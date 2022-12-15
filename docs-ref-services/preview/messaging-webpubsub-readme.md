@@ -1,17 +1,14 @@
 ---
 title: Azure Web PubSub service client library for Java
 keywords: Azure, java, SDK, API, azure-messaging-webpubsub, webpubsub
-author: maggiepint
-ms.author: magpint
-ms.date: 11/11/2021
+author: joshfree
+ms.author: jfree
+ms.date: 12/15/2022
 ms.topic: reference
-ms.prod: azure
-ms.technology: azure
 ms.devlang: java
 ms.service: webpubsub
 ---
-
-# Azure Web PubSub service client library for Java - version 1.0.0-beta.6 
+# Azure Web PubSub service client library for Java - version 1.2.0-alpha.20221215.1 
 
 
 [Azure Web PubSub service](https://aka.ms/awps/doc) is an Azure-managed service that helps developers easily build web applications with real-time features and publish-subscribe pattern. Any scenario that requires real-time publish-subscribe messaging between server and clients or among clients can use Azure Web PubSub service. Traditional real-time features that often require polling from server or submitting HTTP requests can also use Azure Web PubSub service.
@@ -38,7 +35,40 @@ Details about the terms used here are described in [Key concepts](#key-concepts)
 - A [Java Development Kit (JDK)][jdk_link], version 8 or later.
 - [Azure Subscription][azure_subscription]
 
-### Include the Package
+### Include the package
+
+#### Include the BOM file
+
+Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/boms/azure-sdk-bom/README.md).
+
+```xml
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>com.azure</groupId>
+            <artifactId>azure-sdk-bom</artifactId>
+            <version>{bom_version_to_target}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+```
+and then include the direct dependency in the dependencies section without the version tag as shown below.
+
+```xml
+<dependencies>
+  <dependency>
+    <groupId>com.azure</groupId>
+    <artifactId>azure-messaging-webpubsub</artifactId>
+  </dependency>
+</dependencies>
+```
+
+#### Include direct dependency
+If you want to take dependency on a particular version of the library that is not present in the BOM,
+add the direct dependency to your project as follows.
 
 [//]: # ({x-version-update-start;com.azure:azure-messaging-webpubsub;current})
 
@@ -46,7 +76,7 @@ Details about the terms used here are described in [Key concepts](#key-concepts)
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-messaging-webpubsub</artifactId>
-    <version>1.0.0-beta.6</version>
+    <version>1.1.8</version>
 </dependency>
 ```
 
@@ -54,8 +84,7 @@ Details about the terms used here are described in [Key concepts](#key-concepts)
 
 ### Create a `WebPubSubServiceClient` using connection string
 
-<!-- embedme ./src/samples/java/com/azure/messaging/webpubsub/ReadmeSamples.java#L21-L24 -->
-```java
+```java readme-sample-createClientWithConnectionString
 WebPubSubServiceClient webPubSubServiceClient = new WebPubSubServiceClientBuilder()
     .connectionString("{connection-string}")
     .hub("chat")
@@ -64,8 +93,7 @@ WebPubSubServiceClient webPubSubServiceClient = new WebPubSubServiceClientBuilde
 
 ### Create a `WebPubSubServiceClient` using access key
 
-<!-- embedme ./src/samples/java/com/azure/messaging/webpubsub/ReadmeSamples.java#L31-L35 -->
-```java
+```java readme-sample-createClientWithKey
 WebPubSubServiceClient webPubSubServiceClient = new WebPubSubServiceClientBuilder()
     .credential(new AzureKeyCredential("{access-key}"))
     .endpoint("<Insert endpoint from Azure Portal>")
@@ -97,35 +125,32 @@ When the client is connected, it can send messages to the upstream application, 
 
 ## Examples
 
-* [Broadcast message to entire hub](#broadcast-all "Broadcast message to entire hub")
-* [Broadcast message to a group](#broadcast-group "Broadcast message to a group")
-* [Send message to a connection](#send-to-connection "Send message to a connection")
-* [Send message to a user](#send-to-user "Send message to a user")
+* [Broadcast message to entire hub](#broadcast-message-to-entire-hub)
+* [Broadcast message to a group](#broadcast-message-to-a-group)
+* [Send message to a connection](#send-message-to-a-connection)
+* [Send message to a user](#send-message-to-a-user)
 
 ### Broadcast message to entire hub
 
-<!-- embedme ./src/samples/java/com/azure/messaging/webpubsub/ReadmeSamples.java#L47-L47 -->
-```java
+```java readme-sample-broadcastToAll
 webPubSubServiceClient.sendToAll("Hello world!", WebPubSubContentType.TEXT_PLAIN);
 ```
 
 ### Broadcast message to a group
 
-<!-- embedme ./src/samples/java/com/azure/messaging/webpubsub/ReadmeSamples.java#L59-L59 -->
-```java
+```java readme-sample-broadcastToGroup
 webPubSubServiceClient.sendToGroup("java", "Hello Java!", WebPubSubContentType.TEXT_PLAIN);
 ```
 
 ### Send message to a connection
 
-<!-- embedme ./src/samples/java/com/azure/messaging/webpubsub/ReadmeSamples.java#L71-L71 -->
-```java
+```java readme-sample-sendToConnection
 webPubSubServiceClient.sendToConnection("myconnectionid", "Hello connection!", WebPubSubContentType.TEXT_PLAIN);
 ```
 
 ### Send message to a user
-<!-- embedme ./src/samples/java/com/azure/messaging/webpubsub/ReadmeSamples.java#L83-L83 -->
-```java
+
+```java readme-sample-sendToUser
 webPubSubServiceClient.sendToUser("Andy", "Hello Andy!", WebPubSubContentType.TEXT_PLAIN);
 ```
 
@@ -168,11 +193,11 @@ comments.
 <!-- LINKS -->
 
 [azure_subscription]: https://azure.microsoft.com/free
-[jdk_link]: https://docs.microsoft.com/java/azure/jdk/?view=azure-java-stable
-[source_code]: https://github.com/Azure/azure-sdk-for-java/tree/azure-messaging-webpubsub_1.0.0-beta.6/sdk/webpubsub/azure-messaging-webpubsub/src
+[jdk_link]: /java/azure/jdk/?view=azure-java-stable
+[source_code]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/webpubsub/azure-messaging-webpubsub/src
 [product_documentation]: https://aka.ms/awps/doc
-[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/azure-messaging-webpubsub_1.0.0-beta.6/sdk/webpubsub/azure-messaging-webpubsub/src/samples/README.md
-[log_levels]: https://github.com/Azure/azure-sdk-for-java/blob/azure-messaging-webpubsub_1.0.0-beta.6/sdk/core/azure-core/src/main/java/com/azure/core/util/logging/ClientLogger.java
+[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/webpubsub/azure-messaging-webpubsub/src/samples/README.md
+[log_levels]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core/src/main/java/com/azure/core/util/logging/ClientLogger.java
 [performance_tuning]: https://github.com/Azure/azure-sdk-for-java/wiki/Performance-Tuning
 [cla]: https://cla.microsoft.com
 [coc]: https://opensource.microsoft.com/codeofconduct/
