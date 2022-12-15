@@ -3,12 +3,12 @@ title: Azure Core Experimental shared library for Java
 keywords: Azure, java, SDK, API, azure-core-experimental, core
 author: alzimmermsft
 ms.author: alzimmer
-ms.date: 11/04/2022
+ms.date: 12/15/2022
 ms.topic: reference
 ms.devlang: java
 ms.service: core
 ---
-# Azure Core Experimental shared library for Java - version 1.0.0-beta.34 
+# Azure Core Experimental shared library for Java - version 1.0.0-alpha.20221215.1 
 
 
 [![Build Documentation](https://img.shields.io/badge/documentation-published-blue.svg)](https://azure.github.io/azure-sdk-for-java)
@@ -52,7 +52,7 @@ locate the root issue. View the [logging][logging] wiki for guidance about enabl
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-core-experimental_1.0.0-beta.34/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
