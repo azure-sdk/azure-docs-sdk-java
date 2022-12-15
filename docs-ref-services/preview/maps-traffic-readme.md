@@ -3,12 +3,12 @@ title: Azure Maps SDK Traffic client library for Java
 keywords: Azure, java, SDK, API, azure-maps-traffic, maps
 author: joshfree
 ms.author: jfree
-ms.date: 11/10/2022
+ms.date: 12/15/2022
 ms.topic: reference
 ms.devlang: java
 ms.service: maps
 ---
-# Azure Maps SDK Traffic client library for Java - version 1.0.0-beta.1 
+# Azure Maps SDK Traffic client library for Java - version 1.0.0-alpha.20221215.1 
 
 
 Azure Maps SDK Traffic client library for Java.
@@ -110,13 +110,14 @@ System.out.println("Get Traffic Flow Tile:");
 // options
 client.getTrafficFlowTile(
     new TrafficFlowTileOptions()
-        .setTrafficFlowTileStyle(TrafficFlowTileStyle.RELATIVE_DELAY).setFormat(TileFormat.PNG).setZoom(10));
+        .setTrafficFlowTileStyle(TrafficFlowTileStyle.RELATIVE_DELAY).setFormat(TileFormat.PNG).setZoom(10)
+        .setTileIndex(new TileIndex().setX(1022).setY(680)));
 
 // complete
 client.getTrafficFlowTile(
     new TrafficFlowTileOptions()
         .setTrafficFlowTileStyle(TrafficFlowTileStyle.RELATIVE_DELAY).setFormat(TileFormat.PNG).setZoom(10)
-        .setTileIndex(new TileIndex().setX(2044).setY(1360)).setThickness(10));
+        .setTileIndex(new TileIndex().setX(1022).setY(680)).setThickness(10));
 ```
 
 Get Traffic Incident Detail
@@ -148,7 +149,7 @@ System.out.println("Get Traffic Incident Tile:");
 client.getTrafficIncidentTile(
     new TrafficIncidentTileOptions()
         .setFormat(TileFormat.PNG).setTrafficIncidentTileStyle(TrafficIncidentTileStyle.S3)
-        .setZoom(10));
+        .setZoom(10).setTileIndex(new TileIndex().setX(1022).setY(680)));
 
 // complete
 client.getTrafficIncidentTile(
@@ -159,7 +160,7 @@ client.getTrafficIncidentTile(
 
 Get Traffic Incident Viewport
 ```java com.azure.maps.traffic.sync.get_traffic_incident_viewport
-System.out.println("Get Traffic Incident Tile:");
+System.out.println("Get Traffic Incident Viewport:");
 
 // options
 client.getTrafficIncidentViewport(
@@ -183,11 +184,11 @@ For example, if you search with an invalid coordinate, a error is returned, indi
 ## Next steps
 
 Several Azure Maps Traffic Java SDK samples are available to you in the SDK's GitHub repository.
-[Azure Maps Traffic Samples](https://github.com/Azure/azure-sdk-for-java/tree/azure-maps-traffic_1.0.0-beta.1/sdk/maps/azure-maps-traffic/src/samples)
+[Azure Maps Traffic Samples](https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/maps/azure-maps-traffic/src/samples)
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-maps-traffic_1.0.0-beta.1/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -196,17 +197,17 @@ For details on contributing to this repository, see the [contributing guide](htt
 1. Create new Pull Request
 
 <!-- LINKS -->
-[source]: https://github.com/Azure/azure-sdk-for-java/tree/azure-maps-traffic_1.0.0-beta.1/sdk/maps/azure-maps-traffic/src
-[samples]:  https://github.com/Azure/azure-sdk-for-java/tree/azure-maps-traffic_1.0.0-beta.1/sdk/maps/azure-maps-traffic/src/samples
+[source]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/maps/azure-maps-traffic/src
+[samples]:  https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/maps/azure-maps-traffic/src/samples
 [rest_docs]: /rest/api/maps
 [product_docs]: /azure/azure-maps/
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: /java/azure/jdk/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-maps-traffic_1.0.0-beta.1/sdk/identity/azure-identity
-[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/azure-maps-traffic_1.0.0-beta.1/sdk/core/azure-core-http-netty
-[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/azure-maps-traffic_1.0.0-beta.1/sdk/resourcemanager/docs/AUTH.md
-[design]: https://github.com/Azure/azure-sdk-for-java/blob/azure-maps-traffic_1.0.0-beta.1/sdk/resourcemanager/docs/DESIGN.md
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity
+[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core-http-netty
+[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/resourcemanager/docs/AUTH.md
+[design]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/resourcemanager/docs/DESIGN.md
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fmaps%2Fazure-maps-traffic%2FREADME.png)
 
