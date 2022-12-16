@@ -1,14 +1,14 @@
 ---
 title: Azure Communications Rooms Service client library for Java
 keywords: Azure, java, SDK, API, azure-communication-rooms, communication
-author: JianpingChen
-ms.author: jiach
-ms.date: 08/12/2022
+author: joshfree
+ms.author: jfree
+ms.date: 12/16/2022
 ms.topic: reference
 ms.devlang: java
 ms.service: communication
 ---
-# Azure Communications Rooms Service client library for Java - version 1.0.0-beta.2 
+# Azure Communications Rooms Service client library for Java - version 1.0.0-alpha.20221216.1 
 
 
 Azure Communication Rooms is used to operate on rooms.
@@ -214,6 +214,8 @@ When you submit a pull request, a CLA-bot will automatically determine whether y
 This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For more information see the [Code of Conduct FAQ][coc_faq] or contact [opencode@microsoft.com][coc_contact] with any additional questions or comments.
 
 <!-- LINKS -->
+[source]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/communication/azure-communication-rooms/src
+[package]: https://search.maven.org/artifact/com.azure/azure-communication-rooms
 [cla]: https://cla.microsoft.com
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
