@@ -3,12 +3,12 @@ title: Azure Resource Manager App Platform client library for Java
 keywords: Azure, java, SDK, API, azure-resourcemanager-appplatform, spring-cloud
 author: weidongxu-microsoft
 ms.author: weidxu
-ms.date: 09/08/2022
+ms.date: 12/16/2022
 ms.topic: reference
 ms.devlang: java
 ms.service: spring-cloud
 ---
-# Azure Resource Manager App Platform client library for Java - version 2.19.0-beta.1 
+# Azure Resource Manager App Platform client library for Java - version 2.21.0-alpha.20221215.1 
 
 
 Azure Resource Manager App Platform client library for Java
@@ -29,7 +29,7 @@ For documentation on how to use this package, please see [Azure Management Libra
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
     <artifactId>azure-resourcemanager-appplatform</artifactId>
-    <version>2.19.0-beta.1</version>
+    <version>2.21.0</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -79,7 +79,7 @@ See [Samples][sample] for code snippets and samples.
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-appplatform_2.19.0-beta.1/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -90,9 +90,9 @@ For details on contributing to this repository, see the [contributing guide](htt
 <!-- LINKS -->
 [jdk]: /java/azure/jdk/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-appplatform_2.19.0-beta.1/sdk/identity/azure-identity
-[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-appplatform_2.19.0-beta.1/sdk/core/azure-core-http-netty
-[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-appplatform_2.19.0-beta.1/sdk/resourcemanager/docs/AUTH.md
-[sample]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-appplatform_2.19.0-beta.1/sdk/resourcemanager/docs/SAMPLE.md
-[design]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-appplatform_2.19.0-beta.1/sdk/resourcemanager/docs/DESIGN.md
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity
+[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core-http-netty
+[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/resourcemanager/docs/AUTH.md
+[sample]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/resourcemanager/docs/SAMPLE.md
+[design]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/resourcemanager/docs/DESIGN.md
 
