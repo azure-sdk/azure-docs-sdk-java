@@ -3,12 +3,12 @@ title: Azure DevCenter client library for Java
 keywords: Azure, java, SDK, API, azure-developer-devcenter, devcenter
 author: sebrenna
 ms.author: sebrenna
-ms.date: 11/10/2022
+ms.date: 12/16/2022
 ms.topic: reference
 ms.devlang: java
 ms.service: devcenter
 ---
-# Azure DevCenter client library for Java - version 1.0.0-beta.1 
+# Azure DevCenter client library for Java - version 1.0.0-alpha.20221215.1 
 
 
 This package contains Microsoft Azure DevCenter client library.
@@ -142,7 +142,7 @@ environmentDeleteResponse.waitForCompletion();
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-developer-devcenter_1.0.0-beta.1/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -156,5 +156,5 @@ For details on contributing to this repository, see the [contributing guide](htt
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: /java/azure/jdk/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-developer-devcenter_1.0.0-beta.1/sdk/identity/azure-identity
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity
 
