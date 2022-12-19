@@ -1,22 +1,19 @@
 ---
 title: Azure Resource Manager Deployment client library for Java
-keywords: Azure, java, SDK, API, azure-resourcemanager-deploymentmanager, 
-author: ramya-rao-a
-ms.author: ramyar
-ms.date: 04/20/2021
+keywords: Azure, java, SDK, API, azure-resourcemanager-deploymentmanager, deploymentmanager
+author: joshfree
+ms.author: jfree
+ms.date: 12/19/2022
 ms.topic: reference
-ms.prod: azure
-ms.technology: azure
 ms.devlang: java
-ms.service: 
+ms.service: deploymentmanager
 ---
-
-# Azure Resource Manager Deployment client library for Java - version 1.0.0-beta.1 
+# Azure Resource Manager Deployment client library for Java - version 1.0.0-alpha.20221219.1 
 
 
 Azure Resource Manager Deployment client library for Java.
 
-This package contains Microsoft Azure SDK for Deployment Management SDK. REST APIs for orchestrating deployments using the Azure Deployment Manager (ADM). See https://docs.microsoft.com/azure/azure-resource-manager/deployment-manager-overview for more information. Package tag package-2019-11-01-preview. For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
+This package contains Microsoft Azure SDK for Deployment Management SDK. REST APIs for orchestrating deployments using the Azure Deployment Manager (ADM). See /azure/azure-resource-manager/deployment-manager-overview for more information. Package tag package-2019-11-01-preview. For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
 
 ## We'd love to hear your feedback
 
@@ -94,7 +91,7 @@ See [API design][design] for general introduction on design and key concepts on 
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-deploymentmanager_1.0.0-beta.1/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -105,10 +102,10 @@ For details on contributing to this repository, see the [contributing guide](htt
 <!-- LINKS -->
 [survey]: https://microsoft.qualtrics.com/jfe/form/SV_ehN0lIk2FKEBkwd?Q_CHL=DOCS
 [docs]: https://azure.github.io/azure-sdk-for-java/
-[jdk]: https://docs.microsoft.com/java/azure/jdk/
+[jdk]: /java/azure/jdk/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-deploymentmanager_1.0.0-beta.1/sdk/identity/azure-identity
-[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-deploymentmanager_1.0.0-beta.1/sdk/core/azure-core-http-netty
-[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-deploymentmanager_1.0.0-beta.1/sdk/resourcemanager/docs/AUTH.md
-[design]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-deploymentmanager_1.0.0-beta.1/sdk/resourcemanager/docs/DESIGN.md
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity
+[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core-http-netty
+[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/resourcemanager/docs/AUTH.md
+[design]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/resourcemanager/docs/DESIGN.md
 
