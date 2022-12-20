@@ -3,12 +3,12 @@ title: Azure Cognitive Search client library for Java
 keywords: Azure, java, SDK, API, azure-search-documents, search
 author: alzimmermsft
 ms.author: alzimmer
-ms.date: 11/11/2022
+ms.date: 12/20/2022
 ms.topic: reference
 ms.devlang: java
 ms.service: search
 ---
-# Azure Cognitive Search client library for Java - version 11.6.0-beta.3 
+# Azure Cognitive Search client library for Java - version 11.6.0-alpha.20221219.1 
 
 
 This is the Java client library for [Azure Cognitive Search](/azure/search/).
@@ -47,7 +47,7 @@ Use the Azure Cognitive Search client library to:
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-search-documents_11.6.0-beta.3/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -453,7 +453,7 @@ SearchClient searchClient = new SearchClientBuilder()
 
 ## Troubleshooting
 
-See our [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-search-documents_11.6.0-beta.3/sdk/search/azure-search-documents/TROUBLESHOOTING.md) 
+See our [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/search/azure-search-documents/TROUBLESHOOTING.md) 
 for details on how to diagnose various failure scenarios.
 
 ### General
@@ -520,20 +520,20 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [azure_subscription]: https://azure.microsoft.com/free/java
 [maven]: https://maven.apache.org/
 [package]: https://search.maven.org/artifact/com.azure/azure-search-documents
-[samples]: https://github.com/Azure/azure-sdk-for-java/tree/azure-search-documents_11.6.0-beta.3/sdk/search/azure-search-documents/src/samples/
-[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/azure-search-documents_11.6.0-beta.3/sdk/search/azure-search-documents/src/samples/README.md
-[source_code]: https://github.com/Azure/azure-sdk-for-java/tree/azure-search-documents_11.6.0-beta.3/sdk/search/azure-search-documents/src
+[samples]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/search/azure-search-documents/src/samples/
+[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/search/azure-search-documents/src/samples/README.md
+[source_code]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/search/azure-search-documents/src
 [logging]: https://github.com/Azure/azure-sdk-for-java/wiki/Logging-with-Azure-SDK
 [cla]: https://cla.microsoft.com
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
 [coc_contact]: mailto:opencode@microsoft.com
-[add_headers_from_context_policy]: https://github.com/Azure/azure-sdk-for-java/blob/azure-search-documents_11.6.0-beta.3/sdk/core/azure-core/src/main/java/com/azure/core/http/policy/AddHeadersFromContextPolicy.java
+[add_headers_from_context_policy]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core/src/main/java/com/azure/core/http/policy/AddHeadersFromContextPolicy.java
 [rest_api]: /rest/api/searchservice/http-status-codes
 [create_search_service_docs]: /azure/search/search-create-service-portal
 [create_search_service_ps]: /azure/search/search-manage-powershell#create-or-delete-a-service
 [create_search_service_cli]: /cli/azure/search/service?view=azure-cli-latest#az-search-service-create
-[HttpResponseException]: https://github.com/Azure/azure-sdk-for-java/blob/azure-search-documents_11.6.0-beta.3/sdk/core/azure-core/src/main/java/com/azure/core/exception/HttpResponseException.java
+[HttpResponseException]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core/src/main/java/com/azure/core/exception/HttpResponseException.java
 [status_codes]: /rest/api/searchservice/http-status-codes
 [search-get-started-portal]: /azure/search/search-get-started-portal
 
