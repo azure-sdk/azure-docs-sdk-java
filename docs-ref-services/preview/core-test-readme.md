@@ -1,17 +1,14 @@
 ---
 title: Azure Core Test shared library for Java
 keywords: Azure, java, SDK, API, azure-core-test, core
-author: ramya-rao-a
-ms.author: ramyar
-ms.date: 10/30/2020
+author: alzimmermsft
+ms.author: alzimmer
+ms.date: 12/20/2022
 ms.topic: reference
-ms.prod: azure
-ms.technology: azure
 ms.devlang: java
 ms.service: core
 ---
-
-# Azure Core Test shared library for Java - version 1.5.1 
+# Azure Core Test shared library for Java - version 1.14.0-alpha.20221220.1 
 
 
 Library containing core classes used to test Azure SDK client libraries.
@@ -19,7 +16,7 @@ Library containing core classes used to test Azure SDK client libraries.
 * Create live or playback JUnit tests using [TestBase][TestBase.java] and
   leveraging [InterceptorManager][InterceptorManager.java] to keep track of
   network calls.
-* Record network calls using using pipeline policy,
+* Record network calls using pipeline policy,
   [RecordNetworkCallPolicy][RecordNetworkCallPolicy.java].
 * Playback test session records with [PlaybackClient][PlaybackClient.java].
 
@@ -32,7 +29,7 @@ To use this package, add the following to your _pom.xml_.
 <dependency>
   <groupId>com.azure</groupId>
   <artifactId>azure-core-test</artifactId>
-  <version>1.5.1</version>
+  <version>1.13.0</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -50,8 +47,7 @@ To use this package, add the following to your _pom.xml_.
 Use [TestBase][TestBase.java] to easily create live and playback test cases. Extending from `TestBase` provides an
 `interceptorManager` that keeps track of all network calls.
 
-<!-- embedme ./src/samples/java/com/azure/core/test/ReadmeSamples.java#L27-L39 -->
-```java
+```java readme-sample-createATestClass
 /**
  * Set the AZURE_TEST_MODE environment variable to either PLAYBACK or RECORD to determine if tests are playback or
  * live. By default, tests are run in playback mode.
@@ -72,8 +68,7 @@ public class SessionTests extends TestBase {
 Record network calls using [RecordNetworkCallPolicy][RecordNetworkCallPolicy.java]. Each HTTP request sent from the test
 client, is persisted to [RecordedData][RecordedData.java].
 
-<!-- embedme ./src/samples/java/com/azure/core/test/ReadmeSamples.java#L41-L60 -->
-```java
+```java readme-sample-recordNetworkCalls
 /**
  * Sample code for recording network calls.
  */
@@ -100,8 +95,7 @@ public class Foo {
 
 Playback test session records by creating a [RecordedData][RecordedData.java].
 
-<!-- embedme ./src/samples/java/com/azure/core/test/ReadmeSamples.java#L62-L78 -->
-```java
+```java readme-sample-playbackSessionRecords
 /**
  * Sample code for using playback to test.
  */
@@ -130,12 +124,11 @@ If you encounter any bugs with these SDKs, please file issues via
 ## Next steps
 
 Other useful packages are:
-* [azure-core](https://github.com/Azure/azure-sdk-for-java/blob/azure-core-test_1.5.1/sdk/core/azure-core): Contains core classes and functionality used by all client libraries.
+* [azure-core](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core): Contains core classes and functionality used by all client libraries.
 
 ## Contributing
 
-If you would like to become an active contributor to this project please follow the instructions provided in
-[Microsoft Azure Projects Contribution Guidelines](https://azure.github.io/guidelines.html).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -143,11 +136,11 @@ If you would like to become an active contributor to this project please follow 
 1. Push to the branch (`git push origin my-new-feature`)
 1. Create new Pull Request
 
-[InterceptorManager.java]: https://github.com/Azure/azure-sdk-for-java/blob/azure-core-test_1.5.1/sdk/core/azure-core-test/src/main/java/com/azure/core/test/InterceptorManager.java
-[PlaybackClient.java]: https://github.com/Azure/azure-sdk-for-java/blob/azure-core-test_1.5.1/sdk/core/azure-core-test/src/main/java/com/azure/core/test/http/PlaybackClient.java
-[RecordedData.java]: https://github.com/Azure/azure-sdk-for-java/blob/azure-core-test_1.5.1/sdk/core/azure-core-test/src/main/java/com/azure/core/test/models/RecordedData.java
-[RecordNetworkCallPolicy.java]: https://github.com/Azure/azure-sdk-for-java/blob/azure-core-test_1.5.1/sdk/core/azure-core-test/src/main/java/com/azure/core/test/policy/RecordNetworkCallPolicy.java
-[TestBase.java]: https://github.com/Azure/azure-sdk-for-java/blob/azure-core-test_1.5.1/sdk/core/azure-core-test/src/main/java/com/azure/core/test/TestBase.java
+[InterceptorManager.java]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core-test/src/main/java/com/azure/core/test/InterceptorManager.java
+[PlaybackClient.java]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core-test/src/main/java/com/azure/core/test/http/PlaybackClient.java
+[RecordedData.java]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core-test/src/main/java/com/azure/core/test/models/RecordedData.java
+[RecordNetworkCallPolicy.java]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core-test/src/main/java/com/azure/core/test/policy/RecordNetworkCallPolicy.java
+[TestBase.java]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core-test/src/main/java/com/azure/core/test/TestBase.java
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fcore%2Fazure-core-test%2FREADME.png)
 
