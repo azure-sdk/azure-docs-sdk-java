@@ -1,14 +1,14 @@
 ---
 title: Azure Communication Email client library for Java
 keywords: Azure, java, SDK, API, azure-communication-email, communication
-author: JianpingChen
-ms.author: jiach
-ms.date: 08/09/2022
+author: joshfree
+ms.author: jfree
+ms.date: 12/20/2022
 ms.topic: reference
 ms.devlang: java
 ms.service: communication
 ---
-# Azure Communication Email client library for Java - version 1.0.0-beta.1 
+# Azure Communication Email client library for Java - version 1.0.0-alpha.20221219.1 
 
 
 This package contains the Java SDK for Azure Communication Services for Email.
@@ -29,7 +29,7 @@ To create these resource, you can use the [Azure Portal][communication_resource_
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-communication-email_1.0.0-beta.1/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -99,6 +99,20 @@ EmailClient emailClient = new EmailClientBuilder()
     .buildClient();
 ```
 
+### Azure Active Directory Token Authentication
+A `DefaultAzureCredential` object must be passed to the `EmailClientBuilder` via the `credential()` method. An endpoint must also be set via the `endpoint()` method.
+
+The `AZURE_CLIENT_SECRET`, `AZURE_CLIENT_ID`, and `AZURE_TENANT_ID` environment variables are needed to create a `DefaultAzureCredential` object.
+
+```java readme-sample-createEmailClientWithAAD
+// You can find your endpoint and access key from your resource in the Azure Portal
+String endpoint = "https://<resource-name>.communication.azure.com/";
+
+EmailClient emailClient = new EmailClientBuilder()
+    .endpoint(endpoint)
+    .credential(new DefaultAzureCredentialBuilder().build())
+    .buildClient();
+```
 
 ### Send an Email Message
 
@@ -110,13 +124,13 @@ EmailAddress emailAddress = new EmailAddress("<recipient-email-address>");
 ArrayList<EmailAddress> addressList = new ArrayList<>();
 addressList.add(emailAddress);
 
-EmailRecipients emailRecipients = new EmailRecipients(addressList);
+EmailRecipients emailRecipients = new EmailRecipients()
+    .setTo(addressList);
 
 EmailContent content = new EmailContent("test subject")
     .setPlainText("test message");
 
-EmailMessage emailMessage = new EmailMessage("<sender-email-address>", content)
-    .setRecipients(emailRecipients);
+EmailMessage emailMessage = new EmailMessage("<sender-email-address>", content, emailRecipients);
 
 SendEmailResult response = emailClient.send(emailMessage);
 System.out.println("Message Id: " + response.getMessageId());
@@ -140,15 +154,15 @@ ccAddressList.add(emailAddress);
 ArrayList<EmailAddress> bccAddressList = new ArrayList<>();
 bccAddressList.add(emailAddress);
 
-EmailRecipients emailRecipients = new EmailRecipients(toAddressList)
+EmailRecipients emailRecipients = new EmailRecipients()
+    .setTo(toAddressList)
     .setCc(ccAddressList)
     .setBcc(bccAddressList);
 
 EmailContent content = new EmailContent("test subject")
     .setPlainText("test message");
 
-EmailMessage emailMessage = new EmailMessage("<sender-email-address>", content)
-    .setRecipients(emailRecipients);
+EmailMessage emailMessage = new EmailMessage("<sender-email-address>", content, emailRecipients);
 
 SendEmailResult response = emailClient.send(emailMessage);
 System.out.println("Message Id: " + response.getMessageId());
@@ -175,7 +189,8 @@ EmailAddress emailAddress = new EmailAddress("<recipient-email-address>");
 ArrayList<EmailAddress> addressList = new ArrayList<>();
 addressList.add(emailAddress);
 
-EmailRecipients emailRecipients = new EmailRecipients(addressList);
+EmailRecipients emailRecipients = new EmailRecipients()
+    .setTo(addressList);
 
 EmailContent content = new EmailContent("test subject")
     .setPlainText("test message");
@@ -185,8 +200,7 @@ EmailAttachment attachment = new EmailAttachment("attachment.txt", EmailAttachme
 ArrayList<EmailAttachment> attachmentList = new ArrayList<>();
 attachmentList.add(attachment);
 
-EmailMessage emailMessage = new EmailMessage("<sender-email-address>", content)
-    .setRecipients(emailRecipients)
+EmailMessage emailMessage = new EmailMessage("<sender-email-address>", content, emailRecipients)
     .setAttachments(attachmentList);
 
 SendEmailResult response = emailClient.send(emailMessage);
