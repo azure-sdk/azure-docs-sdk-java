@@ -1,17 +1,17 @@
 ---
-title: Azure Resource Manager CDN client library for Java
-keywords: Azure, java, SDK, API, azure-resourcemanager-cdn, azure-cdn
+title: Azure Resource Manager Cognitive Search client library for Java
+keywords: Azure, java, SDK, API, azure-resourcemanager-search, resourcemanager
 author: weidongxu-microsoft
 ms.author: weidxu
 ms.date: 12/21/2022
 ms.topic: reference
 ms.devlang: java
-ms.service: azure-cdn
+ms.service: resourcemanager
 ---
-# Azure Resource Manager CDN client library for Java - version 2.21.0-alpha.20221220.1 
+# Azure Resource Manager Cognitive Search client library for Java - version 2.22.0-alpha.20221220.1 
 
 
-Azure Resource Manager CDN client library for Java
+Azure Resource Manager Cognitive Search client library for Java
 
 For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
 
@@ -24,11 +24,11 @@ For documentation on how to use this package, please see [Azure Management Libra
 
 ### Adding the package to your product
 
-[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-cdn;current})
+[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-search;current})
 ```xml
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
-    <artifactId>azure-resourcemanager-cdn</artifactId>
+    <artifactId>azure-resourcemanager-search</artifactId>
     <version>2.21.0</version>
 </dependency>
 ```
@@ -57,7 +57,7 @@ AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
 TokenCredential credential = new DefaultAzureCredentialBuilder()
     .authorityHost(profile.getEnvironment().getActiveDirectoryEndpoint())
     .build();
-CdnManager manager = CdnManager
+SearchServiceManager manager = SearchServiceManager
     .authenticate(credential, profile);
 ```
 
