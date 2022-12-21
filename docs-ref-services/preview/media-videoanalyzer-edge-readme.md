@@ -3,7 +3,7 @@ title:
 keywords: Azure, java, SDK, API, azure-media-videoanalyzer-edge, videoanalyzer
 author: joshfree
 ms.author: jfree
-ms.date: 04/30/2022
+ms.date: 12/21/2022
 ms.topic: reference
 ms.devlang: java
 ms.service: videoanalyzer
@@ -211,7 +211,7 @@ additional questions or comments.
 [coc_contact]: mailto:opencode@microsoft.com
 [package]: https://aka.ms/ava/sdk/client/java
 [samples]: https://aka.ms/video-analyzer-sample
-[source]: https://github.com/Azure/azure-sdk-for-java/tree/azure-media-videoanalyzer-edge_1.0.0-beta.6/sdk/videoanalyzer
+[source]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/videoanalyzer
 [doc_direct_methods]: https://go.microsoft.com/fwlink/?linkid=2162396
 [doc_pipelines]: https://go.microsoft.com/fwlink/?linkid=2162396
 [doc_product]: https://go.microsoft.com/fwlink/?linkid=2162396
