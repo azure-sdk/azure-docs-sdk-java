@@ -1,21 +1,19 @@
 ---
 title: Azure GraalVM Netty Support client library for Java
 keywords: Azure, java, SDK, API, azure-aot-graalvm-support-netty, aot
-author: joshfree
-ms.author: jfree
-ms.date: 04/25/2022
+author: srnagar
+ms.author: srnagar
+ms.date: 12/21/2022
 ms.topic: reference
-ms.prod: azure
-ms.technology: azure
 ms.devlang: java
 ms.service: aot
 ---
-# Azure GraalVM Netty Support client library for Java - version 1.0.0-beta.2 
+# Azure GraalVM Netty Support client library for Java - version 1.0.0-alpha.20221221.1 
 
 
-The Azure GraalVM Netty Support client library provides support for applications using 
-[Azure client libraries](https://azure.github.io/azure-sdk/releases/latest/java.html) that take a dependency on 
-[azure-core-http-netty](https://github.com/Azure/azure-sdk-for-java/tree/azure-aot-graalvm-support-netty_1.0.0-beta.2/sdk/core/azure-core-http-netty) to be 
+The Azure GraalVM Netty Support client library provides support for applications using
+[Azure client libraries](https://azure.github.io/azure-sdk/releases/latest/java.html) that take a dependency on
+[azure-core-http-netty](https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/core/azure-core-http-netty) to be
 built as [GraalVM native images](https://www.graalvm.org/22.0/reference-manual/native-image/). The library contains all the necessary
 [configuration files](https://www.graalvm.org/22.0/reference-manual/native-image/BuildConfiguration/) and [GraalVM
 features](https://www.graalvm.org/sdk/javadoc/index.html?org/graalvm/nativeimage/hosted/Feature.html) required to build
@@ -42,32 +40,35 @@ Include both the packages below:
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-aot-graalvm-support</artifactId>
-    <version>1.0.0-beta.2</version>
+    <version>1.0.0-beta.3</version>
 </dependency>
 ```
+[//]: # ({x-version-update-end})
+
 [//]: # ({x-version-update-start;com.azure:azure-aot-graalvm-support-netty;current})
 ```xml
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-aot-graalvm-support-netty</artifactId>
-    <version>1.0.0-beta.2</version>
+    <version>1.0.0-beta.3</version>
 </dependency>
 ```
+[//]: # ({x-version-update-end})
 ## Key concepts
 
-Please refer to the [Key Concepts](https://github.com/Azure/azure-sdk-for-java/tree/azure-aot-graalvm-support-netty_1.0.0-beta.2/sdk/aot/azure-aot-graalvm-support#key-concepts) section of the azure-aot-graalvm-support library.
+Please refer to the [Key Concepts](https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/aot/azure-aot-graalvm-support#key-concepts) section of the azure-aot-graalvm-support library.
 
 ## Examples
 
-Please refer to the [Examples](https://github.com/Azure/azure-sdk-for-java/tree/azure-aot-graalvm-support-netty_1.0.0-beta.2/sdk/aot/azure-aot-graalvm-support#examples) section of the 
+Please refer to the [Examples](https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/aot/azure-aot-graalvm-support#examples) section of the
 `azure-aot-graalvm-support` library.
 
 ## Troubleshooting
-Please refer to the [Troubleshooting](https://github.com/Azure/azure-sdk-for-java/tree/azure-aot-graalvm-support-netty_1.0.0-beta.2/sdk/aot/azure-aot-graalvm-support#troubleshooting) section of the
+Please refer to the [Troubleshooting](https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/aot/azure-aot-graalvm-support#troubleshooting) section of the
 `azure-aot-graalvm-support` library.
 
 ## Next steps
-Please refer to the [Next Steps](https://github.com/Azure/azure-sdk-for-java/tree/azure-aot-graalvm-support-netty_1.0.0-beta.2/sdk/aot/azure-aot-graalvm-support#next-steps) section of the
+Please refer to the [Next Steps](https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/aot/azure-aot-graalvm-support#next-steps) section of the
 `azure-aot-graalvm-support` library.
 
 ## Contributing
@@ -89,7 +90,7 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
 [coc_contact]: mailto:opencode@microsoft.com
-[jdk_link]: https://docs.microsoft.com/java/azure/jdk/?view=azure-java-stable
+[jdk_link]: /java/azure/jdk/?view=azure-java-stable
 [azure_subscription]: https://azure.microsoft.com/free
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Faot%2Fazure-aot-graalvm-support-netty%2FREADME.png)
