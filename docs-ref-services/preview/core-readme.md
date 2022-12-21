@@ -1,17 +1,14 @@
 ---
 title: Azure Core shared library for Java
 keywords: Azure, java, SDK, API, azure-core, core
-author: ramya-rao-a
-ms.author: ramyar
-ms.date: 10/14/2021
+author: alzimmermsft
+ms.author: alzimmer
+ms.date: 12/21/2022
 ms.topic: reference
-ms.prod: azure
-ms.technology: azure
 ms.devlang: java
 ms.service: core
 ---
-
-# Azure Core shared library for Java - version 1.22.0-beta.1 
+# Azure Core shared library for Java - version 1.35.0-alpha.20221221.1 
 
 
 [![Build Documentation](https://img.shields.io/badge/documentation-published-blue.svg)](https://azure.github.io/azure-sdk-for-java)
@@ -36,7 +33,7 @@ APIs in one client library, you will know how to use them in other client librar
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-core_1.22.0-beta.1/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -72,7 +69,7 @@ add the direct dependency to your project as follows.
 <dependency>
   <groupId>com.azure</groupId>
   <artifactId>azure-core</artifactId>
-  <version>1.21.0</version>
+  <version>1.34.0</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -131,11 +128,39 @@ or checkout [StackOverflow for Azure Java SDK](https://stackoverflow.com/questio
 
 Azure SDKs for Java provide a consistent logging story to help aid in troubleshooting application errors and expedite
 their resolution. The logs produced will capture the flow of an application before reaching the terminal state to help
-locate the root issue. View the [logging][logging] wiki for guidance about enabling logging.
+locate the root issue. View the [logging][logging] documentation for guidance about enabling logging.
+
+#### HTTP Request and Response Logging
+
+HTTP request and response logging can be enabled by setting `HttpLogDetailLevel` in the `HttpLogOptions` used to create 
+an HTTP-based service client or by setting the environment variable or system property `AZURE_HTTP_LOG_DETAIL_LEVEL`.
+The following table displays the valid options for `AZURE_HTTP_LOG_DETAIL_LEVEL` and the `HttpLogDetailLevel` it
+correlates to (valid options are case-insensitive):
+
+| `AZURE_HTTP_LOG_DETAIL_LEVEL` value | `HttpLogDetailLevel` enum |
+| ----------------------------------- | ------------------------- |
+| `basic` | `HttpLogDetailLevel.BASIC` |
+| `headers` | `HttpLogDetailLevel.HEADERS` |
+| `body` | `HttpLogDetailLevel.BODY` |
+| `body_and_headers` | `HttpLogDetailLevel.BODY_AND_HEADERS` |
+| `bodyandheaders` | `HttpLogDetailLevel.BODY_AND_HEADERS` |
+
+All other values, or unsupported values, result in `HttpLogDetailLevel.NONE`, or disabled HTTP request and response 
+logging. Logging [must be enabled](#enabling-logging) to log HTTP requests and responses. Logging of HTTP headers requires `verbose`
+logging to be enabled. The following table explains what logging is enabled for each `HttpLogDetailLevel`:
+
+| `HttpLogDetailLevel` value | Logging enabled                                                         |
+| -------------------------- |-------------------------------------------------------------------------|
+| `HttpLogDetailLevel.NONE` | No HTTP request or response logging                                     |
+| `HttpLogDetailLevel.BASIC` | HTTP request method, response status code, and request and response URL |
+| `HttpLogDetailLevel.HEADERS` | All of `HttpLogDetailLevel.BASIC` and request and response headers if the log level is `verbose` |
+| `HttpLogDetailLevel.BODY` | All of `HttpLogDetailLevel.BASIC` and request and response body if it's under 10KB in size |
+| `HttpLogDetailLevel.BODY_AND_HEADERS` | All of `HttpLogDetailLevel.HEADERS` and `HttpLogDetailLevel.BODY` |
+
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-core_1.22.0-beta.1/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
@@ -144,8 +169,8 @@ For details on contributing to this repository, see the [contributing guide](htt
 5. Create new Pull Request
 
 <!-- links -->
-[logging]: https://github.com/Azure/azure-sdk-for-java/wiki/Logging-with-Azure-SDK
-[jdk_link]: https://docs.microsoft.com/java/azure/jdk/?view=azure-java-stable
+[logging]: https://learn.microsoft.com/azure/developer/java/sdk/logging-overview
+[jdk_link]: /java/azure/jdk/?view=azure-java-stable
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fcore%2Fazure-core%2FREADME.png)
 
