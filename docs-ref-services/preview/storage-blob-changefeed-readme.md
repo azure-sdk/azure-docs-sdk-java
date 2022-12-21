@@ -2,13 +2,13 @@
 title: Azure Blob Storage change feed client library for Java
 keywords: Azure, java, SDK, API, azure-storage-blob-changefeed, storage
 author: rickle-msft
-ms.author: frley
-ms.date: 05/06/2022
+ms.author: rickle-msft
+ms.date: 12/21/2022
 ms.topic: reference
 ms.devlang: java
 ms.service: storage
 ---
-# Azure Blob Storage change feed client library for Java - version 12.0.0-beta.18 
+# Azure Blob Storage change feed client library for Java - version 12.0.0-alpha.20221221.1 
 
 
 The purpose of the change feed is to provide transaction logs of all the changes that occur to
@@ -246,7 +246,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 
 <!-- LINKS -->
 [source]: src
-[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob-changefeed_12.0.0-beta.18/sdk/storage/azure-storage-blob-changefeed/src/samples/README.md
+[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/storage/azure-storage-blob-changefeed/src/samples/README.md
 [docs]: http://azure.github.io/azure-sdk-for-java/
 [rest_docs]: /rest/api/storageservices/blob-service-rest-api
 [product_docs]: /azure/storage/blobs/storage-blobs-overview
@@ -256,7 +256,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 [storage_account]: /azure/storage/common/storage-quickstart-create-account?tabs=azure-portal
 [storage_account_create_cli]: /azure/storage/common/storage-quickstart-create-account?tabs=azure-cli
 [storage_account_create_portal]: /azure/storage/common/storage-quickstart-create-account?tabs=azure-portal
-[identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob-changefeed_12.0.0-beta.18/sdk/identity/azure-identity/README.md
+[identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity/README.md
 [error_codes]: /rest/api/storageservices/blob-service-error-codes
 [samples]: src/samples
 [cla]: https://cla.microsoft.com
