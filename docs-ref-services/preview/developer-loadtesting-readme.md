@@ -1,14 +1,14 @@
 ---
 title: Azure Load Testing client library for Java
-keywords: Azure, java, SDK, API, azure-developer-loadtesting, loadtestservice
+keywords: Azure, java, SDK, API, azure-developer-loadtesting, azure-load-testing
 author: Harshan01
 ms.author: harshanb
-ms.date: 10/24/2022
+ms.date: 01/05/2023
 ms.topic: reference
 ms.devlang: java
-ms.service: loadtestservice
+ms.service: azure-load-testing
 ---
-# Azure Load Testing client library for Java - version 1.0.0-beta.1 
+# Azure Load Testing client library for Java - version 1.0.0-alpha.20230105.1 
 
 
 Azure Load Testing provides client library in Java to the user by which they can interact natively with Azure Load Testing service. Azure Load Testing is a fully managed load-testing service that enables you to generate high-scale load. The service simulates traffic for your applications, regardless of where they're hosted. Developers, testers, and quality assurance (QA) engineers can use it to optimize application performance, scalability, or capacity
@@ -38,7 +38,7 @@ Various documentation is available to help you get started
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-developer-loadtesting</artifactId>
-    <version>1.0.0-beta.1</version>
+    <version>1.0.0-beta.2</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -62,12 +62,22 @@ With above configuration, `azure` client can be authenticated by following code:
 TokenCredential credential = new DefaultAzureCredentialBuilder()
     .build();
 // create client using DefaultAzureCredential
-LoadTestingClient client = new LoadTestingClientBuilder()
+LoadTestingClientBuilder builder = new LoadTestingClientBuilder()
     .credential(credential)
-    .endpoint("<Enter Azure Load Testing Data-Plane URL>")
-    .buildClient();
-LoadTestAdministrationClient adminClient = client.getLoadTestAdministrationClient();
-TestRunClient testRunClient = client.getLoadTestRunClient();
+    .endpoint("<Enter Azure Load Testing Data-Plane URL>");
+LoadTestAdministrationClient adminClient = builder.buildLoadTestAdministrationClient();
+LoadTestRunClient testRunClient = builder.buildLoadTestRunClient();
+
+RequestOptions reqOpts = new RequestOptions()
+    .addQueryParam("orderBy", "lastModifiedDateTime")
+    .addQueryParam("maxPageSize", "10");
+adminClient.listTests(reqOpts);
+
+reqOpts = new RequestOptions()
+    .addQueryParam("orderBy", "lastModifiedDateTime")
+    .addQueryParam("status", "EXECUTING,DONE")
+    .addQueryParam("maxPageSize", "10");
+testRunClient.listTestRuns(reqOpts);
 ```
 
 ## Key concepts
@@ -131,10 +141,10 @@ In the above example, `eus` represents the Azure region `East US`.
 ### Creating a Load Test
 
 ```java java-readme-sample-createTest
-LoadTestingClient client = new LoadTestingClientBuilder()
-    .credential(new DefaultAzureCredentialBuilder().build())
-    .endpoint("<endpoint>")
-    .buildClient();
+LoadTestAdministrationClient adminClient = new LoadTestingClientBuilder()
+        .credential(new DefaultAzureCredentialBuilder().build())
+        .endpoint("<endpoint>")
+        .buildLoadTestAdministrationClient();
 
 // construct Test object using nested String:Object Maps
 Map<String, Object> testMap = new HashMap<String, Object>();
@@ -144,7 +154,7 @@ testMap.put("description", "Sample Description");
 // loadTestConfig describes the number of test engines to generate load
 Map<String, Object> loadTestConfigMap = new HashMap<String, Object>();
 loadTestConfigMap.put("engineInstances", 1);
-testMap.put("loadTestConfig", loadTestConfigMap);
+testMap.put("loadTestConfiguration", loadTestConfigMap);
 
 // environmentVariables are plain-text data passed to test engines
 Map<String, Object> envVarMap = new HashMap<String, Object>();
@@ -177,33 +187,33 @@ testMap.put("passFailCriteria", passFailMap);
 BinaryData test = BinaryData.fromObject(testMap);
 
 // receive response with BinaryData content
-Response<BinaryData> testOutResponse = client.getLoadTestAdministrationClient().createOrUpdateTestWithResponse("test12345", test, null);
+Response<BinaryData> testOutResponse = adminClient.createOrUpdateTestWithResponse("test12345", test, null);
 System.out.println(testOutResponse.getValue().toString());
 ```
 
 ### Uploading .jmx file to a Load Test
 
 ```java java-readme-sample-uploadTestFile
-LoadTestingClient client = new LoadTestingClientBuilder()
+LoadTestAdministrationClient adminClient = new LoadTestingClientBuilder()
     .credential(new DefaultAzureCredentialBuilder().build())
     .endpoint("<endpoint>")
-    .buildClient();
+    .buildLoadTestAdministrationClient();
 
 // extract file contents to BinaryData
 BinaryData fileData = BinaryData.fromFile(new File("path/to/file").toPath());
 
 // receive response with BinaryData content
-Response<BinaryData> fileUrlOut = client.getLoadTestAdministrationClient().uploadTestFileWithResponse("test12345", "file12345", "sample-file.jmx", fileData, null);
+Response<BinaryData> fileUrlOut = adminClient.uploadTestFileWithResponse("test12345", "sample-file.jmx", fileData, null);
 System.out.println(fileUrlOut.getValue().toString());
 ```
 
 ### Running a Load Test
 
 ```java java-readme-sample-runTest
-LoadTestingClient client = new LoadTestingClientBuilder()
+LoadTestRunClient testRunClient = new LoadTestingClientBuilder()
     .credential(new DefaultAzureCredentialBuilder().build())
     .endpoint("<endpoint>")
-    .buildClient();
+    .buildLoadTestRunClient();
 
 // construct Test Run object using nested String:Object Maps
 Map<String, Object> testRunMap = new HashMap<String, Object>();
@@ -213,19 +223,20 @@ testRunMap.put("displayName", "SDK-Created-TestRun");
 // convert the object Map to JSON BinaryData
 BinaryData testRun = BinaryData.fromObject(testRunMap);
 
-// receive response with BinaryData content
-Response<BinaryData> testRunOut = client.getLoadTestRunClient().createOrUpdateTestRunWithResponse("testrun12345", testRun, null);
-System.out.println(testRunOut.getValue().toString());
+// start test with poller
+SyncPoller<BinaryData, BinaryData> poller = testRunClient.beginTestRun("testrun12345", testRun, null);
+Duration pollInterval = Duration.ofSeconds(5);
+poller = poller.setPollInterval(pollInterval);
 
 // wait for test to reach terminal state
 JsonNode testRunJson = null;
-String testStatus = null, startDateTime = null, endDateTime = null;
-while (testStatus == null || (testStatus != "DONE" && testStatus != "CANCELLED" && testStatus != "FAILED")) {
-    testRunOut = client.getLoadTestRunClient().getTestRunWithResponse("testrun12345", null);
-    // parse JSON and read status value
+String testStatus;
+PollResponse<BinaryData> pollResponse = poller.poll();
+while (pollResponse.getStatus() == LongRunningOperationStatus.IN_PROGRESS || pollResponse.getStatus() == LongRunningOperationStatus.NOT_STARTED) {
     try {
-        testRunJson = new ObjectMapper().readTree(testRunOut.getValue().toString());
+        testRunJson = new ObjectMapper().readTree(pollResponse.getValue().toString());
         testStatus = testRunJson.get("status").asText();
+        System.out.println("Test run status: " + testStatus);
     } catch (JsonProcessingException e) {
         System.out.println("Error processing JSON response");
         // handle error condition
@@ -233,39 +244,56 @@ while (testStatus == null || (testStatus != "DONE" && testStatus != "CANCELLED" 
 
     // wait and check test status every 5 seconds
     try {
-        Thread.sleep(5000);
+        Thread.sleep(pollInterval.toMillis());
     } catch (InterruptedException e) {
         // handle interruption
     }
+
+    pollResponse = poller.poll();
 }
 
-startDateTime = testRunJson.get("startDateTime").asText();
-endDateTime = testRunJson.get("endDateTime").asText();
+poller.waitForCompletion();
+BinaryData testRunBinary = poller.getFinalResult();
+try {
+    testRunJson = new ObjectMapper().readTree(testRunBinary.toString());
+    testStatus = testRunJson.get("status").asText();
+} catch (JsonProcessingException e) {
+    System.out.println("Error processing JSON response");
+    // handle error condition
+}
 
-// construct Test Run Client Metrics object using nested String:Object Maps
-Map<String, Object> clientMetricsMap = new HashMap<String, Object>();
-List<String> requestSamplersList = new ArrayList<String>();
-requestSamplersList.add("Homepage");
-clientMetricsMap.put("requestSamplers", requestSamplersList);
+String startDateTime = testRunJson.get("startDateTime").asText();
+String endDateTime = testRunJson.get("endDateTime").asText();
 
-List<String> errorsList = new ArrayList<String>();
-errorsList.add("500");
-clientMetricsMap.put("errors", errorsList);
+// get list of all metric namespaces and pick the first one
+Response<BinaryData> metricNamespacesOut = testRunClient.listMetricNamespacesWithResponse("testrun12345", null);
+String metricNamespace = null;
+// parse JSON and read first value
+try {
+    JsonNode metricNamespacesJson = new ObjectMapper().readTree(metricNamespacesOut.getValue().toString());
+    metricNamespace = metricNamespacesJson.get("value").get(0).get("metricNamespaceName").asText();
+} catch (JsonProcessingException e) {
+    System.out.println("Error processing JSON response");
+    // handle error condition
+}
 
-List<String> percentilesList = new ArrayList<String>();
-percentilesList.add("95");
-clientMetricsMap.put("percentiles", percentilesList);
+// get list of all metric definitions and pick the first one
+Response<BinaryData> metricDefinitionsOut = testRunClient.listMetricDefinitionsWithResponse("testrun12345", metricNamespace, null);
+String metricName = null;
+// parse JSON and read first value
+try {
+    JsonNode metricDefinitionsJson = new ObjectMapper().readTree(metricDefinitionsOut.getValue().toString());
+    metricName = metricDefinitionsJson.get("value").get(0).get("name").get("value").asText();
+} catch (JsonProcessingException e) {
+    System.out.println("Error processing JSON response");
+    // handle error condition
+}
 
-clientMetricsMap.put("groupByInterval", "10s");
-clientMetricsMap.put("startTime", startDateTime);
-clientMetricsMap.put("endTime", endDateTime);
-
-// convert the object Map to JSON BinaryData
-BinaryData clientMetrics = BinaryData.fromObject(clientMetricsMap);
-
-// fetch client metrics
-Response<BinaryData> clientMetricsOut = client.getLoadTestRunClient().getTestRunClientMetricsWithResponse("testrun12345", clientMetrics, null);
-System.out.println(clientMetricsOut.getValue().toString());
+// fetch client metrics using metric namespace and metric name
+PagedIterable<BinaryData> clientMetricsOut = testRunClient.listMetrics("testrun12345", metricName, metricNamespace, startDateTime + '/' + endDateTime, null);
+clientMetricsOut.forEach((clientMetric) -> {
+    System.out.println(clientMetric.toString());
+});
 ```
 
 ## Troubleshooting
@@ -281,7 +309,7 @@ See [Azure Load Testing samples][sample_code].
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-developer-loadtesting_1.0.0-beta.1/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -290,12 +318,12 @@ For details on contributing to this repository, see the [contributing guide](htt
 1. Create new Pull Request
 
 <!-- LINKS -->
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-developer-loadtesting_1.0.0-beta.1/sdk/loadtestservice/azure-developer-loadtesting/src
-[sample_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-developer-loadtesting_1.0.0-beta.1/sdk/loadtestservice/azure-developer-loadtesting/src/samples
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/loadtesting/azure-developer-loadtesting/src
+[sample_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/loadtesting/azure-developer-loadtesting/src/samples
 [api_reference_doc]: /rest/api/loadtesting/
 [product_documentation]: https://azure.microsoft.com/services/load-testing/
 [jdk]: /java/azure/jdk/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-developer-loadtesting_1.0.0-beta.1/sdk/identity/azure-identity
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity
 [logging]: https://github.com/Azure/azure-sdk-for-java/wiki/Logging-in-Azure-SDK
 
