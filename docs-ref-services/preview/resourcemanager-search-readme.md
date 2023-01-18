@@ -1,6 +1,6 @@
 ---
-title: Azure Resource Manager dns client library for Java
-keywords: Azure, java, SDK, API, azure-resourcemanager-dns, resourcemanager
+title: Azure Resource Manager Cognitive Search client library for Java
+keywords: Azure, java, SDK, API, azure-resourcemanager-search, resourcemanager
 author: weidongxu-microsoft
 ms.author: weidxu
 ms.date: 01/18/2023
@@ -8,10 +8,10 @@ ms.topic: reference
 ms.devlang: java
 ms.service: resourcemanager
 ---
-# Azure Resource Manager dns client library for Java - version 2.23.0-alpha.20230117.1 
+# Azure Resource Manager Cognitive Search client library for Java - version 2.23.0-alpha.20230117.1 
 
 
-Azure Resource Manager dns client library for Java
+Azure Resource Manager Cognitive Search client library for Java
 
 For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
 
@@ -24,11 +24,11 @@ For documentation on how to use this package, please see [Azure Management Libra
 
 ### Adding the package to your product
 
-[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-dns;current})
+[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-search;current})
 ```xml
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
-    <artifactId>azure-resourcemanager-dns</artifactId>
+    <artifactId>azure-resourcemanager-search</artifactId>
     <version>2.22.0</version>
 </dependency>
 ```
@@ -57,7 +57,7 @@ AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
 TokenCredential credential = new DefaultAzureCredentialBuilder()
     .authorityHost(profile.getEnvironment().getActiveDirectoryEndpoint())
     .build();
-DnsZoneManager manager = DnsZoneManager
+SearchServiceManager manager = SearchServiceManager
     .authenticate(credential, profile);
 ```
 
