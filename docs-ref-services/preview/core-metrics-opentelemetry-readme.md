@@ -3,12 +3,12 @@ title: Azure OpenTelemetry Metrics plugin library for Java
 keywords: Azure, java, SDK, API, azure-core-metrics-opentelemetry, core
 author: alzimmermsft
 ms.author: alzimmer
-ms.date: 01/06/2023
+ms.date: 02/01/2023
 ms.topic: reference
 ms.devlang: java
 ms.service: core
 ---
-# Azure OpenTelemetry Metrics plugin library for Java - version 1.0.0-beta.4 
+# Azure OpenTelemetry Metrics plugin library for Java - version 1.0.0-alpha.20230201.1 
 
 
 This package enables  metrics from Azure SDK Java libraries through [OpenTelemetry][OpenTelemetry]. OpenTelemetry is an open source, vendor-agnostic, single distribution of libraries to provide metrics collection and distributed tracing for services.
@@ -46,7 +46,7 @@ The following sections provide several code snippets covering some of the most c
 - [Default configuration: Opentelemtery SDK](#default-configuration-agent)
 - [Custom configuration](#custom-configuration)
 
-You can find more samples [here](https://github.com/Azure/azure-sdk-for-java/blob/azure-core-metrics-opentelemetry_1.0.0-beta.4/sdk/core/azure-core-metrics-opentelemetry/src/samples/).
+You can find more samples [here](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core-metrics-opentelemetry/src/samples/).
 
 ### Default configuration: agent
 
@@ -71,7 +71,7 @@ package to configure OpenTelemetry using environment variables (or system proper
 // AutoConfiguredOpenTelemetrySdk.initialize();
 
 // configure Azure Client, no metric configuration needed
-// client will use global OTel configured by OpenTelemetry autoconfigure package.
+// client will use global OpenTelemetry configured by OpenTelemetry autoconfigure package.
 AzureClient sampleClient = new AzureClientBuilder()
     .endpoint("https://my-client.azure.com")
     .build();
@@ -92,7 +92,7 @@ SdkMeterProvider meterProvider = SdkMeterProvider.builder()
     .registerMetricReader(PeriodicMetricReader.builder(OtlpGrpcMetricExporter.builder().build()).build())
     .build();
 
-// Pass OTel meterProvider to MetricsOptions.
+// Pass OpenTelemetry meterProvider to MetricsOptions.
 MetricsOptions customMetricsOptions = new OpenTelemetryMetricsOptions()
     .setProvider(meterProvider);
 
@@ -134,10 +134,10 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 
 <!-- Links -->
 [api_documentation]: https://aka.ms/java-docs
-[context]: https://github.com/Azure/azure-sdk-for-java/blob/azure-core-metrics-opentelemetry_1.0.0-beta.4/sdk/core/azure-core/src/main/java/com/azure/core/util/Context.java
+[context]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core/src/main/java/com/azure/core/util/Context.java
 [jdk_link]: /java/azure/jdk/?view=azure-java-stable
 [logging]: https://github.com/Azure/azure-sdk-for-java/wiki/Logging-with-Azure-SDK
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-core-metrics-opentelemetry_1.0.0-beta.4/sdk/core/azure-core-metrics-opentelemetry/src/
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core-metrics-opentelemetry/src/
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fcore%2Fazure-core-metrics-opentelemetry%2FREADME.png)
 
