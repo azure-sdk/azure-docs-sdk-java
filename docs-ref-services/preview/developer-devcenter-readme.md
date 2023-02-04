@@ -3,12 +3,12 @@ title: Azure DevCenter client library for Java
 keywords: Azure, java, SDK, API, azure-developer-devcenter, devcenter
 author: sebrenna
 ms.author: sebrenna
-ms.date: 11/10/2022
+ms.date: 02/04/2023
 ms.topic: reference
 ms.devlang: java
 ms.service: devcenter
 ---
-# Azure DevCenter client library for Java - version 1.0.0-beta.1 
+# Azure DevCenter client library for Java - version 1.0.0-alpha.20230203.2 
 
 
 This package contains Microsoft Azure DevCenter client library.
@@ -36,7 +36,7 @@ Various documentation is available to help you get started
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-developer-devcenter</artifactId>
-    <version>1.0.0-beta.1</version>
+    <version>1.0.0-beta.2</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -50,21 +50,18 @@ Various documentation is available to help you get started
 ## Examples
 ### Dev Box Scenarios
 ```java com.azure.developer.devcenter.readme.devboxes
-String tenantId = Configuration.getGlobalConfiguration().get("AZURE_TENANT_ID");
-String devCenterName = Configuration.getGlobalConfiguration().get("DEVCENTER_NAME");
+String endpoint = Configuration.getGlobalConfiguration().get("DEVCENTER_ENDPOINT");
 
 // Build our clients
 DevCenterClient devCenterClient =
                 new DevCenterClientBuilder()
-                        .devCenter(devCenterName)
-                        .tenantId(tenantId)
+                        .endpoint(endpoint)
                         .credential(new DefaultAzureCredentialBuilder().build())
                         .buildClient();
 
 DevBoxesClient devBoxClient =
                 new DevBoxesClientBuilder()
-                        .devCenter(devCenterName)
-                        .tenantId(tenantId)
+                        .endpoint(endpoint)
                         .credential(new DefaultAzureCredentialBuilder().build())
                         .buildClient();
 
@@ -100,8 +97,7 @@ devBoxDeleteResponse.waitForCompletion();
 ```java com.azure.developer.devcenter.readme.environments
 EnvironmentsClient environmentsClient =
                 new EnvironmentsClientBuilder()
-                        .devCenter(devCenterName)
-                        .tenantId(tenantId)
+                        .endpoint(endpoint)
                         .credential(new DefaultAzureCredentialBuilder().build())
                         .buildClient();
 
@@ -122,14 +118,6 @@ SyncPoller<BinaryData, BinaryData> environmentCreateResponse =
         environmentsClient.beginCreateOrUpdateEnvironment("myProject", "me", "TestEnvironment", environmentBody, null);
 environmentCreateResponse.waitForCompletion();
 
-
-// Fetch the deployment artifacts:
-PagedIterable<BinaryData> artifactListResponse = environmentsClient.listArtifactsByEnvironment("myProject", "me", "TestEnvironment", null);
-for (BinaryData p: artifactListResponse) {
-    System.out.println(p);
-}
-
-
 // Delete the environment when we're finished:
 SyncPoller<BinaryData, Void> environmentDeleteResponse =
                 environmentsClient.beginDeleteEnvironment("myProject", "me", "TestEnvironment", null);
@@ -142,7 +130,7 @@ environmentDeleteResponse.waitForCompletion();
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-developer-devcenter_1.0.0-beta.1/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -156,5 +144,5 @@ For details on contributing to this repository, see the [contributing guide](htt
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: /java/azure/jdk/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-developer-devcenter_1.0.0-beta.1/sdk/identity/azure-identity
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity
 
