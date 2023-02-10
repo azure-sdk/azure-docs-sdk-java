@@ -8,7 +8,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: synapse
 ---
-# Azure Synapse Access Control client library for Java - version 1.0.0-alpha.20230209.1 
+# Azure Synapse Access Control client library for Java - version 1.0.0-alpha.20230210.3 
 
 Azure Synapse is a limitless analytics service that brings together enterprise data warehousing and Big Data analytics. It gives you the freedom to query data on your terms, using either serverless on-demand or provisioned resources—at scale. Azure Synapse brings these two worlds together with a unified experience to ingest, prepare, manage, and serve data for immediate BI and machine learning needs.
 
