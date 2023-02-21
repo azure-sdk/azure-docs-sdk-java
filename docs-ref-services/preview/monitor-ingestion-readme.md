@@ -3,15 +3,16 @@ title: Azure Monitor Ingestion client library for Java
 keywords: Azure, java, SDK, API, azure-monitor-ingestion, monitor
 author: joshfree
 ms.author: jfree
-ms.date: 08/18/2022
+ms.date: 02/21/2023
 ms.topic: reference
 ms.devlang: java
 ms.service: monitor
 ---
-# Azure Monitor Ingestion client library for Java - version 1.0.0-beta.2 
+# Azure Monitor Ingestion client library for Java - version 1.1.0-alpha.20230220.1 
 
 
-The Azure Monitor Ingestion client library is used to send custom logs to [Azure Monitor][azure_monitor_overview].
+The Azure Monitor Ingestion client library is used to send custom logs to [Azure Monitor][azure_monitor_overview] using 
+the [Logs Ingestion API][ingestion_overview].
 
 This library allows you to send data from virtually any source to supported built-in tables or to custom tables 
 that you create in Log Analytics workspace. You can even extend the schema of built-in tables with custom columns.
@@ -32,7 +33,7 @@ that you create in Log Analytics workspace. You can even extend the schema of bu
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-monitor-ingestion</artifactId>
-    <version>1.0.0-beta.2</version>
+    <version>1.0.0</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -50,7 +51,7 @@ To use the [DefaultAzureCredential][DefaultAzureCredential] provider shown below
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-identity</artifactId>
-    <version>1.5.4</version>
+    <version>1.8.0</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -96,7 +97,8 @@ The DCR must understand the structure of the input data and the structure of the
 it can use a transformation to convert the source data to match the target table. You may also use the transform to
 filter source data and perform any other calculations or conversions.
 
-For more details, refer to [Data collection rules in Azure Monitor](/azure/azure-monitor/essentials/data-collection-rule-overview).
+For more details, see [Data collection rules in Azure Monitor][data_collection_rule]. For information on how to retrieve 
+a DCR ID, see [this tutorial][data_collection_rule_tutorial].
 
 ### Log Analytics Workspace Tables
 
@@ -108,10 +110,16 @@ workspace. The target table must exist before you can send data to it. The follo
 - [Syslog](/azure/azure-monitor/reference/tables/syslog)
 - [WindowsEvents](/azure/azure-monitor/reference/tables/windowsevent)
 
+### Logs retrieval
+The logs that were uploaded using this library can be queried using the 
+[Azure Monitor Query](https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/monitor/azure-monitor-query#readme) 
+client library.
+
 ## Examples
 
 - [Upload custom logs](#upload-custom-logs)
 - [Upload custom logs with max concurrency](#upload-custom-logs-with-max-concurrency)
+- [Upload custom logs with error handling](#upload-custom-logs-with-error-handling)
 
 ### Upload custom logs
 
@@ -124,8 +132,8 @@ LogsIngestionClient client = new LogsIngestionClientBuilder()
         .buildClient();
 
 List<Object> logs = getLogs();
-UploadLogsResult result = client.upload("<data-collection-rule-id>", "<stream-name>", logs);
-System.out.println("Logs upload result status " + result.getStatus());
+client.upload("<data-collection-rule-id>", "<stream-name>", logs);
+System.out.println("Logs uploaded successfully");
 ```
 
 ### Upload custom logs with max concurrency
@@ -143,13 +151,41 @@ LogsIngestionClient client = new LogsIngestionClientBuilder()
         .buildClient();
 
 List<Object> logs = getLogs();
-UploadLogsOptions uploadLogsOptions = new UploadLogsOptions()
+LogsUploadOptions logsUploadOptions = new LogsUploadOptions()
         .setMaxConcurrency(3);
-UploadLogsResult result = client.upload("<data-collection-rule-id>", "<stream-name>", logs, uploadLogsOptions,
+client.upload("<data-collection-rule-id>", "<stream-name>", logs, logsUploadOptions,
         Context.NONE);
-System.out.println("Logs upload result status " + result.getStatus());
+System.out.println("Logs uploaded successfully");
 ```
 
+### Upload custom logs with error handling
+
+When uploading large collection of logs, the client splits the input into multiple smaller service requests. The upload 
+method provides an option to handle individual service errors through an error handler as shown in the example below. 
+This error handler include the exception details and the list of all logs that failed to upload. If an error handler is 
+not provided, the upload method will throw an aggregate exception that includes all the service errors.
+
+```java readme-sample-uploadLogs-error-handler
+DefaultAzureCredential tokenCredential = new DefaultAzureCredentialBuilder().build();
+
+LogsIngestionClient client = new LogsIngestionClientBuilder()
+        .endpoint("<data-collection-endpoint")
+        .credential(tokenCredential)
+        .buildClient();
+
+List<Object> logs = getLogs();
+
+LogsUploadOptions logsUploadOptions = new LogsUploadOptions()
+        .setLogsUploadErrorConsumer(uploadLogsError -> {
+            System.out.println("Error message " + uploadLogsError.getResponseException().getMessage());
+            System.out.println("Total logs failed to upload = " + uploadLogsError.getFailedLogs().size());
+
+            // throw the exception here to abort uploading remaining logs
+            // throw uploadLogsError.getResponseException();
+        });
+client.upload("<data-collection-rule-id>", "<stream-name>", logs, logsUploadOptions,
+        Context.NONE);
+```
 ## Troubleshooting
 
 ### Enabling Logging
@@ -176,7 +212,7 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 <!-- LINKS -->
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/tree/azure-monitor-ingestion_1.0.0-beta.2/sdk/identity/azure-identity
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/identity/azure-identity
 [azure_monitor_overview]: /azure/azure-monitor/overview
 [azure_subscription]: https://azure.microsoft.com/free
 [cla]: https://cla.microsoft.com
@@ -185,11 +221,12 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 [coc_contact]: mailto:opencode@microsoft.com
 [data_collection_endpoint]: //azure/azure-monitor/essentials/data-collection-endpoint-overview
 [data_collection_rule]: /azure/azure-monitor/essentials/data-collection-rule-overview
-[DefaultAzureCredential]: https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-ingestion_1.0.0-beta.2/sdk/identity/azure-identity/README.md#defaultazurecredential
+[data_collection_rule_tutorial]: https://learn.microsoft.com/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#collect-information-from-the-dcr
+[DefaultAzureCredential]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity/README.md#defaultazurecredential
+[ingestion_overview]: https://learn.microsoft.com/azure/azure-monitor/logs/logs-ingestion-api-overview
 [jdk_link]: /java/azure/jdk/?view=azure-java-stable
 [log_analytics_workspace]: //azure/azure-monitor/logs/log-analytics-workspace-overview
 [logging]: //azure/developer/java/sdk/logging-overview
-[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-ingestion_1.0.0-beta.2/sdk/monitor/azure-monitor-ingestion/src/samples/java/com/azure/monitor/ingestion
-
+[samples]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/monitor/azure-monitor-ingestion/src/samples/java/com/azure/monitor/ingestion
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fmonitor%2Fazure-monitor-ingestion%2FREADME.png)
 
