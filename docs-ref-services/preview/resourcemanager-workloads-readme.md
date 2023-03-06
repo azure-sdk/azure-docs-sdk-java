@@ -8,7 +8,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: workloads
 ---
-# Azure Resource Manager Workloads client library for Java - version 1.0.0-alpha.20230305.4 
+# Azure Resource Manager Workloads client library for Java - version 1.0.0-alpha.20230306.1 
 
 
 Azure Resource Manager Workloads client library for Java.
