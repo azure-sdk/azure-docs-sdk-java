@@ -3,12 +3,12 @@ title: Azure Storage Blob client library for Java
 keywords: Azure, java, SDK, API, azure-storage-blob, storage
 author: ibrahimrabab
 ms.author: ibrahimr
-ms.date: 02/22/2023
+ms.date: 03/15/2023
 ms.topic: reference
 ms.devlang: java
 ms.service: storage
 ---
-# Azure Storage Blob client library for Java - version 12.21.0 
+# Azure Storage Blob client library for Java - version 11.0.2 
 
 
 Azure Blob Storage is Microsoft's object storage solution for the cloud. Blob
@@ -31,7 +31,7 @@ definition, such as text or binary data.
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on GA version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.21.0/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -191,12 +191,18 @@ The following sections provide several code snippets covering some of the most c
 - [Upload data to a blob](#upload-data-to-a-blob)
 - [Upload a blob from a stream](#upload-a-blob-from-a-stream)
 - [Upload a blob from local path](#upload-a-blob-from-local-path)
+- [Upload a blob if one does not already exist](#upload-a-blob-if-one-does-not-already-exist)
+- [Upload a blob and overwrite if one already exists](#upload-a-blob-and-overwrite-if-one-already-exists)
+- [Upload a blob via an `OutputStream`](#upload-a-blob-via-an-outputstream)
 - [Download data from a blob](#download-data-from-a-blob)
 - [Download a blob to a stream](#download-a-blob-to-a-stream)
 - [Download a blob to local path](#download-a-blob-to-local-path)
+- [Read a blob via an `InputStream`](#read-a-blob-via-an-inputstream)
 - [Enumerate blobs](#enumerate-blobs)
 - [Copy a blob](#copy-a-blob)
+- [Generate a SAS token](#generate-a-sas-token)
 - [Authenticate with Azure Identity](#authenticate-with-azure-identity)
+- [Set a proxy when building a client](#set-a-proxy-when-building-a-client)
 
 ### Create a `BlobServiceClient`
 
@@ -608,8 +614,8 @@ When you submit a pull request, a CLA-bot will automatically determine whether y
 This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For more information see the [Code of Conduct FAQ][coc_faq] or contact [opencode@microsoft.com][coc_contact] with any additional questions or comments.
 
 <!-- LINKS -->
-[source]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.21.0/sdk/storage/azure-storage-blob/src
-[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.21.0/sdk/storage/azure-storage-blob/src/samples/README.md
+[source]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/storage/azure-storage-blob/src
+[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/storage/azure-storage-blob/src/samples/README.md
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [rest_docs]: /rest/api/storageservices/blob-service-rest-api
 [product_docs]: /azure/storage/blobs/storage-blobs-overview
@@ -619,9 +625,9 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [storage_account]: /azure/storage/common/storage-quickstart-create-account?tabs=azure-portal
 [storage_account_create_cli]: /azure/storage/common/storage-quickstart-create-account?tabs=azure-cli
 [storage_account_create_portal]: /azure/storage/common/storage-quickstart-create-account?tabs=azure-portal
-[identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.21.0/sdk/identity/azure-identity/README.md
+[identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity/README.md
 [error_codes]: /rest/api/storageservices/blob-service-error-codes
-[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.21.0/sdk/storage/azure-storage-blob/src/samples
+[samples]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/storage/azure-storage-blob/src/samples
 [cla]: https://cla.microsoft.com
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
