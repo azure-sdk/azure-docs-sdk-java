@@ -8,7 +8,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: mysqlflexibleserver
 ---
-# Azure Resource Manager MySql client library for Java - version 1.0.0-alpha.20230406.1 
+# Azure Resource Manager MySql client library for Java - version 1.0.0-alpha.20230407.1 
 
 
 Azure Resource Manager MySql client library for Java.
