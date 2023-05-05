@@ -8,7 +8,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: openai
 ---
-# Azure OpenAI client library for Java - version 1.0.0-alpha.20230505.2 
+# Azure OpenAI client library for Java - version 1.0.0-alpha.20230505.3 
 
 
 Azure OpenAI is a managed service that allows developers to deploy, tune, and generate content from OpenAI models on 
