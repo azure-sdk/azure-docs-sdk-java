@@ -3,12 +3,12 @@ title: Azure Core JDK HTTP plugin library for Java
 keywords: Azure, java, SDK, API, azure-core-http-jdk-httpclient, core
 author: alzimmermsft
 ms.author: alzimmer
-ms.date: 04/21/2023
+ms.date: 05/05/2023
 ms.topic: reference
 ms.devlang: java
 ms.service: core
 ---
-# Azure Core JDK HTTP plugin library for Java - version 1.0.0-beta.1 
+# Azure Core JDK HTTP plugin library for Java - version 1.0.0-alpha.20230505.1 
 
 
 This is an azure-core HTTP client that makes use of the asynchronous HttpClient that was made generally available as 
@@ -27,7 +27,7 @@ part of JDK 11.
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-core-http-jdk-httpclient</artifactId>
-    <version>1.0.0-beta.1</version>
+    <version>1.0.0-beta.2</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -82,7 +82,7 @@ locate the root issue. View the [logging][logging] wiki for guidance about enabl
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-core-http-jdk-httpclient_1.0.0-beta.1/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
