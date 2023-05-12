@@ -8,7 +8,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: spring
 ---
-# Azure Spring Data Cosmos client library for Java - version 3.35.0-alpha.20230511.1 
+# Azure Spring Data Cosmos client library for Java - version 3.35.0-alpha.20230512.1 
 
 
 **Azure Spring Data Cosmos** provides Spring Data support for Azure Cosmos DB using the [SQL API][sql_api_query], based on Spring Data framework.
