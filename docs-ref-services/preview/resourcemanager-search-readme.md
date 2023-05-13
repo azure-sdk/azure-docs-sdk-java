@@ -1,17 +1,17 @@
 ---
-title: Azure Resource Manager App Service client library for Java
-keywords: Azure, java, SDK, API, azure-resourcemanager-appservice, app-service
+title: Azure Resource Manager Cognitive Search client library for Java
+keywords: Azure, java, SDK, API, azure-resourcemanager-search, cognitive-search
 author: weidongxu-microsoft
 ms.author: weidxu
 ms.date: 05/13/2023
 ms.topic: reference
 ms.devlang: java
-ms.service: app-service
+ms.service: cognitive-search
 ---
-# Azure Resource Manager App Service client library for Java - version 2.27.0-alpha.20230512.1 
+# Azure Resource Manager Cognitive Search client library for Java - version 2.27.0-alpha.20230512.1 
 
 
-Azure Resource Manager App Service client library for Java
+Azure Resource Manager Cognitive Search client library for Java
 
 For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
 
@@ -24,12 +24,12 @@ For documentation on how to use this package, please see [Azure Management Libra
 
 ### Adding the package to your product
 
-[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-appservice;current})
+[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-search;current})
 ```xml
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
-    <artifactId>azure-resourcemanager-appservice</artifactId>
-    <version>2.26.1</version>
+    <artifactId>azure-resourcemanager-search</artifactId>
+    <version>2.26.0</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -57,7 +57,7 @@ AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
 TokenCredential credential = new DefaultAzureCredentialBuilder()
     .authorityHost(profile.getEnvironment().getActiveDirectoryEndpoint())
     .build();
-AppServiceManager manager = AppServiceManager
+SearchServiceManager manager = SearchServiceManager
     .authenticate(credential, profile);
 ```
 
