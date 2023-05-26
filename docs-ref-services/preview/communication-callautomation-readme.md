@@ -8,7 +8,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: communication
 ---
-# Azure Communication Call Automation Service client library for Java - version 1.0.0-alpha.20230525.2 
+# Azure Communication Call Automation Service client library for Java - version 1.0.0-alpha.20230526.3 
 
 
 This package contains a Java SDK for Azure Communication Call Automation Service.
@@ -32,7 +32,7 @@ This package contains a Java SDK for Azure Communication Call Automation Service
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-communication-callautomation</artifactId>
-    <version>1.0.0-beta.2</version>
+    <version>1.0.0</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -48,7 +48,7 @@ This is the restart of Call Automation Service. It is renamed to Call Automation
 
 `CallRecording` provides the functionality of recording the call.
 
-`EventHandler` provides the functionality to handle events from the ACS resource.
+`CallAutomationEventParser` provides the functionality to handle events from the ACS resource.
 
 ## Examples
 
