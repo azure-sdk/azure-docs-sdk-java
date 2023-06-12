@@ -3,12 +3,12 @@ title: Azure Purview Sharing client library for Java
 keywords: Azure, java, SDK, API, azure-analytics-purview-sharing, purview
 author: joshfree
 ms.author: jfree
-ms.date: 03/09/2023
+ms.date: 06/12/2023
 ms.topic: reference
 ms.devlang: java
 ms.service: purview
 ---
-# Azure Purview Sharing client library for Java - version 1.0.0-beta.1 
+# Azure Purview Sharing client library for Java - version 1.0.0-alpha.20230612.1 
 
 
 **Please rely heavily on the [service's documentation][product_documentation] to use this library**
@@ -338,7 +338,7 @@ locate the root issue. View the [logging][logging] wiki for guidance about enabl
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-analytics-purview-sharing_1.0.0-beta.1/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -347,15 +347,15 @@ For details on contributing to this repository, see the [contributing guide](htt
 1. Create new Pull Request
 
 <!-- LINKS -->
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-analytics-purview-sharing_1.0.0-beta.1/sdk/purview/azure-analytics-purview-sharing/src
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/purview/azure-analytics-purview-sharing/src
 [package]: https://mvnrepository.com/artifact/com.azure/azure-analytics-purview-sharing
 [share_product_documentation]: /azure/purview/concept-data-share
-[samples_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-analytics-purview-sharing_1.0.0-beta.1/sdk/purview/azure-analytics-purview-sharing/src/samples/
+[samples_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/purview/azure-analytics-purview-sharing/src/samples/
 [product_documentation]: https://azure.microsoft.com/services/
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: /java/azure/jdk/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-analytics-purview-sharing_1.0.0-beta.1/sdk/identity/azure-identity
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity
 [create_azure_purview_account]: /azure/purview/create-catalog-portal
 [logging]: https://github.com/Azure/azure-sdk-for-java/wiki/Logging-with-Azure-SDK
 
