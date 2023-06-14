@@ -3,12 +3,12 @@ title: Azure OpenAI client library for Java
 keywords: Azure, java, SDK, API, azure-ai-openai, openai
 author: joshfree
 ms.author: jfree
-ms.date: 05/22/2023
+ms.date: 06/14/2023
 ms.topic: reference
 ms.devlang: java
 ms.service: openai
 ---
-# Azure OpenAI client library for Java - version 1.0.0-beta.1 
+# Azure OpenAI client library for Java - version 1.0.0-alpha.20230614.1 
 
 
 Azure OpenAI is a managed service that allows developers to deploy, tune, and generate content from OpenAI models on 
@@ -50,7 +50,7 @@ If you want to see the full code for these snippets check out our [samples folde
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-ai-openai</artifactId>
-    <version>1.0.0-beta.1</version>
+    <version>1.0.0-beta.2</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -110,7 +110,7 @@ Authentication with AAD requires some initial setup:
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-identity</artifactId>
-    <version>1.9.0</version>
+    <version>1.9.1</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -228,7 +228,7 @@ IterableStream<ChatCompletions> chatCompletionsStream = client.getChatCompletion
 chatCompletionsStream.forEach(chatCompletions -> {
     System.out.printf("Model ID=%s is created at %d.%n", chatCompletions.getId(), chatCompletions.getCreated());
     for (ChatChoice choice : chatCompletions.getChoices()) {
-        ChatMessageDelta message = choice.getDelta();
+        ChatMessage message = choice.getDelta();
         if (message != null) {
             System.out.printf("Index: %d, Chat Role: %s.%n", choice.getIndex(), message.getRole());
             System.out.println("Message:");
@@ -284,7 +284,7 @@ reduce the dependency size, refer to the [performance tuning][performance_tuning
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.1/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -294,25 +294,25 @@ For details on contributing to this repository, see the [contributing guide](htt
 
 <!-- LINKS -->
 [aad_authorization]: /azure/cognitive-services/authentication#authenticate-with-azure-active-directory
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.1/sdk/identity/azure-identity
-[azure_identity_credential_type]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-openai_1.0.0-beta.1/sdk/identity/azure-identity#credentials
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity
+[azure_identity_credential_type]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/identity/azure-identity#credentials
 [azure_openai_access]: https://learn.microsoft.com/azure/cognitive-services/openai/overview#how-do-i-get-access-to-azure-openai
 [azure_subscription]: https://azure.microsoft.com/free/
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: /java/azure/jdk/
-[logLevels]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.1/sdk/core/azure-core/src/main/java/com/azure/core/util/logging/ClientLogger.java
+[logLevels]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core/src/main/java/com/azure/core/util/logging/ClientLogger.java
 [microsoft_docs_openai_completion]: https://learn.microsoft.com/azure/cognitive-services/openai/how-to/completions
 [microsoft_docs_openai_embedding]: https://learn.microsoft.com/azure/cognitive-services/openai/concepts/understand-embeddings
 [non_azure_openai_authentication]: https://platform.openai.com/docs/api-reference/authentication
 [performance_tuning]: https://github.com/Azure/azure-sdk-for-java/wiki/Performance-Tuning
 [product_documentation]: https://azure.microsoft.com/services/
 [quickstart]: https://learn.microsoft.com/azure/cognitive-services/openai/quickstart
-[source_code]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-openai_1.0.0-beta.1/sdk/openai/azure-ai-openai/src
-[samples_folder]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-openai_1.0.0-beta.1/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai
-[samples_readme]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-openai_1.0.0-beta.1/sdk/openai/azure-ai-openai/src/samples
-[openai_client_async]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.1/sdk/openai/azure-ai-openai/src/main/java/com/azure/ai/openai/OpenAIAsyncClient.java
-[openai_client_builder]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.1/sdk/openai/azure-ai-openai/src/main/java/com/azure/ai/openai/OpenAIClientBuilder.java
-[openai_client_sync]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.1/sdk/openai/azure-ai-openai/src/main/java/com/azure/ai/openai/OpenAIClient.java
+[source_code]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/openai/azure-ai-openai/src
+[samples_folder]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai
+[samples_readme]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/openai/azure-ai-openai/src/samples
+[openai_client_async]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/openai/azure-ai-openai/src/main/java/com/azure/ai/openai/OpenAIAsyncClient.java
+[openai_client_builder]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/openai/azure-ai-openai/src/main/java/com/azure/ai/openai/OpenAIClientBuilder.java
+[openai_client_sync]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/openai/azure-ai-openai/src/main/java/com/azure/ai/openai/OpenAIClient.java
 [wiki_identity]: https://github.com/Azure/azure-sdk-for-java/wiki/Identity-and-Authentication
 
 
