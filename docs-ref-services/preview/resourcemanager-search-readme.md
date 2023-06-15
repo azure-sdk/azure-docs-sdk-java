@@ -1,17 +1,17 @@
 ---
-title: Azure Resource Manager resources client library for Java
-keywords: Azure, java, SDK, API, azure-resourcemanager-resources, azure-resource-manager
+title: Azure Resource Manager Cognitive Search client library for Java
+keywords: Azure, java, SDK, API, azure-resourcemanager-search, cognitive-search
 author: weidongxu-microsoft
 ms.author: weidxu
 ms.date: 06/15/2023
 ms.topic: reference
 ms.devlang: java
-ms.service: azure-resource-manager
+ms.service: cognitive-search
 ---
-# Azure Resource Manager resources client library for Java - version 2.28.0-alpha.20230614.1 
+# Azure Resource Manager Cognitive Search client library for Java - version 2.28.0-alpha.20230614.1 
 
 
-Azure Resource Manager resources client library for Java
+Azure Resource Manager Cognitive Search client library for Java
 
 For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
 
@@ -24,11 +24,11 @@ For documentation on how to use this package, please see [Azure Management Libra
 
 ### Adding the package to your product
 
-[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-resources;current})
+[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-search;current})
 ```xml
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
-    <artifactId>azure-resourcemanager-resources</artifactId>
+    <artifactId>azure-resourcemanager-search</artifactId>
     <version>2.27.0</version>
 </dependency>
 ```
@@ -57,9 +57,8 @@ AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
 TokenCredential credential = new DefaultAzureCredentialBuilder()
     .authorityHost(profile.getEnvironment().getActiveDirectoryEndpoint())
     .build();
-ResourceManager manager = ResourceManager
-    .authenticate(credential, profile)
-    .withDefaultSubscription();
+SearchServiceManager manager = SearchServiceManager
+    .authenticate(credential, profile);
 ```
 
 The sample code assumes global Azure. Please change `AzureEnvironment.AZURE` variable if otherwise.
