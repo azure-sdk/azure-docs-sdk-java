@@ -3,12 +3,12 @@ title: Azure Load Testing client library for Java
 keywords: Azure, java, SDK, API, azure-developer-loadtesting, azure-load-testing
 author: Harshan01
 ms.author: harshanb
-ms.date: 01/23/2023
+ms.date: 06/15/2023
 ms.topic: reference
 ms.devlang: java
 ms.service: azure-load-testing
 ---
-# Azure Load Testing client library for Java - version 1.0.0-beta.2 
+# Azure Load Testing client library for Java - version 1.1.0-alpha.20230615.1 
 
 
 Azure Load Testing provides client library in Java to the user by which they can interact natively with Azure Load Testing service. Azure Load Testing is a fully managed load-testing service that enables you to generate high-scale load. The service simulates traffic for your applications, regardless of where they're hosted. Developers, testers, and quality assurance (QA) engineers can use it to optimize application performance, scalability, or capacity
@@ -38,7 +38,7 @@ Various documentation is available to help you get started
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-developer-loadtesting</artifactId>
-    <version>1.0.0-beta.2</version>
+    <version>1.0.2</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -62,11 +62,14 @@ With above configuration, `azure` client can be authenticated by following code:
 TokenCredential credential = new DefaultAzureCredentialBuilder()
     .build();
 // create client using DefaultAzureCredential
-LoadTestingClientBuilder builder = new LoadTestingClientBuilder()
-    .credential(credential)
-    .endpoint("<Enter Azure Load Testing Data-Plane URL>");
-LoadTestAdministrationClient adminClient = builder.buildLoadTestAdministrationClient();
-LoadTestRunClient testRunClient = builder.buildLoadTestRunClient();
+LoadTestAdministrationClient adminClient = new LoadTestAdministrationClientBuilder()
+        .credential(credential)
+        .endpoint("<Enter Azure Load Testing Data-Plane URL>")
+        .buildClient();
+LoadTestRunClient testRunClient = new LoadTestRunClientBuilder()
+        .credential(credential)
+        .endpoint("<Enter Azure Load Testing Data-Plane URL>")
+        .buildClient();
 
 RequestOptions reqOpts = new RequestOptions()
     .addQueryParam("orderBy", "lastModifiedDateTime")
@@ -141,10 +144,10 @@ In the above example, `eus` represents the Azure region `East US`.
 ### Creating a Load Test
 
 ```java java-readme-sample-createTest
-LoadTestAdministrationClient adminClient = new LoadTestingClientBuilder()
+LoadTestAdministrationClient adminClient = new LoadTestAdministrationClientBuilder()
         .credential(new DefaultAzureCredentialBuilder().build())
         .endpoint("<endpoint>")
-        .buildLoadTestAdministrationClient();
+        .buildClient();
 
 // construct Test object using nested String:Object Maps
 Map<String, Object> testMap = new HashMap<String, Object>();
@@ -194,10 +197,10 @@ System.out.println(testOutResponse.getValue().toString());
 ### Uploading .jmx file to a Load Test
 
 ```java java-readme-sample-uploadTestFile
-LoadTestAdministrationClient adminClient = new LoadTestingClientBuilder()
+LoadTestAdministrationClient adminClient = new LoadTestAdministrationClientBuilder()
     .credential(new DefaultAzureCredentialBuilder().build())
     .endpoint("<endpoint>")
-    .buildLoadTestAdministrationClient();
+    .buildClient();
 
 // extract file contents to BinaryData
 BinaryData fileData = BinaryData.fromFile(new File("path/to/file").toPath());
@@ -210,10 +213,10 @@ System.out.println(fileUrlOut.getValue().toString());
 ### Running a Load Test
 
 ```java java-readme-sample-runTest
-LoadTestRunClient testRunClient = new LoadTestingClientBuilder()
+LoadTestRunClient testRunClient = new LoadTestRunClientBuilder()
     .credential(new DefaultAzureCredentialBuilder().build())
     .endpoint("<endpoint>")
-    .buildLoadTestRunClient();
+    .buildClient();
 
 // construct Test Run object using nested String:Object Maps
 Map<String, Object> testRunMap = new HashMap<String, Object>();
@@ -266,7 +269,7 @@ String startDateTime = testRunJson.get("startDateTime").asText();
 String endDateTime = testRunJson.get("endDateTime").asText();
 
 // get list of all metric namespaces and pick the first one
-Response<BinaryData> metricNamespacesOut = testRunClient.listMetricNamespacesWithResponse("testrun12345", null);
+Response<BinaryData> metricNamespacesOut = testRunClient.getMetricNamespacesWithResponse("testrun12345", null);
 String metricNamespace = null;
 // parse JSON and read first value
 try {
@@ -278,7 +281,7 @@ try {
 }
 
 // get list of all metric definitions and pick the first one
-Response<BinaryData> metricDefinitionsOut = testRunClient.listMetricDefinitionsWithResponse("testrun12345", metricNamespace, null);
+Response<BinaryData> metricDefinitionsOut = testRunClient.getMetricDefinitionsWithResponse("testrun12345", metricNamespace, null);
 String metricName = null;
 // parse JSON and read first value
 try {
@@ -309,7 +312,7 @@ See [Azure Load Testing samples][sample_code].
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-developer-loadtesting_1.0.0-beta.2/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -318,12 +321,12 @@ For details on contributing to this repository, see the [contributing guide](htt
 1. Create new Pull Request
 
 <!-- LINKS -->
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-developer-loadtesting_1.0.0-beta.2/sdk/loadtesting/azure-developer-loadtesting/src
-[sample_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-developer-loadtesting_1.0.0-beta.2/sdk/loadtesting/azure-developer-loadtesting/src/samples
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/loadtesting/azure-developer-loadtesting/src
+[sample_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/loadtesting/azure-developer-loadtesting/src/samples
 [api_reference_doc]: /rest/api/loadtesting/
 [product_documentation]: https://azure.microsoft.com/services/load-testing/
 [jdk]: /java/azure/jdk/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-developer-loadtesting_1.0.0-beta.2/sdk/identity/azure-identity
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity
 [logging]: https://github.com/Azure/azure-sdk-for-java/wiki/Logging-in-Azure-SDK
 
