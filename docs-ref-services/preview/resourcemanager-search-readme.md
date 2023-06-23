@@ -1,17 +1,17 @@
 ---
-title: Azure Resource Manager redis cache client library for Java
-keywords: Azure, java, SDK, API, azure-resourcemanager-redis, redis-cache
+title: Azure Resource Manager Cognitive Search client library for Java
+keywords: Azure, java, SDK, API, azure-resourcemanager-search, cognitive-search
 author: weidongxu-microsoft
 ms.author: weidxu
 ms.date: 06/23/2023
 ms.topic: reference
 ms.devlang: java
-ms.service: redis-cache
+ms.service: cognitive-search
 ---
-# Azure Resource Manager redis cache client library for Java - version 2.28.0-alpha.20230622.1 
+# Azure Resource Manager Cognitive Search client library for Java - version 2.28.0-alpha.20230622.1 
 
 
-Azure Resource Manager redis cache client library for Java
+Azure Resource Manager Cognitive Search client library for Java
 
 For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
 
@@ -24,11 +24,11 @@ For documentation on how to use this package, please see [Azure Management Libra
 
 ### Adding the package to your product
 
-[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-redis;current})
+[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-search;current})
 ```xml
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
-    <artifactId>azure-resourcemanager-redis</artifactId>
+    <artifactId>azure-resourcemanager-search</artifactId>
     <version>2.27.0</version>
 </dependency>
 ```
@@ -57,7 +57,7 @@ AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
 TokenCredential credential = new DefaultAzureCredentialBuilder()
     .authorityHost(profile.getEnvironment().getActiveDirectoryEndpoint())
     .build();
-RedisManager manager = RedisManager
+SearchServiceManager manager = SearchServiceManager
     .authenticate(credential, profile);
 ```
 
