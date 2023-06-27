@@ -3,17 +3,17 @@ title: Azure Resource Manager PostgreSql client library for Java
 keywords: Azure, java, SDK, API, azure-resourcemanager-postgresqlflexibleserver, postgresqlflexibleserver
 author: joshfree
 ms.author: jfree
-ms.date: 05/20/2023
+ms.date: 06/27/2023
 ms.topic: reference
 ms.devlang: java
 ms.service: postgresqlflexibleserver
 ---
-# Azure Resource Manager PostgreSql client library for Java - version 1.0.0-beta.6 
+# Azure Resource Manager PostgreSql client library for Java - version 1.0.0-alpha.20230626.4 
 
 
 Azure Resource Manager PostgreSql client library for Java.
 
-This package contains Microsoft Azure SDK for PostgreSql Management SDK. The Microsoft Azure management API provides create, read, update, and delete functionality for Azure PostgreSQL resources including servers, databases, firewall rules, VNET rules, security alert policies, log files and configurations with new business model. Package tag package-flexibleserver-2022-12-01. For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
+This package contains Microsoft Azure SDK for PostgreSql Management SDK. The Microsoft Azure management API provides create, read, update, and delete functionality for Azure PostgreSQL resources including servers, databases, firewall rules, VNET rules, security alert policies, log files and configurations with new business model. Package tag package-flexibleserver-2023-03-01-preview. For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
 
 ## We'd love to hear your feedback
 
@@ -43,7 +43,7 @@ Various documentation is available to help you get started
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
     <artifactId>azure-resourcemanager-postgresqlflexibleserver</artifactId>
-    <version>1.0.0-beta.6</version>
+    <version>1.0.0-beta.7</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -85,7 +85,30 @@ See [API design][design] for general introduction on design and key concepts on 
 
 ## Examples
 
-[Code snippets and samples](https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-postgresqlflexibleserver_1.0.0-beta.6/sdk/postgresqlflexibleserver/azure-resourcemanager-postgresqlflexibleserver/SAMPLE.md)
+```java
+server = postgreSqlManager.servers()
+    .define(serverName)
+    .withRegion(REGION)
+    .withExistingResourceGroup(resourceGroupName)
+    .withAdministratorLogin(adminName)
+    .withAdministratorLoginPassword(adminPwd)
+    .withSku(new Sku().withName("Standard_D2ds_v4").withTier(SkuTier.GENERAL_PURPOSE))
+    .withAuthConfig(new AuthConfig()
+        .withActiveDirectoryAuth(ActiveDirectoryAuthEnum.DISABLED)
+        .withPasswordAuth(PasswordAuthEnum.ENABLED))
+    .withIdentity(new UserAssignedIdentity().withType(IdentityType.NONE))
+    .withDataEncryption(new DataEncryption().withType(ArmServerKeyType.SYSTEM_MANAGED))
+    .withVersion(ServerVersion.ONE_FOUR)
+    .withAvailabilityZone("2")
+    .withStorage(new Storage().withStorageSizeGB(128))
+    .withBackup(new Backup()
+        .withGeoRedundantBackup(GeoRedundantBackupEnum.DISABLED)
+        .withBackupRetentionDays(7))
+    .withHighAvailability(new HighAvailability().withMode(HighAvailabilityMode.DISABLED))
+    .withReplicationRole(ReplicationRole.PRIMARY)
+    .create();
+```
+[Code snippets and samples](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/postgresqlflexibleserver/azure-resourcemanager-postgresqlflexibleserver/SAMPLE.md)
 
 
 ## Troubleshooting
@@ -107,11 +130,11 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: /java/azure/jdk/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-postgresqlflexibleserver_1.0.0-beta.6/sdk/identity/azure-identity
-[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-postgresqlflexibleserver_1.0.0-beta.6/sdk/core/azure-core-http-netty
-[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-postgresqlflexibleserver_1.0.0-beta.6/sdk/resourcemanager/docs/AUTH.md
-[design]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-postgresqlflexibleserver_1.0.0-beta.6/sdk/resourcemanager/docs/DESIGN.md
-[cg]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-postgresqlflexibleserver_1.0.0-beta.6/CONTRIBUTING.md
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity
+[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core-http-netty
+[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/resourcemanager/docs/AUTH.md
+[design]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/resourcemanager/docs/DESIGN.md
+[cg]: https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
 
