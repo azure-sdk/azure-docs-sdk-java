@@ -3,7 +3,7 @@ title:
 keywords: Azure, java, SDK, API, azure-security-keyvault-administration, keyvault
 author: vcolin7
 ms.author: vicolina
-ms.date: 11/15/2022
+ms.date: 06/27/2023
 ms.topic: reference
 ms.devlang: java
 ms.service: keyvault
@@ -18,7 +18,7 @@ The Azure Key Vault Administration library clients support administrative tasks 
 ## Getting started
 ### Include the package
 #### Include the BOM file
-Please include the `azure-sdk-bom` to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number. To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-administration_4.3.0-beta.1/sdk/boms/azure-sdk-bom/README.md).
+Please include the `azure-sdk-bom` to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number. To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -53,7 +53,7 @@ If you want to take dependency on a particular version of the library that is no
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-security-keyvault-administration</artifactId>
-    <version>4.3.0-beta.1</version>
+    <version>4.3.3</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -90,10 +90,22 @@ KeyVaultBackupClient keyVaultBackupClient = new KeyVaultBackupClientBuilder()
     .buildClient();
 ```
 
-> NOTE: For using an asynchronous client use `KeyVaultBackupAsyncClient`  instead of `KeyVaultBackupClient` and call `buildAsyncClient()`
+> NOTE: For using an asynchronous client use `KeyVaultBackupAsyncClient`  instead of `KeyVaultBackupClient` and call `buildAsyncClient()`.
+
+#### Create a settings client
+Once you perform [the authentication set up that suits you best][default_azure_credential] and replaced **your-managed-hsm-url** with the URL for your key vault, you can create the `KeyVaultSettingsClient`:
+
+```java readme-sample-createBackupClient
+KeyVaultBackupClient keyVaultBackupClient = new KeyVaultBackupClientBuilder()
+    .vaultUrl("<your-managed-hsm-url>")
+    .credential(new DefaultAzureCredentialBuilder().build())
+    .buildClient();
+```
+
+> NOTE: For using an asynchronous client use `KeyVaultSettingsAsyncClient`  instead of `KeyVaultSettingsClient` and call `buildAsyncClient()`.
 
 ## Key concepts
-### Key Vault Access Control client:
+### Key Vault Access Control client
 The Key Vault Access Control client performs the interactions with the Azure Key Vault service for getting, setting, deleting, and listing role assignments, as well as listing role definitions. Asynchronous (`KeyVaultAccessControlAsyncClient`) and synchronous (`KeyVaultAccessControlClient`) clients exist in the SDK allowing for the selection of a client based on an application's use case. Once you've initialized a role assignment, you can interact with the primary resource types in Key Vault.
 
 ### Role Definition
@@ -114,6 +126,9 @@ A backup operation represents a long-running operation for a full key backup.
 
 ### Restore Operation
 A restore operation represents a long-running operation for both a full key and selective key restore.
+
+### Key Vault Settings client
+The Key Vault Access Control client allows manipulation of an Azure Key Vault account's settings, with operations such as: getting, updating, and listing. Asynchronous (`KeyVaultSettingsAsyncClient`) and synchronous (`KeyVaultSettingsClient`) clients exist in the SDK allowing for the selection of a client based on an application's use case.
 
 ## Access control operations
 ### Examples
@@ -478,8 +493,90 @@ keyVaultBackupAsyncClient.beginSelectiveKeyRestore(folderUrl, sasToken, keyName)
     .subscribe(unused -> System.out.printf("Key restored successfully.%n"));
 ```
 
+## Settings operations
+### Examples
+#### Sync API
+The following sections provide several code snippets covering some of the most common Azure Key Vault Settings client tasks, including:
+- [Listing settings](#get-all-settings)
+- [Retrieving a setting](#retrieve-a-specific-setting)
+- [Updating a setting](#update-a-specific-setting)
+
+##### Get all settings
+List all the settings for a Key Vault account.
+
+```java readme-sample-getSettings
+KeyVaultGetSettingsResult getSettingsResult = keyVaultSettingsClient.getSettings();
+
+for (KeyVaultSetting setting : getSettingsResult.getSettings()) {
+    System.out.printf("Retrieved setting '%s' with value '%s'.%n", setting.getName(), setting.asBoolean());
+}
+```
+
+##### Retrieve a specific setting
+Retrieve a specific setting.
+
+```java readme-sample-getSetting
+String settingName = "<setting-to-get>";
+KeyVaultSetting setting = keyVaultSettingsClient.getSetting(settingName);
+
+System.out.printf("Retrieved setting '%s' with value '%s'.%n", setting.getName(),
+    setting.asBoolean());
+```
+
+##### Update a specific setting
+Update a specific setting.
+```java readme-sample-updateSetting
+String settingName = "<setting-to-update>";
+KeyVaultSetting settingToUpdate = new KeyVaultSetting(settingName, true);
+KeyVaultSetting updatedSetting = keyVaultSettingsClient.updateSetting(settingToUpdate);
+
+System.out.printf("Updated setting '%s' to '%s'.%n", updatedSetting.getName(), updatedSetting.asBoolean());
+```
+
+#### Async API
+The following sections provide several code snippets covering some of the most common asynchronous Azure Key Vault Settings client tasks, including:
+- [Listing settings](#get-all-settings-asynchronously)
+- [Retrieving a setting](#retrieve-a-specific-setting-asynchronously)
+- [Updating a setting](#update-a-specific-setting-asynchronously)
+
+##### Get all settings asynchronously
+List all the settings for a Key Vault account.
+
+```java readme-sample-getSettingsAsync
+keyVaultSettingsAsyncClient.getSettings()
+    .subscribe(settingsResult ->
+        settingsResult.getSettings().forEach(setting ->
+            System.out.printf("Retrieved setting with name '%s' and value '%s'.%n", setting.getName(),
+                setting.asBoolean())));
+```
+
+##### Retrieve a specific setting asynchronously
+Retrieve a specific setting.
+
+```java readme-sample-getSettingAsync
+String settingName = "<setting-to-get>";
+
+keyVaultSettingsAsyncClient.getSetting(settingName)
+    .subscribe(setting ->
+        System.out.printf("Retrieved setting with name '%s' and value '%s'.%n", setting.getName(),
+            setting.asBoolean()));
+```
+
+##### Update a specific setting asynchronously
+Update a specific setting.
+
+```java readme-sample-updateSettingAsync
+String settingName = "<setting-to-update>";
+KeyVaultSetting settingToUpdate = new KeyVaultSetting(settingName, true);
+
+keyVaultSettingsAsyncClient.updateSetting(settingToUpdate)
+    .subscribe(updatedSetting ->
+        System.out.printf("Updated setting with name '%s' and value '%s'.%n", updatedSetting.getName(),
+            updatedSetting.asBoolean()));
+```
+
 ## Troubleshooting
-See our [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-administration_4.3.0-beta.1/sdk/keyvault/azure-security-keyvault-administration/TROUBLESHOOTING.md) for details on how to diagnose various failure scenarios.
+See our [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/keyvault/azure-security-keyvault-administration/TROUBLESHOOTING.md) for details on how to diagnose various failure scenarios.
 
 ### General
 Azure Key Vault Access Control clients raise exceptions. For example, if you try to retrieve a role assignment after it is deleted a `404` error is returned, indicating the resource was not found. In the following snippet, the error is handled gracefully by catching the exception and displaying additional information about the error.
@@ -512,7 +609,7 @@ When you submit a pull request, a CLA-bot will automatically determine whether y
 This project has adopted the [Microsoft Open Source Code of Conduct][microsoft_code_of_conduct]. For more information see the Code of Conduct FAQ or contact <opencode@microsoft.com> with any additional questions or comments.
 
 <!-- LINKS -->
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-administration_4.3.0-beta.1/sdk/keyvault/azure-security-keyvault-administration/src
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/keyvault/azure-security-keyvault-administration/src
 [api_documentation]: https://azure.github.io/azure-sdk-for-java
 [azkeyvault_docs]: /azure/key-vault/
 [azure_identity]: /java/api/overview/azure/identity-readme?view=azure-java-stable
@@ -523,8 +620,8 @@ This project has adopted the [Microsoft Open Source Code of Conduct][microsoft_c
 [default_azure_credential]: /java/api/overview/azure/identity-readme?view=azure-java-stable#defaultazurecredential
 [managed_identity]: /azure/active-directory/managed-identities-azure-resources/overview
 [azkeyvault_rest]: /rest/api/keyvault/
-[administration_samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-administration_4.3.0-beta.1/sdk/keyvault/azure-security-keyvault-administration/src/samples/java/com/azure/security/keyvault/administration
-[storage_readme_sas_token]: https://github.com/Azure/azure-sdk-for-java/tree/azure-security-keyvault-administration_4.3.0-beta.1/sdk/storage/azure-storage-blob#get-credentials
+[administration_samples]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/keyvault/azure-security-keyvault-administration/src/samples/java/com/azure/security/keyvault/administration
+[storage_readme_sas_token]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/storage/azure-storage-blob#get-credentials
 [portal_sas_token]: /azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows#generate-a-shared-access-signature-in-storage-explorer
 [performance_tuning]: https://github.com/Azure/azure-sdk-for-java/wiki/Performance-Tuning
 [jdk_link]: /java/azure/jdk/?view=azure-java-stable
