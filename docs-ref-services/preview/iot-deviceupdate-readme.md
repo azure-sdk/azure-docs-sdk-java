@@ -3,17 +3,17 @@ title: Azure Device Update for IoT Hub client library for Java
 keywords: Azure, java, SDK, API, azure-iot-deviceupdate, deviceupdate
 author: dpokluda
 ms.author: dpokluda
-ms.date: 07/12/2022
+ms.date: 07/10/2023
 ms.topic: reference
 ms.devlang: java
 ms.service: deviceupdate
 ---
-# Azure Device Update for IoT Hub client library for Java - version 1.0.0-beta.3 
+# Azure Device Update for IoT Hub client library for Java - version 1.1.0-alpha.20230710.1 
 
 
-The library provides access to the Device Update for IoT Hub service that enables customers to publish updates for their IoT devices to the cloud, and then deploy these updates to their devices (approve updates to groups of devices managed and provisioned in IoT Hub). 
+The library provides access to the Device Update for IoT Hub service that enables customers to publish updates for their IoT devices to the cloud, and then deploy these updates to their devices (approve updates to groups of devices managed and provisioned in IoT Hub).
 
-  [Source code](https://github.com/Azure/azure-sdk-for-java/tree/azure-iot-deviceupdate_1.0.0-beta.3/sdk) | [Product documentation](/azure/iot-hub-device-update/understand-device-update)
+  [Source code](https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/deviceupdate/azure-iot-deviceupdate/src) | [Product documentation](/azure/iot-hub-device-update/understand-device-update)
 
 ## Getting started
 
@@ -35,7 +35,7 @@ For the best development experience, developers should use the official Microsof
 <dependency>
   <groupId>com.azure</groupId>
   <artifactId>azure-iot-deviceupdate</artifactId>
-  <version>1.0.0-beta.3</version>
+  <version>1.0.8</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -57,7 +57,7 @@ You can learn more about Device Update for IoT Hub by visiting [Device Update fo
 
 ## Examples
 
-You can familiarize yourself with different APIs using [Samples](https://github.com/Azure/azure-sdk-for-java/tree/azure-iot-deviceupdate_1.0.0-beta.3/sdk/deviceupdate/azure-iot-deviceupdate/src/samples).
+You can familiarize yourself with different APIs using [Samples](https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/deviceupdate/azure-iot-deviceupdate/src/samples).
 
 ## Troubleshooting
 
@@ -80,7 +80,7 @@ try {
 
 ## Next steps
 
-Get started with our [Device Update for IoT Hub samples](https://github.com/Azure/azure-sdk-for-java/tree/azure-iot-deviceupdate_1.0.0-beta.3/sdk/deviceupdate/azure-iot-deviceupdate/src/samples)
+Get started with our [Device Update for IoT Hub samples](https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/deviceupdate/azure-iot-deviceupdate/src/samples)
 
 ## Contributing
 
