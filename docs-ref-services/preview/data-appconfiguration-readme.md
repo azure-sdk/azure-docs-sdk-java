@@ -1,18 +1,14 @@
 ---
 title: Azure App Configuration client library for Java
-description: Learn how to centralize your application configurations simply and securely using Azure App Configuration.
 keywords: Azure, java, SDK, API, azure-data-appconfiguration, appconfiguration
-author: ramya-rao-a
+author: mssfang
 ms.author: shafang
-ms.date: 04/09/2021
+ms.date: 07/12/2023
 ms.topic: reference
-
-
 ms.devlang: java
-ms.service: azure-app-configuration
+ms.service: appconfiguration
 ---
-
-# Azure App Configuration client library for Java - version 1.2.0-beta.1 
+# Azure App Configuration client library for Java - version 1.5.0-alpha.20230712.1 
 
 Azure App Configuration is a managed service that helps developers centralize their application configurations simply and securely.
 
@@ -21,7 +17,7 @@ Modern programs, especially programs running in a cloud, generally have many com
 Use the client library for App Configuration to create and manage application configuration settings.
 
 [Source code][source_code] | [Package (Maven)][package] | [API reference documentation][api_documentation]
-| [Product documentation][azconfig_docs] | [Samples][samples]
+| [Product documentation][azconfig_docs] | [Samples][samples] | [Troubleshooting][troubleshooting]
 
 ## Getting started
 
@@ -32,13 +28,45 @@ Use the client library for App Configuration to create and manage application co
 - [App Configuration Store][app_config_store]
 
 ### Include the Package
+#### Include the BOM file
+
+Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/boms/azure-sdk-bom/README.md).
+
+```xml
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>com.azure</groupId>
+            <artifactId>azure-sdk-bom</artifactId>
+            <version>{bom_version_to_target}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+```
+and then include the direct dependency in the dependencies section without the version tag as shown below.
+
+```xml
+<dependencies>
+  <dependency>
+    <groupId>com.azure</groupId>
+    <artifactId>azure-data-appconfiguration</artifactId>
+  </dependency>
+</dependencies>
+```
+
+#### Include direct dependency
+If you want to take dependency on a particular version of the library that is not present in the BOM,
+add the direct dependency to your project as follows.
 
 [//]: # ({x-version-update-start;com.azure:azure-data-appconfiguration;current})
 ```xml
 <dependency>
   <groupId>com.azure</groupId>
   <artifactId>azure-data-appconfiguration</artifactId>
-  <version>1.1.10</version>
+  <version>1.4.6</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -81,8 +109,7 @@ Alternatively, get the connection string from the Azure Portal.
 
 Once you have the value of the connection string you can create the configuration client:
 
-<!-- embedme ./src/samples/java/com/azure/data/appconfiguration/ReadmeSamples.java#L46-L48 -->
-```java
+```java readme-sample-createClient
 ConfigurationClient configurationClient = new ConfigurationClientBuilder()
     .connectionString(connectionString)
     .buildClient();
@@ -90,8 +117,7 @@ ConfigurationClient configurationClient = new ConfigurationClientBuilder()
 
 or
 
-<!-- embedme ./src/samples/java/com/azure/data/appconfiguration/ReadmeSamples.java#L52-L54 -->
-```java
+```java readme-sample-createAsyncClient
 ConfigurationAsyncClient configurationClient = new ConfigurationClientBuilder()
     .connectionString(connectionString)
     .buildAsyncClient();
@@ -146,8 +172,7 @@ configuration client.
 Constructing the client also requires your configuration store's URL, which you can
 get from the Azure CLI or the Azure Portal. In the Azure Portal, the URL can be found listed as the service "Endpoint".
 
-<!-- embedme ./src/samples/java/com/azure/data/appconfiguration/ReadmeSamples.java#L58-L62 -->
-```java
+```java readme-sample-aadAuthentication
 DefaultAzureCredential credential = new DefaultAzureCredentialBuilder().build();
 ConfigurationClient configurationClient = new ConfigurationClientBuilder()
     .credential(credential)
@@ -163,14 +188,15 @@ A configuration setting is the fundamental resource within a configuration store
 
 The Label property of a configuration setting provides a way to separate configuration settings into different dimensions. These dimensions are user defined and can take any form. Some common examples of dimensions to use for a label include regions, semantic versions, or environments. Many applications have a required set of configuration keys that have varying values as the application exists across different dimensions. For example, MaxRequests may be 100 in "NorthAmerica", and 200 in "WestEurope". By creating a configuration setting named MaxRequests with a label of "NorthAmerica" and another, only with a different value, in the "WestEurope" label, a solution can be achieved that allows the application to seamlessly retrieve Configuration Settings as it runs in these two dimensions.
 
+Azure App Configuration allows users to create a point-in-time snapshot of their configuration store, providing them with the ability to treat settings as one consistent version. This feature enables applications to hold a consistent view of configuration, ensuring that there are no version mismatches to individual settings due to reading as updates were made. Snapshots are immutable, ensuring that configuration can confidently be rolled back to a last-known-good configuration in the event of a problem.
+
 ### Configuration Client
 
 The client performs the interactions with the App Configuration service, getting, setting, deleting, and selecting configuration settings. An asynchronous, `ConfigurationAsyncClient`, and synchronous, `ConfigurationClient`, client exists in the SDK allowing for selection of a client based on an application's use case.
 
 An application that needs to retrieve startup configurations is better suited using the synchronous client, for example setting up a SQL connection.
 
-<!-- embedme ./src/samples/java/com/azure/data/appconfiguration/ReadmeSamples.java#L66-L85 -->
-```java
+```java readme-sample-sqlExample
 ConfigurationClient configurationClient = new ConfigurationClientBuilder()
     .connectionString(connectionString)
     .buildClient();
@@ -195,8 +221,7 @@ try {
 
 An application that has a large set of configurations that it needs to periodically update is be better suited using the asynchronous client, for example all settings with a specific label are periodically updated.
 
-<!-- embedme ./src/samples/java/com/azure/data/appconfiguration/ReadmeSamples.java#L89-L94 -->
-```java
+```java readme-sample-listConfigurationsExample
 ConfigurationAsyncClient configurationClient = new ConfigurationClientBuilder()
     .connectionString(connectionString)
     .buildAsyncClient();
@@ -208,13 +233,30 @@ configurationClient.listConfigurationSettings(new SettingSelector().setLabelFilt
 ## Examples
 
 The following sections provide several code snippets covering some of the most common configuration service tasks, including:
+For "Feature Flag" and "Secret Reference" configuration settings, see [samples][samples_readme] for more detail.
+
+* [Create a Configuration Client](#create-a-client)
+* [Create a Configuration Setting](#create-a-configuration-setting)
+* [Retrieve a Configuration Setting](#retrieve-a-configuration-setting)
+* [Update an existing Configuration Setting](#update-an-existing-configuration-setting)
+* [Delete a Configuration Setting](#delete-a-configuration-setting)
+* [List Configuration Settings with multiple keys](#list-configuration-settings-with-multiple-keys)
+* [List revisions of multiple Configuration Settings](#list-revisions-of-multiple-configuration-settings)
+* [Set a Configuration Setting to read only](#set-a-configuration-setting-to-read-only)
+* [Clear read only from a Configuration Setting](#clear-read-only-from-a-configuration-setting)
+* [Create a client with Proxy Options](#create-a-client-with-proxy-options)
+* [Create a Snapshot](#create-a-snapshot)
+* [Retrieve a Snapshot](#retrieve-a-snapshot)
+* [Archive a Snapshot](#archive-a-snapshot)
+* [Recover a snapshot](#recover-a-snapshot)
+* [Retrieve all Snapshots](#retrieve-all-snapshots)
+* [Retrieve Configuration Settings in a Snapshot](#retrieve-configuration-settings-in-a-snapshot)
 
 ### Create a Configuration Client
 
 Create a configuration client by using `ConfigurationClientBuilder` by passing connection string.
 
-<!-- embedme ./src/samples/java/com/azure/data/appconfiguration/ReadmeSamples.java#L46-L48 -->
-```java
+```java readme-sample-createClient
 ConfigurationClient configurationClient = new ConfigurationClientBuilder()
     .connectionString(connectionString)
     .buildClient();
@@ -226,8 +268,7 @@ Create a configuration setting to be stored in the configuration store. There ar
 
 - `addConfigurationSetting` creates a setting only if the setting does not already exist in the store.
 
-<!-- embedme ./src/samples/java/com/azure/data/appconfiguration/ReadmeSamples.java#L98-L98 -->
-```java
+```java readme-sample-addConfigurationSetting
 ConfigurationSetting setting = configurationClient.addConfigurationSetting("new_key", "new_label", "new_value");
 ```
 
@@ -235,38 +276,73 @@ Or
 
 - `setConfigurationSetting` creates a setting if it doesn't exist or overrides an existing setting.
 
-<!-- embedme ./src/samples/java/com/azure/data/appconfiguration/ReadmeSamples.java#L102-L102 -->
-```java
+```java readme-sample-setConfigurationSetting
 ConfigurationSetting setting = configurationClient.setConfigurationSetting("some_key", "some_label", "some_value");
+```
+
+Create a Feature Flag configuration setting or Secrete Reference configuration setting to be stored in the
+configuration store. 
+
+```java readme-sample-addFeatureFlagConfigurationSetting
+String key = "some_key";
+String filterName = "{filter_name}"; // such as "Microsoft.Percentage"
+String filterParameterKey = "{filter_parameter_key}"; // "Value"
+Object filterParameterValue = 30; // Any value. Could be String, primitive value, or Json Object
+FeatureFlagFilter percentageFilter = new FeatureFlagFilter(filterName)
+                                         .addParameter(filterParameterKey, filterParameterValue);
+FeatureFlagConfigurationSetting featureFlagConfigurationSetting =
+    new FeatureFlagConfigurationSetting(key, true)
+        .setClientFilters(Arrays.asList(percentageFilter));
+
+FeatureFlagConfigurationSetting setting = (FeatureFlagConfigurationSetting)
+    configurationClient.addConfigurationSetting(featureFlagConfigurationSetting);
+```
+```java readme-sample-addSecretReferenceConfigurationSetting
+String key = "{some_key}";
+String keyVaultReference = "{key_vault_reference}";
+
+SecretReferenceConfigurationSetting referenceConfigurationSetting =
+    new SecretReferenceConfigurationSetting(key, keyVaultReference);
+
+SecretReferenceConfigurationSetting setting = (SecretReferenceConfigurationSetting)
+    configurationClient.addConfigurationSetting(referenceConfigurationSetting);
 ```
 
 ### Retrieve a Configuration Setting
 
 Retrieve a previously stored configuration setting by calling `getConfigurationSetting`.
 
-<!-- embedme ./src/samples/java/com/azure/data/appconfiguration/ReadmeSamples.java#L106-L107 -->
-```java
+```java readme-sample-getConfigurationSetting
 ConfigurationSetting setting = configurationClient.setConfigurationSetting("some_key", "some_label", "some_value");
 ConfigurationSetting retrievedSetting = configurationClient.getConfigurationSetting("some_key", "some_label");
 ```
 
 For conditional request, if you want to conditionally fetch a configuration setting, set `ifChanged` to true. 
-When `ifChanged` is true, the configuration setting is only retrieved if it is different than the given `setting`. 
+When `ifChanged` is true, the configuration setting is only retrieved if it is different from the given `setting`. 
 This is determined by comparing the ETag of the `setting` to the one in the service to see if they are the same or not.
 If the ETags are not the same, it means the configuration setting is different, and its value is retrieved.
 
-<!-- embedme ./src/samples/java/com/azure/data/appconfiguration/ReadmeSamples.java#L111-L112 -->
-```java
+```java readme-sample-getConfigurationSettingConditionally
 ConfigurationSetting setting = configurationClient.setConfigurationSetting("some_key", "some_label", "some_value");
 Response<ConfigurationSetting> settingResponse = configurationClient.getConfigurationSettingWithResponse(setting, null, true, Context.NONE);
+```
+
+Retrieve a Feature Flag configuration setting or Secrete Reference configuration setting in the configuration store.
+
+```java readme-sample-getFeatureFlagConfigurationSetting
+FeatureFlagConfigurationSetting setting = (FeatureFlagConfigurationSetting)
+    configurationClient.getConfigurationSetting(featureFlagConfigurationSetting);
+```
+```java readme-sample-getSecretReferenceConfigurationSetting
+SecretReferenceConfigurationSetting setting = (SecretReferenceConfigurationSetting)
+    configurationClient.getConfigurationSetting(referenceConfigurationSetting);
 ```
 
 ### Update an existing Configuration Setting
 
 Update an existing configuration setting by calling `setConfigurationSetting`.
 
-<!-- embedme ./src/samples/java/com/azure/data/appconfiguration/ReadmeSamples.java#L116-L117 -->
-```java
+```java readme-sample-updateConfigurationSetting
 ConfigurationSetting setting = configurationClient.setConfigurationSetting("some_key", "some_label", "some_value");
 ConfigurationSetting updatedSetting = configurationClient.setConfigurationSetting("some_key", "some_label", "new_value");
 ```
@@ -276,18 +352,27 @@ true. When `ifUnchanged` is true, the configuration setting is only updated if i
 This is determined by comparing the ETag of the `setting` to the one in the service to see if they are the same or not.
 If the ETag are the same, it means the configuration setting is same, and its value is updated.
 
-<!-- embedme ./src/samples/java/com/azure/data/appconfiguration/ReadmeSamples.java#L121-L122 -->
-```java
+```java readme-sample-updateConfigurationSettingConditionally
 ConfigurationSetting setting = configurationClient.setConfigurationSetting("some_key", "some_label", "some_value");
 Response<ConfigurationSetting> settingResponse = configurationClient.setConfigurationSettingWithResponse(setting, true, Context.NONE);
+```
+
+Update a Feature Flag configuration setting or Secrete Reference configuration setting in the configuration store.
+
+```java readme-sample-updateFeatureFlagConfigurationSetting
+FeatureFlagConfigurationSetting setting = (FeatureFlagConfigurationSetting)
+    configurationClient.setConfigurationSetting(featureFlagConfigurationSetting);
+```
+```java readme-sample-updateSecretReferenceConfigurationSetting
+SecretReferenceConfigurationSetting setting = (SecretReferenceConfigurationSetting)
+    configurationClient.setConfigurationSetting(referenceConfigurationSetting);
 ```
 
 ### Delete a Configuration Setting
 
 Delete an existing configuration setting by calling `deleteConfigurationSetting`.
 
-<!-- embedme ./src/samples/java/com/azure/data/appconfiguration/ReadmeSamples.java#L126-L127 -->
-```java
+```java readme-sample-deleteConfigurationSetting
 ConfigurationSetting setting = configurationClient.setConfigurationSetting("some_key", "some_label", "some_value");
 ConfigurationSetting deletedSetting = configurationClient.deleteConfigurationSetting("some_key", "some_label");
 ```
@@ -296,10 +381,20 @@ to true. When `ifUnchanged` parameter to true. When `ifUnchanged` is true, the c
 it is same as the given `setting`. This is determined by comparing the ETag of the `setting` to the one in the service 
 to see if they are the same or not. If the ETag are same, it means the configuration setting is same, and its value is deleted.
 
-<!-- embedme ./src/samples/java/com/azure/data/appconfiguration/ReadmeSamples.java#L131-L132 -->
-```java
+```java readme-sample-deleteConfigurationSettingConditionally
 ConfigurationSetting setting = configurationClient.setConfigurationSetting("some_key", "some_label", "some_value");
 Response<ConfigurationSetting> settingResponse = configurationClient.deleteConfigurationSettingWithResponse(setting, true, Context.NONE);
+```
+
+Delete a Feature Flag configuration setting or Secrete Reference configuration setting in the configuration store.
+
+```java readme-sample-deleteFeatureFlagConfigurationSetting
+FeatureFlagConfigurationSetting setting = (FeatureFlagConfigurationSetting)
+    configurationClient.deleteConfigurationSetting(featureFlagConfigurationSetting);
+```
+```java readme-sample-deleteSecretReferenceConfigurationSetting
+SecretReferenceConfigurationSetting setting = (SecretReferenceConfigurationSetting)
+    configurationClient.deleteConfigurationSetting(referenceConfigurationSetting);
 ```
 
 ### List Configuration Settings with multiple keys
@@ -307,8 +402,7 @@ Response<ConfigurationSetting> settingResponse = configurationClient.deleteConfi
 List multiple configuration settings by calling `listConfigurationSettings`.
 Pass a null `SettingSelector` into the method if you want to fetch all the configuration settings and their fields.
 
-<!-- embedme ./src/samples/java/com/azure/data/appconfiguration/ReadmeSamples.java#L136-L141 -->
-```java
+```java readme-sample-listConfigurationSetting
 String key = "some_key";
 String key2 = "new_key";
 configurationClient.setConfigurationSetting(key, "some_label", "some_value");
@@ -321,30 +415,28 @@ PagedIterable<ConfigurationSetting> settings = configurationClient.listConfigura
 
 List all revisions of a configuration setting by calling `listRevisions`.
 
-<!-- embedme ./src/samples/java/com/azure/data/appconfiguration/ReadmeSamples.java#L145-L149 -->
-```java
+```java readme-sample-listRevisions
 String key = "revisionKey";
 configurationClient.setConfigurationSetting(key, "some_label", "some_value");
 configurationClient.setConfigurationSetting(key, "new_label", "new_value");
 SettingSelector selector = new SettingSelector().setKeyFilter(key);
 PagedIterable<ConfigurationSetting> settings = configurationClient.listRevisions(selector);
-``` 
+```
 
 ### Set a Configuration Setting to read only
 
 Set a configuration setting to read-only status.
 
-<!-- embedme ./src/samples/java/com/azure/data/appconfiguration/ReadmeSamples.java#L153-L154 -->
-```java
+```java readme-sample-setReadOnly
 configurationClient.setConfigurationSetting("some_key", "some_label", "some_value");
 ConfigurationSetting setting = configurationClient.setReadOnly("some_key", "some_label", true);
 ```
+
 ### Clear read only from a Configuration Setting
 
 Clear read-only from a configuration setting.
 
-<!-- embedme ./src/samples/java/com/azure/data/appconfiguration/ReadmeSamples.java#L158-L158 -->
-```java
+```java readme-sample-clearReadOnly
 ConfigurationSetting setting = configurationClient.setReadOnly("some_key", "some_label", false);
 ```
 
@@ -352,8 +444,7 @@ ConfigurationSetting setting = configurationClient.setReadOnly("some_key", "some
 
 Create a configuration client with proxy options.
 
-<!-- embedme ./src/samples/java/com/azure/data/appconfiguration/ReadmeSamples.java#L175-L187 -->
-```java
+```java readme-sample-createClientWithProxyOption
 // Proxy options
 final String hostname = "{your-host-name}";
 final int port = 447; // your port number
@@ -369,6 +460,91 @@ ConfigurationAsyncClient configurationAsyncClient = new ConfigurationClientBuild
     .buildAsyncClient();
 ```
 
+### Create a Snapshot
+
+To create a snapshot, you need to instantiate the `ConfigurationSettingsSnapshot` class and specify filters to determine 
+which configuration settings should be included. The creation process is a Long-Running Operation (LRO) and can be 
+achieved by calling the `beginCreateSnapshot` method.
+
+```java readme-sample-createSnapshot
+String snapshotName = "{snapshotName}";
+// Prepare the snapshot filters
+List<SnapshotSettingFilter> filters = new ArrayList<>();
+// Key Name also supports RegExp but only support prefix end with "*", such as "k*" and is case-sensitive.
+filters.add(new SnapshotSettingFilter("Test*"));
+SyncPoller<CreateSnapshotOperationDetail, ConfigurationSettingSnapshot> poller =
+    configurationClient.beginCreateSnapshot(snapshotName, new ConfigurationSettingSnapshot(filters), Context.NONE);
+poller.setPollInterval(Duration.ofSeconds(10));
+poller.waitForCompletion();
+ConfigurationSettingSnapshot snapshot = poller.getFinalResult();
+System.out.printf("Snapshot name=%s is created at %s, snapshot status is %s.%n",
+    snapshot.getName(), snapshot.getCreatedAt(), snapshot.getStatus());
+```
+
+### Retrieve a Snapshot
+
+Once a configuration setting snapshot is created, you can retrieve it using the `getSnapshot` method.
+
+```java readme-sample-getSnapshot
+String snapshotName = "{snapshotName}";
+ConfigurationSettingSnapshot getSnapshot = configurationClient.getSnapshot(snapshotName);
+System.out.printf("Snapshot name=%s is created at %s, snapshot status is %s.%n",
+    getSnapshot.getName(), getSnapshot.getCreatedAt(), getSnapshot.getStatus());
+```
+
+### Archive a Snapshot
+
+To archive a snapshot, you can utilize the `archiveSnapshot` method. This operation updates the status of the snapshot 
+to `archived`.
+
+```java readme-sample-archiveSnapshot
+String snapshotName = "{snapshotName}";
+ConfigurationSettingSnapshot archivedSnapshot = configurationClient.archiveSnapshot(snapshotName);
+System.out.printf("Archived snapshot name=%s is created at %s, snapshot status is %s.%n",
+    archivedSnapshot.getName(), archivedSnapshot.getCreatedAt(), archivedSnapshot.getStatus());
+```
+
+### Recover a snapshot
+
+You can recover an archived snapshot by using the `recoverSnapshot` method. This operation updates the status of the 
+snapshot to `ready`.
+
+```java readme-sample-recoverSnapshot
+String snapshotName = "{snapshotName}";
+ConfigurationSettingSnapshot recoveredSnapshot = configurationClient.recoverSnapshot(snapshotName);
+System.out.printf("Recovered snapshot name=%s is created at %s, snapshot status is %s.%n",
+    recoveredSnapshot.getName(), recoveredSnapshot.getCreatedAt(), recoveredSnapshot.getStatus());
+```
+
+### Retrieve all Snapshots
+
+To retrieve all snapshots, you can use the `listSnapshots` method.
+
+```java readme-sample-getAllSnapshots
+String snapshotNameProduct = "{snapshotNameInProduct}";
+SnapshotSelector snapshotSelector = new SnapshotSelector().setName(snapshotNameProduct);
+PagedIterable<ConfigurationSettingSnapshot> configurationSettingSnapshots =
+    configurationClient.listSnapshots(snapshotSelector);
+for (ConfigurationSettingSnapshot snapshot : configurationSettingSnapshots) {
+    System.out.printf("Listed Snapshot name = %s is created at %s, snapshot status is %s.%n",
+        snapshot.getName(), snapshot.getCreatedAt(), snapshot.getStatus());
+}
+```
+
+### Retrieve Configuration Settings in a Snapshot
+List multiple configuration settings in a snapshot by calling `listConfigurationSettingsForSnapshot`.
+
+```java readme-sample-listSettingsInSnapshot
+String snapshotNameProduct = "{snapshotNameInProduct}";
+PagedIterable<ConfigurationSetting> configurationSettings =
+    configurationClient.listConfigurationSettingsForSnapshot(snapshotNameProduct);
+
+for (ConfigurationSetting setting : configurationSettings) {
+    System.out.printf("[ConfigurationSetting in snapshot] Key: %s, Value: %s%n",
+        setting.getKey(), setting.getValue());
+}
+```
+
 ## Troubleshooting
 
 ### General
@@ -377,13 +553,12 @@ When you interact with App Configuration using this Java client library, errors 
 
 App Configuration provides a way to define customized headers through `Context` object in the public API. 
 
-<!-- embedme ./src/samples/java/com/azure/data/appconfiguration/ReadmeSamples.java#L162-L171 -->
-```java
+```java readme-sample-customHeaders
 // Add your headers
 HttpHeaders headers = new HttpHeaders();
-headers.put("my-header1", "my-header1-value");
-headers.put("my-header2", "my-header2-value");
-headers.put("my-header3", "my-header3-value");
+headers.set("my-header1", "my-header1-value");
+headers.set("my-header2", "my-header2-value");
+headers.set("my-header3", "my-header3-value");
 // Call API by passing headers in Context.
 configurationClient.addConfigurationSettingWithResponse(
     new ConfigurationSetting().setKey("key").setValue("value"),
@@ -417,27 +592,28 @@ When you submit a pull request, a CLA-bot will automatically determine whether y
 This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For more information see the [Code of Conduct FAQ][coc_faq] or contact [opencode@microsoft.com][coc_contact] with any additional questions or comments.
 
 <!-- LINKS -->
-[add_headers_from_context_policy]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-appconfiguration_1.2.0-beta.1/sdk/core/azure-core/src/main/java/com/azure/core/http/policy/AddHeadersFromContextPolicy.java
+[add_headers_from_context_policy]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core/src/main/java/com/azure/core/http/policy/AddHeadersFromContextPolicy.java
 [api_documentation]: https://aka.ms/java-docs
-[app_config_store]: https://docs.microsoft.com/azure/azure-app-configuration/quickstart-dotnet-core-app#create-an-app-configuration-store
-[app_config_role]: https://docs.microsoft.com/azure/azure-app-configuration/rest-api-authorization-azure-ad#roles
-[azconfig_docs]: https://docs.microsoft.com/azure/azure-app-configuration
-[azure_cli]: https://docs.microsoft.com/cli/azure
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/tree/azure-data-appconfiguration_1.2.0-beta.1/sdk/identity/azure-identity
+[app_config_store]: /azure/azure-app-configuration/quickstart-dotnet-core-app#create-an-app-configuration-store
+[app_config_role]: /azure/azure-app-configuration/rest-api-authorization-azure-ad#roles
+[azconfig_docs]: /azure/azure-app-configuration
+[azure_cli]: /cli/azure
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/identity/azure-identity
 [azure_subscription]: https://azure.microsoft.com/free
 [cla]: https://cla.microsoft.com
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
 [coc_contact]: mailto:opencode@microsoft.com
 [default_cred_ref]: https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.0.1/com/azure/identity/DefaultAzureCredential.html
-[jdk_link]: https://docs.microsoft.com/java/azure/jdk/?view=azure-java-stable
+[jdk_link]: /java/azure/jdk/?view=azure-java-stable
 [maven]: https://maven.apache.org/
 [package]: https://search.maven.org/artifact/com.azure/azure-data-appconfiguration
 [performance_tuning]: https://github.com/Azure/azure-sdk-for-java/wiki/Performance-Tuning
 [rest_api]: https://github.com/Azure/AppConfiguration#rest-api-reference
-[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-appconfiguration_1.2.0-beta.1/sdk/appconfiguration/azure-data-appconfiguration/src/samples/java/com/azure/data/appconfiguration
-[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-appconfiguration_1.2.0-beta.1/sdk/appconfiguration/azure-data-appconfiguration/src/samples/README.md
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-appconfiguration_1.2.0-beta.1/sdk/appconfiguration/azure-data-appconfiguration/src
-[spring_quickstart]: https://docs.microsoft.com/azure/azure-app-configuration/quickstart-java-spring-app
+[samples]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/appconfiguration/azure-data-appconfiguration/src/samples/java/com/azure/data/appconfiguration
+[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/appconfiguration/azure-data-appconfiguration/src/samples/README.md
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/appconfiguration/azure-data-appconfiguration/src
+[spring_quickstart]: /azure/azure-app-configuration/quickstart-java-spring-app
+[troubleshooting]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/appconfiguration/azure-data-appconfiguration/TROUBLESHOOTING.md
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fappconfiguration%2Fazure-data-appconfiguration%2FREADME.png)
 
