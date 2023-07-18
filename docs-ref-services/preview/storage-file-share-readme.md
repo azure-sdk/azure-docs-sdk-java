@@ -8,7 +8,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: storage
 ---
-# Azure File Share client library for Java - version 12.20.0-alpha.20230718.1 
+# Azure File Share client library for Java - version 12.20.0-alpha.20230718.6 
 
 
 The Server Message Block (SMB) protocol is the preferred file share protocol used on-premises today.
