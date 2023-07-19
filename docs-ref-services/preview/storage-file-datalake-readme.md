@@ -8,7 +8,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: storage
 ---
-# Azure File Data Lake client library for Java - version 12.17.0-alpha.20230718.12 
+# Azure File Data Lake client library for Java - version 12.17.0-alpha.20230719.1 
 
 
 Azure Data Lake Storage is Microsoft's optimized storage solution for for big
