@@ -8,7 +8,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: keyvault
 ---
-# Azure Key Vault Certificate client library for Java - version 4.6.0-alpha.20230719.1 
+# Azure Key Vault Certificate client library for Java - version 4.6.0-alpha.20230719.2 
 
 Azure Key Vault allows you to securely manage and tightly control your certificates. The Azure Key Vault Certificate client library supports certificates backed by RSA and EC keys.
 

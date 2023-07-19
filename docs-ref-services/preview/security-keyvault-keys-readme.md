@@ -8,7 +8,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: keyvault
 ---
-# Azure Key Vault Key client library for Java - version 4.7.0-alpha.20230719.1 
+# Azure Key Vault Key client library for Java - version 4.7.0-alpha.20230719.2 
 
 Azure Key Vault is a cloud service that provides secure storage of keys for encrypting your data. Multiple keys, and multiple versions of the same key, can be kept in the Azure Key Vault. Cryptographic keys in Azure Key Vault are represented as [JSON Web Key [JWK]][jwk_specification] objects.
 

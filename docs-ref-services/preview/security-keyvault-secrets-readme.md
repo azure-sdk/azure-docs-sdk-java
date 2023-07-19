@@ -8,7 +8,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: keyvault
 ---
-# Azure Key Vault Secret client library for Java - version 4.7.0-alpha.20230719.1 
+# Azure Key Vault Secret client library for Java - version 4.7.0-alpha.20230719.2 
 
 Azure Key Vault is a cloud service that provides secure storage for secrets, such as passwords and database connection strings.
 
