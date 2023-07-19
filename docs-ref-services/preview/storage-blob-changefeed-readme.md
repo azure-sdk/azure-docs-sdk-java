@@ -8,7 +8,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: storage
 ---
-# Azure Blob Storage change feed client library for Java - version 12.0.0-alpha.20230719.1 
+# Azure Blob Storage change feed client library for Java - version 12.0.0-alpha.20230719.3 
 
 
 The purpose of the change feed is to provide transaction logs of all the changes that occur to
