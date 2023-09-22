@@ -3,17 +3,17 @@ title: Azure Resource Manager Application client library for Java
 keywords: Azure, java, SDK, API, azure-resourcemanager-managedapplications, managedapplications
 author: joshfree
 ms.author: jfree
-ms.date: 01/18/2023
+ms.date: 09/22/2023
 ms.topic: reference
 ms.devlang: java
 ms.service: managedapplications
 ---
-# Azure Resource Manager Application client library for Java - version 1.0.0-beta.2 
+# Azure Resource Manager Application client library for Java - version 1.0.0-alpha.20230921.4 
 
 
 Azure Resource Manager Application client library for Java.
 
-This package contains Microsoft Azure SDK for Application Management SDK. ARM applications. Package tag package-managedapplications-2018-06. For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
+This package contains Microsoft Azure SDK for Application Management SDK. ARM applications. Package tag package-managedapplications-2021-07. For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
 
 ## We'd love to hear your feedback
 
@@ -43,7 +43,7 @@ Various documentation is available to help you get started
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
     <artifactId>azure-resourcemanager-managedapplications</artifactId>
-    <version>1.0.0-beta.2</version>
+    <version>1.0.0-beta.3</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -85,7 +85,7 @@ See [API design][design] for general introduction on design and key concepts on 
 
 ## Examples
 
-[Code snippets and samples](https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-managedapplications_1.0.0-beta.2/sdk/managedapplications/azure-resourcemanager-managedapplications/SAMPLE.md)
+[Code snippets and samples](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/managedapplications/azure-resourcemanager-managedapplications/SAMPLE.md)
 
 
 ## Troubleshooting
@@ -107,11 +107,13 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: /java/azure/jdk/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-managedapplications_1.0.0-beta.2/sdk/identity/azure-identity
-[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-managedapplications_1.0.0-beta.2/sdk/core/azure-core-http-netty
-[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-managedapplications_1.0.0-beta.2/sdk/resourcemanager/docs/AUTH.md
-[design]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-managedapplications_1.0.0-beta.2/sdk/resourcemanager/docs/DESIGN.md
-[cg]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-managedapplications_1.0.0-beta.2/CONTRIBUTING.md
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity
+[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core-http-netty
+[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/resourcemanager/docs/AUTH.md
+[design]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/resourcemanager/docs/DESIGN.md
+[cg]: https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
+
+![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fmanagedapplications%2Fazure-resourcemanager-managedapplications%2FREADME.png)
 
