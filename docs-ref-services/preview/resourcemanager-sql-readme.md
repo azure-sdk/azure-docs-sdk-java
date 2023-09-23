@@ -1,17 +1,17 @@
 ---
-title: Azure Resource Manager network client library for Java
-keywords: Azure, java, SDK, API, azure-resourcemanager-network, network-access
+title: Azure Resource Manager sql client library for Java
+keywords: Azure, java, SDK, API, azure-resourcemanager-sql, mysql
 author: weidongxu-microsoft
 ms.author: weidxu
 ms.date: 09/23/2023
 ms.topic: reference
 ms.devlang: java
-ms.service: network-access
+ms.service: mysql
 ---
-# Azure Resource Manager network client library for Java - version 2.31.0-alpha.20230922.1 
+# Azure Resource Manager sql client library for Java - version 2.31.0-alpha.20230922.1 
 
 
-Azure Resource Manager network client library for Java
+Azure Resource Manager sql client library for Java
 
 For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
 
@@ -24,11 +24,11 @@ For documentation on how to use this package, please see [Azure Management Libra
 
 ### Adding the package to your product
 
-[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-network;current})
+[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-sql;current})
 ```xml
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
-    <artifactId>azure-resourcemanager-network</artifactId>
+    <artifactId>azure-resourcemanager-sql</artifactId>
     <version>2.30.0</version>
 </dependency>
 ```
@@ -57,7 +57,7 @@ AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
 TokenCredential credential = new DefaultAzureCredentialBuilder()
     .authorityHost(profile.getEnvironment().getActiveDirectoryEndpoint())
     .build();
-NetworkManager manager = NetworkManager
+SqlServerManager manager = SqlServerManager
     .authenticate(credential, profile);
 ```
 
