@@ -3,12 +3,12 @@ title: Azure App Configuration client library for Java
 keywords: Azure, java, SDK, API, azure-data-appconfiguration, appconfiguration
 author: mssfang
 ms.author: shafang
-ms.date: 07/11/2023
+ms.date: 09/26/2023
 ms.topic: reference
 ms.devlang: java
 ms.service: appconfiguration
 ---
-# Azure App Configuration client library for Java - version 1.5.0-beta.1 
+# Azure App Configuration client library for Java - version 1.5.0-alpha.20230926.1 
 
 Azure App Configuration is a managed service that helps developers centralize their application configurations simply and securely.
 
@@ -31,7 +31,7 @@ Use the client library for App Configuration to create and manage application co
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-data-appconfiguration_1.5.0-beta.1/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -66,7 +66,7 @@ add the direct dependency to your project as follows.
 <dependency>
   <groupId>com.azure</groupId>
   <artifactId>azure-data-appconfiguration</artifactId>
-  <version>1.4.6</version>
+  <version>1.4.7</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -472,11 +472,11 @@ String snapshotName = "{snapshotName}";
 List<SnapshotSettingFilter> filters = new ArrayList<>();
 // Key Name also supports RegExp but only support prefix end with "*", such as "k*" and is case-sensitive.
 filters.add(new SnapshotSettingFilter("Test*"));
-SyncPoller<CreateSnapshotOperationDetail, ConfigurationSettingSnapshot> poller =
-    configurationClient.beginCreateSnapshot(snapshotName, new ConfigurationSettingSnapshot(filters), Context.NONE);
+SyncPoller<CreateSnapshotOperationDetail, ConfigurationSettingsSnapshot> poller =
+    configurationClient.beginCreateSnapshot(snapshotName, new ConfigurationSettingsSnapshot(filters), Context.NONE);
 poller.setPollInterval(Duration.ofSeconds(10));
 poller.waitForCompletion();
-ConfigurationSettingSnapshot snapshot = poller.getFinalResult();
+ConfigurationSettingsSnapshot snapshot = poller.getFinalResult();
 System.out.printf("Snapshot name=%s is created at %s, snapshot status is %s.%n",
     snapshot.getName(), snapshot.getCreatedAt(), snapshot.getStatus());
 ```
@@ -487,7 +487,7 @@ Once a configuration setting snapshot is created, you can retrieve it using the 
 
 ```java readme-sample-getSnapshot
 String snapshotName = "{snapshotName}";
-ConfigurationSettingSnapshot getSnapshot = configurationClient.getSnapshot(snapshotName);
+ConfigurationSettingsSnapshot getSnapshot = configurationClient.getSnapshot(snapshotName);
 System.out.printf("Snapshot name=%s is created at %s, snapshot status is %s.%n",
     getSnapshot.getName(), getSnapshot.getCreatedAt(), getSnapshot.getStatus());
 ```
@@ -499,7 +499,7 @@ to `archived`.
 
 ```java readme-sample-archiveSnapshot
 String snapshotName = "{snapshotName}";
-ConfigurationSettingSnapshot archivedSnapshot = configurationClient.archiveSnapshot(snapshotName);
+ConfigurationSettingsSnapshot archivedSnapshot = configurationClient.archiveSnapshot(snapshotName);
 System.out.printf("Archived snapshot name=%s is created at %s, snapshot status is %s.%n",
     archivedSnapshot.getName(), archivedSnapshot.getCreatedAt(), archivedSnapshot.getStatus());
 ```
@@ -511,7 +511,7 @@ snapshot to `ready`.
 
 ```java readme-sample-recoverSnapshot
 String snapshotName = "{snapshotName}";
-ConfigurationSettingSnapshot recoveredSnapshot = configurationClient.recoverSnapshot(snapshotName);
+ConfigurationSettingsSnapshot recoveredSnapshot = configurationClient.recoverSnapshot(snapshotName);
 System.out.printf("Recovered snapshot name=%s is created at %s, snapshot status is %s.%n",
     recoveredSnapshot.getName(), recoveredSnapshot.getCreatedAt(), recoveredSnapshot.getStatus());
 ```
@@ -523,9 +523,9 @@ To retrieve all snapshots, you can use the `listSnapshots` method.
 ```java readme-sample-getAllSnapshots
 String snapshotNameProduct = "{snapshotNameInProduct}";
 SnapshotSelector snapshotSelector = new SnapshotSelector().setName(snapshotNameProduct);
-PagedIterable<ConfigurationSettingSnapshot> configurationSettingSnapshots =
+PagedIterable<ConfigurationSettingsSnapshot> configurationSettingsSnapshots =
     configurationClient.listSnapshots(snapshotSelector);
-for (ConfigurationSettingSnapshot snapshot : configurationSettingSnapshots) {
+for (ConfigurationSettingsSnapshot snapshot : configurationSettingsSnapshots) {
     System.out.printf("Listed Snapshot name = %s is created at %s, snapshot status is %s.%n",
         snapshot.getName(), snapshot.getCreatedAt(), snapshot.getStatus());
 }
@@ -592,13 +592,13 @@ When you submit a pull request, a CLA-bot will automatically determine whether y
 This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For more information see the [Code of Conduct FAQ][coc_faq] or contact [opencode@microsoft.com][coc_contact] with any additional questions or comments.
 
 <!-- LINKS -->
-[add_headers_from_context_policy]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-appconfiguration_1.5.0-beta.1/sdk/core/azure-core/src/main/java/com/azure/core/http/policy/AddHeadersFromContextPolicy.java
+[add_headers_from_context_policy]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core/src/main/java/com/azure/core/http/policy/AddHeadersFromContextPolicy.java
 [api_documentation]: https://aka.ms/java-docs
 [app_config_store]: /azure/azure-app-configuration/quickstart-dotnet-core-app#create-an-app-configuration-store
 [app_config_role]: /azure/azure-app-configuration/rest-api-authorization-azure-ad#roles
 [azconfig_docs]: /azure/azure-app-configuration
 [azure_cli]: /cli/azure
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/tree/azure-data-appconfiguration_1.5.0-beta.1/sdk/identity/azure-identity
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/identity/azure-identity
 [azure_subscription]: https://azure.microsoft.com/free
 [cla]: https://cla.microsoft.com
 [coc]: https://opensource.microsoft.com/codeofconduct/
@@ -607,13 +607,13 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [default_cred_ref]: https://azuresdkdocs.blob.core.windows.net/$web/java/azure-identity/1.0.1/com/azure/identity/DefaultAzureCredential.html
 [jdk_link]: /java/azure/jdk/?view=azure-java-stable
 [maven]: https://maven.apache.org/
-[package]: https://search.maven.org/artifact/com.azure/azure-data-appconfiguration
+[package]: https://central.sonatype.com/artifact/com.azure/azure-data-appconfiguration
 [performance_tuning]: https://github.com/Azure/azure-sdk-for-java/wiki/Performance-Tuning
 [rest_api]: https://github.com/Azure/AppConfiguration#rest-api-reference
-[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-appconfiguration_1.5.0-beta.1/sdk/appconfiguration/azure-data-appconfiguration/src/samples/java/com/azure/data/appconfiguration
-[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-appconfiguration_1.5.0-beta.1/sdk/appconfiguration/azure-data-appconfiguration/src/samples/README.md
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-appconfiguration_1.5.0-beta.1/sdk/appconfiguration/azure-data-appconfiguration/src
+[samples]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/appconfiguration/azure-data-appconfiguration/src/samples/java/com/azure/data/appconfiguration
+[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/appconfiguration/azure-data-appconfiguration/src/samples/README.md
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/appconfiguration/azure-data-appconfiguration/src
 [spring_quickstart]: /azure/azure-app-configuration/quickstart-java-spring-app
-[troubleshooting]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-appconfiguration_1.5.0-beta.1/sdk/appconfiguration/azure-data-appconfiguration/TROUBLESHOOTING.md
+[troubleshooting]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/appconfiguration/azure-data-appconfiguration/TROUBLESHOOTING.md
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fappconfiguration%2Fazure-data-appconfiguration%2FREADME.png)
 
