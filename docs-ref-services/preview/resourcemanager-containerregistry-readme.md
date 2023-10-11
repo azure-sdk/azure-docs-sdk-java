@@ -1,15 +1,15 @@
 ---
-title: Azure Resource Manager keyvault client library for Java
-keywords: Azure, java, SDK, API, azure-resourcemanager-keyvault, key-vault
+title: Azure Resource Manager Containerregistry client library for Java
+keywords: Azure, java, SDK, API, azure-resourcemanager-containerregistry, container-registry
 ms.date: 10/11/2023
 ms.topic: reference
 ms.devlang: java
-ms.service: key-vault
+ms.service: container-registry
 ---
-# Azure Resource Manager keyvault client library for Java - version 2.32.0-alpha.20231010.2 
+# Azure Resource Manager Containerregistry client library for Java - version 2.32.0-alpha.20231010.2 
 
 
-Azure Resource Manager keyvault client library for Java
+Azure Resource Manager Containerregistry client library for Java
 
 For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
 
@@ -22,11 +22,11 @@ For documentation on how to use this package, please see [Azure Management Libra
 
 ### Adding the package to your product
 
-[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-keyvault;current})
+[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-containerregistry;current})
 ```xml
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
-    <artifactId>azure-resourcemanager-keyvault</artifactId>
+    <artifactId>azure-resourcemanager-containerregistry</artifactId>
     <version>2.31.0</version>
 </dependency>
 ```
@@ -55,7 +55,7 @@ AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
 TokenCredential credential = new DefaultAzureCredentialBuilder()
     .authorityHost(profile.getEnvironment().getActiveDirectoryEndpoint())
     .build();
-KeyVaultManager manager = KeyVaultManager
+ContainerRegistryManager manager = ContainerRegistryManager
     .authenticate(credential, profile);
 ```
 
