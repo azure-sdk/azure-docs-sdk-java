@@ -1,12 +1,12 @@
 ---
 title: Azure Resource Manager EdgeOrder client library for Java
 keywords: Azure, java, SDK, API, azure-resourcemanager-edgeorder, edgeorder
-ms.date: 10/10/2023
+ms.date: 10/11/2023
 ms.topic: reference
 ms.devlang: java
 ms.service: edgeorder
 ---
-# Azure Resource Manager EdgeOrder client library for Java - version 1.0.0-alpha.20231009.1 
+# Azure Resource Manager EdgeOrder client library for Java - version 1.0.0-alpha.20231010.1 
 
 
 Azure Resource Manager EdgeOrder client library for Java.
