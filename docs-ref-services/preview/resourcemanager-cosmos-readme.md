@@ -1,15 +1,15 @@
 ---
-title: Azure Resource Manager storage client library for Java
-keywords: Azure, java, SDK, API, azure-resourcemanager-storage, resourcemanager
+title: Azure Resource Manager Cosmos client library for Java
+keywords: Azure, java, SDK, API, azure-resourcemanager-cosmos, cosmos-db
 ms.date: 10/14/2023
 ms.topic: reference
 ms.devlang: java
-ms.service: resourcemanager
+ms.service: cosmos-db
 ---
-# Azure Resource Manager storage client library for Java - version 2.32.0-alpha.20231013.1 
+# Azure Resource Manager Cosmos client library for Java - version 2.32.0-alpha.20231013.1 
 
 
-Azure Resource Manager storage client library for Java
+Azure Resource Manager Cosmos client library for Java
 
 For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
 
@@ -22,11 +22,11 @@ For documentation on how to use this package, please see [Azure Management Libra
 
 ### Adding the package to your product
 
-[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-storage;current})
+[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-cosmos;current})
 ```xml
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
-    <artifactId>azure-resourcemanager-storage</artifactId>
+    <artifactId>azure-resourcemanager-cosmos</artifactId>
     <version>2.31.0</version>
 </dependency>
 ```
@@ -55,7 +55,7 @@ AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
 TokenCredential credential = new DefaultAzureCredentialBuilder()
     .authorityHost(profile.getEnvironment().getActiveDirectoryEndpoint())
     .build();
-StorageManager manager = StorageManager
+CosmosManager manager = CosmosManager
     .authenticate(credential, profile);
 ```
 
