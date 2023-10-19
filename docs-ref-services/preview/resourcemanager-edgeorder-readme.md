@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: edgeorder
 ---
-# Azure Resource Manager EdgeOrder client library for Java - version 1.0.0-alpha.20231018.1 
+# Azure Resource Manager EdgeOrder client library for Java - version 1.0.0-alpha.20231019.1 
 
 
 Azure Resource Manager EdgeOrder client library for Java.
