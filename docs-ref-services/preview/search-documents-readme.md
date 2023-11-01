@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: cognitive-search
 ---
-# Azure Cognitive Search client library for Java - version 11.6.0-alpha.20231031.1 
+# Azure Cognitive Search client library for Java - version 11.6.0-alpha.20231101.1 
 
 
 This is the Java client library for [Azure Cognitive Search](/azure/search/).
@@ -82,7 +82,7 @@ add the direct dependency to your project as follows.
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-search-documents</artifactId>
-    <version>11.6.0-beta.9</version>
+    <version>11.6.0</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
