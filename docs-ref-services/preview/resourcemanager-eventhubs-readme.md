@@ -1,15 +1,15 @@
 ---
-title: Azure Resource Manager msi client library for Java
-keywords: Azure, java, SDK, API, azure-resourcemanager-msi, azure-resource-manager
+title: Azure Resource Manager EventHubs client library for Java
+keywords: Azure, java, SDK, API, azure-resourcemanager-eventhubs, event-hubs
 ms.date: 11/03/2023
 ms.topic: reference
 ms.devlang: java
-ms.service: azure-resource-manager
+ms.service: event-hubs
 ---
-# Azure Resource Manager msi client library for Java - version 2.33.0-alpha.20231102.1 
+# Azure Resource Manager EventHubs client library for Java - version 2.33.0-alpha.20231102.1 
 
 
-Azure Resource Manager msi client library for Java
+Azure Resource Manager EventHubs client library for Java
 
 For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
 
@@ -22,11 +22,11 @@ For documentation on how to use this package, please see [Azure Management Libra
 
 ### Adding the package to your product
 
-[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-msi;current})
+[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-eventhubs;current})
 ```xml
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
-    <artifactId>azure-resourcemanager-msi</artifactId>
+    <artifactId>azure-resourcemanager-eventhubs</artifactId>
     <version>2.32.0</version>
 </dependency>
 ```
@@ -55,7 +55,7 @@ AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
 TokenCredential credential = new DefaultAzureCredentialBuilder()
     .authorityHost(profile.getEnvironment().getActiveDirectoryEndpoint())
     .build();
-MsiManager manager = MsiManager
+EventHubsManager manager = EventHubsManager
     .authenticate(credential, profile);
 ```
 
