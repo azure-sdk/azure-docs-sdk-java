@@ -1,12 +1,12 @@
 ---
 title: Azure DevCenter client library for Java
 keywords: Azure, java, SDK, API, azure-developer-devcenter, devcenter
-ms.date: 02/08/2023
+ms.date: 11/10/2023
 ms.topic: reference
 ms.devlang: java
 ms.service: devcenter
 ---
-# Azure DevCenter client library for Java - version 1.0.0-beta.2 
+# Azure DevCenter client library for Java - version 1.0.0-alpha.20231109.3 
 
 
 This package contains Microsoft Azure DevCenter client library.
@@ -34,7 +34,7 @@ Various documentation is available to help you get started
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-developer-devcenter</artifactId>
-    <version>1.0.0-beta.2</version>
+    <version>1.0.0-beta.3</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -88,20 +88,25 @@ System.out.println(remoteConnectionResponse.getValue());
 // Tear down the Dev Box when we're finished:
 SyncPoller<BinaryData, Void> devBoxDeleteResponse =
                 devBoxClient.beginDeleteDevBox("myProject", "me", "MyDevBox", null);
-devBoxDeleteResponse.waitForCompletion();        
+devBoxDeleteResponse.waitForCompletion();
 ```
 
 ### Environments Scenarios
 ```java com.azure.developer.devcenter.readme.environments
-EnvironmentsClient environmentsClient =
-                new EnvironmentsClientBuilder()
-                        .endpoint(endpoint)
-                        .credential(new DefaultAzureCredentialBuilder().build())
-                        .buildClient();
+DeploymentEnvironmentsClient environmentsClient =
+                    new DeploymentEnvironmentsClientBuilder()
+                            .endpoint(endpoint)
+                            .credential(new DefaultAzureCredentialBuilder().build())
+                            .buildClient();
 
-// Fetch available catalog items and environment types
-PagedIterable<BinaryData> catalogItemListResponse = environmentsClient.listCatalogItems("myProject", null);
-for (BinaryData p: catalogItemListResponse) {
+// Fetch available environment definitions and environment types
+PagedIterable<BinaryData> listCatalogsResponse = environmentsClient.listCatalogs("myProject", null);
+for (BinaryData p: listCatalogsResponse) {
+    System.out.println(p);
+}
+
+PagedIterable<BinaryData> environmentDefinitionsListResponse = environmentsClient.listEnvironmentDefinitionsByCatalog("myProject", "myCatalog", null);
+for (BinaryData p: environmentDefinitionsListResponse) {
     System.out.println(p);
 }
 
@@ -111,9 +116,9 @@ for (BinaryData p: environmentTypesListResponse) {
 }
 
 // Create an environment
-BinaryData environmentBody = BinaryData.fromString("{\"catalogItemName\":\"MyCatalogItem\", \"environmentType\":\"MyEnvironmentType\"}");
+BinaryData environmentBody = BinaryData.fromString("{\"environmentDefinitionName\":\"myEnvironmentDefinition\", \"environmentType\":\"myEnvironmentType\", \"catalogName\":\"myCatalog\"}");
 SyncPoller<BinaryData, BinaryData> environmentCreateResponse =
-        environmentsClient.beginCreateOrUpdateEnvironment("myProject", "me", "TestEnvironment", environmentBody, null);
+                environmentsClient.beginCreateOrUpdateEnvironment("myProject", "me", "TestEnvironment", environmentBody, null);
 environmentCreateResponse.waitForCompletion();
 
 // Delete the environment when we're finished:
@@ -128,7 +133,7 @@ environmentDeleteResponse.waitForCompletion();
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-developer-devcenter_1.0.0-beta.2/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -142,5 +147,5 @@ For details on contributing to this repository, see the [contributing guide](htt
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: /java/azure/jdk/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-developer-devcenter_1.0.0-beta.2/sdk/identity/azure-identity
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity
 
