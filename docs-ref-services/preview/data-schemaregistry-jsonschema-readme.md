@@ -1,12 +1,12 @@
 ---
 title: Azure Schema Registry Json Schema Serializer client library for Java
 keywords: Azure, java, SDK, API, azure-data-schemaregistry-jsonschema, schemaregistry
-ms.date: 09/21/2023
+ms.date: 11/15/2023
 ms.topic: reference
 ms.devlang: java
 ms.service: schemaregistry
 ---
-# Azure Schema Registry Json Schema Serializer client library for Java - version 1.0.0-beta.1 
+# Azure Schema Registry Json Schema Serializer client library for Java - version 1.0.0-alpha.20231115.1 
 
 
 Azure Schema Registry Json Schema is a serializer and deserializer library for JSON data format that is integrated with
@@ -59,7 +59,7 @@ with the Azure SDK, please include the `azure-identity` package:
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-identity</artifactId>
-    <version>1.10.1</version>
+    <version>1.10.4</version>
 </dependency>
 ```
 
@@ -151,15 +151,15 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 
 <!-- LINKS -->
 <!-- [package_maven]: https://central.sonatype.com/artifact/com.azure/azure-data-schemaregistry-jsonschema -->
-[sample_readme]: https://github.com/Azure/azure-sdk-for-java/tree/azure-data-schemaregistry-jsonschema_1.0.0-beta.1/sdk/schemaregistry/azure-data-schemaregistry-jsonschema/src/samples
-[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-schemaregistry-jsonschema_1.0.0-beta.1/sdk/schemaregistry/azure-data-schemaregistry-jsonschema/src/samples/java/com/azure/data/schemaregistry/jsonschema
-[address_type]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-schemaregistry-jsonschema_1.0.0-beta.1/sdk/schemaregistry/azure-data-schemaregistry-jsonschema/src/test/java/com/azure/data/schemaregistry/jsonschema/Address.java
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-schemaregistry-jsonschema_1.0.0-beta.1/sdk/schemaregistry/azure-data-schemaregistry-jsonschema/src
-[samples_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-schemaregistry-jsonschema_1.0.0-beta.1/sdk/schemaregistry/azure-data-schemaregistry-jsonschema/src/samples/
+[sample_readme]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/schemaregistry/azure-data-schemaregistry-jsonschema/src/samples
+[samples]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/schemaregistry/azure-data-schemaregistry-jsonschema/src/samples/java/com/azure/data/schemaregistry/jsonschema
+[address_type]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/schemaregistry/azure-data-schemaregistry-jsonschema/src/test/java/com/azure/data/schemaregistry/jsonschema/Address.java
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/schemaregistry/azure-data-schemaregistry-jsonschema/src
+[samples_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/schemaregistry/azure-data-schemaregistry-jsonschema/src/samples/
 [azure_subscription]: https://azure.microsoft.com/free/
 [api_reference_doc]: https://aka.ms/schemaregistry
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/tree/azure-data-schemaregistry-jsonschema_1.0.0-beta.1/sdk/identity/azure-identity
-[DefaultAzureCredential]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-schemaregistry-jsonschema_1.0.0-beta.1/sdk/identity/azure-identity/README.md#defaultazurecredential
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/identity/azure-identity
+[DefaultAzureCredential]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity/README.md#defaultazurecredential
 [event_hubs_namespace]: /azure/event-hubs/event-hubs-about
 [jdk_link]: /java/azure/jdk/?view=azure-java-stable
 [product_documentation]: https://aka.ms/schemaregistry
