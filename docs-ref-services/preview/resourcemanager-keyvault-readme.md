@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: key-vault
 ---
-# Azure Resource Manager keyvault client library for Java - version 2.34.0-alpha.20231204.4 
+# Azure Resource Manager keyvault client library for Java - version 2.34.0-alpha.20231204.5 
 
 
 Azure Resource Manager keyvault client library for Java
