@@ -1,12 +1,12 @@
 ---
 title: Azure Resource Manager ExternalIdentitiesConfiguration client library for Java
 keywords: Azure, java, SDK, API, azure-resourcemanager-azureadexternalidentities, azureadexternalidentities
-ms.date: 12/14/2023
+ms.date: 12/15/2023
 ms.topic: reference
 ms.devlang: java
 ms.service: azureadexternalidentities
 ---
-# Azure Resource Manager ExternalIdentitiesConfiguration client library for Java - version 1.0.0-alpha.20231213.1 
+# Azure Resource Manager ExternalIdentitiesConfiguration client library for Java - version 1.0.0-alpha.20231214.1 
 
 
 Azure Resource Manager ExternalIdentitiesConfiguration client library for Java.
