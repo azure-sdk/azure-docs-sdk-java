@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: cognitive-search
 ---
-# Azure Resource Manager Azure AI Search client library for Java - version 2.34.0-alpha.20231214.2 
+# Azure Resource Manager Azure AI Search client library for Java - version 2.34.0-alpha.20231214.3 
 
 
 Azure Resource Manager Azure AI Search client library for Java
