@@ -1,14 +1,12 @@
 ---
 title: Azure Synapse Managed Private Endpoints client library for Java
-keywords: Azure, java, SDK, API, azure-analytics-synapse-managedprivateendpoints, synapseanalytics
-ms.date: 09/08/2021
+keywords: Azure, java, SDK, API, azure-analytics-synapse-managedprivateendpoints, synapse
+ms.date: 12/18/2023
 ms.topic: reference
 ms.devlang: java
-ms.service: synapseanalytics
-ms.technology: azure
-ms.prod: azure
+ms.service: synapse
 ---
-# Azure Synapse Managed Private Endpoints client library for Java - version 1.0.0-beta.5 
+# Azure Synapse Managed Private Endpoints client library for Java - version 1.0.0-alpha.20231218.1 
 
 Azure Synapse is a limitless analytics service that brings together enterprise data warehousing and Big Data analytics. It gives you the freedom to query data on your terms, using either serverless on-demand or provisioned resources—at scale. Azure Synapse brings these two worlds together with a unified experience to ingest, prepare, manage, and serve data for immediate BI and machine learning needs.
 
@@ -31,7 +29,7 @@ Maven dependency for the Azure Synapse managed private endpoints client library.
 [//]: # ({x-version-update-end})
 
 ### Prerequisites
-- Java Development Kit (JDK) with version 8 or above
+- [Java Development Kit (JDK)][jdk] with version 8 or above
 - An [Azure subscription][azure_sub].
 - An existing Azure Synapse workspace. If you need to create an Azure Synapse workspace, you can use the Azure Portal or [Azure CLI][azure_cli].
     ```Bash
@@ -104,17 +102,20 @@ When you submit a pull request, a CLA-bot will automatically determine whether y
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the Code of Conduct FAQ or contact <opencode@microsoft.com> with any additional questions or comments.
 
 <!-- LINKS -->
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-analytics-synapse-managedprivateendpoints_1.0.0-beta.5/sdk/synapse/azure-analytics-synapse-accesscontrol/src
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/synapse/azure-analytics-synapse-accesscontrol/src
 [api_documentation]: https://azure.github.io/azure-sdk-for-java
-[azsynapse_docs]: https://docs.microsoft.com/azure/synapse-analytics/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/tree/azure-analytics-synapse-managedprivateendpoints_1.0.0-beta.5/sdk/identity/azure-identity
+[azsynapse_docs]: /azure/synapse-analytics/
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/identity/azure-identity
 [maven]: https://maven.apache.org/
 [azure_subscription]: https://azure.microsoft.com/
-[azure_synapse]: https://docs.microsoft.com/en-us/azure/synapse-analytics/quickstart-create-workspace
-[azure_cli]: https://docs.microsoft.com/cli/azure
-[rest_api]: https://docs.microsoft.com/rest/api/synapse/
-[azsynapse_rest]: https://docs.microsoft.com/rest/api/synapse/
-[azure_create_application_in_portal]: https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal
-[azure_synapse_cli_full]: https://docs.microsoft.com/cli/azure/synapse?view=azure-cli-latest
+[jdk]: /azure/developer/java/fundamentals/?view=azure-java-stable
+[azure_sub]: https://azure.microsoft.com/free/
+[azure_synapse]: /azure/synapse-analytics/quickstart-create-workspace
+[azure_cli]: /cli/azure
+[rest_api]: /rest/api/synapse/
+[azsynapse_rest]: /rest/api/synapse/
+[azure_create_application_in_portal]: /azure/active-directory/develop/howto-create-service-principal-portal
+[azure_synapse_cli_full]: /cli/azure/synapse?view=azure-cli-latest
 [performance_tuning]: https://github.com/Azure/azure-sdk-for-java/wiki/Performance-Tuning
+
 
