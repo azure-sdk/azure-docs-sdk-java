@@ -1,14 +1,12 @@
 ---
 title: Azure Synapse Spark client library for Java
-keywords: Azure, java, SDK, API, azure-analytics-synapse-spark, synapseanalytics
-ms.date: 10/15/2021
+keywords: Azure, java, SDK, API, azure-analytics-synapse-spark, synapse
+ms.date: 12/28/2023
 ms.topic: reference
 ms.devlang: java
-ms.service: synapseanalytics
-ms.technology: azure
-ms.prod: azure
+ms.service: synapse
 ---
-# Azure Synapse Spark client library for Java - version 1.0.0-beta.5 
+# Azure Synapse Spark client library for Java - version 1.0.0-alpha.20231228.1 
 
 Azure Synapse is a limitless analytics service that brings together enterprise data warehousing and Big Data analytics. It gives you the freedom to query data on your terms, using either serverless on-demand or provisioned resources—at scale. Azure Synapse brings these two worlds together with a unified experience to ingest, prepare, manage, and serve data for immediate BI and machine learning needs.
 
@@ -105,7 +103,7 @@ The following sections provide several code snippets covering some of the most c
 ### Spark batch job examples
 * [Create a Spark batch job](#create-a-spark-batch-job)
 * [List role Spark batch jobs](#list-spark-batch-jobs)
-* [Cancel a Spark batch job](#delete-a-spark-batch-job)
+* [Cancel a Spark batch job](#cancel-a-spark-batch-job)
 
 ### Create a Spark batch job
 
@@ -150,10 +148,9 @@ batchClient.cancelSparkBatchJob(jobId);
 ### Async API
 The following sections provide several code snippets covering some of the most common asynchronous Azure Synapse Spark service tasks, including:
 
-* [Create a Spark job asynchronously](#create-a-spark-batch-job-asynchronously)
-* [Retrieve a Spark job asynchronously](#retrieve-a-spark-batch-job-asynchronously)
+* [Create a Spark job asynchronously](#create-a-spark-job-asynchronously)
 * [List Spark jobs asynchronously](#list-spark-batch-jobs-asynchronously)
-* [Delete a Spark job asynchronously](#delete-a-spark-batch-job-asynchronously)
+* [Cancel a Spark batch job asynchronously](#cancel-a-spark-batch-job-asynchronously)
 
 > Note : You should add `System.in.read()` or `Thread.sleep()` after the function calls in the main class/thread to allow async functions/operations to execute and finish before the main application/thread exits.
 
@@ -225,21 +222,23 @@ When you submit a pull request, a CLA-bot will automatically determine whether y
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the Code of Conduct FAQ or contact <opencode@microsoft.com> with any additional questions or comments.
 
 <!-- LINKS -->
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-analytics-synapse-spark_1.0.0-beta.5/sdk/synapse/azure-analytics-synapse-spark/src
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/synapse/azure-analytics-synapse-spark/src
 [api_documentation]: https://azure.github.io/azure-sdk-for-java
-[azsynapse_docs]: https://docs.microsoft.com/azure/synapse-analytics/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/tree/azure-analytics-synapse-spark_1.0.0-beta.5/sdk/identity/azure-identity
+[azsynapse_docs]: /azure/synapse-analytics/
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/identity/azure-identity
 [maven]: https://maven.apache.org/
 [azure_subscription]: https://azure.microsoft.com/
-[azure_synapse]: https://docs.microsoft.com/azure/synapse-analytics/quickstart-create-workspace
-[azure_cli]: https://docs.microsoft.com/azure/synapse-analytics/quickstart-create-workspace-cli
-[rest_api]: https://docs.microsoft.com/rest/api/synapse/
-[azsynapse_rest]: https://docs.microsoft.com/rest/api/synapse/
-[azure_create_application_in_portal]: https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal
-[azure_synapse_cli_full]: https://docs.microsoft.com/cli/azure/synapse?view=azure-cli-latest
-[spark_samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-analytics-synapse-spark_1.0.0-beta.5/sdk/synapse/azure-analytics-synapse-spark/src/samples/java/com/azure/analytics/synapse/spark
-[performance_tuning]: https://github.com/Azure/azure-sdk-for-java/wiki/Performance-Tuning
-[jdk]: https://docs.microsoft.com/java/azure/jdk/
+[azure_synapse]: /azure/synapse-analytics/quickstart-create-workspace
+[azure_cli]: /cli/azure
+[jdk]: /azure/developer/java/fundamentals/?view=azure-java-stable
 [azure_sub]: https://azure.microsoft.com/free/
-[azure_portal]: https://docs.microsoft.com/azure/synapse-analytics/quickstart-create-workspace
+[rest_api]: /rest/api/synapse/
+[azsynapse_rest]: /rest/api/synapse/
+[azure_create_application_in_portal]: /azure/active-directory/develop/howto-create-service-principal-portal
+[azure_synapse_cli_full]: /cli/azure/synapse?view=azure-cli-latest
+[spark_samples]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/synapse/azure-analytics-synapse-spark/src/samples/java/com/azure/analytics/synapse/spark
+[performance_tuning]: https://github.com/Azure/azure-sdk-for-java/wiki/Performance-Tuning
+[jdk]: /java/azure/jdk/
+[azure_sub]: https://azure.microsoft.com/free/
+[azure_portal]: /azure/synapse-analytics/quickstart-create-workspace
 
