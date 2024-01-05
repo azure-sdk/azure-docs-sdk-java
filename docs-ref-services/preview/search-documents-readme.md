@@ -1,14 +1,15 @@
 ---
 title: Azure AI Search client library for Java
 keywords: Azure, java, SDK, API, azure-search-documents, cognitive-search
-ms.date: 10/12/2023
+ms.date: 01/05/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: cognitive-search
 ---
-# Azure AI Search client library for Java - version 11.6.0-beta.10 
+# Azure AI Search client library for Java - version 11.7.0-alpha.20240104.1 
 
-This is the Java client library for [Azure AI Search](https://docs.microsoft.com/azure/search/) (formerly known as "Azure Cognitive Search"). Azure AI Search service is an AI-powered information retrieval platform that helps developers build rich search experiences and generative AI apps that combine large language models with enterprise data.
+
+This is the Java client library for [Azure AI Search](/azure/search/) (formerly known as "Azure Cognitive Search"). Azure AI Search service is an AI-powered information retrieval platform that helps developers build rich search experiences and generative AI apps that combine large language models with enterprise data.
 
 Azure AI Search is well suited for the following application scenarios:
 
@@ -35,7 +36,7 @@ Use the Azure AI Search client library to:
 * Create and manage indexers that pull data from Azure into an index.
 * Create and manage skillsets that add AI enrichment to data ingestion.
 * Create and manage analyzers for advanced text analysis or multi-lingual content.
-* Optimize results through scoring profiles to factor in business logic or freshness.
+* Optimize results through semantic ranking and scoring profiles to factor in business logic or freshness.
 
 [Source code][source_code] | [Package (Maven)][package] | [API reference documentation][api_documentation]| [Product documentation][search_docs] | [Samples][samples]
 
@@ -46,7 +47,7 @@ Use the Azure AI Search client library to:
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-search-documents_11.6.0-beta.10/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -83,7 +84,7 @@ add the direct dependency to your project as follows.
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-search-documents</artifactId>
-    <version>11.6.0-beta.9</version>
+    <version>11.6.0</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -107,21 +108,19 @@ See [choosing a pricing tier](/azure/search/search-sku-tier) for more informatio
 
 To interact with the Search service, you'll need to create an instance of the appropriate client class: `SearchClient` 
 for searching indexed documents, `SearchIndexClient` for managing indexes, or `SearchIndexerClient` for crawling data 
-sources and loading search documents into an index. 
-
-To instantiate a client object, you'll need an **endpoint** and **Azure roles** or an **API key**. You can refer to the documentation for more information on [supported authenticating approaches](https://learn.microsoft.com/azure/search/search-security-overview#authentication) 
+sources and loading search documents into an index. To instantiate a client object, you'll need an **endpoint** and **Azure roles** or an **API key**. You can refer to the documentation for more information on [supported authenticating approaches](https://learn.microsoft.com/azure/search/search-security-overview#authentication) 
 with the Search service.
 
 #### Get an API Key
 
 An API key can be an easier approach to start with because it doesn't require pre-existing role assignments.
 
-You can get the **endpoint** and an **API key** from the Search service in the [Azure Portal](https://portal.azure.com/). 
+You can get the **endpoint** and an **API key** from the search service in the [Azure Portal](https://portal.azure.com/). 
 Please refer the [documentation](/azure/search/search-security-api-keys) for instructions on 
 how to get an API key.
 
 Alternatively, you can use the following [Azure CLI](https://learn.microsoft.com/cli/azure/) command to retrieve the 
-API key from the Search service:
+API key from the search service:
 
 ```bash
 az search admin-key show --service-name <mysearch> --resource-group <mysearch-rg>
@@ -208,15 +207,14 @@ SearchAsyncClient searchAsyncClient = new SearchClientBuilder()
 
 #### Create a client using Microsoft Entra ID authentication
 
-You can also create a `SearchClient`, `SearchIndexClient`, or `SearchIndexerClient` using Microsoft Entra ID 
-authentication. Your user or service principal must be assigned the "Search Index Data Reader" role.
-Using the [DefaultAzureCredential](https://github.com/Azure/azure-sdk-for-java/blob/azure-search-documents_11.6.0-beta.10/sdk/identity/azure-identity/README.md#defaultazurecredential) 
+You can also create a `SearchClient`, `SearchIndexClient`, or `SearchIndexerClient` using Microsoft Entra ID authentication. Your user or service principal must be assigned the "Search Index Data Reader" role.
+Using the [DefaultAzureCredential](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity/README.md#defaultazurecredential) 
 you can authenticate a service using Managed Identity or a service principal, authenticate as a developer working on an
 application, and more all without changing code. Please refer the [documentation](https://learn.microsoft.com/azure/search/search-security-rbac?tabs=config-svc-portal%2Croles-portal%2Ctest-portal%2Ccustom-role-portal%2Cdisable-keys-portal) 
 for instructions on how to connect to Azure AI Search using Azure role-based access control (Azure RBAC).
 
-Before you can use the `DefaultAzureCredential`, or any credential type from [Azure.Identity](https://github.com/Azure/azure-sdk-for-java/blob/azure-search-documents_11.6.0-beta.10/sdk/identity/azure-identity/README.md), 
-you'll first need to [install the Azure.Identity package](https://github.com/Azure/azure-sdk-for-java/blob/azure-search-documents_11.6.0-beta.10/sdk/identity/azure-identity/README.md#include-the-package).
+Before you can use the `DefaultAzureCredential`, or any credential type from [Azure.Identity](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity/README.md), 
+you'll first need to [install the Azure.Identity package](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity/README.md#include-the-package).
 
 To use `DefaultAzureCredential` with a client ID and secret, you'll need to set the `AZURE_TENANT_ID`, 
 `AZURE_CLIENT_ID`, and `AZURE_CLIENT_SECRET` environment variables; alternatively, you can pass those values
@@ -258,7 +256,8 @@ the form of JSON documents. _(If you're new to search, you can make a very rough
 tables.)_ The `azure-search-documents` client library exposes operations on these resources through two main client types.
 
 * `SearchClient` helps with:
-  * Searching your indexed documents using [vector queries](https://learn.microsoft.com/azure/search/vector-search-how-to-query),
+  * [Searching](/azure/search/search-lucene-query-architecture)
+    your indexed documents using [vector queries](https://learn.microsoft.com/azure/search/vector-search-how-to-query),
     [keyword queries](https://learn.microsoft.com/azure/search/search-query-create)
     and [hybrid queries](https://learn.microsoft.com/azure/search/hybrid-search-how-to-query)
   * [Vector query filters](https://learn.microsoft.com/azure/search/vector-search-filters) and [Text query filters](https://learn.microsoft.com/azure/search/search-filters)
@@ -273,7 +272,7 @@ tables.)_ The `azure-search-documents` client library exposes operations on thes
 * `SearchIndexClient` allows you to:
   * [Create, delete, update, or configure a search index](/rest/api/searchservice/index-operations)
   * [Declare custom synonym maps to expand or rewrite queries](/rest/api/searchservice/synonym-map-operations)
-  * Most of the `SearchServiceClient` functionality is not yet available in our current preview
+  <!-- * Most of the `SearchServiceClient` functionality is not yet available in our current preview -->
 
 * `SearchIndexerClient` allows you to:
   * [Start indexers to automatically crawl data sources](/rest/api/searchservice/indexer-operations)
@@ -283,30 +282,20 @@ Azure AI Search provides two powerful features:
 
 ### Semantic ranking
 
-Semantic ranking enhances the quality of search results for text-based queries. By enabling semantic ranking on your 
-search service, you can improve the relevance of search results in two ways:
-
+Semantic ranking enhances the quality of search results for text-based queries. By enabling semantic ranking on your search service, you can improve the relevance of search results in two ways:
 - It applies secondary ranking to the initial result set, promoting the most semantically relevant results to the top.
-- It extracts and returns captions and answers in the response, which can be displayed on a search page to enhance the 
-  user's search experience.
+- It extracts and returns captions and answers in the response, which can be displayed on a search page to enhance the user's search experience.
 
 To learn more about semantic ranking, you can refer to the [documentation](https://learn.microsoft.com/azure/search/vector-search-overview).
 
-### Vector search
 
-Vector search is an information retrieval technique that overcomes the limitations of traditional keyword-based search. 
-Instead of relying solely on lexical analysis and matching individual query terms, vector search utilizes machine 
-learning models to capture the contextual meaning of words and phrases. It represents documents and queries as vectors 
-in a high-dimensional space called an embedding. By understanding the intent behind the query, vector search can deliver 
-more relevant results that align with the user's requirements, even if the exact terms are not present in the document. 
-Moreover, vector search can be applied to various types of content, including images and videos, not just text.
+### Vector Search
 
-To learn how to index vector fields and perform vector search, you can refer to the [sample](https://github.com/Azure/azure-sdk-for-java/blob/azure-search-documents_11.6.0-beta.10/sdk/search/azure-search-documents/src/samples/java/com/azure/search/documents/VectorSearchExample.java). 
-This sample provides detailed guidance on indexing vector fields and demonstrates how to perform vector search.
+Vector search is an information retrieval technique that overcomes the limitations of traditional keyword-based search. Instead of relying solely on lexical analysis and matching individual query terms, vector search uses algorithms for similarity and concept search. It represents documents and queries as vectors in a high-dimensional space called an embedding. By searching on vector representations of content, a vector query can find relevant matches, even if the exact terms of the query are not present in the index. Moreover, vector search can be applied to various types of content, including images and videos and translated text, not just same-language text.
 
-Additionally, for more comprehensive information about vector search, including its concepts and usage, you can refer 
-to the [documentation](https://learn.microsoft.com/azure/search/vector-search-overview). The documentation provides 
-in-depth explanations and guidance on leveraging the power of vector search in Azure AI Search.
+To learn how to index vector fields and perform vector search, you can refer to the [sample](https://github.com/Azure/azure-sdk-for-python/blob/main/sdk/search/azure-search-documents/samples/sample_vector_search.py). This sample provides detailed guidance on indexing vector fields and demonstrates how to perform vector search.
+
+Additionally, for more comprehensive information about vector search, including its concepts and usage, you can refer to the [documentation](https://learn.microsoft.com/azure/search/vector-search-overview). The documentation provides in-depth explanations and guidance on leveraging the power of vector search in Azure AI Search.
 
 ## Examples
 
@@ -530,7 +519,7 @@ SearchClient searchClient = new SearchClientBuilder()
 
 ## Troubleshooting
 
-See our [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-search-documents_11.6.0-beta.10/sdk/search/azure-search-documents/TROUBLESHOOTING.md) 
+See our [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/search/azure-search-documents/TROUBLESHOOTING.md) 
 for details on how to diagnose various failure scenarios.
 
 ### General
@@ -596,20 +585,20 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [azure_subscription]: https://azure.microsoft.com/free/java
 [maven]: https://maven.apache.org/
 [package]: https://central.sonatype.com/artifact/com.azure/azure-search-documents
-[samples]: https://github.com/Azure/azure-sdk-for-java/tree/azure-search-documents_11.6.0-beta.10/sdk/search/azure-search-documents/src/samples/
-[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/azure-search-documents_11.6.0-beta.10/sdk/search/azure-search-documents/src/samples/README.md
-[source_code]: https://github.com/Azure/azure-sdk-for-java/tree/azure-search-documents_11.6.0-beta.10/sdk/search/azure-search-documents/src
+[samples]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/search/azure-search-documents/src/samples/
+[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/search/azure-search-documents/src/samples/README.md
+[source_code]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/search/azure-search-documents/src
 [logging]: https://github.com/Azure/azure-sdk-for-java/wiki/Logging-with-Azure-SDK
 [cla]: https://cla.microsoft.com
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
 [coc_contact]: mailto:opencode@microsoft.com
-[add_headers_from_context_policy]: https://github.com/Azure/azure-sdk-for-java/blob/azure-search-documents_11.6.0-beta.10/sdk/core/azure-core/src/main/java/com/azure/core/http/policy/AddHeadersFromContextPolicy.java
+[add_headers_from_context_policy]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core/src/main/java/com/azure/core/http/policy/AddHeadersFromContextPolicy.java
 [rest_api]: /rest/api/searchservice/http-status-codes
 [create_search_service_docs]: /azure/search/search-create-service-portal
 [create_search_service_ps]: /azure/search/search-manage-powershell#create-or-delete-a-service
 [create_search_service_cli]: /cli/azure/search/service?view=azure-cli-latest#az-search-service-create
-[HttpResponseException]: https://github.com/Azure/azure-sdk-for-java/blob/azure-search-documents_11.6.0-beta.10/sdk/core/azure-core/src/main/java/com/azure/core/exception/HttpResponseException.java
+[HttpResponseException]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core/src/main/java/com/azure/core/exception/HttpResponseException.java
 [status_codes]: /rest/api/searchservice/http-status-codes
 [search-get-started-portal]: /azure/search/search-get-started-portal
 
