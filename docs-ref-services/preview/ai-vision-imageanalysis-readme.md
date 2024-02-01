@@ -1,12 +1,12 @@
 ---
 title: Azure Image Analysis client library for Java
 keywords: Azure, java, SDK, API, azure-ai-vision-imageanalysis, vision
-ms.date: 01/22/2024
+ms.date: 02/01/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: vision
 ---
-# Azure Image Analysis client library for Java - version 1.0.0-beta.1 
+# Azure Image Analysis client library for Java - version 1.0.0-alpha.20240201.1 
 
 
 The Image Analysis service provides AI algorithms for processing images and returning information about their content. In a single service call, you can extract one or more visual features from the image simultaneously, including getting a caption for the image, extracting text shown in the image (OCR) and detecting objects. For more information on the service and the supported visual features, see [Image Analysis overview][image_analysis_overview], and the [Concepts][image_analysis_concepts] page.
@@ -382,6 +382,6 @@ additional questions or comments.
 [image_analysis_concepts]: https://learn.microsoft.com/azure/ai-services/computer-vision/concept-tag-images-40
 [vision_studio]: https://aka.ms/vision-studio/image-analysis
 [samples]: https://aka.ms/azsdk/image-analysis/samples/java
-[sdk_source_code]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-vision-imageanalysis_1.0.0-beta.1/sdk/vision/azure-ai-vision-imageanalysis/src/main/java/com/azure/ai/vision/imageanalysis
+[sdk_source_code]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/vision/azure-ai-vision-imageanalysis/src/main/java/com/azure/ai/vision/imageanalysis
 [supported_regions]: https://learn.microsoft.com/azure/ai-services/computer-vision/concept-describe-images-40
 
