@@ -1,12 +1,12 @@
 ---
 title: Azure Communication Phone Numbers client library for Java
 keywords: Azure, java, SDK, API, azure-communication-phonenumbers, communication
-ms.date: 01/29/2024
+ms.date: 03/04/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: communication
 ---
-# Azure Communication Phone Numbers client library for Java - version 1.2.0-beta.2 
+# Azure Communication Phone Numbers client library for Java - version 1.2.0-alpha.20240304.1 
 
 
 The phone numbers package provides capabilities for phone number management.
@@ -28,7 +28,7 @@ Purchased phone numbers can come with many capabilities, depending on the countr
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-communication-phonenumbers_1.2.0-beta.2/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -64,7 +64,7 @@ add the direct dependency to your project as follows.
 <dependency>
   <groupId>com.azure</groupId>
   <artifactId>azure-communication-phonenumbers</artifactId>
-  <version>1.2.0-beta.2</version>
+  <version>1.1.4</version>
 </dependency>
 ```
 
@@ -337,7 +337,7 @@ Check out other client libraries for Azure communication service
 [product_docs]: /azure/communication-services/
 [package]: https://central.sonatype.com/artifact/com.azure/azure-communication-phonenumbers
 [api_documentation]: https://aka.ms/java-docs
-[source]: https://github.com/Azure/azure-sdk-for-java/tree/azure-communication-phonenumbers_1.2.0-beta.2/sdk/communication/azure-communication-phonenumbers/src
+[source]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/communication/azure-communication-phonenumbers/src
 
 
 
