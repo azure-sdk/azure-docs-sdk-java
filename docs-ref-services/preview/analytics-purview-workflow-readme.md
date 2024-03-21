@@ -1,12 +1,12 @@
 ---
 title: Azure Purview Workflow client library for Java
 keywords: Azure, java, SDK, API, azure-analytics-purview-workflow, purview
-ms.date: 11/06/2023
+ms.date: 03/21/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: purview
 ---
-# Azure Purview Workflow client library for Java - version 1.0.0-beta.2 
+# Azure Purview Workflow client library for Java - version 1.0.0-alpha.20240321.1 
 
 
 Workflows are automated, repeatable business processes that users can create within Microsoft Purview to validate and orchestrate CUD (create, update, delete) operations on their data entities. Enabling these processes allow organizations to track changes, enforce policy compliance, and ensure quality data across their data landscape.
@@ -38,7 +38,7 @@ To use the [UsernamePasswordCredential][username_password_credential] provider s
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-identity</artifactId>
-    <version>1.10.4</version>
+    <version>1.11.2</version>
 </dependency>
 ```
 
@@ -117,7 +117,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [jdk]: /java/azure/jdk/
 [azure_subscription]: https://azure.microsoft.com/free/
 [purview_resource]: /azure/purview/create-catalog-portal
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-analytics-purview-workflow_1.0.0-beta.2/sdk/identity/azure-identity/README.md
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity/README.md
 [app_registration]:https://learn.microsoft.com/azure/active-directory/develop/quickstart-register-app
 [username_password_credential]: https://learn.microsoft.com/java/api/com.azure.identity.usernamepasswordcredential?source=recommendations&view=azure-java-stable
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fpurview%2Fazure-analytics-purview-workflow%2FREADME.png)
