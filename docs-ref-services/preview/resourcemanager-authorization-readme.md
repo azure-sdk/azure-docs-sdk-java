@@ -1,15 +1,15 @@
 ---
-title: Azure Resource Manager redis cache client library for Java
-keywords: Azure, java, SDK, API, azure-resourcemanager-redis, redis-cache
+title: Azure Resource Manager Authorization client library for Java
+keywords: Azure, java, SDK, API, azure-resourcemanager-authorization, azure-resource-manager
 ms.date: 03/21/2024
 ms.topic: reference
 ms.devlang: java
-ms.service: redis-cache
+ms.service: azure-resource-manager
 ---
-# Azure Resource Manager redis cache client library for Java - version 2.37.0-alpha.20240320.1 
+# Azure Resource Manager Authorization client library for Java - version 2.37.0-alpha.20240320.1 
 
 
-Azure Resource Manager redis cache client library for Java
+Azure Resource Manager Authorization client library for Java
 
 For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
 
@@ -22,11 +22,11 @@ For documentation on how to use this package, please see [Azure Management Libra
 
 ### Adding the package to your product
 
-[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-redis;current})
+[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-authorization;current})
 ```xml
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
-    <artifactId>azure-resourcemanager-redis</artifactId>
+    <artifactId>azure-resourcemanager-authorization</artifactId>
     <version>2.36.0</version>
 </dependency>
 ```
@@ -55,7 +55,7 @@ AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
 TokenCredential credential = new DefaultAzureCredentialBuilder()
     .authorityHost(profile.getEnvironment().getActiveDirectoryEndpoint())
     .build();
-RedisManager manager = RedisManager
+AuthorizationManager manager = AuthorizationManager
     .authenticate(credential, profile);
 ```
 
