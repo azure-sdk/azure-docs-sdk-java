@@ -1,12 +1,12 @@
 ---
 title: Azure Maps SDK GeoLocation client library for Java
 keywords: Azure, java, SDK, API, azure-maps-geolocation, maps
-ms.date: 10/14/2022
+ms.date: 03/21/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: maps
 ---
-# Azure Maps SDK GeoLocation client library for Java - version 1.0.0-beta.1 
+# Azure Maps SDK GeoLocation client library for Java - version 1.0.0-alpha.20240321.1 
 
 
 Azure Maps SDK GeoLocation client library for Java.
@@ -64,7 +64,7 @@ With above configuration, `azure` client can be authenticated by following code:
 DefaultAzureCredential tokenCredential = new DefaultAzureCredentialBuilder().build();
 
 // Creates a client
-GeoLocationClient client = new GeoLocationClientBuilder()
+GeolocationClient client = new GeolocationClientBuilder()
     .credential(tokenCredential)
     .clientId(System.getenv("MAPS_CLIENT_ID"))
     .buildClient();
@@ -92,11 +92,11 @@ For example, if you search with an IP address, a error is returned, indicating `
 ## Next steps
 
 Several Azure Maps GeoLocation Java SDK samples are available to you in the SDK's GitHub repository.
-[Azure Maps GeoLocation Samples](https://github.com/Azure/azure-sdk-for-java/tree/azure-maps-geolocation_1.0.0-beta.1/sdk/maps/azure-maps-geolocation/src/samples)
+[Azure Maps GeoLocation Samples](https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/maps/azure-maps-geolocation/src/samples)
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-maps-geolocation_1.0.0-beta.1/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -105,17 +105,17 @@ For details on contributing to this repository, see the [contributing guide](htt
 1. Create new Pull Request
 
 <!-- LINKS -->
-[source]: https://github.com/Azure/azure-sdk-for-java/tree/azure-maps-geolocation_1.0.0-beta.1/sdk/maps/azure-maps-geolocation/src
-[samples]:  https://github.com/Azure/azure-sdk-for-java/tree/azure-maps-geolocation_1.0.0-beta.1/sdk/maps/azure-maps-geolocation/src/samples
+[source]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/maps/azure-maps-geolocation/src
+[samples]:  https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/maps/azure-maps-geolocation/src/samples
 [rest_docs]: /rest/api/maps
 [product_docs]: /azure/azure-maps/
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: /java/azure/jdk/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-maps-geolocation_1.0.0-beta.1/sdk/identity/azure-identity
-[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/azure-maps-geolocation_1.0.0-beta.1/sdk/core/azure-core-http-netty
-[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/azure-maps-geolocation_1.0.0-beta.1/sdk/resourcemanager/docs/AUTH.md
-[design]: https://github.com/Azure/azure-sdk-for-java/blob/azure-maps-geolocation_1.0.0-beta.1/sdk/resourcemanager/docs/DESIGN.md
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity
+[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core-http-netty
+[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/resourcemanager/docs/AUTH.md
+[design]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/resourcemanager/docs/DESIGN.md
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fmaps%2Fazure-maps-geolocation%2FREADME.png)
 
