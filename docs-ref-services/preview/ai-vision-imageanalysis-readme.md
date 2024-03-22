@@ -1,12 +1,12 @@
 ---
 title: Azure Image Analysis client library for Java
 keywords: Azure, java, SDK, API, azure-ai-vision-imageanalysis, vision
-ms.date: 02/13/2024
+ms.date: 03/22/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: vision
 ---
-# Azure Image Analysis client library for Java - version 1.0.0-beta.2 
+# Azure Image Analysis client library for Java - version 1.0.0-alpha.20240322.1 
 
 
 The Image Analysis service provides AI algorithms for processing images and returning information about their content. In a single service call, you can extract one or more visual features from the image simultaneously, including getting a caption for the image, extracting text shown in the image (OCR) and detecting objects. For more information on the service and the supported visual features, see [Image Analysis overview][image_analysis_overview], and the [Concepts][image_analysis_concepts] page.
@@ -300,7 +300,7 @@ Message: Status code 400, "{"error":{"code":"InvalidRequest","message":"Image fo
 Reviewing the HTTP request sent or response received over the wire to the Image Analysis service can be useful in troubleshooting. This can be done in two ways:
 
 1. The Image Analysis client library supports a built-in console logging framework for temporary debugging purposes. It also supports more advanced logging using the [SLF4J](https://www.slf4j.org/) interface. For detailed information see [Use logging in the Azure SDK for Java](https://learn.microsoft.com/azure/developer/java/sdk/troubleshooting-overview#use-logging-in-the-azure-sdk-for-java).
-1. By getting access to the [Response](https://learn.microsoft.com/java/api/com.azure.core.http.rest.response) object, and from it the [HttpRequest](https://learn.microsoft.com/java/api/com.azure.core.http.httprequest) object, and printing information provided by these objects. See [SampleCaptionImageFileWithResponse.java](https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-vision-imageanalysis_1.0.0-beta.2/sdk/vision/azure-ai-vision-imageanalysis/src/samples/java/com/azure/ai/vision/imageanalysis/SampleCaptionImageFileWithResponse.java) and [SampleOcrImageUrlWithResponseAsync.java](https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-vision-imageanalysis_1.0.0-beta.2/sdk/vision/azure-ai-vision-imageanalysis/src/samples/java/com/azure/ai/vision/imageanalysis/SampleOcrImageUrlWithResponseAsync.java).
+1. By getting access to the [Response](https://learn.microsoft.com/java/api/com.azure.core.http.rest.response) object, and from it the [HttpRequest](https://learn.microsoft.com/java/api/com.azure.core.http.httprequest) object, and printing information provided by these objects. See [SampleCaptionImageFileWithResponse.java](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/vision/azure-ai-vision-imageanalysis/src/samples/java/com/azure/ai/vision/imageanalysis/SampleCaptionImageFileWithResponse.java) and [SampleOcrImageUrlWithResponseAsync.java](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/vision/azure-ai-vision-imageanalysis/src/samples/java/com/azure/ai/vision/imageanalysis/SampleOcrImageUrlWithResponseAsync.java).
 
 We recommend you enable console logging (option #1). The sections below discusses enabling console logging using the built-in framework.
 
@@ -383,6 +383,6 @@ additional questions or comments.
 [image_analysis_concepts]: https://learn.microsoft.com/azure/ai-services/computer-vision/concept-tag-images-40
 [vision_studio]: https://aka.ms/vision-studio/image-analysis
 [samples]: https://aka.ms/azsdk/image-analysis/samples/java
-[sdk_source_code]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-vision-imageanalysis_1.0.0-beta.2/sdk/vision/azure-ai-vision-imageanalysis/src/main/java/com/azure/ai/vision/imageanalysis
+[sdk_source_code]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/vision/azure-ai-vision-imageanalysis/src/main/java/com/azure/ai/vision/imageanalysis
 [supported_regions]: https://learn.microsoft.com/azure/ai-services/computer-vision/concept-describe-images-40
 
