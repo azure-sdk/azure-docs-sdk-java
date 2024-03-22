@@ -1,14 +1,12 @@
 ---
 title: Azure Document Translator client library for Java
-keywords: Azure, java, SDK, API, azure-ai-documenttranslator,
-ms.date: 04/28/2021
+keywords: Azure, java, SDK, API, azure-ai-documenttranslator, translation
+ms.date: 03/22/2024
 ms.topic: reference
 ms.devlang: java
-ms.service: 
-ms.technology: azure
-ms.prod: azure
+ms.service: translation
 ---
-# Azure Document Translator client library for Java - version 1.0.0-beta.1 
+# Azure Document Translator client library for Java - version 1.0.0-alpha.20240322.1 
 
 
 Microsoft Azure Cognitive Services Document Translator API enables you to translate documents in batch.
@@ -46,17 +44,16 @@ In order to interact with the Document Translator service, you'll need to create
 You can obtain the endpoint and API key from the resource information in the [Azure Portal][azure_portal] from your Document Translator resource. The endpoint is of format `https://<NAME-OF-YOUR-RESOURCE>.cognitiveservices.azure.com`. 
 
 ##### Example
-<!-- embedme ./src/samples/java/com/azure/ai/documenttranslator/ReadmeSamples.java#L21-L29 -->
-```java
+```java readme-sample-createBatchDocumentTranslationRestClient
 String endpoint = String.format("https://%s.cognitiveservices.azure.com/translator/text/batch/v1.0-preview.1",
     "<document-translator-resource-name>");
 String apiKey = "<document-translator-api-key>";
 
-BatchDocumentTranslationRestClient client = new BatchDocumentTranslationClientBuilder()
+BatchDocumentTranslationClient client = new BatchDocumentTranslationClientBuilder()
     .credential(new AzureKeyCredential(apiKey))
     .endpoint(endpoint)
     .httpClient(new NettyAsyncHttpClientBuilder().build())
-    .buildRestClient();
+    .buildClient();
 ```
 
 ## Key concepts
@@ -84,16 +81,16 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 
 <!-- LINKS -->
 [samples]: src/samples/java/com/azure/ai/documenttranslator
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-documenttranslator_1.0.0-beta.1/sdk/translation/azure-ai-documenttranslator/src
-[samples_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-documenttranslator_1.0.0-beta.1/sdk/translation/azure-ai-documenttranslator/src/samples/
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/translation/azure-ai-documenttranslator/src
+[samples_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/translation/azure-ai-documenttranslator/src/samples/
 [azure_subscription]: https://azure.microsoft.com/free/
-[product_documentation]: https://docs.microsoft.com/azure/cognitive-services/translator/document-translation/get-started-with-document-translation
-[cognitive_resource_cli]: https://docs.microsoft.com/azure/cognitive-services/cognitive-services-apis-create-account-cli
-[batch_document_translation_client_class]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-documenttranslator_1.0.0-beta.1/sdk/translation/azure-ai-documenttranslator/src/main/java/com/azure/ai/documenttranslator/BatchDocumentTranslationRestClient.java
+[product_documentation]: https://learn.microsoft.com/azure/ai-services/translator/document-translation/overview#get-started
+[cognitive_resource_cli]: /azure/cognitive-services/cognitive-services-apis-create-account-cli
+[batch_document_translation_client_class]: https://github.com/Azure/azure-sdk-for-java/tree/7cebc63a02f2f6ccd2a8adc9b7975e2e71bd3f74/sdk/translation/azure-ai-documenttranslator/src/main/java/com/azure/ai/documenttranslator/BatchDocumentTranslationClient.java
 [azure_portal]: https://portal.azure.com
-[jdk_link]: https://docs.microsoft.com/java/azure/jdk/?view=azure-java-stable
-[package]: https://mvnrepository.com/artifact/com.azure/azure-ai-documenttranslator
-[samples_readme]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-documenttranslator_1.0.0-beta.1/sdk/translation/azure-ai-documenttranslator/src/samples/README.md
+[jdk_link]: /java/azure/jdk/?view=azure-java-stable
+[package]: https://central.sonatype.com/artifact/com.azure/azure-ai-documenttranslator
+[samples_readme]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/translation/azure-ai-documenttranslator/src/samples/README.md
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Ftranslation%2Fazure-ai-documenttranslator%2FREADME.png)
 
