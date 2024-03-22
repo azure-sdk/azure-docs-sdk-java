@@ -1,12 +1,12 @@
 ---
 title: Azure Storage Common shared library for Java
 keywords: Azure, java, SDK, API, azure-storage-common, storage
-ms.date: 10/20/2023
+ms.date: 03/22/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: storage
 ---
-# Azure Storage Common shared library for Java - version 12.24.0-beta.1 
+# Azure Storage Common shared library for Java - version 12.25.0-alpha.20240322.1 
 
 Azure Storage Common is a library that has common dependencies for all Azure Storage packages.
 
@@ -25,7 +25,7 @@ Azure Storage Common is a library that has common dependencies for all Azure Sto
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on GA version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-common_12.24.0-beta.1/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -61,7 +61,7 @@ add the direct dependency to your project as follows.
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-storage-common</artifactId>
-    <version>12.24.0-beta.1</version>
+    <version>12.24.0</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -83,7 +83,7 @@ the client library to use the Netty HTTP client. Configuring or changing the HTT
 All client libraries, by default, use the Tomcat-native Boring SSL library to enable native-level performance for SSL
 operations. The Boring SSL library is an uber jar containing native libraries for Linux / macOS / Windows, and provides
 better performance compared to the default SSL implementation within the JDK. For more information, including how to
-reduce the dependency size, refer to the [performance tuning][performance_tuning] section of the wiki.
+reduce the dependency size, refer to the [performance tuning](https://github.com/Azure/azure-sdk-for-java/wiki/Performance-Tuning) section of the wiki.
 
 ## Next steps
 
@@ -98,7 +98,7 @@ When you submit a pull request, a CLA-bot will automatically determine whether y
 This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For more information see the [Code of Conduct FAQ][coc_faq] or contact [opencode@microsoft.com][coc_contact] with any additional questions or comments.
 
 <!-- LINKS -->
-[source]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-common_12.24.0-beta.1/sdk/storage/azure-storage-common/src
+[source]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/storage/azure-storage-common/src
 [samples_readme]: src/samples/README.md
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [sas_token]: /azure/storage/common/storage-dotnet-shared-access-signature-part-1
