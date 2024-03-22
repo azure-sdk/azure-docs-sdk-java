@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: azureadexternalidentities
 ---
-# Azure Resource Manager ExternalIdentitiesConfiguration client library for Java - version 1.0.0-alpha.20240321.1 
+# Azure Resource Manager ExternalIdentitiesConfiguration client library for Java - version 1.0.0-alpha.20240322.1 
 
 
 Azure Resource Manager ExternalIdentitiesConfiguration client library for Java.
