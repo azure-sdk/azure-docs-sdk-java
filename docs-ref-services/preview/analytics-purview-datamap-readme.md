@@ -1,12 +1,12 @@
 ---
 title: Azure Purview DataMap client library for Java
 keywords: Azure, java, SDK, API, azure-analytics-purview-datamap, purview
-ms.date: 03/07/2024
+ms.date: 03/22/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: purview
 ---
-# Azure Purview DataMap client library for Java - version 1.0.0-beta.1 
+# Azure Purview DataMap client library for Java - version 1.0.0-alpha.20240322.1 
 
 
 Microsoft Purview Data Map provides the foundation for data discovery and data governance. Microsoft Purview Data Map is a cloud native PaaS service that captures metadata about enterprise data present in analytics and operation systems on-premises and cloud. Azure Purview DataMap client provides a set of APIs in Purview Data Map Data Plane. For a full list of APIs, please refer to [Data Map API](https://learn.microsoft.com/rest/api/purview/datamapdataplane/operation-groups?view=rest-purview-datamapdataplane-2023-09-01).
@@ -72,7 +72,7 @@ AtlasEntityDef type = typeDefinitionClient.getEntityByName("AtlasGlossary");
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-analytics-purview-datamap_1.0.0-beta.1/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -85,7 +85,7 @@ For details on contributing to this repository, see the [contributing guide](htt
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: https://learn.microsoft.com/azure/developer/java/fundamentals/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-analytics-purview-datamap_1.0.0-beta.1/sdk/identity/azure-identity
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fpurview%2Fazure-analytics-purview-datamap%2FREADME.png)
 
