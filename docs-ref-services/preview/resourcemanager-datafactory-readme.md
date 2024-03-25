@@ -1,12 +1,12 @@
 ---
 title: Azure Resource Manager DataFactory client library for Java
 keywords: Azure, java, SDK, API, azure-resourcemanager-datafactory, datafactory
-ms.date: 03/14/2024
+ms.date: 03/25/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: datafactory
 ---
-# Azure Resource Manager DataFactory client library for Java - version 1.0.0-beta.27 
+# Azure Resource Manager DataFactory client library for Java - version 1.0.0-alpha.20240325.1 
 
 
 Azure Resource Manager DataFactory client library for Java.
@@ -170,7 +170,7 @@ while ("InProgress".equals(runStatus)) {
     runStatus = pipelineRun.status();
 }
 ```
-[Code snippets and samples](https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-datafactory_1.0.0-beta.27/sdk/datafactory/azure-resourcemanager-datafactory/SAMPLE.md)
+[Code snippets and samples](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/datafactory/azure-resourcemanager-datafactory/SAMPLE.md)
 
 
 ## Troubleshooting
@@ -192,11 +192,11 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: https://learn.microsoft.com/azure/developer/java/fundamentals/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-datafactory_1.0.0-beta.27/sdk/identity/azure-identity
-[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-datafactory_1.0.0-beta.27/sdk/core/azure-core-http-netty
-[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-datafactory_1.0.0-beta.27/sdk/resourcemanager/docs/AUTH.md
-[design]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-datafactory_1.0.0-beta.27/sdk/resourcemanager/docs/DESIGN.md
-[cg]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-datafactory_1.0.0-beta.27/CONTRIBUTING.md
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity
+[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core-http-netty
+[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/resourcemanager/docs/AUTH.md
+[design]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/resourcemanager/docs/DESIGN.md
+[cg]: https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
 
