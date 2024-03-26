@@ -1,12 +1,12 @@
 ---
 title: Azure OpenAI: OpenAI Assistants client library for Java
 keywords: Azure, java, SDK, API, azure-ai-openai-assistants, openai
-ms.date: 02/14/2024
+ms.date: 03/26/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: openai
 ---
-# Azure OpenAI: OpenAI Assistants client library for Java - version 1.0.0-beta.2 
+# Azure OpenAI: OpenAI Assistants client library for Java - version 1.0.0-alpha.20240326.1 
 
 
 The Azure OpenAI Assistants client library for Java is an adaptation of OpenAI's REST APIs that provides an idiomatic interface
@@ -325,7 +325,7 @@ reduce the dependency size, refer to the [performance tuning][performance_tuning
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai-assistants_1.0.0-beta.2/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -335,14 +335,14 @@ For details on contributing to this repository, see the [contributing guide](htt
 
 <!-- LINKS -->
 [jdk]: https://learn.microsoft.com/azure/developer/java/fundamentals/
-[logLevels]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai-assistants_1.0.0-beta.2/sdk/core/azure-core/src/main/java/com/azure/core/util/logging/ClientLogger.java
+[logLevels]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core/src/main/java/com/azure/core/util/logging/ClientLogger.java
 [non_azure_openai_authentication]: https://platform.openai.com/docs/api-reference/authentication
 [performance_tuning]: https://github.com/Azure/azure-sdk-for-java/wiki/Performance-Tuning
-[samples_readme]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-openai-assistants_1.0.0-beta.2/sdk/openai/azure-ai-openai-assistants/src/samples
+[samples_readme]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/openai/azure-ai-openai-assistants/src/samples
 
 [azure_openai_access]: https://learn.microsoft.com/azure/cognitive-services/openai/overview#how-do-i-get-access-to-azure-openai
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai-assistants_1.0.0-beta.2/sdk/identity/azure-identity
-[function_tool_call_full_sample]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai-assistants_1.0.0-beta.2/sdk/openai/azure-ai-openai-assistants/src/samples/java/com/azure/ai/openai/assistants/FunctionToolCallSample.java
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity
+[function_tool_call_full_sample]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/openai/azure-ai-openai-assistants/src/samples/java/com/azure/ai/openai/assistants/FunctionToolCallSample.java
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fopenai%2Fassistants%2Fazure-ai-openai-assistants%2FREADME.png)
 
