@@ -1,37 +1,35 @@
 ---
 title: Azure Communication Network Traversal Package client library for Java
 keywords: Azure, java, SDK, API, azure-communication-networktraversal, communication
-ms.date: 04/14/2022
+ms.date: 03/27/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: communication
-ms.technology: azure
-ms.prod: azure
 ---
-# Azure Communication Network Traversal Package client library for Java - version 1.1.0-beta.2 
+# Azure Communication Network Traversal Package client library for Java - version 1.1.0-alpha.20240327.1 
 
 
 Azure Communication Network Traversal is managing TURN credentials for Azure Communication Services.
 
 It will provide TURN credentials to a user.
 
-[Source code](https://github.com/Azure/azure-sdk-for-java/blob/azure-communication-networktraversal_1.1.0-beta.2/sdk/communication) | [API reference documentation](https://github.com/Azure/azure-sdk-for-java/blob/azure-communication-networktraversal_1.1.0-beta.2/sdk/communication)
+[Source code](https://github.com/Azure/azure-sdk-for-java/blob/master/sdk/communication) | [API reference documentation](https://github.com/Azure/azure-sdk-for-java/blob/master/sdk/communication)
 
 ## Getting started
 
 ### Prerequisites
 
 - An Azure subscription. [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
-- [Java Development Kit (JDK)](https://docs.microsoft.com/java/azure/jdk/?view=azure-java-stable) version 8 or above.
+- [Java Development Kit (JDK)](/java/azure/jdk/?view=azure-java-stable) version 8 or above.
 - [Apache Maven](https://maven.apache.org/download.cgi).
-- A Communication Services resource. You can use the [Azure Portal](https://docs.microsoft.com/azure/communication-services/quickstarts/create-communication-resource?tabs=windows&pivots=platform-azp) or the [Azure PowerShell](https://docs.microsoft.com/powershell/module/az.communication/new-azcommunicationservice) to set it up.
+- A Communication Services resource. You can use the [Azure Portal](/azure/communication-services/quickstarts/create-communication-resource?tabs=windows&pivots=platform-azp) or the [Azure PowerShell](/powershell/module/az.communication/new-azcommunicationservice) to set it up.
 
 ### Include the package
 
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-communication-networktraversal_1.1.0-beta.2/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -235,7 +233,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
 [coc_contact]: mailto:opencode@microsoft.com
-[product_docs]: https://docs.microsoft.com/azure/communication-services/
+[product_docs]: /azure/communication-services/
 [api_documentation]: https://aka.ms/java-docs
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fcommunication%2Fazure-communication-networktraversal%2FREADME.png)
