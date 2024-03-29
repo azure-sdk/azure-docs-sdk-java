@@ -1,12 +1,12 @@
 ---
 title: Azure OpenTelemetry Metrics plugin library for Java
 keywords: Azure, java, SDK, API, azure-core-metrics-opentelemetry, core
-ms.date: 03/01/2024
+ms.date: 03/29/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: core
 ---
-# Azure OpenTelemetry Metrics plugin library for Java - version 1.0.0-beta.17 
+# Azure OpenTelemetry Metrics plugin library for Java - version 1.0.0-alpha.20240329.3 
 
 
 This package enables  metrics from Azure SDK Java libraries through [OpenTelemetry][OpenTelemetry]. OpenTelemetry is an open source, vendor-agnostic, single distribution of libraries to provide metrics collection and distributed tracing for services.
@@ -44,7 +44,7 @@ The following sections provide several code snippets covering some of the most c
 - [Default configuration: Opentelemtery SDK](#default-configuration-agent)
 - [Custom configuration](#custom-configuration)
 
-You can find more samples [here](https://github.com/Azure/azure-sdk-for-java/blob/azure-core-metrics-opentelemetry_1.0.0-beta.17/sdk/core/azure-core-metrics-opentelemetry/src/samples/).
+You can find more samples [here](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core-metrics-opentelemetry/src/samples/).
 
 ### Default configuration: agent
 
@@ -133,10 +133,10 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 
 <!-- Links -->
 [api_documentation]: https://aka.ms/java-docs
-[context]: https://github.com/Azure/azure-sdk-for-java/blob/azure-core-metrics-opentelemetry_1.0.0-beta.17/sdk/core/azure-core/src/main/java/com/azure/core/util/Context.java
+[context]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core/src/main/java/com/azure/core/util/Context.java
 [jdk_link]: /java/azure/jdk/?view=azure-java-stable
 [logging]: https://github.com/Azure/azure-sdk-for-java/wiki/Logging-with-Azure-SDK
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-core-metrics-opentelemetry_1.0.0-beta.17/sdk/core/azure-core-metrics-opentelemetry/src/
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core-metrics-opentelemetry/src/
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fcore%2Fazure-core-metrics-opentelemetry%2FREADME.png)
 
