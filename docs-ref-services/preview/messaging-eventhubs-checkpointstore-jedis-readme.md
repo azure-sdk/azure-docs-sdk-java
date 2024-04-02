@@ -1,12 +1,12 @@
 ---
 title: Azure Event Hubs Checkpoint Store client library for Java
-keywords: Azure, java, SDK, API, azure-messaging-eventhubs-checkpointstore-jedis, eventhubs
-ms.date: 09/25/2023
+keywords: Azure, java, SDK, API, azure-messaging-eventhubs-checkpointstore-jedis, event-hubs
+ms.date: 04/02/2024
 ms.topic: reference
 ms.devlang: java
-ms.service: eventhubs
+ms.service: event-hubs
 ---
-# Azure Event Hubs Checkpoint Store client library for Java - version 1.0.0-beta.2 
+# Azure Event Hubs Checkpoint Store client library for Java - version 1.0.0-alpha.20240402.1 
  using the Jedis Client Library for Redis
 
 Azure Event Hubs Checkpoint Store can be used for storing checkpoints while processing events from Azure Event Hubs.
@@ -33,7 +33,7 @@ documentation][event_hubs_product_docs] | [Samples][sample_examples]
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-messaging-eventhubs-checkpointstore-jedis_1.0.0-beta.2/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -183,17 +183,17 @@ Guidelines][guidelines] for more information.
 [event_hubs_create]: /azure/event-hubs/event-hubs-create
 [event_hubs_product_docs]: /azure/event-hubs/
 [jdk_link]: /java/azure/jdk/?view=azure-java-stable
-[key_concepts]: https://github.com/Azure/azure-sdk-for-java/blob/azure-messaging-eventhubs-checkpointstore-jedis_1.0.0-beta.2/sdk/eventhubs/azure-messaging-eventhubs-checkpointstore-blob/README.md#key-concepts
+[key_concepts]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/eventhubs/azure-messaging-eventhubs-checkpointstore-blob/README.md#key-concepts
 [logging]: https://github.com/Azure/azure-sdk-for-java/wiki/Logging-with-Azure-SDK
 [maven]: https://maven.apache.org/
 [redis_quickstart]: https://learn.microsoft.com/azure/azure-cache-for-redis/quickstart-create-redis
 [redis_quickstart_java]: https://learn.microsoft.com/azure/azure-cache-for-redis/cache-java-get-started
-[samples_readme]: https://github.com/Azure/azure-sdk-for-java/tree/azure-messaging-eventhubs-checkpointstore-jedis_1.0.0-beta.2/sdk/eventhubs/azure-messaging-eventhubs-checkpointstore-jedis
-[sample_jedis_client]: https://github.com/Azure/azure-sdk-for-java/blob/azure-messaging-eventhubs-checkpointstore-jedis_1.0.0-beta.2/sdk/eventhubs/azure-messaging-eventhubs-checkpointstore-jedis/src/samples/java/com/azure/messaging/eventhubs/checkpointstore/jedis/JedisCheckpointStoreSample.java
-[sample_event_processor]: https://github.com/Azure/azure-sdk-for-java/blob/azure-messaging-eventhubs-checkpointstore-jedis_1.0.0-beta.2/sdk/eventhubs/azure-messaging-eventhubs-checkpointstore-jedis/src/samples/java/com/azure/messaging/eventhubs/checkpointstore/jedis/EventProcessorClientJedisSample.java
-[sample_examples]: https://github.com/Azure/azure-sdk-for-java/tree/azure-messaging-eventhubs-checkpointstore-jedis_1.0.0-beta.2/sdk/eventhubs/azure-messaging-eventhubs-checkpointstore-jedis/src/samples
-[source_code]: https://github.com/Azure/azure-sdk-for-java/tree/azure-messaging-eventhubs-checkpointstore-jedis_1.0.0-beta.2/sdk/eventhubs/azure-messaging-eventhubs-checkpointstore-jedis
-[source_eventprocessorclient]: https://github.com/Azure/azure-sdk-for-java/blob/azure-messaging-eventhubs-checkpointstore-jedis_1.0.0-beta.2/sdk/eventhubs/azure-messaging-eventhubs/src/main/java/com/azure/messaging/eventhubs/EventProcessorClient.java
-[source_jedisredischeckpointstore]: https://github.com/Azure/azure-sdk-for-java/blob/azure-messaging-eventhubs-checkpointstore-jedis_1.0.0-beta.2/sdk/eventhubs/azure-messaging-eventhubs-checkpointstore-jedis/src/main/java/com/azure/messaging/eventhubs/checkpointstore/jedis/JedisCheckpointStore.java
-[guidelines]: https://github.com/Azure/azure-sdk-for-java/blob/azure-messaging-eventhubs-checkpointstore-jedis_1.0.0-beta.2/CONTRIBUTING.md
+[samples_readme]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/eventhubs/azure-messaging-eventhubs-checkpointstore-jedis
+[sample_jedis_client]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/eventhubs/azure-messaging-eventhubs-checkpointstore-jedis/src/samples/java/com/azure/messaging/eventhubs/checkpointstore/jedis/JedisCheckpointStoreSample.java
+[sample_event_processor]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/eventhubs/azure-messaging-eventhubs-checkpointstore-jedis/src/samples/java/com/azure/messaging/eventhubs/checkpointstore/jedis/EventProcessorClientJedisSample.java
+[sample_examples]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/eventhubs/azure-messaging-eventhubs-checkpointstore-jedis/src/samples
+[source_code]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/eventhubs/azure-messaging-eventhubs-checkpointstore-jedis
+[source_eventprocessorclient]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/eventhubs/azure-messaging-eventhubs/src/main/java/com/azure/messaging/eventhubs/EventProcessorClient.java
+[source_jedisredischeckpointstore]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/eventhubs/azure-messaging-eventhubs-checkpointstore-jedis/src/main/java/com/azure/messaging/eventhubs/checkpointstore/jedis/JedisCheckpointStore.java
+[guidelines]: https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md
 
