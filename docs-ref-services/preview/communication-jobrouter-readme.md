@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: communication
 ---
-# Azure Communication Job Router client library for Java - version 1.2.0-alpha.20240402.7 
+# Azure Communication Job Router client library for Java - version 1.2.0-alpha.20240403.2 
 
 
 Azure Communication Job Router contains the APIs used in job router applications for Azure Communication Services.
@@ -60,7 +60,7 @@ add the direct dependency to your project as follows.
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-communication-jobrouter</artifactId>
-    <version>1.1.1</version>
+    <version>1.0.0</version>
 </dependency>
 ```
 
