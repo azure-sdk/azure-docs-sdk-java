@@ -1,12 +1,12 @@
 ---
 title: Azure Maps SDK Route client library for Java
 keywords: Azure, java, SDK, API, azure-maps-route, maps
-ms.date: 09/06/2022
+ms.date: 04/03/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: maps
 ---
-# Azure Maps SDK Route client library for Java - version 1.0.0-beta.1 
+# Azure Maps SDK Route client library for Java - version 1.0.0-alpha.20240402.1 
 
 
 Azure Maps SDK Route client library for Java.
@@ -89,14 +89,14 @@ RouteMatrixQuery matrixQuery = new RouteMatrixQuery();
 
 // origins
 GeoPointCollection origins = new GeoPointCollection(Arrays.asList(
-    new GeoPoint(52.36006, 4.85106),
-    new GeoPoint(52.36187, 4.85056)
+    new GeoPoint(4.85106, 52.36006),
+    new GeoPoint(4.85056, 52.36187)
 ));
 
 // destinations
 GeoPointCollection destinations = new GeoPointCollection(Arrays.asList(
-    new GeoPoint(52.36241, 4.85003),
-    new GeoPoint(52.50931, 13.42937)
+    new GeoPoint(4.85003, 52.36241),
+    new GeoPoint(13.42937, 52.50931)
 ));
 
 matrixQuery.setDestinations(destinations);
@@ -160,7 +160,7 @@ client.getRouteDirections(routeOptions,
 Get Route Range
 ```java com.azure.maps.search.sync.route_range
 System.out.println("Get route range");
-RouteRangeOptions rangeOptions = new RouteRangeOptions(new GeoPosition(5.86605, 50.97452), Duration.ofSeconds(6000));
+RouteRangeOptions rangeOptions = new RouteRangeOptions(new GeoPosition(50.97452, 5.86605), Duration.ofSeconds(6000));
 client.getRouteRange(rangeOptions);
 ```
 
@@ -203,11 +203,11 @@ For example, if you search with an invalid coordinate, a error is returned, indi
 ## Next steps
 
 Several Azure Maps Route Java SDK samples are available to you in the SDK's GitHub repository.
-[Azure Maps Route Samples](https://github.com/Azure/azure-sdk-for-java/tree/azure-maps-route_1.0.0-beta.1/sdk/maps/azure-maps-route/src/samples)
+[Azure Maps Route Samples](https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/maps/azure-maps-route/src/samples)
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-maps-route_1.0.0-beta.1/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -216,17 +216,17 @@ For details on contributing to this repository, see the [contributing guide](htt
 1. Create new Pull Request
 
 <!-- LINKS -->
-[source]: https://github.com/Azure/azure-sdk-for-java/tree/azure-maps-route_1.0.0-beta.1/sdk/maps/azure-maps-route/src
-[samples]:  https://github.com/Azure/azure-sdk-for-java/tree/azure-maps-route_1.0.0-beta.1/sdk/maps/azure-maps-route/src/samples
+[source]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/maps/azure-maps-route/src
+[samples]:  https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/maps/azure-maps-route/src/samples
 [rest_docs]: /rest/api/maps
 [product_docs]: /azure/azure-maps/
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: /java/azure/jdk/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-maps-route_1.0.0-beta.1/sdk/identity/azure-identity
-[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/azure-maps-route_1.0.0-beta.1/sdk/core/azure-core-http-netty
-[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/azure-maps-route_1.0.0-beta.1/sdk/resourcemanager/docs/AUTH.md
-[design]: https://github.com/Azure/azure-sdk-for-java/blob/azure-maps-route_1.0.0-beta.1/sdk/resourcemanager/docs/DESIGN.md
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity
+[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core-http-netty
+[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/resourcemanager/docs/AUTH.md
+[design]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/resourcemanager/docs/DESIGN.md
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fmaps%2Fazure-maps-route%2FREADME.png)
 
