@@ -1,15 +1,15 @@
 ---
-title: Azure Resource Manager App Service client library for Java
-keywords: Azure, java, SDK, API, azure-resourcemanager-appservice, app-service
+title: Azure Resource Manager resources client library for Java
+keywords: Azure, java, SDK, API, azure-resourcemanager-resources, azure-resource-manager
 ms.date: 04/06/2024
 ms.topic: reference
 ms.devlang: java
-ms.service: app-service
+ms.service: azure-resource-manager
 ---
-# Azure Resource Manager App Service client library for Java - version 2.38.0-alpha.20240405.1 
+# Azure Resource Manager resources client library for Java - version 2.38.0-alpha.20240405.1 
 
 
-Azure Resource Manager App Service client library for Java
+Azure Resource Manager resources client library for Java
 
 For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
 
@@ -22,11 +22,11 @@ For documentation on how to use this package, please see [Azure Management Libra
 
 ### Adding the package to your product
 
-[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-appservice;current})
+[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-resources;current})
 ```xml
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
-    <artifactId>azure-resourcemanager-appservice</artifactId>
+    <artifactId>azure-resourcemanager-resources</artifactId>
     <version>2.37.0</version>
 </dependency>
 ```
@@ -55,8 +55,9 @@ AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
 TokenCredential credential = new DefaultAzureCredentialBuilder()
     .authorityHost(profile.getEnvironment().getActiveDirectoryEndpoint())
     .build();
-AppServiceManager manager = AppServiceManager
-    .authenticate(credential, profile);
+ResourceManager manager = ResourceManager
+    .authenticate(credential, profile)
+    .withDefaultSubscription();
 ```
 
 The sample code assumes global Azure. Please change `AzureEnvironment.AZURE` variable if otherwise.
