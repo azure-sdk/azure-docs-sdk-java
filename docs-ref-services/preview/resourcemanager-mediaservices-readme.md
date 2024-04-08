@@ -1,12 +1,12 @@
 ---
 title: Azure Resource Manager MediaServices client library for Java
 keywords: Azure, java, SDK, API, azure-resourcemanager-mediaservices, mediaservices
-ms.date: 02/17/2023
+ms.date: 04/08/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: mediaservices
 ---
-# Azure Resource Manager MediaServices client library for Java - version 2.4.0-beta.1 
+# Azure Resource Manager MediaServices client library for Java - version 2.4.0-alpha.20240408.1 
 
 
 Azure Resource Manager MediaServices client library for Java.
@@ -139,7 +139,7 @@ while (!(jobState == JobState.CANCELED || jobState == JobState.ERROR || jobState
 // refresh output asset after job finished
 asset.refresh();
 ```
-[Code snippets and samples](https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-mediaservices_2.4.0-beta.1/sdk/mediaservices/azure-resourcemanager-mediaservices/SAMPLE.md)
+[Code snippets and samples](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/mediaservices/azure-resourcemanager-mediaservices/SAMPLE.md)
 
 
 ## Troubleshooting
@@ -161,11 +161,11 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: /java/azure/jdk/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-mediaservices_2.4.0-beta.1/sdk/identity/azure-identity
-[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-mediaservices_2.4.0-beta.1/sdk/core/azure-core-http-netty
-[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-mediaservices_2.4.0-beta.1/sdk/resourcemanager/docs/AUTH.md
-[design]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-mediaservices_2.4.0-beta.1/sdk/resourcemanager/docs/DESIGN.md
-[cg]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-mediaservices_2.4.0-beta.1/CONTRIBUTING.md
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity
+[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core-http-netty
+[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/resourcemanager/docs/AUTH.md
+[design]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/resourcemanager/docs/DESIGN.md
+[cg]: https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
 
