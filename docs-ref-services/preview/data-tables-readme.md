@@ -1,12 +1,12 @@
 ---
 title: Azure Tables client library for Java
 keywords: Azure, java, SDK, API, azure-data-tables, tables
-ms.date: 03/13/2024
+ms.date: 04/09/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: tables
 ---
-# Azure Tables client library for Java - version 12.4.0-beta.1 
+# Azure Tables client library for Java - version 12.4.0-alpha.20240409.1 
 
 Azure Tables is a service that stores structured NoSQL data in the cloud, providing a key/attribute store with a schemaless design. Azure Tables gives developers flexibility and scalability with all the best parts of Azure cloud.
 
@@ -20,7 +20,7 @@ Azure Tables is a service that stores structured NoSQL data in the cloud, provid
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-data-tables_12.4.0-beta.1/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -156,7 +156,7 @@ Azure Tables provides integration with Azure Active Directory (AAD) for identity
 To access a table resource with a `TokenCredential`, the authenticated identity should have either the "Storage Table Data Contributor" or "Storage Table Data Reader" role.
 
 With the `azure-identity` package, you can seamlessly authorize requests in both development and production environments.
-To learn more about Azure AD integration in Azure Storage, see the [Azure Identity README](https://github.com/Azure/azure-sdk-for-java/blob/azure-data-tables_12.4.0-beta.1/sdk/identity/azure-identity/README.md).
+To learn more about Azure AD integration in Azure Storage, see the [Azure Identity README](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity/README.md).
 
 ## Key concepts
 
@@ -377,13 +377,13 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [cosmosdb_create_cli]: /azure/cosmos-db/scripts/cli/table/create
 [cosmosdb_create_portal]: /azure/cosmos-db/create-table-java#create-a-database-account
 [jdk]: /java/azure/jdk/
-[log_level]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-tables_12.4.0-beta.1/sdk/core/azure-core/src/main/java/com/azure/core/util/logging/LogLevel.java
+[log_level]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core/src/main/java/com/azure/core/util/logging/LogLevel.java
 [package]: https://central.sonatype.com/artifact/com.azure/azure-data-tables
 [product_documentation]: /azure/cosmos-db/table-storage-overview
 [query_options]: /rest/api/storageservices/querying-tables-and-entities#supported-query-options
 [rest_api]: /rest/api/storageservices/table-service-rest-api
-[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-tables_12.4.0-beta.1/sdk/tables/azure-data-tables/src/samples/java/
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-tables_12.4.0-beta.1/sdk/tables/azure-data-tables/src
+[samples]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/tables/azure-data-tables/src/samples/java/
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/tables/azure-data-tables/src
 [storage_account_create_cli]: /azure/storage/common/storage-account-create?tabs=azure-cli
 [storage_account_create_portal]: /azure/storage/common/storage-account-create?tabs=azure-portal
 
