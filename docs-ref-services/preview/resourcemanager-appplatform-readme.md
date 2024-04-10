@@ -1,15 +1,15 @@
 ---
-title: Azure Resource Manager network client library for Java
-keywords: Azure, java, SDK, API, azure-resourcemanager-network, network-access
+title: Azure Resource Manager App Platform client library for Java
+keywords: Azure, java, SDK, API, azure-resourcemanager-appplatform, spring-cloud
 ms.date: 04/10/2024
 ms.topic: reference
 ms.devlang: java
-ms.service: network-access
+ms.service: spring-cloud
 ---
-# Azure Resource Manager network client library for Java - version 2.38.0-alpha.20240409.2 
+# Azure Resource Manager App Platform client library for Java - version 2.38.0-alpha.20240409.2 
 
 
-Azure Resource Manager network client library for Java
+Azure Resource Manager App Platform client library for Java
 
 For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
 
@@ -22,11 +22,11 @@ For documentation on how to use this package, please see [Azure Management Libra
 
 ### Adding the package to your product
 
-[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-network;current})
+[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-appplatform;current})
 ```xml
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
-    <artifactId>azure-resourcemanager-network</artifactId>
+    <artifactId>azure-resourcemanager-appplatform</artifactId>
     <version>2.37.0</version>
 </dependency>
 ```
@@ -55,7 +55,7 @@ AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
 TokenCredential credential = new DefaultAzureCredentialBuilder()
     .authorityHost(profile.getEnvironment().getActiveDirectoryEndpoint())
     .build();
-NetworkManager manager = NetworkManager
+AppPlatformManager manager = AppPlatformManager
     .authenticate(credential, profile);
 ```
 
