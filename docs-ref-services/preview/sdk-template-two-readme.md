@@ -1,12 +1,12 @@
 ---
 title: Azure Template Two client library for Java
 keywords: Azure, java, SDK, API, azure-sdk-template-two, template
-ms.date: 04/08/2024
+ms.date: 04/10/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: template
 ---
-# Azure Template Two client library for Java - version 1.0.0-beta.3676943 
+# Azure Template Two client library for Java - version 1.0.0-alpha.20240409.8 
 
 
 Use the guidelines in each section of this template to ensure consistency and readability of your README.
@@ -16,7 +16,7 @@ It's also used as the package distribution page (NuGet, PyPi, npm, etc.) and as 
 **Title**: The H1 of your README should be in the format: `# [Product Name] client library for [Language]`
 
 * All headings, including the H1, should use **sentence-style capitalization**. Refer to the [Microsoft Style Guide][style-guide-msft].
-* Example: `# Azure Batch client library for Java - version 1.0.0-beta.3676943 
+* Example: `# Azure Batch client library for Java - version 1.0.0-alpha.20240409.8 
 `
 
 **Introduction**: The introduction appears directly under the title (H1) of your README.
