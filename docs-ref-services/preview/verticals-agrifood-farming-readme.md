@@ -1,12 +1,12 @@
 ---
 title: Azure FarmBeats client library for Java
 keywords: Azure, java, SDK, API, azure-verticals-agrifood-farming, agrifood
-ms.date: 02/23/2023
+ms.date: 04/11/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: agrifood
 ---
-# Azure FarmBeats client library for Java - version 1.0.0-beta.3 
+# Azure FarmBeats client library for Java - version 1.0.0-alpha.20240411.1 
 
 
 FarmBeats is a B2B PaaS offering from Microsoft that makes it easy for AgriFood companies to build intelligent digital agriculture solutions on Azure. FarmBeats allows users to acquire, aggregate, and process agricultural data from various sources (farm equipment, weather, satellite) without the need to invest in deep data engineering resources.  Customers can build SaaS solutions on top of FarmBeats and leverage first class support for model building to generate insights at scale.
@@ -56,7 +56,7 @@ To use the [DefaultAzureCredential][DefaultAzureCredential] provider shown below
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-identity</artifactId>
-    <version>1.5.4</version>
+    <version>1.11.4</version>
 </dependency>
 ```
 
@@ -159,7 +159,7 @@ For more extensive documentation please check our [Product Documentation][produc
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-verticals-agrifood-farming_1.0.0-beta.3/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 This project welcomes contributions and suggestions. Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution. For details, view [Microsoft's CLA](https://cla.microsoft.com).
 
@@ -169,14 +169,14 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 
 <!-- LINKS -->
 [samples]: src/samples/java/com/azure/verticals/agrifood/farming
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-verticals-agrifood-farming_1.0.0-beta.3/sdk/agrifood/azure-verticals-agrifood-farming/src
-[samples_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-verticals-agrifood-farming_1.0.0-beta.3/sdk/agrifood/azure-verticals-agrifood-farming/src/samples/
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/agrifood/azure-verticals-agrifood-farming/src
+[samples_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/agrifood/azure-verticals-agrifood-farming/src/samples/
 [azure_subscription]: https://azure.microsoft.com/free/
 [product_documentation]: https://aka.ms/FarmBeatsProductDocumentationPaaS
 [azure_portal]: https://portal.azure.com
 [jdk_link]: /java/azure/jdk/?view=azure-java-stable
-[package]: https://mvnrepository.com/artifact/com.azure/azure-verticals-agrifood-farming
-[samples_readme]: https://github.com/Azure/azure-sdk-for-java/tree/azure-verticals-agrifood-farming_1.0.0-beta.3/sdk/agrifood/azure-verticals-agrifood-farming/src/samples/README.md
+[package]: https://central.sonatype.com/artifact/com.azure/azure-verticals-agrifood-farming
+[samples_readme]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/agrifood/azure-verticals-agrifood-farming/src/samples/README.md
 [farm_hierarchy]: https://aka.ms/FarmBeatsFarmHierarchyDocs
 [farm_operations_docs]: https://aka.ms/FarmBeatsFarmOperationsDocumentation
 [scenes]: https://aka.ms/FarmBeatsSatellitePaaSDocumentation
