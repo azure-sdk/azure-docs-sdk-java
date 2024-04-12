@@ -1,14 +1,12 @@
 ---
 title: Azure IoT Models Repository client library for Java
-keywords: Azure, java, SDK, API, azure-iot-modelsrepository,
-ms.date: 03/30/2021
+keywords: Azure, java, SDK, API, azure-iot-modelsrepository, modelsrepository
+ms.date: 04/12/2024
 ms.topic: reference
 ms.devlang: java
-ms.service: 
-ms.technology: azure
-ms.prod: azure
+ms.service: modelsrepository
 ---
-# Azure IoT Models Repository client library for Java - version 1.0.0-beta.1 
+# Azure IoT Models Repository client library for Java - version 1.0.0-alpha.20240411.1 
 
 
 This library provides functionality for interacting with the [Azure IoT Models Repository][modelsrepository_iot_endpoint]. It also aims to provide a consistent experience working with digital twin model repositories following Azure IoT conventions.
@@ -67,7 +65,7 @@ See implementation examples with our [code samples][modelsrepository_samples].
 
 This project welcomes contributions and suggestions.
 Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution.
-For details, visit <https://cla.microsoft.com.>.
+For details, visit <https://cla.microsoft.com>.
 
 When you submit a pull request, a CLA-bot will automatically determine whether you need to provide a CLA and decorate the PR appropriately (e.g., label, comment).
 Simply follow the instructions provided by the bot.
@@ -80,9 +78,9 @@ For more information see the Code of Conduct FAQ or contact opencode@microsoft.c
 [microsoft_sdk_download]: https://azure.microsoft.com/downloads/?sdk=net
 [code_of_conduct]: https://opensource.microsoft.com/codeofconduct/
 [modelsrepository_iot_endpoint]: https://devicemodels.azure.com/
-[source]: https://github.com/Azure/azure-sdk-for-java/tree/azure-iot-modelsrepository_1.0.0-beta.1/sdk/modelsrepository/azure-iot-modelsrepository/src
+[source]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/modelsrepository/azure-iot-modelsrepository/src
 [modelsrepository_conventions]: https://github.com/Azure/iot-plugandplay-models-tools/wiki
 [json_ld_reference]: https://json-ld.org
 [dtdlv2_reference]: https://github.com/Azure/opendigitaltwins-dtdl/blob/master/DTDL/v2/dtdlv2.md
-[modelsrepository_samples]: https://github.com/Azure/azure-sdk-for-java/tree/azure-iot-modelsrepository_1.0.0-beta.1/sdk/modelsrepository/azure-iot-modelsrepository/src/samples
+[modelsrepository_samples]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/modelsrepository/azure-iot-modelsrepository/src/samples
 
