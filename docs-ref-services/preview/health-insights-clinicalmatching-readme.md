@@ -1,15 +1,15 @@
 ---
 title: Azure Cognitive Services Health Insights Clinical Matching client library for Java
 keywords: Azure, java, SDK, API, azure-health-insights-clinicalmatching, healthinsights
-ms.date: 04/12/2023
+ms.date: 04/12/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: healthinsights
 ---
-# Azure Cognitive Services Health Insights Clinical Matching client library for Java - version 1.0.0-beta.1 
+# Azure Cognitive Services Health Insights Clinical Matching client library for Java - version 1.0.0-alpha.20240412.1 
 
 
-[Health Insights](https://review.learn.microsoft.com/azure/cognitive-services/health-decision-support/overview?branch=main) is an Azure Applied AI Service built with the Azure Cognitive Services Framework, that leverages multiple Cognitive Services, Healthcare API services and other Azure resources.
+[Health Insights][health_insights] is an Azure Applied AI Service built with the Azure Cognitive Services Framework, that leverages multiple Cognitive Services, Healthcare API services and other Azure resources.
 
 The [Clinical Matching model][clinical_matching_docs] receives patients data and clinical trials protocols, and provides relevant clinical trials based on eligibility criteria.
 
@@ -80,7 +80,7 @@ Trial Matcher provides the user of the services two main modes of operation: pat
 
 Finding potential eligible trials for a patient.
 <!--
-- [SampleMatchTrialsSync.java](https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-clinicalmatching_1.0.0-beta.1/sdk/healthinsights/azure-health-insights-clinicalmatching/src/samples/java/com/azure/health/insights/clinicalmatching/SampleMatchTrialsSync.java).
+- [SampleMatchTrialsSync.java](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/healthinsights/azure-health-insights-clinicalmatching/src/samples/java/com/azure/health/insights/clinicalmatching/SampleMatchTrialsSync.java).
 -->
 ```Java com.azure.health.insights.clinicalmatching.findtrials
 // Construct Patient
@@ -140,7 +140,7 @@ PollerFlux<TrialMatcherResult, TrialMatcherResult> asyncPoller = asyncClient.beg
 
 To see the full example source files, see:
 <!--
-This code sample show common scenario operation with the Azure Health Insights Clinical Matching library. More samples can be found under the [samples](https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-clinicalmatching_1.0.0-beta.1/sdk/healthinsights/azure-health-insights-clinicalmatching/src/samples/java/com/azure/health/insights/) directory.
+This code sample show common scenario operation with the Azure Health Insights Clinical Matching library. More samples can be found under the [samples](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/healthinsights/azure-health-insights-clinicalmatching/src/samples/java/com/azure/health/insights/) directory.
 -->
 
 ## Additional documentation
@@ -165,12 +165,13 @@ This project has adopted the [Microsoft Open Source Code of Conduct][code_of_con
 [jdk_link]: /java/azure/jdk/?view=azure-java-stable
 [azure_cli]: /cli/azure
 [azure_portal]: https://portal.azure.com
-[clinical_matching_docs]: https://review.learn.microsoft.com/azure/cognitive-services/health-decision-support/trial-matcher/overview?branch=main
-[clinical_matching_client_class]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-clinicalmatching_1.0.0-beta.1/sdk/healthinsights/azure-health-insights-clinicalmatching/src/main/java/com/azure/health/insights/clinicalmatching/ClinicalMatchingClient.java
-[package]: https://mvnrepository.com/artifact/com.azure/azure-health-insights-clinicalmatching
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-clinicalmatching_1.0.0-beta.1/sdk/healthinsights/azure-health-insights-clinicalmatching/src/
-[clinical_matching_api_documentation]: https://review.learn.microsoft.com/rest/api/cognitiveservices/healthinsights/trial-matcher?branch=healthin202303
-[product_documentation]: https://review.learn.microsoft.com/azure/cognitive-services/health-decision-support/trial-matcher/?branch=main
-[samples_location]: https://github.com/Azure/azure-sdk-for-java/tree/azure-health-insights-clinicalmatching_1.0.0-beta.1/sdk/healthinsights/azure-health-insights-clinicalmatching/src/samples
+[health_insights]: https://learn.microsoft.com/azure/azure-health-insights/overview?branch=main
+[clinical_matching_docs]: https://learn.microsoft.com/azure/azure-health-insights/trial-matcher/overview
+[clinical_matching_client_class]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/healthinsights/azure-health-insights-clinicalmatching/src/main/java/com/azure/health/insights/clinicalmatching/ClinicalMatchingClient.java
+[package]: https://central.sonatype.com/artifact/com.azure/azure-health-insights-clinicalmatching
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/healthinsights/azure-health-insights-clinicalmatching/src/
+[clinical_matching_api_documentation]: https://learn.microsoft.com/rest/api/cognitiveservices/healthinsights/trial-matcher
+[product_documentation]: https://learn.microsoft.com/azure/azure-health-insights/trial-matcher/
+[samples_location]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/healthinsights/azure-health-insights-clinicalmatching/src/samples
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%healthinsights%2Fazure-health-insights-clinicalmatching%2FREADME.png)
 
