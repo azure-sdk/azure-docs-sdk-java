@@ -1,12 +1,12 @@
 ---
 title: Azure App Configuration client library for Java
 keywords: Azure, java, SDK, API, azure-data-appconfiguration, appconfiguration
-ms.date: 03/04/2024
+ms.date: 04/15/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: appconfiguration
 ---
-# Azure App Configuration client library for Java - version 1.6.0-beta.1 
+# Azure App Configuration client library for Java - version 1.7.0-alpha.20240415.1 
 
 Azure App Configuration is a managed service that helps developers centralize their application configurations simply and securely.
 
@@ -29,7 +29,7 @@ Use the client library for App Configuration to create and manage application co
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-data-appconfiguration_1.6.0-beta.1/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -64,7 +64,7 @@ add the direct dependency to your project as follows.
 <dependency>
   <groupId>com.azure</groupId>
   <artifactId>azure-data-appconfiguration</artifactId>
-  <version>1.5.0</version>
+  <version>1.6.0</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -590,13 +590,13 @@ When you submit a pull request, a CLA-bot will automatically determine whether y
 This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For more information see the [Code of Conduct FAQ][coc_faq] or contact [opencode@microsoft.com][coc_contact] with any additional questions or comments.
 
 <!-- LINKS -->
-[add_headers_from_context_policy]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-appconfiguration_1.6.0-beta.1/sdk/core/azure-core/src/main/java/com/azure/core/http/policy/AddHeadersFromContextPolicy.java
+[add_headers_from_context_policy]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core/src/main/java/com/azure/core/http/policy/AddHeadersFromContextPolicy.java
 [api_documentation]: https://aka.ms/java-docs
 [app_config_store]: /azure/azure-app-configuration/quickstart-dotnet-core-app#create-an-app-configuration-store
 [app_config_role]: /azure/azure-app-configuration/rest-api-authorization-azure-ad#roles
 [azconfig_docs]: /azure/azure-app-configuration
 [azure_cli]: /cli/azure
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/tree/azure-data-appconfiguration_1.6.0-beta.1/sdk/identity/azure-identity
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/identity/azure-identity
 [azure_subscription]: https://azure.microsoft.com/free
 [cla]: https://cla.microsoft.com
 [coc]: https://opensource.microsoft.com/codeofconduct/
@@ -608,10 +608,10 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [package]: https://central.sonatype.com/artifact/com.azure/azure-data-appconfiguration
 [performance_tuning]: https://github.com/Azure/azure-sdk-for-java/wiki/Performance-Tuning
 [rest_api]: https://github.com/Azure/AppConfiguration#rest-api-reference
-[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-appconfiguration_1.6.0-beta.1/sdk/appconfiguration/azure-data-appconfiguration/src/samples/java/com/azure/data/appconfiguration
-[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-appconfiguration_1.6.0-beta.1/sdk/appconfiguration/azure-data-appconfiguration/src/samples/README.md
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-appconfiguration_1.6.0-beta.1/sdk/appconfiguration/azure-data-appconfiguration/src
+[samples]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/appconfiguration/azure-data-appconfiguration/src/samples/java/com/azure/data/appconfiguration
+[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/appconfiguration/azure-data-appconfiguration/src/samples/README.md
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/appconfiguration/azure-data-appconfiguration/src
 [spring_quickstart]: /azure/azure-app-configuration/quickstart-java-spring-app
-[troubleshooting]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-appconfiguration_1.6.0-beta.1/sdk/appconfiguration/azure-data-appconfiguration/TROUBLESHOOTING.md
+[troubleshooting]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/appconfiguration/azure-data-appconfiguration/TROUBLESHOOTING.md
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fappconfiguration%2Fazure-data-appconfiguration%2FREADME.png)
 
