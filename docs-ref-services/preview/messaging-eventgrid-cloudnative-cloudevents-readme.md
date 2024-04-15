@@ -1,14 +1,12 @@
 ---
 title: Azure Cloud Native Cloud Event client library for Java
-keywords: Azure, java, SDK, API, azure-messaging-eventgrid-cloudnative-cloudevents, eventgrid
-ms.date: 01/24/2022
+keywords: Azure, java, SDK, API, azure-messaging-eventgrid-cloudnative-cloudevents, event-grid
+ms.date: 04/15/2024
 ms.topic: reference
 ms.devlang: java
-ms.service: eventgrid
-ms.technology: azure
-ms.prod: azure
+ms.service: event-grid
 ---
-# Azure Cloud Native Cloud Event client library for Java - version 1.0.0-beta.1 
+# Azure Cloud Native Cloud Event client library for Java - version 1.0.0-alpha.20240415.1 
 
 
 This library can be used to enable publishing the Cloud Native Computing Foundation(CNCF) [CloudEvents][CNCFCloudEvents]
@@ -116,7 +114,7 @@ If you encounter any bugs with these SDKs, please file issues via [Issues](https
 
 ## Next steps
 
-- [Azure Java SDKs](https://docs.microsoft.com/java/azure/)
+- [Azure Java SDKs](/java/azure/)
 - If you don't have a Microsoft Azure subscription you can get a FREE trial account [here](https://go.microsoft.com/fwlink/?LinkId=330212)
 
 ## Contributing
@@ -125,12 +123,12 @@ If you would like to become an active contributor to this project please refer t
 Contribution Guidelines for more information.
 
 <!-- LINKS -->
-[eventgridGettingStarted]: https://github.com/Azure/azure-sdk-for-java/tree/azure-messaging-eventgrid-cloudnative-cloudevents_1.0.0-beta.1/sdk/eventgrid/azure-messaging-eventgrid#getting-started
-[eventgridConcept]: https://docs.microsoft.com/azure/event-grid/concepts
-[eventgridClientConcept]: https://github.com/Azure/azure-sdk-for-java/tree/azure-messaging-eventgrid-cloudnative-cloudevents_1.0.0-beta.1/sdk/eventgrid/azure-messaging-eventgrid#key-concepts
+[eventgridGettingStarted]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/eventgrid/azure-messaging-eventgrid#getting-started
+[eventgridConcept]: /azure/event-grid/concepts
+[eventgridClientConcept]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/eventgrid/azure-messaging-eventgrid#key-concepts
 [javadocs]: https://azure.github.io/azure-sdk-for-java/eventgrid.html
 [CNCFCloudEvents]: https://cloudevents.github.io/sdk-java/
-[HttpResponseException]: https://github.com/Azure/azure-sdk-for-java/blob/azure-messaging-eventgrid-cloudnative-cloudevents_1.0.0-beta.1/sdk/core/azure-core/src/main/java/com/azure/core/exception/HttpResponseException.java
+[HttpResponseException]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core/src/main/java/com/azure/core/exception/HttpResponseException.java
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Feventgrid%2Fazure-messaging-eventgrid-cloudnative-cloudevents%2FREADME.png)
 
