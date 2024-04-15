@@ -1,12 +1,12 @@
 ---
 title: Azure Key Vault Key client library for Java
 keywords: Azure, java, SDK, API, azure-security-keyvault-keys, keyvault
-ms.date: 11/10/2023
+ms.date: 04/15/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: keyvault
 ---
-# Azure Key Vault Key client library for Java - version 4.8.0-beta.1 
+# Azure Key Vault Key client library for Java - version 4.9.0-alpha.20240415.1 
 
 Azure Key Vault is a cloud service that provides secure storage of keys for encrypting your data. Multiple keys, and multiple versions of the same key, can be kept in the Azure Key Vault. Cryptographic keys in Azure Key Vault are represented as [JSON Web Key [JWK]][jwk_specification] objects.
 
@@ -19,7 +19,7 @@ The Azure Key Vault keys library client supports RSA keys and Elliptic Curve (EC
 ## Getting started
 ### Include the package
 #### Include the BOM file
-Please include the `azure-sdk-bom` to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number. To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-keys_4.8.0-beta.1/sdk/boms/azure-sdk-bom/README.md).
+Please include the `azure-sdk-bom` to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number. To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -54,7 +54,7 @@ If you want to take dependency on a particular version of the library that is no
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-security-keyvault-keys</artifactId>
-    <version>4.8.0-beta.1</version>
+    <version>4.8.2</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -321,7 +321,7 @@ cryptoAsyncClient.encrypt(EncryptionAlgorithm.RSA_OAEP, plaintext)
 ```
 
 ## Troubleshooting
-See our [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-keys_4.8.0-beta.1/sdk/keyvault/azure-security-keyvault-keys/TROUBLESHOOTING.md) for details on how to diagnose various failure scenarios.
+See our [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/keyvault/azure-security-keyvault-keys/TROUBLESHOOTING.md) for details on how to diagnose various failure scenarios.
 
 ### General
 Azure Key Vault Key clients raise exceptions. For example, if you try to retrieve a key after it is deleted a `404` error is returned, indicating the resource was not found. In the following snippet, the error is handled gracefully by catching the exception and displaying additional information about the error.
@@ -357,7 +357,7 @@ When you submit a pull request, a CLA-bot will automatically determine whether y
 This project has adopted the [Microsoft Open Source Code of Conduct][microsoft_code_of_conduct]. For more information see the Code of Conduct FAQ or contact <opencode@microsoft.com> with any additional questions or comments.
 
 <!-- LINKS -->
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-keys_4.8.0-beta.1/sdk/keyvault/azure-security-keyvault-keys/src
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/keyvault/azure-security-keyvault-keys/src
 [api_documentation]: https://azure.github.io/azure-sdk-for-java
 [azkeyvault_docs]: /azure/key-vault/
 [azure_identity]: /java/api/overview/azure/identity-readme?view=azure-java-stable
@@ -370,8 +370,8 @@ This project has adopted the [Microsoft Open Source Code of Conduct][microsoft_c
 [default_azure_credential]: /java/api/overview/azure/identity-readme?view=azure-java-stable#defaultazurecredential
 [managed_identity]: /azure/active-directory/managed-identities-azure-resources/overview
 [azkeyvault_rest]: /rest/api/keyvault/
-[keys_samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-keys_4.8.0-beta.1/sdk/keyvault/azure-security-keyvault-keys/src/samples/java/com/azure/security/keyvault/keys
-[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-keys_4.8.0-beta.1/sdk/keyvault/azure-security-keyvault-keys/src/samples/README.md
+[keys_samples]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/keyvault/azure-security-keyvault-keys/src/samples/java/com/azure/security/keyvault/keys
+[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/keyvault/azure-security-keyvault-keys/src/samples/README.md
 [performance_tuning]: https://github.com/Azure/azure-sdk-for-java/wiki/Performance-Tuning
 [jdk_link]: /java/azure/jdk/?view=azure-java-stable
 [jwk_specification]: https://tools.ietf.org/html/rfc7517
