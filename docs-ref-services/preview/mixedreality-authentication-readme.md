@@ -1,14 +1,12 @@
 ---
 title: Azure Mixed Reality client library for Java
-keywords: Azure, java, SDK, API, azure-mixedreality-authentication,
-ms.date: 02/23/2021
+keywords: Azure, java, SDK, API, azure-mixedreality-authentication, mixedreality
+ms.date: 04/17/2024
 ms.topic: reference
 ms.devlang: java
-ms.service: 
-ms.technology: azure
-ms.prod: azure
+ms.service: mixedreality
 ---
-# Azure Mixed Reality client library for Java - version 1.0.0-beta.1 
+# Azure Mixed Reality client library for Java - version 1.3.0-alpha.20240416.1 
 
 
 Mixed Reality services, like Azure Spatial Anchors, Azure Remote Rendering, and others, use the Mixed Reality security
@@ -18,7 +16,7 @@ token from the STS that can be used to access Mixed Reality services.
 [Source code][source] | [Package (Maven)][package] | [API reference documentation][api_documentation]
 | [Product documentation][product_docs]
 
-![Mixed Reality service authentication diagram](https://docs.microsoft.com/azure/spatial-anchors/concepts/media/spatial-anchors-authentication-overview.png)
+![Mixed Reality service authentication diagram](/azure/spatial-anchors/concepts/media/spatial-anchors-authentication-overview.png)
 
 ## Getting started
 
@@ -26,20 +24,53 @@ token from the STS that can be used to access Mixed Reality services.
 
 - You must have an [Azure subscription](https://azure.microsoft.com/free/).
 - You must have an account with an [Azure Mixed Reality service](https://azure.microsoft.com/topic/mixed-reality/):
-  - [Azure Remote Rendering](https://docs.microsoft.com/azure/remote-rendering/)
-  - [Azure Spatial Anchors](https://docs.microsoft.com/azure/spatial-anchors/)
-- [Java Development Kit (JDK)](https://docs.microsoft.com/java/azure/jdk/?view=azure-java-stable) version 8 or above.
+  - [Azure Remote Rendering](/azure/remote-rendering/)
+  - [Azure Spatial Anchors](/azure/spatial-anchors/)
+- [Java Development Kit (JDK)](/java/azure/jdk/?view=azure-java-stable) version 8 or above.
 - [Apache Maven](https://maven.apache.org/download.cgi).
-- Familiarity with the authentication and credential concepts from [Azure.Identity](https://github.com/Azure/azure-sdk-for-java/tree/azure-mixedreality-authentication_1.0.0-beta.1/sdk/identity/azure-identity).
+- Familiarity with the authentication and credential concepts from [Azure.Identity](https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/identity/azure-identity).
 
 ### Include the package
+
+#### Include the BOM file
+
+Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/boms/azure-sdk-bom/README.md).
+
+```xml
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>com.azure</groupId>
+            <artifactId>azure-sdk-bom</artifactId>
+            <version>{bom_version_to_target}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+```
+and then include the direct dependency in the dependencies section without the version tag as shown below.
+
+```xml
+<dependencies>
+    <dependency>
+        <groupId>com.azure</groupId>
+        <artifactId>azure-mixedreality-authentication</artifactId>
+    </dependency>
+</dependencies>
+```
+
+#### Include direct dependency
+If you want to take dependency on a particular version of the library that is not present in the BOM,
+add the direct dependency to your project as follows.
 
 [//]: # ({x-version-update-start;com.azure:azure-mixedreality-authentication;current})
 ```xml
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-mixedreality-authentication</artifactId>
-    <version>1.0.0-beta.1</version>
+    <version>1.2.15</version>
 </dependency>
 ```
 
@@ -58,7 +89,7 @@ Mixed Reality services support a few different forms of authentication:
     method for production applications because it allows you to avoid embedding the credentials for access to a Mixed
     Reality service in your client application.
 
-See [here](https://docs.microsoft.com/azure/spatial-anchors/concepts/authentication) for detailed instructions and information.
+See [here](/azure/spatial-anchors/concepts/authentication) for detailed instructions and information.
 
 ## Key concepts
 
@@ -161,9 +192,9 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
 [coc_contact]: mailto:opencode@microsoft.com
 [product_docs]: https://azure.microsoft.com/topic/mixed-reality/
-[package]: https://search.maven.org/artifact/com.azure/azure-mixedreality-authentication
+[package]: https://central.sonatype.com/artifact/com.azure/azure-mixedreality-authentication
 [api_documentation]: https://aka.ms/java-docs
-[source]: https://github.com/Azure/azure-sdk-for-java/tree/azure-mixedreality-authentication_1.0.0-beta.1/sdk/mixedreality/azure-mixedreality-authentication
+[source]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/mixedreality/azure-mixedreality-authentication
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fmixedreality%2Fazure-mixedreality-authentication%2FREADME.png)
 
