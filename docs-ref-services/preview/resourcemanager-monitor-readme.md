@@ -1,15 +1,15 @@
 ---
-title: Azure Resource Manager CDN client library for Java
-keywords: Azure, java, SDK, API, azure-resourcemanager-cdn, azure-cdn
+title: Azure Resource Manager monitor client library for Java
+keywords: Azure, java, SDK, API, azure-resourcemanager-monitor, resourcemanager
 ms.date: 04/23/2024
 ms.topic: reference
 ms.devlang: java
-ms.service: azure-cdn
+ms.service: resourcemanager
 ---
-# Azure Resource Manager CDN client library for Java - version 2.39.0-alpha.20240422.1 
+# Azure Resource Manager monitor client library for Java - version 2.39.0-alpha.20240422.1 
 
 
-Azure Resource Manager CDN client library for Java
+Azure Resource Manager monitor client library for Java
 
 For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
 
@@ -22,11 +22,11 @@ For documentation on how to use this package, please see [Azure Management Libra
 
 ### Adding the package to your product
 
-[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-cdn;current})
+[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-monitor;current})
 ```xml
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
-    <artifactId>azure-resourcemanager-cdn</artifactId>
+    <artifactId>azure-resourcemanager-monitor</artifactId>
     <version>2.38.0</version>
 </dependency>
 ```
@@ -55,7 +55,7 @@ AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
 TokenCredential credential = new DefaultAzureCredentialBuilder()
     .authorityHost(profile.getEnvironment().getActiveDirectoryEndpoint())
     .build();
-CdnManager manager = CdnManager
+MonitorManager manager = MonitorManager
     .authenticate(credential, profile);
 ```
 
