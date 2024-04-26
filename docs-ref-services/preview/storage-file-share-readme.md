@@ -1,12 +1,12 @@
 ---
 title: Azure File Share client library for Java
 keywords: Azure, java, SDK, API, azure-storage-file-share, storage
-ms.date: 04/17/2024
+ms.date: 04/26/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: storage
 ---
-# Azure File Share client library for Java - version 12.22.0-beta.1 
+# Azure File Share client library for Java - version 12.22.0-alpha.20240426.1 
 
 
 The Server Message Block (SMB) protocol is the preferred file share protocol used on-premises today.
@@ -32,7 +32,7 @@ Shares provide a way to organize sets of files and also can be mounted as an SMB
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on GA version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-file-share_12.22.0-beta.1/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -583,7 +583,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-file-share_12.22.0-beta.1/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
@@ -592,7 +592,7 @@ For details on contributing to this repository, see the [contributing guide](htt
 5. Create new Pull Request
 
 <!-- LINKS -->
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-file-share_12.22.0-beta.1/sdk/storage/azure-storage-file-share/src/
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/storage/azure-storage-file-share/src/
 [reference_docs]: https://azure.github.io/azure-sdk-for-java/
 [rest_api_documentation]: /rest/api/storageservices/file-service-rest-api
 [storage_docs]: /azure/storage/files/storage-files-introduction
@@ -606,7 +606,7 @@ For details on contributing to this repository, see the [contributing guide](htt
 [RFL_URL_2]: https://www.ietf.org/rfc/rfc3987.txt
 [csharp_identifiers]: /dotnet/csharp/language-reference/
 [storage_file_rest]: /rest/api/storageservices/file-service-error-codes
-[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-file-share_12.22.0-beta.1/sdk/storage/azure-storage-file-share/src/samples
+[samples]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/storage/azure-storage-file-share/src/samples
 [performance_tuning]: https://github.com/Azure/azure-sdk-for-java/wiki/Performance-Tuning
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fstorage%2Fazure-storage-file-share%2FREADME.png)
