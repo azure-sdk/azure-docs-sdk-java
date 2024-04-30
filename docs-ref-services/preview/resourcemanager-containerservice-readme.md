@@ -1,15 +1,15 @@
 ---
-title: Azure Resource Manager sql client library for Java
-keywords: Azure, java, SDK, API, azure-resourcemanager-sql, mysql
+title: Azure Resource Manager Containerservice client library for Java
+keywords: Azure, java, SDK, API, azure-resourcemanager-containerservice, container-service
 ms.date: 04/30/2024
 ms.topic: reference
 ms.devlang: java
-ms.service: mysql
+ms.service: container-service
 ---
-# Azure Resource Manager sql client library for Java - version 2.39.0-alpha.20240429.1 
+# Azure Resource Manager Containerservice client library for Java - version 2.39.0-alpha.20240429.1 
 
 
-Azure Resource Manager sql client library for Java
+Azure Resource Manager Containerservice client library for Java
 
 For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
 
@@ -22,11 +22,11 @@ For documentation on how to use this package, please see [Azure Management Libra
 
 ### Adding the package to your product
 
-[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-sql;current})
+[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-containerservice;current})
 ```xml
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
-    <artifactId>azure-resourcemanager-sql</artifactId>
+    <artifactId>azure-resourcemanager-containerservice</artifactId>
     <version>2.38.0</version>
 </dependency>
 ```
@@ -55,7 +55,7 @@ AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
 TokenCredential credential = new DefaultAzureCredentialBuilder()
     .authorityHost(profile.getEnvironment().getActiveDirectoryEndpoint())
     .build();
-SqlServerManager manager = SqlServerManager
+ContainerServiceManager manager = ContainerServiceManager
     .authenticate(credential, profile);
 ```
 
