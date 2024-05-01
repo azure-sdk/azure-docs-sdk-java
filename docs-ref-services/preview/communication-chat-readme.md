@@ -1,14 +1,12 @@
 ---
 title: Azure Communication Chat client library for Java
 keywords: Azure, java, SDK, API, azure-communication-chat, communication
-ms.date: 08/12/2021
+ms.date: 05/01/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: communication
-ms.technology: azure
-ms.prod: azure
 ---
-# Azure Communication Chat client library for Java - version 1.1.0-beta.2 
+# Azure Communication Chat client library for Java - version 1.6.0-alpha.20240501.1 
 
 
 Azure Communication Chat contains the APIs used in chat applications for Azure Communication Services.  
@@ -21,17 +19,49 @@ Azure Communication Chat contains the APIs used in chat applications for Azure C
 ### Prerequisites
 
 - An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
-- [Java Development Kit (JDK)](https://docs.microsoft.com/java/azure/jdk/?view=azure-java-stable) version 8 or above.
+- [Java Development Kit (JDK)](/java/azure/jdk/?view=azure-java-stable) version 8 or above.
 - [Apache Maven](https://maven.apache.org/download.cgi).
-- A deployed Communication Services resource. You can use the [Azure Portal](https://docs.microsoft.com/azure/communication-services/quickstarts/create-communication-resource?tabs=windows&pivots=platform-azp) or the [Azure PowerShell](https://docs.microsoft.com/powershell/module/az.communication/new-azcommunicationservice) to set it up.
+- A deployed Communication Services resource. You can use the [Azure Portal](/azure/communication-services/quickstarts/create-communication-resource?tabs=windows&pivots=platform-azp) or the [Azure PowerShell](/powershell/module/az.communication/new-azcommunicationservice) to set it up.
 ### Include the package
+#### Include the BOM file
+
+Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/boms/azure-sdk-bom/README.md).
+
+```xml
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>com.azure</groupId>
+            <artifactId>azure-sdk-bom</artifactId>
+            <version>{bom_version_to_target}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+```
+and then include the direct dependency in the dependencies section without the version tag.
+
+```xml
+<dependencies>
+  <dependency>
+    <groupId>com.azure</groupId>
+    <artifactId>azure-communication-chat</artifactId>
+  </dependency>
+</dependencies>
+```
+
+#### Include direct dependency
+If you want to take dependency on a particular version of the library that is not present in the BOM,
+add the direct dependency to your project as follows.
 
 [//]: # ({x-version-update-start;com.azure:azure-communication-chat;current})
 ```xml
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-communication-chat</artifactId>
-    <version>1.1.0-beta.2</version>
+    <version>1.4.0</version>
 </dependency>
 ```
 
@@ -66,7 +96,7 @@ endpoint = "https://*Azure-Communication-Resource-Name*.communications.azure.com
 User access tokens enable you to build client applications that directly authenticate to Azure Communication Services. 
 You generate these tokens on your server, pass them back to a client device, and then use them to initialize the Communication Services SDKs. 
 
-Learn how to generate user access tokens from [User Access Tokens](https://docs.microsoft.com/azure/communication-services/quickstarts/access-tokens?pivots=programming-language-java#issue-user-access-tokens)
+Learn how to generate user access tokens from [User Access Tokens](/azure/communication-services/quickstarts/access-tokens?pivots=programming-language-java#issue-user-access-tokens)
 
 ## Examples
 
@@ -81,8 +111,7 @@ The following sections provide several code snippets covering some of the most c
 
 ### Create the Chat Client
 
-<!-- embedme ./src/samples/java/com/azure/communication/chat/ReadmeSamples.java#L38-L48 -->
-```Java
+```java readme-sample-createChatClient
 String endpoint = "https://<RESOURCE_NAME>.communcationservices.azure.com";
 
 // Your user access token retrieved from your trusted service
@@ -112,8 +141,7 @@ Use the `createChatThread` method to create a chat thread.
 It contains a `getChatThread()` method which returns the `ChatThread` object that can be used to get the thread client from which you can get the `ChatThreadClient` for performing operations on the created thread: add participants, send message, etc.
 The `ChatThread` object also contains the `getId()` method which retrieves the unique ID of the thread.
 
-<!-- embedme ./src/samples/java/com/azure/communication/chat/ReadmeSamples.java#L62-L79 -->
-```Java
+```java readme-sample-createChatThread
 List<ChatParticipant> participants = new ArrayList<ChatParticipant>();
 
 ChatParticipant firstParticipant = new ChatParticipant()
@@ -138,8 +166,7 @@ String chatThreadId = result.getChatThread().getId();
 
 The `getChatThreadProperties` method retrieves a thread's properties from the service.
 
-<!-- embedme ./src/samples/java/com/azure/communication/chat/ReadmeSamples.java#L88-L89 -->
-```Java
+```java readme-sample-getChatThread
 ChatThreadClient chatThreadClient = chatClient.getChatThreadClient("Id");
 ChatThreadProperties chatThreadProperties = chatThreadClient.getProperties();
 ```
@@ -149,8 +176,7 @@ ChatThreadProperties chatThreadProperties = chatThreadClient.getProperties();
 Use `deleteChatThread` method to delete a chat thread
 `chatThreadId` is the unique ID of the chat thread.
 
-<!-- embedme ./src/samples/java/com/azure/communication/chat/ReadmeSamples.java#L98-L99 -->
-```Java
+```java readme-sample-deleteChatThread
 String chatThreadId = "Id";
 chatClient.deleteChatThread(chatThreadId);
 ```
@@ -160,8 +186,7 @@ chatClient.deleteChatThread(chatThreadId);
 The `getChatThreadClient` method returns a thread client for a thread that already exists. It can be used for performing operations on the created thread: add participants, send message, etc.
 `chatThreadId` is the unique ID of the existing chat thread.
 
-<!-- embedme ./src/samples/java/com/azure/communication/chat/ReadmeSamples.java#L110-L111 -->
-```Java
+```java readme-sample-getChatThreadClient
 String chatThreadId = "Id";
 ChatThreadClient chatThreadClient = chatClient.getChatThreadClient(chatThreadId);
 ```
@@ -171,8 +196,7 @@ ChatThreadClient chatThreadClient = chatClient.getChatThreadClient(chatThreadId)
 Use `updateTopic` method to update a thread's topic
 `topic` is used to hold the new topic of the thread.
 
-<!-- embedme ./src/samples/java/com/azure/communication/chat/ReadmeSamples.java#L122-L122 -->
-```Java
+```java readme-sample-updateTopic
 chatThreadClient.updateTopic("New Topic");
 ```
 
@@ -189,8 +213,7 @@ Use the `sendMessage` method to send a chat message to the chat thread that the 
 
 A `SendChatMessageResult` response returned from sending a chat message, it contains an id, which is the unique ID of the message.
 
-<!-- embedme ./src/samples/java/com/azure/communication/chat/ReadmeSamples.java#L134-L138 -->
-```Java
+```java readme-sample-sendChatMessage
 SendChatMessageOptions sendChatMessageOptions = new SendChatMessageOptions()
     .setContent("Message content")
     .setSenderDisplayName("Sender Display Name");
@@ -203,8 +226,7 @@ SendChatMessageResult sendResult = chatThreadClient.sendMessage(sendChatMessageO
 The `getMessage` method retrieves a chat message from the service.
 `chatMessageId` is the unique ID of the chat message.
 
-<!-- embedme ./src/samples/java/com/azure/communication/chat/ReadmeSamples.java#L147-L148 -->
-```Java
+```java readme-sample-getChatMessage
 String chatMessageId = "Id";
 ChatMessage chatMessage = chatThreadClient.getMessage(chatMessageId);
 ```
@@ -213,15 +235,13 @@ ChatMessage chatMessage = chatThreadClient.getMessage(chatMessageId);
 
 You can retrieve chat messages using the `listMessages` method on the chat thread client at specified intervals (polling).
 
-<!-- embedme ./src/samples/java/com/azure/communication/chat/ReadmeSamples.java#L157-L164 -->
-```Java
+```java readme-sample-getChatMessages
 PagedIterable<ChatMessage> chatMessagesResponse = chatThreadClient.listMessages();
 chatMessagesResponse.iterableByPage().forEach(resp -> {
     System.out.printf("Response headers are %s. Url %s  and status code %d %n", resp.getHeaders(),
         resp.getRequest().getUrl(), resp.getStatusCode());
-    resp.getItems().forEach(message -> {
-        System.out.printf("Message id is %s.", message.getId());
-    });
+    resp.getElements().forEach(message ->
+        System.out.printf("Message id is %s.", message.getId()));
 });
 ```
 
@@ -245,7 +265,7 @@ listMessages returns different types of messages which can be identified by `cha
 
 - `participantRemoved`: System message that indicates a participant has been removed from the chat thread.
 
-For more details, see [Message Types](https://docs.microsoft.com/azure/communication-services/concepts/chat/concepts#message-types).
+For more details, see [Message Types](/azure/communication-services/concepts/chat/concepts#message-types).
 
 #### Update a chat message
 
@@ -255,8 +275,7 @@ Use `updateMessage` to update a chat message identified by chatThreadId and mess
 
 - Use `content` to provide a new chat message content;
 
-<!-- embedme ./src/samples/java/com/azure/communication/chat/ReadmeSamples.java#L173-L177 -->
-```Java
+```java readme-sample-updateChatMessage
 String chatMessageId = "Id";
 UpdateChatMessageOptions updateChatMessageOptions = new UpdateChatMessageOptions()
     .setContent("Updated message content");
@@ -269,8 +288,7 @@ chatThreadClient.updateMessage(chatMessageId, updateChatMessageOptions);
 Use `updateMessage` to update a chat message identified by chatMessageId.
 `chatMessageId` is the unique ID of the chat message.
 
-<!-- embedme ./src/samples/java/com/azure/communication/chat/ReadmeSamples.java#L186-L187 -->
-```Java
+```java readme-sample-deleteChatMessage
 String chatMessageId = "Id";
 chatThreadClient.deleteMessage(chatMessageId);
 ```
@@ -281,15 +299,13 @@ chatThreadClient.deleteMessage(chatMessageId);
 
 Use `listParticipants` to retrieve a paged collection containing the participants of the chat thread.
 
-<!-- embedme ./src/samples/java/com/azure/communication/chat/ReadmeSamples.java#L196-L203 -->
-```Java
+```java readme-sample-listChatParticipants
 PagedIterable<ChatParticipant> chatParticipantsResponse = chatThreadClient.listParticipants();
 chatParticipantsResponse.iterableByPage().forEach(resp -> {
     System.out.printf("Response headers are %s. Url %s  and status code %d %n", resp.getHeaders(),
         resp.getRequest().getUrl(), resp.getStatusCode());
-    resp.getItems().forEach(chatParticipant -> {
-        System.out.printf("Participant id is %s.", ((CommunicationUserIdentifier) chatParticipant.getCommunicationIdentifier()).getId());
-    });
+    resp.getElements().forEach(chatParticipant ->
+        System.out.printf("Participant id is %s.", ((CommunicationUserIdentifier) chatParticipant.getCommunicationIdentifier()).getId()));
 });
 ```
 
@@ -298,12 +314,11 @@ chatParticipantsResponse.iterableByPage().forEach(resp -> {
 Use `addParticipants` method to add participants to the chat thread.
 `participants` list of participants to be added to the thread;
 
-- `communicationIdentifier`, required, is the CommunicationIdentifier you've created by using the CommunicationIdentityClient. More info at: [Create A User](https://docs.microsoft.com/azure/communication-services/quickstarts/access-tokens?pivots=programming-language-java#create-a-user).
+- `communicationIdentifier`, required, is the CommunicationIdentifier you've created by using the CommunicationIdentityClient. More info at: [Create A User](/azure/communication-services/quickstarts/access-tokens?pivots=programming-language-java#create-a-user).
 - `display_name`, optional, is the display name for the thread member.
 - `share_history_time`, optional, is the time from which the chat history is shared with the member. To share history since the inception of the chat thread, set this property to any date equal to, or less than the thread creation time. To share no history previous to when the member was added, set it to the current date. To share partial history, set it to the required date.
 
-<!-- embedme ./src/samples/java/com/azure/communication/chat/ReadmeSamples.java#L216-L229 -->
-```Java
+```java readme-sample-addChatParticipants
 List<ChatParticipant> participants = new ArrayList<ChatParticipant>();
 
 ChatParticipant firstParticipant = new ChatParticipant()
@@ -325,8 +340,7 @@ chatThreadClient.addParticipants(participants);
 Use `removeParticipant` method to remove a participant from the chat thread.
 `identifier` is the CommunicationIdentifier you've created.
 
-<!-- embedme ./src/samples/java/com/azure/communication/chat/ReadmeSamples.java#L240-L240 -->
-```Java
+```java readme-sample-removeChatParticipant
 chatThreadClient.removeParticipant(user);
 ```
 
@@ -337,8 +351,7 @@ chatThreadClient.removeParticipant(user);
 Use `sendReadReceipt` method to post a read receipt event to a chat thread, on behalf of a user.
 `chatMessageId` is the unique ID of the chat message that was read.
 
-<!-- embedme ./src/samples/java/com/azure/communication/chat/ReadmeSamples.java#L249-L250 -->
-```Java
+```java readme-sample-sendReadReceipt
 String chatMessageId = "Id";
 chatThreadClient.sendReadReceipt(chatMessageId);
 ```
@@ -347,15 +360,13 @@ chatThreadClient.sendReadReceipt(chatMessageId);
 
 `getReadReceipts` method retrieves read receipts for a chat thread.
 
-<!-- embedme ./src/samples/java/com/azure/communication/chat/ReadmeSamples.java#L259-L266 -->
-```Java
+```java readme-sample-listReadReceipts
 PagedIterable<ChatMessageReadReceipt> readReceiptsResponse = chatThreadClient.listReadReceipts();
 readReceiptsResponse.iterableByPage().forEach(resp -> {
     System.out.printf("Response headers are %s. Url %s  and status code %d %n", resp.getHeaders(),
         resp.getRequest().getUrl(), resp.getStatusCode());
-    resp.getItems().forEach(readReceipt -> {
-        System.out.printf("Read message id is %s.", readReceipt.getChatMessageId());
-    });
+    resp.getElements().forEach(readReceipt ->
+        System.out.printf("Read message id is %s.", readReceipt.getChatMessageId()));
 });
 ```
 
@@ -368,14 +379,11 @@ Use `sendTypingNotification` method to post a typing notification event to a cha
 
 - Use `senderDisplayName` to set the display name of the notification sender;
 
-<!-- embedme ./src/samples/java/com/azure/communication/chat/ReadmeSamples.java#L276-L278 -->
-```Java
+```java readme-sample-sendTypingNotification
 TypingNotificationOptions options = new TypingNotificationOptions();
 options.setSenderDisplayName("Sender Display Name");
-chatThreadClient.sendTypingNotification(options);
+chatThreadClient.sendTypingNotificationWithResponse(options, Context.NONE);
 ```
-
-
 
 ## Troubleshooting
 
@@ -390,8 +398,8 @@ Check out other client libraries for Azure communication service
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
 [coc_contact]: mailto:opencode@microsoft.com
-[product_docs]: https://docs.microsoft.com/azure/communication-services/
-[package]: https://search.maven.org/artifact/com.azure/azure-communication-chat
+[product_docs]: /azure/communication-services/
+[package]: https://central.sonatype.com/artifact/com.azure/azure-communication-chat
 [api_documentation]: https://aka.ms/java-docs
-[source]: https://github.com/Azure/azure-sdk-for-java/tree/azure-communication-chat_1.1.0-beta.2/sdk/communication/azure-communication-chat/src
+[source]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/communication/azure-communication-chat/src
 
