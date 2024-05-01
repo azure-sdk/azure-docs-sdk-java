@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: communication
 ---
-# Azure Communications Rooms Service client library for Java - version 1.2.0-alpha.20240501.1 
+# Azure Communications Rooms Service client library for Java - version 1.2.0-alpha.20240430.2 
 
 
 Azure Communication Rooms is used to operate on rooms.
