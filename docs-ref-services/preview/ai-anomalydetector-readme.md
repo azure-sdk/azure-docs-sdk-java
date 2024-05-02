@@ -1,12 +1,12 @@
 ---
 title: Azure Anomaly Detector client library for Java
 keywords: Azure, java, SDK, API, azure-ai-anomalydetector, anomalydetector
-ms.date: 12/09/2022
+ms.date: 05/02/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: anomalydetector
 ---
-# Azure Anomaly Detector client library for Java - version 3.0.0-beta.5 
+# Azure Anomaly Detector client library for Java - version 3.0.0-alpha.20240502.1 
 
 
 [Anomaly Detector](https://learn.microsoft.com/azure/cognitive-services/Anomaly-Detector/overview) is an AI service with a set of APIs, which enables you to monitor and detect anomalies in your time series data with little machine learning (ML) knowledge, either batch validation or real-time inference.
@@ -63,7 +63,7 @@ To use the [DefaultAzureCredential][DefaultAzureCredential] provider shown below
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-identity</artifactId>
-    <version>1.5.4</version>
+    <version>1.11.4</version>
 </dependency>
 ```
 
@@ -147,19 +147,19 @@ AnomalyDetectorClient anomalyDetectorClient =
 
 ### Batch detection
 
-For batch detection in univariate anomaly detection, please go to this sample for better understanding the workflow: [DetectAnomaliesEntireSeries.java](https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-anomalydetector_3.0.0-beta.5/sdk/anomalydetector/azure-ai-anomalydetector/src/samples/java/com/azure/ai/anomalydetector/DetectAnomaliesEntireSeries.java)
+For batch detection in univariate anomaly detection, please go to this sample for better understanding the workflow: [DetectAnomaliesEntireSeries.java](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/anomalydetector/azure-ai-anomalydetector/src/samples/java/com/azure/ai/anomalydetector/DetectAnomaliesEntireSeries.java)
 
 ### Streaming detection
 
-For streaming/last detection in univariate anomaly detection, please go to this sample for better understanding the workflow: [DetectAnomaliesLastPoint.java](https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-anomalydetector_3.0.0-beta.5/sdk/anomalydetector/azure-ai-anomalydetector/src/samples/java/com/azure/ai/anomalydetector/DetectAnomaliesLastPoint.java)
+For streaming/last detection in univariate anomaly detection, please go to this sample for better understanding the workflow: [DetectAnomaliesLastPoint.java](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/anomalydetector/azure-ai-anomalydetector/src/samples/java/com/azure/ai/anomalydetector/DetectAnomaliesLastPoint.java)
 
 ### Detect change points
 
-For change points detection in univariate anomaly detection, please go to this sample for better understanding the workflow: [DetectChangePoints.java](https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-anomalydetector_3.0.0-beta.5/sdk/anomalydetector/azure-ai-anomalydetector/src/samples/java/com/azure/ai/anomalydetector/DetectChangePoints.java)
+For change points detection in univariate anomaly detection, please go to this sample for better understanding the workflow: [DetectChangePoints.java](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/anomalydetector/azure-ai-anomalydetector/src/samples/java/com/azure/ai/anomalydetector/DetectChangePoints.java)
 
 ### Multivariate Anomaly Detection Sample
 
-To see how to use Anomaly Detector library to conduct Multivariate Anomaly Detection, see this [MultivariateSample.java](https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-anomalydetector_3.0.0-beta.5/sdk/anomalydetector/azure-ai-anomalydetector/src/samples/java/com/azure/ai/anomalydetector/MultivariateSample.java).
+To see how to use Anomaly Detector library to conduct Multivariate Anomaly Detection, see this [MultivariateSample.java](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/anomalydetector/azure-ai-anomalydetector/src/samples/java/com/azure/ai/anomalydetector/MultivariateSample.java).
 
 ## Troubleshooting
 
@@ -171,7 +171,7 @@ locate the root issue. View the [logging][logging] wiki for guidance about enabl
 
 ## Next steps
 
-These code samples show common scenario operations with the Azure Anomaly Detector library. More samples can be found under the [samples](https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-anomalydetector_3.0.0-beta.5/sdk/anomalydetector/azure-ai-anomalydetector/src/samples/java/com/azure/ai/anomalydetector) directory.
+These code samples show common scenario operations with the Azure Anomaly Detector library. More samples can be found under the [samples](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/anomalydetector/azure-ai-anomalydetector/src/samples/java/com/azure/ai/anomalydetector) directory.
 
 For more extensive documentation on Azure Anomaly Detector, see the [Anomaly Detector documentation](https://learn.microsoft.com/azure/cognitive-services/anomaly-detector/overview) on docs.microsoft.com.
 
@@ -189,23 +189,23 @@ This project has adopted the [Microsoft Open Source Code of Conduct][code_of_con
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
 [coc_contact]: mailto:opencode@microsoft.com
 [samples]: src/samples/java/com/azure/ai/anomalydetector
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-anomalydetector_3.0.0-beta.5/sdk/anomalydetector/azure-ai-anomalydetector/src
-[samples_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-anomalydetector_3.0.0-beta.5/sdk/anomalydetector/azure-ai-anomalydetector/src/samples/
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/anomalydetector/azure-ai-anomalydetector/src
+[samples_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/anomalydetector/azure-ai-anomalydetector/src/samples/
 [azure_subscription]: https://azure.microsoft.com/free/
-[api_reference_doc]: https://aka.ms/azsdk/net/docs/ref/anomalydetector
+[api_reference_doc]: https://azure.github.io/azure-sdk-for-java/
 [product_documentation]: /azure/cognitive-services/anomaly-detector/
 [cognitive_resource_cli]: /azure/cognitive-services/cognitive-services-apis-create-account-cli
-[anomaly_detector_client_class]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-anomalydetector_3.0.0-beta.5/sdk/anomalydetector/azure-ai-anomalydetector/src/main/java/com/azure/ai/anomalydetector/AnomalyDetectorClient.java
+[anomaly_detector_client_class]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/anomalydetector/azure-ai-anomalydetector/src/main/java/com/azure/ai/anomalydetector/AnomalyDetectorClient.java
 [azure_cli]: /cli/azure
 [azure_portal]: https://portal.azure.com
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-anomalydetector_3.0.0-beta.5/sdk/identity/azure-identity
-[DefaultAzureCredential]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-anomalydetector_3.0.0-beta.5/sdk/identity/azure-identity/README.md#defaultazurecredential
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/identity/azure-identity
+[DefaultAzureCredential]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity/README.md#defaultazurecredential
 [custom_subdomain]: /azure/cognitive-services/authentication#create-a-resource-with-a-custom-subdomain
 [register_aad_app]: /azure/cognitive-services/authentication#assign-a-role-to-a-service-principal
 [aad_grant_access]: /azure/cognitive-services/authentication#assign-a-role-to-a-service-principal
 [jdk_link]: /java/azure/jdk/?view=azure-java-stable
-[package]: https://mvnrepository.com/artifact/com.azure/azure-ai-anomalydetector
-[samples_readme]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-anomalydetector_3.0.0-beta.5/sdk/anomalydetector/azure-ai-anomalydetector/src/samples/README.md
+[package]: https://central.sonatype.com/artifact/com.azure/azure-ai-anomalydetector
+[samples_readme]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/anomalydetector/azure-ai-anomalydetector/src/samples/README.md
 [logging]: https://github.com/Azure/azure-sdk-for-java/wiki/Logging-with-Azure-SDK
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fanomalydetector%2Fazure-ai-anomalydetector%2FREADME.png)
 
