@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: cosmos
 ---
-# Azure Cosmos Test client library for Java - version 1.0.0-alpha.20240502.1 
+# Azure Cosmos Test client library for Java - version 1.0.0-alpha.20240502.2 
 
 Library containing core fault injection classes used to test Azure Cosmos DB SDK libraries.
 
