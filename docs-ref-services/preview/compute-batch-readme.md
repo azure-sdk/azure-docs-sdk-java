@@ -1,12 +1,12 @@
 ---
 title: Azure Batch client library for Java
 keywords: Azure, java, SDK, API, azure-compute-batch, batch
-ms.date: 06/10/2024
+ms.date: 07/18/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: batch
 ---
-# Azure Batch client library for Java - version 1.0.0-beta.2 
+# Azure Batch client library for Java - version 1.0.0-alpha.20240718.1 
 
 
 This README is based on the latest released version of the Azure Compute Batch SDK, otherwise known as the track 2 Azure Batch Data Plane SDK.
@@ -190,7 +190,7 @@ Handle Transient Errors: Implement retry logic in your application to handle tra
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-compute-batch_1.0.0-beta.2/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
