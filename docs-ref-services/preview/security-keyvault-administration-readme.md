@@ -1,7 +1,7 @@
 ---
 title: 
 keywords: Azure, java, SDK, API, azure-security-keyvault-administration, keyvault
-ms.date: 11/10/2023
+ms.date: 07/18/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: keyvault
@@ -16,7 +16,7 @@ The Azure Key Vault Administration library clients support administrative tasks 
 ## Getting started
 ### Include the package
 #### Include the BOM file
-Please include the `azure-sdk-bom` to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number. To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-administration_4.5.0-beta.1/sdk/boms/azure-sdk-bom/README.md).
+Please include the `azure-sdk-bom` to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number. To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -51,13 +51,14 @@ If you want to take dependency on a particular version of the library that is no
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-security-keyvault-administration</artifactId>
-    <version>4.5.0-beta.1</version>
+    <version>4.5.4</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
 
 ### Prerequisites
 - A [Java Development Kit (JDK)][jdk_link], version 8 or later.
+  - Here are details about [Java 8 client compatibility with Azure Certificate Authority](https://learn.microsoft.com/azure/security/fundamentals/azure-ca-details?tabs=root-and-subordinate-cas-list#client-compatibility-for-public-pkis).
 - An [Azure Subscription][azure_subscription].
 - An existing [Azure Key Vault Managed HSM][azure_keyvault_mhsm]. If you need to create a Managed HSM, you can do so using the Azure CLI by following the steps in [this document][azure_keyvault_mhsm_cli].
 
@@ -119,8 +120,14 @@ The Key Vault Backup Client provides both synchronous and asynchronous operation
 
 > NOTE: The backing store for key backups is a blob storage container using Shared Access Signature authentication. For more details on creating a SAS token using the `BlobServiceClient`, see the [Azure Storage Blobs client README][storage_readme_sas_token]. Alternatively, it is possible to [generate a SAS token in Storage Explorer][portal_sas_token].
 
+### Pre-Backup Operation
+A pre-backup operation represents a long-running operation that checks if it is possible to perform a full key backup.
+
 ### Backup Operation
 A backup operation represents a long-running operation for a full key backup.
+
+### Pre-Restore Operation
+A pre-restore operation represents a long-running operation that checks if it is possible to perform a full key restore from a backup.
 
 ### Restore Operation
 A restore operation represents a long-running operation for both a full key and selective key restore.
@@ -348,20 +355,47 @@ keyVaultAccessControlAsyncClient.deleteRoleAssignment(KeyVaultRoleScope.GLOBAL, 
 ### Examples
 #### Sync API
 The following sections provide several code snippets covering some of the most common Azure Key Vault Backup client tasks, including:
+- [Pre-backup check for a Key Vault](#run-pre-backup-check-for-a-collection-of-keys)
 - [Backup a Key Vault](#backup-a-collection-of-keys)
+- [Pre-restore check for a Key Vault](#run-pre-restore-check-for-a-collection-of-keys)
 - [Restore a Key Vault](#restore-a-collection-of-keys)
 - [Restore a key](#selectively-restore-a-key)
+
+##### Run pre-backup check for a collection of keys
+Check if an entire collection of keys can be backed up by using `beginPreBackup()`.
+
+```java readme-sample-beginPreBackup
+String blobStorageUrl = "https://myaccount.blob.core.windows.net/myContainer";
+String sasToken = "<sas-token>";
+
+SyncPoller<KeyVaultBackupOperation, String> preBackupPoller =
+    keyVaultBackupClient.beginPreBackup(blobStorageUrl, sasToken);
+PollResponse<KeyVaultBackupOperation> pollResponse = preBackupPoller.poll();
+
+System.out.printf("The current status of the operation is: %s.%n", pollResponse.getStatus());
+
+PollResponse<KeyVaultBackupOperation> finalPollResponse = preBackupPoller.waitForCompletion();
+
+if (finalPollResponse.getStatus() == LongRunningOperationStatus.SUCCESSFULLY_COMPLETED) {
+    String folderUrl = preBackupPoller.getFinalResult();
+
+    System.out.printf("Pre-backup check completed successfully.%n");
+} else {
+    KeyVaultBackupOperation operation = preBackupPoller.poll().getValue();
+
+    System.out.printf("Pre-backup check failed with error: %s.%n", operation.getError().getMessage());
+}
+```
 
 ##### Backup a collection of keys
 Back up an entire collection of keys using `beginBackup()`.
 
 ```java readme-sample-beginBackup
 String blobStorageUrl = "https://myaccount.blob.core.windows.net/myContainer";
-String sasToken = "sv=2020-02-10&ss=b&srt=o&sp=rwdlactfx&se=2021-06-17T07:13:07Z&st=2021-06-16T23:13:07Z&spr=https&sig=n5V6fnlkViEF9b7ij%2FttTHNwO2BdFIHKHppRxGAyJdc%3D";
+String sasToken = "<sas-token>";
 
 SyncPoller<KeyVaultBackupOperation, String> backupPoller =
     keyVaultBackupClient.beginBackup(blobStorageUrl, sasToken);
-
 PollResponse<KeyVaultBackupOperation> pollResponse = backupPoller.poll();
 
 System.out.printf("The current status of the operation is: %s.%n", pollResponse.getStatus());
@@ -379,26 +413,49 @@ if (finalPollResponse.getStatus() == LongRunningOperationStatus.SUCCESSFULLY_COM
 }
 ```
 
+##### Run pre-restore check for a collection of keys
+Check if an entire collection of keys can be restored from a backup by using `beginPreRestore()`.
+
+```java readme-sample-beginPreRestore
+String folderUrl = "https://myaccount.blob.core.windows.net/myContainer/mhsm-myaccount-2020090117323313";
+String sasToken = "<sas-token>";
+
+SyncPoller<KeyVaultRestoreOperation, KeyVaultRestoreResult> preRestorePoller =
+    keyVaultBackupClient.beginPreRestore(folderUrl, sasToken);
+PollResponse<KeyVaultRestoreOperation> pollResponse = preRestorePoller.poll();
+
+System.out.printf("The current status of the operation is: %s.%n", pollResponse.getStatus());
+
+PollResponse<KeyVaultRestoreOperation> finalPollResponse = preRestorePoller.waitForCompletion();
+
+if (finalPollResponse.getStatus() == LongRunningOperationStatus.SUCCESSFULLY_COMPLETED) {
+    System.out.printf("Pre-restore check completed successfully.%n");
+} else {
+    KeyVaultRestoreOperation operation = preRestorePoller.poll().getValue();
+
+    System.out.printf("Pre-restore check failed with error: %s.%n", operation.getError().getMessage());
+}
+```
+
 ##### Restore a collection of keys
 Restore an entire collection of keys from a backup using `beginRestore()`.
 
 ```java readme-sample-beginRestore
 String folderUrl = "https://myaccount.blob.core.windows.net/myContainer/mhsm-myaccount-2020090117323313";
-String sasToken = "sv=2020-02-10&ss=b&srt=o&sp=rwdlactfx&se=2021-06-17T07:13:07Z&st=2021-06-16T23:13:07Z&spr=https&sig=n5V6fnlkViEF9b7ij%2FttTHNwO2BdFIHKHppRxGAyJdc%3D";
+String sasToken = "<sas-token>";
 
-SyncPoller<KeyVaultRestoreOperation, KeyVaultRestoreResult> backupPoller =
+SyncPoller<KeyVaultRestoreOperation, KeyVaultRestoreResult> restorePoller =
     keyVaultBackupClient.beginRestore(folderUrl, sasToken);
-
-PollResponse<KeyVaultRestoreOperation> pollResponse = backupPoller.poll();
+PollResponse<KeyVaultRestoreOperation> pollResponse = restorePoller.poll();
 
 System.out.printf("The current status of the operation is: %s.%n", pollResponse.getStatus());
 
-PollResponse<KeyVaultRestoreOperation> finalPollResponse = backupPoller.waitForCompletion();
+PollResponse<KeyVaultRestoreOperation> finalPollResponse = restorePoller.waitForCompletion();
 
 if (finalPollResponse.getStatus() == LongRunningOperationStatus.SUCCESSFULLY_COMPLETED) {
     System.out.printf("Backup restored successfully.%n");
 } else {
-    KeyVaultRestoreOperation operation = backupPoller.poll().getValue();
+    KeyVaultRestoreOperation operation = restorePoller.poll().getValue();
 
     System.out.printf("Restore failed with error: %s.%n", operation.getError().getMessage());
 }
@@ -409,22 +466,21 @@ Restore a specific key from a backup using `beginSelectiveRestore()`.
 
 ```java readme-sample-beginSelectiveKeyRestore
 String folderUrl = "https://myaccount.blob.core.windows.net/myContainer/mhsm-myaccount-2020090117323313";
-String sasToken = "sv=2020-02-10&ss=b&srt=o&sp=rwdlactfx&se=2021-06-17T07:13:07Z&st=2021-06-16T23:13:07Z&spr=https&sig=n5V6fnlkViEF9b7ij%2FttTHNwO2BdFIHKHppRxGAyJdc%3D";
+String sasToken = "<sas-token>";
 String keyName = "myKey";
 
-SyncPoller<KeyVaultSelectiveKeyRestoreOperation, KeyVaultSelectiveKeyRestoreResult> backupPoller =
+SyncPoller<KeyVaultSelectiveKeyRestoreOperation, KeyVaultSelectiveKeyRestoreResult> restorePoller =
     keyVaultBackupClient.beginSelectiveKeyRestore(folderUrl, sasToken, keyName);
-
-PollResponse<KeyVaultSelectiveKeyRestoreOperation> pollResponse = backupPoller.poll();
+PollResponse<KeyVaultSelectiveKeyRestoreOperation> pollResponse = restorePoller.poll();
 
 System.out.printf("The current status of the operation is: %s.%n", pollResponse.getStatus());
 
-PollResponse<KeyVaultSelectiveKeyRestoreOperation> finalPollResponse = backupPoller.waitForCompletion();
+PollResponse<KeyVaultSelectiveKeyRestoreOperation> finalPollResponse = restorePoller.waitForCompletion();
 
 if (finalPollResponse.getStatus() == LongRunningOperationStatus.SUCCESSFULLY_COMPLETED) {
     System.out.printf("Key restored successfully.%n");
 } else {
-    KeyVaultSelectiveKeyRestoreOperation operation = backupPoller.poll().getValue();
+    KeyVaultSelectiveKeyRestoreOperation operation = restorePoller.poll().getValue();
 
     System.out.printf("Key restore failed with error: %s.%n", operation.getError().getMessage());
 }
@@ -432,18 +488,38 @@ if (finalPollResponse.getStatus() == LongRunningOperationStatus.SUCCESSFULLY_COM
 
 #### Async API
 The following sections provide several code snippets covering some of the most common asynchronous Azure Key Vault Backup client tasks, including:
+- [Run pre-backup check for a collection of keys asynchronously](#run-pre-backup-check-for-a-collection-of-keys-asynchronously)
 - [Backup a Key Vault asynchronously](#backup-a-collection-of-keys-asynchronously)
+- [Run pre-restore check for a collection of keys asynchronously](#run-pre-restore-check-for-a-collection-of-keys-asynchronously)
 - [Restore a Key Vault asynchronously](#restore-a-collection-of-keys-asynchronously)
 - [Restore a key asynchronously](#selectively-restore-a-key-asynchronously)
 
 > Note : You should add `System.in.read()` or `Thread.sleep()` after the function calls in the main class/thread to allow async functions/operations to execute and finish before the main application/thread exits.
+
+##### Run pre-backup check for a collection of keys asynchronously
+Check if an entire collection of keys can be backed up by using `beginPreBackup()`.
+
+```java readme-sample-beginPreBackupAsync
+String blobStorageUrl = "https://myaccount.blob.core.windows.net/myContainer";
+String sasToken = "<sas-token>";
+
+keyVaultBackupAsyncClient.beginPreBackup(blobStorageUrl, sasToken)
+    .setPollInterval(Duration.ofSeconds(1)) // You can set a custom polling interval.
+    .doOnError(e -> System.out.printf("Pre-backup check failed with error: %s.%n", e.getMessage()))
+    .doOnNext(pollResponse ->
+        System.out.printf("The current status of the operation is: %s.%n", pollResponse.getStatus()))
+    .filter(pollResponse -> pollResponse.getStatus() == LongRunningOperationStatus.SUCCESSFULLY_COMPLETED)
+    .flatMap(AsyncPollResponse::getFinalResult)
+    .subscribe(folderUrl ->
+        System.out.printf("Pre-backup check completed successfully.%n"));
+```
 
 ##### Backup a collection of keys asynchronously
 Back up an entire collection of keys using `beginBackup()`.
 
 ```java readme-sample-beginBackupAsync
 String blobStorageUrl = "https://myaccount.blob.core.windows.net/myContainer";
-String sasToken = "sv=2020-02-10&ss=b&srt=o&sp=rwdlactfx&se=2021-06-17T07:13:07Z&st=2021-06-16T23:13:07Z&spr=https&sig=n5V6fnlkViEF9b7ij%2FttTHNwO2BdFIHKHppRxGAyJdc%3D";
+String sasToken = "<sas-token>";
 
 keyVaultBackupAsyncClient.beginBackup(blobStorageUrl, sasToken)
     .setPollInterval(Duration.ofSeconds(1)) // You can set a custom polling interval.
@@ -456,12 +532,29 @@ keyVaultBackupAsyncClient.beginBackup(blobStorageUrl, sasToken)
         System.out.printf("Backup completed. The storage location of this backup is: %s.%n", folderUrl));
 ```
 
+##### Run pre-restore check for a collection of keys asynchronously
+Check if an entire collection of keys can be restored from a backup by using `beginPreRestore()`.
+
+```java readme-sample-beginPreRestoreAsync
+String folderUrl = "https://myaccount.blob.core.windows.net/myContainer/mhsm-myaccount-2020090117323313";
+String sasToken = "<sas-token>";
+
+keyVaultBackupAsyncClient.beginPreRestore(folderUrl, sasToken)
+    .setPollInterval(Duration.ofSeconds(1)) // You can set a custom polling interval.
+    .doOnError(e -> System.out.printf("Pre-restore check failed with error: %s.%n", e.getMessage()))
+    .doOnNext(pollResponse ->
+        System.out.printf("The current status of the operation is: %s.%n", pollResponse.getStatus()))
+    .filter(pollResponse -> pollResponse.getStatus() == LongRunningOperationStatus.SUCCESSFULLY_COMPLETED)
+    .flatMap(AsyncPollResponse::getFinalResult)
+    .subscribe(unused -> System.out.printf("Pre-restore check completed successfully.%n"));
+```
+
 ##### Restore a collection of keys asynchronously
 Restore an entire collection of keys from a backup using `beginRestore()`.
 
 ```java readme-sample-beginRestoreAsync
 String folderUrl = "https://myaccount.blob.core.windows.net/myContainer/mhsm-myaccount-2020090117323313";
-String sasToken = "sv=2020-02-10&ss=b&srt=o&sp=rwdlactfx&se=2021-06-17T07:13:07Z&st=2021-06-16T23:13:07Z&spr=https&sig=n5V6fnlkViEF9b7ij%2FttTHNwO2BdFIHKHppRxGAyJdc%3D";
+String sasToken = "<sas-token>";
 
 keyVaultBackupAsyncClient.beginRestore(folderUrl, sasToken)
     .setPollInterval(Duration.ofSeconds(1)) // You can set a custom polling interval.
@@ -478,7 +571,7 @@ Restore an entire collection of keys from a backup using `beginSelectiveRestore(
 
 ```java readme-sample-beginSelectiveKeyRestoreAsync
 String folderUrl = "https://myaccount.blob.core.windows.net/myContainer/mhsm-myaccount-2020090117323313";
-String sasToken = "sv=2020-02-10&ss=b&srt=o&sp=rwdlactfx&se=2021-06-17T07:13:07Z&st=2021-06-16T23:13:07Z&spr=https&sig=n5V6fnlkViEF9b7ij%2FttTHNwO2BdFIHKHppRxGAyJdc%3D";
+String sasToken = "<sas-token>";
 String keyName = "myKey";
 
 keyVaultBackupAsyncClient.beginSelectiveKeyRestore(folderUrl, sasToken, keyName)
@@ -500,7 +593,7 @@ The following sections provide several code snippets covering some of the most c
 - [Updating a setting](#update-a-specific-setting)
 
 ##### Get all settings
-List all the settings for a Key Vault account.
+List all the settings for an Azure Key Vault account.
 
 ```java readme-sample-getSettings
 KeyVaultGetSettingsResult getSettingsResult = keyVaultSettingsClient.getSettings();
@@ -574,7 +667,7 @@ keyVaultSettingsAsyncClient.updateSetting(settingToUpdate)
 ```
 
 ## Troubleshooting
-See our [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-administration_4.5.0-beta.1/sdk/keyvault/azure-security-keyvault-administration/TROUBLESHOOTING.md) for details on how to diagnose various failure scenarios.
+See our [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/keyvault/azure-security-keyvault-administration/TROUBLESHOOTING.md) for details on how to diagnose various failure scenarios.
 
 ### General
 Azure Key Vault Access Control clients raise exceptions. For example, if you try to retrieve a role assignment after it is deleted a `404` error is returned, indicating the resource was not found. In the following snippet, the error is handled gracefully by catching the exception and displaying additional information about the error.
@@ -607,7 +700,7 @@ When you submit a pull request, a CLA-bot will automatically determine whether y
 This project has adopted the [Microsoft Open Source Code of Conduct][microsoft_code_of_conduct]. For more information see the Code of Conduct FAQ or contact <opencode@microsoft.com> with any additional questions or comments.
 
 <!-- LINKS -->
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-administration_4.5.0-beta.1/sdk/keyvault/azure-security-keyvault-administration/src
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/keyvault/azure-security-keyvault-administration/src
 [api_documentation]: https://azure.github.io/azure-sdk-for-java
 [azkeyvault_docs]: /azure/key-vault/
 [azure_identity]: /java/api/overview/azure/identity-readme?view=azure-java-stable
@@ -618,8 +711,8 @@ This project has adopted the [Microsoft Open Source Code of Conduct][microsoft_c
 [default_azure_credential]: /java/api/overview/azure/identity-readme?view=azure-java-stable#defaultazurecredential
 [managed_identity]: /azure/active-directory/managed-identities-azure-resources/overview
 [azkeyvault_rest]: /rest/api/keyvault/
-[administration_samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-administration_4.5.0-beta.1/sdk/keyvault/azure-security-keyvault-administration/src/samples/java/com/azure/security/keyvault/administration
-[storage_readme_sas_token]: https://github.com/Azure/azure-sdk-for-java/tree/azure-security-keyvault-administration_4.5.0-beta.1/sdk/storage/azure-storage-blob#get-credentials
+[administration_samples]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/keyvault/azure-security-keyvault-administration/src/samples/java/com/azure/security/keyvault/administration
+[storage_readme_sas_token]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/storage/azure-storage-blob#get-credentials
 [portal_sas_token]: /azure/vs-azure-tools-storage-manage-with-storage-explorer?tabs=windows#generate-a-shared-access-signature-in-storage-explorer
 [performance_tuning]: https://github.com/Azure/azure-sdk-for-java/wiki/Performance-Tuning
 [jdk_link]: /java/azure/jdk/?view=azure-java-stable
