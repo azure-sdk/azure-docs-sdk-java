@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: botservice
 ---
-# Azure Resource Manager BotService client library for Java - version 1.0.0-alpha.20240718.1 
+# Azure Resource Manager BotService client library for Java - version 1.0.0-alpha.20240719.1 
 
 
 Azure Resource Manager BotService client library for Java.
