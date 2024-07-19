@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: maps
 ---
-# Azure Maps SDK Timezone client library for Java - version 1.0.0-alpha.20240718.1 
+# Azure Maps SDK Timezone client library for Java - version 1.0.0-alpha.20240719.1 
 
 
 Azure Maps SDK Timezone client library for Java.
