@@ -1,12 +1,12 @@
 ---
 title: Azure AI Vision Face client library for Java
-keywords: Azure, java, SDK, API, azure-ai-vision-face, face
-ms.date: 05/28/2024
+keywords: Azure, java, SDK, API, azure-ai-vision-face, azure-ai-face
+ms.date: 07/22/2024
 ms.topic: reference
 ms.devlang: java
-ms.service: face
+ms.service: azure-ai-face
 ---
-# Azure AI Vision Face client library for Java - version 1.0.0-beta.1 
+# Azure AI Vision Face client library for Java - version 1.0.0-alpha.20240722.1 
 
 
 The Azure AI Face service provides AI algorithms that detect, recognize, and analyze human faces in images. It includes the following main features:
@@ -96,7 +96,7 @@ To use the [DefaultAzureCredential][azure_sdk_java_default_azure_credential] typ
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-identity</artifactId>
-    <version>1.11.4</version>
+    <version>1.12.2</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -281,7 +281,7 @@ For more extensive documentation on Azure AI Face, see the [Face documentation][
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-vision-face_1.0.0-beta.1/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -291,11 +291,11 @@ For details on contributing to this repository, see the [contributing guide](htt
 
 
 <!-- LINKS -->
-[source_code]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-vision-face_1.0.0-beta.1/sdk/face/azure-ai-vision-face/src/
+[source_code]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/face/azure-ai-vision-face/src/
 [face_java_package_maven]: https://central.sonatype.com/artifact/com.azure/azure-ai-vision-face/
 [face_ref_java_docs]: https://aka.ms/azsdk-java-face-ref
 [face_product_docs]: https://learn.microsoft.com/azure/ai-services/computer-vision/overview-identity
-[face_samples]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-vision-face_1.0.0-beta.1/sdk/face/azure-ai-vision-face/src/samples
+[face_samples]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/face/azure-ai-vision-face/src/samples
 
 [jdk_link]: /java/azure/jdk/?view=azure-java-stable
 [azure_sub]: https://azure.microsoft.com/free/
@@ -311,17 +311,17 @@ For details on contributing to this repository, see the [contributing guide](htt
 [regional_endpoints]: https://azure.microsoft.com/global-infrastructure/services/?products=cognitive-services
 [azure_sdk_java_azure_key_credential]: https://learn.microsoft.com/java/api/com.azure.core.credential.azurekeycredential?view=azure-java-stable
 
-[face_client_async]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-vision-face_1.0.0-beta.1/sdk/face/azure-ai-vision-face/src/main/java/com/azure/ai/vision/face/FaceAsyncClient.java
-[face_client]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-vision-face_1.0.0-beta.1/sdk/face/azure-ai-vision-face/src/main/java/com/azure/ai/vision/face/FaceClient.java
-[face_client_builder]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-vision-face_1.0.0-beta.1/sdk/face/azure-ai-vision-face/src/main/java/com/azure/ai/vision/face/FaceClientBuilder.java
-[face_session_client_async]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-vision-face_1.0.0-beta.1/sdk/face/azure-ai-vision-face/src/main/java/com/azure/ai/vision/face/FaceSessionAsyncClient.java
-[face_session_client]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-vision-face_1.0.0-beta.1/sdk/face/azure-ai-vision-face/src/main/java/com/azure/ai/vision/face/FaceSessionClient.java
-[face_session_client_builder]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-vision-face_1.0.0-beta.1/sdk/face/azure-ai-vision-face/src/main/java/com/azure/ai/vision/face/FaceSessionClientBuilder.java
+[face_client_async]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/face/azure-ai-vision-face/src/main/java/com/azure/ai/vision/face/FaceAsyncClient.java
+[face_client]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/face/azure-ai-vision-face/src/main/java/com/azure/ai/vision/face/FaceClient.java
+[face_client_builder]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/face/azure-ai-vision-face/src/main/java/com/azure/ai/vision/face/FaceClientBuilder.java
+[face_session_client_async]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/face/azure-ai-vision-face/src/main/java/com/azure/ai/vision/face/FaceSessionAsyncClient.java
+[face_session_client]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/face/azure-ai-vision-face/src/main/java/com/azure/ai/vision/face/FaceSessionClient.java
+[face_session_client_builder]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/face/azure-ai-vision-face/src/main/java/com/azure/ai/vision/face/FaceSessionClientBuilder.java
 
 [azure_sdk_java_identity]: https://learn.microsoft.com/azure/developer/java/sdk/identity
 [custom_subdomain]: /azure/cognitive-services/authentication#create-a-resource-with-a-custom-subdomain
 [migrate_to_custom_subdomain]: https://learn.microsoft.com/azure/ai-services/cognitive-services-custom-subdomains#how-does-this-impact-existing-resources
-[azure_sdk_java_default_azure_credential]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-vision-face_1.0.0-beta.1/sdk/identity/azure-identity#defaultazurecredential
+[azure_sdk_java_default_azure_credential]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/identity/azure-identity#defaultazurecredential
 [register_aad_app]: /azure/cognitive-services/authentication#assign-a-role-to-a-service-principal
 
 [evaluate_different_detection_models]: https://learn.microsoft.com/azure/ai-services/computer-vision/how-to/specify-detection-model#evaluate-different-models
@@ -329,6 +329,6 @@ For details on contributing to this repository, see the [contributing guide](htt
 [liveness_tutorial]: https://learn.microsoft.com/azure/ai-services/computer-vision/tutorials/liveness
 [integrate_liveness_into_mobile_application]: https://learn.microsoft.com/azure/ai-services/computer-vision/tutorials/liveness#integrate-liveness-into-mobile-application
 
-[logLevels]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-vision-face_1.0.0-beta.1/sdk/core/azure-core/src/main/java/com/azure/core/util/logging/ClientLogger.java
+[logLevels]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core/src/main/java/com/azure/core/util/logging/ClientLogger.java
 [performance_tuning]: https://github.com/Azure/azure-sdk-for-java/wiki/Performance-Tuning
 
