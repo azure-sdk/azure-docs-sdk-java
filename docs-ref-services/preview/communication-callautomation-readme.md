@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: communication
 ---
-# Azure Communication Call Automation Service client library for Java - version 1.3.0-alpha.20240805.4 
+# Azure Communication Call Automation Service client library for Java - version 1.3.0-alpha.20240805.5 
 
 
 This package contains a Java SDK for Azure Communication Call Automation Service.
