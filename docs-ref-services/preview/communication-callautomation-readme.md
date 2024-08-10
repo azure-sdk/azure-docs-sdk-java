@@ -1,12 +1,12 @@
 ---
 title: Azure Communication Call Automation Service client library for Java
 keywords: Azure, java, SDK, API, azure-communication-callautomation, communication
-ms.date: 08/07/2024
+ms.date: 08/10/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: communication
 ---
-# Azure Communication Call Automation Service client library for Java - version 1.3.0-beta.1 
+# Azure Communication Call Automation Service client library for Java - version 1.3.0-alpha.20240809.1 
 
 
 This package contains a Java SDK for Azure Communication Call Automation Service.
@@ -141,7 +141,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [product_docs]: /azure/communication-services/
 [package]: https://dev.azure.com/azure-sdk/public/_artifacts/feed/azure-sdk-for-java-communication-interaction
 [api_documentation]: https://aka.ms/java-docs
-[source]: https://github.com/Azure/azure-sdk-for-java/tree/azure-communication-callautomation_1.3.0-beta.1/sdk/communication/azure-communication-callautomation/src
+[source]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/communication/azure-communication-callautomation/src
 [overview]: https://learn.microsoft.com/azure/communication-services/concepts/voice-video-calling/call-automation
 [incomingcall]: https://learn.microsoft.com/azure/communication-services/concepts/voice-video-calling/incoming-call-notification
 [build1]: https://learn.microsoft.com/azure/communication-services/quickstarts/voice-video-calling/callflows-for-customer-interactions?pivots=programming-language-java
