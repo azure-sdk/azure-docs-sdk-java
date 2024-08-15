@@ -1,15 +1,15 @@
 ---
-title: Azure Resource Manager Compute client library for Java
-keywords: Azure, java, SDK, API, azure-resourcemanager-compute, resourcemanager
+title: Azure Resource Manager monitor client library for Java
+keywords: Azure, java, SDK, API, azure-resourcemanager-monitor, resourcemanager
 ms.date: 08/15/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: resourcemanager
 ---
-# Azure Resource Manager Compute client library for Java - version 2.42.0-alpha.20240814.6 
+# Azure Resource Manager monitor client library for Java - version 2.42.0-alpha.20240814.6 
 
 
-Azure Resource Manager Compute client library for Java
+Azure Resource Manager monitor client library for Java
 
 For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
 
@@ -22,11 +22,11 @@ For documentation on how to use this package, please see [Azure Management Libra
 
 ### Adding the package to your product
 
-[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-compute;current})
+[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-monitor;current})
 ```xml
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
-    <artifactId>azure-resourcemanager-compute</artifactId>
+    <artifactId>azure-resourcemanager-monitor</artifactId>
     <version>2.41.0</version>
 </dependency>
 ```
@@ -52,7 +52,7 @@ AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
 TokenCredential credential = new DefaultAzureCredentialBuilder()
     .authorityHost(profile.getEnvironment().getActiveDirectoryEndpoint())
     .build();
-ComputeManager manager = ComputeManager
+MonitorManager manager = MonitorManager
     .authenticate(credential, profile);
 ```
 
