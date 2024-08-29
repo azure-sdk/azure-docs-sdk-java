@@ -1,12 +1,12 @@
 ---
 title: Azure OpenAI client library for Java
 keywords: Azure, java, SDK, API, azure-ai-openai, openai
-ms.date: 07/02/2024
+ms.date: 08/29/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: openai
 ---
-# Azure OpenAI client library for Java - version 1.0.0-beta.10 
+# Azure OpenAI client library for Java - version 1.0.0-alpha.20240829.2 
 
 
 Azure OpenAI is a managed service that allows developers to deploy, tune, and generate content from OpenAI models on 
@@ -31,6 +31,8 @@ For concrete examples you can have a look at the following links. Some of the mo
 * [Audio Transcription sample](#audio-transcription "Audio Transcription")
 * [Audio Translation sample](#audio-translation "Audio Translation")
 * [Text To Speech sample](#text-to-speech "Text To Speech")
+* [File operations sample](#file-operations "File Operations")
+* [Batch operations sample](#batch-operations "Batch Operations")
 
 If you want to see the full code for these snippets check out our [samples folder][samples_folder].
 
@@ -52,7 +54,7 @@ If you want to see the full code for these snippets check out our [samples folde
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-ai-openai</artifactId>
-    <version>1.0.0-beta.9</version>
+    <version>1.0.0-beta.11</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -114,7 +116,7 @@ Authentication with AAD requires some initial setup:
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-identity</artifactId>
-    <version>1.12.2</version>
+    <version>1.13.1</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -166,6 +168,9 @@ The following sections provide several code snippets covering some of the most c
 * [Image Generation sample](#image-generation "Image Generation")
 * [Audio Transcription sample](#audio-transcription "Audio Transcription")
 * [Audio Translation sample](#audio-translation "Audio Translation")
+* [Text To Speech sample](#text-to-speech "Text To Speech")
+* [File operations sample](#file-operations "File Operations")
+* [Batch operations sample](#batch-operations "Batch Operations")
 
 ### Legacy completions
 
@@ -427,6 +432,43 @@ Files.write(path, speech.toBytes());
 See sample [Text to Speech][sample_text_to_speech] for a complete sample.
 Please refer to the service documentation for a conceptual discussion of [Text to Speech][microsoft_docs_text_to_speech].
 
+### File operations
+
+The OpenAI service supports `upload`, `get`, `list`, and `delete` operations for interacting File APIs with OpenAI service. 
+```java readme-sample-fileOperations
+// Upload a file
+FileDetails fileDetails = new FileDetails(
+    BinaryData.fromFile(Paths.get("{your-local-file-path}/batch_tasks.jsonl")),
+    "batch_tasks.jsonl");
+OpenAIFile file = client.uploadFile(fileDetails, FilePurpose.BATCH);
+String fileId = file.getId();
+// Get single file
+OpenAIFile fileFromBackend = client.getFile(fileId);
+// List files
+List<OpenAIFile> files = client.listFiles(FilePurpose.ASSISTANTS);
+// Delete file
+FileDeletionStatus deletionStatus = client.deleteFile(fileId);
+```
+For a complete sample example, see sample [File Operations][sample_file_operations].
+
+### Batch operations
+
+The OpenAI service supports `create`, `get`, `list`, and `delete` operations for interacting Batch APIs with OpenAI service.
+Use Batch API to send asynchronous groups of requests with 50% lower costs, a separate pool of significantly higher rate 
+limits, and a clear 24-hour turnaround time. The service is ideal for processing jobs that don't require immediate responses.
+```java readme-sample-batchOperations
+String fileId = "{fileId-from-service-side}";
+// Create a batch
+Batch batch = client.createBatch(new BatchCreateRequest("/chat/completions", fileId, "24h"));
+// Get single file
+byte[] fileContent = client.getFileContent(batch.getOutputFileId());
+// List batches
+PageableList<Batch> batchPageableList = client.listBatches();
+// Cancel a batch
+Batch cancelledBatch = client.cancelBatch(batch.getId());
+```
+For a complete sample example, see sample [Batch Operations][sample_batch_operations].
+
 ## Troubleshooting
 ### Enable client logging
 You can set the `AZURE_LOG_LEVEL` environment variable to view logging statements made in the client library. For
@@ -451,7 +493,7 @@ For more details, see [TROUBLESHOOTING][troubleshooting] guideline.
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.10/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -461,14 +503,14 @@ For details on contributing to this repository, see the [contributing guide](htt
 
 <!-- LINKS -->
 [aad_authorization]: /azure/cognitive-services/authentication#authenticate-with-azure-active-directory
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.10/sdk/identity/azure-identity
-[azure_identity_credential_type]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-openai_1.0.0-beta.10/sdk/identity/azure-identity#credentials
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity
+[azure_identity_credential_type]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/identity/azure-identity#credentials
 [azure_openai_access]: https://learn.microsoft.com/azure/cognitive-services/openai/overview#how-do-i-get-access-to-azure-openai
 [azure_subscription]: https://azure.microsoft.com/free/
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: /java/azure/jdk/
 [jtokkit]: https://github.com/knuddelsgmbh/jtokkit
-[logLevels]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.10/sdk/core/azure-core/src/main/java/com/azure/core/util/logging/ClientLogger.java
+[logLevels]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core/src/main/java/com/azure/core/util/logging/ClientLogger.java
 [microsoft_docs_openai_completion]: https://learn.microsoft.com/azure/cognitive-services/openai/how-to/completions
 [microsoft_docs_openai_embedding]: https://learn.microsoft.com/azure/cognitive-services/openai/concepts/understand-embeddings
 [microsoft_docs_whisper_model]: https://learn.microsoft.com/azure/ai-services/openai/whisper-quickstart?tabs=command-line
@@ -477,26 +519,28 @@ For details on contributing to this repository, see the [contributing guide](htt
 [performance_tuning]: https://github.com/Azure/azure-sdk-for-java/wiki/Performance-Tuning
 [product_documentation]: https://azure.microsoft.com/services/
 [quickstart]: https://learn.microsoft.com/azure/cognitive-services/openai/quickstart
-[source_code]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-openai_1.0.0-beta.10/sdk/openai/azure-ai-openai/src
-[samples_folder]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-openai_1.0.0-beta.10/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai
-[samples_readme]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-openai_1.0.0-beta.10/sdk/openai/azure-ai-openai/src/samples
-[sample_chat_completion_function_call]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-openai_1.0.0-beta.10/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/ChatCompletionsFunctionCall.java
-[sample_chat_completion_BYOD]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.10/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/ChatCompletionsWithYourData.java
-[sample_get_chat_completions]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.10/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/usage/GetChatCompletionsSample.java
-[sample_get_chat_completions_streaming]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.10/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/usage/GetChatCompletionsStreamSample.java
-[sample_get_completions]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.10/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/usage/GetCompletionsSample.java
-[sample_get_completions_streaming]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.10/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/usage/GetCompletionsStreamSample.java
-[sample_get_embedding]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.10/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/usage/GetEmbeddingsSample.java
-[sample_image_generation]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.10/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/usage/GetImagesSample.java
-[sample_audio_transcription]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.10/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/usage/AudioTranscriptionSample.java
-[sample_audio_translation]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.10/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/usage/AudioTranslationSample.java
-[sample_chat_with_images]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.10/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/usage/GetChatCompletionsVisionSample.java
-[sample_tool_calls]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.10/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/usage/GetChatCompletionsToolCallSample.java
-[sample_text_to_speech]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.10/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/usage/TextToSpeechSample.java
-[openai_client_async]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.10/sdk/openai/azure-ai-openai/src/main/java/com/azure/ai/openai/OpenAIAsyncClient.java
-[openai_client_builder]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.10/sdk/openai/azure-ai-openai/src/main/java/com/azure/ai/openai/OpenAIClientBuilder.java
-[openai_client_sync]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.10/sdk/openai/azure-ai-openai/src/main/java/com/azure/ai/openai/OpenAIClient.java
-[troubleshooting]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-openai_1.0.0-beta.10/sdk/openai/azure-ai-openai/TROUBLESHOOTING.md
+[source_code]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/openai/azure-ai-openai/src
+[samples_folder]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai
+[samples_readme]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/openai/azure-ai-openai/src/samples
+[sample_batch_operations]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/BatchOperationsSample.java
+[sample_chat_completion_function_call]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/ChatCompletionsFunctionCall.java
+[sample_chat_completion_BYOD]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/ChatCompletionsWithYourData.java
+[sample_file_operations]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/FileOperationsSample.java
+[sample_get_chat_completions]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/usage/GetChatCompletionsSample.java
+[sample_get_chat_completions_streaming]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/usage/GetChatCompletionsStreamSample.java
+[sample_get_completions]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/usage/GetCompletionsSample.java
+[sample_get_completions_streaming]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/usage/GetCompletionsStreamSample.java
+[sample_get_embedding]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/usage/GetEmbeddingsSample.java
+[sample_image_generation]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/usage/GetImagesSample.java
+[sample_audio_transcription]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/usage/AudioTranscriptionSample.java
+[sample_audio_translation]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/usage/AudioTranslationSample.java
+[sample_chat_with_images]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/usage/GetChatCompletionsVisionSample.java
+[sample_tool_calls]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/usage/GetChatCompletionsToolCallSample.java
+[sample_text_to_speech]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/usage/TextToSpeechSample.java
+[openai_client_async]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/openai/azure-ai-openai/src/main/java/com/azure/ai/openai/OpenAIAsyncClient.java
+[openai_client_builder]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/openai/azure-ai-openai/src/main/java/com/azure/ai/openai/OpenAIClientBuilder.java
+[openai_client_sync]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/openai/azure-ai-openai/src/main/java/com/azure/ai/openai/OpenAIClient.java
+[troubleshooting]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/openai/azure-ai-openai/TROUBLESHOOTING.md
 [wiki_identity]: https://github.com/Azure/azure-sdk-for-java/wiki/Identity-and-Authentication
 
 
