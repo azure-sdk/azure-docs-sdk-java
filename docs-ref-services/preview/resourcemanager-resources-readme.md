@@ -1,15 +1,15 @@
 ---
-title: Azure Resource Manager Private DNS client library for Java
-keywords: Azure, java, SDK, API, azure-resourcemanager-privatedns, dns
+title: Azure Resource Manager resources client library for Java
+keywords: Azure, java, SDK, API, azure-resourcemanager-resources, azure-resource-manager
 ms.date: 09/14/2024
 ms.topic: reference
 ms.devlang: java
-ms.service: dns
+ms.service: azure-resource-manager
 ---
-# Azure Resource Manager Private DNS client library for Java - version 2.43.0-alpha.20240913.4 
+# Azure Resource Manager resources client library for Java - version 2.43.0-alpha.20240913.4 
 
 
-Azure Resource Manager Private DNS client library for Java
+Azure Resource Manager resources client library for Java
 
 For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
 
@@ -22,11 +22,11 @@ For documentation on how to use this package, please see [Azure Management Libra
 
 ### Adding the package to your product
 
-[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-privatedns;current})
+[//]: # ({x-version-update-start;com.azure.resourcemanager:azure-resourcemanager-resources;current})
 ```xml
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
-    <artifactId>azure-resourcemanager-privatedns</artifactId>
+    <artifactId>azure-resourcemanager-resources</artifactId>
     <version>2.42.0</version>
 </dependency>
 ```
@@ -52,8 +52,9 @@ AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
 TokenCredential credential = new DefaultAzureCredentialBuilder()
     .authorityHost(profile.getEnvironment().getActiveDirectoryEndpoint())
     .build();
-PrivateDnsZoneManager manager = PrivateDnsZoneManager
-    .authenticate(credential, profile);
+ResourceManager manager = ResourceManager
+    .authenticate(credential, profile)
+    .withDefaultSubscription();
 ```
 
 The sample code assumes global Azure. Please change `AzureEnvironment.AZURE` variable if otherwise.
