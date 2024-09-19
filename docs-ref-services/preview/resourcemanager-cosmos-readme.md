@@ -1,12 +1,12 @@
 ---
 title: Azure Resource Manager Cosmos client library for Java
 keywords: Azure, java, SDK, API, azure-resourcemanager-cosmos, cosmos-db
-ms.date: 06/05/2024
+ms.date: 09/19/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: cosmos-db
 ---
-# Azure Resource Manager Cosmos client library for Java - version 2.40.0-beta.1 
+# Azure Resource Manager Cosmos client library for Java - version 2.43.0-alpha.20240918.2 
 
 
 Azure Resource Manager Cosmos client library for Java
@@ -27,7 +27,7 @@ For documentation on how to use this package, please see [Azure Management Libra
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
     <artifactId>azure-resourcemanager-cosmos</artifactId>
-    <version>2.40.0-beta.1</version>
+    <version>2.42.0</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -40,15 +40,12 @@ Azure Management Libraries require a `TokenCredential` implementation for authen
 
 ### Authentication
 
-By default, Microsoft Entra ID token authentication depends on correct configure of following environment variables.
+Microsoft Entra ID token authentication relies on the [credential class][azure_identity_credentials] from [Azure Identity][azure_identity] package.
 
-- `AZURE_CLIENT_ID` for Azure client ID.
-- `AZURE_TENANT_ID` for Azure tenant ID.
-- `AZURE_CLIENT_SECRET` or `AZURE_CLIENT_CERTIFICATE_PATH` for client secret or client certificate.
+Azure subscription ID can be configured via `AZURE_SUBSCRIPTION_ID` environment variable.
+Azure tenant ID can be configured via `AZURE_TENANT_ID` environment variable.
 
-In addition, Azure subscription ID can be configured via environment variable `AZURE_SUBSCRIPTION_ID`.
-
-With above configuration, `azure` client can be authenticated by following code:
+Assuming the use of the `DefaultAzureCredential` credential class, the client can be authenticated using the following code:
 
 ```java readme-sample-authenticate
 AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
@@ -77,7 +74,7 @@ See [Samples][sample] for code snippets and samples.
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-cosmos_2.40.0-beta.1/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -88,9 +85,10 @@ For details on contributing to this repository, see the [contributing guide](htt
 <!-- LINKS -->
 [jdk]: https://learn.microsoft.com/azure/developer/java/fundamentals/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-cosmos_2.40.0-beta.1/sdk/identity/azure-identity
-[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-cosmos_2.40.0-beta.1/sdk/core/azure-core-http-netty
-[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-cosmos_2.40.0-beta.1/sdk/resourcemanager/docs/AUTH.md
-[sample]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-cosmos_2.40.0-beta.1/sdk/resourcemanager/docs/SAMPLE.md
-[design]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-cosmos_2.40.0-beta.1/sdk/resourcemanager/docs/DESIGN.md
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity
+[azure_identity_credentials]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/identity/azure-identity#credentials
+[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core-http-netty
+[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/resourcemanager/docs/AUTH.md
+[sample]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/resourcemanager/docs/SAMPLE.md
+[design]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/resourcemanager/docs/DESIGN.md
 
