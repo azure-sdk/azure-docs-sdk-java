@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: communication
 ---
-# Azure Communication Email client library for Java - version 1.1.0-alpha.20240924.1 
+# Azure Communication Email client library for Java - version 1.1.0-alpha.20240925.2 
 
 
 This package contains the Java SDK for Azure Communication Services for Email.
