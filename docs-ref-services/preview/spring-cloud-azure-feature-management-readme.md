@@ -1,10 +1,10 @@
 ---
 title: 
-keywords: Azure, java, SDK, API, spring-cloud-azure-feature-management, appconfiguration
-ms.date: 10/09/2022
+keywords: Azure, java, SDK, API, spring-cloud-azure-feature-management, spring
+ms.date: 09/25/2024
 ms.topic: reference
 ms.devlang: java
-ms.service: appconfiguration
+ms.service: spring
 ---
 # Spring Cloud for Azure feature management client library for Java
 
@@ -49,10 +49,10 @@ feature-management:
     feature-v:
       enabled-for:
         -
-          name: TimeWindowFilter
+          name: Microsoft.TimeWindow
           parameters:
-            time-window-filter-setting-start: "Wed, 01 May 2019 13:59:59 GMT"
-            time-window-filter-setting-end: "Mon, 01 July 2019 00:00:00 GMT"
+            start: "Wed, 01 May 2019 13:59:59 GMT"
+            end: "Mon, 01 July 2019 00:00:00 GMT"
     feature-w:
       evaluate: false
       enabled-for:
@@ -123,11 +123,11 @@ public class DisabledFeaturesHandler implements IDisabledFeaturesHandler{
 
 ### Routing
 
-Certain routes may expose application capabilites that are gated by features. These routes can redirected if a feature is disabled to another endpoint.
+Certain routes may expose application capabilities that are gated by features. These routes can redirected if a feature is disabled to another endpoint.
 
 ```java
 @GetMapping("/featureT")
-@FeatureGate(feature = "feature-t" fallback= "/oldEndpoint")
+@FeatureGate(feature = "feature-t", fallback= "/oldEndpoint")
 @ResponseBody
 public String featureT() {
     ...
@@ -190,7 +190,7 @@ feature-management:
 
 ### TimeWindowFilter
 
-This filter provides the capability to enable a feature based on a time window. If only `time-window-filter-setting-end` is specified, the feature will be considered on until that time. If only start is specified, the feature will be considered on at all points after that time. If both are specified the feature will be considered valid between the two times.
+This filter provides the capability to enable a feature based on a time window. If only `end` is specified, the feature will be considered enabled until that time. If only `start` is specified, the feature will be considered enabled at all points after that time. If both are specified the feature will be considered enabled between the two times.
 
 ```yaml
 feature-management:
@@ -198,15 +198,178 @@ feature-management:
     feature-v:
       enabled-for:
         -
-         name: TimeWindowFilter
+          name: Microsoft.TimeWindow
           parameters:
-            time-window-filter-setting-start: "Wed, 01 May 2019 13:59:59 GMT",
-            time-window-filter-setting-end: "Mon, 01 July 2019 00:00:00 GMT"
+            start: "Wed, 01 May 2019 13:59:59 GMT"
+            end: "Mon, 01 July 2019 00:00:00 GMT"
 ```
+
+The time window can be configured to recur periodically. This can be useful in the scenario where you have to enable/disable a feature during low or high traffic periods of a day or for certain days of the week. To expand the individual time window to recurring time windows, the recurrence rule should be specified in the `recurrence` parameter.
+
+
+```yaml
+feature-management:
+  feature-flags:
+    feature-v:
+      enabled-for:
+        -
+          name: Microsoft.TimeWindow
+          parameters:
+            start: "Fri, 22 Mar 2024 20:00:00 GMT"
+            end: "Sat, 23 Mar 2024 02:00:00 GMT"
+            recurrence:
+              pattern:
+                type: "Daily"
+                interval: 1
+              range:
+                type: "Numbered"
+                numberOfOccurrences: 3
+```
+To create a recurrence rule, you need to specify 3 parts: `start`, `end` and `recurrence`. 
+The `start` and `end` parameters define the time window which need to recur periodically. 
+The `recurrence` parameter is made up of two parts: `pattern` (how often the time window will repeat) and `range` (for how long the recurrence pattern will repeat). To create a recurrence rule, you must specify both `pattern` and `range`. Any pattern type can work with any range type. 
+The time zone offset of the `start` property will apply to the recurrence settings.
+
+**Note:** `start` must be a valid first occurrence which fits the recurrence pattern. For example, if we define to repeat on every other Monday and Tuesday, then the start time should be in Monday or Tuesday. <br /> Additionally, the duration of the time window cannot be longer than how frequently it occurs. For example, it is invalid to have a 25-hour time window recur every day.
+
+#### Recurrence Pattern
+
+There are two possible recurrence pattern types: `Daily` and `Weekly`. 
+
+`Daily` causes an event to repeat based on a number of days between each occurrence. For example, "every day" or "every 3 days".
+
+`Weekly` causes an event to repeat on the same day or days of the week, based on the number of weeks between each set of occurrences. For example, "every Monday" or "every other Friday".
+
+* Parameters
+
+  Property | Relevance | Description
+  -----------|-------|-----
+  **type** | Required  | `Daily`/`Weekly`.
+  **interval** | Optional  | Specifies the interval between each start time of occurrence. Default value is 1. <br/>For example, if the interval is 2 with `Daily` type, and current occurrence is 2:00 AM ~ 3:00 AM on 2024/05/11, then the next occurrence should be 2:00 AM ~ 3:00 AM on 2024/05/13
+  **daysOfWeek** | Required/Optional  | Specifies on which day(s) of the week the event occurs. It's required when `Weekly` type, negatively for `Daily` type. 
+  **firstDayOfWeek** | Optional  | Specifies which day is considered the first day of the week. Default value is `Sunday`. Negatively for `Daily` type. 
+  
+  * Example
+    * Daily
+  
+        The following example will repeat from 2:00 AM to 3:00 AM on every 2 days
+
+        ```yaml
+        start: "Mon, 13 May 2024 02:00:00 GMT"
+        end: "Mon, 13 May 2024 03:00:00 GMT"
+        recurrence:
+          pattern:
+            type: "Daily"
+            interval: 2
+          range:
+            type: "NoEnd"
+        ```
+
+    * Weekly
+  
+      The following example will repeat from 2:00 AM to 3:00 AM on every other Monday and Tuesday
+
+        ```yaml
+        start: "Mon, 13 May 2024 02:00:00 GMT"
+        end: "Mon, 13 May 2024 03:00:00 GMT"
+        recurrence:
+          pattern:
+            type: "Weekly"
+            interval: 2
+            daysOfWeek: 
+              - Monday
+              - Tuesday
+          range:
+            type: "NoEnd"
+        ```
+      The following example shows a time window starts on one day and ends on another, repeat every week.
+
+        ```yaml
+        start: "Mon, 13 May 2024 02:00:00 GMT"
+        end: "Mon, 14 May 2024 03:00:00 GMT"
+        recurrence:
+          pattern:
+            type: "Weekly"
+            interval: 1
+            daysOfWeek: 
+              - Monday
+          range:
+            type: "NoEnd"
+        ```
+
+
+#### Recurrence Range
+
+There are three possible recurrence range type: `NoEnd`, `EndDate` and `Numbered`.
+
+* Parameter
+  
+    Property | Relevance | Description                                                                           |
+    -----------|---------------|-------------
+    **type** | Required  | `NoEnd`/`EndDate`/`Numbered`.
+    **endDate** | Required/Optional  |  Specifies the date time to stop applying the pattern. Note that as long as the start time of the last occurrence falls before the end date, the end time of that occurrence is allowed to extend beyond it. <br /> It's required for `EndDate` type, negatively for `NoEnd` and `Numbered` type.
+    **NumberOfOccurrences** | Required/Optional | Specifies the number of days that it will occur. <br /> It's required for `Numbered` type, negatively for `NoEnd` and `EndDate` type.
+
+  * Example
+    * `NoEnd`
+
+      The `NoEnd` range causes the recurrence to occur indefinitely.
+
+      The following example will repeat from 6:00 PM to 8:00 PM every day.
+
+      ``` yaml
+        start: "Fri, 22 Mar 2024 18:00:00 GMT"
+        end: "Fri, 22 Mar 2024 20:00:00 GMT"
+        recurrence:
+          pattern:
+            type: "Daily"
+            interval: 1
+          range:
+            type: "NoEnd"
+      ```
+
+    * `EndDate`
+
+      The `EndDate` range causes the time window to occur on all days that fit the applicable pattern until the end date.
+
+      The following example will repeat from 6:00 PM to 8:00 PM every day until the last occurrence happens on April 1st, 2024.
+
+      ``` yaml
+      start: "Fri, 22 Mar 2024 18:00:00 GMT"
+      end: "Fri, 22 Mar 2024 20:00:00 GMT"
+      recurrence:
+        pattern:
+          type: "Daily"
+          interval: 1
+        range:
+          type: "EndDate"
+          endDate: "Mon, 1 Apr 2024 20:00:00 GMT"
+      ```
+
+    * `Numbered`
+
+      The `Numbered` range causes the time window to occur a fixed number of days (based on the pattern).
+
+      The following example will repeat from 6:00 PM to 8:00 PM on Monday and Tuesday until the there are 3 occurrences, which respectively happens on 2024/04/01(Mon), 2024/04/02(Tue) and 2024/04/08(Mon).
+
+        ``` yaml
+        start: "Mon, 1 Apr 2024 18:00:00 GMT"
+        end: "Mon, 1 Apr 2024 20:00:00 GMT"
+        recurrence:
+          pattern:
+            type: "Weekly"
+            interval: 1
+            daysOfWeek:
+                - Monday
+                - Tuesday
+          range:
+            type: "Numbered"
+            numberOfOccurrences: 3
+        ```
 
 ### TargetingFilter
 
-This filter provides the capability to enable a feature for a target audience. An in-depth explanation of targeting is explained in the targeting section below. The filter parameters include an audience object which describes users, groups, and a default percentage of the user base that should have access to the feature. Each group object that is listed in the target audience must also specify what percentage of the group's members should have access. If a user is specified in the users section directly, or if the user is in the included percentage of any of the group rollouts, or if the user falls into the default rollout percentage then that user will have the feature enabled.
+This filter provides the capability to enable a feature for a target audience. An in-depth explanation of targeting is explained in the targeting section below. The filter parameters include an audience object which describes users, groups, and a default percentage of the user base that should have access to the feature, and an exclusion object for users and groups that should never be targeted. Each group object that is listed in the target audience must also specify what percentage of the group's members should have access. If a user is specified in the users section directly, or if the user is in the included percentage of any of the group rollouts, or if the user falls into the default rollout percentage then that user will have the feature enabled.
 
 ```yml
 feature-management:
@@ -227,6 +390,11 @@ feature-management:
                 name: Ring1
                 rolloutPercentage: 100
             defaultRolloutPercentage: 50
+            exclusion:
+              users:
+                - Ross
+              groups:
+                - Ring2
 ```
 
 ## Targeting
@@ -275,218 +443,6 @@ Options are available to customize how targeting evaluation is performed across 
         return new TargetingFilter(contextAccessor, new TargetingEvaluationOptions().setIgnoreCase(true));
     }
 ```
-
-## Dynamic Features
-
-When new features are being added to an application there may come a time when a feature has multiple different proposed design options. A common pattern when this happens is to do some form of A/B testing. That is, provide a different version of the feature to different segments of the user base, and judge off user interaction which is better. The dynamic feature functionality contained in this library aims to proivde a simplistic, standardized method for developers to perform this form of A/B testing.
-
-In the scenario above, the different proposals for the design of a feature are referred to as variants of the feature. The feature itself is referred to as a dynamic feature. The variants of a dynamic feature can have types ranging from object, to string, to integer and so on. There is no limit to the amount of variants a dynamic feature may have. A developer is free to choose what type should be returned when a variant of a dynamic feature is requested. They are also free to choose how many variants are available to select from.
-
-Each variant of a dynamic feature is associated with a different configuration of the feature. Additionally, each variant of a dynamic feature contains information describing under what circumstances the variant should be used.
-
-### Consumption
-
-Dynamic Features are accessible through `DynamicFeatureManager`.
-
-The dynamic feature manager performs a resolution process that takes the name of a feature and returns a strongly typed value to represent the variant's value.
-
-The following steps are performed during the retrieval of a dynamic feature's variant
-
-1. Lookup the configuration of the specified dynamic feature to find the registered variants
-1. Assign one of the registered variants to be used.
-1. Resolve typed value based off of the assigned variant.
-
-The Dynamic Feature Manager is made available by using `@Autwired` on `DynamicFeatureManager` and calling it's `getVariantAsync` method. In addition any required feature variant assigners need to be generated as `@Component`, such as the `TargetingEvaluator`.
-
-**NOTE:** `TargetingEvaluator` extends `TargetingFilter` so it can be used for both at the same time.
-
-### Usage Example
-
-One possible example of when variants may be used is in a web application when there is a desire to test different visuals. In the following examples a mock of how one might assign different variants of a web page background to their users is shown.
-
-```java
-@Autowired
-private DynamicFeatureManager dynamicFeatureManager;
-
-...
-
-//
-// Modify view based off multiple possible variants
-model.setBackgroundUrl(dynamicFeatureManager.GetVariantAsync("HomeBackground", String.class).block());
-```
-
-### Dynamic Feature Declaration
-
-Dynamic features can be configured in a configuration file similarly to feature flags. Instead of being defined in the `FeatureManagement.FeatureFlags` section, they are defined in the `FeatureManagement.DynamicFeatures` section. Additionally, dynamic features have the following properties.
-
-* Assigner: The assigner that should be used to select which variant should be used any time this feature is accessed.
-* Variants: The different variants of the dynamic feature.
-  * Name: The name of the variant.
-  * Default: Whether the variant should be used if no variant could be explicitly assigned. One and only one default variant is required.
-  * ConfigurationReference: A reference to the configuration of the variant to be used as typed options in the application.
-  * AssignmentParameters: The parameters used in the assignment process to determine if this variant should be used.
-
-An example of a dynamic feature named "ShoppingCart" is shown below.
-
-```yml
-feature-management:
-  dynamic-features:
-    ShoppingCart:
-      assigner: Microsoft.Targeting
-      variants:
-      - default: true
-        name: Big
-        configuration-reference: ShoppingCart.Big
-        assignment-parameters:
-          audience:
-            users:
-            - Alec
-            groups: []
-      - name: Small
-        configuration-reference: ShoppingCart.Small
-        assignment-parameters:
-          audience:
-            users: []
-            groups:
-            - name: Ring1
-              rollout-percentage: 50
-            default-rollout-percentage: 30
-feature-variants:
-  ShoppingCart:
-    Big:
-      Size: 400
-      Color: green
-    Small:
-      Size: 150
-      Color: gray
-```
-
-In the example above we see the declaration of a dynamic feature in a json configuration file. The dynamic feature is defined in the `feature-management.dynamic-features` section of configuration. The name of this dynamic feature is `ShoppingCart`. A dynamic feature must declare a feature variant assigner that should be used to select a variant when requested. In this case the built-in `Microsoft.Targeting` feature variant assigner is used. The dynamic feature has two different variants that are available to the application. One variant is named `Big` and the other is named `Small`. Each variant contains a configuration reference denoted by the `configuration-reference` property. The configuration reference is a pointer to a section of application configuration that contains the options that should be used for that variant. The variant also contains assignment parameters denoted by the `assignment-parameters` property. The assignment parameters are used by the assigner associated with the dynamic feature. The assigner reads the assignment parameters at run time when a variant of the dynamic feature is requested to choose which variant should be returned.
-
-An application that is configured with this `ShoppingCart` dynamic feature may request the value of a variant of the feature at runtime through the use of `DynamicFeatureManager.getVariantAsync`. The dynamic feature uses targeting for [variant assignment](#feature-variant-assignment) so each of the variants' assignment parameters specify a target audience that should receive the variant. For a walkthrough of how the targeting assigner would choose a variant in this scenario reference the [Microsoft.Targeting Assigner](#microsofttargeting-feature-variant-assigner) section. When the feature manager chooses one of the variants it resolves the value of the variant by resolving the configuration reference declared in the variant. The example above includes the configuration that is referenced by the `configuration-reference` of each variant.
-
-### Feature Variant Assigners
-
-A feature variant assigner is a component that uses contextual information within an application to decide which feature variant should be chosen when a variant of a dynamic feature is requested.
-
-### Feature Variant Assignment
-
-When requesting the value of a dynamic feature, the feature manager needs to determine which variant to use. The act of choosing which of the variants to be used is called "assignment." A built-in method of assignment allows the variants of a dynamic feature to be assigned to segments of an application's audience. This is the same [targeting](#microsofttargeting-feature-variant-assigner) strategy used by the targeting feature filter.
-
-To perform assignments, the feature manager uses components known as feature variant assigners. Feature variant assigners choose which of the variants of a dynamic feature should be assigned when a dynamic feature is requested. Each variant of a dynamic feature defines assignment parameters so that when an assigner is invoked, the assigner can tell under which conditions each variant should be selected. It is possible that an assigner is unable to choose between the list of available variants based on the configured assignment parameters. In this case, the feature manager chooses the **default variant**. The default variant is a variant that is marked explicitly as the default. It is required to have a default variant when configuring a dynamic feature in order to handle the possibility that an assigner is not able to select a variant of a dynamic feature.
-
-### Custom Assignment
-
-There may come a time when custom criteria is needed to decide which variant of a feature should be assigned when a feature is referenced. This is made possible by an extensibility model that allows the act of assignment to be overridden. Every feature registered in the feature management system that uses feature variants specifies what assigner should be used to choose a variant.
-
-```java
-public interface IFeatureVariantAssigner extends IFeatureVariantAssignerMetadata {
-    
-    /**
-     * Assign a variant of a dynamic feature to be used based off of customized criteria.
-     * @param featureDefinition A variant assignment context that contains information needed to assign a variant for a
-     *  dynamic feature.
-     * @return The variant that should be assigned for a given dynamic feature.
-     */
-    public Mono<FeatureVariant> assignVariantAsync(FeatureDefinition featureDefinition);
-
-}
-```
-
-### Built-In Feature Variant Assigners
-
-There is a built-in feature variant assigner that uses targeting. It comes with the `azure-spring-cloud-feature-management` package. This assigner is not added automatically, but it can be referenced and configured as a `@Component`.
-
-#### Microsoft.Targeting Feature Variant Assigner
-
-This feature variant assigner provides the capability to assign the variants of a dynamic feature to targeted audiences. An in-depth explanation of targeting is explained in the [targeting](#targeting) section.
-
-The assignment parameters used by the targeting feature variant assigner include an audience object which describes the user base that should receive the associated variant. The audience is made of users, groups, and a percentage of the entire user base. Each group object that is listed in the target audience is required to specify what percentage of the group's members should have receive the variant. If a user is specified in the users section directly, or if the user is in the included percentage of any of the group rollouts, or if the user falls into the default rollout percentage then that user will receive the associated variant.
-
-```yml
-ShoppingCart:
-  assigner: Microsoft.Targeting
-  variants:
-  - default: true
-    name: Big
-    configuration-reference: ShoppingCart.Big
-    assignment-parameters:
-      audience:
-        users:
-        - 
-          Alec
-        groups:
-        - 
-          name: Ring0
-          rollout-percentage: 100
-        - 
-          name: Ring1
-          rollout-percentage: 50
-  - name: Small
-    configuration-reference: ShoppingCart.Small
-    assignment-parameters:
-      audience:
-        users:
-          - Susan
-        groups:
-        - 
-          name: Ring1
-          rollout-percentage: 50
-        default-rollout-percentage: 80
-```
-
-Based on the configured audiences for the variants included in this feature, if the application is executed under the context of a user named `Alec` then the value of the `Big` variant will be returned. If the application is executing under the context of a user named `Susan` then the value of the `Small` variant will be returned. If a user match does not occur, then group matches are evaluated. If the application is executed under the context of a user in the group `Ring0` then the `Big` variant will be returned. If the user's group is `Ring1` instead, then the user has a 50% chance of being assigned to `Small`. If there is no user match nor group match, then the default rollout percentage is used. In this case, 80% of unmatched users will get the `Small` variant, leaving the other 20% to get the `Big` variant since it is marked as the Default.
-
-When using the targeting feature variant assigner, make sure to register it as well as an implementation of [ITargetingContextAccessor](#itargetingcontextaccessor).
-
-```java
-@Component
-@RequestScope
-public class TargetingContextImpl implements ITargetingContextAccessor {
-    
-    @Autowired
-    private HttpServletRequest request;
-
-    @Override
-    public Mono<TargetingContext> getContextAsync() {
-        ...
-    }
-
-}
-```
-
-### Variant Resolution
-
-When a variant of a dynamic feature has been chosen, the feature management system resolves the configuration reference associated with that variant. The resolution is done through the `configuration-reference` property. In the "[Configuring a Dynamic Feature](#configuring-a-dynamic-feature)" section we see a dynamic feature named `ShoppingCart`. The first variant of the feature, is named "Big", and is being referenced in the feature variant as `ShoppingCart.Big` in the configuration reference. The referenced section is shown below.
-
-```yml
-feature-variants:
-  ShoppingCart:
-    Big:
-      size: 400
-      color: "green"
-```
-
-In this case, there is a `@ConfigurationProperties` that implements `IDynamicFeatureProperties`
-
-```java
-@ConfigurationProperties(prefix = "feature-variants")
-public class ApplicationProperties implements IDynamicFeatureProperties {
-
-    private Map<String, ShoppingCart> shoppingCart;
-
-    public Map<String, ShoppingCart> getShoppingCart() {
-        return shoppingCart;
-    }
-
-    public void setShoppingCart(Map<String, ShoppingCart> shoppingCart) {
-        this.shoppingCart = shoppingCart;
-    }
-
-}
-```
-
-`IDynamicFeatureProperties` flags `@ConfigurationProperties` as containing `FeatureVariants`. Multiple `@ConfigurationProperties` can have `IDynamicFeatureProperties`. The feature management system resolves the configuration reference by accessing the `@ConfigurationProperties` and getting the variant from the `Map`.
 
 <!-- Links -->
 [example_project]: https://github.com/Azure-Samples/azure-spring-boot-samples/tree/tag_azure-spring-boot_3.6.0/appconfiguration/feature-management-web-sample
