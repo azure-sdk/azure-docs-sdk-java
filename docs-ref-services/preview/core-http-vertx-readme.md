@@ -1,12 +1,12 @@
 ---
 title: Azure Core Vert.x HTTP plugin library for Java
 keywords: Azure, java, SDK, API, azure-core-http-vertx, core
-ms.date: 09/12/2024
+ms.date: 09/27/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: core
 ---
-# Azure Core Vert.x HTTP plugin library for Java - version 1.0.0-beta.21 
+# Azure Core Vert.x HTTP plugin library for Java - version 1.0.0-alpha.20240927.3 
 
 
 Azure Core Vert.x HTTP client is a plugin for the `azure-core` HTTP client API.
@@ -46,13 +46,13 @@ The following sections provide several code snippets covering some of the most c
 Create a Vert.x HttpClient.
 
 ```java readme-sample-createBasicClient
-HttpClient client = new VertxAsyncHttpClientBuilder().build();
+HttpClient client = new VertxHttpClientBuilder().build();
 ```
 
 Create a Vert.x HttpClient using a connection timeout of 60 seconds.
 
 ```java readme-sample-createClientWithConnectionTimeout
-HttpClient client = new VertxAsyncHttpClientBuilder().connectTimeout(Duration.ofSeconds(60)).build();
+HttpClient client = new VertxHttpClientBuilder().connectTimeout(Duration.ofSeconds(60)).build();
 ```
 
 ### Create a Client with Proxy
@@ -60,7 +60,7 @@ HttpClient client = new VertxAsyncHttpClientBuilder().connectTimeout(Duration.of
 Create a Vert.x client that is using a proxy.
 
 ```java readme-sample-createProxyClient
-HttpClient client = new VertxAsyncHttpClientBuilder()
+HttpClient client = new VertxHttpClientBuilder()
     .proxy(new ProxyOptions(ProxyOptions.Type.HTTP, new InetSocketAddress("<proxy-host>", 8888)))
     .build();
 ```
@@ -82,7 +82,7 @@ locate the root issue. View the [logging][logging] wiki for guidance about enabl
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-core-http-vertx_1.0.0-beta.21/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
