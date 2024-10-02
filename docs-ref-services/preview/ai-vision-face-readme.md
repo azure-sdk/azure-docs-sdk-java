@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: azure-ai-face
 ---
-# Azure AI Vision Face client library for Java - version 1.0.0-alpha.20241001.1 
+# Azure AI Vision Face client library for Java - version 1.0.0-alpha.20241002.1 
 
 
 The Azure AI Face service provides AI algorithms that detect, recognize, and analyze human faces in images. It includes the following main features:
