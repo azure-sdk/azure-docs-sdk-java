@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: cognitiveservices
 ---
-# Azure Resource Manager CognitiveServices client library for Java - version 1.1.0-alpha.20241001.1 
+# Azure Resource Manager CognitiveServices client library for Java - version 1.1.0-alpha.20241002.1 
 
 
 Azure Resource Manager CognitiveServices client library for Java.
