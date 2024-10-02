@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: azure-event-grid
 ---
-# Azure Cloud Native Cloud Event client library for Java - version 1.0.0-alpha.20241001.1 
+# Azure Cloud Native Cloud Event client library for Java - version 1.0.0-alpha.20241002.1 
 
 
 This library can be used to enable publishing the Cloud Native Computing Foundation(CNCF) [CloudEvents][CNCFCloudEvents]
