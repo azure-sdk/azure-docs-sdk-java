@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: avs
 ---
-# Azure Resource Manager Avs client library for Java - version 1.3.0-alpha.20241001.1 
+# Azure Resource Manager Avs client library for Java - version 1.3.0-alpha.20241002.1 
 
 
 Azure Resource Manager Avs client library for Java.
