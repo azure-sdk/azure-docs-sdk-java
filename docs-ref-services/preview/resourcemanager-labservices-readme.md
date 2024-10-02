@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: lab-services
 ---
-# Azure Resource Manager LabServices client library for Java - version 1.0.0-alpha.20241001.1 
+# Azure Resource Manager LabServices client library for Java - version 1.0.0-alpha.20241002.1 
 
 
 Azure Resource Manager LabServices client library for Java.
