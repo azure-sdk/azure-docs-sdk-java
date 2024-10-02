@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: translation
 ---
-# Azure DocumentTranslation client library for Java - version 1.0.0-alpha.20241001.1 
+# Azure DocumentTranslation client library for Java - version 1.0.0-alpha.20241002.1 
 
 
 Document Translation is a cloud-based machine translation feature of the Azure AI Translator service. You can translate multiple and complex documents across all supported languages and dialects while preserving original document structure and data format. The Document translation API supports two translation processes:

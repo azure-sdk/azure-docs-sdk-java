@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: translation
 ---
-# Azure Text Translation client library for Java - version 1.1.0-alpha.20241001.1 
+# Azure Text Translation client library for Java - version 1.1.0-alpha.20241002.1 
 
 
 Text translation is a cloud-based REST API feature of the Translator service that uses neural machine translation technology to enable quick and accurate source-to-target text translation in real time across all supported languages.
