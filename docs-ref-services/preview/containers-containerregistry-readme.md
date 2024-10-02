@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: containerregistry
 ---
-# Azure Container Registry client library for Java - version 1.3.0-alpha.20241001.1 
+# Azure Container Registry client library for Java - version 1.3.0-alpha.20241002.1 
 
 
 Azure Container Registry allows you to store and manage container images and artifacts in a private registry for all types of container deployments.
