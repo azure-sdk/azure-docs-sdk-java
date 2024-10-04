@@ -1,12 +1,12 @@
 ---
 title: Azure AI Inference client library for Java
 keywords: Azure, java, SDK, API, azure-ai-inference, ai
-ms.date: 09/19/2024
+ms.date: 10/04/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: ai
 ---
-# Azure AI Inference client library for Java - version 1.0.0-beta.1 
+# Azure AI Inference client library for Java - version 1.0.0-alpha.20241004.2 
 
 
 Azure AI Inference client library for Java.
@@ -34,7 +34,7 @@ Various documentation is available to help you get started
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-ai-inference</artifactId>
-    <version>1.0.0-beta.1</version>
+    <version>1.0.0-beta.2</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -76,7 +76,7 @@ Authentication with AAD requires some initial setup:
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-identity</artifactId>
-    <version>1.13.1</version>
+    <version>1.13.3</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -127,8 +127,6 @@ for (ChatChoice choice : chatCompletions.getChoices()) {
 ```
 For a complete sample example, see sample [Chat Completions][sample_get_chat_completions].
 
-Please refer to the service documentation for a conceptual discussion of [text completion][microsoft_docs_openai_completion].
-
 ### Streaming chat completions
 
 ```java readme-sample-getChatCompletionsStream
@@ -143,7 +141,7 @@ client.completeStream(new ChatCompletionsOptions(chatMessages))
         if (CoreUtils.isNullOrEmpty(chatCompletions.getChoices())) {
             return;
         }
-        StreamingChatResponseMessageUpdate delta = chatCompletions.getChoices().get(0).getDelta();
+        StreamingChatResponseMessageUpdate delta = chatCompletions.getChoice().getDelta();
         if (delta.getRole() != null) {
             System.out.println("Role = " + delta.getRole());
         }
@@ -156,15 +154,80 @@ client.completeStream(new ChatCompletionsOptions(chatMessages))
 
 To compute tokens in streaming chat completions, see sample [Streaming Chat Completions][sample_get_chat_completions_streaming].
 
-<!--
+### Chat with image URL
+
+```java readme-sample-chatWithImageUrl
+List<ChatMessageContentItem> contentItems = new ArrayList<>();
+contentItems.add(new ChatMessageTextContentItem("Describe the image."));
+contentItems.add(new ChatMessageImageContentItem(
+    new ChatMessageImageUrl("<URL>")));
+
+List<ChatRequestMessage> chatMessages = new ArrayList<>();
+chatMessages.add(new ChatRequestSystemMessage("You are a helpful assistant."));
+chatMessages.add(ChatRequestUserMessage.fromContentItems(contentItems));
+
+ChatCompletions completions = client.complete(new ChatCompletionsOptions(chatMessages));
+System.out.printf("%s.%n", completions.getChoice().getMessage().getContent());
+```
+For a complete sample example, see sample [Image URL][sample_chat_with_image_url].
+
+### Chat with image file
+
+```java readme-sample-chatWithImageFile
+Path testFilePath = Paths.get("<path-to-image-file>");
+List<ChatMessageContentItem> contentItems = new ArrayList<>();
+contentItems.add(new ChatMessageTextContentItem("Describe the image."));
+contentItems.add(new ChatMessageImageContentItem(testFilePath, "<image-format>"));
+
+List<ChatRequestMessage> chatMessages = new ArrayList<>();
+chatMessages.add(new ChatRequestSystemMessage("You are a helpful assistant."));
+chatMessages.add(ChatRequestUserMessage.fromContentItems(contentItems));
+
+ChatCompletions completions = client.complete(new ChatCompletionsOptions(chatMessages));
+
+System.out.printf("%s.%n", completions.getChoice().getMessage().getContent());
+```
+For a complete sample example, see sample [Image File][sample_chat_with_image_file].
+
 ### Text embeddings
 
 ```java readme-sample-getEmbedding
+EmbeddingsClient client = new EmbeddingsClientBuilder()
+    .endpoint("{endpoint}")
+    .credential(new AzureKeyCredential("{key}"))
+    .buildClient();
+
+List<String> promptList = new ArrayList<>();
+String prompt = "Tell me 3 jokes about trains";
+promptList.add(prompt);
+
+EmbeddingsResult embeddings = client.embed(promptList);
+
+for (EmbeddingItem item : embeddings.getData()) {
+    System.out.printf("Index: %d.%n", item.getIndex());
+    for (Float embedding : item.getEmbeddingList()) {
+        System.out.printf("%f;", embedding);
+    }
+}
 ```
 For a complete sample example, see sample [Embedding][sample_get_embedding].
 
-Please refer to the service documentation for a conceptual discussion of [openAI embedding][microsoft_docs_openai_embedding].
--->
+### Function calls
+
+For a complete sample example, see sample [Function Calls][sample_function_calls].
+
+### Streaming function calls
+
+For a complete sample example, see sample [Streaming Function Calls][sample_streaming_function_calls].
+
+### Get Model information
+
+```java readme-sample-getModelInfo
+ModelInfo modelInfo = client.getModelInfo();
+
+System.out.printf("modelName: %s, modelNameProvider: %s, modelType: %s%n",
+    modelInfo.getModelName(), modelInfo.getModelProviderName(), modelInfo.getModelType().toString());
+```
 
 ### Service API versions
 
@@ -204,7 +267,7 @@ For more details, see [TROUBLESHOOTING][troubleshooting] guideline.
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-inference_1.0.0-beta.1/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -214,21 +277,24 @@ For details on contributing to this repository, see the [contributing guide](htt
 
 <!-- LINKS -->
 [product_documentation]: https://azure.microsoft.com/services/
-[docs]: https://azure.github.io/azure-sdk-for-java/
+[docs]: https://aka.ms/azsdk/azure-ai-inference/java/reference
 [jdk]: https://learn.microsoft.com/azure/developer/java/fundamentals/
 [aad_authorization]: /azure/cognitive-services/authentication#authenticate-with-azure-active-directory
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-inference_1.0.0-beta.1/sdk/identity/azure-identity
-[sample_get_chat_completions]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-inference_1.0.0-beta.1/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/usage/GetChatCompletionsSample.java
-[sample_get_chat_completions_streaming]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-inference_1.0.0-beta.1/sdk/openai/azure-ai-openai/src/samples/java/com/azure/ai/openai/usage/GetChatCompletionsStreamSample.java
-[microsoft_docs_openai_completion]: https://learn.microsoft.com/azure/cognitive-services/openai/how-to/completions
-[microsoft_docs_openai_embedding]: https://learn.microsoft.com/azure/cognitive-services/openai/concepts/understand-embeddings
-[chat_completions_client_async]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-inference_1.0.0-beta.1/sdk/openai/azure-ai-openai/src/main/java/com/azure/ai/openai/OpenAIAsyncClient.java
-[chat_completions_client_builder]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-inference_1.0.0-beta.1/sdk/openai/azure-ai-openai/src/main/java/com/azure/ai/openai/OpenAIClientBuilder.java
-[chat_completions_client_sync]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-inference_1.0.0-beta.1/sdk/openai/azure-ai-openai/src/main/java/com/azure/ai/openai/OpenAIClient.java
-[logLevels]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-inference_1.0.0-beta.1/sdk/core/azure-core/src/main/java/com/azure/core/util/logging/ClientLogger.java
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity
+[sample_get_chat_completions]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/ai/azure-ai-inference/src/samples/java/com/azure/ai/inference/usage/BasicChatSample.java
+[sample_get_chat_completions_streaming]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/ai/azure-ai-inference/src/samples/java/com/azure/ai/inference/usage/StreamingChatSample.java 
+[sample_get_embedding]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/ai/azure-ai-inference/src/samples/java/com/azure/ai/inference/usage/TextEmbeddingsSample.java
+[sample_chat_with_image_url]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/ai/azure-ai-inference/src/samples/java/com/azure/ai/inference/usage/ImageUrlChatSample.java
+[sample_chat_with_image_file]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/ai/azure-ai-inference/src/samples/java/com/azure/ai/inference/usage/ImageFileChatSample.java
+[sample_function_calls]: https://aka.ms/azsdk/azure-ai-inference/java/toolCallSample
+[sample_streaming_function_calls]: https://aka.ms/azsdk/azure-ai-inference/java/streamingToolCallSample
+[chat_completions_client_async]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/ai/azure-ai-inference/src/main/java/com/azure/ai/inference/ChatCompletionsAsyncClient.java
+[chat_completions_client_builder]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/ai/azure-ai-inference/src/main/java/com/azure/ai/inference/ChatCompletionsClientBuilder.java
+[chat_completions_client_sync]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/ai/azure-ai-inference/src/main/java/com/azure/ai/inference/ChatCompletionsClient.java
+[logLevels]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core/src/main/java/com/azure/core/util/logging/ClientLogger.java
 [performance_tuning]: https://github.com/Azure/azure-sdk-for-java/wiki/Performance-Tuning
-[troubleshooting]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-inference_1.0.0-beta.1/sdk/openai/azure-ai-openai/TROUBLESHOOTING.md
+[troubleshooting]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/openai/azure-ai-openai/TROUBLESHOOTING.md
 [wiki_identity]: https://learn.microsoft.com/azure/developer/java/sdk/identity
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fai%2Fazure-ai-inference%2FREADME.png)
