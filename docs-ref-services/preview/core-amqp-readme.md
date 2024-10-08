@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: core
 ---
-# Azure Core AMQP shared library for Java - version 2.10.0-alpha.20241008.1 
+# Azure Core AMQP shared library for Java - version 2.10.0-alpha.20241008.3 
 
 
 Azure Core AMQP client library is a collection of classes common to the AMQP protocol. It help developers create their

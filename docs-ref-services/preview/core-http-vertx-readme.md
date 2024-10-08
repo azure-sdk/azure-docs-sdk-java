@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: core
 ---
-# Azure Core Vert.x HTTP plugin library for Java - version 1.0.0-alpha.20241008.1 
+# Azure Core Vert.x HTTP plugin library for Java - version 1.0.0-alpha.20241008.3 
 
 
 Azure Core Vert.x HTTP client is a plugin for the `azure-core` HTTP client API.
