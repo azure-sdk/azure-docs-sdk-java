@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: vmwarecloudsimple
 ---
-# Azure Resource Manager VMwareCloudSimple client library for Java - version 1.0.0-alpha.20241009.1 
+# Azure Resource Manager VMwareCloudSimple client library for Java - version 1.0.0-alpha.20241010.1 
 
 
 Azure Resource Manager VMwareCloudSimple client library for Java.
