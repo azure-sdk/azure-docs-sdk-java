@@ -1,7 +1,7 @@
 ---
 title: 
 keywords: Azure, java, SDK, API, azure-media-videoanalyzer-edge, videoanalyzer
-ms.date: 04/30/2022
+ms.date: 10/18/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: videoanalyzer
@@ -209,11 +209,11 @@ additional questions or comments.
 [coc_contact]: mailto:opencode@microsoft.com
 [package]: https://aka.ms/ava/sdk/client/java
 [samples]: https://aka.ms/video-analyzer-sample
-[source]: https://github.com/Azure/azure-sdk-for-java/tree/azure-media-videoanalyzer-edge_1.0.0-beta.6/sdk/videoanalyzer
-[doc_direct_methods]: https://go.microsoft.com/fwlink/?linkid=2162396
-[doc_pipelines]: https://go.microsoft.com/fwlink/?linkid=2162396
-[doc_product]: https://go.microsoft.com/fwlink/?linkid=2162396
-[iot-device-sdk]: https://search.maven.org/search?q=a:iot-service-client
+[source]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/videoanalyzer
+[doc_direct_methods]: https://learn.microsoft.com/previous-versions/azure/azure-video-analyzer/video-analyzer-docs/articles/azure-video-analyzer/video-analyzer-docs/edge/direct-methods
+[doc_pipelines]: https://learn.microsoft.com/previous-versions/azure/azure-video-analyzer/video-analyzer-docs/articles/azure-video-analyzer/video-analyzer-docs/pipeline
+[doc_product]: https://learn.microsoft.com/azure/azure-video-analyzer/video-analyzer-docs/
+[iot-device-sdk]: https://central.sonatype.com/artifact/com.microsoft.azure.sdk.iot/iot-service-client
 [iot-hub-sdk]: https://github.com/Azure/azure-iot-sdk-java
 [github-page-issues]: https://github.com/Azure/azure-sdk-for-java/issues
 [applied-ai-service]: https://azure.microsoft.com/product-categories/applied-ai-services/#services
