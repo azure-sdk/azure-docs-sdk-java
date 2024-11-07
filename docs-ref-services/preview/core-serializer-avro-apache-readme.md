@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: core
 ---
-# Azure Core Apache Avro Serializer plugin library for Java - version 1.0.0-alpha.20241107.1 
+# Azure Core Apache Avro Serializer plugin library for Java - version 1.0.0-alpha.20241107.3 
 
 
 Azure Core Apache Avro Serializer is a plugin for the `azure-core` `AvroSerializer` API.

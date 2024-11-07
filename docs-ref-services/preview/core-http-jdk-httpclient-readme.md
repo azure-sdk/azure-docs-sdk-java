@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: core
 ---
-# Azure Core JDK HTTP plugin library for Java - version 1.0.0-alpha.20241107.1 
+# Azure Core JDK HTTP plugin library for Java - version 1.0.0-alpha.20241107.3 
 
 
 This is an azure-core HTTP client that makes use of the asynchronous HttpClient that was made generally available as 

@@ -6,7 +6,7 @@ ms.topic: reference
 ms.devlang: java
 ms.service: core
 ---
-# Azure OpenTelemetry Metrics plugin library for Java - version 1.0.0-alpha.20241107.1 
+# Azure OpenTelemetry Metrics plugin library for Java - version 1.0.0-alpha.20241107.3 
 
 
 This package enables  metrics from Azure SDK Java libraries through [OpenTelemetry][OpenTelemetry]. OpenTelemetry is an open source, vendor-agnostic, single distribution of libraries to provide metrics collection and distributed tracing for services.
