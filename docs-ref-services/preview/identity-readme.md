@@ -1,12 +1,12 @@
 ---
 title: Azure Identity client library for Java
-keywords: Azure, java, SDK, API, azure-identity, identity
-ms.date: 09/20/2024
+keywords: Azure, java, SDK, API, azure-identity, entra-id
+ms.date: 11/13/2024
 ms.topic: reference
 ms.devlang: java
-ms.service: identity
+ms.service: entra-id
 ---
-# Azure Identity client library for Java - version 1.14.0-beta.2 
+# Azure Identity client library for Java - version 1.15.0-alpha.20241113.1 
 
 
 The Azure Identity library provides [Microsoft Entra ID](https://learn.microsoft.com/entra/fundamentals/whatis) ([formerly Azure Active Directory](https://learn.microsoft.com/entra/fundamentals/new-name)) token authentication support across the Azure SDK. It provides a set of [TokenCredential](https://learn.microsoft.com/java/api/com.azure.core.credential.tokencredential?view=azure-java-stable) implementations that can be used to construct Azure SDK clients that support Microsoft Entra token authentication.
@@ -19,7 +19,7 @@ The Azure Identity library provides [Microsoft Entra ID](https://learn.microsoft
 
 #### Include the BOM file
 
-Include the `azure-sdk-bom` in your project to take a dependency on the stable version of the library. In the following snippet, replace the `{bom_version_to_target}` placeholder with the version number. To learn more about the BOM, see the [Azure SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-identity_1.14.0-beta.2/sdk/boms/azure-sdk-bom/README.md).
+Include the `azure-sdk-bom` in your project to take a dependency on the stable version of the library. In the following snippet, replace the `{bom_version_to_target}` placeholder with the version number. To learn more about the BOM, see the [Azure SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -55,7 +55,7 @@ To take dependency on a particular version of the library that isn't present in 
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-identity</artifactId>
-    <version>1.13.3</version>
+    <version>1.14.1</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -90,21 +90,7 @@ See [Credential classes](#credential-classes) for a complete list of available c
 
 ### DefaultAzureCredential
 
-`DefaultAzureCredential` is appropriate for most scenarios where the application is intended to ultimately be run in Azure. This is because `DefaultAzureCredential` combines credentials commonly used to authenticate when deployed, with credentials used to authenticate in a development environment.
-
-> Note: `DefaultAzureCredential` is intended to simplify getting started with the SDK by handling common scenarios with reasonable default behaviors. Developers who want more control or whose scenario isn't served by the default settings should use other credential types.
-
-`DefaultAzureCredential` attempts to authenticate via the following mechanisms in order:
-
-![DefaultAzureCredential authentication flow](images/mermaidjs/DefaultAzureCredentialAuthFlow.svg)
-
-1. **Environment** - `DefaultAzureCredential` reads account information specified via [environment variables](#environment-variables) and uses it to authenticate.
-2. **Workload Identity** - If the app is deployed on Kubernetes with environment variables set by the workload identity webhook, `DefaultAzureCredential` authenticates the configured identity.
-3. **Managed Identity** - If the app is deployed to an Azure host with Managed Identity enabled, `DefaultAzureCredential` authenticates with that account.
-4. **Azure Developer CLI** - If the developer authenticated an account via the Azure Developer CLI `azd auth login` command, `DefaultAzureCredential` authenticates with that account.
-5. **IntelliJ** - If the developer authenticated via Azure Toolkit for IntelliJ, `DefaultAzureCredential` authenticates with that account.
-6. **Azure CLI** - If the developer authenticated an account via the Azure CLI `az login` command, `DefaultAzureCredential` authenticates with that account.
-7. **Azure PowerShell** - If the developer authenticated an account via the Azure PowerShell `Connect-AzAccount` command, `DefaultAzureCredential` authenticates with that account.
+`DefaultAzureCredential` simplifies authentication while developing apps that deploy to Azure by combining credentials used in Azure hosting environments with credentials used in local development. For more information, see [DefaultAzureCredential overview][dac_overview].
 
 #### Continuation policy
 
@@ -139,8 +125,6 @@ public void createDefaultAzureCredential() {
         .buildClient();
 }
 ```
-
-For more information on configuring `DefaultAzureCredential` for your workstation or Azure, see [Configure DefaultAzureCredential](https://learn.microsoft.com/azure/developer/java/sdk/identity-azure-hosted-auth#default-azure-credential).
 
 ### Authenticate a user-assigned managed identity with `DefaultAzureCredential`
 
@@ -179,12 +163,10 @@ See more about how to configure your IntelliJ IDEA in [Sign in Azure Toolkit for
 
 ```java
 /**
- * DefaultAzureCredential uses the KeePass database path to find the user account in IntelliJ on Windows.
+ * DefaultAzureCredential uses the signed-in user from Azure Toolkit for Java.
  */
 public void createDefaultAzureCredentialForIntelliJ() {
     DefaultAzureCredential defaultCredential = new DefaultAzureCredentialBuilder()
-        // KeePass configuration required only for Windows. No configuration needed for Linux / Mac
-        .intelliJKeePassDatabasePath("C:\\Users\\user\\AppData\\Roaming\\JetBrains\\IdeaIC2020.1\\c.kdbx")
         .build();
 
     // Azure SDK client builders accept the credential as a parameter
@@ -207,7 +189,7 @@ The [Managed identity authentication](https://learn.microsoft.com/entra/identity
 - [Azure Virtual Machines](https://learn.microsoft.com/entra/identity/managed-identities-azure-resources/how-to-use-vm-token)
 - [Azure Virtual Machines Scale Sets](https://learn.microsoft.com/entra/identity/managed-identities-azure-resources/qs-configure-powershell-windows-vmss)
 
-**Note:** Use `azure-identity` version `1.7.0` or later to utilize [token caching](https://github.com/Azure/azure-sdk-for-java/blob/azure-identity_1.14.0-beta.2/sdk/identity/azure-identity/TOKEN_CACHING.md) support for managed identity authentication.
+**Note:** Use `azure-identity` version `1.7.0` or later to utilize [token caching](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity/TOKEN_CACHING.md) support for managed identity authentication.
 
 ### Examples
 
@@ -224,6 +206,34 @@ See more about how to configure your Azure resource for managed identity in [Ena
 public void createManagedIdentityCredential() {
     ManagedIdentityCredential managedIdentityCredential = new ManagedIdentityCredentialBuilder()
         .clientId("<USER-ASSIGNED MANAGED IDENTITY CLIENT ID>") // only required for user-assigned
+        .build();
+
+    // Azure SDK client builders accept the credential as a parameter
+    SecretClient client = new SecretClientBuilder()
+        .vaultUrl("https://{YOUR_VAULT_NAME}.vault.azure.net")
+        .credential(managedIdentityCredential)
+        .buildClient();
+}
+```
+
+```java
+public void createManagedIdentityCredentialWithResourceId() {
+    ManagedIdentityCredential managedIdentityCredential = new ManagedIdentityCredentialBuilder()
+        .resourceId("/subscriptions/<subscriptionID>/resourcegroups/<resource group>/providers/Microsoft.ManagedIdentity/userAssignedIdentities/<MI name>") // only required for user-assigned
+        .build();
+
+    // Azure SDK client builders accept the credential as a parameter
+    SecretClient client = new SecretClientBuilder()
+        .vaultUrl("https://{YOUR_VAULT_NAME}.vault.azure.net")
+        .credential(managedIdentityCredential)
+        .buildClient();
+}
+```
+
+```java
+public void createManagedIdentityCredentialWithObjectId() {
+    ManagedIdentityCredential managedIdentityCredential = new ManagedIdentityCredentialBuilder()
+        .objectId("<USER-ASSIGNED MANAGED IDENTITY OBJECT ID>") // only required for user-assigned
         .build();
 
     // Azure SDK client builders accept the credential as a parameter
@@ -252,30 +262,7 @@ public void createManagedIdentityCredential() {
 
 ### Define a custom authentication flow with `ChainedTokenCredential`
 
-While `DefaultAzureCredential` is generally the quickest way to get started developing apps for Azure, more advanced users may want to customize the credentials considered when authenticating. `ChainedTokenCredential` enables users to combine multiple credential instances to define a customized chain of credentials. This example demonstrates creating a `ChainedTokenCredential`, which will:
-
-- Attempt to authenticate using managed identity.
-- Fall back to authenticating via the Azure CLI if managed identity is unavailable in the current environment.
-
-```java
-// Authenticate using managed identity if it's available; otherwise use the Azure CLI to authenticate.
-
-ManagedIdentityCredential managedIdentityCredential = new ManagedIdentityCredentialBuilder()
-    .build();
-AzureCliCredential cliCredential = new AzureCliCredentialBuilder()
-    .build();
-
-ChainedTokenCredential credential = new ChainedTokenCredentialBuilder()
-    .addLast(managedIdentityCredential)
-    .addLast(cliCredential)
-    .build();
-
-// Azure SDK client builders accept the credential as a parameter
-SecretClient client = new SecretClientBuilder()
-    .vaultUrl("https://{YOUR_VAULT_NAME}.vault.azure.net")
-    .credential(credential)
-    .buildClient();
-```
+While `DefaultAzureCredential` is generally the quickest way to authenticate apps for Azure, you can create a customized chain of credentials to be considered. `ChainedTokenCredential` enables users to combine multiple credential instances to define a customized chain of credentials. For more information, see [ChainedTokenCredential overview][ctc_overview].
 
 ## Sovereign cloud configuration
 
@@ -395,7 +382,7 @@ Token caching is a feature provided by the Azure Identity library that allows ap
 - Improve resilience and performance.
 - Reduce the number of requests made to Microsoft Entra ID to obtain access tokens.
 
-The Azure Identity library offers both in-memory and persistent disk caching. For more information, see the [token caching documentation](https://github.com/Azure/azure-sdk-for-java/blob/azure-identity_1.14.0-beta.2/sdk/identity/azure-identity/TOKEN_CACHING.md).
+The Azure Identity library offers both in-memory and persistent disk caching. For more information, see the [token caching documentation](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity/TOKEN_CACHING.md).
 
 ## Brokered authentication
 
@@ -407,7 +394,7 @@ Credentials raise exceptions when they fail to authenticate or can't execute aut
 
 When credentials can't execute authentication due to one of the underlying resources required by the credential being unavailable on the machine, the `CredentialUnavailableException` is raised. The exception has a `message` attribute that describes why the credential is unavailable for authentication execution. When `ChainedTokenCredential` raises this exception, the message collects error messages from each credential in the chain.
 
-See the [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-identity_1.14.0-beta.2/sdk/identity/azure-identity/TROUBLESHOOTING.md) for details on how to diagnose various failure scenarios.
+See the [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity/TROUBLESHOOTING.md) for details on how to diagnose various failure scenarios.
 
 ## Next steps
 
@@ -424,9 +411,9 @@ When you submit a pull request, a CLA-bot will automatically determine whether y
 This project has adopted the [Microsoft Open Source Code of Conduct][code_of_conduct]. For more information, see the Code of Conduct FAQ or contact opencode@microsoft.com with any additional questions or comments.
 
 <!-- LINKS -->
-[azure_core_library]: https://github.com/Azure/azure-sdk-for-java/tree/azure-identity_1.14.0-beta.2/sdk/core
+[azure_core_library]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/core
 [azure_identity_broker]: https://central.sonatype.com/artifact/com.azure/azure-identity-broker
-[azure_identity_broker_readme]: https://github.com/Azure/azure-sdk-for-java/blob/azure-identity_1.14.0-beta.2/sdk/identity/azure-identity-broker/README.md
+[azure_identity_broker_readme]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity-broker/README.md
 [azure_sub]: https://azure.microsoft.com/free/
 [code_of_conduct]: https://opensource.microsoft.com/codeofconduct/
 [cred_acc]: https://learn.microsoft.com/java/api/com.azure.identity.authorizationcodecredential?view=azure-java-stable
@@ -472,12 +459,14 @@ This project has adopted the [Microsoft Open Source Code of Conduct][code_of_con
 [cred_wic]: https://learn.microsoft.com/java/api/com.azure.identity.workloadidentitycredential?view=azure-java-stable
 [cred_wic_example]: https://learn.microsoft.com/azure/aks/workload-identity-overview?tabs=java#azure-identity-client-libraries
 [cred_wic_ref]: https://learn.microsoft.com/azure/aks/workload-identity-overview
+[ctc_overview]: https://aka.ms/azsdk/java/identity/credential-chains#chainedtokencredential-overview
+[dac_overview]: https://aka.ms/azsdk/java/identity/credential-chains#defaultazurecredential-overview
 [entraid_doc]: https://learn.microsoft.com/entra/identity/
 [javadoc]: https://learn.microsoft.com/java/api/com.azure.identity?view=azure-java-stable
 [jdk_link]: https://learn.microsoft.com/java/azure/jdk/?view=azure-java-stable
 [logging]: https://github.com/Azure/azure-sdk-for-java/wiki/Logging-in-Azure-SDK
-[secrets_client_library]: https://github.com/Azure/azure-sdk-for-java/tree/azure-identity_1.14.0-beta.2/sdk/keyvault/azure-security-keyvault-secrets
-[source]: https://github.com/Azure/azure-sdk-for-java/tree/azure-identity_1.14.0-beta.2/sdk/identity/azure-identity
+[secrets_client_library]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/keyvault/azure-security-keyvault-secrets
+[source]: https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/identity/azure-identity
 [sp]: https://learn.microsoft.com/entra/identity-platform/app-objects-and-service-principals
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fidentity%2Fazure-identity%2FREADME.png)
