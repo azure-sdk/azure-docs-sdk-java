@@ -1,12 +1,12 @@
 ---
 title: Azure AI Inference client library for Java
 keywords: Azure, java, SDK, API, azure-ai-inference, ai
-ms.date: 10/03/2024
+ms.date: 11/14/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: ai
 ---
-# Azure AI Inference client library for Java - version 1.0.0-beta.2 
+# Azure AI Inference client library for Java - version 1.0.0-alpha.20241114.2 
 
 
 Azure AI Inference client library for Java.
@@ -34,7 +34,7 @@ Various documentation is available to help you get started
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-ai-inference</artifactId>
-    <version>1.0.0-beta.1</version>
+    <version>1.0.0-beta.2</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -267,7 +267,7 @@ For more details, see [TROUBLESHOOTING][troubleshooting] guideline.
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-inference_1.0.0-beta.2/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/main/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -281,20 +281,20 @@ For details on contributing to this repository, see the [contributing guide](htt
 [jdk]: https://learn.microsoft.com/azure/developer/java/fundamentals/
 [aad_authorization]: /azure/cognitive-services/authentication#authenticate-with-azure-active-directory
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-inference_1.0.0-beta.2/sdk/identity/azure-identity
-[sample_get_chat_completions]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-inference_1.0.0-beta.2/sdk/ai/azure-ai-inference/src/samples/java/com/azure/ai/inference/usage/BasicChatSample.java
-[sample_get_chat_completions_streaming]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-inference_1.0.0-beta.2/sdk/ai/azure-ai-inference/src/samples/java/com/azure/ai/inference/usage/StreamingChatSample.java 
-[sample_get_embedding]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-inference_1.0.0-beta.2/sdk/ai/azure-ai-inference/src/samples/java/com/azure/ai/inference/usage/TextEmbeddingsSample.java
-[sample_chat_with_image_url]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-inference_1.0.0-beta.2/sdk/ai/azure-ai-inference/src/samples/java/com/azure/ai/inference/usage/ImageUrlChatSample.java
-[sample_chat_with_image_file]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-inference_1.0.0-beta.2/sdk/ai/azure-ai-inference/src/samples/java/com/azure/ai/inference/usage/ImageFileChatSample.java
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/identity/azure-identity
+[sample_get_chat_completions]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/ai/azure-ai-inference/src/samples/java/com/azure/ai/inference/usage/BasicChatSample.java
+[sample_get_chat_completions_streaming]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/ai/azure-ai-inference/src/samples/java/com/azure/ai/inference/usage/StreamingChatSample.java 
+[sample_get_embedding]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/ai/azure-ai-inference/src/samples/java/com/azure/ai/inference/usage/TextEmbeddingsSample.java
+[sample_chat_with_image_url]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/ai/azure-ai-inference/src/samples/java/com/azure/ai/inference/usage/ImageUrlChatSample.java
+[sample_chat_with_image_file]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/ai/azure-ai-inference/src/samples/java/com/azure/ai/inference/usage/ImageFileChatSample.java
 [sample_function_calls]: https://aka.ms/azsdk/azure-ai-inference/java/toolCallSample
 [sample_streaming_function_calls]: https://aka.ms/azsdk/azure-ai-inference/java/streamingToolCallSample
-[chat_completions_client_async]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-inference_1.0.0-beta.2/sdk/ai/azure-ai-inference/src/main/java/com/azure/ai/inference/ChatCompletionsAsyncClient.java
-[chat_completions_client_builder]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-inference_1.0.0-beta.2/sdk/ai/azure-ai-inference/src/main/java/com/azure/ai/inference/ChatCompletionsClientBuilder.java
-[chat_completions_client_sync]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-inference_1.0.0-beta.2/sdk/ai/azure-ai-inference/src/main/java/com/azure/ai/inference/ChatCompletionsClient.java
-[logLevels]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-inference_1.0.0-beta.2/sdk/core/azure-core/src/main/java/com/azure/core/util/logging/ClientLogger.java
+[chat_completions_client_async]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/ai/azure-ai-inference/src/main/java/com/azure/ai/inference/ChatCompletionsAsyncClient.java
+[chat_completions_client_builder]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/ai/azure-ai-inference/src/main/java/com/azure/ai/inference/ChatCompletionsClientBuilder.java
+[chat_completions_client_sync]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/ai/azure-ai-inference/src/main/java/com/azure/ai/inference/ChatCompletionsClient.java
+[logLevels]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core/src/main/java/com/azure/core/util/logging/ClientLogger.java
 [performance_tuning]: https://github.com/Azure/azure-sdk-for-java/wiki/Performance-Tuning
-[troubleshooting]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-inference_1.0.0-beta.2/sdk/openai/azure-ai-openai/TROUBLESHOOTING.md
+[troubleshooting]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/openai/azure-ai-openai/TROUBLESHOOTING.md
 [wiki_identity]: https://learn.microsoft.com/azure/developer/java/sdk/identity
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fai%2Fazure-ai-inference%2FREADME.png)
