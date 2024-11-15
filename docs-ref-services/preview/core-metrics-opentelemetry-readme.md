@@ -1,18 +1,19 @@
 ---
 title: Azure OpenTelemetry Metrics plugin library for Java
 keywords: Azure, java, SDK, API, azure-core-metrics-opentelemetry, core
-ms.date: 11/01/2024
+ms.date: 11/15/2024
 ms.topic: reference
 ms.devlang: java
 ms.service: core
 ---
-# Azure OpenTelemetry Metrics plugin library for Java - version 1.0.0-beta.24 
+# Azure OpenTelemetry Metrics plugin library for Java - version 1.0.0-alpha.20241115.2 
 
 
-This package enables  metrics from Azure SDK Java libraries through [OpenTelemetry][OpenTelemetry]. OpenTelemetry is an open source, vendor-agnostic, single distribution of libraries to provide metrics collection and distributed tracing for services.
+This package enables  metrics from Azure SDK Java libraries through [OpenTelemetry][OpenTelemetry]. OpenTelemetry is an
+open source, vendor-agnostic, single distribution of libraries to provide metrics collection and distributed tracing for
+services.
 
-[Source code][source_code] | [API reference documentation][api_documentation] | [Product
-documentation][OpenTelemetry] | [Samples][samples]
+[Source code][source_code] | [API reference documentation][api_documentation] | [Product documentation][OpenTelemetry] | [Samples][samples]
 
 ## Getting started
 
@@ -28,7 +29,7 @@ documentation][OpenTelemetry] | [Samples][samples]
 <dependency>
   <groupId>com.azure</groupId>
   <artifactId>azure-core-metrics-opentelemetry</artifactId>
-  <version>1.0.0-beta.24</version>
+  <version>1.0.0-beta.25</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -45,7 +46,7 @@ The following sections provide several code snippets covering some of the most c
 - [Default configuration: OpenTelemetry SDK](#default-configuration-agent)
 - [Custom configuration](#custom-configuration)
 
-You can find more samples [here](https://github.com/Azure/azure-sdk-for-java/blob/azure-core-metrics-opentelemetry_1.0.0-beta.24/sdk/core/azure-core-metrics-opentelemetry/src/samples/).
+You can find more samples [here](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core-metrics-opentelemetry/src/samples/).
 
 ### Default configuration: agent
 
@@ -65,7 +66,6 @@ package to configure OpenTelemetry using environment variables (or system proper
 
 
 ```java readme-sample-defaultConfiguration
-
 // configure OpenTelemetry SDK using io.opentelemetry:opentelemetry-sdk-extension-autoconfigure
 // AutoConfiguredOpenTelemetrySdk.initialize();
 
@@ -77,7 +77,6 @@ AzureClient sampleClient = new AzureClientBuilder()
 
 // use client as usual, if it emits metric, they will be exported
 sampleClient.methodCall("get items");
-
 ```
 
 ### Custom configuration
@@ -85,7 +84,6 @@ sampleClient.methodCall("get items");
 If you want to pass `MeterProvider` explicitly, you can do it using `MetricsOptions` and passing them to Azure Clients. `MetricsOptions` can also be used to disable metrics from specific client. 
 
 ```java readme-sample-customConfiguration
-
 // configure OpenTelemetry SDK explicitly per https://opentelemetry.io/docs/instrumentation/java/manual/
 SdkMeterProvider meterProvider = SdkMeterProvider.builder()
     .registerMetricReader(PeriodicMetricReader.builder(OtlpGrpcMetricExporter.builder().build()).build())
@@ -105,7 +103,6 @@ AzureClient sampleClient = new AzureClientBuilder()
 
 // use client as usual, if it emits metric, they will be exported
 sampleClient.methodCall("get items");
-
 ```
 
 ## Troubleshooting
@@ -134,11 +131,13 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 
 <!-- Links -->
 [api_documentation]: https://aka.ms/java-docs
-[context]: https://github.com/Azure/azure-sdk-for-java/blob/azure-core-metrics-opentelemetry_1.0.0-beta.24/sdk/core/azure-core/src/main/java/com/azure/core/util/Context.java
+[context]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core/src/main/java/com/azure/core/util/Context.java
 [jdk_link]: /java/azure/jdk/?view=azure-java-stable
 [java8_client_compatibility]: https://learn.microsoft.com/azure/security/fundamentals/azure-ca-details?tabs=root-and-subordinate-cas-list#client-compatibility-for-public-pkis
 [logging]: https://github.com/Azure/azure-sdk-for-java/wiki/Logging-in-Azure-SDK
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-core-metrics-opentelemetry_1.0.0-beta.24/sdk/core/azure-core-metrics-opentelemetry/src/
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core-metrics-opentelemetry/src/
+[OpenTelemetry]: https://github.com/open-telemetry/opentelemetry-java#opentelemetry-for-java
+[samples]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core-metrics-opentelemetry/src/samples/
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fcore%2Fazure-core-metrics-opentelemetry%2FREADME.png)
 
