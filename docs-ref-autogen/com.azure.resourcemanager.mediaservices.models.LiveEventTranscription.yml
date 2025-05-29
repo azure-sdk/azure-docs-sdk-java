@@ -20,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **LiveEventTranscription**"
+syntax: "public final class **LiveEventTranscription**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.mediaservices.models.LiveEventTranscription?alt=com.azure.resourcemanager.mediaservices.models.LiveEventTranscription&text=LiveEventTranscription\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.mediaservices.models.LiveEventTranscription.LiveEventTranscription()"
   fullName: "com.azure.resourcemanager.mediaservices.models.LiveEventTranscription.LiveEventTranscription()"
@@ -30,6 +30,25 @@ constructors:
   syntax: "public LiveEventTranscription()"
   desc: "Creates an instance of LiveEventTranscription class."
 methods:
+- uid: "com.azure.resourcemanager.mediaservices.models.LiveEventTranscription.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.mediaservices.models.LiveEventTranscription.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "LiveEventTranscription.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Live<wbr>Event<wbr>Transcription from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static LiveEventTranscription fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the LiveEventTranscription."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of LiveEventTranscription from the JsonReader."
+  returns:
+    description: "An instance of LiveEventTranscription if the JsonReader was pointing to an instance of it, or null if it\n was pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.LiveEventTranscription?alt=com.azure.resourcemanager.mediaservices.models.LiveEventTranscription&text=LiveEventTranscription\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.mediaservices.models.LiveEventTranscription.inputTrackSelection()"
   fullName: "com.azure.resourcemanager.mediaservices.models.LiveEventTranscription.inputTrackSelection()"
   name: "inputTrackSelection()"
@@ -60,6 +79,18 @@ methods:
   returns:
     description: "the outputTranscriptionTrack value."
     type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.LiveEventOutputTranscriptionTrack?alt=com.azure.resourcemanager.mediaservices.models.LiveEventOutputTranscriptionTrack&text=LiveEventOutputTranscriptionTrack\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.mediaservices.models.LiveEventTranscription.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.mediaservices.models.LiveEventTranscription.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "LiveEventTranscription.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.mediaservices.models.LiveEventTranscription.validate()"
   fullName: "com.azure.resourcemanager.mediaservices.models.LiveEventTranscription.validate()"
   name: "validate()"
@@ -111,6 +142,8 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.LiveEventTranscription?alt=com.azure.resourcemanager.mediaservices.models.LiveEventTranscription&text=LiveEventTranscription\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Describes the transcription tracks in the output of a live event, generated using speech-to-text transcription. This property is reserved for future use, any value set on this property will be ignored."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.mediaservices.models.LiveEventTranscription?alt=com.azure.resourcemanager.mediaservices.models.LiveEventTranscription&text=LiveEventTranscription\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.mediaservices.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-mediaservices:2.3.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-mediaservices:2.4.0

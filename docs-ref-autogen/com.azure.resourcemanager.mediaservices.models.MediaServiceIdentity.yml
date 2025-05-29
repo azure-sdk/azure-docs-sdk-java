@@ -20,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public class **MediaServiceIdentity**"
+syntax: "public final class **MediaServiceIdentity**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.mediaservices.models.MediaServiceIdentity?alt=com.azure.resourcemanager.mediaservices.models.MediaServiceIdentity&text=MediaServiceIdentity\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.mediaservices.models.MediaServiceIdentity.MediaServiceIdentity()"
   fullName: "com.azure.resourcemanager.mediaservices.models.MediaServiceIdentity.MediaServiceIdentity()"
@@ -30,6 +30,25 @@ constructors:
   syntax: "public MediaServiceIdentity()"
   desc: "Creates an instance of MediaServiceIdentity class."
 methods:
+- uid: "com.azure.resourcemanager.mediaservices.models.MediaServiceIdentity.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.mediaservices.models.MediaServiceIdentity.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "MediaServiceIdentity.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Media<wbr>Service<wbr>Identity from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static MediaServiceIdentity fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of MediaServiceIdentity from the JsonReader."
+  returns:
+    description: "An instance of MediaServiceIdentity if the JsonReader was pointing to an instance of it, or null if it\n was pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.MediaServiceIdentity?alt=com.azure.resourcemanager.mediaservices.models.MediaServiceIdentity&text=MediaServiceIdentity\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.mediaservices.models.MediaServiceIdentity.principalId()"
   fullName: "com.azure.resourcemanager.mediaservices.models.MediaServiceIdentity.principalId()"
   name: "principalId()"
@@ -50,6 +69,18 @@ methods:
   returns:
     description: "the tenantId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html\">UUID</a>"
+- uid: "com.azure.resourcemanager.mediaservices.models.MediaServiceIdentity.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.mediaservices.models.MediaServiceIdentity.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "MediaServiceIdentity.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.mediaservices.models.MediaServiceIdentity.type()"
   fullName: "com.azure.resourcemanager.mediaservices.models.MediaServiceIdentity.type()"
   name: "type()"
@@ -107,6 +138,8 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.MediaServiceIdentity?alt=com.azure.resourcemanager.mediaservices.models.MediaServiceIdentity&text=MediaServiceIdentity\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "The MediaServiceIdentity model."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.mediaservices.models.MediaServiceIdentity?alt=com.azure.resourcemanager.mediaservices.models.MediaServiceIdentity&text=MediaServiceIdentity\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.mediaservices.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-mediaservices:2.3.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-mediaservices:2.4.0

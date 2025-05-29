@@ -20,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **MediaServiceProperties**"
+syntax: "public final class **MediaServiceProperties**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties?alt=com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties&text=MediaServiceProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties.MediaServiceProperties()"
   fullName: "com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties.MediaServiceProperties()"
@@ -40,6 +40,25 @@ methods:
   returns:
     description: "the encryption value."
     type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.AccountEncryption?alt=com.azure.resourcemanager.mediaservices.models.AccountEncryption&text=AccountEncryption\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "MediaServiceProperties.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Media<wbr>Service<wbr>Properties from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static MediaServiceProperties fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the MediaServiceProperties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of MediaServiceProperties from the JsonReader."
+  returns:
+    description: "An instance of MediaServiceProperties if the JsonReader was pointing to an instance of it, or null if it\n was pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties?alt=com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties&text=MediaServiceProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties.keyDelivery()"
   fullName: "com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties.keyDelivery()"
   name: "keyDelivery()"
@@ -60,6 +79,16 @@ methods:
   returns:
     description: "the mediaServiceId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html\">UUID</a>"
+- uid: "com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties.minimumTlsVersion()"
+  fullName: "com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties.minimumTlsVersion()"
+  name: "minimumTlsVersion()"
+  nameWithType: "MediaServiceProperties.minimumTlsVersion()"
+  summary: "Get the minimum<wbr>Tls<wbr>Version property: The minimum TLS version allowed for this account's requests."
+  syntax: "public MinimumTlsVersion minimumTlsVersion()"
+  desc: "Get the minimumTlsVersion property: The minimum TLS version allowed for this account's requests. This is an optional property. If unspecified, a secure default value will be used."
+  returns:
+    description: "the minimumTlsVersion value."
+    type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.MinimumTlsVersion?alt=com.azure.resourcemanager.mediaservices.models.MinimumTlsVersion&text=MinimumTlsVersion\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties.privateEndpointConnections()"
   fullName: "com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties.privateEndpointConnections()"
   name: "privateEndpointConnections()"
@@ -110,6 +139,18 @@ methods:
   returns:
     description: "the storageAuthentication value."
     type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.StorageAuthentication?alt=com.azure.resourcemanager.mediaservices.models.StorageAuthentication&text=StorageAuthentication\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "MediaServiceProperties.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties.validate()"
   fullName: "com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties.validate()"
   name: "validate()"
@@ -142,6 +183,20 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.KeyDelivery?alt=com.azure.resourcemanager.mediaservices.models.KeyDelivery&text=KeyDelivery\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public MediaServiceProperties withKeyDelivery(KeyDelivery keyDelivery)"
   desc: "Set the keyDelivery property: The Key Delivery properties for Media Services account."
+  returns:
+    description: "the MediaServiceProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties?alt=com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties&text=MediaServiceProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties.withMinimumTlsVersion(com.azure.resourcemanager.mediaservices.models.MinimumTlsVersion)"
+  fullName: "com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties.withMinimumTlsVersion(MinimumTlsVersion minimumTlsVersion)"
+  name: "withMinimumTlsVersion(MinimumTlsVersion minimumTlsVersion)"
+  nameWithType: "MediaServiceProperties.withMinimumTlsVersion(MinimumTlsVersion minimumTlsVersion)"
+  summary: "Set the minimum<wbr>Tls<wbr>Version property: The minimum TLS version allowed for this account's requests."
+  parameters:
+  - description: "the minimumTlsVersion value to set."
+    name: "minimumTlsVersion"
+    type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.MinimumTlsVersion?alt=com.azure.resourcemanager.mediaservices.models.MinimumTlsVersion&text=MinimumTlsVersion\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public MediaServiceProperties withMinimumTlsVersion(MinimumTlsVersion minimumTlsVersion)"
+  desc: "Set the minimumTlsVersion property: The minimum TLS version allowed for this account's requests. This is an optional property. If unspecified, a secure default value will be used."
   returns:
     description: "the MediaServiceProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties?alt=com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties&text=MediaServiceProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -189,6 +244,8 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties?alt=com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties&text=MediaServiceProperties\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Properties of the Media Services account."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties?alt=com.azure.resourcemanager.mediaservices.fluent.models.MediaServiceProperties&text=MediaServiceProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.mediaservices.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-mediaservices:2.3.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-mediaservices:2.4.0

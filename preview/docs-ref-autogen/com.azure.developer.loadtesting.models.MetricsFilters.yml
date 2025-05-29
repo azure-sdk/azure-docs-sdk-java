@@ -1,0 +1,94 @@
+### YamlMime:JavaType
+uid: "com.azure.developer.loadtesting.models.MetricsFilters"
+fullName: "com.azure.developer.loadtesting.models.MetricsFilters"
+name: "MetricsFilters"
+nameWithType: "MetricsFilters"
+summary: "Filters to fetch the set of metric."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **MetricsFilters**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.developer.loadtesting.models.MetricsFilters?alt=com.azure.developer.loadtesting.models.MetricsFilters&text=MetricsFilters\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.developer.loadtesting.models.MetricsFilters.MetricsFilters()"
+  fullName: "com.azure.developer.loadtesting.models.MetricsFilters.MetricsFilters()"
+  name: "MetricsFilters()"
+  nameWithType: "MetricsFilters.MetricsFilters()"
+  summary: "Creates an instance of Metrics<wbr>Filters class."
+  syntax: "public MetricsFilters()"
+  desc: "Creates an instance of MetricsFilters class."
+methods:
+- uid: "com.azure.developer.loadtesting.models.MetricsFilters.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.developer.loadtesting.models.MetricsFilters.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "MetricsFilters.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Metrics<wbr>Filters from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static MetricsFilters fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the MetricsFilters."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of MetricsFilters from the JsonReader."
+  returns:
+    description: "An instance of MetricsFilters if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.developer.loadtesting.models.MetricsFilters?alt=com.azure.developer.loadtesting.models.MetricsFilters&text=MetricsFilters\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.developer.loadtesting.models.MetricsFilters.getFilters()"
+  fullName: "com.azure.developer.loadtesting.models.MetricsFilters.getFilters()"
+  name: "getFilters()"
+  nameWithType: "MetricsFilters.getFilters()"
+  summary: "Get the filters property: Get metrics for specific dimension values."
+  syntax: "public List<DimensionFilter> getFilters()"
+  desc: "Get the filters property: Get metrics for specific dimension values. Example: Metric contains dimension like SamplerName, Error. To retrieve all the time series data where SamplerName is equals to HTTPRequest1 or HTTPRequest2, the DimensionFilter value will be \\{\"SamplerName\", \\[\"HTTPRequest1\", \"HTTPRequest2\"\\}."
+  returns:
+    description: "the filters value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.developer.loadtesting.models.DimensionFilter?alt=com.azure.developer.loadtesting.models.DimensionFilter&text=DimensionFilter\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.developer.loadtesting.models.MetricsFilters.setFilters(java.util.List<com.azure.developer.loadtesting.models.DimensionFilter>)"
+  fullName: "com.azure.developer.loadtesting.models.MetricsFilters.setFilters(List<DimensionFilter> filters)"
+  name: "setFilters(List<DimensionFilter> filters)"
+  nameWithType: "MetricsFilters.setFilters(List<DimensionFilter> filters)"
+  summary: "Set the filters property: Get metrics for specific dimension values."
+  parameters:
+  - description: "the filters value to set."
+    name: "filters"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.developer.loadtesting.models.DimensionFilter?alt=com.azure.developer.loadtesting.models.DimensionFilter&text=DimensionFilter\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public MetricsFilters setFilters(List<DimensionFilter> filters)"
+  desc: "Set the filters property: Get metrics for specific dimension values. Example: Metric contains dimension like SamplerName, Error. To retrieve all the time series data where SamplerName is equals to HTTPRequest1 or HTTPRequest2, the DimensionFilter value will be \\{\"SamplerName\", \\[\"HTTPRequest1\", \"HTTPRequest2\"\\}."
+  returns:
+    description: "the MetricsFilters object itself."
+    type: "<xref href=\"com.azure.developer.loadtesting.models.MetricsFilters?alt=com.azure.developer.loadtesting.models.MetricsFilters&text=MetricsFilters\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.developer.loadtesting.models.MetricsFilters.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.developer.loadtesting.models.MetricsFilters.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "MetricsFilters.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Filters to fetch the set of metric."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.developer.loadtesting.models.MetricsFilters?alt=com.azure.developer.loadtesting.models.MetricsFilters&text=MetricsFilters\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.developer.loadtesting.models"
+artifact: com.azure:azure-developer-loadtesting:1.1.0-beta.1

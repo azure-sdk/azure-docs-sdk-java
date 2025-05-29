@@ -20,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **LiveEventInput**"
+syntax: "public final class **LiveEventInput**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.mediaservices.models.LiveEventInput?alt=com.azure.resourcemanager.mediaservices.models.LiveEventInput&text=LiveEventInput\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.mediaservices.models.LiveEventInput.LiveEventInput()"
   fullName: "com.azure.resourcemanager.mediaservices.models.LiveEventInput.LiveEventInput()"
@@ -60,6 +60,25 @@ methods:
   returns:
     description: "the endpoints value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.mediaservices.models.LiveEventEndpoint?alt=com.azure.resourcemanager.mediaservices.models.LiveEventEndpoint&text=LiveEventEndpoint\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.mediaservices.models.LiveEventInput.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.mediaservices.models.LiveEventInput.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "LiveEventInput.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Live<wbr>Event<wbr>Input from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static LiveEventInput fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of LiveEventInput from the JsonReader."
+  returns:
+    description: "An instance of LiveEventInput if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.LiveEventInput?alt=com.azure.resourcemanager.mediaservices.models.LiveEventInput&text=LiveEventInput\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.mediaservices.models.LiveEventInput.keyFrameIntervalDuration()"
   fullName: "com.azure.resourcemanager.mediaservices.models.LiveEventInput.keyFrameIntervalDuration()"
   name: "keyFrameIntervalDuration()"
@@ -80,6 +99,28 @@ methods:
   returns:
     description: "the streamingProtocol value."
     type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.LiveEventInputProtocol?alt=com.azure.resourcemanager.mediaservices.models.LiveEventInputProtocol&text=LiveEventInputProtocol\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.mediaservices.models.LiveEventInput.timedMetadataEndpoints()"
+  fullName: "com.azure.resourcemanager.mediaservices.models.LiveEventInput.timedMetadataEndpoints()"
+  name: "timedMetadataEndpoints()"
+  nameWithType: "LiveEventInput.timedMetadataEndpoints()"
+  summary: "Get the timed<wbr>Metadata<wbr>Endpoints property: The metadata endpoints for the live event."
+  syntax: "public List<LiveEventTimedMetadataEndpoint> timedMetadataEndpoints()"
+  desc: "Get the timedMetadataEndpoints property: The metadata endpoints for the live event."
+  returns:
+    description: "the timedMetadataEndpoints value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.mediaservices.models.LiveEventTimedMetadataEndpoint?alt=com.azure.resourcemanager.mediaservices.models.LiveEventTimedMetadataEndpoint&text=LiveEventTimedMetadataEndpoint\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.mediaservices.models.LiveEventInput.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.mediaservices.models.LiveEventInput.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "LiveEventInput.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.mediaservices.models.LiveEventInput.validate()"
   fullName: "com.azure.resourcemanager.mediaservices.models.LiveEventInput.validate()"
   name: "validate()"
@@ -157,8 +198,24 @@ methods:
   returns:
     description: "the LiveEventInput object itself."
     type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.LiveEventInput?alt=com.azure.resourcemanager.mediaservices.models.LiveEventInput&text=LiveEventInput\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.mediaservices.models.LiveEventInput.withTimedMetadataEndpoints(java.util.List<com.azure.resourcemanager.mediaservices.models.LiveEventTimedMetadataEndpoint>)"
+  fullName: "com.azure.resourcemanager.mediaservices.models.LiveEventInput.withTimedMetadataEndpoints(List<LiveEventTimedMetadataEndpoint> timedMetadataEndpoints)"
+  name: "withTimedMetadataEndpoints(List<LiveEventTimedMetadataEndpoint> timedMetadataEndpoints)"
+  nameWithType: "LiveEventInput.withTimedMetadataEndpoints(List<LiveEventTimedMetadataEndpoint> timedMetadataEndpoints)"
+  summary: "Set the timed<wbr>Metadata<wbr>Endpoints property: The metadata endpoints for the live event."
+  parameters:
+  - description: "the timedMetadataEndpoints value to set."
+    name: "timedMetadataEndpoints"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.mediaservices.models.LiveEventTimedMetadataEndpoint?alt=com.azure.resourcemanager.mediaservices.models.LiveEventTimedMetadataEndpoint&text=LiveEventTimedMetadataEndpoint\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public LiveEventInput withTimedMetadataEndpoints(List<LiveEventTimedMetadataEndpoint> timedMetadataEndpoints)"
+  desc: "Set the timedMetadataEndpoints property: The metadata endpoints for the live event."
+  returns:
+    description: "the LiveEventInput object itself."
+    type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.LiveEventInput?alt=com.azure.resourcemanager.mediaservices.models.LiveEventInput&text=LiveEventInput\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "The live event input."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.mediaservices.models.LiveEventInput?alt=com.azure.resourcemanager.mediaservices.models.LiveEventInput&text=LiveEventInput\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.mediaservices.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-mediaservices:2.3.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-mediaservices:2.4.0

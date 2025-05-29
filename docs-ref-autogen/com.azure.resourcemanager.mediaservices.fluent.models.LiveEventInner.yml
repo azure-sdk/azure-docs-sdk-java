@@ -16,8 +16,10 @@ inheritedClassMethods:
   - "<xref href=\"com.azure.core.management.ProxyResource.type()?alt=com.azure.core.management.ProxyResource.type&text=type\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "<xref href=\"com.azure.core.management.Resource?alt=com.azure.core.management.Resource&text=Resource\" data-throw-if-not-resolved=\"False\" />"
   methodsRef:
+  - "<xref href=\"com.azure.core.management.Resource.fromJson(com.azure.json.JsonReader)?alt=com.azure.core.management.Resource.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.management.Resource.location()?alt=com.azure.core.management.Resource.location&text=location\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.management.Resource.tags()?alt=com.azure.core.management.Resource.tags&text=tags\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.Resource.toJson(com.azure.json.JsonWriter)?alt=com.azure.core.management.Resource.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.management.Resource.withLocation(java.lang.String)?alt=com.azure.core.management.Resource.withLocation&text=withLocation\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.management.Resource.withTags(java.util.Map<java.lang.String,java.lang.String>)?alt=com.azure.core.management.Resource.withTags&text=withTags\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
@@ -83,6 +85,25 @@ methods:
   returns:
     description: "the encoding value."
     type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.LiveEventEncoding?alt=com.azure.resourcemanager.mediaservices.models.LiveEventEncoding&text=LiveEventEncoding\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.mediaservices.fluent.models.LiveEventInner.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.mediaservices.fluent.models.LiveEventInner.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "LiveEventInner.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Live<wbr>Event<wbr>Inner from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static LiveEventInner fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of LiveEventInner from the JsonReader."
+  returns:
+    description: "An instance of LiveEventInner if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.mediaservices.fluent.models.LiveEventInner?alt=com.azure.resourcemanager.mediaservices.fluent.models.LiveEventInner&text=LiveEventInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.mediaservices.fluent.models.LiveEventInner.hostnamePrefix()"
   fullName: "com.azure.resourcemanager.mediaservices.fluent.models.LiveEventInner.hostnamePrefix()"
   name: "hostnamePrefix()"
@@ -92,6 +113,17 @@ methods:
   desc: "Get the hostnamePrefix property: When useStaticHostname is set to true, the hostnamePrefix specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center."
   returns:
     description: "the hostnamePrefix value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.mediaservices.fluent.models.LiveEventInner.id()"
+  fullName: "com.azure.resourcemanager.mediaservices.fluent.models.LiveEventInner.id()"
+  name: "id()"
+  nameWithType: "LiveEventInner.id()"
+  summary: "Get the id property: Fully qualified resource Id for the resource."
+  overridden: "com.azure.core.management.ProxyResource.id()"
+  syntax: "public String id()"
+  desc: "Get the id property: Fully qualified resource Id for the resource."
+  returns:
+    description: "the id value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.mediaservices.fluent.models.LiveEventInner.input()"
   fullName: "com.azure.resourcemanager.mediaservices.fluent.models.LiveEventInner.input()"
@@ -113,6 +145,17 @@ methods:
   returns:
     description: "the lastModified value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
+- uid: "com.azure.resourcemanager.mediaservices.fluent.models.LiveEventInner.name()"
+  fullName: "com.azure.resourcemanager.mediaservices.fluent.models.LiveEventInner.name()"
+  name: "name()"
+  nameWithType: "LiveEventInner.name()"
+  summary: "Get the name property: The name of the resource."
+  overridden: "com.azure.core.management.ProxyResource.name()"
+  syntax: "public String name()"
+  desc: "Get the name property: The name of the resource."
+  returns:
+    description: "the name value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.mediaservices.fluent.models.LiveEventInner.preview()"
   fullName: "com.azure.resourcemanager.mediaservices.fluent.models.LiveEventInner.preview()"
   name: "preview()"
@@ -163,6 +206,19 @@ methods:
   returns:
     description: "the systemData value."
     type: "<xref href=\"com.azure.core.management.SystemData?alt=com.azure.core.management.SystemData&text=SystemData\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.mediaservices.fluent.models.LiveEventInner.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.mediaservices.fluent.models.LiveEventInner.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "LiveEventInner.toJson(JsonWriter jsonWriter)"
+  overridden: "com.azure.core.management.Resource.toJson(com.azure.json.JsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.mediaservices.fluent.models.LiveEventInner.transcriptions()"
   fullName: "com.azure.resourcemanager.mediaservices.fluent.models.LiveEventInner.transcriptions()"
   name: "transcriptions()"
@@ -173,6 +229,17 @@ methods:
   returns:
     description: "the transcriptions value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.mediaservices.models.LiveEventTranscription?alt=com.azure.resourcemanager.mediaservices.models.LiveEventTranscription&text=LiveEventTranscription\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.mediaservices.fluent.models.LiveEventInner.type()"
+  fullName: "com.azure.resourcemanager.mediaservices.fluent.models.LiveEventInner.type()"
+  name: "type()"
+  nameWithType: "LiveEventInner.type()"
+  summary: "Get the type property: The type of the resource."
+  overridden: "com.azure.core.management.ProxyResource.type()"
+  syntax: "public String type()"
+  desc: "Get the type property: The type of the resource."
+  returns:
+    description: "the type value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.mediaservices.fluent.models.LiveEventInner.useStaticHostname()"
   fullName: "com.azure.resourcemanager.mediaservices.fluent.models.LiveEventInner.useStaticHostname()"
   name: "useStaticHostname()"
@@ -342,4 +409,4 @@ type: "class"
 desc: "The live event."
 metadata: {}
 package: "com.azure.resourcemanager.mediaservices.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-mediaservices:2.3.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-mediaservices:2.4.0

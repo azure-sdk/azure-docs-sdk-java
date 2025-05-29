@@ -78,7 +78,7 @@ methods:
     name: "parameters"
     type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.ListEdgePoliciesInput?alt=com.azure.resourcemanager.mediaservices.models.ListEdgePoliciesInput&text=ListEdgePoliciesInput\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract EdgePolicies listEdgePolicies(ListEdgePoliciesInput parameters)"
-  desc: "List the media edge policies associated with the Media Services account.\n\nList all the media edge policies associated with the Media Services account."
+  desc: "List the media edge policies associated with the Media Services account. List all the media edge policies associated with the Media Services account."
   returns:
     description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.EdgePolicies?alt=com.azure.resourcemanager.mediaservices.models.EdgePolicies&text=EdgePolicies\" data-throw-if-not-resolved=\"False\" />"
@@ -97,7 +97,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<EdgePolicies> listEdgePoliciesWithResponse(ListEdgePoliciesInput parameters, Context context)"
-  desc: "List the media edge policies associated with the Media Services account.\n\nList all the media edge policies associated with the Media Services account."
+  desc: "List the media edge policies associated with the Media Services account. List all the media edge policies associated with the Media Services account."
   returns:
     description: "the response body along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.mediaservices.models.EdgePolicies?alt=com.azure.resourcemanager.mediaservices.models.EdgePolicies&text=EdgePolicies\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -125,6 +125,18 @@ methods:
   returns:
     description: "the mediaServiceId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html\">UUID</a>"
+- uid: "com.azure.resourcemanager.mediaservices.models.MediaService.minimumTlsVersion()"
+  fullName: "com.azure.resourcemanager.mediaservices.models.MediaService.minimumTlsVersion()"
+  name: "minimumTlsVersion()"
+  nameWithType: "MediaService.minimumTlsVersion()"
+  summary: "Gets the minimum<wbr>Tls<wbr>Version property: The minimum TLS version allowed for this account's requests."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract MinimumTlsVersion minimumTlsVersion()"
+  desc: "Gets the minimumTlsVersion property: The minimum TLS version allowed for this account's requests. This is an optional property. If unspecified, a secure default value will be used."
+  returns:
+    description: "the minimumTlsVersion value."
+    type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.MinimumTlsVersion?alt=com.azure.resourcemanager.mediaservices.models.MinimumTlsVersion&text=MinimumTlsVersion\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.mediaservices.models.MediaService.name()"
   fullName: "com.azure.resourcemanager.mediaservices.models.MediaService.name()"
   name: "name()"
@@ -265,7 +277,7 @@ methods:
   fullName: "com.azure.resourcemanager.mediaservices.models.MediaService.syncStorageKeys(SyncStorageKeysInput parameters)"
   name: "syncStorageKeys(SyncStorageKeysInput parameters)"
   nameWithType: "MediaService.syncStorageKeys(SyncStorageKeysInput parameters)"
-  summary: "Synchronizes Storage Account Keys"
+  summary: "Synchronizes Storage Account Keys Synchronizes storage account keys for a storage account associated with the Media Service account."
   modifiers:
   - "abstract"
   parameters:
@@ -273,12 +285,12 @@ methods:
     name: "parameters"
     type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.SyncStorageKeysInput?alt=com.azure.resourcemanager.mediaservices.models.SyncStorageKeysInput&text=SyncStorageKeysInput\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract void syncStorageKeys(SyncStorageKeysInput parameters)"
-  desc: "Synchronizes Storage Account Keys\n\nSynchronizes storage account keys for a storage account associated with the Media Service account."
+  desc: "Synchronizes Storage Account Keys Synchronizes storage account keys for a storage account associated with the Media Service account."
 - uid: "com.azure.resourcemanager.mediaservices.models.MediaService.syncStorageKeysWithResponse(com.azure.resourcemanager.mediaservices.models.SyncStorageKeysInput,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.mediaservices.models.MediaService.syncStorageKeysWithResponse(SyncStorageKeysInput parameters, Context context)"
   name: "syncStorageKeysWithResponse(SyncStorageKeysInput parameters, Context context)"
   nameWithType: "MediaService.syncStorageKeysWithResponse(SyncStorageKeysInput parameters, Context context)"
-  summary: "Synchronizes Storage Account Keys"
+  summary: "Synchronizes Storage Account Keys Synchronizes storage account keys for a storage account associated with the Media Service account."
   modifiers:
   - "abstract"
   parameters:
@@ -289,7 +301,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<Void> syncStorageKeysWithResponse(SyncStorageKeysInput parameters, Context context)"
-  desc: "Synchronizes Storage Account Keys\n\nSynchronizes storage account keys for a storage account associated with the Media Service account."
+  desc: "Synchronizes Storage Account Keys Synchronizes storage account keys for a storage account associated with the Media Service account."
   returns:
     description: "the <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
@@ -345,4 +357,4 @@ type: "interface"
 desc: "An immutable client-side representation of MediaService."
 metadata: {}
 package: "com.azure.resourcemanager.mediaservices.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-mediaservices:2.3.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-mediaservices:2.4.0

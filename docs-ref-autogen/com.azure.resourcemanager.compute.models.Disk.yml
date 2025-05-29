@@ -30,6 +30,54 @@ methods:
   returns:
     description: "the disk creation method"
     type: "<xref href=\"com.azure.resourcemanager.compute.models.DiskCreateOption?alt=com.azure.resourcemanager.compute.models.DiskCreateOption&text=DiskCreateOption\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.compute.models.Disk.diskIopsReadOnly()"
+  fullName: "com.azure.resourcemanager.compute.models.Disk.diskIopsReadOnly()"
+  name: "diskIopsReadOnly()"
+  nameWithType: "Disk.diskIopsReadOnly()"
+  summary: "Gets the total number of IOPS allowed across all VMs mounting this shared disk as read-only."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Long diskIopsReadOnly()"
+  desc: "Gets the total number of IOPS allowed across all VMs mounting this shared disk as read-only."
+  returns:
+    description: "the total number of IOPS allowed for this shared read-only disk."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
+- uid: "com.azure.resourcemanager.compute.models.Disk.diskIopsReadWrite()"
+  fullName: "com.azure.resourcemanager.compute.models.Disk.diskIopsReadWrite()"
+  name: "diskIopsReadWrite()"
+  nameWithType: "Disk.diskIopsReadWrite()"
+  summary: "Gets the number of IOPS allowed for this disk."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Long diskIopsReadWrite()"
+  desc: "Gets the number of IOPS allowed for this disk."
+  returns:
+    description: "the number of IOPS allowed for this disk."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
+- uid: "com.azure.resourcemanager.compute.models.Disk.diskMBpsReadOnly()"
+  fullName: "com.azure.resourcemanager.compute.models.Disk.diskMBpsReadOnly()"
+  name: "diskMBpsReadOnly()"
+  nameWithType: "Disk.diskMBpsReadOnly()"
+  summary: "Gets the total throughput (MBps) allowed across all VMs mounting this shared disk as read-only."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Long diskMBpsReadOnly()"
+  desc: "Gets the total throughput (MBps) allowed across all VMs mounting this shared disk as read-only."
+  returns:
+    description: "the total throughput (MBps) allowed for this shared read-only disk."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
+- uid: "com.azure.resourcemanager.compute.models.Disk.diskMBpsReadWrite()"
+  fullName: "com.azure.resourcemanager.compute.models.Disk.diskMBpsReadWrite()"
+  name: "diskMBpsReadWrite()"
+  nameWithType: "Disk.diskMBpsReadWrite()"
+  summary: "Gets the throughput (MBps) allowed for this disk."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Long diskMBpsReadWrite()"
+  desc: "Gets the throughput (MBps) allowed for this disk."
+  returns:
+    description: "the throughput (MBps) allowed for this disk."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
 - uid: "com.azure.resourcemanager.compute.models.Disk.encryption()"
   fullName: "com.azure.resourcemanager.compute.models.Disk.encryption()"
   name: "encryption()"
@@ -134,6 +182,18 @@ methods:
   returns:
     description: "logical sector size in bytes for Premium SSD v2 and Ultra disks."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+- uid: "com.azure.resourcemanager.compute.models.Disk.maximumShares()"
+  fullName: "com.azure.resourcemanager.compute.models.Disk.maximumShares()"
+  name: "maximumShares()"
+  nameWithType: "Disk.maximumShares()"
+  summary: "Gets the maximum number of VMs that can attach to the disk at the same time."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract int maximumShares()"
+  desc: "Gets the maximum number of VMs that can attach to the disk at the same time."
+  returns:
+    description: "the maximum number of VMs that can attach to the disk at the same time."
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.compute.models.Disk.osType()"
   fullName: "com.azure.resourcemanager.compute.models.Disk.osType()"
   name: "osType()"
@@ -235,10 +295,22 @@ methods:
   modifiers:
   - "abstract"
   syntax: "public abstract String virtualMachineId()"
-  desc: "Gets the resource ID of the virtual machine this disk is attached to."
+  desc: "Gets the resource ID of the virtual machine this disk is attached to.\n\nIf the disk can be shared, use <xref uid=\"com.azure.resourcemanager.compute.models.Disk.virtualMachineIds()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#virtualMachineIds()\"></xref> to get the list of all virtual machines."
   returns:
     description: "the resource ID of the virtual machine this disk is attached to, or null if the disk is in a detached\n     state"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.compute.models.Disk.virtualMachineIds()"
+  fullName: "com.azure.resourcemanager.compute.models.Disk.virtualMachineIds()"
+  name: "virtualMachineIds()"
+  nameWithType: "Disk.virtualMachineIds()"
+  summary: "Gets the list of the virtual machines that this disk is attached to."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract List<String> virtualMachineIds()"
+  desc: "Gets the list of the virtual machines that this disk is attached to.\n\nA disk could be attached to multiple virtual machines."
+  returns:
+    description: "the resource ID of the virtual machines this disk is attached to"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 type: "interface"
 desc: "An immutable client-side representation of an Azure managed disk."
 implements:
@@ -247,4 +319,4 @@ implements:
 - "<xref href=\"com.azure.resourcemanager.resources.fluentcore.model.Updatable?alt=com.azure.resourcemanager.resources.fluentcore.model.Updatable&text=Updatable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.compute.models.Disk.Update?alt=com.azure.resourcemanager.compute.models.Disk.Update&text=Update\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.compute.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.50.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.51.0

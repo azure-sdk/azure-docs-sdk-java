@@ -1,0 +1,77 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.compute.models.Disk.DefinitionStages.WithIopsThroughput"
+fullName: "com.azure.resourcemanager.compute.models.Disk.DefinitionStages.WithIopsThroughput"
+name: "Disk.DefinitionStages.WithIopsThroughput"
+nameWithType: "Disk.DefinitionStages.WithIopsThroughput"
+summary: "The stage of disk definition allowing to configure IOPS and throughput settings."
+syntax: "public static interface **Disk.DefinitionStages.WithIopsThroughput**"
+methods:
+- uid: "com.azure.resourcemanager.compute.models.Disk.DefinitionStages.WithIopsThroughput.withIopsReadOnly(long)"
+  fullName: "com.azure.resourcemanager.compute.models.Disk.DefinitionStages.WithIopsThroughput.withIopsReadOnly(long diskIopsReadOnly)"
+  name: "withIopsReadOnly(long diskIopsReadOnly)"
+  nameWithType: "Disk.DefinitionStages.WithIopsThroughput.withIopsReadOnly(long diskIopsReadOnly)"
+  summary: "Sets the total number of IOPS allowed across all VMs mounting this shared disk as read-only."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The total number of IOPS allowed across all VMs mounting this shared disk as read-only. One operation can transfer between 4k and 256k bytes."
+    name: "diskIopsReadOnly"
+    type: "<xref href=\"long?alt=long&text=long\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Disk.DefinitionStages.WithCreate withIopsReadOnly(long diskIopsReadOnly)"
+  desc: "Sets the total number of IOPS allowed across all VMs mounting this shared disk as read-only. It is only settable for UltraSSD disks or Premium SSD v2 disks."
+  returns:
+    description: "the next stage of the definition"
+    type: "<xref href=\"com.azure.resourcemanager.compute.models.Disk.DefinitionStages.WithCreate?alt=com.azure.resourcemanager.compute.models.Disk.DefinitionStages.WithCreate&text=WithCreate\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.compute.models.Disk.DefinitionStages.WithIopsThroughput.withIopsReadWrite(long)"
+  fullName: "com.azure.resourcemanager.compute.models.Disk.DefinitionStages.WithIopsThroughput.withIopsReadWrite(long diskIopsReadWrite)"
+  name: "withIopsReadWrite(long diskIopsReadWrite)"
+  nameWithType: "Disk.DefinitionStages.WithIopsThroughput.withIopsReadWrite(long diskIopsReadWrite)"
+  summary: "Sets the number of IOPS allowed for this disk."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The number of IOPS allowed for this disk. One operation can transfer between 4k and 256k bytes."
+    name: "diskIopsReadWrite"
+    type: "<xref href=\"long?alt=long&text=long\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Disk.DefinitionStages.WithCreate withIopsReadWrite(long diskIopsReadWrite)"
+  desc: "Sets the number of IOPS allowed for this disk. It is only settable for UltraSSD disks or Premium SSD v2 disks."
+  returns:
+    description: "the next stage of the definition"
+    type: "<xref href=\"com.azure.resourcemanager.compute.models.Disk.DefinitionStages.WithCreate?alt=com.azure.resourcemanager.compute.models.Disk.DefinitionStages.WithCreate&text=WithCreate\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.compute.models.Disk.DefinitionStages.WithIopsThroughput.withMBpsReadOnly(long)"
+  fullName: "com.azure.resourcemanager.compute.models.Disk.DefinitionStages.WithIopsThroughput.withMBpsReadOnly(long diskMBpsReadOnly)"
+  name: "withMBpsReadOnly(long diskMBpsReadOnly)"
+  nameWithType: "Disk.DefinitionStages.WithIopsThroughput.withMBpsReadOnly(long diskMBpsReadOnly)"
+  summary: "Sets the total throughput (MBps) allowed across all VMs mounting this shared disk as read-only."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The total throughput (MBps) allowed across all VMs mounting this shared disk as read-only."
+    name: "diskMBpsReadOnly"
+    type: "<xref href=\"long?alt=long&text=long\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Disk.DefinitionStages.WithCreate withMBpsReadOnly(long diskMBpsReadOnly)"
+  desc: "Sets the total throughput (MBps) allowed across all VMs mounting this shared disk as read-only. It is only settable for UltraSSD disks or Premium SSD v2 disks."
+  returns:
+    description: "the next stage of the definition"
+    type: "<xref href=\"com.azure.resourcemanager.compute.models.Disk.DefinitionStages.WithCreate?alt=com.azure.resourcemanager.compute.models.Disk.DefinitionStages.WithCreate&text=WithCreate\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.compute.models.Disk.DefinitionStages.WithIopsThroughput.withMBpsReadWrite(long)"
+  fullName: "com.azure.resourcemanager.compute.models.Disk.DefinitionStages.WithIopsThroughput.withMBpsReadWrite(long diskMBpsReadWrite)"
+  name: "withMBpsReadWrite(long diskMBpsReadWrite)"
+  nameWithType: "Disk.DefinitionStages.WithIopsThroughput.withMBpsReadWrite(long diskMBpsReadWrite)"
+  summary: "Sets the throughput (MBps) allowed for this disk."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The bandwidth allowed for this disk."
+    name: "diskMBpsReadWrite"
+    type: "<xref href=\"long?alt=long&text=long\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Disk.DefinitionStages.WithCreate withMBpsReadWrite(long diskMBpsReadWrite)"
+  desc: "Sets the throughput (MBps) allowed for this disk. It is only settable for UltraSSD disks or Premium SSD v2 disks."
+  returns:
+    description: "the next stage of the definition"
+    type: "<xref href=\"com.azure.resourcemanager.compute.models.Disk.DefinitionStages.WithCreate?alt=com.azure.resourcemanager.compute.models.Disk.DefinitionStages.WithCreate&text=WithCreate\" data-throw-if-not-resolved=\"False\" />"
+type: "interface"
+desc: "The stage of disk definition allowing to configure IOPS and throughput settings."
+metadata: {}
+package: "com.azure.resourcemanager.compute.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.51.0

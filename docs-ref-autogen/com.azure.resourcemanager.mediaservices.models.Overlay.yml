@@ -20,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public class **Overlay**"
+syntax: "public class **Overlay**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.mediaservices.models.Overlay?alt=com.azure.resourcemanager.mediaservices.models.Overlay&text=Overlay\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.mediaservices.models.Overlay.Overlay()"
   fullName: "com.azure.resourcemanager.mediaservices.models.Overlay.Overlay()"
@@ -70,6 +70,25 @@ methods:
   returns:
     description: "the fadeOutDuration value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
+- uid: "com.azure.resourcemanager.mediaservices.models.Overlay.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.mediaservices.models.Overlay.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "Overlay.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Overlay from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static Overlay fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of Overlay from the JsonReader."
+  returns:
+    description: "An instance of Overlay if the JsonReader was pointing to an instance of it, or null if it was pointing to\n JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.Overlay?alt=com.azure.resourcemanager.mediaservices.models.Overlay&text=Overlay\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.mediaservices.models.Overlay.inputLabel()"
   fullName: "com.azure.resourcemanager.mediaservices.models.Overlay.inputLabel()"
   name: "inputLabel()"
@@ -79,6 +98,16 @@ methods:
   desc: "Get the inputLabel property: The label of the job input which is to be used as an overlay. The Input must specify exactly one file. You can specify an image file in JPG, PNG, GIF or BMP format, or an audio file (such as a WAV, MP3, WMA or M4A file), or a video file. See https://aka.ms/mesformats for the complete list of supported audio and video file formats."
   returns:
     description: "the inputLabel value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.mediaservices.models.Overlay.odataType()"
+  fullName: "com.azure.resourcemanager.mediaservices.models.Overlay.odataType()"
+  name: "odataType()"
+  nameWithType: "Overlay.odataType()"
+  summary: "Get the odata<wbr>Type property: The discriminator for derived types."
+  syntax: "public String odataType()"
+  desc: "Get the odataType property: The discriminator for derived types."
+  returns:
+    description: "the odataType value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.mediaservices.models.Overlay.start()"
   fullName: "com.azure.resourcemanager.mediaservices.models.Overlay.start()"
@@ -90,6 +119,18 @@ methods:
   returns:
     description: "the start value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
+- uid: "com.azure.resourcemanager.mediaservices.models.Overlay.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.mediaservices.models.Overlay.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "Overlay.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.mediaservices.models.Overlay.validate()"
   fullName: "com.azure.resourcemanager.mediaservices.models.Overlay.validate()"
   name: "validate()"
@@ -183,6 +224,8 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.Overlay?alt=com.azure.resourcemanager.mediaservices.models.Overlay&text=Overlay\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Base type for all overlays - image, audio or video."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.mediaservices.models.Overlay?alt=com.azure.resourcemanager.mediaservices.models.Overlay&text=Overlay\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.mediaservices.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-mediaservices:2.3.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-mediaservices:2.4.0

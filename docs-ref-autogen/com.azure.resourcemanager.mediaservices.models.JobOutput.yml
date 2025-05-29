@@ -20,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public class **JobOutput**"
+syntax: "public class **JobOutput**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.mediaservices.models.JobOutput?alt=com.azure.resourcemanager.mediaservices.models.JobOutput&text=JobOutput\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.mediaservices.models.JobOutput.JobOutput()"
   fullName: "com.azure.resourcemanager.mediaservices.models.JobOutput.JobOutput()"
@@ -50,6 +50,25 @@ methods:
   returns:
     description: "the error value."
     type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.JobError?alt=com.azure.resourcemanager.mediaservices.models.JobError&text=JobError\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.mediaservices.models.JobOutput.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.mediaservices.models.JobOutput.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "JobOutput.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Job<wbr>Output from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static JobOutput fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the JobOutput."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of JobOutput from the JsonReader."
+  returns:
+    description: "An instance of JobOutput if the JsonReader was pointing to an instance of it, or null if it was pointing\n to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.JobOutput?alt=com.azure.resourcemanager.mediaservices.models.JobOutput&text=JobOutput\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.mediaservices.models.JobOutput.label()"
   fullName: "com.azure.resourcemanager.mediaservices.models.JobOutput.label()"
   name: "label()"
@@ -59,6 +78,16 @@ methods:
   desc: "Get the label property: A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of '\\{presetName\\}\\_\\{outputIndex\\}' will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform."
   returns:
     description: "the label value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.mediaservices.models.JobOutput.odataType()"
+  fullName: "com.azure.resourcemanager.mediaservices.models.JobOutput.odataType()"
+  name: "odataType()"
+  nameWithType: "JobOutput.odataType()"
+  summary: "Get the odata<wbr>Type property: The discriminator for derived types."
+  syntax: "public String odataType()"
+  desc: "Get the odataType property: The discriminator for derived types."
+  returns:
+    description: "the odataType value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.mediaservices.models.JobOutput.presetOverride()"
   fullName: "com.azure.resourcemanager.mediaservices.models.JobOutput.presetOverride()"
@@ -100,6 +129,18 @@ methods:
   returns:
     description: "the state value."
     type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.JobState?alt=com.azure.resourcemanager.mediaservices.models.JobState&text=JobState\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.mediaservices.models.JobOutput.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.mediaservices.models.JobOutput.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "JobOutput.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.mediaservices.models.JobOutput.validate()"
   fullName: "com.azure.resourcemanager.mediaservices.models.JobOutput.validate()"
   name: "validate()"
@@ -137,6 +178,8 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.mediaservices.models.JobOutput?alt=com.azure.resourcemanager.mediaservices.models.JobOutput&text=JobOutput\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Describes all the properties of a JobOutput."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.mediaservices.models.JobOutput?alt=com.azure.resourcemanager.mediaservices.models.JobOutput&text=JobOutput\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.mediaservices.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-mediaservices:2.3.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-mediaservices:2.4.0

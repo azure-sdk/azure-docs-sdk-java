@@ -16,8 +16,10 @@ inheritedClassMethods:
   - "<xref href=\"com.azure.core.management.ProxyResource.type()?alt=com.azure.core.management.ProxyResource.type&text=type\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "<xref href=\"com.azure.core.management.Resource?alt=com.azure.core.management.Resource&text=Resource\" data-throw-if-not-resolved=\"False\" />"
   methodsRef:
+  - "<xref href=\"com.azure.core.management.Resource.fromJson(com.azure.json.JsonReader)?alt=com.azure.core.management.Resource.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.management.Resource.location()?alt=com.azure.core.management.Resource.location&text=location\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.management.Resource.tags()?alt=com.azure.core.management.Resource.tags&text=tags\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.Resource.toJson(com.azure.json.JsonWriter)?alt=com.azure.core.management.Resource.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.management.Resource.withLocation(java.lang.String)?alt=com.azure.core.management.Resource.withLocation&text=withLocation\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.management.Resource.withTags(java.util.Map<java.lang.String,java.lang.String>)?alt=com.azure.core.management.Resource.withTags&text=withTags\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
@@ -143,6 +145,25 @@ methods:
   returns:
     description: "the freeTrialEndTime value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
+- uid: "com.azure.resourcemanager.mediaservices.fluent.models.StreamingEndpointInner.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.mediaservices.fluent.models.StreamingEndpointInner.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "StreamingEndpointInner.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Streaming<wbr>Endpoint<wbr>Inner from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static StreamingEndpointInner fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of StreamingEndpointInner from the JsonReader."
+  returns:
+    description: "An instance of StreamingEndpointInner if the JsonReader was pointing to an instance of it, or null if it\n was pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.mediaservices.fluent.models.StreamingEndpointInner?alt=com.azure.resourcemanager.mediaservices.fluent.models.StreamingEndpointInner&text=StreamingEndpointInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.mediaservices.fluent.models.StreamingEndpointInner.hostname()"
   fullName: "com.azure.resourcemanager.mediaservices.fluent.models.StreamingEndpointInner.hostname()"
   name: "hostname()"
@@ -152,6 +173,17 @@ methods:
   desc: "Get the hostname property: The streaming endpoint host name."
   returns:
     description: "the hostname value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.mediaservices.fluent.models.StreamingEndpointInner.id()"
+  fullName: "com.azure.resourcemanager.mediaservices.fluent.models.StreamingEndpointInner.id()"
+  name: "id()"
+  nameWithType: "StreamingEndpointInner.id()"
+  summary: "Get the id property: Fully qualified resource Id for the resource."
+  overridden: "com.azure.core.management.ProxyResource.id()"
+  syntax: "public String id()"
+  desc: "Get the id property: Fully qualified resource Id for the resource."
+  returns:
+    description: "the id value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.mediaservices.fluent.models.StreamingEndpointInner.lastModified()"
   fullName: "com.azure.resourcemanager.mediaservices.fluent.models.StreamingEndpointInner.lastModified()"
@@ -173,6 +205,17 @@ methods:
   returns:
     description: "the maxCacheAge value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
+- uid: "com.azure.resourcemanager.mediaservices.fluent.models.StreamingEndpointInner.name()"
+  fullName: "com.azure.resourcemanager.mediaservices.fluent.models.StreamingEndpointInner.name()"
+  name: "name()"
+  nameWithType: "StreamingEndpointInner.name()"
+  summary: "Get the name property: The name of the resource."
+  overridden: "com.azure.core.management.ProxyResource.name()"
+  syntax: "public String name()"
+  desc: "Get the name property: The name of the resource."
+  returns:
+    description: "the name value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.mediaservices.fluent.models.StreamingEndpointInner.provisioningState()"
   fullName: "com.azure.resourcemanager.mediaservices.fluent.models.StreamingEndpointInner.provisioningState()"
   name: "provisioningState()"
@@ -223,6 +266,30 @@ methods:
   returns:
     description: "the systemData value."
     type: "<xref href=\"com.azure.core.management.SystemData?alt=com.azure.core.management.SystemData&text=SystemData\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.mediaservices.fluent.models.StreamingEndpointInner.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.mediaservices.fluent.models.StreamingEndpointInner.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "StreamingEndpointInner.toJson(JsonWriter jsonWriter)"
+  overridden: "com.azure.core.management.Resource.toJson(com.azure.json.JsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.mediaservices.fluent.models.StreamingEndpointInner.type()"
+  fullName: "com.azure.resourcemanager.mediaservices.fluent.models.StreamingEndpointInner.type()"
+  name: "type()"
+  nameWithType: "StreamingEndpointInner.type()"
+  summary: "Get the type property: The type of the resource."
+  overridden: "com.azure.core.management.ProxyResource.type()"
+  syntax: "public String type()"
+  desc: "Get the type property: The type of the resource."
+  returns:
+    description: "the type value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.mediaservices.fluent.models.StreamingEndpointInner.validate()"
   fullName: "com.azure.resourcemanager.mediaservices.fluent.models.StreamingEndpointInner.validate()"
   name: "validate()"
@@ -410,4 +477,4 @@ type: "class"
 desc: "The streaming endpoint."
 metadata: {}
 package: "com.azure.resourcemanager.mediaservices.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-mediaservices:2.3.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-mediaservices:2.4.0

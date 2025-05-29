@@ -6,6 +6,25 @@ nameWithType: "ContainerGroup.DefinitionStages.WithPrivateImageRegistry"
 summary: "The stage of the container group definition allowing to specify a private image registry."
 syntax: "public static interface **ContainerGroup.DefinitionStages.WithPrivateImageRegistry**"
 methods:
+- uid: "com.azure.resourcemanager.containerinstance.models.ContainerGroup.DefinitionStages.WithPrivateImageRegistry.withPrivateImageRegistry(java.lang.String,com.azure.resourcemanager.msi.models.Identity)"
+  fullName: "com.azure.resourcemanager.containerinstance.models.ContainerGroup.DefinitionStages.WithPrivateImageRegistry.withPrivateImageRegistry(String server, Identity identity)"
+  name: "withPrivateImageRegistry(String server, Identity identity)"
+  nameWithType: "ContainerGroup.DefinitionStages.WithPrivateImageRegistry.withPrivateImageRegistry(String server, Identity identity)"
+  summary: "Specifies the private container image registry server login for the container group."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "Docker image registry server, without protocol such as \"http\" and \"https\""
+    name: "server"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "the managed identity (with \"acrpull\" role)"
+    name: "identity"
+    type: "<xref href=\"com.azure.resourcemanager.msi.models.Identity?alt=com.azure.resourcemanager.msi.models.Identity&text=Identity\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract ContainerGroup.DefinitionStages.WithPrivateImageRegistryOrVolume withPrivateImageRegistry(String server, Identity identity)"
+  desc: "Specifies the private container image registry server login for the container group."
+  returns:
+    description: "the next stage of the definition"
+    type: "<xref href=\"com.azure.resourcemanager.containerinstance.models.ContainerGroup.DefinitionStages.WithPrivateImageRegistryOrVolume?alt=com.azure.resourcemanager.containerinstance.models.ContainerGroup.DefinitionStages.WithPrivateImageRegistryOrVolume&text=WithPrivateImageRegistryOrVolume\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerinstance.models.ContainerGroup.DefinitionStages.WithPrivateImageRegistry.withPrivateImageRegistry(java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.containerinstance.models.ContainerGroup.DefinitionStages.WithPrivateImageRegistry.withPrivateImageRegistry(String server, String username, String password)"
   name: "withPrivateImageRegistry(String server, String username, String password)"
@@ -32,4 +51,4 @@ type: "interface"
 desc: "The stage of the container group definition allowing to specify a private image registry."
 metadata: {}
 package: "com.azure.resourcemanager.containerinstance.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerinstance:2.50.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerinstance:2.51.0
