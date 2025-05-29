@@ -1,7 +1,7 @@
 ---
 title: Azure API Center SDK for Java
 description: Reference for Azure API Center SDK for Java
-ms.date: 05/28/2025
+ms.date: 05/29/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: apicenter
