@@ -35,6 +35,22 @@ constructors:
     type: "<xref href=\"long?alt=long&text=long\" data-throw-if-not-resolved=\"False\" />"
   syntax: "protected SpeechConfig(long handleValue)"
   desc: "Internal constructor for speech configuration object."
+- uid: "com.microsoft.cognitiveservices.speech.SpeechConfig.SpeechConfig(long,com.azure.core.credential.TokenCredential)"
+  fullName: "com.microsoft.cognitiveservices.speech.SpeechConfig.SpeechConfig(long configPtr, TokenCredential tokenCredential)"
+  name: "SpeechConfig(long configPtr, TokenCredential tokenCredential)"
+  nameWithType: "SpeechConfig.SpeechConfig(long configPtr, TokenCredential tokenCredential)"
+  summary: "Creates a Speech<wbr>Config instance using the given configuration pointer and token credential."
+  modifiers:
+  - "protected"
+  parameters:
+  - description: "The pointer to the speech configuration."
+    name: "configPtr"
+    type: "<xref href=\"long?alt=long&text=long\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The TokenCredential for authentication."
+    name: "tokenCredential"
+    type: "<xref href=\"com.azure.core.credential.TokenCredential?alt=com.azure.core.credential.TokenCredential&text=TokenCredential\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "protected SpeechConfig(long configPtr, TokenCredential tokenCredential)"
+  desc: "Creates a SpeechConfig instance using the given configuration pointer and token credential."
 fields:
 - uid: "com.microsoft.cognitiveservices.speech.SpeechConfig.speechConfigClass"
   fullName: "com.microsoft.cognitiveservices.speech.SpeechConfig.speechConfigClass"
@@ -120,6 +136,25 @@ methods:
     type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static SpeechConfig fromEndpoint(URI endpoint, String subscriptionKey)"
   desc: "Creates an instance of the speech config with specified endpoint and subscription key. This method is intended only for users who use a non-standard service endpoint or parameters. Note: The query parameters specified in the endpoint URI are not changed, even if they are set by any other APIs. Whether a specific query parameter is supported or not, depends on the endpoint and scenario. For example, if the recognition language is defined in URI as query parameter \"language=de-DE\", and also set by setSpeechRecognitionLanguage(\"en-US\"), the language setting in URI takes precedence, and the effective language is \"de-DE\". The example only applies when the endpoint and scenario combination supports language as a query parameter. Only the parameters that are not specified in the endpoint URI can be set by other APIs. Note: To use an authorization token with fromEndpoint, please use fromEndpoint(java.net.URI), and then call setAuthorizationToken() on the created SpeechConfig instance."
+  returns:
+    description: "A speech config instance."
+    type: "<xref href=\"com.microsoft.cognitiveservices.speech.SpeechConfig?alt=com.microsoft.cognitiveservices.speech.SpeechConfig&text=SpeechConfig\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.cognitiveservices.speech.SpeechConfig.fromEndpoint(java.net.URI,com.azure.core.credential.TokenCredential)"
+  fullName: "com.microsoft.cognitiveservices.speech.SpeechConfig.fromEndpoint(URI endpoint, TokenCredential credential)"
+  name: "fromEndpoint(URI endpoint, TokenCredential credential)"
+  nameWithType: "SpeechConfig.fromEndpoint(URI endpoint, TokenCredential credential)"
+  summary: "Creates a speech configuration instance using a specified endpoint and AAD token credential."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The service endpoint with a custom domain. For more details, see: https://learn.microsoft.com/azure/ai-services/speech-service/speech-services-private-link?tabs=portal#create-a-custom-domain-name"
+    name: "endpoint"
+    type: "<xref href=\"java.net.URI?alt=java.net.URI&text=URI\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The AAD token credential used for authentication and token requests."
+    name: "credential"
+    type: "<xref href=\"com.azure.core.credential.TokenCredential?alt=com.azure.core.credential.TokenCredential&text=TokenCredential\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static SpeechConfig fromEndpoint(URI endpoint, TokenCredential credential)"
+  desc: "Creates a speech configuration instance using a specified endpoint and AAD token credential. Introduced in version 1.43.0. Note:This API is available for SpeechRecognizer, ConversationTranscriber and TranslationRecognizer. Note:This method requires a valid token credential. The authorization token is automatically refreshed before it expires. Note:Query parameters specified in the endpoint URI remain unchanged, even if modified through other APIs. The availability and support of specific query parameters depend on the endpoint and scenario. For example, if the URI contains the query parameter \"language=de-DE\", but the property SpeechRecognitionLanguage is set to \"en-US\", the URI setting takes precedence, and \"de-DE\" will be used as the recognition language. This behavior applies only when the endpoint and scenario combination supports language as a query parameter. Parameters not defined in the URI can be modified via other APIs. Note:If the endpoint requires authentication using a subscription key, use fromEndpoint(URI, String) to pass the key as a parameter. To authenticate with an authorization token, use fromEndpoint(URI), then set the AuthorizationToken property on the newly created SpeechConfig instance."
   returns:
     description: "A speech config instance."
     type: "<xref href=\"com.microsoft.cognitiveservices.speech.SpeechConfig?alt=com.microsoft.cognitiveservices.speech.SpeechConfig&text=SpeechConfig\" data-throw-if-not-resolved=\"False\" />"
@@ -285,6 +320,16 @@ methods:
   returns:
     description: "Returns the synthesis voice name."
     type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.cognitiveservices.speech.SpeechConfig.getTokenCredential()"
+  fullName: "com.microsoft.cognitiveservices.speech.SpeechConfig.getTokenCredential()"
+  name: "getTokenCredential()"
+  nameWithType: "SpeechConfig.getTokenCredential()"
+  summary: "Retrieves the Token<wbr>Credential used for authentication."
+  syntax: "public TokenCredential getTokenCredential()"
+  desc: "Retrieves the TokenCredential used for authentication."
+  returns:
+    description: "The TokenCredential instance."
+    type: "<xref href=\"com.azure.core.credential.TokenCredential?alt=com.azure.core.credential.TokenCredential&text=TokenCredential\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.microsoft.cognitiveservices.speech.SpeechConfig.requestWordLevelTimestamps()"
   fullName: "com.microsoft.cognitiveservices.speech.SpeechConfig.requestWordLevelTimestamps()"
   name: "requestWordLevelTimestamps()"
@@ -451,4 +496,4 @@ implements:
 - "<xref href=\"java.lang.AutoCloseable?alt=java.lang.AutoCloseable&text=AutoCloseable\" data-throw-if-not-resolved=\"False\" />"
 metadata: {}
 package: "com.microsoft.cognitiveservices.speech"
-artifact: com.microsoft.cognitiveservices.speech:client-sdk:1.43.0
+artifact: com.microsoft.cognitiveservices.speech:client-sdk:1.44.0

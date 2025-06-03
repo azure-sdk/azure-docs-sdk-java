@@ -115,6 +115,48 @@ constructors:
   syntax: "public SpeechSynthesizer(SpeechConfig speechConfig, AudioConfig audioConfig)"
   desc: "Creates a new instance of Speech Synthesizer. If audioConfig is null, there is no audio output."
 fields:
+- uid: "com.microsoft.cognitiveservices.speech.SpeechSynthesizer.AUTH_TOKEN_ERROR_PROPERTY"
+  fullName: "com.microsoft.cognitiveservices.speech.SpeechSynthesizer.AUTH_TOKEN_ERROR_PROPERTY"
+  name: "AUTH_TOKEN_ERROR_PROPERTY"
+  nameWithType: "SpeechSynthesizer.AUTH_TOKEN_ERROR_PROPERTY"
+  summary: "Property name for the last authentication token error."
+  modifiers:
+  - "protected"
+  - "static"
+  - "final"
+  field:
+    value: "service.auth.token.lasterror"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "protected static final String AUTH_TOKEN_ERROR_PROPERTY"
+  desc: "Property name for the last authentication token error."
+- uid: "com.microsoft.cognitiveservices.speech.SpeechSynthesizer.AUTH_TOKEN_EXPIRY_PROPERTY"
+  fullName: "com.microsoft.cognitiveservices.speech.SpeechSynthesizer.AUTH_TOKEN_EXPIRY_PROPERTY"
+  name: "AUTH_TOKEN_EXPIRY_PROPERTY"
+  nameWithType: "SpeechSynthesizer.AUTH_TOKEN_EXPIRY_PROPERTY"
+  summary: "Property name for the token expiration time in milliseconds."
+  modifiers:
+  - "protected"
+  - "static"
+  - "final"
+  field:
+    value: "service.auth.token.expirems"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "protected static final String AUTH_TOKEN_EXPIRY_PROPERTY"
+  desc: "Property name for the token expiration time in milliseconds."
+- uid: "com.microsoft.cognitiveservices.speech.SpeechSynthesizer.AUTH_TOKEN_REFRESH_INTERVAL_MS_PROPERTY"
+  fullName: "com.microsoft.cognitiveservices.speech.SpeechSynthesizer.AUTH_TOKEN_REFRESH_INTERVAL_MS_PROPERTY"
+  name: "AUTH_TOKEN_REFRESH_INTERVAL_MS_PROPERTY"
+  nameWithType: "SpeechSynthesizer.AUTH_TOKEN_REFRESH_INTERVAL_MS_PROPERTY"
+  summary: "Property name for the token refresh interval in milliseconds."
+  modifiers:
+  - "protected"
+  - "static"
+  - "final"
+  field:
+    value: "service.auth.token.refreshintervalms"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "protected static final String AUTH_TOKEN_REFRESH_INTERVAL_MS_PROPERTY"
+  desc: "Property name for the token refresh interval in milliseconds."
 - uid: "com.microsoft.cognitiveservices.speech.SpeechSynthesizer.BookmarkReached"
   fullName: "com.microsoft.cognitiveservices.speech.SpeechSynthesizer.BookmarkReached"
   name: "BookmarkReached"
@@ -265,6 +307,19 @@ methods:
     type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public void setAuthorizationToken(String token)"
   desc: "Sets the authorization token used to communicate with the service. Note: The caller needs to ensure that the authorization token is valid. Before the authorization token expires, the caller needs to refresh it by calling this setter with a new valid token. Otherwise, the synthesizer will encounter errors while speech synthesis."
+- uid: "com.microsoft.cognitiveservices.speech.SpeechSynthesizer.setUpTokenRefreshCallback(com.microsoft.cognitiveservices.speech.PropertyCollection)"
+  fullName: "com.microsoft.cognitiveservices.speech.SpeechSynthesizer.setUpTokenRefreshCallback(PropertyCollection property)"
+  name: "setUpTokenRefreshCallback(PropertyCollection property)"
+  nameWithType: "SpeechSynthesizer.setUpTokenRefreshCallback(PropertyCollection property)"
+  summary: "Sets up a callback for the token refresh event."
+  modifiers:
+  - "protected"
+  parameters:
+  - description: "The property collection."
+    name: "property"
+    type: "<xref href=\"com.microsoft.cognitiveservices.speech.PropertyCollection?alt=com.microsoft.cognitiveservices.speech.PropertyCollection&text=PropertyCollection\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "protected void setUpTokenRefreshCallback(PropertyCollection property)"
+  desc: "Sets up a callback for the token refresh event."
 - uid: "com.microsoft.cognitiveservices.speech.SpeechSynthesizer.SpeakSsml(java.lang.String)"
   fullName: "com.microsoft.cognitiveservices.speech.SpeechSynthesizer.SpeakSsml(String ssml)"
   name: "SpeakSsml(String ssml)"
@@ -387,10 +442,22 @@ methods:
   returns:
     description: "A task representing the asynchronous operation that stops the synthesis."
     type: "<xref href=\"java.util.concurrent.Future?alt=java.util.concurrent.Future&text=Future\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"java.lang.Void?alt=java.lang.Void&text=Void\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.microsoft.cognitiveservices.speech.SpeechSynthesizer.updateAuthToken(com.microsoft.cognitiveservices.speech.PropertyCollection)"
+  fullName: "com.microsoft.cognitiveservices.speech.SpeechSynthesizer.updateAuthToken(PropertyCollection property)"
+  name: "updateAuthToken(PropertyCollection property)"
+  nameWithType: "SpeechSynthesizer.updateAuthToken(PropertyCollection property)"
+  summary: "Updates the authentication token in the given Property<wbr>Collection."
+  modifiers:
+  - "protected"
+  parameters:
+  - name: "property"
+    type: "<xref href=\"com.microsoft.cognitiveservices.speech.PropertyCollection?alt=com.microsoft.cognitiveservices.speech.PropertyCollection&text=PropertyCollection\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "protected void updateAuthToken(PropertyCollection property)"
+  desc: "Updates the authentication token in the given PropertyCollection."
 type: "class"
 desc: "Performs speech synthesis to speaker, file, or other audio output streams, and gets synthesized audio as result. Note: close() must be called in order to release underlying resources held by the object. Updated in version 1.16.0"
 implements:
 - "<xref href=\"java.lang.AutoCloseable?alt=java.lang.AutoCloseable&text=AutoCloseable\" data-throw-if-not-resolved=\"False\" />"
 metadata: {}
 package: "com.microsoft.cognitiveservices.speech"
-artifact: com.microsoft.cognitiveservices.speech:client-sdk:1.43.0
+artifact: com.microsoft.cognitiveservices.speech:client-sdk:1.44.0

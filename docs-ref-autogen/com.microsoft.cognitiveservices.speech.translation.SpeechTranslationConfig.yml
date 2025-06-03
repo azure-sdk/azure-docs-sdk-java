@@ -15,6 +15,7 @@ inheritedClassMethods:
   - "<xref href=\"com.microsoft.cognitiveservices.speech.SpeechConfig.enableDictation()?alt=com.microsoft.cognitiveservices.speech.SpeechConfig.enableDictation&text=enableDictation\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.microsoft.cognitiveservices.speech.SpeechConfig.fromAuthorizationToken(java.lang.String,java.lang.String)?alt=com.microsoft.cognitiveservices.speech.SpeechConfig.fromAuthorizationToken&text=fromAuthorizationToken\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.microsoft.cognitiveservices.speech.SpeechConfig.fromEndpoint(java.net.URI)?alt=com.microsoft.cognitiveservices.speech.SpeechConfig.fromEndpoint&text=fromEndpoint\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.microsoft.cognitiveservices.speech.SpeechConfig.fromEndpoint(java.net.URI,com.azure.core.credential.TokenCredential)?alt=com.microsoft.cognitiveservices.speech.SpeechConfig.fromEndpoint&text=fromEndpoint\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.microsoft.cognitiveservices.speech.SpeechConfig.fromEndpoint(java.net.URI,java.lang.String)?alt=com.microsoft.cognitiveservices.speech.SpeechConfig.fromEndpoint&text=fromEndpoint\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.microsoft.cognitiveservices.speech.SpeechConfig.fromHost(java.net.URI)?alt=com.microsoft.cognitiveservices.speech.SpeechConfig.fromHost&text=fromHost\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.microsoft.cognitiveservices.speech.SpeechConfig.fromHost(java.net.URI,java.lang.String)?alt=com.microsoft.cognitiveservices.speech.SpeechConfig.fromHost&text=fromHost\" data-throw-if-not-resolved=\"False\" />"
@@ -29,6 +30,7 @@ inheritedClassMethods:
   - "<xref href=\"com.microsoft.cognitiveservices.speech.SpeechConfig.getSpeechSynthesisLanguage()?alt=com.microsoft.cognitiveservices.speech.SpeechConfig.getSpeechSynthesisLanguage&text=getSpeechSynthesisLanguage\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.microsoft.cognitiveservices.speech.SpeechConfig.getSpeechSynthesisOutputFormat()?alt=com.microsoft.cognitiveservices.speech.SpeechConfig.getSpeechSynthesisOutputFormat&text=getSpeechSynthesisOutputFormat\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.microsoft.cognitiveservices.speech.SpeechConfig.getSpeechSynthesisVoiceName()?alt=com.microsoft.cognitiveservices.speech.SpeechConfig.getSpeechSynthesisVoiceName&text=getSpeechSynthesisVoiceName\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.microsoft.cognitiveservices.speech.SpeechConfig.getTokenCredential()?alt=com.microsoft.cognitiveservices.speech.SpeechConfig.getTokenCredential&text=getTokenCredential\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.microsoft.cognitiveservices.speech.SpeechConfig.requestWordLevelTimestamps()?alt=com.microsoft.cognitiveservices.speech.SpeechConfig.requestWordLevelTimestamps&text=requestWordLevelTimestamps\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.microsoft.cognitiveservices.speech.SpeechConfig.setAuthorizationToken(java.lang.String)?alt=com.microsoft.cognitiveservices.speech.SpeechConfig.setAuthorizationToken&text=setAuthorizationToken\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.microsoft.cognitiveservices.speech.SpeechConfig.setEndpointId(java.lang.String)?alt=com.microsoft.cognitiveservices.speech.SpeechConfig.setEndpointId&text=setEndpointId\" data-throw-if-not-resolved=\"False\" />"
@@ -130,6 +132,25 @@ methods:
   returns:
     description: "A SpeechTranslationConfig instance."
     type: "<xref href=\"com.microsoft.cognitiveservices.speech.translation.SpeechTranslationConfig?alt=com.microsoft.cognitiveservices.speech.translation.SpeechTranslationConfig&text=SpeechTranslationConfig\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.cognitiveservices.speech.translation.SpeechTranslationConfig.fromEndpoint(java.net.URI,com.azure.core.credential.TokenCredential)"
+  fullName: "com.microsoft.cognitiveservices.speech.translation.SpeechTranslationConfig.fromEndpoint(URI endpoint, TokenCredential credential)"
+  name: "fromEndpoint(URI endpoint, TokenCredential credential)"
+  nameWithType: "SpeechTranslationConfig.fromEndpoint(URI endpoint, TokenCredential credential)"
+  summary: "Creates a speech configuration instance using a specified endpoint and AAD token credential."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The service endpoint with a custom domain. For more details, see: https://learn.microsoft.com/azure/ai-services/speech-service/speech-services-private-link?tabs=portal#create-a-custom-domain-name"
+    name: "endpoint"
+    type: "<xref href=\"java.net.URI?alt=java.net.URI&text=URI\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The AAD token credential used for authentication and token requests."
+    name: "credential"
+    type: "<xref href=\"com.azure.core.credential.TokenCredential?alt=com.azure.core.credential.TokenCredential&text=TokenCredential\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static SpeechTranslationConfig fromEndpoint(URI endpoint, TokenCredential credential)"
+  desc: "Creates a speech configuration instance using a specified endpoint and AAD token credential. Introduced in version 1.43.0. Note:This API is available for TranslationRecognizer. Note:The AAD token is automatically refreshed before expiration. Note:This method requires a valid token credential. The authorization token is automatically refreshed before it expires. Note:Query parameters specified in the endpoint URI remain unchanged, even if modified through other APIs. The availability and support of specific query parameters depend on the endpoint and scenario. For example, if the URI contains the query parameter \"language=de-DE\", but the property SpeechRecognitionLanguage is set to \"en-US\", the URI setting takes precedence, and \"de-DE\" will be used as the recognition language. This behavior applies only when the endpoint and scenario combination supports language as a query parameter. Parameters not defined in the URI can be modified via other APIs. Note:If the endpoint requires authentication using a subscription key, use fromEndpoint(URI, String) to pass the key as a parameter. To authenticate with an authorization token, use fromEndpoint(URI), then set the AuthorizationToken property on the newly created SpeechConfig instance."
+  returns:
+    description: "A speech translation config instance."
+    type: "<xref href=\"com.microsoft.cognitiveservices.speech.translation.SpeechTranslationConfig?alt=com.microsoft.cognitiveservices.speech.translation.SpeechTranslationConfig&text=SpeechTranslationConfig\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.microsoft.cognitiveservices.speech.translation.SpeechTranslationConfig.fromHost(java.net.URI)"
   fullName: "com.microsoft.cognitiveservices.speech.translation.SpeechTranslationConfig.fromHost(URI host)"
   name: "fromHost(URI host)"
@@ -205,6 +226,17 @@ methods:
   returns:
     description: "the list of target languages."
     type: "<xref href=\"java.util.ArrayList?alt=java.util.ArrayList&text=ArrayList\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.microsoft.cognitiveservices.speech.translation.SpeechTranslationConfig.getTokenCredential()"
+  fullName: "com.microsoft.cognitiveservices.speech.translation.SpeechTranslationConfig.getTokenCredential()"
+  name: "getTokenCredential()"
+  nameWithType: "SpeechTranslationConfig.getTokenCredential()"
+  summary: "Retrieves the Token<wbr>Credential used for authentication."
+  overridden: "com.microsoft.cognitiveservices.speech.SpeechConfig.getTokenCredential()"
+  syntax: "public TokenCredential getTokenCredential()"
+  desc: "Retrieves the TokenCredential used for authentication."
+  returns:
+    description: "The TokenCredential instance."
+    type: "<xref href=\"com.azure.core.credential.TokenCredential?alt=com.azure.core.credential.TokenCredential&text=TokenCredential\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.microsoft.cognitiveservices.speech.translation.SpeechTranslationConfig.getVoiceName()"
   fullName: "com.microsoft.cognitiveservices.speech.translation.SpeechTranslationConfig.getVoiceName()"
   name: "getVoiceName()"
@@ -254,4 +286,4 @@ implements:
 - "<xref href=\"java.lang.AutoCloseable?alt=java.lang.AutoCloseable&text=AutoCloseable\" data-throw-if-not-resolved=\"False\" />"
 metadata: {}
 package: "com.microsoft.cognitiveservices.speech.translation"
-artifact: com.microsoft.cognitiveservices.speech:client-sdk:1.43.0
+artifact: com.microsoft.cognitiveservices.speech:client-sdk:1.44.0
