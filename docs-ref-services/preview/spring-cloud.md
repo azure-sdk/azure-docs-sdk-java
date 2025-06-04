@@ -1,6 +1,7 @@
 ---
 title: Azure Spring Cloud SDK for Java
 description: Reference for Azure Spring Cloud SDK for Java
+ms.date: 06/04/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: springcloud
@@ -8,4 +9,3 @@ ms.service: springcloud
 # Azure Spring Cloud SDK for Java - preview
 ## Packages - preview
 [!INCLUDE [packages](spring-cloud-index.md)]
-
