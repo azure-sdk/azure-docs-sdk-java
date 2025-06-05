@@ -1,0 +1,29 @@
+### YamlMime:JavaType
+uid: "com.azure.spring.cloud.feature.management.filters.FeatureFilter"
+fullName: "com.azure.spring.cloud.feature.management.filters.FeatureFilter"
+name: "FeatureFilter"
+nameWithType: "FeatureFilter"
+summary: "A Filter for Feature Management that is attached to Features."
+syntax: "public interface **FeatureFilter**"
+methods:
+- uid: "com.azure.spring.cloud.feature.management.filters.FeatureFilter.evaluate(com.azure.spring.cloud.feature.management.models.FeatureFilterEvaluationContext)"
+  fullName: "com.azure.spring.cloud.feature.management.filters.FeatureFilter.evaluate(FeatureFilterEvaluationContext context)"
+  name: "evaluate(FeatureFilterEvaluationContext context)"
+  nameWithType: "FeatureFilter.evaluate(FeatureFilterEvaluationContext context)"
+  summary: "Evaluates if the filter is on or off."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The context for whether or not the filter is passed."
+    name: "context"
+    type: "<xref href=\"com.azure.spring.cloud.feature.management.models.FeatureFilterEvaluationContext?alt=com.azure.spring.cloud.feature.management.models.FeatureFilterEvaluationContext&text=FeatureFilterEvaluationContext\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract boolean evaluate(FeatureFilterEvaluationContext context)"
+  desc: "Evaluates if the filter is on or off. Returning true results in Feature evaluation ending and returning true. Returning false results in the next Feature evaluation to continue."
+  returns:
+    description: "True if the feature is enabled, false otherwise."
+    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+type: "interface"
+desc: "A Filter for Feature Management that is attached to Features. The filter needs to have @Component set to be found by feature management."
+metadata: {}
+package: "com.azure.spring.cloud.feature.management.filters"
+artifact: com.azure.spring:spring-cloud-azure-feature-management:6.0.0-beta.1

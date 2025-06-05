@@ -1,0 +1,55 @@
+### YamlMime:JavaType
+uid: "com.azure.spring.cloud.appconfiguration.config.AppConfigurationRefresh"
+fullName: "com.azure.spring.cloud.appconfiguration.config.AppConfigurationRefresh"
+name: "AppConfigurationRefresh"
+nameWithType: "AppConfigurationRefresh"
+summary: "Enables checking of Configuration updates."
+syntax: "public interface **AppConfigurationRefresh**</br> extends <xref href=\"org.springframework.context.ApplicationEventPublisherAware?alt=org.springframework.context.ApplicationEventPublisherAware&text=ApplicationEventPublisherAware\" data-throw-if-not-resolved=\"False\" />"
+methods:
+- uid: "com.azure.spring.cloud.appconfiguration.config.AppConfigurationRefresh.expireRefreshInterval(java.lang.String,java.lang.String)"
+  fullName: "com.azure.spring.cloud.appconfiguration.config.AppConfigurationRefresh.expireRefreshInterval(String endpoint, String syncToken)"
+  name: "expireRefreshInterval(String endpoint, String syncToken)"
+  nameWithType: "AppConfigurationRefresh.expireRefreshInterval(String endpoint, String syncToken)"
+  summary: "Soft expires refresh interval."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "Config Store endpoint to expire refresh interval on."
+    name: "endpoint"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "syncToken to verify the latest changes are available on pull"
+    name: "syncToken"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract void expireRefreshInterval(String endpoint, String syncToken)"
+  desc: "Soft expires refresh interval. Sets amount of time to next refresh to be a random value between 0 and 15 seconds, unless value is less than the amount of time to the next refresh check."
+- uid: "com.azure.spring.cloud.appconfiguration.config.AppConfigurationRefresh.getAppConfigurationStoresHealth()"
+  fullName: "com.azure.spring.cloud.appconfiguration.config.AppConfigurationRefresh.getAppConfigurationStoresHealth()"
+  name: "getAppConfigurationStoresHealth()"
+  nameWithType: "AppConfigurationRefresh.getAppConfigurationStoresHealth()"
+  summary: "Gets the latest Health connection info for refresh."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Map<String,AppConfigurationStoreHealth> getAppConfigurationStoresHealth()"
+  desc: "Gets the latest Health connection info for refresh."
+  returns:
+    description: "Map of String, endpoint, and Health information."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.spring.cloud.appconfiguration.config.AppConfigurationStoreHealth?alt=com.azure.spring.cloud.appconfiguration.config.AppConfigurationStoreHealth&text=AppConfigurationStoreHealth\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.spring.cloud.appconfiguration.config.AppConfigurationRefresh.refreshConfigurations()"
+  fullName: "com.azure.spring.cloud.appconfiguration.config.AppConfigurationRefresh.refreshConfigurations()"
+  name: "refreshConfigurations()"
+  nameWithType: "AppConfigurationRefresh.refreshConfigurations()"
+  summary: "Checks configurations to see if configurations should be reloaded."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Mono<Boolean> refreshConfigurations()"
+  desc: "Checks configurations to see if configurations should be reloaded. If the refresh interval has passed and a trigger has been updated configuration are reloaded."
+  returns:
+    description: "Mono with a boolean of if a RefreshEvent was published. If refreshConfigurations is currently being run\n elsewhere this method will return right away as <b>false</b>."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>&gt;"
+type: "interface"
+desc: "Enables checking of Configuration updates."
+implements:
+- "<xref href=\"org.springframework.context.ApplicationEventPublisherAware?alt=org.springframework.context.ApplicationEventPublisherAware&text=ApplicationEventPublisherAware\" data-throw-if-not-resolved=\"False\" />"
+metadata: {}
+package: "com.azure.spring.cloud.appconfiguration.config"
+artifact: com.azure.spring:spring-cloud-azure-appconfiguration-config:6.0.0-beta.1
