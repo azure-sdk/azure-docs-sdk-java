@@ -1,6 +1,6 @@
 {
   "Name": "azure-core-http-okhttp",
-  "Version": "1.12.10",
+  "Version": "1.12.11",
   "DevVersion": null,
   "DirectoryPath": "sdk/core/azure-core-http-okhttp",
   "ServiceDirectory": "core",
@@ -10,7 +10,7 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-core-http-okhttp",
-  "ReleaseStatus": "2025-03-10",
+  "ReleaseStatus": "2025-06-05",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": [
     "com.azure:azure-core-tracing-opentelemetry-samples",
@@ -18,29 +18,29 @@
     "com.azure:perf-test-core"
   ],
   "ArtifactDetails": {
-    "safeName": "azurecorehttpokhttp",
-    "groupId": "com.azure",
-    "name": "azure-core-http-okhttp",
     "triggeringPaths": [
       "/sdk/core/ci.yml"
     ],
-    "releaseInBatch": "${{ parameters.release_azurecorehttpokhttp }}"
+    "name": "azure-core-http-okhttp",
+    "releaseInBatch": "${{ parameters.release_azurecorehttpokhttp }}",
+    "safeName": "azurecorehttpokhttp",
+    "groupId": "com.azure"
   },
   "CIParameters": {
     "CIMatrixConfigs": [
       {
-        "Selection": "sparse",
-        "NonSparseParameters": "Agent",
         "Name": "Java_ci_test_base",
         "Path": "eng/pipelines/templates/stages/platform-matrix.json",
-        "GenerateVMJobs": true
+        "Selection": "sparse",
+        "GenerateVMJobs": true,
+        "NonSparseParameters": "Agent"
       },
       {
-        "Selection": "all",
-        "PRBatching": false,
         "Name": "version_overrides_tests",
         "Path": "sdk/core/version-overrides-matrix.json",
-        "GenerateVMJobs": true
+        "Selection": "all",
+        "GenerateVMJobs": true,
+        "PRBatching": false
       }
     ]
   },

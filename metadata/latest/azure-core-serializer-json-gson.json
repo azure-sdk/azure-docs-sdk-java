@@ -1,6 +1,6 @@
 {
   "Name": "azure-core-serializer-json-gson",
-  "Version": "1.3.8",
+  "Version": "1.3.9",
   "DevVersion": null,
   "DirectoryPath": "sdk/core/azure-core-serializer-json-gson",
   "ServiceDirectory": "core",
@@ -10,7 +10,7 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-core-serializer-json-gson",
-  "ReleaseStatus": "2025-03-10",
+  "ReleaseStatus": "2025-06-05",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": [
     "com.azure:azure-core-tracing-opentelemetry-samples",
@@ -18,29 +18,29 @@
     "com.azure:perf-test-core"
   ],
   "ArtifactDetails": {
-    "safeName": "azurecoreserializerjsongson",
-    "groupId": "com.azure",
-    "name": "azure-core-serializer-json-gson",
     "triggeringPaths": [
       "/sdk/core/ci.yml"
     ],
-    "releaseInBatch": "${{ parameters.release_azurecoreserializerjsongson }}"
+    "name": "azure-core-serializer-json-gson",
+    "releaseInBatch": "${{ parameters.release_azurecoreserializerjsongson }}",
+    "safeName": "azurecoreserializerjsongson",
+    "groupId": "com.azure"
   },
   "CIParameters": {
     "CIMatrixConfigs": [
       {
-        "Selection": "sparse",
-        "NonSparseParameters": "Agent",
         "Name": "Java_ci_test_base",
         "Path": "eng/pipelines/templates/stages/platform-matrix.json",
-        "GenerateVMJobs": true
+        "Selection": "sparse",
+        "GenerateVMJobs": true,
+        "NonSparseParameters": "Agent"
       },
       {
-        "Selection": "all",
-        "PRBatching": false,
         "Name": "version_overrides_tests",
         "Path": "sdk/core/version-overrides-matrix.json",
-        "GenerateVMJobs": true
+        "Selection": "all",
+        "GenerateVMJobs": true,
+        "PRBatching": false
       }
     ]
   },

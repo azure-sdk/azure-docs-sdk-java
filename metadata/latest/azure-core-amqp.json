@@ -1,6 +1,6 @@
 {
   "Name": "azure-core-amqp",
-  "Version": "2.9.15",
+  "Version": "2.10.0",
   "DevVersion": null,
   "DirectoryPath": "sdk/core/azure-core-amqp",
   "ServiceDirectory": "core",
@@ -10,7 +10,7 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-core-amqp",
-  "ReleaseStatus": "2025-02-20",
+  "ReleaseStatus": "2025-06-05",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": [
     "com.azure:azure-core-tracing-opentelemetry-samples",
@@ -18,11 +18,38 @@
     "com.azure:perf-test-core"
   ],
   "ArtifactDetails": {
-    "groupId": "com.azure",
-    "safeName": "azurecoreamqp",
+    "triggeringPaths": [
+      "/sdk/core/ci.yml"
+    ],
+    "name": "azure-core-amqp",
     "releaseInBatch": "${{ parameters.release_azurecoreamqp }}",
-    "name": "azure-core-amqp"
+    "safeName": "azurecoreamqp",
+    "groupId": "com.azure"
   },
+  "CIParameters": {
+    "CIMatrixConfigs": [
+      {
+        "Name": "Java_ci_test_base",
+        "Path": "eng/pipelines/templates/stages/platform-matrix.json",
+        "Selection": "sparse",
+        "GenerateVMJobs": true,
+        "NonSparseParameters": "Agent"
+      },
+      {
+        "Name": "version_overrides_tests",
+        "Path": "sdk/core/version-overrides-matrix.json",
+        "Selection": "all",
+        "GenerateVMJobs": true,
+        "PRBatching": false
+      }
+    ]
+  },
+  "Namespaces": [
+    "com.azure.core.amqp",
+    "com.azure.core.amqp.client.traits",
+    "com.azure.core.amqp.exception",
+    "com.azure.core.amqp.models"
+  ],
   "CIMatrixConfigs": [
     {
       "Path": "eng/pipelines/templates/stages/platform-matrix.json",
@@ -31,11 +58,5 @@
       "GenerateVMJobs": true,
       "Selection": "sparse"
     }
-  ],
-  "Namespaces": [
-    "com.azure.core.amqp",
-    "com.azure.core.amqp.client.traits",
-    "com.azure.core.amqp.exception",
-    "com.azure.core.amqp.models"
   ]
 }
