@@ -1,0 +1,86 @@
+### YamlMime:JavaType
+uid: "com.azure.communication.callautomation.models.StreamingData"
+fullName: "com.azure.communication.callautomation.models.StreamingData"
+name: "StreamingData"
+nameWithType: "StreamingData"
+summary: "The abstract class used as parent of Streaming data such as Audio, Transcription, or Captions."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public abstract class **StreamingData**"
+constructors:
+- uid: "com.azure.communication.callautomation.models.StreamingData.StreamingData(com.azure.communication.callautomation.models.StreamingDataKind)"
+  fullName: "com.azure.communication.callautomation.models.StreamingData.StreamingData(StreamingDataKind streamingDataKind)"
+  name: "StreamingData(StreamingDataKind streamingDataKind)"
+  nameWithType: "StreamingData.StreamingData(StreamingDataKind streamingDataKind)"
+  summary: "Creates an instance of <xref uid=\"com.azure.communication.callautomation.models.StreamingData\" data-throw-if-not-resolved=\"false\" data-raw-source=\"StreamingData\"></xref>."
+  parameters:
+  - description: "The kind of streaming data."
+    name: "streamingDataKind"
+    type: "<xref href=\"com.azure.communication.callautomation.models.StreamingDataKind?alt=com.azure.communication.callautomation.models.StreamingDataKind&text=StreamingDataKind\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public StreamingData(StreamingDataKind streamingDataKind)"
+  desc: "Creates an instance of <xref uid=\"com.azure.communication.callautomation.models.StreamingData\" data-throw-if-not-resolved=\"false\" data-raw-source=\"StreamingData\"></xref>."
+methods:
+- uid: "com.azure.communication.callautomation.models.StreamingData.getStreamingDataKind()"
+  fullName: "com.azure.communication.callautomation.models.StreamingData.getStreamingDataKind()"
+  name: "getStreamingDataKind()"
+  nameWithType: "StreamingData.getStreamingDataKind()"
+  summary: "Get the streaming data kind."
+  syntax: "public StreamingDataKind getStreamingDataKind()"
+  desc: "Get the streaming data kind."
+  returns:
+    description: "streaming data kind."
+    type: "<xref href=\"com.azure.communication.callautomation.models.StreamingDataKind?alt=com.azure.communication.callautomation.models.StreamingDataKind&text=StreamingDataKind\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.communication.callautomation.models.StreamingData.parse(java.lang.String)"
+  fullName: "com.azure.communication.callautomation.models.StreamingData.parse(String data)"
+  name: "parse(String data)"
+  nameWithType: "StreamingData.parse(String data)"
+  summary: "Parses a base64 encoded string into a Streaming<wbr>Data object, which can be one of the following subtypes: Audio<wbr>Data, Audio<wbr>Metadata, Transcription<wbr>Data, or Transcription<wbr>Metadata."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The base64 string represents streaming data that will be converted into the appropriate subtype of StreamingData."
+    name: "data"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public static StreamingData parse(String data)"
+  desc: "Parses a base64 encoded string into a StreamingData object, which can be one of the following subtypes: AudioData, AudioMetadata, TranscriptionData, or TranscriptionMetadata."
+  returns:
+    description: "StreamingData"
+    type: "<xref href=\"com.azure.communication.callautomation.models.StreamingData?alt=com.azure.communication.callautomation.models.StreamingData&text=StreamingData\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.communication.callautomation.models.StreamingData.<T>parse(java.lang.String,java.lang.Class<T>)"
+  fullName: "com.azure.communication.callautomation.models.StreamingData.parse(String data, Class<T> type)"
+  name: "parse(String data, Class<T> type)"
+  nameWithType: "StreamingData.parse(String data, Class<T> type)"
+  summary: "Parses a base64 encoded string into a Streaming<wbr>Data object, which can be one of the following subtypes: Audio<wbr>Data, Audio<wbr>Metadata, Transcription<wbr>Data, or Transcription<wbr>Metadata."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The base64 string represents streaming data that will be converted into the appropriate subtype of StreamingData."
+    name: "data"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "type of the streamindata ex. AudioData, AudioMetadata, TranscriptionData, TranscriptionMetadata"
+    name: "type"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html\">Class</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public static T <T>parse(String data, Class<T> type)"
+  desc: "Parses a base64 encoded string into a StreamingData object, which can be one of the following subtypes: AudioData, AudioMetadata, TranscriptionData, or TranscriptionMetadata."
+  returns:
+    description: "Subtypes of StreamingData"
+    type: "<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "The abstract class used as parent of Streaming data such as Audio, Transcription, or Captions."
+metadata: {}
+package: "com.azure.communication.callautomation.models"
+artifact: com.azure:azure-communication-callautomation:1.4.0
