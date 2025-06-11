@@ -6,6 +6,6 @@ ms.topic: reference
 ms.devlang: java
 ms.service: mediaservices
 ---
-# Azure Media Services SDK for Java - preview
-## Packages - preview
+# Azure Media Services SDK for Java - legacy
+## Packages - legacy
 [!INCLUDE [packages](media-services-index.md)]
