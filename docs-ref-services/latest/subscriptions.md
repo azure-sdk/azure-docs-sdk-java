@@ -1,7 +1,7 @@
 ---
 title: Azure Subscriptions SDK for Java
 description: Reference for Azure Subscriptions SDK for Java
-ms.date: 06/11/2025
+ms.date: 06/12/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: subscriptions
