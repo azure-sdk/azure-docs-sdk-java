@@ -53,10 +53,10 @@ methods:
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
-- uid: "com.azure.resourcemanager.appconfiguration.fluent.KeyValuesClient.createOrUpdate(java.lang.String,java.lang.String,java.lang.String)"
-  fullName: "com.azure.resourcemanager.appconfiguration.fluent.KeyValuesClient.createOrUpdate(String resourceGroupName, String configStoreName, String keyValueName)"
-  name: "createOrUpdate(String resourceGroupName, String configStoreName, String keyValueName)"
-  nameWithType: "KeyValuesClient.createOrUpdate(String resourceGroupName, String configStoreName, String keyValueName)"
+- uid: "com.azure.resourcemanager.appconfiguration.fluent.KeyValuesClient.createOrUpdate(java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.appconfiguration.fluent.models.KeyValueInner)"
+  fullName: "com.azure.resourcemanager.appconfiguration.fluent.KeyValuesClient.createOrUpdate(String resourceGroupName, String configStoreName, String keyValueName, KeyValueInner keyValueParameters)"
+  name: "createOrUpdate(String resourceGroupName, String configStoreName, String keyValueName, KeyValueInner keyValueParameters)"
+  nameWithType: "KeyValuesClient.createOrUpdate(String resourceGroupName, String configStoreName, String keyValueName, KeyValueInner keyValueParameters)"
   summary: "Creates a key-value."
   modifiers:
   - "abstract"
@@ -70,7 +70,10 @@ methods:
   - description: "Identifier of key and label combination. Key and label are joined by $ character. Label is\n optional."
     name: "keyValueName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract KeyValueInner createOrUpdate(String resourceGroupName, String configStoreName, String keyValueName)"
+  - description: "The parameters for creating a key-value."
+    name: "keyValueParameters"
+    type: "<xref href=\"com.azure.resourcemanager.appconfiguration.fluent.models.KeyValueInner?alt=com.azure.resourcemanager.appconfiguration.fluent.models.KeyValueInner&text=KeyValueInner\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract KeyValueInner createOrUpdate(String resourceGroupName, String configStoreName, String keyValueName, KeyValueInner keyValueParameters)"
   desc: "Creates a key-value. NOTE: This operation is intended for use in ARM Template deployments. For all other scenarios involving App Configuration key-values the data plane API should be used instead."
   returns:
     description: "the key-value resource along with all resource properties."
@@ -195,4 +198,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in KeyValuesClient."
 metadata: {}
 package: "com.azure.resourcemanager.appconfiguration.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-appconfiguration:1.0.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-appconfiguration:1.1.0
