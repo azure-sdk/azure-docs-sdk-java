@@ -1,12 +1,12 @@
 ---
 title: Azure Key Vault Secret client library for Java
 keywords: Azure, java, SDK, API, azure-security-keyvault-secrets, keyvault
-ms.date: 03/25/2025
+ms.date: 06/14/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: keyvault
 ---
-# Azure Key Vault Secret client library for Java - version 4.9.4 
+# Azure Key Vault Secret client library for Java - version 4.10.0 
 
 Azure Key Vault is a cloud service that provides secure storage for secrets, such as passwords and database connection strings.
 
@@ -20,7 +20,7 @@ Use the Azure Key Vault Secrets client library to create and manage secrets.
 ### Include the package
 #### Include the BOM file
 Please include the `azure-sdk-bom` to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-secrets_4.9.4/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-secrets_4.10.0/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -55,7 +55,7 @@ If you want to take dependency on a particular version of the library that is no
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-security-keyvault-secrets</artifactId>
-    <version>4.9.4</version>
+    <version>4.10.0</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -232,7 +232,7 @@ secretAsyncClient.listPropertiesOfSecrets()
 ```
 
 ## Troubleshooting
-See our [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-secrets_4.9.4/sdk/keyvault/azure-security-keyvault-secrets/TROUBLESHOOTING.md) for details on how to diagnose various failure scenarios.
+See our [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-secrets_4.10.0/sdk/keyvault/azure-security-keyvault-secrets/TROUBLESHOOTING.md) for details on how to diagnose various failure scenarios.
 
 ### General
 Azure Key Vault Secret clients raise exceptions. For example, if you try to retrieve a secret after it is deleted a `404` error is returned, indicating the resource was not found. In the following snippet, the error is handled gracefully by catching the exception and displaying additional information about the error.
@@ -268,23 +268,23 @@ When you submit a pull request, a CLA-bot will automatically determine whether y
 This project has adopted the [Microsoft Open Source Code of Conduct][microsoft_code_of_conduct]. For more information see the Code of Conduct FAQ or contact <opencode@microsoft.com> with any additional questions or comments.
 
 <!-- LINKS -->
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-secrets_4.9.4/sdk/keyvault/azure-security-keyvault-secrets/src
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-secrets_4.10.0/sdk/keyvault/azure-security-keyvault-secrets/src
 [api_documentation]: https://azure.github.io/azure-sdk-for-java
-[azkeyvault_docs]: /azure/key-vault/
-[azure_identity]: /java/api/overview/azure/identity-readme?view=azure-java-stable
+[azkeyvault_docs]: https://learn.microsoft.com/azure/key-vault/
+[azure_identity]: https://learn.microsoft.com/java/api/overview/azure/identity-readme?view=azure-java-stable
 [azure_subscription]: https://azure.microsoft.com/
-[azure_keyvault]: /azure/key-vault/general/overview
-[azure_keyvault_cli]: /azure/key-vault/general/quick-create-cli
-[azure_keyvault_portal]: /azure/key-vault/general/quick-create-portal
-[default_azure_credential]: /java/api/overview/azure/identity-readme?view=azure-java-stable#defaultazurecredential
-[managed_identity]: /azure/active-directory/managed-identities-azure-resources/overview
-[azkeyvault_rest]: /rest/api/keyvault/
-[secrets_samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-secrets_4.9.4/sdk/keyvault/azure-security-keyvault-secrets/src/samples/java/com/azure/security/keyvault/secrets
-[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-secrets_4.9.4/sdk/keyvault/azure-security-keyvault-secrets/src/samples/README.md
+[azure_keyvault]: https://learn.microsoft.com/azure/key-vault/general/overview
+[azure_keyvault_cli]: https://learn.microsoft.com/azure/key-vault/general/quick-create-cli
+[azure_keyvault_portal]: https://learn.microsoft.com/azure/key-vault/general/quick-create-portal
+[default_azure_credential]: https://learn.microsoft.com/java/api/overview/azure/identity-readme?view=azure-java-stable#defaultazurecredential
+[managed_identity]: https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview
+[azkeyvault_rest]: https://learn.microsoft.com/rest/api/keyvault/
+[secrets_samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-secrets_4.10.0/sdk/keyvault/azure-security-keyvault-secrets/src/samples/java/com/azure/security/keyvault/secrets
+[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-secrets_4.10.0/sdk/keyvault/azure-security-keyvault-secrets/src/samples/README.md
 [performance_tuning]: https://github.com/Azure/azure-sdk-for-java/wiki/Performance-Tuning
-[jdk_link]: /java/azure/jdk/?view=azure-java-stable
+[jdk_link]: https://learn.microsoft.com/java/azure/jdk/?view=azure-java-stable
 [http_clients_wiki]: https://learn.microsoft.com/azure/developer/java/sdk/http-client-pipeline#http-clients
 [microsoft_code_of_conduct]: https://opensource.microsoft.com/codeofconduct/
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fkeyvault%2Fazure-security-keyvault-secrets%2FREADME.png)
+
 

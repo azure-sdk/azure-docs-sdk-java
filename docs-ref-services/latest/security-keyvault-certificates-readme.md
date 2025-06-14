@@ -1,12 +1,12 @@
 ---
 title: Azure Key Vault Certificate client library for Java
 keywords: Azure, java, SDK, API, azure-security-keyvault-certificates, keyvault
-ms.date: 03/25/2025
+ms.date: 06/14/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: keyvault
 ---
-# Azure Key Vault Certificate client library for Java - version 4.7.4 
+# Azure Key Vault Certificate client library for Java - version 4.8.0 
 
 Azure Key Vault allows you to securely manage and tightly control your certificates. The Azure Key Vault Certificate client library supports certificates backed by RSA and EC keys.
 
@@ -17,7 +17,7 @@ Multiple certificates and multiple versions of the same certificate can be kept 
 ## Getting started
 ### Include the package
 #### Include the BOM file
-Please include the `azure-sdk-bom` to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number. To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-certificates_4.7.4/sdk/boms/azure-sdk-bom/README.md).
+Please include the `azure-sdk-bom` to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number. To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-certificates_4.8.0/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -52,7 +52,7 @@ If you want to take dependency on a particular version of the library that is no
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-security-keyvault-certificates</artifactId>
-    <version>4.7.4</version>
+    <version>4.8.0</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -82,7 +82,7 @@ CertificateClient certificateClient = new CertificateClientBuilder()
 
 ## Key concepts
 ### Certificate
-Azure Key Vault supports certificates with secret content types (`PKCS12` and `PEM`). The certificate can be backed by keys in Azure Key Vault of types (`EC` and `RSA`). In addition to the certificate policy, the following attributes may be specified:
+Azure Key Vault supports certificates with secret content types (`PKCS12` & `PEM`). The certificate can be backed by keys in Azure Key Vault of types (`EC` & `RSA`). In addition to the certificate policy, the following attributes may be specified:
 * enabled: Specifies whether the certificate is enabled and usable.
 * created: Indicates when this version of the certificate was created.
 * updated: Indicates when this version of the certificate was updated.
@@ -240,7 +240,7 @@ certificateAsyncClient.listPropertiesOfCertificates()
 ```
 
 ## Troubleshooting
-See our [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-certificates_4.7.4/sdk/keyvault/azure-security-keyvault-certificates/TROUBLESHOOTING.md) for details on how to diagnose various failure scenarios.
+See our [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-certificates_4.8.0/sdk/keyvault/azure-security-keyvault-certificates/TROUBLESHOOTING.md) for details on how to diagnose various failure scenarios.
 
 ### General
 Azure Key Vault Certificate clients raise exceptions. For example, if you try to retrieve a certificate after it is deleted a `404` error is returned, indicating the resource was not found. In the following snippet, the error is handled gracefully by catching the exception and displaying additional information about the error.
@@ -276,25 +276,25 @@ When you submit a pull request, a CLA-bot will automatically determine whether y
 This project has adopted the [Microsoft Open Source Code of Conduct][microsoft_code_of_conduct]. For more information see the Code of Conduct FAQ or contact <opencode@microsoft.com> with any additional questions or comments.
 
 <!-- LINKS -->
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-certificates_4.7.4/sdk/keyvault/azure-security-keyvault-certificates/src
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-certificates_4.8.0/sdk/keyvault/azure-security-keyvault-certificates/src
 [api_documentation]: https://azure.github.io/azure-sdk-for-java
-[azkeyvault_docs]: /azure/key-vault/
-[certificates_samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-certificates_4.7.4/sdk/keyvault/azure-security-keyvault-certificates/src/samples/java/com/azure/security/keyvault/certificates
-[managed_identity]: /azure/active-directory/managed-identities-azure-resources/overview
-[azure_identity]: /java/api/overview/azure/identity-readme?view=azure-java-stable
+[azkeyvault_docs]: https://learn.microsoft.com/azure/key-vault/
+[certificates_samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-certificates_4.8.0/sdk/keyvault/azure-security-keyvault-certificates/src/samples/java/com/azure/security/keyvault/certificates
+[managed_identity]: https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview
+[azure_identity]: https://learn.microsoft.com/java/api/overview/azure/identity-readme?view=azure-java-stable
 [azure_subscription]: https://azure.microsoft.com/
-[azure_keyvault]: /azure/key-vault/general/overview
-[azure_keyvault_cli]: /azure/key-vault/general/quick-create-cli
-[azure_keyvault_portal]: /azure/key-vault/general/quick-create-portal
-[default_azure_credential]: /java/api/overview/azure/identity-readme?view=azure-java-stable#defaultazurecredential
-[azkeyvault_rest]: /rest/api/keyvault/
-[certificates_samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-certificates_4.7.4/sdk/keyvault/azure-security-keyvault-certificates/src/samples/java/com/azure/security/keyvault/certificates
-[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-certificates_4.7.4/sdk/keyvault/azure-security-keyvault-certificates/src/samples/README.md
+[azure_keyvault]: https://learn.microsoft.com/azure/key-vault/general/overview
+[azure_keyvault_cli]: https://learn.microsoft.com/azure/key-vault/general/quick-create-cli
+[azure_keyvault_portal]: https://learn.microsoft.com/azure/key-vault/general/quick-create-portal
+[default_azure_credential]: https://learn.microsoft.com/java/api/overview/azure/identity-readme?view=azure-java-stable#defaultazurecredential
+[azkeyvault_rest]: https://learn.microsoft.com/rest/api/keyvault/
+[certificates_samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-certificates_4.8.0/sdk/keyvault/azure-security-keyvault-certificates/src/samples/java/com/azure/security/keyvault/certificates
+[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/azure-security-keyvault-certificates_4.8.0/sdk/keyvault/azure-security-keyvault-certificates/src/samples/README.md
 [performance_tuning]: https://github.com/Azure/azure-sdk-for-java/wiki/Performance-Tuning
-[jdk_link]: /java/azure/jdk/?view=azure-java-stable
+[jdk_link]: https://learn.microsoft.com/java/azure/jdk/?view=azure-java-stable
 [jwk_specification]: https://tools.ietf.org/html/rfc7517
 [http_clients_wiki]: https://learn.microsoft.com/azure/developer/java/sdk/http-client-pipeline#http-clients
 [microsoft_code_of_conduct]: https://opensource.microsoft.com/codeofconduct/
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fkeyvault%2Fazure-security-keyvault-certificates%2FREADME.png)
+
 
