@@ -1,12 +1,12 @@
 ---
 title: Azure Communication Service Common client library for Java
-keywords: Azure, java, SDK, API, azure-communication-common, communication
-ms.date: 03/25/2025
+keywords: Azure, java, SDK, API, azure-communication-common, communication/azure-communication-common
+ms.date: 06/17/2025
 ms.topic: reference
 ms.devlang: java
-ms.service: communication
+ms.service: communication/azure-communication-common
 ---
-# Azure Communication Service Common client library for Java - version 1.3.11 
+# Azure Communication Service Common client library for Java - version 1.4.0 
 
 
 Azure Communication Common contains data structures commonly used for communicating with Azure Communication Services. 
@@ -17,14 +17,14 @@ It is intended to provide cross-cutting concerns, e.g. authentication.
 ### Prerequisites
 
 - An Azure account with an active subscription. [Create an account for free](https://azure.microsoft.com/free/?WT.mc_id=A261C142F).
-- [Java Development Kit (JDK)](/java/azure/jdk/?view=azure-java-stable) version 8 or above.
+- [Java Development Kit (JDK)](https://learn.microsoft.com/java/azure/jdk/?view=azure-java-stable) version 8 or above.
 - [Apache Maven](https://maven.apache.org/download.cgi).
 - A deployed Communication Services resource.
 
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-communication-common_1.3.11/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-communication-common_1.4.0/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -60,7 +60,7 @@ add the direct dependency to your project as follows.
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-communication-common</artifactId>
-    <version>1.3.11</version>
+    <version>1.4.0</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -81,6 +81,7 @@ Depending on your scenario, you may want to initialize the `CommunicationTokenCr
 
 - a static token (suitable for short-lived clients used to e.g. send one-off Chat messages) or
 - a callback function that ensures a continuous authentication state (ideal e.g. for long Calling sessions).
+- a token credential capable of obtaining an Entra user token. You can provide any implementation of [Azure.Core.TokenCredential](https://learn.microsoft.com/es-es/java/api/com.azure.core.credential.tokencredential?view=azure-java-stable). It is suitable for scenarios where Entra user access tokens are needed to authenticate with Communication Services.
 
 The tokens supplied to the `CommunicationTokenCredential` either through the constructor or via the token refresher callback can be obtained using the Azure Communication Identity library.
 
@@ -110,6 +111,52 @@ CommunicationTokenRefreshOptions tokenRefreshOptions = new CommunicationTokenRef
     .setRefreshProactively(true)
     .setInitialToken(token);
 CommunicationTokenCredential tokenCredential = new CommunicationTokenCredential(tokenRefreshOptions);     
+```
+
+### Create a credential with a token credential capable of obtaining an Entra user token
+
+For scenarios where an Entra user can be used with Communication Services, you need to initialize any implementation of [Azure.Core.TokenCredential](https://learn.microsoft.com/es-es/java/api/com.azure.core.credential.tokencredential?view=azure-java-stable) and provide it to the `EntraCommunicationTokenCredentialOptions`.
+Along with this, you must provide the URI of the Azure Communication Services resource and the scopes required for the Entra user token. These scopes determine the permissions granted to the token.
+
+This approach needs to be used for authorizing an Entra user with a Teams license to use Teams Phone Extensibility features through your Azure Communication Services resource.
+This requires providing the `https://auth.msft.communication.azure.com/TeamsExtension.ManageCalls` scope.
+
+```java
+InteractiveBrowserCredential tokenCredential = new InteractiveBrowserCredentialBuilder()
+    .clientId("<your-client-id>")
+    .tenantId("<your-tenant-id>")
+    .redirectUrl("<your-redirect-uri>")
+    .build();
+String resourceEndpoint = "https://<your-resource>.communication.azure.com";
+List<String> scopes = new ArrayList<String>() {
+    {
+        add("https://auth.msft.communication.azure.com/TeamsExtension.ManageCalls");
+    }
+};
+
+EntraCommunicationTokenCredentialOptions entraTokenCredentialOptions = new EntraCommunicationTokenCredentialOptions(tokenCredential, resourceEndpoint).setScopes(scopes);
+CommunicationTokenCredential credential = new CommunicationTokenCredential(entraTokenCredentialOptions);
+```
+
+Other scenarios for Entra users to utilize Azure Communication Services are currently in the **preview stage only and should not be used in production**.
+The scopes for these scenarios follow the format `https://communication.azure.com/clients/<Azure Communication Services Clients API permission>`.
+If specific scopes are not provided, the default scopes will be set to `https://communication.azure.com/clients/.default`.
+
+```java
+InteractiveBrowserCredential tokenCredential = new InteractiveBrowserCredentialBuilder()
+    .clientId("<your-client-id>")
+    .tenantId("<your-tenant-id>")
+    .redirectUrl("<your-redirect-uri>")
+    .build();
+String resourceEndpoint = "https://<your-resource>.communication.azure.com";
+List<String> scopes = new ArrayList<String>() {
+    {
+        add("https://communication.azure.com/clients/VoIP");
+    }
+};
+
+EntraCommunicationTokenCredentialOptions entraTokenCredentialOptions = new EntraCommunicationTokenCredentialOptions(tokenCredential, resourceEndpoint).setScopes(scopes);
+CommunicationTokenCredential credential = new CommunicationTokenCredential(entraTokenCredentialOptions);
 ```
 
 ## Troubleshooting
