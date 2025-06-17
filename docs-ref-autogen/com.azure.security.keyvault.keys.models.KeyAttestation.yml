@@ -1,0 +1,102 @@
+### YamlMime:JavaType
+uid: "com.azure.security.keyvault.keys.models.KeyAttestation"
+fullName: "com.azure.security.keyvault.keys.models.KeyAttestation"
+name: "KeyAttestation"
+nameWithType: "KeyAttestation"
+summary: "The key attestation information."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **KeyAttestation**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.security.keyvault.keys.models.KeyAttestation?alt=com.azure.security.keyvault.keys.models.KeyAttestation&text=KeyAttestation\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.azure.security.keyvault.keys.models.KeyAttestation.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.security.keyvault.keys.models.KeyAttestation.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "KeyAttestation.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Key<wbr>Attestation from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static KeyAttestation fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the KeyAttestation."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of KeyAttestation from the JsonReader."
+  returns:
+    description: "An instance of KeyAttestation if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.security.keyvault.keys.models.KeyAttestation?alt=com.azure.security.keyvault.keys.models.KeyAttestation&text=KeyAttestation\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.security.keyvault.keys.models.KeyAttestation.getCertificatePemFile()"
+  fullName: "com.azure.security.keyvault.keys.models.KeyAttestation.getCertificatePemFile()"
+  name: "getCertificatePemFile()"
+  nameWithType: "KeyAttestation.getCertificatePemFile()"
+  summary: "Get a base64url-encoded string containing certificates in PEM format, used for attestation validation."
+  syntax: "public byte[] getCertificatePemFile()"
+  desc: "Get a base64url-encoded string containing certificates in PEM format, used for attestation validation."
+  returns:
+    description: "The certificate in PEM format."
+    type: "<xref href=\"byte?alt=byte&text=byte\" data-throw-if-not-resolved=\"False\" />[]"
+- uid: "com.azure.security.keyvault.keys.models.KeyAttestation.getPrivateKeyAttestation()"
+  fullName: "com.azure.security.keyvault.keys.models.KeyAttestation.getPrivateKeyAttestation()"
+  name: "getPrivateKeyAttestation()"
+  nameWithType: "KeyAttestation.getPrivateKeyAttestation()"
+  summary: "Get the attestation blob bytes encoded as base64url string corresponding to a private key."
+  syntax: "public byte[] getPrivateKeyAttestation()"
+  desc: "Get the attestation blob bytes encoded as base64url string corresponding to a private key."
+  returns:
+    description: "The attestation blob bytes for the private portion of the key."
+    type: "<xref href=\"byte?alt=byte&text=byte\" data-throw-if-not-resolved=\"False\" />[]"
+- uid: "com.azure.security.keyvault.keys.models.KeyAttestation.getPublicKeyAttestation()"
+  fullName: "com.azure.security.keyvault.keys.models.KeyAttestation.getPublicKeyAttestation()"
+  name: "getPublicKeyAttestation()"
+  nameWithType: "KeyAttestation.getPublicKeyAttestation()"
+  summary: "Get the attestation blob bytes encoded as base64url string corresponding to a public key in case of asymmetric key."
+  syntax: "public byte[] getPublicKeyAttestation()"
+  desc: "Get the attestation blob bytes encoded as base64url string corresponding to a public key in case of asymmetric key."
+  returns:
+    description: "The attestation blob bytes for the public portion of the key."
+    type: "<xref href=\"byte?alt=byte&text=byte\" data-throw-if-not-resolved=\"False\" />[]"
+- uid: "com.azure.security.keyvault.keys.models.KeyAttestation.getVersion()"
+  fullName: "com.azure.security.keyvault.keys.models.KeyAttestation.getVersion()"
+  name: "getVersion()"
+  nameWithType: "KeyAttestation.getVersion()"
+  summary: "Get the version of the attestation."
+  syntax: "public String getVersion()"
+  desc: "Get the version of the attestation."
+  returns:
+    description: "The version of the attestation."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.security.keyvault.keys.models.KeyAttestation.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.security.keyvault.keys.models.KeyAttestation.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "KeyAttestation.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "The key attestation information."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.security.keyvault.keys.models.KeyAttestation?alt=com.azure.security.keyvault.keys.models.KeyAttestation&text=KeyAttestation\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.security.keyvault.keys.models"
+artifact: com.azure:azure-security-keyvault-keys:4.10.0
