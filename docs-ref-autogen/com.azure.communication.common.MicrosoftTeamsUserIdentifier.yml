@@ -34,7 +34,7 @@ constructors:
   nameWithType: "MicrosoftTeamsUserIdentifier.MicrosoftTeamsUserIdentifier(String userId)"
   summary: "Creates a Microsoft<wbr>Teams<wbr>User<wbr>Identifier object"
   parameters:
-  - description: "Id of the Microsoft Teams user. If the user isn't anonymous, the id is the Azure AD object id of the user."
+  - description: "Id of the Microsoft Teams user. If the user isn't anonymous, the id is the Entra ID object id of the user."
     name: "userId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public MicrosoftTeamsUserIdentifier(String userId)"
@@ -45,7 +45,7 @@ constructors:
   nameWithType: "MicrosoftTeamsUserIdentifier.MicrosoftTeamsUserIdentifier(String userId, boolean isAnonymous)"
   summary: "Creates a Microsoft<wbr>Teams<wbr>User<wbr>Identifier object"
   parameters:
-  - description: "Id of the Microsoft Teams user. If the user isn't anonymous, the id is the Azure AD object id of the user."
+  - description: "Id of the Microsoft Teams user. If the user isn't anonymous, the id is the Entra ID object id of the user."
     name: "userId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "set this to true if the user is anonymous,\n                    for example when joining a meeting with a share link"
@@ -83,7 +83,7 @@ methods:
   syntax: "public String getUserId()"
   desc: "Get Teams User Id"
   returns:
-    description: "userId Id of the Microsoft Teams user. If the user isn't anonymous, the id is the Azure AD object id of the user."
+    description: "userId Id of the Microsoft Teams user. If the user isn't anonymous, the id is the Entra ID object id of the user."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.communication.common.MicrosoftTeamsUserIdentifier.hashCode()"
   fullName: "com.azure.communication.common.MicrosoftTeamsUserIdentifier.hashCode()"
@@ -97,7 +97,9 @@ methods:
   fullName: "com.azure.communication.common.MicrosoftTeamsUserIdentifier.isAnonymous()"
   name: "isAnonymous()"
   nameWithType: "MicrosoftTeamsUserIdentifier.isAnonymous()"
+  summary: "Get if the user is anonymous"
   syntax: "public boolean isAnonymous()"
+  desc: "Get if the user is anonymous"
   returns:
     description: "True if the user is anonymous, for example when joining a meeting with a share link."
     type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
@@ -134,4 +136,4 @@ type: "class"
 desc: "Communication identifier for Microsoft Teams User"
 metadata: {}
 package: "com.azure.communication.common"
-artifact: com.azure:azure-communication-common:1.3.11
+artifact: com.azure:azure-communication-common:1.4.0

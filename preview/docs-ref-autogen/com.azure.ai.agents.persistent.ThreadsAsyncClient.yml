@@ -3,7 +3,7 @@ uid: "com.azure.ai.agents.persistent.ThreadsAsyncClient"
 fullName: "com.azure.ai.agents.persistent.ThreadsAsyncClient"
 name: "ThreadsAsyncClient"
 nameWithType: "ThreadsAsyncClient"
-summary: "Initializes a new instance of the asynchronous Persistent<wbr>Agents<wbr>Administration<wbr>Client type."
+summary: "Initializes a new instance of the asynchronous Threads type."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -78,28 +78,11 @@ methods:
   - description: "Identifier of the thread."
     name: "threadId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public Mono<ThreadDeletionStatus> deleteThread(String threadId)"
+  syntax: "public Mono<Void> deleteThread(String threadId)"
   desc: "Deletes an existing thread."
   returns:
-    description: "the status of a thread deletion operation on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.ai.agents.persistent.models.ThreadDeletionStatus?alt=com.azure.ai.agents.persistent.models.ThreadDeletionStatus&text=ThreadDeletionStatus\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.ai.agents.persistent.ThreadsAsyncClient.deleteThreadWithResponse(java.lang.String,com.azure.core.http.rest.RequestOptions)"
-  fullName: "com.azure.ai.agents.persistent.ThreadsAsyncClient.deleteThreadWithResponse(String threadId, RequestOptions requestOptions)"
-  name: "deleteThreadWithResponse(String threadId, RequestOptions requestOptions)"
-  nameWithType: "ThreadsAsyncClient.deleteThreadWithResponse(String threadId, RequestOptions requestOptions)"
-  summary: "Deletes an existing thread."
-  parameters:
-  - description: "Identifier of the thread."
-    name: "threadId"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The options to configure the HTTP request before HTTP client sends it."
-    name: "requestOptions"
-    type: "<xref href=\"com.azure.core.http.rest.RequestOptions?alt=com.azure.core.http.rest.RequestOptions&text=RequestOptions\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public Mono<Response<BinaryData>> deleteThreadWithResponse(String threadId, RequestOptions requestOptions)"
-  desc: "Deletes an existing thread.\n\n**Response Body Schema**\n\n```java\n{\n     id: String (Required)\n     deleted: boolean (Required)\n     object: String (Required)\n }\n```"
-  returns:
-    description: "the status of a thread deletion operation along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of\n <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    description: "a <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> that completes when the thread is deleted successfully."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.ai.agents.persistent.ThreadsAsyncClient.getThread(java.lang.String)"
   fullName: "com.azure.ai.agents.persistent.ThreadsAsyncClient.getThread(String threadId)"
   name: "getThread(String threadId)"
@@ -233,7 +216,7 @@ methods:
     description: "information about a single thread associated with an agent along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful\n completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 type: "class"
-desc: "Initializes a new instance of the asynchronous PersistentAgentsAdministrationClient type."
+desc: "Initializes a new instance of the asynchronous Threads type."
 metadata: {}
 package: "com.azure.ai.agents.persistent"
-artifact: com.azure:azure-ai-agents-persistent:1.0.0-beta.1
+artifact: com.azure:azure-ai-agents-persistent:1.0.0-beta.2
