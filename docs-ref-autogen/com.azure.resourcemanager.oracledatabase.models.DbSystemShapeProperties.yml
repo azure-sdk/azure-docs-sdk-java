@@ -21,25 +21,27 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
 syntax: "public final class **DbSystemShapeProperties**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.oracledatabase.models.DbSystemShapeProperties?alt=com.azure.resourcemanager.oracledatabase.models.DbSystemShapeProperties&text=DbSystemShapeProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
-constructors:
-- uid: "com.azure.resourcemanager.oracledatabase.models.DbSystemShapeProperties.DbSystemShapeProperties()"
-  fullName: "com.azure.resourcemanager.oracledatabase.models.DbSystemShapeProperties.DbSystemShapeProperties()"
-  name: "DbSystemShapeProperties()"
-  nameWithType: "DbSystemShapeProperties.DbSystemShapeProperties()"
-  summary: "Creates an instance of Db<wbr>System<wbr>Shape<wbr>Properties class."
-  syntax: "public DbSystemShapeProperties()"
-  desc: "Creates an instance of DbSystemShapeProperties class."
 methods:
+- uid: "com.azure.resourcemanager.oracledatabase.models.DbSystemShapeProperties.areServerTypesSupported()"
+  fullName: "com.azure.resourcemanager.oracledatabase.models.DbSystemShapeProperties.areServerTypesSupported()"
+  name: "areServerTypesSupported()"
+  nameWithType: "DbSystemShapeProperties.areServerTypesSupported()"
+  summary: "Get the are<wbr>Server<wbr>Types<wbr>Supported property: Indicates if the shape supports database and storage server types."
+  syntax: "public Boolean areServerTypesSupported()"
+  desc: "Get the areServerTypesSupported property: Indicates if the shape supports database and storage server types."
+  returns:
+    description: "the areServerTypesSupported value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.resourcemanager.oracledatabase.models.DbSystemShapeProperties.availableCoreCount()"
   fullName: "com.azure.resourcemanager.oracledatabase.models.DbSystemShapeProperties.availableCoreCount()"
   name: "availableCoreCount()"
   nameWithType: "DbSystemShapeProperties.availableCoreCount()"
   summary: "Get the available<wbr>Core<wbr>Count property: The maximum number of CPU cores that can be enabled on the DB system for this shape."
-  syntax: "public Integer availableCoreCount()"
+  syntax: "public int availableCoreCount()"
   desc: "Get the availableCoreCount property: The maximum number of CPU cores that can be enabled on the DB system for this shape."
   returns:
     description: "the availableCoreCount value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.oracledatabase.models.DbSystemShapeProperties.availableCoreCountPerNode()"
   fullName: "com.azure.resourcemanager.oracledatabase.models.DbSystemShapeProperties.availableCoreCountPerNode()"
   name: "availableCoreCountPerNode()"
@@ -110,6 +112,16 @@ methods:
   returns:
     description: "the availableMemoryPerNodeInGbs value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+- uid: "com.azure.resourcemanager.oracledatabase.models.DbSystemShapeProperties.computeModel()"
+  fullName: "com.azure.resourcemanager.oracledatabase.models.DbSystemShapeProperties.computeModel()"
+  name: "computeModel()"
+  nameWithType: "DbSystemShapeProperties.computeModel()"
+  summary: "Get the compute<wbr>Model property: The compute model of the Exadata Infrastructure."
+  syntax: "public ComputeModel computeModel()"
+  desc: "Get the computeModel property: The compute model of the Exadata Infrastructure."
+  returns:
+    description: "the computeModel value."
+    type: "<xref href=\"com.azure.resourcemanager.oracledatabase.models.ComputeModel?alt=com.azure.resourcemanager.oracledatabase.models.ComputeModel&text=ComputeModel\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.oracledatabase.models.DbSystemShapeProperties.coreCountIncrement()"
   fullName: "com.azure.resourcemanager.oracledatabase.models.DbSystemShapeProperties.coreCountIncrement()"
   name: "coreCountIncrement()"
@@ -120,6 +132,16 @@ methods:
   returns:
     description: "the coreCountIncrement value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+- uid: "com.azure.resourcemanager.oracledatabase.models.DbSystemShapeProperties.displayName()"
+  fullName: "com.azure.resourcemanager.oracledatabase.models.DbSystemShapeProperties.displayName()"
+  name: "displayName()"
+  nameWithType: "DbSystemShapeProperties.displayName()"
+  summary: "Get the display<wbr>Name property: The display name of the shape used for the DB system."
+  syntax: "public String displayName()"
+  desc: "Get the displayName property: The display name of the shape used for the DB system."
+  returns:
+    description: "the displayName value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.oracledatabase.models.DbSystemShapeProperties.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.resourcemanager.oracledatabase.models.DbSystemShapeProperties.fromJson(JsonReader jsonReader)"
   name: "fromJson(JsonReader jsonReader)"
@@ -133,7 +155,7 @@ methods:
     type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static DbSystemShapeProperties fromJson(JsonReader jsonReader)"
   exceptions:
-  - description: "If an error occurs while reading the DbSystemShapeProperties."
+  - description: "If the deserialized JSON object was missing any required properties."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   desc: "Reads an instance of DbSystemShapeProperties from the JsonReader."
   returns:
@@ -249,6 +271,16 @@ methods:
   returns:
     description: "the shapeFamily value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.oracledatabase.models.DbSystemShapeProperties.shapeName()"
+  fullName: "com.azure.resourcemanager.oracledatabase.models.DbSystemShapeProperties.shapeName()"
+  name: "shapeName()"
+  nameWithType: "DbSystemShapeProperties.shapeName()"
+  summary: "Get the shape<wbr>Name property: The shape used for the DB system."
+  syntax: "public String shapeName()"
+  desc: "Get the shapeName property: The shape used for the DB system."
+  returns:
+    description: "the shapeName value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.oracledatabase.models.DbSystemShapeProperties.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.oracledatabase.models.DbSystemShapeProperties.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -274,4 +306,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.oracledatabase.models.DbSystemShapeProperties?alt=com.azure.resourcemanager.oracledatabase.models.DbSystemShapeProperties&text=DbSystemShapeProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.oracledatabase.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-oracledatabase:1.0.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-oracledatabase:1.1.0

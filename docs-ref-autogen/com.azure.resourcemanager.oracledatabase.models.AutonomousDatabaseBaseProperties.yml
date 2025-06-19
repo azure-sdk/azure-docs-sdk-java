@@ -125,11 +125,11 @@ methods:
   name: "computeCount()"
   nameWithType: "AutonomousDatabaseBaseProperties.computeCount()"
   summary: "Get the compute<wbr>Count property: The compute amount (CPUs) available to the database."
-  syntax: "public Float computeCount()"
+  syntax: "public Double computeCount()"
   desc: "Get the computeCount property: The compute amount (CPUs) available to the database."
   returns:
     description: "the computeCount value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Float.html\">Float</a>"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html\">Double</a>"
 - uid: "com.azure.resourcemanager.oracledatabase.models.AutonomousDatabaseBaseProperties.computeModel()"
   fullName: "com.azure.resourcemanager.oracledatabase.models.AutonomousDatabaseBaseProperties.computeModel()"
   name: "computeModel()"
@@ -513,9 +513,9 @@ methods:
   fullName: "com.azure.resourcemanager.oracledatabase.models.AutonomousDatabaseBaseProperties.peerDbId()"
   name: "peerDbId()"
   nameWithType: "AutonomousDatabaseBaseProperties.peerDbId()"
-  summary: "Get the peer<wbr>DbId property: The database OCID of the Disaster Recovery peer database, which is located in a different region from the current peer database."
+  summary: "Get the peer<wbr>DbId property: The Azure resource ID of the Disaster Recovery peer database, which is located in a different region from the current peer database."
   syntax: "public String peerDbId()"
-  desc: "Get the peerDbId property: The database OCID of the Disaster Recovery peer database, which is located in a different region from the current peer database."
+  desc: "Get the peerDbId property: The Azure resource ID of the Disaster Recovery peer database, which is located in a different region from the current peer database."
   returns:
     description: "the peerDbId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -523,9 +523,9 @@ methods:
   fullName: "com.azure.resourcemanager.oracledatabase.models.AutonomousDatabaseBaseProperties.peerDbIds()"
   name: "peerDbIds()"
   nameWithType: "AutonomousDatabaseBaseProperties.peerDbIds()"
-  summary: "Get the peer<wbr>DbIds property: The list of \\[OCIDs\\](https://docs.<wbr>oracle.<wbr>com/iaas/Content/General/Concepts/identifiers.<wbr>htm) of standby databases located in Autonomous Data Guard remote regions that are associated with the source database."
+  summary: "Get the peer<wbr>DbIds property: The list of Azure resource IDs of standby databases located in Autonomous Data Guard remote regions that are associated with the source database."
   syntax: "public List<String> peerDbIds()"
-  desc: "Get the peerDbIds property: The list of \\[OCIDs\\](https://docs.oracle.com/iaas/Content/General/Concepts/identifiers.htm) of standby databases located in Autonomous Data Guard remote regions that are associated with the source database. Note that for Autonomous Database Serverless instances, standby databases located in the same region as the source primary database do not have OCIDs."
+  desc: "Get the peerDbIds property: The list of Azure resource IDs of standby databases located in Autonomous Data Guard remote regions that are associated with the source database. Note that for Autonomous Database Serverless instances, standby databases located in the same region as the source primary database do not have Azure IDs."
   returns:
     description: "the peerDbIds value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
@@ -589,6 +589,16 @@ methods:
   returns:
     description: "the provisioningState value."
     type: "<xref href=\"com.azure.resourcemanager.oracledatabase.models.AzureResourceProvisioningState?alt=com.azure.resourcemanager.oracledatabase.models.AzureResourceProvisioningState&text=AzureResourceProvisioningState\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.oracledatabase.models.AutonomousDatabaseBaseProperties.remoteDisasterRecoveryConfiguration()"
+  fullName: "com.azure.resourcemanager.oracledatabase.models.AutonomousDatabaseBaseProperties.remoteDisasterRecoveryConfiguration()"
+  name: "remoteDisasterRecoveryConfiguration()"
+  nameWithType: "AutonomousDatabaseBaseProperties.remoteDisasterRecoveryConfiguration()"
+  summary: "Get the remote<wbr>Disaster<wbr>Recovery<wbr>Configuration property: Indicates remote disaster recovery configuration."
+  syntax: "public DisasterRecoveryConfigurationDetails remoteDisasterRecoveryConfiguration()"
+  desc: "Get the remoteDisasterRecoveryConfiguration property: Indicates remote disaster recovery configuration."
+  returns:
+    description: "the remoteDisasterRecoveryConfiguration value."
+    type: "<xref href=\"com.azure.resourcemanager.oracledatabase.models.DisasterRecoveryConfigurationDetails?alt=com.azure.resourcemanager.oracledatabase.models.DisasterRecoveryConfigurationDetails&text=DisasterRecoveryConfigurationDetails\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.oracledatabase.models.AutonomousDatabaseBaseProperties.role()"
   fullName: "com.azure.resourcemanager.oracledatabase.models.AutonomousDatabaseBaseProperties.role()"
   name: "role()"
@@ -679,6 +689,16 @@ methods:
   returns:
     description: "the timeDeletionOfFreeAutonomousDatabase value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.oracledatabase.models.AutonomousDatabaseBaseProperties.timeDisasterRecoveryRoleChanged()"
+  fullName: "com.azure.resourcemanager.oracledatabase.models.AutonomousDatabaseBaseProperties.timeDisasterRecoveryRoleChanged()"
+  name: "timeDisasterRecoveryRoleChanged()"
+  nameWithType: "AutonomousDatabaseBaseProperties.timeDisasterRecoveryRoleChanged()"
+  summary: "Get the time<wbr>Disaster<wbr>Recovery<wbr>Role<wbr>Changed property: The date and time the Disaster Recovery role was switched for the standby Autonomous Database."
+  syntax: "public OffsetDateTime timeDisasterRecoveryRoleChanged()"
+  desc: "Get the timeDisasterRecoveryRoleChanged property: The date and time the Disaster Recovery role was switched for the standby Autonomous Database."
+  returns:
+    description: "the timeDisasterRecoveryRoleChanged value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
 - uid: "com.azure.resourcemanager.oracledatabase.models.AutonomousDatabaseBaseProperties.timeLocalDataGuardEnabled()"
   fullName: "com.azure.resourcemanager.oracledatabase.models.AutonomousDatabaseBaseProperties.timeLocalDataGuardEnabled()"
   name: "timeLocalDataGuardEnabled()"
@@ -888,16 +908,16 @@ methods:
   returns:
     description: "the AutonomousDatabaseBaseProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.oracledatabase.models.AutonomousDatabaseBaseProperties?alt=com.azure.resourcemanager.oracledatabase.models.AutonomousDatabaseBaseProperties&text=AutonomousDatabaseBaseProperties\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.oracledatabase.models.AutonomousDatabaseBaseProperties.withComputeCount(java.lang.Float)"
-  fullName: "com.azure.resourcemanager.oracledatabase.models.AutonomousDatabaseBaseProperties.withComputeCount(Float computeCount)"
-  name: "withComputeCount(Float computeCount)"
-  nameWithType: "AutonomousDatabaseBaseProperties.withComputeCount(Float computeCount)"
+- uid: "com.azure.resourcemanager.oracledatabase.models.AutonomousDatabaseBaseProperties.withComputeCount(java.lang.Double)"
+  fullName: "com.azure.resourcemanager.oracledatabase.models.AutonomousDatabaseBaseProperties.withComputeCount(Double computeCount)"
+  name: "withComputeCount(Double computeCount)"
+  nameWithType: "AutonomousDatabaseBaseProperties.withComputeCount(Double computeCount)"
   summary: "Set the compute<wbr>Count property: The compute amount (CPUs) available to the database."
   parameters:
   - description: "the computeCount value to set."
     name: "computeCount"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Float.html\">Float</a>"
-  syntax: "public AutonomousDatabaseBaseProperties withComputeCount(Float computeCount)"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html\">Double</a>"
+  syntax: "public AutonomousDatabaseBaseProperties withComputeCount(Double computeCount)"
   desc: "Set the computeCount property: The compute amount (CPUs) available to the database."
   returns:
     description: "the AutonomousDatabaseBaseProperties object itself."
@@ -1172,13 +1192,13 @@ methods:
   fullName: "com.azure.resourcemanager.oracledatabase.models.AutonomousDatabaseBaseProperties.withPeerDbId(String peerDbId)"
   name: "withPeerDbId(String peerDbId)"
   nameWithType: "AutonomousDatabaseBaseProperties.withPeerDbId(String peerDbId)"
-  summary: "Set the peer<wbr>DbId property: The database OCID of the Disaster Recovery peer database, which is located in a different region from the current peer database."
+  summary: "Set the peer<wbr>DbId property: The Azure resource ID of the Disaster Recovery peer database, which is located in a different region from the current peer database."
   parameters:
   - description: "the peerDbId value to set."
     name: "peerDbId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public AutonomousDatabaseBaseProperties withPeerDbId(String peerDbId)"
-  desc: "Set the peerDbId property: The database OCID of the Disaster Recovery peer database, which is located in a different region from the current peer database."
+  desc: "Set the peerDbId property: The Azure resource ID of the Disaster Recovery peer database, which is located in a different region from the current peer database."
   returns:
     description: "the AutonomousDatabaseBaseProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.oracledatabase.models.AutonomousDatabaseBaseProperties?alt=com.azure.resourcemanager.oracledatabase.models.AutonomousDatabaseBaseProperties&text=AutonomousDatabaseBaseProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -1300,4 +1320,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.oracledatabase.models.AutonomousDatabaseBaseProperties?alt=com.azure.resourcemanager.oracledatabase.models.AutonomousDatabaseBaseProperties&text=AutonomousDatabaseBaseProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.oracledatabase.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-oracledatabase:1.0.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-oracledatabase:1.1.0

@@ -46,7 +46,7 @@ methods:
   nameWithType: "BareMetalMachineConfigurationData.bmcCredentials()"
   summary: "Get the bmc<wbr>Credentials property: The credentials of the baseboard management controller on this bare metal machine."
   syntax: "public AdministrativeCredentials bmcCredentials()"
-  desc: "Get the bmcCredentials property: The credentials of the baseboard management controller on this bare metal machine."
+  desc: "Get the bmcCredentials property: The credentials of the baseboard management controller on this bare metal machine. The password field is expected to be an Azure Key Vault key URL. Until the cluster is converted to utilize managed identity by setting the secret archive settings, the actual password value should be provided instead."
   returns:
     description: "the bmcCredentials value."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.AdministrativeCredentials?alt=com.azure.resourcemanager.networkcloud.models.AdministrativeCredentials&text=AdministrativeCredentials\" data-throw-if-not-resolved=\"False\" />"
@@ -158,7 +158,7 @@ methods:
     name: "bmcCredentials"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.AdministrativeCredentials?alt=com.azure.resourcemanager.networkcloud.models.AdministrativeCredentials&text=AdministrativeCredentials\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public BareMetalMachineConfigurationData withBmcCredentials(AdministrativeCredentials bmcCredentials)"
-  desc: "Set the bmcCredentials property: The credentials of the baseboard management controller on this bare metal machine."
+  desc: "Set the bmcCredentials property: The credentials of the baseboard management controller on this bare metal machine. The password field is expected to be an Azure Key Vault key URL. Until the cluster is converted to utilize managed identity by setting the secret archive settings, the actual password value should be provided instead."
   returns:
     description: "the BareMetalMachineConfigurationData object itself."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.BareMetalMachineConfigurationData?alt=com.azure.resourcemanager.networkcloud.models.BareMetalMachineConfigurationData&text=BareMetalMachineConfigurationData\" data-throw-if-not-resolved=\"False\" />"
@@ -252,4 +252,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.BareMetalMachineConfigurationData?alt=com.azure.resourcemanager.networkcloud.models.BareMetalMachineConfigurationData&text=BareMetalMachineConfigurationData\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.networkcloud.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.0.0

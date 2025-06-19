@@ -36,7 +36,7 @@ methods:
   nameWithType: "StorageApplianceConfigurationData.adminCredentials()"
   summary: "Get the admin<wbr>Credentials property: The credentials of the administrative interface on this storage appliance."
   syntax: "public AdministrativeCredentials adminCredentials()"
-  desc: "Get the adminCredentials property: The credentials of the administrative interface on this storage appliance."
+  desc: "Get the adminCredentials property: The credentials of the administrative interface on this storage appliance. The password field is expected to be an Azure Key Vault key URL. Until the cluster is converted to utilize managed identity by setting the secret archive settings, the actual password value should be provided instead."
   returns:
     description: "the adminCredentials value."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.AdministrativeCredentials?alt=com.azure.resourcemanager.networkcloud.models.AdministrativeCredentials&text=AdministrativeCredentials\" data-throw-if-not-resolved=\"False\" />"
@@ -118,7 +118,7 @@ methods:
     name: "adminCredentials"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.AdministrativeCredentials?alt=com.azure.resourcemanager.networkcloud.models.AdministrativeCredentials&text=AdministrativeCredentials\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public StorageApplianceConfigurationData withAdminCredentials(AdministrativeCredentials adminCredentials)"
-  desc: "Set the adminCredentials property: The credentials of the administrative interface on this storage appliance."
+  desc: "Set the adminCredentials property: The credentials of the administrative interface on this storage appliance. The password field is expected to be an Azure Key Vault key URL. Until the cluster is converted to utilize managed identity by setting the secret archive settings, the actual password value should be provided instead."
   returns:
     description: "the StorageApplianceConfigurationData object itself."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.StorageApplianceConfigurationData?alt=com.azure.resourcemanager.networkcloud.models.StorageApplianceConfigurationData&text=StorageApplianceConfigurationData\" data-throw-if-not-resolved=\"False\" />"
@@ -170,4 +170,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.StorageApplianceConfigurationData?alt=com.azure.resourcemanager.networkcloud.models.StorageApplianceConfigurationData&text=StorageApplianceConfigurationData\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.networkcloud.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.0.0
