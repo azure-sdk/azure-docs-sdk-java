@@ -1,12 +1,12 @@
 ---
 title: Azure Monitor Ingestion client library for Java
 keywords: Azure, java, SDK, API, azure-monitor-ingestion, monitor
-ms.date: 12/04/2024
+ms.date: 06/21/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: monitor
 ---
-# Azure Monitor Ingestion client library for Java - version 1.2.7 
+# Azure Monitor Ingestion client library for Java - version 1.2.10 
 
 
 The Azure Monitor Ingestion client library is used to send custom logs to [Azure Monitor][azure_monitor_overview] using 
@@ -31,7 +31,7 @@ that you create in Log Analytics workspace. You can even extend the schema of bu
 
 Please include the `azure-sdk-bom` to your project to take a dependency on the latest stable version of the library. In 
 the following snippet, replace the `{bom_version_to_target}` placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-ingestion_1.2.7/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-ingestion_1.2.10/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -67,7 +67,7 @@ add the direct dependency to your project as follows.
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-monitor-ingestion</artifactId>
-    <version>1.2.7</version>
+    <version>1.2.10</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -147,7 +147,7 @@ workspace. The target table must exist before you can send data to it. The follo
 
 ### Logs retrieval
 The logs that were uploaded using this library can be queried using the 
-[Azure Monitor Query](https://github.com/Azure/azure-sdk-for-java/tree/azure-monitor-ingestion_1.2.7/sdk/monitor/azure-monitor-query#readme) 
+[Azure Monitor Query](https://github.com/Azure/azure-sdk-for-java/tree/azure-monitor-ingestion_1.2.10/sdk/monitor/azure-monitor-query#readme) 
 client library.
 
 ## Examples
@@ -223,7 +223,7 @@ client.upload("<data-collection-rule-id>", "<stream-name>", logs, logsUploadOpti
 ```
 ## Troubleshooting
 
-For details on diagnosing various failure scenarios, see our [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-ingestion_1.2.7/sdk/monitor/azure-monitor-ingestion/TROUBLESHOOTING.md).
+For details on diagnosing various failure scenarios, see our [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-ingestion_1.2.10/sdk/monitor/azure-monitor-ingestion/TROUBLESHOOTING.md).
 
 ## Next steps
 More samples can be found [here][samples].
@@ -243,7 +243,7 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 <!-- LINKS -->
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/tree/azure-monitor-ingestion_1.2.7/sdk/identity/azure-identity
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/tree/azure-monitor-ingestion_1.2.10/sdk/identity/azure-identity
 [azure_monitor_overview]: https://learn.microsoft.com/azure/azure-monitor/overview
 [azure_subscription]: https://azure.microsoft.com/free
 [cla]: https://cla.microsoft.com
@@ -253,11 +253,11 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 [data_collection_endpoint]: https://learn.microsoft.com//azure/azure-monitor/essentials/data-collection-endpoint-overview
 [data_collection_rule]: https://learn.microsoft.com/azure/azure-monitor/essentials/data-collection-rule-overview
 [data_collection_rule_tutorial]: https://learn.microsoft.com/azure/azure-monitor/logs/tutorial-logs-ingestion-portal#collect-information-from-the-dcr
-[DefaultAzureCredential]: https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-ingestion_1.2.7/sdk/identity/azure-identity/README.md#defaultazurecredential
+[DefaultAzureCredential]: https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-ingestion_1.2.10/sdk/identity/azure-identity/README.md#defaultazurecredential
 [ingestion_overview]: https://learn.microsoft.com/azure/azure-monitor/logs/logs-ingestion-api-overview
 [jdk_link]: https://learn.microsoft.com/java/azure/jdk/?view=azure-java-stable
 [log_analytics_workspace]: https://learn.microsoft.com//azure/azure-monitor/logs/log-analytics-workspace-overview
 [logging]: https://learn.microsoft.com//azure/developer/java/sdk/logging-overview
-[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-ingestion_1.2.7/sdk/monitor/azure-monitor-ingestion/src/samples/java/com/azure/monitor/ingestion
-
+[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-ingestion_1.2.10/sdk/monitor/azure-monitor-ingestion/src/samples/java/com/azure/monitor/ingestion
+![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fmonitor%2Fazure-monitor-ingestion%2FREADME.png)
 

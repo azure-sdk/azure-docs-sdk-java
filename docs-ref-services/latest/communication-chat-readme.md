@@ -1,12 +1,12 @@
 ---
 title: Azure Communication Chat client library for Java
 keywords: Azure, java, SDK, API, azure-communication-chat, communication
-ms.date: 03/25/2025
+ms.date: 06/21/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: communication
 ---
-# Azure Communication Chat client library for Java - version 1.5.9 
+# Azure Communication Chat client library for Java - version 1.5.10 
 
 
 Azure Communication Chat contains the APIs used in chat applications for Azure Communication Services.  
@@ -26,7 +26,7 @@ Azure Communication Chat contains the APIs used in chat applications for Azure C
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-communication-chat_1.5.9/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-communication-chat_1.5.10/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -61,7 +61,7 @@ add the direct dependency to your project as follows.
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-communication-chat</artifactId>
-    <version>1.5.9</version>
+    <version>1.5.10</version>
 </dependency>
 ```
 
@@ -401,5 +401,5 @@ Check out other client libraries for Azure communication service
 [product_docs]: /azure/communication-services/
 [package]: https://central.sonatype.com/artifact/com.azure/azure-communication-chat
 [api_documentation]: https://aka.ms/java-docs
-[source]: https://github.com/Azure/azure-sdk-for-java/tree/azure-communication-chat_1.5.9/sdk/communication/azure-communication-chat/src
+[source]: https://github.com/Azure/azure-sdk-for-java/tree/azure-communication-chat_1.5.10/sdk/communication/azure-communication-chat/src
 

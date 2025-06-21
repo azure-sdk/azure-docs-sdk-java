@@ -1,12 +1,12 @@
 ---
 title: Azure Storage Blob client library for Java
 keywords: Azure, java, SDK, API, azure-storage-blob, storage
-ms.date: 03/04/2025
+ms.date: 06/21/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: storage
 ---
-# Azure Storage Blob client library for Java - version 12.29.1 
+# Azure Storage Blob client library for Java - version 12.30.1 
 
 
 Azure Blob Storage is Microsoft's object storage solution for the cloud. Blob
@@ -30,7 +30,7 @@ definition, such as text or binary data.
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on GA version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.29.1/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.30.1/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -65,7 +65,7 @@ add the direct dependency to your project as follows.
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-storage-blob</artifactId>
-    <version>12.29.1</version>
+    <version>12.30.1</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -617,25 +617,25 @@ When you submit a pull request, a CLA-bot will automatically determine whether y
 This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For more information see the [Code of Conduct FAQ][coc_faq] or contact [opencode@microsoft.com][coc_contact] with any additional questions or comments.
 
 <!-- LINKS -->
-[source]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.29.1/sdk/storage/azure-storage-blob/src
-[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.29.1/sdk/storage/azure-storage-blob/src/samples/README.md
+[source]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.30.1/sdk/storage/azure-storage-blob/src
+[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.30.1/sdk/storage/azure-storage-blob/src/samples/README.md
 [docs]: https://azure.github.io/azure-sdk-for-java/
-[rest_docs]: /rest/api/storageservices/blob-service-rest-api
-[product_docs]: /azure/storage/blobs/storage-blobs-overview
-[sas_token]: /azure/storage/common/storage-dotnet-shared-access-signature-part-1
-[jdk]: /java/azure/jdk/
+[rest_docs]: https://learn.microsoft.com/rest/api/storageservices/blob-service-rest-api
+[product_docs]: https://learn.microsoft.com/azure/storage/blobs/storage-blobs-overview
+[sas_token]: https://learn.microsoft.com/azure/storage/common/storage-dotnet-shared-access-signature-part-1
+[jdk]: https://learn.microsoft.com/java/azure/jdk/
 [azure_subscription]: https://azure.microsoft.com/free/
-[storage_account]: /azure/storage/common/storage-quickstart-create-account?tabs=azure-portal
-[storage_account_create_cli]: /azure/storage/common/storage-quickstart-create-account?tabs=azure-cli
-[storage_account_create_portal]: /azure/storage/common/storage-quickstart-create-account?tabs=azure-portal
-[identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.29.1/sdk/identity/azure-identity/README.md
-[error_codes]: /rest/api/storageservices/blob-service-error-codes
-[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.29.1/sdk/storage/azure-storage-blob/src/samples
+[storage_account]: https://learn.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal
+[storage_account_create_cli]: https://learn.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=azure-cli
+[storage_account_create_portal]: https://learn.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal
+[identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.30.1/sdk/identity/azure-identity/README.md
+[error_codes]: https://learn.microsoft.com/rest/api/storageservices/blob-service-error-codes
+[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.30.1/sdk/storage/azure-storage-blob/src/samples
 [cla]: https://cla.microsoft.com
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
 [coc_contact]: mailto:opencode@microsoft.com
 [performance_tuning]: https://github.com/Azure/azure-sdk-for-java/wiki/Performance-Tuning
 
-![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fstorage%2Fazure-storage-blob%2FREADME.png)
+
 

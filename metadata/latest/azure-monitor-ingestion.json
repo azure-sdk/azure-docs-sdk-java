@@ -1,6 +1,6 @@
 {
   "Name": "azure-monitor-ingestion",
-  "Version": "1.2.7",
+  "Version": "1.2.10",
   "DevVersion": null,
   "DirectoryPath": "sdk/monitor/azure-monitor-ingestion",
   "ServiceDirectory": "monitor",
@@ -10,7 +10,7 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-monitor-ingestion",
-  "ReleaseStatus": "2024-12-04",
+  "ReleaseStatus": "2025-06-19",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": [
     "com.azure:azure-monitor-query-perf",
@@ -18,15 +18,21 @@
     "com.azure:perf-test-core"
   ],
   "ArtifactDetails": {
-    "name": "azure-monitor-ingestion",
+    "triggeringPaths": [
+      "/sdk/monitor/ci.yml"
+    ],
     "groupId": "com.azure",
     "safeName": "azuremonitoringestion",
+    "name": "azure-monitor-ingestion",
     "releaseInBatch": "${{ parameters.release_azuremonitoringestion }}"
   },
-  "CIMatrixConfigs": [],
+  "CIParameters": {
+    "CIMatrixConfigs": []
+  },
   "Namespaces": [
     "com.azure.monitor.ingestion",
     "com.azure.monitor.ingestion.models"
   ],
+  "CIMatrixConfigs": [],
   "DependentPackages": null
 }
