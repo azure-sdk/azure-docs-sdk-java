@@ -26,15 +26,18 @@ constructors:
   fullName: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.BlockBlobSimpleUploadOptions(BinaryData data)"
   name: "BlockBlobSimpleUploadOptions(BinaryData data)"
   nameWithType: "BlockBlobSimpleUploadOptions.BlockBlobSimpleUploadOptions(BinaryData data)"
+  summary: "Creates a new instance of <xref uid=\"com.azure.storage.blob.options.BlockBlobSimpleUploadOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlockBlobSimpleUploadOptions\"></xref>."
   parameters:
   - description: "The data to write to the block. Note that this <code>BinaryData</code> must have defined length\n and must be replayable if retries are enabled (the default), see <xref uid=\"com.azure.core.util.BinaryData.isReplayable*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BinaryData#isReplayable()\"></xref>."
     name: "data"
     type: "<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public BlockBlobSimpleUploadOptions(BinaryData data)"
+  desc: "Creates a new instance of <xref uid=\"com.azure.storage.blob.options.BlockBlobSimpleUploadOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlockBlobSimpleUploadOptions\"></xref>."
 - uid: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.BlockBlobSimpleUploadOptions(java.io.InputStream,long)"
   fullName: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.BlockBlobSimpleUploadOptions(InputStream data, long length)"
   name: "BlockBlobSimpleUploadOptions(InputStream data, long length)"
   nameWithType: "BlockBlobSimpleUploadOptions.BlockBlobSimpleUploadOptions(InputStream data, long length)"
+  summary: "Creates a new instance of <xref uid=\"com.azure.storage.blob.options.BlockBlobSimpleUploadOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlockBlobSimpleUploadOptions\"></xref>."
   parameters:
   - description: "The data to write to the blob."
     name: "data"
@@ -43,10 +46,12 @@ constructors:
     name: "length"
     type: "<xref href=\"long?alt=long&text=long\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public BlockBlobSimpleUploadOptions(InputStream data, long length)"
+  desc: "Creates a new instance of <xref uid=\"com.azure.storage.blob.options.BlockBlobSimpleUploadOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlockBlobSimpleUploadOptions\"></xref>."
 - uid: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.BlockBlobSimpleUploadOptions(reactor.core.publisher.Flux<java.nio.ByteBuffer>,long)"
   fullName: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.BlockBlobSimpleUploadOptions(Flux<ByteBuffer> data, long length)"
   name: "BlockBlobSimpleUploadOptions(Flux<ByteBuffer> data, long length)"
   nameWithType: "BlockBlobSimpleUploadOptions.BlockBlobSimpleUploadOptions(Flux<ByteBuffer> data, long length)"
+  summary: "Creates a new instance of <xref uid=\"com.azure.storage.blob.options.BlockBlobSimpleUploadOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlockBlobSimpleUploadOptions\"></xref>."
   parameters:
   - description: "The data to write to the blob. Note that this <code>Flux</code> must be replayable if retries are enabled\n (the default). In other words, the Flux must produce the same data each time it is subscribed to."
     name: "data"
@@ -55,12 +60,15 @@ constructors:
     name: "length"
     type: "<xref href=\"long?alt=long&text=long\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public BlockBlobSimpleUploadOptions(Flux<ByteBuffer> data, long length)"
+  desc: "Creates a new instance of <xref uid=\"com.azure.storage.blob.options.BlockBlobSimpleUploadOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlockBlobSimpleUploadOptions\"></xref>."
 methods:
 - uid: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.getContentMd5()"
   fullName: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.getContentMd5()"
   name: "getContentMd5()"
   nameWithType: "BlockBlobSimpleUploadOptions.getContentMd5()"
+  summary: "Gets the MD5 hash of the content."
   syntax: "public byte[] getContentMd5()"
+  desc: "Gets the MD5 hash of the content."
   returns:
     description: "An MD5 hash of the content. This hash is used to verify the integrity of the content during\n transport. When this header is specified, the storage service compares the hash of the content that has arrived\n with this header value. Note that this MD5 hash is not stored with the blob. If the two hashes do not match, the\n operation will fail."
     type: "<xref href=\"byte?alt=byte&text=byte\" data-throw-if-not-resolved=\"False\" />[]"
@@ -68,7 +76,9 @@ methods:
   fullName: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.getData()"
   name: "getData()"
   nameWithType: "BlockBlobSimpleUploadOptions.getData()"
+  summary: "Gets the data to write to the blob."
   syntax: "public BinaryData getData()"
+  desc: "Gets the data to write to the blob."
   returns:
     description: "The data to write to the blob."
     type: "<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />"
@@ -76,7 +86,9 @@ methods:
   fullName: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.getDataFlux()"
   name: "getDataFlux()"
   nameWithType: "BlockBlobSimpleUploadOptions.getDataFlux()"
+  summary: "Gets the data to write to the blob."
   syntax: "public Flux<ByteBuffer> getDataFlux()"
+  desc: "Gets the data to write to the blob."
   returns:
     description: "The data to write to the blob. Note that this <code>Flux</code> must be replayable if retries are enabled\n (the default). In other words, the Flux must produce the same data each time it is subscribed to."
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
@@ -84,7 +96,9 @@ methods:
   fullName: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.getDataStream()"
   name: "getDataStream()"
   nameWithType: "BlockBlobSimpleUploadOptions.getDataStream()"
+  summary: "Gets the data to write to the blob."
   syntax: "public InputStream getDataStream()"
+  desc: "Gets the data to write to the blob."
   returns:
     description: "The data to write to the blob."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html\">InputStream</a>"
@@ -92,7 +106,9 @@ methods:
   fullName: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.getHeaders()"
   name: "getHeaders()"
   nameWithType: "BlockBlobSimpleUploadOptions.getHeaders()"
+  summary: "Gets the <xref uid=\"com.azure.storage.blob.models.BlobHttpHeaders\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobHttpHeaders\"></xref>."
   syntax: "public BlobHttpHeaders getHeaders()"
+  desc: "Gets the <xref uid=\"com.azure.storage.blob.models.BlobHttpHeaders\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobHttpHeaders\"></xref>."
   returns:
     description: "<xref uid=\"com.azure.storage.blob.models.BlobHttpHeaders\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobHttpHeaders\"></xref>"
     type: "<xref href=\"com.azure.storage.blob.models.BlobHttpHeaders?alt=com.azure.storage.blob.models.BlobHttpHeaders&text=BlobHttpHeaders\" data-throw-if-not-resolved=\"False\" />"
@@ -100,7 +116,9 @@ methods:
   fullName: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.getImmutabilityPolicy()"
   name: "getImmutabilityPolicy()"
   nameWithType: "BlockBlobSimpleUploadOptions.getImmutabilityPolicy()"
+  summary: "Gets the <xref uid=\"com.azure.storage.blob.models.BlobImmutabilityPolicy\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobImmutabilityPolicy\"></xref>."
   syntax: "public BlobImmutabilityPolicy getImmutabilityPolicy()"
+  desc: "Gets the <xref uid=\"com.azure.storage.blob.models.BlobImmutabilityPolicy\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobImmutabilityPolicy\"></xref>."
   returns:
     description: "<xref uid=\"com.azure.storage.blob.models.BlobImmutabilityPolicy\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobImmutabilityPolicy\"></xref>"
     type: "<xref href=\"com.azure.storage.blob.models.BlobImmutabilityPolicy?alt=com.azure.storage.blob.models.BlobImmutabilityPolicy&text=BlobImmutabilityPolicy\" data-throw-if-not-resolved=\"False\" />"
@@ -108,7 +126,9 @@ methods:
   fullName: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.getLength()"
   name: "getLength()"
   nameWithType: "BlockBlobSimpleUploadOptions.getLength()"
+  summary: "Gets the exact length of the data."
   syntax: "public long getLength()"
+  desc: "Gets the exact length of the data."
   returns:
     description: "The exact length of the data. It is important that this value match precisely the length of the\n data emitted by the data source."
     type: "<xref href=\"long?alt=long&text=long\" data-throw-if-not-resolved=\"False\" />"
@@ -116,7 +136,9 @@ methods:
   fullName: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.getMetadata()"
   name: "getMetadata()"
   nameWithType: "BlockBlobSimpleUploadOptions.getMetadata()"
+  summary: "Gets the metadata to associate with the blob."
   syntax: "public Map<String,String> getMetadata()"
+  desc: "Gets the metadata to associate with the blob."
   returns:
     description: "The metadata to associate with the blob."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
@@ -124,7 +146,9 @@ methods:
   fullName: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.getRequestConditions()"
   name: "getRequestConditions()"
   nameWithType: "BlockBlobSimpleUploadOptions.getRequestConditions()"
+  summary: "Gets the <xref uid=\"com.azure.storage.blob.models.BlobRequestConditions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobRequestConditions\"></xref>."
   syntax: "public BlobRequestConditions getRequestConditions()"
+  desc: "Gets the <xref uid=\"com.azure.storage.blob.models.BlobRequestConditions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobRequestConditions\"></xref>."
   returns:
     description: "<xref uid=\"com.azure.storage.blob.models.BlobRequestConditions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobRequestConditions\"></xref>"
     type: "<xref href=\"com.azure.storage.blob.models.BlobRequestConditions?alt=com.azure.storage.blob.models.BlobRequestConditions&text=BlobRequestConditions\" data-throw-if-not-resolved=\"False\" />"
@@ -132,7 +156,9 @@ methods:
   fullName: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.getTags()"
   name: "getTags()"
   nameWithType: "BlockBlobSimpleUploadOptions.getTags()"
+  summary: "Gets the tags to associate with the blob."
   syntax: "public Map<String,String> getTags()"
+  desc: "Gets the tags to associate with the blob."
   returns:
     description: "The tags to associate with the blob."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
@@ -140,7 +166,9 @@ methods:
   fullName: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.getTier()"
   name: "getTier()"
   nameWithType: "BlockBlobSimpleUploadOptions.getTier()"
+  summary: "Gets the <xref uid=\"com.azure.storage.blob.models.AccessTier\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AccessTier\"></xref>."
   syntax: "public AccessTier getTier()"
+  desc: "Gets the <xref uid=\"com.azure.storage.blob.models.AccessTier\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AccessTier\"></xref>."
   returns:
     description: "<xref uid=\"com.azure.storage.blob.models.AccessTier\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AccessTier\"></xref>"
     type: "<xref href=\"com.azure.storage.blob.models.AccessTier?alt=com.azure.storage.blob.models.AccessTier&text=AccessTier\" data-throw-if-not-resolved=\"False\" />"
@@ -148,7 +176,9 @@ methods:
   fullName: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.isLegalHold()"
   name: "isLegalHold()"
   nameWithType: "BlockBlobSimpleUploadOptions.isLegalHold()"
+  summary: "Gets if a legal hold should be placed on the blob."
   syntax: "public Boolean isLegalHold()"
+  desc: "Gets if a legal hold should be placed on the blob."
   returns:
     description: "If a legal hold should be placed on the blob."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
@@ -156,11 +186,13 @@ methods:
   fullName: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.setContentMd5(byte[] contentMd5)"
   name: "setContentMd5(byte[] contentMd5)"
   nameWithType: "BlockBlobSimpleUploadOptions.setContentMd5(byte[] contentMd5)"
+  summary: "Sets the MD5 hash of the content."
   parameters:
   - description: "An MD5 hash of the block content. This hash is used to verify the integrity of the block during\n transport. When this header is specified, the storage service compares the hash of the content that has arrived\n with this header value. Note that this MD5 hash is not stored with the blob. If the two hashes do not match, the\n operation will fail."
     name: "contentMd5"
     type: "<xref href=\"byte?alt=byte&text=byte\" data-throw-if-not-resolved=\"False\" />[]"
   syntax: "public BlockBlobSimpleUploadOptions setContentMd5(byte[] contentMd5)"
+  desc: "Sets the MD5 hash of the content."
   returns:
     description: "The updated options"
     type: "<xref href=\"com.azure.storage.blob.options.BlockBlobSimpleUploadOptions?alt=com.azure.storage.blob.options.BlockBlobSimpleUploadOptions&text=BlockBlobSimpleUploadOptions\" data-throw-if-not-resolved=\"False\" />"
@@ -168,11 +200,13 @@ methods:
   fullName: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.setHeaders(BlobHttpHeaders headers)"
   name: "setHeaders(BlobHttpHeaders headers)"
   nameWithType: "BlockBlobSimpleUploadOptions.setHeaders(BlobHttpHeaders headers)"
+  summary: "Sets the <xref uid=\"com.azure.storage.blob.models.BlobHttpHeaders\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobHttpHeaders\"></xref>."
   parameters:
   - description: "<xref uid=\"com.azure.storage.blob.models.BlobHttpHeaders\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobHttpHeaders\"></xref>"
     name: "headers"
     type: "<xref href=\"com.azure.storage.blob.models.BlobHttpHeaders?alt=com.azure.storage.blob.models.BlobHttpHeaders&text=BlobHttpHeaders\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public BlockBlobSimpleUploadOptions setHeaders(BlobHttpHeaders headers)"
+  desc: "Sets the <xref uid=\"com.azure.storage.blob.models.BlobHttpHeaders\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobHttpHeaders\"></xref>."
   returns:
     description: "The updated options"
     type: "<xref href=\"com.azure.storage.blob.options.BlockBlobSimpleUploadOptions?alt=com.azure.storage.blob.options.BlockBlobSimpleUploadOptions&text=BlockBlobSimpleUploadOptions\" data-throw-if-not-resolved=\"False\" />"
@@ -180,13 +214,13 @@ methods:
   fullName: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.setImmutabilityPolicy(BlobImmutabilityPolicy immutabilityPolicy)"
   name: "setImmutabilityPolicy(BlobImmutabilityPolicy immutabilityPolicy)"
   nameWithType: "BlockBlobSimpleUploadOptions.setImmutabilityPolicy(BlobImmutabilityPolicy immutabilityPolicy)"
-  summary: "Note that this parameter is only applicable to a blob within a container that has immutable storage with versioning enabled."
+  summary: "Sets the <xref uid=\"com.azure.storage.blob.models.BlobImmutabilityPolicy\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobImmutabilityPolicy\"></xref>."
   parameters:
   - description: "<xref uid=\"com.azure.storage.blob.models.BlobImmutabilityPolicy\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobImmutabilityPolicy\"></xref>"
     name: "immutabilityPolicy"
     type: "<xref href=\"com.azure.storage.blob.models.BlobImmutabilityPolicy?alt=com.azure.storage.blob.models.BlobImmutabilityPolicy&text=BlobImmutabilityPolicy\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public BlockBlobSimpleUploadOptions setImmutabilityPolicy(BlobImmutabilityPolicy immutabilityPolicy)"
-  desc: "Note that this parameter is only applicable to a blob within a container that has immutable storage with versioning enabled."
+  desc: "Sets the <xref uid=\"com.azure.storage.blob.models.BlobImmutabilityPolicy\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobImmutabilityPolicy\"></xref>.\n\nNote that this parameter is only applicable to a blob within a container that has immutable storage with versioning enabled."
   returns:
     description: "The updated options."
     type: "<xref href=\"com.azure.storage.blob.options.BlockBlobSimpleUploadOptions?alt=com.azure.storage.blob.options.BlockBlobSimpleUploadOptions&text=BlockBlobSimpleUploadOptions\" data-throw-if-not-resolved=\"False\" />"
@@ -194,13 +228,13 @@ methods:
   fullName: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.setLegalHold(Boolean legalHold)"
   name: "setLegalHold(Boolean legalHold)"
   nameWithType: "BlockBlobSimpleUploadOptions.setLegalHold(Boolean legalHold)"
-  summary: "Note that this parameter is only applicable to a blob within a container that has immutable storage with versioning enabled."
+  summary: "Sets if a legal hold should be placed on the blob."
   parameters:
   - description: "Indicates if a legal hold should be placed on the blob."
     name: "legalHold"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
   syntax: "public BlockBlobSimpleUploadOptions setLegalHold(Boolean legalHold)"
-  desc: "Note that this parameter is only applicable to a blob within a container that has immutable storage with versioning enabled."
+  desc: "Sets if a legal hold should be placed on the blob.\n\nNote that this parameter is only applicable to a blob within a container that has immutable storage with versioning enabled."
   returns:
     description: "The updated options."
     type: "<xref href=\"com.azure.storage.blob.options.BlockBlobSimpleUploadOptions?alt=com.azure.storage.blob.options.BlockBlobSimpleUploadOptions&text=BlockBlobSimpleUploadOptions\" data-throw-if-not-resolved=\"False\" />"
@@ -208,11 +242,13 @@ methods:
   fullName: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.setMetadata(Map<String,String> metadata)"
   name: "setMetadata(Map<String,String> metadata)"
   nameWithType: "BlockBlobSimpleUploadOptions.setMetadata(Map<String,String> metadata)"
+  summary: "Sets the metadata to associate with the blob."
   parameters:
   - description: "The metadata to associate with the blob."
     name: "metadata"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
   syntax: "public BlockBlobSimpleUploadOptions setMetadata(Map<String,String> metadata)"
+  desc: "Sets the metadata to associate with the blob."
   returns:
     description: "The updated options"
     type: "<xref href=\"com.azure.storage.blob.options.BlockBlobSimpleUploadOptions?alt=com.azure.storage.blob.options.BlockBlobSimpleUploadOptions&text=BlockBlobSimpleUploadOptions\" data-throw-if-not-resolved=\"False\" />"
@@ -220,11 +256,13 @@ methods:
   fullName: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.setRequestConditions(BlobRequestConditions requestConditions)"
   name: "setRequestConditions(BlobRequestConditions requestConditions)"
   nameWithType: "BlockBlobSimpleUploadOptions.setRequestConditions(BlobRequestConditions requestConditions)"
+  summary: "Sets the <xref uid=\"com.azure.storage.blob.models.BlobRequestConditions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobRequestConditions\"></xref>."
   parameters:
   - description: "<xref uid=\"com.azure.storage.blob.models.BlobRequestConditions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobRequestConditions\"></xref>"
     name: "requestConditions"
     type: "<xref href=\"com.azure.storage.blob.models.BlobRequestConditions?alt=com.azure.storage.blob.models.BlobRequestConditions&text=BlobRequestConditions\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public BlockBlobSimpleUploadOptions setRequestConditions(BlobRequestConditions requestConditions)"
+  desc: "Sets the <xref uid=\"com.azure.storage.blob.models.BlobRequestConditions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobRequestConditions\"></xref>."
   returns:
     description: "The updated options."
     type: "<xref href=\"com.azure.storage.blob.options.BlockBlobSimpleUploadOptions?alt=com.azure.storage.blob.options.BlockBlobSimpleUploadOptions&text=BlockBlobSimpleUploadOptions\" data-throw-if-not-resolved=\"False\" />"
@@ -232,11 +270,13 @@ methods:
   fullName: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.setTags(Map<String,String> tags)"
   name: "setTags(Map<String,String> tags)"
   nameWithType: "BlockBlobSimpleUploadOptions.setTags(Map<String,String> tags)"
+  summary: "Sets the tags to associate with the blob."
   parameters:
   - description: "The tags to associate with the blob."
     name: "tags"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
   syntax: "public BlockBlobSimpleUploadOptions setTags(Map<String,String> tags)"
+  desc: "Sets the tags to associate with the blob."
   returns:
     description: "The updated options."
     type: "<xref href=\"com.azure.storage.blob.options.BlockBlobSimpleUploadOptions?alt=com.azure.storage.blob.options.BlockBlobSimpleUploadOptions&text=BlockBlobSimpleUploadOptions\" data-throw-if-not-resolved=\"False\" />"
@@ -244,11 +284,13 @@ methods:
   fullName: "com.azure.storage.blob.options.BlockBlobSimpleUploadOptions.setTier(AccessTier tier)"
   name: "setTier(AccessTier tier)"
   nameWithType: "BlockBlobSimpleUploadOptions.setTier(AccessTier tier)"
+  summary: "Sets the <xref uid=\"com.azure.storage.blob.models.AccessTier\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AccessTier\"></xref>."
   parameters:
   - description: "<xref uid=\"com.azure.storage.blob.models.AccessTier\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AccessTier\"></xref>"
     name: "tier"
     type: "<xref href=\"com.azure.storage.blob.models.AccessTier?alt=com.azure.storage.blob.models.AccessTier&text=AccessTier\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public BlockBlobSimpleUploadOptions setTier(AccessTier tier)"
+  desc: "Sets the <xref uid=\"com.azure.storage.blob.models.AccessTier\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AccessTier\"></xref>."
   returns:
     description: "The updated options."
     type: "<xref href=\"com.azure.storage.blob.options.BlockBlobSimpleUploadOptions?alt=com.azure.storage.blob.options.BlockBlobSimpleUploadOptions&text=BlockBlobSimpleUploadOptions\" data-throw-if-not-resolved=\"False\" />"
@@ -256,4 +298,4 @@ type: "class"
 desc: "Extended options that may be passed when uploading a Block Blob in a single request."
 metadata: {}
 package: "com.azure.storage.blob.options"
-artifact: com.azure:azure-storage-blob:12.29.1
+artifact: com.azure:azure-storage-blob:12.30.1

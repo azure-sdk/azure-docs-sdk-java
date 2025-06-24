@@ -58,7 +58,7 @@ constructors:
     name: "length"
     type: "<xref href=\"long?alt=long&text=long\" data-throw-if-not-resolved=\"False\" />"
   syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public BlobParallelUploadOptions(InputStream dataStream, long length)"
-  desc: "Constructs a new <xref uid=\"com.azure.storage.blob.options.BlobParallelUploadOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobParallelUploadOptions\"></xref>. Use <xref uid=\"com.azure.storage.blob.options.BlobParallelUploadOptions.BlobParallelUploadOptions(java.io.InputStream)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#BlobParallelUploadOptions(InputStream)\"></xref> instead to supply an InputStream without knowing the exact length beforehand."
+  desc: "Constructs a new <xref uid=\"com.azure.storage.blob.options.BlobParallelUploadOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobParallelUploadOptions\"></xref>.\n\nUse <xref uid=\"com.azure.storage.blob.options.BlobParallelUploadOptions.BlobParallelUploadOptions(java.io.InputStream)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#BlobParallelUploadOptions(InputStream)\"></xref> instead to supply an InputStream without knowing the exact length beforehand."
   hasDeprecatedTag: true
 - uid: "com.azure.storage.blob.options.BlobParallelUploadOptions.BlobParallelUploadOptions(reactor.core.publisher.Flux<java.nio.ByteBuffer>)"
   fullName: "com.azure.storage.blob.options.BlobParallelUploadOptions.BlobParallelUploadOptions(Flux<ByteBuffer> dataFlux)"
@@ -106,7 +106,9 @@ methods:
   fullName: "com.azure.storage.blob.options.BlobParallelUploadOptions.getImmutabilityPolicy()"
   name: "getImmutabilityPolicy()"
   nameWithType: "BlobParallelUploadOptions.getImmutabilityPolicy()"
+  summary: "Gets the <xref uid=\"com.azure.storage.blob.models.BlobImmutabilityPolicy\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobImmutabilityPolicy\"></xref>."
   syntax: "public BlobImmutabilityPolicy getImmutabilityPolicy()"
+  desc: "Gets the <xref uid=\"com.azure.storage.blob.models.BlobImmutabilityPolicy\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobImmutabilityPolicy\"></xref>."
   returns:
     description: "<xref uid=\"com.azure.storage.blob.models.BlobImmutabilityPolicy\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobImmutabilityPolicy\"></xref>"
     type: "<xref href=\"com.azure.storage.blob.models.BlobImmutabilityPolicy?alt=com.azure.storage.blob.models.BlobImmutabilityPolicy&text=BlobImmutabilityPolicy\" data-throw-if-not-resolved=\"False\" />"
@@ -198,15 +200,19 @@ methods:
   fullName: "com.azure.storage.blob.options.BlobParallelUploadOptions.isComputeMd5()"
   name: "isComputeMd5()"
   nameWithType: "BlobParallelUploadOptions.isComputeMd5()"
+  summary: "Gets the compute<wbr>Md5 property."
   syntax: "public boolean isComputeMd5()"
+  desc: "Gets the computeMd5 property."
   returns:
-    description: "Whether or not the library should calculate the md5 and send it for the service to verify."
+    description: "Whether the library should calculate the md5 and send it for the service to verify."
     type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.blob.options.BlobParallelUploadOptions.isLegalHold()"
   fullName: "com.azure.storage.blob.options.BlobParallelUploadOptions.isLegalHold()"
   name: "isLegalHold()"
   nameWithType: "BlobParallelUploadOptions.isLegalHold()"
+  summary: "Gets if a legal hold should be placed on the blob."
   syntax: "public Boolean isLegalHold()"
+  desc: "Gets if a legal hold should be placed on the blob."
   returns:
     description: "If a legal hold should be placed on the blob."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
@@ -216,7 +222,7 @@ methods:
   nameWithType: "BlobParallelUploadOptions.setComputeMd5(boolean computeMd5)"
   summary: "Sets the compute<wbr>Md5 property."
   parameters:
-  - description: "Whether or not the library should calculate the md5 and send it for the service to\n verify."
+  - description: "Whether the library should calculate the md5 and send it for the service to\n verify."
     name: "computeMd5"
     type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public BlobParallelUploadOptions setComputeMd5(boolean computeMd5)"
@@ -242,13 +248,13 @@ methods:
   fullName: "com.azure.storage.blob.options.BlobParallelUploadOptions.setImmutabilityPolicy(BlobImmutabilityPolicy immutabilityPolicy)"
   name: "setImmutabilityPolicy(BlobImmutabilityPolicy immutabilityPolicy)"
   nameWithType: "BlobParallelUploadOptions.setImmutabilityPolicy(BlobImmutabilityPolicy immutabilityPolicy)"
-  summary: "Note that this parameter is only applicable to a blob within a container that has immutable storage with versioning enabled."
+  summary: "Sets the <xref uid=\"com.azure.storage.blob.models.BlobImmutabilityPolicy\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobImmutabilityPolicy\"></xref>."
   parameters:
   - description: "<xref uid=\"com.azure.storage.blob.models.BlobImmutabilityPolicy\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobImmutabilityPolicy\"></xref>"
     name: "immutabilityPolicy"
     type: "<xref href=\"com.azure.storage.blob.models.BlobImmutabilityPolicy?alt=com.azure.storage.blob.models.BlobImmutabilityPolicy&text=BlobImmutabilityPolicy\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public BlobParallelUploadOptions setImmutabilityPolicy(BlobImmutabilityPolicy immutabilityPolicy)"
-  desc: "Note that this parameter is only applicable to a blob within a container that has immutable storage with versioning enabled."
+  desc: "Sets the <xref uid=\"com.azure.storage.blob.models.BlobImmutabilityPolicy\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobImmutabilityPolicy\"></xref>.\n\nNote that this parameter is only applicable to a blob within a container that has immutable storage with versioning enabled."
   returns:
     description: "The updated options."
     type: "<xref href=\"com.azure.storage.blob.options.BlobParallelUploadOptions?alt=com.azure.storage.blob.options.BlobParallelUploadOptions&text=BlobParallelUploadOptions\" data-throw-if-not-resolved=\"False\" />"
@@ -256,13 +262,13 @@ methods:
   fullName: "com.azure.storage.blob.options.BlobParallelUploadOptions.setLegalHold(Boolean legalHold)"
   name: "setLegalHold(Boolean legalHold)"
   nameWithType: "BlobParallelUploadOptions.setLegalHold(Boolean legalHold)"
-  summary: "Note that this parameter is only applicable to a blob within a container that has immutable storage with versioning enabled."
+  summary: "Sets if a legal hold should be placed on the blob."
   parameters:
   - description: "Indicates if a legal hold should be placed on the blob."
     name: "legalHold"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
   syntax: "public BlobParallelUploadOptions setLegalHold(Boolean legalHold)"
-  desc: "Note that this parameter is only applicable to a blob within a container that has immutable storage with versioning enabled."
+  desc: "Sets if a legal hold should be placed on the blob.\n\nNote that this parameter is only applicable to a blob within a container that has immutable storage with versioning enabled."
   returns:
     description: "The updated options."
     type: "<xref href=\"com.azure.storage.blob.options.BlobParallelUploadOptions?alt=com.azure.storage.blob.options.BlobParallelUploadOptions&text=BlobParallelUploadOptions\" data-throw-if-not-resolved=\"False\" />"
@@ -356,4 +362,4 @@ type: "class"
 desc: "Extended options that may be passed when uploading a Block Blob in parallel."
 metadata: {}
 package: "com.azure.storage.blob.options"
-artifact: com.azure:azure-storage-blob:12.29.1
+artifact: com.azure:azure-storage-blob:12.30.1

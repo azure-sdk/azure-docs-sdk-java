@@ -177,11 +177,13 @@ methods:
   fullName: "com.azure.storage.blob.models.ParallelTransferOptions.setMaxConcurrency(Integer maxConcurrency)"
   name: "setMaxConcurrency(Integer maxConcurrency)"
   nameWithType: "ParallelTransferOptions.setMaxConcurrency(Integer maxConcurrency)"
+  summary: "Sets the maximum number of parallel requests that will be issued at any given time as a part of a single parallel transfer."
   parameters:
   - description: "The maximum number of parallel requests that will be issued at any given time as a part of\n a single parallel transfer. This value applies per api. For example, if two calls to uploadFromFile are made at\n the same time, and each specifies a maxConcurrency of 5, there may be up to 10 outstanding, concurrent requests,\n up to 5 for each of the upload operations. For buffered uploads only, the maximum number of buffers to be\n allocated as part of the transfer will be <code>maxConcurrency + 1</code>. In those cases, memory will be allocated\n lazily as needed. The amount of memory consumed by methods which buffer may be up to blockSize * maxConcurrency.\n In general, upload methods which do not accept a length parameter must perform some buffering."
     name: "maxConcurrency"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
   syntax: "public ParallelTransferOptions setMaxConcurrency(Integer maxConcurrency)"
+  desc: "Sets the maximum number of parallel requests that will be issued at any given time as a part of a single parallel transfer. This value applies per api. For example, if two calls to uploadFromFile are made at the same time, and each specifies a maxConcurrency of 5, there may be up to 10 outstanding, concurrent requests, up to 5 for each of the upload operations. For buffered uploads only, the maximum number of buffers to be allocated as part of the transfer will be `maxConcurrency + 1`. In those cases, memory will be allocated lazily as needed. The amount of memory consumed by methods which buffer may be up to blockSize \\* maxConcurrency. In general, upload methods which do not accept a length parameter must perform some buffering."
   returns:
     description: "The ParallelTransferOptions object itself."
     type: "<xref href=\"com.azure.storage.blob.models.ParallelTransferOptions?alt=com.azure.storage.blob.models.ParallelTransferOptions&text=ParallelTransferOptions\" data-throw-if-not-resolved=\"False\" />"
@@ -233,4 +235,4 @@ type: "class"
 desc: "This class contains configuration used to parallelize data transfer operations. Note that not all values are used by every method which accepts this type. Please refer to the javadoc on specific methods for these cases."
 metadata: {}
 package: "com.azure.storage.blob.models"
-artifact: com.azure:azure-storage-blob:12.29.1
+artifact: com.azure:azure-storage-blob:12.30.1
