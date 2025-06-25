@@ -20,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **ChatError**"
+syntax: "public final class **ChatError**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.chat.models.ChatError?alt=com.azure.communication.chat.models.ChatError&text=ChatError\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.communication.chat.models.ChatError.ChatError(java.lang.String,java.lang.String,java.lang.String,java.util.List<com.azure.communication.chat.models.ChatError>,com.azure.communication.chat.models.ChatError)"
   fullName: "com.azure.communication.chat.models.ChatError.ChatError(String message, String code, String target, List<ChatError> details, ChatError innerError)"
@@ -46,6 +46,25 @@ constructors:
   syntax: "public ChatError(String message, String code, String target, List<ChatError> details, ChatError innerError)"
   desc: "Constructs a new ChatError"
 methods:
+- uid: "com.azure.communication.chat.models.ChatError.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.communication.chat.models.ChatError.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "ChatError.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Chat<wbr>Error from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static ChatError fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the ChatError."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of ChatError from the JsonReader."
+  returns:
+    description: "An instance of ChatError if the JsonReader was pointing to an instance of it, or null\n if it was pointing to JSON null."
+    type: "<xref href=\"com.azure.communication.chat.models.ChatError?alt=com.azure.communication.chat.models.ChatError&text=ChatError\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.communication.chat.models.ChatError.getCode()"
   fullName: "com.azure.communication.chat.models.ChatError.getCode()"
   name: "getCode()"
@@ -96,8 +115,22 @@ methods:
   returns:
     description: "the target value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.communication.chat.models.ChatError.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.communication.chat.models.ChatError.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "ChatError.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "The Chat Services error."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.chat.models.ChatError?alt=com.azure.communication.chat.models.ChatError&text=ChatError\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.communication.chat.models"
-artifact: com.azure:azure-communication-chat:1.5.10
+artifact: com.azure:azure-communication-chat:1.6.0

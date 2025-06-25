@@ -20,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **UpdateChatMessageOptions**"
+syntax: "public final class **UpdateChatMessageOptions**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.chat.models.UpdateChatMessageOptions?alt=com.azure.communication.chat.models.UpdateChatMessageOptions&text=UpdateChatMessageOptions\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.communication.chat.models.UpdateChatMessageOptions.UpdateChatMessageOptions()"
   fullName: "com.azure.communication.chat.models.UpdateChatMessageOptions.UpdateChatMessageOptions()"
@@ -30,6 +30,25 @@ constructors:
   syntax: "public UpdateChatMessageOptions()"
   desc: "Creates an instance of UpdateChatMessageOptions class."
 methods:
+- uid: "com.azure.communication.chat.models.UpdateChatMessageOptions.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.communication.chat.models.UpdateChatMessageOptions.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "UpdateChatMessageOptions.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Update<wbr>Chat<wbr>Message<wbr>Options from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static UpdateChatMessageOptions fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the UpdateChatMessageOptions."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of UpdateChatMessageOptions from the JsonReader."
+  returns:
+    description: "An instance of UpdateChatMessageOptions if the JsonReader was pointing to an instance of it, or null if\n it was pointing to JSON null."
+    type: "<xref href=\"com.azure.communication.chat.models.UpdateChatMessageOptions?alt=com.azure.communication.chat.models.UpdateChatMessageOptions&text=UpdateChatMessageOptions\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.communication.chat.models.UpdateChatMessageOptions.getContent()"
   fullName: "com.azure.communication.chat.models.UpdateChatMessageOptions.getContent()"
   name: "getContent()"
@@ -78,8 +97,22 @@ methods:
   returns:
     description: "the UpdateChatMessageOptions object itself."
     type: "<xref href=\"com.azure.communication.chat.models.UpdateChatMessageOptions?alt=com.azure.communication.chat.models.UpdateChatMessageOptions&text=UpdateChatMessageOptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.communication.chat.models.UpdateChatMessageOptions.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.communication.chat.models.UpdateChatMessageOptions.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "UpdateChatMessageOptions.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Request payload for updating a chat message."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.chat.models.UpdateChatMessageOptions?alt=com.azure.communication.chat.models.UpdateChatMessageOptions&text=UpdateChatMessageOptions\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.communication.chat.models"
-artifact: com.azure:azure-communication-chat:1.5.10
+artifact: com.azure:azure-communication-chat:1.6.0

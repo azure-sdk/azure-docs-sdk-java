@@ -388,6 +388,34 @@ methods:
   returns:
     description: "the completion."
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
+- uid: "com.azure.communication.chat.ChatThreadAsyncClient.updateThreadProperties(com.azure.communication.chat.models.UpdateChatThreadOptions)"
+  fullName: "com.azure.communication.chat.ChatThreadAsyncClient.updateThreadProperties(UpdateChatThreadOptions options)"
+  name: "updateThreadProperties(UpdateChatThreadOptions options)"
+  nameWithType: "ChatThreadAsyncClient.updateThreadProperties(UpdateChatThreadOptions options)"
+  summary: "Updates a thread's properties."
+  parameters:
+  - description: "The thread update options (e.g., topic, metadata)."
+    name: "options"
+    type: "<xref href=\"com.azure.communication.chat.models.UpdateChatThreadOptions?alt=com.azure.communication.chat.models.UpdateChatThreadOptions&text=UpdateChatThreadOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public Mono<Void> updateThreadProperties(UpdateChatThreadOptions options)"
+  desc: "Updates a thread's properties."
+  returns:
+    description: "the completion."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+- uid: "com.azure.communication.chat.ChatThreadAsyncClient.updateThreadPropertiesWithResponse(com.azure.communication.chat.models.UpdateChatThreadOptions)"
+  fullName: "com.azure.communication.chat.ChatThreadAsyncClient.updateThreadPropertiesWithResponse(UpdateChatThreadOptions options)"
+  name: "updateThreadPropertiesWithResponse(UpdateChatThreadOptions options)"
+  nameWithType: "ChatThreadAsyncClient.updateThreadPropertiesWithResponse(UpdateChatThreadOptions options)"
+  summary: "Updates a thread's properties."
+  parameters:
+  - description: "The thread update options (e.g., topic, metadata)."
+    name: "options"
+    type: "<xref href=\"com.azure.communication.chat.models.UpdateChatThreadOptions?alt=com.azure.communication.chat.models.UpdateChatThreadOptions&text=UpdateChatThreadOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public Mono<Response<Void>> updateThreadPropertiesWithResponse(UpdateChatThreadOptions options)"
+  desc: "Updates a thread's properties."
+  returns:
+    description: "the response containing the result of the operation."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
 - uid: "com.azure.communication.chat.ChatThreadAsyncClient.updateTopic(java.lang.String)"
   fullName: "com.azure.communication.chat.ChatThreadAsyncClient.updateTopic(String topic)"
   name: "updateTopic(String topic)"
@@ -420,4 +448,4 @@ type: "class"
 desc: "Async Client that supports chat thread operations.\n\n**Instantiating an asynchronous Chat Thread Client**\n\n```java\n// Initialize the chat client builder\n final ChatClientBuilder builder = new ChatClientBuilder()\n     .endpoint(endpoint)\n     .credential(credential);\n\n // Build the chat client\n ChatAsyncClient chatClient = builder.buildAsyncClient();\n\n // Get the chat thread client for your thread's id\n ChatThreadAsyncClient chatThreadClient = chatClient.getChatThreadClient(threadId);\n```\n\nView <xref uid=\"com.azure.communication.chat.ChatClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"this\"></xref> for additional ways to construct the client."
 metadata: {}
 package: "com.azure.communication.chat"
-artifact: com.azure:azure-communication-chat:1.5.10
+artifact: com.azure:azure-communication-chat:1.6.0

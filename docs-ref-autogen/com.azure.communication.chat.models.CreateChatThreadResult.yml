@@ -20,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **CreateChatThreadResult**"
+syntax: "public final class **CreateChatThreadResult**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.chat.models.CreateChatThreadResult?alt=com.azure.communication.chat.models.CreateChatThreadResult&text=CreateChatThreadResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.communication.chat.models.CreateChatThreadResult.CreateChatThreadResult(com.azure.communication.chat.models.ChatThreadProperties,java.util.List<com.azure.communication.chat.models.ChatError>)"
   fullName: "com.azure.communication.chat.models.CreateChatThreadResult.CreateChatThreadResult(ChatThreadProperties chatThreadProperties, List<ChatError> invalidParticipants)"
@@ -37,28 +37,61 @@ constructors:
   syntax: "public CreateChatThreadResult(ChatThreadProperties chatThreadProperties, List<ChatError> invalidParticipants)"
   desc: "Constructs a new instance of CreateChatThreadResult"
 methods:
+- uid: "com.azure.communication.chat.models.CreateChatThreadResult.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.communication.chat.models.CreateChatThreadResult.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "CreateChatThreadResult.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Add<wbr>Chat<wbr>Participants<wbr>Result from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static CreateChatThreadResult fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the AddChatParticipantsResult."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of AddChatParticipantsResult from the JsonReader."
+  returns:
+    description: "An instance of AddChatParticipantsResult if the JsonReader was pointing to an instance of it, or null\n if it was pointing to JSON null."
+    type: "<xref href=\"com.azure.communication.chat.models.CreateChatThreadResult?alt=com.azure.communication.chat.models.CreateChatThreadResult&text=CreateChatThreadResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.communication.chat.models.CreateChatThreadResult.getChatThread()"
   fullName: "com.azure.communication.chat.models.CreateChatThreadResult.getChatThread()"
   name: "getChatThread()"
   nameWithType: "CreateChatThreadResult.getChatThread()"
-  summary: "Get the chat<wbr>Thread property: The chat<wbr>Thread property."
+  summary: "Gets the chat<wbr>Thread property: The chat<wbr>Thread property."
   syntax: "public ChatThreadProperties getChatThread()"
-  desc: "Get the chatThread property: The chatThread property."
+  desc: "Gets the chatThread property: The chatThread property."
   returns:
-    description: "the chatThread value."
+    description: "the chatThread."
     type: "<xref href=\"com.azure.communication.chat.models.ChatThreadProperties?alt=com.azure.communication.chat.models.ChatThreadProperties&text=ChatThreadProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.communication.chat.models.CreateChatThreadResult.getInvalidParticipants()"
   fullName: "com.azure.communication.chat.models.CreateChatThreadResult.getInvalidParticipants()"
   name: "getInvalidParticipants()"
   nameWithType: "CreateChatThreadResult.getInvalidParticipants()"
-  summary: "Get the invalid<wbr>Participants property: The participants that failed to be added to the chat thread."
+  summary: "Gets the invalid<wbr>Participants property: The participants that failed to be added to the chat thread."
   syntax: "public List<ChatError> getInvalidParticipants()"
-  desc: "Get the invalidParticipants property: The participants that failed to be added to the chat thread. The 'target' property of each ChatError will reference the failed participant."
+  desc: "Gets the invalidParticipants property: The participants that failed to be added to the chat thread. The 'target' property of each ChatError will reference the failed participant."
   returns:
-    description: "the invalidParticipants value."
+    description: "the invalidParticipants."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.communication.chat.models.ChatError?alt=com.azure.communication.chat.models.ChatError&text=ChatError\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.communication.chat.models.CreateChatThreadResult.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.communication.chat.models.CreateChatThreadResult.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "CreateChatThreadResult.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "The CreateChatThreadResult model."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.chat.models.CreateChatThreadResult?alt=com.azure.communication.chat.models.CreateChatThreadResult&text=CreateChatThreadResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.communication.chat.models"
-artifact: com.azure:azure-communication-chat:1.5.10
+artifact: com.azure:azure-communication-chat:1.6.0

@@ -20,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **TypingNotificationOptions**"
+syntax: "public final class **TypingNotificationOptions**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.chat.models.TypingNotificationOptions?alt=com.azure.communication.chat.models.TypingNotificationOptions&text=TypingNotificationOptions\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.communication.chat.models.TypingNotificationOptions.TypingNotificationOptions()"
   fullName: "com.azure.communication.chat.models.TypingNotificationOptions.TypingNotificationOptions()"
@@ -30,6 +30,25 @@ constructors:
   syntax: "public TypingNotificationOptions()"
   desc: "Creates an instance of TypingNotificationOptions class."
 methods:
+- uid: "com.azure.communication.chat.models.TypingNotificationOptions.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.communication.chat.models.TypingNotificationOptions.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "TypingNotificationOptions.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Typing<wbr>Notification<wbr>Options from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static TypingNotificationOptions fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the TypingNotificationOptions."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of TypingNotificationOptions from the JsonReader."
+  returns:
+    description: "An instance of TypingNotificationOptions if the JsonReader was pointing to an instance of it, or null if\n it was pointing to JSON null."
+    type: "<xref href=\"com.azure.communication.chat.models.TypingNotificationOptions?alt=com.azure.communication.chat.models.TypingNotificationOptions&text=TypingNotificationOptions\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.communication.chat.models.TypingNotificationOptions.getSenderDisplayName()"
   fullName: "com.azure.communication.chat.models.TypingNotificationOptions.getSenderDisplayName()"
   name: "getSenderDisplayName()"
@@ -54,8 +73,22 @@ methods:
   returns:
     description: "the TypingNotificationOptions object itself."
     type: "<xref href=\"com.azure.communication.chat.models.TypingNotificationOptions?alt=com.azure.communication.chat.models.TypingNotificationOptions&text=TypingNotificationOptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.communication.chat.models.TypingNotificationOptions.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.communication.chat.models.TypingNotificationOptions.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "TypingNotificationOptions.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Request payload for typing notifications."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.chat.models.TypingNotificationOptions?alt=com.azure.communication.chat.models.TypingNotificationOptions&text=TypingNotificationOptions\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.communication.chat.models"
-artifact: com.azure:azure-communication-chat:1.5.10
+artifact: com.azure:azure-communication-chat:1.6.0
