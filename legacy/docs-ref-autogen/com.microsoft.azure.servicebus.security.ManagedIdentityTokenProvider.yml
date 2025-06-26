@@ -1,0 +1,56 @@
+### YamlMime:JavaType
+uid: "com.microsoft.azure.servicebus.security.ManagedIdentityTokenProvider"
+fullName: "com.microsoft.azure.servicebus.security.ManagedIdentityTokenProvider"
+name: "ManagedIdentityTokenProvider"
+nameWithType: "ManagedIdentityTokenProvider"
+summary: "This is a token provider that obtains token using Managed Identity(MI)."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"com.microsoft.azure.servicebus.security.TokenProvider?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "<xref href=\"com.microsoft.azure.servicebus.security.TokenProvider?alt=com.microsoft.azure.servicebus.security.TokenProvider&text=TokenProvider\" data-throw-if-not-resolved=\"False\" />"
+  methodsRef:
+  - "<xref href=\"com.microsoft.azure.servicebus.security.TokenProvider.createAzureActiveDirectoryTokenProvider(com.microsoft.azure.servicebus.security.AzureActiveDirectoryTokenProvider.AuthenticationCallback,java.lang.String,java.lang.Object)?alt=com.microsoft.azure.servicebus.security.TokenProvider.createAzureActiveDirectoryTokenProvider&text=createAzureActiveDirectoryTokenProvider\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.microsoft.azure.servicebus.security.TokenProvider.createManagedIdentityTokenProvider()?alt=com.microsoft.azure.servicebus.security.TokenProvider.createManagedIdentityTokenProvider&text=createManagedIdentityTokenProvider\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.microsoft.azure.servicebus.security.TokenProvider.createSharedAccessSignatureTokenProvider(java.lang.String,java.lang.String)?alt=com.microsoft.azure.servicebus.security.TokenProvider.createSharedAccessSignatureTokenProvider&text=createSharedAccessSignatureTokenProvider\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.microsoft.azure.servicebus.security.TokenProvider.createSharedAccessSignatureTokenProvider(java.lang.String,java.time.Instant)?alt=com.microsoft.azure.servicebus.security.TokenProvider.createSharedAccessSignatureTokenProvider&text=createSharedAccessSignatureTokenProvider\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.microsoft.azure.servicebus.security.TokenProvider.getSecurityTokenAsync(java.lang.String)?alt=com.microsoft.azure.servicebus.security.TokenProvider.getSecurityTokenAsync&text=getSecurityTokenAsync\" data-throw-if-not-resolved=\"False\" />"
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public class **ManagedIdentityTokenProvider**</br> extends <xref href=\"com.microsoft.azure.servicebus.security.TokenProvider?alt=com.microsoft.azure.servicebus.security.TokenProvider&text=TokenProvider\" data-throw-if-not-resolved=\"False\" />"
+constructors:
+- uid: "com.microsoft.azure.servicebus.security.ManagedIdentityTokenProvider.ManagedIdentityTokenProvider()"
+  fullName: "com.microsoft.azure.servicebus.security.ManagedIdentityTokenProvider.ManagedIdentityTokenProvider()"
+  name: "ManagedIdentityTokenProvider()"
+  nameWithType: "ManagedIdentityTokenProvider.ManagedIdentityTokenProvider()"
+  syntax: "public ManagedIdentityTokenProvider()"
+methods:
+- uid: "com.microsoft.azure.servicebus.security.ManagedIdentityTokenProvider.getSecurityTokenAsync(java.lang.String)"
+  fullName: "com.microsoft.azure.servicebus.security.ManagedIdentityTokenProvider.getSecurityTokenAsync(String audience)"
+  name: "getSecurityTokenAsync(String audience)"
+  nameWithType: "ManagedIdentityTokenProvider.getSecurityTokenAsync(String audience)"
+  summary: "Asynchronously gets a security token for the given audience."
+  overridden: "com.microsoft.azure.servicebus.security.TokenProvider.getSecurityTokenAsync(java.lang.String)"
+  parameters:
+  - name: "audience"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public CompletableFuture<SecurityToken> getSecurityTokenAsync(String audience)"
+  desc: "Asynchronously gets a security token for the given audience. Implementations of this method may choose to create a new token for every call or return a cached token. But the token returned must be valid."
+  returns:
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html\">CompletableFuture</a>&lt;<xref href=\"com.microsoft.azure.servicebus.security.SecurityToken?alt=com.microsoft.azure.servicebus.security.SecurityToken&text=SecurityToken\" data-throw-if-not-resolved=\"False\" />&gt;"
+type: "class"
+desc: "This is a token provider that obtains token using Managed Identity(MI). This token provider automatically detects MI settings."
+metadata: {}
+package: "com.microsoft.azure.servicebus.security"
+artifact: com.microsoft.azure:azure-servicebus:3.6.7

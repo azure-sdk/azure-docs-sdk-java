@@ -1,0 +1,33 @@
+### YamlMime:JavaType
+uid: "com.microsoft.azure.servicebus.security.AzureActiveDirectoryTokenProvider.AuthenticationCallback"
+fullName: "com.microsoft.azure.servicebus.security.AzureActiveDirectoryTokenProvider.AuthenticationCallback"
+name: "AzureActiveDirectoryTokenProvider.AuthenticationCallback"
+nameWithType: "AzureActiveDirectoryTokenProvider.AuthenticationCallback"
+syntax: "public static interface **AzureActiveDirectoryTokenProvider.AuthenticationCallback**"
+methods:
+- uid: "com.microsoft.azure.servicebus.security.AzureActiveDirectoryTokenProvider.AuthenticationCallback.acquireTokenAsync(java.lang.String,java.lang.String,java.lang.Object)"
+  fullName: "com.microsoft.azure.servicebus.security.AzureActiveDirectoryTokenProvider.AuthenticationCallback.acquireTokenAsync(String audience, String authority, Object state)"
+  name: "acquireTokenAsync(String audience, String authority, Object state)"
+  nameWithType: "AzureActiveDirectoryTokenProvider.AuthenticationCallback.acquireTokenAsync(String audience, String authority, Object state)"
+  summary: "A user defined method for obtaining an access token."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The target resource that the access token will be granted for."
+    name: "audience"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The resource that will validate the the access token."
+    name: "authority"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Parameter that may be used as part of the custom acquireToken process."
+    name: "state"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  syntax: "public abstract CompletableFuture<String> acquireTokenAsync(String audience, String authority, Object state)"
+  desc: "A user defined method for obtaining an access token."
+  returns:
+    description: "A CompletableFuture which returns a valid security token."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html\">CompletableFuture</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+type: "interface"
+metadata: {}
+package: "com.microsoft.azure.servicebus.security"
+artifact: com.microsoft.azure:azure-servicebus:3.6.7

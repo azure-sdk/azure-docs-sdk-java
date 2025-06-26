@@ -1,0 +1,67 @@
+### YamlMime:JavaType
+uid: "com.azure.communication.networktraversal.CommunicationRelayAsyncClient"
+fullName: "com.azure.communication.networktraversal.CommunicationRelayAsyncClient"
+name: "CommunicationRelayAsyncClient"
+nameWithType: "CommunicationRelayAsyncClient"
+summary: "Asynchronous client interface for Azure Communication Network Traversal operations"
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **CommunicationRelayAsyncClient**"
+methods:
+- uid: "com.azure.communication.networktraversal.CommunicationRelayAsyncClient.getRelayConfiguration()"
+  fullName: "com.azure.communication.networktraversal.CommunicationRelayAsyncClient.getRelayConfiguration()"
+  name: "getRelayConfiguration()"
+  nameWithType: "CommunicationRelayAsyncClient.getRelayConfiguration()"
+  summary: "Gets a Relay Configuration."
+  syntax: "public Mono<CommunicationRelayConfiguration> getRelayConfiguration()"
+  desc: "Gets a Relay Configuration.\n\n**Sample code for getting a relay configuration without parameters**\n\n```java\nCommunicationRelayClient communicationRelayClient = createCommunicationNetworkTraversalClient();\n CommunicationRelayConfiguration config = communicationRelayClient.getRelayConfiguration();\n\n System.out.println(\"Expires on:\" + config.getExpiresOn());\n List<CommunicationIceServer> iceServers = config.getIceServers();\n\n for (CommunicationIceServer iceS : iceServers) {\n     System.out.println(\"URLS: \" + iceS.getUrls());\n     System.out.println(\"Username: \" + iceS.getUsername());\n     System.out.println(\"Credential: \" + iceS.getCredential());\n     System.out.println(\"RouteType: \" + iceS.getRouteType());\n }\n```"
+  returns:
+    description: "The obtained Communication Relay Configuration."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.communication.networktraversal.models.CommunicationRelayConfiguration?alt=com.azure.communication.networktraversal.models.CommunicationRelayConfiguration&text=CommunicationRelayConfiguration\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.communication.networktraversal.CommunicationRelayAsyncClient.getRelayConfiguration(com.azure.communication.networktraversal.models.GetRelayConfigurationOptions)"
+  fullName: "com.azure.communication.networktraversal.CommunicationRelayAsyncClient.getRelayConfiguration(GetRelayConfigurationOptions options)"
+  name: "getRelayConfiguration(GetRelayConfigurationOptions options)"
+  nameWithType: "CommunicationRelayAsyncClient.getRelayConfiguration(GetRelayConfigurationOptions options)"
+  summary: "Gets a Relay Configuration for a Communication<wbr>User<wbr>Identifier."
+  parameters:
+  - description: "of the GetRelayConfigurationOptions request"
+    name: "options"
+    type: "<xref href=\"com.azure.communication.networktraversal.models.GetRelayConfigurationOptions?alt=com.azure.communication.networktraversal.models.GetRelayConfigurationOptions&text=GetRelayConfigurationOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public Mono<CommunicationRelayConfiguration> getRelayConfiguration(GetRelayConfigurationOptions options)"
+  desc: "Gets a Relay Configuration for a CommunicationUserIdentifier.\n\n**Sample code for getting a relay configuration**\n\n```java\nCommunicationIdentityClient communicationIdentityClient = createCommunicationIdentityClient();\n\n CommunicationUserIdentifier user = communicationIdentityClient.createUser();\n System.out.println(\"User id: \" + user.getId());\n\n GetRelayConfigurationOptions options = new GetRelayConfigurationOptions();\n options.setCommunicationUserIdentifier(user);\n\n CommunicationRelayClient communicationRelayClient = createCommunicationNetworkTraversalClient();\n CommunicationRelayConfiguration config = communicationRelayClient.getRelayConfiguration(options);\n\n System.out.println(\"Expires on:\" + config.getExpiresOn());\n List<CommunicationIceServer> iceServers = config.getIceServers();\n\n for (CommunicationIceServer iceS : iceServers) {\n     System.out.println(\"URLS: \" + iceS.getUrls());\n     System.out.println(\"Username: \" + iceS.getUsername());\n     System.out.println(\"Credential: \" + iceS.getCredential());\n     System.out.println(\"RouteType: \" + iceS.getRouteType());\n }\n```"
+  returns:
+    description: "The obtained Communication Relay Configuration."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.communication.networktraversal.models.CommunicationRelayConfiguration?alt=com.azure.communication.networktraversal.models.CommunicationRelayConfiguration&text=CommunicationRelayConfiguration\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.communication.networktraversal.CommunicationRelayAsyncClient.getRelayConfigurationWithResponse(com.azure.communication.networktraversal.models.GetRelayConfigurationOptions)"
+  fullName: "com.azure.communication.networktraversal.CommunicationRelayAsyncClient.getRelayConfigurationWithResponse(GetRelayConfigurationOptions options)"
+  name: "getRelayConfigurationWithResponse(GetRelayConfigurationOptions options)"
+  nameWithType: "CommunicationRelayAsyncClient.getRelayConfigurationWithResponse(GetRelayConfigurationOptions options)"
+  summary: "Gets a Relay Configuration for a Communication<wbr>User<wbr>Identifier given options with response."
+  parameters:
+  - description: "of the GetRelayConfigurationOptions request"
+    name: "options"
+    type: "<xref href=\"com.azure.communication.networktraversal.models.GetRelayConfigurationOptions?alt=com.azure.communication.networktraversal.models.GetRelayConfigurationOptions&text=GetRelayConfigurationOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public Mono<Response<CommunicationRelayConfiguration>> getRelayConfigurationWithResponse(GetRelayConfigurationOptions options)"
+  desc: "Gets a Relay Configuration for a CommunicationUserIdentifier given options with response."
+  returns:
+    description: "The obtained Communication Relay Configuration."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.networktraversal.models.CommunicationRelayConfiguration?alt=com.azure.communication.networktraversal.models.CommunicationRelayConfiguration&text=CommunicationRelayConfiguration\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+type: "class"
+desc: "Asynchronous client interface for Azure Communication Network Traversal operations\n\n**Instantiating an asynchronous CommunicationRelayClient**\n\n```java\n// You can find your endpoint and access key from your resource in the Azure Portal\n String endpoint = \"https://<RESOURCE_NAME>.communication.azure.com\";\n AzureKeyCredential keyCredential = new AzureKeyCredential(\"<access-key>\");\n\n CommunicationRelayAsyncClient communicationRelayClient = new CommunicationRelayClientBuilder()\n     .endpoint(endpoint)\n     .credential(keyCredential)\n     .buildAsyncClient();\n```\n\nView <xref uid=\"com.azure.communication.networktraversal.CommunicationRelayClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"this\"></xref> for additional ways to construct the client."
+metadata: {}
+package: "com.azure.communication.networktraversal"
+artifact: com.azure:azure-communication-networktraversal:1.1.0

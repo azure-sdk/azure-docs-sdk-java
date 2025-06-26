@@ -1,0 +1,82 @@
+### YamlMime:JavaType
+uid: "com.microsoft.azure.management.containerservice.KubernetesCluster.UpdateStages.WithAgentPool"
+fullName: "com.microsoft.azure.management.containerservice.KubernetesCluster.UpdateStages.WithAgentPool"
+name: "KubernetesCluster.UpdateStages.WithAgentPool"
+nameWithType: "KubernetesCluster.UpdateStages.WithAgentPool"
+summary: "The stage of the Kubernetes cluster update definition allowing to specify the agent poll in the cluster."
+syntax: "public static interface **KubernetesCluster.UpdateStages.WithAgentPool**"
+methods:
+- uid: "com.microsoft.azure.management.containerservice.KubernetesCluster.UpdateStages.WithAgentPool.defineAgentPool(java.lang.String)"
+  fullName: "com.microsoft.azure.management.containerservice.KubernetesCluster.UpdateStages.WithAgentPool.defineAgentPool(String name)"
+  name: "defineAgentPool(String name)"
+  nameWithType: "KubernetesCluster.UpdateStages.WithAgentPool.defineAgentPool(String name)"
+  summary: "Begins the definition of an agent pool profile to be attached to the Kubernetes cluster."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the name for the agent pool profile"
+    name: "name"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract KubernetesClusterAgentPool.DefinitionStages.Blank<? extends KubernetesCluster.Update> defineAgentPool(String name)"
+  desc: "Begins the definition of an agent pool profile to be attached to the Kubernetes cluster."
+  returns:
+    description: "the stage representing configuration for the agent pool profile"
+    type: "<xref href=\"com.microsoft.azure.management.containerservice.KubernetesClusterAgentPool.DefinitionStages.Blank?alt=com.microsoft.azure.management.containerservice.KubernetesClusterAgentPool.DefinitionStages.Blank&text=Blank\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"? extends com.microsoft.azure.management.containerservice.KubernetesCluster.Update?alt=? extends com.microsoft.azure.management.containerservice.KubernetesCluster.Update&text=Update\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.microsoft.azure.management.containerservice.KubernetesCluster.UpdateStages.WithAgentPool.updateAgentPool(java.lang.String)"
+  fullName: "com.microsoft.azure.management.containerservice.KubernetesCluster.UpdateStages.WithAgentPool.updateAgentPool(String name)"
+  name: "updateAgentPool(String name)"
+  nameWithType: "KubernetesCluster.UpdateStages.WithAgentPool.updateAgentPool(String name)"
+  summary: "Begins the definition of an agent pool profile to be attached to the Kubernetes cluster."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the name for the agent pool profile"
+    name: "name"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract KubernetesClusterAgentPool.Update<? extends KubernetesCluster.Update> updateAgentPool(String name)"
+  desc: "Begins the definition of an agent pool profile to be attached to the Kubernetes cluster."
+  returns:
+    description: "the stage representing configuration for the agent pool profile"
+    type: "<xref href=\"com.microsoft.azure.management.containerservice.KubernetesClusterAgentPool.Update?alt=com.microsoft.azure.management.containerservice.KubernetesClusterAgentPool.Update&text=Update\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"? extends com.microsoft.azure.management.containerservice.KubernetesCluster.Update?alt=? extends com.microsoft.azure.management.containerservice.KubernetesCluster.Update&text=Update\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.microsoft.azure.management.containerservice.KubernetesCluster.UpdateStages.WithAgentPool.withAgentPoolVirtualMachineCount(int)"
+  fullName: "com.microsoft.azure.management.containerservice.KubernetesCluster.UpdateStages.WithAgentPool.withAgentPoolVirtualMachineCount(int agentCount)"
+  name: "withAgentPoolVirtualMachineCount(int agentCount)"
+  nameWithType: "KubernetesCluster.UpdateStages.WithAgentPool.withAgentPoolVirtualMachineCount(int agentCount)"
+  summary: "Updates the virtual machine count for all agent pools."
+  deprecatedTag: "use \\`update<wbr>Agent<wbr>Pool\\` method to update a specific agent pool."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the number of agents (virtual machines) to host docker containers."
+    name: "agentCount"
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "</br>public abstract KubernetesCluster.Update withAgentPoolVirtualMachineCount(int agentCount)"
+  desc: "Updates the virtual machine count for all agent pools."
+  hasDeprecatedTag: true
+  returns:
+    description: "the stage representing configuration for the agent pool profile"
+    type: "<xref href=\"com.microsoft.azure.management.containerservice.KubernetesCluster.Update?alt=com.microsoft.azure.management.containerservice.KubernetesCluster.Update&text=Update\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.azure.management.containerservice.KubernetesCluster.UpdateStages.WithAgentPool.withAgentPoolVirtualMachineCount(java.lang.String,int)"
+  fullName: "com.microsoft.azure.management.containerservice.KubernetesCluster.UpdateStages.WithAgentPool.withAgentPoolVirtualMachineCount(String agentPoolName, int agentCount)"
+  name: "withAgentPoolVirtualMachineCount(String agentPoolName, int agentCount)"
+  nameWithType: "KubernetesCluster.UpdateStages.WithAgentPool.withAgentPoolVirtualMachineCount(String agentPoolName, int agentCount)"
+  summary: "Updates the agent pool virtual machine count."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the name of the agent pool to be updated"
+    name: "agentPoolName"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  - description: "the number of agents (virtual machines) to host docker containers."
+    name: "agentCount"
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract KubernetesCluster.Update withAgentPoolVirtualMachineCount(String agentPoolName, int agentCount)"
+  desc: "Updates the agent pool virtual machine count. Recommended to use \\`updateAgentPool\\` method."
+  returns:
+    description: "the stage representing configuration for the agent pool profile"
+    type: "<xref href=\"com.microsoft.azure.management.containerservice.KubernetesCluster.Update?alt=com.microsoft.azure.management.containerservice.KubernetesCluster.Update&text=Update\" data-throw-if-not-resolved=\"False\" />"
+type: "interface"
+desc: "The stage of the Kubernetes cluster update definition allowing to specify the agent poll in the cluster."
+metadata: {}
+package: "com.microsoft.azure.management.containerservice"
+artifact: com.microsoft.azure:azure-mgmt-containerservice:1.41.4

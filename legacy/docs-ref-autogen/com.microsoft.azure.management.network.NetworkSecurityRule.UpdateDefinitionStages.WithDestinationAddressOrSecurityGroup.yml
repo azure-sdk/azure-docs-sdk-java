@@ -1,0 +1,76 @@
+### YamlMime:JavaType
+uid: "com.microsoft.azure.management.network.NetworkSecurityRule.UpdateDefinitionStages.WithDestinationAddressOrSecurityGroup"
+fullName: "com.microsoft.azure.management.network.NetworkSecurityRule.UpdateDefinitionStages.WithDestinationAddressOrSecurityGroup<ParentT>"
+name: "NetworkSecurityRule.UpdateDefinitionStages.WithDestinationAddressOrSecurityGroup<ParentT>"
+nameWithType: "NetworkSecurityRule.UpdateDefinitionStages.WithDestinationAddressOrSecurityGroup<ParentT>"
+summary: "The stage of the network rule definition allowing the destination address to be specified."
+syntax: "public static interface **NetworkSecurityRule.UpdateDefinitionStages.WithDestinationAddressOrSecurityGroup<ParentT>**"
+methods:
+- uid: "com.microsoft.azure.management.network.NetworkSecurityRule.UpdateDefinitionStages.WithDestinationAddressOrSecurityGroup.toAddress(java.lang.String)"
+  fullName: "com.microsoft.azure.management.network.NetworkSecurityRule.UpdateDefinitionStages.WithDestinationAddressOrSecurityGroup<ParentT>.toAddress(String cidr)"
+  name: "toAddress(String cidr)"
+  nameWithType: "NetworkSecurityRule.UpdateDefinitionStages.WithDestinationAddressOrSecurityGroup<ParentT>.toAddress(String cidr)"
+  summary: "Specifies the traffic destination address range to which this rule applies."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "an IP address range expressed in the CIDR notation"
+    name: "cidr"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract NetworkSecurityRule.UpdateDefinitionStages.WithDestinationPort<ParentT> toAddress(String cidr)"
+  desc: "Specifies the traffic destination address range to which this rule applies."
+  returns:
+    description: "the next stage of the definition"
+    type: "<xref href=\"com.microsoft.azure.management.network.NetworkSecurityRule.UpdateDefinitionStages.WithDestinationPort?alt=com.microsoft.azure.management.network.NetworkSecurityRule.UpdateDefinitionStages.WithDestinationPort&text=WithDestinationPort\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"ParentT?alt=ParentT&text=ParentT\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.microsoft.azure.management.network.NetworkSecurityRule.UpdateDefinitionStages.WithDestinationAddressOrSecurityGroup.toAddresses(java.lang.String...)"
+  fullName: "com.microsoft.azure.management.network.NetworkSecurityRule.UpdateDefinitionStages.WithDestinationAddressOrSecurityGroup<ParentT>.toAddresses(String[] addresses)"
+  name: "toAddresses(String[] addresses)"
+  nameWithType: "NetworkSecurityRule.UpdateDefinitionStages.WithDestinationAddressOrSecurityGroup<ParentT>.toAddresses(String[] addresses)"
+  summary: "Specifies the traffic destination address prefixes to which this rule applies."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "IP address prefixes in CIDR notation or IP addresses"
+    name: "addresses"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />[]"
+  syntax: "public abstract NetworkSecurityRule.UpdateDefinitionStages.WithDestinationPort<ParentT> toAddresses(String[] addresses)"
+  desc: "Specifies the traffic destination address prefixes to which this rule applies."
+  returns:
+    description: "the next stage of the definition"
+    type: "<xref href=\"com.microsoft.azure.management.network.NetworkSecurityRule.UpdateDefinitionStages.WithDestinationPort?alt=com.microsoft.azure.management.network.NetworkSecurityRule.UpdateDefinitionStages.WithDestinationPort&text=WithDestinationPort\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"ParentT?alt=ParentT&text=ParentT\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.microsoft.azure.management.network.NetworkSecurityRule.UpdateDefinitionStages.WithDestinationAddressOrSecurityGroup.toAnyAddress()"
+  fullName: "com.microsoft.azure.management.network.NetworkSecurityRule.UpdateDefinitionStages.WithDestinationAddressOrSecurityGroup<ParentT>.toAnyAddress()"
+  name: "toAnyAddress()"
+  nameWithType: "NetworkSecurityRule.UpdateDefinitionStages.WithDestinationAddressOrSecurityGroup<ParentT>.toAnyAddress()"
+  summary: "Makes the rule apply to any traffic destination address."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract NetworkSecurityRule.UpdateDefinitionStages.WithDestinationPort<ParentT> toAnyAddress()"
+  desc: "Makes the rule apply to any traffic destination address."
+  returns:
+    description: "the next stage of the definition"
+    type: "<xref href=\"com.microsoft.azure.management.network.NetworkSecurityRule.UpdateDefinitionStages.WithDestinationPort?alt=com.microsoft.azure.management.network.NetworkSecurityRule.UpdateDefinitionStages.WithDestinationPort&text=WithDestinationPort\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"ParentT?alt=ParentT&text=ParentT\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.microsoft.azure.management.network.NetworkSecurityRule.UpdateDefinitionStages.WithDestinationAddressOrSecurityGroup.withDestinationApplicationSecurityGroup(java.lang.String)"
+  fullName: "com.microsoft.azure.management.network.NetworkSecurityRule.UpdateDefinitionStages.WithDestinationAddressOrSecurityGroup<ParentT>.withDestinationApplicationSecurityGroup(String id)"
+  name: "withDestinationApplicationSecurityGroup(String id)"
+  nameWithType: "NetworkSecurityRule.UpdateDefinitionStages.WithDestinationAddressOrSecurityGroup<ParentT>.withDestinationApplicationSecurityGroup(String id)"
+  summary: "Sets the application security group specified as destination."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "application security group id"
+    name: "id"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract NetworkSecurityRule.UpdateDefinitionStages.WithDestinationPort<ParentT> withDestinationApplicationSecurityGroup(String id)"
+  desc: "Sets the application security group specified as destination."
+  returns:
+    description: "the next stage of the definition"
+    type: "<xref href=\"com.microsoft.azure.management.network.NetworkSecurityRule.UpdateDefinitionStages.WithDestinationPort?alt=com.microsoft.azure.management.network.NetworkSecurityRule.UpdateDefinitionStages.WithDestinationPort&text=WithDestinationPort\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"ParentT?alt=ParentT&text=ParentT\" data-throw-if-not-resolved=\"False\" />&gt;"
+type: "interface"
+typeParameters:
+- description: "the stage of the parent definition to return to after attaching this definition"
+  name: "ParentT"
+desc: "The stage of the network rule definition allowing the destination address to be specified. Note: network security rule must specify a non empty value for exactly one of: DestinationAddressPrefixes, DestinationAddressPrefix, DestinationApplicationSecurityGroups."
+metadata: {}
+package: "com.microsoft.azure.management.network"
+artifact: com.microsoft.azure:azure-mgmt-network:1.41.4

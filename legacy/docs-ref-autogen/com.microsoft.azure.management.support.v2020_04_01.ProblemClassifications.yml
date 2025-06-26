@@ -1,0 +1,50 @@
+### YamlMime:JavaType
+uid: "com.microsoft.azure.management.support.v2020_04_01.ProblemClassifications"
+fullName: "com.microsoft.azure.management.support.v2020_04_01.ProblemClassifications"
+name: "ProblemClassifications"
+nameWithType: "ProblemClassifications"
+summary: "Type representing Problem<wbr>Classifications."
+syntax: "public interface **ProblemClassifications**</br> extends <xref href=\"com.microsoft.azure.arm.model.HasInner?alt=com.microsoft.azure.arm.model.HasInner&text=HasInner\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.support.v2020_04_01.implementation.ProblemClassificationsInner?alt=com.microsoft.azure.management.support.v2020_04_01.implementation.ProblemClassificationsInner&text=ProblemClassificationsInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.microsoft.azure.management.support.v2020_04_01.ProblemClassifications.getAsync(java.lang.String,java.lang.String)"
+  fullName: "com.microsoft.azure.management.support.v2020_04_01.ProblemClassifications.getAsync(String serviceName, String problemClassificationName)"
+  name: "getAsync(String serviceName, String problemClassificationName)"
+  nameWithType: "ProblemClassifications.getAsync(String serviceName, String problemClassificationName)"
+  summary: "Get problem classification details for a specific Azure service."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "Name of the Azure service available for support."
+    name: "serviceName"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  - description: "Name of problem classification."
+    name: "problemClassificationName"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Observable<ProblemClassification> getAsync(String serviceName, String problemClassificationName)"
+  desc: "Get problem classification details for a specific Azure service."
+  returns:
+    description: "the observable for the request"
+    type: "<xref href=\"rx.Observable?alt=rx.Observable&text=Observable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.support.v2020_04_01.ProblemClassification?alt=com.microsoft.azure.management.support.v2020_04_01.ProblemClassification&text=ProblemClassification\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.microsoft.azure.management.support.v2020_04_01.ProblemClassifications.listAsync(java.lang.String)"
+  fullName: "com.microsoft.azure.management.support.v2020_04_01.ProblemClassifications.listAsync(String serviceName)"
+  name: "listAsync(String serviceName)"
+  nameWithType: "ProblemClassifications.listAsync(String serviceName)"
+  summary: "Lists all the problem classifications (categories) available for a specific Azure service."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "Name of the Azure service for which the problem classifications need to be retrieved."
+    name: "serviceName"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Observable<ProblemClassification> listAsync(String serviceName)"
+  desc: "Lists all the problem classifications (categories) available for a specific Azure service. Always use the service and problem classifications obtained programmatically. This practice ensures that you always have the most recent set of service and problem classification Ids."
+  returns:
+    description: "the observable for the request"
+    type: "<xref href=\"rx.Observable?alt=rx.Observable&text=Observable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.support.v2020_04_01.ProblemClassification?alt=com.microsoft.azure.management.support.v2020_04_01.ProblemClassification&text=ProblemClassification\" data-throw-if-not-resolved=\"False\" />&gt;"
+type: "interface"
+desc: "Type representing ProblemClassifications."
+implements:
+- "<xref href=\"com.microsoft.azure.arm.model.HasInner?alt=com.microsoft.azure.arm.model.HasInner&text=HasInner\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.support.v2020_04_01.implementation.ProblemClassificationsInner?alt=com.microsoft.azure.management.support.v2020_04_01.implementation.ProblemClassificationsInner&text=ProblemClassificationsInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.microsoft.azure.management.support.v2020_04_01"
+artifact: com.microsoft.azure.support.v2020_04_01:azure-mgmt-support:1.0.0

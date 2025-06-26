@@ -1,0 +1,55 @@
+### YamlMime:JavaType
+uid: "com.azure.search.SearchApiKeyPipelinePolicy"
+fullName: "com.azure.search.SearchApiKeyPipelinePolicy"
+name: "SearchApiKeyPipelinePolicy"
+nameWithType: "SearchApiKeyPipelinePolicy"
+summary: "Policy that adds the Cognitive Search Service api-key into the request's Authorization header."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **SearchApiKeyPipelinePolicy**</br> implements <xref href=\"com.azure.core.http.policy.HttpPipelinePolicy?alt=com.azure.core.http.policy.HttpPipelinePolicy&text=HttpPipelinePolicy\" data-throw-if-not-resolved=\"False\" />"
+constructors:
+- uid: "com.azure.search.SearchApiKeyPipelinePolicy.SearchApiKeyPipelinePolicy(com.azure.search.SearchApiKeyCredential)"
+  fullName: "com.azure.search.SearchApiKeyPipelinePolicy.SearchApiKeyPipelinePolicy(SearchApiKeyCredential apiKey)"
+  name: "SearchApiKeyPipelinePolicy(SearchApiKeyCredential apiKey)"
+  nameWithType: "SearchApiKeyPipelinePolicy.SearchApiKeyPipelinePolicy(SearchApiKeyCredential apiKey)"
+  summary: "Constructor"
+  parameters:
+  - description: "Azure Cognitive Search service api admin or query key"
+    name: "apiKey"
+    type: "<xref href=\"com.azure.search.SearchApiKeyCredential?alt=com.azure.search.SearchApiKeyCredential&text=SearchApiKeyCredential\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public SearchApiKeyPipelinePolicy(SearchApiKeyCredential apiKey)"
+  desc: "Constructor"
+methods:
+- uid: "com.azure.search.SearchApiKeyPipelinePolicy.process(com.azure.core.http.HttpPipelineCallContext,com.azure.core.http.HttpPipelineNextPolicy)"
+  fullName: "com.azure.search.SearchApiKeyPipelinePolicy.process(HttpPipelineCallContext context, HttpPipelineNextPolicy next)"
+  name: "process(HttpPipelineCallContext context, HttpPipelineNextPolicy next)"
+  nameWithType: "SearchApiKeyPipelinePolicy.process(HttpPipelineCallContext context, HttpPipelineNextPolicy next)"
+  parameters:
+  - name: "context"
+    type: "<xref href=\"com.azure.core.http.HttpPipelineCallContext?alt=com.azure.core.http.HttpPipelineCallContext&text=HttpPipelineCallContext\" data-throw-if-not-resolved=\"False\" />"
+  - name: "next"
+    type: "<xref href=\"com.azure.core.http.HttpPipelineNextPolicy?alt=com.azure.core.http.HttpPipelineNextPolicy&text=HttpPipelineNextPolicy\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public Mono<HttpResponse> process(HttpPipelineCallContext context, HttpPipelineNextPolicy next)"
+  returns:
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.HttpResponse?alt=com.azure.core.http.HttpResponse&text=HttpResponse\" data-throw-if-not-resolved=\"False\" />&gt;"
+type: "class"
+desc: "Policy that adds the Cognitive Search Service api-key into the request's Authorization header."
+implements:
+- "<xref href=\"com.azure.core.http.policy.HttpPipelinePolicy?alt=com.azure.core.http.policy.HttpPipelinePolicy&text=HttpPipelinePolicy\" data-throw-if-not-resolved=\"False\" />"
+metadata: {}
+package: "com.azure.search"
+artifact: com.azure:azure-search:11.0.0-beta.1

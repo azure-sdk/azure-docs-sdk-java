@@ -1,0 +1,62 @@
+### YamlMime:JavaType
+uid: "com.microsoft.azure.management.apimanagement.v2019_01_01.QuotaByCounterKeys"
+fullName: "com.microsoft.azure.management.apimanagement.v2019_01_01.QuotaByCounterKeys"
+name: "QuotaByCounterKeys"
+nameWithType: "QuotaByCounterKeys"
+summary: "Type representing Quota<wbr>ByCounter<wbr>Keys."
+syntax: "public interface **QuotaByCounterKeys**</br> extends <xref href=\"com.microsoft.azure.arm.model.HasInner?alt=com.microsoft.azure.arm.model.HasInner&text=HasInner\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.apimanagement.v2019_01_01.implementation.QuotaByCounterKeysInner?alt=com.microsoft.azure.management.apimanagement.v2019_01_01.implementation.QuotaByCounterKeysInner&text=QuotaByCounterKeysInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.microsoft.azure.management.apimanagement.v2019_01_01.QuotaByCounterKeys.listByServiceAsync(java.lang.String,java.lang.String,java.lang.String)"
+  fullName: "com.microsoft.azure.management.apimanagement.v2019_01_01.QuotaByCounterKeys.listByServiceAsync(String resourceGroupName, String serviceName, String quotaCounterKey)"
+  name: "listByServiceAsync(String resourceGroupName, String serviceName, String quotaCounterKey)"
+  nameWithType: "QuotaByCounterKeys.listByServiceAsync(String resourceGroupName, String serviceName, String quotaCounterKey)"
+  summary: "Lists a collection of current quota counter periods associated with the counter-key configured in the policy on the specified service instance."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group."
+    name: "resourceGroupName"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The name of the API Management service."
+    name: "serviceName"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  - description: "Quota counter key identifier.This is the result of expression defined in counter-key attribute of the quota-by-key policy.For Example, if you specify counter-key=\"boo\" in the policy, then it\\u2019s accessible by \"boo\" counter key. But if it\\u2019s defined as counter-key=\"@(\"b\"+\"a\")\" then it will be accessible by \"ba\" key"
+    name: "quotaCounterKey"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Observable<QuotaCounterCollection> listByServiceAsync(String resourceGroupName, String serviceName, String quotaCounterKey)"
+  desc: "Lists a collection of current quota counter periods associated with the counter-key configured in the policy on the specified service instance. The api does not support paging yet."
+  returns:
+    description: "the observable for the request"
+    type: "<xref href=\"rx.Observable?alt=rx.Observable&text=Observable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.apimanagement.v2019_01_01.QuotaCounterCollection?alt=com.microsoft.azure.management.apimanagement.v2019_01_01.QuotaCounterCollection&text=QuotaCounterCollection\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.microsoft.azure.management.apimanagement.v2019_01_01.QuotaByCounterKeys.updateAsync(java.lang.String,java.lang.String,java.lang.String,com.microsoft.azure.management.apimanagement.v2019_01_01.QuotaCounterValueContractProperties)"
+  fullName: "com.microsoft.azure.management.apimanagement.v2019_01_01.QuotaByCounterKeys.updateAsync(String resourceGroupName, String serviceName, String quotaCounterKey, QuotaCounterValueContractProperties parameters)"
+  name: "updateAsync(String resourceGroupName, String serviceName, String quotaCounterKey, QuotaCounterValueContractProperties parameters)"
+  nameWithType: "QuotaByCounterKeys.updateAsync(String resourceGroupName, String serviceName, String quotaCounterKey, QuotaCounterValueContractProperties parameters)"
+  summary: "Updates all the quota counter values specified with the existing quota counter key to a value in the specified service instance."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group."
+    name: "resourceGroupName"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The name of the API Management service."
+    name: "serviceName"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  - description: "Quota counter key identifier.This is the result of expression defined in counter-key attribute of the quota-by-key policy.For Example, if you specify counter-key=\"boo\" in the policy, then it\\u2019s accessible by \"boo\" counter key. But if it\\u2019s defined as counter-key=\"@(\"b\"+\"a\")\" then it will be accessible by \"ba\" key"
+    name: "quotaCounterKey"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The value of the quota counter to be applied to all quota counter periods."
+    name: "parameters"
+    type: "<xref href=\"com.microsoft.azure.management.apimanagement.v2019_01_01.QuotaCounterValueContractProperties?alt=com.microsoft.azure.management.apimanagement.v2019_01_01.QuotaCounterValueContractProperties&text=QuotaCounterValueContractProperties\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Completable updateAsync(String resourceGroupName, String serviceName, String quotaCounterKey, QuotaCounterValueContractProperties parameters)"
+  desc: "Updates all the quota counter values specified with the existing quota counter key to a value in the specified service instance. This should be used for reset of the quota counter values."
+  returns:
+    description: "the observable for the request"
+    type: "<xref href=\"rx.Completable?alt=rx.Completable&text=Completable\" data-throw-if-not-resolved=\"False\" />"
+type: "interface"
+desc: "Type representing QuotaByCounterKeys."
+implements:
+- "<xref href=\"com.microsoft.azure.arm.model.HasInner?alt=com.microsoft.azure.arm.model.HasInner&text=HasInner\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.apimanagement.v2019_01_01.implementation.QuotaByCounterKeysInner?alt=com.microsoft.azure.management.apimanagement.v2019_01_01.implementation.QuotaByCounterKeysInner&text=QuotaByCounterKeysInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.microsoft.azure.management.apimanagement.v2019_01_01"
+artifact: com.microsoft.azure.apimanagement.v2019_01_01:azure-mgmt-apimanagement:1.0.0-beta-1

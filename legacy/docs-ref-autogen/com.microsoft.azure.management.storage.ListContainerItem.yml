@@ -1,0 +1,133 @@
+### YamlMime:JavaType
+uid: "com.microsoft.azure.management.storage.ListContainerItem"
+fullName: "com.microsoft.azure.management.storage.ListContainerItem"
+name: "ListContainerItem"
+nameWithType: "ListContainerItem"
+syntax: "public interface **ListContainerItem**</br> extends <xref href=\"com.microsoft.azure.management.resources.fluentcore.model.HasInner?alt=com.microsoft.azure.management.resources.fluentcore.model.HasInner&text=HasInner\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.storage.implementation.ListContainerItemInner?alt=com.microsoft.azure.management.storage.implementation.ListContainerItemInner&text=ListContainerItemInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.microsoft.azure.management.storage.ListContainerItem.hasImmutabilityPolicy()"
+  fullName: "com.microsoft.azure.management.storage.ListContainerItem.hasImmutabilityPolicy()"
+  name: "hasImmutabilityPolicy()"
+  nameWithType: "ListContainerItem.hasImmutabilityPolicy()"
+  summary: "Get the has<wbr>Immutability<wbr>Policy public property is set to true by SRP if Immutability<wbr>Policy has been created for this container."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Boolean hasImmutabilityPolicy()"
+  desc: "Get the hasImmutabilityPolicy public property is set to true by SRP if ImmutabilityPolicy has been created for this container. The hasImmutabilityPolicy public property is set to false by SRP if ImmutabilityPolicy has not been created for this container."
+  returns:
+    description: "the hasImmutabilityPolicy value"
+    type: "<xref href=\"java.lang.Boolean?alt=java.lang.Boolean&text=Boolean\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.azure.management.storage.ListContainerItem.hasLegalHold()"
+  fullName: "com.microsoft.azure.management.storage.ListContainerItem.hasLegalHold()"
+  name: "hasLegalHold()"
+  nameWithType: "ListContainerItem.hasLegalHold()"
+  summary: "Get the has<wbr>Legal<wbr>Hold public property is set to true by SRP if there are at least one existing tag."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Boolean hasLegalHold()"
+  desc: "Get the hasLegalHold public property is set to true by SRP if there are at least one existing tag. The hasLegalHold public property is set to false by SRP if all existing legal hold tags are cleared out. There can be a maximum of 1000 blob containers with hasLegalHold=true for a given account."
+  returns:
+    description: "the hasLegalHold value"
+    type: "<xref href=\"java.lang.Boolean?alt=java.lang.Boolean&text=Boolean\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.azure.management.storage.ListContainerItem.immutabilityPolicy()"
+  fullName: "com.microsoft.azure.management.storage.ListContainerItem.immutabilityPolicy()"
+  name: "immutabilityPolicy()"
+  nameWithType: "ListContainerItem.immutabilityPolicy()"
+  summary: "Get the Immutability<wbr>Policy property of the container."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract ImmutabilityPolicyProperties immutabilityPolicy()"
+  desc: "Get the ImmutabilityPolicy property of the container."
+  returns:
+    description: "the immutabilityPolicy value"
+    type: "<xref href=\"com.microsoft.azure.management.storage.ImmutabilityPolicyProperties?alt=com.microsoft.azure.management.storage.ImmutabilityPolicyProperties&text=ImmutabilityPolicyProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.azure.management.storage.ListContainerItem.lastModifiedTime()"
+  fullName: "com.microsoft.azure.management.storage.ListContainerItem.lastModifiedTime()"
+  name: "lastModifiedTime()"
+  nameWithType: "ListContainerItem.lastModifiedTime()"
+  summary: "Get returns the date and time the container was last modified."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract DateTime lastModifiedTime()"
+  desc: "Get returns the date and time the container was last modified."
+  returns:
+    description: "the lastModifiedTime value"
+    type: "<xref href=\"org.joda.time.DateTime?alt=org.joda.time.DateTime&text=DateTime\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.azure.management.storage.ListContainerItem.leaseDuration()"
+  fullName: "com.microsoft.azure.management.storage.ListContainerItem.leaseDuration()"
+  name: "leaseDuration()"
+  nameWithType: "ListContainerItem.leaseDuration()"
+  summary: "Get specifies whether the lease on a container is of infinite or fixed duration, only when the container is leased."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract LeaseDuration leaseDuration()"
+  desc: "Get specifies whether the lease on a container is of infinite or fixed duration, only when the container is leased. Possible values include: 'Infinite', 'Fixed'."
+  returns:
+    description: "the leaseDuration value"
+    type: "<xref href=\"com.microsoft.azure.management.storage.LeaseDuration?alt=com.microsoft.azure.management.storage.LeaseDuration&text=LeaseDuration\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.azure.management.storage.ListContainerItem.leaseState()"
+  fullName: "com.microsoft.azure.management.storage.ListContainerItem.leaseState()"
+  name: "leaseState()"
+  nameWithType: "ListContainerItem.leaseState()"
+  summary: "Get lease state of the container."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract LeaseState leaseState()"
+  desc: "Get lease state of the container. Possible values include: 'Available', 'Leased', 'Expired', 'Breaking', 'Broken'."
+  returns:
+    description: "the leaseState value"
+    type: "<xref href=\"com.microsoft.azure.management.storage.LeaseState?alt=com.microsoft.azure.management.storage.LeaseState&text=LeaseState\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.azure.management.storage.ListContainerItem.leaseStatus()"
+  fullName: "com.microsoft.azure.management.storage.ListContainerItem.leaseStatus()"
+  name: "leaseStatus()"
+  nameWithType: "ListContainerItem.leaseStatus()"
+  summary: "Get the lease status of the container."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract LeaseStatus leaseStatus()"
+  desc: "Get the lease status of the container. Possible values include: 'Locked', 'Unlocked'."
+  returns:
+    description: "the leaseStatus value"
+    type: "<xref href=\"com.microsoft.azure.management.storage.LeaseStatus?alt=com.microsoft.azure.management.storage.LeaseStatus&text=LeaseStatus\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.azure.management.storage.ListContainerItem.legalHold()"
+  fullName: "com.microsoft.azure.management.storage.ListContainerItem.legalHold()"
+  name: "legalHold()"
+  nameWithType: "ListContainerItem.legalHold()"
+  summary: "Get the Legal<wbr>Hold property of the container."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract LegalHoldProperties legalHold()"
+  desc: "Get the LegalHold property of the container."
+  returns:
+    description: "the legalHold value"
+    type: "<xref href=\"com.microsoft.azure.management.storage.LegalHoldProperties?alt=com.microsoft.azure.management.storage.LegalHoldProperties&text=LegalHoldProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.azure.management.storage.ListContainerItem.metadata()"
+  fullName: "com.microsoft.azure.management.storage.ListContainerItem.metadata()"
+  name: "metadata()"
+  nameWithType: "ListContainerItem.metadata()"
+  summary: "Get a name-value pair to associate with the container as metadata."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Map<String,String> metadata()"
+  desc: "Get a name-value pair to associate with the container as metadata."
+  returns:
+    description: "the metadata value"
+    type: "<xref href=\"java.util.Map?alt=java.util.Map&text=Map\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />,<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.microsoft.azure.management.storage.ListContainerItem.publicAccess()"
+  fullName: "com.microsoft.azure.management.storage.ListContainerItem.publicAccess()"
+  name: "publicAccess()"
+  nameWithType: "ListContainerItem.publicAccess()"
+  summary: "Get specifies whether data in the container may be accessed publicly and the level of access."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract PublicAccess publicAccess()"
+  desc: "Get specifies whether data in the container may be accessed publicly and the level of access. Possible values include: 'Container', 'Blob', 'None'."
+  returns:
+    description: "the publicAccess value"
+    type: "<xref href=\"com.microsoft.azure.management.storage.PublicAccess?alt=com.microsoft.azure.management.storage.PublicAccess&text=PublicAccess\" data-throw-if-not-resolved=\"False\" />"
+type: "interface"
+implements:
+- "<xref href=\"com.microsoft.azure.management.resources.fluentcore.model.HasInner?alt=com.microsoft.azure.management.resources.fluentcore.model.HasInner&text=HasInner\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.storage.implementation.ListContainerItemInner?alt=com.microsoft.azure.management.storage.implementation.ListContainerItemInner&text=ListContainerItemInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.microsoft.azure.management.storage"
+artifact: com.microsoft.azure:azure-mgmt-storage:1.41.4

@@ -1,0 +1,49 @@
+### YamlMime:JavaType
+uid: "com.microsoft.azure.management.support.v2020_04_01.SupportTickets"
+fullName: "com.microsoft.azure.management.support.v2020_04_01.SupportTickets"
+name: "SupportTickets"
+nameWithType: "SupportTickets"
+summary: "Type representing Support<wbr>Tickets."
+syntax: "public interface **SupportTickets**</br> extends <xref href=\"com.microsoft.azure.arm.collection.SupportsCreating?alt=com.microsoft.azure.arm.collection.SupportsCreating&text=SupportsCreating\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.support.v2020_04_01.SupportTicketDetails.DefinitionStages.Blank?alt=com.microsoft.azure.management.support.v2020_04_01.SupportTicketDetails.DefinitionStages.Blank&text=Blank\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.microsoft.azure.arm.collection.SupportsListing?alt=com.microsoft.azure.arm.collection.SupportsListing&text=SupportsListing\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.support.v2020_04_01.SupportTicketDetails?alt=com.microsoft.azure.management.support.v2020_04_01.SupportTicketDetails&text=SupportTicketDetails\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.microsoft.azure.arm.model.HasInner?alt=com.microsoft.azure.arm.model.HasInner&text=HasInner\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.support.v2020_04_01.implementation.SupportTicketsInner?alt=com.microsoft.azure.management.support.v2020_04_01.implementation.SupportTicketsInner&text=SupportTicketsInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.microsoft.azure.management.support.v2020_04_01.SupportTickets.checkNameAvailabilityAsync(com.microsoft.azure.management.support.v2020_04_01.CheckNameAvailabilityInput)"
+  fullName: "com.microsoft.azure.management.support.v2020_04_01.SupportTickets.checkNameAvailabilityAsync(CheckNameAvailabilityInput checkNameAvailabilityInput)"
+  name: "checkNameAvailabilityAsync(CheckNameAvailabilityInput checkNameAvailabilityInput)"
+  nameWithType: "SupportTickets.checkNameAvailabilityAsync(CheckNameAvailabilityInput checkNameAvailabilityInput)"
+  summary: "Check the availability of a resource name."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "Input to check."
+    name: "checkNameAvailabilityInput"
+    type: "<xref href=\"com.microsoft.azure.management.support.v2020_04_01.CheckNameAvailabilityInput?alt=com.microsoft.azure.management.support.v2020_04_01.CheckNameAvailabilityInput&text=CheckNameAvailabilityInput\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Observable<CheckNameAvailabilityOutput> checkNameAvailabilityAsync(CheckNameAvailabilityInput checkNameAvailabilityInput)"
+  desc: "Check the availability of a resource name. This API should be used to check the uniqueness of the name for support ticket creation for the selected subscription."
+  returns:
+    description: "the observable for the request"
+    type: "<xref href=\"rx.Observable?alt=rx.Observable&text=Observable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.support.v2020_04_01.CheckNameAvailabilityOutput?alt=com.microsoft.azure.management.support.v2020_04_01.CheckNameAvailabilityOutput&text=CheckNameAvailabilityOutput\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.microsoft.azure.management.support.v2020_04_01.SupportTickets.getAsync(java.lang.String)"
+  fullName: "com.microsoft.azure.management.support.v2020_04_01.SupportTickets.getAsync(String supportTicketName)"
+  name: "getAsync(String supportTicketName)"
+  nameWithType: "SupportTickets.getAsync(String supportTicketName)"
+  summary: "Get ticket details for an Azure subscription."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "Support ticket name."
+    name: "supportTicketName"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Observable<SupportTicketDetails> getAsync(String supportTicketName)"
+  desc: "Get ticket details for an Azure subscription. Support ticket data is available for 12 months after ticket creation. If a ticket was created more than 12 months ago, a request for data might cause an error."
+  returns:
+    description: "the observable for the request"
+    type: "<xref href=\"rx.Observable?alt=rx.Observable&text=Observable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.support.v2020_04_01.SupportTicketDetails?alt=com.microsoft.azure.management.support.v2020_04_01.SupportTicketDetails&text=SupportTicketDetails\" data-throw-if-not-resolved=\"False\" />&gt;"
+type: "interface"
+desc: "Type representing SupportTickets."
+implements:
+- "<xref href=\"com.microsoft.azure.arm.collection.SupportsCreating?alt=com.microsoft.azure.arm.collection.SupportsCreating&text=SupportsCreating\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.support.v2020_04_01.SupportTicketDetails.DefinitionStages.Blank?alt=com.microsoft.azure.management.support.v2020_04_01.SupportTicketDetails.DefinitionStages.Blank&text=Blank\" data-throw-if-not-resolved=\"False\" />&gt;"
+- "<xref href=\"com.microsoft.azure.arm.collection.SupportsListing?alt=com.microsoft.azure.arm.collection.SupportsListing&text=SupportsListing\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.support.v2020_04_01.SupportTicketDetails?alt=com.microsoft.azure.management.support.v2020_04_01.SupportTicketDetails&text=SupportTicketDetails\" data-throw-if-not-resolved=\"False\" />&gt;"
+- "<xref href=\"com.microsoft.azure.arm.model.HasInner?alt=com.microsoft.azure.arm.model.HasInner&text=HasInner\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.support.v2020_04_01.implementation.SupportTicketsInner?alt=com.microsoft.azure.management.support.v2020_04_01.implementation.SupportTicketsInner&text=SupportTicketsInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.microsoft.azure.management.support.v2020_04_01"
+artifact: com.microsoft.azure.support.v2020_04_01:azure-mgmt-support:1.0.0
