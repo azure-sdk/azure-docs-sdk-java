@@ -1,0 +1,29 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.videoanalyzer.models.LivePipeline.DefinitionStages.WithBitrateKbps"
+fullName: "com.azure.resourcemanager.videoanalyzer.models.LivePipeline.DefinitionStages.WithBitrateKbps"
+name: "LivePipeline.DefinitionStages.WithBitrateKbps"
+nameWithType: "LivePipeline.DefinitionStages.WithBitrateKbps"
+summary: "The stage of the Live<wbr>Pipeline definition allowing to specify bitrate<wbr>Kbps."
+syntax: "public static interface **LivePipeline.DefinitionStages.WithBitrateKbps**"
+methods:
+- uid: "com.azure.resourcemanager.videoanalyzer.models.LivePipeline.DefinitionStages.WithBitrateKbps.withBitrateKbps(int)"
+  fullName: "com.azure.resourcemanager.videoanalyzer.models.LivePipeline.DefinitionStages.WithBitrateKbps.withBitrateKbps(int bitrateKbps)"
+  name: "withBitrateKbps(int bitrateKbps)"
+  nameWithType: "LivePipeline.DefinitionStages.WithBitrateKbps.withBitrateKbps(int bitrateKbps)"
+  summary: "Specifies the bitrate<wbr>Kbps property: Maximum bitrate capacity in Kbps reserved for the live pipeline."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "Maximum bitrate capacity in Kbps reserved for the live pipeline. The allowed range is\n     from 500 to 3000 Kbps in increments of 100 Kbps. If the RTSP camera exceeds this capacity, then the\n     service will disconnect temporarily from the camera. It will retry to re-establish connection (with\n     exponential backoff), checking to see if the camera bitrate is now below the reserved capacity. Doing\n     so will ensure that one 'noisy neighbor' does not affect other live pipelines in your account."
+    name: "bitrateKbps"
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract LivePipeline.DefinitionStages.WithCreate withBitrateKbps(int bitrateKbps)"
+  desc: "Specifies the bitrateKbps property: Maximum bitrate capacity in Kbps reserved for the live pipeline. The allowed range is from 500 to 3000 Kbps in increments of 100 Kbps. If the RTSP camera exceeds this capacity, then the service will disconnect temporarily from the camera. It will retry to re-establish connection (with exponential backoff), checking to see if the camera bitrate is now below the reserved capacity. Doing so will ensure that one 'noisy neighbor' does not affect other live pipelines in your account.."
+  returns:
+    description: "the next definition stage."
+    type: "<xref href=\"com.azure.resourcemanager.videoanalyzer.models.LivePipeline.DefinitionStages.WithCreate?alt=com.azure.resourcemanager.videoanalyzer.models.LivePipeline.DefinitionStages.WithCreate&text=WithCreate\" data-throw-if-not-resolved=\"False\" />"
+type: "interface"
+desc: "The stage of the LivePipeline definition allowing to specify bitrateKbps."
+metadata: {}
+package: "com.azure.resourcemanager.videoanalyzer.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-videoanalyzer:1.0.0-beta.5

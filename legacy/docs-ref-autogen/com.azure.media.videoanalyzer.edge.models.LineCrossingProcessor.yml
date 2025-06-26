@@ -1,0 +1,62 @@
+### YamlMime:JavaType
+uid: "com.azure.media.videoanalyzer.edge.models.LineCrossingProcessor"
+fullName: "com.azure.media.videoanalyzer.edge.models.LineCrossingProcessor"
+name: "LineCrossingProcessor"
+nameWithType: "LineCrossingProcessor"
+summary: "Line crossing processor allows for the detection of tracked objects moving across one or more predefined lines."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"com.azure.media.videoanalyzer.edge.models.ProcessorNodeBase?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "<xref href=\"com.azure.media.videoanalyzer.edge.models.ProcessorNodeBase?alt=com.azure.media.videoanalyzer.edge.models.ProcessorNodeBase&text=ProcessorNodeBase\" data-throw-if-not-resolved=\"False\" />"
+  methodsRef:
+  - "<xref href=\"com.azure.media.videoanalyzer.edge.models.ProcessorNodeBase.getInputs()?alt=com.azure.media.videoanalyzer.edge.models.ProcessorNodeBase.getInputs&text=getInputs\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.media.videoanalyzer.edge.models.ProcessorNodeBase.getName()?alt=com.azure.media.videoanalyzer.edge.models.ProcessorNodeBase.getName&text=getName\" data-throw-if-not-resolved=\"False\" />"
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **LineCrossingProcessor**</br> extends <xref href=\"com.azure.media.videoanalyzer.edge.models.ProcessorNodeBase?alt=com.azure.media.videoanalyzer.edge.models.ProcessorNodeBase&text=ProcessorNodeBase\" data-throw-if-not-resolved=\"False\" />"
+constructors:
+- uid: "com.azure.media.videoanalyzer.edge.models.LineCrossingProcessor.LineCrossingProcessor(java.lang.String,java.util.List<com.azure.media.videoanalyzer.edge.models.NodeInput>,java.util.List<com.azure.media.videoanalyzer.edge.models.NamedLineBase>)"
+  fullName: "com.azure.media.videoanalyzer.edge.models.LineCrossingProcessor.LineCrossingProcessor(String name, List<NodeInput> inputs, List<NamedLineBase> lines)"
+  name: "LineCrossingProcessor(String name, List<NodeInput> inputs, List<NamedLineBase> lines)"
+  nameWithType: "LineCrossingProcessor.LineCrossingProcessor(String name, List<NodeInput> inputs, List<NamedLineBase> lines)"
+  summary: "Creates an instance of Line<wbr>Crossing<wbr>Processor class."
+  parameters:
+  - description: "the name value to set."
+    name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "the inputs value to set."
+    name: "inputs"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.media.videoanalyzer.edge.models.NodeInput?alt=com.azure.media.videoanalyzer.edge.models.NodeInput&text=NodeInput\" data-throw-if-not-resolved=\"False\" />&gt;"
+  - description: "the lines value to set."
+    name: "lines"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.media.videoanalyzer.edge.models.NamedLineBase?alt=com.azure.media.videoanalyzer.edge.models.NamedLineBase&text=NamedLineBase\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public LineCrossingProcessor(String name, List<NodeInput> inputs, List<NamedLineBase> lines)"
+  desc: "Creates an instance of LineCrossingProcessor class."
+methods:
+- uid: "com.azure.media.videoanalyzer.edge.models.LineCrossingProcessor.getLines()"
+  fullName: "com.azure.media.videoanalyzer.edge.models.LineCrossingProcessor.getLines()"
+  name: "getLines()"
+  nameWithType: "LineCrossingProcessor.getLines()"
+  summary: "Get the lines property: An array of lines used to compute line crossing events."
+  syntax: "public List<NamedLineBase> getLines()"
+  desc: "Get the lines property: An array of lines used to compute line crossing events."
+  returns:
+    description: "the lines value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.media.videoanalyzer.edge.models.NamedLineBase?alt=com.azure.media.videoanalyzer.edge.models.NamedLineBase&text=NamedLineBase\" data-throw-if-not-resolved=\"False\" />&gt;"
+type: "class"
+desc: "Line crossing processor allows for the detection of tracked objects moving across one or more predefined lines. It must be downstream of an object tracker of downstream on an AI extension node that generates sequenceId for objects which are tracked across different frames of the video. Inference events are generated every time objects crosses from one side of the line to another."
+metadata: {}
+package: "com.azure.media.videoanalyzer.edge.models"
+artifact: com.azure:azure-media-videoanalyzer-edge:1.0.0-beta.6

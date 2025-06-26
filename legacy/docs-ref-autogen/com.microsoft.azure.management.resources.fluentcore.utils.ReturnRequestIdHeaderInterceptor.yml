@@ -1,0 +1,62 @@
+### YamlMime:JavaType
+uid: "com.microsoft.azure.management.resources.fluentcore.utils.ReturnRequestIdHeaderInterceptor"
+fullName: "com.microsoft.azure.management.resources.fluentcore.utils.ReturnRequestIdHeaderInterceptor"
+name: "ReturnRequestIdHeaderInterceptor"
+nameWithType: "ReturnRequestIdHeaderInterceptor"
+summary: "An interceptor for requesting server return client-request-id in response headers."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "<xref href=\"java.lang.Object?alt=java.lang.Object&text=Object\" data-throw-if-not-resolved=\"False\" />"
+  methodsRef:
+  - "<xref href=\"java.lang.Object.clone()?alt=java.lang.Object.clone&text=clone\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"java.lang.Object.equals(java.lang.Object)?alt=java.lang.Object.equals&text=equals\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"java.lang.Object.finalize()?alt=java.lang.Object.finalize&text=finalize\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"java.lang.Object.getClass()?alt=java.lang.Object.getClass&text=getClass\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"java.lang.Object.hashCode()?alt=java.lang.Object.hashCode&text=hashCode\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"java.lang.Object.notify()?alt=java.lang.Object.notify&text=notify\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"java.lang.Object.notifyAll()?alt=java.lang.Object.notifyAll&text=notifyAll\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"java.lang.Object.toString()?alt=java.lang.Object.toString&text=toString\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"java.lang.Object.wait()?alt=java.lang.Object.wait&text=wait\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"java.lang.Object.wait(long)?alt=java.lang.Object.wait&text=wait\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"java.lang.Object.wait(long,int)?alt=java.lang.Object.wait&text=wait\" data-throw-if-not-resolved=\"False\" />"
+syntax: "public class **ReturnRequestIdHeaderInterceptor**</br> implements <xref href=\"okhttp3.Interceptor?alt=okhttp3.Interceptor&text=Interceptor\" data-throw-if-not-resolved=\"False\" />"
+constructors:
+- uid: "com.microsoft.azure.management.resources.fluentcore.utils.ReturnRequestIdHeaderInterceptor.ReturnRequestIdHeaderInterceptor()"
+  fullName: "com.microsoft.azure.management.resources.fluentcore.utils.ReturnRequestIdHeaderInterceptor.ReturnRequestIdHeaderInterceptor()"
+  name: "ReturnRequestIdHeaderInterceptor()"
+  nameWithType: "ReturnRequestIdHeaderInterceptor.ReturnRequestIdHeaderInterceptor()"
+  summary: "Creates a new instance of Return<wbr>Request<wbr>IdHeader<wbr>Interceptor."
+  syntax: "public ReturnRequestIdHeaderInterceptor()"
+  desc: "Creates a new instance of ReturnRequestIdHeaderInterceptor. Sets \"x-ms-return-client-request-id: true\" in requests headers."
+- uid: "com.microsoft.azure.management.resources.fluentcore.utils.ReturnRequestIdHeaderInterceptor.ReturnRequestIdHeaderInterceptor(com.microsoft.azure.management.resources.fluentcore.utils.ReturnRequestIdHeaderInterceptor.Option)"
+  fullName: "com.microsoft.azure.management.resources.fluentcore.utils.ReturnRequestIdHeaderInterceptor.ReturnRequestIdHeaderInterceptor(ReturnRequestIdHeaderInterceptor.Option option)"
+  name: "ReturnRequestIdHeaderInterceptor(ReturnRequestIdHeaderInterceptor.Option option)"
+  nameWithType: "ReturnRequestIdHeaderInterceptor.ReturnRequestIdHeaderInterceptor(ReturnRequestIdHeaderInterceptor.Option option)"
+  summary: "Creates a new instance of Return<wbr>Request<wbr>IdHeader<wbr>Interceptor."
+  parameters:
+  - description: "the option of additional client handling, if server does not return client-request-id in response headers."
+    name: "option"
+    type: "<xref href=\"com.microsoft.azure.management.resources.fluentcore.utils.ReturnRequestIdHeaderInterceptor.Option?alt=com.microsoft.azure.management.resources.fluentcore.utils.ReturnRequestIdHeaderInterceptor.Option&text=Option\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ReturnRequestIdHeaderInterceptor(ReturnRequestIdHeaderInterceptor.Option option)"
+  desc: "Creates a new instance of ReturnRequestIdHeaderInterceptor. Sets \"x-ms-return-client-request-id: true\" in requests headers.\n\nOptionally fill-in the client-request-id if server does not return it in response headers."
+methods:
+- uid: "com.microsoft.azure.management.resources.fluentcore.utils.ReturnRequestIdHeaderInterceptor.intercept(okhttp3.Interceptor.Chain)"
+  fullName: "com.microsoft.azure.management.resources.fluentcore.utils.ReturnRequestIdHeaderInterceptor.intercept(Interceptor.Chain chain)"
+  name: "intercept(Interceptor.Chain chain)"
+  nameWithType: "ReturnRequestIdHeaderInterceptor.intercept(Interceptor.Chain chain)"
+  parameters:
+  - name: "chain"
+    type: "<xref href=\"okhttp3.Interceptor.Chain?alt=okhttp3.Interceptor.Chain&text=Chain\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public Response intercept(Interceptor.Chain chain)"
+  exceptions:
+  - type: "<xref href=\"java.io.IOException?alt=java.io.IOException&text=IOException\" data-throw-if-not-resolved=\"False\" />"
+  returns:
+    type: "<xref href=\"okhttp3.Response?alt=okhttp3.Response&text=Response\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "An interceptor for requesting server return client-request-id in response headers. Optionally, fill-in the client-request-id, if server does not return it in response headers.\n\nReturnRequestIdHeaderInterceptor should be added after <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RequestIdHeaderInterceptor\"></xref>. By default, <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RequestIdHeaderInterceptor\"></xref> is added as first interceptor by <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RestClient\"></xref>."
+implements:
+- "<xref href=\"okhttp3.Interceptor?alt=okhttp3.Interceptor&text=Interceptor\" data-throw-if-not-resolved=\"False\" />"
+metadata: {}
+package: "com.microsoft.azure.management.resources.fluentcore.utils"
+artifact: com.microsoft.azure:azure-mgmt-resources:1.41.4

@@ -1,0 +1,61 @@
+### YamlMime:JavaType
+uid: "com.azure.search.util.SuggestPagedResponse"
+fullName: "com.azure.search.util.SuggestPagedResponse"
+name: "SuggestPagedResponse"
+nameWithType: "SuggestPagedResponse"
+summary: "Represents an HTTP response from the suggest API request that contains a list of items deserialized into a <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Page\"></xref>."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"com.azure.core.http.rest.PagedResponseBase?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "<xref href=\"com.azure.core.http.rest.PagedResponseBase?alt=com.azure.core.http.rest.PagedResponseBase&text=PagedResponseBase\" data-throw-if-not-resolved=\"False\" />"
+  methodsRef:
+  - "<xref href=\"com.azure.core.http.rest.PagedResponseBase.close()?alt=com.azure.core.http.rest.PagedResponseBase.close&text=close\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.http.rest.PagedResponseBase.getContinuationToken()?alt=com.azure.core.http.rest.PagedResponseBase.getContinuationToken&text=getContinuationToken\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.http.rest.PagedResponseBase.getDeserializedHeaders()?alt=com.azure.core.http.rest.PagedResponseBase.getDeserializedHeaders&text=getDeserializedHeaders\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.http.rest.PagedResponseBase.getElements()?alt=com.azure.core.http.rest.PagedResponseBase.getElements&text=getElements\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.http.rest.PagedResponseBase.getHeaders()?alt=com.azure.core.http.rest.PagedResponseBase.getHeaders&text=getHeaders\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.http.rest.PagedResponseBase.getRequest()?alt=com.azure.core.http.rest.PagedResponseBase.getRequest&text=getRequest\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.http.rest.PagedResponseBase.getStatusCode()?alt=com.azure.core.http.rest.PagedResponseBase.getStatusCode&text=getStatusCode\" data-throw-if-not-resolved=\"False\" />"
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **SuggestPagedResponse**</br> extends <xref href=\"com.azure.core.http.rest.PagedResponseBase?alt=com.azure.core.http.rest.PagedResponseBase&text=PagedResponseBase\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>,<xref href=\"com.azure.search.models.SuggestResult?alt=com.azure.search.models.SuggestResult&text=SuggestResult\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.search.util.SuggestPagedResponse.SuggestPagedResponse(com.azure.core.http.rest.SimpleResponse<com.azure.search.models.SuggestDocumentsResult>)"
+  fullName: "com.azure.search.util.SuggestPagedResponse.SuggestPagedResponse(SimpleResponse<SuggestDocumentsResult> documentSearchResponse)"
+  name: "SuggestPagedResponse(SimpleResponse<SuggestDocumentsResult> documentSearchResponse)"
+  nameWithType: "SuggestPagedResponse.SuggestPagedResponse(SimpleResponse<SuggestDocumentsResult> documentSearchResponse)"
+  summary: "Constructor"
+  parameters:
+  - description: "an http response with the results"
+    name: "documentSearchResponse"
+    type: "<xref href=\"com.azure.core.http.rest.SimpleResponse?alt=com.azure.core.http.rest.SimpleResponse&text=SimpleResponse\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.models.SuggestDocumentsResult?alt=com.azure.search.models.SuggestDocumentsResult&text=SuggestDocumentsResult\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public SuggestPagedResponse(SimpleResponse<SuggestDocumentsResult> documentSearchResponse)"
+  desc: "Constructor"
+methods:
+- uid: "com.azure.search.util.SuggestPagedResponse.getCoverage()"
+  fullName: "com.azure.search.util.SuggestPagedResponse.getCoverage()"
+  name: "getCoverage()"
+  nameWithType: "SuggestPagedResponse.getCoverage()"
+  summary: "The percentage of the index covered in the suggest request."
+  syntax: "public Double getCoverage()"
+  desc: "The percentage of the index covered in the suggest request.\n\nIf `minimumCoverage` wasn't supplied in the request this will be `null`."
+  returns:
+    description: "The percentage of the index covered in the suggest request if <code>minimumCoverage</code> was set in the\n request, otherwise <code>null</code>."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html\">Double</a>"
+type: "class"
+desc: "Represents an HTTP response from the suggest API request that contains a list of items deserialized into a <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Page\"></xref>. Each page contains additional information returned by the API request. In the Suggest API case the additional information is: coverage - coverage value."
+metadata: {}
+package: "com.azure.search.util"
+artifact: com.azure:azure-search:11.0.0-beta.1

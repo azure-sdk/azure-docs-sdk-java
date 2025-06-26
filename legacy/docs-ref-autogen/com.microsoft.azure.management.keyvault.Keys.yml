@@ -1,0 +1,89 @@
+### YamlMime:JavaType
+uid: "com.microsoft.azure.management.keyvault.Keys"
+fullName: "com.microsoft.azure.management.keyvault.Keys"
+name: "Keys"
+nameWithType: "Keys"
+summary: "Entry point for Key Vault keys API."
+syntax: "public interface **Keys**</br> extends <xref href=\"com.microsoft.azure.management.resources.fluentcore.collection.SupportsCreating?alt=com.microsoft.azure.management.resources.fluentcore.collection.SupportsCreating&text=SupportsCreating\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.keyvault.Key.DefinitionStages.Blank?alt=com.microsoft.azure.management.keyvault.Key.DefinitionStages.Blank&text=Blank\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.microsoft.azure.management.resources.fluentcore.collection.SupportsDeletingById?alt=com.microsoft.azure.management.resources.fluentcore.collection.SupportsDeletingById&text=SupportsDeletingById\" data-throw-if-not-resolved=\"False\" />, <xref href=\"com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsGettingById?alt=com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsGettingById&text=SupportsGettingById\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.keyvault.Key?alt=com.microsoft.azure.management.keyvault.Key&text=Key\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsGettingByNameAsync?alt=com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsGettingByNameAsync&text=SupportsGettingByNameAsync\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.keyvault.Key?alt=com.microsoft.azure.management.keyvault.Key&text=Key\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.microsoft.azure.management.resources.fluentcore.collection.SupportsListing?alt=com.microsoft.azure.management.resources.fluentcore.collection.SupportsListing&text=SupportsListing\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.keyvault.Key?alt=com.microsoft.azure.management.keyvault.Key&text=Key\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.microsoft.azure.management.keyvault.Keys.getByNameAndVersion(java.lang.String,java.lang.String)"
+  fullName: "com.microsoft.azure.management.keyvault.Keys.getByNameAndVersion(String name, String version)"
+  name: "getByNameAndVersion(String name, String version)"
+  nameWithType: "Keys.getByNameAndVersion(String name, String version)"
+  summary: "Gets a Key Vault key."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the name of the key"
+    name: "name"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  - description: "the version of the key"
+    name: "version"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Key getByNameAndVersion(String name, String version)"
+  desc: "Gets a Key Vault key."
+  returns:
+    description: "the key"
+    type: "<xref href=\"com.microsoft.azure.management.keyvault.Key?alt=com.microsoft.azure.management.keyvault.Key&text=Key\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.azure.management.keyvault.Keys.getByNameAndVersionAsync(java.lang.String,java.lang.String)"
+  fullName: "com.microsoft.azure.management.keyvault.Keys.getByNameAndVersionAsync(String name, String version)"
+  name: "getByNameAndVersionAsync(String name, String version)"
+  nameWithType: "Keys.getByNameAndVersionAsync(String name, String version)"
+  summary: "Gets a Key Vault key."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the name of the key"
+    name: "name"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  - description: "the version of the key"
+    name: "version"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Observable<Key> getByNameAndVersionAsync(String name, String version)"
+  desc: "Gets a Key Vault key."
+  returns:
+    description: "the key"
+    type: "<xref href=\"rx.Observable?alt=rx.Observable&text=Observable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.keyvault.Key?alt=com.microsoft.azure.management.keyvault.Key&text=Key\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.microsoft.azure.management.keyvault.Keys.restore(byte[])"
+  fullName: "com.microsoft.azure.management.keyvault.Keys.restore(byte[] backup)"
+  name: "restore(byte[] backup)"
+  nameWithType: "Keys.restore(byte[] backup)"
+  summary: "Restores a backup key into a Key Vault key."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the backup key"
+    name: "backup"
+    type: "<xref href=\"byte?alt=byte&text=byte\" data-throw-if-not-resolved=\"False\" />[]"
+  syntax: "public abstract Key restore(byte[] backup)"
+  desc: "Restores a backup key into a Key Vault key."
+  returns:
+    description: "the key restored from the backup"
+    type: "<xref href=\"com.microsoft.azure.management.keyvault.Key?alt=com.microsoft.azure.management.keyvault.Key&text=Key\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.azure.management.keyvault.Keys.restoreAsync(byte[])"
+  fullName: "com.microsoft.azure.management.keyvault.Keys.restoreAsync(byte[] backup)"
+  name: "restoreAsync(byte[] backup)"
+  nameWithType: "Keys.restoreAsync(byte[] backup)"
+  summary: "Restores a backup key into a Key Vault key."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the backup key"
+    name: "backup"
+    type: "<xref href=\"byte?alt=byte&text=byte\" data-throw-if-not-resolved=\"False\" />[]"
+  syntax: "public abstract Observable<Key> restoreAsync(byte[] backup)"
+  desc: "Restores a backup key into a Key Vault key."
+  returns:
+    description: "the key restored from the backup"
+    type: "<xref href=\"rx.Observable?alt=rx.Observable&text=Observable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.keyvault.Key?alt=com.microsoft.azure.management.keyvault.Key&text=Key\" data-throw-if-not-resolved=\"False\" />&gt;"
+type: "interface"
+desc: "Entry point for Key Vault keys API."
+implements:
+- "<xref href=\"com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsGettingById?alt=com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsGettingById&text=SupportsGettingById\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.keyvault.Key?alt=com.microsoft.azure.management.keyvault.Key&text=Key\" data-throw-if-not-resolved=\"False\" />&gt;"
+- "<xref href=\"com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsGettingByNameAsync?alt=com.microsoft.azure.management.resources.fluentcore.arm.collection.SupportsGettingByNameAsync&text=SupportsGettingByNameAsync\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.keyvault.Key?alt=com.microsoft.azure.management.keyvault.Key&text=Key\" data-throw-if-not-resolved=\"False\" />&gt;"
+- "<xref href=\"com.microsoft.azure.management.resources.fluentcore.collection.SupportsCreating?alt=com.microsoft.azure.management.resources.fluentcore.collection.SupportsCreating&text=SupportsCreating\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.keyvault.Key.DefinitionStages.Blank?alt=com.microsoft.azure.management.keyvault.Key.DefinitionStages.Blank&text=Blank\" data-throw-if-not-resolved=\"False\" />&gt;"
+- "<xref href=\"com.microsoft.azure.management.resources.fluentcore.collection.SupportsDeletingById?alt=com.microsoft.azure.management.resources.fluentcore.collection.SupportsDeletingById&text=SupportsDeletingById\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"com.microsoft.azure.management.resources.fluentcore.collection.SupportsListing?alt=com.microsoft.azure.management.resources.fluentcore.collection.SupportsListing&text=SupportsListing\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.keyvault.Key?alt=com.microsoft.azure.management.keyvault.Key&text=Key\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.microsoft.azure.management.keyvault"
+artifact: com.microsoft.azure:azure-mgmt-keyvault:1.41.4

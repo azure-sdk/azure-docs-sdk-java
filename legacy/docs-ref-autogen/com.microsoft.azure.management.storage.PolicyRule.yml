@@ -1,0 +1,155 @@
+### YamlMime:JavaType
+uid: "com.microsoft.azure.management.storage.PolicyRule"
+fullName: "com.microsoft.azure.management.storage.PolicyRule"
+name: "PolicyRule"
+nameWithType: "PolicyRule"
+summary: "An immutable client-side representation of a rule in an Azure Management Policy."
+syntax: "public interface **PolicyRule**</br> extends <xref href=\"com.microsoft.azure.management.resources.fluentcore.model.HasInner?alt=com.microsoft.azure.management.resources.fluentcore.model.HasInner&text=HasInner\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.storage.ManagementPolicyRule?alt=com.microsoft.azure.management.storage.ManagementPolicyRule&text=ManagementPolicyRule\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.microsoft.azure.management.storage.PolicyRule.actionsOnBaseBlob()"
+  fullName: "com.microsoft.azure.management.storage.PolicyRule.actionsOnBaseBlob()"
+  name: "actionsOnBaseBlob()"
+  nameWithType: "PolicyRule.actionsOnBaseBlob()"
+  modifiers:
+  - "abstract"
+  syntax: "public abstract ManagementPolicyBaseBlob actionsOnBaseBlob()"
+  returns:
+    description: "an object describing the actions to take on the filtered base blobs in this rule"
+    type: "<xref href=\"com.microsoft.azure.management.storage.ManagementPolicyBaseBlob?alt=com.microsoft.azure.management.storage.ManagementPolicyBaseBlob&text=ManagementPolicyBaseBlob\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.azure.management.storage.PolicyRule.actionsOnSnapShot()"
+  fullName: "com.microsoft.azure.management.storage.PolicyRule.actionsOnSnapShot()"
+  name: "actionsOnSnapShot()"
+  nameWithType: "PolicyRule.actionsOnSnapShot()"
+  modifiers:
+  - "abstract"
+  syntax: "public abstract ManagementPolicySnapShot actionsOnSnapShot()"
+  returns:
+    description: "an object describing the actions to take on the filtered snapshot in this rule"
+    type: "<xref href=\"com.microsoft.azure.management.storage.ManagementPolicySnapShot?alt=com.microsoft.azure.management.storage.ManagementPolicySnapShot&text=ManagementPolicySnapShot\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.azure.management.storage.PolicyRule.blobTypesToFilterFor()"
+  fullName: "com.microsoft.azure.management.storage.PolicyRule.blobTypesToFilterFor()"
+  name: "blobTypesToFilterFor()"
+  nameWithType: "PolicyRule.blobTypesToFilterFor()"
+  modifiers:
+  - "abstract"
+  syntax: "public abstract List<BlobTypes> blobTypesToFilterFor()"
+  returns:
+    description: "an unmodifiable list of the blob types this rule will apply for"
+    type: "<xref href=\"java.util.List?alt=java.util.List&text=List\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.storage.BlobTypes?alt=com.microsoft.azure.management.storage.BlobTypes&text=BlobTypes\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.microsoft.azure.management.storage.PolicyRule.daysAfterBaseBlobModificationUntilArchiving()"
+  fullName: "com.microsoft.azure.management.storage.PolicyRule.daysAfterBaseBlobModificationUntilArchiving()"
+  name: "daysAfterBaseBlobModificationUntilArchiving()"
+  nameWithType: "PolicyRule.daysAfterBaseBlobModificationUntilArchiving()"
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Double daysAfterBaseBlobModificationUntilArchiving()"
+  returns:
+    description: "the number of days after a filtered base blob is last modified when the tier to archive action is enacted"
+    type: "<xref href=\"java.lang.Double?alt=java.lang.Double&text=Double\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.azure.management.storage.PolicyRule.daysAfterBaseBlobModificationUntilCooling()"
+  fullName: "com.microsoft.azure.management.storage.PolicyRule.daysAfterBaseBlobModificationUntilCooling()"
+  name: "daysAfterBaseBlobModificationUntilCooling()"
+  nameWithType: "PolicyRule.daysAfterBaseBlobModificationUntilCooling()"
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Double daysAfterBaseBlobModificationUntilCooling()"
+  returns:
+    description: "the number of days after a filtered base blob is last modified when the tier to cool action is enacted"
+    type: "<xref href=\"java.lang.Double?alt=java.lang.Double&text=Double\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.azure.management.storage.PolicyRule.daysAfterBaseBlobModificationUntilDeleting()"
+  fullName: "com.microsoft.azure.management.storage.PolicyRule.daysAfterBaseBlobModificationUntilDeleting()"
+  name: "daysAfterBaseBlobModificationUntilDeleting()"
+  nameWithType: "PolicyRule.daysAfterBaseBlobModificationUntilDeleting()"
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Double daysAfterBaseBlobModificationUntilDeleting()"
+  returns:
+    description: "the number of days after a filtered base blob is last modified when the delete action is enacted"
+    type: "<xref href=\"java.lang.Double?alt=java.lang.Double&text=Double\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.azure.management.storage.PolicyRule.daysAfterSnapShotCreationUntilDeleting()"
+  fullName: "com.microsoft.azure.management.storage.PolicyRule.daysAfterSnapShotCreationUntilDeleting()"
+  name: "daysAfterSnapShotCreationUntilDeleting()"
+  nameWithType: "PolicyRule.daysAfterSnapShotCreationUntilDeleting()"
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Double daysAfterSnapShotCreationUntilDeleting()"
+  returns:
+    description: "the number of days after a filtered snapshot is created when the delete action is enacted"
+    type: "<xref href=\"java.lang.Double?alt=java.lang.Double&text=Double\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.azure.management.storage.PolicyRule.deleteActionOnBaseBlobEnabled()"
+  fullName: "com.microsoft.azure.management.storage.PolicyRule.deleteActionOnBaseBlobEnabled()"
+  name: "deleteActionOnBaseBlobEnabled()"
+  nameWithType: "PolicyRule.deleteActionOnBaseBlobEnabled()"
+  modifiers:
+  - "abstract"
+  syntax: "public abstract boolean deleteActionOnBaseBlobEnabled()"
+  returns:
+    description: "whether there is a delete action specified for the filtered base blobs in this rule"
+    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.azure.management.storage.PolicyRule.deleteActionOnSnapShotEnabled()"
+  fullName: "com.microsoft.azure.management.storage.PolicyRule.deleteActionOnSnapShotEnabled()"
+  name: "deleteActionOnSnapShotEnabled()"
+  nameWithType: "PolicyRule.deleteActionOnSnapShotEnabled()"
+  modifiers:
+  - "abstract"
+  syntax: "public abstract boolean deleteActionOnSnapShotEnabled()"
+  returns:
+    description: "whether there is a delete action specified for the filtered snapshots in this rule"
+    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.azure.management.storage.PolicyRule.name()"
+  fullName: "com.microsoft.azure.management.storage.PolicyRule.name()"
+  name: "name()"
+  nameWithType: "PolicyRule.name()"
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String name()"
+  returns:
+    description: "the name of the rule"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.azure.management.storage.PolicyRule.prefixesToFilterFor()"
+  fullName: "com.microsoft.azure.management.storage.PolicyRule.prefixesToFilterFor()"
+  name: "prefixesToFilterFor()"
+  nameWithType: "PolicyRule.prefixesToFilterFor()"
+  modifiers:
+  - "abstract"
+  syntax: "public abstract List<String> prefixesToFilterFor()"
+  returns:
+    description: "an unmodifiable list of the prefixes of the blob types this rule will apply for"
+    type: "<xref href=\"java.util.List?alt=java.util.List&text=List\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.microsoft.azure.management.storage.PolicyRule.tierToArchiveActionOnBaseBlobEnabled()"
+  fullName: "com.microsoft.azure.management.storage.PolicyRule.tierToArchiveActionOnBaseBlobEnabled()"
+  name: "tierToArchiveActionOnBaseBlobEnabled()"
+  nameWithType: "PolicyRule.tierToArchiveActionOnBaseBlobEnabled()"
+  modifiers:
+  - "abstract"
+  syntax: "public abstract boolean tierToArchiveActionOnBaseBlobEnabled()"
+  returns:
+    description: "whether there is a tier to archive action specified for the filtered base blobs in this rule"
+    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.azure.management.storage.PolicyRule.tierToCoolActionOnBaseBlobEnabled()"
+  fullName: "com.microsoft.azure.management.storage.PolicyRule.tierToCoolActionOnBaseBlobEnabled()"
+  name: "tierToCoolActionOnBaseBlobEnabled()"
+  nameWithType: "PolicyRule.tierToCoolActionOnBaseBlobEnabled()"
+  modifiers:
+  - "abstract"
+  syntax: "public abstract boolean tierToCoolActionOnBaseBlobEnabled()"
+  returns:
+    description: "whether there is a tier to cool action specified for the filtered base blobs in this rule"
+    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.azure.management.storage.PolicyRule.type()"
+  fullName: "com.microsoft.azure.management.storage.PolicyRule.type()"
+  name: "type()"
+  nameWithType: "PolicyRule.type()"
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String type()"
+  returns:
+    description: "the type of the rule"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+type: "interface"
+desc: "An immutable client-side representation of a rule in an Azure Management Policy."
+implements:
+- "<xref href=\"com.microsoft.azure.management.resources.fluentcore.model.HasInner?alt=com.microsoft.azure.management.resources.fluentcore.model.HasInner&text=HasInner\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.storage.ManagementPolicyRule?alt=com.microsoft.azure.management.storage.ManagementPolicyRule&text=ManagementPolicyRule\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.microsoft.azure.management.storage"
+artifact: com.microsoft.azure:azure-mgmt-storage:1.41.4

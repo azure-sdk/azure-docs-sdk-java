@@ -1,0 +1,43 @@
+### YamlMime:JavaType
+uid: "com.microsoft.azure.management.support.v2020_04_01.Services"
+fullName: "com.microsoft.azure.management.support.v2020_04_01.Services"
+name: "Services"
+nameWithType: "Services"
+summary: "Type representing Services."
+syntax: "public interface **Services**</br> extends <xref href=\"com.microsoft.azure.arm.model.HasInner?alt=com.microsoft.azure.arm.model.HasInner&text=HasInner\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.support.v2020_04_01.implementation.ServicesInner?alt=com.microsoft.azure.management.support.v2020_04_01.implementation.ServicesInner&text=ServicesInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.microsoft.azure.management.support.v2020_04_01.Services.getAsync(java.lang.String)"
+  fullName: "com.microsoft.azure.management.support.v2020_04_01.Services.getAsync(String serviceName)"
+  name: "getAsync(String serviceName)"
+  nameWithType: "Services.getAsync(String serviceName)"
+  summary: "Gets a specific Azure service for support ticket creation."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "Name of the Azure service."
+    name: "serviceName"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Observable<Service> getAsync(String serviceName)"
+  desc: "Gets a specific Azure service for support ticket creation."
+  returns:
+    description: "the observable for the request"
+    type: "<xref href=\"rx.Observable?alt=rx.Observable&text=Observable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.support.v2020_04_01.Service?alt=com.microsoft.azure.management.support.v2020_04_01.Service&text=Service\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.microsoft.azure.management.support.v2020_04_01.Services.listAsync()"
+  fullName: "com.microsoft.azure.management.support.v2020_04_01.Services.listAsync()"
+  name: "listAsync()"
+  nameWithType: "Services.listAsync()"
+  summary: "Lists all the Azure services available for support ticket creation."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Observable<Service> listAsync()"
+  desc: "Lists all the Azure services available for support ticket creation. For \\*\\*Technical\\*\\* issues, select the Service Id that maps to the Azure service/product as displayed in the \\*\\*Services\\*\\* drop-down list on the Azure portal's \\[New support request\\](https://portal.azure.com/\\#blade/Microsoft\\_Azure\\_Support/HelpAndSupportBlade/overview) page. Always use the service and its corresponding problem classification(s) obtained programmatically for support ticket creation. This practice ensures that you always have the most recent set of service and problem classification Ids."
+  returns:
+    description: "the observable for the request"
+    type: "<xref href=\"rx.Observable?alt=rx.Observable&text=Observable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.support.v2020_04_01.Service?alt=com.microsoft.azure.management.support.v2020_04_01.Service&text=Service\" data-throw-if-not-resolved=\"False\" />&gt;"
+type: "interface"
+desc: "Type representing Services."
+implements:
+- "<xref href=\"com.microsoft.azure.arm.model.HasInner?alt=com.microsoft.azure.arm.model.HasInner&text=HasInner\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.support.v2020_04_01.implementation.ServicesInner?alt=com.microsoft.azure.management.support.v2020_04_01.implementation.ServicesInner&text=ServicesInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.microsoft.azure.management.support.v2020_04_01"
+artifact: com.microsoft.azure.support.v2020_04_01:azure-mgmt-support:1.0.0

@@ -1,0 +1,62 @@
+### YamlMime:JavaType
+uid: "com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespaces"
+fullName: "com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespaces"
+name: "PartnerNamespaces"
+nameWithType: "PartnerNamespaces"
+summary: "Type representing Partner<wbr>Namespaces."
+syntax: "public interface **PartnerNamespaces**</br> extends <xref href=\"com.microsoft.azure.arm.collection.SupportsCreating?alt=com.microsoft.azure.arm.collection.SupportsCreating&text=SupportsCreating\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespace.DefinitionStages.Blank?alt=com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespace.DefinitionStages.Blank&text=Blank\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.microsoft.azure.arm.resources.collection.SupportsDeletingByResourceGroup?alt=com.microsoft.azure.arm.resources.collection.SupportsDeletingByResourceGroup&text=SupportsDeletingByResourceGroup\" data-throw-if-not-resolved=\"False\" />, <xref href=\"com.microsoft.azure.arm.resources.collection.SupportsBatchDeletion?alt=com.microsoft.azure.arm.resources.collection.SupportsBatchDeletion&text=SupportsBatchDeletion\" data-throw-if-not-resolved=\"False\" />, <xref href=\"com.microsoft.azure.arm.resources.collection.SupportsGettingByResourceGroup?alt=com.microsoft.azure.arm.resources.collection.SupportsGettingByResourceGroup&text=SupportsGettingByResourceGroup\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespace?alt=com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespace&text=PartnerNamespace\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.microsoft.azure.arm.resources.collection.SupportsListingByResourceGroup?alt=com.microsoft.azure.arm.resources.collection.SupportsListingByResourceGroup&text=SupportsListingByResourceGroup\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespace?alt=com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespace&text=PartnerNamespace\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.microsoft.azure.arm.collection.SupportsListing?alt=com.microsoft.azure.arm.collection.SupportsListing&text=SupportsListing\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespace?alt=com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespace&text=PartnerNamespace\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.microsoft.azure.arm.model.HasInner?alt=com.microsoft.azure.arm.model.HasInner&text=HasInner\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.eventgrid.v2020_04_01_preview.implementation.PartnerNamespacesInner?alt=com.microsoft.azure.management.eventgrid.v2020_04_01_preview.implementation.PartnerNamespacesInner&text=PartnerNamespacesInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespaces.listSharedAccessKeysAsync(java.lang.String,java.lang.String)"
+  fullName: "com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespaces.listSharedAccessKeysAsync(String resourceGroupName, String partnerNamespaceName)"
+  name: "listSharedAccessKeysAsync(String resourceGroupName, String partnerNamespaceName)"
+  nameWithType: "PartnerNamespaces.listSharedAccessKeysAsync(String resourceGroupName, String partnerNamespaceName)"
+  summary: "List keys for a partner namespace."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group within the user's subscription."
+    name: "resourceGroupName"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  - description: "Name of the partner namespace."
+    name: "partnerNamespaceName"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Observable<PartnerNamespaceSharedAccessKeys> listSharedAccessKeysAsync(String resourceGroupName, String partnerNamespaceName)"
+  desc: "List keys for a partner namespace. List the two keys used to publish to a partner namespace."
+  returns:
+    description: "the observable for the request"
+    type: "<xref href=\"rx.Observable?alt=rx.Observable&text=Observable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespaceSharedAccessKeys?alt=com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespaceSharedAccessKeys&text=PartnerNamespaceSharedAccessKeys\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespaces.regenerateKeyAsync(java.lang.String,java.lang.String,java.lang.String)"
+  fullName: "com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespaces.regenerateKeyAsync(String resourceGroupName, String partnerNamespaceName, String keyName)"
+  name: "regenerateKeyAsync(String resourceGroupName, String partnerNamespaceName, String keyName)"
+  nameWithType: "PartnerNamespaces.regenerateKeyAsync(String resourceGroupName, String partnerNamespaceName, String keyName)"
+  summary: "Regenerate key for a partner namespace."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group within the user's subscription."
+    name: "resourceGroupName"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  - description: "Name of the partner namespace."
+    name: "partnerNamespaceName"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  - description: "Key name to regenerate (key1 or key2)."
+    name: "keyName"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Observable<PartnerNamespaceSharedAccessKeys> regenerateKeyAsync(String resourceGroupName, String partnerNamespaceName, String keyName)"
+  desc: "Regenerate key for a partner namespace. Regenerate a shared access key for a partner namespace."
+  returns:
+    description: "the observable for the request"
+    type: "<xref href=\"rx.Observable?alt=rx.Observable&text=Observable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespaceSharedAccessKeys?alt=com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespaceSharedAccessKeys&text=PartnerNamespaceSharedAccessKeys\" data-throw-if-not-resolved=\"False\" />&gt;"
+type: "interface"
+desc: "Type representing PartnerNamespaces."
+implements:
+- "<xref href=\"com.microsoft.azure.arm.collection.SupportsCreating?alt=com.microsoft.azure.arm.collection.SupportsCreating&text=SupportsCreating\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespace.DefinitionStages.Blank?alt=com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespace.DefinitionStages.Blank&text=Blank\" data-throw-if-not-resolved=\"False\" />&gt;"
+- "<xref href=\"com.microsoft.azure.arm.collection.SupportsListing?alt=com.microsoft.azure.arm.collection.SupportsListing&text=SupportsListing\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespace?alt=com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespace&text=PartnerNamespace\" data-throw-if-not-resolved=\"False\" />&gt;"
+- "<xref href=\"com.microsoft.azure.arm.model.HasInner?alt=com.microsoft.azure.arm.model.HasInner&text=HasInner\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.eventgrid.v2020_04_01_preview.implementation.PartnerNamespacesInner?alt=com.microsoft.azure.management.eventgrid.v2020_04_01_preview.implementation.PartnerNamespacesInner&text=PartnerNamespacesInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- "<xref href=\"com.microsoft.azure.arm.resources.collection.SupportsBatchDeletion?alt=com.microsoft.azure.arm.resources.collection.SupportsBatchDeletion&text=SupportsBatchDeletion\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"com.microsoft.azure.arm.resources.collection.SupportsDeletingByResourceGroup?alt=com.microsoft.azure.arm.resources.collection.SupportsDeletingByResourceGroup&text=SupportsDeletingByResourceGroup\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"com.microsoft.azure.arm.resources.collection.SupportsGettingByResourceGroup?alt=com.microsoft.azure.arm.resources.collection.SupportsGettingByResourceGroup&text=SupportsGettingByResourceGroup\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespace?alt=com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespace&text=PartnerNamespace\" data-throw-if-not-resolved=\"False\" />&gt;"
+- "<xref href=\"com.microsoft.azure.arm.resources.collection.SupportsListingByResourceGroup?alt=com.microsoft.azure.arm.resources.collection.SupportsListingByResourceGroup&text=SupportsListingByResourceGroup\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespace?alt=com.microsoft.azure.management.eventgrid.v2020_04_01_preview.PartnerNamespace&text=PartnerNamespace\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.microsoft.azure.management.eventgrid.v2020_04_01_preview"
+artifact: com.microsoft.azure.eventgrid.v2020_04_01_preview:azure-mgmt-eventgrid:1.0.0-beta-3

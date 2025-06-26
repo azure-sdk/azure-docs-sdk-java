@@ -1,0 +1,48 @@
+### YamlMime:JavaType
+uid: "com.microsoft.azure.management.network.ApplicationGatewayUrlPathMap.UpdateDefinitionStages.WithBackendHttpConfiguration"
+fullName: "com.microsoft.azure.management.network.ApplicationGatewayUrlPathMap.UpdateDefinitionStages.WithBackendHttpConfiguration<ParentT>"
+name: "ApplicationGatewayUrlPathMap.UpdateDefinitionStages.WithBackendHttpConfiguration<ParentT>"
+nameWithType: "ApplicationGatewayUrlPathMap.UpdateDefinitionStages.WithBackendHttpConfiguration<ParentT>"
+summary: "The stage of an application gateway URL path map definition allowing to specify the backend HTTP settings configuration to associate the URL path map with."
+syntax: "public static interface **ApplicationGatewayUrlPathMap.UpdateDefinitionStages.WithBackendHttpConfiguration<ParentT>**"
+methods:
+- uid: "com.microsoft.azure.management.network.ApplicationGatewayUrlPathMap.UpdateDefinitionStages.WithBackendHttpConfiguration.toBackendHttpConfiguration(java.lang.String)"
+  fullName: "com.microsoft.azure.management.network.ApplicationGatewayUrlPathMap.UpdateDefinitionStages.WithBackendHttpConfiguration<ParentT>.toBackendHttpConfiguration(String name)"
+  name: "toBackendHttpConfiguration(String name)"
+  nameWithType: "ApplicationGatewayUrlPathMap.UpdateDefinitionStages.WithBackendHttpConfiguration<ParentT>.toBackendHttpConfiguration(String name)"
+  summary: "Associates the specified backend HTTP settings configuration with this URL path map."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the name of a backend HTTP settings configuration"
+    name: "name"
+    type: "<xref href=\"java.lang.String?alt=java.lang.String&text=String\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract ApplicationGatewayUrlPathMap.UpdateDefinitionStages.WithBackend<ParentT> toBackendHttpConfiguration(String name)"
+  desc: "Associates the specified backend HTTP settings configuration with this URL path map.\n\nIf the backend configuration does not exist yet, it must be defined in the optional part of the application gateway definition. The URL path map references it only by name."
+  returns:
+    description: "the next stage of the definition"
+    type: "<xref href=\"com.microsoft.azure.management.network.ApplicationGatewayUrlPathMap.UpdateDefinitionStages.WithBackend?alt=com.microsoft.azure.management.network.ApplicationGatewayUrlPathMap.UpdateDefinitionStages.WithBackend&text=WithBackend\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"ParentT?alt=ParentT&text=ParentT\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.microsoft.azure.management.network.ApplicationGatewayUrlPathMap.UpdateDefinitionStages.WithBackendHttpConfiguration.toBackendHttpPort(int)"
+  fullName: "com.microsoft.azure.management.network.ApplicationGatewayUrlPathMap.UpdateDefinitionStages.WithBackendHttpConfiguration<ParentT>.toBackendHttpPort(int portNumber)"
+  name: "toBackendHttpPort(int portNumber)"
+  nameWithType: "ApplicationGatewayUrlPathMap.UpdateDefinitionStages.WithBackendHttpConfiguration<ParentT>.toBackendHttpPort(int portNumber)"
+  summary: "Creates a backend HTTP settings configuration for the specified backend port and the HTTP protocol, and associates it with this URL path map."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the port number for a new backend HTTP settings configuration"
+    name: "portNumber"
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract ApplicationGatewayUrlPathMap.UpdateDefinitionStages.WithBackendOrAddress<ParentT> toBackendHttpPort(int portNumber)"
+  desc: "Creates a backend HTTP settings configuration for the specified backend port and the HTTP protocol, and associates it with this URL path map.\n\nAn auto-generated name will be used for this newly created configuration."
+  returns:
+    description: "the next stage of the definition"
+    type: "<xref href=\"com.microsoft.azure.management.network.ApplicationGatewayUrlPathMap.UpdateDefinitionStages.WithBackendOrAddress?alt=com.microsoft.azure.management.network.ApplicationGatewayUrlPathMap.UpdateDefinitionStages.WithBackendOrAddress&text=WithBackendOrAddress\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"ParentT?alt=ParentT&text=ParentT\" data-throw-if-not-resolved=\"False\" />&gt;"
+type: "interface"
+typeParameters:
+- description: "the stage of the application gateway definition to return to after attaching this definition"
+  name: "ParentT"
+desc: "The stage of an application gateway URL path map definition allowing to specify the backend HTTP settings configuration to associate the URL path map with."
+metadata: {}
+package: "com.microsoft.azure.management.network"
+artifact: com.microsoft.azure:azure-mgmt-network:1.41.4

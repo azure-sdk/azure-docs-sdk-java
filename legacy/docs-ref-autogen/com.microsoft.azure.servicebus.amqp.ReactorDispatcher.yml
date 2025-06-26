@@ -1,0 +1,62 @@
+### YamlMime:JavaType
+uid: "com.microsoft.azure.servicebus.amqp.ReactorDispatcher"
+fullName: "com.microsoft.azure.servicebus.amqp.ReactorDispatcher"
+name: "ReactorDispatcher"
+nameWithType: "ReactorDispatcher"
+summary: "<xref uid=\"org.apache.qpid.proton.reactor.Reactor\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Reactor\"></xref> is not thread-safe - all calls to <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Proton\"></xref> API's should be - on the Reactor Thread."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **ReactorDispatcher**"
+constructors:
+- uid: "com.microsoft.azure.servicebus.amqp.ReactorDispatcher.ReactorDispatcher(org.apache.qpid.proton.reactor.Reactor)"
+  fullName: "com.microsoft.azure.servicebus.amqp.ReactorDispatcher.ReactorDispatcher(Reactor reactor)"
+  name: "ReactorDispatcher(Reactor reactor)"
+  nameWithType: "ReactorDispatcher.ReactorDispatcher(Reactor reactor)"
+  parameters:
+  - name: "reactor"
+    type: "<xref href=\"org.apache.qpid.proton.reactor.Reactor?alt=org.apache.qpid.proton.reactor.Reactor&text=Reactor\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ReactorDispatcher(Reactor reactor)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+methods:
+- uid: "com.microsoft.azure.servicebus.amqp.ReactorDispatcher.invoke(com.microsoft.azure.servicebus.amqp.DispatchHandler)"
+  fullName: "com.microsoft.azure.servicebus.amqp.ReactorDispatcher.invoke(DispatchHandler timerCallback)"
+  name: "invoke(DispatchHandler timerCallback)"
+  nameWithType: "ReactorDispatcher.invoke(DispatchHandler timerCallback)"
+  parameters:
+  - name: "timerCallback"
+    type: "<xref href=\"com.microsoft.azure.servicebus.amqp.DispatchHandler?alt=com.microsoft.azure.servicebus.amqp.DispatchHandler&text=DispatchHandler\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public void invoke(DispatchHandler timerCallback)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+- uid: "com.microsoft.azure.servicebus.amqp.ReactorDispatcher.invoke(int,com.microsoft.azure.servicebus.amqp.DispatchHandler)"
+  fullName: "com.microsoft.azure.servicebus.amqp.ReactorDispatcher.invoke(int delay, DispatchHandler timerCallback)"
+  name: "invoke(int delay, DispatchHandler timerCallback)"
+  nameWithType: "ReactorDispatcher.invoke(int delay, DispatchHandler timerCallback)"
+  parameters:
+  - name: "delay"
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
+  - name: "timerCallback"
+    type: "<xref href=\"com.microsoft.azure.servicebus.amqp.DispatchHandler?alt=com.microsoft.azure.servicebus.amqp.DispatchHandler&text=DispatchHandler\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public void invoke(int delay, DispatchHandler timerCallback)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+type: "class"
+desc: "<xref uid=\"org.apache.qpid.proton.reactor.Reactor\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Reactor\"></xref> is not thread-safe - all calls to <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Proton\"></xref> API's should be - on the Reactor Thread. <xref uid=\"org.apache.qpid.proton.reactor.Reactor\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Reactor\"></xref> works out-of-box for all event driven API - ex: onReceive - which could raise upon onSocketRead. <xref uid=\"org.apache.qpid.proton.reactor.Reactor\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Reactor\"></xref> didn't support API's like Send() out-of-box - which could potentially run on different thread to that of Reactor. So, the following utility class is used to generate an Event to hook into <xref uid=\"org.apache.qpid.proton.reactor.Reactor\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Reactor\"></xref>'s event delegation pattern. It uses a <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Pipe\"></xref> as the IO on which Reactor Listens to. Cardinality: multiple <xref uid=\"com.microsoft.azure.servicebus.amqp.ReactorDispatcher\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ReactorDispatcher\"></xref>'s could be attached to 1 <xref uid=\"org.apache.qpid.proton.reactor.Reactor\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Reactor\"></xref>. Each <xref uid=\"com.microsoft.azure.servicebus.amqp.ReactorDispatcher\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ReactorDispatcher\"></xref> should be initialized Synchronously - as it calls API in <xref uid=\"org.apache.qpid.proton.reactor.Reactor\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Reactor\"></xref> which is not thread-safe."
+metadata: {}
+package: "com.microsoft.azure.servicebus.amqp"
+artifact: com.microsoft.azure:azure-servicebus:3.6.7
