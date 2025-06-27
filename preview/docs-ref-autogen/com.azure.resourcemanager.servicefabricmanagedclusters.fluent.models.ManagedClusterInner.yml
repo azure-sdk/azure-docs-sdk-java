@@ -279,9 +279,9 @@ methods:
   fullName: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.ManagedClusterInner.etag()"
   name: "etag()"
   nameWithType: "ManagedClusterInner.etag()"
-  summary: "Get the etag property: Azure resource etag."
+  summary: "Get the etag property: If e<wbr>Tag is provided in the response body, it may also be provided as a header per the normal etag convention."
   syntax: "public String etag()"
-  desc: "Get the etag property: Azure resource etag."
+  desc: "Get the etag property: If eTag is provided in the response body, it may also be provided as a header per the normal etag convention. Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.\",."
   returns:
     description: "the etag value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -480,9 +480,9 @@ methods:
   fullName: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.ManagedClusterInner.systemData()"
   name: "systemData()"
   nameWithType: "ManagedClusterInner.systemData()"
-  summary: "Get the system<wbr>Data property: Metadata pertaining to creation and last modification of the resource."
+  summary: "Get the system<wbr>Data property: Azure Resource Manager metadata containing created<wbr>By and modified<wbr>By information."
   syntax: "public SystemData systemData()"
-  desc: "Get the systemData property: Metadata pertaining to creation and last modification of the resource."
+  desc: "Get the systemData property: Azure Resource Manager metadata containing createdBy and modifiedBy information."
   returns:
     description: "the systemData value."
     type: "<xref href=\"com.azure.core.management.SystemData?alt=com.azure.core.management.SystemData&text=SystemData\" data-throw-if-not-resolved=\"False\" />"
@@ -537,6 +537,16 @@ methods:
   summary: "Validates the instance."
   syntax: "public void validate()"
   desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.ManagedClusterInner.vmImage()"
+  fullName: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.ManagedClusterInner.vmImage()"
+  name: "vmImage()"
+  nameWithType: "ManagedClusterInner.vmImage()"
+  summary: "Get the vm<wbr>Image property: The VM image the node types are configured with."
+  syntax: "public String vmImage()"
+  desc: "Get the vmImage property: The VM image the node types are configured with. This property controls the Service Fabric component packages to be used for the cluster. Allowed values are: 'Windows'. The default value is 'Windows'."
+  returns:
+    description: "the vmImage value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.ManagedClusterInner.withAddonFeatures(java.util.List<com.azure.resourcemanager.servicefabricmanagedclusters.models.ManagedClusterAddOnFeature>)"
   fullName: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.ManagedClusterInner.withAddonFeatures(List<ManagedClusterAddOnFeature> addonFeatures)"
   name: "withAddonFeatures(List<ManagedClusterAddOnFeature> addonFeatures)"
@@ -1021,6 +1031,20 @@ methods:
   returns:
     description: "the ManagedClusterInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.ManagedClusterInner?alt=com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.ManagedClusterInner&text=ManagedClusterInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.ManagedClusterInner.withVmImage(java.lang.String)"
+  fullName: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.ManagedClusterInner.withVmImage(String vmImage)"
+  name: "withVmImage(String vmImage)"
+  nameWithType: "ManagedClusterInner.withVmImage(String vmImage)"
+  summary: "Set the vm<wbr>Image property: The VM image the node types are configured with."
+  parameters:
+  - description: "the vmImage value to set."
+    name: "vmImage"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public ManagedClusterInner withVmImage(String vmImage)"
+  desc: "Set the vmImage property: The VM image the node types are configured with. This property controls the Service Fabric component packages to be used for the cluster. Allowed values are: 'Windows'. The default value is 'Windows'."
+  returns:
+    description: "the ManagedClusterInner object itself."
+    type: "<xref href=\"com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.ManagedClusterInner?alt=com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.ManagedClusterInner&text=ManagedClusterInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.ManagedClusterInner.withZonalResiliency(java.lang.Boolean)"
   fullName: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.ManagedClusterInner.withZonalResiliency(Boolean zonalResiliency)"
   name: "withZonalResiliency(Boolean zonalResiliency)"
@@ -1073,4 +1097,4 @@ type: "class"
 desc: "The managed cluster resource."
 metadata: {}
 package: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-servicefabricmanagedclusters:1.0.0-beta.3
+artifact: com.azure.resourcemanager:azure-resourcemanager-servicefabricmanagedclusters:1.1.0-beta.1

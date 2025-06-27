@@ -325,17 +325,27 @@ methods:
   nameWithType: "NodeTypeProperties.secureBootEnabled()"
   summary: "Get the secure<wbr>Boot<wbr>Enabled property: Specifies whether secure boot should be enabled on the node<wbr>Type."
   syntax: "public Boolean secureBootEnabled()"
-  desc: "Get the secureBootEnabled property: Specifies whether secure boot should be enabled on the nodeType. Can only be used with TrustedLaunch SecurityType."
+  desc: "Get the secureBootEnabled property: Specifies whether secure boot should be enabled on the nodeType. Can only be used with TrustedLaunch and ConfidentialVM SecurityType."
   returns:
     description: "the secureBootEnabled value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties.securityEncryptionType()"
+  fullName: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties.securityEncryptionType()"
+  name: "securityEncryptionType()"
+  nameWithType: "NodeTypeProperties.securityEncryptionType()"
+  summary: "Get the security<wbr>Encryption<wbr>Type property: Specifies the Encryption<wbr>Type of the managed disk."
+  syntax: "public SecurityEncryptionType securityEncryptionType()"
+  desc: "Get the securityEncryptionType property: Specifies the EncryptionType of the managed disk. It is set to DiskWithVMGuestState for encryption of the managed disk along with VMGuestState blob and VMGuestStateOnly for encryption of just the VMGuestState blob. Note: It can be set for only Confidential VMs."
+  returns:
+    description: "the securityEncryptionType value."
+    type: "<xref href=\"com.azure.resourcemanager.servicefabricmanagedclusters.models.SecurityEncryptionType?alt=com.azure.resourcemanager.servicefabricmanagedclusters.models.SecurityEncryptionType&text=SecurityEncryptionType\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties.securityType()"
   fullName: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties.securityType()"
   name: "securityType()"
   nameWithType: "NodeTypeProperties.securityType()"
   summary: "Get the security<wbr>Type property: Specifies the security type of the node<wbr>Type."
   syntax: "public SecurityType securityType()"
-  desc: "Get the securityType property: Specifies the security type of the nodeType. Only Standard and TrustedLaunch are currently supported."
+  desc: "Get the securityType property: Specifies the security type of the nodeType. Supported values include Standard, TrustedLaunch and ConfidentialVM."
   returns:
     description: "the securityType value."
     type: "<xref href=\"com.azure.resourcemanager.servicefabricmanagedclusters.models.SecurityType?alt=com.azure.resourcemanager.servicefabricmanagedclusters.models.SecurityType&text=SecurityType\" data-throw-if-not-resolved=\"False\" />"
@@ -504,7 +514,7 @@ methods:
   nameWithType: "NodeTypeProperties.vmInstanceCount()"
   summary: "Get the vm<wbr>Instance<wbr>Count property: The number of nodes in the node type."
   syntax: "public int vmInstanceCount()"
-  desc: "Get the vmInstanceCount property: The number of nodes in the node type. <br /><br />\\*\\*Values:\\*\\* <br />-1 - Use when auto scale rules are configured or sku.capacity is defined <br /> 0 - Not supported <br /> >0 - Use for manual scale."
+  desc: "Get the vmInstanceCount property: The number of nodes in the node type. \\*\\*Values:\\*\\* -1 - Use when auto scale rules are configured or sku.capacity is defined 0 - Not supported >0 - Use for manual scale."
   returns:
     description: "the vmInstanceCount value."
     type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
@@ -932,7 +942,21 @@ methods:
     name: "secureBootEnabled"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
   syntax: "public NodeTypeProperties withSecureBootEnabled(Boolean secureBootEnabled)"
-  desc: "Set the secureBootEnabled property: Specifies whether secure boot should be enabled on the nodeType. Can only be used with TrustedLaunch SecurityType."
+  desc: "Set the secureBootEnabled property: Specifies whether secure boot should be enabled on the nodeType. Can only be used with TrustedLaunch and ConfidentialVM SecurityType."
+  returns:
+    description: "the NodeTypeProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties?alt=com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties&text=NodeTypeProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties.withSecurityEncryptionType(com.azure.resourcemanager.servicefabricmanagedclusters.models.SecurityEncryptionType)"
+  fullName: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties.withSecurityEncryptionType(SecurityEncryptionType securityEncryptionType)"
+  name: "withSecurityEncryptionType(SecurityEncryptionType securityEncryptionType)"
+  nameWithType: "NodeTypeProperties.withSecurityEncryptionType(SecurityEncryptionType securityEncryptionType)"
+  summary: "Set the security<wbr>Encryption<wbr>Type property: Specifies the Encryption<wbr>Type of the managed disk."
+  parameters:
+  - description: "the securityEncryptionType value to set."
+    name: "securityEncryptionType"
+    type: "<xref href=\"com.azure.resourcemanager.servicefabricmanagedclusters.models.SecurityEncryptionType?alt=com.azure.resourcemanager.servicefabricmanagedclusters.models.SecurityEncryptionType&text=SecurityEncryptionType\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public NodeTypeProperties withSecurityEncryptionType(SecurityEncryptionType securityEncryptionType)"
+  desc: "Set the securityEncryptionType property: Specifies the EncryptionType of the managed disk. It is set to DiskWithVMGuestState for encryption of the managed disk along with VMGuestState blob and VMGuestStateOnly for encryption of just the VMGuestState blob. Note: It can be set for only Confidential VMs."
   returns:
     description: "the NodeTypeProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties?alt=com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties&text=NodeTypeProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -946,7 +970,7 @@ methods:
     name: "securityType"
     type: "<xref href=\"com.azure.resourcemanager.servicefabricmanagedclusters.models.SecurityType?alt=com.azure.resourcemanager.servicefabricmanagedclusters.models.SecurityType&text=SecurityType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public NodeTypeProperties withSecurityType(SecurityType securityType)"
-  desc: "Set the securityType property: Specifies the security type of the nodeType. Only Standard and TrustedLaunch are currently supported."
+  desc: "Set the securityType property: Specifies the security type of the nodeType. Supported values include Standard, TrustedLaunch and ConfidentialVM."
   returns:
     description: "the NodeTypeProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties?alt=com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties&text=NodeTypeProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -1156,7 +1180,7 @@ methods:
     name: "vmInstanceCount"
     type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public NodeTypeProperties withVmInstanceCount(int vmInstanceCount)"
-  desc: "Set the vmInstanceCount property: The number of nodes in the node type. <br /><br />\\*\\*Values:\\*\\* <br />-1 - Use when auto scale rules are configured or sku.capacity is defined <br /> 0 - Not supported <br /> >0 - Use for manual scale."
+  desc: "Set the vmInstanceCount property: The number of nodes in the node type. \\*\\*Values:\\*\\* -1 - Use when auto scale rules are configured or sku.capacity is defined 0 - Not supported >0 - Use for manual scale."
   returns:
     description: "the NodeTypeProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties?alt=com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties&text=NodeTypeProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -1230,6 +1254,20 @@ methods:
   returns:
     description: "the NodeTypeProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties?alt=com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties&text=NodeTypeProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties.withZoneBalance(java.lang.Boolean)"
+  fullName: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties.withZoneBalance(Boolean zoneBalance)"
+  name: "withZoneBalance(Boolean zoneBalance)"
+  nameWithType: "NodeTypeProperties.withZoneBalance(Boolean zoneBalance)"
+  summary: "Set the zone<wbr>Balance property: Setting this to true allows stateless node types to scale out without equal distribution across zones."
+  parameters:
+  - description: "the zoneBalance value to set."
+    name: "zoneBalance"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+  syntax: "public NodeTypeProperties withZoneBalance(Boolean zoneBalance)"
+  desc: "Set the zoneBalance property: Setting this to true allows stateless node types to scale out without equal distribution across zones."
+  returns:
+    description: "the NodeTypeProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties?alt=com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties&text=NodeTypeProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties.withZones(java.util.List<java.lang.String>)"
   fullName: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties.withZones(List<String> zones)"
   name: "withZones(List<String> zones)"
@@ -1244,6 +1282,16 @@ methods:
   returns:
     description: "the NodeTypeProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties?alt=com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties&text=NodeTypeProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties.zoneBalance()"
+  fullName: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties.zoneBalance()"
+  name: "zoneBalance()"
+  nameWithType: "NodeTypeProperties.zoneBalance()"
+  summary: "Get the zone<wbr>Balance property: Setting this to true allows stateless node types to scale out without equal distribution across zones."
+  syntax: "public Boolean zoneBalance()"
+  desc: "Get the zoneBalance property: Setting this to true allows stateless node types to scale out without equal distribution across zones."
+  returns:
+    description: "the zoneBalance value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties.zones()"
   fullName: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties.zones()"
   name: "zones()"
@@ -1260,4 +1308,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties?alt=com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models.NodeTypeProperties&text=NodeTypeProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.servicefabricmanagedclusters.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-servicefabricmanagedclusters:1.0.0-beta.3
+artifact: com.azure.resourcemanager:azure-resourcemanager-servicefabricmanagedclusters:1.1.0-beta.1
