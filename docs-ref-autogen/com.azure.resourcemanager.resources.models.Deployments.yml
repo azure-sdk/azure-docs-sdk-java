@@ -6,6 +6,82 @@ nameWithType: "Deployments"
 summary: "Entry point to template deployment in Azure."
 syntax: "public interface **Deployments**</br> extends <xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.SupportsCreating?alt=com.azure.resourcemanager.resources.fluentcore.collection.SupportsCreating&text=SupportsCreating\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.models.Deployment.DefinitionStages.Blank?alt=com.azure.resourcemanager.resources.models.Deployment.DefinitionStages.Blank&text=Blank\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.SupportsListing?alt=com.azure.resourcemanager.resources.fluentcore.collection.SupportsListing&text=SupportsListing\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.models.Deployment?alt=com.azure.resourcemanager.resources.models.Deployment&text=Deployment\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.azure.resourcemanager.resources.fluentcore.arm.collection.SupportsListingByResourceGroup?alt=com.azure.resourcemanager.resources.fluentcore.arm.collection.SupportsListingByResourceGroup&text=SupportsListingByResourceGroup\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.models.Deployment?alt=com.azure.resourcemanager.resources.models.Deployment&text=Deployment\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.azure.resourcemanager.resources.fluentcore.arm.collection.SupportsGettingByName?alt=com.azure.resourcemanager.resources.fluentcore.arm.collection.SupportsGettingByName&text=SupportsGettingByName\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.models.Deployment?alt=com.azure.resourcemanager.resources.models.Deployment&text=Deployment\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.azure.resourcemanager.resources.fluentcore.arm.collection.SupportsGettingByResourceGroup?alt=com.azure.resourcemanager.resources.fluentcore.arm.collection.SupportsGettingByResourceGroup&text=SupportsGettingByResourceGroup\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.models.Deployment?alt=com.azure.resourcemanager.resources.models.Deployment&text=Deployment\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.azure.resourcemanager.resources.fluentcore.arm.collection.SupportsGettingById?alt=com.azure.resourcemanager.resources.fluentcore.arm.collection.SupportsGettingById&text=SupportsGettingById\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.models.Deployment?alt=com.azure.resourcemanager.resources.models.Deployment&text=Deployment\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.SupportsDeletingById?alt=com.azure.resourcemanager.resources.fluentcore.collection.SupportsDeletingById&text=SupportsDeletingById\" data-throw-if-not-resolved=\"False\" />, <xref href=\"com.azure.resourcemanager.resources.fluentcore.arm.collection.SupportsDeletingByResourceGroup?alt=com.azure.resourcemanager.resources.fluentcore.arm.collection.SupportsDeletingByResourceGroup&text=SupportsDeletingByResourceGroup\" data-throw-if-not-resolved=\"False\" />, <xref href=\"com.azure.resourcemanager.resources.fluentcore.arm.models.HasManager?alt=com.azure.resourcemanager.resources.fluentcore.arm.models.HasManager&text=HasManager\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.ResourceManager?alt=com.azure.resourcemanager.resources.ResourceManager&text=ResourceManager\" data-throw-if-not-resolved=\"False\" />&gt;"
 methods:
+- uid: "com.azure.resourcemanager.resources.models.Deployments.beginDeleteById(java.lang.String)"
+  fullName: "com.azure.resourcemanager.resources.models.Deployments.beginDeleteById(String id)"
+  name: "beginDeleteById(String id)"
+  nameWithType: "Deployments.beginDeleteById(String id)"
+  summary: "Deletes a deployment from the deployment history by its ID."
+  modifiers:
+  - "default"
+  parameters:
+  - description: "the resource ID of the resource to delete"
+    name: "id"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public default Accepted<Void> beginDeleteById(String id)"
+  desc: "Deletes a deployment from the deployment history by its ID. A template deployment that is currently running cannot be deleted. Deleting a template deployment removes the associated deployment operations. Deleting a template deployment does not affect the state of the resource group."
+  returns:
+    description: "the accepted deleting operation"
+    type: "<xref href=\"com.azure.resourcemanager.resources.fluentcore.model.Accepted?alt=com.azure.resourcemanager.resources.fluentcore.model.Accepted&text=Accepted\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+- uid: "com.azure.resourcemanager.resources.models.Deployments.beginDeleteById(java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.resources.models.Deployments.beginDeleteById(String id, Context context)"
+  name: "beginDeleteById(String id, Context context)"
+  nameWithType: "Deployments.beginDeleteById(String id, Context context)"
+  summary: "Deletes a deployment from the deployment history by its ID."
+  modifiers:
+  - "default"
+  parameters:
+  - description: "the resource ID of the resource to delete"
+    name: "id"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "the <xref uid=\"com.azure.core.util.Context\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Context\"></xref> of the request"
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public default Accepted<Void> beginDeleteById(String id, Context context)"
+  desc: "Deletes a deployment from the deployment history by its ID. A template deployment that is currently running cannot be deleted. Deleting a template deployment removes the associated deployment operations. Deleting a template deployment does not affect the state of the resource group."
+  returns:
+    description: "the accepted deleting operation"
+    type: "<xref href=\"com.azure.resourcemanager.resources.fluentcore.model.Accepted?alt=com.azure.resourcemanager.resources.fluentcore.model.Accepted&text=Accepted\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+- uid: "com.azure.resourcemanager.resources.models.Deployments.beginDeleteByResourceGroup(java.lang.String,java.lang.String)"
+  fullName: "com.azure.resourcemanager.resources.models.Deployments.beginDeleteByResourceGroup(String resourceGroupName, String name)"
+  name: "beginDeleteByResourceGroup(String resourceGroupName, String name)"
+  nameWithType: "Deployments.beginDeleteByResourceGroup(String resourceGroupName, String name)"
+  summary: "Deletes a deployment from the deployment history by its resource group and name."
+  modifiers:
+  - "default"
+  parameters:
+  - description: "the resource group the deployment is part of"
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "the name of the deployment"
+    name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public default Accepted<Void> beginDeleteByResourceGroup(String resourceGroupName, String name)"
+  desc: "Deletes a deployment from the deployment history by its resource group and name. A template deployment that is currently running cannot be deleted. Deleting a template deployment removes the associated deployment operations. Deleting a template deployment does not affect the state of the resource group."
+  returns:
+    description: "the accepted deleting operation"
+    type: "<xref href=\"com.azure.resourcemanager.resources.fluentcore.model.Accepted?alt=com.azure.resourcemanager.resources.fluentcore.model.Accepted&text=Accepted\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+- uid: "com.azure.resourcemanager.resources.models.Deployments.beginDeleteByResourceGroup(java.lang.String,java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.resources.models.Deployments.beginDeleteByResourceGroup(String resourceGroupName, String name, Context context)"
+  name: "beginDeleteByResourceGroup(String resourceGroupName, String name, Context context)"
+  nameWithType: "Deployments.beginDeleteByResourceGroup(String resourceGroupName, String name, Context context)"
+  summary: "Deletes a deployment from the deployment history by its resource group and name."
+  modifiers:
+  - "default"
+  parameters:
+  - description: "the resource group the deployment is part of"
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "the name of the deployment"
+    name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "the <xref uid=\"com.azure.core.util.Context\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Context\"></xref> of the request"
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public default Accepted<Void> beginDeleteByResourceGroup(String resourceGroupName, String name, Context context)"
+  desc: "Deletes a deployment from the deployment history by its resource group and name. A template deployment that is currently running cannot be deleted. Deleting a template deployment removes the associated deployment operations. Deleting a template deployment does not affect the state of the resource group."
+  returns:
+    description: "the accepted deleting operation"
+    type: "<xref href=\"com.azure.resourcemanager.resources.fluentcore.model.Accepted?alt=com.azure.resourcemanager.resources.fluentcore.model.Accepted&text=Accepted\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.resources.models.Deployments.checkExistence(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.resources.models.Deployments.checkExistence(String resourceGroupName, String deploymentName)"
   name: "checkExistence(String resourceGroupName, String deploymentName)"
@@ -39,4 +115,4 @@ implements:
 - "<xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.SupportsListing?alt=com.azure.resourcemanager.resources.fluentcore.collection.SupportsListing&text=SupportsListing\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.models.Deployment?alt=com.azure.resourcemanager.resources.models.Deployment&text=Deployment\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.resources.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-resources:2.51.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-resources:2.52.0

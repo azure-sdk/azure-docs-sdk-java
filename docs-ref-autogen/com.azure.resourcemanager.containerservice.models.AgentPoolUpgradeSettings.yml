@@ -65,9 +65,19 @@ methods:
   nameWithType: "AgentPoolUpgradeSettings.maxSurge()"
   summary: "Get the max<wbr>Surge property: This can either be set to an integer (e.<wbr>g."
   syntax: "public String maxSurge()"
-  desc: "Get the maxSurge property: This can either be set to an integer (e.g. '5') or a percentage (e.g. '50%'). If a percentage is specified, it is the percentage of the total agent pool size at the time of the upgrade. For percentages, fractional nodes are rounded up. If not specified, the default is 10%. For more information, including best practices, see: https://docs.microsoft.com/azure/aks/upgrade-cluster\\#customize-node-surge-upgrade."
+  desc: "Get the maxSurge property: This can either be set to an integer (e.g. '5') or a percentage (e.g. '50%'). If a percentage is specified, it is the percentage of the total agent pool size at the time of the upgrade. For percentages, fractional nodes are rounded up. If not specified, the default is 10%. For more information, including best practices, see: https://learn.microsoft.com/en-us/azure/aks/upgrade-cluster."
   returns:
     description: "the maxSurge value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings.maxUnavailable()"
+  fullName: "com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings.maxUnavailable()"
+  name: "maxUnavailable()"
+  nameWithType: "AgentPoolUpgradeSettings.maxUnavailable()"
+  summary: "Get the max<wbr>Unavailable property: This can either be set to an integer (e.<wbr>g."
+  syntax: "public String maxUnavailable()"
+  desc: "Get the maxUnavailable property: This can either be set to an integer (e.g. '1') or a percentage (e.g. '5%'). If a percentage is specified, it is the percentage of the total agent pool size at the time of the upgrade. For percentages, fractional nodes are rounded up. If not specified, the default is 0. For more information, including best practices, see: https://learn.microsoft.com/en-us/azure/aks/upgrade-cluster."
+  returns:
+    description: "the maxUnavailable value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings.nodeSoakDurationInMinutes()"
   fullName: "com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings.nodeSoakDurationInMinutes()"
@@ -91,6 +101,16 @@ methods:
   - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings.undrainableNodeBehavior()"
+  fullName: "com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings.undrainableNodeBehavior()"
+  name: "undrainableNodeBehavior()"
+  nameWithType: "AgentPoolUpgradeSettings.undrainableNodeBehavior()"
+  summary: "Get the undrainable<wbr>Node<wbr>Behavior property: Defines the behavior for undrainable nodes during upgrade."
+  syntax: "public UndrainableNodeBehavior undrainableNodeBehavior()"
+  desc: "Get the undrainableNodeBehavior property: Defines the behavior for undrainable nodes during upgrade. The most common cause of undrainable nodes is Pod Disruption Budgets (PDBs), but other issues, such as pod termination grace period is exceeding the remaining per-node drain timeout or pod is still being in a running state, can also cause undrainable nodes."
+  returns:
+    description: "the undrainableNodeBehavior value."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.UndrainableNodeBehavior?alt=com.azure.resourcemanager.containerservice.models.UndrainableNodeBehavior&text=UndrainableNodeBehavior\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings.validate()"
   fullName: "com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings.validate()"
   name: "validate()"
@@ -122,7 +142,21 @@ methods:
     name: "maxSurge"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public AgentPoolUpgradeSettings withMaxSurge(String maxSurge)"
-  desc: "Set the maxSurge property: This can either be set to an integer (e.g. '5') or a percentage (e.g. '50%'). If a percentage is specified, it is the percentage of the total agent pool size at the time of the upgrade. For percentages, fractional nodes are rounded up. If not specified, the default is 10%. For more information, including best practices, see: https://docs.microsoft.com/azure/aks/upgrade-cluster\\#customize-node-surge-upgrade."
+  desc: "Set the maxSurge property: This can either be set to an integer (e.g. '5') or a percentage (e.g. '50%'). If a percentage is specified, it is the percentage of the total agent pool size at the time of the upgrade. For percentages, fractional nodes are rounded up. If not specified, the default is 10%. For more information, including best practices, see: https://learn.microsoft.com/en-us/azure/aks/upgrade-cluster."
+  returns:
+    description: "the AgentPoolUpgradeSettings object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings?alt=com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings&text=AgentPoolUpgradeSettings\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings.withMaxUnavailable(java.lang.String)"
+  fullName: "com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings.withMaxUnavailable(String maxUnavailable)"
+  name: "withMaxUnavailable(String maxUnavailable)"
+  nameWithType: "AgentPoolUpgradeSettings.withMaxUnavailable(String maxUnavailable)"
+  summary: "Set the max<wbr>Unavailable property: This can either be set to an integer (e.<wbr>g."
+  parameters:
+  - description: "the maxUnavailable value to set."
+    name: "maxUnavailable"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public AgentPoolUpgradeSettings withMaxUnavailable(String maxUnavailable)"
+  desc: "Set the maxUnavailable property: This can either be set to an integer (e.g. '1') or a percentage (e.g. '5%'). If a percentage is specified, it is the percentage of the total agent pool size at the time of the upgrade. For percentages, fractional nodes are rounded up. If not specified, the default is 0. For more information, including best practices, see: https://learn.microsoft.com/en-us/azure/aks/upgrade-cluster."
   returns:
     description: "the AgentPoolUpgradeSettings object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings?alt=com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings&text=AgentPoolUpgradeSettings\" data-throw-if-not-resolved=\"False\" />"
@@ -140,10 +174,24 @@ methods:
   returns:
     description: "the AgentPoolUpgradeSettings object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings?alt=com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings&text=AgentPoolUpgradeSettings\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings.withUndrainableNodeBehavior(com.azure.resourcemanager.containerservice.models.UndrainableNodeBehavior)"
+  fullName: "com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings.withUndrainableNodeBehavior(UndrainableNodeBehavior undrainableNodeBehavior)"
+  name: "withUndrainableNodeBehavior(UndrainableNodeBehavior undrainableNodeBehavior)"
+  nameWithType: "AgentPoolUpgradeSettings.withUndrainableNodeBehavior(UndrainableNodeBehavior undrainableNodeBehavior)"
+  summary: "Set the undrainable<wbr>Node<wbr>Behavior property: Defines the behavior for undrainable nodes during upgrade."
+  parameters:
+  - description: "the undrainableNodeBehavior value to set."
+    name: "undrainableNodeBehavior"
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.UndrainableNodeBehavior?alt=com.azure.resourcemanager.containerservice.models.UndrainableNodeBehavior&text=UndrainableNodeBehavior\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public AgentPoolUpgradeSettings withUndrainableNodeBehavior(UndrainableNodeBehavior undrainableNodeBehavior)"
+  desc: "Set the undrainableNodeBehavior property: Defines the behavior for undrainable nodes during upgrade. The most common cause of undrainable nodes is Pod Disruption Budgets (PDBs), but other issues, such as pod termination grace period is exceeding the remaining per-node drain timeout or pod is still being in a running state, can also cause undrainable nodes."
+  returns:
+    description: "the AgentPoolUpgradeSettings object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings?alt=com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings&text=AgentPoolUpgradeSettings\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Settings for upgrading an agentpool."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings?alt=com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings&text=AgentPoolUpgradeSettings\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.51.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.52.0

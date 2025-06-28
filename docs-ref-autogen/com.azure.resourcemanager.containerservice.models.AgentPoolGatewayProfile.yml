@@ -1,0 +1,101 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.containerservice.models.AgentPoolGatewayProfile"
+fullName: "com.azure.resourcemanager.containerservice.models.AgentPoolGatewayProfile"
+name: "AgentPoolGatewayProfile"
+nameWithType: "AgentPoolGatewayProfile"
+summary: "Profile of the managed cluster gateway agent pool."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **AgentPoolGatewayProfile**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservice.models.AgentPoolGatewayProfile?alt=com.azure.resourcemanager.containerservice.models.AgentPoolGatewayProfile&text=AgentPoolGatewayProfile\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.resourcemanager.containerservice.models.AgentPoolGatewayProfile.AgentPoolGatewayProfile()"
+  fullName: "com.azure.resourcemanager.containerservice.models.AgentPoolGatewayProfile.AgentPoolGatewayProfile()"
+  name: "AgentPoolGatewayProfile()"
+  nameWithType: "AgentPoolGatewayProfile.AgentPoolGatewayProfile()"
+  summary: "Creates an instance of Agent<wbr>Pool<wbr>Gateway<wbr>Profile class."
+  syntax: "public AgentPoolGatewayProfile()"
+  desc: "Creates an instance of AgentPoolGatewayProfile class."
+methods:
+- uid: "com.azure.resourcemanager.containerservice.models.AgentPoolGatewayProfile.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.containerservice.models.AgentPoolGatewayProfile.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "AgentPoolGatewayProfile.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Agent<wbr>Pool<wbr>Gateway<wbr>Profile from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static AgentPoolGatewayProfile fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the AgentPoolGatewayProfile."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of AgentPoolGatewayProfile from the JsonReader."
+  returns:
+    description: "An instance of AgentPoolGatewayProfile if the JsonReader was pointing to an instance of it, or null if it\n was pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.AgentPoolGatewayProfile?alt=com.azure.resourcemanager.containerservice.models.AgentPoolGatewayProfile&text=AgentPoolGatewayProfile\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservice.models.AgentPoolGatewayProfile.publicIpPrefixSize()"
+  fullName: "com.azure.resourcemanager.containerservice.models.AgentPoolGatewayProfile.publicIpPrefixSize()"
+  name: "publicIpPrefixSize()"
+  nameWithType: "AgentPoolGatewayProfile.publicIpPrefixSize()"
+  summary: "Get the public<wbr>IpPrefix<wbr>Size property: The Gateway agent pool associates one public IPPrefix for each static egress gateway to provide public egress."
+  syntax: "public Integer publicIpPrefixSize()"
+  desc: "Get the publicIpPrefixSize property: The Gateway agent pool associates one public IPPrefix for each static egress gateway to provide public egress. The size of Public IPPrefix should be selected by the user. Each node in the agent pool is assigned with one IP from the IPPrefix. The IPPrefix size thus serves as a cap on the size of the Gateway agent pool. Due to Azure public IPPrefix size limitation, the valid value range is \\[28, 31\\] (/31 = 2 nodes/IPs, /30 = 4 nodes/IPs, /29 = 8 nodes/IPs, /28 = 16 nodes/IPs). The default value is 31."
+  returns:
+    description: "the publicIpPrefixSize value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+- uid: "com.azure.resourcemanager.containerservice.models.AgentPoolGatewayProfile.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.containerservice.models.AgentPoolGatewayProfile.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "AgentPoolGatewayProfile.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservice.models.AgentPoolGatewayProfile.validate()"
+  fullName: "com.azure.resourcemanager.containerservice.models.AgentPoolGatewayProfile.validate()"
+  name: "validate()"
+  nameWithType: "AgentPoolGatewayProfile.validate()"
+  summary: "Validates the instance."
+  syntax: "public void validate()"
+  desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.containerservice.models.AgentPoolGatewayProfile.withPublicIpPrefixSize(java.lang.Integer)"
+  fullName: "com.azure.resourcemanager.containerservice.models.AgentPoolGatewayProfile.withPublicIpPrefixSize(Integer publicIpPrefixSize)"
+  name: "withPublicIpPrefixSize(Integer publicIpPrefixSize)"
+  nameWithType: "AgentPoolGatewayProfile.withPublicIpPrefixSize(Integer publicIpPrefixSize)"
+  summary: "Set the public<wbr>IpPrefix<wbr>Size property: The Gateway agent pool associates one public IPPrefix for each static egress gateway to provide public egress."
+  parameters:
+  - description: "the publicIpPrefixSize value to set."
+    name: "publicIpPrefixSize"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  syntax: "public AgentPoolGatewayProfile withPublicIpPrefixSize(Integer publicIpPrefixSize)"
+  desc: "Set the publicIpPrefixSize property: The Gateway agent pool associates one public IPPrefix for each static egress gateway to provide public egress. The size of Public IPPrefix should be selected by the user. Each node in the agent pool is assigned with one IP from the IPPrefix. The IPPrefix size thus serves as a cap on the size of the Gateway agent pool. Due to Azure public IPPrefix size limitation, the valid value range is \\[28, 31\\] (/31 = 2 nodes/IPs, /30 = 4 nodes/IPs, /29 = 8 nodes/IPs, /28 = 16 nodes/IPs). The default value is 31."
+  returns:
+    description: "the AgentPoolGatewayProfile object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.AgentPoolGatewayProfile?alt=com.azure.resourcemanager.containerservice.models.AgentPoolGatewayProfile&text=AgentPoolGatewayProfile\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Profile of the managed cluster gateway agent pool."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservice.models.AgentPoolGatewayProfile?alt=com.azure.resourcemanager.containerservice.models.AgentPoolGatewayProfile&text=AgentPoolGatewayProfile\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.containerservice.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.52.0

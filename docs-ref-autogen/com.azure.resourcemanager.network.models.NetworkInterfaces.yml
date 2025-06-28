@@ -22,6 +22,25 @@ methods:
   returns:
     description: "the accepted deleting operation"
     type: "<xref href=\"com.azure.resourcemanager.resources.fluentcore.model.Accepted?alt=com.azure.resourcemanager.resources.fluentcore.model.Accepted&text=Accepted\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+- uid: "com.azure.resourcemanager.network.models.NetworkInterfaces.beginDeleteById(java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.network.models.NetworkInterfaces.beginDeleteById(String id, Context context)"
+  name: "beginDeleteById(String id, Context context)"
+  nameWithType: "NetworkInterfaces.beginDeleteById(String id, Context context)"
+  summary: "Begins deleting a virtual machine from Azure, identifying it by its resource ID."
+  modifiers:
+  - "default"
+  parameters:
+  - description: "the resource ID of the virtual machine to delete"
+    name: "id"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "the <xref uid=\"com.azure.core.util.Context\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Context\"></xref> of the request"
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public default Accepted<Void> beginDeleteById(String id, Context context)"
+  desc: "Begins deleting a virtual machine from Azure, identifying it by its resource ID."
+  returns:
+    description: "the accepted deleting operation"
+    type: "<xref href=\"com.azure.resourcemanager.resources.fluentcore.model.Accepted?alt=com.azure.resourcemanager.resources.fluentcore.model.Accepted&text=Accepted\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.network.models.NetworkInterfaces.beginDeleteByResourceGroup(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.network.models.NetworkInterfaces.beginDeleteByResourceGroup(String resourceGroupName, String name)"
   name: "beginDeleteByResourceGroup(String resourceGroupName, String name)"
@@ -37,6 +56,28 @@ methods:
     name: "name"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract Accepted<Void> beginDeleteByResourceGroup(String resourceGroupName, String name)"
+  desc: "Begins deleting a virtual machine from Azure, identifying it by its name and its resource group."
+  returns:
+    description: "the accepted deleting operation"
+    type: "<xref href=\"com.azure.resourcemanager.resources.fluentcore.model.Accepted?alt=com.azure.resourcemanager.resources.fluentcore.model.Accepted&text=Accepted\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+- uid: "com.azure.resourcemanager.network.models.NetworkInterfaces.beginDeleteByResourceGroup(java.lang.String,java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.network.models.NetworkInterfaces.beginDeleteByResourceGroup(String resourceGroupName, String name, Context context)"
+  name: "beginDeleteByResourceGroup(String resourceGroupName, String name, Context context)"
+  nameWithType: "NetworkInterfaces.beginDeleteByResourceGroup(String resourceGroupName, String name, Context context)"
+  summary: "Begins deleting a virtual machine from Azure, identifying it by its name and its resource group."
+  modifiers:
+  - "default"
+  parameters:
+  - description: "the resource group the resource is part of"
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "the virtual machine name"
+    name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "the <xref uid=\"com.azure.core.util.Context\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Context\"></xref> of the request"
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public default Accepted<Void> beginDeleteByResourceGroup(String resourceGroupName, String name, Context context)"
   desc: "Begins deleting a virtual machine from Azure, identifying it by its name and its resource group."
   returns:
     description: "the accepted deleting operation"
@@ -91,6 +132,25 @@ methods:
   returns:
     description: "network interface"
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.resourcemanager.network.models.VirtualMachineScaleSetNetworkInterface?alt=com.azure.resourcemanager.network.models.VirtualMachineScaleSetNetworkInterface&text=VirtualMachineScaleSetNetworkInterface\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.network.models.NetworkInterfaces.listByResourceGroup(java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.network.models.NetworkInterfaces.listByResourceGroup(String resourceGroupName, Context context)"
+  name: "listByResourceGroup(String resourceGroupName, Context context)"
+  nameWithType: "NetworkInterfaces.listByResourceGroup(String resourceGroupName, Context context)"
+  summary: "Lists resources of the specified type in the specified resource group."
+  modifiers:
+  - "default"
+  parameters:
+  - description: "the name of the resource group to list the resources from"
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "the <xref uid=\"com.azure.core.util.Context\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Context\"></xref> of the request"
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public default PagedIterable<NetworkInterface> listByResourceGroup(String resourceGroupName, Context context)"
+  desc: "Lists resources of the specified type in the specified resource group."
+  returns:
+    description: "the list of resources"
+    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.network.models.NetworkInterface?alt=com.azure.resourcemanager.network.models.NetworkInterface&text=NetworkInterface\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.network.models.NetworkInterfaces.listByVirtualMachineScaleSet(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.network.models.NetworkInterfaces.listByVirtualMachineScaleSet(String resourceGroupName, String scaleSetName)"
   name: "listByVirtualMachineScaleSet(String resourceGroupName, String scaleSetName)"
@@ -185,4 +245,4 @@ implements:
 - "<xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.SupportsListing?alt=com.azure.resourcemanager.resources.fluentcore.collection.SupportsListing&text=SupportsListing\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.network.models.NetworkInterface?alt=com.azure.resourcemanager.network.models.NetworkInterface&text=NetworkInterface\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.network.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-network:2.51.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-network:2.52.0

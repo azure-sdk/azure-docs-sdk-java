@@ -96,7 +96,7 @@ methods:
   nameWithType: "SiteConfigInner.appSettings()"
   summary: "Get the app<wbr>Settings property: Application settings."
   syntax: "public List<NameValuePair> appSettings()"
-  desc: "Get the appSettings property: Application settings."
+  desc: "Get the appSettings property: Application settings. This property is not returned in response to normal create and read requests since it may contain sensitive information."
   returns:
     description: "the appSettings value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.appservice.models.NameValuePair?alt=com.azure.resourcemanager.appservice.models.NameValuePair&text=NameValuePair\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -146,7 +146,7 @@ methods:
   nameWithType: "SiteConfigInner.connectionStrings()"
   summary: "Get the connection<wbr>Strings property: Connection strings."
   syntax: "public List<ConnStringInfo> connectionStrings()"
-  desc: "Get the connectionStrings property: Connection strings."
+  desc: "Get the connectionStrings property: Connection strings. This property is not returned in response to normal create and read requests since it may contain sensitive information."
   returns:
     description: "the connectionStrings value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.appservice.models.ConnStringInfo?alt=com.azure.resourcemanager.appservice.models.ConnStringInfo&text=ConnStringInfo\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -289,6 +289,16 @@ methods:
   returns:
     description: "the http20Enabled value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.resourcemanager.appservice.fluent.models.SiteConfigInner.http20ProxyFlag()"
+  fullName: "com.azure.resourcemanager.appservice.fluent.models.SiteConfigInner.http20ProxyFlag()"
+  name: "http20ProxyFlag()"
+  nameWithType: "SiteConfigInner.http20ProxyFlag()"
+  summary: "Get the http20Proxy<wbr>Flag property: Http20Proxy<wbr>Flag: Configures a website to allow http2.0 to pass be proxied all the way to the app."
+  syntax: "public Integer http20ProxyFlag()"
+  desc: "Get the http20ProxyFlag property: Http20ProxyFlag: Configures a website to allow http2.0 to pass be proxied all the way to the app. 0 = disabled, 1 = pass through all http2 traffic, 2 = pass through gRPC only."
+  returns:
+    description: "the http20ProxyFlag value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
 - uid: "com.azure.resourcemanager.appservice.fluent.models.SiteConfigInner.httpLoggingEnabled()"
   fullName: "com.azure.resourcemanager.appservice.fluent.models.SiteConfigInner.httpLoggingEnabled()"
   name: "httpLoggingEnabled()"
@@ -872,7 +882,7 @@ methods:
     name: "appSettings"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.appservice.models.NameValuePair?alt=com.azure.resourcemanager.appservice.models.NameValuePair&text=NameValuePair\" data-throw-if-not-resolved=\"False\" />&gt;"
   syntax: "public SiteConfigInner withAppSettings(List<NameValuePair> appSettings)"
-  desc: "Set the appSettings property: Application settings."
+  desc: "Set the appSettings property: Application settings. This property is not returned in response to normal create and read requests since it may contain sensitive information."
   returns:
     description: "the SiteConfigInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.appservice.fluent.models.SiteConfigInner?alt=com.azure.resourcemanager.appservice.fluent.models.SiteConfigInner&text=SiteConfigInner\" data-throw-if-not-resolved=\"False\" />"
@@ -942,7 +952,7 @@ methods:
     name: "connectionStrings"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.appservice.models.ConnStringInfo?alt=com.azure.resourcemanager.appservice.models.ConnStringInfo&text=ConnStringInfo\" data-throw-if-not-resolved=\"False\" />&gt;"
   syntax: "public SiteConfigInner withConnectionStrings(List<ConnStringInfo> connectionStrings)"
-  desc: "Set the connectionStrings property: Connection strings."
+  desc: "Set the connectionStrings property: Connection strings. This property is not returned in response to normal create and read requests since it may contain sensitive information."
   returns:
     description: "the SiteConfigInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.appservice.fluent.models.SiteConfigInner?alt=com.azure.resourcemanager.appservice.fluent.models.SiteConfigInner&text=SiteConfigInner\" data-throw-if-not-resolved=\"False\" />"
@@ -1111,6 +1121,20 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
   syntax: "public SiteConfigInner withHttp20Enabled(Boolean http20Enabled)"
   desc: "Set the http20Enabled property: Http20Enabled: configures a web site to allow clients to connect over http2.0."
+  returns:
+    description: "the SiteConfigInner object itself."
+    type: "<xref href=\"com.azure.resourcemanager.appservice.fluent.models.SiteConfigInner?alt=com.azure.resourcemanager.appservice.fluent.models.SiteConfigInner&text=SiteConfigInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.appservice.fluent.models.SiteConfigInner.withHttp20ProxyFlag(java.lang.Integer)"
+  fullName: "com.azure.resourcemanager.appservice.fluent.models.SiteConfigInner.withHttp20ProxyFlag(Integer http20ProxyFlag)"
+  name: "withHttp20ProxyFlag(Integer http20ProxyFlag)"
+  nameWithType: "SiteConfigInner.withHttp20ProxyFlag(Integer http20ProxyFlag)"
+  summary: "Set the http20Proxy<wbr>Flag property: Http20Proxy<wbr>Flag: Configures a website to allow http2.0 to pass be proxied all the way to the app."
+  parameters:
+  - description: "the http20ProxyFlag value to set."
+    name: "http20ProxyFlag"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  syntax: "public SiteConfigInner withHttp20ProxyFlag(Integer http20ProxyFlag)"
+  desc: "Set the http20ProxyFlag property: Http20ProxyFlag: Configures a website to allow http2.0 to pass be proxied all the way to the app. 0 = disabled, 1 = pass through all http2 traffic, 2 = pass through gRPC only."
   returns:
     description: "the SiteConfigInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.appservice.fluent.models.SiteConfigInner?alt=com.azure.resourcemanager.appservice.fluent.models.SiteConfigInner&text=SiteConfigInner\" data-throw-if-not-resolved=\"False\" />"
@@ -1788,4 +1812,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.appservice.fluent.models.SiteConfigInner?alt=com.azure.resourcemanager.appservice.fluent.models.SiteConfigInner&text=SiteConfigInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.appservice.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-appservice:2.51.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-appservice:2.52.0

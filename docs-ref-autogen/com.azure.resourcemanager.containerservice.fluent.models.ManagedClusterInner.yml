@@ -175,16 +175,6 @@ methods:
   returns:
     description: "the dnsPrefix value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-- uid: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterInner.enablePodSecurityPolicy()"
-  fullName: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterInner.enablePodSecurityPolicy()"
-  name: "enablePodSecurityPolicy()"
-  nameWithType: "ManagedClusterInner.enablePodSecurityPolicy()"
-  summary: "Get the enable<wbr>Pod<wbr>Security<wbr>Policy property: (DEPRECATED) Whether to enable Kubernetes pod security policy (preview)."
-  syntax: "public Boolean enablePodSecurityPolicy()"
-  desc: "Get the enablePodSecurityPolicy property: (DEPRECATED) Whether to enable Kubernetes pod security policy (preview). PodSecurityPolicy was deprecated in Kubernetes v1.21, and removed from Kubernetes in v1.25. Learn more at https://aka.ms/k8s/psp and https://aka.ms/aks/psp."
-  returns:
-    description: "the enablePodSecurityPolicy value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterInner.enableRbac()"
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterInner.enableRbac()"
   name: "enableRbac()"
@@ -506,6 +496,16 @@ methods:
   returns:
     description: "the sku value."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterSku?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterSku&text=ManagedClusterSku\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterInner.status()"
+  fullName: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterInner.status()"
+  name: "status()"
+  nameWithType: "ManagedClusterInner.status()"
+  summary: "Get the status property: Contains read-only information about the Managed Cluster."
+  syntax: "public ManagedClusterStatus status()"
+  desc: "Get the status property: Contains read-only information about the Managed Cluster."
+  returns:
+    description: "the status value."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterStatus?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterStatus&text=ManagedClusterStatus\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterInner.storageProfile()"
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterInner.storageProfile()"
   name: "storageProfile()"
@@ -738,20 +738,6 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ManagedClusterInner withDnsPrefix(String dnsPrefix)"
   desc: "Set the dnsPrefix property: This cannot be updated once the Managed Cluster has been created."
-  returns:
-    description: "the ManagedClusterInner object itself."
-    type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterInner?alt=com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterInner&text=ManagedClusterInner\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterInner.withEnablePodSecurityPolicy(java.lang.Boolean)"
-  fullName: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterInner.withEnablePodSecurityPolicy(Boolean enablePodSecurityPolicy)"
-  name: "withEnablePodSecurityPolicy(Boolean enablePodSecurityPolicy)"
-  nameWithType: "ManagedClusterInner.withEnablePodSecurityPolicy(Boolean enablePodSecurityPolicy)"
-  summary: "Set the enable<wbr>Pod<wbr>Security<wbr>Policy property: (DEPRECATED) Whether to enable Kubernetes pod security policy (preview)."
-  parameters:
-  - description: "the enablePodSecurityPolicy value to set."
-    name: "enablePodSecurityPolicy"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
-  syntax: "public ManagedClusterInner withEnablePodSecurityPolicy(Boolean enablePodSecurityPolicy)"
-  desc: "Set the enablePodSecurityPolicy property: (DEPRECATED) Whether to enable Kubernetes pod security policy (preview). PodSecurityPolicy was deprecated in Kubernetes v1.21, and removed from Kubernetes in v1.25. Learn more at https://aka.ms/k8s/psp and https://aka.ms/aks/psp."
   returns:
     description: "the ManagedClusterInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterInner?alt=com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterInner&text=ManagedClusterInner\" data-throw-if-not-resolved=\"False\" />"
@@ -1060,6 +1046,20 @@ methods:
   returns:
     description: "the ManagedClusterInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterInner?alt=com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterInner&text=ManagedClusterInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterInner.withStatus(com.azure.resourcemanager.containerservice.models.ManagedClusterStatus)"
+  fullName: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterInner.withStatus(ManagedClusterStatus status)"
+  name: "withStatus(ManagedClusterStatus status)"
+  nameWithType: "ManagedClusterInner.withStatus(ManagedClusterStatus status)"
+  summary: "Set the status property: Contains read-only information about the Managed Cluster."
+  parameters:
+  - description: "the status value to set."
+    name: "status"
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterStatus?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterStatus&text=ManagedClusterStatus\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ManagedClusterInner withStatus(ManagedClusterStatus status)"
+  desc: "Set the status property: Contains read-only information about the Managed Cluster."
+  returns:
+    description: "the ManagedClusterInner object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterInner?alt=com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterInner&text=ManagedClusterInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterInner.withStorageProfile(com.azure.resourcemanager.containerservice.models.ManagedClusterStorageProfile)"
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterInner.withStorageProfile(ManagedClusterStorageProfile storageProfile)"
   name: "withStorageProfile(ManagedClusterStorageProfile storageProfile)"
@@ -1155,4 +1155,4 @@ type: "class"
 desc: "Managed cluster."
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.51.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.52.0

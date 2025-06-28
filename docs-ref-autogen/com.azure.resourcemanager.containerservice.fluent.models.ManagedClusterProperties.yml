@@ -160,16 +160,6 @@ methods:
   returns:
     description: "the dnsPrefix value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-- uid: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterProperties.enablePodSecurityPolicy()"
-  fullName: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterProperties.enablePodSecurityPolicy()"
-  name: "enablePodSecurityPolicy()"
-  nameWithType: "ManagedClusterProperties.enablePodSecurityPolicy()"
-  summary: "Get the enable<wbr>Pod<wbr>Security<wbr>Policy property: (DEPRECATED) Whether to enable Kubernetes pod security policy (preview)."
-  syntax: "public Boolean enablePodSecurityPolicy()"
-  desc: "Get the enablePodSecurityPolicy property: (DEPRECATED) Whether to enable Kubernetes pod security policy (preview). PodSecurityPolicy was deprecated in Kubernetes v1.21, and removed from Kubernetes in v1.25. Learn more at https://aka.ms/k8s/psp and https://aka.ms/aks/psp."
-  returns:
-    description: "the enablePodSecurityPolicy value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterProperties.enableRbac()"
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterProperties.enableRbac()"
   name: "enableRbac()"
@@ -429,6 +419,16 @@ methods:
   returns:
     description: "the servicePrincipalProfile value."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterServicePrincipalProfile?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterServicePrincipalProfile&text=ManagedClusterServicePrincipalProfile\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterProperties.status()"
+  fullName: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterProperties.status()"
+  name: "status()"
+  nameWithType: "ManagedClusterProperties.status()"
+  summary: "Get the status property: Contains read-only information about the Managed Cluster."
+  syntax: "public ManagedClusterStatus status()"
+  desc: "Get the status property: Contains read-only information about the Managed Cluster."
+  returns:
+    description: "the status value."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterStatus?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterStatus&text=ManagedClusterStatus\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterProperties.storageProfile()"
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterProperties.storageProfile()"
   name: "storageProfile()"
@@ -639,20 +639,6 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ManagedClusterProperties withDnsPrefix(String dnsPrefix)"
   desc: "Set the dnsPrefix property: This cannot be updated once the Managed Cluster has been created."
-  returns:
-    description: "the ManagedClusterProperties object itself."
-    type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterProperties?alt=com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterProperties&text=ManagedClusterProperties\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterProperties.withEnablePodSecurityPolicy(java.lang.Boolean)"
-  fullName: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterProperties.withEnablePodSecurityPolicy(Boolean enablePodSecurityPolicy)"
-  name: "withEnablePodSecurityPolicy(Boolean enablePodSecurityPolicy)"
-  nameWithType: "ManagedClusterProperties.withEnablePodSecurityPolicy(Boolean enablePodSecurityPolicy)"
-  summary: "Set the enable<wbr>Pod<wbr>Security<wbr>Policy property: (DEPRECATED) Whether to enable Kubernetes pod security policy (preview)."
-  parameters:
-  - description: "the enablePodSecurityPolicy value to set."
-    name: "enablePodSecurityPolicy"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
-  syntax: "public ManagedClusterProperties withEnablePodSecurityPolicy(Boolean enablePodSecurityPolicy)"
-  desc: "Set the enablePodSecurityPolicy property: (DEPRECATED) Whether to enable Kubernetes pod security policy (preview). PodSecurityPolicy was deprecated in Kubernetes v1.21, and removed from Kubernetes in v1.25. Learn more at https://aka.ms/k8s/psp and https://aka.ms/aks/psp."
   returns:
     description: "the ManagedClusterProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterProperties?alt=com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterProperties&text=ManagedClusterProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -908,6 +894,20 @@ methods:
   returns:
     description: "the ManagedClusterProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterProperties?alt=com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterProperties&text=ManagedClusterProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterProperties.withStatus(com.azure.resourcemanager.containerservice.models.ManagedClusterStatus)"
+  fullName: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterProperties.withStatus(ManagedClusterStatus status)"
+  name: "withStatus(ManagedClusterStatus status)"
+  nameWithType: "ManagedClusterProperties.withStatus(ManagedClusterStatus status)"
+  summary: "Set the status property: Contains read-only information about the Managed Cluster."
+  parameters:
+  - description: "the status value to set."
+    name: "status"
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterStatus?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterStatus&text=ManagedClusterStatus\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ManagedClusterProperties withStatus(ManagedClusterStatus status)"
+  desc: "Set the status property: Contains read-only information about the Managed Cluster."
+  returns:
+    description: "the ManagedClusterProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterProperties?alt=com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterProperties&text=ManagedClusterProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterProperties.withStorageProfile(com.azure.resourcemanager.containerservice.models.ManagedClusterStorageProfile)"
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterProperties.withStorageProfile(ManagedClusterStorageProfile storageProfile)"
   name: "withStorageProfile(ManagedClusterStorageProfile storageProfile)"
@@ -994,4 +994,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterProperties?alt=com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterProperties&text=ManagedClusterProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.51.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.52.0
