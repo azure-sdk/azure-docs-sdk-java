@@ -1,12 +1,12 @@
 ---
 title: Azure OpenTelemetry Metrics plugin library for Java
 keywords: Azure, java, SDK, API, azure-core-metrics-opentelemetry, core
-ms.date: 06/06/2025
+ms.date: 06/30/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: core
 ---
-# Azure OpenTelemetry Metrics plugin library for Java - version 1.0.0-beta.30 
+# Azure OpenTelemetry Metrics plugin library for Java - version 1.0.0-beta.31 
 
 
 This package enables  metrics from Azure SDK Java libraries through [OpenTelemetry][OpenTelemetry]. OpenTelemetry is an
@@ -29,7 +29,7 @@ services.
 <dependency>
   <groupId>com.azure</groupId>
   <artifactId>azure-core-metrics-opentelemetry</artifactId>
-  <version>1.0.0-beta.30</version>
+  <version>1.0.0-beta.31</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -46,7 +46,7 @@ The following sections provide several code snippets covering some of the most c
 - [Default configuration: OpenTelemetry SDK](#default-configuration-agent)
 - [Custom configuration](#custom-configuration)
 
-You can find more samples [here](https://github.com/Azure/azure-sdk-for-java/blob/azure-core-metrics-opentelemetry_1.0.0-beta.30/sdk/core/azure-core-metrics-opentelemetry/src/samples/).
+You can find more samples [here](https://github.com/Azure/azure-sdk-for-java/blob/azure-core-metrics-opentelemetry_1.0.0-beta.31/sdk/core/azure-core-metrics-opentelemetry/src/samples/).
 
 ### Default configuration: agent
 
@@ -131,13 +131,13 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 
 <!-- Links -->
 [api_documentation]: https://aka.ms/java-docs
-[context]: https://github.com/Azure/azure-sdk-for-java/blob/azure-core-metrics-opentelemetry_1.0.0-beta.30/sdk/core/azure-core/src/main/java/com/azure/core/util/Context.java
+[context]: https://github.com/Azure/azure-sdk-for-java/blob/azure-core-metrics-opentelemetry_1.0.0-beta.31/sdk/core/azure-core/src/main/java/com/azure/core/util/Context.java
 [jdk_link]: https://learn.microsoft.com/java/azure/jdk/?view=azure-java-stable
 [java8_client_compatibility]: https://learn.microsoft.com/azure/security/fundamentals/azure-ca-details?tabs=root-and-subordinate-cas-list#client-compatibility-for-public-pkis
 [logging]: https://github.com/Azure/azure-sdk-for-java/wiki/Logging-in-Azure-SDK
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-core-metrics-opentelemetry_1.0.0-beta.30/sdk/core/azure-core-metrics-opentelemetry/src/
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-core-metrics-opentelemetry_1.0.0-beta.31/sdk/core/azure-core-metrics-opentelemetry/src/
 [OpenTelemetry]: https://github.com/open-telemetry/opentelemetry-java#opentelemetry-for-java
-[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-core-metrics-opentelemetry_1.0.0-beta.30/sdk/core/azure-core-metrics-opentelemetry/src/samples/
+[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-core-metrics-opentelemetry_1.0.0-beta.31/sdk/core/azure-core-metrics-opentelemetry/src/samples/
 
 
 

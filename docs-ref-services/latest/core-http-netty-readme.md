@@ -1,12 +1,12 @@
 ---
 title: Azure Core Netty HTTP plugin library for Java
 keywords: Azure, java, SDK, API, azure-core-http-netty, core
-ms.date: 06/06/2025
+ms.date: 06/30/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: core
 ---
-# Azure Core Netty HTTP plugin library for Java - version 1.15.12 
+# Azure Core Netty HTTP plugin library for Java - version 1.15.13 
 
 
 Azure Core Netty HTTP client is a plugin for the `azure-core` HTTP client API.
@@ -22,7 +22,7 @@ Azure Core Netty HTTP client is a plugin for the `azure-core` HTTP client API.
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-core-http-netty_1.15.12/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-core-http-netty_1.15.13/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -57,7 +57,7 @@ add the direct dependency to your project as follows.
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-core-http-netty</artifactId>
-    <version>1.15.12</version>
+    <version>1.15.13</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -88,6 +88,63 @@ Create a Netty HttpClient that is using a proxy.
 ```java readme-sample-createProxyClient
 HttpClient client = new NettyAsyncHttpClientBuilder()
     .proxy(new ProxyOptions(ProxyOptions.Type.HTTP, new InetSocketAddress("<proxy-host>", 8888)))
+    .build();
+```
+
+### Create a Client with Authenticated Proxy
+
+```java readme-sample-createAuthenticatedProxyClient
+HttpClient client = new NettyAsyncHttpClientBuilder()
+    .proxy(new ProxyOptions(ProxyOptions.Type.HTTP, new InetSocketAddress("<proxy-host>", 8888))
+        .setCredentials("<username>", "<password>"))
+    .build();
+```
+
+Authenticated proxies have a few unique behaviors not seen with unauthenticated proxies.
+
+1. Authenticated proxies use a custom Netty `ChannelHandler` to apply `Proxy-Authorization` to the proxy `CONNECT`.
+2. Authenticated proxies defer applying `Proxy-Authorization` when `CONNECT` is called, waiting for the proxy to respond
+   with `Proxy-Authenticate`. This better supports `Digest` authorization that may require information from the proxy 
+   and prevents sending credential information when it isn't needed.
+3. Authenticated proxies will use either Netty's `NoopAddressResolverGroup.INSTANCE` or a customer `AddressResolverGroup`
+   when there wasn't one configured by a provided Reactor Netty `HttpClient` to `NettyAsyncHttpClientBuilder` and when 
+   no Reactor Netty `HttpClient` was provided. See the following sample on non-proxy hosts for more details.
+
+### Create a Client with non-proxy hosts proxy
+
+```java readme-sample-createProxyWithNonProxyHostsClient
+HttpClient client = new NettyAsyncHttpClientBuilder()
+    .proxy(new ProxyOptions(ProxyOptions.Type.HTTP, new InetSocketAddress("<proxy-host>", 8888))
+        .setCredentials("<username>", "<password>")
+        .setNonProxyHosts("<nonProxyHostRegex>"))
+    .build();
+```
+
+A proxy with non-proxy hosts will use a special `AddressResolverGroup` if one isn't configured by a passed Reactor Netty
+`HttpClient` or if a Reactor Netty `HttpClient` wasn't passed. This `AddressResolverGroup` will use 
+`NoopAddressResolverGroup.INSTANCE` to no-op address resolution when the proxy will be used, deferring address 
+resolution to the proxy itself, and will use `DefaultAddressResolverGroup.INSTANCE` to resolve the address when the 
+proxy won't be used.
+
+If this handling causes issue, you can pass a Reactor Netty `HttpClient` with an `AddressResolverGroup` configured.
+`NettyAsyncHttpClientBuilder` respects the pre-configured `AddressResolverGroup` and won't override it when adding
+proxy configurations to the Reactor Netty `HttpClient`.
+
+```java readme-sample-createProxyWithNonProxyHostsClientCustomResolver
+// Create a Reactor Netty HttpClient with a configured AddressResolverGroup to override the default behavior
+// of NettyAsyncHttpClientBuilder.
+//
+// Passing DefaultAddressResolverGroup here will prevent issues with NoopAddressResolverGroup where it won't
+// resolve the address of a non-proxy host.
+//
+// This may run into other issues when calling proxied hosts that the client machine cannot resolve.
+reactor.netty.http.client.HttpClient reactorNettyHttpClient = reactor.netty.http.client.HttpClient.create()
+    .resolver(DefaultAddressResolverGroup.INSTANCE);
+
+HttpClient client = new NettyAsyncHttpClientBuilder(reactorNettyHttpClient)
+    .proxy(new ProxyOptions(ProxyOptions.Type.HTTP, new InetSocketAddress("<proxy-host>", 8888))
+        .setCredentials("<username>", "<password>")
+        .setNonProxyHosts("<nonProxyHostRegex>"))
     .build();
 ```
 
@@ -160,7 +217,7 @@ locate the root issue. View the [logging][logging] wiki for guidance about enabl
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-core-http-netty_1.15.12/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-core-http-netty_1.15.13/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)

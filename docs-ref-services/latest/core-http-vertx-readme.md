@@ -1,12 +1,12 @@
 ---
 title: Azure Core Vert.x HTTP plugin library for Java
 keywords: Azure, java, SDK, API, azure-core-http-vertx, core
-ms.date: 06/06/2025
+ms.date: 06/30/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: core
 ---
-# Azure Core Vert.x HTTP plugin library for Java - version 1.0.4 
+# Azure Core Vert.x HTTP plugin library for Java - version 1.0.5 
 
 
 Azure Core Vert.x HTTP client is a plugin for the `azure-core` HTTP client API.
@@ -19,6 +19,38 @@ Azure Core Vert.x HTTP client is a plugin for the `azure-core` HTTP client API.
   - Here are details about [Java 8 client compatibility with Azure Certificate Authority][java8_client_compatibility].
 
 ### Include the package
+#### Include the BOM file
+
+Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-core-http-vertx_1.0.5/sdk/boms/azure-sdk-bom/README.md).
+
+```xml
+<dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>com.azure</groupId>
+            <artifactId>azure-sdk-bom</artifactId>
+            <version>{bom_version_to_target}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+    </dependencies>
+</dependencyManagement>
+```
+and then include the direct dependency in the dependencies section without the version tag.
+
+```xml
+<dependencies>
+  <dependency>
+    <groupId>com.azure</groupId>
+    <artifactId>azure-core-http-vertx</artifactId>
+  </dependency>
+</dependencies>
+```
+
+#### Include direct dependency
+If you want to take dependency on a particular version of the library that is not present in the BOM,
+add the direct dependency to your project as follows.
 
 [//]: # ({x-version-update-start;com.azure:azure-core-http-vertx;current})
 ```xml
@@ -26,7 +58,7 @@ Azure Core Vert.x HTTP client is a plugin for the `azure-core` HTTP client API.
   <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-core-http-vertx</artifactId>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
   </dependency>
 </dependencies>
 ```
@@ -101,7 +133,7 @@ locate the root issue. View the [logging][logging] wiki for guidance about enabl
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-core-http-vertx_1.0.4/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-core-http-vertx_1.0.5/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)

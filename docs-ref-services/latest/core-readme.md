@@ -1,12 +1,12 @@
 ---
 title: Azure Core shared library for Java
 keywords: Azure, java, SDK, API, azure-core, core
-ms.date: 06/06/2025
+ms.date: 06/30/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: core
 ---
-# Azure Core shared library for Java - version 1.55.4 
+# Azure Core shared library for Java - version 1.55.5 
 
 
 [![Build Documentation](https://img.shields.io/badge/documentation-published-blue.svg)](https://azure.github.io/azure-sdk-for-java)
@@ -36,7 +36,7 @@ APIs in one client library, you will know how to use them in other client librar
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the
 library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
 To learn more about the BOM, see
-the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-core_1.55.4/sdk/boms/azure-sdk-bom/README.md).
+the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-core_1.55.5/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -75,7 +75,7 @@ add the direct dependency to your project as follows.
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-core</artifactId>
-    <version>1.55.4</version>
+    <version>1.55.5</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -259,7 +259,7 @@ logging to be enabled. The following table explains what logging is enabled for 
 ## Contributing
 
 For details on contributing to this repository, see
-the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-core_1.55.4/CONTRIBUTING.md).
+the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-core_1.55.5/CONTRIBUTING.md).
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
