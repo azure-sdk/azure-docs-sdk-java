@@ -1,8 +1,0 @@
-| Reference | Package | Source |
-|---|---|---|
-|Synapse - AccessControl|[azure-analytics-synapse-accesscontrol](https://repo1.maven.org/maven2/com/azure/azure-analytics-synapse-accesscontrol)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/)|
-|Synapse - Artifacts|[azure-analytics-synapse-artifacts](https://repo1.maven.org/maven2/com/azure/azure-analytics-synapse-artifacts)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/synapse/azure-analytics-synapse-artifacts)|
-|Synapse - Managed Private Endpoints|[azure-analytics-synapse-managedprivateendpoints](https://repo1.maven.org/maven2/com/azure/azure-analytics-synapse-managedprivateendpoints)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/)|
-|Synapse - Monitoring|[azure-analytics-synapse-monitoring](https://repo1.maven.org/maven2/com/azure/azure-analytics-synapse-monitoring)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/)|
-|Synapse - Spark|[azure-analytics-synapse-spark](https://repo1.maven.org/maven2/com/azure/azure-analytics-synapse-spark)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/)|
-|Resource Management - Synapse|[azure-resourcemanager-synapse](https://repo1.maven.org/maven2/com/azure/resourcemanager/azure-resourcemanager-synapse)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/synapse/azure-resourcemanager-synapse)|

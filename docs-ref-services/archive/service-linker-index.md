@@ -1,3 +1,0 @@
-| Reference | Package | Source |
-|---|---|---|
-|Resource Management - Service Linker|[azure-resourcemanager-servicelinker](https://repo1.maven.org/maven2/com/azure/resourcemanager/azure-resourcemanager-servicelinker)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/servicelinker/azure-resourcemanager-servicelinker)|
