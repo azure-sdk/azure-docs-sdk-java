@@ -1,3 +1,0 @@
-| Reference | Package | Source |
-|---|---|---|
-|Resource Management - System Center Virtual Machine Manager|[azure-resourcemanager-scvmm](https://repo1.maven.org/maven2/com/azure/resourcemanager/azure-resourcemanager-scvmm)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/scvmm/azure-resourcemanager-scvmm)|

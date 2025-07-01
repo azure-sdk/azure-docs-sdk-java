@@ -1,8 +1,0 @@
-| Reference | Package | Source |
-|---|---|---|
-|Key Vault - Administration|[azure-security-keyvault-administration](https://repo1.maven.org/maven2/com/azure/azure-security-keyvault-administration)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/keyvault/azure-security-keyvault-administration)|
-|[Key Vault - Certificates](security-keyvault-certificates-readme.md)|[azure-security-keyvault-certificates](https://repo1.maven.org/maven2/com/azure/azure-security-keyvault-certificates)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/keyvault/azure-security-keyvault-certificates)|
-|[Key Vault - Keys](security-keyvault-keys-readme.md)|[azure-security-keyvault-keys](https://repo1.maven.org/maven2/com/azure/azure-security-keyvault-keys)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/keyvault/azure-security-keyvault-keys)|
-|[Key Vault - Secrets](security-keyvault-secrets-readme.md)|[azure-security-keyvault-secrets](https://repo1.maven.org/maven2/com/azure/azure-security-keyvault-secrets)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/keyvault/azure-security-keyvault-secrets)|
-|Management - Key Vault|[azure-mgmt-keyvault](https://repo1.maven.org/maven2/com/microsoft/azure/azure-mgmt-keyvault)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/)|
-|[Resource Management - Key Vault](resourcemanager-keyvault-readme.md)|[azure-resourcemanager-keyvault](https://repo1.maven.org/maven2/com/azure/resourcemanager/azure-resourcemanager-keyvault)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/resourcemanager/azure-resourcemanager-keyvault)|
