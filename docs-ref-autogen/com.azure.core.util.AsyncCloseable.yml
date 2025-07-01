@@ -22,4 +22,4 @@ type: "interface"
 desc: "Interface for close operations that are asynchronous.\n\n**Asynchronously closing a class**\n\nIn the snippet below, we have a long-lived `NetworkResource` class. There are some operations such as closing I/O. Instead of returning a sync `close()`, we use `closeAsync()` so users' programs don't block waiting for this operation to complete.\n\n```java\nNetworkResource resource = new NetworkResource();\n resource.longRunningDownload(\"https://longdownload.com\")\n     .subscribe(\n         byteBuffer -> System.out.println(\"Buffer received: \" + byteBuffer),\n         error -> System.err.printf(\"Error occurred while downloading: %s%n\", error),\n         () -> System.out.println(\"Completed download operation.\"));\n\n System.out.println(\"Press enter to stop downloading.\");\n System.in.read();\n\n // We block here because it is the end of the main Program function. A real-life program may chain this\n // with some other close operations like save download/program state, etc.\n resource.closeAsync().block();\n```"
 metadata: {}
 package: "com.azure.core.util"
-artifact: com.azure:azure-core:1.55.4
+artifact: com.azure:azure-core:1.55.5
