@@ -6,6 +6,6 @@ ms.topic: reference
 ms.devlang: java
 ms.service: lambdatesthyperexecute
 ---
-# Azure Lambdatesthyperexecute SDK for Java - preview
-## Packages - preview
+# Azure Lambdatesthyperexecute SDK for Java - latest
+## Packages - latest
 [!INCLUDE [packages](lambdatesthyperexecute-index.md)]
