@@ -6,6 +6,6 @@ ms.topic: reference
 ms.devlang: java
 ms.service: mongodbatlas
 ---
-# Azure Mongodbatlas SDK for Java - preview
-## Packages - preview
+# Azure Mongodbatlas SDK for Java - latest
+## Packages - latest
 [!INCLUDE [packages](mongodbatlas-index.md)]
