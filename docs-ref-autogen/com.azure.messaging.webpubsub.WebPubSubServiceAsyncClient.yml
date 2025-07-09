@@ -232,6 +232,23 @@ methods:
   returns:
     description: "whether resource exists."
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>&gt;&gt;"
+- uid: "com.azure.messaging.webpubsub.WebPubSubServiceAsyncClient.listConnectionsInGroup(java.lang.String,com.azure.core.http.rest.RequestOptions)"
+  fullName: "com.azure.messaging.webpubsub.WebPubSubServiceAsyncClient.listConnectionsInGroup(String group, RequestOptions requestOptions)"
+  name: "listConnectionsInGroup(String group, RequestOptions requestOptions)"
+  nameWithType: "WebPubSubServiceAsyncClient.listConnectionsInGroup(String group, RequestOptions requestOptions)"
+  summary: "List connections in a group."
+  parameters:
+  - description: "Target group name, whose length should be greater than 0 and less than 1025."
+    name: "group"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The options to configure the HTTP request before HTTP client sends it."
+    name: "requestOptions"
+    type: "<xref href=\"com.azure.core.http.rest.RequestOptions?alt=com.azure.core.http.rest.RequestOptions&text=RequestOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public PagedFlux<WebPubSubGroupConnection> listConnectionsInGroup(String group, RequestOptions requestOptions)"
+  desc: "List connections in a group.\n\n**Query Parameters**\n\n    | ----------- | ------- | -------- | ----------------------------------------------------------------------------------------------------------------------- |\n    | Name        | Type    | Required | Description                                                                                                             |\n    | maxpagesize | Integer | No       | The maximum number of connections to include in a single response. It should be between 1 and 200.                      |\n    | top         | Integer | No       | The maximum number of connections to return. If the value is not set, then all the connections in a group are returned. |\n\nYou can add these to a request with <xref uid=\"com.azure.core.http.rest.RequestOptions.addQueryParam\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RequestOptions#addQueryParam\"></xref>\n\n**Response Body Schema**\n\n```java\n{\n     connectionId: String (Required)\n     userId: String (Optional)\n }\n```"
+  returns:
+    description: "represents a page of elements as a LIST REST API result as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.messaging.webpubsub.models.WebPubSubGroupConnection?alt=com.azure.messaging.webpubsub.models.WebPubSubGroupConnection&text=WebPubSubGroupConnection\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.messaging.webpubsub.WebPubSubServiceAsyncClient.removeConnectionFromAllGroupsWithResponse(java.lang.String,com.azure.core.http.rest.RequestOptions)"
   fullName: "com.azure.messaging.webpubsub.WebPubSubServiceAsyncClient.removeConnectionFromAllGroupsWithResponse(String connectionId, RequestOptions requestOptions)"
   name: "removeConnectionFromAllGroupsWithResponse(String connectionId, RequestOptions requestOptions)"
@@ -602,4 +619,4 @@ type: "class"
 desc: "Initializes a new instance of the asynchronous AzureWebPubSubServiceRestAPI type."
 metadata: {}
 package: "com.azure.messaging.webpubsub"
-artifact: com.azure:azure-messaging-webpubsub:1.4.2
+artifact: com.azure:azure-messaging-webpubsub:1.5.0
