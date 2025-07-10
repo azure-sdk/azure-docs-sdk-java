@@ -1,7 +1,7 @@
 ---
 title: Azure Managed Network Fabric SDK for Java
 description: Reference for Azure Managed Network Fabric SDK for Java
-ms.date: 07/09/2025
+ms.date: 07/10/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: managednetworkfabric
