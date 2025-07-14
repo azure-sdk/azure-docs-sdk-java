@@ -1,12 +1,12 @@
 ---
 title: Azure DNS SDK for Java
 description: Reference for Azure DNS SDK for Java
-ms.date: 07/11/2025
+ms.date: 07/14/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: dns
-keywords: Azure, Java, SDK, API, domains, DNS, name, service, domain name service
 manager: douge
+keywords: Azure, Java, SDK, API, domains, DNS, name, service, domain name service
 ---
 # Azure DNS libraries for Java
 
