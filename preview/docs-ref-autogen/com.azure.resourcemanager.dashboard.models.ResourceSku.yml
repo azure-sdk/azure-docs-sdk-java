@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.dashboard.models.ResourceSku"
 fullName: "com.azure.resourcemanager.dashboard.models.ResourceSku"
 name: "ResourceSku"
 nameWithType: "ResourceSku"
-summary: "The Resource<wbr>Sku model."
+summary: "Represents the SKU of a resource."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -20,24 +20,57 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **ResourceSku**"
+syntax: "public final class **ResourceSku**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.dashboard.models.ResourceSku?alt=com.azure.resourcemanager.dashboard.models.ResourceSku&text=ResourceSku\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.dashboard.models.ResourceSku.ResourceSku()"
   fullName: "com.azure.resourcemanager.dashboard.models.ResourceSku.ResourceSku()"
   name: "ResourceSku()"
   nameWithType: "ResourceSku.ResourceSku()"
+  summary: "Creates an instance of Resource<wbr>Sku class."
   syntax: "public ResourceSku()"
+  desc: "Creates an instance of ResourceSku class."
 methods:
+- uid: "com.azure.resourcemanager.dashboard.models.ResourceSku.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.dashboard.models.ResourceSku.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "ResourceSku.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Resource<wbr>Sku from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static ResourceSku fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of ResourceSku from the JsonReader."
+  returns:
+    description: "An instance of ResourceSku if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.dashboard.models.ResourceSku?alt=com.azure.resourcemanager.dashboard.models.ResourceSku&text=ResourceSku\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.dashboard.models.ResourceSku.name()"
   fullName: "com.azure.resourcemanager.dashboard.models.ResourceSku.name()"
   name: "name()"
   nameWithType: "ResourceSku.name()"
-  summary: "Get the name property: The name property."
+  summary: "Get the name property: The name of the SKU."
   syntax: "public String name()"
-  desc: "Get the name property: The name property."
+  desc: "Get the name property: The name of the SKU."
   returns:
     description: "the name value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.dashboard.models.ResourceSku.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.dashboard.models.ResourceSku.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "ResourceSku.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.dashboard.models.ResourceSku.validate()"
   fullName: "com.azure.resourcemanager.dashboard.models.ResourceSku.validate()"
   name: "validate()"
@@ -49,18 +82,20 @@ methods:
   fullName: "com.azure.resourcemanager.dashboard.models.ResourceSku.withName(String name)"
   name: "withName(String name)"
   nameWithType: "ResourceSku.withName(String name)"
-  summary: "Set the name property: The name property."
+  summary: "Set the name property: The name of the SKU."
   parameters:
   - description: "the name value to set."
     name: "name"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ResourceSku withName(String name)"
-  desc: "Set the name property: The name property."
+  desc: "Set the name property: The name of the SKU."
   returns:
     description: "the ResourceSku object itself."
     type: "<xref href=\"com.azure.resourcemanager.dashboard.models.ResourceSku?alt=com.azure.resourcemanager.dashboard.models.ResourceSku&text=ResourceSku\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "The ResourceSku model."
+desc: "Represents the SKU of a resource."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.dashboard.models.ResourceSku?alt=com.azure.resourcemanager.dashboard.models.ResourceSku&text=ResourceSku\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.dashboard.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-dashboard:1.0.0-beta.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-dashboard:1.2.0-beta.1

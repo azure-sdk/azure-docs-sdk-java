@@ -20,13 +20,15 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **ManagedGrafanaProperties**"
+syntax: "public final class **ManagedGrafanaProperties**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties?alt=com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties&text=ManagedGrafanaProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.ManagedGrafanaProperties()"
   fullName: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.ManagedGrafanaProperties()"
   name: "ManagedGrafanaProperties()"
   nameWithType: "ManagedGrafanaProperties.ManagedGrafanaProperties()"
+  summary: "Creates an instance of Managed<wbr>Grafana<wbr>Properties class."
   syntax: "public ManagedGrafanaProperties()"
+  desc: "Creates an instance of ManagedGrafanaProperties class."
 methods:
 - uid: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.apiKey()"
   fullName: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.apiKey()"
@@ -68,6 +70,45 @@ methods:
   returns:
     description: "the endpoint value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.enterpriseConfigurations()"
+  fullName: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.enterpriseConfigurations()"
+  name: "enterpriseConfigurations()"
+  nameWithType: "ManagedGrafanaProperties.enterpriseConfigurations()"
+  summary: "Get the enterprise<wbr>Configurations property: Enterprise settings of a Grafana instance."
+  syntax: "public EnterpriseConfigurations enterpriseConfigurations()"
+  desc: "Get the enterpriseConfigurations property: Enterprise settings of a Grafana instance."
+  returns:
+    description: "the enterpriseConfigurations value."
+    type: "<xref href=\"com.azure.resourcemanager.dashboard.models.EnterpriseConfigurations?alt=com.azure.resourcemanager.dashboard.models.EnterpriseConfigurations&text=EnterpriseConfigurations\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "ManagedGrafanaProperties.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Managed<wbr>Grafana<wbr>Properties from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static ManagedGrafanaProperties fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the ManagedGrafanaProperties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of ManagedGrafanaProperties from the JsonReader."
+  returns:
+    description: "An instance of ManagedGrafanaProperties if the JsonReader was pointing to an instance of it, or null if\n it was pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties?alt=com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties&text=ManagedGrafanaProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.grafanaConfigurations()"
+  fullName: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.grafanaConfigurations()"
+  name: "grafanaConfigurations()"
+  nameWithType: "ManagedGrafanaProperties.grafanaConfigurations()"
+  summary: "Get the grafana<wbr>Configurations property: Server configurations of a Grafana instance."
+  syntax: "public GrafanaConfigurations grafanaConfigurations()"
+  desc: "Get the grafanaConfigurations property: Server configurations of a Grafana instance."
+  returns:
+    description: "the grafanaConfigurations value."
+    type: "<xref href=\"com.azure.resourcemanager.dashboard.models.GrafanaConfigurations?alt=com.azure.resourcemanager.dashboard.models.GrafanaConfigurations&text=GrafanaConfigurations\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.grafanaIntegrations()"
   fullName: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.grafanaIntegrations()"
   name: "grafanaIntegrations()"
@@ -78,6 +119,26 @@ methods:
   returns:
     description: "the grafanaIntegrations value."
     type: "<xref href=\"com.azure.resourcemanager.dashboard.models.GrafanaIntegrations?alt=com.azure.resourcemanager.dashboard.models.GrafanaIntegrations&text=GrafanaIntegrations\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.grafanaMajorVersion()"
+  fullName: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.grafanaMajorVersion()"
+  name: "grafanaMajorVersion()"
+  nameWithType: "ManagedGrafanaProperties.grafanaMajorVersion()"
+  summary: "Get the grafana<wbr>Major<wbr>Version property: The major Grafana software version to target."
+  syntax: "public String grafanaMajorVersion()"
+  desc: "Get the grafanaMajorVersion property: The major Grafana software version to target."
+  returns:
+    description: "the grafanaMajorVersion value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.grafanaPlugins()"
+  fullName: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.grafanaPlugins()"
+  name: "grafanaPlugins()"
+  nameWithType: "ManagedGrafanaProperties.grafanaPlugins()"
+  summary: "Get the grafana<wbr>Plugins property: Installed plugin list of the Grafana instance."
+  syntax: "public Map<String,GrafanaPlugin> grafanaPlugins()"
+  desc: "Get the grafanaPlugins property: Installed plugin list of the Grafana instance. Key is plugin id, value is plugin definition."
+  returns:
+    description: "the grafanaPlugins value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.resourcemanager.dashboard.models.GrafanaPlugin?alt=com.azure.resourcemanager.dashboard.models.GrafanaPlugin&text=GrafanaPlugin\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.grafanaVersion()"
   fullName: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.grafanaVersion()"
   name: "grafanaVersion()"
@@ -128,6 +189,18 @@ methods:
   returns:
     description: "the publicNetworkAccess value."
     type: "<xref href=\"com.azure.resourcemanager.dashboard.models.PublicNetworkAccess?alt=com.azure.resourcemanager.dashboard.models.PublicNetworkAccess&text=PublicNetworkAccess\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "ManagedGrafanaProperties.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.validate()"
   fullName: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.validate()"
   name: "validate()"
@@ -177,6 +250,34 @@ methods:
   returns:
     description: "the ManagedGrafanaProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties?alt=com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties&text=ManagedGrafanaProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.withEnterpriseConfigurations(com.azure.resourcemanager.dashboard.models.EnterpriseConfigurations)"
+  fullName: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.withEnterpriseConfigurations(EnterpriseConfigurations enterpriseConfigurations)"
+  name: "withEnterpriseConfigurations(EnterpriseConfigurations enterpriseConfigurations)"
+  nameWithType: "ManagedGrafanaProperties.withEnterpriseConfigurations(EnterpriseConfigurations enterpriseConfigurations)"
+  summary: "Set the enterprise<wbr>Configurations property: Enterprise settings of a Grafana instance."
+  parameters:
+  - description: "the enterpriseConfigurations value to set."
+    name: "enterpriseConfigurations"
+    type: "<xref href=\"com.azure.resourcemanager.dashboard.models.EnterpriseConfigurations?alt=com.azure.resourcemanager.dashboard.models.EnterpriseConfigurations&text=EnterpriseConfigurations\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ManagedGrafanaProperties withEnterpriseConfigurations(EnterpriseConfigurations enterpriseConfigurations)"
+  desc: "Set the enterpriseConfigurations property: Enterprise settings of a Grafana instance."
+  returns:
+    description: "the ManagedGrafanaProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties?alt=com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties&text=ManagedGrafanaProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.withGrafanaConfigurations(com.azure.resourcemanager.dashboard.models.GrafanaConfigurations)"
+  fullName: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.withGrafanaConfigurations(GrafanaConfigurations grafanaConfigurations)"
+  name: "withGrafanaConfigurations(GrafanaConfigurations grafanaConfigurations)"
+  nameWithType: "ManagedGrafanaProperties.withGrafanaConfigurations(GrafanaConfigurations grafanaConfigurations)"
+  summary: "Set the grafana<wbr>Configurations property: Server configurations of a Grafana instance."
+  parameters:
+  - description: "the grafanaConfigurations value to set."
+    name: "grafanaConfigurations"
+    type: "<xref href=\"com.azure.resourcemanager.dashboard.models.GrafanaConfigurations?alt=com.azure.resourcemanager.dashboard.models.GrafanaConfigurations&text=GrafanaConfigurations\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ManagedGrafanaProperties withGrafanaConfigurations(GrafanaConfigurations grafanaConfigurations)"
+  desc: "Set the grafanaConfigurations property: Server configurations of a Grafana instance."
+  returns:
+    description: "the ManagedGrafanaProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties?alt=com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties&text=ManagedGrafanaProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.withGrafanaIntegrations(com.azure.resourcemanager.dashboard.models.GrafanaIntegrations)"
   fullName: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.withGrafanaIntegrations(GrafanaIntegrations grafanaIntegrations)"
   name: "withGrafanaIntegrations(GrafanaIntegrations grafanaIntegrations)"
@@ -188,6 +289,34 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.dashboard.models.GrafanaIntegrations?alt=com.azure.resourcemanager.dashboard.models.GrafanaIntegrations&text=GrafanaIntegrations\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public ManagedGrafanaProperties withGrafanaIntegrations(GrafanaIntegrations grafanaIntegrations)"
   desc: "Set the grafanaIntegrations property: GrafanaIntegrations is a bundled observability experience (e.g. pre-configured data source, tailored Grafana dashboards, alerting defaults) for common monitoring scenarios."
+  returns:
+    description: "the ManagedGrafanaProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties?alt=com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties&text=ManagedGrafanaProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.withGrafanaMajorVersion(java.lang.String)"
+  fullName: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.withGrafanaMajorVersion(String grafanaMajorVersion)"
+  name: "withGrafanaMajorVersion(String grafanaMajorVersion)"
+  nameWithType: "ManagedGrafanaProperties.withGrafanaMajorVersion(String grafanaMajorVersion)"
+  summary: "Set the grafana<wbr>Major<wbr>Version property: The major Grafana software version to target."
+  parameters:
+  - description: "the grafanaMajorVersion value to set."
+    name: "grafanaMajorVersion"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public ManagedGrafanaProperties withGrafanaMajorVersion(String grafanaMajorVersion)"
+  desc: "Set the grafanaMajorVersion property: The major Grafana software version to target."
+  returns:
+    description: "the ManagedGrafanaProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties?alt=com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties&text=ManagedGrafanaProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.withGrafanaPlugins(java.util.Map<java.lang.String,com.azure.resourcemanager.dashboard.models.GrafanaPlugin>)"
+  fullName: "com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties.withGrafanaPlugins(Map<String,GrafanaPlugin> grafanaPlugins)"
+  name: "withGrafanaPlugins(Map<String,GrafanaPlugin> grafanaPlugins)"
+  nameWithType: "ManagedGrafanaProperties.withGrafanaPlugins(Map<String,GrafanaPlugin> grafanaPlugins)"
+  summary: "Set the grafana<wbr>Plugins property: Installed plugin list of the Grafana instance."
+  parameters:
+  - description: "the grafanaPlugins value to set."
+    name: "grafanaPlugins"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.resourcemanager.dashboard.models.GrafanaPlugin?alt=com.azure.resourcemanager.dashboard.models.GrafanaPlugin&text=GrafanaPlugin\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public ManagedGrafanaProperties withGrafanaPlugins(Map<String,GrafanaPlugin> grafanaPlugins)"
+  desc: "Set the grafanaPlugins property: Installed plugin list of the Grafana instance. Key is plugin id, value is plugin definition."
   returns:
     description: "the ManagedGrafanaProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties?alt=com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties&text=ManagedGrafanaProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -231,6 +360,8 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.dashboard.models.ZoneRedundancy?alt=com.azure.resourcemanager.dashboard.models.ZoneRedundancy&text=ZoneRedundancy\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Properties specific to the grafana resource."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties?alt=com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties&text=ManagedGrafanaProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.dashboard.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-dashboard:1.0.0-beta.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-dashboard:1.2.0-beta.1

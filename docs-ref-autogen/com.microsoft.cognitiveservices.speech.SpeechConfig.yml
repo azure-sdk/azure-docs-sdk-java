@@ -120,6 +120,25 @@ methods:
   returns:
     description: "A speech config instance."
     type: "<xref href=\"com.microsoft.cognitiveservices.speech.SpeechConfig?alt=com.microsoft.cognitiveservices.speech.SpeechConfig&text=SpeechConfig\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.cognitiveservices.speech.SpeechConfig.fromEndpoint(java.net.URI,com.azure.core.credential.KeyCredential)"
+  fullName: "com.microsoft.cognitiveservices.speech.SpeechConfig.fromEndpoint(URI endpoint, KeyCredential keyCredential)"
+  name: "fromEndpoint(URI endpoint, KeyCredential keyCredential)"
+  nameWithType: "SpeechConfig.fromEndpoint(URI endpoint, KeyCredential keyCredential)"
+  summary: "Creates an instance of Speech<wbr>Config with a custom endpoint and key credential."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The service endpoint to connect to."
+    name: "endpoint"
+    type: "<xref href=\"java.net.URI?alt=java.net.URI&text=URI\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The key credential used to authenticate the request."
+    name: "keyCredential"
+    type: "<xref href=\"com.azure.core.credential.KeyCredential?alt=com.azure.core.credential.KeyCredential&text=KeyCredential\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static SpeechConfig fromEndpoint(URI endpoint, KeyCredential keyCredential)"
+  desc: "Creates an instance of SpeechConfig with a custom endpoint and key credential. The query parameters specified in the endpoint URI are not changed, even if they are set by any other API call. For example, if the recognition language is defined in the URI query parameter as \"language=de-DE\", and the property SpeechRecognitionLanguage is set to \"en-US\", the language set in the URI takes precedence, and \"de-DE\" remains the expected language. Since parameters included in the endpoint URI take priority, only parameters that are not specified in the endpoint URI can be set by other APIs. To use an authorization token with FromEndpoint, use FromEndpoint(java.net.URI), and then set the AuthorizationToken property on the new SpeechConfig instance."
+  returns:
+    description: "A speech config instance."
+    type: "<xref href=\"com.microsoft.cognitiveservices.speech.SpeechConfig?alt=com.microsoft.cognitiveservices.speech.SpeechConfig&text=SpeechConfig\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.microsoft.cognitiveservices.speech.SpeechConfig.fromEndpoint(java.net.URI,java.lang.String)"
   fullName: "com.microsoft.cognitiveservices.speech.SpeechConfig.fromEndpoint(URI endpoint, String subscriptionKey)"
   name: "fromEndpoint(URI endpoint, String subscriptionKey)"
@@ -496,4 +515,4 @@ implements:
 - "<xref href=\"java.lang.AutoCloseable?alt=java.lang.AutoCloseable&text=AutoCloseable\" data-throw-if-not-resolved=\"False\" />"
 metadata: {}
 package: "com.microsoft.cognitiveservices.speech"
-artifact: com.microsoft.cognitiveservices.speech:client-sdk:1.44.0
+artifact: com.microsoft.cognitiveservices.speech:client-sdk:1.45.0
