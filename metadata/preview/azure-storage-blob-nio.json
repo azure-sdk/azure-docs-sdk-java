@@ -1,6 +1,6 @@
 {
   "Name": "azure-storage-blob-nio",
-  "Version": "12.0.0-beta.31",
+  "Version": "12.0.0-beta.32",
   "DevVersion": null,
   "DirectoryPath": "sdk/storage/azure-storage-blob-nio",
   "ServiceDirectory": "storage",
@@ -10,29 +10,29 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-storage-blob-nio",
-  "ReleaseStatus": "2025-05-06",
+  "ReleaseStatus": "2025-07-16",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": [
     "com.azure:azure-storage-perf",
     "com.azure:perf-test-core"
   ],
   "ArtifactDetails": {
-    "releaseInBatch": "${{ parameters.release_azurestorageblobnio }}",
-    "name": "azure-storage-blob-nio",
     "safeName": "azurestorageblobnio",
     "groupId": "com.azure",
     "triggeringPaths": [
       "/sdk/storage/ci.yml"
-    ]
+    ],
+    "name": "azure-storage-blob-nio",
+    "releaseInBatch": "${{ parameters.release_azurestorageblobnio }}"
   },
   "CIParameters": {
     "CIMatrixConfigs": [
       {
         "Name": "Storage_ci",
-        "Path": "sdk/storage/platform-matrix-ci.json",
         "Selection": "sparse",
-        "GenerateVMJobs": true,
-        "NonSparseParameters": "Agent"
+        "Path": "sdk/storage/platform-matrix-ci.json",
+        "NonSparseParameters": "Agent",
+        "GenerateVMJobs": true
       }
     ]
   },

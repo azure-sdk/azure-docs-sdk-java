@@ -1,6 +1,6 @@
 {
   "Name": "azure-storage-blob-cryptography",
-  "Version": "12.29.1",
+  "Version": "12.30.0",
   "DevVersion": null,
   "DirectoryPath": "sdk/storage/azure-storage-blob-cryptography",
   "ServiceDirectory": "storage",
@@ -10,18 +10,18 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-storage-blob-cryptography",
-  "ReleaseStatus": "2025-06-19",
+  "ReleaseStatus": "2025-07-16",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": [
     "com.azure:azure-storage-perf",
     "com.azure:perf-test-core"
   ],
   "ArtifactDetails": {
+    "safeName": "azurestorageblobcryptography",
+    "groupId": "com.azure",
     "triggeringPaths": [
       "/sdk/storage/ci.yml"
     ],
-    "groupId": "com.azure",
-    "safeName": "azurestorageblobcryptography",
     "name": "azure-storage-blob-cryptography",
     "releaseInBatch": "${{ parameters.release_azurestorageblobcryptography }}"
   },
@@ -29,10 +29,10 @@
     "CIMatrixConfigs": [
       {
         "Name": "Storage_ci",
-        "GenerateVMJobs": true,
-        "Path": "sdk/storage/platform-matrix-ci.json",
         "Selection": "sparse",
-        "NonSparseParameters": "Agent"
+        "Path": "sdk/storage/platform-matrix-ci.json",
+        "NonSparseParameters": "Agent",
+        "GenerateVMJobs": true
       }
     ]
   },
