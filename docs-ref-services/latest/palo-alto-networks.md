@@ -1,7 +1,7 @@
 ---
 title: Azure Palo Alto Networks SDK for Java
 description: Reference for Azure Palo Alto Networks SDK for Java
-ms.date: 07/15/2025
+ms.date: 07/16/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: paloaltonetworks
