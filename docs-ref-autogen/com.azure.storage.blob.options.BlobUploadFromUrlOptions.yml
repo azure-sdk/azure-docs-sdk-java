@@ -94,6 +94,16 @@ methods:
   returns:
     description: "<xref uid=\"com.azure.storage.blob.models.BlobRequestConditions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobRequestConditions\"></xref>"
     type: "<xref href=\"com.azure.storage.blob.models.BlobRequestConditions?alt=com.azure.storage.blob.models.BlobRequestConditions&text=BlobRequestConditions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.blob.options.BlobUploadFromUrlOptions.getSourceShareTokenIntent()"
+  fullName: "com.azure.storage.blob.options.BlobUploadFromUrlOptions.getSourceShareTokenIntent()"
+  name: "getSourceShareTokenIntent()"
+  nameWithType: "BlobUploadFromUrlOptions.getSourceShareTokenIntent()"
+  summary: "Optional, only applicable (but required) when the source is Azure Storage Files and using token authentication."
+  syntax: "public FileShareTokenIntent getSourceShareTokenIntent()"
+  desc: "Optional, only applicable (but required) when the source is Azure Storage Files and using token authentication. Gets the intent of the request."
+  returns:
+    description: "the <xref uid=\"com.azure.storage.blob.models.FileShareTokenIntent\" data-throw-if-not-resolved=\"false\" data-raw-source=\"FileShareTokenIntent\"></xref> for the file share."
+    type: "<xref href=\"com.azure.storage.blob.models.FileShareTokenIntent?alt=com.azure.storage.blob.models.FileShareTokenIntent&text=FileShareTokenIntent\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.blob.options.BlobUploadFromUrlOptions.getSourceUrl()"
   fullName: "com.azure.storage.blob.options.BlobUploadFromUrlOptions.getSourceUrl()"
   name: "getSourceUrl()"
@@ -232,6 +242,20 @@ methods:
   returns:
     description: "The updated options."
     type: "<xref href=\"com.azure.storage.blob.options.BlobUploadFromUrlOptions?alt=com.azure.storage.blob.options.BlobUploadFromUrlOptions&text=BlobUploadFromUrlOptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.blob.options.BlobUploadFromUrlOptions.setSourceShareTokenIntent(com.azure.storage.blob.models.FileShareTokenIntent)"
+  fullName: "com.azure.storage.blob.options.BlobUploadFromUrlOptions.setSourceShareTokenIntent(FileShareTokenIntent sourceShareTokenIntent)"
+  name: "setSourceShareTokenIntent(FileShareTokenIntent sourceShareTokenIntent)"
+  nameWithType: "BlobUploadFromUrlOptions.setSourceShareTokenIntent(FileShareTokenIntent sourceShareTokenIntent)"
+  summary: "Optional, only applicable (but required) when the source is Azure Storage Files and using token authentication."
+  parameters:
+  - description: "Used to indicate the intent of the request."
+    name: "sourceShareTokenIntent"
+    type: "<xref href=\"com.azure.storage.blob.models.FileShareTokenIntent?alt=com.azure.storage.blob.models.FileShareTokenIntent&text=FileShareTokenIntent\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public BlobUploadFromUrlOptions setSourceShareTokenIntent(FileShareTokenIntent sourceShareTokenIntent)"
+  desc: "Optional, only applicable (but required) when the source is Azure Storage Files and using token authentication. Sets the intent of the request."
+  returns:
+    description: "The updated options."
+    type: "<xref href=\"com.azure.storage.blob.options.BlobUploadFromUrlOptions?alt=com.azure.storage.blob.options.BlobUploadFromUrlOptions&text=BlobUploadFromUrlOptions\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.blob.options.BlobUploadFromUrlOptions.setTags(java.util.Map<java.lang.String,java.lang.String>)"
   fullName: "com.azure.storage.blob.options.BlobUploadFromUrlOptions.setTags(Map<String,String> tags)"
   name: "setTags(Map<String,String> tags)"
@@ -264,4 +288,4 @@ type: "class"
 desc: "Extended options that may be passed when uploading a Block Blob from URL."
 metadata: {}
 package: "com.azure.storage.blob.options"
-artifact: com.azure:azure-storage-blob:12.30.1
+artifact: com.azure:azure-storage-blob:12.31.0

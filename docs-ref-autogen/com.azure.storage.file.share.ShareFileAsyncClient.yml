@@ -238,6 +238,34 @@ methods:
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> containing a <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> whose <xref uid=\"com.azure.core.http.rest.Response.getValue*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"value\"></xref> contains\n <xref uid=\"com.azure.storage.file.share.models.ShareFileInfo\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareFileInfo\"></xref> describing the state of the hard link."
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.models.ShareFileInfo?alt=com.azure.storage.file.share.models.ShareFileInfo&text=ShareFileInfo\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+- uid: "com.azure.storage.file.share.ShareFileAsyncClient.createSymbolicLink(java.lang.String)"
+  fullName: "com.azure.storage.file.share.ShareFileAsyncClient.createSymbolicLink(String linkText)"
+  name: "createSymbolicLink(String linkText)"
+  nameWithType: "ShareFileAsyncClient.createSymbolicLink(String linkText)"
+  summary: "NFS only."
+  parameters:
+  - description: "The absolute or relative path of the file to be linked to."
+    name: "linkText"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public Mono<ShareFileInfo> createSymbolicLink(String linkText)"
+  desc: "NFS only. Creates a symbolic link to a file specified by the path.\n\n```java\nsymbolicLinkClient.createSymbolicLink(sourceClient.getFilePath())\n     .subscribe(response -> System.out.printf(\"Link count is %s.\",\n         response.getPosixProperties().getLinkCount()));\n```"
+  returns:
+    description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> containing a <xref uid=\"com.azure.storage.file.share.models.ShareFileInfo\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareFileInfo\"></xref> describing the state of the symbolic link."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.storage.file.share.models.ShareFileInfo?alt=com.azure.storage.file.share.models.ShareFileInfo&text=ShareFileInfo\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.storage.file.share.ShareFileAsyncClient.createSymbolicLinkWithResponse(com.azure.storage.file.share.options.ShareFileCreateSymbolicLinkOptions)"
+  fullName: "com.azure.storage.file.share.ShareFileAsyncClient.createSymbolicLinkWithResponse(ShareFileCreateSymbolicLinkOptions options)"
+  name: "createSymbolicLinkWithResponse(ShareFileCreateSymbolicLinkOptions options)"
+  nameWithType: "ShareFileAsyncClient.createSymbolicLinkWithResponse(ShareFileCreateSymbolicLinkOptions options)"
+  summary: "NFS only."
+  parameters:
+  - description: "<xref uid=\"com.azure.storage.file.share.options.ShareFileCreateSymbolicLinkOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareFileCreateSymbolicLinkOptions\"></xref>"
+    name: "options"
+    type: "<xref href=\"com.azure.storage.file.share.options.ShareFileCreateSymbolicLinkOptions?alt=com.azure.storage.file.share.options.ShareFileCreateSymbolicLinkOptions&text=ShareFileCreateSymbolicLinkOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public Mono<Response<ShareFileInfo>> createSymbolicLinkWithResponse(ShareFileCreateSymbolicLinkOptions options)"
+  desc: "NFS only. Creates a symbolic link to a file specified by the path.\n\n```java\nShareFileCreateSymbolicLinkOptions options = new ShareFileCreateSymbolicLinkOptions(sourceClient.getFilePath());\n symbolicLinkClient.createSymbolicLinkWithResponse(options)\n     .subscribe(response -> System.out.printf(\"Link count is %s.\",\n         response.getValue().getPosixProperties().getLinkCount()));\n```"
+  returns:
+    description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> containing a <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> whose <xref uid=\"com.azure.core.http.rest.Response.getValue*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"value\"></xref> contains\n <xref uid=\"com.azure.storage.file.share.models.ShareFileInfo\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareFileInfo\"></xref> describing the state of the symbolic link."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.models.ShareFileInfo?alt=com.azure.storage.file.share.models.ShareFileInfo&text=ShareFileInfo\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.storage.file.share.ShareFileAsyncClient.createWithResponse(long,com.azure.storage.file.share.models.ShareFileHttpHeaders,com.azure.storage.file.share.FileSmbProperties,java.lang.String,java.util.Map<java.lang.String,java.lang.String>)"
   fullName: "com.azure.storage.file.share.ShareFileAsyncClient.createWithResponse(long maxSize, ShareFileHttpHeaders httpHeaders, FileSmbProperties smbProperties, String filePermission, Map<String,String> metadata)"
   name: "createWithResponse(long maxSize, ShareFileHttpHeaders httpHeaders, FileSmbProperties smbProperties, String filePermission, Map<String,String> metadata)"
@@ -700,6 +728,26 @@ methods:
   returns:
     description: "The snapshot id which is a unique <code>DateTime</code> value that identifies the share snapshot to its base\n share."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.storage.file.share.ShareFileAsyncClient.getSymbolicLink()"
+  fullName: "com.azure.storage.file.share.ShareFileAsyncClient.getSymbolicLink()"
+  name: "getSymbolicLink()"
+  nameWithType: "ShareFileAsyncClient.getSymbolicLink()"
+  summary: "Reads the value of the symbolic link."
+  syntax: "public Mono<ShareFileSymbolicLinkInfo> getSymbolicLink()"
+  desc: "Reads the value of the symbolic link. Only applicable if this <xref uid=\"com.azure.storage.file.share.ShareFileAsyncClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareFileAsyncClient\"></xref> is pointed at an NFS symbolic link.\n\n```java\nsymbolicLinkClient.getSymbolicLink()\n     .subscribe(response -> {\n         System.out.printf(\"Link text is %s.\", response.getLinkText());\n     });\n```"
+  returns:
+    description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> containing a <xref uid=\"com.azure.storage.file.share.models.ShareFileSymbolicLinkInfo\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareFileSymbolicLinkInfo\"></xref> describing the symbolic link."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.storage.file.share.models.ShareFileSymbolicLinkInfo?alt=com.azure.storage.file.share.models.ShareFileSymbolicLinkInfo&text=ShareFileSymbolicLinkInfo\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.storage.file.share.ShareFileAsyncClient.getSymbolicLinkWithResponse()"
+  fullName: "com.azure.storage.file.share.ShareFileAsyncClient.getSymbolicLinkWithResponse()"
+  name: "getSymbolicLinkWithResponse()"
+  nameWithType: "ShareFileAsyncClient.getSymbolicLinkWithResponse()"
+  summary: "Reads the value of the symbolic link."
+  syntax: "public Mono<Response<ShareFileSymbolicLinkInfo>> getSymbolicLinkWithResponse()"
+  desc: "Reads the value of the symbolic link. Only applicable if this <xref uid=\"com.azure.storage.file.share.ShareFileAsyncClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareFileAsyncClient\"></xref> is pointed at an NFS symbolic link.\n\n```java\nsymbolicLinkClient.getSymbolicLinkWithResponse()\n     .subscribe(response -> {\n         System.out.printf(\"Link text is %s.\", response.getValue().getLinkText());\n     });\n```"
+  returns:
+    description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> containing a <xref uid=\"com.azure.storage.file.share.models.ShareFileSymbolicLinkInfo\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareFileSymbolicLinkInfo\"></xref> describing the symbolic link."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.models.ShareFileSymbolicLinkInfo?alt=com.azure.storage.file.share.models.ShareFileSymbolicLinkInfo&text=ShareFileSymbolicLinkInfo\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.storage.file.share.ShareFileAsyncClient.listHandles()"
   fullName: "com.azure.storage.file.share.ShareFileAsyncClient.listHandles()"
   name: "listHandles()"
@@ -1201,4 +1249,4 @@ type: "class"
 desc: "This class provides a client that contains all the operations for interacting with file in Azure Storage File Service. Operations allowed by the client are creating, copying, uploading, downloading, deleting and listing on a file, retrieving properties, setting metadata and list or force close handles of the file.\n\n**Instantiating an Asynchronous File Client**\n\n```java\nShareFileAsyncClient client = new ShareFileClientBuilder()\n     .connectionString(\"${connectionString}\")\n     .endpoint(\"${endpoint}\")\n     .buildFileAsyncClient();\n```\n\nView <xref uid=\"com.azure.storage.file.share.ShareFileClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"this\"></xref> for additional ways to construct the client."
 metadata: {}
 package: "com.azure.storage.file.share"
-artifact: com.azure:azure-storage-file-share:12.26.1
+artifact: com.azure:azure-storage-file-share:12.27.0

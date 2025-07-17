@@ -400,6 +400,30 @@ methods:
   returns:
     description: "the service version the client is using."
     type: "<xref href=\"com.azure.storage.file.datalake.DataLakeServiceVersion?alt=com.azure.storage.file.datalake.DataLakeServiceVersion&text=DataLakeServiceVersion\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.file.datalake.DataLakePathAsyncClient.getSystemProperties()"
+  fullName: "com.azure.storage.file.datalake.DataLakePathAsyncClient.getSystemProperties()"
+  name: "getSystemProperties()"
+  nameWithType: "DataLakePathAsyncClient.getSystemProperties()"
+  summary: "Returns the system properties for a resource by using the get<wbr>Status query parameter."
+  syntax: "public Mono<PathSystemProperties> getSystemProperties()"
+  desc: "Returns the system properties for a resource by using the getStatus query parameter.\n\n**Code Samples**\n\n```java\nclient.getSystemProperties().subscribe(\n     response -> System.out.printf(\"Is server encrypted: %s\", response.isServerEncrypted()));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/datalakestoragegen2/path/get-properties"
+  returns:
+    description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> containing resource system properties."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.storage.file.datalake.models.PathSystemProperties?alt=com.azure.storage.file.datalake.models.PathSystemProperties&text=PathSystemProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.storage.file.datalake.DataLakePathAsyncClient.getSystemPropertiesWithResponse(com.azure.storage.file.datalake.options.PathGetSystemPropertiesOptions)"
+  fullName: "com.azure.storage.file.datalake.DataLakePathAsyncClient.getSystemPropertiesWithResponse(PathGetSystemPropertiesOptions options)"
+  name: "getSystemPropertiesWithResponse(PathGetSystemPropertiesOptions options)"
+  nameWithType: "DataLakePathAsyncClient.getSystemPropertiesWithResponse(PathGetSystemPropertiesOptions options)"
+  summary: "Returns the system properties for a resource by using the get<wbr>Status query parameter."
+  parameters:
+  - description: "<xref uid=\"com.azure.storage.file.datalake.options.PathGetSystemPropertiesOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PathGetSystemPropertiesOptions\"></xref>"
+    name: "options"
+    type: "<xref href=\"com.azure.storage.file.datalake.options.PathGetSystemPropertiesOptions?alt=com.azure.storage.file.datalake.options.PathGetSystemPropertiesOptions&text=PathGetSystemPropertiesOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public Mono<Response<PathSystemProperties>> getSystemPropertiesWithResponse(PathGetSystemPropertiesOptions options)"
+  desc: "Returns the system properties for a resource by using the getStatus query parameter.\n\n**Code Samples**\n\n```java\nPathGetSystemPropertiesOptions options = new PathGetSystemPropertiesOptions().setRequestConditions(\n     new DataLakeRequestConditions().setLeaseId(leaseId));\n\n client.getSystemPropertiesWithResponse(options).subscribe(\n     response -> System.out.printf(\"Is server encrypted: %s\", response.getValue().isServerEncrypted()));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/datalakestoragegen2/path/get-properties"
+  returns:
+    description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> containing the response and a resource's system properties."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.datalake.models.PathSystemProperties?alt=com.azure.storage.file.datalake.models.PathSystemProperties&text=PathSystemProperties\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.storage.file.datalake.DataLakePathAsyncClient.removeAccessControlRecursive(java.util.List<com.azure.storage.file.datalake.models.PathRemoveAccessControlEntry>)"
   fullName: "com.azure.storage.file.datalake.DataLakePathAsyncClient.removeAccessControlRecursive(List<PathRemoveAccessControlEntry> accessControlList)"
   name: "removeAccessControlRecursive(List<PathRemoveAccessControlEntry> accessControlList)"
@@ -636,4 +660,4 @@ type: "class"
 desc: "This class provides a client that contains all operations that apply to any path object."
 metadata: {}
 package: "com.azure.storage.file.datalake"
-artifact: com.azure:azure-storage-file-datalake:12.23.1
+artifact: com.azure:azure-storage-file-datalake:12.24.0
