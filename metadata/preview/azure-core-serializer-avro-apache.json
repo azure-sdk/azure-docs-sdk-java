@@ -1,6 +1,6 @@
 {
   "Name": "azure-core-serializer-avro-apache",
-  "Version": "1.0.0-beta.58",
+  "Version": "1.0.0-beta.59",
   "DevVersion": null,
   "DirectoryPath": "sdk/core/azure-core-serializer-avro-apache",
   "ServiceDirectory": "core",
@@ -10,7 +10,7 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-core-serializer-avro-apache",
-  "ReleaseStatus": "2025-06-26",
+  "ReleaseStatus": "2025-07-18",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": [
     "com.azure:azure-core-tracing-opentelemetry-samples",
@@ -18,33 +18,33 @@
     "com.azure:perf-test-core"
   ],
   "ArtifactDetails": {
+    "groupId": "com.azure",
+    "releaseInBatch": "${{ parameters.release_azurecoreserializeravroapache }}",
     "safeName": "azurecoreserializeravroapache",
     "triggeringPaths": [
       "/sdk/core/ci.yml"
     ],
-    "releaseInBatch": "${{ parameters.release_azurecoreserializeravroapache }}",
-    "name": "azure-core-serializer-avro-apache",
-    "groupId": "com.azure"
+    "name": "azure-core-serializer-avro-apache"
   },
   "CIParameters": {
     "CIMatrixConfigs": [
       {
-        "GenerateVMJobs": true,
         "Name": "Java_ci_test_base",
-        "NonSparseParameters": "Agent",
+        "GenerateVMJobs": true,
         "Path": "eng/pipelines/templates/stages/platform-matrix.json",
-        "Selection": "sparse"
+        "Selection": "sparse",
+        "NonSparseParameters": "Agent"
       },
       {
-        "PRBatching": false,
         "Name": "version_overrides_tests",
+        "PRBatching": false,
         "GenerateVMJobs": true,
         "Path": "sdk/core/version-overrides-matrix.json",
         "Selection": "all"
       },
       {
-        "PRBatching": false,
         "Name": "version_overrides_vertx_tests",
+        "PRBatching": false,
         "GenerateVMJobs": true,
         "Path": "sdk/core/version-overrides-vertx-matrix.json",
         "Selection": "all"
