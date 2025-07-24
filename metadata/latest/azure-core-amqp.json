@@ -1,6 +1,6 @@
 {
   "Name": "azure-core-amqp",
-  "Version": "2.10.1",
+  "Version": "2.10.2",
   "DevVersion": null,
   "DirectoryPath": "sdk/core/azure-core-amqp",
   "ServiceDirectory": "core",
@@ -10,7 +10,7 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-core-amqp",
-  "ReleaseStatus": "2025-06-26",
+  "ReleaseStatus": "2025-07-23",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": [
     "com.azure:azure-core-tracing-opentelemetry-samples",
@@ -18,36 +18,36 @@
     "com.azure:perf-test-core"
   ],
   "ArtifactDetails": {
+    "releaseInBatch": "${{ parameters.release_azurecoreamqp }}",
     "safeName": "azurecoreamqp",
+    "name": "azure-core-amqp",
+    "groupId": "com.azure",
     "triggeringPaths": [
       "/sdk/core/ci.yml"
-    ],
-    "releaseInBatch": "${{ parameters.release_azurecoreamqp }}",
-    "name": "azure-core-amqp",
-    "groupId": "com.azure"
+    ]
   },
   "CIParameters": {
     "CIMatrixConfigs": [
       {
-        "GenerateVMJobs": true,
+        "Selection": "sparse",
         "Name": "Java_ci_test_base",
         "NonSparseParameters": "Agent",
-        "Path": "eng/pipelines/templates/stages/platform-matrix.json",
-        "Selection": "sparse"
+        "GenerateVMJobs": true,
+        "Path": "eng/pipelines/templates/stages/platform-matrix.json"
       },
       {
-        "PRBatching": false,
+        "Selection": "all",
+        "GenerateVMJobs": true,
         "Name": "version_overrides_tests",
-        "GenerateVMJobs": true,
-        "Path": "sdk/core/version-overrides-matrix.json",
-        "Selection": "all"
+        "PRBatching": false,
+        "Path": "sdk/core/version-overrides-matrix.json"
       },
       {
-        "PRBatching": false,
-        "Name": "version_overrides_vertx_tests",
+        "Selection": "all",
         "GenerateVMJobs": true,
-        "Path": "sdk/core/version-overrides-vertx-matrix.json",
-        "Selection": "all"
+        "Name": "version_overrides_vertx_tests",
+        "PRBatching": false,
+        "Path": "sdk/core/version-overrides-vertx-matrix.json"
       }
     ]
   },
