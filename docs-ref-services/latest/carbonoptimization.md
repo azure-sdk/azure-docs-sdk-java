@@ -6,6 +6,6 @@ ms.topic: reference
 ms.devlang: java
 ms.service: carbonoptimization
 ---
-# Azure Carbonoptimization SDK for Java - preview
-## Packages - preview
+# Azure Carbonoptimization SDK for Java - latest
+## Packages - latest
 [!INCLUDE [packages](carbonoptimization-index.md)]
