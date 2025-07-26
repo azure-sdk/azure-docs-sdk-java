@@ -30,6 +30,16 @@ constructors:
   syntax: "public CustomJwtAuthenticationSettings()"
   desc: "Creates an instance of CustomJwtAuthenticationSettings class."
 methods:
+- uid: "com.azure.resourcemanager.eventgrid.models.CustomJwtAuthenticationSettings.encodedIssuerCertificates()"
+  fullName: "com.azure.resourcemanager.eventgrid.models.CustomJwtAuthenticationSettings.encodedIssuerCertificates()"
+  name: "encodedIssuerCertificates()"
+  nameWithType: "CustomJwtAuthenticationSettings.encodedIssuerCertificates()"
+  summary: "Get the encoded<wbr>Issuer<wbr>Certificates property: Information about the encoded public certificates that are used for custom authentication."
+  syntax: "public List<EncodedIssuerCertificateInfo> encodedIssuerCertificates()"
+  desc: "Get the encodedIssuerCertificates property: Information about the encoded public certificates that are used for custom authentication."
+  returns:
+    description: "the encodedIssuerCertificates value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.eventgrid.models.EncodedIssuerCertificateInfo?alt=com.azure.resourcemanager.eventgrid.models.EncodedIssuerCertificateInfo&text=EncodedIssuerCertificateInfo\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.eventgrid.models.CustomJwtAuthenticationSettings.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.resourcemanager.eventgrid.models.CustomJwtAuthenticationSettings.fromJson(JsonReader jsonReader)"
   name: "fromJson(JsonReader jsonReader)"
@@ -53,9 +63,9 @@ methods:
   fullName: "com.azure.resourcemanager.eventgrid.models.CustomJwtAuthenticationSettings.issuerCertificates()"
   name: "issuerCertificates()"
   nameWithType: "CustomJwtAuthenticationSettings.issuerCertificates()"
-  summary: "Get the issuer<wbr>Certificates property: Information about the certificate that is used for token validation."
+  summary: "Get the issuer<wbr>Certificates property: Information about the certificates that are used for token validation."
   syntax: "public List<IssuerCertificateInfo> issuerCertificates()"
-  desc: "Get the issuerCertificates property: Information about the certificate that is used for token validation. We currently support maximum 2 certificates."
+  desc: "Get the issuerCertificates property: Information about the certificates that are used for token validation. We currently support maximum 2 certificates."
   returns:
     description: "the issuerCertificates value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.eventgrid.models.IssuerCertificateInfo?alt=com.azure.resourcemanager.eventgrid.models.IssuerCertificateInfo&text=IssuerCertificateInfo\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -88,17 +98,31 @@ methods:
   summary: "Validates the instance."
   syntax: "public void validate()"
   desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.eventgrid.models.CustomJwtAuthenticationSettings.withEncodedIssuerCertificates(java.util.List<com.azure.resourcemanager.eventgrid.models.EncodedIssuerCertificateInfo>)"
+  fullName: "com.azure.resourcemanager.eventgrid.models.CustomJwtAuthenticationSettings.withEncodedIssuerCertificates(List<EncodedIssuerCertificateInfo> encodedIssuerCertificates)"
+  name: "withEncodedIssuerCertificates(List<EncodedIssuerCertificateInfo> encodedIssuerCertificates)"
+  nameWithType: "CustomJwtAuthenticationSettings.withEncodedIssuerCertificates(List<EncodedIssuerCertificateInfo> encodedIssuerCertificates)"
+  summary: "Set the encoded<wbr>Issuer<wbr>Certificates property: Information about the encoded public certificates that are used for custom authentication."
+  parameters:
+  - description: "the encodedIssuerCertificates value to set."
+    name: "encodedIssuerCertificates"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.eventgrid.models.EncodedIssuerCertificateInfo?alt=com.azure.resourcemanager.eventgrid.models.EncodedIssuerCertificateInfo&text=EncodedIssuerCertificateInfo\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public CustomJwtAuthenticationSettings withEncodedIssuerCertificates(List<EncodedIssuerCertificateInfo> encodedIssuerCertificates)"
+  desc: "Set the encodedIssuerCertificates property: Information about the encoded public certificates that are used for custom authentication."
+  returns:
+    description: "the CustomJwtAuthenticationSettings object itself."
+    type: "<xref href=\"com.azure.resourcemanager.eventgrid.models.CustomJwtAuthenticationSettings?alt=com.azure.resourcemanager.eventgrid.models.CustomJwtAuthenticationSettings&text=CustomJwtAuthenticationSettings\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.eventgrid.models.CustomJwtAuthenticationSettings.withIssuerCertificates(java.util.List<com.azure.resourcemanager.eventgrid.models.IssuerCertificateInfo>)"
   fullName: "com.azure.resourcemanager.eventgrid.models.CustomJwtAuthenticationSettings.withIssuerCertificates(List<IssuerCertificateInfo> issuerCertificates)"
   name: "withIssuerCertificates(List<IssuerCertificateInfo> issuerCertificates)"
   nameWithType: "CustomJwtAuthenticationSettings.withIssuerCertificates(List<IssuerCertificateInfo> issuerCertificates)"
-  summary: "Set the issuer<wbr>Certificates property: Information about the certificate that is used for token validation."
+  summary: "Set the issuer<wbr>Certificates property: Information about the certificates that are used for token validation."
   parameters:
   - description: "the issuerCertificates value to set."
     name: "issuerCertificates"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.eventgrid.models.IssuerCertificateInfo?alt=com.azure.resourcemanager.eventgrid.models.IssuerCertificateInfo&text=IssuerCertificateInfo\" data-throw-if-not-resolved=\"False\" />&gt;"
   syntax: "public CustomJwtAuthenticationSettings withIssuerCertificates(List<IssuerCertificateInfo> issuerCertificates)"
-  desc: "Set the issuerCertificates property: Information about the certificate that is used for token validation. We currently support maximum 2 certificates."
+  desc: "Set the issuerCertificates property: Information about the certificates that are used for token validation. We currently support maximum 2 certificates."
   returns:
     description: "the CustomJwtAuthenticationSettings object itself."
     type: "<xref href=\"com.azure.resourcemanager.eventgrid.models.CustomJwtAuthenticationSettings?alt=com.azure.resourcemanager.eventgrid.models.CustomJwtAuthenticationSettings&text=CustomJwtAuthenticationSettings\" data-throw-if-not-resolved=\"False\" />"
@@ -122,4 +146,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.eventgrid.models.CustomJwtAuthenticationSettings?alt=com.azure.resourcemanager.eventgrid.models.CustomJwtAuthenticationSettings&text=CustomJwtAuthenticationSettings\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.eventgrid.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-eventgrid:1.2.0-beta.7
+artifact: com.azure.resourcemanager:azure-resourcemanager-eventgrid:1.3.0-beta.1

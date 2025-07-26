@@ -35,7 +35,7 @@ methods:
   desc: "Acquires a lease for write and delete operations. The lease duration must be between 15 and 60 seconds or -1 for an infinite duration.\n\n**Code Samples**\n\n```java\nclient.acquireLease(60).subscribe(response -> System.out.printf(\"Lease ID is %s%n\", response));\n```"
   returns:
     description: "A reactive response containing the lease ID."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.acquireLeaseWithResponse(com.azure.storage.blob.options.BlobAcquireLeaseOptions)"
   fullName: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.acquireLeaseWithResponse(BlobAcquireLeaseOptions options)"
   name: "acquireLeaseWithResponse(BlobAcquireLeaseOptions options)"
@@ -49,7 +49,7 @@ methods:
   desc: "Acquires a lease for write and delete operations. The lease duration must be between 15 and 60 seconds, or -1 for an infinite duration.\n\n**Code Samples**\n\n```java\nBlobLeaseRequestConditions requestConditions = new BlobLeaseRequestConditions()\n     .setIfModifiedSince(OffsetDateTime.now().minusDays(3));\n\n BlobAcquireLeaseOptions options = new BlobAcquireLeaseOptions(60)\n     .setRequestConditions(requestConditions);\n\n client.acquireLeaseWithResponse(options).subscribe(response ->\n     System.out.printf(\"Lease ID is %s%n\", response.getValue()));\n```"
   returns:
     description: "A reactive response containing the lease ID."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.acquireLeaseWithResponse(int,com.azure.core.http.RequestConditions)"
   fullName: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.acquireLeaseWithResponse(int durationInSeconds, RequestConditions modifiedRequestConditions)"
   name: "acquireLeaseWithResponse(int durationInSeconds, RequestConditions modifiedRequestConditions)"
@@ -66,7 +66,7 @@ methods:
   desc: "Acquires a lease for write and delete operations. The lease duration must be between 15 and 60 seconds, or -1 for an infinite duration.\n\n**Code Samples**\n\n```java\nRequestConditions modifiedRequestConditions = new RequestConditions()\n     .setIfModifiedSince(OffsetDateTime.now().minusDays(3));\n\n client.acquireLeaseWithResponse(60, modifiedRequestConditions).subscribe(response ->\n     System.out.printf(\"Lease ID is %s%n\", response.getValue()));\n```"
   returns:
     description: "A reactive response containing the lease ID."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.breakLease()"
   fullName: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.breakLease()"
   name: "breakLease()"
@@ -76,7 +76,7 @@ methods:
   desc: "Breaks the previously acquired lease, if it exists.\n\n**Code Samples**\n\n```java\nclient.breakLease().subscribe(response ->\n     System.out.printf(\"The broken lease has %d seconds remaining on the lease\", response));\n```"
   returns:
     description: "A reactive response containing the remaining time in the broken lease in seconds."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.breakLeaseWithResponse(com.azure.storage.blob.options.BlobBreakLeaseOptions)"
   fullName: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.breakLeaseWithResponse(BlobBreakLeaseOptions options)"
   name: "breakLeaseWithResponse(BlobBreakLeaseOptions options)"
@@ -90,7 +90,7 @@ methods:
   desc: "Breaks the previously acquired lease, if it exists.\n\nIf `null` is passed for `breakPeriodInSeconds` a fixed duration lease will break after the remaining lease period elapses and an infinite lease will break immediately.\n\n**Code Samples**\n\n```java\nInteger retainLeaseInSeconds = 5;\n BlobLeaseRequestConditions requestConditions = new BlobLeaseRequestConditions()\n     .setIfUnmodifiedSince(OffsetDateTime.now().minusDays(3));\n\n BlobBreakLeaseOptions options = new BlobBreakLeaseOptions()\n     .setBreakPeriod(Duration.ofSeconds(retainLeaseInSeconds))\n     .setRequestConditions(requestConditions);\n\n client.breakLeaseWithResponse(options).subscribe(response ->\n     System.out.printf(\"The broken lease has %d seconds remaining on the lease\", response.getValue()));\n```"
   returns:
     description: "A reactive response containing the remaining time in the broken lease in seconds."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.breakLeaseWithResponse(java.lang.Integer,com.azure.core.http.RequestConditions)"
   fullName: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.breakLeaseWithResponse(Integer breakPeriodInSeconds, RequestConditions modifiedRequestConditions)"
   name: "breakLeaseWithResponse(Integer breakPeriodInSeconds, RequestConditions modifiedRequestConditions)"
@@ -107,7 +107,7 @@ methods:
   desc: "Breaks the previously acquired lease, if it exists.\n\nIf `null` is passed for `breakPeriodInSeconds` a fixed duration lease will break after the remaining lease period elapses and an infinite lease will break immediately.\n\n**Code Samples**\n\n```java\nInteger retainLeaseInSeconds = 5;\n RequestConditions modifiedRequestConditions = new RequestConditions()\n     .setIfUnmodifiedSince(OffsetDateTime.now().minusDays(3));\n\n client.breakLeaseWithResponse(retainLeaseInSeconds, modifiedRequestConditions).subscribe(response ->\n     System.out.printf(\"The broken lease has %d seconds remaining on the lease\", response.getValue()));\n```"
   returns:
     description: "A reactive response containing the remaining time in the broken lease in seconds."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.changeLease(java.lang.String)"
   fullName: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.changeLease(String proposedId)"
   name: "changeLease(String proposedId)"
@@ -121,7 +121,7 @@ methods:
   desc: "Changes the lease ID.\n\n**Code Samples**\n\n```java\nclient.changeLease(\"proposedId\").subscribe(response -> System.out.printf(\"Changed lease ID is %s%n\", response));\n```"
   returns:
     description: "A reactive response containing the new lease ID."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.changeLeaseWithResponse(com.azure.storage.blob.options.BlobChangeLeaseOptions)"
   fullName: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.changeLeaseWithResponse(BlobChangeLeaseOptions options)"
   name: "changeLeaseWithResponse(BlobChangeLeaseOptions options)"
@@ -135,7 +135,7 @@ methods:
   desc: "Changes the lease ID.\n\n**Code Samples**\n\n```java\nBlobLeaseRequestConditions requestConditions = new BlobLeaseRequestConditions()\n     .setIfUnmodifiedSince(OffsetDateTime.now().minusDays(3));\n\n BlobChangeLeaseOptions options = new BlobChangeLeaseOptions(\"proposedId\")\n     .setRequestConditions(requestConditions);\n\n client.changeLeaseWithResponse(options).subscribe(response ->\n     System.out.printf(\"Changed lease ID is %s%n\", response.getValue()));\n```"
   returns:
     description: "A reactive response containing the new lease ID."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.changeLeaseWithResponse(java.lang.String,com.azure.core.http.RequestConditions)"
   fullName: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.changeLeaseWithResponse(String proposedId, RequestConditions modifiedRequestConditions)"
   name: "changeLeaseWithResponse(String proposedId, RequestConditions modifiedRequestConditions)"
@@ -152,7 +152,7 @@ methods:
   desc: "Changes the lease ID.\n\n**Code Samples**\n\n```java\nRequestConditions modifiedRequestConditions = new RequestConditions()\n     .setIfUnmodifiedSince(OffsetDateTime.now().minusDays(3));\n\n client.changeLeaseWithResponse(\"proposedId\", modifiedRequestConditions).subscribe(response ->\n     System.out.printf(\"Changed lease ID is %s%n\", response.getValue()));\n```"
   returns:
     description: "A reactive response containing the new lease ID."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.getAccountName()"
   fullName: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.getAccountName()"
   name: "getAccountName()"
@@ -192,7 +192,7 @@ methods:
   desc: "Releases the previously acquired lease.\n\n**Code Samples**\n\n```java\nclient.releaseLease().subscribe(response -> System.out.println(\"Completed release lease\"));\n```"
   returns:
     description: "A reactive response signalling completion."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.releaseLeaseWithResponse(com.azure.storage.blob.options.BlobReleaseLeaseOptions)"
   fullName: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.releaseLeaseWithResponse(BlobReleaseLeaseOptions options)"
   name: "releaseLeaseWithResponse(BlobReleaseLeaseOptions options)"
@@ -206,7 +206,7 @@ methods:
   desc: "Releases the previously acquired lease.\n\n**Code Samples**\n\n```java\nBlobLeaseRequestConditions requestConditions = new BlobLeaseRequestConditions()\n     .setIfModifiedSince(OffsetDateTime.now().minusDays(3));\n\n BlobReleaseLeaseOptions options = new BlobReleaseLeaseOptions()\n     .setRequestConditions(requestConditions);\n\n client.releaseLeaseWithResponse(options).subscribe(response ->\n     System.out.printf(\"Release lease completed with status %d%n\", response.getStatusCode()));\n```"
   returns:
     description: "A reactive response signalling completion."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.releaseLeaseWithResponse(com.azure.core.http.RequestConditions)"
   fullName: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.releaseLeaseWithResponse(RequestConditions modifiedRequestConditions)"
   name: "releaseLeaseWithResponse(RequestConditions modifiedRequestConditions)"
@@ -220,7 +220,7 @@ methods:
   desc: "Releases the previously acquired lease.\n\n**Code Samples**\n\n```java\nRequestConditions modifiedRequestConditions = new RequestConditions()\n     .setIfUnmodifiedSince(OffsetDateTime.now().minusDays(3));\n\n client.releaseLeaseWithResponse(modifiedRequestConditions).subscribe(response ->\n     System.out.printf(\"Release lease completed with status %d%n\", response.getStatusCode()));\n```"
   returns:
     description: "A reactive response signalling completion."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.renewLease()"
   fullName: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.renewLease()"
   name: "renewLease()"
@@ -230,7 +230,7 @@ methods:
   desc: "Renews the previously acquired lease.\n\n**Code Samples**\n\n```java\nclient.renewLease().subscribe(response -> System.out.printf(\"Renewed lease ID is %s%n\", response));\n```"
   returns:
     description: "A reactive response containing the renewed lease ID."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.renewLeaseWithResponse(com.azure.storage.blob.options.BlobRenewLeaseOptions)"
   fullName: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.renewLeaseWithResponse(BlobRenewLeaseOptions options)"
   name: "renewLeaseWithResponse(BlobRenewLeaseOptions options)"
@@ -244,7 +244,7 @@ methods:
   desc: "Renews the previously acquired lease.\n\n**Code Samples**\n\n```java\nBlobLeaseRequestConditions requestConditions = new BlobLeaseRequestConditions()\n     .setIfModifiedSince(OffsetDateTime.now().minusDays(3));\n\n BlobRenewLeaseOptions options = new BlobRenewLeaseOptions()\n     .setRequestConditions(requestConditions);\n\n client.renewLeaseWithResponse(options).subscribe(response ->\n     System.out.printf(\"Lease ID is %s%n\", response.getValue()));\n```"
   returns:
     description: "A reactive response containing the renewed lease ID."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.renewLeaseWithResponse(com.azure.core.http.RequestConditions)"
   fullName: "com.azure.storage.blob.specialized.BlobLeaseAsyncClient.renewLeaseWithResponse(RequestConditions modifiedRequestConditions)"
   name: "renewLeaseWithResponse(RequestConditions modifiedRequestConditions)"
@@ -258,7 +258,7 @@ methods:
   desc: "Renews the previously acquired lease.\n\n**Code Samples**\n\n```java\nRequestConditions modifiedRequestConditions = new RequestConditions()\n     .setIfUnmodifiedSince(OffsetDateTime.now().minusDays(3));\n\n client.renewLeaseWithResponse(modifiedRequestConditions).subscribe(response ->\n     System.out.printf(\"Renewed lease ID is %s%n\", response.getValue()));\n```"
   returns:
     description: "A reactive response containing the renewed lease ID."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;"
 type: "class"
 desc: "This class provides a client that contains all the leasing operations for <xref uid=\"com.azure.storage.blob.BlobContainerAsyncClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"containers\"></xref> and <xref uid=\"com.azure.storage.blob.BlobAsyncClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"blobs\"></xref>. This client acts as a supplement to those clients and only handles leasing operations.\n\n**Instantiating a BlobLeaseAsyncClient**\n\n```java\nBlobLeaseAsyncClient blobLeaseAsyncClient = new BlobLeaseClientBuilder()\n     .blobAsyncClient(blobAsyncClient)\n     .buildAsyncClient();\n```\n\n```java\nBlobLeaseAsyncClient blobLeaseAsyncClient = new BlobLeaseClientBuilder()\n     .containerAsyncClient(blobContainerAsyncClient)\n     .buildAsyncClient();\n```\n\nView <xref uid=\"com.azure.storage.blob.specialized.BlobLeaseClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"this\"></xref> for additional ways to construct the client.\n\nFor more information about leasing see the [container leasing][] or [blob leasing][] documentation.\n\n\n[container leasing]: https://docs.microsoft.com/rest/api/storageservices/lease-container\n[blob leasing]: https://docs.microsoft.com/rest/api/storageservices/lease-blob"
 metadata: {}

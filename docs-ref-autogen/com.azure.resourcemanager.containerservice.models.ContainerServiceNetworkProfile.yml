@@ -73,9 +73,9 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile.ipFamilies()"
   name: "ipFamilies()"
   nameWithType: "ContainerServiceNetworkProfile.ipFamilies()"
-  summary: "Get the ip<wbr>Families property: IP families are used to determine single-stack or dual-stack clusters."
+  summary: "Get the ip<wbr>Families property: The IP families used to specify IP versions available to the cluster."
   syntax: "public List<IpFamily> ipFamilies()"
-  desc: "Get the ipFamilies property: IP families are used to determine single-stack or dual-stack clusters. For single-stack, the expected value is IPv4. For dual-stack, the expected values are IPv4 and IPv6."
+  desc: "Get the ipFamilies property: The IP families used to specify IP versions available to the cluster. IP families are used to determine single-stack or dual-stack clusters. For single-stack, the expected value is IPv4. For dual-stack, the expected values are IPv4 and IPv6."
   returns:
     description: "the ipFamilies value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.containerservice.models.IpFamily?alt=com.azure.resourcemanager.containerservice.models.IpFamily&text=IpFamily\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -93,9 +93,9 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile.loadBalancerSku()"
   name: "loadBalancerSku()"
   nameWithType: "ContainerServiceNetworkProfile.loadBalancerSku()"
-  summary: "Get the load<wbr>Balancer<wbr>Sku property: The default is 'standard'."
+  summary: "Get the load<wbr>Balancer<wbr>Sku property: The load balancer sku for the managed cluster."
   syntax: "public LoadBalancerSku loadBalancerSku()"
-  desc: "Get the loadBalancerSku property: The default is 'standard'. See \\[Azure Load Balancer SKUs\\](https://docs.microsoft.com/azure/load-balancer/skus) for more information about the differences between load balancer SKUs."
+  desc: "Get the loadBalancerSku property: The load balancer sku for the managed cluster. The default is 'standard'. See \\[Azure Load Balancer SKUs\\](https://docs.microsoft.com/azure/load-balancer/skus) for more information about the differences between load balancer SKUs."
   returns:
     description: "the loadBalancerSku value."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.LoadBalancerSku?alt=com.azure.resourcemanager.containerservice.models.LoadBalancerSku&text=LoadBalancerSku\" data-throw-if-not-resolved=\"False\" />"
@@ -123,9 +123,9 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile.networkMode()"
   name: "networkMode()"
   nameWithType: "ContainerServiceNetworkProfile.networkMode()"
-  summary: "Get the network<wbr>Mode property: This cannot be specified if network<wbr>Plugin is anything other than 'azure'."
+  summary: "Get the network<wbr>Mode property: The network mode Azure CNI is configured with."
   syntax: "public NetworkMode networkMode()"
-  desc: "Get the networkMode property: This cannot be specified if networkPlugin is anything other than 'azure'."
+  desc: "Get the networkMode property: The network mode Azure CNI is configured with. This cannot be specified if networkPlugin is anything other than 'azure'."
   returns:
     description: "the networkMode value."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.NetworkMode?alt=com.azure.resourcemanager.containerservice.models.NetworkMode&text=NetworkMode\" data-throw-if-not-resolved=\"False\" />"
@@ -163,9 +163,9 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile.outboundType()"
   name: "outboundType()"
   nameWithType: "ContainerServiceNetworkProfile.outboundType()"
-  summary: "Get the outbound<wbr>Type property: This can only be set at cluster creation time and cannot be changed later."
+  summary: "Get the outbound<wbr>Type property: The outbound (egress) routing method."
   syntax: "public OutboundType outboundType()"
-  desc: "Get the outboundType property: This can only be set at cluster creation time and cannot be changed later. For more information see \\[egress outbound type\\](https://docs.microsoft.com/azure/aks/egress-outboundtype)."
+  desc: "Get the outboundType property: The outbound (egress) routing method. This can only be set at cluster creation time and cannot be changed later. For more information see \\[egress outbound type\\](https://docs.microsoft.com/azure/aks/egress-outboundtype)."
   returns:
     description: "the outboundType value."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.OutboundType?alt=com.azure.resourcemanager.containerservice.models.OutboundType&text=OutboundType\" data-throw-if-not-resolved=\"False\" />"
@@ -183,9 +183,9 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile.podCidrs()"
   name: "podCidrs()"
   nameWithType: "ContainerServiceNetworkProfile.podCidrs()"
-  summary: "Get the pod<wbr>Cidrs property: One IPv4 CIDR is expected for single-stack networking."
+  summary: "Get the pod<wbr>Cidrs property: The CIDR notation IP ranges from which to assign pod IPs."
   syntax: "public List<String> podCidrs()"
-  desc: "Get the podCidrs property: One IPv4 CIDR is expected for single-stack networking. Two CIDRs, one for each IP family (IPv4/IPv6), is expected for dual-stack networking."
+  desc: "Get the podCidrs property: The CIDR notation IP ranges from which to assign pod IPs. One IPv4 CIDR is expected for single-stack networking. Two CIDRs, one for each IP family (IPv4/IPv6), is expected for dual-stack networking."
   returns:
     description: "the podCidrs value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
@@ -203,9 +203,9 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile.serviceCidrs()"
   name: "serviceCidrs()"
   nameWithType: "ContainerServiceNetworkProfile.serviceCidrs()"
-  summary: "Get the service<wbr>Cidrs property: One IPv4 CIDR is expected for single-stack networking."
+  summary: "Get the service<wbr>Cidrs property: The CIDR notation IP ranges from which to assign service cluster IPs."
   syntax: "public List<String> serviceCidrs()"
-  desc: "Get the serviceCidrs property: One IPv4 CIDR is expected for single-stack networking. Two CIDRs, one for each IP family (IPv4/IPv6), is expected for dual-stack networking. They must not overlap with any Subnet IP ranges."
+  desc: "Get the serviceCidrs property: The CIDR notation IP ranges from which to assign service cluster IPs. One IPv4 CIDR is expected for single-stack networking. Two CIDRs, one for each IP family (IPv4/IPv6), is expected for dual-stack networking. They must not overlap with any Subnet IP ranges."
   returns:
     description: "the serviceCidrs value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
@@ -270,13 +270,13 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile.withIpFamilies(List<IpFamily> ipFamilies)"
   name: "withIpFamilies(List<IpFamily> ipFamilies)"
   nameWithType: "ContainerServiceNetworkProfile.withIpFamilies(List<IpFamily> ipFamilies)"
-  summary: "Set the ip<wbr>Families property: IP families are used to determine single-stack or dual-stack clusters."
+  summary: "Set the ip<wbr>Families property: The IP families used to specify IP versions available to the cluster."
   parameters:
   - description: "the ipFamilies value to set."
     name: "ipFamilies"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.containerservice.models.IpFamily?alt=com.azure.resourcemanager.containerservice.models.IpFamily&text=IpFamily\" data-throw-if-not-resolved=\"False\" />&gt;"
   syntax: "public ContainerServiceNetworkProfile withIpFamilies(List<IpFamily> ipFamilies)"
-  desc: "Set the ipFamilies property: IP families are used to determine single-stack or dual-stack clusters. For single-stack, the expected value is IPv4. For dual-stack, the expected values are IPv4 and IPv6."
+  desc: "Set the ipFamilies property: The IP families used to specify IP versions available to the cluster. IP families are used to determine single-stack or dual-stack clusters. For single-stack, the expected value is IPv4. For dual-stack, the expected values are IPv4 and IPv6."
   returns:
     description: "the ContainerServiceNetworkProfile object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile?alt=com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile&text=ContainerServiceNetworkProfile\" data-throw-if-not-resolved=\"False\" />"
@@ -298,13 +298,13 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile.withLoadBalancerSku(LoadBalancerSku loadBalancerSku)"
   name: "withLoadBalancerSku(LoadBalancerSku loadBalancerSku)"
   nameWithType: "ContainerServiceNetworkProfile.withLoadBalancerSku(LoadBalancerSku loadBalancerSku)"
-  summary: "Set the load<wbr>Balancer<wbr>Sku property: The default is 'standard'."
+  summary: "Set the load<wbr>Balancer<wbr>Sku property: The load balancer sku for the managed cluster."
   parameters:
   - description: "the loadBalancerSku value to set."
     name: "loadBalancerSku"
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.LoadBalancerSku?alt=com.azure.resourcemanager.containerservice.models.LoadBalancerSku&text=LoadBalancerSku\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public ContainerServiceNetworkProfile withLoadBalancerSku(LoadBalancerSku loadBalancerSku)"
-  desc: "Set the loadBalancerSku property: The default is 'standard'. See \\[Azure Load Balancer SKUs\\](https://docs.microsoft.com/azure/load-balancer/skus) for more information about the differences between load balancer SKUs."
+  desc: "Set the loadBalancerSku property: The load balancer sku for the managed cluster. The default is 'standard'. See \\[Azure Load Balancer SKUs\\](https://docs.microsoft.com/azure/load-balancer/skus) for more information about the differences between load balancer SKUs."
   returns:
     description: "the ContainerServiceNetworkProfile object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile?alt=com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile&text=ContainerServiceNetworkProfile\" data-throw-if-not-resolved=\"False\" />"
@@ -340,13 +340,13 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile.withNetworkMode(NetworkMode networkMode)"
   name: "withNetworkMode(NetworkMode networkMode)"
   nameWithType: "ContainerServiceNetworkProfile.withNetworkMode(NetworkMode networkMode)"
-  summary: "Set the network<wbr>Mode property: This cannot be specified if network<wbr>Plugin is anything other than 'azure'."
+  summary: "Set the network<wbr>Mode property: The network mode Azure CNI is configured with."
   parameters:
   - description: "the networkMode value to set."
     name: "networkMode"
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.NetworkMode?alt=com.azure.resourcemanager.containerservice.models.NetworkMode&text=NetworkMode\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public ContainerServiceNetworkProfile withNetworkMode(NetworkMode networkMode)"
-  desc: "Set the networkMode property: This cannot be specified if networkPlugin is anything other than 'azure'."
+  desc: "Set the networkMode property: The network mode Azure CNI is configured with. This cannot be specified if networkPlugin is anything other than 'azure'."
   returns:
     description: "the ContainerServiceNetworkProfile object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile?alt=com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile&text=ContainerServiceNetworkProfile\" data-throw-if-not-resolved=\"False\" />"
@@ -396,13 +396,13 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile.withOutboundType(OutboundType outboundType)"
   name: "withOutboundType(OutboundType outboundType)"
   nameWithType: "ContainerServiceNetworkProfile.withOutboundType(OutboundType outboundType)"
-  summary: "Set the outbound<wbr>Type property: This can only be set at cluster creation time and cannot be changed later."
+  summary: "Set the outbound<wbr>Type property: The outbound (egress) routing method."
   parameters:
   - description: "the outboundType value to set."
     name: "outboundType"
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.OutboundType?alt=com.azure.resourcemanager.containerservice.models.OutboundType&text=OutboundType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public ContainerServiceNetworkProfile withOutboundType(OutboundType outboundType)"
-  desc: "Set the outboundType property: This can only be set at cluster creation time and cannot be changed later. For more information see \\[egress outbound type\\](https://docs.microsoft.com/azure/aks/egress-outboundtype)."
+  desc: "Set the outboundType property: The outbound (egress) routing method. This can only be set at cluster creation time and cannot be changed later. For more information see \\[egress outbound type\\](https://docs.microsoft.com/azure/aks/egress-outboundtype)."
   returns:
     description: "the ContainerServiceNetworkProfile object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile?alt=com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile&text=ContainerServiceNetworkProfile\" data-throw-if-not-resolved=\"False\" />"
@@ -424,13 +424,13 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile.withPodCidrs(List<String> podCidrs)"
   name: "withPodCidrs(List<String> podCidrs)"
   nameWithType: "ContainerServiceNetworkProfile.withPodCidrs(List<String> podCidrs)"
-  summary: "Set the pod<wbr>Cidrs property: One IPv4 CIDR is expected for single-stack networking."
+  summary: "Set the pod<wbr>Cidrs property: The CIDR notation IP ranges from which to assign pod IPs."
   parameters:
   - description: "the podCidrs value to set."
     name: "podCidrs"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
   syntax: "public ContainerServiceNetworkProfile withPodCidrs(List<String> podCidrs)"
-  desc: "Set the podCidrs property: One IPv4 CIDR is expected for single-stack networking. Two CIDRs, one for each IP family (IPv4/IPv6), is expected for dual-stack networking."
+  desc: "Set the podCidrs property: The CIDR notation IP ranges from which to assign pod IPs. One IPv4 CIDR is expected for single-stack networking. Two CIDRs, one for each IP family (IPv4/IPv6), is expected for dual-stack networking."
   returns:
     description: "the ContainerServiceNetworkProfile object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile?alt=com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile&text=ContainerServiceNetworkProfile\" data-throw-if-not-resolved=\"False\" />"
@@ -452,13 +452,13 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile.withServiceCidrs(List<String> serviceCidrs)"
   name: "withServiceCidrs(List<String> serviceCidrs)"
   nameWithType: "ContainerServiceNetworkProfile.withServiceCidrs(List<String> serviceCidrs)"
-  summary: "Set the service<wbr>Cidrs property: One IPv4 CIDR is expected for single-stack networking."
+  summary: "Set the service<wbr>Cidrs property: The CIDR notation IP ranges from which to assign service cluster IPs."
   parameters:
   - description: "the serviceCidrs value to set."
     name: "serviceCidrs"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
   syntax: "public ContainerServiceNetworkProfile withServiceCidrs(List<String> serviceCidrs)"
-  desc: "Set the serviceCidrs property: One IPv4 CIDR is expected for single-stack networking. Two CIDRs, one for each IP family (IPv4/IPv6), is expected for dual-stack networking. They must not overlap with any Subnet IP ranges."
+  desc: "Set the serviceCidrs property: The CIDR notation IP ranges from which to assign service cluster IPs. One IPv4 CIDR is expected for single-stack networking. Two CIDRs, one for each IP family (IPv4/IPv6), is expected for dual-stack networking. They must not overlap with any Subnet IP ranges."
   returns:
     description: "the ContainerServiceNetworkProfile object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile?alt=com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile&text=ContainerServiceNetworkProfile\" data-throw-if-not-resolved=\"False\" />"
@@ -482,4 +482,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile?alt=com.azure.resourcemanager.containerservice.models.ContainerServiceNetworkProfile&text=ContainerServiceNetworkProfile\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.52.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.53.0

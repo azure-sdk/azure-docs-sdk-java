@@ -66,7 +66,7 @@ methods:
   nameWithType: "DataDisk.detachOption()"
   summary: "Get the detach<wbr>Option property: Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine."
   syntax: "public DiskDetachOptionTypes detachOption()"
-  desc: "Get the detachOption property: Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: \\*\\*ForceDetach.\\*\\* detachOption: \\*\\*ForceDetach\\*\\* is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'."
+  desc: "Get the detachOption property: Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: \\*\\*ForceDetach.\\*\\* detachOption: \\*\\*ForceDetach\\*\\* is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. \\*\\*This feature is still in preview\\*\\*. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'."
   returns:
     description: "the detachOption value."
     type: "<xref href=\"com.azure.resourcemanager.compute.models.DiskDetachOptionTypes?alt=com.azure.resourcemanager.compute.models.DiskDetachOptionTypes&text=DiskDetachOptionTypes\" data-throw-if-not-resolved=\"False\" />"
@@ -260,7 +260,7 @@ methods:
     name: "detachOption"
     type: "<xref href=\"com.azure.resourcemanager.compute.models.DiskDetachOptionTypes?alt=com.azure.resourcemanager.compute.models.DiskDetachOptionTypes&text=DiskDetachOptionTypes\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public DataDisk withDetachOption(DiskDetachOptionTypes detachOption)"
-  desc: "Set the detachOption property: Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: \\*\\*ForceDetach.\\*\\* detachOption: \\*\\*ForceDetach\\*\\* is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'."
+  desc: "Set the detachOption property: Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: \\*\\*ForceDetach.\\*\\* detachOption: \\*\\*ForceDetach\\*\\* is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. \\*\\*This feature is still in preview\\*\\*. To force-detach a data disk update toBeDetached to 'true' along with setting detachOption: 'ForceDetach'."
   returns:
     description: "the DataDisk object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.models.DataDisk?alt=com.azure.resourcemanager.compute.models.DataDisk&text=DataDisk\" data-throw-if-not-resolved=\"False\" />"
@@ -406,4 +406,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.compute.models.DataDisk?alt=com.azure.resourcemanager.compute.models.DataDisk&text=DataDisk\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.compute.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.52.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.53.0

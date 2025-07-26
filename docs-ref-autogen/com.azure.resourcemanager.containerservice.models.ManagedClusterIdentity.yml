@@ -95,9 +95,9 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ManagedClusterIdentity.type()"
   name: "type()"
   nameWithType: "ManagedClusterIdentity.type()"
-  summary: "Get the type property: For more information see \\[use managed identities in AKS\\](https://docs.<wbr>microsoft.<wbr>com/azure/aks/use-managed-identity)."
+  summary: "Get the type property: The type of identity used for the managed cluster."
   syntax: "public ResourceIdentityType type()"
-  desc: "Get the type property: For more information see \\[use managed identities in AKS\\](https://docs.microsoft.com/azure/aks/use-managed-identity)."
+  desc: "Get the type property: The type of identity used for the managed cluster. For more information see \\[use managed identities in AKS\\](https://docs.microsoft.com/azure/aks/use-managed-identity)."
   returns:
     description: "the type value."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ResourceIdentityType?alt=com.azure.resourcemanager.containerservice.models.ResourceIdentityType&text=ResourceIdentityType\" data-throw-if-not-resolved=\"False\" />"
@@ -105,9 +105,9 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ManagedClusterIdentity.userAssignedIdentities()"
   name: "userAssignedIdentities()"
   nameWithType: "ManagedClusterIdentity.userAssignedIdentities()"
-  summary: "Get the user<wbr>Assigned<wbr>Identities property: The keys must be ARM resource IDs in the form: '/subscriptions/\\{subscription<wbr>Id\\}/resource<wbr>Groups/\\{resource<wbr>Group<wbr>Name\\}/providers/Microsoft.<wbr>Managed<wbr>Identity/user<wbr>Assigned<wbr>Identities/\\{identity<wbr>Name\\}'."
+  summary: "Get the user<wbr>Assigned<wbr>Identities property: The user identity associated with the managed cluster."
   syntax: "public Map<String,ManagedServiceIdentityUserAssignedIdentitiesValue> userAssignedIdentities()"
-  desc: "Get the userAssignedIdentities property: The keys must be ARM resource IDs in the form: '/subscriptions/\\{subscriptionId\\}/resourceGroups/\\{resourceGroupName\\}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/\\{identityName\\}'."
+  desc: "Get the userAssignedIdentities property: The user identity associated with the managed cluster. This identity will be used in control plane. Only one user assigned identity is allowed. The keys must be ARM resource IDs in the form: '/subscriptions/\\{subscriptionId\\}/resourceGroups/\\{resourceGroupName\\}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/\\{identityName\\}'."
   returns:
     description: "the userAssignedIdentities value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedServiceIdentityUserAssignedIdentitiesValue?alt=com.azure.resourcemanager.containerservice.models.ManagedServiceIdentityUserAssignedIdentitiesValue&text=ManagedServiceIdentityUserAssignedIdentitiesValue\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -136,13 +136,13 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ManagedClusterIdentity.withType(ResourceIdentityType type)"
   name: "withType(ResourceIdentityType type)"
   nameWithType: "ManagedClusterIdentity.withType(ResourceIdentityType type)"
-  summary: "Set the type property: For more information see \\[use managed identities in AKS\\](https://docs.<wbr>microsoft.<wbr>com/azure/aks/use-managed-identity)."
+  summary: "Set the type property: The type of identity used for the managed cluster."
   parameters:
   - description: "the type value to set."
     name: "type"
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ResourceIdentityType?alt=com.azure.resourcemanager.containerservice.models.ResourceIdentityType&text=ResourceIdentityType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public ManagedClusterIdentity withType(ResourceIdentityType type)"
-  desc: "Set the type property: For more information see \\[use managed identities in AKS\\](https://docs.microsoft.com/azure/aks/use-managed-identity)."
+  desc: "Set the type property: The type of identity used for the managed cluster. For more information see \\[use managed identities in AKS\\](https://docs.microsoft.com/azure/aks/use-managed-identity)."
   returns:
     description: "the ManagedClusterIdentity object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterIdentity?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterIdentity&text=ManagedClusterIdentity\" data-throw-if-not-resolved=\"False\" />"
@@ -150,13 +150,13 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ManagedClusterIdentity.withUserAssignedIdentities(Map<String,ManagedServiceIdentityUserAssignedIdentitiesValue> userAssignedIdentities)"
   name: "withUserAssignedIdentities(Map<String,ManagedServiceIdentityUserAssignedIdentitiesValue> userAssignedIdentities)"
   nameWithType: "ManagedClusterIdentity.withUserAssignedIdentities(Map<String,ManagedServiceIdentityUserAssignedIdentitiesValue> userAssignedIdentities)"
-  summary: "Set the user<wbr>Assigned<wbr>Identities property: The keys must be ARM resource IDs in the form: '/subscriptions/\\{subscription<wbr>Id\\}/resource<wbr>Groups/\\{resource<wbr>Group<wbr>Name\\}/providers/Microsoft.<wbr>Managed<wbr>Identity/user<wbr>Assigned<wbr>Identities/\\{identity<wbr>Name\\}'."
+  summary: "Set the user<wbr>Assigned<wbr>Identities property: The user identity associated with the managed cluster."
   parameters:
   - description: "the userAssignedIdentities value to set."
     name: "userAssignedIdentities"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedServiceIdentityUserAssignedIdentitiesValue?alt=com.azure.resourcemanager.containerservice.models.ManagedServiceIdentityUserAssignedIdentitiesValue&text=ManagedServiceIdentityUserAssignedIdentitiesValue\" data-throw-if-not-resolved=\"False\" />&gt;"
   syntax: "public ManagedClusterIdentity withUserAssignedIdentities(Map<String,ManagedServiceIdentityUserAssignedIdentitiesValue> userAssignedIdentities)"
-  desc: "Set the userAssignedIdentities property: The keys must be ARM resource IDs in the form: '/subscriptions/\\{subscriptionId\\}/resourceGroups/\\{resourceGroupName\\}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/\\{identityName\\}'."
+  desc: "Set the userAssignedIdentities property: The user identity associated with the managed cluster. This identity will be used in control plane. Only one user assigned identity is allowed. The keys must be ARM resource IDs in the form: '/subscriptions/\\{subscriptionId\\}/resourceGroups/\\{resourceGroupName\\}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/\\{identityName\\}'."
   returns:
     description: "the ManagedClusterIdentity object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterIdentity?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterIdentity&text=ManagedClusterIdentity\" data-throw-if-not-resolved=\"False\" />"
@@ -166,4 +166,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterIdentity?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterIdentity&text=ManagedClusterIdentity\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.52.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.53.0
