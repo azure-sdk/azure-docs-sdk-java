@@ -220,7 +220,7 @@ methods:
   desc: "Stops a pending copy that was previously started and leaves a destination blob with 0 length and metadata.\n\n**Code Samples**\n\n```java\nclient.abortCopyFromUrl(copyId).doOnSuccess(response -> System.out.println(\"Aborted copy from URL\"));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/abort-copy-blob"
   returns:
     description: "A reactive response signalling completion."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.abortCopyFromUrlWithResponse(java.lang.String,java.lang.String)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.abortCopyFromUrlWithResponse(String copyId, String leaseId)"
   name: "abortCopyFromUrlWithResponse(String copyId, String leaseId)"
@@ -237,7 +237,7 @@ methods:
   desc: "Stops a pending copy that was previously started and leaves a destination blob with 0 length and metadata.\n\n**Code Samples**\n\n```java\nclient.abortCopyFromUrlWithResponse(copyId, leaseId)\n     .subscribe(response -> System.out.printf(\"Aborted copy completed with status %d%n\", response.getStatusCode()));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/abort-copy-blob"
   returns:
     description: "A reactive response signalling completion."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.beginCopy(com.azure.storage.blob.options.BlobBeginCopyOptions)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.beginCopy(BlobBeginCopyOptions options)"
   name: "beginCopy(BlobBeginCopyOptions options)"
@@ -314,7 +314,7 @@ methods:
   desc: "Copies the data at the source URL to a blob and waits for the copy to complete before returning a response.\n\nThe source must be a block blob no larger than 256MB. The source must also be either public or have a sas token attached. The URL must be URL encoded.\n\n**Code Samples**\n\n```java\nclient.copyFromUrl(url).subscribe(response -> System.out.printf(\"Copy identifier: %s%n\", response));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/copy-blob-from-url"
   returns:
     description: "A reactive response containing the copy ID for the long-running operation."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.copyFromUrlWithResponse(com.azure.storage.blob.options.BlobCopyFromUrlOptions)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.copyFromUrlWithResponse(BlobCopyFromUrlOptions options)"
   name: "copyFromUrlWithResponse(BlobCopyFromUrlOptions options)"
@@ -328,7 +328,7 @@ methods:
   desc: "Copies the data at the source URL to a blob and waits for the copy to complete before returning a response.\n\nThe source must be a block blob no larger than 256MB. The source must also be either public or have a sas token attached. The URL must be URL encoded.\n\n**Code Samples**\n\n```java\nMap<String, String> metadata = Collections.singletonMap(\"metadata\", \"value\");\n Map<String, String> tags = Collections.singletonMap(\"tag\", \"value\");\n RequestConditions modifiedRequestConditions = new RequestConditions()\n     .setIfUnmodifiedSince(OffsetDateTime.now().minusDays(7));\n BlobRequestConditions blobRequestConditions = new BlobRequestConditions().setLeaseId(leaseId);\n\n client.copyFromUrlWithResponse(new BlobCopyFromUrlOptions(url).setMetadata(metadata).setTags(tags)\n     .setTier(AccessTier.HOT).setSourceRequestConditions(modifiedRequestConditions)\n     .setDestinationRequestConditions(blobRequestConditions))\n     .subscribe(response -> System.out.printf(\"Copy identifier: %s%n\", response));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/copy-blob-from-url"
   returns:
     description: "A reactive response containing the copy ID for the long-running operation."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.copyFromUrlWithResponse(java.lang.String,java.util.Map<java.lang.String,java.lang.String>,com.azure.storage.blob.models.AccessTier,com.azure.core.http.RequestConditions,com.azure.storage.blob.models.BlobRequestConditions)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.copyFromUrlWithResponse(String copySource, Map<String,String> metadata, AccessTier tier, RequestConditions sourceModifiedRequestConditions, BlobRequestConditions destRequestConditions)"
   name: "copyFromUrlWithResponse(String copySource, Map<String,String> metadata, AccessTier tier, RequestConditions sourceModifiedRequestConditions, BlobRequestConditions destRequestConditions)"
@@ -354,7 +354,7 @@ methods:
   desc: "Copies the data at the source URL to a blob and waits for the copy to complete before returning a response.\n\nThe source must be a block blob no larger than 256MB. The source must also be either public or have a sas token attached. The URL must be URL encoded.\n\n**Code Samples**\n\n```java\nMap<String, String> metadata = Collections.singletonMap(\"metadata\", \"value\");\n RequestConditions modifiedRequestConditions = new RequestConditions()\n     .setIfUnmodifiedSince(OffsetDateTime.now().minusDays(7));\n BlobRequestConditions blobRequestConditions = new BlobRequestConditions().setLeaseId(leaseId);\n\n client.copyFromUrlWithResponse(url, metadata, AccessTier.HOT, modifiedRequestConditions, blobRequestConditions)\n     .subscribe(response -> System.out.printf(\"Copy identifier: %s%n\", response));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/copy-blob-from-url"
   returns:
     description: "A reactive response containing the copy ID for the long-running operation."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.createSnapshot()"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.createSnapshot()"
   name: "createSnapshot()"
@@ -364,7 +364,7 @@ methods:
   desc: "Creates a read-only snapshot of the blob.\n\n**Code Samples**\n\n```java\nclient.createSnapshot()\n     .subscribe(response -> System.out.printf(\"Identifier for the snapshot is %s%n\",\n         response.getSnapshotId()));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/snapshot-blob"
   returns:
     description: "A response containing a <xref uid=\"com.azure.storage.blob.specialized.BlobAsyncClientBase\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobAsyncClientBase\"></xref> which is used to interact with the created snapshot,\n use <xref uid=\"com.azure.storage.blob.specialized.BlobAsyncClientBase.getSnapshotId()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#getSnapshotId()\"></xref> to get the identifier for the snapshot."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.specialized.BlobAsyncClientBase?alt=com.azure.storage.blob.specialized.BlobAsyncClientBase&text=BlobAsyncClientBase\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.storage.blob.specialized.BlobAsyncClientBase?alt=com.azure.storage.blob.specialized.BlobAsyncClientBase&text=BlobAsyncClientBase\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.createSnapshotWithResponse(java.util.Map<java.lang.String,java.lang.String>,com.azure.storage.blob.models.BlobRequestConditions)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.createSnapshotWithResponse(Map<String,String> metadata, BlobRequestConditions requestConditions)"
   name: "createSnapshotWithResponse(Map<String,String> metadata, BlobRequestConditions requestConditions)"
@@ -381,7 +381,7 @@ methods:
   desc: "Creates a read-only snapshot of the blob.\n\n**Code Samples**\n\n```java\nMap<String, String> snapshotMetadata = Collections.singletonMap(\"metadata\", \"value\");\n BlobRequestConditions requestConditions = new BlobRequestConditions().setLeaseId(leaseId);\n\n client.createSnapshotWithResponse(snapshotMetadata, requestConditions)\n     .subscribe(response -> System.out.printf(\"Identifier for the snapshot is %s%n\", response.getValue()));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/snapshot-blob"
   returns:
     description: "A response containing a <xref uid=\"com.azure.storage.blob.specialized.BlobAsyncClientBase\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobAsyncClientBase\"></xref> which is used to interact with the created snapshot,\n use <xref uid=\"com.azure.storage.blob.specialized.BlobAsyncClientBase.getSnapshotId()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#getSnapshotId()\"></xref> to get the identifier for the snapshot."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.specialized.BlobAsyncClientBase?alt=com.azure.storage.blob.specialized.BlobAsyncClientBase&text=BlobAsyncClientBase\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.specialized.BlobAsyncClientBase?alt=com.azure.storage.blob.specialized.BlobAsyncClientBase&text=BlobAsyncClientBase\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.delete()"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.delete()"
   name: "delete()"
@@ -391,7 +391,7 @@ methods:
   desc: "Deletes the specified blob or snapshot. To delete a blob with its snapshots use <xref uid=\"com.azure.storage.blob.specialized.BlobAsyncClientBase.deleteIfExistsWithResponse(com.azure.storage.blob.models.DeleteSnapshotsOptionType,com.azure.storage.blob.models.BlobRequestConditions)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#deleteIfExistsWithResponse(DeleteSnapshotsOptionType, BlobRequestConditions)\"></xref> and set `DeleteSnapshotsOptionType` to INCLUDE.\n\n**Code Samples**\n\n```java\nclient.delete().doOnSuccess(response -> System.out.println(\"Completed delete\"));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/delete-blob"
   returns:
     description: "A reactive response signalling completion."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.deleteIfExists()"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.deleteIfExists()"
   name: "deleteIfExists()"
@@ -401,7 +401,7 @@ methods:
   desc: "Deletes the specified blob or snapshot if it exists. To delete a blob with its snapshots use <xref uid=\"com.azure.storage.blob.specialized.BlobAsyncClientBase.deleteWithResponse(com.azure.storage.blob.models.DeleteSnapshotsOptionType,com.azure.storage.blob.models.BlobRequestConditions)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#deleteWithResponse(DeleteSnapshotsOptionType, BlobRequestConditions)\"></xref> and set `DeleteSnapshotsOptionType` to INCLUDE.\n\n**Code Samples**\n\n```java\nclient.deleteIfExists().subscribe(deleted -> {\n     if (deleted) {\n         System.out.println(\"Successfully deleted.\");\n     } else {\n         System.out.println(\"Does not exist.\");\n     }\n });\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/delete-blob"
   returns:
     description: "A reactive response signaling completion. <code>true</code> indicates that the blob was deleted.\n <code>false</code> indicates the blob does not exist at this location."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.deleteIfExistsWithResponse(com.azure.storage.blob.models.DeleteSnapshotsOptionType,com.azure.storage.blob.models.BlobRequestConditions)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.deleteIfExistsWithResponse(DeleteSnapshotsOptionType deleteBlobSnapshotOptions, BlobRequestConditions requestConditions)"
   name: "deleteIfExistsWithResponse(DeleteSnapshotsOptionType deleteBlobSnapshotOptions, BlobRequestConditions requestConditions)"
@@ -418,7 +418,7 @@ methods:
   desc: "Deletes the specified blob or snapshot if it exists. To delete a blob with its snapshots set `DeleteSnapshotsOptionType` to INCLUDE.\n\n**Code Samples**\n\n```java\nclient.deleteIfExistsWithResponse(DeleteSnapshotsOptionType.INCLUDE, null).subscribe(response -> {\n     if (response.getStatusCode() == 404) {\n         System.out.println(\"Does not exist.\");\n     } else {\n         System.out.println(\"successfully deleted.\");\n     }\n });\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/delete-blob"
   returns:
     description: "A reactive response signaling completion. If <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>'s status code is 202, the base blob was\n successfully deleted. If status code is 404, the base blob does not exist."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>&gt;&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.deleteImmutabilityPolicy()"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.deleteImmutabilityPolicy()"
   name: "deleteImmutabilityPolicy()"
@@ -428,7 +428,7 @@ methods:
   desc: "Deletes the immutability policy on a blob, blob snapshot or blob version.\n\nNOTE: Blob Versioning must be enabled on your storage account and the blob must be in a container with object level immutable policy enabled to call this API.\n\n**Code Samples**\n\n```java\nclient.deleteImmutabilityPolicy().subscribe(response -> System.out.println(\"Completed immutability policy\"\n     + \" deletion.\"));\n```"
   returns:
     description: "A reactive response signalling completion."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.deleteImmutabilityPolicyWithResponse()"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.deleteImmutabilityPolicyWithResponse()"
   name: "deleteImmutabilityPolicyWithResponse()"
@@ -438,7 +438,7 @@ methods:
   desc: "Deletes the immutability policy on a blob, blob snapshot or blob version.\n\nNOTE: Blob Versioning must be enabled on your storage account and the blob must be in a container with immutable storage with versioning enabled to call this API.\n\n**Code Samples**\n\n```java\nclient.deleteImmutabilityPolicyWithResponse().subscribe(response ->\n     System.out.println(\"Delete immutability policy completed with status: \" + response.getStatusCode()));\n```"
   returns:
     description: "A reactive response signalling completion."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.deleteWithResponse(com.azure.storage.blob.models.DeleteSnapshotsOptionType,com.azure.storage.blob.models.BlobRequestConditions)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.deleteWithResponse(DeleteSnapshotsOptionType deleteBlobSnapshotOptions, BlobRequestConditions requestConditions)"
   name: "deleteWithResponse(DeleteSnapshotsOptionType deleteBlobSnapshotOptions, BlobRequestConditions requestConditions)"
@@ -455,7 +455,7 @@ methods:
   desc: "Deletes the specified blob or snapshot. To delete a blob with its snapshots set `DeleteSnapshotsOptionType` to INCLUDE.\n\n**Code Samples**\n\n```java\nclient.deleteWithResponse(DeleteSnapshotsOptionType.INCLUDE, null)\n     .subscribe(response -> System.out.printf(\"Delete completed with status %d%n\", response.getStatusCode()));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/delete-blob"
   returns:
     description: "A reactive response signalling completion."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.download()"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.download()"
   name: "download()"
@@ -467,7 +467,7 @@ methods:
   hasDeprecatedTag: true
   returns:
     description: "A reactive response containing the blob data."
-    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadContent()"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadContent()"
   name: "downloadContent()"
@@ -477,7 +477,7 @@ methods:
   desc: "Reads the entire blob. Uploading data must be done from the <xref uid=\"com.azure.storage.blob.specialized.BlockBlobClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlockBlobClient\"></xref>, <xref uid=\"com.azure.storage.blob.specialized.PageBlobClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PageBlobClient\"></xref>, or <xref uid=\"com.azure.storage.blob.specialized.AppendBlobClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AppendBlobClient\"></xref>.\n\n**Code Samples**\n\n```java\nclient.downloadContent().subscribe(data -> {\n     System.out.printf(\"Downloaded %s\", data.toString());\n });\n```\n\nFor more information, see the [Azure Docs][]\n\nThis method supports downloads up to 2GB of data. Content will be buffered in memory. If the blob is larger, use <xref uid=\"com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadStream()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#downloadStream()\"></xref> to download larger blobs.\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/get-blob"
   returns:
     description: "A reactive response containing the blob data."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadContentWithResponse(com.azure.storage.blob.models.DownloadRetryOptions,com.azure.storage.blob.models.BlobRequestConditions)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadContentWithResponse(DownloadRetryOptions options, BlobRequestConditions requestConditions)"
   name: "downloadContentWithResponse(DownloadRetryOptions options, BlobRequestConditions requestConditions)"
@@ -494,7 +494,7 @@ methods:
   desc: "Reads a range of bytes from a blob. Uploading data must be done from the <xref uid=\"com.azure.storage.blob.specialized.BlockBlobClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlockBlobClient\"></xref>, <xref uid=\"com.azure.storage.blob.specialized.PageBlobClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PageBlobClient\"></xref>, or <xref uid=\"com.azure.storage.blob.specialized.AppendBlobClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AppendBlobClient\"></xref>.\n\n**Code Samples**\n\n```java\nDownloadRetryOptions options = new DownloadRetryOptions().setMaxRetryRequests(5);\n\n client.downloadContentWithResponse(options, null).subscribe(response -> {\n     BinaryData content = response.getValue();\n     System.out.println(content.toString());\n });\n```\n\nFor more information, see the [Azure Docs][]\n\nThis method supports downloads up to 2GB of data. Content will be buffered in memory. If the blob is larger, use <xref uid=\"com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadStreamWithResponse(com.azure.storage.blob.models.BlobRange,com.azure.storage.blob.models.DownloadRetryOptions,com.azure.storage.blob.models.BlobRequestConditions,boolean)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#downloadStreamWithResponse(BlobRange, DownloadRetryOptions, BlobRequestConditions, boolean)\"></xref> to download larger blobs.\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/get-blob"
   returns:
     description: "A reactive response containing the blob data."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.BlobDownloadContentAsyncResponse?alt=com.azure.storage.blob.models.BlobDownloadContentAsyncResponse&text=BlobDownloadContentAsyncResponse\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.storage.blob.models.BlobDownloadContentAsyncResponse?alt=com.azure.storage.blob.models.BlobDownloadContentAsyncResponse&text=BlobDownloadContentAsyncResponse\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadStream()"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadStream()"
   name: "downloadStream()"
@@ -504,7 +504,7 @@ methods:
   desc: "Reads the entire blob. Uploading data must be done from the <xref uid=\"com.azure.storage.blob.specialized.BlockBlobClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlockBlobClient\"></xref>, <xref uid=\"com.azure.storage.blob.specialized.PageBlobClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PageBlobClient\"></xref>, or <xref uid=\"com.azure.storage.blob.specialized.AppendBlobClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AppendBlobClient\"></xref>.\n\n**Code Samples**\n\n```java\nByteArrayOutputStream downloadData = new ByteArrayOutputStream();\n client.downloadStream().subscribe(piece -> {\n     try {\n         downloadData.write(piece.array());\n     } catch (IOException ex) {\n         throw new UncheckedIOException(ex);\n     }\n });\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/get-blob"
   returns:
     description: "A reactive response containing the blob data."
-    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadStreamWithResponse(com.azure.storage.blob.models.BlobRange,com.azure.storage.blob.models.DownloadRetryOptions,com.azure.storage.blob.models.BlobRequestConditions,boolean)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadStreamWithResponse(BlobRange range, DownloadRetryOptions options, BlobRequestConditions requestConditions, boolean getRangeContentMd5)"
   name: "downloadStreamWithResponse(BlobRange range, DownloadRetryOptions options, BlobRequestConditions requestConditions, boolean getRangeContentMd5)"
@@ -527,7 +527,7 @@ methods:
   desc: "Reads a range of bytes from a blob. Uploading data must be done from the <xref uid=\"com.azure.storage.blob.specialized.BlockBlobClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlockBlobClient\"></xref>, <xref uid=\"com.azure.storage.blob.specialized.PageBlobClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PageBlobClient\"></xref>, or <xref uid=\"com.azure.storage.blob.specialized.AppendBlobClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AppendBlobClient\"></xref>.\n\n**Code Samples**\n\n```java\nBlobRange range = new BlobRange(1024, (long) 2048);\n DownloadRetryOptions options = new DownloadRetryOptions().setMaxRetryRequests(5);\n\n client.downloadStreamWithResponse(range, options, null, false).subscribe(response -> {\n     ByteArrayOutputStream downloadData = new ByteArrayOutputStream();\n     response.getValue().subscribe(piece -> {\n         try {\n             downloadData.write(piece.array());\n         } catch (IOException ex) {\n             throw new UncheckedIOException(ex);\n         }\n     });\n });\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/get-blob"
   returns:
     description: "A reactive response containing the blob data."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.BlobDownloadAsyncResponse?alt=com.azure.storage.blob.models.BlobDownloadAsyncResponse&text=BlobDownloadAsyncResponse\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.storage.blob.models.BlobDownloadAsyncResponse?alt=com.azure.storage.blob.models.BlobDownloadAsyncResponse&text=BlobDownloadAsyncResponse\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadToFile(java.lang.String)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadToFile(String filePath)"
   name: "downloadToFile(String filePath)"
@@ -541,7 +541,7 @@ methods:
   desc: "Downloads the entire blob into a file specified by the path.\n\nThe file will be created and must not exist, if the file already exists a <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"FileAlreadyExistsException\"></xref> will be thrown.\n\n**Code Samples**\n\n```java\nclient.downloadToFile(file).subscribe(response -> System.out.println(\"Completed download to file\"));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/get-blob"
   returns:
     description: "A reactive response containing the blob properties and metadata."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.BlobProperties?alt=com.azure.storage.blob.models.BlobProperties&text=BlobProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.storage.blob.models.BlobProperties?alt=com.azure.storage.blob.models.BlobProperties&text=BlobProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadToFile(java.lang.String,boolean)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadToFile(String filePath, boolean overwrite)"
   name: "downloadToFile(String filePath, boolean overwrite)"
@@ -558,7 +558,7 @@ methods:
   desc: "Downloads the entire blob into a file specified by the path.\n\nIf overwrite is set to false, the file will be created and must not exist, if the file already exists a <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"FileAlreadyExistsException\"></xref> will be thrown.\n\n**Code Samples**\n\n```java\nboolean overwrite = false; // Default value\n client.downloadToFile(file, overwrite).subscribe(response -> System.out.println(\"Completed download to file\"));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/get-blob"
   returns:
     description: "A reactive response containing the blob properties and metadata."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.BlobProperties?alt=com.azure.storage.blob.models.BlobProperties&text=BlobProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.storage.blob.models.BlobProperties?alt=com.azure.storage.blob.models.BlobProperties&text=BlobProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadToFileWithResponse(com.azure.storage.blob.options.BlobDownloadToFileOptions)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadToFileWithResponse(BlobDownloadToFileOptions options)"
   name: "downloadToFileWithResponse(BlobDownloadToFileOptions options)"
@@ -572,7 +572,7 @@ methods:
   desc: "Downloads the entire blob into a file specified by the path.\n\nBy default the file will be created and must not exist, if the file already exists a <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"FileAlreadyExistsException\"></xref> will be thrown. To override this behavior, provide appropriate <xref uid=\"java.nio.file.OpenOption\" data-throw-if-not-resolved=\"false\" data-raw-source=\"OpenOptions\"></xref>\n\n**Code Samples**\n\n```java\nclient.downloadToFileWithResponse(new BlobDownloadToFileOptions(file)\n     .setRange(new BlobRange(1024, 2018L))\n     .setDownloadRetryOptions(new DownloadRetryOptions().setMaxRetryRequests(5))\n     .setOpenOptions(new HashSet<>(Arrays.asList(StandardOpenOption.CREATE_NEW, StandardOpenOption.WRITE,\n         StandardOpenOption.READ))))\n     .subscribe(response -> System.out.println(\"Completed download to file\"));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/get-blob"
   returns:
     description: "A reactive response containing the blob properties and metadata."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.BlobProperties?alt=com.azure.storage.blob.models.BlobProperties&text=BlobProperties\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.BlobProperties?alt=com.azure.storage.blob.models.BlobProperties&text=BlobProperties\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadToFileWithResponse(java.lang.String,com.azure.storage.blob.models.BlobRange,com.azure.storage.blob.models.ParallelTransferOptions,com.azure.storage.blob.models.DownloadRetryOptions,com.azure.storage.blob.models.BlobRequestConditions,boolean)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadToFileWithResponse(String filePath, BlobRange range, ParallelTransferOptions parallelTransferOptions, DownloadRetryOptions options, BlobRequestConditions requestConditions, boolean rangeGetContentMd5)"
   name: "downloadToFileWithResponse(String filePath, BlobRange range, ParallelTransferOptions parallelTransferOptions, DownloadRetryOptions options, BlobRequestConditions requestConditions, boolean rangeGetContentMd5)"
@@ -601,7 +601,7 @@ methods:
   desc: "Downloads the entire blob into a file specified by the path.\n\nThe file will be created and must not exist, if the file already exists a <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"FileAlreadyExistsException\"></xref> will be thrown.\n\n**Code Samples**\n\n```java\nBlobRange range = new BlobRange(1024, 2048L);\n DownloadRetryOptions options = new DownloadRetryOptions().setMaxRetryRequests(5);\n\n client.downloadToFileWithResponse(file, range, null, options, null, false)\n     .subscribe(response -> System.out.println(\"Completed download to file\"));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/get-blob"
   returns:
     description: "A reactive response containing the blob properties and metadata."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.BlobProperties?alt=com.azure.storage.blob.models.BlobProperties&text=BlobProperties\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.BlobProperties?alt=com.azure.storage.blob.models.BlobProperties&text=BlobProperties\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadToFileWithResponse(java.lang.String,com.azure.storage.blob.models.BlobRange,com.azure.storage.blob.models.ParallelTransferOptions,com.azure.storage.blob.models.DownloadRetryOptions,com.azure.storage.blob.models.BlobRequestConditions,boolean,java.util.Set<java.nio.file.OpenOption>)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadToFileWithResponse(String filePath, BlobRange range, ParallelTransferOptions parallelTransferOptions, DownloadRetryOptions options, BlobRequestConditions requestConditions, boolean rangeGetContentMd5, Set<OpenOption> openOptions)"
   name: "downloadToFileWithResponse(String filePath, BlobRange range, ParallelTransferOptions parallelTransferOptions, DownloadRetryOptions options, BlobRequestConditions requestConditions, boolean rangeGetContentMd5, Set<OpenOption> openOptions)"
@@ -633,7 +633,7 @@ methods:
   desc: "Downloads the entire blob into a file specified by the path.\n\nBy default the file will be created and must not exist, if the file already exists a <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"FileAlreadyExistsException\"></xref> will be thrown. To override this behavior, provide appropriate <xref uid=\"java.nio.file.OpenOption\" data-throw-if-not-resolved=\"false\" data-raw-source=\"OpenOptions\"></xref>\n\n**Code Samples**\n\n```java\nBlobRange blobRange = new BlobRange(1024, 2048L);\n DownloadRetryOptions downloadRetryOptions = new DownloadRetryOptions().setMaxRetryRequests(5);\n Set<OpenOption> openOptions = new HashSet<>(Arrays.asList(StandardOpenOption.CREATE_NEW,\n     StandardOpenOption.WRITE, StandardOpenOption.READ)); // Default options\n\n client.downloadToFileWithResponse(file, blobRange, null, downloadRetryOptions, null, false, openOptions)\n     .subscribe(response -> System.out.println(\"Completed download to file\"));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/get-blob"
   returns:
     description: "A reactive response containing the blob properties and metadata."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.BlobProperties?alt=com.azure.storage.blob.models.BlobProperties&text=BlobProperties\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.BlobProperties?alt=com.azure.storage.blob.models.BlobProperties&text=BlobProperties\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadWithResponse(com.azure.storage.blob.models.BlobRange,com.azure.storage.blob.models.DownloadRetryOptions,com.azure.storage.blob.models.BlobRequestConditions,boolean)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadWithResponse(BlobRange range, DownloadRetryOptions options, BlobRequestConditions requestConditions, boolean getRangeContentMd5)"
   name: "downloadWithResponse(BlobRange range, DownloadRetryOptions options, BlobRequestConditions requestConditions, boolean getRangeContentMd5)"
@@ -658,7 +658,7 @@ methods:
   hasDeprecatedTag: true
   returns:
     description: "A reactive response containing the blob data."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.BlobDownloadAsyncResponse?alt=com.azure.storage.blob.models.BlobDownloadAsyncResponse&text=BlobDownloadAsyncResponse\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.storage.blob.models.BlobDownloadAsyncResponse?alt=com.azure.storage.blob.models.BlobDownloadAsyncResponse&text=BlobDownloadAsyncResponse\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.exists()"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.exists()"
   name: "exists()"
@@ -668,7 +668,7 @@ methods:
   desc: "Determines if the blob this client represents exists in the cloud.\n\n**Code Samples**\n\n```java\nclient.exists().subscribe(response -> System.out.printf(\"Exists? %b%n\", response));\n```"
   returns:
     description: "true if the blob exists, false if it doesn't"
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.existsWithResponse()"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.existsWithResponse()"
   name: "existsWithResponse()"
@@ -678,7 +678,7 @@ methods:
   desc: "Determines if the blob this client represents exists in the cloud.\n\n**Code Samples**\n\n```java\nclient.existsWithResponse().subscribe(response -> System.out.printf(\"Exists? %b%n\", response.getValue()));\n```"
   returns:
     description: "true if the blob exists, false if it doesn't"
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>&gt;&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.generateSas(com.azure.storage.blob.sas.BlobServiceSasSignatureValues)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.generateSas(BlobServiceSasSignatureValues blobServiceSasSignatureValues)"
   name: "generateSas(BlobServiceSasSignatureValues blobServiceSasSignatureValues)"
@@ -805,7 +805,7 @@ methods:
   desc: "Returns the sku name and account kind for the account.\n\n**Code Samples**\n\n```java\nclient.getAccountInfo().subscribe(response -> System.out.printf(\"Account Kind: %s, SKU: %s%n\",\n     response.getAccountKind(), response.getSkuName()));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/get-account-information"
   returns:
     description: "a reactor response containing the sku name and account kind."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.StorageAccountInfo?alt=com.azure.storage.blob.models.StorageAccountInfo&text=StorageAccountInfo\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.storage.blob.models.StorageAccountInfo?alt=com.azure.storage.blob.models.StorageAccountInfo&text=StorageAccountInfo\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.getAccountInfoWithResponse()"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.getAccountInfoWithResponse()"
   name: "getAccountInfoWithResponse()"
@@ -815,7 +815,7 @@ methods:
   desc: "Returns the sku name and account kind for the account.\n\n**Code Samples**\n\n```java\nclient.getAccountInfoWithResponse().subscribe(response -> System.out.printf(\"Account Kind: %s, SKU: %s%n\",\n     response.getValue().getAccountKind(), response.getValue().getSkuName()));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/get-account-information"
   returns:
     description: "a reactor response containing the sku name and account kind."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.StorageAccountInfo?alt=com.azure.storage.blob.models.StorageAccountInfo&text=StorageAccountInfo\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.StorageAccountInfo?alt=com.azure.storage.blob.models.StorageAccountInfo&text=StorageAccountInfo\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.getAccountName()"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.getAccountName()"
   name: "getAccountName()"
@@ -949,7 +949,7 @@ methods:
   desc: "Returns the blob's metadata and properties.\n\n**Code Samples**\n\n```java\nclient.getProperties().subscribe(response ->\n     System.out.printf(\"Type: %s, Size: %d%n\", response.getBlobType(), response.getBlobSize()));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/get-blob-properties"
   returns:
     description: "A reactive response containing the blob properties and metadata."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.BlobProperties?alt=com.azure.storage.blob.models.BlobProperties&text=BlobProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.storage.blob.models.BlobProperties?alt=com.azure.storage.blob.models.BlobProperties&text=BlobProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.getPropertiesWithResponse(com.azure.storage.blob.models.BlobRequestConditions)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.getPropertiesWithResponse(BlobRequestConditions requestConditions)"
   name: "getPropertiesWithResponse(BlobRequestConditions requestConditions)"
@@ -963,7 +963,7 @@ methods:
   desc: "Returns the blob's metadata and properties.\n\n**Code Samples**\n\n```java\nBlobRequestConditions requestConditions = new BlobRequestConditions().setLeaseId(leaseId);\n\n client.getPropertiesWithResponse(requestConditions).subscribe(\n     response -> System.out.printf(\"Type: %s, Size: %d%n\", response.getValue().getBlobType(),\n         response.getValue().getBlobSize()));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/get-blob-properties"
   returns:
     description: "A reactive response containing the blob properties and metadata."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.BlobProperties?alt=com.azure.storage.blob.models.BlobProperties&text=BlobProperties\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.BlobProperties?alt=com.azure.storage.blob.models.BlobProperties&text=BlobProperties\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.getServiceVersion()"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.getServiceVersion()"
   name: "getServiceVersion()"
@@ -1007,7 +1007,7 @@ methods:
   desc: "Returns the blob's tags.\n\n**Code Samples**\n\n```java\nclient.getTags().subscribe(response ->\n     System.out.printf(\"Num tags: %d%n\", response.size()));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/get-blob-tags"
   returns:
     description: "A reactive response containing the blob's tags."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.getTagsWithResponse(com.azure.storage.blob.options.BlobGetTagsOptions)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.getTagsWithResponse(BlobGetTagsOptions options)"
   name: "getTagsWithResponse(BlobGetTagsOptions options)"
@@ -1021,7 +1021,7 @@ methods:
   desc: "Returns the blob's tags.\n\n**Code Samples**\n\n```java\nclient.getTagsWithResponse(new BlobGetTagsOptions()).subscribe(response ->\n     System.out.printf(\"Status code: %d. Num tags: %d%n\", response.getStatusCode(), response.getValue().size()));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/get-blob-tags"
   returns:
     description: "A reactive response containing the blob's tags."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.getVersionClient(java.lang.String)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.getVersionClient(String versionId)"
   name: "getVersionClient(String versionId)"
@@ -1069,7 +1069,7 @@ methods:
   desc: "Queries the entire blob.\n\nFor more information, see the [Azure Docs][]\n\n**Code Samples**\n\n```java\nByteArrayOutputStream queryData = new ByteArrayOutputStream();\n String expression = \"SELECT * from BlobStorage\";\n client.query(expression).subscribe(piece -> {\n     try {\n         queryData.write(piece.array());\n     } catch (IOException ex) {\n         throw new UncheckedIOException(ex);\n     }\n });\n```\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/query-blob-contents"
   returns:
     description: "A reactive response containing the queried data."
-    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.queryWithResponse(com.azure.storage.blob.options.BlobQueryOptions)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.queryWithResponse(BlobQueryOptions queryOptions)"
   name: "queryWithResponse(BlobQueryOptions queryOptions)"
@@ -1083,7 +1083,7 @@ methods:
   desc: "Queries the entire blob.\n\nFor more information, see the [Azure Docs][]\n\n**Code Samples**\n\n```java\nString expression = \"SELECT * from BlobStorage\";\n BlobQueryJsonSerialization input = new BlobQueryJsonSerialization()\n     .setRecordSeparator('\\n');\n BlobQueryDelimitedSerialization output = new BlobQueryDelimitedSerialization()\n     .setEscapeChar('\\0')\n     .setColumnSeparator(',')\n     .setRecordSeparator('\\n')\n     .setFieldQuote('\\'')\n     .setHeadersPresent(true);\n BlobRequestConditions requestConditions = new BlobRequestConditions().setLeaseId(leaseId);\n Consumer<BlobQueryError> errorConsumer = System.out::println;\n Consumer<BlobQueryProgress> progressConsumer = progress -> System.out.println(\"total blob bytes read: \"\n     + progress.getBytesScanned());\n BlobQueryOptions queryOptions = new BlobQueryOptions(expression)\n     .setInputSerialization(input)\n     .setOutputSerialization(output)\n     .setRequestConditions(requestConditions)\n     .setErrorConsumer(errorConsumer)\n     .setProgressConsumer(progressConsumer);\n\n client.queryWithResponse(queryOptions)\n     .subscribe(response -> {\n         ByteArrayOutputStream queryData = new ByteArrayOutputStream();\n         response.getValue().subscribe(piece -> {\n             try {\n                 queryData.write(piece.array());\n             } catch (IOException ex) {\n                 throw new UncheckedIOException(ex);\n             }\n         });\n     });\n```\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/query-blob-contents"
   returns:
     description: "A reactive response containing the queried data."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.BlobQueryAsyncResponse?alt=com.azure.storage.blob.models.BlobQueryAsyncResponse&text=BlobQueryAsyncResponse\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.storage.blob.models.BlobQueryAsyncResponse?alt=com.azure.storage.blob.models.BlobQueryAsyncResponse&text=BlobQueryAsyncResponse\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setAccessTier(com.azure.storage.blob.models.AccessTier)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setAccessTier(AccessTier tier)"
   name: "setAccessTier(AccessTier tier)"
@@ -1097,7 +1097,7 @@ methods:
   desc: "Sets the tier on a blob. The operation is allowed on a page blob in a premium storage account or a block blob in a blob storage or GPV2 account. A premium page blob's tier determines the allowed size, IOPS, and bandwidth of the blob. A block blob's tier determines the Hot/Cool/Archive storage type. This does not update the blob's etag.\n\n**Code Samples**\n\n```java\nclient.setAccessTier(AccessTier.HOT);\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/set-blob-tier"
   returns:
     description: "A reactive response signalling completion."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setAccessTierWithResponse(com.azure.storage.blob.models.AccessTier,com.azure.storage.blob.models.RehydratePriority,java.lang.String)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setAccessTierWithResponse(AccessTier tier, RehydratePriority priority, String leaseId)"
   name: "setAccessTierWithResponse(AccessTier tier, RehydratePriority priority, String leaseId)"
@@ -1117,7 +1117,7 @@ methods:
   desc: "Sets the tier on a blob. The operation is allowed on a page blob in a premium storage account or a block blob in a blob storage or GPV2 account. A premium page blob's tier determines the allowed size, IOPS, and bandwidth of the blob. A block blob's tier determines the Hot/Cool/Archive storage type. This does not update the blob's etag.\n\n**Code Samples**\n\n```java\nclient.setAccessTierWithResponse(AccessTier.HOT, RehydratePriority.STANDARD, leaseId)\n     .subscribe(response -> System.out.printf(\"Set tier completed with status code %d%n\",\n         response.getStatusCode()));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/set-blob-tier"
   returns:
     description: "A reactive response signalling completion."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setAccessTierWithResponse(com.azure.storage.blob.options.BlobSetAccessTierOptions)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setAccessTierWithResponse(BlobSetAccessTierOptions options)"
   name: "setAccessTierWithResponse(BlobSetAccessTierOptions options)"
@@ -1131,7 +1131,7 @@ methods:
   desc: "Sets the tier on a blob. The operation is allowed on a page blob in a premium storage account or a block blob in a blob storage or GPV2 account. A premium page blob's tier determines the allowed size, IOPS, and bandwidth of the blob. A block blob's tier determines the Hot/Cool/Archive storage type. This does not update the blob's etag.\n\n**Code Samples**\n\n```java\nclient.setAccessTierWithResponse(new BlobSetAccessTierOptions(AccessTier.HOT)\n     .setPriority(RehydratePriority.STANDARD)\n     .setLeaseId(leaseId)\n     .setTagsConditions(tags))\n     .subscribe(response -> System.out.printf(\"Set tier completed with status code %d%n\",\n         response.getStatusCode()));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/set-blob-tier"
   returns:
     description: "A reactive response signalling completion."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setHttpHeaders(com.azure.storage.blob.models.BlobHttpHeaders)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setHttpHeaders(BlobHttpHeaders headers)"
   name: "setHttpHeaders(BlobHttpHeaders headers)"
@@ -1145,7 +1145,7 @@ methods:
   desc: "Changes a blob's HTTP header properties. if only one HTTP header is updated, the others will all be erased. In order to preserve existing values, they must be passed alongside the header being changed.\n\n**Code Samples**\n\n```java\nclient.setHttpHeaders(new BlobHttpHeaders()\n     .setContentLanguage(\"en-US\")\n     .setContentType(\"binary\"));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/set-blob-properties"
   returns:
     description: "A reactive response signalling completion."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setHttpHeadersWithResponse(com.azure.storage.blob.models.BlobHttpHeaders,com.azure.storage.blob.models.BlobRequestConditions)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setHttpHeadersWithResponse(BlobHttpHeaders headers, BlobRequestConditions requestConditions)"
   name: "setHttpHeadersWithResponse(BlobHttpHeaders headers, BlobRequestConditions requestConditions)"
@@ -1162,7 +1162,7 @@ methods:
   desc: "Changes a blob's HTTP header properties. if only one HTTP header is updated, the others will all be erased. In order to preserve existing values, they must be passed alongside the header being changed.\n\n**Code Samples**\n\n```java\nBlobRequestConditions requestConditions = new BlobRequestConditions().setLeaseId(leaseId);\n\n client.setHttpHeadersWithResponse(new BlobHttpHeaders()\n     .setContentLanguage(\"en-US\")\n     .setContentType(\"binary\"), requestConditions).subscribe(\n         response ->\n             System.out.printf(\"Set HTTP headers completed with status %d%n\",\n                 response.getStatusCode()));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/set-blob-properties"
   returns:
     description: "A reactive response signalling completion."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setImmutabilityPolicy(com.azure.storage.blob.models.BlobImmutabilityPolicy)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setImmutabilityPolicy(BlobImmutabilityPolicy immutabilityPolicy)"
   name: "setImmutabilityPolicy(BlobImmutabilityPolicy immutabilityPolicy)"
@@ -1176,7 +1176,7 @@ methods:
   desc: "Sets the immutability policy on a blob, blob snapshot or blob version.\n\nNOTE: Blob Versioning must be enabled on your storage account and the blob must be in a container with object level immutable policy enabled to call this API.\n\n**Code Samples**\n\n```java\nBlobImmutabilityPolicy policy = new BlobImmutabilityPolicy()\n     .setPolicyMode(BlobImmutabilityPolicyMode.LOCKED)\n     .setExpiryTime(OffsetDateTime.now().plusDays(1));\n client.setImmutabilityPolicy(policy).subscribe(response -> System.out.println(\"Completed. Set immutability \"\n     + \"policy to \" + response.getPolicyMode()));\n```"
   returns:
     description: "A reactive response containing the immutability policy."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.BlobImmutabilityPolicy?alt=com.azure.storage.blob.models.BlobImmutabilityPolicy&text=BlobImmutabilityPolicy\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.storage.blob.models.BlobImmutabilityPolicy?alt=com.azure.storage.blob.models.BlobImmutabilityPolicy&text=BlobImmutabilityPolicy\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setImmutabilityPolicyWithResponse(com.azure.storage.blob.models.BlobImmutabilityPolicy,com.azure.storage.blob.models.BlobRequestConditions)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setImmutabilityPolicyWithResponse(BlobImmutabilityPolicy immutabilityPolicy, BlobRequestConditions requestConditions)"
   name: "setImmutabilityPolicyWithResponse(BlobImmutabilityPolicy immutabilityPolicy, BlobRequestConditions requestConditions)"
@@ -1193,7 +1193,7 @@ methods:
   desc: "Sets the immutability policy on a blob, blob snapshot or blob version.\n\nNOTE: Blob Versioning must be enabled on your storage account and the blob must be in a container with immutable storage with versioning enabled to call this API.\n\n**Code Samples**\n\n```java\nBlobImmutabilityPolicy immutabilityPolicy = new BlobImmutabilityPolicy()\n     .setPolicyMode(BlobImmutabilityPolicyMode.LOCKED)\n     .setExpiryTime(OffsetDateTime.now().plusDays(1));\n BlobRequestConditions requestConditions = new BlobRequestConditions()\n     .setIfUnmodifiedSince(OffsetDateTime.now().minusDays(1));\n client.setImmutabilityPolicyWithResponse(immutabilityPolicy, requestConditions).subscribe(response ->\n     System.out.println(\"Completed. Set immutability policy to \" + response.getValue().getPolicyMode()));\n```"
   returns:
     description: "A reactive response containing the immutability policy."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.BlobImmutabilityPolicy?alt=com.azure.storage.blob.models.BlobImmutabilityPolicy&text=BlobImmutabilityPolicy\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.BlobImmutabilityPolicy?alt=com.azure.storage.blob.models.BlobImmutabilityPolicy&text=BlobImmutabilityPolicy\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setLegalHold(boolean)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setLegalHold(boolean legalHold)"
   name: "setLegalHold(boolean legalHold)"
@@ -1207,7 +1207,7 @@ methods:
   desc: "Sets a legal hold on the blob.\n\nNOTE: Blob Versioning must be enabled on your storage account and the blob must be in a container with object level immutable policy enabled to call this API.\n\n**Code Samples**\n\n```java\nclient.setLegalHold(true).subscribe(response -> System.out.println(\"Legal hold status: \"\n     + response.hasLegalHold()));\n```"
   returns:
     description: "A reactive response containing the legal hold result."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.BlobLegalHoldResult?alt=com.azure.storage.blob.models.BlobLegalHoldResult&text=BlobLegalHoldResult\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.storage.blob.models.BlobLegalHoldResult?alt=com.azure.storage.blob.models.BlobLegalHoldResult&text=BlobLegalHoldResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setLegalHoldWithResponse(boolean)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setLegalHoldWithResponse(boolean legalHold)"
   name: "setLegalHoldWithResponse(boolean legalHold)"
@@ -1221,7 +1221,7 @@ methods:
   desc: "Sets a legal hold on the blob.\n\nNOTE: Blob Versioning must be enabled on your storage account and the blob must be in a container with immutable storage with versioning enabled to call this API.\n\n**Code Samples**\n\n```java\nclient.setLegalHoldWithResponse(true).subscribe(response ->\n     System.out.println(\"Legal hold status: \" + response.getValue().hasLegalHold()));\n```"
   returns:
     description: "A reactive response containing the legal hold result."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.BlobLegalHoldResult?alt=com.azure.storage.blob.models.BlobLegalHoldResult&text=BlobLegalHoldResult\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.BlobLegalHoldResult?alt=com.azure.storage.blob.models.BlobLegalHoldResult&text=BlobLegalHoldResult\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setMetadata(java.util.Map<java.lang.String,java.lang.String>)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setMetadata(Map<String,String> metadata)"
   name: "setMetadata(Map<String,String> metadata)"
@@ -1235,7 +1235,7 @@ methods:
   desc: "Changes a blob's metadata. The specified metadata in this method will replace existing metadata. If old values must be preserved, they must be downloaded and included in the call to this method.\n\n**Code Samples**\n\n```java\nclient.setMetadata(Collections.singletonMap(\"metadata\", \"value\"));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/set-blob-metadata"
   returns:
     description: "A reactive response signalling completion."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setMetadataWithResponse(java.util.Map<java.lang.String,java.lang.String>,com.azure.storage.blob.models.BlobRequestConditions)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setMetadataWithResponse(Map<String,String> metadata, BlobRequestConditions requestConditions)"
   name: "setMetadataWithResponse(Map<String,String> metadata, BlobRequestConditions requestConditions)"
@@ -1252,7 +1252,7 @@ methods:
   desc: "Changes a blob's metadata. The specified metadata in this method will replace existing metadata. If old values must be preserved, they must be downloaded and included in the call to this method.\n\n**Code Samples**\n\n```java\nBlobRequestConditions requestConditions = new BlobRequestConditions().setLeaseId(leaseId);\n\n client.setMetadataWithResponse(Collections.singletonMap(\"metadata\", \"value\"), requestConditions)\n     .subscribe(response -> System.out.printf(\"Set metadata completed with status %d%n\", response.getStatusCode()));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/set-blob-metadata"
   returns:
     description: "A reactive response signalling completion."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setTags(java.util.Map<java.lang.String,java.lang.String>)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setTags(Map<String,String> tags)"
   name: "setTags(Map<String,String> tags)"
@@ -1266,7 +1266,7 @@ methods:
   desc: "Sets user defined tags. The specified tags in this method will replace existing tags. If old values must be preserved, they must be downloaded and included in the call to this method.\n\n**Code Samples**\n\n```java\nclient.setTags(Collections.singletonMap(\"tag\", \"value\"));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/set-blob-tags"
   returns:
     description: "A reactive response signaling completion."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setTagsWithResponse(com.azure.storage.blob.options.BlobSetTagsOptions)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.setTagsWithResponse(BlobSetTagsOptions options)"
   name: "setTagsWithResponse(BlobSetTagsOptions options)"
@@ -1280,7 +1280,7 @@ methods:
   desc: "Sets user defined tags. The specified tags in this method will replace existing tags. If old values must be preserved, they must be downloaded and included in the call to this method.\n\n**Code Samples**\n\n```java\nclient.setTagsWithResponse(new BlobSetTagsOptions(Collections.singletonMap(\"tag\", \"value\")))\n     .subscribe(response -> System.out.printf(\"Set tags completed with stats %d%n\", response.getStatusCode()));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/set-blob-tags"
   returns:
     description: "A reactive response signaling completion."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.undelete()"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.undelete()"
   name: "undelete()"
@@ -1290,7 +1290,7 @@ methods:
   desc: "Undelete restores the content and metadata of a soft-deleted blob and/or any associated soft-deleted snapshots.\n\n**Code Samples**\n\n```java\nclient.undelete().doOnSuccess(response -> System.out.println(\"Completed undelete\"));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/undelete-blob"
   returns:
     description: "A reactive response signalling completion."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.undeleteWithResponse()"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.undeleteWithResponse()"
   name: "undeleteWithResponse()"
@@ -1300,7 +1300,7 @@ methods:
   desc: "Undelete restores the content and metadata of a soft-deleted blob and/or any associated soft-deleted snapshots.\n\n**Code Samples**\n\n```java\nclient.undeleteWithResponse()\n     .subscribe(response -> System.out.printf(\"Undelete completed with status %d%n\", response.getStatusCode()));\n```\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/undelete-blob"
   returns:
     description: "A reactive response signalling completion."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
 type: "class"
 desc: "This class provides a client that contains all operations that apply to any blob type.\n\nThis client offers the ability to download blobs. Note that uploading data is specific to each type of blob. Please refer to the <xref uid=\"com.azure.storage.blob.specialized.BlockBlobClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlockBlobClient\"></xref>, <xref uid=\"com.azure.storage.blob.specialized.PageBlobClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PageBlobClient\"></xref>, or <xref uid=\"com.azure.storage.blob.specialized.AppendBlobClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AppendBlobClient\"></xref> for upload options."
 metadata: {}

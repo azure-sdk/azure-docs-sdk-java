@@ -10,11 +10,11 @@ methods:
   fullName: "com.azure.resourcemanager.datamigration.models.ProjectTask.cancel()"
   name: "cancel()"
   nameWithType: "ProjectTask.cancel()"
-  summary: "Cancel a task The tasks resource is a nested, proxy-only resource representing work performed by a DMS instance."
+  summary: "Cancel a task The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance."
   modifiers:
   - "abstract"
   syntax: "public abstract ProjectTask cancel()"
-  desc: "Cancel a task The tasks resource is a nested, proxy-only resource representing work performed by a DMS instance. This method cancels a task if it's currently queued or running."
+  desc: "Cancel a task The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance. This method cancels a task if it's currently queued or running."
   returns:
     description: "a task resource."
     type: "<xref href=\"com.azure.resourcemanager.datamigration.models.ProjectTask?alt=com.azure.resourcemanager.datamigration.models.ProjectTask&text=ProjectTask\" data-throw-if-not-resolved=\"False\" />"
@@ -22,7 +22,7 @@ methods:
   fullName: "com.azure.resourcemanager.datamigration.models.ProjectTask.cancelWithResponse(Context context)"
   name: "cancelWithResponse(Context context)"
   nameWithType: "ProjectTask.cancelWithResponse(Context context)"
-  summary: "Cancel a task The tasks resource is a nested, proxy-only resource representing work performed by a DMS instance."
+  summary: "Cancel a task The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance."
   modifiers:
   - "abstract"
   parameters:
@@ -30,10 +30,45 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<ProjectTask> cancelWithResponse(Context context)"
-  desc: "Cancel a task The tasks resource is a nested, proxy-only resource representing work performed by a DMS instance. This method cancels a task if it's currently queued or running."
+  desc: "Cancel a task The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance. This method cancels a task if it's currently queued or running."
   returns:
     description: "a task resource along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datamigration.models.ProjectTask?alt=com.azure.resourcemanager.datamigration.models.ProjectTask&text=ProjectTask\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.datamigration.models.ProjectTask.command(com.azure.resourcemanager.datamigration.fluent.models.CommandPropertiesInner)"
+  fullName: "com.azure.resourcemanager.datamigration.models.ProjectTask.command(CommandPropertiesInner parameters)"
+  name: "command(CommandPropertiesInner parameters)"
+  nameWithType: "ProjectTask.command(CommandPropertiesInner parameters)"
+  summary: "Execute a command on a task The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "Command to execute."
+    name: "parameters"
+    type: "<xref href=\"com.azure.resourcemanager.datamigration.fluent.models.CommandPropertiesInner?alt=com.azure.resourcemanager.datamigration.fluent.models.CommandPropertiesInner&text=CommandPropertiesInner\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract CommandProperties command(CommandPropertiesInner parameters)"
+  desc: "Execute a command on a task The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance. This method executes a command on a running task."
+  returns:
+    description: "base class for all types of DMS (classic) command properties."
+    type: "<xref href=\"com.azure.resourcemanager.datamigration.models.CommandProperties?alt=com.azure.resourcemanager.datamigration.models.CommandProperties&text=CommandProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.datamigration.models.ProjectTask.commandWithResponse(com.azure.resourcemanager.datamigration.fluent.models.CommandPropertiesInner,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.datamigration.models.ProjectTask.commandWithResponse(CommandPropertiesInner parameters, Context context)"
+  name: "commandWithResponse(CommandPropertiesInner parameters, Context context)"
+  nameWithType: "ProjectTask.commandWithResponse(CommandPropertiesInner parameters, Context context)"
+  summary: "Execute a command on a task The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "Command to execute."
+    name: "parameters"
+    type: "<xref href=\"com.azure.resourcemanager.datamigration.fluent.models.CommandPropertiesInner?alt=com.azure.resourcemanager.datamigration.fluent.models.CommandPropertiesInner&text=CommandPropertiesInner\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Response<CommandProperties> commandWithResponse(CommandPropertiesInner parameters, Context context)"
+  desc: "Execute a command on a task The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance. This method executes a command on a running task."
+  returns:
+    description: "base class for all types of DMS (classic) command properties along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datamigration.models.CommandProperties?alt=com.azure.resourcemanager.datamigration.models.CommandProperties&text=CommandProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.datamigration.models.ProjectTask.etag()"
   fullName: "com.azure.resourcemanager.datamigration.models.ProjectTask.etag()"
   name: "etag()"
@@ -134,6 +169,18 @@ methods:
   returns:
     description: "the name of the resource group."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.datamigration.models.ProjectTask.systemData()"
+  fullName: "com.azure.resourcemanager.datamigration.models.ProjectTask.systemData()"
+  name: "systemData()"
+  nameWithType: "ProjectTask.systemData()"
+  summary: "Gets the system<wbr>Data property: Metadata pertaining to creation and last modification of the resource."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract SystemDataAutoGenerated systemData()"
+  desc: "Gets the systemData property: Metadata pertaining to creation and last modification of the resource."
+  returns:
+    description: "the systemData value."
+    type: "<xref href=\"com.azure.resourcemanager.datamigration.models.SystemDataAutoGenerated?alt=com.azure.resourcemanager.datamigration.models.SystemDataAutoGenerated&text=SystemDataAutoGenerated\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.datamigration.models.ProjectTask.type()"
   fullName: "com.azure.resourcemanager.datamigration.models.ProjectTask.type()"
   name: "type()"
@@ -162,4 +209,4 @@ type: "interface"
 desc: "An immutable client-side representation of ProjectTask."
 metadata: {}
 package: "com.azure.resourcemanager.datamigration.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-datamigration:1.0.0-beta.3
+artifact: com.azure.resourcemanager:azure-resourcemanager-datamigration:1.1.0-beta.1

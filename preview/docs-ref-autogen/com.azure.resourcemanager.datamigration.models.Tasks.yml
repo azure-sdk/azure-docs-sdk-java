@@ -10,7 +10,7 @@ methods:
   fullName: "com.azure.resourcemanager.datamigration.models.Tasks.cancel(String groupName, String serviceName, String projectName, String taskName)"
   name: "cancel(String groupName, String serviceName, String projectName, String taskName)"
   nameWithType: "Tasks.cancel(String groupName, String serviceName, String projectName, String taskName)"
-  summary: "Cancel a task The tasks resource is a nested, proxy-only resource representing work performed by a DMS instance."
+  summary: "Cancel a task The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance."
   modifiers:
   - "abstract"
   parameters:
@@ -27,7 +27,7 @@ methods:
     name: "taskName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract ProjectTask cancel(String groupName, String serviceName, String projectName, String taskName)"
-  desc: "Cancel a task The tasks resource is a nested, proxy-only resource representing work performed by a DMS instance. This method cancels a task if it's currently queued or running."
+  desc: "Cancel a task The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance. This method cancels a task if it's currently queued or running."
   returns:
     description: "a task resource."
     type: "<xref href=\"com.azure.resourcemanager.datamigration.models.ProjectTask?alt=com.azure.resourcemanager.datamigration.models.ProjectTask&text=ProjectTask\" data-throw-if-not-resolved=\"False\" />"
@@ -35,7 +35,7 @@ methods:
   fullName: "com.azure.resourcemanager.datamigration.models.Tasks.cancelWithResponse(String groupName, String serviceName, String projectName, String taskName, Context context)"
   name: "cancelWithResponse(String groupName, String serviceName, String projectName, String taskName, Context context)"
   nameWithType: "Tasks.cancelWithResponse(String groupName, String serviceName, String projectName, String taskName, Context context)"
-  summary: "Cancel a task The tasks resource is a nested, proxy-only resource representing work performed by a DMS instance."
+  summary: "Cancel a task The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance."
   modifiers:
   - "abstract"
   parameters:
@@ -55,10 +55,69 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<ProjectTask> cancelWithResponse(String groupName, String serviceName, String projectName, String taskName, Context context)"
-  desc: "Cancel a task The tasks resource is a nested, proxy-only resource representing work performed by a DMS instance. This method cancels a task if it's currently queued or running."
+  desc: "Cancel a task The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance. This method cancels a task if it's currently queued or running."
   returns:
     description: "a task resource along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datamigration.models.ProjectTask?alt=com.azure.resourcemanager.datamigration.models.ProjectTask&text=ProjectTask\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.datamigration.models.Tasks.command(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.datamigration.fluent.models.CommandPropertiesInner)"
+  fullName: "com.azure.resourcemanager.datamigration.models.Tasks.command(String groupName, String serviceName, String projectName, String taskName, CommandPropertiesInner parameters)"
+  name: "command(String groupName, String serviceName, String projectName, String taskName, CommandPropertiesInner parameters)"
+  nameWithType: "Tasks.command(String groupName, String serviceName, String projectName, String taskName, CommandPropertiesInner parameters)"
+  summary: "Execute a command on a task The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "Name of the resource group."
+    name: "groupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the service."
+    name: "serviceName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the project."
+    name: "projectName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the Task."
+    name: "taskName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Command to execute."
+    name: "parameters"
+    type: "<xref href=\"com.azure.resourcemanager.datamigration.fluent.models.CommandPropertiesInner?alt=com.azure.resourcemanager.datamigration.fluent.models.CommandPropertiesInner&text=CommandPropertiesInner\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract CommandProperties command(String groupName, String serviceName, String projectName, String taskName, CommandPropertiesInner parameters)"
+  desc: "Execute a command on a task The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance. This method executes a command on a running task."
+  returns:
+    description: "base class for all types of DMS (classic) command properties."
+    type: "<xref href=\"com.azure.resourcemanager.datamigration.models.CommandProperties?alt=com.azure.resourcemanager.datamigration.models.CommandProperties&text=CommandProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.datamigration.models.Tasks.commandWithResponse(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.datamigration.fluent.models.CommandPropertiesInner,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.datamigration.models.Tasks.commandWithResponse(String groupName, String serviceName, String projectName, String taskName, CommandPropertiesInner parameters, Context context)"
+  name: "commandWithResponse(String groupName, String serviceName, String projectName, String taskName, CommandPropertiesInner parameters, Context context)"
+  nameWithType: "Tasks.commandWithResponse(String groupName, String serviceName, String projectName, String taskName, CommandPropertiesInner parameters, Context context)"
+  summary: "Execute a command on a task The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "Name of the resource group."
+    name: "groupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the service."
+    name: "serviceName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the project."
+    name: "projectName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the Task."
+    name: "taskName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Command to execute."
+    name: "parameters"
+    type: "<xref href=\"com.azure.resourcemanager.datamigration.fluent.models.CommandPropertiesInner?alt=com.azure.resourcemanager.datamigration.fluent.models.CommandPropertiesInner&text=CommandPropertiesInner\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Response<CommandProperties> commandWithResponse(String groupName, String serviceName, String projectName, String taskName, CommandPropertiesInner parameters, Context context)"
+  desc: "Execute a command on a task The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance. This method executes a command on a running task."
+  returns:
+    description: "base class for all types of DMS (classic) command properties along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datamigration.models.CommandProperties?alt=com.azure.resourcemanager.datamigration.models.CommandProperties&text=CommandProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.datamigration.models.Tasks.define(java.lang.String)"
   fullName: "com.azure.resourcemanager.datamigration.models.Tasks.define(String name)"
   name: "define(String name)"
@@ -79,7 +138,7 @@ methods:
   fullName: "com.azure.resourcemanager.datamigration.models.Tasks.delete(String groupName, String serviceName, String projectName, String taskName)"
   name: "delete(String groupName, String serviceName, String projectName, String taskName)"
   nameWithType: "Tasks.delete(String groupName, String serviceName, String projectName, String taskName)"
-  summary: "Delete task The tasks resource is a nested, proxy-only resource representing work performed by a DMS instance."
+  summary: "Delete task The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance."
   modifiers:
   - "abstract"
   parameters:
@@ -96,12 +155,12 @@ methods:
     name: "taskName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract void delete(String groupName, String serviceName, String projectName, String taskName)"
-  desc: "Delete task The tasks resource is a nested, proxy-only resource representing work performed by a DMS instance. The DELETE method deletes a task, canceling it first if it's running."
+  desc: "Delete task The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance. The DELETE method deletes a task, canceling it first if it's running."
 - uid: "com.azure.resourcemanager.datamigration.models.Tasks.deleteById(java.lang.String)"
   fullName: "com.azure.resourcemanager.datamigration.models.Tasks.deleteById(String id)"
   name: "deleteById(String id)"
   nameWithType: "Tasks.deleteById(String id)"
-  summary: "Delete task The tasks resource is a nested, proxy-only resource representing work performed by a DMS instance."
+  summary: "Delete task The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance."
   modifiers:
   - "abstract"
   parameters:
@@ -109,12 +168,12 @@ methods:
     name: "id"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract void deleteById(String id)"
-  desc: "Delete task The tasks resource is a nested, proxy-only resource representing work performed by a DMS instance. The DELETE method deletes a task, canceling it first if it's running."
+  desc: "Delete task The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance. The DELETE method deletes a task, canceling it first if it's running."
 - uid: "com.azure.resourcemanager.datamigration.models.Tasks.deleteByIdWithResponse(java.lang.String,java.lang.Boolean,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.datamigration.models.Tasks.deleteByIdWithResponse(String id, Boolean deleteRunningTasks, Context context)"
   name: "deleteByIdWithResponse(String id, Boolean deleteRunningTasks, Context context)"
   nameWithType: "Tasks.deleteByIdWithResponse(String id, Boolean deleteRunningTasks, Context context)"
-  summary: "Delete task The tasks resource is a nested, proxy-only resource representing work performed by a DMS instance."
+  summary: "Delete task The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance."
   modifiers:
   - "abstract"
   parameters:
@@ -128,7 +187,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<Void> deleteByIdWithResponse(String id, Boolean deleteRunningTasks, Context context)"
-  desc: "Delete task The tasks resource is a nested, proxy-only resource representing work performed by a DMS instance. The DELETE method deletes a task, canceling it first if it's running."
+  desc: "Delete task The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance. The DELETE method deletes a task, canceling it first if it's running."
   returns:
     description: "the <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
@@ -136,7 +195,7 @@ methods:
   fullName: "com.azure.resourcemanager.datamigration.models.Tasks.deleteWithResponse(String groupName, String serviceName, String projectName, String taskName, Boolean deleteRunningTasks, Context context)"
   name: "deleteWithResponse(String groupName, String serviceName, String projectName, String taskName, Boolean deleteRunningTasks, Context context)"
   nameWithType: "Tasks.deleteWithResponse(String groupName, String serviceName, String projectName, String taskName, Boolean deleteRunningTasks, Context context)"
-  summary: "Delete task The tasks resource is a nested, proxy-only resource representing work performed by a DMS instance."
+  summary: "Delete task The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance."
   modifiers:
   - "abstract"
   parameters:
@@ -159,7 +218,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<Void> deleteWithResponse(String groupName, String serviceName, String projectName, String taskName, Boolean deleteRunningTasks, Context context)"
-  desc: "Delete task The tasks resource is a nested, proxy-only resource representing work performed by a DMS instance. The DELETE method deletes a task, canceling it first if it's running."
+  desc: "Delete task The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance. The DELETE method deletes a task, canceling it first if it's running."
   returns:
     description: "the <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
@@ -167,7 +226,7 @@ methods:
   fullName: "com.azure.resourcemanager.datamigration.models.Tasks.get(String groupName, String serviceName, String projectName, String taskName)"
   name: "get(String groupName, String serviceName, String projectName, String taskName)"
   nameWithType: "Tasks.get(String groupName, String serviceName, String projectName, String taskName)"
-  summary: "Get task information The tasks resource is a nested, proxy-only resource representing work performed by a DMS instance."
+  summary: "Get task information The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance."
   modifiers:
   - "abstract"
   parameters:
@@ -184,7 +243,7 @@ methods:
     name: "taskName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract ProjectTask get(String groupName, String serviceName, String projectName, String taskName)"
-  desc: "Get task information The tasks resource is a nested, proxy-only resource representing work performed by a DMS instance. The GET method retrieves information about a task."
+  desc: "Get task information The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance. The GET method retrieves information about a task."
   returns:
     description: "a task resource."
     type: "<xref href=\"com.azure.resourcemanager.datamigration.models.ProjectTask?alt=com.azure.resourcemanager.datamigration.models.ProjectTask&text=ProjectTask\" data-throw-if-not-resolved=\"False\" />"
@@ -192,7 +251,7 @@ methods:
   fullName: "com.azure.resourcemanager.datamigration.models.Tasks.getById(String id)"
   name: "getById(String id)"
   nameWithType: "Tasks.getById(String id)"
-  summary: "Get task information The tasks resource is a nested, proxy-only resource representing work performed by a DMS instance."
+  summary: "Get task information The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance."
   modifiers:
   - "abstract"
   parameters:
@@ -200,7 +259,7 @@ methods:
     name: "id"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract ProjectTask getById(String id)"
-  desc: "Get task information The tasks resource is a nested, proxy-only resource representing work performed by a DMS instance. The GET method retrieves information about a task."
+  desc: "Get task information The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance. The GET method retrieves information about a task."
   returns:
     description: "a task resource along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.resourcemanager.datamigration.models.ProjectTask?alt=com.azure.resourcemanager.datamigration.models.ProjectTask&text=ProjectTask\" data-throw-if-not-resolved=\"False\" />"
@@ -208,7 +267,7 @@ methods:
   fullName: "com.azure.resourcemanager.datamigration.models.Tasks.getByIdWithResponse(String id, String expand, Context context)"
   name: "getByIdWithResponse(String id, String expand, Context context)"
   nameWithType: "Tasks.getByIdWithResponse(String id, String expand, Context context)"
-  summary: "Get task information The tasks resource is a nested, proxy-only resource representing work performed by a DMS instance."
+  summary: "Get task information The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance."
   modifiers:
   - "abstract"
   parameters:
@@ -222,7 +281,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<ProjectTask> getByIdWithResponse(String id, String expand, Context context)"
-  desc: "Get task information The tasks resource is a nested, proxy-only resource representing work performed by a DMS instance. The GET method retrieves information about a task."
+  desc: "Get task information The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance. The GET method retrieves information about a task."
   returns:
     description: "a task resource along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datamigration.models.ProjectTask?alt=com.azure.resourcemanager.datamigration.models.ProjectTask&text=ProjectTask\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -230,7 +289,7 @@ methods:
   fullName: "com.azure.resourcemanager.datamigration.models.Tasks.getWithResponse(String groupName, String serviceName, String projectName, String taskName, String expand, Context context)"
   name: "getWithResponse(String groupName, String serviceName, String projectName, String taskName, String expand, Context context)"
   nameWithType: "Tasks.getWithResponse(String groupName, String serviceName, String projectName, String taskName, String expand, Context context)"
-  summary: "Get task information The tasks resource is a nested, proxy-only resource representing work performed by a DMS instance."
+  summary: "Get task information The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance."
   modifiers:
   - "abstract"
   parameters:
@@ -253,7 +312,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<ProjectTask> getWithResponse(String groupName, String serviceName, String projectName, String taskName, String expand, Context context)"
-  desc: "Get task information The tasks resource is a nested, proxy-only resource representing work performed by a DMS instance. The GET method retrieves information about a task."
+  desc: "Get task information The tasks resource is a nested, proxy-only resource representing work performed by a DMS (classic) instance. The GET method retrieves information about a task."
   returns:
     description: "a task resource along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datamigration.models.ProjectTask?alt=com.azure.resourcemanager.datamigration.models.ProjectTask&text=ProjectTask\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -261,7 +320,7 @@ methods:
   fullName: "com.azure.resourcemanager.datamigration.models.Tasks.list(String groupName, String serviceName, String projectName)"
   name: "list(String groupName, String serviceName, String projectName)"
   nameWithType: "Tasks.list(String groupName, String serviceName, String projectName)"
-  summary: "Get tasks in a service The services resource is the top-level resource that represents the Database Migration Service."
+  summary: "Get tasks in a service The services resource is the top-level resource that represents the Azure Database Migration Service (classic)."
   modifiers:
   - "abstract"
   parameters:
@@ -275,7 +334,7 @@ methods:
     name: "projectName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<ProjectTask> list(String groupName, String serviceName, String projectName)"
-  desc: "Get tasks in a service The services resource is the top-level resource that represents the Database Migration Service. This method returns a list of tasks owned by a service resource. Some tasks may have a status of Unknown, which indicates that an error occurred while querying the status of that task."
+  desc: "Get tasks in a service The services resource is the top-level resource that represents the Azure Database Migration Service (classic). This method returns a list of tasks owned by a service resource. Some tasks may have a status of Unknown, which indicates that an error occurred while querying the status of that task."
   returns:
     description: "oData page of tasks as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datamigration.models.ProjectTask?alt=com.azure.resourcemanager.datamigration.models.ProjectTask&text=ProjectTask\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -283,7 +342,7 @@ methods:
   fullName: "com.azure.resourcemanager.datamigration.models.Tasks.list(String groupName, String serviceName, String projectName, String taskType, Context context)"
   name: "list(String groupName, String serviceName, String projectName, String taskType, Context context)"
   nameWithType: "Tasks.list(String groupName, String serviceName, String projectName, String taskType, Context context)"
-  summary: "Get tasks in a service The services resource is the top-level resource that represents the Database Migration Service."
+  summary: "Get tasks in a service The services resource is the top-level resource that represents the Azure Database Migration Service (classic)."
   modifiers:
   - "abstract"
   parameters:
@@ -303,7 +362,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<ProjectTask> list(String groupName, String serviceName, String projectName, String taskType, Context context)"
-  desc: "Get tasks in a service The services resource is the top-level resource that represents the Database Migration Service. This method returns a list of tasks owned by a service resource. Some tasks may have a status of Unknown, which indicates that an error occurred while querying the status of that task."
+  desc: "Get tasks in a service The services resource is the top-level resource that represents the Azure Database Migration Service (classic). This method returns a list of tasks owned by a service resource. Some tasks may have a status of Unknown, which indicates that an error occurred while querying the status of that task."
   returns:
     description: "oData page of tasks as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datamigration.models.ProjectTask?alt=com.azure.resourcemanager.datamigration.models.ProjectTask&text=ProjectTask\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -311,4 +370,4 @@ type: "interface"
 desc: "Resource collection API of Tasks."
 metadata: {}
 package: "com.azure.resourcemanager.datamigration.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-datamigration:1.0.0-beta.3
+artifact: com.azure.resourcemanager:azure-resourcemanager-datamigration:1.1.0-beta.1

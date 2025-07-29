@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.datamigration.models.ProjectTaskProperties"
 fullName: "com.azure.resourcemanager.datamigration.models.ProjectTaskProperties"
 name: "ProjectTaskProperties"
 nameWithType: "ProjectTaskProperties"
-summary: "Base class for all types of DMS task properties."
+summary: "Base class for all types of DMS (classic) task properties."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -30,16 +30,26 @@ constructors:
   syntax: "public ProjectTaskProperties()"
   desc: "Creates an instance of ProjectTaskProperties class."
 methods:
+- uid: "com.azure.resourcemanager.datamigration.models.ProjectTaskProperties.clientData()"
+  fullName: "com.azure.resourcemanager.datamigration.models.ProjectTaskProperties.clientData()"
+  name: "clientData()"
+  nameWithType: "ProjectTaskProperties.clientData()"
+  summary: "Get the client<wbr>Data property: Key value pairs of client data to attach meta data information to task."
+  syntax: "public Map<String,String> clientData()"
+  desc: "Get the clientData property: Key value pairs of client data to attach meta data information to task."
+  returns:
+    description: "the clientData value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.resourcemanager.datamigration.models.ProjectTaskProperties.commands()"
   fullName: "com.azure.resourcemanager.datamigration.models.ProjectTaskProperties.commands()"
   name: "commands()"
   nameWithType: "ProjectTaskProperties.commands()"
   summary: "Get the commands property: Array of command properties."
-  syntax: "public List<CommandProperties> commands()"
+  syntax: "public List<CommandPropertiesInner> commands()"
   desc: "Get the commands property: Array of command properties."
   returns:
     description: "the commands value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.datamigration.models.CommandProperties?alt=com.azure.resourcemanager.datamigration.models.CommandProperties&text=CommandProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.datamigration.fluent.models.CommandPropertiesInner?alt=com.azure.resourcemanager.datamigration.fluent.models.CommandPropertiesInner&text=CommandPropertiesInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.datamigration.models.ProjectTaskProperties.errors()"
   fullName: "com.azure.resourcemanager.datamigration.models.ProjectTaskProperties.errors()"
   name: "errors()"
@@ -84,11 +94,11 @@ methods:
   name: "taskType()"
   nameWithType: "ProjectTaskProperties.taskType()"
   summary: "Get the task<wbr>Type property: Task type."
-  syntax: "public String taskType()"
+  syntax: "public TaskType taskType()"
   desc: "Get the taskType property: Task type."
   returns:
     description: "the taskType value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+    type: "<xref href=\"com.azure.resourcemanager.datamigration.models.TaskType?alt=com.azure.resourcemanager.datamigration.models.TaskType&text=TaskType\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.datamigration.models.ProjectTaskProperties.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.datamigration.models.ProjectTaskProperties.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -108,10 +118,24 @@ methods:
   summary: "Validates the instance."
   syntax: "public void validate()"
   desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.datamigration.models.ProjectTaskProperties.withClientData(java.util.Map<java.lang.String,java.lang.String>)"
+  fullName: "com.azure.resourcemanager.datamigration.models.ProjectTaskProperties.withClientData(Map<String,String> clientData)"
+  name: "withClientData(Map<String,String> clientData)"
+  nameWithType: "ProjectTaskProperties.withClientData(Map<String,String> clientData)"
+  summary: "Set the client<wbr>Data property: Key value pairs of client data to attach meta data information to task."
+  parameters:
+  - description: "the clientData value to set."
+    name: "clientData"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+  syntax: "public ProjectTaskProperties withClientData(Map<String,String> clientData)"
+  desc: "Set the clientData property: Key value pairs of client data to attach meta data information to task."
+  returns:
+    description: "the ProjectTaskProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.datamigration.models.ProjectTaskProperties?alt=com.azure.resourcemanager.datamigration.models.ProjectTaskProperties&text=ProjectTaskProperties\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Base class for all types of DMS task properties. If task is not supported by current client, this object is returned."
+desc: "Base class for all types of DMS (classic) task properties. If task is not supported by current client, this object is returned."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datamigration.models.ProjectTaskProperties?alt=com.azure.resourcemanager.datamigration.models.ProjectTaskProperties&text=ProjectTaskProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.datamigration.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-datamigration:1.0.0-beta.3
+artifact: com.azure.resourcemanager:azure-resourcemanager-datamigration:1.1.0-beta.1

@@ -46,7 +46,7 @@ methods:
   desc: "Get the identifier of the key to use for cryptography operations."
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> containing the key identifier."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.security.keyvault.keys.cryptography.KeyEncryptionKeyAsyncClient.unwrapKey(java.lang.String,byte[])"
   fullName: "com.azure.security.keyvault.keys.cryptography.KeyEncryptionKeyAsyncClient.unwrapKey(String algorithm, byte[] encryptedKey)"
   name: "unwrapKey(String algorithm, byte[] encryptedKey)"
@@ -58,7 +58,7 @@ methods:
     type: "<xref href=\"byte?alt=byte&text=byte\" data-throw-if-not-resolved=\"False\" />[]"
   syntax: "public Mono<byte[]> unwrapKey(String algorithm, byte[] encryptedKey)"
   returns:
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"byte?alt=byte&text=byte\" data-throw-if-not-resolved=\"False\" />[]&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"byte?alt=byte&text=byte\" data-throw-if-not-resolved=\"False\" />[]&gt;"
 - uid: "com.azure.security.keyvault.keys.cryptography.KeyEncryptionKeyAsyncClient.wrapKey(java.lang.String,byte[])"
   fullName: "com.azure.security.keyvault.keys.cryptography.KeyEncryptionKeyAsyncClient.wrapKey(String algorithm, byte[] key)"
   name: "wrapKey(String algorithm, byte[] key)"
@@ -70,7 +70,7 @@ methods:
     type: "<xref href=\"byte?alt=byte&text=byte\" data-throw-if-not-resolved=\"False\" />[]"
   syntax: "public Mono<byte[]> wrapKey(String algorithm, byte[] key)"
   returns:
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"byte?alt=byte&text=byte\" data-throw-if-not-resolved=\"False\" />[]&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"byte?alt=byte&text=byte\" data-throw-if-not-resolved=\"False\" />[]&gt;"
 type: "class"
 desc: "A key client which is used to asynchronously wrap or unwrap another key.\n\nWhen a <xref uid=\"com.azure.security.keyvault.keys.cryptography.KeyEncryptionKeyAsyncClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"KeyEncryptionKeyAsyncClient\"></xref> gets created using a `Azure Key Vault key identifier`, the first time a cryptographic operation is attempted, the client will attempt to retrieve the key material from the service, cache it, and perform all future cryptographic operations locally, deferring to the service when that's not possible. If key retrieval and caching fails because of a non-retryable error, the client will not make any further attempts and will fall back to performing all cryptographic operations on the service side. Conversely, when a <xref uid=\"com.azure.security.keyvault.keys.cryptography.KeyEncryptionKeyAsyncClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"KeyEncryptionKeyAsyncClient\"></xref> created using a <xref uid=\"com.azure.security.keyvault.keys.models.JsonWebKey\" data-throw-if-not-resolved=\"false\" data-raw-source=\"JSON Web Key\"></xref>, all cryptographic operations will be performed locally."
 implements:
