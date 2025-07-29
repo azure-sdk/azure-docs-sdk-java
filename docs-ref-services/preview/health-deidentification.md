@@ -1,7 +1,7 @@
 ---
 title: Azure Health Deidentification SDK for Java
 description: Reference for Azure Health Deidentification SDK for Java
-ms.date: 07/28/2025
+ms.date: 07/29/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: healthdeidentification
