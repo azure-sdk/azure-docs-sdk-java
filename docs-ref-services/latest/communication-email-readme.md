@@ -1,12 +1,12 @@
 ---
 title: Azure Communication Email client library for Java
 keywords: Azure, java, SDK, API, azure-communication-email, communication
-ms.date: 06/21/2025
+ms.date: 07/30/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: communication
 ---
-# Azure Communication Email client library for Java - version 1.0.22 
+# Azure Communication Email client library for Java - version 1.0.23 
 
 
 This package contains the Java SDK for Azure Communication Services for Email.
@@ -27,7 +27,7 @@ To create these resources, you can use the [Azure Portal][communication_resource
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-communication-email_1.0.22/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-communication-email_1.0.23/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -63,7 +63,7 @@ add the direct dependency to your project as follows.
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-communication-email</artifactId>
-    <version>1.0.22</version>
+    <version>1.0.23</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})

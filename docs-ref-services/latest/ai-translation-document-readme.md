@@ -1,12 +1,12 @@
 ---
 title: Azure DocumentTranslation client library for Java
 keywords: Azure, java, SDK, API, azure-ai-translation-document, translation
-ms.date: 06/21/2025
+ms.date: 07/30/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: translation
 ---
-# Azure DocumentTranslation client library for Java - version 1.0.2 
+# Azure DocumentTranslation client library for Java - version 1.0.3 
 
 
 Document Translation is a cloud-based machine translation feature of the Azure AI Translator service. You can translate multiple and complex documents across all supported languages and dialects while preserving original document structure and data format. The Document translation API supports two translation processes:
@@ -37,7 +37,7 @@ Various documentation is available to help you get started
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-ai-translation-document</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -489,7 +489,7 @@ Samples are provided for each main functional area.
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-translation-document_1.0.2/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-translation-document_1.0.3/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -502,9 +502,9 @@ For details on contributing to this repository, see the [contributing guide](htt
 [docs]: https://learn.microsoft.com/azure/ai-services/translator/document-translation/reference/rest-api-guide
 [jdk]: https://learn.microsoft.com/azure/developer/java/fundamentals/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-translation-document_1.0.2/sdk/identity/azure-identity
-[sample_document_translation_client_with_apiKey]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-translation-document_1.0.2/sdk/translation/azure-ai-translation-document/src/samples/java/com/azure/ai/translation/document/ReadmeSamples.java
-[sample_single_document_translation_client_with_apiKey]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-translation-document_1.0.2/sdk/translation/azure-ai-translation-document/src/samples/java/com/azure/ai/translation/document/ReadmeSamples.java
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-translation-document_1.0.3/sdk/identity/azure-identity
+[sample_document_translation_client_with_apiKey]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-translation-document_1.0.3/sdk/translation/azure-ai-translation-document/src/samples/java/com/azure/ai/translation/document/ReadmeSamples.java
+[sample_single_document_translation_client_with_apiKey]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-translation-document_1.0.3/sdk/translation/azure-ai-translation-document/src/samples/java/com/azure/ai/translation/document/ReadmeSamples.java
 [documentFormats_doc]: https://learn.microsoft.com/azure/ai-services/translator/document-translation/reference/get-supported-document-formats
 [glossaryFormats]: https://learn.microsoft.com/azure/ai-services/translator/document-translation/reference/get-supported-glossary-formats
 [batchTranslation_doc]: https://learn.microsoft.com/azure/ai-services/translator/document-translation/reference/start-batch-translation
@@ -514,17 +514,17 @@ For details on contributing to this repository, see the [contributing guide](htt
 [getTranslationStatus_doc]: https://learn.microsoft.com/azure/ai-services/translator/document-translation/reference/get-translation-status
 [getDocumentsStatus_doc]: https://learn.microsoft.com/azure/ai-services/translator/document-translation/reference/get-documents-status
 [getDocumentStatus_doc]: https://learn.microsoft.com/azure/ai-services/translator/document-translation/reference/get-document-status
-[document_translator_client_class]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-translation-document_1.0.2/sdk/translation/azure-ai-translation-document/src/main/java/com/azure/ai/translation/document/DocumentTranslationClient.java
-[single_document_translator_client_class]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-translation-document_1.0.2/sdk/translation/azure-ai-translation-document/src/main/java/com/azure/ai/translation/document/SingleDocumentTranslationClient.java
-[sample_batchDocumentTranslation]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-translation-document_1.0.2/sdk/translation/azure-ai-translation-document/src/samples/java/com/azure/ai/translation/document/StartDocumentTranslation.java
-[sample_singleDocumentTranslation]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-translation-document_1.0.2/sdk/translation/azure-ai-translation-document/src/samples/java/com/azure/ai/translation/document/StartSingleDocumentTranslation.java
-[sample_cancelTranslation]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-translation-document_1.0.2/sdk/translation/azure-ai-translation-document/src/samples/java/com/azure/ai/translation/document/CancelDocumentTranslation.java
-[sample_getTranslationsStatus]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-translation-document_1.0.2/sdk/translation/azure-ai-translation-document/src/samples/java/com/azure/ai/translation/document/GetTranslationsStatus.java
-[sample_getTranslationStatus]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-translation-document_1.0.2/sdk/translation/azure-ai-translation-document/src/samples/java/com/azure/ai/translation/document/GetTranslationStatus.java
-[sample_getDocumentsStatus]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-translation-document_1.0.2/sdk/translation/azure-ai-translation-document/src/samples/java/com/azure/ai/translation/document/GetDocumentsStatus.java
-[sample_getDocumentStatus]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-translation-document_1.0.2/sdk/translation/azure-ai-translation-document/src/samples/java/com/azure/ai/translation/document/GetDocumentStatus.java
-[sample_getSupportedFormats]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-translation-document_1.0.2/sdk/translation/azure-ai-translation-document/src/samples/java/com/azure/ai/translation/document/GetSupportedFormats.java
-[azure_identity_credential_type]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-translation-document_1.0.2/sdk/identity/azure-identity#credentials
+[document_translator_client_class]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-translation-document_1.0.3/sdk/translation/azure-ai-translation-document/src/main/java/com/azure/ai/translation/document/DocumentTranslationClient.java
+[single_document_translator_client_class]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-translation-document_1.0.3/sdk/translation/azure-ai-translation-document/src/main/java/com/azure/ai/translation/document/SingleDocumentTranslationClient.java
+[sample_batchDocumentTranslation]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-translation-document_1.0.3/sdk/translation/azure-ai-translation-document/src/samples/java/com/azure/ai/translation/document/StartDocumentTranslation.java
+[sample_singleDocumentTranslation]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-translation-document_1.0.3/sdk/translation/azure-ai-translation-document/src/samples/java/com/azure/ai/translation/document/StartSingleDocumentTranslation.java
+[sample_cancelTranslation]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-translation-document_1.0.3/sdk/translation/azure-ai-translation-document/src/samples/java/com/azure/ai/translation/document/CancelDocumentTranslation.java
+[sample_getTranslationsStatus]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-translation-document_1.0.3/sdk/translation/azure-ai-translation-document/src/samples/java/com/azure/ai/translation/document/GetTranslationsStatus.java
+[sample_getTranslationStatus]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-translation-document_1.0.3/sdk/translation/azure-ai-translation-document/src/samples/java/com/azure/ai/translation/document/GetTranslationStatus.java
+[sample_getDocumentsStatus]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-translation-document_1.0.3/sdk/translation/azure-ai-translation-document/src/samples/java/com/azure/ai/translation/document/GetDocumentsStatus.java
+[sample_getDocumentStatus]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-translation-document_1.0.3/sdk/translation/azure-ai-translation-document/src/samples/java/com/azure/ai/translation/document/GetDocumentStatus.java
+[sample_getSupportedFormats]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-translation-document_1.0.3/sdk/translation/azure-ai-translation-document/src/samples/java/com/azure/ai/translation/document/GetSupportedFormats.java
+[azure_identity_credential_type]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-translation-document_1.0.3/sdk/identity/azure-identity#credentials
 [wiki_identity]: https://learn.microsoft.com/azure/developer/java/sdk/identity
 [aad_authorization]: /azure/cognitive-services/authentication#authenticate-with-azure-active-directory
 [managed_identities_for_document_translation]: https://learn.microsoft.com/azure/ai-services/translator/document-translation/how-to-guides/create-use-managed-identities

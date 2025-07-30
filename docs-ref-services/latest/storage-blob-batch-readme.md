@@ -1,12 +1,12 @@
 ---
 title: Azure Storage Blobs Batch client library for Java
 keywords: Azure, java, SDK, API, azure-storage-blob-batch, storage
-ms.date: 07/16/2025
+ms.date: 07/30/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: storage
 ---
-# Azure Storage Blobs Batch client library for Java - version 12.27.0 
+# Azure Storage Blobs Batch client library for Java - version 12.27.1 
 
 
 Azure Blob storage is Microsoft's object storage solution for the cloud. Blob
@@ -30,7 +30,7 @@ definition, such as text or binary data.
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on GA version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob-batch_12.27.0/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob-batch_12.27.1/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -65,7 +65,7 @@ add the direct dependency to your project as follows.
 <dependency>
   <groupId>com.azure</groupId>
   <artifactId>azure-storage-blob-batch</artifactId>
-  <version>12.27.0</version>
+  <version>12.27.1</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -203,19 +203,19 @@ When you submit a pull request, a CLA-bot will automatically determine whether y
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the Code of Conduct FAQ or contact opencode@microsoft.com with any additional questions or comments.
 
 <!-- LINKS -->
-[source]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob-batch_12.27.0/sdk/storage/azure-storage-blob-batch/src/main/java
+[source]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob-batch_12.27.1/sdk/storage/azure-storage-blob-batch/src/main/java
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [rest_docs]: https://learn.microsoft.com/rest/api/storageservices/blob-service-rest-api
 [product_docs]: https://learn.microsoft.com/azure/storage/blobs/storage-blobs-overview
-[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob-batch_12.27.0/sdk/storage/azure-storage-blob-batch/src/samples
+[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob-batch_12.27.1/sdk/storage/azure-storage-blob-batch/src/samples
 [jdk]: https://learn.microsoft.com/java/azure/jdk/?view=azure-java-stable
 [azure_subscription]: https://azure.microsoft.com/free/
 [storage_account]: https://learn.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal
 [azure_portal]: https://learn.microsoft.com/azure/storage/common/storage-account-create?tabs=azure-portal
 [storage_account_create_cli]: https://learn.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=azure-cli
-[blob_service_client]: https://github.com/Azure/azure-sdk-for-java/tree/azure-storage-blob-batch_12.27.0/sdk/storage/azure-storage-blob#create-a-storage-account
+[blob_service_client]: https://github.com/Azure/azure-sdk-for-java/tree/azure-storage-blob-batch_12.27.1/sdk/storage/azure-storage-blob#create-a-storage-account
 [error_codes]: https://learn.microsoft.com/rest/api/storageservices/blob-service-error-codes
-[blob_samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob-batch_12.27.0/sdk/storage/azure-storage-blob-batch/src/samples/README.md
+[blob_samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob-batch_12.27.1/sdk/storage/azure-storage-blob-batch/src/samples/README.md
 [cla]: https://cla.microsoft.com
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
