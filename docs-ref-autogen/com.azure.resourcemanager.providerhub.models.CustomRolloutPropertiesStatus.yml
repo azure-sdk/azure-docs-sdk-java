@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.providerhub.models.CustomRolloutPropertiesStatus
 fullName: "com.azure.resourcemanager.providerhub.models.CustomRolloutPropertiesStatus"
 name: "CustomRolloutPropertiesStatus"
 nameWithType: "CustomRolloutPropertiesStatus"
-summary: "The Custom<wbr>Rollout<wbr>Properties<wbr>Status model."
+summary: "The status."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 - "<xref href=\"com.azure.resourcemanager.providerhub.models.CustomRolloutStatus?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
@@ -13,10 +13,12 @@ inheritedClassMethods:
   - "<xref href=\"com.azure.resourcemanager.providerhub.models.CustomRolloutStatus.completedRegions()?alt=com.azure.resourcemanager.providerhub.models.CustomRolloutStatus.completedRegions&text=completedRegions\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.providerhub.models.CustomRolloutStatus.failedOrSkippedRegions()?alt=com.azure.resourcemanager.providerhub.models.CustomRolloutStatus.failedOrSkippedRegions&text=failedOrSkippedRegions\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.providerhub.models.CustomRolloutStatus.fromJson(com.azure.json.JsonReader)?alt=com.azure.resourcemanager.providerhub.models.CustomRolloutStatus.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.resourcemanager.providerhub.models.CustomRolloutStatus.manifestCheckinStatus()?alt=com.azure.resourcemanager.providerhub.models.CustomRolloutStatus.manifestCheckinStatus&text=manifestCheckinStatus\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.providerhub.models.CustomRolloutStatus.toJson(com.azure.json.JsonWriter)?alt=com.azure.resourcemanager.providerhub.models.CustomRolloutStatus.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.providerhub.models.CustomRolloutStatus.validate()?alt=com.azure.resourcemanager.providerhub.models.CustomRolloutStatus.validate&text=validate\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.providerhub.models.CustomRolloutStatus.withCompletedRegions(java.util.List<java.lang.String>)?alt=com.azure.resourcemanager.providerhub.models.CustomRolloutStatus.withCompletedRegions&text=withCompletedRegions\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.providerhub.models.CustomRolloutStatus.withFailedOrSkippedRegions(java.util.Map<java.lang.String,com.azure.resourcemanager.providerhub.models.ExtendedErrorInfo>)?alt=com.azure.resourcemanager.providerhub.models.CustomRolloutStatus.withFailedOrSkippedRegions&text=withFailedOrSkippedRegions\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.resourcemanager.providerhub.models.CustomRolloutStatus.withManifestCheckinStatus(com.azure.resourcemanager.providerhub.models.CustomRolloutStatusManifestCheckinStatus)?alt=com.azure.resourcemanager.providerhub.models.CustomRolloutStatus.withManifestCheckinStatus&text=withManifestCheckinStatus\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -84,30 +86,43 @@ methods:
   fullName: "com.azure.resourcemanager.providerhub.models.CustomRolloutPropertiesStatus.withCompletedRegions(List<String> completedRegions)"
   name: "withCompletedRegions(List<String> completedRegions)"
   nameWithType: "CustomRolloutPropertiesStatus.withCompletedRegions(List<String> completedRegions)"
-  summary: "Set the completed<wbr>Regions property: The completed<wbr>Regions property."
+  summary: "Set the completed<wbr>Regions property: The completed regions."
   overridden: "com.azure.resourcemanager.providerhub.models.CustomRolloutStatus.withCompletedRegions(java.util.List<java.lang.String>)"
   parameters:
   - name: "completedRegions"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
   syntax: "public CustomRolloutPropertiesStatus withCompletedRegions(List<String> completedRegions)"
-  desc: "Set the completedRegions property: The completedRegions property."
+  desc: "Set the completedRegions property: The completed regions."
   returns:
     type: "<xref href=\"com.azure.resourcemanager.providerhub.models.CustomRolloutPropertiesStatus?alt=com.azure.resourcemanager.providerhub.models.CustomRolloutPropertiesStatus&text=CustomRolloutPropertiesStatus\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.providerhub.models.CustomRolloutPropertiesStatus.withFailedOrSkippedRegions(java.util.Map<java.lang.String,com.azure.resourcemanager.providerhub.models.ExtendedErrorInfo>)"
   fullName: "com.azure.resourcemanager.providerhub.models.CustomRolloutPropertiesStatus.withFailedOrSkippedRegions(Map<String,ExtendedErrorInfo> failedOrSkippedRegions)"
   name: "withFailedOrSkippedRegions(Map<String,ExtendedErrorInfo> failedOrSkippedRegions)"
   nameWithType: "CustomRolloutPropertiesStatus.withFailedOrSkippedRegions(Map<String,ExtendedErrorInfo> failedOrSkippedRegions)"
-  summary: "Set the failed<wbr>OrSkipped<wbr>Regions property: Dictionary of <Extended<wbr>Error<wbr>Info>."
+  summary: "Set the failed<wbr>OrSkipped<wbr>Regions property: The failed or skipped regions."
   overridden: "com.azure.resourcemanager.providerhub.models.CustomRolloutStatus.withFailedOrSkippedRegions(java.util.Map<java.lang.String,com.azure.resourcemanager.providerhub.models.ExtendedErrorInfo>)"
   parameters:
   - name: "failedOrSkippedRegions"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.resourcemanager.providerhub.models.ExtendedErrorInfo?alt=com.azure.resourcemanager.providerhub.models.ExtendedErrorInfo&text=ExtendedErrorInfo\" data-throw-if-not-resolved=\"False\" />&gt;"
   syntax: "public CustomRolloutPropertiesStatus withFailedOrSkippedRegions(Map<String,ExtendedErrorInfo> failedOrSkippedRegions)"
-  desc: "Set the failedOrSkippedRegions property: Dictionary of <ExtendedErrorInfo>."
+  desc: "Set the failedOrSkippedRegions property: The failed or skipped regions."
+  returns:
+    type: "<xref href=\"com.azure.resourcemanager.providerhub.models.CustomRolloutPropertiesStatus?alt=com.azure.resourcemanager.providerhub.models.CustomRolloutPropertiesStatus&text=CustomRolloutPropertiesStatus\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.providerhub.models.CustomRolloutPropertiesStatus.withManifestCheckinStatus(com.azure.resourcemanager.providerhub.models.CustomRolloutStatusManifestCheckinStatus)"
+  fullName: "com.azure.resourcemanager.providerhub.models.CustomRolloutPropertiesStatus.withManifestCheckinStatus(CustomRolloutStatusManifestCheckinStatus manifestCheckinStatus)"
+  name: "withManifestCheckinStatus(CustomRolloutStatusManifestCheckinStatus manifestCheckinStatus)"
+  nameWithType: "CustomRolloutPropertiesStatus.withManifestCheckinStatus(CustomRolloutStatusManifestCheckinStatus manifestCheckinStatus)"
+  summary: "Set the manifest<wbr>Checkin<wbr>Status property: The manifest checkin status."
+  overridden: "com.azure.resourcemanager.providerhub.models.CustomRolloutStatus.withManifestCheckinStatus(com.azure.resourcemanager.providerhub.models.CustomRolloutStatusManifestCheckinStatus)"
+  parameters:
+  - name: "manifestCheckinStatus"
+    type: "<xref href=\"com.azure.resourcemanager.providerhub.models.CustomRolloutStatusManifestCheckinStatus?alt=com.azure.resourcemanager.providerhub.models.CustomRolloutStatusManifestCheckinStatus&text=CustomRolloutStatusManifestCheckinStatus\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public CustomRolloutPropertiesStatus withManifestCheckinStatus(CustomRolloutStatusManifestCheckinStatus manifestCheckinStatus)"
+  desc: "Set the manifestCheckinStatus property: The manifest checkin status."
   returns:
     type: "<xref href=\"com.azure.resourcemanager.providerhub.models.CustomRolloutPropertiesStatus?alt=com.azure.resourcemanager.providerhub.models.CustomRolloutPropertiesStatus&text=CustomRolloutPropertiesStatus\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "The CustomRolloutPropertiesStatus model."
+desc: "The status."
 metadata: {}
 package: "com.azure.resourcemanager.providerhub.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-providerhub:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-providerhub:2.0.0
