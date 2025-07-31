@@ -1,12 +1,12 @@
 ---
 title: Azure Communication Phone Numbers client library for Java
 keywords: Azure, java, SDK, API, azure-communication-phonenumbers, communication/azure-communication-phonenumbers
-ms.date: 07/22/2025
+ms.date: 07/31/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: communication/azure-communication-phonenumbers
 ---
-# Azure Communication Phone Numbers client library for Java - version 1.4.0-beta.1 
+# Azure Communication Phone Numbers client library for Java - version 1.4.0-beta.2 
 
 
 The phone numbers package provides capabilities for phone number management.
@@ -30,7 +30,7 @@ Purchased phone numbers can come with many capabilities, depending on the countr
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-communication-phonenumbers_1.4.0-beta.1/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-communication-phonenumbers_1.4.0-beta.2/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -68,7 +68,7 @@ add the direct dependency to your project as follows.
 <dependency>
   <groupId>com.azure</groupId>
   <artifactId>azure-communication-phonenumbers</artifactId>
-  <version>1.4.0-beta.1</version>
+  <version>1.4.0-beta.2</version>
 </dependency>
 ```
 
@@ -80,7 +80,7 @@ The `direct offer` numbers come in three types: Geographic, Toll-Free and Mobile
 They are managed using the `PhoneNumbersClient`
 
 The `direct routing` feature enables connecting your existing telephony infrastructure to ACS.
-The configuration is managed using the `SipRoutingClient`, which provides methods for setting up SIP trunks and voice routing rules, in order to properly handle calls for your telephony subnet.
+The configuration is managed using the `SipRoutingClient`, which provides methods for setting up SIP domains, trunks and voice routing rules, in order to properly handle calls for your telephony subnet.
 
 ### Initializing Client
 
@@ -172,7 +172,7 @@ Reservations represent a collection of phone numbers that are locked by a specif
 
 ### SIP routing client
 
-Direct routing feature allows connecting customer-provided telephony infrastructure to Azure Communication Resources. In order to setup routing configuration properly, customer needs to supply the SIP trunk configuration and SIP routing rules for calls. SIP routing client provides the necessary interface for setting this configuration.
+Direct routing feature allows connecting customer-provided telephony infrastructure to Azure Communication Resources. In order to setup routing configuration properly, customer needs to supply the SIP domain configuration, SIP trunk configuration and SIP routing rules for calls. SIP routing client provides the necessary interface for setting this configuration.
 
 When the call arrives, system tries to match the destination number with regex number patterns of defined routes. The first route to match the number will be selected. The order of regex matching is the same as the order of routes in configuration, therefore the order of routes matters.
 Once a route is matched, the call is routed to the first trunk in the route's trunks list. If the trunk is not available, next trunk in the list is selected.
@@ -312,13 +312,17 @@ if (LongRunningOperationStatus.SUCCESSFULLY_COMPLETED == response.getStatus()) {
 
 ### SipRoutingClient
 
-#### Retrieve SIP trunks and routes
+#### Retrieve SIP domains, trunks and routes
 
-Get the list of currently configured trunks or routes.
+Get the list of currently configured domains, trunks or routes.
 
-```java readme-sample-listTrunksAndRoutes
+```java readme-sample-listDomainsTrunksAndRoutes
+PagedIterable<SipDomain> domains = sipRoutingClient.listDomains();
 PagedIterable<SipTrunk> trunks = sipRoutingClient.listTrunks();
 PagedIterable<SipTrunkRoute> routes = sipRoutingClient.listRoutes();
+for (SipDomain domain : domains) {
+    System.out.println("Domains " + domain.getFqdn() + ":" + domain.isEnabled());
+}
 for (SipTrunk trunk : trunks) {
     System.out.println("Trunk " + trunk.getFqdn() + ":" + trunk.getSipSignalingPort());
 }
@@ -330,11 +334,14 @@ for (SipTrunkRoute route : routes) {
 }
 ```
 
-#### Replace SIP trunks and routes
+#### Replace SIP domains, trunks and routes
 
-Replace the list of currently configured trunks or routes with new values.
+Replace the list of currently configured domains, trunks or routes with new values.
 
-```java readme-sample-setTrunksAndRoutes
+```java readme-sample-setDomainsTrunksAndRoutes
+sipRoutingClient.setDomains(asList(
+    new SipDomain("<domain fqdn>", false)
+));
 sipRoutingClient.setTrunks(asList(
     new SipTrunk("<first trunk fqdn>", 12345),
     new SipTrunk("<second trunk fqdn>", 23456)
@@ -369,6 +376,30 @@ sipRoutingClient.setTrunk(new SipTrunk("<trunk fqdn>", 12345));
 sipRoutingClient.deleteTrunk("<trunk fqdn>");
 ```
 
+#### Retrieve single domain
+
+```java readme-sample-getDomain
+String domainName = "<domain name>";
+SipDomain domain = sipRoutingClient.getDomain(domainName);
+if (domain != null) {
+    System.out.println("Domain " + domain.isEnabled());
+} else {
+    System.out.println("Domain not found. " + domainName);
+}
+```
+
+#### Set single domain
+
+```java readme-sample-setDomain
+sipRoutingClient.setDomain(new SipDomain("<trunk fqdn>", false));
+```
+
+#### Delete single domain
+
+```java readme-sample-deleteDomain
+sipRoutingClient.deleteDomain("<domain name>");
+```
+
 ## Contributing
 
 This project welcomes contributions and suggestions. Most contributions require you to agree to a [Contributor License Agreement (CLA)][cla] declaring that you have the right to, and actually do, grant us the rights to use your contribution.
@@ -394,5 +425,5 @@ Check out other client libraries for Azure communication service
 [product_docs]: https://learn.microsoft.com/azure/communication-services/
 [package]: https://central.sonatype.com/artifact/com.azure/azure-communication-phonenumbers
 [api_documentation]: https://aka.ms/java-docs
-[source]: https://github.com/Azure/azure-sdk-for-java/tree/azure-communication-phonenumbers_1.4.0-beta.1/sdk/communication/azure-communication-phonenumbers/src
+[source]: https://github.com/Azure/azure-sdk-for-java/tree/azure-communication-phonenumbers_1.4.0-beta.2/sdk/communication/azure-communication-phonenumbers/src
 
