@@ -1,7 +1,7 @@
 ---
 title: Azure Hybrid Kubernetes SDK for Java
 description: Reference for Azure Hybrid Kubernetes SDK for Java
-ms.date: 07/31/2025
+ms.date: 08/01/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: hybridkubernetes
