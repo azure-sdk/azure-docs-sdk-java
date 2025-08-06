@@ -1,7 +1,7 @@
 ---
 title: Azure Orbital SDK for Java
 description: Reference for Azure Orbital SDK for Java
-ms.date: 08/05/2025
+ms.date: 08/06/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: orbital
