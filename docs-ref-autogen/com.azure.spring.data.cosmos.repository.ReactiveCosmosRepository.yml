@@ -4,7 +4,7 @@ fullName: "com.azure.spring.data.cosmos.repository.ReactiveCosmosRepository<T,K>
 name: "ReactiveCosmosRepository<T,K>"
 nameWithType: "ReactiveCosmosRepository<T,K>"
 summary: "Repository interface with search and delete operation"
-syntax: "public interface **ReactiveCosmosRepository<T,K>**</br> extends <xref href=\"org.springframework.data.repository.reactive.ReactiveSortingRepository?alt=org.springframework.data.repository.reactive.ReactiveSortingRepository&text=ReactiveSortingRepository\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />,<xref href=\"K?alt=K&text=K\" data-throw-if-not-resolved=\"False\" />&gt;"
+syntax: "public interface **ReactiveCosmosRepository<T,K>**</br> extends <xref href=\"org.springframework.data.repository.reactive.ReactiveSortingRepository?alt=org.springframework.data.repository.reactive.ReactiveSortingRepository&text=ReactiveSortingRepository\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />,<xref href=\"K?alt=K&text=K\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"org.springframework.data.repository.reactive.ReactiveCrudRepository?alt=org.springframework.data.repository.reactive.ReactiveCrudRepository&text=ReactiveCrudRepository\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />,<xref href=\"K?alt=K&text=K\" data-throw-if-not-resolved=\"False\" />&gt;"
 methods:
 - uid: "com.azure.spring.data.cosmos.repository.ReactiveCosmosRepository.deleteById(K,com.azure.cosmos.models.PartitionKey)"
   fullName: "com.azure.spring.data.cosmos.repository.ReactiveCosmosRepository<T,K>.deleteById(K id, PartitionKey partitionKey)"
@@ -115,11 +115,14 @@ methods:
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"S?alt=S&text=S\" data-throw-if-not-resolved=\"False\" />&gt;"
 type: "interface"
 typeParameters:
-- name: "T"
-- name: "K"
+- description: "the type of the domain class."
+  name: "T"
+- description: "the type of the id of the entity the repository manages."
+  name: "K"
 desc: "Repository interface with search and delete operation"
 implements:
+- "<xref href=\"org.springframework.data.repository.reactive.ReactiveCrudRepository?alt=org.springframework.data.repository.reactive.ReactiveCrudRepository&text=ReactiveCrudRepository\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />,<xref href=\"K?alt=K&text=K\" data-throw-if-not-resolved=\"False\" />&gt;"
 - "<xref href=\"org.springframework.data.repository.reactive.ReactiveSortingRepository?alt=org.springframework.data.repository.reactive.ReactiveSortingRepository&text=ReactiveSortingRepository\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />,<xref href=\"K?alt=K&text=K\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.spring.data.cosmos.repository"
-artifact: com.azure:azure-spring-data-cosmos:3.47.0
+artifact: com.azure:azure-spring-data-cosmos:5.23.0

@@ -25,6 +25,7 @@ inheritedClassMethods:
   methodsRef:
   - "<xref href=\"org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.addRepositoryFactoryCustomizer(org.springframework.data.repository.core.support.RepositoryFactoryCustomizer)?alt=org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.addRepositoryFactoryCustomizer&text=addRepositoryFactoryCustomizer\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet()?alt=org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet&text=afterPropertiesSet\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.createDefaultEvaluationContextProvider(org.springframework.beans.factory.ListableBeanFactory)?alt=org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.createDefaultEvaluationContextProvider&text=createDefaultEvaluationContextProvider\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.createDefaultQueryMethodEvaluationContextProvider(org.springframework.beans.factory.ListableBeanFactory)?alt=org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.createDefaultQueryMethodEvaluationContextProvider&text=createDefaultQueryMethodEvaluationContextProvider\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.createRepositoryFactory()?alt=org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.createRepositoryFactory&text=createRepositoryFactory\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.getEntityInformation()?alt=org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.getEntityInformation&text=getEntityInformation\" data-throw-if-not-resolved=\"False\" />"
@@ -38,7 +39,10 @@ inheritedClassMethods:
   - "<xref href=\"org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.setBeanClassLoader(java.lang.ClassLoader)?alt=org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.setBeanClassLoader&text=setBeanClassLoader\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.setBeanFactory(org.springframework.beans.factory.BeanFactory)?alt=org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.setBeanFactory&text=setBeanFactory\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.setCustomImplementation(java.lang.Object)?alt=org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.setCustomImplementation&text=setCustomImplementation\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.setEnvironment(org.springframework.core.env.Environment)?alt=org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.setEnvironment&text=setEnvironment\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.setEvaluationContextProvider(org.springframework.data.repository.query.QueryMethodEvaluationContextProvider)?alt=org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.setEvaluationContextProvider&text=setEvaluationContextProvider\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.setEvaluationContextProvider(org.springframework.data.spel.EvaluationContextProvider)?alt=org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.setEvaluationContextProvider&text=setEvaluationContextProvider\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.setExposeMetadata(boolean)?alt=org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.setExposeMetadata&text=setExposeMetadata\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.setLazyInit(boolean)?alt=org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.setLazyInit&text=setLazyInit\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.setMappingContext(org.springframework.data.mapping.context.MappingContext<?,?>)?alt=org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.setMappingContext&text=setMappingContext\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.setNamedQueries(org.springframework.data.repository.core.NamedQueries)?alt=org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.setNamedQueries&text=setNamedQueries\" data-throw-if-not-resolved=\"False\" />"
@@ -80,9 +84,11 @@ methods:
   fullName: "com.azure.spring.data.cosmos.repository.support.CosmosRepositoryFactoryBean<T,S,ID>.getFactoryInstance()"
   name: "getFactoryInstance()"
   nameWithType: "CosmosRepositoryFactoryBean<T,S,ID>.getFactoryInstance()"
+  summary: "Return the factory instance."
   modifiers:
   - "protected"
   syntax: "protected RepositoryFactorySupport getFactoryInstance()"
+  desc: "Return the factory instance."
   returns:
     description: "the factory instance"
     type: "<xref href=\"org.springframework.data.repository.core.support.RepositoryFactorySupport?alt=org.springframework.data.repository.core.support.RepositoryFactorySupport&text=RepositoryFactorySupport\" data-throw-if-not-resolved=\"False\" />"
@@ -110,10 +116,13 @@ methods:
   syntax: "protected void setMappingContext(MappingContext<?,?> mappingContext)"
 type: "class"
 typeParameters:
-- name: "T"
-- name: "S"
-- name: "ID"
+- description: "the type of the repository."
+  name: "T"
+- description: "the domain type the repository manages."
+  name: "S"
+- description: "the type of the id of the entity the repository manages."
+  name: "ID"
 desc: "Adapter for Springs <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"FactoryBean\"></xref> interface to allow easy setup of cosmos repository factories via Spring configuration."
 metadata: {}
 package: "com.azure.spring.data.cosmos.repository.support"
-artifact: com.azure:azure-spring-data-cosmos:3.47.0
+artifact: com.azure:azure-spring-data-cosmos:5.23.0
