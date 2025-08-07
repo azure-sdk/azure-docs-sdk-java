@@ -1,12 +1,12 @@
 ---
 title: Azure Resource Manager Dashboard client library for Java
 keywords: Azure, java, SDK, API, azure-resourcemanager-dashboard, dashboard
-ms.date: 07/14/2025
+ms.date: 08/07/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: dashboard
 ---
-# Azure Resource Manager Dashboard client library for Java - version 1.2.0-beta.1 
+# Azure Resource Manager Dashboard client library for Java - version 1.2.0-beta.2 
 
 
 Azure Resource Manager Dashboard client library for Java.
@@ -41,7 +41,7 @@ Various documentation is available to help you get started
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
     <artifactId>azure-resourcemanager-dashboard</artifactId>
-    <version>1.2.0-beta.1</version>
+    <version>1.2.0-beta.2</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -82,12 +82,12 @@ See [API design][design] for general introduction on design and key concepts on 
 ```java
 grafana = dashboardManager.grafanas()
     .define(grafanaName)
-    .withRegion(REGION)
     .withExistingResourceGroup(resourceGroupName)
+    .withRegion(REGION)
     .withIdentity(new ManagedServiceIdentity().withType(ManagedServiceIdentityType.SYSTEM_ASSIGNED))
     .create();
 ```
-[Code snippets and samples](https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-dashboard_1.2.0-beta.1/sdk/dashboard/azure-resourcemanager-dashboard/SAMPLE.md)
+[Code snippets and samples](https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-dashboard_1.2.0-beta.2/sdk/dashboard/azure-resourcemanager-dashboard/SAMPLE.md)
 
 
 ## Troubleshooting
@@ -109,12 +109,12 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: https://learn.microsoft.com/azure/developer/java/fundamentals/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-dashboard_1.2.0-beta.1/sdk/identity/azure-identity
-[azure_identity_credentials]: https://github.com/Azure/azure-sdk-for-java/tree/azure-resourcemanager-dashboard_1.2.0-beta.1/sdk/identity/azure-identity#credentials
-[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-dashboard_1.2.0-beta.1/sdk/core/azure-core-http-netty
-[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-dashboard_1.2.0-beta.1/sdk/resourcemanager/docs/AUTH.md
-[design]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-dashboard_1.2.0-beta.1/sdk/resourcemanager/docs/DESIGN.md
-[cg]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-dashboard_1.2.0-beta.1/CONTRIBUTING.md
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-dashboard_1.2.0-beta.2/sdk/identity/azure-identity
+[azure_identity_credentials]: https://github.com/Azure/azure-sdk-for-java/tree/azure-resourcemanager-dashboard_1.2.0-beta.2/sdk/identity/azure-identity#credentials
+[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-dashboard_1.2.0-beta.2/sdk/core/azure-core-http-netty
+[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-dashboard_1.2.0-beta.2/sdk/resourcemanager/docs/AUTH.md
+[design]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-dashboard_1.2.0-beta.2/sdk/resourcemanager/docs/DESIGN.md
+[cg]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-dashboard_1.2.0-beta.2/CONTRIBUTING.md
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
 
