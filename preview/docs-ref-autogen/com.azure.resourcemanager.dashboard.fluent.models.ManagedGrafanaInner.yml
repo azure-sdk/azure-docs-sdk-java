@@ -7,21 +7,14 @@ summary: "The grafana resource type."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 - "<xref href=\"com.azure.core.management.ProxyResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.core.management.Resource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
 - classRef: "<xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
   methodsRef:
+  - "<xref href=\"com.azure.core.management.ProxyResource.fromJson(com.azure.json.JsonReader)?alt=com.azure.core.management.ProxyResource.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.management.ProxyResource.id()?alt=com.azure.core.management.ProxyResource.id&text=id\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.management.ProxyResource.name()?alt=com.azure.core.management.ProxyResource.name&text=name\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.ProxyResource.toJson(com.azure.json.JsonWriter)?alt=com.azure.core.management.ProxyResource.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.management.ProxyResource.type()?alt=com.azure.core.management.ProxyResource.type&text=type\" data-throw-if-not-resolved=\"False\" />"
-- classRef: "<xref href=\"com.azure.core.management.Resource?alt=com.azure.core.management.Resource&text=Resource\" data-throw-if-not-resolved=\"False\" />"
-  methodsRef:
-  - "<xref href=\"com.azure.core.management.Resource.fromJson(com.azure.json.JsonReader)?alt=com.azure.core.management.Resource.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.location()?alt=com.azure.core.management.Resource.location&text=location\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.tags()?alt=com.azure.core.management.Resource.tags&text=tags\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.toJson(com.azure.json.JsonWriter)?alt=com.azure.core.management.Resource.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.withLocation(java.lang.String)?alt=com.azure.core.management.Resource.withLocation&text=withLocation\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.withTags(java.util.Map<java.lang.String,java.lang.String>)?alt=com.azure.core.management.Resource.withTags&text=withTags\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -35,7 +28,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **ManagedGrafanaInner**</br> extends <xref href=\"com.azure.core.management.Resource?alt=com.azure.core.management.Resource&text=Resource\" data-throw-if-not-resolved=\"False\" />"
+syntax: "public final class **ManagedGrafanaInner**</br> extends <xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
 constructors:
 - uid: "com.azure.resourcemanager.dashboard.fluent.models.ManagedGrafanaInner.ManagedGrafanaInner()"
   fullName: "com.azure.resourcemanager.dashboard.fluent.models.ManagedGrafanaInner.ManagedGrafanaInner()"
@@ -85,6 +78,16 @@ methods:
   returns:
     description: "the identity value."
     type: "<xref href=\"com.azure.resourcemanager.dashboard.models.ManagedServiceIdentity?alt=com.azure.resourcemanager.dashboard.models.ManagedServiceIdentity&text=ManagedServiceIdentity\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.dashboard.fluent.models.ManagedGrafanaInner.location()"
+  fullName: "com.azure.resourcemanager.dashboard.fluent.models.ManagedGrafanaInner.location()"
+  name: "location()"
+  nameWithType: "ManagedGrafanaInner.location()"
+  summary: "Get the location property: The geo-location where the resource lives."
+  syntax: "public String location()"
+  desc: "Get the location property: The geo-location where the resource lives."
+  returns:
+    description: "the location value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.dashboard.fluent.models.ManagedGrafanaInner.name()"
   fullName: "com.azure.resourcemanager.dashboard.fluent.models.ManagedGrafanaInner.name()"
   name: "name()"
@@ -126,11 +129,21 @@ methods:
   returns:
     description: "the systemData value."
     type: "<xref href=\"com.azure.core.management.SystemData?alt=com.azure.core.management.SystemData&text=SystemData\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.dashboard.fluent.models.ManagedGrafanaInner.tags()"
+  fullName: "com.azure.resourcemanager.dashboard.fluent.models.ManagedGrafanaInner.tags()"
+  name: "tags()"
+  nameWithType: "ManagedGrafanaInner.tags()"
+  summary: "Get the tags property: Resource tags."
+  syntax: "public Map<String,String> tags()"
+  desc: "Get the tags property: Resource tags."
+  returns:
+    description: "the tags value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.resourcemanager.dashboard.fluent.models.ManagedGrafanaInner.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.dashboard.fluent.models.ManagedGrafanaInner.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
   nameWithType: "ManagedGrafanaInner.toJson(JsonWriter jsonWriter)"
-  overridden: "com.azure.core.management.Resource.toJson(com.azure.json.JsonWriter)"
+  overridden: "com.azure.core.management.ProxyResource.toJson(com.azure.json.JsonWriter)"
   parameters:
   - name: "jsonWriter"
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
@@ -175,12 +188,15 @@ methods:
   fullName: "com.azure.resourcemanager.dashboard.fluent.models.ManagedGrafanaInner.withLocation(String location)"
   name: "withLocation(String location)"
   nameWithType: "ManagedGrafanaInner.withLocation(String location)"
-  overridden: "com.azure.core.management.Resource.withLocation(java.lang.String)"
+  summary: "Set the location property: The geo-location where the resource lives."
   parameters:
-  - name: "location"
+  - description: "the location value to set."
+    name: "location"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ManagedGrafanaInner withLocation(String location)"
+  desc: "Set the location property: The geo-location where the resource lives."
   returns:
+    description: "the ManagedGrafanaInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.dashboard.fluent.models.ManagedGrafanaInner?alt=com.azure.resourcemanager.dashboard.fluent.models.ManagedGrafanaInner&text=ManagedGrafanaInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.dashboard.fluent.models.ManagedGrafanaInner.withProperties(com.azure.resourcemanager.dashboard.models.ManagedGrafanaProperties)"
   fullName: "com.azure.resourcemanager.dashboard.fluent.models.ManagedGrafanaInner.withProperties(ManagedGrafanaProperties properties)"
@@ -214,15 +230,18 @@ methods:
   fullName: "com.azure.resourcemanager.dashboard.fluent.models.ManagedGrafanaInner.withTags(Map<String,String> tags)"
   name: "withTags(Map<String,String> tags)"
   nameWithType: "ManagedGrafanaInner.withTags(Map<String,String> tags)"
-  overridden: "com.azure.core.management.Resource.withTags(java.util.Map<java.lang.String,java.lang.String>)"
+  summary: "Set the tags property: Resource tags."
   parameters:
-  - name: "tags"
+  - description: "the tags value to set."
+    name: "tags"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
   syntax: "public ManagedGrafanaInner withTags(Map<String,String> tags)"
+  desc: "Set the tags property: Resource tags."
   returns:
+    description: "the ManagedGrafanaInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.dashboard.fluent.models.ManagedGrafanaInner?alt=com.azure.resourcemanager.dashboard.fluent.models.ManagedGrafanaInner&text=ManagedGrafanaInner\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "The grafana resource type."
 metadata: {}
 package: "com.azure.resourcemanager.dashboard.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-dashboard:1.2.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-dashboard:1.2.0-beta.2
