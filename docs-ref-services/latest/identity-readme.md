@@ -1,12 +1,12 @@
 ---
 title: Azure Identity client library for Java
 keywords: Azure, java, SDK, API, azure-identity, entra-id
-ms.date: 07/21/2025
+ms.date: 08/09/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: entra-id
 ---
-# Azure Identity client library for Java - version 1.16.3 
+# Azure Identity client library for Java - version 1.17.0 
 
 
 The Azure Identity library provides [Microsoft Entra ID](https://learn.microsoft.com/entra/fundamentals/whatis) ([formerly Azure Active Directory](https://learn.microsoft.com/entra/fundamentals/new-name)) token authentication support across the Azure SDK. It provides a set of [TokenCredential](https://learn.microsoft.com/java/api/com.azure.core.credential.tokencredential?view=azure-java-stable) implementations that can be used to construct Azure SDK clients that support Microsoft Entra token authentication.
@@ -19,7 +19,7 @@ The Azure Identity library provides [Microsoft Entra ID](https://learn.microsoft
 
 #### Include the BOM file
 
-Include the `azure-sdk-bom` in your project to take a dependency on the stable version of the library. In the following snippet, replace the `{bom_version_to_target}` placeholder with the version number. To learn more about the BOM, see the [Azure SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-identity_1.16.3/sdk/boms/azure-sdk-bom/README.md).
+Include the `azure-sdk-bom` in your project to take a dependency on the stable version of the library. In the following snippet, replace the `{bom_version_to_target}` placeholder with the version number. To learn more about the BOM, see the [Azure SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-identity_1.17.0/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -55,7 +55,7 @@ To take dependency on a particular version of the library that isn't present in 
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-identity</artifactId>
-    <version>1.15.4</version>
+    <version>1.16.3</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -171,6 +171,37 @@ public void createDefaultAzureCredentialForIntelliJ() {
 }
 ```
 
+### Authenticate Using Visual Studio Code with `DefaultAzureCredential`
+
+To authenticate using Visual Studio Code, ensure you have signed in through the **Azure Resources** extension. The signed-in user is then picked up automatically by `DefaultAzureCredential` in the Azure SDK for Java.
+
+#### Prerequisites
+
+- [Azure Resources Extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureresourcegroups) is installed in Visual Studio Code.
+- You are signed in using the `Azure: Sign In` command in VS Code.
+- Your project includes the [`azure-identity-borker`](https://search.maven.org/artifact/com.azure/azure-identity-broker) package.
+
+#### Example: Use `DefaultAzureCredential` with Key Vault
+
+The following example demonstrates authenticating the `SecretClient` from the [`azure-security-keyvault-secrets`](https://learn.microsoft.com/java/api/overview/azure/security-keyvault-secrets-readme?view=azure-java-stable) client library using `DefaultAzureCredential`:
+
+```java
+/**
+ * DefaultAzureCredential uses the signed-in user from Visual Studio Code
+ * via the Azure Resources extension.
+ */
+public void createDefaultAzureCredentialForVSCode() {
+    DefaultAzureCredential defaultCredential = new DefaultAzureCredentialBuilder()
+        .build();
+
+    // Azure SDK client builders accept the credential as a parameter
+    SecretClient client = new SecretClientBuilder()
+        .vaultUrl("https://{YOUR_VAULT_NAME}.vault.azure.net")
+        .credential(defaultCredential)
+        .buildClient();
+    }
+```
+
 ## Managed Identity support
 
 The [Managed identity authentication](https://learn.microsoft.com/entra/identity/managed-identities-azure-resources/overview) is supported indirectly via `DefaultAzureCredential` or directly via `ManagedIdentityCredential` for the following Azure Services:
@@ -183,7 +214,7 @@ The [Managed identity authentication](https://learn.microsoft.com/entra/identity
 - [Azure Virtual Machines](https://learn.microsoft.com/entra/identity/managed-identities-azure-resources/how-to-use-vm-token)
 - [Azure Virtual Machines Scale Sets](https://learn.microsoft.com/entra/identity/managed-identities-azure-resources/qs-configure-powershell-windows-vmss)
 
-**Note:** Use `azure-identity` version `1.7.0` or later to utilize [token caching](https://github.com/Azure/azure-sdk-for-java/blob/azure-identity_1.16.3/sdk/identity/azure-identity/TOKEN_CACHING.md) support for managed identity authentication.
+**Note:** Use `azure-identity` version `1.7.0` or later to utilize [token caching](https://github.com/Azure/azure-sdk-for-java/blob/azure-identity_1.17.0/sdk/identity/azure-identity/TOKEN_CACHING.md) support for managed identity authentication.
 
 ### Examples
 
@@ -365,7 +396,7 @@ Token caching is a feature provided by the Azure Identity library that allows ap
 - Improve resilience and performance.
 - Reduce the number of requests made to Microsoft Entra ID to obtain access tokens.
 
-The Azure Identity library offers both in-memory and persistent disk caching. For more information, see the [token caching documentation](https://github.com/Azure/azure-sdk-for-java/blob/azure-identity_1.16.3/sdk/identity/azure-identity/TOKEN_CACHING.md).
+The Azure Identity library offers both in-memory and persistent disk caching. For more information, see the [token caching documentation](https://github.com/Azure/azure-sdk-for-java/blob/azure-identity_1.17.0/sdk/identity/azure-identity/TOKEN_CACHING.md).
 
 ## Brokered authentication
 
@@ -377,7 +408,7 @@ Credentials raise exceptions when they fail to authenticate or can't execute aut
 
 When credentials can't execute authentication due to one of the underlying resources required by the credential being unavailable on the machine, the `CredentialUnavailableException` is raised. The exception has a `message` attribute that describes why the credential is unavailable for authentication execution. When `ChainedTokenCredential` raises this exception, the message collects error messages from each credential in the chain.
 
-See the [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-identity_1.16.3/sdk/identity/azure-identity/TROUBLESHOOTING.md) for details on how to diagnose various failure scenarios.
+See the [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-identity_1.17.0/sdk/identity/azure-identity/TROUBLESHOOTING.md) for details on how to diagnose various failure scenarios.
 
 ## Next steps
 
@@ -394,9 +425,9 @@ When you submit a pull request, a CLA-bot will automatically determine whether y
 This project has adopted the [Microsoft Open Source Code of Conduct][code_of_conduct]. For more information, see the Code of Conduct FAQ or contact opencode@microsoft.com with any additional questions or comments.
 
 <!-- LINKS -->
-[azure_core_library]: https://github.com/Azure/azure-sdk-for-java/tree/azure-identity_1.16.3/sdk/core
+[azure_core_library]: https://github.com/Azure/azure-sdk-for-java/tree/azure-identity_1.17.0/sdk/core
 [azure_identity_broker]: https://central.sonatype.com/artifact/com.azure/azure-identity-broker
-[azure_identity_broker_readme]: https://github.com/Azure/azure-sdk-for-java/blob/azure-identity_1.16.3/sdk/identity/azure-identity-broker/README.md
+[azure_identity_broker_readme]: https://github.com/Azure/azure-sdk-for-java/blob/azure-identity_1.17.0/sdk/identity/azure-identity-broker/README.md
 [azure_sub]: https://azure.microsoft.com/free/
 [code_of_conduct]: https://opensource.microsoft.com/codeofconduct/
 [cred_acc]: https://learn.microsoft.com/java/api/com.azure.identity.authorizationcodecredential?view=azure-java-stable
@@ -442,8 +473,8 @@ This project has adopted the [Microsoft Open Source Code of Conduct][code_of_con
 [javadoc]: https://learn.microsoft.com/java/api/com.azure.identity?view=azure-java-stable
 [jdk_link]: https://learn.microsoft.com/java/azure/jdk/?view=azure-java-stable
 [logging]: https://github.com/Azure/azure-sdk-for-java/wiki/Logging-in-Azure-SDK
-[secrets_client_library]: https://github.com/Azure/azure-sdk-for-java/tree/azure-identity_1.16.3/sdk/keyvault/azure-security-keyvault-secrets
-[source]: https://github.com/Azure/azure-sdk-for-java/tree/azure-identity_1.16.3/sdk/identity/azure-identity
+[secrets_client_library]: https://github.com/Azure/azure-sdk-for-java/tree/azure-identity_1.17.0/sdk/keyvault/azure-security-keyvault-secrets
+[source]: https://github.com/Azure/azure-sdk-for-java/tree/azure-identity_1.17.0/sdk/identity/azure-identity
 [sp]: https://learn.microsoft.com/entra/identity-platform/app-objects-and-service-principals
 
 
