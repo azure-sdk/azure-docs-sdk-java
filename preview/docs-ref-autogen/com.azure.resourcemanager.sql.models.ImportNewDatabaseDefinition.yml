@@ -20,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **ImportNewDatabaseDefinition**"
+syntax: "public final class **ImportNewDatabaseDefinition**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition?alt=com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition&text=ImportNewDatabaseDefinition\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition.ImportNewDatabaseDefinition()"
   fullName: "com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition.ImportNewDatabaseDefinition()"
@@ -36,7 +36,7 @@ methods:
   nameWithType: "ImportNewDatabaseDefinition.administratorLogin()"
   summary: "Get the administrator<wbr>Login property: Administrator login name."
   syntax: "public String administratorLogin()"
-  desc: "Get the administratorLogin property: Administrator login name."
+  desc: "Get the administratorLogin property: Administrator login name. If AuthenticationType is ManagedIdentity, this field should specify the Managed Identity's resource ID."
   returns:
     description: "the administratorLogin value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -46,7 +46,7 @@ methods:
   nameWithType: "ImportNewDatabaseDefinition.administratorLoginPassword()"
   summary: "Get the administrator<wbr>Login<wbr>Password property: Administrator login password."
   syntax: "public String administratorLoginPassword()"
-  desc: "Get the administratorLoginPassword property: Administrator login password."
+  desc: "Get the administratorLoginPassword property: Administrator login password. If AuthenticationType is ManagedIdentity, this field should not be specified."
   returns:
     description: "the administratorLoginPassword value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -54,9 +54,9 @@ methods:
   fullName: "com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition.authenticationType()"
   name: "authenticationType()"
   nameWithType: "ImportNewDatabaseDefinition.authenticationType()"
-  summary: "Get the authentication<wbr>Type property: Authentication type."
+  summary: "Get the authentication<wbr>Type property: Type of credentials provided for access to the target SQL server: SQL, ADPassword or Managed<wbr>Identity."
   syntax: "public String authenticationType()"
-  desc: "Get the authenticationType property: Authentication type."
+  desc: "Get the authenticationType property: Type of credentials provided for access to the target SQL server: SQL, ADPassword or ManagedIdentity."
   returns:
     description: "the authenticationType value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -80,6 +80,25 @@ methods:
   returns:
     description: "the edition value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "ImportNewDatabaseDefinition.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Import<wbr>New<wbr>Database<wbr>Definition from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static ImportNewDatabaseDefinition fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of ImportNewDatabaseDefinition from the JsonReader."
+  returns:
+    description: "An instance of ImportNewDatabaseDefinition if the JsonReader was pointing to an instance of it, or null\n if it was pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition?alt=com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition&text=ImportNewDatabaseDefinition\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition.maxSizeBytes()"
   fullName: "com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition.maxSizeBytes()"
   name: "maxSizeBytes()"
@@ -95,11 +114,11 @@ methods:
   name: "networkIsolation()"
   nameWithType: "ImportNewDatabaseDefinition.networkIsolation()"
   summary: "Get the network<wbr>Isolation property: Optional resource information to enable network isolation for request."
-  syntax: "public NetworkIsolationSettings networkIsolation()"
+  syntax: "public NetworkIsolationSettingsAutoGenerated networkIsolation()"
   desc: "Get the networkIsolation property: Optional resource information to enable network isolation for request."
   returns:
     description: "the networkIsolation value."
-    type: "<xref href=\"com.azure.resourcemanager.sql.models.NetworkIsolationSettings?alt=com.azure.resourcemanager.sql.models.NetworkIsolationSettings&text=NetworkIsolationSettings\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.resourcemanager.sql.models.NetworkIsolationSettingsAutoGenerated?alt=com.azure.resourcemanager.sql.models.NetworkIsolationSettingsAutoGenerated&text=NetworkIsolationSettingsAutoGenerated\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition.serviceObjectiveName()"
   fullName: "com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition.serviceObjectiveName()"
   name: "serviceObjectiveName()"
@@ -114,9 +133,9 @@ methods:
   fullName: "com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition.storageKey()"
   name: "storageKey()"
   nameWithType: "ImportNewDatabaseDefinition.storageKey()"
-  summary: "Get the storage<wbr>Key property: Storage key."
+  summary: "Get the storage<wbr>Key property: Storage key for the storage account."
   syntax: "public String storageKey()"
-  desc: "Get the storageKey property: Storage key."
+  desc: "Get the storageKey property: Storage key for the storage account. If StorageKeyType is ManagedIdentity, this field should specify the Managed Identity's resource ID."
   returns:
     description: "the storageKey value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -124,9 +143,9 @@ methods:
   fullName: "com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition.storageKeyType()"
   name: "storageKeyType()"
   nameWithType: "ImportNewDatabaseDefinition.storageKeyType()"
-  summary: "Get the storage<wbr>Key<wbr>Type property: Storage key type."
+  summary: "Get the storage<wbr>Key<wbr>Type property: Storage key type: Storage<wbr>Access<wbr>Key, Shared<wbr>Access<wbr>Key, or Managed<wbr>Identity."
   syntax: "public StorageKeyType storageKeyType()"
-  desc: "Get the storageKeyType property: Storage key type."
+  desc: "Get the storageKeyType property: Storage key type: StorageAccessKey, SharedAccessKey, or ManagedIdentity."
   returns:
     description: "the storageKeyType value."
     type: "<xref href=\"com.azure.resourcemanager.sql.models.StorageKeyType?alt=com.azure.resourcemanager.sql.models.StorageKeyType&text=StorageKeyType\" data-throw-if-not-resolved=\"False\" />"
@@ -140,6 +159,18 @@ methods:
   returns:
     description: "the storageUri value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "ImportNewDatabaseDefinition.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition.validate()"
   fullName: "com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition.validate()"
   name: "validate()"
@@ -157,7 +188,7 @@ methods:
     name: "administratorLogin"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ImportNewDatabaseDefinition withAdministratorLogin(String administratorLogin)"
-  desc: "Set the administratorLogin property: Administrator login name."
+  desc: "Set the administratorLogin property: Administrator login name. If AuthenticationType is ManagedIdentity, this field should specify the Managed Identity's resource ID."
   returns:
     description: "the ImportNewDatabaseDefinition object itself."
     type: "<xref href=\"com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition?alt=com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition&text=ImportNewDatabaseDefinition\" data-throw-if-not-resolved=\"False\" />"
@@ -171,7 +202,7 @@ methods:
     name: "administratorLoginPassword"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ImportNewDatabaseDefinition withAdministratorLoginPassword(String administratorLoginPassword)"
-  desc: "Set the administratorLoginPassword property: Administrator login password."
+  desc: "Set the administratorLoginPassword property: Administrator login password. If AuthenticationType is ManagedIdentity, this field should not be specified."
   returns:
     description: "the ImportNewDatabaseDefinition object itself."
     type: "<xref href=\"com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition?alt=com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition&text=ImportNewDatabaseDefinition\" data-throw-if-not-resolved=\"False\" />"
@@ -179,13 +210,13 @@ methods:
   fullName: "com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition.withAuthenticationType(String authenticationType)"
   name: "withAuthenticationType(String authenticationType)"
   nameWithType: "ImportNewDatabaseDefinition.withAuthenticationType(String authenticationType)"
-  summary: "Set the authentication<wbr>Type property: Authentication type."
+  summary: "Set the authentication<wbr>Type property: Type of credentials provided for access to the target SQL server: SQL, ADPassword or Managed<wbr>Identity."
   parameters:
   - description: "the authenticationType value to set."
     name: "authenticationType"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ImportNewDatabaseDefinition withAuthenticationType(String authenticationType)"
-  desc: "Set the authenticationType property: Authentication type."
+  desc: "Set the authenticationType property: Type of credentials provided for access to the target SQL server: SQL, ADPassword or ManagedIdentity."
   returns:
     description: "the ImportNewDatabaseDefinition object itself."
     type: "<xref href=\"com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition?alt=com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition&text=ImportNewDatabaseDefinition\" data-throw-if-not-resolved=\"False\" />"
@@ -231,16 +262,16 @@ methods:
   returns:
     description: "the ImportNewDatabaseDefinition object itself."
     type: "<xref href=\"com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition?alt=com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition&text=ImportNewDatabaseDefinition\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition.withNetworkIsolation(com.azure.resourcemanager.sql.models.NetworkIsolationSettings)"
-  fullName: "com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition.withNetworkIsolation(NetworkIsolationSettings networkIsolation)"
-  name: "withNetworkIsolation(NetworkIsolationSettings networkIsolation)"
-  nameWithType: "ImportNewDatabaseDefinition.withNetworkIsolation(NetworkIsolationSettings networkIsolation)"
+- uid: "com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition.withNetworkIsolation(com.azure.resourcemanager.sql.models.NetworkIsolationSettingsAutoGenerated)"
+  fullName: "com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition.withNetworkIsolation(NetworkIsolationSettingsAutoGenerated networkIsolation)"
+  name: "withNetworkIsolation(NetworkIsolationSettingsAutoGenerated networkIsolation)"
+  nameWithType: "ImportNewDatabaseDefinition.withNetworkIsolation(NetworkIsolationSettingsAutoGenerated networkIsolation)"
   summary: "Set the network<wbr>Isolation property: Optional resource information to enable network isolation for request."
   parameters:
   - description: "the networkIsolation value to set."
     name: "networkIsolation"
-    type: "<xref href=\"com.azure.resourcemanager.sql.models.NetworkIsolationSettings?alt=com.azure.resourcemanager.sql.models.NetworkIsolationSettings&text=NetworkIsolationSettings\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public ImportNewDatabaseDefinition withNetworkIsolation(NetworkIsolationSettings networkIsolation)"
+    type: "<xref href=\"com.azure.resourcemanager.sql.models.NetworkIsolationSettingsAutoGenerated?alt=com.azure.resourcemanager.sql.models.NetworkIsolationSettingsAutoGenerated&text=NetworkIsolationSettingsAutoGenerated\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ImportNewDatabaseDefinition withNetworkIsolation(NetworkIsolationSettingsAutoGenerated networkIsolation)"
   desc: "Set the networkIsolation property: Optional resource information to enable network isolation for request."
   returns:
     description: "the ImportNewDatabaseDefinition object itself."
@@ -263,13 +294,13 @@ methods:
   fullName: "com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition.withStorageKey(String storageKey)"
   name: "withStorageKey(String storageKey)"
   nameWithType: "ImportNewDatabaseDefinition.withStorageKey(String storageKey)"
-  summary: "Set the storage<wbr>Key property: Storage key."
+  summary: "Set the storage<wbr>Key property: Storage key for the storage account."
   parameters:
   - description: "the storageKey value to set."
     name: "storageKey"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ImportNewDatabaseDefinition withStorageKey(String storageKey)"
-  desc: "Set the storageKey property: Storage key."
+  desc: "Set the storageKey property: Storage key for the storage account. If StorageKeyType is ManagedIdentity, this field should specify the Managed Identity's resource ID."
   returns:
     description: "the ImportNewDatabaseDefinition object itself."
     type: "<xref href=\"com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition?alt=com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition&text=ImportNewDatabaseDefinition\" data-throw-if-not-resolved=\"False\" />"
@@ -277,13 +308,13 @@ methods:
   fullName: "com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition.withStorageKeyType(StorageKeyType storageKeyType)"
   name: "withStorageKeyType(StorageKeyType storageKeyType)"
   nameWithType: "ImportNewDatabaseDefinition.withStorageKeyType(StorageKeyType storageKeyType)"
-  summary: "Set the storage<wbr>Key<wbr>Type property: Storage key type."
+  summary: "Set the storage<wbr>Key<wbr>Type property: Storage key type: Storage<wbr>Access<wbr>Key, Shared<wbr>Access<wbr>Key, or Managed<wbr>Identity."
   parameters:
   - description: "the storageKeyType value to set."
     name: "storageKeyType"
     type: "<xref href=\"com.azure.resourcemanager.sql.models.StorageKeyType?alt=com.azure.resourcemanager.sql.models.StorageKeyType&text=StorageKeyType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public ImportNewDatabaseDefinition withStorageKeyType(StorageKeyType storageKeyType)"
-  desc: "Set the storageKeyType property: Storage key type."
+  desc: "Set the storageKeyType property: Storage key type: StorageAccessKey, SharedAccessKey, or ManagedIdentity."
   returns:
     description: "the ImportNewDatabaseDefinition object itself."
     type: "<xref href=\"com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition?alt=com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition&text=ImportNewDatabaseDefinition\" data-throw-if-not-resolved=\"False\" />"
@@ -303,6 +334,8 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition?alt=com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition&text=ImportNewDatabaseDefinition\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Contains the information necessary to perform import operation for new database."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition?alt=com.azure.resourcemanager.sql.models.ImportNewDatabaseDefinition&text=ImportNewDatabaseDefinition\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.sql.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-sql:2.42.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-sql:2.54.0-beta.1

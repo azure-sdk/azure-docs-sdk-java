@@ -20,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **WorkloadGroupProperties**"
+syntax: "public final class **WorkloadGroupProperties**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.sql.fluent.models.WorkloadGroupProperties?alt=com.azure.resourcemanager.sql.fluent.models.WorkloadGroupProperties&text=WorkloadGroupProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.sql.fluent.models.WorkloadGroupProperties.WorkloadGroupProperties()"
   fullName: "com.azure.resourcemanager.sql.fluent.models.WorkloadGroupProperties.WorkloadGroupProperties()"
@@ -30,6 +30,25 @@ constructors:
   syntax: "public WorkloadGroupProperties()"
   desc: "Creates an instance of WorkloadGroupProperties class."
 methods:
+- uid: "com.azure.resourcemanager.sql.fluent.models.WorkloadGroupProperties.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.sql.fluent.models.WorkloadGroupProperties.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "WorkloadGroupProperties.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Workload<wbr>Group<wbr>Properties from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static WorkloadGroupProperties fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of WorkloadGroupProperties from the JsonReader."
+  returns:
+    description: "An instance of WorkloadGroupProperties if the JsonReader was pointing to an instance of it, or null if it\n was pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.sql.fluent.models.WorkloadGroupProperties?alt=com.azure.resourcemanager.sql.fluent.models.WorkloadGroupProperties&text=WorkloadGroupProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.sql.fluent.models.WorkloadGroupProperties.importance()"
   fullName: "com.azure.resourcemanager.sql.fluent.models.WorkloadGroupProperties.importance()"
   name: "importance()"
@@ -90,6 +109,18 @@ methods:
   returns:
     description: "the queryExecutionTimeout value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+- uid: "com.azure.resourcemanager.sql.fluent.models.WorkloadGroupProperties.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.sql.fluent.models.WorkloadGroupProperties.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "WorkloadGroupProperties.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.sql.fluent.models.WorkloadGroupProperties.validate()"
   fullName: "com.azure.resourcemanager.sql.fluent.models.WorkloadGroupProperties.validate()"
   name: "validate()"
@@ -183,6 +214,8 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.sql.fluent.models.WorkloadGroupProperties?alt=com.azure.resourcemanager.sql.fluent.models.WorkloadGroupProperties&text=WorkloadGroupProperties\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Workload group definition. For more information look at sys.workload\\_management\\_workload\\_groups (DMV)."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.sql.fluent.models.WorkloadGroupProperties?alt=com.azure.resourcemanager.sql.fluent.models.WorkloadGroupProperties&text=WorkloadGroupProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.sql.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-sql:2.42.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-sql:2.54.0-beta.1

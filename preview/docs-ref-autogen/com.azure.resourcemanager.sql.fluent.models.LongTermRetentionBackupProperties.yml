@@ -20,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **LongTermRetentionBackupProperties**"
+syntax: "public final class **LongTermRetentionBackupProperties**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties?alt=com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties&text=LongTermRetentionBackupProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.LongTermRetentionBackupProperties()"
   fullName: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.LongTermRetentionBackupProperties()"
@@ -90,6 +90,25 @@ methods:
   returns:
     description: "the databaseName value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "LongTermRetentionBackupProperties.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Long<wbr>Term<wbr>Retention<wbr>Backup<wbr>Properties from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static LongTermRetentionBackupProperties fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the LongTermRetentionBackupProperties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of LongTermRetentionBackupProperties from the JsonReader."
+  returns:
+    description: "An instance of LongTermRetentionBackupProperties if the JsonReader was pointing to an instance of it, or\n null if it was pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties?alt=com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties&text=LongTermRetentionBackupProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.isBackupImmutable()"
   fullName: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.isBackupImmutable()"
   name: "isBackupImmutable()"
@@ -100,6 +119,16 @@ methods:
   returns:
     description: "the isBackupImmutable value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.legalHoldImmutability()"
+  fullName: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.legalHoldImmutability()"
+  name: "legalHoldImmutability()"
+  nameWithType: "LongTermRetentionBackupProperties.legalHoldImmutability()"
+  summary: "Get the legal<wbr>Hold<wbr>Immutability property: The setting for whether Legal<wbr>Hold is enabled or disabled on the LTR backup."
+  syntax: "public SetLegalHoldImmutability legalHoldImmutability()"
+  desc: "Get the legalHoldImmutability property: The setting for whether LegalHold is enabled or disabled on the LTR backup. When LegalHold is enabled, the backup cannot be deleted until the LegalHold is removed."
+  returns:
+    description: "the legalHoldImmutability value."
+    type: "<xref href=\"com.azure.resourcemanager.sql.models.SetLegalHoldImmutability?alt=com.azure.resourcemanager.sql.models.SetLegalHoldImmutability&text=SetLegalHoldImmutability\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.requestedBackupStorageRedundancy()"
   fullName: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.requestedBackupStorageRedundancy()"
   name: "requestedBackupStorageRedundancy()"
@@ -130,6 +159,38 @@ methods:
   returns:
     description: "the serverName value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.timeBasedImmutability()"
+  fullName: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.timeBasedImmutability()"
+  name: "timeBasedImmutability()"
+  nameWithType: "LongTermRetentionBackupProperties.timeBasedImmutability()"
+  summary: "Get the time<wbr>Based<wbr>Immutability property: The setting for whether or not time-based immutability is enabled for the LTR backup."
+  syntax: "public TimeBasedImmutability timeBasedImmutability()"
+  desc: "Get the timeBasedImmutability property: The setting for whether or not time-based immutability is enabled for the LTR backup. When time-based immutability is enabled and locked, the backup cannot be deleted until BackupExpirationTime."
+  returns:
+    description: "the timeBasedImmutability value."
+    type: "<xref href=\"com.azure.resourcemanager.sql.models.TimeBasedImmutability?alt=com.azure.resourcemanager.sql.models.TimeBasedImmutability&text=TimeBasedImmutability\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.timeBasedImmutabilityMode()"
+  fullName: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.timeBasedImmutabilityMode()"
+  name: "timeBasedImmutabilityMode()"
+  nameWithType: "LongTermRetentionBackupProperties.timeBasedImmutabilityMode()"
+  summary: "Get the time<wbr>Based<wbr>Immutability<wbr>Mode property: The time-based immutability mode."
+  syntax: "public TimeBasedImmutabilityMode timeBasedImmutabilityMode()"
+  desc: "Get the timeBasedImmutabilityMode property: The time-based immutability mode. Only applicable if time-based immutability is enabled."
+  returns:
+    description: "the timeBasedImmutabilityMode value."
+    type: "<xref href=\"com.azure.resourcemanager.sql.models.TimeBasedImmutabilityMode?alt=com.azure.resourcemanager.sql.models.TimeBasedImmutabilityMode&text=TimeBasedImmutabilityMode\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "LongTermRetentionBackupProperties.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.validate()"
   fullName: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.validate()"
   name: "validate()"
@@ -151,6 +212,20 @@ methods:
   returns:
     description: "the LongTermRetentionBackupProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties?alt=com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties&text=LongTermRetentionBackupProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.withLegalHoldImmutability(com.azure.resourcemanager.sql.models.SetLegalHoldImmutability)"
+  fullName: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.withLegalHoldImmutability(SetLegalHoldImmutability legalHoldImmutability)"
+  name: "withLegalHoldImmutability(SetLegalHoldImmutability legalHoldImmutability)"
+  nameWithType: "LongTermRetentionBackupProperties.withLegalHoldImmutability(SetLegalHoldImmutability legalHoldImmutability)"
+  summary: "Set the legal<wbr>Hold<wbr>Immutability property: The setting for whether Legal<wbr>Hold is enabled or disabled on the LTR backup."
+  parameters:
+  - description: "the legalHoldImmutability value to set."
+    name: "legalHoldImmutability"
+    type: "<xref href=\"com.azure.resourcemanager.sql.models.SetLegalHoldImmutability?alt=com.azure.resourcemanager.sql.models.SetLegalHoldImmutability&text=SetLegalHoldImmutability\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public LongTermRetentionBackupProperties withLegalHoldImmutability(SetLegalHoldImmutability legalHoldImmutability)"
+  desc: "Set the legalHoldImmutability property: The setting for whether LegalHold is enabled or disabled on the LTR backup. When LegalHold is enabled, the backup cannot be deleted until the LegalHold is removed."
+  returns:
+    description: "the LongTermRetentionBackupProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties?alt=com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties&text=LongTermRetentionBackupProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.withRequestedBackupStorageRedundancy(com.azure.resourcemanager.sql.models.BackupStorageRedundancy)"
   fullName: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.withRequestedBackupStorageRedundancy(BackupStorageRedundancy requestedBackupStorageRedundancy)"
   name: "withRequestedBackupStorageRedundancy(BackupStorageRedundancy requestedBackupStorageRedundancy)"
@@ -165,8 +240,38 @@ methods:
   returns:
     description: "the LongTermRetentionBackupProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties?alt=com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties&text=LongTermRetentionBackupProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.withTimeBasedImmutability(com.azure.resourcemanager.sql.models.TimeBasedImmutability)"
+  fullName: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.withTimeBasedImmutability(TimeBasedImmutability timeBasedImmutability)"
+  name: "withTimeBasedImmutability(TimeBasedImmutability timeBasedImmutability)"
+  nameWithType: "LongTermRetentionBackupProperties.withTimeBasedImmutability(TimeBasedImmutability timeBasedImmutability)"
+  summary: "Set the time<wbr>Based<wbr>Immutability property: The setting for whether or not time-based immutability is enabled for the LTR backup."
+  parameters:
+  - description: "the timeBasedImmutability value to set."
+    name: "timeBasedImmutability"
+    type: "<xref href=\"com.azure.resourcemanager.sql.models.TimeBasedImmutability?alt=com.azure.resourcemanager.sql.models.TimeBasedImmutability&text=TimeBasedImmutability\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public LongTermRetentionBackupProperties withTimeBasedImmutability(TimeBasedImmutability timeBasedImmutability)"
+  desc: "Set the timeBasedImmutability property: The setting for whether or not time-based immutability is enabled for the LTR backup. When time-based immutability is enabled and locked, the backup cannot be deleted until BackupExpirationTime."
+  returns:
+    description: "the LongTermRetentionBackupProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties?alt=com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties&text=LongTermRetentionBackupProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.withTimeBasedImmutabilityMode(com.azure.resourcemanager.sql.models.TimeBasedImmutabilityMode)"
+  fullName: "com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties.withTimeBasedImmutabilityMode(TimeBasedImmutabilityMode timeBasedImmutabilityMode)"
+  name: "withTimeBasedImmutabilityMode(TimeBasedImmutabilityMode timeBasedImmutabilityMode)"
+  nameWithType: "LongTermRetentionBackupProperties.withTimeBasedImmutabilityMode(TimeBasedImmutabilityMode timeBasedImmutabilityMode)"
+  summary: "Set the time<wbr>Based<wbr>Immutability<wbr>Mode property: The time-based immutability mode."
+  parameters:
+  - description: "the timeBasedImmutabilityMode value to set."
+    name: "timeBasedImmutabilityMode"
+    type: "<xref href=\"com.azure.resourcemanager.sql.models.TimeBasedImmutabilityMode?alt=com.azure.resourcemanager.sql.models.TimeBasedImmutabilityMode&text=TimeBasedImmutabilityMode\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public LongTermRetentionBackupProperties withTimeBasedImmutabilityMode(TimeBasedImmutabilityMode timeBasedImmutabilityMode)"
+  desc: "Set the timeBasedImmutabilityMode property: The time-based immutability mode. Only applicable if time-based immutability is enabled."
+  returns:
+    description: "the LongTermRetentionBackupProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties?alt=com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties&text=LongTermRetentionBackupProperties\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Properties of a long term retention backup."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties?alt=com.azure.resourcemanager.sql.fluent.models.LongTermRetentionBackupProperties&text=LongTermRetentionBackupProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.sql.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-sql:2.42.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-sql:2.54.0-beta.1

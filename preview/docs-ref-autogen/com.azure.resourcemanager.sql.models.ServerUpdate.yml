@@ -20,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **ServerUpdate**"
+syntax: "public final class **ServerUpdate**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.sql.models.ServerUpdate?alt=com.azure.resourcemanager.sql.models.ServerUpdate&text=ServerUpdate\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.sql.models.ServerUpdate.ServerUpdate()"
   fullName: "com.azure.resourcemanager.sql.models.ServerUpdate.ServerUpdate()"
@@ -54,12 +54,22 @@ methods:
   fullName: "com.azure.resourcemanager.sql.models.ServerUpdate.administrators()"
   name: "administrators()"
   nameWithType: "ServerUpdate.administrators()"
-  summary: "Get the administrators property: The Azure Active Directory administrator of the server."
+  summary: "Get the administrators property: The Azure Active Directory administrator can be utilized during server creation and for server updates, except for the azure<wbr>ADOnly<wbr>Authentication property."
   syntax: "public ServerExternalAdministrator administrators()"
-  desc: "Get the administrators property: The Azure Active Directory administrator of the server. This can only be used at server create time. If used for server update, it will be ignored or it will result in an error. For updates individual APIs will need to be used."
+  desc: "Get the administrators property: The Azure Active Directory administrator can be utilized during server creation and for server updates, except for the azureADOnlyAuthentication property. To update the azureADOnlyAuthentication property, individual API must be used."
   returns:
     description: "the administrators value."
     type: "<xref href=\"com.azure.resourcemanager.sql.models.ServerExternalAdministrator?alt=com.azure.resourcemanager.sql.models.ServerExternalAdministrator&text=ServerExternalAdministrator\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.sql.models.ServerUpdate.createMode()"
+  fullName: "com.azure.resourcemanager.sql.models.ServerUpdate.createMode()"
+  name: "createMode()"
+  nameWithType: "ServerUpdate.createMode()"
+  summary: "Get the create<wbr>Mode property: Create mode for server, only valid values for this are Normal and Restore."
+  syntax: "public ServerCreateMode createMode()"
+  desc: "Get the createMode property: Create mode for server, only valid values for this are Normal and Restore."
+  returns:
+    description: "the createMode value."
+    type: "<xref href=\"com.azure.resourcemanager.sql.models.ServerCreateMode?alt=com.azure.resourcemanager.sql.models.ServerCreateMode&text=ServerCreateMode\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.sql.models.ServerUpdate.externalGovernanceStatus()"
   fullName: "com.azure.resourcemanager.sql.models.ServerUpdate.externalGovernanceStatus()"
   name: "externalGovernanceStatus()"
@@ -80,6 +90,25 @@ methods:
   returns:
     description: "the federatedClientId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html\">UUID</a>"
+- uid: "com.azure.resourcemanager.sql.models.ServerUpdate.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.sql.models.ServerUpdate.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "ServerUpdate.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Server<wbr>Update from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static ServerUpdate fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the ServerUpdate."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of ServerUpdate from the JsonReader."
+  returns:
+    description: "An instance of ServerUpdate if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.sql.models.ServerUpdate?alt=com.azure.resourcemanager.sql.models.ServerUpdate&text=ServerUpdate\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.sql.models.ServerUpdate.fullyQualifiedDomainName()"
   fullName: "com.azure.resourcemanager.sql.models.ServerUpdate.fullyQualifiedDomainName()"
   name: "fullyQualifiedDomainName()"
@@ -155,11 +184,11 @@ methods:
   name: "publicNetworkAccess()"
   nameWithType: "ServerUpdate.publicNetworkAccess()"
   summary: "Get the public<wbr>Network<wbr>Access property: Whether or not public endpoint access is allowed for this server."
-  syntax: "public ServerNetworkAccessFlag publicNetworkAccess()"
+  syntax: "public ServerPublicNetworkAccessFlag publicNetworkAccess()"
   desc: "Get the publicNetworkAccess property: Whether or not public endpoint access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled' or 'SecuredByPerimeter'."
   returns:
     description: "the publicNetworkAccess value."
-    type: "<xref href=\"com.azure.resourcemanager.sql.models.ServerNetworkAccessFlag?alt=com.azure.resourcemanager.sql.models.ServerNetworkAccessFlag&text=ServerNetworkAccessFlag\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.resourcemanager.sql.models.ServerPublicNetworkAccessFlag?alt=com.azure.resourcemanager.sql.models.ServerPublicNetworkAccessFlag&text=ServerPublicNetworkAccessFlag\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.sql.models.ServerUpdate.restrictOutboundNetworkAccess()"
   fullName: "com.azure.resourcemanager.sql.models.ServerUpdate.restrictOutboundNetworkAccess()"
   name: "restrictOutboundNetworkAccess()"
@@ -170,6 +199,16 @@ methods:
   returns:
     description: "the restrictOutboundNetworkAccess value."
     type: "<xref href=\"com.azure.resourcemanager.sql.models.ServerNetworkAccessFlag?alt=com.azure.resourcemanager.sql.models.ServerNetworkAccessFlag&text=ServerNetworkAccessFlag\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.sql.models.ServerUpdate.retentionDays()"
+  fullName: "com.azure.resourcemanager.sql.models.ServerUpdate.retentionDays()"
+  name: "retentionDays()"
+  nameWithType: "ServerUpdate.retentionDays()"
+  summary: "Get the retention<wbr>Days property: Number of days this server will stay soft-deleted."
+  syntax: "public Integer retentionDays()"
+  desc: "Get the retentionDays property: Number of days this server will stay soft-deleted."
+  returns:
+    description: "the retentionDays value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
 - uid: "com.azure.resourcemanager.sql.models.ServerUpdate.state()"
   fullName: "com.azure.resourcemanager.sql.models.ServerUpdate.state()"
   name: "state()"
@@ -190,6 +229,18 @@ methods:
   returns:
     description: "the tags value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+- uid: "com.azure.resourcemanager.sql.models.ServerUpdate.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.sql.models.ServerUpdate.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "ServerUpdate.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.sql.models.ServerUpdate.validate()"
   fullName: "com.azure.resourcemanager.sql.models.ServerUpdate.validate()"
   name: "validate()"
@@ -239,13 +290,27 @@ methods:
   fullName: "com.azure.resourcemanager.sql.models.ServerUpdate.withAdministrators(ServerExternalAdministrator administrators)"
   name: "withAdministrators(ServerExternalAdministrator administrators)"
   nameWithType: "ServerUpdate.withAdministrators(ServerExternalAdministrator administrators)"
-  summary: "Set the administrators property: The Azure Active Directory administrator of the server."
+  summary: "Set the administrators property: The Azure Active Directory administrator can be utilized during server creation and for server updates, except for the azure<wbr>ADOnly<wbr>Authentication property."
   parameters:
   - description: "the administrators value to set."
     name: "administrators"
     type: "<xref href=\"com.azure.resourcemanager.sql.models.ServerExternalAdministrator?alt=com.azure.resourcemanager.sql.models.ServerExternalAdministrator&text=ServerExternalAdministrator\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public ServerUpdate withAdministrators(ServerExternalAdministrator administrators)"
-  desc: "Set the administrators property: The Azure Active Directory administrator of the server. This can only be used at server create time. If used for server update, it will be ignored or it will result in an error. For updates individual APIs will need to be used."
+  desc: "Set the administrators property: The Azure Active Directory administrator can be utilized during server creation and for server updates, except for the azureADOnlyAuthentication property. To update the azureADOnlyAuthentication property, individual API must be used."
+  returns:
+    description: "the ServerUpdate object itself."
+    type: "<xref href=\"com.azure.resourcemanager.sql.models.ServerUpdate?alt=com.azure.resourcemanager.sql.models.ServerUpdate&text=ServerUpdate\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.sql.models.ServerUpdate.withCreateMode(com.azure.resourcemanager.sql.models.ServerCreateMode)"
+  fullName: "com.azure.resourcemanager.sql.models.ServerUpdate.withCreateMode(ServerCreateMode createMode)"
+  name: "withCreateMode(ServerCreateMode createMode)"
+  nameWithType: "ServerUpdate.withCreateMode(ServerCreateMode createMode)"
+  summary: "Set the create<wbr>Mode property: Create mode for server, only valid values for this are Normal and Restore."
+  parameters:
+  - description: "the createMode value to set."
+    name: "createMode"
+    type: "<xref href=\"com.azure.resourcemanager.sql.models.ServerCreateMode?alt=com.azure.resourcemanager.sql.models.ServerCreateMode&text=ServerCreateMode\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ServerUpdate withCreateMode(ServerCreateMode createMode)"
+  desc: "Set the createMode property: Create mode for server, only valid values for this are Normal and Restore."
   returns:
     description: "the ServerUpdate object itself."
     type: "<xref href=\"com.azure.resourcemanager.sql.models.ServerUpdate?alt=com.azure.resourcemanager.sql.models.ServerUpdate&text=ServerUpdate\" data-throw-if-not-resolved=\"False\" />"
@@ -333,16 +398,16 @@ methods:
   returns:
     description: "the ServerUpdate object itself."
     type: "<xref href=\"com.azure.resourcemanager.sql.models.ServerUpdate?alt=com.azure.resourcemanager.sql.models.ServerUpdate&text=ServerUpdate\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.sql.models.ServerUpdate.withPublicNetworkAccess(com.azure.resourcemanager.sql.models.ServerNetworkAccessFlag)"
-  fullName: "com.azure.resourcemanager.sql.models.ServerUpdate.withPublicNetworkAccess(ServerNetworkAccessFlag publicNetworkAccess)"
-  name: "withPublicNetworkAccess(ServerNetworkAccessFlag publicNetworkAccess)"
-  nameWithType: "ServerUpdate.withPublicNetworkAccess(ServerNetworkAccessFlag publicNetworkAccess)"
+- uid: "com.azure.resourcemanager.sql.models.ServerUpdate.withPublicNetworkAccess(com.azure.resourcemanager.sql.models.ServerPublicNetworkAccessFlag)"
+  fullName: "com.azure.resourcemanager.sql.models.ServerUpdate.withPublicNetworkAccess(ServerPublicNetworkAccessFlag publicNetworkAccess)"
+  name: "withPublicNetworkAccess(ServerPublicNetworkAccessFlag publicNetworkAccess)"
+  nameWithType: "ServerUpdate.withPublicNetworkAccess(ServerPublicNetworkAccessFlag publicNetworkAccess)"
   summary: "Set the public<wbr>Network<wbr>Access property: Whether or not public endpoint access is allowed for this server."
   parameters:
   - description: "the publicNetworkAccess value to set."
     name: "publicNetworkAccess"
-    type: "<xref href=\"com.azure.resourcemanager.sql.models.ServerNetworkAccessFlag?alt=com.azure.resourcemanager.sql.models.ServerNetworkAccessFlag&text=ServerNetworkAccessFlag\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public ServerUpdate withPublicNetworkAccess(ServerNetworkAccessFlag publicNetworkAccess)"
+    type: "<xref href=\"com.azure.resourcemanager.sql.models.ServerPublicNetworkAccessFlag?alt=com.azure.resourcemanager.sql.models.ServerPublicNetworkAccessFlag&text=ServerPublicNetworkAccessFlag\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ServerUpdate withPublicNetworkAccess(ServerPublicNetworkAccessFlag publicNetworkAccess)"
   desc: "Set the publicNetworkAccess property: Whether or not public endpoint access is allowed for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled' or 'SecuredByPerimeter'."
   returns:
     description: "the ServerUpdate object itself."
@@ -358,6 +423,20 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.sql.models.ServerNetworkAccessFlag?alt=com.azure.resourcemanager.sql.models.ServerNetworkAccessFlag&text=ServerNetworkAccessFlag\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public ServerUpdate withRestrictOutboundNetworkAccess(ServerNetworkAccessFlag restrictOutboundNetworkAccess)"
   desc: "Set the restrictOutboundNetworkAccess property: Whether or not to restrict outbound network access for this server. Value is optional but if passed in, must be 'Enabled' or 'Disabled'."
+  returns:
+    description: "the ServerUpdate object itself."
+    type: "<xref href=\"com.azure.resourcemanager.sql.models.ServerUpdate?alt=com.azure.resourcemanager.sql.models.ServerUpdate&text=ServerUpdate\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.sql.models.ServerUpdate.withRetentionDays(java.lang.Integer)"
+  fullName: "com.azure.resourcemanager.sql.models.ServerUpdate.withRetentionDays(Integer retentionDays)"
+  name: "withRetentionDays(Integer retentionDays)"
+  nameWithType: "ServerUpdate.withRetentionDays(Integer retentionDays)"
+  summary: "Set the retention<wbr>Days property: Number of days this server will stay soft-deleted."
+  parameters:
+  - description: "the retentionDays value to set."
+    name: "retentionDays"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  syntax: "public ServerUpdate withRetentionDays(Integer retentionDays)"
+  desc: "Set the retentionDays property: Number of days this server will stay soft-deleted."
   returns:
     description: "the ServerUpdate object itself."
     type: "<xref href=\"com.azure.resourcemanager.sql.models.ServerUpdate?alt=com.azure.resourcemanager.sql.models.ServerUpdate&text=ServerUpdate\" data-throw-if-not-resolved=\"False\" />"
@@ -401,6 +480,8 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.sql.models.ServerWorkspaceFeature?alt=com.azure.resourcemanager.sql.models.ServerWorkspaceFeature&text=ServerWorkspaceFeature\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "An update request for an Azure SQL Database server."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.sql.models.ServerUpdate?alt=com.azure.resourcemanager.sql.models.ServerUpdate&text=ServerUpdate\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.sql.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-sql:2.42.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-sql:2.54.0-beta.1

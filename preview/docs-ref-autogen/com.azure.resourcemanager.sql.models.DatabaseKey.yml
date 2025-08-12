@@ -20,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **DatabaseKey**"
+syntax: "public final class **DatabaseKey**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.sql.models.DatabaseKey?alt=com.azure.resourcemanager.sql.models.DatabaseKey&text=DatabaseKey\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.sql.models.DatabaseKey.DatabaseKey()"
   fullName: "com.azure.resourcemanager.sql.models.DatabaseKey.DatabaseKey()"
@@ -40,6 +40,25 @@ methods:
   returns:
     description: "the creationDate value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
+- uid: "com.azure.resourcemanager.sql.models.DatabaseKey.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.sql.models.DatabaseKey.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "DatabaseKey.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Database<wbr>Key from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static DatabaseKey fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the DatabaseKey."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of DatabaseKey from the JsonReader."
+  returns:
+    description: "An instance of DatabaseKey if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.sql.models.DatabaseKey?alt=com.azure.resourcemanager.sql.models.DatabaseKey&text=DatabaseKey\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.sql.models.DatabaseKey.subregion()"
   fullName: "com.azure.resourcemanager.sql.models.DatabaseKey.subregion()"
   name: "subregion()"
@@ -60,6 +79,18 @@ methods:
   returns:
     description: "the thumbprint value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.sql.models.DatabaseKey.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.sql.models.DatabaseKey.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "DatabaseKey.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.sql.models.DatabaseKey.type()"
   fullName: "com.azure.resourcemanager.sql.models.DatabaseKey.type()"
   name: "type()"
@@ -79,6 +110,8 @@ methods:
   desc: "Validates the instance."
 type: "class"
 desc: "Database level key used for encryption at rest."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.sql.models.DatabaseKey?alt=com.azure.resourcemanager.sql.models.DatabaseKey&text=DatabaseKey\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.sql.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-sql:2.42.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-sql:2.54.0-beta.1
