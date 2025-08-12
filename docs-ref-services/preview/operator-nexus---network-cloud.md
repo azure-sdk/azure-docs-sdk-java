@@ -1,7 +1,7 @@
 ---
 title: Azure Operator Nexus - Network Cloud SDK for Java
 description: Reference for Azure Operator Nexus - Network Cloud SDK for Java
-ms.date: 08/11/2025
+ms.date: 08/12/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: operatornexus-networkcloud
