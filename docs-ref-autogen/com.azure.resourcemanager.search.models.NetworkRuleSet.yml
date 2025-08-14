@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.search.models.NetworkRuleSet"
 fullName: "com.azure.resourcemanager.search.models.NetworkRuleSet"
 name: "NetworkRuleSet"
 nameWithType: "NetworkRuleSet"
-summary: "Network-specific rules that determine how the search service can be reached."
+summary: "Network specific rules that determine how the Azure AI Search service may be reached."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -30,6 +30,16 @@ constructors:
   syntax: "public NetworkRuleSet()"
   desc: "Creates an instance of NetworkRuleSet class."
 methods:
+- uid: "com.azure.resourcemanager.search.models.NetworkRuleSet.bypass()"
+  fullName: "com.azure.resourcemanager.search.models.NetworkRuleSet.bypass()"
+  name: "bypass()"
+  nameWithType: "NetworkRuleSet.bypass()"
+  summary: "Get the bypass property: Possible origins of inbound traffic that can bypass the rules defined in the 'ip<wbr>Rules' section."
+  syntax: "public SearchBypass bypass()"
+  desc: "Get the bypass property: Possible origins of inbound traffic that can bypass the rules defined in the 'ipRules' section."
+  returns:
+    description: "the bypass value."
+    type: "<xref href=\"com.azure.resourcemanager.search.models.SearchBypass?alt=com.azure.resourcemanager.search.models.SearchBypass&text=SearchBypass\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.search.models.NetworkRuleSet.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.resourcemanager.search.models.NetworkRuleSet.fromJson(JsonReader jsonReader)"
   name: "fromJson(JsonReader jsonReader)"
@@ -53,9 +63,9 @@ methods:
   fullName: "com.azure.resourcemanager.search.models.NetworkRuleSet.ipRules()"
   name: "ipRules()"
   nameWithType: "NetworkRuleSet.ipRules()"
-  summary: "Get the ip<wbr>Rules property: A list of IP restriction rules used for an IP firewall."
+  summary: "Get the ip<wbr>Rules property: A list of IP restriction rules that defines the inbound network(s) with allowing access to the search service endpoint."
   syntax: "public List<IpRule> ipRules()"
-  desc: "Get the ipRules property: A list of IP restriction rules used for an IP firewall. Any IPs that do not match the rules are blocked by the firewall. These rules are only applied when the 'publicNetworkAccess' of the search service is 'enabled'."
+  desc: "Get the ipRules property: A list of IP restriction rules that defines the inbound network(s) with allowing access to the search service endpoint. At the meantime, all other public IP networks are blocked by the firewall. These restriction rules are applied only when the 'publicNetworkAccess' of the search service is 'enabled'; otherwise, traffic over public interface is not allowed even with any public IP rules, and private endpoint connections would be the exclusive access method."
   returns:
     description: "the ipRules value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.search.models.IpRule?alt=com.azure.resourcemanager.search.models.IpRule&text=IpRule\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -78,24 +88,38 @@ methods:
   summary: "Validates the instance."
   syntax: "public void validate()"
   desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.search.models.NetworkRuleSet.withBypass(com.azure.resourcemanager.search.models.SearchBypass)"
+  fullName: "com.azure.resourcemanager.search.models.NetworkRuleSet.withBypass(SearchBypass bypass)"
+  name: "withBypass(SearchBypass bypass)"
+  nameWithType: "NetworkRuleSet.withBypass(SearchBypass bypass)"
+  summary: "Set the bypass property: Possible origins of inbound traffic that can bypass the rules defined in the 'ip<wbr>Rules' section."
+  parameters:
+  - description: "the bypass value to set."
+    name: "bypass"
+    type: "<xref href=\"com.azure.resourcemanager.search.models.SearchBypass?alt=com.azure.resourcemanager.search.models.SearchBypass&text=SearchBypass\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public NetworkRuleSet withBypass(SearchBypass bypass)"
+  desc: "Set the bypass property: Possible origins of inbound traffic that can bypass the rules defined in the 'ipRules' section."
+  returns:
+    description: "the NetworkRuleSet object itself."
+    type: "<xref href=\"com.azure.resourcemanager.search.models.NetworkRuleSet?alt=com.azure.resourcemanager.search.models.NetworkRuleSet&text=NetworkRuleSet\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.search.models.NetworkRuleSet.withIpRules(java.util.List<com.azure.resourcemanager.search.models.IpRule>)"
   fullName: "com.azure.resourcemanager.search.models.NetworkRuleSet.withIpRules(List<IpRule> ipRules)"
   name: "withIpRules(List<IpRule> ipRules)"
   nameWithType: "NetworkRuleSet.withIpRules(List<IpRule> ipRules)"
-  summary: "Set the ip<wbr>Rules property: A list of IP restriction rules used for an IP firewall."
+  summary: "Set the ip<wbr>Rules property: A list of IP restriction rules that defines the inbound network(s) with allowing access to the search service endpoint."
   parameters:
   - description: "the ipRules value to set."
     name: "ipRules"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.search.models.IpRule?alt=com.azure.resourcemanager.search.models.IpRule&text=IpRule\" data-throw-if-not-resolved=\"False\" />&gt;"
   syntax: "public NetworkRuleSet withIpRules(List<IpRule> ipRules)"
-  desc: "Set the ipRules property: A list of IP restriction rules used for an IP firewall. Any IPs that do not match the rules are blocked by the firewall. These rules are only applied when the 'publicNetworkAccess' of the search service is 'enabled'."
+  desc: "Set the ipRules property: A list of IP restriction rules that defines the inbound network(s) with allowing access to the search service endpoint. At the meantime, all other public IP networks are blocked by the firewall. These restriction rules are applied only when the 'publicNetworkAccess' of the search service is 'enabled'; otherwise, traffic over public interface is not allowed even with any public IP rules, and private endpoint connections would be the exclusive access method."
   returns:
     description: "the NetworkRuleSet object itself."
     type: "<xref href=\"com.azure.resourcemanager.search.models.NetworkRuleSet?alt=com.azure.resourcemanager.search.models.NetworkRuleSet&text=NetworkRuleSet\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Network-specific rules that determine how the search service can be reached."
+desc: "Network specific rules that determine how the Azure AI Search service may be reached."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.search.models.NetworkRuleSet?alt=com.azure.resourcemanager.search.models.NetworkRuleSet&text=NetworkRuleSet\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.search.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-search:2.53.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-search:2.54.0

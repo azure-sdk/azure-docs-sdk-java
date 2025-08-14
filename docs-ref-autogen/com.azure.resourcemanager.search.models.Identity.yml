@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.search.models.Identity"
 fullName: "com.azure.resourcemanager.search.models.Identity"
 name: "Identity"
 nameWithType: "Identity"
-summary: "Identity for the resource."
+summary: "Details about the search service identity."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -85,12 +85,22 @@ methods:
   fullName: "com.azure.resourcemanager.search.models.Identity.type()"
   name: "type()"
   nameWithType: "Identity.type()"
-  summary: "Get the type property: The identity type."
+  summary: "Get the type property: The type of identity used for the resource."
   syntax: "public IdentityType type()"
-  desc: "Get the type property: The identity type."
+  desc: "Get the type property: The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an identity created by the system and a set of user assigned identities. The type 'None' will remove all identities from the service."
   returns:
     description: "the type value."
     type: "<xref href=\"com.azure.resourcemanager.search.models.IdentityType?alt=com.azure.resourcemanager.search.models.IdentityType&text=IdentityType\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.search.models.Identity.userAssignedIdentities()"
+  fullName: "com.azure.resourcemanager.search.models.Identity.userAssignedIdentities()"
+  name: "userAssignedIdentities()"
+  nameWithType: "Identity.userAssignedIdentities()"
+  summary: "Get the user<wbr>Assigned<wbr>Identities property: The list of user identities associated with the resource."
+  syntax: "public Map<String,UserAssignedIdentity> userAssignedIdentities()"
+  desc: "Get the userAssignedIdentities property: The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource IDs in the form: '/subscriptions/\\{subscriptionId\\}/resourceGroups/\\{resourceGroupName\\}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/\\{identityName\\}'."
+  returns:
+    description: "the userAssignedIdentities value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.resourcemanager.search.models.UserAssignedIdentity?alt=com.azure.resourcemanager.search.models.UserAssignedIdentity&text=UserAssignedIdentity\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.search.models.Identity.validate()"
   fullName: "com.azure.resourcemanager.search.models.Identity.validate()"
   name: "validate()"
@@ -102,20 +112,34 @@ methods:
   fullName: "com.azure.resourcemanager.search.models.Identity.withType(IdentityType type)"
   name: "withType(IdentityType type)"
   nameWithType: "Identity.withType(IdentityType type)"
-  summary: "Set the type property: The identity type."
+  summary: "Set the type property: The type of identity used for the resource."
   parameters:
   - description: "the type value to set."
     name: "type"
     type: "<xref href=\"com.azure.resourcemanager.search.models.IdentityType?alt=com.azure.resourcemanager.search.models.IdentityType&text=IdentityType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public Identity withType(IdentityType type)"
-  desc: "Set the type property: The identity type."
+  desc: "Set the type property: The type of identity used for the resource. The type 'SystemAssigned, UserAssigned' includes both an identity created by the system and a set of user assigned identities. The type 'None' will remove all identities from the service."
+  returns:
+    description: "the Identity object itself."
+    type: "<xref href=\"com.azure.resourcemanager.search.models.Identity?alt=com.azure.resourcemanager.search.models.Identity&text=Identity\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.search.models.Identity.withUserAssignedIdentities(java.util.Map<java.lang.String,com.azure.resourcemanager.search.models.UserAssignedIdentity>)"
+  fullName: "com.azure.resourcemanager.search.models.Identity.withUserAssignedIdentities(Map<String,UserAssignedIdentity> userAssignedIdentities)"
+  name: "withUserAssignedIdentities(Map<String,UserAssignedIdentity> userAssignedIdentities)"
+  nameWithType: "Identity.withUserAssignedIdentities(Map<String,UserAssignedIdentity> userAssignedIdentities)"
+  summary: "Set the user<wbr>Assigned<wbr>Identities property: The list of user identities associated with the resource."
+  parameters:
+  - description: "the userAssignedIdentities value to set."
+    name: "userAssignedIdentities"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.resourcemanager.search.models.UserAssignedIdentity?alt=com.azure.resourcemanager.search.models.UserAssignedIdentity&text=UserAssignedIdentity\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public Identity withUserAssignedIdentities(Map<String,UserAssignedIdentity> userAssignedIdentities)"
+  desc: "Set the userAssignedIdentities property: The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource IDs in the form: '/subscriptions/\\{subscriptionId\\}/resourceGroups/\\{resourceGroupName\\}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/\\{identityName\\}'."
   returns:
     description: "the Identity object itself."
     type: "<xref href=\"com.azure.resourcemanager.search.models.Identity?alt=com.azure.resourcemanager.search.models.Identity&text=Identity\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Identity for the resource."
+desc: "Details about the search service identity. A null value indicates that the search service has no identity assigned."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.search.models.Identity?alt=com.azure.resourcemanager.search.models.Identity&text=Identity\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.search.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-search:2.53.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-search:2.54.0

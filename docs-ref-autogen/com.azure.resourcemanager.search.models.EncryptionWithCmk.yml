@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.search.models.EncryptionWithCmk"
 fullName: "com.azure.resourcemanager.search.models.EncryptionWithCmk"
 name: "EncryptionWithCmk"
 nameWithType: "EncryptionWithCmk"
-summary: "Describes a policy that determines how resources within the search service are to be encrypted with customer=managed keys."
+summary: "Describes a policy that determines how resources within the search service are to be encrypted with customer managed keys."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -34,9 +34,9 @@ methods:
   fullName: "com.azure.resourcemanager.search.models.EncryptionWithCmk.encryptionComplianceStatus()"
   name: "encryptionComplianceStatus()"
   nameWithType: "EncryptionWithCmk.encryptionComplianceStatus()"
-  summary: "Get the encryption<wbr>Compliance<wbr>Status property: Describes whether the search service is compliant or not with respect to having non-customer-encrypted resources."
+  summary: "Get the encryption<wbr>Compliance<wbr>Status property: Returns the status of search service compliance with respect to non-CMK-encrypted objects."
   syntax: "public SearchEncryptionComplianceStatus encryptionComplianceStatus()"
-  desc: "Get the encryptionComplianceStatus property: Describes whether the search service is compliant or not with respect to having non-customer-encrypted resources. If a service has more than one non-customer-encrypted resource and 'Enforcement' is 'enabled' then the service will be marked as 'nonCompliant'."
+  desc: "Get the encryptionComplianceStatus property: Returns the status of search service compliance with respect to non-CMK-encrypted objects. If a service has more than one unencrypted object, and enforcement is enabled, the service is marked as noncompliant."
   returns:
     description: "the encryptionComplianceStatus value."
     type: "<xref href=\"com.azure.resourcemanager.search.models.SearchEncryptionComplianceStatus?alt=com.azure.resourcemanager.search.models.SearchEncryptionComplianceStatus&text=SearchEncryptionComplianceStatus\" data-throw-if-not-resolved=\"False\" />"
@@ -44,9 +44,9 @@ methods:
   fullName: "com.azure.resourcemanager.search.models.EncryptionWithCmk.enforcement()"
   name: "enforcement()"
   nameWithType: "EncryptionWithCmk.enforcement()"
-  summary: "Get the enforcement property: Describes how a search service should enforce having one or more non-customer-encrypted resources."
+  summary: "Get the enforcement property: Describes how a search service should enforce compliance if it finds objects that aren't encrypted with the customer-managed key."
   syntax: "public SearchEncryptionWithCmk enforcement()"
-  desc: "Get the enforcement property: Describes how a search service should enforce having one or more non-customer-encrypted resources."
+  desc: "Get the enforcement property: Describes how a search service should enforce compliance if it finds objects that aren't encrypted with the customer-managed key."
   returns:
     description: "the enforcement value."
     type: "<xref href=\"com.azure.resourcemanager.search.models.SearchEncryptionWithCmk?alt=com.azure.resourcemanager.search.models.SearchEncryptionWithCmk&text=SearchEncryptionWithCmk\" data-throw-if-not-resolved=\"False\" />"
@@ -92,20 +92,20 @@ methods:
   fullName: "com.azure.resourcemanager.search.models.EncryptionWithCmk.withEnforcement(SearchEncryptionWithCmk enforcement)"
   name: "withEnforcement(SearchEncryptionWithCmk enforcement)"
   nameWithType: "EncryptionWithCmk.withEnforcement(SearchEncryptionWithCmk enforcement)"
-  summary: "Set the enforcement property: Describes how a search service should enforce having one or more non-customer-encrypted resources."
+  summary: "Set the enforcement property: Describes how a search service should enforce compliance if it finds objects that aren't encrypted with the customer-managed key."
   parameters:
   - description: "the enforcement value to set."
     name: "enforcement"
     type: "<xref href=\"com.azure.resourcemanager.search.models.SearchEncryptionWithCmk?alt=com.azure.resourcemanager.search.models.SearchEncryptionWithCmk&text=SearchEncryptionWithCmk\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public EncryptionWithCmk withEnforcement(SearchEncryptionWithCmk enforcement)"
-  desc: "Set the enforcement property: Describes how a search service should enforce having one or more non-customer-encrypted resources."
+  desc: "Set the enforcement property: Describes how a search service should enforce compliance if it finds objects that aren't encrypted with the customer-managed key."
   returns:
     description: "the EncryptionWithCmk object itself."
     type: "<xref href=\"com.azure.resourcemanager.search.models.EncryptionWithCmk?alt=com.azure.resourcemanager.search.models.EncryptionWithCmk&text=EncryptionWithCmk\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Describes a policy that determines how resources within the search service are to be encrypted with customer=managed keys."
+desc: "Describes a policy that determines how resources within the search service are to be encrypted with customer managed keys."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.search.models.EncryptionWithCmk?alt=com.azure.resourcemanager.search.models.EncryptionWithCmk&text=EncryptionWithCmk\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.search.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-search:2.53.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-search:2.54.0

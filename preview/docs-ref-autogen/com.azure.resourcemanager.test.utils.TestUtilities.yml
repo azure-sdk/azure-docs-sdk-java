@@ -1,0 +1,77 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.test.utils.TestUtilities"
+fullName: "com.azure.resourcemanager.test.utils.TestUtilities"
+name: "TestUtilities"
+nameWithType: "TestUtilities"
+summary: "Common utility functions for the tests."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **TestUtilities**"
+methods:
+- uid: "com.azure.resourcemanager.test.utils.TestUtilities.<T>getSize(java.lang.Iterable<T>)"
+  fullName: "com.azure.resourcemanager.test.utils.TestUtilities.getSize(Iterable<T> iterable)"
+  name: "getSize(Iterable<T> iterable)"
+  nameWithType: "TestUtilities.getSize(Iterable<T> iterable)"
+  summary: "Return the size of Iterable collection."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "the Iterable collection."
+    name: "iterable"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html\">Iterable</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public static int <T>getSize(Iterable<T> iterable)"
+  desc: "Return the size of Iterable collection."
+  returns:
+    description: "the size of the collection."
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.test.utils.TestUtilities.<T>isEmpty(com.azure.core.http.rest.PagedIterable<T>)"
+  fullName: "com.azure.resourcemanager.test.utils.TestUtilities.isEmpty(PagedIterable<T> iterable)"
+  name: "isEmpty(PagedIterable<T> iterable)"
+  nameWithType: "TestUtilities.isEmpty(PagedIterable<T> iterable)"
+  summary: "Return whether the Iterable collection is empty."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "the Iterable collection."
+    name: "iterable"
+    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public static boolean <T>isEmpty(PagedIterable<T> iterable)"
+  desc: "Return whether the Iterable collection is empty."
+  returns:
+    description: "if the collection is empty."
+    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.test.utils.TestUtilities.sleep(int,boolean)"
+  fullName: "com.azure.resourcemanager.test.utils.TestUtilities.sleep(int milliseconds, boolean isRecordMode)"
+  name: "sleep(int milliseconds, boolean isRecordMode)"
+  nameWithType: "TestUtilities.sleep(int milliseconds, boolean isRecordMode)"
+  summary: "Wrapper on the Resource<wbr>Manager<wbr>Utils.<wbr>Internal<wbr>Runtime<wbr>Context.<wbr>sleep, in case of record mode will not sleep, otherwise sleep."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "time in milliseconds for which to sleep."
+    name: "milliseconds"
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
+  - description: "the value indicates whether it is record mode."
+    name: "isRecordMode"
+    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static void sleep(int milliseconds, boolean isRecordMode)"
+  desc: "Wrapper on the ResourceManagerUtils.InternalRuntimeContext.sleep, in case of record mode will not sleep, otherwise sleep."
+type: "class"
+desc: "Common utility functions for the tests."
+metadata: {}
+package: "com.azure.resourcemanager.test.utils"
+artifact: com.azure.resourcemanager:azure-resourcemanager-test:2.0.0-beta.1
