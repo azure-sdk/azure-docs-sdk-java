@@ -188,11 +188,23 @@ methods:
   name: "getOffset()"
   nameWithType: "EventData.getOffset()"
   summary: "Gets the offset of the event when it was received from the associated Event Hub partition."
-  syntax: "public Long getOffset()"
+  deprecatedTag: "This value is obsolete and should no longer be used. Please use <xref uid=\"com.azure.messaging.eventhubs.EventData.getOffsetString()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#getOffsetString()\"></xref> instead."
+  syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public Long getOffset()"
+  desc: "Gets the offset of the event when it was received from the associated Event Hub partition. This is only present on a **received** <xref uid=\"com.azure.messaging.eventhubs.EventData\" data-throw-if-not-resolved=\"false\" data-raw-source=\"EventData\"></xref>."
+  hasDeprecatedTag: true
+  returns:
+    description: "The offset within the Event Hub partition of the received event. <code>null</code> if the <xref uid=\"com.azure.messaging.eventhubs.EventData\" data-throw-if-not-resolved=\"false\" data-raw-source=\"EventData\"></xref>\n     was not received from Event Hubs service or the offset could not be represented as a long."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
+- uid: "com.azure.messaging.eventhubs.EventData.getOffsetString()"
+  fullName: "com.azure.messaging.eventhubs.EventData.getOffsetString()"
+  name: "getOffsetString()"
+  nameWithType: "EventData.getOffsetString()"
+  summary: "Gets the offset of the event when it was received from the associated Event Hub partition."
+  syntax: "public String getOffsetString()"
   desc: "Gets the offset of the event when it was received from the associated Event Hub partition. This is only present on a **received** <xref uid=\"com.azure.messaging.eventhubs.EventData\" data-throw-if-not-resolved=\"false\" data-raw-source=\"EventData\"></xref>."
   returns:
     description: "The offset within the Event Hub partition of the received event. <code>null</code> if the <xref uid=\"com.azure.messaging.eventhubs.EventData\" data-throw-if-not-resolved=\"false\" data-raw-source=\"EventData\"></xref>\n     was not received from Event Hubs service."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.messaging.eventhubs.EventData.getPartitionKey()"
   fullName: "com.azure.messaging.eventhubs.EventData.getPartitionKey()"
   name: "getPartitionKey()"
@@ -313,4 +325,4 @@ type: "class"
 desc: "The data structure encapsulating the event being sent-to and received-from Event Hubs. Each Event Hub partition can be visualized as a stream of <xref uid=\"com.azure.messaging.eventhubs.EventData\" data-throw-if-not-resolved=\"false\" data-raw-source=\"EventData\"></xref>. This class is not thread-safe."
 metadata: {}
 package: "com.azure.messaging.eventhubs"
-artifact: com.azure:azure-messaging-eventhubs:5.20.5
+artifact: com.azure:azure-messaging-eventhubs:5.21.0

@@ -66,13 +66,31 @@ methods:
   name: "fromOffset(long offset)"
   nameWithType: "EventPosition.fromOffset(long offset)"
   summary: "Creates a position to an event in the partition at the provided offset."
+  deprecatedTag: "This method is obsolete and should no longer be used. Please use <xref uid=\"com.azure.messaging.eventhubs.models.EventPosition.fromOffsetString(java.lang.String)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#fromOffsetString(String)\"></xref>."
   modifiers:
   - "static"
   parameters:
   - description: "The offset of the event within that partition."
     name: "offset"
     type: "<xref href=\"long?alt=long&text=long\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public static EventPosition fromOffset(long offset)"
+  syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public static EventPosition fromOffset(long offset)"
+  desc: "Creates a position to an event in the partition at the provided offset. The event at that offset will not be included. Instead, the next event is returned.\n\nThe offset is the relative position for event in the context of the stream. The offset should not be considered a stable value, as the same offset may refer to a different event as events reach the age limit for retention and are no longer visible within the stream."
+  hasDeprecatedTag: true
+  returns:
+    description: "An <xref uid=\"com.azure.messaging.eventhubs.models.EventPosition\" data-throw-if-not-resolved=\"false\" data-raw-source=\"EventPosition\"></xref> object."
+    type: "<xref href=\"com.azure.messaging.eventhubs.models.EventPosition?alt=com.azure.messaging.eventhubs.models.EventPosition&text=EventPosition\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.messaging.eventhubs.models.EventPosition.fromOffsetString(java.lang.String)"
+  fullName: "com.azure.messaging.eventhubs.models.EventPosition.fromOffsetString(String offset)"
+  name: "fromOffsetString(String offset)"
+  nameWithType: "EventPosition.fromOffsetString(String offset)"
+  summary: "Creates a position to an event in the partition at the provided offset."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The offset of the event within that partition."
+    name: "offset"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public static EventPosition fromOffsetString(String offset)"
   desc: "Creates a position to an event in the partition at the provided offset. The event at that offset will not be included. Instead, the next event is returned.\n\nThe offset is the relative position for event in the context of the stream. The offset should not be considered a stable value, as the same offset may refer to a different event as events reach the age limit for retention and are no longer visible within the stream."
   returns:
     description: "An <xref uid=\"com.azure.messaging.eventhubs.models.EventPosition\" data-throw-if-not-resolved=\"false\" data-raw-source=\"EventPosition\"></xref> object."
@@ -184,4 +202,4 @@ type: "class"
 desc: "Defines a position of an <xref uid=\"com.azure.messaging.eventhubs.EventData\" data-throw-if-not-resolved=\"false\" data-raw-source=\"EventData\"></xref> in the Event Hub partition stream. The position can be an offset, sequence number, or enqueued time in UTC."
 metadata: {}
 package: "com.azure.messaging.eventhubs.models"
-artifact: com.azure:azure-messaging-eventhubs:5.20.5
+artifact: com.azure:azure-messaging-eventhubs:5.21.0

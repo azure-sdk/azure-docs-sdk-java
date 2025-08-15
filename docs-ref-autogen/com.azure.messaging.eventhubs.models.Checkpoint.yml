@@ -65,11 +65,23 @@ methods:
   name: "getOffset()"
   nameWithType: "Checkpoint.getOffset()"
   summary: "Gets the offset of the last successfully processed event to store as checkpoint."
-  syntax: "public Long getOffset()"
+  deprecatedTag: "This method is obsolete and should no longer be used. Please use <xref uid=\"com.azure.messaging.eventhubs.models.Checkpoint.getOffsetString()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#getOffsetString()\"></xref>"
+  syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public Long getOffset()"
+  desc: "Gets the offset of the last successfully processed event to store as checkpoint."
+  hasDeprecatedTag: true
+  returns:
+    description: "The offset of the last successfully processed event to store as checkpoint. <code>null</code> if the\n     information has not been set, or the offset cannot be represented as a long."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
+- uid: "com.azure.messaging.eventhubs.models.Checkpoint.getOffsetString()"
+  fullName: "com.azure.messaging.eventhubs.models.Checkpoint.getOffsetString()"
+  name: "getOffsetString()"
+  nameWithType: "Checkpoint.getOffsetString()"
+  summary: "Gets the offset of the last successfully processed event to store as checkpoint."
+  syntax: "public String getOffsetString()"
   desc: "Gets the offset of the last successfully processed event to store as checkpoint."
   returns:
-    description: "The offset of the last successfully processed event to store as checkpoint."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
+    description: "Offset of the last successfully processed event to store as checkpoint."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.messaging.eventhubs.models.Checkpoint.getPartitionId()"
   fullName: "com.azure.messaging.eventhubs.models.Checkpoint.getPartitionId()"
   name: "getPartitionId()"
@@ -137,11 +149,27 @@ methods:
   name: "setOffset(Long offset)"
   nameWithType: "Checkpoint.setOffset(Long offset)"
   summary: "Sets the offset of the last successfully processed event to store as checkpoint."
+  deprecatedTag: "This method is obsolete and should no longer be used. Please use <xref uid=\"com.azure.messaging.eventhubs.models.Checkpoint.setOffsetString(java.lang.String)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#setOffsetString(String)\"></xref>."
   parameters:
   - description: "The offset of the last successfully processed event to store as checkpoint."
     name: "offset"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
-  syntax: "public Checkpoint setOffset(Long offset)"
+  syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public Checkpoint setOffset(Long offset)"
+  desc: "Sets the offset of the last successfully processed event to store as checkpoint."
+  hasDeprecatedTag: true
+  returns:
+    description: "The updated <xref uid=\"com.azure.messaging.eventhubs.models.Checkpoint\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Checkpoint\"></xref> instance."
+    type: "<xref href=\"com.azure.messaging.eventhubs.models.Checkpoint?alt=com.azure.messaging.eventhubs.models.Checkpoint&text=Checkpoint\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.messaging.eventhubs.models.Checkpoint.setOffsetString(java.lang.String)"
+  fullName: "com.azure.messaging.eventhubs.models.Checkpoint.setOffsetString(String offsetString)"
+  name: "setOffsetString(String offsetString)"
+  nameWithType: "Checkpoint.setOffsetString(String offsetString)"
+  summary: "Sets the offset of the last successfully processed event to store as checkpoint."
+  parameters:
+  - description: "The offset of the last successfully processed event to store as checkpoint."
+    name: "offsetString"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public Checkpoint setOffsetString(String offsetString)"
   desc: "Sets the offset of the last successfully processed event to store as checkpoint."
   returns:
     description: "The updated <xref uid=\"com.azure.messaging.eventhubs.models.Checkpoint\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Checkpoint\"></xref> instance."
@@ -178,4 +206,4 @@ type: "class"
 desc: "A model class to hold checkpoint data. A checkpoint represents the last successfully processed event for a particular partition of an Event Hub."
 metadata: {}
 package: "com.azure.messaging.eventhubs.models"
-artifact: com.azure:azure-messaging-eventhubs:5.20.5
+artifact: com.azure:azure-messaging-eventhubs:5.21.0
