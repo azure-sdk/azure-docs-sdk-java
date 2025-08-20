@@ -6,6 +6,18 @@ nameWithType: "Volume"
 summary: "An immutable client-side representation of Volume."
 syntax: "public interface **Volume**"
 methods:
+- uid: "com.azure.resourcemanager.netapp.models.Volume.acceptGrowCapacityPoolForShortTermCloneSplit()"
+  fullName: "com.azure.resourcemanager.netapp.models.Volume.acceptGrowCapacityPoolForShortTermCloneSplit()"
+  name: "acceptGrowCapacityPoolForShortTermCloneSplit()"
+  nameWithType: "Volume.acceptGrowCapacityPoolForShortTermCloneSplit()"
+  summary: "Gets the accept<wbr>Grow<wbr>Capacity<wbr>Pool<wbr>For<wbr>Short<wbr>Term<wbr>Clone<wbr>Split property: While auto splitting the short term clone volume, if the parent pool does not have enough space to accommodate the volume after split, it will be automatically resized, which will lead to increased billing."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract AcceptGrowCapacityPoolForShortTermCloneSplit acceptGrowCapacityPoolForShortTermCloneSplit()"
+  desc: "Gets the acceptGrowCapacityPoolForShortTermCloneSplit property: While auto splitting the short term clone volume, if the parent pool does not have enough space to accommodate the volume after split, it will be automatically resized, which will lead to increased billing. To accept capacity pool size auto grow and create a short term clone volume, set the property as accepted."
+  returns:
+    description: "the acceptGrowCapacityPoolForShortTermCloneSplit value."
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.AcceptGrowCapacityPoolForShortTermCloneSplit?alt=com.azure.resourcemanager.netapp.models.AcceptGrowCapacityPoolForShortTermCloneSplit&text=AcceptGrowCapacityPoolForShortTermCloneSplit\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.netapp.models.Volume.actualThroughputMibps()"
   fullName: "com.azure.resourcemanager.netapp.models.Volume.actualThroughputMibps()"
   name: "actualThroughputMibps()"
@@ -479,6 +491,18 @@ methods:
   returns:
     description: "the id value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.netapp.models.Volume.inheritedSizeInBytes()"
+  fullName: "com.azure.resourcemanager.netapp.models.Volume.inheritedSizeInBytes()"
+  name: "inheritedSizeInBytes()"
+  nameWithType: "Volume.inheritedSizeInBytes()"
+  summary: "Gets the inherited<wbr>Size<wbr>InBytes property: Space shared by short term clone volume with parent volume in bytes."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Long inheritedSizeInBytes()"
+  desc: "Gets the inheritedSizeInBytes property: Space shared by short term clone volume with parent volume in bytes."
+  returns:
+    description: "the inheritedSizeInBytes value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
 - uid: "com.azure.resourcemanager.netapp.models.Volume.innerModel()"
   fullName: "com.azure.resourcemanager.netapp.models.Volume.innerModel()"
   name: "innerModel()"
@@ -1215,6 +1239,34 @@ methods:
   returns:
     description: "the snapshotId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.netapp.models.Volume.splitCloneFromParent()"
+  fullName: "com.azure.resourcemanager.netapp.models.Volume.splitCloneFromParent()"
+  name: "splitCloneFromParent()"
+  nameWithType: "Volume.splitCloneFromParent()"
+  summary: "Split clone from parent volume Split operation to convert clone volume to an independent volume."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Volume splitCloneFromParent()"
+  desc: "Split clone from parent volume Split operation to convert clone volume to an independent volume."
+  returns:
+    description: "volume resource."
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.Volume?alt=com.azure.resourcemanager.netapp.models.Volume&text=Volume\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.netapp.models.Volume.splitCloneFromParent(com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.netapp.models.Volume.splitCloneFromParent(Context context)"
+  name: "splitCloneFromParent(Context context)"
+  nameWithType: "Volume.splitCloneFromParent(Context context)"
+  summary: "Split clone from parent volume Split operation to convert clone volume to an independent volume."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Volume splitCloneFromParent(Context context)"
+  desc: "Split clone from parent volume Split operation to convert clone volume to an independent volume."
+  returns:
+    description: "volume resource."
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.Volume?alt=com.azure.resourcemanager.netapp.models.Volume&text=Volume\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.netapp.models.Volume.storageToNetworkProximity()"
   fullName: "com.azure.resourcemanager.netapp.models.Volume.storageToNetworkProximity()"
   name: "storageToNetworkProximity()"
@@ -1387,4 +1439,4 @@ type: "interface"
 desc: "An immutable client-side representation of Volume."
 metadata: {}
 package: "com.azure.resourcemanager.netapp.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:1.8.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:1.9.0
