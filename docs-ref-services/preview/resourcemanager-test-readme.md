@@ -1,12 +1,12 @@
 ---
 title: Azure Resource Manager Test shared library for Java
 keywords: Azure, java, SDK, API, azure-resourcemanager-test, resourcemanager
-ms.date: 08/13/2025
+ms.date: 08/21/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: resourcemanager
 ---
-# Azure Resource Manager Test shared library for Java - version 2.0.0-beta.1 
+# Azure Resource Manager Test shared library for Java - version 2.0.0-beta.2 
 
 
 Azure Resource Manager test library for Java
@@ -179,7 +179,7 @@ export AZURE_TEST_LOG_LEVEL=BODY_AND_HEADERS
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-test_2.0.0-beta.1/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-test_2.0.0-beta.2/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
