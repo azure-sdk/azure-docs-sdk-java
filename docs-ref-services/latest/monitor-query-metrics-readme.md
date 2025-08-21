@@ -1,12 +1,12 @@
 ---
 title: Azure Monitor Metrics Query client library for Java
 keywords: Azure, java, SDK, API, azure-monitor-query-metrics, monitor
-ms.date: 07/31/2025
+ms.date: 08/21/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: monitor
 ---
-# Azure Monitor Metrics Query client library for Java - version 1.0.0 
+# Azure Monitor Metrics Query client library for Java - version 1.0.1 
 
 
 The Azure Monitor Metrics Query client library is used to execute read-only queries against [Azure Monitor][azure_monitor_overview]'s metrics data platform:
@@ -36,7 +36,7 @@ The Azure Monitor Metrics Query client library is used to execute read-only quer
 
 #### Include the BOM file
 
-Include the `azure-sdk-bom` to your project to take a dependency on the stable version of the library. In the following snippet, replace the `{bom_version_to_target}` placeholder with the version number. To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-metrics_1.0.0/sdk/boms/azure-sdk-bom/README.md).
+Include the `azure-sdk-bom` to your project to take a dependency on the stable version of the library. In the following snippet, replace the `{bom_version_to_target}` placeholder with the version number. To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-metrics_1.0.1/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -73,7 +73,7 @@ If you want to take dependency on a particular version of the library that isn't
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-monitor-query-metrics</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
@@ -254,7 +254,7 @@ for (MetricsQueryResult queryResult : metricsQueryResult.getMetricsQueryResults(
 
 ## Troubleshooting
 
-See our [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-metrics_1.0.0/sdk/monitor/azure-monitor-query-metrics/TROUBLESHOOTING.md)
+See our [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-metrics_1.0.1/sdk/monitor/azure-monitor-query-metrics/TROUBLESHOOTING.md)
 for details on how to diagnose various failure scenarios.
 
 ## Next steps
@@ -275,17 +275,17 @@ comments.
 
 
 <!-- LINKS -->
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-metrics_1.0.0/sdk/identity/azure-identity/README.md
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-metrics_1.0.1/sdk/identity/azure-identity/README.md
 [azure_monitor_overview]: https://learn.microsoft.com/azure/azure-monitor/overview
 [azure_subscription]: https://azure.microsoft.com/free/java
-[changelog]: https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-metrics_1.0.0/sdk/monitor/azure-monitor-query-metrics/CHANGELOG.md
+[changelog]: https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-metrics_1.0.1/sdk/monitor/azure-monitor-query-metrics/CHANGELOG.md
 [custom_subdomain]: https://learn.microsoft.com/azure/cognitive-services/authentication?tabs=powershell#create-a-resource-with-a-custom-subdomain
-[DefaultAzureCredential]: https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-metrics_1.0.0/sdk/identity/azure-identity/README.md#defaultazurecredential
+[DefaultAzureCredential]: https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-metrics_1.0.1/sdk/identity/azure-identity/README.md#defaultazurecredential
 [jdk_link]: https://learn.microsoft.com/java/azure/jdk/?view=azure-java-stable
 [msdocs_apiref]: https://learn.microsoft.com/java/api/com.azure.monitor.query?view=azure-java-stable
 [package]: https://central.sonatype.com/artifact/com.azure/azure-monitor-query-metrics
-[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-metrics_1.0.0/sdk/monitor/azure-monitor-query-metrics/src/samples/java/README.md
-[source]: https://github.com/Azure/azure-sdk-for-java/tree/azure-monitor-query-metrics_1.0.0/sdk/monitor/azure-monitor-query-metrics/src
+[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-metrics_1.0.1/sdk/monitor/azure-monitor-query-metrics/src/samples/java/README.md
+[source]: https://github.com/Azure/azure-sdk-for-java/tree/azure-monitor-query-metrics_1.0.1/sdk/monitor/azure-monitor-query-metrics/src
 
 [cla]: https://cla.microsoft.com
 [coc]: https://opensource.microsoft.com/codeofconduct/

@@ -1,12 +1,12 @@
 ---
 title: Azure Cognitive Services Health Insights Radiology Insights client library for Java
 keywords: Azure, java, SDK, API, azure-health-insights-radiologyinsights, healthinsights
-ms.date: 07/30/2025
+ms.date: 08/21/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: healthinsights
 ---
-# Azure Cognitive Services Health Insights Radiology Insights client library for Java - version 1.1.2 
+# Azure Cognitive Services Health Insights Radiology Insights client library for Java - version 1.1.3 
 
 
 
@@ -34,7 +34,7 @@ For more information about creating the resource or how to get the location and 
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-health-insights-radiologyinsights</artifactId>
-    <version>1.1.2</version>
+    <version>1.1.3</version>
 </dependency>
 ```
 
@@ -974,7 +974,7 @@ For more extensive documentation on Azure Health Insights Radiology Insights, se
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.2/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.3/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -989,31 +989,31 @@ For details on contributing to this repository, see the [contributing guide](htt
 [azure_subscription]: https://azure.microsoft.com/free/
 [cognitive_resource_cli]: https://learn.microsoft.com/azure/cognitive-services/cognitive-services-apis-create-account-cli
 [azure_cli]: https://learn.microsoft.com/cli/azure
-[radiology_insights_client_class]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.2/sdk/healthinsights/azure-health-insights-radiologyinsights/src/main/java/com/azure/health/insights/radiologyinsights/RadiologyInsightsClient.java
-[ri_sync_sample]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.2/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleCriticalResultInferenceSync.java
-[ri_async_sample]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.2/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleCriticalResultInferenceAsync.java
-[ri_async_sample_agemismatch]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.2/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleAgeMismatchInferenceAsync.java
-[ri_async_sample_completeorderdiscrepancy]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.2/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleCompleteOrderDiscrepancyInferenceAsync.java
-[ri_async_sample_finding]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.2/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleFindingInferenceAsync.java
-[ri_async_sample_followupcommunication]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.2/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleFollowupCommunicationAsync.java
-[ri_async_sample_followuprecommendation]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.2/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleFollowupRecommendationInferenceAsync.java
-[ri_async_sample_lateralitydiscrepancy]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.2/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleLateralityDiscrepancyInferenceAsync.java
-[ri_async_sample_limitedorderdiscrepancy]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.2/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleLimitedOrderDiscrepancyInferenceAsync.java
-[ri_async_sample_radiologyprocedure]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.2/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleRadiologyProcedureInferenceAsync.java
-[ri_async_sample_sexmismatch]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.2/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleSexMismatchInferenceAsync.java
-[ri_async_sample_qualitymeasure]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.2/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleQualityMeasureInferenceAsync.java
-[ri_async_sample_scoringandassessment]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.2/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleScoringAndAssessmentInferenceAsync.java
-[ri_async_sample_guidance]: https://github.com/Azure/azure-sdk-for-java/tree/azure-health-insights-radiologyinsights_1.1.2/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleGuidanceInferenceAsync.java
+[radiology_insights_client_class]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.3/sdk/healthinsights/azure-health-insights-radiologyinsights/src/main/java/com/azure/health/insights/radiologyinsights/RadiologyInsightsClient.java
+[ri_sync_sample]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.3/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleCriticalResultInferenceSync.java
+[ri_async_sample]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.3/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleCriticalResultInferenceAsync.java
+[ri_async_sample_agemismatch]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.3/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleAgeMismatchInferenceAsync.java
+[ri_async_sample_completeorderdiscrepancy]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.3/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleCompleteOrderDiscrepancyInferenceAsync.java
+[ri_async_sample_finding]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.3/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleFindingInferenceAsync.java
+[ri_async_sample_followupcommunication]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.3/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleFollowupCommunicationAsync.java
+[ri_async_sample_followuprecommendation]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.3/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleFollowupRecommendationInferenceAsync.java
+[ri_async_sample_lateralitydiscrepancy]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.3/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleLateralityDiscrepancyInferenceAsync.java
+[ri_async_sample_limitedorderdiscrepancy]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.3/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleLimitedOrderDiscrepancyInferenceAsync.java
+[ri_async_sample_radiologyprocedure]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.3/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleRadiologyProcedureInferenceAsync.java
+[ri_async_sample_sexmismatch]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.3/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleSexMismatchInferenceAsync.java
+[ri_async_sample_qualitymeasure]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.3/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleQualityMeasureInferenceAsync.java
+[ri_async_sample_scoringandassessment]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.3/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleScoringAndAssessmentInferenceAsync.java
+[ri_async_sample_guidance]: https://github.com/Azure/azure-sdk-for-java/tree/azure-health-insights-radiologyinsights_1.1.3/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples/java/com/azure/health/insights/radiologyinsights/SampleGuidanceInferenceAsync.java
 [product_documentation]: https://learn.microsoft.com/azure/azure-health-insights/radiology-insights/
 [radiology_insights_inferences]: https://learn.microsoft.com/azure/azure-health-insights/radiology-insights/inferences
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.2/sdk/identity/azure-identity
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.3/sdk/identity/azure-identity
 [azure_portal]: https://portal.azure.com
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.2/sdk/healthinsights/azure-health-insights-radiologyinsights/src/
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.3/sdk/healthinsights/azure-health-insights-radiologyinsights/src/
 [package]: https://central.sonatype.com/artifact/com.azure/azure-health-insights-radiologyinsights
-[samples_location]: https://github.com/Azure/azure-sdk-for-java/tree/azure-health-insights-radiologyinsights_1.1.2/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples
+[samples_location]: https://github.com/Azure/azure-sdk-for-java/tree/azure-health-insights-radiologyinsights_1.1.3/sdk/healthinsights/azure-health-insights-radiologyinsights/src/samples
 [azure_credential]: https://learn.microsoft.com/java/api/com.azure.identity.defaultazurecredential
-[add_headers_from_context_policy]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.2/sdk/core/azure-core/src/main/java/com/azure/core/http/policy/AddHeadersFromContextPolicy.java
+[add_headers_from_context_policy]: https://github.com/Azure/azure-sdk-for-java/blob/azure-health-insights-radiologyinsights_1.1.3/sdk/core/azure-core/src/main/java/com/azure/core/http/policy/AddHeadersFromContextPolicy.java
 [performance_tuning]: https://github.com/Azure/azure-sdk-for-java/wiki/Performance-Tuning
 [rest_api]: https://github.com/Azure/AppConfiguration#rest-api-reference
 

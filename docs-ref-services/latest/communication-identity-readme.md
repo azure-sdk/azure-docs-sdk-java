@@ -1,12 +1,12 @@
 ---
 title: Azure Communication Identity client library for Java
 keywords: Azure, java, SDK, API, azure-communication-identity, communication
-ms.date: 07/30/2025
+ms.date: 08/21/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: communication
 ---
-# Azure Communication Identity client library for Java - version 1.6.6 
+# Azure Communication Identity client library for Java - version 1.6.7 
 
 
 The identity package is used for managing users and tokens for Azure Communication Services.
@@ -28,7 +28,7 @@ The identity package is used for managing users and tokens for Azure Communicati
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-communication-identity_1.6.6/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-communication-identity_1.6.7/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -64,7 +64,7 @@ add the direct dependency to your project as follows.
 <dependency>
   <groupId>com.azure</groupId>
   <artifactId>azure-communication-identity</artifactId>
-  <version>1.6.6</version>
+  <version>1.6.7</version>
 </dependency>
 ```
 
@@ -245,8 +245,8 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [product_docs]: /azure/communication-services/
 [package]: https://central.sonatype.com/artifact/com.azure/azure-communication-identity
 [api_documentation]: https://aka.ms/java-docs
-[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-communication-identity_1.6.6/sdk/communication/azure-communication-identity/src/samples/java/com/azure/communication/identity/ReadmeSamples.java
-[source]: https://github.com/Azure/azure-sdk-for-java/tree/azure-communication-identity_1.6.6/sdk/communication/azure-communication-identity/src
+[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-communication-identity_1.6.7/sdk/communication/azure-communication-identity/src/samples/java/com/azure/communication/identity/ReadmeSamples.java
+[source]: https://github.com/Azure/azure-sdk-for-java/tree/azure-communication-identity_1.6.7/sdk/communication/azure-communication-identity/src
 
 ![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-java%2Fsdk%2Fcommunication%2Fazure-communication-identity%2FREADME.png)
 

@@ -1,12 +1,12 @@
 ---
 title: Azure WebPubSub client library for Java
 keywords: Azure, java, SDK, API, azure-messaging-webpubsub-client, webpubsub
-ms.date: 06/21/2025
+ms.date: 08/21/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: webpubsub
 ---
-# Azure WebPubSub client library for Java - version 1.1.2 
+# Azure WebPubSub client library for Java - version 1.1.4 
 
 
 [Web PubSub](https://aka.ms/awps/doc) is an Azure-managed service that helps developers easily build web applications with real-time features and publish-subscribe patterns. Any scenario that requires real-time publish-subscribe messaging between server and clients or among clients can use Web PubSub. Traditional real-time features that often require polling from the server or submitting HTTP requests can also use Web PubSub.
@@ -45,7 +45,7 @@ Various documentation is available to help you get started
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-messaging-webpubsub-client</artifactId>
-    <version>1.1.2</version>
+    <version>1.1.4</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -101,7 +101,7 @@ Features to differentiate `WebPubSubClient` and `WebPubSubServiceClient`.
 |Package Name|azure-messaging-webpubsub-client|azure-messaging-webpubsub|
 |Features|Usually used on client side. Publish messages and subscribe to messages.|Usually used on server side. Generate Client Access Uri and manage clients.|
 
-Find more details in [azure-messaging-webpubsub](https://github.com/Azure/azure-sdk-for-java/tree/azure-messaging-webpubsub-client_1.1.2/sdk/webpubsub/azure-messaging-webpubsub)
+Find more details in [azure-messaging-webpubsub](https://github.com/Azure/azure-sdk-for-java/tree/azure-messaging-webpubsub-client_1.1.4/sdk/webpubsub/azure-messaging-webpubsub)
 
 ## Key concepts
 
@@ -219,7 +219,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: https://learn.microsoft.com/java/azure/jdk/
 [azure_subscription]: https://azure.microsoft.com/free/
-[cg]: https://github.com/Azure/azure-sdk-for-java/blob/azure-messaging-webpubsub-client_1.1.2/CONTRIBUTING.md
+[cg]: https://github.com/Azure/azure-sdk-for-java/blob/azure-messaging-webpubsub-client_1.1.4/CONTRIBUTING.md
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
 
