@@ -38,6 +38,22 @@ methods:
   returns:
     description: "the size of the collection."
     type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.test.utils.TestUtilities.getTokenCredentialForTest(com.azure.core.test.TestMode)"
+  fullName: "com.azure.resourcemanager.test.utils.TestUtilities.getTokenCredentialForTest(TestMode testMode)"
+  name: "getTokenCredentialForTest(TestMode testMode)"
+  nameWithType: "TestUtilities.getTokenCredentialForTest(TestMode testMode)"
+  summary: "Creates a comprehensive <xref uid=\"com.azure.core.credential.TokenCredential\" data-throw-if-not-resolved=\"false\" data-raw-source=\"TokenCredential\"></xref> chain optimized for test environments."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "<xref uid=\"com.azure.core.test.TestMode\" data-throw-if-not-resolved=\"false\" data-raw-source=\"TestMode\"></xref> that the test is running in, usually set through <code>AZURE_TEST_MODE</code> env var"
+    name: "testMode"
+    type: "<xref href=\"com.azure.core.test.TestMode?alt=com.azure.core.test.TestMode&text=TestMode\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static TokenCredential getTokenCredentialForTest(TestMode testMode)"
+  desc: "Creates a comprehensive <xref uid=\"com.azure.core.credential.TokenCredential\" data-throw-if-not-resolved=\"false\" data-raw-source=\"TokenCredential\"></xref> chain optimized for test environments.\n\nThis method constructs a credential chain that attempts multiple authentication methods in a specific order, making it suitable for various testing scenarios including local development and live tests in CI/CD pipelines.\n\n**Azure Pipelines Configuration:**\nFor Azure Pipelines authentication, the following environment variables must be set:\n\n *  `AZURESUBSCRIPTION_SERVICE_CONNECTION_ID`\n *  `AZURESUBSCRIPTION_CLIENT_ID`\n *  `AZURESUBSCRIPTION_TENANT_ID`\n *  `SYSTEM_ACCESSTOKEN`\n\n**Local run Configuration:**\nFor local run authentication, use Azure CLI for example, the following environment variables must be set:\n\n *  `AZURE_SUBSCRIPTION_ID`\n *  `AZURE_TENANT_ID`"
+  returns:
+    description: "a <xref uid=\"com.azure.core.credential.TokenCredential\" data-throw-if-not-resolved=\"false\" data-raw-source=\"TokenCredential\"></xref> appropriate for the test environment:\n         <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"MockTokenCredential\"></xref> for playback mode, or a\n         <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"com.azure.identity.ChainedTokenCredential\"></xref> for live testing"
+    type: "<xref href=\"com.azure.core.credential.TokenCredential?alt=com.azure.core.credential.TokenCredential&text=TokenCredential\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.test.utils.TestUtilities.<T>isEmpty(com.azure.core.http.rest.PagedIterable<T>)"
   fullName: "com.azure.resourcemanager.test.utils.TestUtilities.isEmpty(PagedIterable<T> iterable)"
   name: "isEmpty(PagedIterable<T> iterable)"
@@ -74,4 +90,4 @@ type: "class"
 desc: "Common utility functions for the tests."
 metadata: {}
 package: "com.azure.resourcemanager.test.utils"
-artifact: com.azure.resourcemanager:azure-resourcemanager-test:2.0.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-test:2.0.0-beta.2
