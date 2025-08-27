@@ -1,7 +1,7 @@
 ---
 title: Azure Web PubSub SDK for Java
 description: Reference for Azure Web PubSub SDK for Java
-ms.date: 08/26/2025
+ms.date: 08/27/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: webpubsub

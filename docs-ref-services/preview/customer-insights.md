@@ -1,7 +1,7 @@
 ---
 title: Azure Customer Insights SDK for Java
 description: Reference for Azure Customer Insights SDK for Java
-ms.date: 08/26/2025
+ms.date: 08/27/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: customerinsights
