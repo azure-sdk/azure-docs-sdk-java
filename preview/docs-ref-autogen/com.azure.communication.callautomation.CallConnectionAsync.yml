@@ -134,7 +134,7 @@ methods:
   syntax: "public Mono<Response<CallParticipant>> getParticipantWithResponse(CommunicationIdentifier targetParticipant)"
   desc: "Get a specific participant."
   returns:
-    description: "Response with the result of getting a desired participant in the call."
+    description: "Response with the result of getting a desired participant in the\n         call."
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.callautomation.models.CallParticipant?alt=com.azure.communication.callautomation.models.CallParticipant&text=CallParticipant\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.communication.callautomation.CallConnectionAsync.hangUp(boolean)"
   fullName: "com.azure.communication.callautomation.CallConnectionAsync.hangUp(boolean isForEveryone)"
@@ -174,6 +174,37 @@ methods:
   returns:
     description: "Response with result of getting all participants in the call."
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.callautomation.models.CallParticipant?alt=com.azure.communication.callautomation.models.CallParticipant&text=CallParticipant\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.communication.callautomation.CallConnectionAsync.moveParticipants(java.util.List<com.azure.communication.common.CommunicationIdentifier>,java.lang.String)"
+  fullName: "com.azure.communication.callautomation.CallConnectionAsync.moveParticipants(List<CommunicationIdentifier> targetParticipants, String fromCall)"
+  name: "moveParticipants(List<CommunicationIdentifier> targetParticipants, String fromCall)"
+  nameWithType: "CallConnectionAsync.moveParticipants(List<CommunicationIdentifier> targetParticipants, String fromCall)"
+  summary: "Move participants from one call to another."
+  parameters:
+  - description: "participants to move."
+    name: "targetParticipants"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.communication.common.CommunicationIdentifier?alt=com.azure.communication.common.CommunicationIdentifier&text=CommunicationIdentifier\" data-throw-if-not-resolved=\"False\" />&gt;"
+  - description: "The CallConnectionId for the call you want to move the participant from."
+    name: "fromCall"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public Mono<MoveParticipantsResult> moveParticipants(List<CommunicationIdentifier> targetParticipants, String fromCall)"
+  desc: "Move participants from one call to another."
+  returns:
+    description: "Result of moving participants to the call."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.communication.callautomation.models.MoveParticipantsResult?alt=com.azure.communication.callautomation.models.MoveParticipantsResult&text=MoveParticipantsResult\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.communication.callautomation.CallConnectionAsync.moveParticipantsWithResponse(com.azure.communication.callautomation.models.MoveParticipantsOptions)"
+  fullName: "com.azure.communication.callautomation.CallConnectionAsync.moveParticipantsWithResponse(MoveParticipantsOptions moveParticipantsOptions)"
+  name: "moveParticipantsWithResponse(MoveParticipantsOptions moveParticipantsOptions)"
+  nameWithType: "CallConnectionAsync.moveParticipantsWithResponse(MoveParticipantsOptions moveParticipantsOptions)"
+  summary: "Move participants from one call to another."
+  parameters:
+  - description: "Options bag for moveParticipants"
+    name: "moveParticipantsOptions"
+    type: "<xref href=\"com.azure.communication.callautomation.models.MoveParticipantsOptions?alt=com.azure.communication.callautomation.models.MoveParticipantsOptions&text=MoveParticipantsOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public Mono<Response<MoveParticipantsResult>> moveParticipantsWithResponse(MoveParticipantsOptions moveParticipantsOptions)"
+  desc: "Move participants from one call to another."
+  returns:
+    description: "Response with result of moving participants to the call."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.callautomation.models.MoveParticipantsResult?alt=com.azure.communication.callautomation.models.MoveParticipantsResult&text=MoveParticipantsResult\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.communication.callautomation.CallConnectionAsync.muteParticipant(com.azure.communication.common.CommunicationIdentifier)"
   fullName: "com.azure.communication.callautomation.CallConnectionAsync.muteParticipant(CommunicationIdentifier targetParticipant)"
   name: "muteParticipant(CommunicationIdentifier targetParticipant)"
@@ -236,7 +267,7 @@ methods:
   nameWithType: "CallConnectionAsync.transferCallToParticipant(CommunicationIdentifier targetParticipant)"
   summary: "Transfer the call to a participant."
   parameters:
-  - description: "A <xref uid=\"com.azure.communication.common.CommunicationIdentifier\" data-throw-if-not-resolved=\"false\" data-raw-source=\"CommunicationIdentifier\"></xref> representing the targetParticipant participant of this transfer."
+  - description: "A <xref uid=\"com.azure.communication.common.CommunicationIdentifier\" data-throw-if-not-resolved=\"false\" data-raw-source=\"CommunicationIdentifier\"></xref> representing the\n                          targetParticipant participant of this transfer."
     name: "targetParticipant"
     type: "<xref href=\"com.azure.communication.common.CommunicationIdentifier?alt=com.azure.communication.common.CommunicationIdentifier&text=CommunicationIdentifier\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public Mono<TransferCallResult> transferCallToParticipant(CommunicationIdentifier targetParticipant)"
@@ -256,10 +287,10 @@ methods:
   syntax: "public Mono<Response<TransferCallResult>> transferCallToParticipantWithResponse(TransferCallToParticipantOptions transferCallToParticipantOptions)"
   desc: "Transfer the call to a participant."
   returns:
-    description: "Response with result of transferring the call to a designated participant."
+    description: "Response with result of transferring the call to a designated\n         participant."
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.callautomation.models.TransferCallResult?alt=com.azure.communication.callautomation.models.TransferCallResult&text=TransferCallResult\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 type: "class"
 desc: "CallConnectionAsync for mid-call actions"
 metadata: {}
 package: "com.azure.communication.callautomation"
-artifact: com.azure:azure-communication-callautomation:1.4.0-beta.2
+artifact: com.azure:azure-communication-callautomation:1.6.0-beta.1

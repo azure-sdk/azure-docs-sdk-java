@@ -3,7 +3,7 @@ uid: "com.azure.communication.callautomation.models.OutStreamingData"
 fullName: "com.azure.communication.callautomation.models.OutStreamingData"
 name: "OutStreamingData"
 nameWithType: "OutStreamingData"
-summary: "The Play<wbr>Source model."
+summary: "This class stream audio data back to Azure Communication Services, which plays the audio into the cal"
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -20,56 +20,38 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public class **OutStreamingData**"
-constructors:
-- uid: "com.azure.communication.callautomation.models.OutStreamingData.OutStreamingData(com.azure.communication.callautomation.models.MediaKind)"
-  fullName: "com.azure.communication.callautomation.models.OutStreamingData.OutStreamingData(MediaKind kind)"
-  name: "OutStreamingData(MediaKind kind)"
-  nameWithType: "OutStreamingData.OutStreamingData(MediaKind kind)"
-  summary: "Constructor"
-  parameters:
-  - description: "media kind type on the out streaming data"
-    name: "kind"
-    type: "<xref href=\"com.azure.communication.callautomation.models.MediaKind?alt=com.azure.communication.callautomation.models.MediaKind&text=MediaKind\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public OutStreamingData(MediaKind kind)"
-  desc: "Constructor"
+syntax: "public final class **OutStreamingData**"
 methods:
 - uid: "com.azure.communication.callautomation.models.OutStreamingData.getStopAudioForOutbound()"
   fullName: "com.azure.communication.callautomation.models.OutStreamingData.getStopAudioForOutbound()"
   name: "getStopAudioForOutbound()"
   nameWithType: "OutStreamingData.getStopAudioForOutbound()"
-  summary: "Get the stop audiofor outbound"
+  summary: "Serialized stop data to stop playing audio back into the call Get the stop audiofor outbound"
   modifiers:
   - "static"
   syntax: "public static String getStopAudioForOutbound()"
-  exceptions:
-  - description: "throws exception when failed to serialize"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
-  desc: "Get the stop audiofor outbound"
+  desc: "Serialized stop data to stop playing audio back into the call Get the stop audiofor outbound"
   returns:
     description: "the string of outstreaming data"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-- uid: "com.azure.communication.callautomation.models.OutStreamingData.getStreamingDataForOutbound(byte[])"
-  fullName: "com.azure.communication.callautomation.models.OutStreamingData.getStreamingDataForOutbound(byte[] audioData)"
-  name: "getStreamingDataForOutbound(byte[] audioData)"
-  nameWithType: "OutStreamingData.getStreamingDataForOutbound(byte[] audioData)"
-  summary: "Get the streaming data for outbound"
+- uid: "com.azure.communication.callautomation.models.OutStreamingData.getStreamingDataForOutbound(com.azure.core.util.BinaryData)"
+  fullName: "com.azure.communication.callautomation.models.OutStreamingData.getStreamingDataForOutbound(BinaryData audioData)"
+  name: "getStreamingDataForOutbound(BinaryData audioData)"
+  nameWithType: "OutStreamingData.getStreamingDataForOutbound(BinaryData audioData)"
+  summary: "Serialized audio data to play back into the cal Get the streaming data for outbound"
   modifiers:
   - "static"
   parameters:
   - description: "the audioData to set"
     name: "audioData"
-    type: "<xref href=\"byte?alt=byte&text=byte\" data-throw-if-not-resolved=\"False\" />[]"
-  syntax: "public static String getStreamingDataForOutbound(byte[] audioData)"
-  exceptions:
-  - description: "when failed to serilize the data"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
-  desc: "Get the streaming data for outbound"
+    type: "<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static String getStreamingDataForOutbound(BinaryData audioData)"
+  desc: "Serialized audio data to play back into the cal Get the streaming data for outbound"
   returns:
     description: "the string of outstreaming data"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 type: "class"
-desc: "The PlaySource model."
+desc: "This class stream audio data back to Azure Communication Services, which plays the audio into the cal"
 metadata: {}
 package: "com.azure.communication.callautomation.models"
-artifact: com.azure:azure-communication-callautomation:1.4.0-beta.2
+artifact: com.azure:azure-communication-callautomation:1.6.0-beta.1

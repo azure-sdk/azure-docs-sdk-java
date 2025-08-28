@@ -201,6 +201,40 @@ methods:
   returns:
     description: "Response with a list of all participants in the call."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.callautomation.models.CallParticipant?alt=com.azure.communication.callautomation.models.CallParticipant&text=CallParticipant\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.communication.callautomation.CallConnection.moveParticipants(java.util.List<com.azure.communication.common.CommunicationIdentifier>,java.lang.String)"
+  fullName: "com.azure.communication.callautomation.CallConnection.moveParticipants(List<CommunicationIdentifier> targetParticipants, String fromCall)"
+  name: "moveParticipants(List<CommunicationIdentifier> targetParticipants, String fromCall)"
+  nameWithType: "CallConnection.moveParticipants(List<CommunicationIdentifier> targetParticipants, String fromCall)"
+  summary: "Move participants from one call to another."
+  parameters:
+  - description: "participants to move."
+    name: "targetParticipants"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.communication.common.CommunicationIdentifier?alt=com.azure.communication.common.CommunicationIdentifier&text=CommunicationIdentifier\" data-throw-if-not-resolved=\"False\" />&gt;"
+  - description: "The CallConnectionId for the call you want to move the participant from."
+    name: "fromCall"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public MoveParticipantsResult moveParticipants(List<CommunicationIdentifier> targetParticipants, String fromCall)"
+  desc: "Move participants from one call to another."
+  returns:
+    description: "Result of moving participants to the call."
+    type: "<xref href=\"com.azure.communication.callautomation.models.MoveParticipantsResult?alt=com.azure.communication.callautomation.models.MoveParticipantsResult&text=MoveParticipantsResult\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.communication.callautomation.CallConnection.moveParticipantsWithResponse(com.azure.communication.callautomation.models.MoveParticipantsOptions,com.azure.core.util.Context)"
+  fullName: "com.azure.communication.callautomation.CallConnection.moveParticipantsWithResponse(MoveParticipantsOptions moveParticipantsOptions, Context context)"
+  name: "moveParticipantsWithResponse(MoveParticipantsOptions moveParticipantsOptions, Context context)"
+  nameWithType: "CallConnection.moveParticipantsWithResponse(MoveParticipantsOptions moveParticipantsOptions, Context context)"
+  summary: "Move participants from one call to another."
+  parameters:
+  - description: "Options bag for moveParticipants"
+    name: "moveParticipantsOptions"
+    type: "<xref href=\"com.azure.communication.callautomation.models.MoveParticipantsOptions?alt=com.azure.communication.callautomation.models.MoveParticipantsOptions&text=MoveParticipantsOptions\" data-throw-if-not-resolved=\"False\" />"
+  - description: "A <xref uid=\"com.azure.core.util.Context\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Context\"></xref> representing the request context."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public Response<MoveParticipantsResult> moveParticipantsWithResponse(MoveParticipantsOptions moveParticipantsOptions, Context context)"
+  desc: "Move participants from one call to another."
+  returns:
+    description: "Response with result of moving participants to the call."
+    type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.callautomation.models.MoveParticipantsResult?alt=com.azure.communication.callautomation.models.MoveParticipantsResult&text=MoveParticipantsResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.communication.callautomation.CallConnection.muteParticipant(com.azure.communication.common.CommunicationIdentifier)"
   fullName: "com.azure.communication.callautomation.CallConnection.muteParticipant(CommunicationIdentifier targetParticipant)"
   name: "muteParticipant(CommunicationIdentifier targetParticipant)"
@@ -298,4 +332,4 @@ type: "class"
 desc: "CallConnection for mid-call actions"
 metadata: {}
 package: "com.azure.communication.callautomation"
-artifact: com.azure:azure-communication-callautomation:1.4.0-beta.2
+artifact: com.azure:azure-communication-callautomation:1.6.0-beta.1
