@@ -30,6 +30,16 @@ constructors:
   syntax: "public AutoUpgradeProfileProperties()"
   desc: "Creates an instance of AutoUpgradeProfileProperties class."
 methods:
+- uid: "com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties.autoUpgradeProfileStatus()"
+  fullName: "com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties.autoUpgradeProfileStatus()"
+  name: "autoUpgradeProfileStatus()"
+  nameWithType: "AutoUpgradeProfileProperties.autoUpgradeProfileStatus()"
+  summary: "Get the auto<wbr>Upgrade<wbr>Profile<wbr>Status property: The status of the auto upgrade profile."
+  syntax: "public AutoUpgradeProfileStatus autoUpgradeProfileStatus()"
+  desc: "Get the autoUpgradeProfileStatus property: The status of the auto upgrade profile."
+  returns:
+    description: "the autoUpgradeProfileStatus value."
+    type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.models.AutoUpgradeProfileStatus?alt=com.azure.resourcemanager.containerservicefleet.models.AutoUpgradeProfileStatus&text=AutoUpgradeProfileStatus\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties.channel()"
   fullName: "com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties.channel()"
   name: "channel()"
@@ -69,6 +79,16 @@ methods:
   returns:
     description: "An instance of AutoUpgradeProfileProperties if the JsonReader was pointing to an instance of it, or null\n if it was pointing to JSON null."
     type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties?alt=com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties&text=AutoUpgradeProfileProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties.longTermSupport()"
+  fullName: "com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties.longTermSupport()"
+  name: "longTermSupport()"
+  nameWithType: "AutoUpgradeProfileProperties.longTermSupport()"
+  summary: "Get the long<wbr>Term<wbr>Support property: If upgrade channel is not Target<wbr>Kubernetes<wbr>Version, this field must be False."
+  syntax: "public Boolean longTermSupport()"
+  desc: "Get the longTermSupport property: If upgrade channel is not TargetKubernetesVersion, this field must be False. If set to True: Fleet auto upgrade will continue generate update runs for patches of minor versions earlier than N-2 (where N is the latest supported minor version) if those minor versions support Long-Term Support (LTS). By default, this is set to False. For more information on AKS LTS, please see https://learn.microsoft.com/en-us/azure/aks/long-term-support."
+  returns:
+    description: "the longTermSupport value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties.nodeImageSelection()"
   fullName: "com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties.nodeImageSelection()"
   name: "nodeImageSelection()"
@@ -89,6 +109,16 @@ methods:
   returns:
     description: "the provisioningState value."
     type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.models.AutoUpgradeProfileProvisioningState?alt=com.azure.resourcemanager.containerservicefleet.models.AutoUpgradeProfileProvisioningState&text=AutoUpgradeProfileProvisioningState\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties.targetKubernetesVersion()"
+  fullName: "com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties.targetKubernetesVersion()"
+  name: "targetKubernetesVersion()"
+  nameWithType: "AutoUpgradeProfileProperties.targetKubernetesVersion()"
+  summary: "Get the target<wbr>Kubernetes<wbr>Version property: This is the target Kubernetes version for auto-upgrade."
+  syntax: "public String targetKubernetesVersion()"
+  desc: "Get the targetKubernetesVersion property: This is the target Kubernetes version for auto-upgrade. The format must be \\`\\{major version\\}.\\{minor version\\}\\`. For example, \"1.30\". By default, this is empty. If upgrade channel is set to TargetKubernetesVersion, this field must not be empty. If upgrade channel is Rapid, Stable or NodeImage, this field must be empty."
+  returns:
+    description: "the targetKubernetesVersion value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -118,6 +148,20 @@ methods:
   summary: "Validates the instance."
   syntax: "public void validate()"
   desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties.withAutoUpgradeProfileStatus(com.azure.resourcemanager.containerservicefleet.models.AutoUpgradeProfileStatus)"
+  fullName: "com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties.withAutoUpgradeProfileStatus(AutoUpgradeProfileStatus autoUpgradeProfileStatus)"
+  name: "withAutoUpgradeProfileStatus(AutoUpgradeProfileStatus autoUpgradeProfileStatus)"
+  nameWithType: "AutoUpgradeProfileProperties.withAutoUpgradeProfileStatus(AutoUpgradeProfileStatus autoUpgradeProfileStatus)"
+  summary: "Set the auto<wbr>Upgrade<wbr>Profile<wbr>Status property: The status of the auto upgrade profile."
+  parameters:
+  - description: "the autoUpgradeProfileStatus value to set."
+    name: "autoUpgradeProfileStatus"
+    type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.models.AutoUpgradeProfileStatus?alt=com.azure.resourcemanager.containerservicefleet.models.AutoUpgradeProfileStatus&text=AutoUpgradeProfileStatus\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public AutoUpgradeProfileProperties withAutoUpgradeProfileStatus(AutoUpgradeProfileStatus autoUpgradeProfileStatus)"
+  desc: "Set the autoUpgradeProfileStatus property: The status of the auto upgrade profile."
+  returns:
+    description: "the AutoUpgradeProfileProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties?alt=com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties&text=AutoUpgradeProfileProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties.withChannel(com.azure.resourcemanager.containerservicefleet.models.UpgradeChannel)"
   fullName: "com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties.withChannel(UpgradeChannel channel)"
   name: "withChannel(UpgradeChannel channel)"
@@ -146,6 +190,20 @@ methods:
   returns:
     description: "the AutoUpgradeProfileProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties?alt=com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties&text=AutoUpgradeProfileProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties.withLongTermSupport(java.lang.Boolean)"
+  fullName: "com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties.withLongTermSupport(Boolean longTermSupport)"
+  name: "withLongTermSupport(Boolean longTermSupport)"
+  nameWithType: "AutoUpgradeProfileProperties.withLongTermSupport(Boolean longTermSupport)"
+  summary: "Set the long<wbr>Term<wbr>Support property: If upgrade channel is not Target<wbr>Kubernetes<wbr>Version, this field must be False."
+  parameters:
+  - description: "the longTermSupport value to set."
+    name: "longTermSupport"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+  syntax: "public AutoUpgradeProfileProperties withLongTermSupport(Boolean longTermSupport)"
+  desc: "Set the longTermSupport property: If upgrade channel is not TargetKubernetesVersion, this field must be False. If set to True: Fleet auto upgrade will continue generate update runs for patches of minor versions earlier than N-2 (where N is the latest supported minor version) if those minor versions support Long-Term Support (LTS). By default, this is set to False. For more information on AKS LTS, please see https://learn.microsoft.com/en-us/azure/aks/long-term-support."
+  returns:
+    description: "the AutoUpgradeProfileProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties?alt=com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties&text=AutoUpgradeProfileProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties.withNodeImageSelection(com.azure.resourcemanager.containerservicefleet.models.AutoUpgradeNodeImageSelection)"
   fullName: "com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties.withNodeImageSelection(AutoUpgradeNodeImageSelection nodeImageSelection)"
   name: "withNodeImageSelection(AutoUpgradeNodeImageSelection nodeImageSelection)"
@@ -157,6 +215,20 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.models.AutoUpgradeNodeImageSelection?alt=com.azure.resourcemanager.containerservicefleet.models.AutoUpgradeNodeImageSelection&text=AutoUpgradeNodeImageSelection\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public AutoUpgradeProfileProperties withNodeImageSelection(AutoUpgradeNodeImageSelection nodeImageSelection)"
   desc: "Set the nodeImageSelection property: The node image upgrade to be applied to the target clusters in auto upgrade."
+  returns:
+    description: "the AutoUpgradeProfileProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties?alt=com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties&text=AutoUpgradeProfileProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties.withTargetKubernetesVersion(java.lang.String)"
+  fullName: "com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties.withTargetKubernetesVersion(String targetKubernetesVersion)"
+  name: "withTargetKubernetesVersion(String targetKubernetesVersion)"
+  nameWithType: "AutoUpgradeProfileProperties.withTargetKubernetesVersion(String targetKubernetesVersion)"
+  summary: "Set the target<wbr>Kubernetes<wbr>Version property: This is the target Kubernetes version for auto-upgrade."
+  parameters:
+  - description: "the targetKubernetesVersion value to set."
+    name: "targetKubernetesVersion"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public AutoUpgradeProfileProperties withTargetKubernetesVersion(String targetKubernetesVersion)"
+  desc: "Set the targetKubernetesVersion property: This is the target Kubernetes version for auto-upgrade. The format must be \\`\\{major version\\}.\\{minor version\\}\\`. For example, \"1.30\". By default, this is empty. If upgrade channel is set to TargetKubernetesVersion, this field must not be empty. If upgrade channel is Rapid, Stable or NodeImage, this field must be empty."
   returns:
     description: "the AutoUpgradeProfileProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties?alt=com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties&text=AutoUpgradeProfileProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -180,4 +252,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties?alt=com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileProperties&text=AutoUpgradeProfileProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.containerservicefleet.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservicefleet:1.2.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservicefleet:1.3.0-beta.1

@@ -42,38 +42,50 @@ fields:
   fullName: "com.azure.resourcemanager.containerservicefleet.models.UpgradeChannel.NODE_IMAGE"
   name: "NODE_IMAGE"
   nameWithType: "UpgradeChannel.NODE_IMAGE"
-  summary: "Static value Node<wbr>Image for Upgrade<wbr>Channel."
+  summary: "Upgrade node image version of the clusters."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.models.UpgradeChannel?alt=com.azure.resourcemanager.containerservicefleet.models.UpgradeChannel&text=UpgradeChannel\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final UpgradeChannel NODE_IMAGE"
-  desc: "Static value NodeImage for UpgradeChannel."
+  desc: "Upgrade node image version of the clusters."
 - uid: "com.azure.resourcemanager.containerservicefleet.models.UpgradeChannel.RAPID"
   fullName: "com.azure.resourcemanager.containerservicefleet.models.UpgradeChannel.RAPID"
   name: "RAPID"
   nameWithType: "UpgradeChannel.RAPID"
-  summary: "Static value Rapid for Upgrade<wbr>Channel."
+  summary: "Upgrades the clusters kubernetes version to the latest supported patch release on the latest supported minor version."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.models.UpgradeChannel?alt=com.azure.resourcemanager.containerservicefleet.models.UpgradeChannel&text=UpgradeChannel\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final UpgradeChannel RAPID"
-  desc: "Static value Rapid for UpgradeChannel."
+  desc: "Upgrades the clusters kubernetes version to the latest supported patch release on the latest supported minor version."
 - uid: "com.azure.resourcemanager.containerservicefleet.models.UpgradeChannel.STABLE"
   fullName: "com.azure.resourcemanager.containerservicefleet.models.UpgradeChannel.STABLE"
   name: "STABLE"
   nameWithType: "UpgradeChannel.STABLE"
-  summary: "Static value Stable for Upgrade<wbr>Channel."
+  summary: "Upgrades the clusters kubernetes version to the latest supported patch release on minor version N-1, where N is the latest supported minor version."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.models.UpgradeChannel?alt=com.azure.resourcemanager.containerservicefleet.models.UpgradeChannel&text=UpgradeChannel\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final UpgradeChannel STABLE"
-  desc: "Static value Stable for UpgradeChannel."
+  desc: "Upgrades the clusters kubernetes version to the latest supported patch release on minor version N-1, where N is the latest supported minor version. For example, if a cluster runs version 1.17.7 and versions 1.17.9, 1.18.4, 1.18.6, and 1.19.1 are available, the cluster upgrades to 1.18.6."
+- uid: "com.azure.resourcemanager.containerservicefleet.models.UpgradeChannel.TARGET_KUBERNETES_VERSION"
+  fullName: "com.azure.resourcemanager.containerservicefleet.models.UpgradeChannel.TARGET_KUBERNETES_VERSION"
+  name: "TARGET_KUBERNETES_VERSION"
+  nameWithType: "UpgradeChannel.TARGET_KUBERNETES_VERSION"
+  summary: "Upgrades the clusters Kubernetes version to the latest supported patch version of the specified target Kubernetes version."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.models.UpgradeChannel?alt=com.azure.resourcemanager.containerservicefleet.models.UpgradeChannel&text=UpgradeChannel\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final UpgradeChannel TARGET_KUBERNETES_VERSION"
+  desc: "Upgrades the clusters Kubernetes version to the latest supported patch version of the specified target Kubernetes version. For information on the behavior of update run for Kubernetes version upgrade, see https://learn.microsoft.com/en-us/azure/kubernetes-fleet/update-orchestration?tabs=azure-portal."
 methods:
 - uid: "com.azure.resourcemanager.containerservicefleet.models.UpgradeChannel.fromString(java.lang.String)"
   fullName: "com.azure.resourcemanager.containerservicefleet.models.UpgradeChannel.fromString(String name)"
@@ -107,4 +119,4 @@ type: "class"
 desc: "Configuration of how auto upgrade will be run."
 metadata: {}
 package: "com.azure.resourcemanager.containerservicefleet.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservicefleet:1.2.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservicefleet:1.3.0-beta.1

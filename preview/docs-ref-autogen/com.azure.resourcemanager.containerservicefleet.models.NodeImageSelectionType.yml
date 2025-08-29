@@ -42,38 +42,38 @@ fields:
   fullName: "com.azure.resourcemanager.containerservicefleet.models.NodeImageSelectionType.CONSISTENT"
   name: "CONSISTENT"
   nameWithType: "NodeImageSelectionType.CONSISTENT"
-  summary: "Static value Consistent for Node<wbr>Image<wbr>Selection<wbr>Type."
+  summary: "The image versions to upgrade nodes to are selected as described below: for each node pool in managed clusters affected by the update run, the system selects the latest image version such that it is available across all other node pools (in all other clusters) of the same image type."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.models.NodeImageSelectionType?alt=com.azure.resourcemanager.containerservicefleet.models.NodeImageSelectionType&text=NodeImageSelectionType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final NodeImageSelectionType CONSISTENT"
-  desc: "Static value Consistent for NodeImageSelectionType."
+  desc: "The image versions to upgrade nodes to are selected as described below: for each node pool in managed clusters affected by the update run, the system selects the latest image version such that it is available across all other node pools (in all other clusters) of the same image type. As a result, all node pools of the same image type will be upgraded to the same image version. For example, if the latest image version for image type 'AKSUbuntu-1804gen2containerd' is 'AKSUbuntu-1804gen2containerd-2021.10.12' for a node pool in cluster A in region X, and is 'AKSUbuntu-1804gen2containerd-2021.10.17' for a node pool in cluster B in region Y, the system will upgrade both node pools to image version 'AKSUbuntu-1804gen2containerd-2021.10.12'."
 - uid: "com.azure.resourcemanager.containerservicefleet.models.NodeImageSelectionType.CUSTOM"
   fullName: "com.azure.resourcemanager.containerservicefleet.models.NodeImageSelectionType.CUSTOM"
   name: "CUSTOM"
   nameWithType: "NodeImageSelectionType.CUSTOM"
-  summary: "Static value Custom for Node<wbr>Image<wbr>Selection<wbr>Type."
+  summary: "Upgrade the nodes to the custom image versions."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.models.NodeImageSelectionType?alt=com.azure.resourcemanager.containerservicefleet.models.NodeImageSelectionType&text=NodeImageSelectionType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final NodeImageSelectionType CUSTOM"
-  desc: "Static value Custom for NodeImageSelectionType."
+  desc: "Upgrade the nodes to the custom image versions. When set, update run will use node image versions provided in customNodeImageVersions to upgrade the nodes. If set, customNodeImageVersions must not be empty."
 - uid: "com.azure.resourcemanager.containerservicefleet.models.NodeImageSelectionType.LATEST"
   fullName: "com.azure.resourcemanager.containerservicefleet.models.NodeImageSelectionType.LATEST"
   name: "LATEST"
   nameWithType: "NodeImageSelectionType.LATEST"
-  summary: "Static value Latest for Node<wbr>Image<wbr>Selection<wbr>Type."
+  summary: "Use the latest image version when upgrading nodes."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.models.NodeImageSelectionType?alt=com.azure.resourcemanager.containerservicefleet.models.NodeImageSelectionType&text=NodeImageSelectionType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final NodeImageSelectionType LATEST"
-  desc: "Static value Latest for NodeImageSelectionType."
+  desc: "Use the latest image version when upgrading nodes. Clusters may use different image versions (e.g., 'AKSUbuntu-1804gen2containerd-2021.10.12' and 'AKSUbuntu-1804gen2containerd-2021.10.19') because, for example, the latest available version is different in different regions."
 methods:
 - uid: "com.azure.resourcemanager.containerservicefleet.models.NodeImageSelectionType.fromString(java.lang.String)"
   fullName: "com.azure.resourcemanager.containerservicefleet.models.NodeImageSelectionType.fromString(String name)"
@@ -107,4 +107,4 @@ type: "class"
 desc: "The node image upgrade type."
 metadata: {}
 package: "com.azure.resourcemanager.containerservicefleet.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservicefleet:1.2.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservicefleet:1.3.0-beta.1

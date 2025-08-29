@@ -42,38 +42,38 @@ fields:
   fullName: "com.azure.resourcemanager.containerservicefleet.models.ManagedClusterUpgradeType.CONTROL_PLANE_ONLY"
   name: "CONTROL_PLANE_ONLY"
   nameWithType: "ManagedClusterUpgradeType.CONTROL_PLANE_ONLY"
-  summary: "Static value Control<wbr>Plane<wbr>Only for Managed<wbr>Cluster<wbr>Upgrade<wbr>Type."
+  summary: "Control<wbr>Plane<wbr>Only upgrades only targets the Kubernetes<wbr>Version of the Managed<wbr>Clusters and will not be applied to the Agent<wbr>Pool."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.models.ManagedClusterUpgradeType?alt=com.azure.resourcemanager.containerservicefleet.models.ManagedClusterUpgradeType&text=ManagedClusterUpgradeType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final ManagedClusterUpgradeType CONTROL_PLANE_ONLY"
-  desc: "Static value ControlPlaneOnly for ManagedClusterUpgradeType."
+  desc: "ControlPlaneOnly upgrades only targets the KubernetesVersion of the ManagedClusters and will not be applied to the AgentPool. Requires the ManagedClusterUpgradeSpec.KubernetesVersion property to be set."
 - uid: "com.azure.resourcemanager.containerservicefleet.models.ManagedClusterUpgradeType.FULL"
   fullName: "com.azure.resourcemanager.containerservicefleet.models.ManagedClusterUpgradeType.FULL"
   name: "FULL"
   nameWithType: "ManagedClusterUpgradeType.FULL"
-  summary: "Static value Full for Managed<wbr>Cluster<wbr>Upgrade<wbr>Type."
+  summary: "Full upgrades the control plane and all agent pools of the target Managed<wbr>Clusters."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.models.ManagedClusterUpgradeType?alt=com.azure.resourcemanager.containerservicefleet.models.ManagedClusterUpgradeType&text=ManagedClusterUpgradeType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final ManagedClusterUpgradeType FULL"
-  desc: "Static value Full for ManagedClusterUpgradeType."
+  desc: "Full upgrades the control plane and all agent pools of the target ManagedClusters. Requires the ManagedClusterUpgradeSpec.KubernetesVersion property to be set."
 - uid: "com.azure.resourcemanager.containerservicefleet.models.ManagedClusterUpgradeType.NODE_IMAGE_ONLY"
   fullName: "com.azure.resourcemanager.containerservicefleet.models.ManagedClusterUpgradeType.NODE_IMAGE_ONLY"
   name: "NODE_IMAGE_ONLY"
   nameWithType: "ManagedClusterUpgradeType.NODE_IMAGE_ONLY"
-  summary: "Static value Node<wbr>Image<wbr>Only for Managed<wbr>Cluster<wbr>Upgrade<wbr>Type."
+  summary: "Node<wbr>Image<wbr>Only upgrades only the node images of the target Managed<wbr>Clusters."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.models.ManagedClusterUpgradeType?alt=com.azure.resourcemanager.containerservicefleet.models.ManagedClusterUpgradeType&text=ManagedClusterUpgradeType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final ManagedClusterUpgradeType NODE_IMAGE_ONLY"
-  desc: "Static value NodeImageOnly for ManagedClusterUpgradeType."
+  desc: "NodeImageOnly upgrades only the node images of the target ManagedClusters. Requires the ManagedClusterUpgradeSpec.KubernetesVersion property to NOT be set."
 methods:
 - uid: "com.azure.resourcemanager.containerservicefleet.models.ManagedClusterUpgradeType.fromString(java.lang.String)"
   fullName: "com.azure.resourcemanager.containerservicefleet.models.ManagedClusterUpgradeType.fromString(String name)"
@@ -107,4 +107,4 @@ type: "class"
 desc: "The type of upgrade to perform when targeting ManagedClusters."
 metadata: {}
 package: "com.azure.resourcemanager.containerservicefleet.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservicefleet:1.2.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservicefleet:1.3.0-beta.1
