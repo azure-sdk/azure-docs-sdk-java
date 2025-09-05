@@ -1,12 +1,12 @@
 ---
 title: Azure Cosmos DB Client Library for Java
 keywords: Azure, java, SDK, API, azure-cosmos, cosmos
-ms.date: 07/25/2025
+ms.date: 09/05/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: cosmos
 ---
-# Azure Cosmos DB Client Library for Java - version 4.73.1 
+# Azure Cosmos DB Client Library for Java - version 4.74.0 
 
 
 Azure Cosmos DB is Microsoft’s globally distributed, multi-model database service for operational and analytics workloads. It offers multi-mastering feature by automatically scaling throughput, compute, and storage.
@@ -20,7 +20,7 @@ This project provides SDK library in Java for interacting with [SQL API][sql_api
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on GA version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-cosmos_4.73.1/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-cosmos_4.74.0/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -131,10 +131,10 @@ You may learn more about partitioning [here](https://learn.microsoft.com/azure/c
 ## Examples
 
 The following section provides several code snippets covering some of the most common Cosmos DB SQL API tasks, including:
-* [Create Cosmos Client](#create-cosmos-client "Create Cosmos Client")
-* [Create Database](#create-database "Create Database")
-* [Create Container](#create-container "Create Container")
-* [CRUD operation on Items](#crud-operation-on-items "CRUD operation on Items")
+* [Create Cosmos Client](#create-cosmos-client)
+* [Create Database](#create-database)
+* [Create Container](#create-container)
+* [CRUD operation on Items](#crud-operation-on-items)
 
 ### Create Cosmos Client
 ```java readme-sample-createCosmosClient2
@@ -293,7 +293,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 or contact [opencode@microsoft.com][coc_contact] with any additional questions or comments.
 
 <!-- LINKS -->
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-cosmos_4.73.1/sdk/cosmos/azure-cosmos/src
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-cosmos_4.74.0/sdk/cosmos/azure-cosmos/src
 [cosmos_introduction]: https://learn.microsoft.com/azure/cosmos-db/
 [api_documentation]: https://azuresdkdocs.z19.web.core.windows.net/java/azure-cosmos/latest/index.html
 [cosmos_docs]: https://learn.microsoft.com/azure/cosmos-db/introduction
@@ -315,7 +315,4 @@ or contact [opencode@microsoft.com][coc_contact] with any additional questions o
 [getting_started]: https://github.com/Azure-Samples/azure-cosmos-java-getting-started
 [quickstart]: https://learn.microsoft.com/azure/cosmos-db/create-sql-api-java?tabs=sync
 [project_reactor_schedulers]: https://projectreactor.io/docs/core/release/api/reactor/core/scheduler/Schedulers.html
-
-
-
 
