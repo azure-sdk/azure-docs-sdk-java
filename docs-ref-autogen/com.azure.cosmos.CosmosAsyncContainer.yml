@@ -185,7 +185,7 @@ methods:
   nameWithType: "CosmosAsyncContainer.enableGlobalThroughputControlGroup(ThroughputControlGroupConfig groupConfig, GlobalThroughputControlConfig globalControlConfig)"
   summary: "Enable the throughput control group with global control mode."
   parameters:
-  - description: "The throughput control group configuration, see <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"GlobalThroughputControlGroup\"></xref>."
+  - description: "The throughput control group configuration, see <xref uid=\"com.azure.cosmos.ThroughputControlGroupConfig\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ThroughputControlGroupConfig\"></xref>."
     name: "groupConfig"
     type: "<xref href=\"com.azure.cosmos.ThroughputControlGroupConfig?alt=com.azure.cosmos.ThroughputControlGroupConfig&text=ThroughputControlGroupConfig\" data-throw-if-not-resolved=\"False\" />"
   - description: "The global throughput control configuration, see <xref uid=\"com.azure.cosmos.GlobalThroughputControlConfig\" data-throw-if-not-resolved=\"false\" data-raw-source=\"GlobalThroughputControlConfig\"></xref>."
@@ -204,6 +204,17 @@ methods:
     type: "<xref href=\"com.azure.cosmos.ThroughputControlGroupConfig?alt=com.azure.cosmos.ThroughputControlGroupConfig&text=ThroughputControlGroupConfig\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public void enableLocalThroughputControlGroup(ThroughputControlGroupConfig groupConfig)"
   desc: "Enable the throughput control group with local control mode.\n\n\n```java\nThroughputControlGroupConfig groupConfig =\n     new ThroughputControlGroupConfigBuilder()\n         .groupName(\"localControlGroup\")\n         .targetThroughputThreshold(0.1)\n         .build();\n\n container.enableLocalThroughputControlGroup(groupConfig);\n```"
+- uid: "com.azure.cosmos.CosmosAsyncContainer.enableServerThroughputControlGroup(com.azure.cosmos.ThroughputControlGroupConfig)"
+  fullName: "com.azure.cosmos.CosmosAsyncContainer.enableServerThroughputControlGroup(ThroughputControlGroupConfig groupConfig)"
+  name: "enableServerThroughputControlGroup(ThroughputControlGroupConfig groupConfig)"
+  nameWithType: "CosmosAsyncContainer.enableServerThroughputControlGroup(ThroughputControlGroupConfig groupConfig)"
+  summary: "Enable the server throughput bucket control group."
+  parameters:
+  - description: "the throughput control group config, see <xref uid=\"com.azure.cosmos.ThroughputControlGroupConfig\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ThroughputControlGroupConfig\"></xref>."
+    name: "groupConfig"
+    type: "<xref href=\"com.azure.cosmos.ThroughputControlGroupConfig?alt=com.azure.cosmos.ThroughputControlGroupConfig&text=ThroughputControlGroupConfig\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public void enableServerThroughputControlGroup(ThroughputControlGroupConfig groupConfig)"
+  desc: "Enable the server throughput bucket control group.\n\n```java\nThroughputControlGroupConfig groupConfig =\n     new ThroughputControlGroupConfigBuilder()\n         .groupName(\"localControlGroup\")\n         .throughputBucket(2)\n         .build();\n\n container.enableServerThroughputControlGroup(groupConfig);\n```"
 - uid: "com.azure.cosmos.CosmosAsyncContainer.<TContext>executeBulkOperations(reactor.core.publisher.Flux<com.azure.cosmos.models.CosmosItemOperation>)"
   fullName: "com.azure.cosmos.CosmosAsyncContainer.executeBulkOperations(Flux<CosmosItemOperation> operations)"
   name: "executeBulkOperations(Flux<CosmosItemOperation> operations)"
@@ -847,4 +858,4 @@ type: "class"
 desc: "Provides methods for reading, deleting, and replacing existing Containers. Provides methods for interacting with child resources (Items, Scripts, Conflicts)"
 metadata: {}
 package: "com.azure.cosmos"
-artifact: com.azure:azure-cosmos:4.73.1
+artifact: com.azure:azure-cosmos:4.74.0

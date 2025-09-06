@@ -21,14 +21,6 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
 syntax: "public final class **SbomComponent**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent?alt=com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent&text=SbomComponent\" data-throw-if-not-resolved=\"False\" />&gt;"
-constructors:
-- uid: "com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent.SbomComponent()"
-  fullName: "com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent.SbomComponent()"
-  name: "SbomComponent()"
-  nameWithType: "SbomComponent.SbomComponent()"
-  summary: "Creates an instance of Sbom<wbr>Component class."
-  syntax: "public SbomComponent()"
-  desc: "Creates an instance of SbomComponent class."
 methods:
 - uid: "com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent.componentId()"
   fullName: "com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent.componentId()"
@@ -56,7 +48,7 @@ methods:
   nameWithType: "SbomComponent.filePaths()"
   summary: "Get the file<wbr>Paths property: File paths related to the component."
   syntax: "public List<String> filePaths()"
-  desc: "Get the filePaths property: File paths related to the component."
+  desc: "Get the filePaths property: File paths related to the component. Note, relatedFiles should be used instead of this property."
   returns:
     description: "the filePaths value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
@@ -89,6 +81,16 @@ methods:
   returns:
     description: "the license value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent.provisioningState()"
+  fullName: "com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent.provisioningState()"
+  name: "provisioningState()"
+  nameWithType: "SbomComponent.provisioningState()"
+  summary: "Get the provisioning<wbr>State property: The status of the last operation."
+  syntax: "public ProvisioningState provisioningState()"
+  desc: "Get the provisioningState property: The status of the last operation."
+  returns:
+    description: "the provisioningState value."
+    type: "<xref href=\"com.azure.resourcemanager.iotfirmwaredefense.models.ProvisioningState?alt=com.azure.resourcemanager.iotfirmwaredefense.models.ProvisioningState&text=ProvisioningState\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -118,80 +120,10 @@ methods:
   returns:
     description: "the version value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-- uid: "com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent.withComponentId(java.lang.String)"
-  fullName: "com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent.withComponentId(String componentId)"
-  name: "withComponentId(String componentId)"
-  nameWithType: "SbomComponent.withComponentId(String componentId)"
-  summary: "Set the component<wbr>Id property: ID for the component."
-  parameters:
-  - description: "the componentId value to set."
-    name: "componentId"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public SbomComponent withComponentId(String componentId)"
-  desc: "Set the componentId property: ID for the component."
-  returns:
-    description: "the SbomComponent object itself."
-    type: "<xref href=\"com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent?alt=com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent&text=SbomComponent\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent.withComponentName(java.lang.String)"
-  fullName: "com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent.withComponentName(String componentName)"
-  name: "withComponentName(String componentName)"
-  nameWithType: "SbomComponent.withComponentName(String componentName)"
-  summary: "Set the component<wbr>Name property: Name for the component."
-  parameters:
-  - description: "the componentName value to set."
-    name: "componentName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public SbomComponent withComponentName(String componentName)"
-  desc: "Set the componentName property: Name for the component."
-  returns:
-    description: "the SbomComponent object itself."
-    type: "<xref href=\"com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent?alt=com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent&text=SbomComponent\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent.withFilePaths(java.util.List<java.lang.String>)"
-  fullName: "com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent.withFilePaths(List<String> filePaths)"
-  name: "withFilePaths(List<String> filePaths)"
-  nameWithType: "SbomComponent.withFilePaths(List<String> filePaths)"
-  summary: "Set the file<wbr>Paths property: File paths related to the component."
-  parameters:
-  - description: "the filePaths value to set."
-    name: "filePaths"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
-  syntax: "public SbomComponent withFilePaths(List<String> filePaths)"
-  desc: "Set the filePaths property: File paths related to the component."
-  returns:
-    description: "the SbomComponent object itself."
-    type: "<xref href=\"com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent?alt=com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent&text=SbomComponent\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent.withLicense(java.lang.String)"
-  fullName: "com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent.withLicense(String license)"
-  name: "withLicense(String license)"
-  nameWithType: "SbomComponent.withLicense(String license)"
-  summary: "Set the license property: License for the component."
-  parameters:
-  - description: "the license value to set."
-    name: "license"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public SbomComponent withLicense(String license)"
-  desc: "Set the license property: License for the component."
-  returns:
-    description: "the SbomComponent object itself."
-    type: "<xref href=\"com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent?alt=com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent&text=SbomComponent\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent.withVersion(java.lang.String)"
-  fullName: "com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent.withVersion(String version)"
-  name: "withVersion(String version)"
-  nameWithType: "SbomComponent.withVersion(String version)"
-  summary: "Set the version property: Version for the component."
-  parameters:
-  - description: "the version value to set."
-    name: "version"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public SbomComponent withVersion(String version)"
-  desc: "Set the version property: Version for the component."
-  returns:
-    description: "the SbomComponent object itself."
-    type: "<xref href=\"com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent?alt=com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent&text=SbomComponent\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "SBOM component of a firmware."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent?alt=com.azure.resourcemanager.iotfirmwaredefense.fluent.models.SbomComponent&text=SbomComponent\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.iotfirmwaredefense.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-iotfirmwaredefense:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-iotfirmwaredefense:2.0.0

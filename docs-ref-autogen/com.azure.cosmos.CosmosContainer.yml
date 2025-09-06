@@ -176,6 +176,17 @@ methods:
     type: "<xref href=\"com.azure.cosmos.ThroughputControlGroupConfig?alt=com.azure.cosmos.ThroughputControlGroupConfig&text=ThroughputControlGroupConfig\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public void enableLocalThroughputControlGroup(ThroughputControlGroupConfig groupConfig)"
   desc: "Enable the throughput control group with local control mode.\n\n```java\nThroughputControlGroupConfig groupConfig =\n     new ThroughputControlGroupConfigBuilder()\n         .groupName(\"localControlGroup\")\n         .targetThroughputThreshold(0.1)\n         .build();\n\n container.enableLocalThroughputControlGroup(groupConfig);\n```"
+- uid: "com.azure.cosmos.CosmosContainer.enableServerThroughputControlGroup(com.azure.cosmos.ThroughputControlGroupConfig)"
+  fullName: "com.azure.cosmos.CosmosContainer.enableServerThroughputControlGroup(ThroughputControlGroupConfig groupConfig)"
+  name: "enableServerThroughputControlGroup(ThroughputControlGroupConfig groupConfig)"
+  nameWithType: "CosmosContainer.enableServerThroughputControlGroup(ThroughputControlGroupConfig groupConfig)"
+  summary: "Enable the server throughput control group."
+  parameters:
+  - description: "the throughput control group config, see <xref uid=\"com.azure.cosmos.ThroughputControlGroupConfig\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ThroughputControlGroupConfig\"></xref>."
+    name: "groupConfig"
+    type: "<xref href=\"com.azure.cosmos.ThroughputControlGroupConfig?alt=com.azure.cosmos.ThroughputControlGroupConfig&text=ThroughputControlGroupConfig\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public void enableServerThroughputControlGroup(ThroughputControlGroupConfig groupConfig)"
+  desc: "Enable the server throughput control group.\n\n```java\nThroughputControlGroupConfig groupConfig =\n     new ThroughputControlGroupConfigBuilder()\n         .groupName(\"localControlGroup\")\n         .throughputBucket(2)\n         .build();\n\n container.enableServerThroughputControlGroup(groupConfig);\n```"
 - uid: "com.azure.cosmos.CosmosContainer.<TContext>executeBulkOperations(java.lang.Iterable<com.azure.cosmos.models.CosmosItemOperation>)"
   fullName: "com.azure.cosmos.CosmosContainer.executeBulkOperations(Iterable<CosmosItemOperation> operations)"
   name: "executeBulkOperations(Iterable<CosmosItemOperation> operations)"
@@ -690,4 +701,4 @@ type: "class"
 desc: "Provides synchronous methods for reading, deleting, and replacing existing Containers Provides methods for interacting with child resources (Items, Scripts, Conflicts)"
 metadata: {}
 package: "com.azure.cosmos"
-artifact: com.azure:azure-cosmos:4.73.1
+artifact: com.azure:azure-cosmos:4.74.0

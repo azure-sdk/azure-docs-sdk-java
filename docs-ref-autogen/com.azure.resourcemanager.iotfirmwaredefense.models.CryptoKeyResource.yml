@@ -18,6 +18,18 @@ methods:
   returns:
     description: "the cryptoKeyId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.iotfirmwaredefense.models.CryptoKeyResource.cryptoKeySize()"
+  fullName: "com.azure.resourcemanager.iotfirmwaredefense.models.CryptoKeyResource.cryptoKeySize()"
+  name: "cryptoKeySize()"
+  nameWithType: "CryptoKeyResource.cryptoKeySize()"
+  summary: "Gets the crypto<wbr>Key<wbr>Size property: Size of the key in bits."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Long cryptoKeySize()"
+  desc: "Gets the cryptoKeySize property: Size of the key in bits."
+  returns:
+    description: "the cryptoKeySize value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
 - uid: "com.azure.resourcemanager.iotfirmwaredefense.models.CryptoKeyResource.filePaths()"
   fullName: "com.azure.resourcemanager.iotfirmwaredefense.models.CryptoKeyResource.filePaths()"
   name: "filePaths()"
@@ -58,11 +70,11 @@ methods:
   fullName: "com.azure.resourcemanager.iotfirmwaredefense.models.CryptoKeyResource.isShortKeySize()"
   name: "isShortKeySize()"
   nameWithType: "CryptoKeyResource.isShortKeySize()"
-  summary: "Gets the is<wbr>Short<wbr>Key<wbr>Size property: Indicates the key size is considered too small to be secure for the algorithm."
+  summary: "Gets the is<wbr>Short<wbr>Key<wbr>Size property: Indicates the key size is considered too small to be secure for the algorithm according to NIST guidance."
   modifiers:
   - "abstract"
   syntax: "public abstract Boolean isShortKeySize()"
-  desc: "Gets the isShortKeySize property: Indicates the key size is considered too small to be secure for the algorithm."
+  desc: "Gets the isShortKeySize property: Indicates the key size is considered too small to be secure for the algorithm according to NIST guidance."
   returns:
     description: "the isShortKeySize value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
@@ -78,18 +90,6 @@ methods:
   returns:
     description: "the keyAlgorithm value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-- uid: "com.azure.resourcemanager.iotfirmwaredefense.models.CryptoKeyResource.keySize()"
-  fullName: "com.azure.resourcemanager.iotfirmwaredefense.models.CryptoKeyResource.keySize()"
-  name: "keySize()"
-  nameWithType: "CryptoKeyResource.keySize()"
-  summary: "Gets the key<wbr>Size property: Size of the key in bits."
-  modifiers:
-  - "abstract"
-  syntax: "public abstract Long keySize()"
-  desc: "Gets the keySize property: Size of the key in bits."
-  returns:
-    description: "the keySize value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
 - uid: "com.azure.resourcemanager.iotfirmwaredefense.models.CryptoKeyResource.keyType()"
   fullName: "com.azure.resourcemanager.iotfirmwaredefense.models.CryptoKeyResource.keyType()"
   name: "keyType()"
@@ -97,11 +97,11 @@ methods:
   summary: "Gets the key<wbr>Type property: Type of the key (public or private)."
   modifiers:
   - "abstract"
-  syntax: "public abstract String keyType()"
+  syntax: "public abstract CryptoKeyType keyType()"
   desc: "Gets the keyType property: Type of the key (public or private)."
   returns:
     description: "the keyType value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+    type: "<xref href=\"com.azure.resourcemanager.iotfirmwaredefense.models.CryptoKeyType?alt=com.azure.resourcemanager.iotfirmwaredefense.models.CryptoKeyType&text=CryptoKeyType\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.iotfirmwaredefense.models.CryptoKeyResource.name()"
   fullName: "com.azure.resourcemanager.iotfirmwaredefense.models.CryptoKeyResource.name()"
   name: "name()"
@@ -126,6 +126,18 @@ methods:
   returns:
     description: "the pairedKey value."
     type: "<xref href=\"com.azure.resourcemanager.iotfirmwaredefense.models.PairedKey?alt=com.azure.resourcemanager.iotfirmwaredefense.models.PairedKey&text=PairedKey\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.iotfirmwaredefense.models.CryptoKeyResource.provisioningState()"
+  fullName: "com.azure.resourcemanager.iotfirmwaredefense.models.CryptoKeyResource.provisioningState()"
+  name: "provisioningState()"
+  nameWithType: "CryptoKeyResource.provisioningState()"
+  summary: "Gets the provisioning<wbr>State property: The status of the last operation."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract ProvisioningState provisioningState()"
+  desc: "Gets the provisioningState property: The status of the last operation."
+  returns:
+    description: "the provisioningState value."
+    type: "<xref href=\"com.azure.resourcemanager.iotfirmwaredefense.models.ProvisioningState?alt=com.azure.resourcemanager.iotfirmwaredefense.models.ProvisioningState&text=ProvisioningState\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.iotfirmwaredefense.models.CryptoKeyResource.systemData()"
   fullName: "com.azure.resourcemanager.iotfirmwaredefense.models.CryptoKeyResource.systemData()"
   name: "systemData()"
@@ -166,4 +178,4 @@ type: "interface"
 desc: "An immutable client-side representation of CryptoKeyResource."
 metadata: {}
 package: "com.azure.resourcemanager.iotfirmwaredefense.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-iotfirmwaredefense:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-iotfirmwaredefense:2.0.0
