@@ -1,17 +1,21 @@
 ---
 title: Azure Resource Manager Playwright Testing client library for Java
 keywords: Azure, java, SDK, API, azure-resourcemanager-playwrighttesting, playwrighttesting
-ms.date: 12/03/2024
+ms.date: 09/08/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: playwrighttesting
 ---
-# Azure Resource Manager Playwright Testing client library for Java - version 1.0.0-beta.3 
+# Azure Resource Manager Playwright Testing client library for Java - version 1.1.0-beta.1 
 
+
+**Deprecation Notice**
+
+Please note, this package has been deprecated and will no longer be maintained after 02/09/2026. We encourage you to upgrade to the replacement package, azure-resourcemanager-playwright, to continue receiving updates. Refer to the migration guide https://aka.ms/mpt/migration-guidance for guidance on upgrading. Refer to our deprecation policy (https://aka.ms/azsdk/support-policies) for more details.
 
 Azure Resource Manager Playwright Testing client library for Java.
 
-This package contains Microsoft Azure SDK for Playwright Testing Management SDK. Azure Playwright testing management service. Package tag package-2023-10-01-preview. For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
+This package contains Microsoft Azure SDK for Playwright Testing Management SDK. Microsoft.AzurePlaywrightService Resource Provider Management API. For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
 
 ## We'd love to hear your feedback
 
@@ -41,7 +45,7 @@ Various documentation is available to help you get started
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
     <artifactId>azure-resourcemanager-playwrighttesting</artifactId>
-    <version>1.0.0-beta.3</version>
+    <version>1.1.0-beta.1</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -79,7 +83,7 @@ See [API design][design] for general introduction on design and key concepts on 
 
 ## Examples
 
-[Code snippets and samples](https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-playwrighttesting_1.0.0-beta.3/sdk/playwrighttesting/azure-resourcemanager-playwrighttesting/SAMPLE.md)
+[Code snippets and samples](https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-playwrighttesting_1.1.0-beta.1/sdk/playwrighttesting/azure-resourcemanager-playwrighttesting/SAMPLE.md)
 
 
 ## Troubleshooting
@@ -101,12 +105,12 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: https://learn.microsoft.com/azure/developer/java/fundamentals/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-playwrighttesting_1.0.0-beta.3/sdk/identity/azure-identity
-[azure_identity_credentials]: https://github.com/Azure/azure-sdk-for-java/tree/azure-resourcemanager-playwrighttesting_1.0.0-beta.3/sdk/identity/azure-identity#credentials
-[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-playwrighttesting_1.0.0-beta.3/sdk/core/azure-core-http-netty
-[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-playwrighttesting_1.0.0-beta.3/sdk/resourcemanager/docs/AUTH.md
-[design]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-playwrighttesting_1.0.0-beta.3/sdk/resourcemanager/docs/DESIGN.md
-[cg]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-playwrighttesting_1.0.0-beta.3/CONTRIBUTING.md
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-playwrighttesting_1.1.0-beta.1/sdk/identity/azure-identity
+[azure_identity_credentials]: https://github.com/Azure/azure-sdk-for-java/tree/azure-resourcemanager-playwrighttesting_1.1.0-beta.1/sdk/identity/azure-identity#credentials
+[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-playwrighttesting_1.1.0-beta.1/sdk/core/azure-core-http-netty
+[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-playwrighttesting_1.1.0-beta.1/sdk/resourcemanager/docs/AUTH.md
+[design]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-playwrighttesting_1.1.0-beta.1/sdk/resourcemanager/docs/DESIGN.md
+[cg]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-playwrighttesting_1.1.0-beta.1/CONTRIBUTING.md
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
 
