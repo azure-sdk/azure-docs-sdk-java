@@ -1,6 +1,6 @@
 {
   "Name": "azure-core-test",
-  "Version": "1.27.0-beta.11",
+  "Version": "1.27.0-beta.12",
   "DevVersion": null,
   "DirectoryPath": "sdk/core/azure-core-test",
   "ServiceDirectory": "core",
@@ -10,7 +10,7 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-core-test",
-  "ReleaseStatus": "2025-08-07",
+  "ReleaseStatus": "2025-09-05",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": [
     "com.azure:azure-core-tracing-opentelemetry-samples",
@@ -18,36 +18,36 @@
     "com.azure:perf-test-core"
   ],
   "ArtifactDetails": {
-    "safeName": "azurecoretest",
-    "releaseInBatch": "${{ parameters.release_azurecoretest }}",
+    "name": "azure-core-test",
     "triggeringPaths": [
       "/sdk/core/ci.yml"
     ],
-    "name": "azure-core-test",
-    "groupId": "com.azure"
+    "groupId": "com.azure",
+    "safeName": "azurecoretest",
+    "releaseInBatch": "${{ parameters.release_azurecoretest }}"
   },
   "CIParameters": {
     "CIMatrixConfigs": [
       {
-        "GenerateVMJobs": true,
+        "Path": "eng/pipelines/templates/stages/platform-matrix.json",
         "Name": "Java_ci_test_base",
+        "GenerateVMJobs": true,
         "Selection": "sparse",
-        "NonSparseParameters": "Agent",
-        "Path": "eng/pipelines/templates/stages/platform-matrix.json"
+        "NonSparseParameters": "Agent"
       },
       {
-        "GenerateVMJobs": true,
         "PRBatching": false,
+        "Path": "sdk/core/version-overrides-matrix.json",
         "Name": "version_overrides_tests",
-        "Selection": "all",
-        "Path": "sdk/core/version-overrides-matrix.json"
+        "GenerateVMJobs": true,
+        "Selection": "all"
       },
       {
-        "GenerateVMJobs": true,
         "PRBatching": false,
+        "Path": "sdk/core/version-overrides-vertx-matrix.json",
         "Name": "version_overrides_vertx_tests",
-        "Selection": "all",
-        "Path": "sdk/core/version-overrides-vertx-matrix.json"
+        "GenerateVMJobs": true,
+        "Selection": "all"
       }
     ]
   },

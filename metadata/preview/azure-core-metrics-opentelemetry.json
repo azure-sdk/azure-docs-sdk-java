@@ -1,6 +1,6 @@
 {
   "Name": "azure-core-metrics-opentelemetry",
-  "Version": "1.0.0-beta.32",
+  "Version": "1.0.0-beta.33",
   "DevVersion": null,
   "DirectoryPath": "sdk/core/azure-core-metrics-opentelemetry",
   "ServiceDirectory": "core",
@@ -10,7 +10,7 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-core-metrics-opentelemetry",
-  "ReleaseStatus": "2025-08-07",
+  "ReleaseStatus": "2025-09-05",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": [
     "com.azure:azure-core-tracing-opentelemetry-samples",
@@ -18,36 +18,36 @@
     "com.azure:perf-test-core"
   ],
   "ArtifactDetails": {
-    "safeName": "azurecoremetricsopentelemetry",
-    "releaseInBatch": "${{ parameters.release_azurecoremetricsopentelemetry }}",
+    "name": "azure-core-metrics-opentelemetry",
     "triggeringPaths": [
       "/sdk/core/ci.yml"
     ],
-    "name": "azure-core-metrics-opentelemetry",
-    "groupId": "com.azure"
+    "groupId": "com.azure",
+    "safeName": "azurecoremetricsopentelemetry",
+    "releaseInBatch": "${{ parameters.release_azurecoremetricsopentelemetry }}"
   },
   "CIParameters": {
     "CIMatrixConfigs": [
       {
-        "GenerateVMJobs": true,
+        "Path": "eng/pipelines/templates/stages/platform-matrix.json",
         "Name": "Java_ci_test_base",
+        "GenerateVMJobs": true,
         "Selection": "sparse",
-        "NonSparseParameters": "Agent",
-        "Path": "eng/pipelines/templates/stages/platform-matrix.json"
+        "NonSparseParameters": "Agent"
       },
       {
-        "GenerateVMJobs": true,
         "PRBatching": false,
+        "Path": "sdk/core/version-overrides-matrix.json",
         "Name": "version_overrides_tests",
-        "Selection": "all",
-        "Path": "sdk/core/version-overrides-matrix.json"
+        "GenerateVMJobs": true,
+        "Selection": "all"
       },
       {
-        "GenerateVMJobs": true,
         "PRBatching": false,
+        "Path": "sdk/core/version-overrides-vertx-matrix.json",
         "Name": "version_overrides_vertx_tests",
-        "Selection": "all",
-        "Path": "sdk/core/version-overrides-vertx-matrix.json"
+        "GenerateVMJobs": true,
+        "Selection": "all"
       }
     ]
   },

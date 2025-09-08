@@ -1,6 +1,6 @@
 {
   "Name": "azure-core-serializer-json-gson",
-  "Version": "1.4.0",
+  "Version": "1.4.1",
   "DevVersion": null,
   "DirectoryPath": "sdk/core/azure-core-serializer-json-gson",
   "ServiceDirectory": "core",
@@ -10,7 +10,7 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-core-serializer-json-gson",
-  "ReleaseStatus": "2025-08-07",
+  "ReleaseStatus": "2025-09-05",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": [
     "com.azure:azure-core-tracing-opentelemetry-samples",
@@ -18,36 +18,36 @@
     "com.azure:perf-test-core"
   ],
   "ArtifactDetails": {
-    "safeName": "azurecoreserializerjsongson",
-    "releaseInBatch": "${{ parameters.release_azurecoreserializerjsongson }}",
+    "name": "azure-core-serializer-json-gson",
     "triggeringPaths": [
       "/sdk/core/ci.yml"
     ],
-    "name": "azure-core-serializer-json-gson",
-    "groupId": "com.azure"
+    "groupId": "com.azure",
+    "safeName": "azurecoreserializerjsongson",
+    "releaseInBatch": "${{ parameters.release_azurecoreserializerjsongson }}"
   },
   "CIParameters": {
     "CIMatrixConfigs": [
       {
-        "GenerateVMJobs": true,
+        "Path": "eng/pipelines/templates/stages/platform-matrix.json",
         "Name": "Java_ci_test_base",
+        "GenerateVMJobs": true,
         "Selection": "sparse",
-        "NonSparseParameters": "Agent",
-        "Path": "eng/pipelines/templates/stages/platform-matrix.json"
+        "NonSparseParameters": "Agent"
       },
       {
-        "GenerateVMJobs": true,
         "PRBatching": false,
+        "Path": "sdk/core/version-overrides-matrix.json",
         "Name": "version_overrides_tests",
-        "Selection": "all",
-        "Path": "sdk/core/version-overrides-matrix.json"
+        "GenerateVMJobs": true,
+        "Selection": "all"
       },
       {
-        "GenerateVMJobs": true,
         "PRBatching": false,
+        "Path": "sdk/core/version-overrides-vertx-matrix.json",
         "Name": "version_overrides_vertx_tests",
-        "Selection": "all",
-        "Path": "sdk/core/version-overrides-vertx-matrix.json"
+        "GenerateVMJobs": true,
+        "Selection": "all"
       }
     ]
   },
