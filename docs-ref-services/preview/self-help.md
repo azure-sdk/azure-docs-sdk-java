@@ -1,7 +1,7 @@
 ---
 title: Azure Self Help SDK for Java
 description: Reference for Azure Self Help SDK for Java
-ms.date: 09/08/2025
+ms.date: 09/09/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: selfhelp
