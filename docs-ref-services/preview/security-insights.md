@@ -1,7 +1,7 @@
 ---
 title: Azure Security Insights SDK for Java
 description: Reference for Azure Security Insights SDK for Java
-ms.date: 09/09/2025
+ms.date: 09/10/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: securityinsights
