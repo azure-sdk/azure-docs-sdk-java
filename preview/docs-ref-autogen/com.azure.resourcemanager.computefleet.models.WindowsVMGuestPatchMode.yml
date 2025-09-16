@@ -13,6 +13,7 @@ inheritedClassMethods:
   - "<xref href=\"com.azure.core.util.ExpandableStringEnum.<T>fromString(java.lang.String,java.lang.Class<T>)?alt=com.azure.core.util.ExpandableStringEnum.<T>fromString&text=<T>fromString\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.util.ExpandableStringEnum.<T>values(java.lang.Class<T>)?alt=com.azure.core.util.ExpandableStringEnum.<T>values&text=<T>values\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.util.ExpandableStringEnum.equals(java.lang.Object)?alt=com.azure.core.util.ExpandableStringEnum.equals&text=equals\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.util.ExpandableStringEnum.getValue()?alt=com.azure.core.util.ExpandableStringEnum.getValue&text=getValue\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.util.ExpandableStringEnum.hashCode()?alt=com.azure.core.util.ExpandableStringEnum.hashCode&text=hashCode\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.util.ExpandableStringEnum.toString()?alt=com.azure.core.util.ExpandableStringEnum.toString&text=toString\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
@@ -41,38 +42,38 @@ fields:
   fullName: "com.azure.resourcemanager.computefleet.models.WindowsVMGuestPatchMode.AUTOMATIC_BY_OS"
   name: "AUTOMATIC_BY_OS"
   nameWithType: "WindowsVMGuestPatchMode.AUTOMATIC_BY_OS"
-  summary: "Static value Automatic<wbr>ByOS for Windows<wbr>VMGuest<wbr>Patch<wbr>Mode."
+  summary: "The virtual machine will automatically be updated by the OS."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.computefleet.models.WindowsVMGuestPatchMode?alt=com.azure.resourcemanager.computefleet.models.WindowsVMGuestPatchMode&text=WindowsVMGuestPatchMode\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final WindowsVMGuestPatchMode AUTOMATIC_BY_OS"
-  desc: "Static value AutomaticByOS for WindowsVMGuestPatchMode."
+  desc: "The virtual machine will automatically be updated by the OS. The property WindowsConfiguration.enableAutomaticUpdates must be true."
 - uid: "com.azure.resourcemanager.computefleet.models.WindowsVMGuestPatchMode.AUTOMATIC_BY_PLATFORM"
   fullName: "com.azure.resourcemanager.computefleet.models.WindowsVMGuestPatchMode.AUTOMATIC_BY_PLATFORM"
   name: "AUTOMATIC_BY_PLATFORM"
   nameWithType: "WindowsVMGuestPatchMode.AUTOMATIC_BY_PLATFORM"
-  summary: "Static value Automatic<wbr>ByPlatform for Windows<wbr>VMGuest<wbr>Patch<wbr>Mode."
+  summary: "The virtual machine will automatically updated by the platform."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.computefleet.models.WindowsVMGuestPatchMode?alt=com.azure.resourcemanager.computefleet.models.WindowsVMGuestPatchMode&text=WindowsVMGuestPatchMode\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final WindowsVMGuestPatchMode AUTOMATIC_BY_PLATFORM"
-  desc: "Static value AutomaticByPlatform for WindowsVMGuestPatchMode."
+  desc: "The virtual machine will automatically updated by the platform. The properties provisionVMAgent and WindowsConfiguration.enableAutomaticUpdates must be true."
 - uid: "com.azure.resourcemanager.computefleet.models.WindowsVMGuestPatchMode.MANUAL"
   fullName: "com.azure.resourcemanager.computefleet.models.WindowsVMGuestPatchMode.MANUAL"
   name: "MANUAL"
   nameWithType: "WindowsVMGuestPatchMode.MANUAL"
-  summary: "Static value Manual for Windows<wbr>VMGuest<wbr>Patch<wbr>Mode."
+  summary: "You control the application of patches to a virtual machine."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.computefleet.models.WindowsVMGuestPatchMode?alt=com.azure.resourcemanager.computefleet.models.WindowsVMGuestPatchMode&text=WindowsVMGuestPatchMode\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final WindowsVMGuestPatchMode MANUAL"
-  desc: "Static value Manual for WindowsVMGuestPatchMode."
+  desc: "You control the application of patches to a virtual machine. You do this by applying patches manually inside the VM. In this mode, automatic updates are disabled; the property WindowsConfiguration.enableAutomaticUpdates must be false."
 methods:
 - uid: "com.azure.resourcemanager.computefleet.models.WindowsVMGuestPatchMode.fromString(java.lang.String)"
   fullName: "com.azure.resourcemanager.computefleet.models.WindowsVMGuestPatchMode.fromString(String name)"
@@ -106,4 +107,4 @@ type: "class"
 desc: "Specifies the mode of VM Guest Patching to IaaS virtual machine or virtual machines associated to virtual machine scale set with OrchestrationMode as Flexible."
 metadata: {}
 package: "com.azure.resourcemanager.computefleet.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-computefleet:1.0.0-beta.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-computefleet:1.1.0-beta.1

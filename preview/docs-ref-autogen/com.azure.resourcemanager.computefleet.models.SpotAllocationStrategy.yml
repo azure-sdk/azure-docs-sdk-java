@@ -13,6 +13,7 @@ inheritedClassMethods:
   - "<xref href=\"com.azure.core.util.ExpandableStringEnum.<T>fromString(java.lang.String,java.lang.Class<T>)?alt=com.azure.core.util.ExpandableStringEnum.<T>fromString&text=<T>fromString\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.util.ExpandableStringEnum.<T>values(java.lang.Class<T>)?alt=com.azure.core.util.ExpandableStringEnum.<T>values&text=<T>values\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.util.ExpandableStringEnum.equals(java.lang.Object)?alt=com.azure.core.util.ExpandableStringEnum.equals&text=equals\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.util.ExpandableStringEnum.getValue()?alt=com.azure.core.util.ExpandableStringEnum.getValue&text=getValue\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.util.ExpandableStringEnum.hashCode()?alt=com.azure.core.util.ExpandableStringEnum.hashCode&text=hashCode\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.util.ExpandableStringEnum.toString()?alt=com.azure.core.util.ExpandableStringEnum.toString&text=toString\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
@@ -41,38 +42,38 @@ fields:
   fullName: "com.azure.resourcemanager.computefleet.models.SpotAllocationStrategy.CAPACITY_OPTIMIZED"
   name: "CAPACITY_OPTIMIZED"
   nameWithType: "SpotAllocationStrategy.CAPACITY_OPTIMIZED"
-  summary: "Static value Capacity<wbr>Optimized for Spot<wbr>Allocation<wbr>Strategy."
+  summary: "VM sizes distribution will be determined to optimize for capacity."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.computefleet.models.SpotAllocationStrategy?alt=com.azure.resourcemanager.computefleet.models.SpotAllocationStrategy&text=SpotAllocationStrategy\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final SpotAllocationStrategy CAPACITY_OPTIMIZED"
-  desc: "Static value CapacityOptimized for SpotAllocationStrategy."
+  desc: "VM sizes distribution will be determined to optimize for capacity."
 - uid: "com.azure.resourcemanager.computefleet.models.SpotAllocationStrategy.LOWEST_PRICE"
   fullName: "com.azure.resourcemanager.computefleet.models.SpotAllocationStrategy.LOWEST_PRICE"
   name: "LOWEST_PRICE"
   nameWithType: "SpotAllocationStrategy.LOWEST_PRICE"
-  summary: "Static value Lowest<wbr>Price for Spot<wbr>Allocation<wbr>Strategy."
+  summary: "VM sizes distribution will be determined to optimize for price."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.computefleet.models.SpotAllocationStrategy?alt=com.azure.resourcemanager.computefleet.models.SpotAllocationStrategy&text=SpotAllocationStrategy\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final SpotAllocationStrategy LOWEST_PRICE"
-  desc: "Static value LowestPrice for SpotAllocationStrategy."
+  desc: "VM sizes distribution will be determined to optimize for price. Note: Capacity will still be considered here but will be given much less weight."
 - uid: "com.azure.resourcemanager.computefleet.models.SpotAllocationStrategy.PRICE_CAPACITY_OPTIMIZED"
   fullName: "com.azure.resourcemanager.computefleet.models.SpotAllocationStrategy.PRICE_CAPACITY_OPTIMIZED"
   name: "PRICE_CAPACITY_OPTIMIZED"
   nameWithType: "SpotAllocationStrategy.PRICE_CAPACITY_OPTIMIZED"
-  summary: "Static value Price<wbr>Capacity<wbr>Optimized for Spot<wbr>Allocation<wbr>Strategy."
+  summary: "Default."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.computefleet.models.SpotAllocationStrategy?alt=com.azure.resourcemanager.computefleet.models.SpotAllocationStrategy&text=SpotAllocationStrategy\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final SpotAllocationStrategy PRICE_CAPACITY_OPTIMIZED"
-  desc: "Static value PriceCapacityOptimized for SpotAllocationStrategy."
+  desc: "Default. VM sizes distribution will be determined to optimize for both price and capacity."
 methods:
 - uid: "com.azure.resourcemanager.computefleet.models.SpotAllocationStrategy.fromString(java.lang.String)"
   fullName: "com.azure.resourcemanager.computefleet.models.SpotAllocationStrategy.fromString(String name)"
@@ -106,4 +107,4 @@ type: "class"
 desc: "Spot allocation strategy types for Compute Fleet."
 metadata: {}
 package: "com.azure.resourcemanager.computefleet.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-computefleet:1.0.0-beta.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-computefleet:1.1.0-beta.1
