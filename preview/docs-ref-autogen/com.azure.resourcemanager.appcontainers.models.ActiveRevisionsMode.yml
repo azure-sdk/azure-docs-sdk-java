@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.appcontainers.models.ActiveRevisionsMode"
 fullName: "com.azure.resourcemanager.appcontainers.models.ActiveRevisionsMode"
 name: "ActiveRevisionsMode"
 nameWithType: "ActiveRevisionsMode"
-summary: "Active<wbr>Revisions<wbr>Mode controls how active revisions are handled for the Container app: <list><item>Multiple: multiple revisions can be active.</item><item>Single: Only one revision can be active at a time."
+summary: "Active<wbr>Revisions<wbr>Mode controls how active revisions are handled for the Container app: <list><item>Single: Only one revision can be active at a time."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 - "<xref href=\"com.azure.core.util.ExpandableStringEnum?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
@@ -38,6 +38,18 @@ constructors:
   desc: "Creates a new instance of ActiveRevisionsMode value."
   hasDeprecatedTag: true
 fields:
+- uid: "com.azure.resourcemanager.appcontainers.models.ActiveRevisionsMode.LABELS"
+  fullName: "com.azure.resourcemanager.appcontainers.models.ActiveRevisionsMode.LABELS"
+  name: "LABELS"
+  nameWithType: "ActiveRevisionsMode.LABELS"
+  summary: "Static value Labels for Active<wbr>Revisions<wbr>Mode."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.resourcemanager.appcontainers.models.ActiveRevisionsMode?alt=com.azure.resourcemanager.appcontainers.models.ActiveRevisionsMode&text=ActiveRevisionsMode\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final ActiveRevisionsMode LABELS"
+  desc: "Static value Labels for ActiveRevisionsMode."
 - uid: "com.azure.resourcemanager.appcontainers.models.ActiveRevisionsMode.MULTIPLE"
   fullName: "com.azure.resourcemanager.appcontainers.models.ActiveRevisionsMode.MULTIPLE"
   name: "MULTIPLE"
@@ -92,7 +104,7 @@ methods:
     description: "known ActiveRevisionsMode values."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html\">Collection</a>&lt;<xref href=\"com.azure.resourcemanager.appcontainers.models.ActiveRevisionsMode?alt=com.azure.resourcemanager.appcontainers.models.ActiveRevisionsMode&text=ActiveRevisionsMode\" data-throw-if-not-resolved=\"False\" />&gt;"
 type: "class"
-desc: "ActiveRevisionsMode controls how active revisions are handled for the Container app: <list><item>Multiple: multiple revisions can be active.</item><item>Single: Only one revision can be active at a time. Revision weights can not be used in this mode. If no value if provided, this is the default.</item></list>."
+desc: "ActiveRevisionsMode controls how active revisions are handled for the Container app: <list><item>Single: Only one revision can be active at a time. Traffic weights cannot be used. This is the default.</item><item>Multiple: Multiple revisions can be active, including optional traffic weights and labels.</item><item>Labels: Only revisions with labels are active. Traffic weights can be applied to labels.</item></list>."
 metadata: {}
 package: "com.azure.resourcemanager.appcontainers.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-appcontainers:1.1.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-appcontainers:1.2.0-beta.1

@@ -83,6 +83,16 @@ methods:
   returns:
     description: "the autoScaleFormula value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.compute.batch.models.BatchPoolSpecification.getCertificateReferences()"
+  fullName: "com.azure.compute.batch.models.BatchPoolSpecification.getCertificateReferences()"
+  name: "getCertificateReferences()"
+  nameWithType: "BatchPoolSpecification.getCertificateReferences()"
+  summary: "Get the certificate<wbr>References property: For Windows Nodes, the Batch service installs the Certificates to the specified Certificate store and location."
+  syntax: "public List<BatchCertificateReference> getCertificateReferences()"
+  desc: "Get the certificateReferences property: For Windows Nodes, the Batch service installs the Certificates to the specified Certificate store and location. For Linux Compute Nodes, the Certificates are stored in a directory inside the Task working directory and an environment variable AZ\\_BATCH\\_CERTIFICATES\\_DIR is supplied to the Task to query for this location. For Certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/\\{user-name\\}/certs) and Certificates are placed in that directory. Warning: This property is deprecated and will be removed after February, 2024. Please use the \\[Azure KeyVault Extension\\](https://learn.microsoft.com/azure/batch/batch-certificate-migration-guide) instead."
+  returns:
+    description: "the certificateReferences value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.BatchCertificateReference?alt=com.azure.compute.batch.models.BatchCertificateReference&text=BatchCertificateReference\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.compute.batch.models.BatchPoolSpecification.getDisplayName()"
   fullName: "com.azure.compute.batch.models.BatchPoolSpecification.getDisplayName()"
   name: "getDisplayName()"
@@ -98,11 +108,11 @@ methods:
   name: "getMetadata()"
   nameWithType: "BatchPoolSpecification.getMetadata()"
   summary: "Get the metadata property: A list of name-value pairs associated with the Pool as metadata."
-  syntax: "public List<MetadataItem> getMetadata()"
+  syntax: "public List<BatchMetadataItem> getMetadata()"
   desc: "Get the metadata property: A list of name-value pairs associated with the Pool as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code."
   returns:
     description: "the metadata value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.MetadataItem?alt=com.azure.compute.batch.models.MetadataItem&text=MetadataItem\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.BatchMetadataItem?alt=com.azure.compute.batch.models.BatchMetadataItem&text=BatchMetadataItem\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.compute.batch.models.BatchPoolSpecification.getMountConfiguration()"
   fullName: "com.azure.compute.batch.models.BatchPoolSpecification.getMountConfiguration()"
   name: "getMountConfiguration()"
@@ -239,7 +249,7 @@ methods:
   nameWithType: "BatchPoolSpecification.getVmSize()"
   summary: "Get the vm<wbr>Size property: The size of the virtual machines in the Pool."
   syntax: "public String getVmSize()"
-  desc: "Get the vmSize property: The size of the virtual machines in the Pool. All virtual machines in a Pool are the same size. For information about available sizes of virtual machines in Pools, see Choose a VM size for Compute Nodes in an Azure Batch Pool (https://docs.microsoft.com/azure/batch/batch-pool-vm-sizes)."
+  desc: "Get the vmSize property: The size of the virtual machines in the Pool. All virtual machines in a Pool are the same size. For information about available sizes of virtual machines in Pools, see Choose a VM size for Compute Nodes in an Azure Batch Pool (https://learn.microsoft.com/azure/batch/batch-pool-vm-sizes)."
   returns:
     description: "the vmSize value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -305,6 +315,20 @@ methods:
   returns:
     description: "the BatchPoolSpecification object itself."
     type: "<xref href=\"com.azure.compute.batch.models.BatchPoolSpecification?alt=com.azure.compute.batch.models.BatchPoolSpecification&text=BatchPoolSpecification\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.compute.batch.models.BatchPoolSpecification.setCertificateReferences(java.util.List<com.azure.compute.batch.models.BatchCertificateReference>)"
+  fullName: "com.azure.compute.batch.models.BatchPoolSpecification.setCertificateReferences(List<BatchCertificateReference> certificateReferences)"
+  name: "setCertificateReferences(List<BatchCertificateReference> certificateReferences)"
+  nameWithType: "BatchPoolSpecification.setCertificateReferences(List<BatchCertificateReference> certificateReferences)"
+  summary: "Set the certificate<wbr>References property: For Windows Nodes, the Batch service installs the Certificates to the specified Certificate store and location."
+  parameters:
+  - description: "the certificateReferences value to set."
+    name: "certificateReferences"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.BatchCertificateReference?alt=com.azure.compute.batch.models.BatchCertificateReference&text=BatchCertificateReference\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public BatchPoolSpecification setCertificateReferences(List<BatchCertificateReference> certificateReferences)"
+  desc: "Set the certificateReferences property: For Windows Nodes, the Batch service installs the Certificates to the specified Certificate store and location. For Linux Compute Nodes, the Certificates are stored in a directory inside the Task working directory and an environment variable AZ\\_BATCH\\_CERTIFICATES\\_DIR is supplied to the Task to query for this location. For Certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/\\{user-name\\}/certs) and Certificates are placed in that directory. Warning: This property is deprecated and will be removed after February, 2024. Please use the \\[Azure KeyVault Extension\\](https://learn.microsoft.com/azure/batch/batch-certificate-migration-guide) instead."
+  returns:
+    description: "the BatchPoolSpecification object itself."
+    type: "<xref href=\"com.azure.compute.batch.models.BatchPoolSpecification?alt=com.azure.compute.batch.models.BatchPoolSpecification&text=BatchPoolSpecification\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.compute.batch.models.BatchPoolSpecification.setDisplayName(java.lang.String)"
   fullName: "com.azure.compute.batch.models.BatchPoolSpecification.setDisplayName(String displayName)"
   name: "setDisplayName(String displayName)"
@@ -347,16 +371,16 @@ methods:
   returns:
     description: "the BatchPoolSpecification object itself."
     type: "<xref href=\"com.azure.compute.batch.models.BatchPoolSpecification?alt=com.azure.compute.batch.models.BatchPoolSpecification&text=BatchPoolSpecification\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.compute.batch.models.BatchPoolSpecification.setMetadata(java.util.List<com.azure.compute.batch.models.MetadataItem>)"
-  fullName: "com.azure.compute.batch.models.BatchPoolSpecification.setMetadata(List<MetadataItem> metadata)"
-  name: "setMetadata(List<MetadataItem> metadata)"
-  nameWithType: "BatchPoolSpecification.setMetadata(List<MetadataItem> metadata)"
+- uid: "com.azure.compute.batch.models.BatchPoolSpecification.setMetadata(java.util.List<com.azure.compute.batch.models.BatchMetadataItem>)"
+  fullName: "com.azure.compute.batch.models.BatchPoolSpecification.setMetadata(List<BatchMetadataItem> metadata)"
+  name: "setMetadata(List<BatchMetadataItem> metadata)"
+  nameWithType: "BatchPoolSpecification.setMetadata(List<BatchMetadataItem> metadata)"
   summary: "Set the metadata property: A list of name-value pairs associated with the Pool as metadata."
   parameters:
   - description: "the metadata value to set."
     name: "metadata"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.MetadataItem?alt=com.azure.compute.batch.models.MetadataItem&text=MetadataItem\" data-throw-if-not-resolved=\"False\" />&gt;"
-  syntax: "public BatchPoolSpecification setMetadata(List<MetadataItem> metadata)"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.BatchMetadataItem?alt=com.azure.compute.batch.models.BatchMetadataItem&text=BatchMetadataItem\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public BatchPoolSpecification setMetadata(List<BatchMetadataItem> metadata)"
   desc: "Set the metadata property: A list of name-value pairs associated with the Pool as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code."
   returns:
     description: "the BatchPoolSpecification object itself."
@@ -561,4 +585,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.compute.batch.models.BatchPoolSpecification?alt=com.azure.compute.batch.models.BatchPoolSpecification&text=BatchPoolSpecification\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.compute.batch.models"
-artifact: com.azure:azure-compute-batch:1.0.0-beta.3
+artifact: com.azure:azure-compute-batch:1.0.0-beta.5

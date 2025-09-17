@@ -1,0 +1,94 @@
+### YamlMime:JavaType
+uid: "com.azure.compute.batch.models.BatchDiffDiskSettings"
+fullName: "com.azure.compute.batch.models.BatchDiffDiskSettings"
+name: "BatchDiffDiskSettings"
+nameWithType: "BatchDiffDiskSettings"
+summary: "Specifies the ephemeral Disk Settings for the operating system disk used by the compute node (VM)."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **BatchDiffDiskSettings**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.compute.batch.models.BatchDiffDiskSettings?alt=com.azure.compute.batch.models.BatchDiffDiskSettings&text=BatchDiffDiskSettings\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.compute.batch.models.BatchDiffDiskSettings.BatchDiffDiskSettings()"
+  fullName: "com.azure.compute.batch.models.BatchDiffDiskSettings.BatchDiffDiskSettings()"
+  name: "BatchDiffDiskSettings()"
+  nameWithType: "BatchDiffDiskSettings.BatchDiffDiskSettings()"
+  summary: "Creates an instance of Batch<wbr>Diff<wbr>Disk<wbr>Settings class."
+  syntax: "public BatchDiffDiskSettings()"
+  desc: "Creates an instance of BatchDiffDiskSettings class."
+methods:
+- uid: "com.azure.compute.batch.models.BatchDiffDiskSettings.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.compute.batch.models.BatchDiffDiskSettings.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "BatchDiffDiskSettings.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Batch<wbr>Diff<wbr>Disk<wbr>Settings from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static BatchDiffDiskSettings fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the BatchDiffDiskSettings."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of BatchDiffDiskSettings from the JsonReader."
+  returns:
+    description: "An instance of BatchDiffDiskSettings if the JsonReader was pointing to an instance of it, or null if it\n was pointing to JSON null."
+    type: "<xref href=\"com.azure.compute.batch.models.BatchDiffDiskSettings?alt=com.azure.compute.batch.models.BatchDiffDiskSettings&text=BatchDiffDiskSettings\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.compute.batch.models.BatchDiffDiskSettings.getPlacement()"
+  fullName: "com.azure.compute.batch.models.BatchDiffDiskSettings.getPlacement()"
+  name: "getPlacement()"
+  nameWithType: "BatchDiffDiskSettings.getPlacement()"
+  summary: "Get the placement property: Specifies the ephemeral disk placement for operating system disk for all VMs in the pool."
+  syntax: "public DiffDiskPlacement getPlacement()"
+  desc: "Get the placement property: Specifies the ephemeral disk placement for operating system disk for all VMs in the pool. This property can be used by user in the request to choose the location e.g., cache disk space for Ephemeral OS disk provisioning. For more information on Ephemeral OS disk size requirements, please refer to Ephemeral OS disk size requirements for Windows VMs at https://learn.microsoft.com/azure/virtual-machines/windows/ephemeral-os-disks\\#size-requirements and Linux VMs at https://learn.microsoft.com/azure/virtual-machines/linux/ephemeral-os-disks\\#size-requirements."
+  returns:
+    description: "the placement value."
+    type: "<xref href=\"com.azure.compute.batch.models.DiffDiskPlacement?alt=com.azure.compute.batch.models.DiffDiskPlacement&text=DiffDiskPlacement\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.compute.batch.models.BatchDiffDiskSettings.setPlacement(com.azure.compute.batch.models.DiffDiskPlacement)"
+  fullName: "com.azure.compute.batch.models.BatchDiffDiskSettings.setPlacement(DiffDiskPlacement placement)"
+  name: "setPlacement(DiffDiskPlacement placement)"
+  nameWithType: "BatchDiffDiskSettings.setPlacement(DiffDiskPlacement placement)"
+  summary: "Set the placement property: Specifies the ephemeral disk placement for operating system disk for all VMs in the pool."
+  parameters:
+  - description: "the placement value to set."
+    name: "placement"
+    type: "<xref href=\"com.azure.compute.batch.models.DiffDiskPlacement?alt=com.azure.compute.batch.models.DiffDiskPlacement&text=DiffDiskPlacement\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public BatchDiffDiskSettings setPlacement(DiffDiskPlacement placement)"
+  desc: "Set the placement property: Specifies the ephemeral disk placement for operating system disk for all VMs in the pool. This property can be used by user in the request to choose the location e.g., cache disk space for Ephemeral OS disk provisioning. For more information on Ephemeral OS disk size requirements, please refer to Ephemeral OS disk size requirements for Windows VMs at https://learn.microsoft.com/azure/virtual-machines/windows/ephemeral-os-disks\\#size-requirements and Linux VMs at https://learn.microsoft.com/azure/virtual-machines/linux/ephemeral-os-disks\\#size-requirements."
+  returns:
+    description: "the BatchDiffDiskSettings object itself."
+    type: "<xref href=\"com.azure.compute.batch.models.BatchDiffDiskSettings?alt=com.azure.compute.batch.models.BatchDiffDiskSettings&text=BatchDiffDiskSettings\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.compute.batch.models.BatchDiffDiskSettings.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.compute.batch.models.BatchDiffDiskSettings.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "BatchDiffDiskSettings.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Specifies the ephemeral Disk Settings for the operating system disk used by the compute node (VM)."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.compute.batch.models.BatchDiffDiskSettings?alt=com.azure.compute.batch.models.BatchDiffDiskSettings&text=BatchDiffDiskSettings\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.compute.batch.models"
+artifact: com.azure:azure-compute-batch:1.0.0-beta.5

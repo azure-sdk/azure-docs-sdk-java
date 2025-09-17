@@ -22,16 +22,16 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
 syntax: "public final class **BatchPoolEndpointConfiguration**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.compute.batch.models.BatchPoolEndpointConfiguration?alt=com.azure.compute.batch.models.BatchPoolEndpointConfiguration&text=BatchPoolEndpointConfiguration\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
-- uid: "com.azure.compute.batch.models.BatchPoolEndpointConfiguration.BatchPoolEndpointConfiguration(java.util.List<com.azure.compute.batch.models.InboundNatPool>)"
-  fullName: "com.azure.compute.batch.models.BatchPoolEndpointConfiguration.BatchPoolEndpointConfiguration(List<InboundNatPool> inboundNatPools)"
-  name: "BatchPoolEndpointConfiguration(List<InboundNatPool> inboundNatPools)"
-  nameWithType: "BatchPoolEndpointConfiguration.BatchPoolEndpointConfiguration(List<InboundNatPool> inboundNatPools)"
+- uid: "com.azure.compute.batch.models.BatchPoolEndpointConfiguration.BatchPoolEndpointConfiguration(java.util.List<com.azure.compute.batch.models.BatchInboundNatPool>)"
+  fullName: "com.azure.compute.batch.models.BatchPoolEndpointConfiguration.BatchPoolEndpointConfiguration(List<BatchInboundNatPool> inboundNatPools)"
+  name: "BatchPoolEndpointConfiguration(List<BatchInboundNatPool> inboundNatPools)"
+  nameWithType: "BatchPoolEndpointConfiguration.BatchPoolEndpointConfiguration(List<BatchInboundNatPool> inboundNatPools)"
   summary: "Creates an instance of Batch<wbr>Pool<wbr>Endpoint<wbr>Configuration class."
   parameters:
   - description: "the inboundNatPools value to set."
     name: "inboundNatPools"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.InboundNatPool?alt=com.azure.compute.batch.models.InboundNatPool&text=InboundNatPool\" data-throw-if-not-resolved=\"False\" />&gt;"
-  syntax: "public BatchPoolEndpointConfiguration(List<InboundNatPool> inboundNatPools)"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.BatchInboundNatPool?alt=com.azure.compute.batch.models.BatchInboundNatPool&text=BatchInboundNatPool\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public BatchPoolEndpointConfiguration(List<BatchInboundNatPool> inboundNatPools)"
   desc: "Creates an instance of BatchPoolEndpointConfiguration class."
 methods:
 - uid: "com.azure.compute.batch.models.BatchPoolEndpointConfiguration.fromJson(com.azure.json.JsonReader)"
@@ -58,11 +58,11 @@ methods:
   name: "getInboundNatPools()"
   nameWithType: "BatchPoolEndpointConfiguration.getInboundNatPools()"
   summary: "Get the inbound<wbr>Nat<wbr>Pools property: A list of inbound NAT Pools that can be used to address specific ports on an individual Compute Node externally."
-  syntax: "public List<InboundNatPool> getInboundNatPools()"
+  syntax: "public List<BatchInboundNatPool> getInboundNatPools()"
   desc: "Get the inboundNatPools property: A list of inbound NAT Pools that can be used to address specific ports on an individual Compute Node externally. The maximum number of inbound NAT Pools per Batch Pool is 5. If the maximum number of inbound NAT Pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses."
   returns:
     description: "the inboundNatPools value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.InboundNatPool?alt=com.azure.compute.batch.models.InboundNatPool&text=InboundNatPool\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.BatchInboundNatPool?alt=com.azure.compute.batch.models.BatchInboundNatPool&text=BatchInboundNatPool\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.compute.batch.models.BatchPoolEndpointConfiguration.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.compute.batch.models.BatchPoolEndpointConfiguration.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -81,4 +81,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.compute.batch.models.BatchPoolEndpointConfiguration?alt=com.azure.compute.batch.models.BatchPoolEndpointConfiguration&text=BatchPoolEndpointConfiguration\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.compute.batch.models"
-artifact: com.azure:azure-compute-batch:1.0.0-beta.3
+artifact: com.azure:azure-compute-batch:1.0.0-beta.5

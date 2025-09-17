@@ -54,11 +54,11 @@ methods:
   name: "getAffinityInfo()"
   nameWithType: "BatchTask.getAffinityInfo()"
   summary: "Get the affinity<wbr>Info property: A locality hint that can be used by the Batch service to select a Compute Node on which to start the new Task."
-  syntax: "public AffinityInfo getAffinityInfo()"
+  syntax: "public BatchAffinityInfo getAffinityInfo()"
   desc: "Get the affinityInfo property: A locality hint that can be used by the Batch service to select a Compute Node on which to start the new Task."
   returns:
     description: "the affinityInfo value."
-    type: "<xref href=\"com.azure.compute.batch.models.AffinityInfo?alt=com.azure.compute.batch.models.AffinityInfo&text=AffinityInfo\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.compute.batch.models.BatchAffinityInfo?alt=com.azure.compute.batch.models.BatchAffinityInfo&text=BatchAffinityInfo\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.compute.batch.models.BatchTask.getApplicationPackageReferences()"
   fullName: "com.azure.compute.batch.models.BatchTask.getApplicationPackageReferences()"
   name: "getApplicationPackageReferences()"
@@ -85,7 +85,7 @@ methods:
   nameWithType: "BatchTask.getCommandLine()"
   summary: "Get the command<wbr>Line property: The command line of the Task."
   syntax: "public String getCommandLine()"
-  desc: "Get the commandLine property: The command line of the Task. For multi-instance Tasks, the command line is executed as the primary Task, after the primary Task and all subtasks have finished executing the coordination command line. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using \"cmd /c MyCommand\" in Windows or \"/bin/sh -c MyCommand\" in Linux. If the command line refers to file paths, it should use a relative path (relative to the Task working directory), or use the Batch provided environment variable (https://docs.microsoft.com/azure/batch/batch-compute-node-environment-variables)."
+  desc: "Get the commandLine property: The command line of the Task. For multi-instance Tasks, the command line is executed as the primary Task, after the primary Task and all subtasks have finished executing the coordination command line. The command line does not run under a shell, and therefore cannot take advantage of shell features such as environment variable expansion. If you want to take advantage of such features, you should invoke the shell in the command line, for example using \"cmd /c MyCommand\" in Windows or \"/bin/sh -c MyCommand\" in Linux. If the command line refers to file paths, it should use a relative path (relative to the Task working directory), or use the Batch provided environment variable (https://learn.microsoft.com/azure/batch/batch-compute-node-environment-variables)."
   returns:
     description: "the commandLine value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -289,15 +289,15 @@ methods:
   returns:
     description: "the stateTransitionTime value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
-- uid: "com.azure.compute.batch.models.BatchTask.getStats()"
-  fullName: "com.azure.compute.batch.models.BatchTask.getStats()"
-  name: "getStats()"
-  nameWithType: "BatchTask.getStats()"
-  summary: "Get the stats property: Resource usage statistics for the Task."
-  syntax: "public BatchTaskStatistics getStats()"
-  desc: "Get the stats property: Resource usage statistics for the Task."
+- uid: "com.azure.compute.batch.models.BatchTask.getTaskStatistics()"
+  fullName: "com.azure.compute.batch.models.BatchTask.getTaskStatistics()"
+  name: "getTaskStatistics()"
+  nameWithType: "BatchTask.getTaskStatistics()"
+  summary: "Get the task<wbr>Statistics property: Resource usage statistics for the Task."
+  syntax: "public BatchTaskStatistics getTaskStatistics()"
+  desc: "Get the taskStatistics property: Resource usage statistics for the Task."
   returns:
-    description: "the stats value."
+    description: "the taskStatistics value."
     type: "<xref href=\"com.azure.compute.batch.models.BatchTaskStatistics?alt=com.azure.compute.batch.models.BatchTaskStatistics&text=BatchTaskStatistics\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.compute.batch.models.BatchTask.getUrl()"
   fullName: "com.azure.compute.batch.models.BatchTask.getUrl()"
@@ -351,4 +351,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.compute.batch.models.BatchTask?alt=com.azure.compute.batch.models.BatchTask&text=BatchTask\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.compute.batch.models"
-artifact: com.azure:azure-compute-batch:1.0.0-beta.3
+artifact: com.azure:azure-compute-batch:1.0.0-beta.5

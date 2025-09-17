@@ -65,7 +65,7 @@ methods:
   nameWithType: "AutoUserSpecification.getScope()"
   summary: "Get the scope property: The scope for the auto user."
   syntax: "public AutoUserScope getScope()"
-  desc: "Get the scope property: The scope for the auto user. The default value is pool. If the pool is running Windows, a value of Task should be specified if stricter isolation between tasks is required, such as if the task mutates the registry in a way which could impact other tasks."
+  desc: "Get the scope property: The scope for the auto user. The default value is pool. If the pool is running Windows a value of Task should be specified if stricter isolation between tasks is required. For example, if the task mutates the registry in a way which could impact other tasks, or if certificates have been specified on the pool which should not be accessible by normal tasks but should be accessible by StartTasks."
   returns:
     description: "the scope value."
     type: "<xref href=\"com.azure.compute.batch.models.AutoUserScope?alt=com.azure.compute.batch.models.AutoUserScope&text=AutoUserScope\" data-throw-if-not-resolved=\"False\" />"
@@ -93,7 +93,7 @@ methods:
     name: "scope"
     type: "<xref href=\"com.azure.compute.batch.models.AutoUserScope?alt=com.azure.compute.batch.models.AutoUserScope&text=AutoUserScope\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public AutoUserSpecification setScope(AutoUserScope scope)"
-  desc: "Set the scope property: The scope for the auto user. The default value is pool. If the pool is running Windows, a value of Task should be specified if stricter isolation between tasks is required, such as if the task mutates the registry in a way which could impact other tasks."
+  desc: "Set the scope property: The scope for the auto user. The default value is pool. If the pool is running Windows a value of Task should be specified if stricter isolation between tasks is required. For example, if the task mutates the registry in a way which could impact other tasks, or if certificates have been specified on the pool which should not be accessible by normal tasks but should be accessible by StartTasks."
   returns:
     description: "the AutoUserSpecification object itself."
     type: "<xref href=\"com.azure.compute.batch.models.AutoUserSpecification?alt=com.azure.compute.batch.models.AutoUserSpecification&text=AutoUserSpecification\" data-throw-if-not-resolved=\"False\" />"
@@ -115,4 +115,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.compute.batch.models.AutoUserSpecification?alt=com.azure.compute.batch.models.AutoUserSpecification&text=AutoUserSpecification\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.compute.batch.models"
-artifact: com.azure:azure-compute-batch:1.0.0-beta.3
+artifact: com.azure:azure-compute-batch:1.0.0-beta.5

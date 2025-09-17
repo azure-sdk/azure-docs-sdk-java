@@ -103,6 +103,16 @@ methods:
   returns:
     description: "the id value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.compute.batch.models.BatchJobSchedule.getJobScheduleStatistics()"
+  fullName: "com.azure.compute.batch.models.BatchJobSchedule.getJobScheduleStatistics()"
+  name: "getJobScheduleStatistics()"
+  nameWithType: "BatchJobSchedule.getJobScheduleStatistics()"
+  summary: "Get the job<wbr>Schedule<wbr>Statistics property: The lifetime resource usage statistics for the Job Schedule."
+  syntax: "public BatchJobScheduleStatistics getJobScheduleStatistics()"
+  desc: "Get the jobScheduleStatistics property: The lifetime resource usage statistics for the Job Schedule. The statistics may not be immediately available. The Batch service performs periodic roll-up of statistics. The typical delay is about 30 minutes."
+  returns:
+    description: "the jobScheduleStatistics value."
+    type: "<xref href=\"com.azure.compute.batch.models.BatchJobScheduleStatistics?alt=com.azure.compute.batch.models.BatchJobScheduleStatistics&text=BatchJobScheduleStatistics\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.compute.batch.models.BatchJobSchedule.getJobSpecification()"
   fullName: "com.azure.compute.batch.models.BatchJobSchedule.getJobSpecification()"
   name: "getJobSpecification()"
@@ -128,11 +138,11 @@ methods:
   name: "getMetadata()"
   nameWithType: "BatchJobSchedule.getMetadata()"
   summary: "Get the metadata property: A list of name-value pairs associated with the schedule as metadata."
-  syntax: "public List<MetadataItem> getMetadata()"
+  syntax: "public List<BatchMetadataItem> getMetadata()"
   desc: "Get the metadata property: A list of name-value pairs associated with the schedule as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code."
   returns:
     description: "the metadata value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.MetadataItem?alt=com.azure.compute.batch.models.MetadataItem&text=MetadataItem\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.BatchMetadataItem?alt=com.azure.compute.batch.models.BatchMetadataItem&text=BatchMetadataItem\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.compute.batch.models.BatchJobSchedule.getPreviousState()"
   fullName: "com.azure.compute.batch.models.BatchJobSchedule.getPreviousState()"
   name: "getPreviousState()"
@@ -183,16 +193,6 @@ methods:
   returns:
     description: "the stateTransitionTime value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
-- uid: "com.azure.compute.batch.models.BatchJobSchedule.getStats()"
-  fullName: "com.azure.compute.batch.models.BatchJobSchedule.getStats()"
-  name: "getStats()"
-  nameWithType: "BatchJobSchedule.getStats()"
-  summary: "Get the stats property: The lifetime resource usage statistics for the Job Schedule."
-  syntax: "public BatchJobScheduleStatistics getStats()"
-  desc: "Get the stats property: The lifetime resource usage statistics for the Job Schedule. The statistics may not be immediately available. The Batch service performs periodic roll-up of statistics. The typical delay is about 30 minutes."
-  returns:
-    description: "the stats value."
-    type: "<xref href=\"com.azure.compute.batch.models.BatchJobScheduleStatistics?alt=com.azure.compute.batch.models.BatchJobScheduleStatistics&text=BatchJobScheduleStatistics\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.compute.batch.models.BatchJobSchedule.getUrl()"
   fullName: "com.azure.compute.batch.models.BatchJobSchedule.getUrl()"
   name: "getUrl()"
@@ -203,16 +203,16 @@ methods:
   returns:
     description: "the url value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-- uid: "com.azure.compute.batch.models.BatchJobSchedule.setMetadata(java.util.List<com.azure.compute.batch.models.MetadataItem>)"
-  fullName: "com.azure.compute.batch.models.BatchJobSchedule.setMetadata(List<MetadataItem> metadata)"
-  name: "setMetadata(List<MetadataItem> metadata)"
-  nameWithType: "BatchJobSchedule.setMetadata(List<MetadataItem> metadata)"
+- uid: "com.azure.compute.batch.models.BatchJobSchedule.setMetadata(java.util.List<com.azure.compute.batch.models.BatchMetadataItem>)"
+  fullName: "com.azure.compute.batch.models.BatchJobSchedule.setMetadata(List<BatchMetadataItem> metadata)"
+  name: "setMetadata(List<BatchMetadataItem> metadata)"
+  nameWithType: "BatchJobSchedule.setMetadata(List<BatchMetadataItem> metadata)"
   summary: "Set the metadata property: A list of name-value pairs associated with the schedule as metadata."
   parameters:
   - description: "the metadata value to set."
     name: "metadata"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.MetadataItem?alt=com.azure.compute.batch.models.MetadataItem&text=MetadataItem\" data-throw-if-not-resolved=\"False\" />&gt;"
-  syntax: "public BatchJobSchedule setMetadata(List<MetadataItem> metadata)"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.BatchMetadataItem?alt=com.azure.compute.batch.models.BatchMetadataItem&text=BatchMetadataItem\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public BatchJobSchedule setMetadata(List<BatchMetadataItem> metadata)"
   desc: "Set the metadata property: A list of name-value pairs associated with the schedule as metadata. The Batch service does not assign any meaning to metadata; it is solely for the use of user code."
   returns:
     description: "the BatchJobSchedule object itself."
@@ -249,4 +249,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.compute.batch.models.BatchJobSchedule?alt=com.azure.compute.batch.models.BatchJobSchedule&text=BatchJobSchedule\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.compute.batch.models"
-artifact: com.azure:azure-compute-batch:1.0.0-beta.3
+artifact: com.azure:azure-compute-batch:1.0.0-beta.5

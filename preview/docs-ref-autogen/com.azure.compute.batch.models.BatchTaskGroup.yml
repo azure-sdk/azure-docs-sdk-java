@@ -22,16 +22,16 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
 syntax: "public final class **BatchTaskGroup**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.compute.batch.models.BatchTaskGroup?alt=com.azure.compute.batch.models.BatchTaskGroup&text=BatchTaskGroup\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
-- uid: "com.azure.compute.batch.models.BatchTaskGroup.BatchTaskGroup(java.util.List<com.azure.compute.batch.models.BatchTaskCreateContent>)"
-  fullName: "com.azure.compute.batch.models.BatchTaskGroup.BatchTaskGroup(List<BatchTaskCreateContent> value)"
-  name: "BatchTaskGroup(List<BatchTaskCreateContent> value)"
-  nameWithType: "BatchTaskGroup.BatchTaskGroup(List<BatchTaskCreateContent> value)"
+- uid: "com.azure.compute.batch.models.BatchTaskGroup.BatchTaskGroup(java.util.List<com.azure.compute.batch.models.BatchTaskCreateParameters>)"
+  fullName: "com.azure.compute.batch.models.BatchTaskGroup.BatchTaskGroup(List<BatchTaskCreateParameters> values)"
+  name: "BatchTaskGroup(List<BatchTaskCreateParameters> values)"
+  nameWithType: "BatchTaskGroup.BatchTaskGroup(List<BatchTaskCreateParameters> values)"
   summary: "Creates an instance of Batch<wbr>Task<wbr>Group class."
   parameters:
-  - description: "the value value to set."
-    name: "value"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.BatchTaskCreateContent?alt=com.azure.compute.batch.models.BatchTaskCreateContent&text=BatchTaskCreateContent\" data-throw-if-not-resolved=\"False\" />&gt;"
-  syntax: "public BatchTaskGroup(List<BatchTaskCreateContent> value)"
+  - description: "the values value to set."
+    name: "values"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.BatchTaskCreateParameters?alt=com.azure.compute.batch.models.BatchTaskCreateParameters&text=BatchTaskCreateParameters\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public BatchTaskGroup(List<BatchTaskCreateParameters> values)"
   desc: "Creates an instance of BatchTaskGroup class."
 methods:
 - uid: "com.azure.compute.batch.models.BatchTaskGroup.fromJson(com.azure.json.JsonReader)"
@@ -53,16 +53,16 @@ methods:
   returns:
     description: "An instance of BatchTaskGroup if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
     type: "<xref href=\"com.azure.compute.batch.models.BatchTaskGroup?alt=com.azure.compute.batch.models.BatchTaskGroup&text=BatchTaskGroup\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.compute.batch.models.BatchTaskGroup.getValue()"
-  fullName: "com.azure.compute.batch.models.BatchTaskGroup.getValue()"
-  name: "getValue()"
-  nameWithType: "BatchTaskGroup.getValue()"
-  summary: "Get the value property: The collection of Tasks to add."
-  syntax: "public List<BatchTaskCreateContent> getValue()"
-  desc: "Get the value property: The collection of Tasks to add. The maximum count of Tasks is 100. The total serialized size of this collection must be less than 1MB. If it is greater than 1MB (for example if each Task has 100's of resource files or environment variables), the request will fail with code 'RequestBodyTooLarge' and should be retried again with fewer Tasks."
+- uid: "com.azure.compute.batch.models.BatchTaskGroup.getValues()"
+  fullName: "com.azure.compute.batch.models.BatchTaskGroup.getValues()"
+  name: "getValues()"
+  nameWithType: "BatchTaskGroup.getValues()"
+  summary: "Get the values property: The collection of Tasks to add."
+  syntax: "public List<BatchTaskCreateParameters> getValues()"
+  desc: "Get the values property: The collection of Tasks to add. The maximum count of Tasks is 100. The total serialized size of this collection must be less than 1MB. If it is greater than 1MB (for example if each Task has 100's of resource files or environment variables), the request will fail with code 'RequestBodyTooLarge' and should be retried again with fewer Tasks."
   returns:
-    description: "the value value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.BatchTaskCreateContent?alt=com.azure.compute.batch.models.BatchTaskCreateContent&text=BatchTaskCreateContent\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the values value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.BatchTaskCreateParameters?alt=com.azure.compute.batch.models.BatchTaskCreateParameters&text=BatchTaskCreateParameters\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.compute.batch.models.BatchTaskGroup.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.compute.batch.models.BatchTaskGroup.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -81,4 +81,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.compute.batch.models.BatchTaskGroup?alt=com.azure.compute.batch.models.BatchTaskGroup&text=BatchTaskGroup\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.compute.batch.models"
-artifact: com.azure:azure-compute-batch:1.0.0-beta.3
+artifact: com.azure:azure-compute-batch:1.0.0-beta.5

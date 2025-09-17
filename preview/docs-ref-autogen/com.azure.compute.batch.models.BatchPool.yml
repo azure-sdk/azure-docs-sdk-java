@@ -101,6 +101,16 @@ methods:
   returns:
     description: "the autoScaleRun value."
     type: "<xref href=\"com.azure.compute.batch.models.AutoScaleRun?alt=com.azure.compute.batch.models.AutoScaleRun&text=AutoScaleRun\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.compute.batch.models.BatchPool.getCertificateReferences()"
+  fullName: "com.azure.compute.batch.models.BatchPool.getCertificateReferences()"
+  name: "getCertificateReferences()"
+  nameWithType: "BatchPool.getCertificateReferences()"
+  summary: "Get the certificate<wbr>References property: For Windows Nodes, the Batch service installs the Certificates to the specified Certificate store and location."
+  syntax: "public List<BatchCertificateReference> getCertificateReferences()"
+  desc: "Get the certificateReferences property: For Windows Nodes, the Batch service installs the Certificates to the specified Certificate store and location. For Linux Compute Nodes, the Certificates are stored in a directory inside the Task working directory and an environment variable AZ\\_BATCH\\_CERTIFICATES\\_DIR is supplied to the Task to query for this location. For Certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/\\{user-name\\}/certs) and Certificates are placed in that directory. Warning: This property is deprecated and will be removed after February, 2024. Please use the \\[Azure KeyVault Extension\\](https://learn.microsoft.com/azure/batch/batch-certificate-migration-guide) instead."
+  returns:
+    description: "the certificateReferences value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.BatchCertificateReference?alt=com.azure.compute.batch.models.BatchCertificateReference&text=BatchCertificateReference\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.compute.batch.models.BatchPool.getCreationTime()"
   fullName: "com.azure.compute.batch.models.BatchPool.getCreationTime()"
   name: "getCreationTime()"
@@ -196,11 +206,11 @@ methods:
   name: "getMetadata()"
   nameWithType: "BatchPool.getMetadata()"
   summary: "Get the metadata property: A list of name-value pairs associated with the Pool as metadata."
-  syntax: "public List<MetadataItem> getMetadata()"
+  syntax: "public List<BatchMetadataItem> getMetadata()"
   desc: "Get the metadata property: A list of name-value pairs associated with the Pool as metadata."
   returns:
     description: "the metadata value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.MetadataItem?alt=com.azure.compute.batch.models.MetadataItem&text=MetadataItem\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.BatchMetadataItem?alt=com.azure.compute.batch.models.BatchMetadataItem&text=BatchMetadataItem\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.compute.batch.models.BatchPool.getMountConfiguration()"
   fullName: "com.azure.compute.batch.models.BatchPool.getMountConfiguration()"
   name: "getMountConfiguration()"
@@ -221,6 +231,16 @@ methods:
   returns:
     description: "the networkConfiguration value."
     type: "<xref href=\"com.azure.compute.batch.models.NetworkConfiguration?alt=com.azure.compute.batch.models.NetworkConfiguration&text=NetworkConfiguration\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.compute.batch.models.BatchPool.getPoolStatistics()"
+  fullName: "com.azure.compute.batch.models.BatchPool.getPoolStatistics()"
+  name: "getPoolStatistics()"
+  nameWithType: "BatchPool.getPoolStatistics()"
+  summary: "Get the pool<wbr>Statistics property: Utilization and resource usage statistics for the entire lifetime of the Pool."
+  syntax: "public BatchPoolStatistics getPoolStatistics()"
+  desc: "Get the poolStatistics property: Utilization and resource usage statistics for the entire lifetime of the Pool. This property is populated only if the BatchPool was retrieved with an expand clause including the 'stats' attribute; otherwise it is null. The statistics may not be immediately available. The Batch service performs periodic roll-up of statistics. The typical delay is about 30 minutes."
+  returns:
+    description: "the poolStatistics value."
+    type: "<xref href=\"com.azure.compute.batch.models.BatchPoolStatistics?alt=com.azure.compute.batch.models.BatchPoolStatistics&text=BatchPoolStatistics\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.compute.batch.models.BatchPool.getResizeErrors()"
   fullName: "com.azure.compute.batch.models.BatchPool.getResizeErrors()"
   name: "getResizeErrors()"
@@ -281,16 +301,6 @@ methods:
   returns:
     description: "the stateTransitionTime value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
-- uid: "com.azure.compute.batch.models.BatchPool.getStats()"
-  fullName: "com.azure.compute.batch.models.BatchPool.getStats()"
-  name: "getStats()"
-  nameWithType: "BatchPool.getStats()"
-  summary: "Get the stats property: Utilization and resource usage statistics for the entire lifetime of the Pool."
-  syntax: "public BatchPoolStatistics getStats()"
-  desc: "Get the stats property: Utilization and resource usage statistics for the entire lifetime of the Pool. This property is populated only if the BatchPool was retrieved with an expand clause including the 'stats' attribute; otherwise it is null. The statistics may not be immediately available. The Batch service performs periodic roll-up of statistics. The typical delay is about 30 minutes."
-  returns:
-    description: "the stats value."
-    type: "<xref href=\"com.azure.compute.batch.models.BatchPoolStatistics?alt=com.azure.compute.batch.models.BatchPoolStatistics&text=BatchPoolStatistics\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.compute.batch.models.BatchPool.getTargetDedicatedNodes()"
   fullName: "com.azure.compute.batch.models.BatchPool.getTargetDedicatedNodes()"
   name: "getTargetDedicatedNodes()"
@@ -387,7 +397,7 @@ methods:
   nameWithType: "BatchPool.getVmSize()"
   summary: "Get the vm<wbr>Size property: The size of virtual machines in the Pool."
   syntax: "public String getVmSize()"
-  desc: "Get the vmSize property: The size of virtual machines in the Pool. All virtual machines in a Pool are the same size. For information about available VM sizes, see Sizes for Virtual Machines (Linux) (https://azure.microsoft.com/documentation/articles/virtual-machines-linux-sizes/) or Sizes for Virtual Machines (Windows) (https://azure.microsoft.com/documentation/articles/virtual-machines-windows-sizes/). Batch supports all Azure VM sizes except STANDARD\\_A0 and those with premium storage (STANDARD\\_GS, STANDARD\\_DS, and STANDARD\\_DSV2 series)."
+  desc: "Get the vmSize property: The size of virtual machines in the Pool. All virtual machines in a Pool are the same size. For information about available VM sizes, see Sizes for Virtual Machines in Azure (https://learn.microsoft.com/azure/virtual-machines/sizes/overview). Batch supports all Azure VM sizes except STANDARD\\_A0 and those with premium storage (STANDARD\\_GS, STANDARD\\_DS, and STANDARD\\_DSV2 series)."
   returns:
     description: "the vmSize value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -429,4 +439,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.compute.batch.models.BatchPool?alt=com.azure.compute.batch.models.BatchPool&text=BatchPool\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.compute.batch.models"
-artifact: com.azure:azure-compute-batch:1.0.0-beta.3
+artifact: com.azure:azure-compute-batch:1.0.0-beta.5

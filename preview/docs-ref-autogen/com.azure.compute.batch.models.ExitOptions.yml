@@ -64,11 +64,11 @@ methods:
   name: "getJobAction()"
   nameWithType: "ExitOptions.getJobAction()"
   summary: "Get the job<wbr>Action property: An action to take on the Job containing the Task, if the Task completes with the given exit condition and the Job's on<wbr>Task<wbr>Failed property is 'perform<wbr>Exit<wbr>Options<wbr>Job<wbr>Action'."
-  syntax: "public BatchJobAction getJobAction()"
+  syntax: "public BatchJobActionKind getJobAction()"
   desc: "Get the jobAction property: An action to take on the Job containing the Task, if the Task completes with the given exit condition and the Job's onTaskFailed property is 'performExitOptionsJobAction'. The default is none for exit code 0 and terminate for all other exit conditions. If the Job's onTaskFailed property is noaction, then specifying this property returns an error and the add Task request fails with an invalid property value error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request)."
   returns:
     description: "the jobAction value."
-    type: "<xref href=\"com.azure.compute.batch.models.BatchJobAction?alt=com.azure.compute.batch.models.BatchJobAction&text=BatchJobAction\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.compute.batch.models.BatchJobActionKind?alt=com.azure.compute.batch.models.BatchJobActionKind&text=BatchJobActionKind\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.compute.batch.models.ExitOptions.setDependencyAction(com.azure.compute.batch.models.DependencyAction)"
   fullName: "com.azure.compute.batch.models.ExitOptions.setDependencyAction(DependencyAction dependencyAction)"
   name: "setDependencyAction(DependencyAction dependencyAction)"
@@ -83,16 +83,16 @@ methods:
   returns:
     description: "the ExitOptions object itself."
     type: "<xref href=\"com.azure.compute.batch.models.ExitOptions?alt=com.azure.compute.batch.models.ExitOptions&text=ExitOptions\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.compute.batch.models.ExitOptions.setJobAction(com.azure.compute.batch.models.BatchJobAction)"
-  fullName: "com.azure.compute.batch.models.ExitOptions.setJobAction(BatchJobAction jobAction)"
-  name: "setJobAction(BatchJobAction jobAction)"
-  nameWithType: "ExitOptions.setJobAction(BatchJobAction jobAction)"
+- uid: "com.azure.compute.batch.models.ExitOptions.setJobAction(com.azure.compute.batch.models.BatchJobActionKind)"
+  fullName: "com.azure.compute.batch.models.ExitOptions.setJobAction(BatchJobActionKind jobAction)"
+  name: "setJobAction(BatchJobActionKind jobAction)"
+  nameWithType: "ExitOptions.setJobAction(BatchJobActionKind jobAction)"
   summary: "Set the job<wbr>Action property: An action to take on the Job containing the Task, if the Task completes with the given exit condition and the Job's on<wbr>Task<wbr>Failed property is 'perform<wbr>Exit<wbr>Options<wbr>Job<wbr>Action'."
   parameters:
   - description: "the jobAction value to set."
     name: "jobAction"
-    type: "<xref href=\"com.azure.compute.batch.models.BatchJobAction?alt=com.azure.compute.batch.models.BatchJobAction&text=BatchJobAction\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public ExitOptions setJobAction(BatchJobAction jobAction)"
+    type: "<xref href=\"com.azure.compute.batch.models.BatchJobActionKind?alt=com.azure.compute.batch.models.BatchJobActionKind&text=BatchJobActionKind\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ExitOptions setJobAction(BatchJobActionKind jobAction)"
   desc: "Set the jobAction property: An action to take on the Job containing the Task, if the Task completes with the given exit condition and the Job's onTaskFailed property is 'performExitOptionsJobAction'. The default is none for exit code 0 and terminate for all other exit conditions. If the Job's onTaskFailed property is noaction, then specifying this property returns an error and the add Task request fails with an invalid property value error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request)."
   returns:
     description: "the ExitOptions object itself."
@@ -115,4 +115,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.compute.batch.models.ExitOptions?alt=com.azure.compute.batch.models.ExitOptions&text=ExitOptions\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.compute.batch.models"
-artifact: com.azure:azure-compute-batch:1.0.0-beta.3
+artifact: com.azure:azure-compute-batch:1.0.0-beta.5

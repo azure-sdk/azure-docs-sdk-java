@@ -61,6 +61,16 @@ methods:
   returns:
     description: "the allocationTime value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
+- uid: "com.azure.compute.batch.models.BatchNode.getCertificateReferences()"
+  fullName: "com.azure.compute.batch.models.BatchNode.getCertificateReferences()"
+  name: "getCertificateReferences()"
+  nameWithType: "BatchNode.getCertificateReferences()"
+  summary: "Get the certificate<wbr>References property: For Windows Nodes, the Batch service installs the Certificates to the specified Certificate store and location."
+  syntax: "public List<BatchCertificateReference> getCertificateReferences()"
+  desc: "Get the certificateReferences property: For Windows Nodes, the Batch service installs the Certificates to the specified Certificate store and location. For Linux Compute Nodes, the Certificates are stored in a directory inside the Task working directory and an environment variable AZ\\_BATCH\\_CERTIFICATES\\_DIR is supplied to the Task to query for this location. For Certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/\\{user-name\\}/certs) and Certificates are placed in that directory. Warning: This property is deprecated and will be removed after February, 2024. Please use the \\[Azure KeyVault Extension\\](https://learn.microsoft.com/azure/batch/batch-certificate-migration-guide) instead."
+  returns:
+    description: "the certificateReferences value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.BatchCertificateReference?alt=com.azure.compute.batch.models.BatchCertificateReference&text=BatchCertificateReference\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.compute.batch.models.BatchNode.getEndpointConfiguration()"
   fullName: "com.azure.compute.batch.models.BatchNode.getEndpointConfiguration()"
   name: "getEndpointConfiguration()"
@@ -247,7 +257,7 @@ methods:
   nameWithType: "BatchNode.getVmSize()"
   summary: "Get the vm<wbr>Size property: The size of the virtual machine hosting the Compute Node."
   syntax: "public String getVmSize()"
-  desc: "Get the vmSize property: The size of the virtual machine hosting the Compute Node. For information about available sizes of virtual machines in Pools, see Choose a VM size for Compute Nodes in an Azure Batch Pool (https://docs.microsoft.com/azure/batch/batch-pool-vm-sizes)."
+  desc: "Get the vmSize property: The size of the virtual machine hosting the Compute Node. For information about available sizes of virtual machines in Pools, see Choose a VM size for Compute Nodes in an Azure Batch Pool (https://learn.microsoft.com/azure/batch/batch-pool-vm-sizes)."
   returns:
     description: "the vmSize value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -279,4 +289,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.compute.batch.models.BatchNode?alt=com.azure.compute.batch.models.BatchNode&text=BatchNode\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.compute.batch.models"
-artifact: com.azure:azure-compute-batch:1.0.0-beta.3
+artifact: com.azure:azure-compute-batch:1.0.0-beta.5

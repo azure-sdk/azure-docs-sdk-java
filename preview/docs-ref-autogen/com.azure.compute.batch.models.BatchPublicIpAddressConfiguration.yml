@@ -1,0 +1,118 @@
+### YamlMime:JavaType
+uid: "com.azure.compute.batch.models.BatchPublicIpAddressConfiguration"
+fullName: "com.azure.compute.batch.models.BatchPublicIpAddressConfiguration"
+name: "BatchPublicIpAddressConfiguration"
+nameWithType: "BatchPublicIpAddressConfiguration"
+summary: "The public IP Address configuration of the networking configuration of a Pool."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **BatchPublicIpAddressConfiguration**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.compute.batch.models.BatchPublicIpAddressConfiguration?alt=com.azure.compute.batch.models.BatchPublicIpAddressConfiguration&text=BatchPublicIpAddressConfiguration\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.compute.batch.models.BatchPublicIpAddressConfiguration.BatchPublicIpAddressConfiguration()"
+  fullName: "com.azure.compute.batch.models.BatchPublicIpAddressConfiguration.BatchPublicIpAddressConfiguration()"
+  name: "BatchPublicIpAddressConfiguration()"
+  nameWithType: "BatchPublicIpAddressConfiguration.BatchPublicIpAddressConfiguration()"
+  summary: "Creates an instance of Batch<wbr>Public<wbr>IpAddress<wbr>Configuration class."
+  syntax: "public BatchPublicIpAddressConfiguration()"
+  desc: "Creates an instance of BatchPublicIpAddressConfiguration class."
+methods:
+- uid: "com.azure.compute.batch.models.BatchPublicIpAddressConfiguration.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.compute.batch.models.BatchPublicIpAddressConfiguration.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "BatchPublicIpAddressConfiguration.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Batch<wbr>Public<wbr>IpAddress<wbr>Configuration from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static BatchPublicIpAddressConfiguration fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the BatchPublicIpAddressConfiguration."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of BatchPublicIpAddressConfiguration from the JsonReader."
+  returns:
+    description: "An instance of BatchPublicIpAddressConfiguration if the JsonReader was pointing to an instance of it, or\n null if it was pointing to JSON null."
+    type: "<xref href=\"com.azure.compute.batch.models.BatchPublicIpAddressConfiguration?alt=com.azure.compute.batch.models.BatchPublicIpAddressConfiguration&text=BatchPublicIpAddressConfiguration\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.compute.batch.models.BatchPublicIpAddressConfiguration.getIpAddressIds()"
+  fullName: "com.azure.compute.batch.models.BatchPublicIpAddressConfiguration.getIpAddressIds()"
+  name: "getIpAddressIds()"
+  nameWithType: "BatchPublicIpAddressConfiguration.getIpAddressIds()"
+  summary: "Get the ip<wbr>Address<wbr>Ids property: The list of public IPs which the Batch service will use when provisioning Compute Nodes."
+  syntax: "public List<String> getIpAddressIds()"
+  desc: "Get the ipAddressIds property: The list of public IPs which the Batch service will use when provisioning Compute Nodes. The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 Spot/Low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/\\{subscription\\}/resourceGroups/\\{group\\}/providers/Microsoft.Network/publicIPAddresses/\\{ip\\}."
+  returns:
+    description: "the ipAddressIds value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+- uid: "com.azure.compute.batch.models.BatchPublicIpAddressConfiguration.getIpAddressProvisioningType()"
+  fullName: "com.azure.compute.batch.models.BatchPublicIpAddressConfiguration.getIpAddressProvisioningType()"
+  name: "getIpAddressProvisioningType()"
+  nameWithType: "BatchPublicIpAddressConfiguration.getIpAddressProvisioningType()"
+  summary: "Get the ip<wbr>Address<wbr>Provisioning<wbr>Type property: The provisioning type for Public IP Addresses for the Pool."
+  syntax: "public IpAddressProvisioningType getIpAddressProvisioningType()"
+  desc: "Get the ipAddressProvisioningType property: The provisioning type for Public IP Addresses for the Pool. The default value is BatchManaged."
+  returns:
+    description: "the ipAddressProvisioningType value."
+    type: "<xref href=\"com.azure.compute.batch.models.IpAddressProvisioningType?alt=com.azure.compute.batch.models.IpAddressProvisioningType&text=IpAddressProvisioningType\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.compute.batch.models.BatchPublicIpAddressConfiguration.setIpAddressIds(java.util.List<java.lang.String>)"
+  fullName: "com.azure.compute.batch.models.BatchPublicIpAddressConfiguration.setIpAddressIds(List<String> ipAddressIds)"
+  name: "setIpAddressIds(List<String> ipAddressIds)"
+  nameWithType: "BatchPublicIpAddressConfiguration.setIpAddressIds(List<String> ipAddressIds)"
+  summary: "Set the ip<wbr>Address<wbr>Ids property: The list of public IPs which the Batch service will use when provisioning Compute Nodes."
+  parameters:
+  - description: "the ipAddressIds value to set."
+    name: "ipAddressIds"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+  syntax: "public BatchPublicIpAddressConfiguration setIpAddressIds(List<String> ipAddressIds)"
+  desc: "Set the ipAddressIds property: The list of public IPs which the Batch service will use when provisioning Compute Nodes. The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 Spot/Low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/\\{subscription\\}/resourceGroups/\\{group\\}/providers/Microsoft.Network/publicIPAddresses/\\{ip\\}."
+  returns:
+    description: "the BatchPublicIpAddressConfiguration object itself."
+    type: "<xref href=\"com.azure.compute.batch.models.BatchPublicIpAddressConfiguration?alt=com.azure.compute.batch.models.BatchPublicIpAddressConfiguration&text=BatchPublicIpAddressConfiguration\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.compute.batch.models.BatchPublicIpAddressConfiguration.setIpAddressProvisioningType(com.azure.compute.batch.models.IpAddressProvisioningType)"
+  fullName: "com.azure.compute.batch.models.BatchPublicIpAddressConfiguration.setIpAddressProvisioningType(IpAddressProvisioningType ipAddressProvisioningType)"
+  name: "setIpAddressProvisioningType(IpAddressProvisioningType ipAddressProvisioningType)"
+  nameWithType: "BatchPublicIpAddressConfiguration.setIpAddressProvisioningType(IpAddressProvisioningType ipAddressProvisioningType)"
+  summary: "Set the ip<wbr>Address<wbr>Provisioning<wbr>Type property: The provisioning type for Public IP Addresses for the Pool."
+  parameters:
+  - description: "the ipAddressProvisioningType value to set."
+    name: "ipAddressProvisioningType"
+    type: "<xref href=\"com.azure.compute.batch.models.IpAddressProvisioningType?alt=com.azure.compute.batch.models.IpAddressProvisioningType&text=IpAddressProvisioningType\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public BatchPublicIpAddressConfiguration setIpAddressProvisioningType(IpAddressProvisioningType ipAddressProvisioningType)"
+  desc: "Set the ipAddressProvisioningType property: The provisioning type for Public IP Addresses for the Pool. The default value is BatchManaged."
+  returns:
+    description: "the BatchPublicIpAddressConfiguration object itself."
+    type: "<xref href=\"com.azure.compute.batch.models.BatchPublicIpAddressConfiguration?alt=com.azure.compute.batch.models.BatchPublicIpAddressConfiguration&text=BatchPublicIpAddressConfiguration\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.compute.batch.models.BatchPublicIpAddressConfiguration.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.compute.batch.models.BatchPublicIpAddressConfiguration.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "BatchPublicIpAddressConfiguration.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "The public IP Address configuration of the networking configuration of a Pool."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.compute.batch.models.BatchPublicIpAddressConfiguration?alt=com.azure.compute.batch.models.BatchPublicIpAddressConfiguration&text=BatchPublicIpAddressConfiguration\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.compute.batch.models"
+artifact: com.azure:azure-compute-batch:1.0.0-beta.5

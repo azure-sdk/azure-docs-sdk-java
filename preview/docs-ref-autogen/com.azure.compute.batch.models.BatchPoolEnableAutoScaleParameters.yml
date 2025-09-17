@@ -1,0 +1,118 @@
+### YamlMime:JavaType
+uid: "com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters"
+fullName: "com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters"
+name: "BatchPoolEnableAutoScaleParameters"
+nameWithType: "BatchPoolEnableAutoScaleParameters"
+summary: "Parameters for enabling automatic scaling on an Azure Batch Pool."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **BatchPoolEnableAutoScaleParameters**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters?alt=com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters&text=BatchPoolEnableAutoScaleParameters\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters.BatchPoolEnableAutoScaleParameters()"
+  fullName: "com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters.BatchPoolEnableAutoScaleParameters()"
+  name: "BatchPoolEnableAutoScaleParameters()"
+  nameWithType: "BatchPoolEnableAutoScaleParameters.BatchPoolEnableAutoScaleParameters()"
+  summary: "Creates an instance of Batch<wbr>Pool<wbr>Enable<wbr>Auto<wbr>Scale<wbr>Parameters class."
+  syntax: "public BatchPoolEnableAutoScaleParameters()"
+  desc: "Creates an instance of BatchPoolEnableAutoScaleParameters class."
+methods:
+- uid: "com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "BatchPoolEnableAutoScaleParameters.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Batch<wbr>Pool<wbr>Enable<wbr>Auto<wbr>Scale<wbr>Parameters from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static BatchPoolEnableAutoScaleParameters fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the BatchPoolEnableAutoScaleParameters."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of BatchPoolEnableAutoScaleParameters from the JsonReader."
+  returns:
+    description: "An instance of BatchPoolEnableAutoScaleParameters if the JsonReader was pointing to an instance of it, or\n null if it was pointing to JSON null."
+    type: "<xref href=\"com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters?alt=com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters&text=BatchPoolEnableAutoScaleParameters\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters.getAutoScaleEvaluationInterval()"
+  fullName: "com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters.getAutoScaleEvaluationInterval()"
+  name: "getAutoScaleEvaluationInterval()"
+  nameWithType: "BatchPoolEnableAutoScaleParameters.getAutoScaleEvaluationInterval()"
+  summary: "Get the auto<wbr>Scale<wbr>Evaluation<wbr>Interval property: The time interval at which to automatically adjust the Pool size according to the autoscale formula."
+  syntax: "public Duration getAutoScaleEvaluationInterval()"
+  desc: "Get the autoScaleEvaluationInterval property: The time interval at which to automatically adjust the Pool size according to the autoscale formula. The default value is 15 minutes. The minimum and maximum value are 5 minutes and 168 hours respectively. If you specify a value less than 5 minutes or greater than 168 hours, the Batch service rejects the request with an invalid property value error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request). If you specify a new interval, then the existing autoscale evaluation schedule will be stopped and a new autoscale evaluation schedule will be started, with its starting time being the time when this request was issued."
+  returns:
+    description: "the autoScaleEvaluationInterval value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
+- uid: "com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters.getAutoScaleFormula()"
+  fullName: "com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters.getAutoScaleFormula()"
+  name: "getAutoScaleFormula()"
+  nameWithType: "BatchPoolEnableAutoScaleParameters.getAutoScaleFormula()"
+  summary: "Get the auto<wbr>Scale<wbr>Formula property: The formula for the desired number of Compute Nodes in the Pool."
+  syntax: "public String getAutoScaleFormula()"
+  desc: "Get the autoScaleFormula property: The formula for the desired number of Compute Nodes in the Pool. The default value is 15 minutes. The minimum and maximum value are 5 minutes and 168 hours respectively. If you specify a value less than 5 minutes or greater than 168 hours, the Batch service rejects the request with an invalid property value error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request). If you specify a new interval, then the existing autoscale evaluation schedule will be stopped and a new autoscale evaluation schedule will be started, with its starting time being the time when this request was issued."
+  returns:
+    description: "the autoScaleFormula value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters.setAutoScaleEvaluationInterval(java.time.Duration)"
+  fullName: "com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters.setAutoScaleEvaluationInterval(Duration autoScaleEvaluationInterval)"
+  name: "setAutoScaleEvaluationInterval(Duration autoScaleEvaluationInterval)"
+  nameWithType: "BatchPoolEnableAutoScaleParameters.setAutoScaleEvaluationInterval(Duration autoScaleEvaluationInterval)"
+  summary: "Set the auto<wbr>Scale<wbr>Evaluation<wbr>Interval property: The time interval at which to automatically adjust the Pool size according to the autoscale formula."
+  parameters:
+  - description: "the autoScaleEvaluationInterval value to set."
+    name: "autoScaleEvaluationInterval"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
+  syntax: "public BatchPoolEnableAutoScaleParameters setAutoScaleEvaluationInterval(Duration autoScaleEvaluationInterval)"
+  desc: "Set the autoScaleEvaluationInterval property: The time interval at which to automatically adjust the Pool size according to the autoscale formula. The default value is 15 minutes. The minimum and maximum value are 5 minutes and 168 hours respectively. If you specify a value less than 5 minutes or greater than 168 hours, the Batch service rejects the request with an invalid property value error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request). If you specify a new interval, then the existing autoscale evaluation schedule will be stopped and a new autoscale evaluation schedule will be started, with its starting time being the time when this request was issued."
+  returns:
+    description: "the BatchPoolEnableAutoScaleParameters object itself."
+    type: "<xref href=\"com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters?alt=com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters&text=BatchPoolEnableAutoScaleParameters\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters.setAutoScaleFormula(java.lang.String)"
+  fullName: "com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters.setAutoScaleFormula(String autoScaleFormula)"
+  name: "setAutoScaleFormula(String autoScaleFormula)"
+  nameWithType: "BatchPoolEnableAutoScaleParameters.setAutoScaleFormula(String autoScaleFormula)"
+  summary: "Set the auto<wbr>Scale<wbr>Formula property: The formula for the desired number of Compute Nodes in the Pool."
+  parameters:
+  - description: "the autoScaleFormula value to set."
+    name: "autoScaleFormula"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public BatchPoolEnableAutoScaleParameters setAutoScaleFormula(String autoScaleFormula)"
+  desc: "Set the autoScaleFormula property: The formula for the desired number of Compute Nodes in the Pool. The default value is 15 minutes. The minimum and maximum value are 5 minutes and 168 hours respectively. If you specify a value less than 5 minutes or greater than 168 hours, the Batch service rejects the request with an invalid property value error; if you are calling the REST API directly, the HTTP status code is 400 (Bad Request). If you specify a new interval, then the existing autoscale evaluation schedule will be stopped and a new autoscale evaluation schedule will be started, with its starting time being the time when this request was issued."
+  returns:
+    description: "the BatchPoolEnableAutoScaleParameters object itself."
+    type: "<xref href=\"com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters?alt=com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters&text=BatchPoolEnableAutoScaleParameters\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "BatchPoolEnableAutoScaleParameters.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Parameters for enabling automatic scaling on an Azure Batch Pool."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters?alt=com.azure.compute.batch.models.BatchPoolEnableAutoScaleParameters&text=BatchPoolEnableAutoScaleParameters\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.compute.batch.models"
+artifact: com.azure:azure-compute-batch:1.0.0-beta.5
