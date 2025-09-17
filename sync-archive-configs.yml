@@ -1,0 +1,19 @@
+trigger:
+  batch: true
+  branches:
+    include:
+    - main
+  paths:
+    include:
+    - metadata/legacy
+    
+resources:
+  repositories:
+    - repository: ReferenceAutomation
+      type: git
+      name: Content CI/ReferenceAutomation
+      ref: refs/heads/master
+
+extends:
+  template: Java/pipeline-yaml/azure-java-archive-push-configs.yml@ReferenceAutomation
+  
