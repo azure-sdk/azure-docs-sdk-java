@@ -1,7 +1,7 @@
 ---
 title: Azure Kubernetesconfiguration-Privatelinkscopes SDK for Java
 description: Reference for Azure Kubernetesconfiguration-Privatelinkscopes SDK for Java
-ms.date: 09/16/2025
+ms.date: 09/17/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: kubernetesconfiguration-privatelinkscopes
