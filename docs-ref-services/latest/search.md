@@ -1,7 +1,7 @@
 ---
 title: Azure Search SDK for Java
 description: Reference for Azure Search SDK for Java
-ms.date: 09/17/2025
+ms.date: 09/18/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: cognitive-search
