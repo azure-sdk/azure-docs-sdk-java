@@ -1,7 +1,7 @@
 ---
 title: Azure Security DevOps SDK for Java
 description: Reference for Azure Security DevOps SDK for Java
-ms.date: 09/18/2025
+ms.date: 09/19/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: securitydevops
