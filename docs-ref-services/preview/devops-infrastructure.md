@@ -1,7 +1,7 @@
 ---
 title: Azure DevOps Infrastructure SDK for Java
 description: Reference for Azure DevOps Infrastructure SDK for Java
-ms.date: 09/19/2025
+ms.date: 09/22/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: devopsinfrastructure
