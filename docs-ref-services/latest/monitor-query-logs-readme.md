@@ -1,12 +1,12 @@
 ---
 title: Azure Monitor Logs Query client library for Java
 keywords: Azure, java, SDK, API, azure-monitor-query-logs, monitor
-ms.date: 08/21/2025
+ms.date: 09/26/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: monitor
 ---
-# Azure Monitor Logs Query client library for Java - version 1.0.1 
+# Azure Monitor Logs Query client library for Java - version 1.0.2 
 
 
 The Azure Monitor Logs Query client library is used to execute read-only queries against [Azure Monitor][azure_monitor_overview]'s logs data platform:
@@ -36,7 +36,7 @@ The Azure Monitor Logs Query client library is used to execute read-only queries
 
 #### Include the BOM file
 
-Include the `azure-sdk-bom` to your project to take a dependency on the stable version of the library. In the following snippet, replace the `{bom_version_to_target}` placeholder with the version number. To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-logs_1.0.1/sdk/boms/azure-sdk-bom/README.md).
+Include the `azure-sdk-bom` to your project to take a dependency on the stable version of the library. In the following snippet, replace the `{bom_version_to_target}` placeholder with the version number. To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-logs_1.0.2/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -408,7 +408,7 @@ If your query exceeds the [service limits][service_limits], see the large log qu
 
 ## Troubleshooting
 
-See our [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-logs_1.0.1/sdk/monitor/azure-monitor-query/TROUBLESHOOTING.md)
+See our [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-logs_1.0.2/sdk/monitor/azure-monitor-query/TROUBLESHOOTING.md)
 for details on how to diagnose various failure scenarios.
 
 ## Next steps
@@ -429,20 +429,20 @@ comments.
 
 <!-- LINKS -->
 
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-logs_1.0.1/sdk/identity/azure-identity/README.md
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-logs_1.0.2/sdk/identity/azure-identity/README.md
 [azure_monitor_create_using_portal]: https://learn.microsoft.com/azure/azure-monitor/logs/quick-create-workspace
 [azure_monitor_overview]: https://learn.microsoft.com/azure/azure-monitor/overview
 [azure_subscription]: https://azure.microsoft.com/free/java
-[changelog]: https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-logs_1.0.1/sdk/monitor/azure-monitor-query/CHANGELOG.md
+[changelog]: https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-logs_1.0.2/sdk/monitor/azure-monitor-query/CHANGELOG.md
 [custom_subdomain]: https://learn.microsoft.com/azure/cognitive-services/authentication?tabs=powershell#create-a-resource-with-a-custom-subdomain
-[DefaultAzureCredential]: https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-logs_1.0.1/sdk/identity/azure-identity/README.md#defaultazurecredential
+[DefaultAzureCredential]: https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-logs_1.0.2/sdk/identity/azure-identity/README.md#defaultazurecredential
 [jdk_link]: https://learn.microsoft.com/java/azure/jdk/?view=azure-java-stable
 [kusto_query_language]: https://learn.microsoft.com/azure/data-explorer/kusto/query/
-[log_levels]: https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-logs_1.0.1/sdk/core/azure-core/src/main/java/com/azure/core/util/logging/ClientLogger.java
+[log_levels]: https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-logs_1.0.2/sdk/core/azure-core/src/main/java/com/azure/core/util/logging/ClientLogger.java
 [msdocs_apiref]: https://learn.microsoft.com/java/api/com.azure.monitor.query?view=azure-java-stable
 [package]: https://central.sonatype.com/artifact/com.azure/azure-monitor-query-logs
-[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-logs_1.0.1/sdk/monitor/azure-monitor-query-logs/src/samples/README.md
-[source]: https://github.com/Azure/azure-sdk-for-java/tree/azure-monitor-query-logs_1.0.1/sdk/monitor/azure-monitor-query-logs/src
+[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-monitor-query-logs_1.0.2/sdk/monitor/azure-monitor-query-logs/src/samples/README.md
+[source]: https://github.com/Azure/azure-sdk-for-java/tree/azure-monitor-query-logs_1.0.2/sdk/monitor/azure-monitor-query-logs/src
 [performance_tuning]: https://github.com/Azure/azure-sdk-for-java/wiki/Performance-Tuning
 [service_limits]: https://learn.microsoft.com/azure/azure-monitor/service-limits#log-queries-and-language
 
