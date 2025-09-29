@@ -6,6 +6,6 @@ ms.topic: reference
 ms.devlang: java
 ms.service: sitemanager
 ---
-# Azure Sitemanager SDK for Java - preview
-## Packages - preview
+# Azure Sitemanager SDK for Java - latest
+## Packages - latest
 [!INCLUDE [packages](sitemanager-index.md)]
