@@ -1,7 +1,7 @@
 ---
 title: Azure Hybrid Connectivity SDK for Java
 description: Reference for Azure Hybrid Connectivity SDK for Java
-ms.date: 10/03/2025
+ms.date: 10/06/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: hybridconnectivity

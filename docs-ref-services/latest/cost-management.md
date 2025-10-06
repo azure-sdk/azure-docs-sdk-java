@@ -1,7 +1,7 @@
 ---
 title: Azure Cost Management SDK for Java
 description: Reference for Azure Cost Management SDK for Java
-ms.date: 10/03/2025
+ms.date: 10/06/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: costmanagement
