@@ -1,6 +1,6 @@
 {
   "Name": "azure-core-experimental",
-  "Version": "1.0.0-beta.64",
+  "Version": "1.0.0-beta.65",
   "DevVersion": null,
   "DirectoryPath": "sdk/core/azure-core-experimental",
   "ServiceDirectory": "core",
@@ -10,7 +10,7 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-core-experimental",
-  "ReleaseStatus": "2025-09-05",
+  "ReleaseStatus": "2025-10-06",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": [
     "com.azure:azure-core-tracing-opentelemetry-samples",
@@ -18,36 +18,36 @@
     "com.azure:perf-test-core"
   ],
   "ArtifactDetails": {
-    "name": "azure-core-experimental",
+    "safeName": "azurecoreexperimental",
+    "releaseInBatch": "${{ parameters.release_azurecoreexperimental }}",
     "triggeringPaths": [
       "/sdk/core/ci.yml"
     ],
     "groupId": "com.azure",
-    "safeName": "azurecoreexperimental",
-    "releaseInBatch": "${{ parameters.release_azurecoreexperimental }}"
+    "name": "azure-core-experimental"
   },
   "CIParameters": {
     "CIMatrixConfigs": [
       {
-        "Path": "eng/pipelines/templates/stages/platform-matrix.json",
         "Name": "Java_ci_test_base",
         "GenerateVMJobs": true,
         "Selection": "sparse",
+        "Path": "eng/pipelines/templates/stages/platform-matrix.json",
         "NonSparseParameters": "Agent"
       },
       {
         "PRBatching": false,
-        "Path": "sdk/core/version-overrides-matrix.json",
         "Name": "version_overrides_tests",
         "GenerateVMJobs": true,
-        "Selection": "all"
+        "Selection": "all",
+        "Path": "sdk/core/version-overrides-matrix.json"
       },
       {
         "PRBatching": false,
-        "Path": "sdk/core/version-overrides-vertx-matrix.json",
         "Name": "version_overrides_vertx_tests",
         "GenerateVMJobs": true,
-        "Selection": "all"
+        "Selection": "all",
+        "Path": "sdk/core/version-overrides-vertx-matrix.json"
       }
     ]
   },

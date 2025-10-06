@@ -1,6 +1,6 @@
 {
   "Name": "azure-core-http-jdk-httpclient",
-  "Version": "1.1.1",
+  "Version": "1.1.2",
   "DevVersion": null,
   "DirectoryPath": "sdk/core/azure-core-http-jdk-httpclient",
   "ServiceDirectory": "core",
@@ -10,7 +10,7 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-core-http-jdk-httpclient",
-  "ReleaseStatus": "2025-09-05",
+  "ReleaseStatus": "2025-10-06",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": [
     "com.azure:azure-core-tracing-opentelemetry-samples",
@@ -18,36 +18,36 @@
     "com.azure:perf-test-core"
   ],
   "ArtifactDetails": {
-    "name": "azure-core-http-jdk-httpclient",
+    "safeName": "azurecorehttpjdkhttpclient",
+    "releaseInBatch": "${{ parameters.release_azurecorehttpjdkhttpclient }}",
     "triggeringPaths": [
       "/sdk/core/ci.yml"
     ],
     "groupId": "com.azure",
-    "safeName": "azurecorehttpjdkhttpclient",
-    "releaseInBatch": "${{ parameters.release_azurecorehttpjdkhttpclient }}"
+    "name": "azure-core-http-jdk-httpclient"
   },
   "CIParameters": {
     "CIMatrixConfigs": [
       {
-        "Path": "eng/pipelines/templates/stages/platform-matrix.json",
         "Name": "Java_ci_test_base",
         "GenerateVMJobs": true,
         "Selection": "sparse",
+        "Path": "eng/pipelines/templates/stages/platform-matrix.json",
         "NonSparseParameters": "Agent"
       },
       {
         "PRBatching": false,
-        "Path": "sdk/core/version-overrides-matrix.json",
         "Name": "version_overrides_tests",
         "GenerateVMJobs": true,
-        "Selection": "all"
+        "Selection": "all",
+        "Path": "sdk/core/version-overrides-matrix.json"
       },
       {
         "PRBatching": false,
-        "Path": "sdk/core/version-overrides-vertx-matrix.json",
         "Name": "version_overrides_vertx_tests",
         "GenerateVMJobs": true,
-        "Selection": "all"
+        "Selection": "all",
+        "Path": "sdk/core/version-overrides-vertx-matrix.json"
       }
     ]
   },
