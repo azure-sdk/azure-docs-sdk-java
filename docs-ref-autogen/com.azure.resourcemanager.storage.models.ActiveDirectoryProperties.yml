@@ -36,7 +36,7 @@ methods:
   nameWithType: "ActiveDirectoryProperties.accountType()"
   summary: "Get the account<wbr>Type property: Specifies the Active Directory account type for Azure Storage."
   syntax: "public ActiveDirectoryPropertiesAccountType accountType()"
-  desc: "Get the accountType property: Specifies the Active Directory account type for Azure Storage."
+  desc: "Get the accountType property: Specifies the Active Directory account type for Azure Storage. If directoryServiceOptions is set to AD (AD DS authentication), this property is optional. If provided, samAccountName should also be provided. For directoryServiceOptions AADDS (Entra DS authentication) or AADKERB (Entra authentication), this property can be omitted."
   returns:
     description: "the accountType value."
     type: "<xref href=\"com.azure.resourcemanager.storage.models.ActiveDirectoryPropertiesAccountType?alt=com.azure.resourcemanager.storage.models.ActiveDirectoryPropertiesAccountType&text=ActiveDirectoryPropertiesAccountType\" data-throw-if-not-resolved=\"False\" />"
@@ -46,7 +46,7 @@ methods:
   nameWithType: "ActiveDirectoryProperties.azureStorageSid()"
   summary: "Get the azure<wbr>Storage<wbr>Sid property: Specifies the security identifier (SID) for Azure Storage."
   syntax: "public String azureStorageSid()"
-  desc: "Get the azureStorageSid property: Specifies the security identifier (SID) for Azure Storage."
+  desc: "Get the azureStorageSid property: Specifies the security identifier (SID) for Azure Storage. If directoryServiceOptions is set to AD (AD DS authentication), this property is required. Otherwise, it can be omitted."
   returns:
     description: "the azureStorageSid value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -56,7 +56,7 @@ methods:
   nameWithType: "ActiveDirectoryProperties.domainGuid()"
   summary: "Get the domain<wbr>Guid property: Specifies the domain GUID."
   syntax: "public String domainGuid()"
-  desc: "Get the domainGuid property: Specifies the domain GUID."
+  desc: "Get the domainGuid property: Specifies the domain GUID. If directoryServiceOptions is set to AD (AD DS authentication), this property is required. If directoryServiceOptions is set to AADDS (Entra DS authentication), this property can be omitted. If directoryServiceOptions is set to AADKERB (Entra authentication), this property is optional; it is needed to support configuration of directory- and file-level permissions via Windows File Explorer, but is not required for authentication."
   returns:
     description: "the domainGuid value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -66,7 +66,7 @@ methods:
   nameWithType: "ActiveDirectoryProperties.domainName()"
   summary: "Get the domain<wbr>Name property: Specifies the primary domain that the AD DNS server is authoritative for."
   syntax: "public String domainName()"
-  desc: "Get the domainName property: Specifies the primary domain that the AD DNS server is authoritative for."
+  desc: "Get the domainName property: Specifies the primary domain that the AD DNS server is authoritative for. This property is required if directoryServiceOptions is set to AD (AD DS authentication). If directoryServiceOptions is set to AADDS (Entra DS authentication), providing this property is optional, as it will be inferred automatically if omitted. If directoryServiceOptions is set to AADKERB (Entra authentication), this property is optional; it is needed to support configuration of directory- and file-level permissions via Windows File Explorer, but is not required for authentication."
   returns:
     description: "the domainName value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -74,9 +74,9 @@ methods:
   fullName: "com.azure.resourcemanager.storage.models.ActiveDirectoryProperties.domainSid()"
   name: "domainSid()"
   nameWithType: "ActiveDirectoryProperties.domainSid()"
-  summary: "Get the domain<wbr>Sid property: Specifies the security identifier (SID)."
+  summary: "Get the domain<wbr>Sid property: Specifies the security identifier (SID) of the AD domain."
   syntax: "public String domainSid()"
-  desc: "Get the domainSid property: Specifies the security identifier (SID)."
+  desc: "Get the domainSid property: Specifies the security identifier (SID) of the AD domain. If directoryServiceOptions is set to AD (AD DS authentication), this property is required. Otherwise, it can be omitted."
   returns:
     description: "the domainSid value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -86,7 +86,7 @@ methods:
   nameWithType: "ActiveDirectoryProperties.forestName()"
   summary: "Get the forest<wbr>Name property: Specifies the Active Directory forest to get."
   syntax: "public String forestName()"
-  desc: "Get the forestName property: Specifies the Active Directory forest to get."
+  desc: "Get the forestName property: Specifies the Active Directory forest to get. If directoryServiceOptions is set to AD (AD DS authentication), this property is required. Otherwise, it can be omitted."
   returns:
     description: "the forestName value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -103,7 +103,7 @@ methods:
     type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static ActiveDirectoryProperties fromJson(JsonReader jsonReader)"
   exceptions:
-  - description: "If the deserialized JSON object was missing any required properties."
+  - description: "If an error occurs while reading the ActiveDirectoryProperties."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   desc: "Reads an instance of ActiveDirectoryProperties from the JsonReader."
   returns:
@@ -115,7 +115,7 @@ methods:
   nameWithType: "ActiveDirectoryProperties.netBiosDomainName()"
   summary: "Get the net<wbr>Bios<wbr>Domain<wbr>Name property: Specifies the NetBIOS domain name."
   syntax: "public String netBiosDomainName()"
-  desc: "Get the netBiosDomainName property: Specifies the NetBIOS domain name."
+  desc: "Get the netBiosDomainName property: Specifies the NetBIOS domain name. If directoryServiceOptions is set to AD (AD DS authentication), this property is required. Otherwise, it can be omitted."
   returns:
     description: "the netBiosDomainName value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -125,7 +125,7 @@ methods:
   nameWithType: "ActiveDirectoryProperties.samAccountName()"
   summary: "Get the sam<wbr>Account<wbr>Name property: Specifies the Active Directory SAMAccount<wbr>Name for Azure Storage."
   syntax: "public String samAccountName()"
-  desc: "Get the samAccountName property: Specifies the Active Directory SAMAccountName for Azure Storage."
+  desc: "Get the samAccountName property: Specifies the Active Directory SAMAccountName for Azure Storage. If directoryServiceOptions is set to AD (AD DS authentication), this property is optional. If provided, accountType should also be provided. For directoryServiceOptions AADDS (Entra DS authentication) or AADKERB (Entra authentication), this property can be omitted."
   returns:
     description: "the samAccountName value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -158,7 +158,7 @@ methods:
     name: "accountType"
     type: "<xref href=\"com.azure.resourcemanager.storage.models.ActiveDirectoryPropertiesAccountType?alt=com.azure.resourcemanager.storage.models.ActiveDirectoryPropertiesAccountType&text=ActiveDirectoryPropertiesAccountType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public ActiveDirectoryProperties withAccountType(ActiveDirectoryPropertiesAccountType accountType)"
-  desc: "Set the accountType property: Specifies the Active Directory account type for Azure Storage."
+  desc: "Set the accountType property: Specifies the Active Directory account type for Azure Storage. If directoryServiceOptions is set to AD (AD DS authentication), this property is optional. If provided, samAccountName should also be provided. For directoryServiceOptions AADDS (Entra DS authentication) or AADKERB (Entra authentication), this property can be omitted."
   returns:
     description: "the ActiveDirectoryProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.storage.models.ActiveDirectoryProperties?alt=com.azure.resourcemanager.storage.models.ActiveDirectoryProperties&text=ActiveDirectoryProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -172,7 +172,7 @@ methods:
     name: "azureStorageSid"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ActiveDirectoryProperties withAzureStorageSid(String azureStorageSid)"
-  desc: "Set the azureStorageSid property: Specifies the security identifier (SID) for Azure Storage."
+  desc: "Set the azureStorageSid property: Specifies the security identifier (SID) for Azure Storage. If directoryServiceOptions is set to AD (AD DS authentication), this property is required. Otherwise, it can be omitted."
   returns:
     description: "the ActiveDirectoryProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.storage.models.ActiveDirectoryProperties?alt=com.azure.resourcemanager.storage.models.ActiveDirectoryProperties&text=ActiveDirectoryProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -186,7 +186,7 @@ methods:
     name: "domainGuid"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ActiveDirectoryProperties withDomainGuid(String domainGuid)"
-  desc: "Set the domainGuid property: Specifies the domain GUID."
+  desc: "Set the domainGuid property: Specifies the domain GUID. If directoryServiceOptions is set to AD (AD DS authentication), this property is required. If directoryServiceOptions is set to AADDS (Entra DS authentication), this property can be omitted. If directoryServiceOptions is set to AADKERB (Entra authentication), this property is optional; it is needed to support configuration of directory- and file-level permissions via Windows File Explorer, but is not required for authentication."
   returns:
     description: "the ActiveDirectoryProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.storage.models.ActiveDirectoryProperties?alt=com.azure.resourcemanager.storage.models.ActiveDirectoryProperties&text=ActiveDirectoryProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -200,7 +200,7 @@ methods:
     name: "domainName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ActiveDirectoryProperties withDomainName(String domainName)"
-  desc: "Set the domainName property: Specifies the primary domain that the AD DNS server is authoritative for."
+  desc: "Set the domainName property: Specifies the primary domain that the AD DNS server is authoritative for. This property is required if directoryServiceOptions is set to AD (AD DS authentication). If directoryServiceOptions is set to AADDS (Entra DS authentication), providing this property is optional, as it will be inferred automatically if omitted. If directoryServiceOptions is set to AADKERB (Entra authentication), this property is optional; it is needed to support configuration of directory- and file-level permissions via Windows File Explorer, but is not required for authentication."
   returns:
     description: "the ActiveDirectoryProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.storage.models.ActiveDirectoryProperties?alt=com.azure.resourcemanager.storage.models.ActiveDirectoryProperties&text=ActiveDirectoryProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -208,13 +208,13 @@ methods:
   fullName: "com.azure.resourcemanager.storage.models.ActiveDirectoryProperties.withDomainSid(String domainSid)"
   name: "withDomainSid(String domainSid)"
   nameWithType: "ActiveDirectoryProperties.withDomainSid(String domainSid)"
-  summary: "Set the domain<wbr>Sid property: Specifies the security identifier (SID)."
+  summary: "Set the domain<wbr>Sid property: Specifies the security identifier (SID) of the AD domain."
   parameters:
   - description: "the domainSid value to set."
     name: "domainSid"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ActiveDirectoryProperties withDomainSid(String domainSid)"
-  desc: "Set the domainSid property: Specifies the security identifier (SID)."
+  desc: "Set the domainSid property: Specifies the security identifier (SID) of the AD domain. If directoryServiceOptions is set to AD (AD DS authentication), this property is required. Otherwise, it can be omitted."
   returns:
     description: "the ActiveDirectoryProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.storage.models.ActiveDirectoryProperties?alt=com.azure.resourcemanager.storage.models.ActiveDirectoryProperties&text=ActiveDirectoryProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -228,7 +228,7 @@ methods:
     name: "forestName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ActiveDirectoryProperties withForestName(String forestName)"
-  desc: "Set the forestName property: Specifies the Active Directory forest to get."
+  desc: "Set the forestName property: Specifies the Active Directory forest to get. If directoryServiceOptions is set to AD (AD DS authentication), this property is required. Otherwise, it can be omitted."
   returns:
     description: "the ActiveDirectoryProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.storage.models.ActiveDirectoryProperties?alt=com.azure.resourcemanager.storage.models.ActiveDirectoryProperties&text=ActiveDirectoryProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -242,7 +242,7 @@ methods:
     name: "netBiosDomainName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ActiveDirectoryProperties withNetBiosDomainName(String netBiosDomainName)"
-  desc: "Set the netBiosDomainName property: Specifies the NetBIOS domain name."
+  desc: "Set the netBiosDomainName property: Specifies the NetBIOS domain name. If directoryServiceOptions is set to AD (AD DS authentication), this property is required. Otherwise, it can be omitted."
   returns:
     description: "the ActiveDirectoryProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.storage.models.ActiveDirectoryProperties?alt=com.azure.resourcemanager.storage.models.ActiveDirectoryProperties&text=ActiveDirectoryProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -256,7 +256,7 @@ methods:
     name: "samAccountName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ActiveDirectoryProperties withSamAccountName(String samAccountName)"
-  desc: "Set the samAccountName property: Specifies the Active Directory SAMAccountName for Azure Storage."
+  desc: "Set the samAccountName property: Specifies the Active Directory SAMAccountName for Azure Storage. If directoryServiceOptions is set to AD (AD DS authentication), this property is optional. If provided, accountType should also be provided. For directoryServiceOptions AADDS (Entra DS authentication) or AADKERB (Entra authentication), this property can be omitted."
   returns:
     description: "the ActiveDirectoryProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.storage.models.ActiveDirectoryProperties?alt=com.azure.resourcemanager.storage.models.ActiveDirectoryProperties&text=ActiveDirectoryProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -266,4 +266,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.storage.models.ActiveDirectoryProperties?alt=com.azure.resourcemanager.storage.models.ActiveDirectoryProperties&text=ActiveDirectoryProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.storage.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-storage:2.53.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-storage:2.54.1

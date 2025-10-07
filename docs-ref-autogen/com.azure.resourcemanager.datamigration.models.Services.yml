@@ -6,6 +6,53 @@ nameWithType: "Services"
 summary: "Resource collection API of Services."
 syntax: "public interface **Services**"
 methods:
+- uid: "com.azure.resourcemanager.datamigration.models.Services.checkChildrenNameAvailability(java.lang.String,java.lang.String,com.azure.resourcemanager.datamigration.models.NameAvailabilityRequest)"
+  fullName: "com.azure.resourcemanager.datamigration.models.Services.checkChildrenNameAvailability(String groupName, String serviceName, NameAvailabilityRequest parameters)"
+  name: "checkChildrenNameAvailability(String groupName, String serviceName, NameAvailabilityRequest parameters)"
+  nameWithType: "Services.checkChildrenNameAvailability(String groupName, String serviceName, NameAvailabilityRequest parameters)"
+  summary: "Check nested resource name validity and availability This method checks whether a proposed nested resource name is valid and available."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "Name of the resource group."
+    name: "groupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the service."
+    name: "serviceName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Requested name to validate."
+    name: "parameters"
+    type: "<xref href=\"com.azure.resourcemanager.datamigration.models.NameAvailabilityRequest?alt=com.azure.resourcemanager.datamigration.models.NameAvailabilityRequest&text=NameAvailabilityRequest\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract NameAvailabilityResponse checkChildrenNameAvailability(String groupName, String serviceName, NameAvailabilityRequest parameters)"
+  desc: "Check nested resource name validity and availability This method checks whether a proposed nested resource name is valid and available."
+  returns:
+    description: "indicates whether a proposed resource name is available."
+    type: "<xref href=\"com.azure.resourcemanager.datamigration.models.NameAvailabilityResponse?alt=com.azure.resourcemanager.datamigration.models.NameAvailabilityResponse&text=NameAvailabilityResponse\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.datamigration.models.Services.checkChildrenNameAvailabilityWithResponse(java.lang.String,java.lang.String,com.azure.resourcemanager.datamigration.models.NameAvailabilityRequest,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.datamigration.models.Services.checkChildrenNameAvailabilityWithResponse(String groupName, String serviceName, NameAvailabilityRequest parameters, Context context)"
+  name: "checkChildrenNameAvailabilityWithResponse(String groupName, String serviceName, NameAvailabilityRequest parameters, Context context)"
+  nameWithType: "Services.checkChildrenNameAvailabilityWithResponse(String groupName, String serviceName, NameAvailabilityRequest parameters, Context context)"
+  summary: "Check nested resource name validity and availability This method checks whether a proposed nested resource name is valid and available."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "Name of the resource group."
+    name: "groupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the service."
+    name: "serviceName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Requested name to validate."
+    name: "parameters"
+    type: "<xref href=\"com.azure.resourcemanager.datamigration.models.NameAvailabilityRequest?alt=com.azure.resourcemanager.datamigration.models.NameAvailabilityRequest&text=NameAvailabilityRequest\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Response<NameAvailabilityResponse> checkChildrenNameAvailabilityWithResponse(String groupName, String serviceName, NameAvailabilityRequest parameters, Context context)"
+  desc: "Check nested resource name validity and availability This method checks whether a proposed nested resource name is valid and available."
+  returns:
+    description: "indicates whether a proposed resource name is available along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datamigration.models.NameAvailabilityResponse?alt=com.azure.resourcemanager.datamigration.models.NameAvailabilityResponse&text=NameAvailabilityResponse\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.datamigration.models.Services.checkNameAvailability(java.lang.String,com.azure.resourcemanager.datamigration.models.NameAvailabilityRequest)"
   fullName: "com.azure.resourcemanager.datamigration.models.Services.checkNameAvailability(String location, NameAvailabilityRequest parameters)"
   name: "checkNameAvailability(String location, NameAvailabilityRequest parameters)"
@@ -51,7 +98,7 @@ methods:
   fullName: "com.azure.resourcemanager.datamigration.models.Services.checkStatus(String groupName, String serviceName)"
   name: "checkStatus(String groupName, String serviceName)"
   nameWithType: "Services.checkStatus(String groupName, String serviceName)"
-  summary: "Check service health status The services resource is the top-level resource that represents the Database Migration Service."
+  summary: "Check service health status The services resource is the top-level resource that represents the Azure Database Migration Service (classic)."
   modifiers:
   - "abstract"
   parameters:
@@ -62,7 +109,7 @@ methods:
     name: "serviceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract DataMigrationServiceStatusResponse checkStatus(String groupName, String serviceName)"
-  desc: "Check service health status The services resource is the top-level resource that represents the Database Migration Service. This action performs a health check and returns the status of the service and virtual machine size."
+  desc: "Check service health status The services resource is the top-level resource that represents the Azure Database Migration Service (classic). This action performs a health check and returns the status of the service and virtual machine size."
   returns:
     description: "service health status."
     type: "<xref href=\"com.azure.resourcemanager.datamigration.models.DataMigrationServiceStatusResponse?alt=com.azure.resourcemanager.datamigration.models.DataMigrationServiceStatusResponse&text=DataMigrationServiceStatusResponse\" data-throw-if-not-resolved=\"False\" />"
@@ -70,7 +117,7 @@ methods:
   fullName: "com.azure.resourcemanager.datamigration.models.Services.checkStatusWithResponse(String groupName, String serviceName, Context context)"
   name: "checkStatusWithResponse(String groupName, String serviceName, Context context)"
   nameWithType: "Services.checkStatusWithResponse(String groupName, String serviceName, Context context)"
-  summary: "Check service health status The services resource is the top-level resource that represents the Database Migration Service."
+  summary: "Check service health status The services resource is the top-level resource that represents the Azure Database Migration Service (classic)."
   modifiers:
   - "abstract"
   parameters:
@@ -84,7 +131,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<DataMigrationServiceStatusResponse> checkStatusWithResponse(String groupName, String serviceName, Context context)"
-  desc: "Check service health status The services resource is the top-level resource that represents the Database Migration Service. This action performs a health check and returns the status of the service and virtual machine size."
+  desc: "Check service health status The services resource is the top-level resource that represents the Azure Database Migration Service (classic). This action performs a health check and returns the status of the service and virtual machine size."
   returns:
     description: "service health status along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datamigration.models.DataMigrationServiceStatusResponse?alt=com.azure.resourcemanager.datamigration.models.DataMigrationServiceStatusResponse&text=DataMigrationServiceStatusResponse\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -108,7 +155,7 @@ methods:
   fullName: "com.azure.resourcemanager.datamigration.models.Services.delete(String groupName, String serviceName)"
   name: "delete(String groupName, String serviceName)"
   nameWithType: "Services.delete(String groupName, String serviceName)"
-  summary: "Delete DMS Service Instance The services resource is the top-level resource that represents the Database Migration Service."
+  summary: "Delete DMS (classic) Service Instance The services resource is the top-level resource that represents the Azure Database Migration Service (classic)."
   modifiers:
   - "abstract"
   parameters:
@@ -119,12 +166,12 @@ methods:
     name: "serviceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract void delete(String groupName, String serviceName)"
-  desc: "Delete DMS Service Instance The services resource is the top-level resource that represents the Database Migration Service. The DELETE method deletes a service. Any running tasks will be canceled."
+  desc: "Delete DMS (classic) Service Instance The services resource is the top-level resource that represents the Azure Database Migration Service (classic). The DELETE method deletes a service. Any running tasks will be canceled."
 - uid: "com.azure.resourcemanager.datamigration.models.Services.delete(java.lang.String,java.lang.String,java.lang.Boolean,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.datamigration.models.Services.delete(String groupName, String serviceName, Boolean deleteRunningTasks, Context context)"
   name: "delete(String groupName, String serviceName, Boolean deleteRunningTasks, Context context)"
   nameWithType: "Services.delete(String groupName, String serviceName, Boolean deleteRunningTasks, Context context)"
-  summary: "Delete DMS Service Instance The services resource is the top-level resource that represents the Database Migration Service."
+  summary: "Delete DMS (classic) Service Instance The services resource is the top-level resource that represents the Azure Database Migration Service (classic)."
   modifiers:
   - "abstract"
   parameters:
@@ -141,12 +188,12 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract void delete(String groupName, String serviceName, Boolean deleteRunningTasks, Context context)"
-  desc: "Delete DMS Service Instance The services resource is the top-level resource that represents the Database Migration Service. The DELETE method deletes a service. Any running tasks will be canceled."
+  desc: "Delete DMS (classic) Service Instance The services resource is the top-level resource that represents the Azure Database Migration Service (classic). The DELETE method deletes a service. Any running tasks will be canceled."
 - uid: "com.azure.resourcemanager.datamigration.models.Services.deleteById(java.lang.String)"
   fullName: "com.azure.resourcemanager.datamigration.models.Services.deleteById(String id)"
   name: "deleteById(String id)"
   nameWithType: "Services.deleteById(String id)"
-  summary: "Delete DMS Service Instance The services resource is the top-level resource that represents the Database Migration Service."
+  summary: "Delete DMS (classic) Service Instance The services resource is the top-level resource that represents the Azure Database Migration Service (classic)."
   modifiers:
   - "abstract"
   parameters:
@@ -154,12 +201,12 @@ methods:
     name: "id"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract void deleteById(String id)"
-  desc: "Delete DMS Service Instance The services resource is the top-level resource that represents the Database Migration Service. The DELETE method deletes a service. Any running tasks will be canceled."
+  desc: "Delete DMS (classic) Service Instance The services resource is the top-level resource that represents the Azure Database Migration Service (classic). The DELETE method deletes a service. Any running tasks will be canceled."
 - uid: "com.azure.resourcemanager.datamigration.models.Services.deleteByIdWithResponse(java.lang.String,java.lang.Boolean,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.datamigration.models.Services.deleteByIdWithResponse(String id, Boolean deleteRunningTasks, Context context)"
   name: "deleteByIdWithResponse(String id, Boolean deleteRunningTasks, Context context)"
   nameWithType: "Services.deleteByIdWithResponse(String id, Boolean deleteRunningTasks, Context context)"
-  summary: "Delete DMS Service Instance The services resource is the top-level resource that represents the Database Migration Service."
+  summary: "Delete DMS (classic) Service Instance The services resource is the top-level resource that represents the Azure Database Migration Service (classic)."
   modifiers:
   - "abstract"
   parameters:
@@ -173,12 +220,12 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract void deleteByIdWithResponse(String id, Boolean deleteRunningTasks, Context context)"
-  desc: "Delete DMS Service Instance The services resource is the top-level resource that represents the Database Migration Service. The DELETE method deletes a service. Any running tasks will be canceled."
+  desc: "Delete DMS (classic) Service Instance The services resource is the top-level resource that represents the Azure Database Migration Service (classic). The DELETE method deletes a service. Any running tasks will be canceled."
 - uid: "com.azure.resourcemanager.datamigration.models.Services.getById(java.lang.String)"
   fullName: "com.azure.resourcemanager.datamigration.models.Services.getById(String id)"
   name: "getById(String id)"
   nameWithType: "Services.getById(String id)"
-  summary: "Get DMS Service Instance The services resource is the top-level resource that represents the Database Migration Service."
+  summary: "Get DMS (classic) Service Instance The services resource is the top-level resource that represents the Azure Database Migration Service (classic)."
   modifiers:
   - "abstract"
   parameters:
@@ -186,15 +233,15 @@ methods:
     name: "id"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract DataMigrationService getById(String id)"
-  desc: "Get DMS Service Instance The services resource is the top-level resource that represents the Database Migration Service. The GET method retrieves information about a service instance."
+  desc: "Get DMS (classic) Service Instance The services resource is the top-level resource that represents the Azure Database Migration Service (classic). The GET method retrieves information about a service instance."
   returns:
-    description: "a Database Migration Service resource along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    description: "an Azure Database Migration Service (classic) resource along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.resourcemanager.datamigration.models.DataMigrationService?alt=com.azure.resourcemanager.datamigration.models.DataMigrationService&text=DataMigrationService\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.datamigration.models.Services.getByIdWithResponse(java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.datamigration.models.Services.getByIdWithResponse(String id, Context context)"
   name: "getByIdWithResponse(String id, Context context)"
   nameWithType: "Services.getByIdWithResponse(String id, Context context)"
-  summary: "Get DMS Service Instance The services resource is the top-level resource that represents the Database Migration Service."
+  summary: "Get DMS (classic) Service Instance The services resource is the top-level resource that represents the Azure Database Migration Service (classic)."
   modifiers:
   - "abstract"
   parameters:
@@ -205,15 +252,15 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<DataMigrationService> getByIdWithResponse(String id, Context context)"
-  desc: "Get DMS Service Instance The services resource is the top-level resource that represents the Database Migration Service. The GET method retrieves information about a service instance."
+  desc: "Get DMS (classic) Service Instance The services resource is the top-level resource that represents the Azure Database Migration Service (classic). The GET method retrieves information about a service instance."
   returns:
-    description: "a Database Migration Service resource along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    description: "an Azure Database Migration Service (classic) resource along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datamigration.models.DataMigrationService?alt=com.azure.resourcemanager.datamigration.models.DataMigrationService&text=DataMigrationService\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.datamigration.models.Services.getByResourceGroup(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.datamigration.models.Services.getByResourceGroup(String groupName, String serviceName)"
   name: "getByResourceGroup(String groupName, String serviceName)"
   nameWithType: "Services.getByResourceGroup(String groupName, String serviceName)"
-  summary: "Get DMS Service Instance The services resource is the top-level resource that represents the Database Migration Service."
+  summary: "Get DMS (classic) Service Instance The services resource is the top-level resource that represents the Azure Database Migration Service (classic)."
   modifiers:
   - "abstract"
   parameters:
@@ -224,15 +271,15 @@ methods:
     name: "serviceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract DataMigrationService getByResourceGroup(String groupName, String serviceName)"
-  desc: "Get DMS Service Instance The services resource is the top-level resource that represents the Database Migration Service. The GET method retrieves information about a service instance."
+  desc: "Get DMS (classic) Service Instance The services resource is the top-level resource that represents the Azure Database Migration Service (classic). The GET method retrieves information about a service instance."
   returns:
-    description: "a Database Migration Service resource."
+    description: "an Azure Database Migration Service (classic) resource."
     type: "<xref href=\"com.azure.resourcemanager.datamigration.models.DataMigrationService?alt=com.azure.resourcemanager.datamigration.models.DataMigrationService&text=DataMigrationService\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.datamigration.models.Services.getByResourceGroupWithResponse(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.datamigration.models.Services.getByResourceGroupWithResponse(String groupName, String serviceName, Context context)"
   name: "getByResourceGroupWithResponse(String groupName, String serviceName, Context context)"
   nameWithType: "Services.getByResourceGroupWithResponse(String groupName, String serviceName, Context context)"
-  summary: "Get DMS Service Instance The services resource is the top-level resource that represents the Database Migration Service."
+  summary: "Get DMS (classic) Service Instance The services resource is the top-level resource that represents the Azure Database Migration Service (classic)."
   modifiers:
   - "abstract"
   parameters:
@@ -246,19 +293,19 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<DataMigrationService> getByResourceGroupWithResponse(String groupName, String serviceName, Context context)"
-  desc: "Get DMS Service Instance The services resource is the top-level resource that represents the Database Migration Service. The GET method retrieves information about a service instance."
+  desc: "Get DMS (classic) Service Instance The services resource is the top-level resource that represents the Azure Database Migration Service (classic). The GET method retrieves information about a service instance."
   returns:
-    description: "a Database Migration Service resource along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    description: "an Azure Database Migration Service (classic) resource along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datamigration.models.DataMigrationService?alt=com.azure.resourcemanager.datamigration.models.DataMigrationService&text=DataMigrationService\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.datamigration.models.Services.list()"
   fullName: "com.azure.resourcemanager.datamigration.models.Services.list()"
   name: "list()"
   nameWithType: "Services.list()"
-  summary: "Get services in subscription The services resource is the top-level resource that represents the Database Migration Service."
+  summary: "Get services in subscription The services resource is the top-level resource that represents the Azure Database Migration Service (classic)."
   modifiers:
   - "abstract"
   syntax: "public abstract PagedIterable<DataMigrationService> list()"
-  desc: "Get services in subscription The services resource is the top-level resource that represents the Database Migration Service. This method returns a list of service resources in a subscription."
+  desc: "Get services in subscription The services resource is the top-level resource that represents the Azure Database Migration Service (classic). This method returns a list of service resources in a subscription."
   returns:
     description: "oData page of service objects as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datamigration.models.DataMigrationService?alt=com.azure.resourcemanager.datamigration.models.DataMigrationService&text=DataMigrationService\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -266,7 +313,7 @@ methods:
   fullName: "com.azure.resourcemanager.datamigration.models.Services.list(Context context)"
   name: "list(Context context)"
   nameWithType: "Services.list(Context context)"
-  summary: "Get services in subscription The services resource is the top-level resource that represents the Database Migration Service."
+  summary: "Get services in subscription The services resource is the top-level resource that represents the Azure Database Migration Service (classic)."
   modifiers:
   - "abstract"
   parameters:
@@ -274,7 +321,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<DataMigrationService> list(Context context)"
-  desc: "Get services in subscription The services resource is the top-level resource that represents the Database Migration Service. This method returns a list of service resources in a subscription."
+  desc: "Get services in subscription The services resource is the top-level resource that represents the Azure Database Migration Service (classic). This method returns a list of service resources in a subscription."
   returns:
     description: "oData page of service objects as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datamigration.models.DataMigrationService?alt=com.azure.resourcemanager.datamigration.models.DataMigrationService&text=DataMigrationService\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -282,7 +329,7 @@ methods:
   fullName: "com.azure.resourcemanager.datamigration.models.Services.listByResourceGroup(String groupName)"
   name: "listByResourceGroup(String groupName)"
   nameWithType: "Services.listByResourceGroup(String groupName)"
-  summary: "Get services in resource group The Services resource is the top-level resource that represents the Database Migration Service."
+  summary: "Get services in resource group The Services resource is the top-level resource that represents the Azure Database Migration Service (classic)."
   modifiers:
   - "abstract"
   parameters:
@@ -290,7 +337,7 @@ methods:
     name: "groupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<DataMigrationService> listByResourceGroup(String groupName)"
-  desc: "Get services in resource group The Services resource is the top-level resource that represents the Database Migration Service. This method returns a list of service resources in a resource group."
+  desc: "Get services in resource group The Services resource is the top-level resource that represents the Azure Database Migration Service (classic). This method returns a list of service resources in a resource group."
   returns:
     description: "oData page of service objects as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datamigration.models.DataMigrationService?alt=com.azure.resourcemanager.datamigration.models.DataMigrationService&text=DataMigrationService\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -298,7 +345,7 @@ methods:
   fullName: "com.azure.resourcemanager.datamigration.models.Services.listByResourceGroup(String groupName, Context context)"
   name: "listByResourceGroup(String groupName, Context context)"
   nameWithType: "Services.listByResourceGroup(String groupName, Context context)"
-  summary: "Get services in resource group The Services resource is the top-level resource that represents the Database Migration Service."
+  summary: "Get services in resource group The Services resource is the top-level resource that represents the Azure Database Migration Service (classic)."
   modifiers:
   - "abstract"
   parameters:
@@ -309,7 +356,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<DataMigrationService> listByResourceGroup(String groupName, Context context)"
-  desc: "Get services in resource group The Services resource is the top-level resource that represents the Database Migration Service. This method returns a list of service resources in a resource group."
+  desc: "Get services in resource group The Services resource is the top-level resource that represents the Azure Database Migration Service (classic). This method returns a list of service resources in a resource group."
   returns:
     description: "oData page of service objects as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datamigration.models.DataMigrationService?alt=com.azure.resourcemanager.datamigration.models.DataMigrationService&text=DataMigrationService\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -317,7 +364,7 @@ methods:
   fullName: "com.azure.resourcemanager.datamigration.models.Services.listSkus(String groupName, String serviceName)"
   name: "listSkus(String groupName, String serviceName)"
   nameWithType: "Services.listSkus(String groupName, String serviceName)"
-  summary: "Get compatible SKUs The services resource is the top-level resource that represents the Database Migration Service."
+  summary: "Get compatible SKUs The services resource is the top-level resource that represents the Database Migration Service (classic)."
   modifiers:
   - "abstract"
   parameters:
@@ -328,7 +375,7 @@ methods:
     name: "serviceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<AvailableServiceSku> listSkus(String groupName, String serviceName)"
-  desc: "Get compatible SKUs The services resource is the top-level resource that represents the Database Migration Service. The skus action returns the list of SKUs that a service resource can be updated to."
+  desc: "Get compatible SKUs The services resource is the top-level resource that represents the Database Migration Service (classic). The skus action returns the list of SKUs that a service resource can be updated to."
   returns:
     description: "oData page of available SKUs as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datamigration.models.AvailableServiceSku?alt=com.azure.resourcemanager.datamigration.models.AvailableServiceSku&text=AvailableServiceSku\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -336,7 +383,7 @@ methods:
   fullName: "com.azure.resourcemanager.datamigration.models.Services.listSkus(String groupName, String serviceName, Context context)"
   name: "listSkus(String groupName, String serviceName, Context context)"
   nameWithType: "Services.listSkus(String groupName, String serviceName, Context context)"
-  summary: "Get compatible SKUs The services resource is the top-level resource that represents the Database Migration Service."
+  summary: "Get compatible SKUs The services resource is the top-level resource that represents the Database Migration Service (classic)."
   modifiers:
   - "abstract"
   parameters:
@@ -350,62 +397,15 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<AvailableServiceSku> listSkus(String groupName, String serviceName, Context context)"
-  desc: "Get compatible SKUs The services resource is the top-level resource that represents the Database Migration Service. The skus action returns the list of SKUs that a service resource can be updated to."
+  desc: "Get compatible SKUs The services resource is the top-level resource that represents the Database Migration Service (classic). The skus action returns the list of SKUs that a service resource can be updated to."
   returns:
     description: "oData page of available SKUs as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datamigration.models.AvailableServiceSku?alt=com.azure.resourcemanager.datamigration.models.AvailableServiceSku&text=AvailableServiceSku\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.datamigration.models.Services.nestedCheckNameAvailability(java.lang.String,java.lang.String,com.azure.resourcemanager.datamigration.models.NameAvailabilityRequest)"
-  fullName: "com.azure.resourcemanager.datamigration.models.Services.nestedCheckNameAvailability(String groupName, String serviceName, NameAvailabilityRequest parameters)"
-  name: "nestedCheckNameAvailability(String groupName, String serviceName, NameAvailabilityRequest parameters)"
-  nameWithType: "Services.nestedCheckNameAvailability(String groupName, String serviceName, NameAvailabilityRequest parameters)"
-  summary: "Check nested resource name validity and availability This method checks whether a proposed nested resource name is valid and available."
-  modifiers:
-  - "abstract"
-  parameters:
-  - description: "Name of the resource group."
-    name: "groupName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Name of the service."
-    name: "serviceName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Requested name to validate."
-    name: "parameters"
-    type: "<xref href=\"com.azure.resourcemanager.datamigration.models.NameAvailabilityRequest?alt=com.azure.resourcemanager.datamigration.models.NameAvailabilityRequest&text=NameAvailabilityRequest\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract NameAvailabilityResponse nestedCheckNameAvailability(String groupName, String serviceName, NameAvailabilityRequest parameters)"
-  desc: "Check nested resource name validity and availability This method checks whether a proposed nested resource name is valid and available."
-  returns:
-    description: "indicates whether a proposed resource name is available."
-    type: "<xref href=\"com.azure.resourcemanager.datamigration.models.NameAvailabilityResponse?alt=com.azure.resourcemanager.datamigration.models.NameAvailabilityResponse&text=NameAvailabilityResponse\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.datamigration.models.Services.nestedCheckNameAvailabilityWithResponse(java.lang.String,java.lang.String,com.azure.resourcemanager.datamigration.models.NameAvailabilityRequest,com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.datamigration.models.Services.nestedCheckNameAvailabilityWithResponse(String groupName, String serviceName, NameAvailabilityRequest parameters, Context context)"
-  name: "nestedCheckNameAvailabilityWithResponse(String groupName, String serviceName, NameAvailabilityRequest parameters, Context context)"
-  nameWithType: "Services.nestedCheckNameAvailabilityWithResponse(String groupName, String serviceName, NameAvailabilityRequest parameters, Context context)"
-  summary: "Check nested resource name validity and availability This method checks whether a proposed nested resource name is valid and available."
-  modifiers:
-  - "abstract"
-  parameters:
-  - description: "Name of the resource group."
-    name: "groupName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Name of the service."
-    name: "serviceName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Requested name to validate."
-    name: "parameters"
-    type: "<xref href=\"com.azure.resourcemanager.datamigration.models.NameAvailabilityRequest?alt=com.azure.resourcemanager.datamigration.models.NameAvailabilityRequest&text=NameAvailabilityRequest\" data-throw-if-not-resolved=\"False\" />"
-  - description: "The context to associate with this operation."
-    name: "context"
-    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract Response<NameAvailabilityResponse> nestedCheckNameAvailabilityWithResponse(String groupName, String serviceName, NameAvailabilityRequest parameters, Context context)"
-  desc: "Check nested resource name validity and availability This method checks whether a proposed nested resource name is valid and available."
-  returns:
-    description: "indicates whether a proposed resource name is available along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
-    type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datamigration.models.NameAvailabilityResponse?alt=com.azure.resourcemanager.datamigration.models.NameAvailabilityResponse&text=NameAvailabilityResponse\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.datamigration.models.Services.start(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.datamigration.models.Services.start(String groupName, String serviceName)"
   name: "start(String groupName, String serviceName)"
   nameWithType: "Services.start(String groupName, String serviceName)"
-  summary: "Start service The services resource is the top-level resource that represents the Database Migration Service."
+  summary: "Start service The services resource is the top-level resource that represents the Azure Database Migration Service (classic)."
   modifiers:
   - "abstract"
   parameters:
@@ -416,12 +416,12 @@ methods:
     name: "serviceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract void start(String groupName, String serviceName)"
-  desc: "Start service The services resource is the top-level resource that represents the Database Migration Service. This action starts the service and the service can be used for data migration."
+  desc: "Start service The services resource is the top-level resource that represents the Azure Database Migration Service (classic). This action starts the service and the service can be used for data migration."
 - uid: "com.azure.resourcemanager.datamigration.models.Services.start(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.datamigration.models.Services.start(String groupName, String serviceName, Context context)"
   name: "start(String groupName, String serviceName, Context context)"
   nameWithType: "Services.start(String groupName, String serviceName, Context context)"
-  summary: "Start service The services resource is the top-level resource that represents the Database Migration Service."
+  summary: "Start service The services resource is the top-level resource that represents the Azure Database Migration Service (classic)."
   modifiers:
   - "abstract"
   parameters:
@@ -435,12 +435,12 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract void start(String groupName, String serviceName, Context context)"
-  desc: "Start service The services resource is the top-level resource that represents the Database Migration Service. This action starts the service and the service can be used for data migration."
+  desc: "Start service The services resource is the top-level resource that represents the Azure Database Migration Service (classic). This action starts the service and the service can be used for data migration."
 - uid: "com.azure.resourcemanager.datamigration.models.Services.stop(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.datamigration.models.Services.stop(String groupName, String serviceName)"
   name: "stop(String groupName, String serviceName)"
   nameWithType: "Services.stop(String groupName, String serviceName)"
-  summary: "Stop service The services resource is the top-level resource that represents the Database Migration Service."
+  summary: "Stop service The services resource is the top-level resource that represents the Azure Database Migration Service (classic)."
   modifiers:
   - "abstract"
   parameters:
@@ -451,12 +451,12 @@ methods:
     name: "serviceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract void stop(String groupName, String serviceName)"
-  desc: "Stop service The services resource is the top-level resource that represents the Database Migration Service. This action stops the service and the service cannot be used for data migration. The service owner won't be billed when the service is stopped."
+  desc: "Stop service The services resource is the top-level resource that represents the Azure Database Migration Service (classic). This action stops the service and the service cannot be used for data migration. The service owner won't be billed when the service is stopped."
 - uid: "com.azure.resourcemanager.datamigration.models.Services.stop(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.datamigration.models.Services.stop(String groupName, String serviceName, Context context)"
   name: "stop(String groupName, String serviceName, Context context)"
   nameWithType: "Services.stop(String groupName, String serviceName, Context context)"
-  summary: "Stop service The services resource is the top-level resource that represents the Database Migration Service."
+  summary: "Stop service The services resource is the top-level resource that represents the Azure Database Migration Service (classic)."
   modifiers:
   - "abstract"
   parameters:
@@ -470,9 +470,9 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract void stop(String groupName, String serviceName, Context context)"
-  desc: "Stop service The services resource is the top-level resource that represents the Database Migration Service. This action stops the service and the service cannot be used for data migration. The service owner won't be billed when the service is stopped."
+  desc: "Stop service The services resource is the top-level resource that represents the Azure Database Migration Service (classic). This action stops the service and the service cannot be used for data migration. The service owner won't be billed when the service is stopped."
 type: "interface"
 desc: "Resource collection API of Services."
 metadata: {}
 package: "com.azure.resourcemanager.datamigration.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-datamigration:1.0.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-datamigration:1.2.0

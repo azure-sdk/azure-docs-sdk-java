@@ -26,7 +26,7 @@ methods:
   fullName: "com.azure.resourcemanager.quota.QuotaManager.authenticate(HttpPipeline httpPipeline, AzureProfile profile)"
   name: "authenticate(HttpPipeline httpPipeline, AzureProfile profile)"
   nameWithType: "QuotaManager.authenticate(HttpPipeline httpPipeline, AzureProfile profile)"
-  summary: "Creates an instance of quota service API entry point."
+  summary: "Creates an instance of Quota service API entry point."
   modifiers:
   - "static"
   parameters:
@@ -37,15 +37,15 @@ methods:
     name: "profile"
     type: "<xref href=\"com.azure.core.management.profile.AzureProfile?alt=com.azure.core.management.profile.AzureProfile&text=AzureProfile\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static QuotaManager authenticate(HttpPipeline httpPipeline, AzureProfile profile)"
-  desc: "Creates an instance of quota service API entry point."
+  desc: "Creates an instance of Quota service API entry point."
   returns:
-    description: "the quota service API instance."
+    description: "the Quota service API instance."
     type: "<xref href=\"com.azure.resourcemanager.quota.QuotaManager?alt=com.azure.resourcemanager.quota.QuotaManager&text=QuotaManager\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.quota.QuotaManager.authenticate(com.azure.core.credential.TokenCredential,com.azure.core.management.profile.AzureProfile)"
   fullName: "com.azure.resourcemanager.quota.QuotaManager.authenticate(TokenCredential credential, AzureProfile profile)"
   name: "authenticate(TokenCredential credential, AzureProfile profile)"
   nameWithType: "QuotaManager.authenticate(TokenCredential credential, AzureProfile profile)"
-  summary: "Creates an instance of quota service API entry point."
+  summary: "Creates an instance of Quota service API entry point."
   modifiers:
   - "static"
   parameters:
@@ -56,9 +56,9 @@ methods:
     name: "profile"
     type: "<xref href=\"com.azure.core.management.profile.AzureProfile?alt=com.azure.core.management.profile.AzureProfile&text=AzureProfile\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static QuotaManager authenticate(TokenCredential credential, AzureProfile profile)"
-  desc: "Creates an instance of quota service API entry point."
+  desc: "Creates an instance of Quota service API entry point."
   returns:
-    description: "the quota service API instance."
+    description: "the Quota service API instance."
     type: "<xref href=\"com.azure.resourcemanager.quota.QuotaManager?alt=com.azure.resourcemanager.quota.QuotaManager&text=QuotaManager\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.quota.QuotaManager.configure()"
   fullName: "com.azure.resourcemanager.quota.QuotaManager.configure()"
@@ -92,6 +92,16 @@ methods:
   returns:
     description: "Resource collection API of GroupQuotaLimitsRequests."
     type: "<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotaLimitsRequests?alt=com.azure.resourcemanager.quota.models.GroupQuotaLimitsRequests&text=GroupQuotaLimitsRequests\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.quota.QuotaManager.groupQuotaLocationSettings()"
+  fullName: "com.azure.resourcemanager.quota.QuotaManager.groupQuotaLocationSettings()"
+  name: "groupQuotaLocationSettings()"
+  nameWithType: "QuotaManager.groupQuotaLocationSettings()"
+  summary: "Gets the resource collection API of Group<wbr>Quota<wbr>Location<wbr>Settings."
+  syntax: "public GroupQuotaLocationSettings groupQuotaLocationSettings()"
+  desc: "Gets the resource collection API of GroupQuotaLocationSettings."
+  returns:
+    description: "Resource collection API of GroupQuotaLocationSettings."
+    type: "<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotaLocationSettings?alt=com.azure.resourcemanager.quota.models.GroupQuotaLocationSettings&text=GroupQuotaLocationSettings\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.quota.QuotaManager.groupQuotas()"
   fullName: "com.azure.resourcemanager.quota.QuotaManager.groupQuotas()"
   name: "groupQuotas()"
@@ -142,6 +152,16 @@ methods:
   returns:
     description: "Resource collection API of GroupQuotaSubscriptions."
     type: "<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotaSubscriptions?alt=com.azure.resourcemanager.quota.models.GroupQuotaSubscriptions&text=GroupQuotaSubscriptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.quota.QuotaManager.groupQuotaUsages()"
+  fullName: "com.azure.resourcemanager.quota.QuotaManager.groupQuotaUsages()"
+  name: "groupQuotaUsages()"
+  nameWithType: "QuotaManager.groupQuotaUsages()"
+  summary: "Gets the resource collection API of Group<wbr>Quota<wbr>Usages."
+  syntax: "public GroupQuotaUsages groupQuotaUsages()"
+  desc: "Gets the resource collection API of GroupQuotaUsages."
+  returns:
+    description: "Resource collection API of GroupQuotaUsages."
+    type: "<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotaUsages?alt=com.azure.resourcemanager.quota.models.GroupQuotaUsages&text=GroupQuotaUsages\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.quota.QuotaManager.quotaOperations()"
   fullName: "com.azure.resourcemanager.quota.QuotaManager.quotaOperations()"
   name: "quotaOperations()"
@@ -176,12 +196,12 @@ methods:
   fullName: "com.azure.resourcemanager.quota.QuotaManager.serviceClient()"
   name: "serviceClient()"
   nameWithType: "QuotaManager.serviceClient()"
-  summary: "Gets wrapped service client Azure<wbr>Quota<wbr>Extension<wbr>Api providing direct access to the underlying auto-generated API implementation, based on Azure REST API."
-  syntax: "public AzureQuotaExtensionApi serviceClient()"
-  desc: "Gets wrapped service client AzureQuotaExtensionApi providing direct access to the underlying auto-generated API implementation, based on Azure REST API."
+  summary: "Gets wrapped service client Quota<wbr>Management<wbr>Client providing direct access to the underlying auto-generated API implementation, based on Azure REST API."
+  syntax: "public QuotaManagementClient serviceClient()"
+  desc: "Gets wrapped service client QuotaManagementClient providing direct access to the underlying auto-generated API implementation, based on Azure REST API."
   returns:
-    description: "Wrapped service client AzureQuotaExtensionApi."
-    type: "<xref href=\"com.azure.resourcemanager.quota.fluent.AzureQuotaExtensionApi?alt=com.azure.resourcemanager.quota.fluent.AzureQuotaExtensionApi&text=AzureQuotaExtensionApi\" data-throw-if-not-resolved=\"False\" />"
+    description: "Wrapped service client QuotaManagementClient."
+    type: "<xref href=\"com.azure.resourcemanager.quota.fluent.QuotaManagementClient?alt=com.azure.resourcemanager.quota.fluent.QuotaManagementClient&text=QuotaManagementClient\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.quota.QuotaManager.usages()"
   fullName: "com.azure.resourcemanager.quota.QuotaManager.usages()"
   name: "usages()"
@@ -193,7 +213,7 @@ methods:
     description: "Resource collection API of Usages."
     type: "<xref href=\"com.azure.resourcemanager.quota.models.Usages?alt=com.azure.resourcemanager.quota.models.Usages&text=Usages\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Entry point to QuotaManager. Microsoft Azure Quota Resource Provider. This Swagger is for Azure Group Quota using GroupQuota Entity."
+desc: "Entry point to QuotaManager. Microsoft Azure Quota Resource Provider."
 metadata: {}
 package: "com.azure.resourcemanager.quota"
-artifact: com.azure.resourcemanager:azure-resourcemanager-quota:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-quota:2.0.0

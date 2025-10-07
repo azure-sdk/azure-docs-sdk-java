@@ -10,7 +10,7 @@ methods:
   fullName: "com.azure.resourcemanager.quota.models.GroupQuotaSubscriptions.createOrUpdate(String managementGroupId, String groupQuotaName)"
   name: "createOrUpdate(String managementGroupId, String groupQuotaName)"
   nameWithType: "GroupQuotaSubscriptions.createOrUpdate(String managementGroupId, String groupQuotaName)"
-  summary: "Adds subscription to the Group<wbr>Quotas."
+  summary: "Adds a subscription to Group<wbr>Quotas."
   modifiers:
   - "abstract"
   parameters:
@@ -20,16 +20,16 @@ methods:
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
     name: "groupQuotaName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract ProxyResource createOrUpdate(String managementGroupId, String groupQuotaName)"
-  desc: "Adds subscription to the GroupQuotas. Adds a subscription to GroupQuotas. The subscriptions will be validated based on the additionalAttributes defined in the GroupQuota. The additionalAttributes works as filter for the subscriptions, which can be included in the GroupQuotas. The request's TenantId is validated against the subscription's TenantId."
+  syntax: "public abstract GroupQuotaSubscriptionId createOrUpdate(String managementGroupId, String groupQuotaName)"
+  desc: "Adds a subscription to GroupQuotas. The subscriptions will be validated based on the additionalAttributes defined in the GroupQuota. The additionalAttributes works as filter for the subscriptions, which can be included in the GroupQuotas. The request's TenantId is validated against the subscription's TenantId."
   returns:
     description: "this represents a Azure subscriptionId that is associated with a GroupQuotasEntity."
-    type: "<xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionId?alt=com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionId&text=GroupQuotaSubscriptionId\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.quota.models.GroupQuotaSubscriptions.createOrUpdate(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.quota.models.GroupQuotaSubscriptions.createOrUpdate(String managementGroupId, String groupQuotaName, Context context)"
   name: "createOrUpdate(String managementGroupId, String groupQuotaName, Context context)"
   nameWithType: "GroupQuotaSubscriptions.createOrUpdate(String managementGroupId, String groupQuotaName, Context context)"
-  summary: "Adds subscription to the Group<wbr>Quotas."
+  summary: "Adds a subscription to Group<wbr>Quotas."
   modifiers:
   - "abstract"
   parameters:
@@ -42,11 +42,11 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract ProxyResource createOrUpdate(String managementGroupId, String groupQuotaName, Context context)"
-  desc: "Adds subscription to the GroupQuotas. Adds a subscription to GroupQuotas. The subscriptions will be validated based on the additionalAttributes defined in the GroupQuota. The additionalAttributes works as filter for the subscriptions, which can be included in the GroupQuotas. The request's TenantId is validated against the subscription's TenantId."
+  syntax: "public abstract GroupQuotaSubscriptionId createOrUpdate(String managementGroupId, String groupQuotaName, Context context)"
+  desc: "Adds a subscription to GroupQuotas. The subscriptions will be validated based on the additionalAttributes defined in the GroupQuota. The additionalAttributes works as filter for the subscriptions, which can be included in the GroupQuotas. The request's TenantId is validated against the subscription's TenantId."
   returns:
     description: "this represents a Azure subscriptionId that is associated with a GroupQuotasEntity."
-    type: "<xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionId?alt=com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionId&text=GroupQuotaSubscriptionId\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.quota.models.GroupQuotaSubscriptions.delete(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.quota.models.GroupQuotaSubscriptions.delete(String managementGroupId, String groupQuotaName, Context context)"
   name: "delete(String managementGroupId, String groupQuotaName, Context context)"
@@ -55,7 +55,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
@@ -65,7 +65,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract void delete(String managementGroupId, String groupQuotaName, Context context)"
-  desc: "Removes the subscription from GroupQuotas. Removes the subscription from GroupQuotas. The request's TenantId is validated against the subscription's TenantId."
+  desc: "Removes the subscription from GroupQuotas. The request's TenantId is validated against the subscription's TenantId."
 - uid: "com.azure.resourcemanager.quota.models.GroupQuotaSubscriptions.deleteByResourceGroup(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.quota.models.GroupQuotaSubscriptions.deleteByResourceGroup(String managementGroupId, String groupQuotaName)"
   name: "deleteByResourceGroup(String managementGroupId, String groupQuotaName)"
@@ -74,30 +74,30 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
     name: "groupQuotaName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract void deleteByResourceGroup(String managementGroupId, String groupQuotaName)"
-  desc: "Removes the subscription from GroupQuotas. Removes the subscription from GroupQuotas. The request's TenantId is validated against the subscription's TenantId."
+  desc: "Removes the subscription from GroupQuotas. The request's TenantId is validated against the subscription's TenantId."
 - uid: "com.azure.resourcemanager.quota.models.GroupQuotaSubscriptions.get(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.quota.models.GroupQuotaSubscriptions.get(String managementGroupId, String groupQuotaName)"
   name: "get(String managementGroupId, String groupQuotaName)"
   nameWithType: "GroupQuotaSubscriptions.get(String managementGroupId, String groupQuotaName)"
-  summary: "Returns the subscription<wbr>Id along with its provisioning state for being associated with the Group<wbr>Quotas."
+  summary: "Returns the subscription<wbr>Ids along with its provisioning state for being associated with the Group<wbr>Quota."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
     name: "groupQuotaName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract GroupQuotaSubscriptionId get(String managementGroupId, String groupQuotaName)"
-  desc: "Returns the subscriptionId along with its provisioning state for being associated with the GroupQuotas. Returns the subscriptionIds along with its provisioning state for being associated with the GroupQuota. If the subscription is not a member of GroupQuota, it will return 404, else 200."
+  desc: "Returns the subscriptionIds along with its provisioning state for being associated with the GroupQuota. If the subscription is not a member of GroupQuota, it will return 404, else 200."
   returns:
     description: "this represents a Azure subscriptionId that is associated with a GroupQuotasEntity."
     type: "<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionId?alt=com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionId&text=GroupQuotaSubscriptionId\" data-throw-if-not-resolved=\"False\" />"
@@ -105,11 +105,11 @@ methods:
   fullName: "com.azure.resourcemanager.quota.models.GroupQuotaSubscriptions.getWithResponse(String managementGroupId, String groupQuotaName, Context context)"
   name: "getWithResponse(String managementGroupId, String groupQuotaName, Context context)"
   nameWithType: "GroupQuotaSubscriptions.getWithResponse(String managementGroupId, String groupQuotaName, Context context)"
-  summary: "Returns the subscription<wbr>Id along with its provisioning state for being associated with the Group<wbr>Quotas."
+  summary: "Returns the subscription<wbr>Ids along with its provisioning state for being associated with the Group<wbr>Quota."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
@@ -119,7 +119,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<GroupQuotaSubscriptionId> getWithResponse(String managementGroupId, String groupQuotaName, Context context)"
-  desc: "Returns the subscriptionId along with its provisioning state for being associated with the GroupQuotas. Returns the subscriptionIds along with its provisioning state for being associated with the GroupQuota. If the subscription is not a member of GroupQuota, it will return 404, else 200."
+  desc: "Returns the subscriptionIds along with its provisioning state for being associated with the GroupQuota. If the subscription is not a member of GroupQuota, it will return 404, else 200."
   returns:
     description: "this represents a Azure subscriptionId that is associated with a GroupQuotasEntity along with\n <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionId?alt=com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionId&text=GroupQuotaSubscriptionId\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -127,18 +127,18 @@ methods:
   fullName: "com.azure.resourcemanager.quota.models.GroupQuotaSubscriptions.list(String managementGroupId, String groupQuotaName)"
   name: "list(String managementGroupId, String groupQuotaName)"
   nameWithType: "GroupQuotaSubscriptions.list(String managementGroupId, String groupQuotaName)"
-  summary: "Returns a list of the subscription<wbr>Ids for the Group<wbr>Quotas."
+  summary: "Returns a list of the subscription<wbr>Ids associated with the Group<wbr>Quotas."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
     name: "groupQuotaName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<GroupQuotaSubscriptionId> list(String managementGroupId, String groupQuotaName)"
-  desc: "Returns a list of the subscriptionIds for the GroupQuotas. Returns a list of the subscriptionIds associated with the GroupQuotas."
+  desc: "Returns a list of the subscriptionIds associated with the GroupQuotas."
   returns:
     description: "list of GroupQuotaSubscriptionIds as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionId?alt=com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionId&text=GroupQuotaSubscriptionId\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -146,11 +146,11 @@ methods:
   fullName: "com.azure.resourcemanager.quota.models.GroupQuotaSubscriptions.list(String managementGroupId, String groupQuotaName, Context context)"
   name: "list(String managementGroupId, String groupQuotaName, Context context)"
   nameWithType: "GroupQuotaSubscriptions.list(String managementGroupId, String groupQuotaName, Context context)"
-  summary: "Returns a list of the subscription<wbr>Ids for the Group<wbr>Quotas."
+  summary: "Returns a list of the subscription<wbr>Ids associated with the Group<wbr>Quotas."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
@@ -160,7 +160,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<GroupQuotaSubscriptionId> list(String managementGroupId, String groupQuotaName, Context context)"
-  desc: "Returns a list of the subscriptionIds for the GroupQuotas. Returns a list of the subscriptionIds associated with the GroupQuotas."
+  desc: "Returns a list of the subscriptionIds associated with the GroupQuotas."
   returns:
     description: "list of GroupQuotaSubscriptionIds as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionId?alt=com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionId&text=GroupQuotaSubscriptionId\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -179,7 +179,7 @@ methods:
     name: "groupQuotaName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract GroupQuotaSubscriptionId update(String managementGroupId, String groupQuotaName)"
-  desc: "Updates the GroupQuotas with the subscription to add to the subscriptions list. Updates the GroupQuotas with the subscription to add to the subscriptions list. The subscriptions will be validated if additionalAttributes are defined in the GroupQuota. The request's TenantId is validated against the subscription's TenantId."
+  desc: "Updates the GroupQuotas with the subscription to add to the subscriptions list. The subscriptions will be validated if additionalAttributes are defined in the GroupQuota. The request's TenantId is validated against the subscription's TenantId."
   returns:
     description: "this represents a Azure subscriptionId that is associated with a GroupQuotasEntity."
     type: "<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionId?alt=com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionId&text=GroupQuotaSubscriptionId\" data-throw-if-not-resolved=\"False\" />"
@@ -201,7 +201,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract GroupQuotaSubscriptionId update(String managementGroupId, String groupQuotaName, Context context)"
-  desc: "Updates the GroupQuotas with the subscription to add to the subscriptions list. Updates the GroupQuotas with the subscription to add to the subscriptions list. The subscriptions will be validated if additionalAttributes are defined in the GroupQuota. The request's TenantId is validated against the subscription's TenantId."
+  desc: "Updates the GroupQuotas with the subscription to add to the subscriptions list. The subscriptions will be validated if additionalAttributes are defined in the GroupQuota. The request's TenantId is validated against the subscription's TenantId."
   returns:
     description: "this represents a Azure subscriptionId that is associated with a GroupQuotasEntity."
     type: "<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionId?alt=com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionId&text=GroupQuotaSubscriptionId\" data-throw-if-not-resolved=\"False\" />"
@@ -209,4 +209,4 @@ type: "interface"
 desc: "Resource collection API of GroupQuotaSubscriptions."
 metadata: {}
 package: "com.azure.resourcemanager.quota.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-quota:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-quota:2.0.0

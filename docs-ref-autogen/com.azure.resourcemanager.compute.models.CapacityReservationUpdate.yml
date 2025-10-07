@@ -107,13 +107,23 @@ methods:
   returns:
     description: "the reservationId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.compute.models.CapacityReservationUpdate.scheduleProfile()"
+  fullName: "com.azure.resourcemanager.compute.models.CapacityReservationUpdate.scheduleProfile()"
+  name: "scheduleProfile()"
+  nameWithType: "CapacityReservationUpdate.scheduleProfile()"
+  summary: "Get the schedule<wbr>Profile property: Defines the schedule for Block-type capacity reservations."
+  syntax: "public ScheduleProfile scheduleProfile()"
+  desc: "Get the scheduleProfile property: Defines the schedule for Block-type capacity reservations. Specifies the schedule during which capacity reservation is active and VM or VMSS resource can be allocated using reservation. This property is required and only supported when the capacity reservation group type is 'Block'. The scheduleProfile, start, and end fields are immutable after creation. Minimum API version: 2025-04-01. Please refer to https://aka.ms/blockcapacityreservation for more details."
+  returns:
+    description: "the scheduleProfile value."
+    type: "<xref href=\"com.azure.resourcemanager.compute.models.ScheduleProfile?alt=com.azure.resourcemanager.compute.models.ScheduleProfile&text=ScheduleProfile\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.compute.models.CapacityReservationUpdate.sku()"
   fullName: "com.azure.resourcemanager.compute.models.CapacityReservationUpdate.sku()"
   name: "sku()"
   nameWithType: "CapacityReservationUpdate.sku()"
   summary: "Get the sku property: SKU of the resource for which capacity needs be reserved."
   syntax: "public Sku sku()"
-  desc: "Get the sku property: SKU of the resource for which capacity needs be reserved. The SKU name and capacity is required to be set. Currently VM Skus with the capability called 'CapacityReservationSupported' set to true are supported. Refer to List Microsoft.Compute SKUs in a region (https://docs.microsoft.com/rest/api/compute/resourceskus/list) for supported values."
+  desc: "Get the sku property: SKU of the resource for which capacity needs be reserved. The SKU name and capacity is required to be set. Currently VM Skus with the capability called 'CapacityReservationSupported' set to true are supported. When 'CapacityReservationSupported' is true, the SKU capability also specifies the 'SupportedCapacityReservationTypes', which lists the types of capacity reservations (such as Targeted or Block) that the SKU supports. Refer to List Microsoft.Compute SKUs in a region (https://docs.microsoft.com/rest/api/compute/resourceskus/list) for supported values. \\*\\*Note:\\*\\* The SKU name and capacity cannot be updated for Block capacity reservations."
   returns:
     description: "the sku value."
     type: "<xref href=\"com.azure.resourcemanager.compute.models.Sku?alt=com.azure.resourcemanager.compute.models.Sku&text=Sku\" data-throw-if-not-resolved=\"False\" />"
@@ -158,6 +168,20 @@ methods:
   returns:
     description: "the virtualMachinesAssociated value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.compute.models.SubResourceReadOnly?alt=com.azure.resourcemanager.compute.models.SubResourceReadOnly&text=SubResourceReadOnly\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.compute.models.CapacityReservationUpdate.withScheduleProfile(com.azure.resourcemanager.compute.models.ScheduleProfile)"
+  fullName: "com.azure.resourcemanager.compute.models.CapacityReservationUpdate.withScheduleProfile(ScheduleProfile scheduleProfile)"
+  name: "withScheduleProfile(ScheduleProfile scheduleProfile)"
+  nameWithType: "CapacityReservationUpdate.withScheduleProfile(ScheduleProfile scheduleProfile)"
+  summary: "Set the schedule<wbr>Profile property: Defines the schedule for Block-type capacity reservations."
+  parameters:
+  - description: "the scheduleProfile value to set."
+    name: "scheduleProfile"
+    type: "<xref href=\"com.azure.resourcemanager.compute.models.ScheduleProfile?alt=com.azure.resourcemanager.compute.models.ScheduleProfile&text=ScheduleProfile\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public CapacityReservationUpdate withScheduleProfile(ScheduleProfile scheduleProfile)"
+  desc: "Set the scheduleProfile property: Defines the schedule for Block-type capacity reservations. Specifies the schedule during which capacity reservation is active and VM or VMSS resource can be allocated using reservation. This property is required and only supported when the capacity reservation group type is 'Block'. The scheduleProfile, start, and end fields are immutable after creation. Minimum API version: 2025-04-01. Please refer to https://aka.ms/blockcapacityreservation for more details."
+  returns:
+    description: "the CapacityReservationUpdate object itself."
+    type: "<xref href=\"com.azure.resourcemanager.compute.models.CapacityReservationUpdate?alt=com.azure.resourcemanager.compute.models.CapacityReservationUpdate&text=CapacityReservationUpdate\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.compute.models.CapacityReservationUpdate.withSku(com.azure.resourcemanager.compute.models.Sku)"
   fullName: "com.azure.resourcemanager.compute.models.CapacityReservationUpdate.withSku(Sku sku)"
   name: "withSku(Sku sku)"
@@ -168,7 +192,7 @@ methods:
     name: "sku"
     type: "<xref href=\"com.azure.resourcemanager.compute.models.Sku?alt=com.azure.resourcemanager.compute.models.Sku&text=Sku\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public CapacityReservationUpdate withSku(Sku sku)"
-  desc: "Set the sku property: SKU of the resource for which capacity needs be reserved. The SKU name and capacity is required to be set. Currently VM Skus with the capability called 'CapacityReservationSupported' set to true are supported. Refer to List Microsoft.Compute SKUs in a region (https://docs.microsoft.com/rest/api/compute/resourceskus/list) for supported values."
+  desc: "Set the sku property: SKU of the resource for which capacity needs be reserved. The SKU name and capacity is required to be set. Currently VM Skus with the capability called 'CapacityReservationSupported' set to true are supported. When 'CapacityReservationSupported' is true, the SKU capability also specifies the 'SupportedCapacityReservationTypes', which lists the types of capacity reservations (such as Targeted or Block) that the SKU supports. Refer to List Microsoft.Compute SKUs in a region (https://docs.microsoft.com/rest/api/compute/resourceskus/list) for supported values. \\*\\*Note:\\*\\* The SKU name and capacity cannot be updated for Block capacity reservations."
   returns:
     description: "the CapacityReservationUpdate object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.models.CapacityReservationUpdate?alt=com.azure.resourcemanager.compute.models.CapacityReservationUpdate&text=CapacityReservationUpdate\" data-throw-if-not-resolved=\"False\" />"
@@ -186,7 +210,7 @@ methods:
   returns:
     type: "<xref href=\"com.azure.resourcemanager.compute.models.CapacityReservationUpdate?alt=com.azure.resourcemanager.compute.models.CapacityReservationUpdate&text=CapacityReservationUpdate\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Specifies information about the capacity reservation. Only tags and sku.capacity can be updated."
+desc: "Specifies information about the capacity reservation. sku.capacity cannot be updated for Block Capacity Reservation. Tags can be update for all Capacity Reservation Types."
 metadata: {}
 package: "com.azure.resourcemanager.compute.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.53.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.54.0

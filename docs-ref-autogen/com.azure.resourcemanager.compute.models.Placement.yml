@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.compute.models.Placement"
 fullName: "com.azure.resourcemanager.compute.models.Placement"
 name: "Placement"
 nameWithType: "Placement"
-summary: "Describes the user-defined constraints for virtual machine hardware placement."
+summary: "Describes the user-defined constraints for resource hardware placement."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -36,7 +36,7 @@ methods:
   nameWithType: "Placement.excludeZones()"
   summary: "Get the exclude<wbr>Zones property: This property supplements the 'zone<wbr>Placement<wbr>Policy' property."
   syntax: "public List<String> excludeZones()"
-  desc: "Get the excludeZones property: This property supplements the 'zonePlacementPolicy' property. If 'zonePlacementPolicy' is set to 'Any', availability zone selected by the system must not be present in the list of availability zones passed with 'excludeZones'. If 'excludeZones' is not provided, all availability zones in region will be considered for selection."
+  desc: "Get the excludeZones property: This property supplements the 'zonePlacementPolicy' property. If 'zonePlacementPolicy' is set to 'Any'/'Auto', availability zone selected by the system must not be present in the list of availability zones passed with 'excludeZones'. If 'excludeZones' is not provided, all availability zones in region will be considered for selection."
   returns:
     description: "the excludeZones value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
@@ -65,7 +65,7 @@ methods:
   nameWithType: "Placement.includeZones()"
   summary: "Get the include<wbr>Zones property: This property supplements the 'zone<wbr>Placement<wbr>Policy' property."
   syntax: "public List<String> includeZones()"
-  desc: "Get the includeZones property: This property supplements the 'zonePlacementPolicy' property. If 'zonePlacementPolicy' is set to 'Any', availability zone selected by the system must be present in the list of availability zones passed with 'includeZones'. If 'includeZones' is not provided, all availability zones in region will be considered for selection."
+  desc: "Get the includeZones property: This property supplements the 'zonePlacementPolicy' property. If 'zonePlacementPolicy' is set to 'Any'/'Auto', availability zone selected by the system must be present in the list of availability zones passed with 'includeZones'. If 'includeZones' is not provided, all availability zones in region will be considered for selection."
   returns:
     description: "the includeZones value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
@@ -98,7 +98,7 @@ methods:
     name: "excludeZones"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
   syntax: "public Placement withExcludeZones(List<String> excludeZones)"
-  desc: "Set the excludeZones property: This property supplements the 'zonePlacementPolicy' property. If 'zonePlacementPolicy' is set to 'Any', availability zone selected by the system must not be present in the list of availability zones passed with 'excludeZones'. If 'excludeZones' is not provided, all availability zones in region will be considered for selection."
+  desc: "Set the excludeZones property: This property supplements the 'zonePlacementPolicy' property. If 'zonePlacementPolicy' is set to 'Any'/'Auto', availability zone selected by the system must not be present in the list of availability zones passed with 'excludeZones'. If 'excludeZones' is not provided, all availability zones in region will be considered for selection."
   returns:
     description: "the Placement object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.models.Placement?alt=com.azure.resourcemanager.compute.models.Placement&text=Placement\" data-throw-if-not-resolved=\"False\" />"
@@ -112,7 +112,7 @@ methods:
     name: "includeZones"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
   syntax: "public Placement withIncludeZones(List<String> includeZones)"
-  desc: "Set the includeZones property: This property supplements the 'zonePlacementPolicy' property. If 'zonePlacementPolicy' is set to 'Any', availability zone selected by the system must be present in the list of availability zones passed with 'includeZones'. If 'includeZones' is not provided, all availability zones in region will be considered for selection."
+  desc: "Set the includeZones property: This property supplements the 'zonePlacementPolicy' property. If 'zonePlacementPolicy' is set to 'Any'/'Auto', availability zone selected by the system must be present in the list of availability zones passed with 'includeZones'. If 'includeZones' is not provided, all availability zones in region will be considered for selection."
   returns:
     description: "the Placement object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.models.Placement?alt=com.azure.resourcemanager.compute.models.Placement&text=Placement\" data-throw-if-not-resolved=\"False\" />"
@@ -120,13 +120,13 @@ methods:
   fullName: "com.azure.resourcemanager.compute.models.Placement.withZonePlacementPolicy(ZonePlacementPolicyType zonePlacementPolicy)"
   name: "withZonePlacementPolicy(ZonePlacementPolicyType zonePlacementPolicy)"
   nameWithType: "Placement.withZonePlacementPolicy(ZonePlacementPolicyType zonePlacementPolicy)"
-  summary: "Set the zone<wbr>Placement<wbr>Policy property: Specifies the policy for virtual machine's placement in availability zone."
+  summary: "Set the zone<wbr>Placement<wbr>Policy property: Specifies the policy for resource's placement in availability zone."
   parameters:
   - description: "the zonePlacementPolicy value to set."
     name: "zonePlacementPolicy"
     type: "<xref href=\"com.azure.resourcemanager.compute.models.ZonePlacementPolicyType?alt=com.azure.resourcemanager.compute.models.ZonePlacementPolicyType&text=ZonePlacementPolicyType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public Placement withZonePlacementPolicy(ZonePlacementPolicyType zonePlacementPolicy)"
-  desc: "Set the zonePlacementPolicy property: Specifies the policy for virtual machine's placement in availability zone. Possible values are: \\*\\*Any\\*\\* - An availability zone will be automatically picked by system as part of virtual machine creation."
+  desc: "Set the zonePlacementPolicy property: Specifies the policy for resource's placement in availability zone. Possible values are: \\*\\*Any\\*\\* (used for Virtual Machines), \\*\\*Auto\\*\\* (used for Virtual Machine Scale Sets) - An availability zone will be automatically picked by system as part of resource creation."
   returns:
     description: "the Placement object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.models.Placement?alt=com.azure.resourcemanager.compute.models.Placement&text=Placement\" data-throw-if-not-resolved=\"False\" />"
@@ -134,16 +134,16 @@ methods:
   fullName: "com.azure.resourcemanager.compute.models.Placement.zonePlacementPolicy()"
   name: "zonePlacementPolicy()"
   nameWithType: "Placement.zonePlacementPolicy()"
-  summary: "Get the zone<wbr>Placement<wbr>Policy property: Specifies the policy for virtual machine's placement in availability zone."
+  summary: "Get the zone<wbr>Placement<wbr>Policy property: Specifies the policy for resource's placement in availability zone."
   syntax: "public ZonePlacementPolicyType zonePlacementPolicy()"
-  desc: "Get the zonePlacementPolicy property: Specifies the policy for virtual machine's placement in availability zone. Possible values are: \\*\\*Any\\*\\* - An availability zone will be automatically picked by system as part of virtual machine creation."
+  desc: "Get the zonePlacementPolicy property: Specifies the policy for resource's placement in availability zone. Possible values are: \\*\\*Any\\*\\* (used for Virtual Machines), \\*\\*Auto\\*\\* (used for Virtual Machine Scale Sets) - An availability zone will be automatically picked by system as part of resource creation."
   returns:
     description: "the zonePlacementPolicy value."
     type: "<xref href=\"com.azure.resourcemanager.compute.models.ZonePlacementPolicyType?alt=com.azure.resourcemanager.compute.models.ZonePlacementPolicyType&text=ZonePlacementPolicyType\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Describes the user-defined constraints for virtual machine hardware placement."
+desc: "Describes the user-defined constraints for resource hardware placement."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.compute.models.Placement?alt=com.azure.resourcemanager.compute.models.Placement&text=Placement\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.compute.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.53.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.54.0

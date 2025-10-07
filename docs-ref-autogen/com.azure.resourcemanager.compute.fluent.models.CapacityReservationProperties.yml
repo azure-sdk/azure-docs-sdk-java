@@ -99,6 +99,16 @@ methods:
   returns:
     description: "the reservationId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.compute.fluent.models.CapacityReservationProperties.scheduleProfile()"
+  fullName: "com.azure.resourcemanager.compute.fluent.models.CapacityReservationProperties.scheduleProfile()"
+  name: "scheduleProfile()"
+  nameWithType: "CapacityReservationProperties.scheduleProfile()"
+  summary: "Get the schedule<wbr>Profile property: Defines the schedule for Block-type capacity reservations."
+  syntax: "public ScheduleProfile scheduleProfile()"
+  desc: "Get the scheduleProfile property: Defines the schedule for Block-type capacity reservations. Specifies the schedule during which capacity reservation is active and VM or VMSS resource can be allocated using reservation. This property is required and only supported when the capacity reservation group type is 'Block'. The scheduleProfile, start, and end fields are immutable after creation. Minimum API version: 2025-04-01. Please refer to https://aka.ms/blockcapacityreservation for more details."
+  returns:
+    description: "the scheduleProfile value."
+    type: "<xref href=\"com.azure.resourcemanager.compute.models.ScheduleProfile?alt=com.azure.resourcemanager.compute.models.ScheduleProfile&text=ScheduleProfile\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.compute.fluent.models.CapacityReservationProperties.timeCreated()"
   fullName: "com.azure.resourcemanager.compute.fluent.models.CapacityReservationProperties.timeCreated()"
   name: "timeCreated()"
@@ -138,10 +148,24 @@ methods:
   returns:
     description: "the virtualMachinesAssociated value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.compute.models.SubResourceReadOnly?alt=com.azure.resourcemanager.compute.models.SubResourceReadOnly&text=SubResourceReadOnly\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.compute.fluent.models.CapacityReservationProperties.withScheduleProfile(com.azure.resourcemanager.compute.models.ScheduleProfile)"
+  fullName: "com.azure.resourcemanager.compute.fluent.models.CapacityReservationProperties.withScheduleProfile(ScheduleProfile scheduleProfile)"
+  name: "withScheduleProfile(ScheduleProfile scheduleProfile)"
+  nameWithType: "CapacityReservationProperties.withScheduleProfile(ScheduleProfile scheduleProfile)"
+  summary: "Set the schedule<wbr>Profile property: Defines the schedule for Block-type capacity reservations."
+  parameters:
+  - description: "the scheduleProfile value to set."
+    name: "scheduleProfile"
+    type: "<xref href=\"com.azure.resourcemanager.compute.models.ScheduleProfile?alt=com.azure.resourcemanager.compute.models.ScheduleProfile&text=ScheduleProfile\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public CapacityReservationProperties withScheduleProfile(ScheduleProfile scheduleProfile)"
+  desc: "Set the scheduleProfile property: Defines the schedule for Block-type capacity reservations. Specifies the schedule during which capacity reservation is active and VM or VMSS resource can be allocated using reservation. This property is required and only supported when the capacity reservation group type is 'Block'. The scheduleProfile, start, and end fields are immutable after creation. Minimum API version: 2025-04-01. Please refer to https://aka.ms/blockcapacityreservation for more details."
+  returns:
+    description: "the CapacityReservationProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.compute.fluent.models.CapacityReservationProperties?alt=com.azure.resourcemanager.compute.fluent.models.CapacityReservationProperties&text=CapacityReservationProperties\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Properties of the Capacity reservation."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.compute.fluent.models.CapacityReservationProperties?alt=com.azure.resourcemanager.compute.fluent.models.CapacityReservationProperties&text=CapacityReservationProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.compute.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.53.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.54.0

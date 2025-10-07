@@ -157,12 +157,6 @@ fields:
   nameWithType: "PropertyId.LanguageUnderstandingServiceResponse_JsonResult"
   summary: "The Language Understanding Service response output (in JSON format)."
   desc: "The Language Understanding Service response output (in JSON format). Available via <xref uid=\"com.microsoft.cognitiveservices.speech.intent.IntentRecognitionResult.toString\" data-throw-if-not-resolved=\"false\" data-raw-source=\"com.microsoft.cognitiveservices.speech.intent.IntentRecognitionResult#toString\"></xref>."
-- uid: "com.microsoft.cognitiveservices.speech.PropertyId.PronunciationAssessment_ContentTopic"
-  fullName: "com.microsoft.cognitiveservices.speech.PropertyId.PronunciationAssessment_ContentTopic"
-  name: "PronunciationAssessment_ContentTopic"
-  nameWithType: "PropertyId.PronunciationAssessment_ContentTopic"
-  summary: "The content type of the pronunciation assessment."
-  desc: "The content type of the pronunciation assessment. Under normal circumstances, you shouldn't have to use this property directly. instead, use <xref uid=\"com.microsoft.cognitiveservices.speech.PronunciationAssessmentConfig.enableContentAssessmentWithTopic\" data-throw-if-not-resolved=\"false\" data-raw-source=\"com.microsoft.cognitiveservices.speech.PronunciationAssessmentConfig#enableContentAssessmentWithTopic\"></xref>. Added in version 1.33.0"
 - uid: "com.microsoft.cognitiveservices.speech.PropertyId.PronunciationAssessment_EnableMiscue"
   fullName: "com.microsoft.cognitiveservices.speech.PropertyId.PronunciationAssessment_EnableMiscue"
   name: "PronunciationAssessment_EnableMiscue"
@@ -257,8 +251,8 @@ fields:
   fullName: "com.microsoft.cognitiveservices.speech.PropertyId.SpeechServiceConnection_EndSilenceTimeoutMs"
   name: "SpeechServiceConnection_EndSilenceTimeoutMs"
   nameWithType: "PropertyId.SpeechServiceConnection_EndSilenceTimeoutMs"
-  summary: "The end silence timeout value (in milliseconds) used by the service."
-  desc: "The end silence timeout value (in milliseconds) used by the service. Added in version 1.5.0"
+  summary: "This property is deprecated."
+  desc: "This property is deprecated. For current information about silence timeouts, please visit https://aka.ms/csspeech/timeouts."
 - uid: "com.microsoft.cognitiveservices.speech.PropertyId.SpeechServiceConnection_Endpoint"
   fullName: "com.microsoft.cognitiveservices.speech.PropertyId.SpeechServiceConnection_Endpoint"
   name: "SpeechServiceConnection_Endpoint"
@@ -655,6 +649,12 @@ fields:
   nameWithType: "PropertyId.Speech_SessionId"
   summary: "The session id."
   desc: "The session id. This id is a universally unique identifier (aka UUID) representing a specific binding of an audio input stream and the underlying speech recognition instance to which its bound. Under normal circumstances, you shouldn't have to use this property directly. Instead use <xref uid=\"com.microsoft.cognitiveservices.speech.SessionEventArgs.getSessionId\" data-throw-if-not-resolved=\"false\" data-raw-source=\"com.microsoft.cognitiveservices.speech.SessionEventArgs#getSessionId\"></xref>."
+- uid: "com.microsoft.cognitiveservices.speech.PropertyId.Speech_StartEventSensitivity"
+  fullName: "com.microsoft.cognitiveservices.speech.PropertyId.Speech_StartEventSensitivity"
+  name: "Speech_StartEventSensitivity"
+  nameWithType: "PropertyId.Speech_StartEventSensitivity"
+  summary: "The sensitivity of how soon a potential speech start can be signaled."
+  desc: "The sensitivity of how soon a potential speech start can be signaled. Allowed values are \"low\" (default), \"medium\" and \"high\"."
 methods:
 - uid: "com.microsoft.cognitiveservices.speech.PropertyId.getValue()"
   fullName: "com.microsoft.cognitiveservices.speech.PropertyId.getValue()"
@@ -690,4 +690,4 @@ methods:
 desc: "Defines property ids. Changed in version 1.8.0."
 metadata: {}
 package: "com.microsoft.cognitiveservices.speech"
-artifact: com.microsoft.cognitiveservices.speech:client-sdk:1.45.0
+artifact: com.microsoft.cognitiveservices.speech:client-sdk:1.46.0

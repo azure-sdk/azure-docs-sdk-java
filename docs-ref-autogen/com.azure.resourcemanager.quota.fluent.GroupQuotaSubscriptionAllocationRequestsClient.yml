@@ -14,7 +14,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
@@ -30,7 +30,7 @@ methods:
     name: "allocateQuotaRequest"
     type: "<xref href=\"com.azure.resourcemanager.quota.fluent.models.SubscriptionQuotaAllocationsListInner?alt=com.azure.resourcemanager.quota.fluent.models.SubscriptionQuotaAllocationsListInner&text=SubscriptionQuotaAllocationsListInner\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SyncPoller<PollResult<SubscriptionQuotaAllocationsListInner>,SubscriptionQuotaAllocationsListInner> beginUpdate(String managementGroupId, String groupQuotaName, String resourceProviderName, String location, SubscriptionQuotaAllocationsListInner allocateQuotaRequest)"
-  desc: "Request to assign quota from group quota to a specific Subscription. This request will use Asynchronous pattern with 202 response and status polling API. Request to assign quota from group quota to a specific Subscription. The assign GroupQuota to subscriptions or reduce the quota allocated to subscription to give back the unused quota ( quota >= usages) to the groupQuota. So, this API can be used to assign Quota to subscriptions and assign back unused quota to group quota, which can be assigned to another subscriptions in the GroupQuota. User can collect unused quotas from multiple subscriptions within the groupQuota and assign the groupQuota to the subscription, where it's needed."
+  desc: "Request to assign quota from group quota to a specific Subscription. The assign GroupQuota to subscriptions or reduce the quota allocated to subscription to give back the unused quota ( quota >= usages) to the groupQuota. So, this API can be used to assign Quota to subscriptions and assign back unused quota to group quota, which can be assigned to another subscriptions in the GroupQuota. User can collect unused quotas from multiple subscriptions within the groupQuota and assign the groupQuota to the subscription, where it's needed."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of subscription quota list."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.quota.fluent.models.SubscriptionQuotaAllocationsListInner?alt=com.azure.resourcemanager.quota.fluent.models.SubscriptionQuotaAllocationsListInner&text=SubscriptionQuotaAllocationsListInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.quota.fluent.models.SubscriptionQuotaAllocationsListInner?alt=com.azure.resourcemanager.quota.fluent.models.SubscriptionQuotaAllocationsListInner&text=SubscriptionQuotaAllocationsListInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -42,7 +42,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
@@ -61,7 +61,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SyncPoller<PollResult<SubscriptionQuotaAllocationsListInner>,SubscriptionQuotaAllocationsListInner> beginUpdate(String managementGroupId, String groupQuotaName, String resourceProviderName, String location, SubscriptionQuotaAllocationsListInner allocateQuotaRequest, Context context)"
-  desc: "Request to assign quota from group quota to a specific Subscription. This request will use Asynchronous pattern with 202 response and status polling API. Request to assign quota from group quota to a specific Subscription. The assign GroupQuota to subscriptions or reduce the quota allocated to subscription to give back the unused quota ( quota >= usages) to the groupQuota. So, this API can be used to assign Quota to subscriptions and assign back unused quota to group quota, which can be assigned to another subscriptions in the GroupQuota. User can collect unused quotas from multiple subscriptions within the groupQuota and assign the groupQuota to the subscription, where it's needed."
+  desc: "Request to assign quota from group quota to a specific Subscription. The assign GroupQuota to subscriptions or reduce the quota allocated to subscription to give back the unused quota ( quota >= usages) to the groupQuota. So, this API can be used to assign Quota to subscriptions and assign back unused quota to group quota, which can be assigned to another subscriptions in the GroupQuota. User can collect unused quotas from multiple subscriptions within the groupQuota and assign the groupQuota to the subscription, where it's needed."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of subscription quota list."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.quota.fluent.models.SubscriptionQuotaAllocationsListInner?alt=com.azure.resourcemanager.quota.fluent.models.SubscriptionQuotaAllocationsListInner&text=SubscriptionQuotaAllocationsListInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.quota.fluent.models.SubscriptionQuotaAllocationsListInner?alt=com.azure.resourcemanager.quota.fluent.models.SubscriptionQuotaAllocationsListInner&text=SubscriptionQuotaAllocationsListInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -69,11 +69,11 @@ methods:
   fullName: "com.azure.resourcemanager.quota.fluent.GroupQuotaSubscriptionAllocationRequestsClient.get(String managementGroupId, String groupQuotaName, String resourceProviderName, String allocationId)"
   name: "get(String managementGroupId, String groupQuotaName, String resourceProviderName, String allocationId)"
   nameWithType: "GroupQuotaSubscriptionAllocationRequestsClient.get(String managementGroupId, String groupQuotaName, String resourceProviderName, String allocationId)"
-  summary: "Get the status of the quota allocation request for the subscription<wbr>Id."
+  summary: "Get the quota allocation request status for the subscription<wbr>Id by allocation<wbr>Id."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
@@ -86,7 +86,7 @@ methods:
     name: "allocationId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract QuotaAllocationRequestStatusInner get(String managementGroupId, String groupQuotaName, String resourceProviderName, String allocationId)"
-  desc: "Get the status of the quota allocation request for the subscriptionId. Get the quota allocation request status for the subscriptionId by allocationId."
+  desc: "Get the quota allocation request status for the subscriptionId by allocationId."
   returns:
     description: "the quota allocation request status for the subscriptionId by allocationId."
     type: "<xref href=\"com.azure.resourcemanager.quota.fluent.models.QuotaAllocationRequestStatusInner?alt=com.azure.resourcemanager.quota.fluent.models.QuotaAllocationRequestStatusInner&text=QuotaAllocationRequestStatusInner\" data-throw-if-not-resolved=\"False\" />"
@@ -94,11 +94,11 @@ methods:
   fullName: "com.azure.resourcemanager.quota.fluent.GroupQuotaSubscriptionAllocationRequestsClient.getWithResponse(String managementGroupId, String groupQuotaName, String resourceProviderName, String allocationId, Context context)"
   name: "getWithResponse(String managementGroupId, String groupQuotaName, String resourceProviderName, String allocationId, Context context)"
   nameWithType: "GroupQuotaSubscriptionAllocationRequestsClient.getWithResponse(String managementGroupId, String groupQuotaName, String resourceProviderName, String allocationId, Context context)"
-  summary: "Get the status of the quota allocation request for the subscription<wbr>Id."
+  summary: "Get the quota allocation request status for the subscription<wbr>Id by allocation<wbr>Id."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
@@ -114,7 +114,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<QuotaAllocationRequestStatusInner> getWithResponse(String managementGroupId, String groupQuotaName, String resourceProviderName, String allocationId, Context context)"
-  desc: "Get the status of the quota allocation request for the subscriptionId. Get the quota allocation request status for the subscriptionId by allocationId."
+  desc: "Get the quota allocation request status for the subscriptionId by allocationId."
   returns:
     description: "the quota allocation request status for the subscriptionId by allocationId along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.quota.fluent.models.QuotaAllocationRequestStatusInner?alt=com.azure.resourcemanager.quota.fluent.models.QuotaAllocationRequestStatusInner&text=QuotaAllocationRequestStatusInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -126,7 +126,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
@@ -139,7 +139,7 @@ methods:
     name: "filter"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<QuotaAllocationRequestStatusInner> list(String managementGroupId, String groupQuotaName, String resourceProviderName, String filter)"
-  desc: "Get all the quotaAllocationRequests for a resourceProvider/location. Get all the quotaAllocationRequests for a resourceProvider/location. The filter paramter for location is required."
+  desc: "Get all the quotaAllocationRequests for a resourceProvider/location. The filter paramter for location is required."
   returns:
     description: "all the quotaAllocationRequests for a resourceProvider/location as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.quota.fluent.models.QuotaAllocationRequestStatusInner?alt=com.azure.resourcemanager.quota.fluent.models.QuotaAllocationRequestStatusInner&text=QuotaAllocationRequestStatusInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -151,7 +151,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
@@ -167,7 +167,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<QuotaAllocationRequestStatusInner> list(String managementGroupId, String groupQuotaName, String resourceProviderName, String filter, Context context)"
-  desc: "Get all the quotaAllocationRequests for a resourceProvider/location. Get all the quotaAllocationRequests for a resourceProvider/location. The filter paramter for location is required."
+  desc: "Get all the quotaAllocationRequests for a resourceProvider/location. The filter paramter for location is required."
   returns:
     description: "all the quotaAllocationRequests for a resourceProvider/location as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.quota.fluent.models.QuotaAllocationRequestStatusInner?alt=com.azure.resourcemanager.quota.fluent.models.QuotaAllocationRequestStatusInner&text=QuotaAllocationRequestStatusInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -179,7 +179,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
@@ -195,7 +195,7 @@ methods:
     name: "allocateQuotaRequest"
     type: "<xref href=\"com.azure.resourcemanager.quota.fluent.models.SubscriptionQuotaAllocationsListInner?alt=com.azure.resourcemanager.quota.fluent.models.SubscriptionQuotaAllocationsListInner&text=SubscriptionQuotaAllocationsListInner\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SubscriptionQuotaAllocationsListInner update(String managementGroupId, String groupQuotaName, String resourceProviderName, String location, SubscriptionQuotaAllocationsListInner allocateQuotaRequest)"
-  desc: "Request to assign quota from group quota to a specific Subscription. This request will use Asynchronous pattern with 202 response and status polling API. Request to assign quota from group quota to a specific Subscription. The assign GroupQuota to subscriptions or reduce the quota allocated to subscription to give back the unused quota ( quota >= usages) to the groupQuota. So, this API can be used to assign Quota to subscriptions and assign back unused quota to group quota, which can be assigned to another subscriptions in the GroupQuota. User can collect unused quotas from multiple subscriptions within the groupQuota and assign the groupQuota to the subscription, where it's needed."
+  desc: "Request to assign quota from group quota to a specific Subscription. The assign GroupQuota to subscriptions or reduce the quota allocated to subscription to give back the unused quota ( quota >= usages) to the groupQuota. So, this API can be used to assign Quota to subscriptions and assign back unused quota to group quota, which can be assigned to another subscriptions in the GroupQuota. User can collect unused quotas from multiple subscriptions within the groupQuota and assign the groupQuota to the subscription, where it's needed."
   returns:
     description: "subscription quota list."
     type: "<xref href=\"com.azure.resourcemanager.quota.fluent.models.SubscriptionQuotaAllocationsListInner?alt=com.azure.resourcemanager.quota.fluent.models.SubscriptionQuotaAllocationsListInner&text=SubscriptionQuotaAllocationsListInner\" data-throw-if-not-resolved=\"False\" />"
@@ -207,7 +207,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
@@ -226,7 +226,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SubscriptionQuotaAllocationsListInner update(String managementGroupId, String groupQuotaName, String resourceProviderName, String location, SubscriptionQuotaAllocationsListInner allocateQuotaRequest, Context context)"
-  desc: "Request to assign quota from group quota to a specific Subscription. This request will use Asynchronous pattern with 202 response and status polling API. Request to assign quota from group quota to a specific Subscription. The assign GroupQuota to subscriptions or reduce the quota allocated to subscription to give back the unused quota ( quota >= usages) to the groupQuota. So, this API can be used to assign Quota to subscriptions and assign back unused quota to group quota, which can be assigned to another subscriptions in the GroupQuota. User can collect unused quotas from multiple subscriptions within the groupQuota and assign the groupQuota to the subscription, where it's needed."
+  desc: "Request to assign quota from group quota to a specific Subscription. The assign GroupQuota to subscriptions or reduce the quota allocated to subscription to give back the unused quota ( quota >= usages) to the groupQuota. So, this API can be used to assign Quota to subscriptions and assign back unused quota to group quota, which can be assigned to another subscriptions in the GroupQuota. User can collect unused quotas from multiple subscriptions within the groupQuota and assign the groupQuota to the subscription, where it's needed."
   returns:
     description: "subscription quota list."
     type: "<xref href=\"com.azure.resourcemanager.quota.fluent.models.SubscriptionQuotaAllocationsListInner?alt=com.azure.resourcemanager.quota.fluent.models.SubscriptionQuotaAllocationsListInner&text=SubscriptionQuotaAllocationsListInner\" data-throw-if-not-resolved=\"False\" />"
@@ -234,4 +234,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in GroupQuotaSubscriptionAllocationRequestsClient."
 metadata: {}
 package: "com.azure.resourcemanager.quota.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-quota:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-quota:2.0.0

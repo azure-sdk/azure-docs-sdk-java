@@ -10,11 +10,11 @@ methods:
   fullName: "com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionRequests.get(String managementGroupId, String groupQuotaName, String requestId)"
   name: "get(String managementGroupId, String groupQuotaName, String requestId)"
   nameWithType: "GroupQuotaSubscriptionRequests.get(String managementGroupId, String groupQuotaName, String requestId)"
-  summary: "Get the status of a single subscription<wbr>Id request by request<wbr>Id."
+  summary: "Get API to check the status of a subscription<wbr>Ids request by request<wbr>Id."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
@@ -24,7 +24,7 @@ methods:
     name: "requestId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract GroupQuotaSubscriptionRequestStatus get(String managementGroupId, String groupQuotaName, String requestId)"
-  desc: "Get the status of a single subscriptionId request by requestId. The Async pattern will be used, if we determine the request is taking longer, else it can return 200 response as response to the subscription add API call. Get API to check the status of a subscriptionIds request by requestId. Use the polling API - OperationsStatus URI specified in Azure-AsyncOperation header field, with retry-after duration in seconds to check the intermediate status. This API provides the finals status with the request details and status."
+  desc: "Get API to check the status of a subscriptionIds request by requestId. Use the polling API - OperationsStatus URI specified in Azure-AsyncOperation header field, with retry-after duration in seconds to check the intermediate status. This API provides the finals status with the request details and status."
   returns:
     description: "aPI to check the status of a subscriptionIds request by requestId."
     type: "<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionRequestStatus?alt=com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionRequestStatus&text=GroupQuotaSubscriptionRequestStatus\" data-throw-if-not-resolved=\"False\" />"
@@ -32,11 +32,11 @@ methods:
   fullName: "com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionRequests.getWithResponse(String managementGroupId, String groupQuotaName, String requestId, Context context)"
   name: "getWithResponse(String managementGroupId, String groupQuotaName, String requestId, Context context)"
   nameWithType: "GroupQuotaSubscriptionRequests.getWithResponse(String managementGroupId, String groupQuotaName, String requestId, Context context)"
-  summary: "Get the status of a single subscription<wbr>Id request by request<wbr>Id."
+  summary: "Get API to check the status of a subscription<wbr>Ids request by request<wbr>Id."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
@@ -49,7 +49,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<GroupQuotaSubscriptionRequestStatus> getWithResponse(String managementGroupId, String groupQuotaName, String requestId, Context context)"
-  desc: "Get the status of a single subscriptionId request by requestId. The Async pattern will be used, if we determine the request is taking longer, else it can return 200 response as response to the subscription add API call. Get API to check the status of a subscriptionIds request by requestId. Use the polling API - OperationsStatus URI specified in Azure-AsyncOperation header field, with retry-after duration in seconds to check the intermediate status. This API provides the finals status with the request details and status."
+  desc: "Get API to check the status of a subscriptionIds request by requestId. Use the polling API - OperationsStatus URI specified in Azure-AsyncOperation header field, with retry-after duration in seconds to check the intermediate status. This API provides the finals status with the request details and status."
   returns:
     description: "aPI to check the status of a subscriptionIds request by requestId along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionRequestStatus?alt=com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionRequestStatus&text=GroupQuotaSubscriptionRequestStatus\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -57,18 +57,18 @@ methods:
   fullName: "com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionRequests.list(String managementGroupId, String groupQuotaName)"
   name: "list(String managementGroupId, String groupQuotaName)"
   nameWithType: "GroupQuotaSubscriptionRequests.list(String managementGroupId, String groupQuotaName)"
-  summary: "List the status of all requests to add subscription<wbr>Ids to the Group<wbr>Quotas<wbr>Entity."
+  summary: "List API to check the status of a subscription<wbr>Id requests by request<wbr>Id."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
     name: "groupQuotaName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<GroupQuotaSubscriptionRequestStatus> list(String managementGroupId, String groupQuotaName)"
-  desc: "List the status of all requests to add subscriptionIds to the GroupQuotasEntity. List API to check the status of a subscriptionId requests by requestId. Request history is maintained for 1 year."
+  desc: "List API to check the status of a subscriptionId requests by requestId. Request history is maintained for 1 year."
   returns:
     description: "list of GroupQuotaSubscriptionRequests Status as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionRequestStatus?alt=com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionRequestStatus&text=GroupQuotaSubscriptionRequestStatus\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -76,11 +76,11 @@ methods:
   fullName: "com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionRequests.list(String managementGroupId, String groupQuotaName, Context context)"
   name: "list(String managementGroupId, String groupQuotaName, Context context)"
   nameWithType: "GroupQuotaSubscriptionRequests.list(String managementGroupId, String groupQuotaName, Context context)"
-  summary: "List the status of all requests to add subscription<wbr>Ids to the Group<wbr>Quotas<wbr>Entity."
+  summary: "List API to check the status of a subscription<wbr>Id requests by request<wbr>Id."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
@@ -90,7 +90,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<GroupQuotaSubscriptionRequestStatus> list(String managementGroupId, String groupQuotaName, Context context)"
-  desc: "List the status of all requests to add subscriptionIds to the GroupQuotasEntity. List API to check the status of a subscriptionId requests by requestId. Request history is maintained for 1 year."
+  desc: "List API to check the status of a subscriptionId requests by requestId. Request history is maintained for 1 year."
   returns:
     description: "list of GroupQuotaSubscriptionRequests Status as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionRequestStatus?alt=com.azure.resourcemanager.quota.models.GroupQuotaSubscriptionRequestStatus&text=GroupQuotaSubscriptionRequestStatus\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -98,4 +98,4 @@ type: "interface"
 desc: "Resource collection API of GroupQuotaSubscriptionRequests."
 metadata: {}
 package: "com.azure.resourcemanager.quota.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-quota:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-quota:2.0.0

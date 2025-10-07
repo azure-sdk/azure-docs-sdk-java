@@ -32,7 +32,23 @@ methods:
     name: "retryAttempts"
     type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Duration calculateRetryDelay(int retryAttempts)"
-  desc: "Computes the delay between each retry."
+  desc: "Computes the delay between each retry.\n\nIf both this method and <xref uid=\"com.azure.core.http.policy.RetryStrategy.calculateRetryDelay(com.azure.core.http.policy.RequestRetryCondition)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#calculateRetryDelay(RequestRetryCondition)\"></xref> are overridden, this method is ignored."
+  returns:
+    description: "The delay duration before the next retry."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
+- uid: "com.azure.core.http.policy.RetryStrategy.calculateRetryDelay(com.azure.core.http.policy.RequestRetryCondition)"
+  fullName: "com.azure.core.http.policy.RetryStrategy.calculateRetryDelay(RequestRetryCondition requestRetryCondition)"
+  name: "calculateRetryDelay(RequestRetryCondition requestRetryCondition)"
+  nameWithType: "RetryStrategy.calculateRetryDelay(RequestRetryCondition requestRetryCondition)"
+  summary: "Computes the delay between each retry based on the <xref uid=\"com.azure.core.http.policy.RequestRetryCondition\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RequestRetryCondition\"></xref>."
+  modifiers:
+  - "default"
+  parameters:
+  - description: "The <xref uid=\"com.azure.core.http.policy.RequestRetryCondition\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RequestRetryCondition\"></xref> containing information that can be used to\n determine the delay."
+    name: "requestRetryCondition"
+    type: "<xref href=\"com.azure.core.http.policy.RequestRetryCondition?alt=com.azure.core.http.policy.RequestRetryCondition&text=RequestRetryCondition\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public default Duration calculateRetryDelay(RequestRetryCondition requestRetryCondition)"
+  desc: "Computes the delay between each retry based on the <xref uid=\"com.azure.core.http.policy.RequestRetryCondition\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RequestRetryCondition\"></xref>.\n\nIf this method is not overridden, the <xref uid=\"com.azure.core.http.policy.RetryStrategy.calculateRetryDelay(int)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#calculateRetryDelay(int)\"></xref> method is called with <xref uid=\"com.azure.core.http.policy.RequestRetryCondition.getTryCount()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RequestRetryCondition#getTryCount()\"></xref>.\n\nIf both this method and <xref uid=\"com.azure.core.http.policy.RetryStrategy.calculateRetryDelay(int)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#calculateRetryDelay(int)\"></xref> are overridden, this method is used."
   returns:
     description: "The delay duration before the next retry."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
@@ -40,11 +56,11 @@ methods:
   fullName: "com.azure.core.http.policy.RetryStrategy.getMaxRetries()"
   name: "getMaxRetries()"
   nameWithType: "RetryStrategy.getMaxRetries()"
-  summary: "Max number of retry attempts to be make."
+  summary: "Max number of retry attempts to be made."
   modifiers:
   - "abstract"
   syntax: "public abstract int getMaxRetries()"
-  desc: "Max number of retry attempts to be make."
+  desc: "Max number of retry attempts to be made."
   returns:
     description: "The max number of retry attempts."
     type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
@@ -100,4 +116,4 @@ type: "interface"
 desc: "The interface for determining the retry strategy used in <xref uid=\"com.azure.core.http.policy.RetryPolicy\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RetryPolicy\"></xref>."
 metadata: {}
 package: "com.azure.core.http.policy"
-artifact: com.azure:azure-core:1.56.1
+artifact: com.azure:azure-core:1.57.0

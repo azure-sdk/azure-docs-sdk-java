@@ -36,7 +36,7 @@ methods:
   nameWithType: "VirtualMachineRunCommandScriptSource.commandId()"
   summary: "Get the command<wbr>Id property: Specifies a command<wbr>Id of predefined built-in script."
   syntax: "public String commandId()"
-  desc: "Get the commandId property: Specifies a commandId of predefined built-in script."
+  desc: "Get the commandId property: Specifies a commandId of predefined built-in script. Command IDs available for Linux are listed at https://aka.ms/RunCommandManagedLinux\\#available-commands, Windows at https://aka.ms/RunCommandManagedWindows\\#available-commands."
   returns:
     description: "the commandId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -59,6 +59,16 @@ methods:
   returns:
     description: "An instance of VirtualMachineRunCommandScriptSource if the JsonReader was pointing to an instance of it,\n or null if it was pointing to JSON null."
     type: "<xref href=\"com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource?alt=com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource&text=VirtualMachineRunCommandScriptSource\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource.galleryScriptReferenceId()"
+  fullName: "com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource.galleryScriptReferenceId()"
+  name: "galleryScriptReferenceId()"
+  nameWithType: "VirtualMachineRunCommandScriptSource.galleryScriptReferenceId()"
+  summary: "Get the gallery<wbr>Script<wbr>Reference<wbr>Id property: The resource ID of a Gallery Script version that needs to be executed."
+  syntax: "public String galleryScriptReferenceId()"
+  desc: "Get the galleryScriptReferenceId property: The resource ID of a Gallery Script version that needs to be executed. Example ID looks like /subscriptions/\\{subId\\}/resourceGroups/\\{rgName\\}/providers/Microsoft.Compute/galleries/\\{galleryName\\}/scripts/\\{scriptName\\}/versions/\\{version\\}."
+  returns:
+    description: "the galleryScriptReferenceId value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource.script()"
   fullName: "com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource.script()"
   name: "script()"
@@ -69,6 +79,16 @@ methods:
   returns:
     description: "the script value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource.scriptShell()"
+  fullName: "com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource.scriptShell()"
+  name: "scriptShell()"
+  nameWithType: "VirtualMachineRunCommandScriptSource.scriptShell()"
+  summary: "Get the script<wbr>Shell property: Optional."
+  syntax: "public ScriptShellTypes scriptShell()"
+  desc: "Get the scriptShell property: Optional. Specify which shell to use for running the script. These values must match those expected by the extension. Currently supported only for Windows VMs, script uses Powershell 7 when specified. Powershell 7 must be already installed on the machine to use Powershell7 parameter value."
+  returns:
+    description: "the scriptShell value."
+    type: "<xref href=\"com.azure.resourcemanager.compute.models.ScriptShellTypes?alt=com.azure.resourcemanager.compute.models.ScriptShellTypes&text=ScriptShellTypes\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource.scriptUri()"
   fullName: "com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource.scriptUri()"
   name: "scriptUri()"
@@ -118,7 +138,21 @@ methods:
     name: "commandId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public VirtualMachineRunCommandScriptSource withCommandId(String commandId)"
-  desc: "Set the commandId property: Specifies a commandId of predefined built-in script."
+  desc: "Set the commandId property: Specifies a commandId of predefined built-in script. Command IDs available for Linux are listed at https://aka.ms/RunCommandManagedLinux\\#available-commands, Windows at https://aka.ms/RunCommandManagedWindows\\#available-commands."
+  returns:
+    description: "the VirtualMachineRunCommandScriptSource object itself."
+    type: "<xref href=\"com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource?alt=com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource&text=VirtualMachineRunCommandScriptSource\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource.withGalleryScriptReferenceId(java.lang.String)"
+  fullName: "com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource.withGalleryScriptReferenceId(String galleryScriptReferenceId)"
+  name: "withGalleryScriptReferenceId(String galleryScriptReferenceId)"
+  nameWithType: "VirtualMachineRunCommandScriptSource.withGalleryScriptReferenceId(String galleryScriptReferenceId)"
+  summary: "Set the gallery<wbr>Script<wbr>Reference<wbr>Id property: The resource ID of a Gallery Script version that needs to be executed."
+  parameters:
+  - description: "the galleryScriptReferenceId value to set."
+    name: "galleryScriptReferenceId"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public VirtualMachineRunCommandScriptSource withGalleryScriptReferenceId(String galleryScriptReferenceId)"
+  desc: "Set the galleryScriptReferenceId property: The resource ID of a Gallery Script version that needs to be executed. Example ID looks like /subscriptions/\\{subId\\}/resourceGroups/\\{rgName\\}/providers/Microsoft.Compute/galleries/\\{galleryName\\}/scripts/\\{scriptName\\}/versions/\\{version\\}."
   returns:
     description: "the VirtualMachineRunCommandScriptSource object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource?alt=com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource&text=VirtualMachineRunCommandScriptSource\" data-throw-if-not-resolved=\"False\" />"
@@ -133,6 +167,20 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public VirtualMachineRunCommandScriptSource withScript(String script)"
   desc: "Set the script property: Specifies the script content to be executed on the VM."
+  returns:
+    description: "the VirtualMachineRunCommandScriptSource object itself."
+    type: "<xref href=\"com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource?alt=com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource&text=VirtualMachineRunCommandScriptSource\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource.withScriptShell(com.azure.resourcemanager.compute.models.ScriptShellTypes)"
+  fullName: "com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource.withScriptShell(ScriptShellTypes scriptShell)"
+  name: "withScriptShell(ScriptShellTypes scriptShell)"
+  nameWithType: "VirtualMachineRunCommandScriptSource.withScriptShell(ScriptShellTypes scriptShell)"
+  summary: "Set the script<wbr>Shell property: Optional."
+  parameters:
+  - description: "the scriptShell value to set."
+    name: "scriptShell"
+    type: "<xref href=\"com.azure.resourcemanager.compute.models.ScriptShellTypes?alt=com.azure.resourcemanager.compute.models.ScriptShellTypes&text=ScriptShellTypes\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public VirtualMachineRunCommandScriptSource withScriptShell(ScriptShellTypes scriptShell)"
+  desc: "Set the scriptShell property: Optional. Specify which shell to use for running the script. These values must match those expected by the extension. Currently supported only for Windows VMs, script uses Powershell 7 when specified. Powershell 7 must be already installed on the machine to use Powershell7 parameter value."
   returns:
     description: "the VirtualMachineRunCommandScriptSource object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource?alt=com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource&text=VirtualMachineRunCommandScriptSource\" data-throw-if-not-resolved=\"False\" />"
@@ -165,9 +213,9 @@ methods:
     description: "the VirtualMachineRunCommandScriptSource object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource?alt=com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource&text=VirtualMachineRunCommandScriptSource\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Describes the script sources for run command. Use only one of script, scriptUri, commandId."
+desc: "Describes the script sources for run command. Use only one of these script sources: script, scriptUri, commandId, galleryScriptReferenceId."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource?alt=com.azure.resourcemanager.compute.models.VirtualMachineRunCommandScriptSource&text=VirtualMachineRunCommandScriptSource\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.compute.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.53.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.54.0

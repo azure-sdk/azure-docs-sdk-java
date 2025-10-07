@@ -10,11 +10,11 @@ methods:
   fullName: "com.azure.resourcemanager.quota.models.GroupQuotaLimitsRequests.get(String managementGroupId, String groupQuotaName, String requestId)"
   name: "get(String managementGroupId, String groupQuotaName, String requestId)"
   nameWithType: "GroupQuotaLimitsRequests.get(String managementGroupId, String groupQuotaName, String requestId)"
-  summary: "Get the status of a single Group<wbr>Quota request by request<wbr>Id."
+  summary: "Get API to check the status of a Group<wbr>Quota request by request<wbr>Id."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
@@ -24,7 +24,7 @@ methods:
     name: "requestId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract SubmittedResourceRequestStatus get(String managementGroupId, String groupQuotaName, String requestId)"
-  desc: "Get the status of a single GroupQuota request by requestId. Get API to check the status of a GroupQuota request by requestId."
+  desc: "Get API to check the status of a GroupQuota request by requestId."
   returns:
     description: "aPI to check the status of a GroupQuota request by requestId."
     type: "<xref href=\"com.azure.resourcemanager.quota.models.SubmittedResourceRequestStatus?alt=com.azure.resourcemanager.quota.models.SubmittedResourceRequestStatus&text=SubmittedResourceRequestStatus\" data-throw-if-not-resolved=\"False\" />"
@@ -32,11 +32,11 @@ methods:
   fullName: "com.azure.resourcemanager.quota.models.GroupQuotaLimitsRequests.getWithResponse(String managementGroupId, String groupQuotaName, String requestId, Context context)"
   name: "getWithResponse(String managementGroupId, String groupQuotaName, String requestId, Context context)"
   nameWithType: "GroupQuotaLimitsRequests.getWithResponse(String managementGroupId, String groupQuotaName, String requestId, Context context)"
-  summary: "Get the status of a single Group<wbr>Quota request by request<wbr>Id."
+  summary: "Get API to check the status of a Group<wbr>Quota request by request<wbr>Id."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
@@ -49,7 +49,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<SubmittedResourceRequestStatus> getWithResponse(String managementGroupId, String groupQuotaName, String requestId, Context context)"
-  desc: "Get the status of a single GroupQuota request by requestId. Get API to check the status of a GroupQuota request by requestId."
+  desc: "Get API to check the status of a GroupQuota request by requestId."
   returns:
     description: "aPI to check the status of a GroupQuota request by requestId along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.quota.models.SubmittedResourceRequestStatus?alt=com.azure.resourcemanager.quota.models.SubmittedResourceRequestStatus&text=SubmittedResourceRequestStatus\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -57,11 +57,11 @@ methods:
   fullName: "com.azure.resourcemanager.quota.models.GroupQuotaLimitsRequests.list(String managementGroupId, String groupQuotaName, String resourceProviderName, String filter)"
   name: "list(String managementGroupId, String groupQuotaName, String resourceProviderName, String filter)"
   nameWithType: "GroupQuotaLimitsRequests.list(String managementGroupId, String groupQuotaName, String resourceProviderName, String filter)"
-  summary: "Get the status of a single Group<wbr>Quota request by request<wbr>Id."
+  summary: "Get API to check the status of a Group<wbr>Quota request by request<wbr>Id."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
@@ -70,11 +70,11 @@ methods:
   - description: "The resource provider name, such as - Microsoft.Compute. Currently only\n Microsoft.Compute resource provider supports this API."
     name: "resourceProviderName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "| Field | Supported operators\n |---------------------|------------------------\n \n location eq {location} and resource eq {resourceName}\n Example: $filter=location eq eastus and resourceName eq cores."
+  - description: "| Field | Supported operators \\r\\n|---------------------|------------------------\\n\\r\\n location eq\n {location} and resource eq {resourceName}\\n Example: $filter=location eq eastus and resourceName eq cores."
     name: "filter"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<SubmittedResourceRequestStatus> list(String managementGroupId, String groupQuotaName, String resourceProviderName, String filter)"
-  desc: "Get the status of a single GroupQuota request by requestId. Get API to check the status of a GroupQuota request by requestId."
+  desc: "Get API to check the status of a GroupQuota request by requestId."
   returns:
     description: "aPI to check the status of a GroupQuota request by requestId as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.quota.models.SubmittedResourceRequestStatus?alt=com.azure.resourcemanager.quota.models.SubmittedResourceRequestStatus&text=SubmittedResourceRequestStatus\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -82,11 +82,11 @@ methods:
   fullName: "com.azure.resourcemanager.quota.models.GroupQuotaLimitsRequests.list(String managementGroupId, String groupQuotaName, String resourceProviderName, String filter, Context context)"
   name: "list(String managementGroupId, String groupQuotaName, String resourceProviderName, String filter, Context context)"
   nameWithType: "GroupQuotaLimitsRequests.list(String managementGroupId, String groupQuotaName, String resourceProviderName, String filter, Context context)"
-  summary: "Get the status of a single Group<wbr>Quota request by request<wbr>Id."
+  summary: "Get API to check the status of a Group<wbr>Quota request by request<wbr>Id."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
@@ -95,14 +95,14 @@ methods:
   - description: "The resource provider name, such as - Microsoft.Compute. Currently only\n Microsoft.Compute resource provider supports this API."
     name: "resourceProviderName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "| Field | Supported operators\n |---------------------|------------------------\n \n location eq {location} and resource eq {resourceName}\n Example: $filter=location eq eastus and resourceName eq cores."
+  - description: "| Field | Supported operators \\r\\n|---------------------|------------------------\\n\\r\\n location eq\n {location} and resource eq {resourceName}\\n Example: $filter=location eq eastus and resourceName eq cores."
     name: "filter"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<SubmittedResourceRequestStatus> list(String managementGroupId, String groupQuotaName, String resourceProviderName, String filter, Context context)"
-  desc: "Get the status of a single GroupQuota request by requestId. Get API to check the status of a GroupQuota request by requestId."
+  desc: "Get API to check the status of a GroupQuota request by requestId."
   returns:
     description: "aPI to check the status of a GroupQuota request by requestId as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.quota.models.SubmittedResourceRequestStatus?alt=com.azure.resourcemanager.quota.models.SubmittedResourceRequestStatus&text=SubmittedResourceRequestStatus\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -114,7 +114,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
@@ -127,7 +127,7 @@ methods:
     name: "location"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract GroupQuotaLimitList update(String managementGroupId, String groupQuotaName, String resourceProviderName, String location)"
-  desc: "Create the GroupQuota requests for a specific ResourceProvider/Location/Resource. Create the GroupQuota requests for a specific ResourceProvider/Location/Resource. The resourceName properties are specified in the request body. Only 1 resource quota can be requested. Please note that patch request creates a new groupQuota request. Use the polling API - OperationsStatus URI specified in Azure-AsyncOperation header field, with retry-after duration in seconds to check the intermediate status. This API provides the finals status with the request details and status."
+  desc: "Create the GroupQuota requests for a specific ResourceProvider/Location/Resource. The resourceName properties are specified in the request body. Only 1 resource quota can be requested. Please note that patch request creates a new groupQuota request. Use the polling API - OperationsStatus URI specified in Azure-AsyncOperation header field, with retry-after duration in seconds to check the intermediate status. This API provides the finals status with the request details and status."
   returns:
     description: "list of Group Quota Limit details."
     type: "<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotaLimitList?alt=com.azure.resourcemanager.quota.models.GroupQuotaLimitList&text=GroupQuotaLimitList\" data-throw-if-not-resolved=\"False\" />"
@@ -139,7 +139,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
@@ -158,7 +158,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract GroupQuotaLimitList update(String managementGroupId, String groupQuotaName, String resourceProviderName, String location, GroupQuotaLimitListInner groupQuotaRequest, Context context)"
-  desc: "Create the GroupQuota requests for a specific ResourceProvider/Location/Resource. Create the GroupQuota requests for a specific ResourceProvider/Location/Resource. The resourceName properties are specified in the request body. Only 1 resource quota can be requested. Please note that patch request creates a new groupQuota request. Use the polling API - OperationsStatus URI specified in Azure-AsyncOperation header field, with retry-after duration in seconds to check the intermediate status. This API provides the finals status with the request details and status."
+  desc: "Create the GroupQuota requests for a specific ResourceProvider/Location/Resource. The resourceName properties are specified in the request body. Only 1 resource quota can be requested. Please note that patch request creates a new groupQuota request. Use the polling API - OperationsStatus URI specified in Azure-AsyncOperation header field, with retry-after duration in seconds to check the intermediate status. This API provides the finals status with the request details and status."
   returns:
     description: "list of Group Quota Limit details."
     type: "<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotaLimitList?alt=com.azure.resourcemanager.quota.models.GroupQuotaLimitList&text=GroupQuotaLimitList\" data-throw-if-not-resolved=\"False\" />"
@@ -166,4 +166,4 @@ type: "interface"
 desc: "Resource collection API of GroupQuotaLimitsRequests."
 metadata: {}
 package: "com.azure.resourcemanager.quota.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-quota:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-quota:2.0.0

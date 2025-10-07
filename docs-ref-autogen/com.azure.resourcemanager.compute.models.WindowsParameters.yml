@@ -99,6 +99,26 @@ methods:
   returns:
     description: "the maxPatchPublishDate value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
+- uid: "com.azure.resourcemanager.compute.models.WindowsParameters.patchNameMasksToExclude()"
+  fullName: "com.azure.resourcemanager.compute.models.WindowsParameters.patchNameMasksToExclude()"
+  name: "patchNameMasksToExclude()"
+  nameWithType: "WindowsParameters.patchNameMasksToExclude()"
+  summary: "Get the patch<wbr>Name<wbr>Masks<wbr>ToExclude property: This is used to exclude patches that match the given patch name masks."
+  syntax: "public List<String> patchNameMasksToExclude()"
+  desc: "Get the patchNameMasksToExclude property: This is used to exclude patches that match the given patch name masks. Alphanumeric strings and wildcard expressions consisting of \\* and ? are only supported as input values in the list. Null, empty and only whitespaces strings as inputs values are not supported."
+  returns:
+    description: "the patchNameMasksToExclude value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+- uid: "com.azure.resourcemanager.compute.models.WindowsParameters.patchNameMasksToInclude()"
+  fullName: "com.azure.resourcemanager.compute.models.WindowsParameters.patchNameMasksToInclude()"
+  name: "patchNameMasksToInclude()"
+  nameWithType: "WindowsParameters.patchNameMasksToInclude()"
+  summary: "Get the patch<wbr>Name<wbr>Masks<wbr>ToInclude property: This is used to include patches that match the given patch name masks."
+  syntax: "public List<String> patchNameMasksToInclude()"
+  desc: "Get the patchNameMasksToInclude property: This is used to include patches that match the given patch name masks. Alphanumeric strings and wildcard expressions consisting of \\* and ? are only supported as input values in the list. Null, empty and only whitespaces strings as inputs values are not supported."
+  returns:
+    description: "the patchNameMasksToInclude value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.resourcemanager.compute.models.WindowsParameters.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.compute.models.WindowsParameters.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -188,10 +208,38 @@ methods:
   returns:
     description: "the WindowsParameters object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.models.WindowsParameters?alt=com.azure.resourcemanager.compute.models.WindowsParameters&text=WindowsParameters\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.compute.models.WindowsParameters.withPatchNameMasksToExclude(java.util.List<java.lang.String>)"
+  fullName: "com.azure.resourcemanager.compute.models.WindowsParameters.withPatchNameMasksToExclude(List<String> patchNameMasksToExclude)"
+  name: "withPatchNameMasksToExclude(List<String> patchNameMasksToExclude)"
+  nameWithType: "WindowsParameters.withPatchNameMasksToExclude(List<String> patchNameMasksToExclude)"
+  summary: "Set the patch<wbr>Name<wbr>Masks<wbr>ToExclude property: This is used to exclude patches that match the given patch name masks."
+  parameters:
+  - description: "the patchNameMasksToExclude value to set."
+    name: "patchNameMasksToExclude"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+  syntax: "public WindowsParameters withPatchNameMasksToExclude(List<String> patchNameMasksToExclude)"
+  desc: "Set the patchNameMasksToExclude property: This is used to exclude patches that match the given patch name masks. Alphanumeric strings and wildcard expressions consisting of \\* and ? are only supported as input values in the list. Null, empty and only whitespaces strings as inputs values are not supported."
+  returns:
+    description: "the WindowsParameters object itself."
+    type: "<xref href=\"com.azure.resourcemanager.compute.models.WindowsParameters?alt=com.azure.resourcemanager.compute.models.WindowsParameters&text=WindowsParameters\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.compute.models.WindowsParameters.withPatchNameMasksToInclude(java.util.List<java.lang.String>)"
+  fullName: "com.azure.resourcemanager.compute.models.WindowsParameters.withPatchNameMasksToInclude(List<String> patchNameMasksToInclude)"
+  name: "withPatchNameMasksToInclude(List<String> patchNameMasksToInclude)"
+  nameWithType: "WindowsParameters.withPatchNameMasksToInclude(List<String> patchNameMasksToInclude)"
+  summary: "Set the patch<wbr>Name<wbr>Masks<wbr>ToInclude property: This is used to include patches that match the given patch name masks."
+  parameters:
+  - description: "the patchNameMasksToInclude value to set."
+    name: "patchNameMasksToInclude"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+  syntax: "public WindowsParameters withPatchNameMasksToInclude(List<String> patchNameMasksToInclude)"
+  desc: "Set the patchNameMasksToInclude property: This is used to include patches that match the given patch name masks. Alphanumeric strings and wildcard expressions consisting of \\* and ? are only supported as input values in the list. Null, empty and only whitespaces strings as inputs values are not supported."
+  returns:
+    description: "the WindowsParameters object itself."
+    type: "<xref href=\"com.azure.resourcemanager.compute.models.WindowsParameters?alt=com.azure.resourcemanager.compute.models.WindowsParameters&text=WindowsParameters\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Input for InstallPatches on a Windows VM, as directly received by the API."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.compute.models.WindowsParameters?alt=com.azure.resourcemanager.compute.models.WindowsParameters&text=WindowsParameters\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.compute.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.53.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.54.0

@@ -67,16 +67,16 @@ methods:
   - name: "retryAttempts"
     type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public Duration calculateRetryDelay(int retryAttempts)"
-  desc: "Computes the delay between each retry."
+  desc: "Computes the delay between each retry.\n\nIf both this method and <xref uid=\"com.azure.core.http.policy.ExponentialBackoff.calculateRetryDelay*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#calculateRetryDelay(RequestRetryCondition)\"></xref> are overridden, this method is ignored."
   returns:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
 - uid: "com.azure.core.http.policy.ExponentialBackoff.getMaxRetries()"
   fullName: "com.azure.core.http.policy.ExponentialBackoff.getMaxRetries()"
   name: "getMaxRetries()"
   nameWithType: "ExponentialBackoff.getMaxRetries()"
-  summary: "Max number of retry attempts to be make."
+  summary: "Max number of retry attempts to be made."
   syntax: "public int getMaxRetries()"
-  desc: "Max number of retry attempts to be make."
+  desc: "Max number of retry attempts to be made."
   returns:
     type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.core.http.policy.ExponentialBackoff.shouldRetryCondition(com.azure.core.http.policy.RequestRetryCondition)"
@@ -97,4 +97,4 @@ implements:
 - "<xref href=\"com.azure.core.http.policy.RetryStrategy?alt=com.azure.core.http.policy.RetryStrategy&text=RetryStrategy\" data-throw-if-not-resolved=\"False\" />"
 metadata: {}
 package: "com.azure.core.http.policy"
-artifact: com.azure:azure-core:1.56.1
+artifact: com.azure:azure-core:1.57.0

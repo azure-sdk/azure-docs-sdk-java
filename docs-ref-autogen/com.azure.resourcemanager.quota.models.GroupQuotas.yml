@@ -14,17 +14,17 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
     name: "groupQuotaName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract ProxyResource createOrUpdate(String managementGroupId, String groupQuotaName)"
-  desc: "Creates a new GroupQuota for the name passed. Creates a new GroupQuota for the name passed. A RequestId will be returned by the Service. The status can be polled periodically. The status Async polling is using standards defined at - https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/async-api-reference.md\\#asynchronous-operations. Use the OperationsStatus URI provided in Azure-AsyncOperation header, the duration will be specified in retry-after header. Once the operation gets to terminal state - Succeeded | Failed, then the URI will change to Get URI and full details can be checked."
+  syntax: "public abstract GroupQuotasEntity createOrUpdate(String managementGroupId, String groupQuotaName)"
+  desc: "Creates a new GroupQuota for the name passed. A RequestId will be returned by the Service. The status can be polled periodically. The status Async polling is using standards defined at - https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/async-api-reference.md\\#asynchronous-operations. Use the OperationsStatus URI provided in Azure-AsyncOperation header, the duration will be specified in retry-after header. Once the operation gets to terminal state - Succeeded | Failed, then the URI will change to Get URI and full details can be checked."
   returns:
     description: "properties and filters for ShareQuota."
-    type: "<xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotasEntity?alt=com.azure.resourcemanager.quota.models.GroupQuotasEntity&text=GroupQuotasEntity\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.quota.models.GroupQuotas.createOrUpdate(java.lang.String,java.lang.String,com.azure.resourcemanager.quota.fluent.models.GroupQuotasEntityInner,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.quota.models.GroupQuotas.createOrUpdate(String managementGroupId, String groupQuotaName, GroupQuotasEntityInner groupQuotaPutRequestBody, Context context)"
   name: "createOrUpdate(String managementGroupId, String groupQuotaName, GroupQuotasEntityInner groupQuotaPutRequestBody, Context context)"
@@ -33,7 +33,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
@@ -45,20 +45,20 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract ProxyResource createOrUpdate(String managementGroupId, String groupQuotaName, GroupQuotasEntityInner groupQuotaPutRequestBody, Context context)"
-  desc: "Creates a new GroupQuota for the name passed. Creates a new GroupQuota for the name passed. A RequestId will be returned by the Service. The status can be polled periodically. The status Async polling is using standards defined at - https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/async-api-reference.md\\#asynchronous-operations. Use the OperationsStatus URI provided in Azure-AsyncOperation header, the duration will be specified in retry-after header. Once the operation gets to terminal state - Succeeded | Failed, then the URI will change to Get URI and full details can be checked."
+  syntax: "public abstract GroupQuotasEntity createOrUpdate(String managementGroupId, String groupQuotaName, GroupQuotasEntityInner groupQuotaPutRequestBody, Context context)"
+  desc: "Creates a new GroupQuota for the name passed. A RequestId will be returned by the Service. The status can be polled periodically. The status Async polling is using standards defined at - https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/async-api-reference.md\\#asynchronous-operations. Use the OperationsStatus URI provided in Azure-AsyncOperation header, the duration will be specified in retry-after header. Once the operation gets to terminal state - Succeeded | Failed, then the URI will change to Get URI and full details can be checked."
   returns:
     description: "properties and filters for ShareQuota."
-    type: "<xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotasEntity?alt=com.azure.resourcemanager.quota.models.GroupQuotasEntity&text=GroupQuotasEntity\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.quota.models.GroupQuotas.delete(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.quota.models.GroupQuotas.delete(String managementGroupId, String groupQuotaName, Context context)"
   name: "delete(String managementGroupId, String groupQuotaName, Context context)"
   nameWithType: "GroupQuotas.delete(String managementGroupId, String groupQuotaName, Context context)"
-  summary: "Deletes Group<wbr>Quotas for the name passed."
+  summary: "Deletes the Group<wbr>Quotas for the name passed."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
@@ -68,39 +68,39 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract void delete(String managementGroupId, String groupQuotaName, Context context)"
-  desc: "Deletes GroupQuotas for the name passed. Deletes the GroupQuotas for the name passed. All the remaining shareQuota in the GroupQuotas will be lost."
+  desc: "Deletes the GroupQuotas for the name passed. All the remaining shareQuota in the GroupQuotas will be lost."
 - uid: "com.azure.resourcemanager.quota.models.GroupQuotas.deleteByResourceGroup(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.quota.models.GroupQuotas.deleteByResourceGroup(String managementGroupId, String groupQuotaName)"
   name: "deleteByResourceGroup(String managementGroupId, String groupQuotaName)"
   nameWithType: "GroupQuotas.deleteByResourceGroup(String managementGroupId, String groupQuotaName)"
-  summary: "Deletes Group<wbr>Quotas for the name passed."
+  summary: "Deletes the Group<wbr>Quotas for the name passed."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
     name: "groupQuotaName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract void deleteByResourceGroup(String managementGroupId, String groupQuotaName)"
-  desc: "Deletes GroupQuotas for the name passed. Deletes the GroupQuotas for the name passed. All the remaining shareQuota in the GroupQuotas will be lost."
+  desc: "Deletes the GroupQuotas for the name passed. All the remaining shareQuota in the GroupQuotas will be lost."
 - uid: "com.azure.resourcemanager.quota.models.GroupQuotas.get(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.quota.models.GroupQuotas.get(String managementGroupId, String groupQuotaName)"
   name: "get(String managementGroupId, String groupQuotaName)"
   nameWithType: "GroupQuotas.get(String managementGroupId, String groupQuotaName)"
-  summary: "Gets Group<wbr>Quotas for the name passed."
+  summary: "Gets the Group<wbr>Quotas for the name passed."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
     name: "groupQuotaName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract GroupQuotasEntity get(String managementGroupId, String groupQuotaName)"
-  desc: "Gets GroupQuotas for the name passed. Gets the GroupQuotas for the name passed. It will return the GroupQuotas properties only. The details on group quota can be access from the group quota APIs."
+  desc: "Gets the GroupQuotas for the name passed. It will return the GroupQuotas properties only. The details on group quota can be access from the group quota APIs."
   returns:
     description: "the GroupQuotas for the name passed."
     type: "<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotasEntity?alt=com.azure.resourcemanager.quota.models.GroupQuotasEntity&text=GroupQuotasEntity\" data-throw-if-not-resolved=\"False\" />"
@@ -108,11 +108,11 @@ methods:
   fullName: "com.azure.resourcemanager.quota.models.GroupQuotas.getWithResponse(String managementGroupId, String groupQuotaName, Context context)"
   name: "getWithResponse(String managementGroupId, String groupQuotaName, Context context)"
   nameWithType: "GroupQuotas.getWithResponse(String managementGroupId, String groupQuotaName, Context context)"
-  summary: "Gets Group<wbr>Quotas for the name passed."
+  summary: "Gets the Group<wbr>Quotas for the name passed."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
@@ -122,7 +122,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<GroupQuotasEntity> getWithResponse(String managementGroupId, String groupQuotaName, Context context)"
-  desc: "Gets GroupQuotas for the name passed. Gets the GroupQuotas for the name passed. It will return the GroupQuotas properties only. The details on group quota can be access from the group quota APIs."
+  desc: "Gets the GroupQuotas for the name passed. It will return the GroupQuotas properties only. The details on group quota can be access from the group quota APIs."
   returns:
     description: "the GroupQuotas for the name passed along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotasEntity?alt=com.azure.resourcemanager.quota.models.GroupQuotasEntity&text=GroupQuotasEntity\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -134,11 +134,11 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<GroupQuotasEntity> list(String managementGroupId)"
-  desc: "Lists GroupQuotas for the scope passed. Lists GroupQuotas for the scope passed. It will return the GroupQuotas QuotaEntity properties only.The details on group quota can be access from the group quota APIs."
+  desc: "Lists GroupQuotas for the scope passed. It will return the GroupQuotas QuotaEntity properties only.The details on group quota can be access from the group quota APIs."
   returns:
     description: "list of Group Quotas at MG level as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotasEntity?alt=com.azure.resourcemanager.quota.models.GroupQuotasEntity&text=GroupQuotasEntity\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -150,14 +150,14 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<GroupQuotasEntity> list(String managementGroupId, Context context)"
-  desc: "Lists GroupQuotas for the scope passed. Lists GroupQuotas for the scope passed. It will return the GroupQuotas QuotaEntity properties only.The details on group quota can be access from the group quota APIs."
+  desc: "Lists GroupQuotas for the scope passed. It will return the GroupQuotas QuotaEntity properties only.The details on group quota can be access from the group quota APIs."
   returns:
     description: "list of Group Quotas at MG level as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotasEntity?alt=com.azure.resourcemanager.quota.models.GroupQuotasEntity&text=GroupQuotasEntity\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -165,18 +165,18 @@ methods:
   fullName: "com.azure.resourcemanager.quota.models.GroupQuotas.update(String managementGroupId, String groupQuotaName)"
   name: "update(String managementGroupId, String groupQuotaName)"
   nameWithType: "GroupQuotas.update(String managementGroupId, String groupQuotaName)"
-  summary: "Updates a new Group<wbr>Quotas for the name passed."
+  summary: "Updates the Group<wbr>Quotas for the name passed."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
     name: "groupQuotaName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract GroupQuotasEntity update(String managementGroupId, String groupQuotaName)"
-  desc: "Updates a new GroupQuotas for the name passed. Updates the GroupQuotas for the name passed. A GroupQuotas RequestId will be returned by the Service. The status can be polled periodically. The status Async polling is using standards defined at - https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/async-api-reference.md\\#asynchronous-operations. Use the OperationsStatus URI provided in Azure-AsyncOperation header, the duration will be specified in retry-after header. Once the operation gets to terminal state - Succeeded | Failed, then the URI will change to Get URI and full details can be checked. Any change in the filters will be applicable to the future quota assignments, existing quota allocated to subscriptions from the GroupQuotas remains unchanged."
+  desc: "Updates the GroupQuotas for the name passed. A GroupQuotas RequestId will be returned by the Service. The status can be polled periodically. The status Async polling is using standards defined at - https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/async-api-reference.md\\#asynchronous-operations. Use the OperationsStatus URI provided in Azure-AsyncOperation header, the duration will be specified in retry-after header. Once the operation gets to terminal state - Succeeded | Failed, then the URI will change to Get URI and full details can be checked. Any change in the filters will be applicable to the future quota assignments, existing quota allocated to subscriptions from the GroupQuotas remains unchanged."
   returns:
     description: "properties and filters for ShareQuota."
     type: "<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotasEntity?alt=com.azure.resourcemanager.quota.models.GroupQuotasEntity&text=GroupQuotasEntity\" data-throw-if-not-resolved=\"False\" />"
@@ -184,11 +184,11 @@ methods:
   fullName: "com.azure.resourcemanager.quota.models.GroupQuotas.update(String managementGroupId, String groupQuotaName, GroupQuotasEntityPatch groupQuotasPatchRequestBody, Context context)"
   name: "update(String managementGroupId, String groupQuotaName, GroupQuotasEntityPatch groupQuotasPatchRequestBody, Context context)"
   nameWithType: "GroupQuotas.update(String managementGroupId, String groupQuotaName, GroupQuotasEntityPatch groupQuotasPatchRequestBody, Context context)"
-  summary: "Updates a new Group<wbr>Quotas for the name passed."
+  summary: "Updates the Group<wbr>Quotas for the name passed."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Management Group Id."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The GroupQuota name. The name should be unique for the provided context tenantId/MgId."
@@ -201,7 +201,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract GroupQuotasEntity update(String managementGroupId, String groupQuotaName, GroupQuotasEntityPatch groupQuotasPatchRequestBody, Context context)"
-  desc: "Updates a new GroupQuotas for the name passed. Updates the GroupQuotas for the name passed. A GroupQuotas RequestId will be returned by the Service. The status can be polled periodically. The status Async polling is using standards defined at - https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/async-api-reference.md\\#asynchronous-operations. Use the OperationsStatus URI provided in Azure-AsyncOperation header, the duration will be specified in retry-after header. Once the operation gets to terminal state - Succeeded | Failed, then the URI will change to Get URI and full details can be checked. Any change in the filters will be applicable to the future quota assignments, existing quota allocated to subscriptions from the GroupQuotas remains unchanged."
+  desc: "Updates the GroupQuotas for the name passed. A GroupQuotas RequestId will be returned by the Service. The status can be polled periodically. The status Async polling is using standards defined at - https://github.com/Azure/azure-resource-manager-rpc/blob/master/v1.0/async-api-reference.md\\#asynchronous-operations. Use the OperationsStatus URI provided in Azure-AsyncOperation header, the duration will be specified in retry-after header. Once the operation gets to terminal state - Succeeded | Failed, then the URI will change to Get URI and full details can be checked. Any change in the filters will be applicable to the future quota assignments, existing quota allocated to subscriptions from the GroupQuotas remains unchanged."
   returns:
     description: "properties and filters for ShareQuota."
     type: "<xref href=\"com.azure.resourcemanager.quota.models.GroupQuotasEntity?alt=com.azure.resourcemanager.quota.models.GroupQuotasEntity&text=GroupQuotasEntity\" data-throw-if-not-resolved=\"False\" />"
@@ -209,4 +209,4 @@ type: "interface"
 desc: "Resource collection API of GroupQuotas."
 metadata: {}
 package: "com.azure.resourcemanager.quota.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-quota:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-quota:2.0.0

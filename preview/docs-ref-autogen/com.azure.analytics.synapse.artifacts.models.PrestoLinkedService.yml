@@ -73,7 +73,7 @@ methods:
   nameWithType: "PrestoLinkedService.getAllowHostNameCNMismatch()"
   summary: "Get the allow<wbr>Host<wbr>Name<wbr>CNMismatch property: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL."
   syntax: "public Object getAllowHostNameCNMismatch()"
-  desc: "Get the allowHostNameCNMismatch property: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false."
+  desc: "Get the allowHostNameCNMismatch property: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false. Only used for Version 1.0."
   returns:
     description: "the allowHostNameCNMismatch value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
@@ -83,7 +83,7 @@ methods:
   nameWithType: "PrestoLinkedService.getAllowSelfSignedServerCert()"
   summary: "Get the allow<wbr>Self<wbr>Signed<wbr>Server<wbr>Cert property: Specifies whether to allow self-signed certificates from the server."
   syntax: "public Object getAllowSelfSignedServerCert()"
-  desc: "Get the allowSelfSignedServerCert property: Specifies whether to allow self-signed certificates from the server. The default value is false."
+  desc: "Get the allowSelfSignedServerCert property: Specifies whether to allow self-signed certificates from the server. The default value is false. Only used for Version 1.0."
   returns:
     description: "the allowSelfSignedServerCert value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
@@ -107,13 +107,23 @@ methods:
   returns:
     description: "the catalog value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+- uid: "com.azure.analytics.synapse.artifacts.models.PrestoLinkedService.getEnableServerCertificateValidation()"
+  fullName: "com.azure.analytics.synapse.artifacts.models.PrestoLinkedService.getEnableServerCertificateValidation()"
+  name: "getEnableServerCertificateValidation()"
+  nameWithType: "PrestoLinkedService.getEnableServerCertificateValidation()"
+  summary: "Get the enable<wbr>Server<wbr>Certificate<wbr>Validation property: Specifies whether the connections to the server will validate server certificate, the default value is True."
+  syntax: "public Object getEnableServerCertificateValidation()"
+  desc: "Get the enableServerCertificateValidation property: Specifies whether the connections to the server will validate server certificate, the default value is True. Only used for Version 2.0."
+  returns:
+    description: "the enableServerCertificateValidation value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
 - uid: "com.azure.analytics.synapse.artifacts.models.PrestoLinkedService.getEnableSsl()"
   fullName: "com.azure.analytics.synapse.artifacts.models.PrestoLinkedService.getEnableSsl()"
   name: "getEnableSsl()"
   nameWithType: "PrestoLinkedService.getEnableSsl()"
   summary: "Get the enable<wbr>Ssl property: Specifies whether the connections to the server are encrypted using SSL."
   syntax: "public Object getEnableSsl()"
-  desc: "Get the enableSsl property: Specifies whether the connections to the server are encrypted using SSL. The default value is false."
+  desc: "Get the enableSsl property: Specifies whether the connections to the server are encrypted using SSL. The default value for legacy version is False. The default value for version 2.0 is True."
   returns:
     description: "the enableSsl value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
@@ -153,7 +163,7 @@ methods:
   nameWithType: "PrestoLinkedService.getPort()"
   summary: "Get the port property: The TCP port that the Presto server uses to listen for client connections."
   syntax: "public Object getPort()"
-  desc: "Get the port property: The TCP port that the Presto server uses to listen for client connections. The default value is 8080."
+  desc: "Get the port property: The TCP port that the Presto server uses to listen for client connections. The default value is 8080 when disable SSL, default value is 443 when enable SSL."
   returns:
     description: "the port value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
@@ -163,7 +173,7 @@ methods:
   nameWithType: "PrestoLinkedService.getServerVersion()"
   summary: "Get the server<wbr>Version property: The version of the Presto server."
   syntax: "public Object getServerVersion()"
-  desc: "Get the serverVersion property: The version of the Presto server. (i.e. 0.148-t)."
+  desc: "Get the serverVersion property: The version of the Presto server. (i.e. 0.148-t) Only used for Version 1.0."
   returns:
     description: "the serverVersion value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
@@ -173,7 +183,7 @@ methods:
   nameWithType: "PrestoLinkedService.getTimeZoneID()"
   summary: "Get the time<wbr>ZoneID property: The local time zone used by the connection."
   syntax: "public Object getTimeZoneID()"
-  desc: "Get the timeZoneID property: The local time zone used by the connection. Valid values for this option are specified in the IANA Time Zone Database. The default value is the system time zone."
+  desc: "Get the timeZoneID property: The local time zone used by the connection. Valid values for this option are specified in the IANA Time Zone Database. The default value for Version 1.0 is the client system time zone. The default value for Version 2.0 is server system timeZone."
   returns:
     description: "the timeZoneID value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
@@ -183,7 +193,7 @@ methods:
   nameWithType: "PrestoLinkedService.getTrustedCertPath()"
   summary: "Get the trusted<wbr>Cert<wbr>Path property: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL."
   syntax: "public Object getTrustedCertPath()"
-  desc: "Get the trustedCertPath property: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR."
+  desc: "Get the trustedCertPath property: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR. Only used for Version 1.0."
   returns:
     description: "the trustedCertPath value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
@@ -214,7 +224,7 @@ methods:
   nameWithType: "PrestoLinkedService.getUseSystemTrustStore()"
   summary: "Get the use<wbr>System<wbr>Trust<wbr>Store property: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file."
   syntax: "public Object getUseSystemTrustStore()"
-  desc: "Get the useSystemTrustStore property: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false."
+  desc: "Get the useSystemTrustStore property: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false. Only used for Version 1.0."
   returns:
     description: "the useSystemTrustStore value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
@@ -228,7 +238,7 @@ methods:
     name: "allowHostNameCNMismatch"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   syntax: "public PrestoLinkedService setAllowHostNameCNMismatch(Object allowHostNameCNMismatch)"
-  desc: "Set the allowHostNameCNMismatch property: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false."
+  desc: "Set the allowHostNameCNMismatch property: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false. Only used for Version 1.0."
   returns:
     description: "the PrestoLinkedService object itself."
     type: "<xref href=\"com.azure.analytics.synapse.artifacts.models.PrestoLinkedService?alt=com.azure.analytics.synapse.artifacts.models.PrestoLinkedService&text=PrestoLinkedService\" data-throw-if-not-resolved=\"False\" />"
@@ -242,7 +252,7 @@ methods:
     name: "allowSelfSignedServerCert"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   syntax: "public PrestoLinkedService setAllowSelfSignedServerCert(Object allowSelfSignedServerCert)"
-  desc: "Set the allowSelfSignedServerCert property: Specifies whether to allow self-signed certificates from the server. The default value is false."
+  desc: "Set the allowSelfSignedServerCert property: Specifies whether to allow self-signed certificates from the server. The default value is false. Only used for Version 1.0."
   returns:
     description: "the PrestoLinkedService object itself."
     type: "<xref href=\"com.azure.analytics.synapse.artifacts.models.PrestoLinkedService?alt=com.azure.analytics.synapse.artifacts.models.PrestoLinkedService&text=PrestoLinkedService\" data-throw-if-not-resolved=\"False\" />"
@@ -313,6 +323,20 @@ methods:
   desc: "Set the description property: Linked service description."
   returns:
     type: "<xref href=\"com.azure.analytics.synapse.artifacts.models.PrestoLinkedService?alt=com.azure.analytics.synapse.artifacts.models.PrestoLinkedService&text=PrestoLinkedService\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.analytics.synapse.artifacts.models.PrestoLinkedService.setEnableServerCertificateValidation(java.lang.Object)"
+  fullName: "com.azure.analytics.synapse.artifacts.models.PrestoLinkedService.setEnableServerCertificateValidation(Object enableServerCertificateValidation)"
+  name: "setEnableServerCertificateValidation(Object enableServerCertificateValidation)"
+  nameWithType: "PrestoLinkedService.setEnableServerCertificateValidation(Object enableServerCertificateValidation)"
+  summary: "Set the enable<wbr>Server<wbr>Certificate<wbr>Validation property: Specifies whether the connections to the server will validate server certificate, the default value is True."
+  parameters:
+  - description: "the enableServerCertificateValidation value to set."
+    name: "enableServerCertificateValidation"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  syntax: "public PrestoLinkedService setEnableServerCertificateValidation(Object enableServerCertificateValidation)"
+  desc: "Set the enableServerCertificateValidation property: Specifies whether the connections to the server will validate server certificate, the default value is True. Only used for Version 2.0."
+  returns:
+    description: "the PrestoLinkedService object itself."
+    type: "<xref href=\"com.azure.analytics.synapse.artifacts.models.PrestoLinkedService?alt=com.azure.analytics.synapse.artifacts.models.PrestoLinkedService&text=PrestoLinkedService\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.analytics.synapse.artifacts.models.PrestoLinkedService.setEnableSsl(java.lang.Object)"
   fullName: "com.azure.analytics.synapse.artifacts.models.PrestoLinkedService.setEnableSsl(Object enableSsl)"
   name: "setEnableSsl(Object enableSsl)"
@@ -323,7 +347,7 @@ methods:
     name: "enableSsl"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   syntax: "public PrestoLinkedService setEnableSsl(Object enableSsl)"
-  desc: "Set the enableSsl property: Specifies whether the connections to the server are encrypted using SSL. The default value is false."
+  desc: "Set the enableSsl property: Specifies whether the connections to the server are encrypted using SSL. The default value for legacy version is False. The default value for version 2.0 is True."
   returns:
     description: "the PrestoLinkedService object itself."
     type: "<xref href=\"com.azure.analytics.synapse.artifacts.models.PrestoLinkedService?alt=com.azure.analytics.synapse.artifacts.models.PrestoLinkedService&text=PrestoLinkedService\" data-throw-if-not-resolved=\"False\" />"
@@ -392,7 +416,7 @@ methods:
     name: "port"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   syntax: "public PrestoLinkedService setPort(Object port)"
-  desc: "Set the port property: The TCP port that the Presto server uses to listen for client connections. The default value is 8080."
+  desc: "Set the port property: The TCP port that the Presto server uses to listen for client connections. The default value is 8080 when disable SSL, default value is 443 when enable SSL."
   returns:
     description: "the PrestoLinkedService object itself."
     type: "<xref href=\"com.azure.analytics.synapse.artifacts.models.PrestoLinkedService?alt=com.azure.analytics.synapse.artifacts.models.PrestoLinkedService&text=PrestoLinkedService\" data-throw-if-not-resolved=\"False\" />"
@@ -406,7 +430,7 @@ methods:
     name: "serverVersion"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   syntax: "public PrestoLinkedService setServerVersion(Object serverVersion)"
-  desc: "Set the serverVersion property: The version of the Presto server. (i.e. 0.148-t)."
+  desc: "Set the serverVersion property: The version of the Presto server. (i.e. 0.148-t) Only used for Version 1.0."
   returns:
     description: "the PrestoLinkedService object itself."
     type: "<xref href=\"com.azure.analytics.synapse.artifacts.models.PrestoLinkedService?alt=com.azure.analytics.synapse.artifacts.models.PrestoLinkedService&text=PrestoLinkedService\" data-throw-if-not-resolved=\"False\" />"
@@ -420,7 +444,7 @@ methods:
     name: "timeZoneID"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   syntax: "public PrestoLinkedService setTimeZoneID(Object timeZoneID)"
-  desc: "Set the timeZoneID property: The local time zone used by the connection. Valid values for this option are specified in the IANA Time Zone Database. The default value is the system time zone."
+  desc: "Set the timeZoneID property: The local time zone used by the connection. Valid values for this option are specified in the IANA Time Zone Database. The default value for Version 1.0 is the client system time zone. The default value for Version 2.0 is server system timeZone."
   returns:
     description: "the PrestoLinkedService object itself."
     type: "<xref href=\"com.azure.analytics.synapse.artifacts.models.PrestoLinkedService?alt=com.azure.analytics.synapse.artifacts.models.PrestoLinkedService&text=PrestoLinkedService\" data-throw-if-not-resolved=\"False\" />"
@@ -434,7 +458,7 @@ methods:
     name: "trustedCertPath"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   syntax: "public PrestoLinkedService setTrustedCertPath(Object trustedCertPath)"
-  desc: "Set the trustedCertPath property: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR."
+  desc: "Set the trustedCertPath property: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR. Only used for Version 1.0."
   returns:
     description: "the PrestoLinkedService object itself."
     type: "<xref href=\"com.azure.analytics.synapse.artifacts.models.PrestoLinkedService?alt=com.azure.analytics.synapse.artifacts.models.PrestoLinkedService&text=PrestoLinkedService\" data-throw-if-not-resolved=\"False\" />"
@@ -462,7 +486,7 @@ methods:
     name: "useSystemTrustStore"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   syntax: "public PrestoLinkedService setUseSystemTrustStore(Object useSystemTrustStore)"
-  desc: "Set the useSystemTrustStore property: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false."
+  desc: "Set the useSystemTrustStore property: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false. Only used for Version 1.0."
   returns:
     description: "the PrestoLinkedService object itself."
     type: "<xref href=\"com.azure.analytics.synapse.artifacts.models.PrestoLinkedService?alt=com.azure.analytics.synapse.artifacts.models.PrestoLinkedService&text=PrestoLinkedService\" data-throw-if-not-resolved=\"False\" />"
@@ -493,7 +517,7 @@ methods:
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Presto server linked service."
+desc: "Presto server linked service. This linked service has supported version property. The Version 1.0 is scheduled for deprecation while your pipeline will continue to run after EOL but without any bug fix or new features."
 metadata: {}
 package: "com.azure.analytics.synapse.artifacts.models"
-artifact: com.azure:azure-analytics-synapse-artifacts:1.0.0-beta.16
+artifact: com.azure:azure-analytics-synapse-artifacts:1.0.0-beta.17

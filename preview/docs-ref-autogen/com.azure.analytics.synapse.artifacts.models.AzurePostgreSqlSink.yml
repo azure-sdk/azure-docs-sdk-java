@@ -3,7 +3,7 @@ uid: "com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSink"
 fullName: "com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSink"
 name: "AzurePostgreSqlSink"
 nameWithType: "AzurePostgreSqlSink"
-summary: "A copy activity Azure PostgreSQL sink."
+summary: "A copy activity Azure Database for PostgreSQL sink."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 - "<xref href=\"com.azure.analytics.synapse.artifacts.models.CopySink?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
@@ -88,6 +88,26 @@ methods:
   returns:
     description: "the type value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSink.getUpsertSettings()"
+  fullName: "com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSink.getUpsertSettings()"
+  name: "getUpsertSettings()"
+  nameWithType: "AzurePostgreSqlSink.getUpsertSettings()"
+  summary: "Get the upsert<wbr>Settings property: Azure Database for PostgreSQL upsert option settings."
+  syntax: "public AzurePostgreSqlSinkUpsertSettings getUpsertSettings()"
+  desc: "Get the upsertSettings property: Azure Database for PostgreSQL upsert option settings."
+  returns:
+    description: "the upsertSettings value."
+    type: "<xref href=\"com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSinkUpsertSettings?alt=com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSinkUpsertSettings&text=AzurePostgreSqlSinkUpsertSettings\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSink.getWriteMethod()"
+  fullName: "com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSink.getWriteMethod()"
+  name: "getWriteMethod()"
+  nameWithType: "AzurePostgreSqlSink.getWriteMethod()"
+  summary: "Get the write<wbr>Method property: The write behavior for the operation."
+  syntax: "public AzurePostgreSqlWriteMethodEnum getWriteMethod()"
+  desc: "Get the writeMethod property: The write behavior for the operation. Default is Bulk Insert."
+  returns:
+    description: "the writeMethod value."
+    type: "<xref href=\"com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlWriteMethodEnum?alt=com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlWriteMethodEnum&text=AzurePostgreSqlWriteMethodEnum\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSink.setMaxConcurrentConnections(java.lang.Object)"
   fullName: "com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSink.setMaxConcurrentConnections(Object maxConcurrentConnections)"
   name: "setMaxConcurrentConnections(Object maxConcurrentConnections)"
@@ -141,6 +161,20 @@ methods:
   desc: "Set the sinkRetryWait property: Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\\\\d+)\\\\.)?(\\\\d\\\\d):(60|(\\[0-5\\]\\[0-9\\])):(60|(\\[0-5\\]\\[0-9\\]))."
   returns:
     type: "<xref href=\"com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSink?alt=com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSink&text=AzurePostgreSqlSink\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSink.setUpsertSettings(com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSinkUpsertSettings)"
+  fullName: "com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSink.setUpsertSettings(AzurePostgreSqlSinkUpsertSettings upsertSettings)"
+  name: "setUpsertSettings(AzurePostgreSqlSinkUpsertSettings upsertSettings)"
+  nameWithType: "AzurePostgreSqlSink.setUpsertSettings(AzurePostgreSqlSinkUpsertSettings upsertSettings)"
+  summary: "Set the upsert<wbr>Settings property: Azure Database for PostgreSQL upsert option settings."
+  parameters:
+  - description: "the upsertSettings value to set."
+    name: "upsertSettings"
+    type: "<xref href=\"com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSinkUpsertSettings?alt=com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSinkUpsertSettings&text=AzurePostgreSqlSinkUpsertSettings\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public AzurePostgreSqlSink setUpsertSettings(AzurePostgreSqlSinkUpsertSettings upsertSettings)"
+  desc: "Set the upsertSettings property: Azure Database for PostgreSQL upsert option settings."
+  returns:
+    description: "the AzurePostgreSqlSink object itself."
+    type: "<xref href=\"com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSink?alt=com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSink&text=AzurePostgreSqlSink\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSink.setWriteBatchSize(java.lang.Object)"
   fullName: "com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSink.setWriteBatchSize(Object writeBatchSize)"
   name: "setWriteBatchSize(Object writeBatchSize)"
@@ -167,6 +201,20 @@ methods:
   desc: "Set the writeBatchTimeout property: Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\\\\d+)\\\\.)?(\\\\d\\\\d):(60|(\\[0-5\\]\\[0-9\\])):(60|(\\[0-5\\]\\[0-9\\]))."
   returns:
     type: "<xref href=\"com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSink?alt=com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSink&text=AzurePostgreSqlSink\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSink.setWriteMethod(com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlWriteMethodEnum)"
+  fullName: "com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSink.setWriteMethod(AzurePostgreSqlWriteMethodEnum writeMethod)"
+  name: "setWriteMethod(AzurePostgreSqlWriteMethodEnum writeMethod)"
+  nameWithType: "AzurePostgreSqlSink.setWriteMethod(AzurePostgreSqlWriteMethodEnum writeMethod)"
+  summary: "Set the write<wbr>Method property: The write behavior for the operation."
+  parameters:
+  - description: "the writeMethod value to set."
+    name: "writeMethod"
+    type: "<xref href=\"com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlWriteMethodEnum?alt=com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlWriteMethodEnum&text=AzurePostgreSqlWriteMethodEnum\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public AzurePostgreSqlSink setWriteMethod(AzurePostgreSqlWriteMethodEnum writeMethod)"
+  desc: "Set the writeMethod property: The write behavior for the operation. Default is Bulk Insert."
+  returns:
+    description: "the AzurePostgreSqlSink object itself."
+    type: "<xref href=\"com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSink?alt=com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSink&text=AzurePostgreSqlSink\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSink.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.analytics.synapse.artifacts.models.AzurePostgreSqlSink.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -181,7 +229,7 @@ methods:
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "A copy activity Azure PostgreSQL sink."
+desc: "A copy activity Azure Database for PostgreSQL sink."
 metadata: {}
 package: "com.azure.analytics.synapse.artifacts.models"
-artifact: com.azure:azure-analytics-synapse-artifacts:1.0.0-beta.16
+artifact: com.azure:azure-analytics-synapse-artifacts:1.0.0-beta.17

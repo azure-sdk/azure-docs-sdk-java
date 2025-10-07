@@ -6,6 +6,18 @@ nameWithType: "ImportJob"
 summary: "An immutable client-side representation of Import<wbr>Job."
 syntax: "public interface **ImportJob**"
 methods:
+- uid: "com.azure.resourcemanager.storagecache.models.ImportJob.adminStatus()"
+  fullName: "com.azure.resourcemanager.storagecache.models.ImportJob.adminStatus()"
+  name: "adminStatus()"
+  nameWithType: "ImportJob.adminStatus()"
+  summary: "Gets the admin<wbr>Status property: The administrative status of the import job."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract ImportJobAdminStatus adminStatus()"
+  desc: "Gets the adminStatus property: The administrative status of the import job. Possible values: 'Active', 'Cancel'. Passing in a value of 'Cancel' will cancel the current active import job. By default it is set to 'Active'."
+  returns:
+    description: "the adminStatus value."
+    type: "<xref href=\"com.azure.resourcemanager.storagecache.models.ImportJobAdminStatus?alt=com.azure.resourcemanager.storagecache.models.ImportJobAdminStatus&text=ImportJobAdminStatus\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.storagecache.models.ImportJob.blobsImportedPerSecond()"
   fullName: "com.azure.resourcemanager.storagecache.models.ImportJob.blobsImportedPerSecond()"
   name: "blobsImportedPerSecond()"
@@ -54,6 +66,42 @@ methods:
   returns:
     description: "the id value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.storagecache.models.ImportJob.importedDirectories()"
+  fullName: "com.azure.resourcemanager.storagecache.models.ImportJob.importedDirectories()"
+  name: "importedDirectories()"
+  nameWithType: "ImportJob.importedDirectories()"
+  summary: "Gets the imported<wbr>Directories property: New or modified directories that have been imported into the filesystem."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Long importedDirectories()"
+  desc: "Gets the importedDirectories property: New or modified directories that have been imported into the filesystem."
+  returns:
+    description: "the importedDirectories value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
+- uid: "com.azure.resourcemanager.storagecache.models.ImportJob.importedFiles()"
+  fullName: "com.azure.resourcemanager.storagecache.models.ImportJob.importedFiles()"
+  name: "importedFiles()"
+  nameWithType: "ImportJob.importedFiles()"
+  summary: "Gets the imported<wbr>Files property: New or modified files that have been imported into the filesystem."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Long importedFiles()"
+  desc: "Gets the importedFiles property: New or modified files that have been imported into the filesystem."
+  returns:
+    description: "the importedFiles value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
+- uid: "com.azure.resourcemanager.storagecache.models.ImportJob.importedSymlinks()"
+  fullName: "com.azure.resourcemanager.storagecache.models.ImportJob.importedSymlinks()"
+  name: "importedSymlinks()"
+  nameWithType: "ImportJob.importedSymlinks()"
+  summary: "Gets the imported<wbr>Symlinks property: Newly added symbolic links into the filesystem."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Long importedSymlinks()"
+  desc: "Gets the importedSymlinks property: Newly added symbolic links into the filesystem."
+  returns:
+    description: "the importedSymlinks value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
 - uid: "com.azure.resourcemanager.storagecache.models.ImportJob.importPrefixes()"
   fullName: "com.azure.resourcemanager.storagecache.models.ImportJob.importPrefixes()"
   name: "importPrefixes()"
@@ -82,11 +130,11 @@ methods:
   fullName: "com.azure.resourcemanager.storagecache.models.ImportJob.lastCompletionTime()"
   name: "lastCompletionTime()"
   nameWithType: "ImportJob.lastCompletionTime()"
-  summary: "Gets the last<wbr>Completion<wbr>Time property: The time of the last completed archive operation."
+  summary: "Gets the last<wbr>Completion<wbr>Time property: The time (in UTC) of the last completed import job."
   modifiers:
   - "abstract"
   syntax: "public abstract OffsetDateTime lastCompletionTime()"
-  desc: "Gets the lastCompletionTime property: The time of the last completed archive operation."
+  desc: "Gets the lastCompletionTime property: The time (in UTC) of the last completed import job."
   returns:
     description: "the lastCompletionTime value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
@@ -94,11 +142,11 @@ methods:
   fullName: "com.azure.resourcemanager.storagecache.models.ImportJob.lastStartedTime()"
   name: "lastStartedTime()"
   nameWithType: "ImportJob.lastStartedTime()"
-  summary: "Gets the last<wbr>Started<wbr>Time property: The time the latest archive operation started."
+  summary: "Gets the last<wbr>Started<wbr>Time property: The time (in UTC) the latest import job started."
   modifiers:
   - "abstract"
   syntax: "public abstract OffsetDateTime lastStartedTime()"
-  desc: "Gets the lastStartedTime property: The time the latest archive operation started."
+  desc: "Gets the lastStartedTime property: The time (in UTC) the latest import job started."
   returns:
     description: "the lastStartedTime value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
@@ -138,6 +186,42 @@ methods:
   returns:
     description: "the name value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.storagecache.models.ImportJob.preexistingDirectories()"
+  fullName: "com.azure.resourcemanager.storagecache.models.ImportJob.preexistingDirectories()"
+  name: "preexistingDirectories()"
+  nameWithType: "ImportJob.preexistingDirectories()"
+  summary: "Gets the preexisting<wbr>Directories property: Directories that already exist in the filesystem and have not been modified."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Long preexistingDirectories()"
+  desc: "Gets the preexistingDirectories property: Directories that already exist in the filesystem and have not been modified."
+  returns:
+    description: "the preexistingDirectories value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
+- uid: "com.azure.resourcemanager.storagecache.models.ImportJob.preexistingFiles()"
+  fullName: "com.azure.resourcemanager.storagecache.models.ImportJob.preexistingFiles()"
+  name: "preexistingFiles()"
+  nameWithType: "ImportJob.preexistingFiles()"
+  summary: "Gets the preexisting<wbr>Files property: Files that already exist in the filesystem and have not been modified."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Long preexistingFiles()"
+  desc: "Gets the preexistingFiles property: Files that already exist in the filesystem and have not been modified."
+  returns:
+    description: "the preexistingFiles value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
+- uid: "com.azure.resourcemanager.storagecache.models.ImportJob.preexistingSymlinks()"
+  fullName: "com.azure.resourcemanager.storagecache.models.ImportJob.preexistingSymlinks()"
+  name: "preexistingSymlinks()"
+  nameWithType: "ImportJob.preexistingSymlinks()"
+  summary: "Gets the preexisting<wbr>Symlinks property: Symbolic links that already exist in the filesystem and have not been modified."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Long preexistingSymlinks()"
+  desc: "Gets the preexistingSymlinks property: Symbolic links that already exist in the filesystem and have not been modified."
+  returns:
+    description: "the preexistingSymlinks value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
 - uid: "com.azure.resourcemanager.storagecache.models.ImportJob.provisioningState()"
   fullName: "com.azure.resourcemanager.storagecache.models.ImportJob.provisioningState()"
   name: "provisioningState()"
@@ -218,11 +302,11 @@ methods:
   fullName: "com.azure.resourcemanager.storagecache.models.ImportJob.state()"
   name: "state()"
   nameWithType: "ImportJob.state()"
-  summary: "Gets the state property: The state of the import job."
+  summary: "Gets the state property: The operational state of the import job."
   modifiers:
   - "abstract"
   syntax: "public abstract ImportStatusType state()"
-  desc: "Gets the state property: The state of the import job. InProgress indicates the import is still running. Canceled indicates it has been canceled by the user. Completed indicates import finished, successfully importing all discovered blobs into the Lustre namespace. CompletedPartial indicates the import finished but some blobs either were found to be conflicting and could not be imported or other errors were encountered. Failed means the import was unable to complete due to a fatal error."
+  desc: "Gets the state property: The operational state of the import job. InProgress indicates the import is still running. Canceled indicates it has been canceled by the user. Completed indicates import finished, successfully importing all discovered blobs into the Lustre namespace. CompletedPartial indicates the import finished but some blobs either were found to be conflicting and could not be imported or other errors were encountered. Failed means the import was unable to complete due to a fatal error."
   returns:
     description: "the state value."
     type: "<xref href=\"com.azure.resourcemanager.storagecache.models.ImportStatusType?alt=com.azure.resourcemanager.storagecache.models.ImportStatusType&text=ImportStatusType\" data-throw-if-not-resolved=\"False\" />"
@@ -338,4 +422,4 @@ type: "interface"
 desc: "An immutable client-side representation of ImportJob."
 metadata: {}
 package: "com.azure.resourcemanager.storagecache.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-storagecache:1.0.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-storagecache:1.1.0

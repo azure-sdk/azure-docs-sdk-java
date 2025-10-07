@@ -34,9 +34,9 @@ methods:
   fullName: "com.azure.resourcemanager.storage.models.AzureFilesIdentityBasedAuthentication.activeDirectoryProperties()"
   name: "activeDirectoryProperties()"
   nameWithType: "AzureFilesIdentityBasedAuthentication.activeDirectoryProperties()"
-  summary: "Get the active<wbr>Directory<wbr>Properties property: Required if directory<wbr>Service<wbr>Options are AD, optional if they are AADKERB."
+  summary: "Get the active<wbr>Directory<wbr>Properties property: Additional information about the directory service."
   syntax: "public ActiveDirectoryProperties activeDirectoryProperties()"
-  desc: "Get the activeDirectoryProperties property: Required if directoryServiceOptions are AD, optional if they are AADKERB."
+  desc: "Get the activeDirectoryProperties property: Additional information about the directory service. Required if directoryServiceOptions is AD (AD DS authentication). Optional for directoryServiceOptions AADDS (Entra DS authentication) and AADKERB (Entra authentication)."
   returns:
     description: "the activeDirectoryProperties value."
     type: "<xref href=\"com.azure.resourcemanager.storage.models.ActiveDirectoryProperties?alt=com.azure.resourcemanager.storage.models.ActiveDirectoryProperties&text=ActiveDirectoryProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -79,6 +79,16 @@ methods:
   returns:
     description: "An instance of AzureFilesIdentityBasedAuthentication if the JsonReader was pointing to an instance of it,\n or null if it was pointing to JSON null."
     type: "<xref href=\"com.azure.resourcemanager.storage.models.AzureFilesIdentityBasedAuthentication?alt=com.azure.resourcemanager.storage.models.AzureFilesIdentityBasedAuthentication&text=AzureFilesIdentityBasedAuthentication\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.storage.models.AzureFilesIdentityBasedAuthentication.smbOAuthSettings()"
+  fullName: "com.azure.resourcemanager.storage.models.AzureFilesIdentityBasedAuthentication.smbOAuthSettings()"
+  name: "smbOAuthSettings()"
+  nameWithType: "AzureFilesIdentityBasedAuthentication.smbOAuthSettings()"
+  summary: "Get the smb<wbr>OAuth<wbr>Settings property: Required for Managed Identities access using OAuth over SMB."
+  syntax: "public SmbOAuthSettings smbOAuthSettings()"
+  desc: "Get the smbOAuthSettings property: Required for Managed Identities access using OAuth over SMB."
+  returns:
+    description: "the smbOAuthSettings value."
+    type: "<xref href=\"com.azure.resourcemanager.storage.models.SmbOAuthSettings?alt=com.azure.resourcemanager.storage.models.SmbOAuthSettings&text=SmbOAuthSettings\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.storage.models.AzureFilesIdentityBasedAuthentication.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.storage.models.AzureFilesIdentityBasedAuthentication.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -102,13 +112,13 @@ methods:
   fullName: "com.azure.resourcemanager.storage.models.AzureFilesIdentityBasedAuthentication.withActiveDirectoryProperties(ActiveDirectoryProperties activeDirectoryProperties)"
   name: "withActiveDirectoryProperties(ActiveDirectoryProperties activeDirectoryProperties)"
   nameWithType: "AzureFilesIdentityBasedAuthentication.withActiveDirectoryProperties(ActiveDirectoryProperties activeDirectoryProperties)"
-  summary: "Set the active<wbr>Directory<wbr>Properties property: Required if directory<wbr>Service<wbr>Options are AD, optional if they are AADKERB."
+  summary: "Set the active<wbr>Directory<wbr>Properties property: Additional information about the directory service."
   parameters:
   - description: "the activeDirectoryProperties value to set."
     name: "activeDirectoryProperties"
     type: "<xref href=\"com.azure.resourcemanager.storage.models.ActiveDirectoryProperties?alt=com.azure.resourcemanager.storage.models.ActiveDirectoryProperties&text=ActiveDirectoryProperties\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public AzureFilesIdentityBasedAuthentication withActiveDirectoryProperties(ActiveDirectoryProperties activeDirectoryProperties)"
-  desc: "Set the activeDirectoryProperties property: Required if directoryServiceOptions are AD, optional if they are AADKERB."
+  desc: "Set the activeDirectoryProperties property: Additional information about the directory service. Required if directoryServiceOptions is AD (AD DS authentication). Optional for directoryServiceOptions AADDS (Entra DS authentication) and AADKERB (Entra authentication)."
   returns:
     description: "the AzureFilesIdentityBasedAuthentication object itself."
     type: "<xref href=\"com.azure.resourcemanager.storage.models.AzureFilesIdentityBasedAuthentication?alt=com.azure.resourcemanager.storage.models.AzureFilesIdentityBasedAuthentication&text=AzureFilesIdentityBasedAuthentication\" data-throw-if-not-resolved=\"False\" />"
@@ -140,10 +150,24 @@ methods:
   returns:
     description: "the AzureFilesIdentityBasedAuthentication object itself."
     type: "<xref href=\"com.azure.resourcemanager.storage.models.AzureFilesIdentityBasedAuthentication?alt=com.azure.resourcemanager.storage.models.AzureFilesIdentityBasedAuthentication&text=AzureFilesIdentityBasedAuthentication\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.storage.models.AzureFilesIdentityBasedAuthentication.withSmbOAuthSettings(com.azure.resourcemanager.storage.models.SmbOAuthSettings)"
+  fullName: "com.azure.resourcemanager.storage.models.AzureFilesIdentityBasedAuthentication.withSmbOAuthSettings(SmbOAuthSettings smbOAuthSettings)"
+  name: "withSmbOAuthSettings(SmbOAuthSettings smbOAuthSettings)"
+  nameWithType: "AzureFilesIdentityBasedAuthentication.withSmbOAuthSettings(SmbOAuthSettings smbOAuthSettings)"
+  summary: "Set the smb<wbr>OAuth<wbr>Settings property: Required for Managed Identities access using OAuth over SMB."
+  parameters:
+  - description: "the smbOAuthSettings value to set."
+    name: "smbOAuthSettings"
+    type: "<xref href=\"com.azure.resourcemanager.storage.models.SmbOAuthSettings?alt=com.azure.resourcemanager.storage.models.SmbOAuthSettings&text=SmbOAuthSettings\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public AzureFilesIdentityBasedAuthentication withSmbOAuthSettings(SmbOAuthSettings smbOAuthSettings)"
+  desc: "Set the smbOAuthSettings property: Required for Managed Identities access using OAuth over SMB."
+  returns:
+    description: "the AzureFilesIdentityBasedAuthentication object itself."
+    type: "<xref href=\"com.azure.resourcemanager.storage.models.AzureFilesIdentityBasedAuthentication?alt=com.azure.resourcemanager.storage.models.AzureFilesIdentityBasedAuthentication&text=AzureFilesIdentityBasedAuthentication\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Settings for Azure Files identity based authentication."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.storage.models.AzureFilesIdentityBasedAuthentication?alt=com.azure.resourcemanager.storage.models.AzureFilesIdentityBasedAuthentication&text=AzureFilesIdentityBasedAuthentication\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.storage.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-storage:2.53.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-storage:2.54.1

@@ -74,7 +74,7 @@ constructors:
   nameWithType: "RetryPolicy.RetryPolicy(String retryAfterHeader, ChronoUnit retryAfterTimeUnit)"
   summary: "Creates <xref uid=\"com.azure.core.http.policy.RetryPolicy\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RetryPolicy\"></xref> using <xref uid=\"com.azure.core.http.policy.ExponentialBackoff.ExponentialBackoff()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ExponentialBackoff#ExponentialBackoff()\"></xref> as the <xref uid=\"com.azure.core.http.policy.RetryStrategy\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RetryStrategy\"></xref> and uses `retryAfterHeader` to look up the wait period in the returned <xref uid=\"com.azure.core.http.HttpResponse\" data-throw-if-not-resolved=\"false\" data-raw-source=\"HttpResponse\"></xref> to calculate the retry delay when a recoverable HTTP error is returned."
   parameters:
-  - description: "The HTTP header, such as <code>Retry-After</code> or <code>x-ms-retry-after-ms</code>, to lookup\n for the retry delay. If the value is null, <xref uid=\"com.azure.core.http.policy.RetryStrategy.calculateRetryDelay(int)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RetryStrategy#calculateRetryDelay(int)\"></xref> will compute the delay\n and ignore the delay provided in response header."
+  - description: "The HTTP header, such as <code>Retry-After</code> or <code>x-ms-retry-after-ms</code>, to lookup\n for the retry delay. If the value is null, <xref uid=\"com.azure.core.http.policy.RetryStrategy.calculateRetryDelay(com.azure.core.http.policy.RequestRetryCondition)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RetryStrategy#calculateRetryDelay(RequestRetryCondition)\"></xref> will\n compute the delay and ignore the delay provided in response header."
     name: "retryAfterHeader"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The time unit to use when applying the retry delay. Null is valid if, and only if,\n <code>retryAfterHeader</code> is null."
@@ -117,4 +117,4 @@ implements:
 - "<xref href=\"com.azure.core.http.policy.HttpPipelinePolicy?alt=com.azure.core.http.policy.HttpPipelinePolicy&text=HttpPipelinePolicy\" data-throw-if-not-resolved=\"False\" />"
 metadata: {}
 package: "com.azure.core.http.policy"
-artifact: com.azure:azure-core:1.56.1
+artifact: com.azure:azure-core:1.57.0

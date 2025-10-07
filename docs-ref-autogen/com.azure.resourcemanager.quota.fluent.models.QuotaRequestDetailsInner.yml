@@ -6,7 +6,15 @@ nameWithType: "QuotaRequestDetailsInner"
 summary: "List of quota requests with details."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"com.azure.core.management.ProxyResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
+- classRef: "<xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
+  methodsRef:
+  - "<xref href=\"com.azure.core.management.ProxyResource.fromJson(com.azure.json.JsonReader)?alt=com.azure.core.management.ProxyResource.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.ProxyResource.id()?alt=com.azure.core.management.ProxyResource.id&text=id\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.ProxyResource.name()?alt=com.azure.core.management.ProxyResource.name&text=name\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.ProxyResource.toJson(com.azure.json.JsonWriter)?alt=com.azure.core.management.ProxyResource.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.ProxyResource.type()?alt=com.azure.core.management.ProxyResource.type&text=type\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -20,15 +28,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **QuotaRequestDetailsInner**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.quota.fluent.models.QuotaRequestDetailsInner?alt=com.azure.resourcemanager.quota.fluent.models.QuotaRequestDetailsInner&text=QuotaRequestDetailsInner\" data-throw-if-not-resolved=\"False\" />&gt;"
-constructors:
-- uid: "com.azure.resourcemanager.quota.fluent.models.QuotaRequestDetailsInner.QuotaRequestDetailsInner()"
-  fullName: "com.azure.resourcemanager.quota.fluent.models.QuotaRequestDetailsInner.QuotaRequestDetailsInner()"
-  name: "QuotaRequestDetailsInner()"
-  nameWithType: "QuotaRequestDetailsInner.QuotaRequestDetailsInner()"
-  summary: "Creates an instance of Quota<wbr>Request<wbr>Details<wbr>Inner class."
-  syntax: "public QuotaRequestDetailsInner()"
-  desc: "Creates an instance of QuotaRequestDetailsInner class."
+syntax: "public final class **QuotaRequestDetailsInner**</br> extends <xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
 methods:
 - uid: "com.azure.resourcemanager.quota.fluent.models.QuotaRequestDetailsInner.error()"
   fullName: "com.azure.resourcemanager.quota.fluent.models.QuotaRequestDetailsInner.error()"
@@ -53,7 +53,7 @@ methods:
     type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static QuotaRequestDetailsInner fromJson(JsonReader jsonReader)"
   exceptions:
-  - description: "If an error occurs while reading the QuotaRequestDetailsInner."
+  - description: "If the deserialized JSON object was missing any required properties."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   desc: "Reads an instance of QuotaRequestDetailsInner from the JsonReader."
   returns:
@@ -63,9 +63,10 @@ methods:
   fullName: "com.azure.resourcemanager.quota.fluent.models.QuotaRequestDetailsInner.id()"
   name: "id()"
   nameWithType: "QuotaRequestDetailsInner.id()"
-  summary: "Get the id property: Quota request ID."
+  summary: "Get the id property: Fully qualified resource Id for the resource."
+  overridden: "com.azure.core.management.ProxyResource.id()"
   syntax: "public String id()"
-  desc: "Get the id property: Quota request ID."
+  desc: "Get the id property: Fully qualified resource Id for the resource."
   returns:
     description: "the id value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -83,9 +84,10 @@ methods:
   fullName: "com.azure.resourcemanager.quota.fluent.models.QuotaRequestDetailsInner.name()"
   name: "name()"
   nameWithType: "QuotaRequestDetailsInner.name()"
-  summary: "Get the name property: Quota request name."
+  summary: "Get the name property: The name of the resource."
+  overridden: "com.azure.core.management.ProxyResource.name()"
   syntax: "public String name()"
-  desc: "Get the name property: Quota request name."
+  desc: "Get the name property: The name of the resource."
   returns:
     description: "the name value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -109,10 +111,21 @@ methods:
   returns:
     description: "the requestSubmitTime value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
+- uid: "com.azure.resourcemanager.quota.fluent.models.QuotaRequestDetailsInner.systemData()"
+  fullName: "com.azure.resourcemanager.quota.fluent.models.QuotaRequestDetailsInner.systemData()"
+  name: "systemData()"
+  nameWithType: "QuotaRequestDetailsInner.systemData()"
+  summary: "Get the system<wbr>Data property: Azure Resource Manager metadata containing created<wbr>By and modified<wbr>By information."
+  syntax: "public SystemData systemData()"
+  desc: "Get the systemData property: Azure Resource Manager metadata containing createdBy and modifiedBy information."
+  returns:
+    description: "the systemData value."
+    type: "<xref href=\"com.azure.core.management.SystemData?alt=com.azure.core.management.SystemData&text=SystemData\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.quota.fluent.models.QuotaRequestDetailsInner.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.quota.fluent.models.QuotaRequestDetailsInner.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
   nameWithType: "QuotaRequestDetailsInner.toJson(JsonWriter jsonWriter)"
+  overridden: "com.azure.core.management.ProxyResource.toJson(com.azure.json.JsonWriter)"
   parameters:
   - name: "jsonWriter"
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
@@ -125,9 +138,10 @@ methods:
   fullName: "com.azure.resourcemanager.quota.fluent.models.QuotaRequestDetailsInner.type()"
   name: "type()"
   nameWithType: "QuotaRequestDetailsInner.type()"
-  summary: "Get the type property: Resource type."
+  summary: "Get the type property: The type of the resource."
+  overridden: "com.azure.core.management.ProxyResource.type()"
   syntax: "public String type()"
-  desc: "Get the type property: Resource type. \"Microsoft.Quota/quotas\"."
+  desc: "Get the type property: The type of the resource."
   returns:
     description: "the type value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -148,38 +162,8 @@ methods:
   returns:
     description: "the value value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.quota.models.SubRequest?alt=com.azure.resourcemanager.quota.models.SubRequest&text=SubRequest\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.quota.fluent.models.QuotaRequestDetailsInner.withError(com.azure.resourcemanager.quota.models.ServiceErrorDetail)"
-  fullName: "com.azure.resourcemanager.quota.fluent.models.QuotaRequestDetailsInner.withError(ServiceErrorDetail error)"
-  name: "withError(ServiceErrorDetail error)"
-  nameWithType: "QuotaRequestDetailsInner.withError(ServiceErrorDetail error)"
-  summary: "Set the error property: Error details of the quota request."
-  parameters:
-  - description: "the error value to set."
-    name: "error"
-    type: "<xref href=\"com.azure.resourcemanager.quota.models.ServiceErrorDetail?alt=com.azure.resourcemanager.quota.models.ServiceErrorDetail&text=ServiceErrorDetail\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public QuotaRequestDetailsInner withError(ServiceErrorDetail error)"
-  desc: "Set the error property: Error details of the quota request."
-  returns:
-    description: "the QuotaRequestDetailsInner object itself."
-    type: "<xref href=\"com.azure.resourcemanager.quota.fluent.models.QuotaRequestDetailsInner?alt=com.azure.resourcemanager.quota.fluent.models.QuotaRequestDetailsInner&text=QuotaRequestDetailsInner\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.quota.fluent.models.QuotaRequestDetailsInner.withValue(java.util.List<com.azure.resourcemanager.quota.models.SubRequest>)"
-  fullName: "com.azure.resourcemanager.quota.fluent.models.QuotaRequestDetailsInner.withValue(List<SubRequest> value)"
-  name: "withValue(List<SubRequest> value)"
-  nameWithType: "QuotaRequestDetailsInner.withValue(List<SubRequest> value)"
-  summary: "Set the value property: Quota request details."
-  parameters:
-  - description: "the value value to set."
-    name: "value"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.quota.models.SubRequest?alt=com.azure.resourcemanager.quota.models.SubRequest&text=SubRequest\" data-throw-if-not-resolved=\"False\" />&gt;"
-  syntax: "public QuotaRequestDetailsInner withValue(List<SubRequest> value)"
-  desc: "Set the value property: Quota request details."
-  returns:
-    description: "the QuotaRequestDetailsInner object itself."
-    type: "<xref href=\"com.azure.resourcemanager.quota.fluent.models.QuotaRequestDetailsInner?alt=com.azure.resourcemanager.quota.fluent.models.QuotaRequestDetailsInner&text=QuotaRequestDetailsInner\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "List of quota requests with details."
-implements:
-- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.quota.fluent.models.QuotaRequestDetailsInner?alt=com.azure.resourcemanager.quota.fluent.models.QuotaRequestDetailsInner&text=QuotaRequestDetailsInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.quota.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-quota:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-quota:2.0.0

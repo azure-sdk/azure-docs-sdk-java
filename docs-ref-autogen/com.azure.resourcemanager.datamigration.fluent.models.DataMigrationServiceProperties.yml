@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.datamigration.fluent.models.DataMigrationService
 fullName: "com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties"
 name: "DataMigrationServiceProperties"
 nameWithType: "DataMigrationServiceProperties"
-summary: "Properties of the Data Migration service instance."
+summary: "Properties of the Azure Database Migration Service (classic) instance."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -30,6 +30,26 @@ constructors:
   syntax: "public DataMigrationServiceProperties()"
   desc: "Creates an instance of DataMigrationServiceProperties class."
 methods:
+- uid: "com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties.autoStopDelay()"
+  fullName: "com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties.autoStopDelay()"
+  name: "autoStopDelay()"
+  nameWithType: "DataMigrationServiceProperties.autoStopDelay()"
+  summary: "Get the auto<wbr>Stop<wbr>Delay property: The time delay before the service is auto-stopped when idle."
+  syntax: "public String autoStopDelay()"
+  desc: "Get the autoStopDelay property: The time delay before the service is auto-stopped when idle."
+  returns:
+    description: "the autoStopDelay value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties.deleteResourcesOnStop()"
+  fullName: "com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties.deleteResourcesOnStop()"
+  name: "deleteResourcesOnStop()"
+  nameWithType: "DataMigrationServiceProperties.deleteResourcesOnStop()"
+  summary: "Get the delete<wbr>Resources<wbr>OnStop property: Whether service resources should be deleted when stopped."
+  syntax: "public Boolean deleteResourcesOnStop()"
+  desc: "Get the deleteResourcesOnStop property: Whether service resources should be deleted when stopped. (Turned on by default)."
+  returns:
+    description: "the deleteResourcesOnStop value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties.fromJson(JsonReader jsonReader)"
   name: "fromJson(JsonReader jsonReader)"
@@ -43,7 +63,7 @@ methods:
     type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static DataMigrationServiceProperties fromJson(JsonReader jsonReader)"
   exceptions:
-  - description: "If the deserialized JSON object was missing any required properties."
+  - description: "If an error occurs while reading the DataMigrationServiceProperties."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   desc: "Reads an instance of DataMigrationServiceProperties from the JsonReader."
   returns:
@@ -88,6 +108,16 @@ methods:
   summary: "Validates the instance."
   syntax: "public void validate()"
   desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties.virtualNicId()"
+  fullName: "com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties.virtualNicId()"
+  name: "virtualNicId()"
+  nameWithType: "DataMigrationServiceProperties.virtualNicId()"
+  summary: "Get the virtual<wbr>Nic<wbr>Id property: The ID of the Microsoft.<wbr>Network/network<wbr>Interfaces resource which the service have."
+  syntax: "public String virtualNicId()"
+  desc: "Get the virtualNicId property: The ID of the Microsoft.Network/networkInterfaces resource which the service have."
+  returns:
+    description: "the virtualNicId value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties.virtualSubnetId()"
   fullName: "com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties.virtualSubnetId()"
   name: "virtualSubnetId()"
@@ -98,6 +128,34 @@ methods:
   returns:
     description: "the virtualSubnetId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties.withAutoStopDelay(java.lang.String)"
+  fullName: "com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties.withAutoStopDelay(String autoStopDelay)"
+  name: "withAutoStopDelay(String autoStopDelay)"
+  nameWithType: "DataMigrationServiceProperties.withAutoStopDelay(String autoStopDelay)"
+  summary: "Set the auto<wbr>Stop<wbr>Delay property: The time delay before the service is auto-stopped when idle."
+  parameters:
+  - description: "the autoStopDelay value to set."
+    name: "autoStopDelay"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public DataMigrationServiceProperties withAutoStopDelay(String autoStopDelay)"
+  desc: "Set the autoStopDelay property: The time delay before the service is auto-stopped when idle."
+  returns:
+    description: "the DataMigrationServiceProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties?alt=com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties&text=DataMigrationServiceProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties.withDeleteResourcesOnStop(java.lang.Boolean)"
+  fullName: "com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties.withDeleteResourcesOnStop(Boolean deleteResourcesOnStop)"
+  name: "withDeleteResourcesOnStop(Boolean deleteResourcesOnStop)"
+  nameWithType: "DataMigrationServiceProperties.withDeleteResourcesOnStop(Boolean deleteResourcesOnStop)"
+  summary: "Set the delete<wbr>Resources<wbr>OnStop property: Whether service resources should be deleted when stopped."
+  parameters:
+  - description: "the deleteResourcesOnStop value to set."
+    name: "deleteResourcesOnStop"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+  syntax: "public DataMigrationServiceProperties withDeleteResourcesOnStop(Boolean deleteResourcesOnStop)"
+  desc: "Set the deleteResourcesOnStop property: Whether service resources should be deleted when stopped. (Turned on by default)."
+  returns:
+    description: "the DataMigrationServiceProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties?alt=com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties&text=DataMigrationServiceProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties.withPublicKey(java.lang.String)"
   fullName: "com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties.withPublicKey(String publicKey)"
   name: "withPublicKey(String publicKey)"
@@ -109,6 +167,20 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public DataMigrationServiceProperties withPublicKey(String publicKey)"
   desc: "Set the publicKey property: The public key of the service, used to encrypt secrets sent to the service."
+  returns:
+    description: "the DataMigrationServiceProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties?alt=com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties&text=DataMigrationServiceProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties.withVirtualNicId(java.lang.String)"
+  fullName: "com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties.withVirtualNicId(String virtualNicId)"
+  name: "withVirtualNicId(String virtualNicId)"
+  nameWithType: "DataMigrationServiceProperties.withVirtualNicId(String virtualNicId)"
+  summary: "Set the virtual<wbr>Nic<wbr>Id property: The ID of the Microsoft.<wbr>Network/network<wbr>Interfaces resource which the service have."
+  parameters:
+  - description: "the virtualNicId value to set."
+    name: "virtualNicId"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public DataMigrationServiceProperties withVirtualNicId(String virtualNicId)"
+  desc: "Set the virtualNicId property: The ID of the Microsoft.Network/networkInterfaces resource which the service have."
   returns:
     description: "the DataMigrationServiceProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties?alt=com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties&text=DataMigrationServiceProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -127,9 +199,9 @@ methods:
     description: "the DataMigrationServiceProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties?alt=com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties&text=DataMigrationServiceProperties\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Properties of the Data Migration service instance."
+desc: "Properties of the Azure Database Migration Service (classic) instance."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties?alt=com.azure.resourcemanager.datamigration.fluent.models.DataMigrationServiceProperties&text=DataMigrationServiceProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.datamigration.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-datamigration:1.0.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-datamigration:1.2.0
