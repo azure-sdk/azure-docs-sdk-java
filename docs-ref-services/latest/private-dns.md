@@ -4,7 +4,7 @@ description: Reference for Azure Private DNS SDK for Java
 ms.date: 10/07/2025
 ms.topic: reference
 ms.devlang: java
-ms.service: dns
+ms.service: privatedns
 ---
 # Azure Private DNS SDK for Java - latest
 ## Packages - latest
