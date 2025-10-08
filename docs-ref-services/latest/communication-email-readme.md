@@ -1,12 +1,12 @@
 ---
 title: Azure Communication Email client library for Java
-keywords: Azure, java, SDK, API, azure-communication-email, communication
-ms.date: 09/26/2025
+keywords: Azure, java, SDK, API, azure-communication-email, communication/azure-communication-email
+ms.date: 10/08/2025
 ms.topic: reference
 ms.devlang: java
-ms.service: communication
+ms.service: communication/azure-communication-email
 ---
-# Azure Communication Email client library for Java - version 1.0.25 
+# Azure Communication Email client library for Java - version 1.1.0 
 
 
 This package contains the Java SDK for Azure Communication Services for Email.
@@ -18,16 +18,17 @@ This package contains the Java SDK for Azure Communication Services for Email.
 - [Azure subscription][azure_sub]
 - [Communication Service Resource][communication_resource_docs]
 - [Email Communication Resource][email_resource_docs] with an active [Domain][domain_overview]
-- [Java Development Kit (JDK)](/java/azure/jdk/?view=azure-java-stable) version 8 or above
+- [Java Development Kit (JDK)](https://learn.microsoft.com/java/azure/jdk/?view=azure-java-stable) version 8 or above
 - [Apache Maven](https://maven.apache.org/download.cgi)
 
 To create these resources, you can use the [Azure Portal][communication_resource_create_portal], the [Azure PowerShell][communication_resource_create_power_shell], or the [.NET management client library][communication_resource_create_net].
 
 ### Include the package
+
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-communication-email_1.0.25/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-communication-email_1.1.0/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -43,7 +44,7 @@ To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/A
 </dependencyManagement>
 ```
 
-and then include the direct dependency in the dependencies section without the version tag.
+And then include the direct dependency in the dependencies section without the version tag.
 
 ```xml
 <dependencies>
@@ -55,25 +56,29 @@ and then include the direct dependency in the dependencies section without the v
 ```
 
 #### Include direct dependency
-If you want to take dependency on a particular version of the library that is not present in the BOM,
-add the direct dependency to your project as follows.
 
-[//]: # ({x-version-update-start;com.azure:azure-communication-email;current})
+If you want to take dependency on a particular version of the library that is not present in the BOM,
+add the direct dependency to your project as follows. "VERSION" below should be the version number you want. Example: 1.0.22
+
 ```xml
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-communication-email</artifactId>
-    <version>1.0.25</version>
+    <version>VERSION</version>
 </dependency>
 ```
-[//]: # ({x-version-update-end})
 
 ## Key concepts
-> More details coming soon.
+
+The email SDK provides two clients, a synchronous client and an asynchronous client:
+
+`EmailClient` and `EmailAsyncClient` provide an operation to send an email message (plain text or html). Inline images are supported for HTML formatted email message, making emails appealing for marketing campaigns.
+
+`EmailClient` and `EmailAsyncClient` also provide an operation to fetch the status of an email message sent.
 
 ## Examples
 
-`EmailClient` provides the functionality to send email messages .
+`EmailClient` provides the functionality to send email messages.
 
 ### Client Creation and Authentication
 
@@ -100,6 +105,7 @@ EmailClient emailClient = new EmailClientBuilder()
 ```
 
 ### Azure Active Directory Token Authentication
+
 A `DefaultAzureCredential` object must be passed to the `EmailClientBuilder` via the `credential()` method. An endpoint must also be set via the `endpoint()` method.
 
 The `AZURE_CLIENT_SECRET`, `AZURE_CLIENT_ID`, and `AZURE_TENANT_ID` environment variables are needed to create a `DefaultAzureCredential` object.
@@ -196,7 +202,35 @@ PollResponse<EmailSendResult> response = poller.waitForCompletion();
 System.out.println("Operation Id: " + response.getValue().getId());
 ```
 
+### Send Email with Inline Attachments
+
+Azure Communication Services support sending inline attachments.
+Adding an optional `contentId` parameter to an `EmailAttachment` will make the attachment an inline attachment.
+
+```java readme-sample-sendEmailWithInlineAttachment
+byte[] pngContent = Files.readAllBytes(new File("./inline-attachment.png").toPath());
+byte[] pngEncodedContent = Base64.getEncoder().encodeToString(pngContent).getBytes();
+EmailAttachment attachment = new EmailAttachment(
+    "inline-attachment.png",
+    "image/png",
+    BinaryData.fromBytes(pngEncodedContent)
+).setContentId("inline_image");
+
+EmailMessage message = new EmailMessage()
+    .setSenderAddress("<sender-email-address>")
+    .setToRecipients("<recipient-email-address>")
+    .setSubject("test subject")
+    .setBodyHtml("<h1>test message<img src=\"cid:inline_image\"></h1>")
+    .setAttachments(attachment);
+
+SyncPoller<EmailSendResult, EmailSendResult> poller = emailClient.beginSend(message);
+PollResponse<EmailSendResult> response = poller.waitForCompletion();
+
+System.out.println("Operation Id: " + response.getValue().getId());
+```
+
 ## Troubleshooting
+
 > More details coming soon,
 
 ## Next steps
@@ -217,11 +251,11 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
 [coc_contact]: mailto:opencode@microsoft.com
-[communication_resource_docs]: /azure/communication-services/quickstarts/create-communication-resource?tabs=windows&pivots=platform-azp
+[communication_resource_docs]: https://learn.microsoft.com/azure/communication-services/quickstarts/create-communication-resource?tabs=windows&pivots=platform-azp
 [email_resource_docs]: https://aka.ms/acsemail/createemailresource
-[communication_resource_create_portal]: /azure/communication-services/quickstarts/create-communication-resource?tabs=windows&pivots=platform-azp
-[communication_resource_create_power_shell]: /powershell/module/az.communication/new-azcommunicationservice
-[communication_resource_create_net]: /azure/communication-services/quickstarts/create-communication-resource?tabs=windows&pivots=platform-net
+[communication_resource_create_portal]: https://learn.microsoft.com/azure/communication-services/quickstarts/create-communication-resource?tabs=windows&pivots=platform-azp
+[communication_resource_create_power_shell]: https://learn.microsoft.com/powershell/module/az.communication/new-azcommunicationservice
+[communication_resource_create_net]: https://learn.microsoft.com/azure/communication-services/quickstarts/create-communication-resource?tabs=windows&pivots=platform-net
 [package]: https://www.nuget.org/packages/Azure.Communication.Common/
 [product_docs]: https://aka.ms/acsemail/overview
 [nextsteps]: https://aka.ms/acsemail/overview
