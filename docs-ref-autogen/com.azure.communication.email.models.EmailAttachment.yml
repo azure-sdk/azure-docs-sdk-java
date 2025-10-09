@@ -34,7 +34,7 @@ constructors:
   - description: "the contentType value to set."
     name: "contentType"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "the content value to set."
+  - description: "the contentInBase64 value to set."
     name: "content"
     type: "<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public EmailAttachment(String name, String contentType, BinaryData content)"
@@ -44,12 +44,22 @@ methods:
   fullName: "com.azure.communication.email.models.EmailAttachment.getContent()"
   name: "getContent()"
   nameWithType: "EmailAttachment.getContent()"
-  summary: "Get the content property: Contents of the attachment."
+  summary: "Returns the content of the attachment."
   syntax: "public BinaryData getContent()"
-  desc: "Get the content property: Contents of the attachment."
+  desc: "Returns the content of the attachment."
   returns:
-    description: "the content value."
+    description: "The content of the attachment as BinaryData."
     type: "<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.communication.email.models.EmailAttachment.getContentId()"
+  fullName: "com.azure.communication.email.models.EmailAttachment.getContentId()"
+  name: "getContentId()"
+  nameWithType: "EmailAttachment.getContentId()"
+  summary: "Get the content<wbr>Id property: Unique identifier (CID) to reference an inline attachment."
+  syntax: "public String getContentId()"
+  desc: "Get the contentId property: Unique identifier (CID) to reference an inline attachment."
+  returns:
+    description: "the contentId value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.communication.email.models.EmailAttachment.getContentType()"
   fullName: "com.azure.communication.email.models.EmailAttachment.getContentType()"
   name: "getContentType()"
@@ -70,8 +80,22 @@ methods:
   returns:
     description: "the name value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.communication.email.models.EmailAttachment.setContentId(java.lang.String)"
+  fullName: "com.azure.communication.email.models.EmailAttachment.setContentId(String contentId)"
+  name: "setContentId(String contentId)"
+  nameWithType: "EmailAttachment.setContentId(String contentId)"
+  summary: "Set the content<wbr>Id property: Unique identifier (CID) to reference an inline attachment."
+  parameters:
+  - description: "the contentId value to set."
+    name: "contentId"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public EmailAttachment setContentId(String contentId)"
+  desc: "Set the contentId property: Unique identifier (CID) to reference an inline attachment."
+  returns:
+    description: "the EmailAttachment object itself."
+    type: "<xref href=\"com.azure.communication.email.models.EmailAttachment?alt=com.azure.communication.email.models.EmailAttachment&text=EmailAttachment\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Attachment to the email."
 metadata: {}
 package: "com.azure.communication.email.models"
-artifact: com.azure:azure-communication-email:1.0.25
+artifact: com.azure:azure-communication-email:1.1.0

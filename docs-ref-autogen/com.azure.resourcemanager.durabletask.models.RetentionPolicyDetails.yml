@@ -1,0 +1,118 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails"
+fullName: "com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails"
+name: "RetentionPolicyDetails"
+nameWithType: "RetentionPolicyDetails"
+summary: "The properties of a retention policy."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **RetentionPolicyDetails**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails?alt=com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails&text=RetentionPolicyDetails\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails.RetentionPolicyDetails()"
+  fullName: "com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails.RetentionPolicyDetails()"
+  name: "RetentionPolicyDetails()"
+  nameWithType: "RetentionPolicyDetails.RetentionPolicyDetails()"
+  summary: "Creates an instance of Retention<wbr>Policy<wbr>Details class."
+  syntax: "public RetentionPolicyDetails()"
+  desc: "Creates an instance of RetentionPolicyDetails class."
+methods:
+- uid: "com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "RetentionPolicyDetails.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Retention<wbr>Policy<wbr>Details from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static RetentionPolicyDetails fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of RetentionPolicyDetails from the JsonReader."
+  returns:
+    description: "An instance of RetentionPolicyDetails if the JsonReader was pointing to an instance of it, or null if it\n was pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails?alt=com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails&text=RetentionPolicyDetails\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails.orchestrationState()"
+  fullName: "com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails.orchestrationState()"
+  name: "orchestrationState()"
+  nameWithType: "RetentionPolicyDetails.orchestrationState()"
+  summary: "Get the orchestration<wbr>State property: The orchestration state to which this policy applies."
+  syntax: "public PurgeableOrchestrationState orchestrationState()"
+  desc: "Get the orchestrationState property: The orchestration state to which this policy applies. If omitted, the policy applies to all purgeable orchestration states."
+  returns:
+    description: "the orchestrationState value."
+    type: "<xref href=\"com.azure.resourcemanager.durabletask.models.PurgeableOrchestrationState?alt=com.azure.resourcemanager.durabletask.models.PurgeableOrchestrationState&text=PurgeableOrchestrationState\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails.retentionPeriodInDays()"
+  fullName: "com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails.retentionPeriodInDays()"
+  name: "retentionPeriodInDays()"
+  nameWithType: "RetentionPolicyDetails.retentionPeriodInDays()"
+  summary: "Get the retention<wbr>Period<wbr>InDays property: The retention period in days after which the orchestration will be purged automatically."
+  syntax: "public int retentionPeriodInDays()"
+  desc: "Get the retentionPeriodInDays property: The retention period in days after which the orchestration will be purged automatically."
+  returns:
+    description: "the retentionPeriodInDays value."
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "RetentionPolicyDetails.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails.withOrchestrationState(com.azure.resourcemanager.durabletask.models.PurgeableOrchestrationState)"
+  fullName: "com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails.withOrchestrationState(PurgeableOrchestrationState orchestrationState)"
+  name: "withOrchestrationState(PurgeableOrchestrationState orchestrationState)"
+  nameWithType: "RetentionPolicyDetails.withOrchestrationState(PurgeableOrchestrationState orchestrationState)"
+  summary: "Set the orchestration<wbr>State property: The orchestration state to which this policy applies."
+  parameters:
+  - description: "the orchestrationState value to set."
+    name: "orchestrationState"
+    type: "<xref href=\"com.azure.resourcemanager.durabletask.models.PurgeableOrchestrationState?alt=com.azure.resourcemanager.durabletask.models.PurgeableOrchestrationState&text=PurgeableOrchestrationState\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public RetentionPolicyDetails withOrchestrationState(PurgeableOrchestrationState orchestrationState)"
+  desc: "Set the orchestrationState property: The orchestration state to which this policy applies. If omitted, the policy applies to all purgeable orchestration states."
+  returns:
+    description: "the RetentionPolicyDetails object itself."
+    type: "<xref href=\"com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails?alt=com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails&text=RetentionPolicyDetails\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails.withRetentionPeriodInDays(int)"
+  fullName: "com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails.withRetentionPeriodInDays(int retentionPeriodInDays)"
+  name: "withRetentionPeriodInDays(int retentionPeriodInDays)"
+  nameWithType: "RetentionPolicyDetails.withRetentionPeriodInDays(int retentionPeriodInDays)"
+  summary: "Set the retention<wbr>Period<wbr>InDays property: The retention period in days after which the orchestration will be purged automatically."
+  parameters:
+  - description: "the retentionPeriodInDays value to set."
+    name: "retentionPeriodInDays"
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public RetentionPolicyDetails withRetentionPeriodInDays(int retentionPeriodInDays)"
+  desc: "Set the retentionPeriodInDays property: The retention period in days after which the orchestration will be purged automatically."
+  returns:
+    description: "the RetentionPolicyDetails object itself."
+    type: "<xref href=\"com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails?alt=com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails&text=RetentionPolicyDetails\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "The properties of a retention policy."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails?alt=com.azure.resourcemanager.durabletask.models.RetentionPolicyDetails&text=RetentionPolicyDetails\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.durabletask.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-durabletask:1.0.0
