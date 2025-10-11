@@ -14,9 +14,13 @@ inheritedClassMethods:
   - "<xref href=\"com.azure.search.documents.indexes.models.VectorSearchCompression.getCompressionName()?alt=com.azure.search.documents.indexes.models.VectorSearchCompression.getCompressionName&text=getCompressionName\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.search.documents.indexes.models.VectorSearchCompression.getDefaultOversampling()?alt=com.azure.search.documents.indexes.models.VectorSearchCompression.getDefaultOversampling&text=getDefaultOversampling\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.search.documents.indexes.models.VectorSearchCompression.getKind()?alt=com.azure.search.documents.indexes.models.VectorSearchCompression.getKind&text=getKind\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.search.documents.indexes.models.VectorSearchCompression.getRescoringOptions()?alt=com.azure.search.documents.indexes.models.VectorSearchCompression.getRescoringOptions&text=getRescoringOptions\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.search.documents.indexes.models.VectorSearchCompression.getTruncationDimension()?alt=com.azure.search.documents.indexes.models.VectorSearchCompression.getTruncationDimension&text=getTruncationDimension\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.search.documents.indexes.models.VectorSearchCompression.isRerankWithOriginalVectors()?alt=com.azure.search.documents.indexes.models.VectorSearchCompression.isRerankWithOriginalVectors&text=isRerankWithOriginalVectors\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.search.documents.indexes.models.VectorSearchCompression.setDefaultOversampling(java.lang.Double)?alt=com.azure.search.documents.indexes.models.VectorSearchCompression.setDefaultOversampling&text=setDefaultOversampling\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.search.documents.indexes.models.VectorSearchCompression.setRerankWithOriginalVectors(java.lang.Boolean)?alt=com.azure.search.documents.indexes.models.VectorSearchCompression.setRerankWithOriginalVectors&text=setRerankWithOriginalVectors\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.search.documents.indexes.models.VectorSearchCompression.setRescoringOptions(com.azure.search.documents.indexes.models.RescoringOptions)?alt=com.azure.search.documents.indexes.models.VectorSearchCompression.setRescoringOptions&text=setRescoringOptions\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.search.documents.indexes.models.VectorSearchCompression.setTruncationDimension(java.lang.Integer)?alt=com.azure.search.documents.indexes.models.VectorSearchCompression.setTruncationDimension&text=setTruncationDimension\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.search.documents.indexes.models.VectorSearchCompression.toJson(com.azure.json.JsonWriter)?alt=com.azure.search.documents.indexes.models.VectorSearchCompression.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
@@ -85,7 +89,7 @@ methods:
   - name: "defaultOversampling"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html\">Double</a>"
   syntax: "public BinaryQuantizationCompression setDefaultOversampling(Double defaultOversampling)"
-  desc: "Set the defaultOversampling property: Default oversampling factor. Oversampling will internally request more documents (specified by this multiplier) in the initial search. This increases the set of results that will be reranked using recomputed similarity scores from full-precision vectors. Minimum value is 1, meaning no oversampling (1x). This parameter can only be set when rerankWithOriginalVectors is true. Higher values improve recall at the expense of latency."
+  desc: "Set the defaultOversampling property: Default oversampling factor. Oversampling will internally request more documents (specified by this multiplier) in the initial search. This increases the set of results that will be reranked using recomputed similarity scores from full-precision vectors. Minimum value is 1, meaning no oversampling (1x). This parameter can only be set when rerankWithOriginalVectors is true. Higher values improve recall at the expense of latency. For use with only service version 2024-07-01. If using 2025-09-01 or later, use RescoringOptions.defaultOversampling."
   returns:
     type: "<xref href=\"com.azure.search.documents.indexes.models.BinaryQuantizationCompression?alt=com.azure.search.documents.indexes.models.BinaryQuantizationCompression&text=BinaryQuantizationCompression\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.BinaryQuantizationCompression.setRerankWithOriginalVectors(java.lang.Boolean)"
@@ -98,7 +102,33 @@ methods:
   - name: "rerankWithOriginalVectors"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
   syntax: "public BinaryQuantizationCompression setRerankWithOriginalVectors(Boolean rerankWithOriginalVectors)"
-  desc: "Set the rerankWithOriginalVectors property: If set to true, once the ordered set of results calculated using compressed vectors are obtained, they will be reranked again by recalculating the full-precision similarity scores. This will improve recall at the expense of latency."
+  desc: "Set the rerankWithOriginalVectors property: If set to true, once the ordered set of results calculated using compressed vectors are obtained, they will be reranked again by recalculating the full-precision similarity scores. This will improve recall at the expense of latency. For use with only service version 2024-07-01. If using 2025-09-01 or later, use RescoringOptions.rescoringEnabled."
+  returns:
+    type: "<xref href=\"com.azure.search.documents.indexes.models.BinaryQuantizationCompression?alt=com.azure.search.documents.indexes.models.BinaryQuantizationCompression&text=BinaryQuantizationCompression\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.indexes.models.BinaryQuantizationCompression.setRescoringOptions(com.azure.search.documents.indexes.models.RescoringOptions)"
+  fullName: "com.azure.search.documents.indexes.models.BinaryQuantizationCompression.setRescoringOptions(RescoringOptions rescoringOptions)"
+  name: "setRescoringOptions(RescoringOptions rescoringOptions)"
+  nameWithType: "BinaryQuantizationCompression.setRescoringOptions(RescoringOptions rescoringOptions)"
+  summary: "Set the rescoring<wbr>Options property: Contains the options for rescoring."
+  overridden: "com.azure.search.documents.indexes.models.VectorSearchCompression.setRescoringOptions(com.azure.search.documents.indexes.models.RescoringOptions)"
+  parameters:
+  - name: "rescoringOptions"
+    type: "<xref href=\"com.azure.search.documents.indexes.models.RescoringOptions?alt=com.azure.search.documents.indexes.models.RescoringOptions&text=RescoringOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public BinaryQuantizationCompression setRescoringOptions(RescoringOptions rescoringOptions)"
+  desc: "Set the rescoringOptions property: Contains the options for rescoring."
+  returns:
+    type: "<xref href=\"com.azure.search.documents.indexes.models.BinaryQuantizationCompression?alt=com.azure.search.documents.indexes.models.BinaryQuantizationCompression&text=BinaryQuantizationCompression\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.indexes.models.BinaryQuantizationCompression.setTruncationDimension(java.lang.Integer)"
+  fullName: "com.azure.search.documents.indexes.models.BinaryQuantizationCompression.setTruncationDimension(Integer truncationDimension)"
+  name: "setTruncationDimension(Integer truncationDimension)"
+  nameWithType: "BinaryQuantizationCompression.setTruncationDimension(Integer truncationDimension)"
+  summary: "Set the truncation<wbr>Dimension property: The number of dimensions to truncate the vectors to."
+  overridden: "com.azure.search.documents.indexes.models.VectorSearchCompression.setTruncationDimension(java.lang.Integer)"
+  parameters:
+  - name: "truncationDimension"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  syntax: "public BinaryQuantizationCompression setTruncationDimension(Integer truncationDimension)"
+  desc: "Set the truncationDimension property: The number of dimensions to truncate the vectors to. Truncating the vectors reduces the size of the vectors and the amount of data that needs to be transferred during search. This can save storage cost and improve search performance at the expense of recall. It should be only used for embeddings trained with Matryoshka Representation Learning (MRL) such as OpenAI text-embedding-3-large (small). The default value is null, which means no truncation."
   returns:
     type: "<xref href=\"com.azure.search.documents.indexes.models.BinaryQuantizationCompression?alt=com.azure.search.documents.indexes.models.BinaryQuantizationCompression&text=BinaryQuantizationCompression\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.BinaryQuantizationCompression.toJson(com.azure.json.JsonWriter)"
@@ -118,4 +148,4 @@ type: "class"
 desc: "Contains configuration options specific to the binary quantization compression method used during indexing and querying."
 metadata: {}
 package: "com.azure.search.documents.indexes.models"
-artifact: com.azure:azure-search-documents:11.7.10
+artifact: com.azure:azure-search-documents:11.8.0

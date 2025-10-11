@@ -57,9 +57,9 @@ methods:
   fullName: "com.azure.search.documents.indexes.models.SearchIndexerDataContainer.getName()"
   name: "getName()"
   nameWithType: "SearchIndexerDataContainer.getName()"
-  summary: "Get the name property: The name of the table or view (for Azure SQL data source) or collection (for CosmosDB data source) that will be indexed."
+  summary: "Get the name property: The name of the table or view (for Azure SQL datasource), collection (for CosmosDB datasource), container (for Azure Blob and ADLS Gen 2 datasources), Azure Table (for Azure Table datasource), or lakehouse (for Onelake datasource) that will be indexed."
   syntax: "public String getName()"
-  desc: "Get the name property: The name of the table or view (for Azure SQL data source) or collection (for CosmosDB data source) that will be indexed."
+  desc: "Get the name property: The name of the table or view (for Azure SQL datasource), collection (for CosmosDB datasource), container (for Azure Blob and ADLS Gen 2 datasources), Azure Table (for Azure Table datasource), or lakehouse (for Onelake datasource) that will be indexed."
   returns:
     description: "the name value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -69,7 +69,7 @@ methods:
   nameWithType: "SearchIndexerDataContainer.getQuery()"
   summary: "Get the query property: A query that is applied to this data container."
   syntax: "public String getQuery()"
-  desc: "Get the query property: A query that is applied to this data container. The syntax and meaning of this parameter is datasource-specific. Not supported by Azure SQL datasources."
+  desc: "Get the query property: A query that is applied to this data container. For CosmosDB datasource query can flatten and filter data. For Azure Blob and ADLS Gen 2 query can filter by folders. For Azure Table query can filter by row data. For Onelake query can filter by folder or shortcut. Not supported by Azure SQL datasources."
   returns:
     description: "the query value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -83,7 +83,7 @@ methods:
     name: "query"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public SearchIndexerDataContainer setQuery(String query)"
-  desc: "Set the query property: A query that is applied to this data container. The syntax and meaning of this parameter is datasource-specific. Not supported by Azure SQL datasources."
+  desc: "Set the query property: A query that is applied to this data container. For CosmosDB datasource query can flatten and filter data. For Azure Blob and ADLS Gen 2 query can filter by folders. For Azure Table query can filter by row data. For Onelake query can filter by folder or shortcut. Not supported by Azure SQL datasources."
   returns:
     description: "the SearchIndexerDataContainer object itself."
     type: "<xref href=\"com.azure.search.documents.indexes.models.SearchIndexerDataContainer?alt=com.azure.search.documents.indexes.models.SearchIndexerDataContainer&text=SearchIndexerDataContainer\" data-throw-if-not-resolved=\"False\" />"
@@ -105,4 +105,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.indexes.models.SearchIndexerDataContainer?alt=com.azure.search.documents.indexes.models.SearchIndexerDataContainer&text=SearchIndexerDataContainer\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.search.documents.indexes.models"
-artifact: com.azure:azure-search-documents:11.7.10
+artifact: com.azure:azure-search-documents:11.8.0
