@@ -1,7 +1,7 @@
 ---
 title: Azure Sphere SDK for Java
 description: Reference for Azure Sphere SDK for Java
-ms.date: 10/10/2025
+ms.date: 10/13/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: sphere
