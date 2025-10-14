@@ -51,7 +51,7 @@ methods:
   nameWithType: "NetworkVirtualApplianceInner.additionalNics()"
   summary: "Get the additional<wbr>Nics property: Details required for Additional Network Interface."
   syntax: "public List<VirtualApplianceAdditionalNicProperties> additionalNics()"
-  desc: "Get the additionalNics property: Details required for Additional Network Interface."
+  desc: "Get the additionalNics property: Details required for Additional Network Interface. This property is not compatible with the NVA deployed in VNets."
   returns:
     description: "the additionalNics value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.network.models.VirtualApplianceAdditionalNicProperties?alt=com.azure.resourcemanager.network.models.VirtualApplianceAdditionalNicProperties&text=VirtualApplianceAdditionalNicProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -101,7 +101,7 @@ methods:
   nameWithType: "NetworkVirtualApplianceInner.delegation()"
   summary: "Get the delegation property: The delegation for the Virtual Appliance."
   syntax: "public DelegationProperties delegation()"
-  desc: "Get the delegation property: The delegation for the Virtual Appliance."
+  desc: "Get the delegation property: The delegation for the Virtual Appliance. Only appliable for SaaS NVA."
   returns:
     description: "the delegation value."
     type: "<xref href=\"com.azure.resourcemanager.network.models.DelegationProperties?alt=com.azure.resourcemanager.network.models.DelegationProperties&text=DelegationProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -206,6 +206,16 @@ methods:
   returns:
     description: "the networkProfile value."
     type: "<xref href=\"com.azure.resourcemanager.network.models.NetworkVirtualAppliancePropertiesFormatNetworkProfile?alt=com.azure.resourcemanager.network.models.NetworkVirtualAppliancePropertiesFormatNetworkProfile&text=NetworkVirtualAppliancePropertiesFormatNetworkProfile\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.network.fluent.models.NetworkVirtualApplianceInner.nvaInterfaceConfigurations()"
+  fullName: "com.azure.resourcemanager.network.fluent.models.NetworkVirtualApplianceInner.nvaInterfaceConfigurations()"
+  name: "nvaInterfaceConfigurations()"
+  nameWithType: "NetworkVirtualApplianceInner.nvaInterfaceConfigurations()"
+  summary: "Get the nva<wbr>Interface<wbr>Configurations property: The NVA in VNet interface configurations."
+  syntax: "public List<NvaInterfaceConfigurationsProperties> nvaInterfaceConfigurations()"
+  desc: "Get the nvaInterfaceConfigurations property: The NVA in VNet interface configurations."
+  returns:
+    description: "the nvaInterfaceConfigurations value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.network.models.NvaInterfaceConfigurationsProperties?alt=com.azure.resourcemanager.network.models.NvaInterfaceConfigurationsProperties&text=NvaInterfaceConfigurationsProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.network.fluent.models.NetworkVirtualApplianceInner.nvaSku()"
   fullName: "com.azure.resourcemanager.network.fluent.models.NetworkVirtualApplianceInner.nvaSku()"
   name: "nvaSku()"
@@ -226,6 +236,16 @@ methods:
   returns:
     description: "the partnerManagedResource value."
     type: "<xref href=\"com.azure.resourcemanager.network.models.PartnerManagedResourceProperties?alt=com.azure.resourcemanager.network.models.PartnerManagedResourceProperties&text=PartnerManagedResourceProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.network.fluent.models.NetworkVirtualApplianceInner.privateIpAddress()"
+  fullName: "com.azure.resourcemanager.network.fluent.models.NetworkVirtualApplianceInner.privateIpAddress()"
+  name: "privateIpAddress()"
+  nameWithType: "NetworkVirtualApplianceInner.privateIpAddress()"
+  summary: "Get the private<wbr>IpAddress property: A Internal Load Balancer's HA port frontend IP address."
+  syntax: "public String privateIpAddress()"
+  desc: "Get the privateIpAddress property: A Internal Load Balancer's HA port frontend IP address. Can be used to set routes & UDR to load balance traffic between NVA instances."
+  returns:
+    description: "the privateIpAddress value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.network.fluent.models.NetworkVirtualApplianceInner.provisioningState()"
   fullName: "com.azure.resourcemanager.network.fluent.models.NetworkVirtualApplianceInner.provisioningState()"
   name: "provisioningState()"
@@ -337,7 +357,7 @@ methods:
     name: "additionalNics"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.network.models.VirtualApplianceAdditionalNicProperties?alt=com.azure.resourcemanager.network.models.VirtualApplianceAdditionalNicProperties&text=VirtualApplianceAdditionalNicProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
   syntax: "public NetworkVirtualApplianceInner withAdditionalNics(List<VirtualApplianceAdditionalNicProperties> additionalNics)"
-  desc: "Set the additionalNics property: Details required for Additional Network Interface."
+  desc: "Set the additionalNics property: Details required for Additional Network Interface. This property is not compatible with the NVA deployed in VNets."
   returns:
     description: "the NetworkVirtualApplianceInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.network.fluent.models.NetworkVirtualApplianceInner?alt=com.azure.resourcemanager.network.fluent.models.NetworkVirtualApplianceInner&text=NetworkVirtualApplianceInner\" data-throw-if-not-resolved=\"False\" />"
@@ -393,7 +413,7 @@ methods:
     name: "delegation"
     type: "<xref href=\"com.azure.resourcemanager.network.models.DelegationProperties?alt=com.azure.resourcemanager.network.models.DelegationProperties&text=DelegationProperties\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public NetworkVirtualApplianceInner withDelegation(DelegationProperties delegation)"
-  desc: "Set the delegation property: The delegation for the Virtual Appliance."
+  desc: "Set the delegation property: The delegation for the Virtual Appliance. Only appliable for SaaS NVA."
   returns:
     description: "the NetworkVirtualApplianceInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.network.fluent.models.NetworkVirtualApplianceInner?alt=com.azure.resourcemanager.network.fluent.models.NetworkVirtualApplianceInner&text=NetworkVirtualApplianceInner\" data-throw-if-not-resolved=\"False\" />"
@@ -461,6 +481,20 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.network.models.NetworkVirtualAppliancePropertiesFormatNetworkProfile?alt=com.azure.resourcemanager.network.models.NetworkVirtualAppliancePropertiesFormatNetworkProfile&text=NetworkVirtualAppliancePropertiesFormatNetworkProfile\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public NetworkVirtualApplianceInner withNetworkProfile(NetworkVirtualAppliancePropertiesFormatNetworkProfile networkProfile)"
   desc: "Set the networkProfile property: Network Profile containing configurations for Public and Private NIC."
+  returns:
+    description: "the NetworkVirtualApplianceInner object itself."
+    type: "<xref href=\"com.azure.resourcemanager.network.fluent.models.NetworkVirtualApplianceInner?alt=com.azure.resourcemanager.network.fluent.models.NetworkVirtualApplianceInner&text=NetworkVirtualApplianceInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.network.fluent.models.NetworkVirtualApplianceInner.withNvaInterfaceConfigurations(java.util.List<com.azure.resourcemanager.network.models.NvaInterfaceConfigurationsProperties>)"
+  fullName: "com.azure.resourcemanager.network.fluent.models.NetworkVirtualApplianceInner.withNvaInterfaceConfigurations(List<NvaInterfaceConfigurationsProperties> nvaInterfaceConfigurations)"
+  name: "withNvaInterfaceConfigurations(List<NvaInterfaceConfigurationsProperties> nvaInterfaceConfigurations)"
+  nameWithType: "NetworkVirtualApplianceInner.withNvaInterfaceConfigurations(List<NvaInterfaceConfigurationsProperties> nvaInterfaceConfigurations)"
+  summary: "Set the nva<wbr>Interface<wbr>Configurations property: The NVA in VNet interface configurations."
+  parameters:
+  - description: "the nvaInterfaceConfigurations value to set."
+    name: "nvaInterfaceConfigurations"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.network.models.NvaInterfaceConfigurationsProperties?alt=com.azure.resourcemanager.network.models.NvaInterfaceConfigurationsProperties&text=NvaInterfaceConfigurationsProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public NetworkVirtualApplianceInner withNvaInterfaceConfigurations(List<NvaInterfaceConfigurationsProperties> nvaInterfaceConfigurations)"
+  desc: "Set the nvaInterfaceConfigurations property: The NVA in VNet interface configurations."
   returns:
     description: "the NetworkVirtualApplianceInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.network.fluent.models.NetworkVirtualApplianceInner?alt=com.azure.resourcemanager.network.fluent.models.NetworkVirtualApplianceInner&text=NetworkVirtualApplianceInner\" data-throw-if-not-resolved=\"False\" />"
@@ -549,4 +583,4 @@ type: "class"
 desc: "NetworkVirtualAppliance Resource."
 metadata: {}
 package: "com.azure.resourcemanager.network.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-network:2.53.4
+artifact: com.azure.resourcemanager:azure-resourcemanager-network:2.54.0

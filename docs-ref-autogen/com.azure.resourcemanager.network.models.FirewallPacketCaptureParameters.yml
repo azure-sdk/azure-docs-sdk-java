@@ -36,7 +36,7 @@ methods:
   nameWithType: "FirewallPacketCaptureParameters.durationInSeconds()"
   summary: "Get the duration<wbr>InSeconds property: Duration of packet capture in seconds."
   syntax: "public Integer durationInSeconds()"
-  desc: "Get the durationInSeconds property: Duration of packet capture in seconds."
+  desc: "Get the durationInSeconds property: Duration of packet capture in seconds. If the field is not provided, the default value is 60."
   returns:
     description: "the durationInSeconds value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
@@ -95,10 +95,20 @@ methods:
   nameWithType: "FirewallPacketCaptureParameters.numberOfPacketsToCapture()"
   summary: "Get the number<wbr>OfPackets<wbr>ToCapture property: Number of packets to be captured."
   syntax: "public Integer numberOfPacketsToCapture()"
-  desc: "Get the numberOfPacketsToCapture property: Number of packets to be captured."
+  desc: "Get the numberOfPacketsToCapture property: Number of packets to be captured. If the field is not provided, the default value is 1000."
   returns:
     description: "the numberOfPacketsToCapture value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+- uid: "com.azure.resourcemanager.network.models.FirewallPacketCaptureParameters.operation()"
+  fullName: "com.azure.resourcemanager.network.models.FirewallPacketCaptureParameters.operation()"
+  name: "operation()"
+  nameWithType: "FirewallPacketCaptureParameters.operation()"
+  summary: "Get the operation property: The Azure Firewall packet capture operation to perform."
+  syntax: "public AzureFirewallPacketCaptureOperationType operation()"
+  desc: "Get the operation property: The Azure Firewall packet capture operation to perform."
+  returns:
+    description: "the operation value."
+    type: "<xref href=\"com.azure.resourcemanager.network.models.AzureFirewallPacketCaptureOperationType?alt=com.azure.resourcemanager.network.models.AzureFirewallPacketCaptureOperationType&text=AzureFirewallPacketCaptureOperationType\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.network.models.FirewallPacketCaptureParameters.protocol()"
   fullName: "com.azure.resourcemanager.network.models.FirewallPacketCaptureParameters.protocol()"
   name: "protocol()"
@@ -148,7 +158,7 @@ methods:
     name: "durationInSeconds"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
   syntax: "public FirewallPacketCaptureParameters withDurationInSeconds(Integer durationInSeconds)"
-  desc: "Set the durationInSeconds property: Duration of packet capture in seconds."
+  desc: "Set the durationInSeconds property: Duration of packet capture in seconds. If the field is not provided, the default value is 60."
   returns:
     description: "the FirewallPacketCaptureParameters object itself."
     type: "<xref href=\"com.azure.resourcemanager.network.models.FirewallPacketCaptureParameters?alt=com.azure.resourcemanager.network.models.FirewallPacketCaptureParameters&text=FirewallPacketCaptureParameters\" data-throw-if-not-resolved=\"False\" />"
@@ -204,7 +214,21 @@ methods:
     name: "numberOfPacketsToCapture"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
   syntax: "public FirewallPacketCaptureParameters withNumberOfPacketsToCapture(Integer numberOfPacketsToCapture)"
-  desc: "Set the numberOfPacketsToCapture property: Number of packets to be captured."
+  desc: "Set the numberOfPacketsToCapture property: Number of packets to be captured. If the field is not provided, the default value is 1000."
+  returns:
+    description: "the FirewallPacketCaptureParameters object itself."
+    type: "<xref href=\"com.azure.resourcemanager.network.models.FirewallPacketCaptureParameters?alt=com.azure.resourcemanager.network.models.FirewallPacketCaptureParameters&text=FirewallPacketCaptureParameters\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.network.models.FirewallPacketCaptureParameters.withOperation(com.azure.resourcemanager.network.models.AzureFirewallPacketCaptureOperationType)"
+  fullName: "com.azure.resourcemanager.network.models.FirewallPacketCaptureParameters.withOperation(AzureFirewallPacketCaptureOperationType operation)"
+  name: "withOperation(AzureFirewallPacketCaptureOperationType operation)"
+  nameWithType: "FirewallPacketCaptureParameters.withOperation(AzureFirewallPacketCaptureOperationType operation)"
+  summary: "Set the operation property: The Azure Firewall packet capture operation to perform."
+  parameters:
+  - description: "the operation value to set."
+    name: "operation"
+    type: "<xref href=\"com.azure.resourcemanager.network.models.AzureFirewallPacketCaptureOperationType?alt=com.azure.resourcemanager.network.models.AzureFirewallPacketCaptureOperationType&text=AzureFirewallPacketCaptureOperationType\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public FirewallPacketCaptureParameters withOperation(AzureFirewallPacketCaptureOperationType operation)"
+  desc: "Set the operation property: The Azure Firewall packet capture operation to perform."
   returns:
     description: "the FirewallPacketCaptureParameters object itself."
     type: "<xref href=\"com.azure.resourcemanager.network.models.FirewallPacketCaptureParameters?alt=com.azure.resourcemanager.network.models.FirewallPacketCaptureParameters&text=FirewallPacketCaptureParameters\" data-throw-if-not-resolved=\"False\" />"
@@ -242,4 +266,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.network.models.FirewallPacketCaptureParameters?alt=com.azure.resourcemanager.network.models.FirewallPacketCaptureParameters&text=FirewallPacketCaptureParameters\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.network.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-network:2.53.4
+artifact: com.azure.resourcemanager:azure-resourcemanager-network:2.54.0

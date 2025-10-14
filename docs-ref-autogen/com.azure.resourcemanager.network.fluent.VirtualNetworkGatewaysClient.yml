@@ -3745,6 +3745,85 @@ methods:
   returns:
     description: "all the connections in a virtual network gateway as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.network.fluent.models.VirtualNetworkGatewayConnectionListEntityInner?alt=com.azure.resourcemanager.network.fluent.models.VirtualNetworkGatewayConnectionListEntityInner&text=VirtualNetworkGatewayConnectionListEntityInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.network.fluent.VirtualNetworkGatewaysClient.listRadiusSecrets(java.lang.String,java.lang.String)"
+  fullName: "com.azure.resourcemanager.network.fluent.VirtualNetworkGatewaysClient.listRadiusSecrets(String resourceGroupName, String virtualNetworkGatewayName)"
+  name: "listRadiusSecrets(String resourceGroupName, String virtualNetworkGatewayName)"
+  nameWithType: "VirtualNetworkGatewaysClient.listRadiusSecrets(String resourceGroupName, String virtualNetworkGatewayName)"
+  summary: "List all Radius servers with respective radius secrets from virtual network gateway Vpn<wbr>Client<wbr>Configuration."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The name of the virtual network gateway."
+    name: "virtualNetworkGatewayName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract RadiusAuthServerListResultInner listRadiusSecrets(String resourceGroupName, String virtualNetworkGatewayName)"
+  desc: "List all Radius servers with respective radius secrets from virtual network gateway VpnClientConfiguration."
+  returns:
+    description: "list of Radius servers with respective radius secrets."
+    type: "<xref href=\"com.azure.resourcemanager.network.fluent.models.RadiusAuthServerListResultInner?alt=com.azure.resourcemanager.network.fluent.models.RadiusAuthServerListResultInner&text=RadiusAuthServerListResultInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.network.fluent.VirtualNetworkGatewaysClient.listRadiusSecretsAsync(java.lang.String,java.lang.String)"
+  fullName: "com.azure.resourcemanager.network.fluent.VirtualNetworkGatewaysClient.listRadiusSecretsAsync(String resourceGroupName, String virtualNetworkGatewayName)"
+  name: "listRadiusSecretsAsync(String resourceGroupName, String virtualNetworkGatewayName)"
+  nameWithType: "VirtualNetworkGatewaysClient.listRadiusSecretsAsync(String resourceGroupName, String virtualNetworkGatewayName)"
+  summary: "List all Radius servers with respective radius secrets from virtual network gateway Vpn<wbr>Client<wbr>Configuration."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The name of the virtual network gateway."
+    name: "virtualNetworkGatewayName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract Mono<RadiusAuthServerListResultInner> listRadiusSecretsAsync(String resourceGroupName, String virtualNetworkGatewayName)"
+  desc: "List all Radius servers with respective radius secrets from virtual network gateway VpnClientConfiguration."
+  returns:
+    description: "list of Radius servers with respective radius secrets on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.resourcemanager.network.fluent.models.RadiusAuthServerListResultInner?alt=com.azure.resourcemanager.network.fluent.models.RadiusAuthServerListResultInner&text=RadiusAuthServerListResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.network.fluent.VirtualNetworkGatewaysClient.listRadiusSecretsWithResponse(java.lang.String,java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.network.fluent.VirtualNetworkGatewaysClient.listRadiusSecretsWithResponse(String resourceGroupName, String virtualNetworkGatewayName, Context context)"
+  name: "listRadiusSecretsWithResponse(String resourceGroupName, String virtualNetworkGatewayName, Context context)"
+  nameWithType: "VirtualNetworkGatewaysClient.listRadiusSecretsWithResponse(String resourceGroupName, String virtualNetworkGatewayName, Context context)"
+  summary: "List all Radius servers with respective radius secrets from virtual network gateway Vpn<wbr>Client<wbr>Configuration."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The name of the virtual network gateway."
+    name: "virtualNetworkGatewayName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Response<RadiusAuthServerListResultInner> listRadiusSecretsWithResponse(String resourceGroupName, String virtualNetworkGatewayName, Context context)"
+  desc: "List all Radius servers with respective radius secrets from virtual network gateway VpnClientConfiguration."
+  returns:
+    description: "list of Radius servers with respective radius secrets along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.network.fluent.models.RadiusAuthServerListResultInner?alt=com.azure.resourcemanager.network.fluent.models.RadiusAuthServerListResultInner&text=RadiusAuthServerListResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.network.fluent.VirtualNetworkGatewaysClient.listRadiusSecretsWithResponseAsync(java.lang.String,java.lang.String)"
+  fullName: "com.azure.resourcemanager.network.fluent.VirtualNetworkGatewaysClient.listRadiusSecretsWithResponseAsync(String resourceGroupName, String virtualNetworkGatewayName)"
+  name: "listRadiusSecretsWithResponseAsync(String resourceGroupName, String virtualNetworkGatewayName)"
+  nameWithType: "VirtualNetworkGatewaysClient.listRadiusSecretsWithResponseAsync(String resourceGroupName, String virtualNetworkGatewayName)"
+  summary: "List all Radius servers with respective radius secrets from virtual network gateway Vpn<wbr>Client<wbr>Configuration."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The name of the virtual network gateway."
+    name: "virtualNetworkGatewayName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract Mono<Response<RadiusAuthServerListResultInner>> listRadiusSecretsWithResponseAsync(String resourceGroupName, String virtualNetworkGatewayName)"
+  desc: "List all Radius servers with respective radius secrets from virtual network gateway VpnClientConfiguration."
+  returns:
+    description: "list of Radius servers with respective radius secrets along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful\n completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.network.fluent.models.RadiusAuthServerListResultInner?alt=com.azure.resourcemanager.network.fluent.models.RadiusAuthServerListResultInner&text=RadiusAuthServerListResultInner\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.resourcemanager.network.fluent.VirtualNetworkGatewaysClient.reset(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.network.fluent.VirtualNetworkGatewaysClient.reset(String resourceGroupName, String virtualNetworkGatewayName)"
   name: "reset(String resourceGroupName, String virtualNetworkGatewayName)"
@@ -4664,4 +4743,4 @@ implements:
 - "<xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsGet?alt=com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsGet&text=InnerSupportsGet\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.network.fluent.models.VirtualNetworkGatewayInner?alt=com.azure.resourcemanager.network.fluent.models.VirtualNetworkGatewayInner&text=VirtualNetworkGatewayInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.network.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-network:2.53.4
+artifact: com.azure.resourcemanager:azure-resourcemanager-network:2.54.0
