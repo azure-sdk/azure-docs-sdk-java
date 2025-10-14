@@ -1,7 +1,7 @@
 ---
 title: Azure Education SDK for Java
 description: Reference for Azure Education SDK for Java
-ms.date: 10/13/2025
+ms.date: 10/14/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: education
