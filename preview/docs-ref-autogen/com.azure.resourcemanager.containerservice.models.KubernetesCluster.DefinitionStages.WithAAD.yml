@@ -1,0 +1,41 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.containerservice.models.KubernetesCluster.DefinitionStages.WithAAD"
+fullName: "com.azure.resourcemanager.containerservice.models.KubernetesCluster.DefinitionStages.WithAAD"
+name: "KubernetesCluster.DefinitionStages.WithAAD"
+nameWithType: "KubernetesCluster.DefinitionStages.WithAAD"
+summary: "The stage of the Kubernetes cluster definition allowing to specify Azure AD integration."
+syntax: "public static interface **KubernetesCluster.DefinitionStages.WithAAD**"
+methods:
+- uid: "com.azure.resourcemanager.containerservice.models.KubernetesCluster.DefinitionStages.WithAAD.enableAzureRbac()"
+  fullName: "com.azure.resourcemanager.containerservice.models.KubernetesCluster.DefinitionStages.WithAAD.enableAzureRbac()"
+  name: "enableAzureRbac()"
+  nameWithType: "KubernetesCluster.DefinitionStages.WithAAD.enableAzureRbac()"
+  summary: "Enables Azure Role-Based Access Control for Kubernetes authorization."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract KubernetesCluster.DefinitionStages.WithCreate enableAzureRbac()"
+  desc: "Enables Azure Role-Based Access Control for Kubernetes authorization.\n\nAzure AD integration cannot be disabled. It will enable Kubernetes Role-Based Access Control."
+  returns:
+    description: "the next stage"
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.KubernetesCluster.DefinitionStages.WithCreate?alt=com.azure.resourcemanager.containerservice.models.KubernetesCluster.DefinitionStages.WithCreate&text=WithCreate\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservice.models.KubernetesCluster.DefinitionStages.WithAAD.withAzureActiveDirectoryGroup(java.lang.String)"
+  fullName: "com.azure.resourcemanager.containerservice.models.KubernetesCluster.DefinitionStages.WithAAD.withAzureActiveDirectoryGroup(String activeDirectoryGroupObjectId)"
+  name: "withAzureActiveDirectoryGroup(String activeDirectoryGroupObjectId)"
+  nameWithType: "KubernetesCluster.DefinitionStages.WithAAD.withAzureActiveDirectoryGroup(String activeDirectoryGroupObjectId)"
+  summary: "Specified Azure AD group as the admin group of the cluster."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the object ID of the Azure AD group.\n <p>\n See <code>com.azure.resourcemanager.authorization.models.ActiveDirectoryGroup</code> in\n azure-resourcemanager-authorization package."
+    name: "activeDirectoryGroupObjectId"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract KubernetesCluster.DefinitionStages.WithCreate withAzureActiveDirectoryGroup(String activeDirectoryGroupObjectId)"
+  desc: "Specified Azure AD group as the admin group of the cluster.\n\nAzure AD integration cannot be disabled. It will enable Kubernetes Role-Based Access Control."
+  returns:
+    description: "the next stage"
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.KubernetesCluster.DefinitionStages.WithCreate?alt=com.azure.resourcemanager.containerservice.models.KubernetesCluster.DefinitionStages.WithCreate&text=WithCreate\" data-throw-if-not-resolved=\"False\" />"
+type: "interface"
+desc: "The stage of the Kubernetes cluster definition allowing to specify Azure AD integration."
+metadata: {}
+package: "com.azure.resourcemanager.containerservice.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.56.0-beta.1

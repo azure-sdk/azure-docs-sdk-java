@@ -25,6 +25,8 @@ classes:
 - "com.azure.resourcemanager.netapp.models.BucketCredentialsExpiry"
 - "com.azure.resourcemanager.netapp.models.BucketList"
 - "com.azure.resourcemanager.netapp.models.BucketPatch"
+- "com.azure.resourcemanager.netapp.models.BucketPatchPermissions"
+- "com.azure.resourcemanager.netapp.models.BucketPermissions"
 - "com.azure.resourcemanager.netapp.models.BucketServerPatchProperties"
 - "com.azure.resourcemanager.netapp.models.BucketServerProperties"
 - "com.azure.resourcemanager.netapp.models.CapacityPoolList"
@@ -72,7 +74,7 @@ classes:
 - "com.azure.resourcemanager.netapp.models.MultiAdStatus"
 - "com.azure.resourcemanager.netapp.models.NetAppAccountList"
 - "com.azure.resourcemanager.netapp.models.NetAppAccountPatch"
-- "com.azure.resourcemanager.netapp.models.NetappProvisioningState"
+- "com.azure.resourcemanager.netapp.models.NetAppProvisioningState"
 - "com.azure.resourcemanager.netapp.models.NetworkFeatures"
 - "com.azure.resourcemanager.netapp.models.NetworkSiblingSetProvisioningState"
 - "com.azure.resourcemanager.netapp.models.NfsUser"
@@ -133,8 +135,6 @@ classes:
 - "com.azure.resourcemanager.netapp.models.VolumeSnapshotProperties"
 - "com.azure.resourcemanager.netapp.models.VolumeStorageToNetworkProximity"
 - "com.azure.resourcemanager.netapp.models.WeeklySchedule"
-enums:
-- "com.azure.resourcemanager.netapp.models.ProvisioningState"
 interfaces:
 - "com.azure.resourcemanager.netapp.models.Accounts"
 - "com.azure.resourcemanager.netapp.models.Backup"
@@ -195,11 +195,13 @@ interfaces:
 - "com.azure.resourcemanager.netapp.models.Bucket.DefinitionStages.WithFileSystemUser"
 - "com.azure.resourcemanager.netapp.models.Bucket.DefinitionStages.WithParentResource"
 - "com.azure.resourcemanager.netapp.models.Bucket.DefinitionStages.WithPath"
+- "com.azure.resourcemanager.netapp.models.Bucket.DefinitionStages.WithPermissions"
 - "com.azure.resourcemanager.netapp.models.Bucket.DefinitionStages.WithServer"
 - "com.azure.resourcemanager.netapp.models.Bucket.Update"
 - "com.azure.resourcemanager.netapp.models.Bucket.UpdateStages"
 - "com.azure.resourcemanager.netapp.models.Bucket.UpdateStages.WithFileSystemUser"
 - "com.azure.resourcemanager.netapp.models.Bucket.UpdateStages.WithPath"
+- "com.azure.resourcemanager.netapp.models.Bucket.UpdateStages.WithPermissions"
 - "com.azure.resourcemanager.netapp.models.Bucket.UpdateStages.WithServer"
 - "com.azure.resourcemanager.netapp.models.BucketGenerateCredentials"
 - "com.azure.resourcemanager.netapp.models.Buckets"
@@ -414,4 +416,4 @@ interfaces:
 desc: "Package containing the data models for NetAppManagementClient. Microsoft NetApp Files Azure Resource Provider specification."
 metadata: {}
 package: "com.azure.resourcemanager.netapp.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:1.8.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:1.10.0-beta.1

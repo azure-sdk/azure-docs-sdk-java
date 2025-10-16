@@ -14,11 +14,11 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Clustering policy - default is OSSCluster. Specified at create time."
+  - description: "Clustering policy - default is OSSCluster. This property can be updated only if\n the current value is NoCluster. If the value is OSSCluster or EnterpriseCluster, it cannot be updated\n without deleting the database."
     name: "clusteringPolicy"
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusteringPolicy?alt=com.azure.resourcemanager.redisenterprise.models.ClusteringPolicy&text=ClusteringPolicy\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Database.DefinitionStages.WithCreate withClusteringPolicy(ClusteringPolicy clusteringPolicy)"
-  desc: "Specifies the clusteringPolicy property: Clustering policy - default is OSSCluster. Specified at create time.."
+  desc: "Specifies the clusteringPolicy property: Clustering policy - default is OSSCluster. This property can be updated only if the current value is NoCluster. If the value is OSSCluster or EnterpriseCluster, it cannot be updated without deleting the database.."
   returns:
     description: "the next definition stage."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.Database.DefinitionStages.WithCreate?alt=com.azure.resourcemanager.redisenterprise.models.Database.DefinitionStages.WithCreate&text=WithCreate\" data-throw-if-not-resolved=\"False\" />"
@@ -26,4 +26,4 @@ type: "interface"
 desc: "The stage of the Database definition allowing to specify clusteringPolicy."
 metadata: {}
 package: "com.azure.resourcemanager.redisenterprise.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.0.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.1.0

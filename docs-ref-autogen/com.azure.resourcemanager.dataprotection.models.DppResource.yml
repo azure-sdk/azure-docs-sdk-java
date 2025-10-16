@@ -3,18 +3,10 @@ uid: "com.azure.resourcemanager.dataprotection.models.DppResource"
 fullName: "com.azure.resourcemanager.dataprotection.models.DppResource"
 name: "DppResource"
 nameWithType: "DppResource"
-summary: "Dpp<wbr>Resource Resource class."
+summary: "Resource class."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.core.management.ProxyResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
-- classRef: "<xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
-  methodsRef:
-  - "<xref href=\"com.azure.core.management.ProxyResource.fromJson(com.azure.json.JsonReader)?alt=com.azure.core.management.ProxyResource.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.ProxyResource.id()?alt=com.azure.core.management.ProxyResource.id&text=id\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.ProxyResource.name()?alt=com.azure.core.management.ProxyResource.name&text=name\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.ProxyResource.toJson(com.azure.json.JsonWriter)?alt=com.azure.core.management.ProxyResource.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.ProxyResource.type()?alt=com.azure.core.management.ProxyResource.type&text=type\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -28,14 +20,16 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public class **DppResource**</br> extends <xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
+syntax: "public class **DppResource**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.dataprotection.models.DppResource?alt=com.azure.resourcemanager.dataprotection.models.DppResource&text=DppResource\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.dataprotection.models.DppResource.DppResource()"
   fullName: "com.azure.resourcemanager.dataprotection.models.DppResource.DppResource()"
   name: "DppResource()"
   nameWithType: "DppResource.DppResource()"
   summary: "Creates an instance of Dpp<wbr>Resource class."
-  syntax: "public DppResource()"
+  modifiers:
+  - "protected"
+  syntax: "protected DppResource()"
   desc: "Creates an instance of DppResource class."
 methods:
 - uid: "com.azure.resourcemanager.dataprotection.models.DppResource.fromJson(com.azure.json.JsonReader)"
@@ -51,7 +45,7 @@ methods:
     type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static DppResource fromJson(JsonReader jsonReader)"
   exceptions:
-  - description: "If the deserialized JSON object was missing any required properties."
+  - description: "If an error occurs while reading the DppResource."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   desc: "Reads an instance of DppResource from the JsonReader."
   returns:
@@ -61,10 +55,9 @@ methods:
   fullName: "com.azure.resourcemanager.dataprotection.models.DppResource.id()"
   name: "id()"
   nameWithType: "DppResource.id()"
-  summary: "Get the id property: Fully qualified resource Id for the resource."
-  overridden: "com.azure.core.management.ProxyResource.id()"
+  summary: "Get the id property: Resource Id represents the complete path to the resource."
   syntax: "public String id()"
-  desc: "Get the id property: Fully qualified resource Id for the resource."
+  desc: "Get the id property: Resource Id represents the complete path to the resource."
   returns:
     description: "the id value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -72,10 +65,9 @@ methods:
   fullName: "com.azure.resourcemanager.dataprotection.models.DppResource.name()"
   name: "name()"
   nameWithType: "DppResource.name()"
-  summary: "Get the name property: The name of the resource."
-  overridden: "com.azure.core.management.ProxyResource.name()"
+  summary: "Get the name property: Resource name associated with the resource."
   syntax: "public String name()"
-  desc: "Get the name property: The name of the resource."
+  desc: "Get the name property: Resource name associated with the resource."
   returns:
     description: "the name value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -93,7 +85,6 @@ methods:
   fullName: "com.azure.resourcemanager.dataprotection.models.DppResource.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
   nameWithType: "DppResource.toJson(JsonWriter jsonWriter)"
-  overridden: "com.azure.core.management.ProxyResource.toJson(com.azure.json.JsonWriter)"
   parameters:
   - name: "jsonWriter"
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
@@ -106,22 +97,16 @@ methods:
   fullName: "com.azure.resourcemanager.dataprotection.models.DppResource.type()"
   name: "type()"
   nameWithType: "DppResource.type()"
-  summary: "Get the type property: The type of the resource."
-  overridden: "com.azure.core.management.ProxyResource.type()"
+  summary: "Get the type property: Resource type represents the complete path of the form Namespace/Resource<wbr>Type/Resource<wbr>Type/..."
   syntax: "public String type()"
-  desc: "Get the type property: The type of the resource."
+  desc: "Get the type property: Resource type represents the complete path of the form Namespace/ResourceType/ResourceType/..."
   returns:
     description: "the type value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-- uid: "com.azure.resourcemanager.dataprotection.models.DppResource.validate()"
-  fullName: "com.azure.resourcemanager.dataprotection.models.DppResource.validate()"
-  name: "validate()"
-  nameWithType: "DppResource.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
 type: "class"
-desc: "DppResource Resource class."
+desc: "Resource class."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.dataprotection.models.DppResource?alt=com.azure.resourcemanager.dataprotection.models.DppResource&text=DppResource\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.dataprotection.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-dataprotection:1.4.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-dataprotection:1.5.0

@@ -18,6 +18,18 @@ methods:
   returns:
     description: "the encryption value."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusterPropertiesEncryption?alt=com.azure.resourcemanager.redisenterprise.models.ClusterPropertiesEncryption&text=ClusterPropertiesEncryption\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redisenterprise.models.Cluster.highAvailability()"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.Cluster.highAvailability()"
+  name: "highAvailability()"
+  nameWithType: "Cluster.highAvailability()"
+  summary: "Gets the high<wbr>Availability property: Enabled by default."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract HighAvailability highAvailability()"
+  desc: "Gets the highAvailability property: Enabled by default. If highAvailability is disabled, the data set is not replicated. This affects the availability SLA, and increases the risk of data loss."
+  returns:
+    description: "the highAvailability value."
+    type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.HighAvailability?alt=com.azure.resourcemanager.redisenterprise.models.HighAvailability&text=HighAvailability\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.redisenterprise.models.Cluster.hostname()"
   fullName: "com.azure.resourcemanager.redisenterprise.models.Cluster.hostname()"
   name: "hostname()"
@@ -66,6 +78,46 @@ methods:
   returns:
     description: "the inner object."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.fluent.models.ClusterInner?alt=com.azure.resourcemanager.redisenterprise.fluent.models.ClusterInner&text=ClusterInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redisenterprise.models.Cluster.kind()"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.Cluster.kind()"
+  name: "kind()"
+  nameWithType: "Cluster.kind()"
+  summary: "Gets the kind property: Distinguishes the kind of cluster."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Kind kind()"
+  desc: "Gets the kind property: Distinguishes the kind of cluster. Read-only."
+  returns:
+    description: "the kind value."
+    type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.Kind?alt=com.azure.resourcemanager.redisenterprise.models.Kind&text=Kind\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redisenterprise.models.Cluster.listSkusForScaling()"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.Cluster.listSkusForScaling()"
+  name: "listSkusForScaling()"
+  nameWithType: "Cluster.listSkusForScaling()"
+  summary: "Lists the available SKUs for scaling the Redis Enterprise cluster."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract SkuDetailsList listSkusForScaling()"
+  desc: "Lists the available SKUs for scaling the Redis Enterprise cluster."
+  returns:
+    description: "the response of a listSkusForScaling operation."
+    type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.SkuDetailsList?alt=com.azure.resourcemanager.redisenterprise.models.SkuDetailsList&text=SkuDetailsList\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redisenterprise.models.Cluster.listSkusForScalingWithResponse(com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.Cluster.listSkusForScalingWithResponse(Context context)"
+  name: "listSkusForScalingWithResponse(Context context)"
+  nameWithType: "Cluster.listSkusForScalingWithResponse(Context context)"
+  summary: "Lists the available SKUs for scaling the Redis Enterprise cluster."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Response<SkuDetailsList> listSkusForScalingWithResponse(Context context)"
+  desc: "Lists the available SKUs for scaling the Redis Enterprise cluster."
+  returns:
+    description: "the response of a listSkusForScaling operation along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.redisenterprise.models.SkuDetailsList?alt=com.azure.resourcemanager.redisenterprise.models.SkuDetailsList&text=SkuDetailsList\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.redisenterprise.models.Cluster.location()"
   fullName: "com.azure.resourcemanager.redisenterprise.models.Cluster.location()"
   name: "location()"
@@ -86,7 +138,7 @@ methods:
   modifiers:
   - "abstract"
   syntax: "public abstract TlsVersion minimumTlsVersion()"
-  desc: "Gets the minimumTlsVersion property: The minimum TLS version for the cluster to support, e.g. '1.2'."
+  desc: "Gets the minimumTlsVersion property: The minimum TLS version for the cluster to support, e.g. '1.2'. Newer versions can be added in the future. Note that TLS 1.0 and TLS 1.1 are now completely obsolete -- you cannot use them. They are mentioned only for the sake of consistency with old API versions."
   returns:
     description: "the minimumTlsVersion value."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.TlsVersion?alt=com.azure.resourcemanager.redisenterprise.models.TlsVersion&text=TlsVersion\" data-throw-if-not-resolved=\"False\" />"
@@ -106,11 +158,11 @@ methods:
   fullName: "com.azure.resourcemanager.redisenterprise.models.Cluster.privateEndpointConnections()"
   name: "privateEndpointConnections()"
   nameWithType: "Cluster.privateEndpointConnections()"
-  summary: "Gets the private<wbr>Endpoint<wbr>Connections property: List of private endpoint connections associated with the specified Redis<wbr>Enterprise cluster."
+  summary: "Gets the private<wbr>Endpoint<wbr>Connections property: List of private endpoint connections associated with the specified Redis Enterprise cluster."
   modifiers:
   - "abstract"
   syntax: "public abstract List<PrivateEndpointConnection> privateEndpointConnections()"
-  desc: "Gets the privateEndpointConnections property: List of private endpoint connections associated with the specified RedisEnterprise cluster."
+  desc: "Gets the privateEndpointConnections property: List of private endpoint connections associated with the specified Redis Enterprise cluster."
   returns:
     description: "the privateEndpointConnections value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.redisenterprise.models.PrivateEndpointConnection?alt=com.azure.resourcemanager.redisenterprise.models.PrivateEndpointConnection&text=PrivateEndpointConnection\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -126,6 +178,18 @@ methods:
   returns:
     description: "the provisioningState value."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ProvisioningState?alt=com.azure.resourcemanager.redisenterprise.models.ProvisioningState&text=ProvisioningState\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redisenterprise.models.Cluster.publicNetworkAccess()"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.Cluster.publicNetworkAccess()"
+  name: "publicNetworkAccess()"
+  nameWithType: "Cluster.publicNetworkAccess()"
+  summary: "Gets the public<wbr>Network<wbr>Access property: Whether or not public network traffic can access the Redis cluster."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract PublicNetworkAccess publicNetworkAccess()"
+  desc: "Gets the publicNetworkAccess property: Whether or not public network traffic can access the Redis cluster. Only 'Enabled' or 'Disabled' can be set. null is returned only for clusters created using an old API version which do not have this property and cannot be set."
+  returns:
+    description: "the publicNetworkAccess value."
+    type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.PublicNetworkAccess?alt=com.azure.resourcemanager.redisenterprise.models.PublicNetworkAccess&text=PublicNetworkAccess\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.redisenterprise.models.Cluster.redisVersion()"
   fullName: "com.azure.resourcemanager.redisenterprise.models.Cluster.redisVersion()"
   name: "redisVersion()"
@@ -138,6 +202,18 @@ methods:
   returns:
     description: "the redisVersion value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.redisenterprise.models.Cluster.redundancyMode()"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.Cluster.redundancyMode()"
+  name: "redundancyMode()"
+  nameWithType: "Cluster.redundancyMode()"
+  summary: "Gets the redundancy<wbr>Mode property: Explains the current redundancy strategy of the cluster, which affects the expected SLA."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract RedundancyMode redundancyMode()"
+  desc: "Gets the redundancyMode property: Explains the current redundancy strategy of the cluster, which affects the expected SLA."
+  returns:
+    description: "the redundancyMode value."
+    type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.RedundancyMode?alt=com.azure.resourcemanager.redisenterprise.models.RedundancyMode&text=RedundancyMode\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.redisenterprise.models.Cluster.refresh()"
   fullName: "com.azure.resourcemanager.redisenterprise.models.Cluster.refresh()"
   name: "refresh()"
@@ -278,4 +354,4 @@ type: "interface"
 desc: "An immutable client-side representation of Cluster."
 metadata: {}
 package: "com.azure.resourcemanager.redisenterprise.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.0.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.1.0

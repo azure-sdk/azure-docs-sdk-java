@@ -63,10 +63,10 @@ methods:
   returns:
     description: "the response of a GiVersion list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.oracledatabase.fluent.models.GiVersionInner?alt=com.azure.resourcemanager.oracledatabase.fluent.models.GiVersionInner&text=GiVersionInner\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.oracledatabase.fluent.GiVersionsClient.listByLocation(java.lang.String,com.azure.resourcemanager.oracledatabase.models.SystemShapes,java.lang.String,com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.oracledatabase.fluent.GiVersionsClient.listByLocation(String location, SystemShapes shape, String zone, Context context)"
-  name: "listByLocation(String location, SystemShapes shape, String zone, Context context)"
-  nameWithType: "GiVersionsClient.listByLocation(String location, SystemShapes shape, String zone, Context context)"
+- uid: "com.azure.resourcemanager.oracledatabase.fluent.GiVersionsClient.listByLocation(java.lang.String,com.azure.resourcemanager.oracledatabase.models.SystemShapes,java.lang.String,java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.oracledatabase.fluent.GiVersionsClient.listByLocation(String location, SystemShapes shape, String zone, String shapeAttribute, Context context)"
+  name: "listByLocation(String location, SystemShapes shape, String zone, String shapeAttribute, Context context)"
+  nameWithType: "GiVersionsClient.listByLocation(String location, SystemShapes shape, String zone, String shapeAttribute, Context context)"
   summary: "List Gi<wbr>Version resources by Subscription<wbr>Location<wbr>Resource."
   modifiers:
   - "abstract"
@@ -80,10 +80,13 @@ methods:
   - description: "Filters the result for the given Azure Availability Zone."
     name: "zone"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Filters the result for the given Shape Attribute, such as BLOCK_STORAGE or SMART_STORAGE."
+    name: "shapeAttribute"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract PagedIterable<GiVersionInner> listByLocation(String location, SystemShapes shape, String zone, Context context)"
+  syntax: "public abstract PagedIterable<GiVersionInner> listByLocation(String location, SystemShapes shape, String zone, String shapeAttribute, Context context)"
   desc: "List GiVersion resources by SubscriptionLocationResource."
   returns:
     description: "the response of a GiVersion list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
@@ -92,4 +95,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in GiVersionsClient."
 metadata: {}
 package: "com.azure.resourcemanager.oracledatabase.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-oracledatabase:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-oracledatabase:1.2.0

@@ -130,10 +130,10 @@ methods:
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
-- uid: "com.azure.resourcemanager.netapp.fluent.BucketsClient.beginUpdate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
-  fullName: "com.azure.resourcemanager.netapp.fluent.BucketsClient.beginUpdate(String resourceGroupName, String accountName, String poolName, String volumeName, String bucketName)"
-  name: "beginUpdate(String resourceGroupName, String accountName, String poolName, String volumeName, String bucketName)"
-  nameWithType: "BucketsClient.beginUpdate(String resourceGroupName, String accountName, String poolName, String volumeName, String bucketName)"
+- uid: "com.azure.resourcemanager.netapp.fluent.BucketsClient.beginUpdate(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.netapp.models.BucketPatch)"
+  fullName: "com.azure.resourcemanager.netapp.fluent.BucketsClient.beginUpdate(String resourceGroupName, String accountName, String poolName, String volumeName, String bucketName, BucketPatch body)"
+  name: "beginUpdate(String resourceGroupName, String accountName, String poolName, String volumeName, String bucketName, BucketPatch body)"
+  nameWithType: "BucketsClient.beginUpdate(String resourceGroupName, String accountName, String poolName, String volumeName, String bucketName, BucketPatch body)"
   summary: "Updates a bucket for a volume Updates the details of a volume bucket."
   modifiers:
   - "abstract"
@@ -153,7 +153,10 @@ methods:
   - description: "The name of the bucket."
     name: "bucketName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract SyncPoller<PollResult<BucketInner>,BucketInner> beginUpdate(String resourceGroupName, String accountName, String poolName, String volumeName, String bucketName)"
+  - description: "The bucket details including user details, and the volume path that should be mounted inside the\n bucket."
+    name: "body"
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.BucketPatch?alt=com.azure.resourcemanager.netapp.models.BucketPatch&text=BucketPatch\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract SyncPoller<PollResult<BucketInner>,BucketInner> beginUpdate(String resourceGroupName, String accountName, String poolName, String volumeName, String bucketName, BucketPatch body)"
   desc: "Updates a bucket for a volume Updates the details of a volume bucket."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of bucket resource."
@@ -487,10 +490,10 @@ methods:
   returns:
     description: "list of volume bucket resources as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.netapp.fluent.models.BucketInner?alt=com.azure.resourcemanager.netapp.fluent.models.BucketInner&text=BucketInner\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.netapp.fluent.BucketsClient.update(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
-  fullName: "com.azure.resourcemanager.netapp.fluent.BucketsClient.update(String resourceGroupName, String accountName, String poolName, String volumeName, String bucketName)"
-  name: "update(String resourceGroupName, String accountName, String poolName, String volumeName, String bucketName)"
-  nameWithType: "BucketsClient.update(String resourceGroupName, String accountName, String poolName, String volumeName, String bucketName)"
+- uid: "com.azure.resourcemanager.netapp.fluent.BucketsClient.update(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.netapp.models.BucketPatch)"
+  fullName: "com.azure.resourcemanager.netapp.fluent.BucketsClient.update(String resourceGroupName, String accountName, String poolName, String volumeName, String bucketName, BucketPatch body)"
+  name: "update(String resourceGroupName, String accountName, String poolName, String volumeName, String bucketName, BucketPatch body)"
+  nameWithType: "BucketsClient.update(String resourceGroupName, String accountName, String poolName, String volumeName, String bucketName, BucketPatch body)"
   summary: "Updates a bucket for a volume Updates the details of a volume bucket."
   modifiers:
   - "abstract"
@@ -510,7 +513,10 @@ methods:
   - description: "The name of the bucket."
     name: "bucketName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract BucketInner update(String resourceGroupName, String accountName, String poolName, String volumeName, String bucketName)"
+  - description: "The bucket details including user details, and the volume path that should be mounted inside the\n bucket."
+    name: "body"
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.BucketPatch?alt=com.azure.resourcemanager.netapp.models.BucketPatch&text=BucketPatch\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract BucketInner update(String resourceGroupName, String accountName, String poolName, String volumeName, String bucketName, BucketPatch body)"
   desc: "Updates a bucket for a volume Updates the details of a volume bucket."
   returns:
     description: "bucket resource."
@@ -553,4 +559,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in BucketsClient."
 metadata: {}
 package: "com.azure.resourcemanager.netapp.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:1.8.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:1.10.0-beta.1

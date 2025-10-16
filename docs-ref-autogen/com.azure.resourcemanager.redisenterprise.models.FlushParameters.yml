@@ -20,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **FlushParameters**"
+syntax: "public final class **FlushParameters**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.redisenterprise.models.FlushParameters?alt=com.azure.resourcemanager.redisenterprise.models.FlushParameters&text=FlushParameters\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.redisenterprise.models.FlushParameters.FlushParameters()"
   fullName: "com.azure.resourcemanager.redisenterprise.models.FlushParameters.FlushParameters()"
@@ -30,6 +30,25 @@ constructors:
   syntax: "public FlushParameters()"
   desc: "Creates an instance of FlushParameters class."
 methods:
+- uid: "com.azure.resourcemanager.redisenterprise.models.FlushParameters.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.FlushParameters.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "FlushParameters.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Flush<wbr>Parameters from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static FlushParameters fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the FlushParameters."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of FlushParameters from the JsonReader."
+  returns:
+    description: "An instance of FlushParameters if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.FlushParameters?alt=com.azure.resourcemanager.redisenterprise.models.FlushParameters&text=FlushParameters\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.redisenterprise.models.FlushParameters.ids()"
   fullName: "com.azure.resourcemanager.redisenterprise.models.FlushParameters.ids()"
   name: "ids()"
@@ -40,6 +59,18 @@ methods:
   returns:
     description: "the ids value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+- uid: "com.azure.resourcemanager.redisenterprise.models.FlushParameters.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.FlushParameters.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "FlushParameters.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.redisenterprise.models.FlushParameters.validate()"
   fullName: "com.azure.resourcemanager.redisenterprise.models.FlushParameters.validate()"
   name: "validate()"
@@ -63,6 +94,8 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.FlushParameters?alt=com.azure.resourcemanager.redisenterprise.models.FlushParameters&text=FlushParameters\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Flush all the keys from the current and all its linked databases. Parameters for a Redis Enterprise active geo-replication flush operation."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.redisenterprise.models.FlushParameters?alt=com.azure.resourcemanager.redisenterprise.models.FlushParameters&text=FlushParameters\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.redisenterprise.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.0.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.1.0

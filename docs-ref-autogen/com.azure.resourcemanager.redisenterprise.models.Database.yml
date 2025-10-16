@@ -6,6 +6,18 @@ nameWithType: "Database"
 summary: "An immutable client-side representation of Database."
 syntax: "public interface **Database**"
 methods:
+- uid: "com.azure.resourcemanager.redisenterprise.models.Database.accessKeysAuthentication()"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.Database.accessKeysAuthentication()"
+  name: "accessKeysAuthentication()"
+  nameWithType: "Database.accessKeysAuthentication()"
+  summary: "Gets the access<wbr>Keys<wbr>Authentication property: This property can be Enabled/Disabled to allow or deny access with the current access keys."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract AccessKeysAuthentication accessKeysAuthentication()"
+  desc: "Gets the accessKeysAuthentication property: This property can be Enabled/Disabled to allow or deny access with the current access keys. Can be updated even after database is created."
+  returns:
+    description: "the accessKeysAuthentication value."
+    type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.AccessKeysAuthentication?alt=com.azure.resourcemanager.redisenterprise.models.AccessKeysAuthentication&text=AccessKeysAuthentication\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.redisenterprise.models.Database.clientProtocol()"
   fullName: "com.azure.resourcemanager.redisenterprise.models.Database.clientProtocol()"
   name: "clientProtocol()"
@@ -26,10 +38,22 @@ methods:
   modifiers:
   - "abstract"
   syntax: "public abstract ClusteringPolicy clusteringPolicy()"
-  desc: "Gets the clusteringPolicy property: Clustering policy - default is OSSCluster. Specified at create time."
+  desc: "Gets the clusteringPolicy property: Clustering policy - default is OSSCluster. This property can be updated only if the current value is NoCluster. If the value is OSSCluster or EnterpriseCluster, it cannot be updated without deleting the database."
   returns:
     description: "the clusteringPolicy value."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusteringPolicy?alt=com.azure.resourcemanager.redisenterprise.models.ClusteringPolicy&text=ClusteringPolicy\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redisenterprise.models.Database.deferUpgrade()"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.Database.deferUpgrade()"
+  name: "deferUpgrade()"
+  nameWithType: "Database.deferUpgrade()"
+  summary: "Gets the defer<wbr>Upgrade property: Option to defer upgrade when newest version is released - default is Not<wbr>Deferred."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract DeferUpgradeSetting deferUpgrade()"
+  desc: "Gets the deferUpgrade property: Option to defer upgrade when newest version is released - default is NotDeferred. Learn more: https://aka.ms/redisversionupgrade."
+  returns:
+    description: "the deferUpgrade value."
+    type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.DeferUpgradeSetting?alt=com.azure.resourcemanager.redisenterprise.models.DeferUpgradeSetting&text=DeferUpgradeSetting\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.redisenterprise.models.Database.evictionPolicy()"
   fullName: "com.azure.resourcemanager.redisenterprise.models.Database.evictionPolicy()"
   name: "evictionPolicy()"
@@ -71,18 +95,14 @@ methods:
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract void export(ExportClusterParameters parameters, Context context)"
   desc: "Exports a database file from target database."
-- uid: "com.azure.resourcemanager.redisenterprise.models.Database.flush(com.azure.resourcemanager.redisenterprise.models.FlushParameters)"
-  fullName: "com.azure.resourcemanager.redisenterprise.models.Database.flush(FlushParameters parameters)"
-  name: "flush(FlushParameters parameters)"
-  nameWithType: "Database.flush(FlushParameters parameters)"
+- uid: "com.azure.resourcemanager.redisenterprise.models.Database.flush()"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.Database.flush()"
+  name: "flush()"
+  nameWithType: "Database.flush()"
   summary: "Flushes all the keys in this database and also from its linked databases."
   modifiers:
   - "abstract"
-  parameters:
-  - description: "Information identifying the databases to be flushed."
-    name: "parameters"
-    type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.FlushParameters?alt=com.azure.resourcemanager.redisenterprise.models.FlushParameters&text=FlushParameters\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract void flush(FlushParameters parameters)"
+  syntax: "public abstract void flush()"
   desc: "Flushes all the keys in this database and also from its linked databases."
 - uid: "com.azure.resourcemanager.redisenterprise.models.Database.flush(com.azure.resourcemanager.redisenterprise.models.FlushParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.redisenterprise.models.Database.flush(FlushParameters parameters, Context context)"
@@ -100,6 +120,35 @@ methods:
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract void flush(FlushParameters parameters, Context context)"
   desc: "Flushes all the keys in this database and also from its linked databases."
+- uid: "com.azure.resourcemanager.redisenterprise.models.Database.forceLinkToReplicationGroup(com.azure.resourcemanager.redisenterprise.models.ForceLinkParameters)"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.Database.forceLinkToReplicationGroup(ForceLinkParameters parameters)"
+  name: "forceLinkToReplicationGroup(ForceLinkParameters parameters)"
+  nameWithType: "Database.forceLinkToReplicationGroup(ForceLinkParameters parameters)"
+  summary: "Forcibly recreates an existing database on the specified cluster, and rejoins it to an existing replication group."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "Information identifying the database to be unlinked."
+    name: "parameters"
+    type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ForceLinkParameters?alt=com.azure.resourcemanager.redisenterprise.models.ForceLinkParameters&text=ForceLinkParameters\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void forceLinkToReplicationGroup(ForceLinkParameters parameters)"
+  desc: "Forcibly recreates an existing database on the specified cluster, and rejoins it to an existing replication group. \\*\\*IMPORTANT NOTE:\\*\\* All data in this database will be discarded, and the database will temporarily be unavailable while rejoining the replication group."
+- uid: "com.azure.resourcemanager.redisenterprise.models.Database.forceLinkToReplicationGroup(com.azure.resourcemanager.redisenterprise.models.ForceLinkParameters,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.Database.forceLinkToReplicationGroup(ForceLinkParameters parameters, Context context)"
+  name: "forceLinkToReplicationGroup(ForceLinkParameters parameters, Context context)"
+  nameWithType: "Database.forceLinkToReplicationGroup(ForceLinkParameters parameters, Context context)"
+  summary: "Forcibly recreates an existing database on the specified cluster, and rejoins it to an existing replication group."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "Information identifying the database to be unlinked."
+    name: "parameters"
+    type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ForceLinkParameters?alt=com.azure.resourcemanager.redisenterprise.models.ForceLinkParameters&text=ForceLinkParameters\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void forceLinkToReplicationGroup(ForceLinkParameters parameters, Context context)"
+  desc: "Forcibly recreates an existing database on the specified cluster, and rejoins it to an existing replication group. \\*\\*IMPORTANT NOTE:\\*\\* All data in this database will be discarded, and the database will temporarily be unavailable while rejoining the replication group."
 - uid: "com.azure.resourcemanager.redisenterprise.models.Database.forceUnlink(com.azure.resourcemanager.redisenterprise.models.ForceUnlinkParameters)"
   fullName: "com.azure.resourcemanager.redisenterprise.models.Database.forceUnlink(ForceUnlinkParameters parameters)"
   name: "forceUnlink(ForceUnlinkParameters parameters)"
@@ -198,11 +247,11 @@ methods:
   fullName: "com.azure.resourcemanager.redisenterprise.models.Database.listKeys()"
   name: "listKeys()"
   nameWithType: "Database.listKeys()"
-  summary: "Retrieves the access keys for the Redis<wbr>Enterprise database."
+  summary: "Retrieves the access keys for the Redis Enterprise database."
   modifiers:
   - "abstract"
   syntax: "public abstract AccessKeys listKeys()"
-  desc: "Retrieves the access keys for the RedisEnterprise database."
+  desc: "Retrieves the access keys for the Redis Enterprise database."
   returns:
     description: "access keys."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.AccessKeys?alt=com.azure.resourcemanager.redisenterprise.models.AccessKeys&text=AccessKeys\" data-throw-if-not-resolved=\"False\" />"
@@ -210,7 +259,7 @@ methods:
   fullName: "com.azure.resourcemanager.redisenterprise.models.Database.listKeysWithResponse(Context context)"
   name: "listKeysWithResponse(Context context)"
   nameWithType: "Database.listKeysWithResponse(Context context)"
-  summary: "Retrieves the access keys for the Redis<wbr>Enterprise database."
+  summary: "Retrieves the access keys for the Redis Enterprise database."
   modifiers:
   - "abstract"
   parameters:
@@ -218,7 +267,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<AccessKeys> listKeysWithResponse(Context context)"
-  desc: "Retrieves the access keys for the RedisEnterprise database."
+  desc: "Retrieves the access keys for the Redis Enterprise database."
   returns:
     description: "access keys along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.redisenterprise.models.AccessKeys?alt=com.azure.resourcemanager.redisenterprise.models.AccessKeys&text=AccessKeys\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -282,6 +331,18 @@ methods:
   returns:
     description: "the provisioningState value."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ProvisioningState?alt=com.azure.resourcemanager.redisenterprise.models.ProvisioningState&text=ProvisioningState\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redisenterprise.models.Database.redisVersion()"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.Database.redisVersion()"
+  name: "redisVersion()"
+  nameWithType: "Database.redisVersion()"
+  summary: "Gets the redis<wbr>Version property: Version of Redis the database is running on, e.<wbr>g."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String redisVersion()"
+  desc: "Gets the redisVersion property: Version of Redis the database is running on, e.g. '6.0'."
+  returns:
+    description: "the redisVersion value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.redisenterprise.models.Database.refresh()"
   fullName: "com.azure.resourcemanager.redisenterprise.models.Database.refresh()"
   name: "refresh()"
@@ -314,7 +375,7 @@ methods:
   fullName: "com.azure.resourcemanager.redisenterprise.models.Database.regenerateKey(RegenerateKeyParameters parameters)"
   name: "regenerateKey(RegenerateKeyParameters parameters)"
   nameWithType: "Database.regenerateKey(RegenerateKeyParameters parameters)"
-  summary: "Regenerates the Redis<wbr>Enterprise database's access keys."
+  summary: "Regenerates the Redis Enterprise database's access keys."
   modifiers:
   - "abstract"
   parameters:
@@ -322,7 +383,7 @@ methods:
     name: "parameters"
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.RegenerateKeyParameters?alt=com.azure.resourcemanager.redisenterprise.models.RegenerateKeyParameters&text=RegenerateKeyParameters\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract AccessKeys regenerateKey(RegenerateKeyParameters parameters)"
-  desc: "Regenerates the RedisEnterprise database's access keys."
+  desc: "Regenerates the Redis Enterprise database's access keys."
   returns:
     description: "access keys."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.AccessKeys?alt=com.azure.resourcemanager.redisenterprise.models.AccessKeys&text=AccessKeys\" data-throw-if-not-resolved=\"False\" />"
@@ -330,7 +391,7 @@ methods:
   fullName: "com.azure.resourcemanager.redisenterprise.models.Database.regenerateKey(RegenerateKeyParameters parameters, Context context)"
   name: "regenerateKey(RegenerateKeyParameters parameters, Context context)"
   nameWithType: "Database.regenerateKey(RegenerateKeyParameters parameters, Context context)"
-  summary: "Regenerates the Redis<wbr>Enterprise database's access keys."
+  summary: "Regenerates the Redis Enterprise database's access keys."
   modifiers:
   - "abstract"
   parameters:
@@ -341,7 +402,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract AccessKeys regenerateKey(RegenerateKeyParameters parameters, Context context)"
-  desc: "Regenerates the RedisEnterprise database's access keys."
+  desc: "Regenerates the Redis Enterprise database's access keys."
   returns:
     description: "access keys."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.AccessKeys?alt=com.azure.resourcemanager.redisenterprise.models.AccessKeys&text=AccessKeys\" data-throw-if-not-resolved=\"False\" />"
@@ -369,6 +430,18 @@ methods:
   returns:
     description: "the resourceState value."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ResourceState?alt=com.azure.resourcemanager.redisenterprise.models.ResourceState&text=ResourceState\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redisenterprise.models.Database.systemData()"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.Database.systemData()"
+  name: "systemData()"
+  nameWithType: "Database.systemData()"
+  summary: "Gets the system<wbr>Data property: Azure Resource Manager metadata containing created<wbr>By and modified<wbr>By information."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract SystemData systemData()"
+  desc: "Gets the systemData property: Azure Resource Manager metadata containing createdBy and modifiedBy information."
+  returns:
+    description: "the systemData value."
+    type: "<xref href=\"com.azure.core.management.SystemData?alt=com.azure.core.management.SystemData&text=SystemData\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.redisenterprise.models.Database.type()"
   fullName: "com.azure.resourcemanager.redisenterprise.models.Database.type()"
   name: "type()"
@@ -393,8 +466,30 @@ methods:
   returns:
     description: "the stage of resource update."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.Database.Update?alt=com.azure.resourcemanager.redisenterprise.models.Database.Update&text=Update\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redisenterprise.models.Database.upgradeDBRedisVersion()"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.Database.upgradeDBRedisVersion()"
+  name: "upgradeDBRedisVersion()"
+  nameWithType: "Database.upgradeDBRedisVersion()"
+  summary: "Upgrades the database Redis version to the latest available."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract void upgradeDBRedisVersion()"
+  desc: "Upgrades the database Redis version to the latest available."
+- uid: "com.azure.resourcemanager.redisenterprise.models.Database.upgradeDBRedisVersion(com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.Database.upgradeDBRedisVersion(Context context)"
+  name: "upgradeDBRedisVersion(Context context)"
+  nameWithType: "Database.upgradeDBRedisVersion(Context context)"
+  summary: "Upgrades the database Redis version to the latest available."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void upgradeDBRedisVersion(Context context)"
+  desc: "Upgrades the database Redis version to the latest available."
 type: "interface"
 desc: "An immutable client-side representation of Database."
 metadata: {}
 package: "com.azure.resourcemanager.redisenterprise.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.0.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.1.0

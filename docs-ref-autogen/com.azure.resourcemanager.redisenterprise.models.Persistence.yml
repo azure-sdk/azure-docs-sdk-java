@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.redisenterprise.models.Persistence"
 fullName: "com.azure.resourcemanager.redisenterprise.models.Persistence"
 name: "Persistence"
 nameWithType: "Persistence"
-summary: "Persistence settings Persistence-related configuration for the Redis<wbr>Enterprise database."
+summary: "Persistence settings Persistence-related configuration for the Redis Enterprise database."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -20,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **Persistence**"
+syntax: "public final class **Persistence**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.redisenterprise.models.Persistence?alt=com.azure.resourcemanager.redisenterprise.models.Persistence&text=Persistence\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.redisenterprise.models.Persistence.Persistence()"
   fullName: "com.azure.resourcemanager.redisenterprise.models.Persistence.Persistence()"
@@ -36,7 +36,7 @@ methods:
   nameWithType: "Persistence.aofEnabled()"
   summary: "Get the aof<wbr>Enabled property: Sets whether AOF is enabled."
   syntax: "public Boolean aofEnabled()"
-  desc: "Get the aofEnabled property: Sets whether AOF is enabled."
+  desc: "Get the aofEnabled property: Sets whether AOF is enabled. Note that at most one of AOF or RDB persistence may be enabled."
   returns:
     description: "the aofEnabled value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
@@ -46,17 +46,36 @@ methods:
   nameWithType: "Persistence.aofFrequency()"
   summary: "Get the aof<wbr>Frequency property: Sets the frequency at which data is written to disk."
   syntax: "public AofFrequency aofFrequency()"
-  desc: "Get the aofFrequency property: Sets the frequency at which data is written to disk."
+  desc: "Get the aofFrequency property: Sets the frequency at which data is written to disk. Defaults to '1s', meaning 'every second'. Note that the 'always' setting is deprecated, because of its performance impact."
   returns:
     description: "the aofFrequency value."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.AofFrequency?alt=com.azure.resourcemanager.redisenterprise.models.AofFrequency&text=AofFrequency\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redisenterprise.models.Persistence.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.Persistence.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "Persistence.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Persistence from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static Persistence fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the Persistence."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of Persistence from the JsonReader."
+  returns:
+    description: "An instance of Persistence if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.Persistence?alt=com.azure.resourcemanager.redisenterprise.models.Persistence&text=Persistence\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.redisenterprise.models.Persistence.rdbEnabled()"
   fullName: "com.azure.resourcemanager.redisenterprise.models.Persistence.rdbEnabled()"
   name: "rdbEnabled()"
   nameWithType: "Persistence.rdbEnabled()"
   summary: "Get the rdb<wbr>Enabled property: Sets whether RDB is enabled."
   syntax: "public Boolean rdbEnabled()"
-  desc: "Get the rdbEnabled property: Sets whether RDB is enabled."
+  desc: "Get the rdbEnabled property: Sets whether RDB is enabled. Note that at most one of AOF or RDB persistence may be enabled."
   returns:
     description: "the rdbEnabled value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
@@ -70,6 +89,18 @@ methods:
   returns:
     description: "the rdbFrequency value."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.RdbFrequency?alt=com.azure.resourcemanager.redisenterprise.models.RdbFrequency&text=RdbFrequency\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redisenterprise.models.Persistence.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.Persistence.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "Persistence.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.redisenterprise.models.Persistence.validate()"
   fullName: "com.azure.resourcemanager.redisenterprise.models.Persistence.validate()"
   name: "validate()"
@@ -87,7 +118,7 @@ methods:
     name: "aofEnabled"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
   syntax: "public Persistence withAofEnabled(Boolean aofEnabled)"
-  desc: "Set the aofEnabled property: Sets whether AOF is enabled."
+  desc: "Set the aofEnabled property: Sets whether AOF is enabled. Note that at most one of AOF or RDB persistence may be enabled."
   returns:
     description: "the Persistence object itself."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.Persistence?alt=com.azure.resourcemanager.redisenterprise.models.Persistence&text=Persistence\" data-throw-if-not-resolved=\"False\" />"
@@ -101,7 +132,7 @@ methods:
     name: "aofFrequency"
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.AofFrequency?alt=com.azure.resourcemanager.redisenterprise.models.AofFrequency&text=AofFrequency\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public Persistence withAofFrequency(AofFrequency aofFrequency)"
-  desc: "Set the aofFrequency property: Sets the frequency at which data is written to disk."
+  desc: "Set the aofFrequency property: Sets the frequency at which data is written to disk. Defaults to '1s', meaning 'every second'. Note that the 'always' setting is deprecated, because of its performance impact."
   returns:
     description: "the Persistence object itself."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.Persistence?alt=com.azure.resourcemanager.redisenterprise.models.Persistence&text=Persistence\" data-throw-if-not-resolved=\"False\" />"
@@ -115,7 +146,7 @@ methods:
     name: "rdbEnabled"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
   syntax: "public Persistence withRdbEnabled(Boolean rdbEnabled)"
-  desc: "Set the rdbEnabled property: Sets whether RDB is enabled."
+  desc: "Set the rdbEnabled property: Sets whether RDB is enabled. Note that at most one of AOF or RDB persistence may be enabled."
   returns:
     description: "the Persistence object itself."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.Persistence?alt=com.azure.resourcemanager.redisenterprise.models.Persistence&text=Persistence\" data-throw-if-not-resolved=\"False\" />"
@@ -134,7 +165,9 @@ methods:
     description: "the Persistence object itself."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.Persistence?alt=com.azure.resourcemanager.redisenterprise.models.Persistence&text=Persistence\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Persistence settings Persistence-related configuration for the RedisEnterprise database."
+desc: "Persistence settings Persistence-related configuration for the Redis Enterprise database."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.redisenterprise.models.Persistence?alt=com.azure.resourcemanager.redisenterprise.models.Persistence&text=Persistence\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.redisenterprise.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.0.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.1.0

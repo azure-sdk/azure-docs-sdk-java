@@ -13,6 +13,7 @@ inheritedClassMethods:
   - "<xref href=\"com.azure.core.util.ExpandableStringEnum.<T>fromString(java.lang.String,java.lang.Class<T>)?alt=com.azure.core.util.ExpandableStringEnum.<T>fromString&text=<T>fromString\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.util.ExpandableStringEnum.<T>values(java.lang.Class<T>)?alt=com.azure.core.util.ExpandableStringEnum.<T>values&text=<T>values\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.util.ExpandableStringEnum.equals(java.lang.Object)?alt=com.azure.core.util.ExpandableStringEnum.equals&text=equals\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.util.ExpandableStringEnum.getValue()?alt=com.azure.core.util.ExpandableStringEnum.getValue&text=getValue\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.util.ExpandableStringEnum.hashCode()?alt=com.azure.core.util.ExpandableStringEnum.hashCode&text=hashCode\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.util.ExpandableStringEnum.toString()?alt=com.azure.core.util.ExpandableStringEnum.toString&text=toString\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
@@ -49,6 +50,18 @@ fields:
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusteringPolicy?alt=com.azure.resourcemanager.redisenterprise.models.ClusteringPolicy&text=ClusteringPolicy\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final ClusteringPolicy ENTERPRISE_CLUSTER"
   desc: "Static value EnterpriseCluster for ClusteringPolicy."
+- uid: "com.azure.resourcemanager.redisenterprise.models.ClusteringPolicy.NO_CLUSTER"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.ClusteringPolicy.NO_CLUSTER"
+  name: "NO_CLUSTER"
+  nameWithType: "ClusteringPolicy.NO_CLUSTER"
+  summary: "Static value No<wbr>Cluster for Clustering<wbr>Policy."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusteringPolicy?alt=com.azure.resourcemanager.redisenterprise.models.ClusteringPolicy&text=ClusteringPolicy\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final ClusteringPolicy NO_CLUSTER"
+  desc: "Static value NoCluster for ClusteringPolicy."
 - uid: "com.azure.resourcemanager.redisenterprise.models.ClusteringPolicy.OSSCLUSTER"
   fullName: "com.azure.resourcemanager.redisenterprise.models.ClusteringPolicy.OSSCLUSTER"
   name: "OSSCLUSTER"
@@ -91,7 +104,7 @@ methods:
     description: "known ClusteringPolicy values."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html\">Collection</a>&lt;<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusteringPolicy?alt=com.azure.resourcemanager.redisenterprise.models.ClusteringPolicy&text=ClusteringPolicy\" data-throw-if-not-resolved=\"False\" />&gt;"
 type: "class"
-desc: "Clustering policy - default is OSSCluster. Specified at create time."
+desc: "Clustering policy - default is OSSCluster. This property can be updated only if the current value is NoCluster. If the value is OSSCluster or EnterpriseCluster, it cannot be updated without deleting the database."
 metadata: {}
 package: "com.azure.resourcemanager.redisenterprise.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.0.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.1.0
