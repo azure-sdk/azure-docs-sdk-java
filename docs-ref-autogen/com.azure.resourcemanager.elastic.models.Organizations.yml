@@ -10,11 +10,11 @@ methods:
   fullName: "com.azure.resourcemanager.elastic.models.Organizations.getApiKey()"
   name: "getApiKey()"
   nameWithType: "Organizations.getApiKey()"
-  summary: "Fetch User API Key from internal database, if it was generated and stored while creating the Elasticsearch Organization."
+  summary: "Fetch the User API Key from the internal database, if it was generated and stored during the creation of the Elasticsearch Organization."
   modifiers:
   - "abstract"
   syntax: "public abstract UserApiKeyResponse getApiKey()"
-  desc: "Fetch User API Key from internal database, if it was generated and stored while creating the Elasticsearch Organization."
+  desc: "Fetch the User API Key from the internal database, if it was generated and stored during the creation of the Elasticsearch Organization."
   returns:
     description: "the User Api Key created for the Organization associated with the User Email Id that was passed in the\n request."
     type: "<xref href=\"com.azure.resourcemanager.elastic.models.UserApiKeyResponse?alt=com.azure.resourcemanager.elastic.models.UserApiKeyResponse&text=UserApiKeyResponse\" data-throw-if-not-resolved=\"False\" />"
@@ -22,7 +22,7 @@ methods:
   fullName: "com.azure.resourcemanager.elastic.models.Organizations.getApiKeyWithResponse(UserEmailId body, Context context)"
   name: "getApiKeyWithResponse(UserEmailId body, Context context)"
   nameWithType: "Organizations.getApiKeyWithResponse(UserEmailId body, Context context)"
-  summary: "Fetch User API Key from internal database, if it was generated and stored while creating the Elasticsearch Organization."
+  summary: "Fetch the User API Key from the internal database, if it was generated and stored during the creation of the Elasticsearch Organization."
   modifiers:
   - "abstract"
   parameters:
@@ -33,7 +33,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<UserApiKeyResponse> getApiKeyWithResponse(UserEmailId body, Context context)"
-  desc: "Fetch User API Key from internal database, if it was generated and stored while creating the Elasticsearch Organization."
+  desc: "Fetch the User API Key from the internal database, if it was generated and stored during the creation of the Elasticsearch Organization."
   returns:
     description: "the User Api Key created for the Organization associated with the User Email Id that was passed in the\n request along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.elastic.models.UserApiKeyResponse?alt=com.azure.resourcemanager.elastic.models.UserApiKeyResponse&text=UserApiKeyResponse\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -41,19 +41,19 @@ methods:
   fullName: "com.azure.resourcemanager.elastic.models.Organizations.getElasticToAzureSubscriptionMapping()"
   name: "getElasticToAzureSubscriptionMapping()"
   nameWithType: "Organizations.getElasticToAzureSubscriptionMapping()"
-  summary: "Get Elastic Organization To Azure Subscription Mapping details for the logged-in user."
+  summary: "Retrieve mapping details between the Elastic Organization and Azure Subscription for the logged-in user."
   modifiers:
   - "abstract"
   syntax: "public abstract ElasticOrganizationToAzureSubscriptionMappingResponse getElasticToAzureSubscriptionMapping()"
-  desc: "Get Elastic Organization To Azure Subscription Mapping details for the logged-in user."
+  desc: "Retrieve mapping details between the Elastic Organization and Azure Subscription for the logged-in user."
   returns:
-    description: "elastic Organization To Azure Subscription Mapping details for the logged-in user."
+    description: "the Azure Subscription ID to which the Organization of the logged in user belongs and gets billed into."
     type: "<xref href=\"com.azure.resourcemanager.elastic.models.ElasticOrganizationToAzureSubscriptionMappingResponse?alt=com.azure.resourcemanager.elastic.models.ElasticOrganizationToAzureSubscriptionMappingResponse&text=ElasticOrganizationToAzureSubscriptionMappingResponse\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.elastic.models.Organizations.getElasticToAzureSubscriptionMappingWithResponse(com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.elastic.models.Organizations.getElasticToAzureSubscriptionMappingWithResponse(Context context)"
   name: "getElasticToAzureSubscriptionMappingWithResponse(Context context)"
   nameWithType: "Organizations.getElasticToAzureSubscriptionMappingWithResponse(Context context)"
-  summary: "Get Elastic Organization To Azure Subscription Mapping details for the logged-in user."
+  summary: "Retrieve mapping details between the Elastic Organization and Azure Subscription for the logged-in user."
   modifiers:
   - "abstract"
   parameters:
@@ -61,12 +61,56 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<ElasticOrganizationToAzureSubscriptionMappingResponse> getElasticToAzureSubscriptionMappingWithResponse(Context context)"
-  desc: "Get Elastic Organization To Azure Subscription Mapping details for the logged-in user."
+  desc: "Retrieve mapping details between the Elastic Organization and Azure Subscription for the logged-in user."
   returns:
-    description: "elastic Organization To Azure Subscription Mapping details for the logged-in user along with\n <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    description: "the Azure Subscription ID to which the Organization of the logged in user belongs and gets billed into\n along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.elastic.models.ElasticOrganizationToAzureSubscriptionMappingResponse?alt=com.azure.resourcemanager.elastic.models.ElasticOrganizationToAzureSubscriptionMappingResponse&text=ElasticOrganizationToAzureSubscriptionMappingResponse\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.elastic.models.Organizations.resubscribe(java.lang.String,java.lang.String)"
+  fullName: "com.azure.resourcemanager.elastic.models.Organizations.resubscribe(String resourceGroupName, String monitorName)"
+  name: "resubscribe(String resourceGroupName, String monitorName)"
+  nameWithType: "Organizations.resubscribe(String resourceGroupName, String monitorName)"
+  summary: "Resubscribe the Elasticsearch Organization."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Monitor resource name."
+    name: "monitorName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract ElasticMonitorResource resubscribe(String resourceGroupName, String monitorName)"
+  desc: "Resubscribe the Elasticsearch Organization."
+  returns:
+    description: "monitor resource."
+    type: "<xref href=\"com.azure.resourcemanager.elastic.models.ElasticMonitorResource?alt=com.azure.resourcemanager.elastic.models.ElasticMonitorResource&text=ElasticMonitorResource\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.elastic.models.Organizations.resubscribe(java.lang.String,java.lang.String,com.azure.resourcemanager.elastic.models.ResubscribeProperties,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.elastic.models.Organizations.resubscribe(String resourceGroupName, String monitorName, ResubscribeProperties body, Context context)"
+  name: "resubscribe(String resourceGroupName, String monitorName, ResubscribeProperties body, Context context)"
+  nameWithType: "Organizations.resubscribe(String resourceGroupName, String monitorName, ResubscribeProperties body, Context context)"
+  summary: "Resubscribe the Elasticsearch Organization."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Monitor resource name."
+    name: "monitorName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Resubscribe Properties."
+    name: "body"
+    type: "<xref href=\"com.azure.resourcemanager.elastic.models.ResubscribeProperties?alt=com.azure.resourcemanager.elastic.models.ResubscribeProperties&text=ResubscribeProperties\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract ElasticMonitorResource resubscribe(String resourceGroupName, String monitorName, ResubscribeProperties body, Context context)"
+  desc: "Resubscribe the Elasticsearch Organization."
+  returns:
+    description: "monitor resource."
+    type: "<xref href=\"com.azure.resourcemanager.elastic.models.ElasticMonitorResource?alt=com.azure.resourcemanager.elastic.models.ElasticMonitorResource&text=ElasticMonitorResource\" data-throw-if-not-resolved=\"False\" />"
 type: "interface"
 desc: "Resource collection API of Organizations."
 metadata: {}
 package: "com.azure.resourcemanager.elastic.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-elastic:1.0.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-elastic:1.1.0
