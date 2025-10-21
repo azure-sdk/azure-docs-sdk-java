@@ -1,6 +1,6 @@
 {
   "Name": "azure-storage-blob-changefeed",
-  "Version": "12.0.0-beta.31",
+  "Version": "12.0.0-beta.32",
   "DevVersion": null,
   "DirectoryPath": "sdk/storage/azure-storage-blob-changefeed",
   "ServiceDirectory": "storage",
@@ -10,29 +10,29 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-storage-blob-changefeed",
-  "ReleaseStatus": "2025-07-16",
+  "ReleaseStatus": "2025-10-21",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": [
     "com.azure:azure-storage-perf",
     "com.azure:perf-test-core"
   ],
   "ArtifactDetails": {
-    "safeName": "azurestorageblobchangefeed",
     "groupId": "com.azure",
+    "name": "azure-storage-blob-changefeed",
     "triggeringPaths": [
       "/sdk/storage/ci.yml"
     ],
-    "name": "azure-storage-blob-changefeed",
-    "releaseInBatch": "${{ parameters.release_azurestorageblobchangefeed }}"
+    "releaseInBatch": "${{ parameters.release_azurestorageblobchangefeed }}",
+    "safeName": "azurestorageblobchangefeed"
   },
   "CIParameters": {
     "CIMatrixConfigs": [
       {
+        "GenerateVMJobs": true,
         "Name": "Storage_ci",
         "Selection": "sparse",
         "Path": "sdk/storage/platform-matrix-ci.json",
-        "NonSparseParameters": "Agent",
-        "GenerateVMJobs": true
+        "NonSparseParameters": "Agent"
       }
     ]
   },
