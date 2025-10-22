@@ -20,13 +20,15 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **CertificateProperties**"
+syntax: "public final class **CertificateProperties**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.deviceprovisioningservices.models.CertificateProperties?alt=com.azure.resourcemanager.deviceprovisioningservices.models.CertificateProperties&text=CertificateProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.deviceprovisioningservices.models.CertificateProperties.CertificateProperties()"
   fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.CertificateProperties.CertificateProperties()"
   name: "CertificateProperties()"
   nameWithType: "CertificateProperties.CertificateProperties()"
+  summary: "Creates an instance of Certificate<wbr>Properties class."
   syntax: "public CertificateProperties()"
+  desc: "Creates an instance of CertificateProperties class."
 methods:
 - uid: "com.azure.resourcemanager.deviceprovisioningservices.models.CertificateProperties.certificate()"
   fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.CertificateProperties.certificate()"
@@ -58,6 +60,25 @@ methods:
   returns:
     description: "the expiry value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
+- uid: "com.azure.resourcemanager.deviceprovisioningservices.models.CertificateProperties.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.CertificateProperties.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "CertificateProperties.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Certificate<wbr>Properties from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static CertificateProperties fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the CertificateProperties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of CertificateProperties from the JsonReader."
+  returns:
+    description: "An instance of CertificateProperties if the JsonReader was pointing to an instance of it, or null if it\n was pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.deviceprovisioningservices.models.CertificateProperties?alt=com.azure.resourcemanager.deviceprovisioningservices.models.CertificateProperties&text=CertificateProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.deviceprovisioningservices.models.CertificateProperties.isVerified()"
   fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.CertificateProperties.isVerified()"
   name: "isVerified()"
@@ -88,6 +109,18 @@ methods:
   returns:
     description: "the thumbprint value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.deviceprovisioningservices.models.CertificateProperties.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.CertificateProperties.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "CertificateProperties.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.deviceprovisioningservices.models.CertificateProperties.updated()"
   fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.CertificateProperties.updated()"
   name: "updated()"
@@ -98,13 +131,6 @@ methods:
   returns:
     description: "the updated value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
-- uid: "com.azure.resourcemanager.deviceprovisioningservices.models.CertificateProperties.validate()"
-  fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.CertificateProperties.validate()"
-  name: "validate()"
-  nameWithType: "CertificateProperties.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.deviceprovisioningservices.models.CertificateProperties.withCertificate(byte[])"
   fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.CertificateProperties.withCertificate(byte[] certificate)"
   name: "withCertificate(byte[] certificate)"
@@ -135,6 +161,8 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.deviceprovisioningservices.models.CertificateProperties?alt=com.azure.resourcemanager.deviceprovisioningservices.models.CertificateProperties&text=CertificateProperties\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "The description of an X509 CA Certificate."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.deviceprovisioningservices.models.CertificateProperties?alt=com.azure.resourcemanager.deviceprovisioningservices.models.CertificateProperties&text=CertificateProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.deviceprovisioningservices.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-deviceprovisioningservices:1.1.0-beta.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-deviceprovisioningservices:1.2.0-beta.1

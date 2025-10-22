@@ -20,13 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **ErrorMessage**"
-constructors:
-- uid: "com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage.ErrorMessage()"
-  fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage.ErrorMessage()"
-  name: "ErrorMessage()"
-  nameWithType: "ErrorMessage.ErrorMessage()"
-  syntax: "public ErrorMessage()"
+syntax: "public final class **ErrorMessage**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage?alt=com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage&text=ErrorMessage\" data-throw-if-not-resolved=\"False\" />&gt;"
 methods:
 - uid: "com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage.code()"
   fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage.code()"
@@ -48,6 +42,25 @@ methods:
   returns:
     description: "the details value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "ErrorMessage.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Error<wbr>Message from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static ErrorMessage fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the ErrorMessage."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of ErrorMessage from the JsonReader."
+  returns:
+    description: "An instance of ErrorMessage if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage?alt=com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage&text=ErrorMessage\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage.message()"
   fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage.message()"
   name: "message()"
@@ -58,57 +71,22 @@ methods:
   returns:
     description: "the message value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-- uid: "com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage.validate()"
-  fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage.validate()"
-  name: "validate()"
-  nameWithType: "ErrorMessage.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
-- uid: "com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage.withCode(java.lang.String)"
-  fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage.withCode(String code)"
-  name: "withCode(String code)"
-  nameWithType: "ErrorMessage.withCode(String code)"
-  summary: "Set the code property: standard error code."
+- uid: "com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "ErrorMessage.toJson(JsonWriter jsonWriter)"
   parameters:
-  - description: "the code value to set."
-    name: "code"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public ErrorMessage withCode(String code)"
-  desc: "Set the code property: standard error code."
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   returns:
-    description: "the ErrorMessage object itself."
-    type: "<xref href=\"com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage?alt=com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage&text=ErrorMessage\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage.withDetails(java.lang.String)"
-  fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage.withDetails(String details)"
-  name: "withDetails(String details)"
-  nameWithType: "ErrorMessage.withDetails(String details)"
-  summary: "Set the details property: detailed summary of error."
-  parameters:
-  - description: "the details value to set."
-    name: "details"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public ErrorMessage withDetails(String details)"
-  desc: "Set the details property: detailed summary of error."
-  returns:
-    description: "the ErrorMessage object itself."
-    type: "<xref href=\"com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage?alt=com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage&text=ErrorMessage\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage.withMessage(java.lang.String)"
-  fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage.withMessage(String message)"
-  name: "withMessage(String message)"
-  nameWithType: "ErrorMessage.withMessage(String message)"
-  summary: "Set the message property: standard error description."
-  parameters:
-  - description: "the message value to set."
-    name: "message"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public ErrorMessage withMessage(String message)"
-  desc: "Set the message property: standard error description."
-  returns:
-    description: "the ErrorMessage object itself."
-    type: "<xref href=\"com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage?alt=com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage&text=ErrorMessage\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Error response containing message and code."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage?alt=com.azure.resourcemanager.deviceprovisioningservices.models.ErrorMessage&text=ErrorMessage\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.deviceprovisioningservices.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-deviceprovisioningservices:1.1.0-beta.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-deviceprovisioningservices:1.2.0-beta.1
