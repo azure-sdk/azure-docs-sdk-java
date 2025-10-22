@@ -1,7 +1,7 @@
 ---
 title: 
 keywords: Azure, java, SDK, API, azure-cosmos-encryption, cosmos
-ms.date: 09/05/2025
+ms.date: 10/22/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: cosmos
@@ -20,7 +20,7 @@ The Azure Cosmos Encryption Plugin is used for encrypting data with a user-provi
 <dependency>
   <groupId>com.azure</groupId>
   <artifactId>azure-cosmos-encryption</artifactId>
-  <version>2.23.0</version>
+  <version>2.24.0</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -215,7 +215,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 or contact [opencode@microsoft.com][coc_contact] with any additional questions or comments.
 
 <!-- LINKS -->
-[encryption_source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-cosmos-encryption_2.23.0/sdk/cosmos/azure-cosmos-encryption/src
+[encryption_source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-cosmos-encryption_2.24.0/sdk/cosmos/azure-cosmos-encryption/src
 [cosmos_introduction]: https://learn.microsoft.com/azure/cosmos-db/
 [api_documentation]: https://azuresdkdocs.z19.web.core.windows.net/java/azure-cosmos/latest/index.html
 [encryption_api_documentation]: https://azuresdkdocs.z19.web.core.windows.net/java/azure-cosmos-encryption/latest/index.html
@@ -231,6 +231,6 @@ or contact [opencode@microsoft.com][coc_contact] with any additional questions o
 [troubleshooting]: https://learn.microsoft.com/azure/cosmos-db/troubleshoot-java-sdk-v4-sql
 [perf_guide]: https://learn.microsoft.com/azure/cosmos-db/performance-tips-java-sdk-v4-sql?tabs=api-async
 [sql_api_query]: https://learn.microsoft.com/azure/cosmos-db/sql-api-sql-query
-[getting_started_encryption]: https://github.com/Azure/azure-sdk-for-java/tree/azure-cosmos-encryption_2.23.0/sdk/cosmos/azure-cosmos-encryption/src/samples/java/com/azure/cosmos/encryption/
+[getting_started_encryption]: https://github.com/Azure/azure-sdk-for-java/tree/azure-cosmos-encryption_2.24.0/sdk/cosmos/azure-cosmos-encryption/src/samples/java/com/azure/cosmos/encryption/
 [quickstart]: https://learn.microsoft.com/azure/cosmos-db/create-sql-api-java?tabs=sync
 
