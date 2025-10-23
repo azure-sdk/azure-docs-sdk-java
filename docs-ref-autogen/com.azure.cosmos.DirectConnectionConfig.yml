@@ -206,7 +206,7 @@ methods:
     name: "networkRequestTimeout"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
   syntax: "public DirectConnectionConfig setNetworkRequestTimeout(Duration networkRequestTimeout)"
-  desc: "Sets the network request timeout interval (time to wait for response from network peer). Default value is 5 seconds. It only allows values ≥1s and ≤10s. (backend allows requests to take up-to 5 seconds processing time - 5 seconds buffer so 10 seconds in total for transport is more than sufficient). Attention! Please adjust this value with caution. This config represents the max time allowed to wait for and consume a service response after the request has been written to the network connection. Setting a value too low can result in having not enough time to wait for the service response - which could cause too aggressive retries and degrade performance. Setting a value too high can result in fewer retries and reduce chances of success by retries."
+  desc: "Sets the network request timeout interval (time to wait for response from network peer). Default value is 5 seconds. It only allows values ≥5s and ≤10s. (backend allows requests to take up-to 5 seconds processing time - 5 seconds buffer so 10 seconds in total for transport is more than sufficient). Attention! Please adjust this value with caution. This config represents the max time allowed to wait for and consume a service response after the request has been written to the network connection. Setting a value too low can result in having not enough time to wait for the service response - which could cause too aggressive retries and degrade performance. Setting a value too high can result in fewer retries and reduce chances of success by retries."
   returns:
     description: "the <xref uid=\"com.azure.cosmos.DirectConnectionConfig\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DirectConnectionConfig\"></xref>"
     type: "<xref href=\"com.azure.cosmos.DirectConnectionConfig?alt=com.azure.cosmos.DirectConnectionConfig&text=DirectConnectionConfig\" data-throw-if-not-resolved=\"False\" />"
@@ -222,4 +222,4 @@ type: "class"
 desc: "Represents the connection config with <xref uid=\"com.azure.cosmos.ConnectionMode.DIRECT\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ConnectionMode#DIRECT\"></xref> associated with Cosmos Client in the Azure Cosmos DB database service. For performance tips on how to optimize Direct connection configuration, refer to performance tips guide: [Performance tips guide][]\n\n\n[Performance tips guide]: https://docs.microsoft.com/en-us/azure/cosmos-db/performance-tips-java-sdk-v4-sql?tabs=api-async"
 metadata: {}
 package: "com.azure.cosmos"
-artifact: com.azure:azure-cosmos:4.74.0
+artifact: com.azure:azure-cosmos:4.75.0
