@@ -1,7 +1,7 @@
 ---
 title: Azure Red Hat OpenShift SDK for Java
 description: Reference for Azure Red Hat OpenShift SDK for Java
-ms.date: 10/24/2025
+ms.date: 10/27/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: redhatopenshift
