@@ -1,7 +1,7 @@
 ---
 title: Azure Secretsstoreextension SDK for Java
 description: Reference for Azure Secretsstoreextension SDK for Java
-ms.date: 10/31/2025
+ms.date: 11/03/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: secretsstoreextension
