@@ -1,0 +1,38 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.monitor.models.ScaleRule.DefinitionStages.WithScaleAction"
+fullName: "com.azure.resourcemanager.monitor.models.ScaleRule.DefinitionStages.WithScaleAction"
+name: "ScaleRule.DefinitionStages.WithScaleAction"
+nameWithType: "ScaleRule.DefinitionStages.WithScaleAction"
+summary: "The stage of the definition which specifies action to take when the metric alert will be triggered."
+syntax: "public static interface **ScaleRule.DefinitionStages.WithScaleAction**"
+methods:
+- uid: "com.azure.resourcemanager.monitor.models.ScaleRule.DefinitionStages.WithScaleAction.withScaleAction(com.azure.resourcemanager.monitor.models.ScaleDirection,com.azure.resourcemanager.monitor.models.ScaleType,int,java.time.Duration)"
+  fullName: "com.azure.resourcemanager.monitor.models.ScaleRule.DefinitionStages.WithScaleAction.withScaleAction(ScaleDirection direction, ScaleType type, int instanceCountChange, Duration cooldown)"
+  name: "withScaleAction(ScaleDirection direction, ScaleType type, int instanceCountChange, Duration cooldown)"
+  nameWithType: "ScaleRule.DefinitionStages.WithScaleAction.withScaleAction(ScaleDirection direction, ScaleType type, int instanceCountChange, Duration cooldown)"
+  summary: "Sets the action to be performed when the scale rule will be active."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the scale direction. Whether the scaling action increases or decreases the number of\n     instances. Possible values include: 'None', 'Increase', 'Decrease'."
+    name: "direction"
+    type: "<xref href=\"com.azure.resourcemanager.monitor.models.ScaleDirection?alt=com.azure.resourcemanager.monitor.models.ScaleDirection&text=ScaleDirection\" data-throw-if-not-resolved=\"False\" />"
+  - description: "the type of action that should occur when the scale rule fires. Possible values include:\n     'ChangeCount', 'PercentChangeCount', 'ExactCount'."
+    name: "type"
+    type: "<xref href=\"com.azure.resourcemanager.monitor.models.ScaleType?alt=com.azure.resourcemanager.monitor.models.ScaleType&text=ScaleType\" data-throw-if-not-resolved=\"False\" />"
+  - description: "the number of instances that are involved in the scaling action."
+    name: "instanceCountChange"
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
+  - description: "the amount of time to wait since the last scaling action before this action occurs. It\n     must be between 1 week and 1 minute in ISO 8601 format."
+    name: "cooldown"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
+  syntax: "public abstract ScaleRule.DefinitionStages.WithAttach withScaleAction(ScaleDirection direction, ScaleType type, int instanceCountChange, Duration cooldown)"
+  desc: "Sets the action to be performed when the scale rule will be active."
+  returns:
+    description: "the next stage of the definition."
+    type: "<xref href=\"com.azure.resourcemanager.monitor.models.ScaleRule.DefinitionStages.WithAttach?alt=com.azure.resourcemanager.monitor.models.ScaleRule.DefinitionStages.WithAttach&text=WithAttach\" data-throw-if-not-resolved=\"False\" />"
+type: "interface"
+desc: "The stage of the definition which specifies action to take when the metric alert will be triggered."
+metadata: {}
+package: "com.azure.resourcemanager.monitor.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-monitor:2.54.0-beta.1

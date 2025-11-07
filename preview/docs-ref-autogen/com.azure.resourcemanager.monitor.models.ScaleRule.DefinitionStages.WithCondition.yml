@@ -1,0 +1,35 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.monitor.models.ScaleRule.DefinitionStages.WithCondition"
+fullName: "com.azure.resourcemanager.monitor.models.ScaleRule.DefinitionStages.WithCondition"
+name: "ScaleRule.DefinitionStages.WithCondition"
+nameWithType: "ScaleRule.DefinitionStages.WithCondition"
+summary: "The stage of the definition which specifies metric alert condition."
+syntax: "public static interface **ScaleRule.DefinitionStages.WithCondition**"
+methods:
+- uid: "com.azure.resourcemanager.monitor.models.ScaleRule.DefinitionStages.WithCondition.withCondition(com.azure.resourcemanager.monitor.models.TimeAggregationType,com.azure.resourcemanager.monitor.models.ComparisonOperationType,double)"
+  fullName: "com.azure.resourcemanager.monitor.models.ScaleRule.DefinitionStages.WithCondition.withCondition(TimeAggregationType timeAggregation, ComparisonOperationType condition, double threshold)"
+  name: "withCondition(TimeAggregationType timeAggregation, ComparisonOperationType condition, double threshold)"
+  nameWithType: "ScaleRule.DefinitionStages.WithCondition.withCondition(TimeAggregationType timeAggregation, ComparisonOperationType condition, double threshold)"
+  summary: "Sets the condition to monitor for the current metric alert."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the time aggregation type. How the data that is collected should be combined over\n     time. The default value is Average. Possible values include: 'Average', 'Minimum', 'Maximum',\n     'Total', 'Count'."
+    name: "timeAggregation"
+    type: "<xref href=\"com.azure.resourcemanager.monitor.models.TimeAggregationType?alt=com.azure.resourcemanager.monitor.models.TimeAggregationType&text=TimeAggregationType\" data-throw-if-not-resolved=\"False\" />"
+  - description: "the operator that is used to compare the metric data and the threshold. Possible values\n     include: 'Equals', 'NotEquals', 'GreaterThan', 'GreaterThanOrEqual', 'LessThan', 'LessThanOrEqual'."
+    name: "condition"
+    type: "<xref href=\"com.azure.resourcemanager.monitor.models.ComparisonOperationType?alt=com.azure.resourcemanager.monitor.models.ComparisonOperationType&text=ComparisonOperationType\" data-throw-if-not-resolved=\"False\" />"
+  - description: "the threshold of the metric that triggers the scale action."
+    name: "threshold"
+    type: "<xref href=\"double?alt=double&text=double\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract ScaleRule.DefinitionStages.WithScaleAction withCondition(TimeAggregationType timeAggregation, ComparisonOperationType condition, double threshold)"
+  desc: "Sets the condition to monitor for the current metric alert."
+  returns:
+    description: "the next stage of the definition."
+    type: "<xref href=\"com.azure.resourcemanager.monitor.models.ScaleRule.DefinitionStages.WithScaleAction?alt=com.azure.resourcemanager.monitor.models.ScaleRule.DefinitionStages.WithScaleAction&text=WithScaleAction\" data-throw-if-not-resolved=\"False\" />"
+type: "interface"
+desc: "The stage of the definition which specifies metric alert condition."
+metadata: {}
+package: "com.azure.resourcemanager.monitor.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-monitor:2.54.0-beta.1

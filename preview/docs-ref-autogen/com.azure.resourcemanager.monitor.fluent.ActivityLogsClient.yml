@@ -1,0 +1,86 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.monitor.fluent.ActivityLogsClient"
+fullName: "com.azure.resourcemanager.monitor.fluent.ActivityLogsClient"
+name: "ActivityLogsClient"
+nameWithType: "ActivityLogsClient"
+summary: "An instance of this class provides access to all the operations defined in Activity<wbr>Logs<wbr>Client."
+syntax: "public interface **ActivityLogsClient**"
+methods:
+- uid: "com.azure.resourcemanager.monitor.fluent.ActivityLogsClient.list(java.lang.String)"
+  fullName: "com.azure.resourcemanager.monitor.fluent.ActivityLogsClient.list(String filter)"
+  name: "list(String filter)"
+  nameWithType: "ActivityLogsClient.list(String filter)"
+  summary: "Provides the list of records from the activity logs."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "Reduces the set of data collected.&lt;br&gt;This argument is required and it also requires at least\n the start date/time.&lt;br&gt;The **$filter** argument is very restricted and allows only the following\n patterns.&lt;br&gt;- *List events for a resource group*: $filter=eventTimestamp ge '2014-07-16T04:36:37.6407898Z'\n and eventTimestamp le '2014-07-20T04:36:37.6407898Z' and resourceGroupName eq 'resourceGroupName'.&lt;br&gt;-\n *List events for resource*: $filter=eventTimestamp ge '2014-07-16T04:36:37.6407898Z' and eventTimestamp le\n '2014-07-20T04:36:37.6407898Z' and resourceUri eq 'resourceURI'.&lt;br&gt;- *List events for a subscription in a\n time range*: $filter=eventTimestamp ge '2014-07-16T04:36:37.6407898Z' and eventTimestamp le\n '2014-07-20T04:36:37.6407898Z'.&lt;br&gt;- *List events for a resource provider*: $filter=eventTimestamp ge\n '2014-07-16T04:36:37.6407898Z' and eventTimestamp le '2014-07-20T04:36:37.6407898Z' and resourceProvider eq\n 'resourceProviderName'.&lt;br&gt;- *List events for a correlation Id*: $filter=eventTimestamp ge\n '2014-07-16T04:36:37.6407898Z' and eventTimestamp le '2014-07-20T04:36:37.6407898Z' and correlationId eq\n 'correlationID'.&lt;br&gt;&lt;br&gt;**NOTE**: No other syntax is allowed."
+    name: "filter"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract PagedIterable<EventDataInner> list(String filter)"
+  desc: "Provides the list of records from the activity logs."
+  returns:
+    description: "represents collection of events as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.monitor.fluent.models.EventDataInner?alt=com.azure.resourcemanager.monitor.fluent.models.EventDataInner&text=EventDataInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.monitor.fluent.ActivityLogsClient.list(java.lang.String,java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.monitor.fluent.ActivityLogsClient.list(String filter, String select, Context context)"
+  name: "list(String filter, String select, Context context)"
+  nameWithType: "ActivityLogsClient.list(String filter, String select, Context context)"
+  summary: "Provides the list of records from the activity logs."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "Reduces the set of data collected.&lt;br&gt;This argument is required and it also requires at least\n the start date/time.&lt;br&gt;The **$filter** argument is very restricted and allows only the following\n patterns.&lt;br&gt;- *List events for a resource group*: $filter=eventTimestamp ge '2014-07-16T04:36:37.6407898Z'\n and eventTimestamp le '2014-07-20T04:36:37.6407898Z' and resourceGroupName eq 'resourceGroupName'.&lt;br&gt;-\n *List events for resource*: $filter=eventTimestamp ge '2014-07-16T04:36:37.6407898Z' and eventTimestamp le\n '2014-07-20T04:36:37.6407898Z' and resourceUri eq 'resourceURI'.&lt;br&gt;- *List events for a subscription in a\n time range*: $filter=eventTimestamp ge '2014-07-16T04:36:37.6407898Z' and eventTimestamp le\n '2014-07-20T04:36:37.6407898Z'.&lt;br&gt;- *List events for a resource provider*: $filter=eventTimestamp ge\n '2014-07-16T04:36:37.6407898Z' and eventTimestamp le '2014-07-20T04:36:37.6407898Z' and resourceProvider eq\n 'resourceProviderName'.&lt;br&gt;- *List events for a correlation Id*: $filter=eventTimestamp ge\n '2014-07-16T04:36:37.6407898Z' and eventTimestamp le '2014-07-20T04:36:37.6407898Z' and correlationId eq\n 'correlationID'.&lt;br&gt;&lt;br&gt;**NOTE**: No other syntax is allowed."
+    name: "filter"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Used to fetch events with only the given properties.&lt;br&gt;The **$select** argument is a comma\n separated list of property names to be returned. Possible values are: *authorization*, *claims*, *correlationId*,\n *description*, *eventDataId*, *eventName*, *eventTimestamp*, *httpRequest*, *level*, *operationId*,\n *operationName*, *properties*, *resourceGroupName*, *resourceProviderName*, *resourceId*, *status*,\n *submissionTimestamp*, *subStatus*, *subscriptionId*."
+    name: "select"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract PagedIterable<EventDataInner> list(String filter, String select, Context context)"
+  desc: "Provides the list of records from the activity logs."
+  returns:
+    description: "represents collection of events as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.monitor.fluent.models.EventDataInner?alt=com.azure.resourcemanager.monitor.fluent.models.EventDataInner&text=EventDataInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.monitor.fluent.ActivityLogsClient.listAsync(java.lang.String)"
+  fullName: "com.azure.resourcemanager.monitor.fluent.ActivityLogsClient.listAsync(String filter)"
+  name: "listAsync(String filter)"
+  nameWithType: "ActivityLogsClient.listAsync(String filter)"
+  summary: "Provides the list of records from the activity logs."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "Reduces the set of data collected.&lt;br&gt;This argument is required and it also requires at least\n the start date/time.&lt;br&gt;The **$filter** argument is very restricted and allows only the following\n patterns.&lt;br&gt;- *List events for a resource group*: $filter=eventTimestamp ge '2014-07-16T04:36:37.6407898Z'\n and eventTimestamp le '2014-07-20T04:36:37.6407898Z' and resourceGroupName eq 'resourceGroupName'.&lt;br&gt;-\n *List events for resource*: $filter=eventTimestamp ge '2014-07-16T04:36:37.6407898Z' and eventTimestamp le\n '2014-07-20T04:36:37.6407898Z' and resourceUri eq 'resourceURI'.&lt;br&gt;- *List events for a subscription in a\n time range*: $filter=eventTimestamp ge '2014-07-16T04:36:37.6407898Z' and eventTimestamp le\n '2014-07-20T04:36:37.6407898Z'.&lt;br&gt;- *List events for a resource provider*: $filter=eventTimestamp ge\n '2014-07-16T04:36:37.6407898Z' and eventTimestamp le '2014-07-20T04:36:37.6407898Z' and resourceProvider eq\n 'resourceProviderName'.&lt;br&gt;- *List events for a correlation Id*: $filter=eventTimestamp ge\n '2014-07-16T04:36:37.6407898Z' and eventTimestamp le '2014-07-20T04:36:37.6407898Z' and correlationId eq\n 'correlationID'.&lt;br&gt;&lt;br&gt;**NOTE**: No other syntax is allowed."
+    name: "filter"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract PagedFlux<EventDataInner> listAsync(String filter)"
+  desc: "Provides the list of records from the activity logs."
+  returns:
+    description: "represents collection of events as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.monitor.fluent.models.EventDataInner?alt=com.azure.resourcemanager.monitor.fluent.models.EventDataInner&text=EventDataInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.monitor.fluent.ActivityLogsClient.listAsync(java.lang.String,java.lang.String)"
+  fullName: "com.azure.resourcemanager.monitor.fluent.ActivityLogsClient.listAsync(String filter, String select)"
+  name: "listAsync(String filter, String select)"
+  nameWithType: "ActivityLogsClient.listAsync(String filter, String select)"
+  summary: "Provides the list of records from the activity logs."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "Reduces the set of data collected.&lt;br&gt;This argument is required and it also requires at least\n the start date/time.&lt;br&gt;The **$filter** argument is very restricted and allows only the following\n patterns.&lt;br&gt;- *List events for a resource group*: $filter=eventTimestamp ge '2014-07-16T04:36:37.6407898Z'\n and eventTimestamp le '2014-07-20T04:36:37.6407898Z' and resourceGroupName eq 'resourceGroupName'.&lt;br&gt;-\n *List events for resource*: $filter=eventTimestamp ge '2014-07-16T04:36:37.6407898Z' and eventTimestamp le\n '2014-07-20T04:36:37.6407898Z' and resourceUri eq 'resourceURI'.&lt;br&gt;- *List events for a subscription in a\n time range*: $filter=eventTimestamp ge '2014-07-16T04:36:37.6407898Z' and eventTimestamp le\n '2014-07-20T04:36:37.6407898Z'.&lt;br&gt;- *List events for a resource provider*: $filter=eventTimestamp ge\n '2014-07-16T04:36:37.6407898Z' and eventTimestamp le '2014-07-20T04:36:37.6407898Z' and resourceProvider eq\n 'resourceProviderName'.&lt;br&gt;- *List events for a correlation Id*: $filter=eventTimestamp ge\n '2014-07-16T04:36:37.6407898Z' and eventTimestamp le '2014-07-20T04:36:37.6407898Z' and correlationId eq\n 'correlationID'.&lt;br&gt;&lt;br&gt;**NOTE**: No other syntax is allowed."
+    name: "filter"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Used to fetch events with only the given properties.&lt;br&gt;The **$select** argument is a comma\n separated list of property names to be returned. Possible values are: *authorization*, *claims*, *correlationId*,\n *description*, *eventDataId*, *eventName*, *eventTimestamp*, *httpRequest*, *level*, *operationId*,\n *operationName*, *properties*, *resourceGroupName*, *resourceProviderName*, *resourceId*, *status*,\n *submissionTimestamp*, *subStatus*, *subscriptionId*."
+    name: "select"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract PagedFlux<EventDataInner> listAsync(String filter, String select)"
+  desc: "Provides the list of records from the activity logs."
+  returns:
+    description: "represents collection of events as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.monitor.fluent.models.EventDataInner?alt=com.azure.resourcemanager.monitor.fluent.models.EventDataInner&text=EventDataInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+type: "interface"
+desc: "An instance of this class provides access to all the operations defined in ActivityLogsClient."
+metadata: {}
+package: "com.azure.resourcemanager.monitor.fluent"
+artifact: com.azure.resourcemanager:azure-resourcemanager-monitor:2.54.0-beta.1

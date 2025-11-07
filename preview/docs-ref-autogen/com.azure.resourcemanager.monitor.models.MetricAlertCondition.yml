@@ -1,0 +1,100 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.monitor.models.MetricAlertCondition"
+fullName: "com.azure.resourcemanager.monitor.models.MetricAlertCondition"
+name: "MetricAlertCondition"
+nameWithType: "MetricAlertCondition"
+summary: "An immutable client-side representation of an Azure metric dynamic alert criteria."
+syntax: "public interface **MetricAlertCondition**</br> extends <xref href=\"com.azure.resourcemanager.resources.fluentcore.model.HasInnerModel?alt=com.azure.resourcemanager.resources.fluentcore.model.HasInnerModel&text=HasInnerModel\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.monitor.models.MetricCriteria?alt=com.azure.resourcemanager.monitor.models.MetricCriteria&text=MetricCriteria\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.azure.resourcemanager.resources.fluentcore.arm.models.HasParent?alt=com.azure.resourcemanager.resources.fluentcore.arm.models.HasParent&text=HasParent\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.monitor.models.MetricAlert?alt=com.azure.resourcemanager.monitor.models.MetricAlert&text=MetricAlert\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.azure.resourcemanager.monitor.models.MetricAlertCondition.condition()"
+  fullName: "com.azure.resourcemanager.monitor.models.MetricAlertCondition.condition()"
+  name: "condition()"
+  nameWithType: "MetricAlertCondition.condition()"
+  summary: "Get the criteria operator."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract MetricAlertRuleCondition condition()"
+  desc: "Get the criteria operator. Possible values include: 'Equals', 'NotEquals', 'GreaterThan', 'GreaterThanOrEqual', 'LessThan', 'LessThanOrEqual'."
+  returns:
+    description: "the operator value"
+    type: "<xref href=\"com.azure.resourcemanager.monitor.models.MetricAlertRuleCondition?alt=com.azure.resourcemanager.monitor.models.MetricAlertRuleCondition&text=MetricAlertRuleCondition\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.monitor.models.MetricAlertCondition.dimensions()"
+  fullName: "com.azure.resourcemanager.monitor.models.MetricAlertCondition.dimensions()"
+  name: "dimensions()"
+  nameWithType: "MetricAlertCondition.dimensions()"
+  summary: "Get list of dimension conditions."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Collection<MetricDimension> dimensions()"
+  desc: "Get list of dimension conditions."
+  returns:
+    description: "the dimensions value"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html\">Collection</a>&lt;<xref href=\"com.azure.resourcemanager.monitor.models.MetricDimension?alt=com.azure.resourcemanager.monitor.models.MetricDimension&text=MetricDimension\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.monitor.models.MetricAlertCondition.metricName()"
+  fullName: "com.azure.resourcemanager.monitor.models.MetricAlertCondition.metricName()"
+  name: "metricName()"
+  nameWithType: "MetricAlertCondition.metricName()"
+  summary: "Get name of the metric signal."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String metricName()"
+  desc: "Get name of the metric signal."
+  returns:
+    description: "the metricName value"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.monitor.models.MetricAlertCondition.metricNamespace()"
+  fullName: "com.azure.resourcemanager.monitor.models.MetricAlertCondition.metricNamespace()"
+  name: "metricNamespace()"
+  nameWithType: "MetricAlertCondition.metricNamespace()"
+  summary: "Get namespace of the metric."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String metricNamespace()"
+  desc: "Get namespace of the metric."
+  returns:
+    description: "the metricNamespace value"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.monitor.models.MetricAlertCondition.name()"
+  fullName: "com.azure.resourcemanager.monitor.models.MetricAlertCondition.name()"
+  name: "name()"
+  nameWithType: "MetricAlertCondition.name()"
+  summary: "Get name of the criteria."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String name()"
+  desc: "Get name of the criteria."
+  returns:
+    description: "the name value"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.monitor.models.MetricAlertCondition.threshold()"
+  fullName: "com.azure.resourcemanager.monitor.models.MetricAlertCondition.threshold()"
+  name: "threshold()"
+  nameWithType: "MetricAlertCondition.threshold()"
+  summary: "Get the criteria threshold value that activates the alert."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract double threshold()"
+  desc: "Get the criteria threshold value that activates the alert."
+  returns:
+    description: "the threshold value"
+    type: "<xref href=\"double?alt=double&text=double\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.monitor.models.MetricAlertCondition.timeAggregation()"
+  fullName: "com.azure.resourcemanager.monitor.models.MetricAlertCondition.timeAggregation()"
+  name: "timeAggregation()"
+  nameWithType: "MetricAlertCondition.timeAggregation()"
+  summary: "Get the criteria time aggregation types."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract MetricAlertRuleTimeAggregation timeAggregation()"
+  desc: "Get the criteria time aggregation types. Possible values include: 'Average', 'Minimum', 'Maximum', 'Total'."
+  returns:
+    description: "the timeAggregation value"
+    type: "<xref href=\"com.azure.resourcemanager.monitor.models.MetricAlertRuleTimeAggregation?alt=com.azure.resourcemanager.monitor.models.MetricAlertRuleTimeAggregation&text=MetricAlertRuleTimeAggregation\" data-throw-if-not-resolved=\"False\" />"
+type: "interface"
+desc: "An immutable client-side representation of an Azure metric dynamic alert criteria."
+implements:
+- "<xref href=\"com.azure.resourcemanager.resources.fluentcore.arm.models.HasParent?alt=com.azure.resourcemanager.resources.fluentcore.arm.models.HasParent&text=HasParent\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.monitor.models.MetricAlert?alt=com.azure.resourcemanager.monitor.models.MetricAlert&text=MetricAlert\" data-throw-if-not-resolved=\"False\" />&gt;"
+- "<xref href=\"com.azure.resourcemanager.resources.fluentcore.model.HasInnerModel?alt=com.azure.resourcemanager.resources.fluentcore.model.HasInnerModel&text=HasInnerModel\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.monitor.models.MetricCriteria?alt=com.azure.resourcemanager.monitor.models.MetricCriteria&text=MetricCriteria\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.monitor.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-monitor:2.54.0-beta.1

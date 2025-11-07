@@ -1,0 +1,82 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.monitor.models.ScaleRule.UpdateDefinitionStages.WithStatistic"
+fullName: "com.azure.resourcemanager.monitor.models.ScaleRule.UpdateDefinitionStages.WithStatistic"
+name: "ScaleRule.UpdateDefinitionStages.WithStatistic"
+nameWithType: "ScaleRule.UpdateDefinitionStages.WithStatistic"
+summary: "The stage of the definition which specifies what kind of statistics should be used to calculate autoscale trigger action."
+syntax: "public static interface **ScaleRule.UpdateDefinitionStages.WithStatistic**"
+methods:
+- uid: "com.azure.resourcemanager.monitor.models.ScaleRule.UpdateDefinitionStages.WithStatistic.withStatistic()"
+  fullName: "com.azure.resourcemanager.monitor.models.ScaleRule.UpdateDefinitionStages.WithStatistic.withStatistic()"
+  name: "withStatistic()"
+  nameWithType: "ScaleRule.UpdateDefinitionStages.WithStatistic.withStatistic()"
+  summary: "Sets statistics for autoscale trigger action with default values of 10 minutes for duration, 1 minute for frequency(time grain) and 'Average' for statistic type."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract ScaleRule.UpdateDefinitionStages.WithCondition withStatistic()"
+  desc: "Sets statistics for autoscale trigger action with default values of 10 minutes for duration, 1 minute for frequency(time grain) and 'Average' for statistic type."
+  returns:
+    description: "the next stage of the definition."
+    type: "<xref href=\"com.azure.resourcemanager.monitor.models.ScaleRule.UpdateDefinitionStages.WithCondition?alt=com.azure.resourcemanager.monitor.models.ScaleRule.UpdateDefinitionStages.WithCondition&text=WithCondition\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.monitor.models.ScaleRule.UpdateDefinitionStages.WithStatistic.withStatistic(java.time.Duration)"
+  fullName: "com.azure.resourcemanager.monitor.models.ScaleRule.UpdateDefinitionStages.WithStatistic.withStatistic(Duration duration)"
+  name: "withStatistic(Duration duration)"
+  nameWithType: "ScaleRule.UpdateDefinitionStages.WithStatistic.withStatistic(Duration duration)"
+  summary: "Sets statistics for autoscale trigger action with default values of 1 minute for frequency(time grain) and 'Average' for statistic type."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the range of time in which instance data is collected. This value must be greater than\n     the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours\n     and 5 minutes."
+    name: "duration"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
+  syntax: "public abstract ScaleRule.UpdateDefinitionStages.WithCondition withStatistic(Duration duration)"
+  desc: "Sets statistics for autoscale trigger action with default values of 1 minute for frequency(time grain) and 'Average' for statistic type."
+  returns:
+    description: "the next stage of the definition."
+    type: "<xref href=\"com.azure.resourcemanager.monitor.models.ScaleRule.UpdateDefinitionStages.WithCondition?alt=com.azure.resourcemanager.monitor.models.ScaleRule.UpdateDefinitionStages.WithCondition&text=WithCondition\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.monitor.models.ScaleRule.UpdateDefinitionStages.WithStatistic.withStatistic(java.time.Duration,java.time.Duration,com.azure.resourcemanager.monitor.models.MetricStatisticType)"
+  fullName: "com.azure.resourcemanager.monitor.models.ScaleRule.UpdateDefinitionStages.WithStatistic.withStatistic(Duration duration, Duration frequency, MetricStatisticType statisticType)"
+  name: "withStatistic(Duration duration, Duration frequency, MetricStatisticType statisticType)"
+  nameWithType: "ScaleRule.UpdateDefinitionStages.WithStatistic.withStatistic(Duration duration, Duration frequency, MetricStatisticType statisticType)"
+  summary: "Sets statistics for autoscale trigger action."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the range of time in which instance data is collected. This value must be greater than\n     the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours\n     and 5 minutes."
+    name: "duration"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
+  - description: "the granularity of metrics the rule monitors. Must be one of the predefined values\n     returned from metric definitions for the metric. Must be between 12 hours and 1 minute."
+    name: "frequency"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
+  - description: "the metric statistic type. How the metrics from multiple instances are combined.\n     Possible values include: 'Average', 'Min', 'Max', 'Sum'."
+    name: "statisticType"
+    type: "<xref href=\"com.azure.resourcemanager.monitor.models.MetricStatisticType?alt=com.azure.resourcemanager.monitor.models.MetricStatisticType&text=MetricStatisticType\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract ScaleRule.UpdateDefinitionStages.WithCondition withStatistic(Duration duration, Duration frequency, MetricStatisticType statisticType)"
+  desc: "Sets statistics for autoscale trigger action."
+  returns:
+    description: "the next stage of the definition."
+    type: "<xref href=\"com.azure.resourcemanager.monitor.models.ScaleRule.UpdateDefinitionStages.WithCondition?alt=com.azure.resourcemanager.monitor.models.ScaleRule.UpdateDefinitionStages.WithCondition&text=WithCondition\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.monitor.models.ScaleRule.UpdateDefinitionStages.WithStatistic.withStatistic(java.time.Duration,com.azure.resourcemanager.monitor.models.MetricStatisticType)"
+  fullName: "com.azure.resourcemanager.monitor.models.ScaleRule.UpdateDefinitionStages.WithStatistic.withStatistic(Duration duration, MetricStatisticType statisticType)"
+  name: "withStatistic(Duration duration, MetricStatisticType statisticType)"
+  nameWithType: "ScaleRule.UpdateDefinitionStages.WithStatistic.withStatistic(Duration duration, MetricStatisticType statisticType)"
+  summary: "Sets statistics for autoscale trigger action with default values of 1 minute for frequency(time grain)."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the range of time in which instance data is collected. This value must be greater than\n     the delay in metric collection, which can vary from resource-to-resource. Must be between 12 hours\n     and 5 minutes."
+    name: "duration"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
+  - description: "the metric statistic type. How the metrics from multiple instances are combined.\n     Possible values include: 'Average', 'Min', 'Max', 'Sum'."
+    name: "statisticType"
+    type: "<xref href=\"com.azure.resourcemanager.monitor.models.MetricStatisticType?alt=com.azure.resourcemanager.monitor.models.MetricStatisticType&text=MetricStatisticType\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract ScaleRule.UpdateDefinitionStages.WithCondition withStatistic(Duration duration, MetricStatisticType statisticType)"
+  desc: "Sets statistics for autoscale trigger action with default values of 1 minute for frequency(time grain)."
+  returns:
+    description: "the next stage of the definition."
+    type: "<xref href=\"com.azure.resourcemanager.monitor.models.ScaleRule.UpdateDefinitionStages.WithCondition?alt=com.azure.resourcemanager.monitor.models.ScaleRule.UpdateDefinitionStages.WithCondition&text=WithCondition\" data-throw-if-not-resolved=\"False\" />"
+type: "interface"
+desc: "The stage of the definition which specifies what kind of statistics should be used to calculate autoscale trigger action."
+metadata: {}
+package: "com.azure.resourcemanager.monitor.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-monitor:2.54.0-beta.1

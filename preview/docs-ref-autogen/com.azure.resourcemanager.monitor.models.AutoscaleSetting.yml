@@ -1,0 +1,101 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.monitor.models.AutoscaleSetting"
+fullName: "com.azure.resourcemanager.monitor.models.AutoscaleSetting"
+name: "AutoscaleSetting"
+nameWithType: "AutoscaleSetting"
+summary: "An immutable client-side representation of an Azure autoscale setting."
+syntax: "public interface **AutoscaleSetting**</br> extends <xref href=\"com.azure.resourcemanager.resources.fluentcore.arm.models.GroupableResource?alt=com.azure.resourcemanager.resources.fluentcore.arm.models.GroupableResource&text=GroupableResource\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.monitor.MonitorManager?alt=com.azure.resourcemanager.monitor.MonitorManager&text=MonitorManager\" data-throw-if-not-resolved=\"False\" />,<xref href=\"com.azure.resourcemanager.monitor.fluent.models.AutoscaleSettingResourceInner?alt=com.azure.resourcemanager.monitor.fluent.models.AutoscaleSettingResourceInner&text=AutoscaleSettingResourceInner\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.azure.resourcemanager.resources.fluentcore.model.Refreshable?alt=com.azure.resourcemanager.resources.fluentcore.model.Refreshable&text=Refreshable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.monitor.models.AutoscaleSetting?alt=com.azure.resourcemanager.monitor.models.AutoscaleSetting&text=AutoscaleSetting\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.azure.resourcemanager.resources.fluentcore.model.Updatable?alt=com.azure.resourcemanager.resources.fluentcore.model.Updatable&text=Updatable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.monitor.models.AutoscaleSetting.Update?alt=com.azure.resourcemanager.monitor.models.AutoscaleSetting.Update&text=Update\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.azure.resourcemanager.monitor.models.AutoscaleSetting.adminEmailNotificationEnabled()"
+  fullName: "com.azure.resourcemanager.monitor.models.AutoscaleSetting.adminEmailNotificationEnabled()"
+  name: "adminEmailNotificationEnabled()"
+  nameWithType: "AutoscaleSetting.adminEmailNotificationEnabled()"
+  summary: "Get a value indicating whether to send email to subscription administrator."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract boolean adminEmailNotificationEnabled()"
+  desc: "Get a value indicating whether to send email to subscription administrator."
+  returns:
+    description: "the sendToSubscriptionAdministrator value."
+    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.monitor.models.AutoscaleSetting.autoscaleEnabled()"
+  fullName: "com.azure.resourcemanager.monitor.models.AutoscaleSetting.autoscaleEnabled()"
+  name: "autoscaleEnabled()"
+  nameWithType: "AutoscaleSetting.autoscaleEnabled()"
+  summary: "Get the enabled flag."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract boolean autoscaleEnabled()"
+  desc: "Get the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'true'."
+  returns:
+    description: "the enabled value."
+    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.monitor.models.AutoscaleSetting.coAdminEmailNotificationEnabled()"
+  fullName: "com.azure.resourcemanager.monitor.models.AutoscaleSetting.coAdminEmailNotificationEnabled()"
+  name: "coAdminEmailNotificationEnabled()"
+  nameWithType: "AutoscaleSetting.coAdminEmailNotificationEnabled()"
+  summary: "Get a value indicating whether to send email to subscription co-administrators."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract boolean coAdminEmailNotificationEnabled()"
+  desc: "Get a value indicating whether to send email to subscription co-administrators."
+  returns:
+    description: "the sendToSubscriptionCoAdministrators value"
+    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.monitor.models.AutoscaleSetting.customEmailsNotification()"
+  fullName: "com.azure.resourcemanager.monitor.models.AutoscaleSetting.customEmailsNotification()"
+  name: "customEmailsNotification()"
+  nameWithType: "AutoscaleSetting.customEmailsNotification()"
+  summary: "Get the custom e-mails list."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract List<String> customEmailsNotification()"
+  desc: "Get the custom e-mails list. This value can be null or empty, in which case this attribute will be ignored."
+  returns:
+    description: "the customEmails value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+- uid: "com.azure.resourcemanager.monitor.models.AutoscaleSetting.profiles()"
+  fullName: "com.azure.resourcemanager.monitor.models.AutoscaleSetting.profiles()"
+  name: "profiles()"
+  nameWithType: "AutoscaleSetting.profiles()"
+  summary: "Gets the autoscale profiles in the current autoscale setting."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Map<String,AutoscaleProfile> profiles()"
+  desc: "Gets the autoscale profiles in the current autoscale setting."
+  returns:
+    description: "autoscale profiles in the current autoscale setting, indexed by name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.resourcemanager.monitor.models.AutoscaleProfile?alt=com.azure.resourcemanager.monitor.models.AutoscaleProfile&text=AutoscaleProfile\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.monitor.models.AutoscaleSetting.targetResourceId()"
+  fullName: "com.azure.resourcemanager.monitor.models.AutoscaleSetting.targetResourceId()"
+  name: "targetResourceId()"
+  nameWithType: "AutoscaleSetting.targetResourceId()"
+  summary: "Get the resource identifier of the resource that the autoscale setting should be added to."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String targetResourceId()"
+  desc: "Get the resource identifier of the resource that the autoscale setting should be added to."
+  returns:
+    description: "the targetResourceUri value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.monitor.models.AutoscaleSetting.webhookNotification()"
+  fullName: "com.azure.resourcemanager.monitor.models.AutoscaleSetting.webhookNotification()"
+  name: "webhookNotification()"
+  nameWithType: "AutoscaleSetting.webhookNotification()"
+  summary: "Get the service address to receive the notification."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String webhookNotification()"
+  desc: "Get the service address to receive the notification."
+  returns:
+    description: "the serviceUri value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+type: "interface"
+desc: "An immutable client-side representation of an Azure autoscale setting."
+implements:
+- "<xref href=\"com.azure.resourcemanager.resources.fluentcore.arm.models.GroupableResource?alt=com.azure.resourcemanager.resources.fluentcore.arm.models.GroupableResource&text=GroupableResource\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.monitor.MonitorManager?alt=com.azure.resourcemanager.monitor.MonitorManager&text=MonitorManager\" data-throw-if-not-resolved=\"False\" />,<xref href=\"com.azure.resourcemanager.monitor.fluent.models.AutoscaleSettingResourceInner?alt=com.azure.resourcemanager.monitor.fluent.models.AutoscaleSettingResourceInner&text=AutoscaleSettingResourceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- "<xref href=\"com.azure.resourcemanager.resources.fluentcore.model.Refreshable?alt=com.azure.resourcemanager.resources.fluentcore.model.Refreshable&text=Refreshable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.monitor.models.AutoscaleSetting?alt=com.azure.resourcemanager.monitor.models.AutoscaleSetting&text=AutoscaleSetting\" data-throw-if-not-resolved=\"False\" />&gt;"
+- "<xref href=\"com.azure.resourcemanager.resources.fluentcore.model.Updatable?alt=com.azure.resourcemanager.resources.fluentcore.model.Updatable&text=Updatable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.monitor.models.AutoscaleSetting.Update?alt=com.azure.resourcemanager.monitor.models.AutoscaleSetting.Update&text=Update\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.monitor.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-monitor:2.54.0-beta.1
