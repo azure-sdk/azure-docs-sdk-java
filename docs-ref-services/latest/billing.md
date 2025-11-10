@@ -1,7 +1,7 @@
 ---
 title: Azure Billing SDK for Java
 description: Reference for Azure Billing SDK for Java
-ms.date: 11/07/2025
+ms.date: 11/10/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: billing
