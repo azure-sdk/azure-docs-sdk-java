@@ -6,22 +6,7 @@ nameWithType: "ManagedHsmResource"
 summary: "Managed HSM resource."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.core.management.ProxyResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.core.management.Resource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
-- classRef: "<xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
-  methodsRef:
-  - "<xref href=\"com.azure.core.management.ProxyResource.id()?alt=com.azure.core.management.ProxyResource.id&text=id\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.ProxyResource.name()?alt=com.azure.core.management.ProxyResource.name&text=name\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.ProxyResource.type()?alt=com.azure.core.management.ProxyResource.type&text=type\" data-throw-if-not-resolved=\"False\" />"
-- classRef: "<xref href=\"com.azure.core.management.Resource?alt=com.azure.core.management.Resource&text=Resource\" data-throw-if-not-resolved=\"False\" />"
-  methodsRef:
-  - "<xref href=\"com.azure.core.management.Resource.fromJson(com.azure.json.JsonReader)?alt=com.azure.core.management.Resource.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.location()?alt=com.azure.core.management.Resource.location&text=location\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.tags()?alt=com.azure.core.management.Resource.tags&text=tags\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.toJson(com.azure.json.JsonWriter)?alt=com.azure.core.management.Resource.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.withLocation(java.lang.String)?alt=com.azure.core.management.Resource.withLocation&text=withLocation\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.withTags(java.util.Map<java.lang.String,java.lang.String>)?alt=com.azure.core.management.Resource.withTags&text=withTags\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -35,14 +20,16 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public class **ManagedHsmResource**</br> extends <xref href=\"com.azure.core.management.Resource?alt=com.azure.core.management.Resource&text=Resource\" data-throw-if-not-resolved=\"False\" />"
+syntax: "public class **ManagedHsmResource**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.keyvault.models.ManagedHsmResource?alt=com.azure.resourcemanager.keyvault.models.ManagedHsmResource&text=ManagedHsmResource\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.keyvault.models.ManagedHsmResource.ManagedHsmResource()"
   fullName: "com.azure.resourcemanager.keyvault.models.ManagedHsmResource.ManagedHsmResource()"
   name: "ManagedHsmResource()"
   nameWithType: "ManagedHsmResource.ManagedHsmResource()"
   summary: "Creates an instance of Managed<wbr>Hsm<wbr>Resource class."
-  syntax: "public ManagedHsmResource()"
+  modifiers:
+  - "protected"
+  syntax: "protected ManagedHsmResource()"
   desc: "Creates an instance of ManagedHsmResource class."
 methods:
 - uid: "com.azure.resourcemanager.keyvault.models.ManagedHsmResource.fromJson(com.azure.json.JsonReader)"
@@ -58,7 +45,7 @@ methods:
     type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static ManagedHsmResource fromJson(JsonReader jsonReader)"
   exceptions:
-  - description: "If the deserialized JSON object was missing any required properties."
+  - description: "If an error occurs while reading the ManagedHsmResource."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   desc: "Reads an instance of ManagedHsmResource from the JsonReader."
   returns:
@@ -68,10 +55,9 @@ methods:
   fullName: "com.azure.resourcemanager.keyvault.models.ManagedHsmResource.id()"
   name: "id()"
   nameWithType: "ManagedHsmResource.id()"
-  summary: "Get the id property: Fully qualified resource Id for the resource."
-  overridden: "com.azure.core.management.ProxyResource.id()"
+  summary: "Get the id property: The Azure Resource Manager resource ID for the managed HSM Pool."
   syntax: "public String id()"
-  desc: "Get the id property: Fully qualified resource Id for the resource."
+  desc: "Get the id property: The Azure Resource Manager resource ID for the managed HSM Pool."
   returns:
     description: "the id value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -85,14 +71,23 @@ methods:
   returns:
     description: "the identity value."
     type: "<xref href=\"com.azure.resourcemanager.keyvault.models.ManagedServiceIdentity?alt=com.azure.resourcemanager.keyvault.models.ManagedServiceIdentity&text=ManagedServiceIdentity\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.keyvault.models.ManagedHsmResource.location()"
+  fullName: "com.azure.resourcemanager.keyvault.models.ManagedHsmResource.location()"
+  name: "location()"
+  nameWithType: "ManagedHsmResource.location()"
+  summary: "Get the location property: The supported Azure location where the managed HSM Pool should be created."
+  syntax: "public String location()"
+  desc: "Get the location property: The supported Azure location where the managed HSM Pool should be created."
+  returns:
+    description: "the location value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.keyvault.models.ManagedHsmResource.name()"
   fullName: "com.azure.resourcemanager.keyvault.models.ManagedHsmResource.name()"
   name: "name()"
   nameWithType: "ManagedHsmResource.name()"
-  summary: "Get the name property: The name of the resource."
-  overridden: "com.azure.core.management.ProxyResource.name()"
+  summary: "Get the name property: The name of the managed HSM Pool."
   syntax: "public String name()"
-  desc: "Get the name property: The name of the resource."
+  desc: "Get the name property: The name of the managed HSM Pool."
   returns:
     description: "the name value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -116,11 +111,20 @@ methods:
   returns:
     description: "the systemData value."
     type: "<xref href=\"com.azure.core.management.SystemData?alt=com.azure.core.management.SystemData&text=SystemData\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.keyvault.models.ManagedHsmResource.tags()"
+  fullName: "com.azure.resourcemanager.keyvault.models.ManagedHsmResource.tags()"
+  name: "tags()"
+  nameWithType: "ManagedHsmResource.tags()"
+  summary: "Get the tags property: Resource tags."
+  syntax: "public Map<String,String> tags()"
+  desc: "Get the tags property: Resource tags."
+  returns:
+    description: "the tags value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.resourcemanager.keyvault.models.ManagedHsmResource.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.keyvault.models.ManagedHsmResource.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
   nameWithType: "ManagedHsmResource.toJson(JsonWriter jsonWriter)"
-  overridden: "com.azure.core.management.Resource.toJson(com.azure.json.JsonWriter)"
   parameters:
   - name: "jsonWriter"
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
@@ -133,10 +137,9 @@ methods:
   fullName: "com.azure.resourcemanager.keyvault.models.ManagedHsmResource.type()"
   name: "type()"
   nameWithType: "ManagedHsmResource.type()"
-  summary: "Get the type property: The type of the resource."
-  overridden: "com.azure.core.management.ProxyResource.type()"
+  summary: "Get the type property: The resource type of the managed HSM Pool."
   syntax: "public String type()"
-  desc: "Get the type property: The type of the resource."
+  desc: "Get the type property: The resource type of the managed HSM Pool."
   returns:
     description: "the type value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -147,58 +150,10 @@ methods:
   summary: "Validates the instance."
   syntax: "public void validate()"
   desc: "Validates the instance."
-- uid: "com.azure.resourcemanager.keyvault.models.ManagedHsmResource.withIdentity(com.azure.resourcemanager.keyvault.models.ManagedServiceIdentity)"
-  fullName: "com.azure.resourcemanager.keyvault.models.ManagedHsmResource.withIdentity(ManagedServiceIdentity identity)"
-  name: "withIdentity(ManagedServiceIdentity identity)"
-  nameWithType: "ManagedHsmResource.withIdentity(ManagedServiceIdentity identity)"
-  summary: "Set the identity property: Managed service identity (system assigned and/or user assigned identities)."
-  parameters:
-  - description: "the identity value to set."
-    name: "identity"
-    type: "<xref href=\"com.azure.resourcemanager.keyvault.models.ManagedServiceIdentity?alt=com.azure.resourcemanager.keyvault.models.ManagedServiceIdentity&text=ManagedServiceIdentity\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public ManagedHsmResource withIdentity(ManagedServiceIdentity identity)"
-  desc: "Set the identity property: Managed service identity (system assigned and/or user assigned identities)."
-  returns:
-    description: "the ManagedHsmResource object itself."
-    type: "<xref href=\"com.azure.resourcemanager.keyvault.models.ManagedHsmResource?alt=com.azure.resourcemanager.keyvault.models.ManagedHsmResource&text=ManagedHsmResource\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.keyvault.models.ManagedHsmResource.withLocation(java.lang.String)"
-  fullName: "com.azure.resourcemanager.keyvault.models.ManagedHsmResource.withLocation(String location)"
-  name: "withLocation(String location)"
-  nameWithType: "ManagedHsmResource.withLocation(String location)"
-  overridden: "com.azure.core.management.Resource.withLocation(java.lang.String)"
-  parameters:
-  - name: "location"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public ManagedHsmResource withLocation(String location)"
-  returns:
-    type: "<xref href=\"com.azure.resourcemanager.keyvault.models.ManagedHsmResource?alt=com.azure.resourcemanager.keyvault.models.ManagedHsmResource&text=ManagedHsmResource\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.keyvault.models.ManagedHsmResource.withSku(com.azure.resourcemanager.keyvault.models.ManagedHsmSku)"
-  fullName: "com.azure.resourcemanager.keyvault.models.ManagedHsmResource.withSku(ManagedHsmSku sku)"
-  name: "withSku(ManagedHsmSku sku)"
-  nameWithType: "ManagedHsmResource.withSku(ManagedHsmSku sku)"
-  summary: "Set the sku property: SKU details."
-  parameters:
-  - description: "the sku value to set."
-    name: "sku"
-    type: "<xref href=\"com.azure.resourcemanager.keyvault.models.ManagedHsmSku?alt=com.azure.resourcemanager.keyvault.models.ManagedHsmSku&text=ManagedHsmSku\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public ManagedHsmResource withSku(ManagedHsmSku sku)"
-  desc: "Set the sku property: SKU details."
-  returns:
-    description: "the ManagedHsmResource object itself."
-    type: "<xref href=\"com.azure.resourcemanager.keyvault.models.ManagedHsmResource?alt=com.azure.resourcemanager.keyvault.models.ManagedHsmResource&text=ManagedHsmResource\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.keyvault.models.ManagedHsmResource.withTags(java.util.Map<java.lang.String,java.lang.String>)"
-  fullName: "com.azure.resourcemanager.keyvault.models.ManagedHsmResource.withTags(Map<String,String> tags)"
-  name: "withTags(Map<String,String> tags)"
-  nameWithType: "ManagedHsmResource.withTags(Map<String,String> tags)"
-  overridden: "com.azure.core.management.Resource.withTags(java.util.Map<java.lang.String,java.lang.String>)"
-  parameters:
-  - name: "tags"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
-  syntax: "public ManagedHsmResource withTags(Map<String,String> tags)"
-  returns:
-    type: "<xref href=\"com.azure.resourcemanager.keyvault.models.ManagedHsmResource?alt=com.azure.resourcemanager.keyvault.models.ManagedHsmResource&text=ManagedHsmResource\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Managed HSM resource."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.keyvault.models.ManagedHsmResource?alt=com.azure.resourcemanager.keyvault.models.ManagedHsmResource&text=ManagedHsmResource\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.keyvault.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-keyvault:2.53.4
+artifact: com.azure.resourcemanager:azure-resourcemanager-keyvault:2.54.0
