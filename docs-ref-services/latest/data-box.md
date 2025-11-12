@@ -1,7 +1,7 @@
 ---
 title: Azure Data Box SDK for Java
 description: Reference for Azure Data Box SDK for Java
-ms.date: 11/11/2025
+ms.date: 11/12/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: databox
