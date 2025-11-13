@@ -1,0 +1,97 @@
+### YamlMime:JavaType
+uid: "com.azure.ai.agents.models.CompoundFilter"
+fullName: "com.azure.ai.agents.models.CompoundFilter"
+name: "CompoundFilter"
+nameWithType: "CompoundFilter"
+summary: "Combine multiple filters using \\`and\\` or \\`or\\`."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **CompoundFilter**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.CompoundFilter?alt=com.azure.ai.agents.models.CompoundFilter&text=CompoundFilter\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.ai.agents.models.CompoundFilter.CompoundFilter(com.azure.ai.agents.models.CompoundFilterType,java.util.List<com.azure.core.util.BinaryData>)"
+  fullName: "com.azure.ai.agents.models.CompoundFilter.CompoundFilter(CompoundFilterType type, List<BinaryData> filters)"
+  name: "CompoundFilter(CompoundFilterType type, List<BinaryData> filters)"
+  nameWithType: "CompoundFilter.CompoundFilter(CompoundFilterType type, List<BinaryData> filters)"
+  summary: "Creates an instance of Compound<wbr>Filter class."
+  parameters:
+  - description: "the type value to set."
+    name: "type"
+    type: "<xref href=\"com.azure.ai.agents.models.CompoundFilterType?alt=com.azure.ai.agents.models.CompoundFilterType&text=CompoundFilterType\" data-throw-if-not-resolved=\"False\" />"
+  - description: "the filters value to set."
+    name: "filters"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public CompoundFilter(CompoundFilterType type, List<BinaryData> filters)"
+  desc: "Creates an instance of CompoundFilter class."
+methods:
+- uid: "com.azure.ai.agents.models.CompoundFilter.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.ai.agents.models.CompoundFilter.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "CompoundFilter.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Compound<wbr>Filter from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static CompoundFilter fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of CompoundFilter from the JsonReader."
+  returns:
+    description: "An instance of CompoundFilter if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.ai.agents.models.CompoundFilter?alt=com.azure.ai.agents.models.CompoundFilter&text=CompoundFilter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.CompoundFilter.getFilters()"
+  fullName: "com.azure.ai.agents.models.CompoundFilter.getFilters()"
+  name: "getFilters()"
+  nameWithType: "CompoundFilter.getFilters()"
+  summary: "Get the filters property: Array of filters to combine."
+  syntax: "public List<BinaryData> getFilters()"
+  desc: "Get the filters property: Array of filters to combine. Items can be \\`ComparisonFilter\\` or \\`CompoundFilter\\`."
+  returns:
+    description: "the filters value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.ai.agents.models.CompoundFilter.getType()"
+  fullName: "com.azure.ai.agents.models.CompoundFilter.getType()"
+  name: "getType()"
+  nameWithType: "CompoundFilter.getType()"
+  summary: "Get the type property: Type of operation: \\`and\\` or \\`or\\`."
+  syntax: "public CompoundFilterType getType()"
+  desc: "Get the type property: Type of operation: \\`and\\` or \\`or\\`."
+  returns:
+    description: "the type value."
+    type: "<xref href=\"com.azure.ai.agents.models.CompoundFilterType?alt=com.azure.ai.agents.models.CompoundFilterType&text=CompoundFilterType\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.CompoundFilter.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.ai.agents.models.CompoundFilter.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "CompoundFilter.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Combine multiple filters using \\`and\\` or \\`or\\`."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.CompoundFilter?alt=com.azure.ai.agents.models.CompoundFilter&text=CompoundFilter\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.ai.agents.models"
+artifact: com.azure:azure-ai-agents:1.0.0-beta.1

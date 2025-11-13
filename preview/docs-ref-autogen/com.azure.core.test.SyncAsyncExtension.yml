@@ -43,7 +43,7 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html\">Callable</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
   - description: "async callable. It should block at some point to return result."
     name: "async"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html\">Callable</a>&lt;<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html\">Callable</a>&lt;<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
   syntax: "public static T <T>execute(Callable<T> sync, Callable<Mono<T>> async)"
   desc: "Executes sync or async branch depending on the context."
   returns:
@@ -62,7 +62,7 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html\">Runnable</a>"
   - description: "async callable. It should block at some point to return result."
     name: "async"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html\">Callable</a>&lt;<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Callable.html\">Callable</a>&lt;<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
   syntax: "public static void execute(Runnable sync, Callable<Mono<Void>> async)"
   desc: "Executes sync or async branch depending on the context."
 - uid: "com.azure.core.test.SyncAsyncExtension.provideTestTemplateInvocationContexts(org.junit.jupiter.api.extension.ExtensionContext)"

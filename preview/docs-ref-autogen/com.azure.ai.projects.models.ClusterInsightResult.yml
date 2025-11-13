@@ -1,0 +1,92 @@
+### YamlMime:JavaType
+uid: "com.azure.ai.projects.models.ClusterInsightResult"
+fullName: "com.azure.ai.projects.models.ClusterInsightResult"
+name: "ClusterInsightResult"
+nameWithType: "ClusterInsightResult"
+summary: "Insights from the cluster analysis."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **ClusterInsightResult**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.projects.models.ClusterInsightResult?alt=com.azure.ai.projects.models.ClusterInsightResult&text=ClusterInsightResult\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.azure.ai.projects.models.ClusterInsightResult.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.ai.projects.models.ClusterInsightResult.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "ClusterInsightResult.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Cluster<wbr>Insight<wbr>Result from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static ClusterInsightResult fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of ClusterInsightResult from the JsonReader."
+  returns:
+    description: "An instance of ClusterInsightResult if the JsonReader was pointing to an instance of it, or null if it\n was pointing to JSON null."
+    type: "<xref href=\"com.azure.ai.projects.models.ClusterInsightResult?alt=com.azure.ai.projects.models.ClusterInsightResult&text=ClusterInsightResult\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.models.ClusterInsightResult.getClusters()"
+  fullName: "com.azure.ai.projects.models.ClusterInsightResult.getClusters()"
+  name: "getClusters()"
+  nameWithType: "ClusterInsightResult.getClusters()"
+  summary: "Get the clusters property: List of clusters identified in the insights."
+  syntax: "public List<InsightCluster> getClusters()"
+  desc: "Get the clusters property: List of clusters identified in the insights."
+  returns:
+    description: "the clusters value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.ai.projects.models.InsightCluster?alt=com.azure.ai.projects.models.InsightCluster&text=InsightCluster\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.ai.projects.models.ClusterInsightResult.getCoordinates()"
+  fullName: "com.azure.ai.projects.models.ClusterInsightResult.getCoordinates()"
+  name: "getCoordinates()"
+  nameWithType: "ClusterInsightResult.getCoordinates()"
+  summary: "Get the coordinates property: Optional mapping of IDs to 2D coordinates used by the UX for visualization."
+  syntax: "public Map<String,ChartCoordinate> getCoordinates()"
+  desc: "Get the coordinates property: Optional mapping of IDs to 2D coordinates used by the UX for visualization. The map keys are string identifiers (for example, a cluster id or a sample id) and the values are the coordinates and visual size for rendering on a 2D chart. This property is omitted unless the client requests coordinates (for example, by passing \\`includeCoordinates=true\\` as a query parameter). Example: \\`\\`\\` \\{ \"cluster-1\": \\{ \"x\": 12, \"y\": 34, \"size\": 8 \\}, \"sample-123\": \\{ \"x\": 18, \"y\": 22, \"size\": 4 \\} \\} \\`\\`\\` Coordinates are intended only for client-side visualization and do not modify the canonical insights results."
+  returns:
+    description: "the coordinates value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.ai.projects.models.ChartCoordinate?alt=com.azure.ai.projects.models.ChartCoordinate&text=ChartCoordinate\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.ai.projects.models.ClusterInsightResult.getSummary()"
+  fullName: "com.azure.ai.projects.models.ClusterInsightResult.getSummary()"
+  name: "getSummary()"
+  nameWithType: "ClusterInsightResult.getSummary()"
+  summary: "Get the summary property: Summary of the insights report."
+  syntax: "public InsightSummary getSummary()"
+  desc: "Get the summary property: Summary of the insights report."
+  returns:
+    description: "the summary value."
+    type: "<xref href=\"com.azure.ai.projects.models.InsightSummary?alt=com.azure.ai.projects.models.InsightSummary&text=InsightSummary\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.models.ClusterInsightResult.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.ai.projects.models.ClusterInsightResult.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "ClusterInsightResult.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Insights from the cluster analysis."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.projects.models.ClusterInsightResult?alt=com.azure.ai.projects.models.ClusterInsightResult&text=ClusterInsightResult\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.ai.projects.models"
+artifact: com.azure:azure-ai-projects:1.0.0-beta.3

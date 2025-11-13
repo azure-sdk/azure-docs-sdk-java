@@ -26,7 +26,7 @@ methods:
   fullName: "com.azure.ai.projects.ConnectionsAsyncClient.getConnection(String name, boolean includeCredentials)"
   name: "getConnection(String name, boolean includeCredentials)"
   nameWithType: "ConnectionsAsyncClient.getConnection(String name, boolean includeCredentials)"
-  summary: "Get a connection by name, with or without its connection credentials."
+  summary: "Get a connection by name, without populating connection credentials."
   parameters:
   - description: "The friendly name of the connection, provided by the user."
     name: "name"
@@ -35,40 +35,9 @@ methods:
     name: "includeCredentials"
     type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public Mono<Connection> getConnection(String name, boolean includeCredentials)"
-  desc: "Get a connection by name, with or without its connection credentials."
+  desc: "Get a connection by name, without populating connection credentials."
   returns:
-    description: "a connection by name, with or without its connection credentials on successful completion of\n <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.ai.projects.models.Connection?alt=com.azure.ai.projects.models.Connection&text=Connection\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.ai.projects.ConnectionsAsyncClient.getDefaultConnection(com.azure.ai.projects.models.ConnectionType)"
-  fullName: "com.azure.ai.projects.ConnectionsAsyncClient.getDefaultConnection(ConnectionType connectionType)"
-  name: "getDefaultConnection(ConnectionType connectionType)"
-  nameWithType: "ConnectionsAsyncClient.getDefaultConnection(ConnectionType connectionType)"
-  summary: "Get the default connection for a given connection type."
-  parameters:
-  - description: "The type of the connection"
-    name: "connectionType"
-    type: "<xref href=\"com.azure.ai.projects.models.ConnectionType?alt=com.azure.ai.projects.models.ConnectionType&text=ConnectionType\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public Mono<Connection> getDefaultConnection(ConnectionType connectionType)"
-  desc: "Get the default connection for a given connection type."
-  returns:
-    description: "Default connection of the type specified on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.ai.projects.models.Connection?alt=com.azure.ai.projects.models.Connection&text=Connection\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.ai.projects.ConnectionsAsyncClient.getDefaultConnection(com.azure.ai.projects.models.ConnectionType,boolean)"
-  fullName: "com.azure.ai.projects.ConnectionsAsyncClient.getDefaultConnection(ConnectionType connectionType, boolean includeCredentials)"
-  name: "getDefaultConnection(ConnectionType connectionType, boolean includeCredentials)"
-  nameWithType: "ConnectionsAsyncClient.getDefaultConnection(ConnectionType connectionType, boolean includeCredentials)"
-  summary: "Get the default connection for a given connection type."
-  parameters:
-  - description: "The type of the connection"
-    name: "connectionType"
-    type: "<xref href=\"com.azure.ai.projects.models.ConnectionType?alt=com.azure.ai.projects.models.ConnectionType&text=ConnectionType\" data-throw-if-not-resolved=\"False\" />"
-  - description: "Whether to include connection credentials in the response."
-    name: "includeCredentials"
-    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public Mono<Connection> getDefaultConnection(ConnectionType connectionType, boolean includeCredentials)"
-  desc: "Get the default connection for a given connection type."
-  returns:
-    description: "Default connection of the type specified on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
+    description: "a connection by name, without populating connection credentials."
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.ai.projects.models.Connection?alt=com.azure.ai.projects.models.Connection&text=Connection\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.ai.projects.ConnectionsAsyncClient.listConnections()"
   fullName: "com.azure.ai.projects.ConnectionsAsyncClient.listConnections()"
@@ -107,7 +76,7 @@ methods:
     name: "requestOptions"
     type: "<xref href=\"com.azure.core.http.rest.RequestOptions?alt=com.azure.core.http.rest.RequestOptions&text=RequestOptions\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public PagedFlux<BinaryData> listConnections(RequestOptions requestOptions)"
-  desc: "List all connections in the project, without populating connection credentials.\n\n**Query Parameters**\n\n    | ----------------- | ------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n    | Name              | Type    | Required | Description                                                                                                                                                                                   |\n    | connectionType    | String  | No       | List connections of this specific type. Allowed values: \"AzureOpenAI\", \"AzureBlob\", \"AzureStorageAccount\", \"CognitiveSearch\", \"CosmosDB\", \"ApiKey\", \"AppConfig\", \"AppInsights\", \"CustomKeys\". |\n    | defaultConnection | Boolean | No       | List connections that are default connections                                                                                                                                                 |\n\nYou can add these to a request with <xref uid=\"com.azure.core.http.rest.RequestOptions.addQueryParam\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RequestOptions#addQueryParam\"></xref>\n\n**Response Body Schema**\n\n```java\n{\n     name: String (Required)\n     id: String (Required)\n     type: String(AzureOpenAI/AzureBlob/AzureStorageAccount/CognitiveSearch/CosmosDB/ApiKey/AppConfig/AppInsights/CustomKeys) (Required)\n     target: String (Required)\n     isDefault: boolean (Required)\n     credentials (Required): {\n         type: String(ApiKey/AAD/SAS/CustomKeys/None) (Required)\n     }\n     metadata (Required): {\n         String: String (Required)\n     }\n }\n```"
+  desc: "List all connections in the project, without populating connection credentials.\n\n**Query Parameters**\n\n    | ----------------- | ------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n    | Name              | Type    | Required | Description                                                                                                                                                                                                 |\n    | connectionType    | String  | No       | List connections of this specific type. Allowed values: \"AzureOpenAI\", \"AzureBlob\", \"AzureStorageAccount\", \"CognitiveSearch\", \"CosmosDB\", \"ApiKey\", \"AppConfig\", \"AppInsights\", \"CustomKeys\", \"RemoteTool\". |\n    | defaultConnection | Boolean | No       | List connections that are default connections                                                                                                                                                               |\n\nYou can add these to a request with <xref uid=\"com.azure.core.http.rest.RequestOptions.addQueryParam\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RequestOptions#addQueryParam\"></xref>\n\n**Response Body Schema**\n\n```java\n{\n     name: String (Required)\n     id: String (Required)\n     type: String(AzureOpenAI/AzureBlob/AzureStorageAccount/CognitiveSearch/CosmosDB/ApiKey/AppConfig/AppInsights/CustomKeys/RemoteTool) (Required)\n     target: String (Required)\n     isDefault: boolean (Required)\n     credentials (Required): {\n         type: String(ApiKey/AAD/SAS/CustomKeys/None/AgenticIdentityToken) (Required)\n     }\n     metadata (Required): {\n         String: String (Required)\n     }\n }\n```"
   returns:
     description: "paged collection of Connection items as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -115,4 +84,4 @@ type: "class"
 desc: "Initializes a new instance of the asynchronous AIProjectClient type."
 metadata: {}
 package: "com.azure.ai.projects"
-artifact: com.azure:azure-ai-projects:1.0.0-beta.2
+artifact: com.azure:azure-ai-projects:1.0.0-beta.3
