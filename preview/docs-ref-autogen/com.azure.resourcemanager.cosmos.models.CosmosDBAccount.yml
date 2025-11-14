@@ -6,13 +6,27 @@ nameWithType: "CosmosDBAccount"
 summary: "An immutable client-side representation of an Azure Cosmos DB."
 syntax: "public interface **CosmosDBAccount**</br> extends <xref href=\"com.azure.resourcemanager.resources.fluentcore.arm.models.GroupableResource?alt=com.azure.resourcemanager.resources.fluentcore.arm.models.GroupableResource&text=GroupableResource\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cosmos.CosmosManager?alt=com.azure.resourcemanager.cosmos.CosmosManager&text=CosmosManager\" data-throw-if-not-resolved=\"False\" />,<xref href=\"com.azure.resourcemanager.cosmos.fluent.models.DatabaseAccountGetResultsInner?alt=com.azure.resourcemanager.cosmos.fluent.models.DatabaseAccountGetResultsInner&text=DatabaseAccountGetResultsInner\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.azure.resourcemanager.resources.fluentcore.model.Refreshable?alt=com.azure.resourcemanager.resources.fluentcore.model.Refreshable&text=Refreshable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cosmos.models.CosmosDBAccount?alt=com.azure.resourcemanager.cosmos.models.CosmosDBAccount&text=CosmosDBAccount\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.azure.resourcemanager.resources.fluentcore.model.Updatable?alt=com.azure.resourcemanager.resources.fluentcore.model.Updatable&text=Updatable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cosmos.models.CosmosDBAccount.Update?alt=com.azure.resourcemanager.cosmos.models.CosmosDBAccount.Update&text=Update\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.SupportsUpdatingPrivateEndpointConnection?alt=com.azure.resourcemanager.resources.fluentcore.collection.SupportsUpdatingPrivateEndpointConnection&text=SupportsUpdatingPrivateEndpointConnection\" data-throw-if-not-resolved=\"False\" />"
 methods:
+- uid: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.automaticFailoverEnabled()"
+  fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.automaticFailoverEnabled()"
+  name: "automaticFailoverEnabled()"
+  nameWithType: "CosmosDBAccount.automaticFailoverEnabled()"
+  summary: "Checks whether automatic failover is enabled."
+  modifiers:
+  - "default"
+  syntax: "public default boolean automaticFailoverEnabled()"
+  desc: "Checks whether automatic failover is enabled. Enables automatic failover of the write region in the rare event that the region is unavailable due to an outage. Automatic failover will result in a new write region for the account and is chosen based on the failover priorities configured for the account."
+  returns:
+    description: "whether automatic failover is enabled"
+    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.capabilities()"
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.capabilities()"
   name: "capabilities()"
   nameWithType: "CosmosDBAccount.capabilities()"
+  summary: "Gets a list that contains the Cosmos DB capabilities."
   modifiers:
   - "abstract"
   syntax: "public abstract List<Capability> capabilities()"
+  desc: "Gets a list that contains the Cosmos DB capabilities."
   returns:
     description: "a list that contains the Cosmos DB capabilities"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cosmos.models.Capability?alt=com.azure.resourcemanager.cosmos.models.Capability&text=Capability\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -20,9 +34,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.cassandraConnectorEnabled()"
   name: "cassandraConnectorEnabled()"
   nameWithType: "CosmosDBAccount.cassandraConnectorEnabled()"
+  summary: "Checks whether cassandra connector is enabled."
   modifiers:
   - "abstract"
   syntax: "public abstract boolean cassandraConnectorEnabled()"
+  desc: "Checks whether cassandra connector is enabled."
   returns:
     description: "whether cassandra connector is enabled or not."
     type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
@@ -30,9 +46,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.cassandraConnectorOffer()"
   name: "cassandraConnectorOffer()"
   nameWithType: "CosmosDBAccount.cassandraConnectorOffer()"
+  summary: "Gets the current cassandra connector offer."
   modifiers:
   - "abstract"
   syntax: "public abstract ConnectorOffer cassandraConnectorOffer()"
+  desc: "Gets the current cassandra connector offer."
   returns:
     description: "the current cassandra connector offer."
     type: "<xref href=\"com.azure.resourcemanager.cosmos.models.ConnectorOffer?alt=com.azure.resourcemanager.cosmos.models.ConnectorOffer&text=ConnectorOffer\" data-throw-if-not-resolved=\"False\" />"
@@ -40,9 +58,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.consistencyPolicy()"
   name: "consistencyPolicy()"
   nameWithType: "CosmosDBAccount.consistencyPolicy()"
+  summary: "Gets the consistency policy for the CosmosDB database account."
   modifiers:
   - "abstract"
   syntax: "public abstract ConsistencyPolicy consistencyPolicy()"
+  desc: "Gets the consistency policy for the CosmosDB database account."
   returns:
     description: "the consistency policy for the CosmosDB database account"
     type: "<xref href=\"com.azure.resourcemanager.cosmos.models.ConsistencyPolicy?alt=com.azure.resourcemanager.cosmos.models.ConsistencyPolicy&text=ConsistencyPolicy\" data-throw-if-not-resolved=\"False\" />"
@@ -50,9 +70,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.databaseAccountOfferType()"
   name: "databaseAccountOfferType()"
   nameWithType: "CosmosDBAccount.databaseAccountOfferType()"
+  summary: "Gets the offer type for the CosmosDB database account."
   modifiers:
   - "abstract"
   syntax: "public abstract DatabaseAccountOfferType databaseAccountOfferType()"
+  desc: "Gets the offer type for the CosmosDB database account."
   returns:
     description: "the offer type for the CosmosDB database account"
     type: "<xref href=\"com.azure.resourcemanager.cosmos.models.DatabaseAccountOfferType?alt=com.azure.resourcemanager.cosmos.models.DatabaseAccountOfferType&text=DatabaseAccountOfferType\" data-throw-if-not-resolved=\"False\" />"
@@ -60,9 +82,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.defaultConsistencyLevel()"
   name: "defaultConsistencyLevel()"
   nameWithType: "CosmosDBAccount.defaultConsistencyLevel()"
+  summary: "Gets the default consistency level for the CosmosDB database account."
   modifiers:
   - "abstract"
   syntax: "public abstract DefaultConsistencyLevel defaultConsistencyLevel()"
+  desc: "Gets the default consistency level for the CosmosDB database account."
   returns:
     description: "the default consistency level for the CosmosDB database account"
     type: "<xref href=\"com.azure.resourcemanager.cosmos.models.DefaultConsistencyLevel?alt=com.azure.resourcemanager.cosmos.models.DefaultConsistencyLevel&text=DefaultConsistencyLevel\" data-throw-if-not-resolved=\"False\" />"
@@ -70,9 +94,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.documentEndpoint()"
   name: "documentEndpoint()"
   nameWithType: "CosmosDBAccount.documentEndpoint()"
+  summary: "Gets the connection endpoint for the CosmosDB database account."
   modifiers:
   - "abstract"
   syntax: "public abstract String documentEndpoint()"
+  desc: "Gets the connection endpoint for the CosmosDB database account."
   returns:
     description: "the connection endpoint for the CosmosDB database account"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -80,6 +106,7 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.getPrivateEndpointConnection(String name)"
   name: "getPrivateEndpointConnection(String name)"
   nameWithType: "CosmosDBAccount.getPrivateEndpointConnection(String name)"
+  summary: "Gets the specific private endpoint connection."
   modifiers:
   - "abstract"
   parameters:
@@ -87,6 +114,7 @@ methods:
     name: "name"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PrivateEndpointConnection getPrivateEndpointConnection(String name)"
+  desc: "Gets the specific private endpoint connection."
   returns:
     description: "the specific private endpoint connection"
     type: "<xref href=\"com.azure.resourcemanager.cosmos.models.PrivateEndpointConnection?alt=com.azure.resourcemanager.cosmos.models.PrivateEndpointConnection&text=PrivateEndpointConnection\" data-throw-if-not-resolved=\"False\" />"
@@ -94,6 +122,7 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.getPrivateEndpointConnectionAsync(String name)"
   name: "getPrivateEndpointConnectionAsync(String name)"
   nameWithType: "CosmosDBAccount.getPrivateEndpointConnectionAsync(String name)"
+  summary: "Gets the specific private endpoint connection."
   modifiers:
   - "abstract"
   parameters:
@@ -101,6 +130,7 @@ methods:
     name: "name"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract Mono<PrivateEndpointConnection> getPrivateEndpointConnectionAsync(String name)"
+  desc: "Gets the specific private endpoint connection."
   returns:
     description: "the specific private endpoint connection"
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.resourcemanager.cosmos.models.PrivateEndpointConnection?alt=com.azure.resourcemanager.cosmos.models.PrivateEndpointConnection&text=PrivateEndpointConnection\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -108,6 +138,7 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.getPrivateLinkResource(String groupName)"
   name: "getPrivateLinkResource(String groupName)"
   nameWithType: "CosmosDBAccount.getPrivateLinkResource(String groupName)"
+  summary: "Gets the specific private link resource."
   modifiers:
   - "abstract"
   parameters:
@@ -115,13 +146,15 @@ methods:
     name: "groupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PrivateLinkResource getPrivateLinkResource(String groupName)"
+  desc: "Gets the specific private link resource."
   returns:
-    description: "the specific private link resource group"
+    description: "the specific private link resource"
     type: "<xref href=\"com.azure.resourcemanager.cosmos.models.PrivateLinkResource?alt=com.azure.resourcemanager.cosmos.models.PrivateLinkResource&text=PrivateLinkResource\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.getPrivateLinkResourceAsync(java.lang.String)"
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.getPrivateLinkResourceAsync(String groupName)"
   name: "getPrivateLinkResourceAsync(String groupName)"
   nameWithType: "CosmosDBAccount.getPrivateLinkResourceAsync(String groupName)"
+  summary: "Gets the specific private link resource."
   modifiers:
   - "abstract"
   parameters:
@@ -129,17 +162,20 @@ methods:
     name: "groupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract Mono<PrivateLinkResource> getPrivateLinkResourceAsync(String groupName)"
+  desc: "Gets the specific private link resource."
   returns:
-    description: "the specific private link resource group"
+    description: "the specific private link resource"
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.resourcemanager.cosmos.models.PrivateLinkResource?alt=com.azure.resourcemanager.cosmos.models.PrivateLinkResource&text=PrivateLinkResource\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.ipRangeFilter()"
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.ipRangeFilter()"
   name: "ipRangeFilter()"
   nameWithType: "CosmosDBAccount.ipRangeFilter()"
+  summary: "Gets specifies the set of IP addresses or IP address ranges in CIDR form."
   deprecatedTag: "use <xref uid=\"com.azure.resourcemanager.cosmos.models.CosmosDBAccount.ipRules()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#ipRules()\"></xref>"
   modifiers:
   - "abstract"
   syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public abstract String ipRangeFilter()"
+  desc: "Gets specifies the set of IP addresses or IP address ranges in CIDR form."
   hasDeprecatedTag: true
   returns:
     description: "specifies the set of IP addresses or IP address ranges in CIDR form."
@@ -148,9 +184,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.ipRules()"
   name: "ipRules()"
   nameWithType: "CosmosDBAccount.ipRules()"
+  summary: "Gets specifies the set of IP addresses or IP address ranges in CIDR form."
   modifiers:
   - "abstract"
   syntax: "public abstract List<IpAddressOrRange> ipRules()"
+  desc: "Gets specifies the set of IP addresses or IP address ranges in CIDR form."
   returns:
     description: "specifies the set of IP addresses or IP address ranges in CIDR form."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cosmos.models.IpAddressOrRange?alt=com.azure.resourcemanager.cosmos.models.IpAddressOrRange&text=IpAddressOrRange\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -158,9 +196,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.keyBasedMetadataWriteAccessDisabled()"
   name: "keyBasedMetadataWriteAccessDisabled()"
   nameWithType: "CosmosDBAccount.keyBasedMetadataWriteAccessDisabled()"
+  summary: "Checks whether metadata write access is disabled."
   modifiers:
   - "abstract"
   syntax: "public abstract boolean keyBasedMetadataWriteAccessDisabled()"
+  desc: "Checks whether metadata write access is disabled."
   returns:
     description: "whether metadata write access is disabled or not."
     type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
@@ -168,9 +208,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.kind()"
   name: "kind()"
   nameWithType: "CosmosDBAccount.kind()"
+  summary: "Gets the type of database account."
   modifiers:
   - "abstract"
   syntax: "public abstract DatabaseAccountKind kind()"
+  desc: "Gets the type of database account."
   returns:
     description: "indicates the type of database account"
     type: "<xref href=\"com.azure.resourcemanager.cosmos.models.DatabaseAccountKind?alt=com.azure.resourcemanager.cosmos.models.DatabaseAccountKind&text=DatabaseAccountKind\" data-throw-if-not-resolved=\"False\" />"
@@ -178,9 +220,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.listConnectionStrings()"
   name: "listConnectionStrings()"
   nameWithType: "CosmosDBAccount.listConnectionStrings()"
+  summary: "Gets the connection strings for the specified Azure CosmosDB database account."
   modifiers:
   - "abstract"
   syntax: "public abstract DatabaseAccountListConnectionStringsResult listConnectionStrings()"
+  desc: "Gets the connection strings for the specified Azure CosmosDB database account."
   returns:
     description: "the connection strings for the specified Azure CosmosDB database account"
     type: "<xref href=\"com.azure.resourcemanager.cosmos.models.DatabaseAccountListConnectionStringsResult?alt=com.azure.resourcemanager.cosmos.models.DatabaseAccountListConnectionStringsResult&text=DatabaseAccountListConnectionStringsResult\" data-throw-if-not-resolved=\"False\" />"
@@ -188,9 +232,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.listConnectionStringsAsync()"
   name: "listConnectionStringsAsync()"
   nameWithType: "CosmosDBAccount.listConnectionStringsAsync()"
+  summary: "Gets the connection strings for the specified Azure CosmosDB database account."
   modifiers:
   - "abstract"
   syntax: "public abstract Mono<DatabaseAccountListConnectionStringsResult> listConnectionStringsAsync()"
+  desc: "Gets the connection strings for the specified Azure CosmosDB database account."
   returns:
     description: "the connection strings for the specified Azure CosmosDB database account"
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.resourcemanager.cosmos.models.DatabaseAccountListConnectionStringsResult?alt=com.azure.resourcemanager.cosmos.models.DatabaseAccountListConnectionStringsResult&text=DatabaseAccountListConnectionStringsResult\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -198,9 +244,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.listKeys()"
   name: "listKeys()"
   nameWithType: "CosmosDBAccount.listKeys()"
+  summary: "Gets the access keys for the specified Azure CosmosDB database account."
   modifiers:
   - "abstract"
   syntax: "public abstract DatabaseAccountListKeysResult listKeys()"
+  desc: "Gets the access keys for the specified Azure CosmosDB database account."
   returns:
     description: "the access keys for the specified Azure CosmosDB database account"
     type: "<xref href=\"com.azure.resourcemanager.cosmos.models.DatabaseAccountListKeysResult?alt=com.azure.resourcemanager.cosmos.models.DatabaseAccountListKeysResult&text=DatabaseAccountListKeysResult\" data-throw-if-not-resolved=\"False\" />"
@@ -208,9 +256,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.listKeysAsync()"
   name: "listKeysAsync()"
   nameWithType: "CosmosDBAccount.listKeysAsync()"
+  summary: "Gets the access keys for the specified Azure CosmosDB database account."
   modifiers:
   - "abstract"
   syntax: "public abstract Mono<DatabaseAccountListKeysResult> listKeysAsync()"
+  desc: "Gets the access keys for the specified Azure CosmosDB database account."
   returns:
     description: "the access keys for the specified Azure CosmosDB database account"
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.resourcemanager.cosmos.models.DatabaseAccountListKeysResult?alt=com.azure.resourcemanager.cosmos.models.DatabaseAccountListKeysResult&text=DatabaseAccountListKeysResult\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -218,9 +268,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.listPrivateEndpointConnection()"
   name: "listPrivateEndpointConnection()"
   nameWithType: "CosmosDBAccount.listPrivateEndpointConnection()"
+  summary: "Gets all private endpoint connection in the account."
   modifiers:
   - "abstract"
   syntax: "public abstract Map<String,PrivateEndpointConnection> listPrivateEndpointConnection()"
+  desc: "Gets all private endpoint connection in the account."
   returns:
     description: "all private endpoint connection in the account."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.resourcemanager.cosmos.models.PrivateEndpointConnection?alt=com.azure.resourcemanager.cosmos.models.PrivateEndpointConnection&text=PrivateEndpointConnection\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -228,9 +280,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.listPrivateEndpointConnectionAsync()"
   name: "listPrivateEndpointConnectionAsync()"
   nameWithType: "CosmosDBAccount.listPrivateEndpointConnectionAsync()"
+  summary: "Gets all private endpoint connection in the account."
   modifiers:
   - "abstract"
   syntax: "public abstract Mono<Map<String,PrivateEndpointConnection>> listPrivateEndpointConnectionAsync()"
+  desc: "Gets all private endpoint connection in the account."
   returns:
     description: "all private endpoint connection in the account."
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.resourcemanager.cosmos.models.PrivateEndpointConnection?alt=com.azure.resourcemanager.cosmos.models.PrivateEndpointConnection&text=PrivateEndpointConnection\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
@@ -238,9 +292,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.listPrivateLinkResources()"
   name: "listPrivateLinkResources()"
   nameWithType: "CosmosDBAccount.listPrivateLinkResources()"
+  summary: "Gets all private link resources in the account."
   modifiers:
   - "abstract"
   syntax: "public abstract List<PrivateLinkResource> listPrivateLinkResources()"
+  desc: "Gets all private link resources in the account."
   returns:
     description: "all private link resources in the account."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cosmos.models.PrivateLinkResource?alt=com.azure.resourcemanager.cosmos.models.PrivateLinkResource&text=PrivateLinkResource\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -248,9 +304,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.listPrivateLinkResourcesAsync()"
   name: "listPrivateLinkResourcesAsync()"
   nameWithType: "CosmosDBAccount.listPrivateLinkResourcesAsync()"
+  summary: "Gets all private link resources in the account."
   modifiers:
   - "abstract"
   syntax: "public abstract PagedFlux<PrivateLinkResource> listPrivateLinkResourcesAsync()"
+  desc: "Gets all private link resources in the account."
   returns:
     description: "all private link resources in the account."
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cosmos.models.PrivateLinkResource?alt=com.azure.resourcemanager.cosmos.models.PrivateLinkResource&text=PrivateLinkResource\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -258,9 +316,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.listReadOnlyKeys()"
   name: "listReadOnlyKeys()"
   nameWithType: "CosmosDBAccount.listReadOnlyKeys()"
+  summary: "Gets the read-only access keys for the specified Azure CosmosDB database account."
   modifiers:
   - "abstract"
   syntax: "public abstract DatabaseAccountListReadOnlyKeysResult listReadOnlyKeys()"
+  desc: "Gets the read-only access keys for the specified Azure CosmosDB database account."
   returns:
     description: "the read-only access keys for the specified Azure CosmosDB database account"
     type: "<xref href=\"com.azure.resourcemanager.cosmos.models.DatabaseAccountListReadOnlyKeysResult?alt=com.azure.resourcemanager.cosmos.models.DatabaseAccountListReadOnlyKeysResult&text=DatabaseAccountListReadOnlyKeysResult\" data-throw-if-not-resolved=\"False\" />"
@@ -268,9 +328,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.listReadOnlyKeysAsync()"
   name: "listReadOnlyKeysAsync()"
   nameWithType: "CosmosDBAccount.listReadOnlyKeysAsync()"
+  summary: "Gets the read-only access keys for the specified Azure CosmosDB database account."
   modifiers:
   - "abstract"
   syntax: "public abstract Mono<DatabaseAccountListReadOnlyKeysResult> listReadOnlyKeysAsync()"
+  desc: "Gets the read-only access keys for the specified Azure CosmosDB database account."
   returns:
     description: "the read-only access keys for the specified Azure CosmosDB database account"
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.resourcemanager.cosmos.models.DatabaseAccountListReadOnlyKeysResult?alt=com.azure.resourcemanager.cosmos.models.DatabaseAccountListReadOnlyKeysResult&text=DatabaseAccountListReadOnlyKeysResult\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -278,9 +340,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.listSqlDatabases()"
   name: "listSqlDatabases()"
   nameWithType: "CosmosDBAccount.listSqlDatabases()"
+  summary: "Gets the list of Azure Cosmos DB SQL databases."
   modifiers:
   - "abstract"
   syntax: "public abstract List<SqlDatabase> listSqlDatabases()"
+  desc: "Gets the list of Azure Cosmos DB SQL databases."
   returns:
     description: "the list of Azure Cosmos DB SQL databases"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cosmos.models.SqlDatabase?alt=com.azure.resourcemanager.cosmos.models.SqlDatabase&text=SqlDatabase\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -288,19 +352,35 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.listSqlDatabasesAsync()"
   name: "listSqlDatabasesAsync()"
   nameWithType: "CosmosDBAccount.listSqlDatabasesAsync()"
+  summary: "Gets the list of Azure Cosmos DB SQL databases."
   modifiers:
   - "abstract"
   syntax: "public abstract PagedFlux<SqlDatabase> listSqlDatabasesAsync()"
+  desc: "Gets the list of Azure Cosmos DB SQL databases."
   returns:
     description: "the list of Azure Cosmos DB SQL databases"
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cosmos.models.SqlDatabase?alt=com.azure.resourcemanager.cosmos.models.SqlDatabase&text=SqlDatabase\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.localAuthDisabled()"
+  fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.localAuthDisabled()"
+  name: "localAuthDisabled()"
+  nameWithType: "CosmosDBAccount.localAuthDisabled()"
+  summary: "Checks whether local auth is disabled."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract boolean localAuthDisabled()"
+  desc: "Checks whether local auth is disabled."
+  returns:
+    description: "whether local auth is disabled or not."
+    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.multipleWriteLocationsEnabled()"
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.multipleWriteLocationsEnabled()"
   name: "multipleWriteLocationsEnabled()"
   nameWithType: "CosmosDBAccount.multipleWriteLocationsEnabled()"
+  summary: "Checks whether write is enabled for multiple locations."
   modifiers:
   - "abstract"
   syntax: "public abstract boolean multipleWriteLocationsEnabled()"
+  desc: "Checks whether write is enabled for multiple locations."
   returns:
     description: "whether write is enabled for multiple locations or not"
     type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
@@ -378,9 +458,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.readableReplications()"
   name: "readableReplications()"
   nameWithType: "CosmosDBAccount.readableReplications()"
+  summary: "Gets an array that contains the readable georeplication locations enabled for the CosmosDB account."
   modifiers:
   - "abstract"
   syntax: "public abstract List<Location> readableReplications()"
+  desc: "Gets an array that contains the readable georeplication locations enabled for the CosmosDB account."
   returns:
     description: "an array that contains the readable georeplication locations enabled for the CosmosDB account"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cosmos.models.Location?alt=com.azure.resourcemanager.cosmos.models.Location&text=Location\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -388,6 +470,7 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.regenerateKey(KeyKind keyKind)"
   name: "regenerateKey(KeyKind keyKind)"
   nameWithType: "CosmosDBAccount.regenerateKey(KeyKind keyKind)"
+  summary: "Regenerates secret keys."
   modifiers:
   - "abstract"
   parameters:
@@ -395,10 +478,12 @@ methods:
     name: "keyKind"
     type: "<xref href=\"com.azure.resourcemanager.cosmos.models.KeyKind?alt=com.azure.resourcemanager.cosmos.models.KeyKind&text=KeyKind\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract void regenerateKey(KeyKind keyKind)"
+  desc: "Regenerates secret keys."
 - uid: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.regenerateKeyAsync(com.azure.resourcemanager.cosmos.models.KeyKind)"
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.regenerateKeyAsync(KeyKind keyKind)"
   name: "regenerateKeyAsync(KeyKind keyKind)"
   nameWithType: "CosmosDBAccount.regenerateKeyAsync(KeyKind keyKind)"
+  summary: "A deferred emitter that regenerates secret keys."
   modifiers:
   - "abstract"
   parameters:
@@ -406,6 +491,7 @@ methods:
     name: "keyKind"
     type: "<xref href=\"com.azure.resourcemanager.cosmos.models.KeyKind?alt=com.azure.resourcemanager.cosmos.models.KeyKind&text=KeyKind\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Mono<Void> regenerateKeyAsync(KeyKind keyKind)"
+  desc: "A deferred emitter that regenerates secret keys."
   returns:
     description: "a representation of the deferred computation of this call"
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
@@ -413,9 +499,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.virtualNetworkRules()"
   name: "virtualNetworkRules()"
   nameWithType: "CosmosDBAccount.virtualNetworkRules()"
+  summary: "Gets a list that contains the Cosmos DB Virtual Network ACL Rules."
   modifiers:
   - "abstract"
   syntax: "public abstract List<VirtualNetworkRule> virtualNetworkRules()"
+  desc: "Gets a list that contains the Cosmos DB Virtual Network ACL Rules."
   returns:
     description: "a list that contains the Cosmos DB Virtual Network ACL Rules (empty list if none is set)"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cosmos.models.VirtualNetworkRule?alt=com.azure.resourcemanager.cosmos.models.VirtualNetworkRule&text=VirtualNetworkRule\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -423,9 +511,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CosmosDBAccount.writableReplications()"
   name: "writableReplications()"
   nameWithType: "CosmosDBAccount.writableReplications()"
+  summary: "Gets an array that contains the writable georeplication locations enabled for the CosmosDB account."
   modifiers:
   - "abstract"
   syntax: "public abstract List<Location> writableReplications()"
+  desc: "Gets an array that contains the writable georeplication locations enabled for the CosmosDB account."
   returns:
     description: "an array that contains the writable georeplication locations enabled for the CosmosDB account"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cosmos.models.Location?alt=com.azure.resourcemanager.cosmos.models.Location&text=Location\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -438,4 +528,4 @@ implements:
 - "<xref href=\"com.azure.resourcemanager.resources.fluentcore.model.Updatable?alt=com.azure.resourcemanager.resources.fluentcore.model.Updatable&text=Updatable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cosmos.models.CosmosDBAccount.Update?alt=com.azure.resourcemanager.cosmos.models.CosmosDBAccount.Update&text=Update\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.cosmos.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-cosmos:2.46.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-cosmos:2.54.0-beta.1
