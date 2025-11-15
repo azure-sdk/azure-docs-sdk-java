@@ -30,7 +30,7 @@ methods:
     name: "warFile"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/File.html\">File</a>"
   syntax: "public abstract void warDeploy(File warFile)"
-  desc: "Deploys a WAR file onto the Azure specialized Tomcat on this web app."
+  desc: "Deploys a WAR file onto the Azure specialized Tomcat on this web app.\n\nIt is recommended to call `webApp.deploy(DeployType.WAR, warFile, new DeployOptions().withPath(\"webapps/ROOT\"))`"
 - uid: "com.azure.resourcemanager.appservice.models.WebApp.warDeploy(java.io.File,java.lang.String)"
   fullName: "com.azure.resourcemanager.appservice.models.WebApp.warDeploy(File warFile, String appName)"
   name: "warDeploy(File warFile, String appName)"
@@ -46,7 +46,7 @@ methods:
     name: "appName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract void warDeploy(File warFile, String appName)"
-  desc: "Deploys a WAR file onto the Azure specialized Tomcat on this web app."
+  desc: "Deploys a WAR file onto the Azure specialized Tomcat on this web app.\n\nIt is recommended to call `webApp.deploy(DeployType.WAR, warFile, new DeployOptions().withPath(\"webapps/\"))`"
 - uid: "com.azure.resourcemanager.appservice.models.WebApp.warDeploy(java.io.InputStream,long)"
   fullName: "com.azure.resourcemanager.appservice.models.WebApp.warDeploy(InputStream warFile, long length)"
   name: "warDeploy(InputStream warFile, long length)"
@@ -62,7 +62,7 @@ methods:
     name: "length"
     type: "<xref href=\"long?alt=long&text=long\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract void warDeploy(InputStream warFile, long length)"
-  desc: "Deploys a WAR file onto the Azure specialized Tomcat on this web app.\n\nRetry by client is required if error happens, due to nature of the stream."
+  desc: "Deploys a WAR file onto the Azure specialized Tomcat on this web app.\n\nIt is recommended to call `webApp.deploy(DeployType.WAR, warFile, length, new DeployOptions().withPath(\"webapps/ROOT\"))`\n\nRetry by client is required if error happens, due to nature of the stream."
 - uid: "com.azure.resourcemanager.appservice.models.WebApp.warDeploy(java.io.InputStream,long,java.lang.String)"
   fullName: "com.azure.resourcemanager.appservice.models.WebApp.warDeploy(InputStream warFile, long length, String appName)"
   name: "warDeploy(InputStream warFile, long length, String appName)"
@@ -81,7 +81,7 @@ methods:
     name: "appName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract void warDeploy(InputStream warFile, long length, String appName)"
-  desc: "Deploys a WAR file onto the Azure specialized Tomcat on this web app.\n\nRetry by client is required if error happens, due to nature of the stream."
+  desc: "Deploys a WAR file onto the Azure specialized Tomcat on this web app.\n\nIt is recommended to call `webApp.deploy(DeployType.WAR, warFile, length, new DeployOptions().withPath(\"webapps/\"))`\n\nRetry by client is required if error happens, due to nature of the stream."
 - uid: "com.azure.resourcemanager.appservice.models.WebApp.warDeployAsync(java.io.File)"
   fullName: "com.azure.resourcemanager.appservice.models.WebApp.warDeployAsync(File warFile)"
   name: "warDeployAsync(File warFile)"
@@ -94,7 +94,7 @@ methods:
     name: "warFile"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/File.html\">File</a>"
   syntax: "public abstract Mono<Void> warDeployAsync(File warFile)"
-  desc: "Deploys a WAR file onto the Azure specialized Tomcat on this web app."
+  desc: "Deploys a WAR file onto the Azure specialized Tomcat on this web app.\n\nIt is recommended to call `webApp.deployAsync(DeployType.WAR, warFile, new DeployOptions().withPath(\"webapps/ROOT\"))`"
   returns:
     description: "a completable of the operation"
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
@@ -113,7 +113,7 @@ methods:
     name: "appName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract Mono<Void> warDeployAsync(File warFile, String appName)"
-  desc: "Deploys a WAR file onto the Azure specialized Tomcat on this web app."
+  desc: "Deploys a WAR file onto the Azure specialized Tomcat on this web app.\n\nIt is recommended to call `webApp.deployAsync(DeployType.WAR, warFile, new DeployOptions().withPath(\"webapps/\"))`"
   returns:
     description: "a completable of the operation"
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
@@ -132,7 +132,7 @@ methods:
     name: "length"
     type: "<xref href=\"long?alt=long&text=long\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Mono<Void> warDeployAsync(InputStream warFile, long length)"
-  desc: "Deploys a WAR file onto the Azure specialized Tomcat on this web app.\n\nRetry by client is required if error happens, due to nature of the stream."
+  desc: "Deploys a WAR file onto the Azure specialized Tomcat on this web app.\n\nIt is recommended to call `webApp.deployAsync(DeployType.WAR, warFile, length, new DeployOptions().withPath(\"webapps/ROOT\"))`\n\nRetry by client is required if error happens, due to nature of the stream."
   returns:
     description: "a completable of the operation"
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
@@ -154,7 +154,7 @@ methods:
     name: "appName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract Mono<Void> warDeployAsync(InputStream warFile, long length, String appName)"
-  desc: "Deploys a WAR file onto the Azure specialized Tomcat on this web app.\n\nRetry by client is required if error happens, due to nature of the stream."
+  desc: "Deploys a WAR file onto the Azure specialized Tomcat on this web app.\n\nIt is recommended to call `webApp.deployAsync(DeployType.WAR, warFile, length, new DeployOptions().withPath(\"webapps/\"))`\n\nRetry by client is required if error happens, due to nature of the stream."
   returns:
     description: "a completable of the operation"
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
@@ -170,4 +170,4 @@ implements:
 - "<xref href=\"com.azure.resourcemanager.resources.fluentcore.model.Updatable?alt=com.azure.resourcemanager.resources.fluentcore.model.Updatable&text=Updatable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.appservice.models.WebApp.Update?alt=com.azure.resourcemanager.appservice.models.WebApp.Update&text=Update\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.appservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-appservice:2.53.5
+artifact: com.azure.resourcemanager:azure-resourcemanager-appservice:2.54.0
