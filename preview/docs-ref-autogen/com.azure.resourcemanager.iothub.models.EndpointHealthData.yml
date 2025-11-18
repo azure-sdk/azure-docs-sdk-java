@@ -1,0 +1,97 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.iothub.models.EndpointHealthData"
+fullName: "com.azure.resourcemanager.iothub.models.EndpointHealthData"
+name: "EndpointHealthData"
+nameWithType: "EndpointHealthData"
+summary: "An immutable client-side representation of Endpoint<wbr>Health<wbr>Data."
+syntax: "public interface **EndpointHealthData**"
+methods:
+- uid: "com.azure.resourcemanager.iothub.models.EndpointHealthData.endpointId()"
+  fullName: "com.azure.resourcemanager.iothub.models.EndpointHealthData.endpointId()"
+  name: "endpointId()"
+  nameWithType: "EndpointHealthData.endpointId()"
+  summary: "Gets the endpoint<wbr>Id property: Id of the endpoint."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String endpointId()"
+  desc: "Gets the endpointId property: Id of the endpoint."
+  returns:
+    description: "the endpointId value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.iothub.models.EndpointHealthData.healthStatus()"
+  fullName: "com.azure.resourcemanager.iothub.models.EndpointHealthData.healthStatus()"
+  name: "healthStatus()"
+  nameWithType: "EndpointHealthData.healthStatus()"
+  summary: "Gets the health<wbr>Status property: Health statuses have following meanings."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract EndpointHealthStatus healthStatus()"
+  desc: "Gets the healthStatus property: Health statuses have following meanings. The 'healthy' status shows that the endpoint is accepting messages as expected. The 'unhealthy' status shows that the endpoint is not accepting messages as expected and IoT Hub is retrying to send data to this endpoint. The status of an unhealthy endpoint will be updated to healthy when IoT Hub has established an eventually consistent state of health. The 'dead' status shows that the endpoint is not accepting messages, after IoT Hub retried sending messages for the retrial period. See IoT Hub metrics to identify errors and monitor issues with endpoints. The 'unknown' status shows that the IoT Hub has not established a connection with the endpoint. No messages have been delivered to or rejected from this endpoint."
+  returns:
+    description: "the healthStatus value."
+    type: "<xref href=\"com.azure.resourcemanager.iothub.models.EndpointHealthStatus?alt=com.azure.resourcemanager.iothub.models.EndpointHealthStatus&text=EndpointHealthStatus\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.iothub.models.EndpointHealthData.innerModel()"
+  fullName: "com.azure.resourcemanager.iothub.models.EndpointHealthData.innerModel()"
+  name: "innerModel()"
+  nameWithType: "EndpointHealthData.innerModel()"
+  summary: "Gets the inner com.<wbr>azure.<wbr>resourcemanager.<wbr>iothub.<wbr>fluent.<wbr>models.<wbr>Endpoint<wbr>Health<wbr>Data<wbr>Inner object."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract EndpointHealthDataInner innerModel()"
+  desc: "Gets the inner com.azure.resourcemanager.iothub.fluent.models.EndpointHealthDataInner object."
+  returns:
+    description: "the inner object."
+    type: "<xref href=\"com.azure.resourcemanager.iothub.fluent.models.EndpointHealthDataInner?alt=com.azure.resourcemanager.iothub.fluent.models.EndpointHealthDataInner&text=EndpointHealthDataInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.iothub.models.EndpointHealthData.lastKnownError()"
+  fullName: "com.azure.resourcemanager.iothub.models.EndpointHealthData.lastKnownError()"
+  name: "lastKnownError()"
+  nameWithType: "EndpointHealthData.lastKnownError()"
+  summary: "Gets the last<wbr>Known<wbr>Error property: Last error obtained when a message failed to be delivered to iot hub."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String lastKnownError()"
+  desc: "Gets the lastKnownError property: Last error obtained when a message failed to be delivered to iot hub."
+  returns:
+    description: "the lastKnownError value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.iothub.models.EndpointHealthData.lastKnownErrorTime()"
+  fullName: "com.azure.resourcemanager.iothub.models.EndpointHealthData.lastKnownErrorTime()"
+  name: "lastKnownErrorTime()"
+  nameWithType: "EndpointHealthData.lastKnownErrorTime()"
+  summary: "Gets the last<wbr>Known<wbr>Error<wbr>Time property: Time at which the last known error occurred."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract OffsetDateTime lastKnownErrorTime()"
+  desc: "Gets the lastKnownErrorTime property: Time at which the last known error occurred."
+  returns:
+    description: "the lastKnownErrorTime value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
+- uid: "com.azure.resourcemanager.iothub.models.EndpointHealthData.lastSendAttemptTime()"
+  fullName: "com.azure.resourcemanager.iothub.models.EndpointHealthData.lastSendAttemptTime()"
+  name: "lastSendAttemptTime()"
+  nameWithType: "EndpointHealthData.lastSendAttemptTime()"
+  summary: "Gets the last<wbr>Send<wbr>Attempt<wbr>Time property: Last time iot hub tried to send a message to the endpoint."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract OffsetDateTime lastSendAttemptTime()"
+  desc: "Gets the lastSendAttemptTime property: Last time iot hub tried to send a message to the endpoint."
+  returns:
+    description: "the lastSendAttemptTime value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
+- uid: "com.azure.resourcemanager.iothub.models.EndpointHealthData.lastSuccessfulSendAttemptTime()"
+  fullName: "com.azure.resourcemanager.iothub.models.EndpointHealthData.lastSuccessfulSendAttemptTime()"
+  name: "lastSuccessfulSendAttemptTime()"
+  nameWithType: "EndpointHealthData.lastSuccessfulSendAttemptTime()"
+  summary: "Gets the last<wbr>Successful<wbr>Send<wbr>Attempt<wbr>Time property: Last time iot hub successfully sent a message to the endpoint."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract OffsetDateTime lastSuccessfulSendAttemptTime()"
+  desc: "Gets the lastSuccessfulSendAttemptTime property: Last time iot hub successfully sent a message to the endpoint."
+  returns:
+    description: "the lastSuccessfulSendAttemptTime value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
+type: "interface"
+desc: "An immutable client-side representation of EndpointHealthData."
+metadata: {}
+package: "com.azure.resourcemanager.iothub.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-iothub:1.4.0-beta.1
