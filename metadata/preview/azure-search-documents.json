@@ -1,6 +1,6 @@
 {
   "Name": "azure-search-documents",
-  "Version": "11.8.0-beta.8",
+  "Version": "11.9.0-beta.1",
   "DevVersion": null,
   "DirectoryPath": "sdk/search/azure-search-documents",
   "ServiceDirectory": "search",
@@ -10,30 +10,30 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-search-documents",
-  "ReleaseStatus": "2025-09-05",
+  "ReleaseStatus": "2025-11-17",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": [
     "com.azure:azure-search-perf",
     "com.azure:perf-test-core"
   ],
   "ArtifactDetails": {
+    "releaseInBatch": "${{ parameters.release_azuresearchdocuments }}",
+    "safeName": "azuresearch",
+    "name": "azure-search-documents",
+    "groupId": "com.azure",
     "triggeringPaths": [
       "/sdk/search/ci.yml"
-    ],
-    "safeName": "azuresearch",
-    "groupId": "com.azure",
-    "releaseInBatch": "${{ parameters.release_azuresearchdocuments }}",
-    "name": "azure-search-documents"
+    ]
   },
   "CIParameters": {
     "CIMatrixConfigs": []
   },
   "Namespaces": [
     "com.azure.search.documents",
-    "com.azure.search.documents.agents",
-    "com.azure.search.documents.agents.models",
     "com.azure.search.documents.indexes",
     "com.azure.search.documents.indexes.models",
+    "com.azure.search.documents.knowledgebases",
+    "com.azure.search.documents.knowledgebases.models",
     "com.azure.search.documents.models",
     "com.azure.search.documents.options",
     "com.azure.search.documents.util"
