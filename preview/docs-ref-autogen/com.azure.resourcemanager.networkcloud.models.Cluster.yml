@@ -6,6 +6,18 @@ nameWithType: "Cluster"
 summary: "An immutable client-side representation of Cluster."
 syntax: "public interface **Cluster**"
 methods:
+- uid: "com.azure.resourcemanager.networkcloud.models.Cluster.actionStates()"
+  fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.actionStates()"
+  name: "actionStates()"
+  nameWithType: "Cluster.actionStates()"
+  summary: "Gets the action<wbr>States property: The current state of any in progress or completed actions."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract List<ActionState> actionStates()"
+  desc: "Gets the actionStates property: The current state of any in progress or completed actions. The most recent known instance of each action type is shown."
+  returns:
+    description: "the actionStates value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.ActionState?alt=com.azure.resourcemanager.networkcloud.models.ActionState&text=ActionState\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.models.Cluster.aggregatorOrSingleRackDefinition()"
   fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.aggregatorOrSingleRackDefinition()"
   name: "aggregatorOrSingleRackDefinition()"
@@ -130,11 +142,11 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.clusterServicePrincipal()"
   name: "clusterServicePrincipal()"
   nameWithType: "Cluster.clusterServicePrincipal()"
-  summary: "Gets the cluster<wbr>Service<wbr>Principal property: The service principal to be used by the cluster during Arc Appliance installation."
+  summary: "Gets the cluster<wbr>Service<wbr>Principal property: Deprecated: Use managed identity to provide cluster privileges."
   modifiers:
   - "abstract"
   syntax: "public abstract ServicePrincipalInformation clusterServicePrincipal()"
-  desc: "Gets the clusterServicePrincipal property: The service principal to be used by the cluster during Arc Appliance installation."
+  desc: "Gets the clusterServicePrincipal property: Deprecated: Use managed identity to provide cluster privileges. The service principal to be used by the cluster during Arc Appliance installation."
   returns:
     description: "the clusterServicePrincipal value."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.ServicePrincipalInformation?alt=com.azure.resourcemanager.networkcloud.models.ServicePrincipalInformation&text=ServicePrincipalInformation\" data-throw-if-not-resolved=\"False\" />"
@@ -287,6 +299,18 @@ methods:
   desc: "Gets the detailedStatusMessage property: The descriptive message about the detailed status."
   returns:
     description: "the detailedStatusMessage value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.networkcloud.models.Cluster.etag()"
+  fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.etag()"
+  name: "etag()"
+  nameWithType: "Cluster.etag()"
+  summary: "Gets the etag property: Resource ETag."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String etag()"
+  desc: "Gets the etag property: Resource ETag."
+  returns:
+    description: "the etag value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.networkcloud.models.Cluster.extendedLocation()"
   fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.extendedLocation()"
@@ -686,4 +710,4 @@ type: "interface"
 desc: "An immutable client-side representation of Cluster."
 metadata: {}
 package: "com.azure.resourcemanager.networkcloud.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:1.2.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.1.0-beta.1

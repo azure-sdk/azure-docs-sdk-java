@@ -100,11 +100,11 @@ methods:
   fullName: "com.azure.search.documents.indexes.models.SearchField.getNormalizerName()"
   name: "getNormalizerName()"
   nameWithType: "SearchField.getNormalizerName()"
-  summary: "Get the normalizer property: The name of the normalizer to use for the field."
+  summary: "Get the normalizer<wbr>Name property: The name of the normalizer to use for the field."
   syntax: "public LexicalNormalizerName getNormalizerName()"
-  desc: "Get the normalizer property: The name of the normalizer to use for the field. This option can be used only with fields with filterable, sortable, or facetable enabled. Once the normalizer is chosen, it cannot be changed for the field. Must be null for complex fields."
+  desc: "Get the normalizerName property: The name of the normalizer to use for the field. This option can be used only with fields with filterable, sortable, or facetable enabled. Once the normalizer is chosen, it cannot be changed for the field. Must be null for complex fields."
   returns:
-    description: "the normalizer value."
+    description: "the normalizerName value."
     type: "<xref href=\"com.azure.search.documents.indexes.models.LexicalNormalizerName?alt=com.azure.search.documents.indexes.models.LexicalNormalizerName&text=LexicalNormalizerName\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.SearchField.getPermissionFilter()"
   fullName: "com.azure.search.documents.indexes.models.SearchField.getPermissionFilter()"
@@ -225,6 +225,16 @@ methods:
   desc: "Get the searchable property: A value indicating whether the field is full-text searchable. This means it will undergo analysis such as word-breaking during indexing. If you set a searchable field to a value like \"sunny day\", internally it will be split into the individual tokens \"sunny\" and \"day\". This enables full-text searches for these terms. Fields of type Edm.String or Collection(Edm.String) are searchable by default. This property must be false for simple fields of other non-string data types, and it must be null for complex fields. Note: searchable fields consume extra space in your index to accommodate additional tokenized versions of the field value for full-text searches. If you want to save space in your index and you don't need a field to be included in searches, set searchable to false."
   returns:
     description: "the searchable value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.search.documents.indexes.models.SearchField.isSensitivityLabel()"
+  fullName: "com.azure.search.documents.indexes.models.SearchField.isSensitivityLabel()"
+  name: "isSensitivityLabel()"
+  nameWithType: "SearchField.isSensitivityLabel()"
+  summary: "Get the sensitivity<wbr>Label property: A value indicating whether the field should be used for sensitivity label filtering."
+  syntax: "public Boolean isSensitivityLabel()"
+  desc: "Get the sensitivityLabel property: A value indicating whether the field should be used for sensitivity label filtering. This enables document-level filtering based on Microsoft Purview sensitivity labels."
+  returns:
+    description: "the sensitivityLabel value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.search.documents.indexes.models.SearchField.isSortable()"
   fullName: "com.azure.search.documents.indexes.models.SearchField.isSortable()"
@@ -359,16 +369,16 @@ methods:
     description: "the SearchField object itself."
     type: "<xref href=\"com.azure.search.documents.indexes.models.SearchField?alt=com.azure.search.documents.indexes.models.SearchField&text=SearchField\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.SearchField.setNormalizerName(com.azure.search.documents.indexes.models.LexicalNormalizerName)"
-  fullName: "com.azure.search.documents.indexes.models.SearchField.setNormalizerName(LexicalNormalizerName normalizer)"
-  name: "setNormalizerName(LexicalNormalizerName normalizer)"
-  nameWithType: "SearchField.setNormalizerName(LexicalNormalizerName normalizer)"
-  summary: "Set the normalizer property: The name of the normalizer to use for the field."
+  fullName: "com.azure.search.documents.indexes.models.SearchField.setNormalizerName(LexicalNormalizerName normalizerName)"
+  name: "setNormalizerName(LexicalNormalizerName normalizerName)"
+  nameWithType: "SearchField.setNormalizerName(LexicalNormalizerName normalizerName)"
+  summary: "Set the normalizer<wbr>Name property: The name of the normalizer to use for the field."
   parameters:
-  - description: "the normalizer value to set."
-    name: "normalizer"
+  - description: "the normalizerName value to set."
+    name: "normalizerName"
     type: "<xref href=\"com.azure.search.documents.indexes.models.LexicalNormalizerName?alt=com.azure.search.documents.indexes.models.LexicalNormalizerName&text=LexicalNormalizerName\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public SearchField setNormalizerName(LexicalNormalizerName normalizer)"
-  desc: "Set the normalizer property: The name of the normalizer to use for the field. This option can be used only with fields with filterable, sortable, or facetable enabled. Once the normalizer is chosen, it cannot be changed for the field. Must be null for complex fields."
+  syntax: "public SearchField setNormalizerName(LexicalNormalizerName normalizerName)"
+  desc: "Set the normalizerName property: The name of the normalizer to use for the field. This option can be used only with fields with filterable, sortable, or facetable enabled. Once the normalizer is chosen, it cannot be changed for the field. Must be null for complex fields."
   returns:
     description: "the SearchField object itself."
     type: "<xref href=\"com.azure.search.documents.indexes.models.SearchField?alt=com.azure.search.documents.indexes.models.SearchField&text=SearchField\" data-throw-if-not-resolved=\"False\" />"
@@ -411,6 +421,20 @@ methods:
     type: "<xref href=\"com.azure.search.documents.indexes.models.LexicalAnalyzerName?alt=com.azure.search.documents.indexes.models.LexicalAnalyzerName&text=LexicalAnalyzerName\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public SearchField setSearchAnalyzerName(LexicalAnalyzerName searchAnalyzerName)"
   desc: "Set the searchAnalyzerName property: The name of the analyzer used at search time for the field. This option can be used only with searchable fields. It must be set together with indexAnalyzer and it cannot be set together with the analyzer option. This property cannot be set to the name of a language analyzer; use the analyzer property instead if you need a language analyzer. This analyzer can be updated on an existing field. Must be null for complex fields."
+  returns:
+    description: "the SearchField object itself."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.SearchField?alt=com.azure.search.documents.indexes.models.SearchField&text=SearchField\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.indexes.models.SearchField.setSensitivityLabel(java.lang.Boolean)"
+  fullName: "com.azure.search.documents.indexes.models.SearchField.setSensitivityLabel(Boolean sensitivityLabel)"
+  name: "setSensitivityLabel(Boolean sensitivityLabel)"
+  nameWithType: "SearchField.setSensitivityLabel(Boolean sensitivityLabel)"
+  summary: "Set the sensitivity<wbr>Label property: A value indicating whether the field should be used for sensitivity label filtering."
+  parameters:
+  - description: "the sensitivityLabel value to set."
+    name: "sensitivityLabel"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+  syntax: "public SearchField setSensitivityLabel(Boolean sensitivityLabel)"
+  desc: "Set the sensitivityLabel property: A value indicating whether the field should be used for sensitivity label filtering. This enables document-level filtering based on Microsoft Purview sensitivity labels."
   returns:
     description: "the SearchField object itself."
     type: "<xref href=\"com.azure.search.documents.indexes.models.SearchField?alt=com.azure.search.documents.indexes.models.SearchField&text=SearchField\" data-throw-if-not-resolved=\"False\" />"
@@ -530,4 +554,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.indexes.models.SearchField?alt=com.azure.search.documents.indexes.models.SearchField&text=SearchField\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.search.documents.indexes.models"
-artifact: com.azure:azure-search-documents:11.8.0-beta.8
+artifact: com.azure:azure-search-documents:11.9.0-beta.1

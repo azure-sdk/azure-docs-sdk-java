@@ -18,6 +18,18 @@ methods:
   returns:
     description: "the administratorCredentials value."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.AdministrativeCredentials?alt=com.azure.resourcemanager.networkcloud.models.AdministrativeCredentials&text=AdministrativeCredentials\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.networkcloud.models.StorageAppliance.caCertificate()"
+  fullName: "com.azure.resourcemanager.networkcloud.models.StorageAppliance.caCertificate()"
+  name: "caCertificate()"
+  nameWithType: "StorageAppliance.caCertificate()"
+  summary: "Gets the ca<wbr>Certificate property: The CA certificate information issued by the platform for connecting to TLS interfaces for the storage appliance."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract CertificateInfo caCertificate()"
+  desc: "Gets the caCertificate property: The CA certificate information issued by the platform for connecting to TLS interfaces for the storage appliance. Callers add this certificate to their trusted CA store to allow secure communication with the storage appliance."
+  returns:
+    description: "the caCertificate value."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.CertificateInfo?alt=com.azure.resourcemanager.networkcloud.models.CertificateInfo&text=CertificateInfo\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.StorageAppliance.capacity()"
   fullName: "com.azure.resourcemanager.networkcloud.models.StorageAppliance.capacity()"
   name: "capacity()"
@@ -38,7 +50,7 @@ methods:
   modifiers:
   - "abstract"
   syntax: "public abstract Long capacityUsed()"
-  desc: "Gets the capacityUsed property: The amount of storage consumed."
+  desc: "Gets the capacityUsed property: The amount of storage consumed. Measured in GiB."
   returns:
     description: "the capacityUsed value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
@@ -50,7 +62,7 @@ methods:
   modifiers:
   - "abstract"
   syntax: "public abstract String clusterId()"
-  desc: "Gets the clusterId property: The resource ID of the cluster this storage appliance is associated with. Measured in GiB."
+  desc: "Gets the clusterId property: The resource ID of the cluster this storage appliance is associated with."
   returns:
     description: "the clusterId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -137,6 +149,18 @@ methods:
   returns:
     description: "the current status of an async operation."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.networkcloud.models.StorageAppliance.etag()"
+  fullName: "com.azure.resourcemanager.networkcloud.models.StorageAppliance.etag()"
+  name: "etag()"
+  nameWithType: "StorageAppliance.etag()"
+  summary: "Gets the etag property: Resource ETag."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String etag()"
+  desc: "Gets the etag property: Resource ETag."
+  returns:
+    description: "the etag value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.networkcloud.models.StorageAppliance.extendedLocation()"
   fullName: "com.azure.resourcemanager.networkcloud.models.StorageAppliance.extendedLocation()"
   name: "extendedLocation()"
@@ -357,6 +381,41 @@ methods:
   returns:
     description: "the name of the resource group."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.networkcloud.models.StorageAppliance.runReadCommands(com.azure.resourcemanager.networkcloud.models.StorageApplianceRunReadCommandsParameters)"
+  fullName: "com.azure.resourcemanager.networkcloud.models.StorageAppliance.runReadCommands(StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters)"
+  name: "runReadCommands(StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters)"
+  nameWithType: "StorageAppliance.runReadCommands(StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters)"
+  summary: "Run read-only commands against a storage appliance."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The request body."
+    name: "storageApplianceRunReadCommandsParameters"
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.StorageApplianceRunReadCommandsParameters?alt=com.azure.resourcemanager.networkcloud.models.StorageApplianceRunReadCommandsParameters&text=StorageApplianceRunReadCommandsParameters\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract OperationStatusResult runReadCommands(StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters)"
+  desc: "Run read-only commands against a storage appliance. Run one or more read-only commands on the provided storage appliance."
+  returns:
+    description: "the current status of an async operation."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.networkcloud.models.StorageAppliance.runReadCommands(com.azure.resourcemanager.networkcloud.models.StorageApplianceRunReadCommandsParameters,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.networkcloud.models.StorageAppliance.runReadCommands(StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters, Context context)"
+  name: "runReadCommands(StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters, Context context)"
+  nameWithType: "StorageAppliance.runReadCommands(StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters, Context context)"
+  summary: "Run read-only commands against a storage appliance."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The request body."
+    name: "storageApplianceRunReadCommandsParameters"
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.StorageApplianceRunReadCommandsParameters?alt=com.azure.resourcemanager.networkcloud.models.StorageApplianceRunReadCommandsParameters&text=StorageApplianceRunReadCommandsParameters\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract OperationStatusResult runReadCommands(StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters, Context context)"
+  desc: "Run read-only commands against a storage appliance. Run one or more read-only commands on the provided storage appliance."
+  returns:
+    description: "the current status of an async operation."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.StorageAppliance.secretRotationStatus()"
   fullName: "com.azure.resourcemanager.networkcloud.models.StorageAppliance.secretRotationStatus()"
   name: "secretRotationStatus()"
@@ -457,4 +516,4 @@ type: "interface"
 desc: "An immutable client-side representation of StorageAppliance."
 metadata: {}
 package: "com.azure.resourcemanager.networkcloud.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:1.2.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.1.0-beta.1

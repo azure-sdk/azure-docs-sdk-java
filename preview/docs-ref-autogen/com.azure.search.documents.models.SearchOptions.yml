@@ -30,12 +30,12 @@ constructors:
   syntax: "public SearchOptions()"
   desc: "Creates an instance of <xref uid=\"com.azure.search.documents.models.SearchOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SearchOptions\"></xref>."
 methods:
-- uid: "com.azure.search.documents.models.SearchOptions.getDebug()"
-  fullName: "com.azure.search.documents.models.SearchOptions.getDebug()"
-  name: "getDebug()"
-  nameWithType: "SearchOptions.getDebug()"
+- uid: "com.azure.search.documents.models.SearchOptions.getDebugMode()"
+  fullName: "com.azure.search.documents.models.SearchOptions.getDebugMode()"
+  name: "getDebugMode()"
+  nameWithType: "SearchOptions.getDebugMode()"
   summary: "Get the debug property: Enables a debugging tool that can be used to further explore your search results."
-  syntax: "public QueryDebugMode getDebug()"
+  syntax: "public QueryDebugMode getDebugMode()"
   desc: "Get the debug property: Enables a debugging tool that can be used to further explore your search results."
   returns:
     description: "the debug value."
@@ -250,6 +250,16 @@ methods:
   returns:
     description: "the vector search options."
     type: "<xref href=\"com.azure.search.documents.models.VectorSearchOptions?alt=com.azure.search.documents.models.VectorSearchOptions&text=VectorSearchOptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.models.SearchOptions.isElevatedReadEnabled()"
+  fullName: "com.azure.search.documents.models.SearchOptions.isElevatedReadEnabled()"
+  name: "isElevatedReadEnabled()"
+  nameWithType: "SearchOptions.isElevatedReadEnabled()"
+  summary: "Get the enable<wbr>Elevated<wbr>Read property: A value that specifies whether to enable elevated read for search requests."
+  syntax: "public Boolean isElevatedReadEnabled()"
+  desc: "Get the enableElevatedRead property: A value that specifies whether to enable elevated read for search requests. Elevated read allows search requests to read the latest committed index changes, reducing the latency between document upload and their availability for search. This may have a negative impact on search request performance."
+  returns:
+    description: "the enableElevatedRead value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.search.documents.models.SearchOptions.isTotalCountIncluded()"
   fullName: "com.azure.search.documents.models.SearchOptions.isTotalCountIncluded()"
   name: "isTotalCountIncluded()"
@@ -260,17 +270,31 @@ methods:
   returns:
     description: "the includeTotalCount value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
-- uid: "com.azure.search.documents.models.SearchOptions.setDebug(com.azure.search.documents.models.QueryDebugMode)"
-  fullName: "com.azure.search.documents.models.SearchOptions.setDebug(QueryDebugMode debug)"
-  name: "setDebug(QueryDebugMode debug)"
-  nameWithType: "SearchOptions.setDebug(QueryDebugMode debug)"
+- uid: "com.azure.search.documents.models.SearchOptions.setDebugMode(com.azure.search.documents.models.QueryDebugMode)"
+  fullName: "com.azure.search.documents.models.SearchOptions.setDebugMode(QueryDebugMode debug)"
+  name: "setDebugMode(QueryDebugMode debug)"
+  nameWithType: "SearchOptions.setDebugMode(QueryDebugMode debug)"
   summary: "Set the debug property: Enables a debugging tool that can be used to further explore your search results."
   parameters:
   - description: "the debug value to set."
     name: "debug"
     type: "<xref href=\"com.azure.search.documents.models.QueryDebugMode?alt=com.azure.search.documents.models.QueryDebugMode&text=QueryDebugMode\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public SearchOptions setDebug(QueryDebugMode debug)"
+  syntax: "public SearchOptions setDebugMode(QueryDebugMode debug)"
   desc: "Set the debug property: Enables a debugging tool that can be used to further explore your search results."
+  returns:
+    description: "the SearchOptions object itself."
+    type: "<xref href=\"com.azure.search.documents.models.SearchOptions?alt=com.azure.search.documents.models.SearchOptions&text=SearchOptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.models.SearchOptions.setElevatedReadEnabled(java.lang.Boolean)"
+  fullName: "com.azure.search.documents.models.SearchOptions.setElevatedReadEnabled(Boolean enableElevatedRead)"
+  name: "setElevatedReadEnabled(Boolean enableElevatedRead)"
+  nameWithType: "SearchOptions.setElevatedReadEnabled(Boolean enableElevatedRead)"
+  summary: "Set the enable<wbr>Elevated<wbr>Read property: A value that specifies whether to enable elevated read for search requests."
+  parameters:
+  - description: "the enableElevatedRead value to set."
+    name: "enableElevatedRead"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+  syntax: "public SearchOptions setElevatedReadEnabled(Boolean enableElevatedRead)"
+  desc: "Set the enableElevatedRead property: A value that specifies whether to enable elevated read for search requests. Elevated read allows search requests to read the latest committed index changes, reducing the latency between document upload and their availability for search. This may have a negative impact on search request performance."
   returns:
     description: "the SearchOptions object itself."
     type: "<xref href=\"com.azure.search.documents.models.SearchOptions?alt=com.azure.search.documents.models.SearchOptions&text=SearchOptions\" data-throw-if-not-resolved=\"False\" />"
@@ -586,4 +610,4 @@ type: "class"
 desc: "Additional parameters for searchGet operation."
 metadata: {}
 package: "com.azure.search.documents.models"
-artifact: com.azure:azure-search-documents:11.8.0-beta.8
+artifact: com.azure:azure-search-documents:11.9.0-beta.1

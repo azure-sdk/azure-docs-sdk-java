@@ -45,6 +45,16 @@ constructors:
   syntax: "public ClusterInner()"
   desc: "Creates an instance of ClusterInner class."
 methods:
+- uid: "com.azure.resourcemanager.networkcloud.fluent.models.ClusterInner.actionStates()"
+  fullName: "com.azure.resourcemanager.networkcloud.fluent.models.ClusterInner.actionStates()"
+  name: "actionStates()"
+  nameWithType: "ClusterInner.actionStates()"
+  summary: "Get the action<wbr>States property: The current state of any in progress or completed actions."
+  syntax: "public List<ActionState> actionStates()"
+  desc: "Get the actionStates property: The current state of any in progress or completed actions. The most recent known instance of each action type is shown."
+  returns:
+    description: "the actionStates value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.ActionState?alt=com.azure.resourcemanager.networkcloud.models.ActionState&text=ActionState\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.models.ClusterInner.aggregatorOrSingleRackDefinition()"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.models.ClusterInner.aggregatorOrSingleRackDefinition()"
   name: "aggregatorOrSingleRackDefinition()"
@@ -149,9 +159,9 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.models.ClusterInner.clusterServicePrincipal()"
   name: "clusterServicePrincipal()"
   nameWithType: "ClusterInner.clusterServicePrincipal()"
-  summary: "Get the cluster<wbr>Service<wbr>Principal property: The service principal to be used by the cluster during Arc Appliance installation."
+  summary: "Get the cluster<wbr>Service<wbr>Principal property: Deprecated: Use managed identity to provide cluster privileges."
   syntax: "public ServicePrincipalInformation clusterServicePrincipal()"
-  desc: "Get the clusterServicePrincipal property: The service principal to be used by the cluster during Arc Appliance installation."
+  desc: "Get the clusterServicePrincipal property: Deprecated: Use managed identity to provide cluster privileges. The service principal to be used by the cluster during Arc Appliance installation."
   returns:
     description: "the clusterServicePrincipal value."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.ServicePrincipalInformation?alt=com.azure.resourcemanager.networkcloud.models.ServicePrincipalInformation&text=ServicePrincipalInformation\" data-throw-if-not-resolved=\"False\" />"
@@ -224,6 +234,16 @@ methods:
   desc: "Get the detailedStatusMessage property: The descriptive message about the detailed status."
   returns:
     description: "the detailedStatusMessage value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.networkcloud.fluent.models.ClusterInner.etag()"
+  fullName: "com.azure.resourcemanager.networkcloud.fluent.models.ClusterInner.etag()"
+  name: "etag()"
+  nameWithType: "ClusterInner.etag()"
+  summary: "Get the etag property: Resource ETag."
+  syntax: "public String etag()"
+  desc: "Get the etag property: Resource ETag."
+  returns:
+    description: "the etag value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.models.ClusterInner.extendedLocation()"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.models.ClusterInner.extendedLocation()"
@@ -497,13 +517,13 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.models.ClusterInner.withClusterServicePrincipal(ServicePrincipalInformation clusterServicePrincipal)"
   name: "withClusterServicePrincipal(ServicePrincipalInformation clusterServicePrincipal)"
   nameWithType: "ClusterInner.withClusterServicePrincipal(ServicePrincipalInformation clusterServicePrincipal)"
-  summary: "Set the cluster<wbr>Service<wbr>Principal property: The service principal to be used by the cluster during Arc Appliance installation."
+  summary: "Set the cluster<wbr>Service<wbr>Principal property: Deprecated: Use managed identity to provide cluster privileges."
   parameters:
   - description: "the clusterServicePrincipal value to set."
     name: "clusterServicePrincipal"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.ServicePrincipalInformation?alt=com.azure.resourcemanager.networkcloud.models.ServicePrincipalInformation&text=ServicePrincipalInformation\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public ClusterInner withClusterServicePrincipal(ServicePrincipalInformation clusterServicePrincipal)"
-  desc: "Set the clusterServicePrincipal property: The service principal to be used by the cluster during Arc Appliance installation."
+  desc: "Set the clusterServicePrincipal property: Deprecated: Use managed identity to provide cluster privileges. The service principal to be used by the cluster during Arc Appliance installation."
   returns:
     description: "the ClusterInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ClusterInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ClusterInner&text=ClusterInner\" data-throw-if-not-resolved=\"False\" />"
@@ -739,4 +759,4 @@ type: "class"
 desc: "Cluster represents the on-premises Network Cloud cluster."
 metadata: {}
 package: "com.azure.resourcemanager.networkcloud.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:1.2.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.1.0-beta.1

@@ -45,12 +45,14 @@ constructors:
   name: "SearchPagedIterable(SearchPagedFlux pagedFlux)"
   nameWithType: "SearchPagedIterable.SearchPagedIterable(SearchPagedFlux pagedFlux)"
   summary: "Creates an instance of <xref uid=\"com.azure.search.documents.util.SearchPagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SearchPagedIterable\"></xref>."
+  deprecatedTag: "Use <xref uid=\"com.azure.search.documents.util.SearchPagedIterable.SearchPagedIterable(java.util.function.Supplier<com.azure.search.documents.util.SearchPagedResponse>)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SearchPagedIterable#SearchPagedIterable(Supplier)\"></xref> or <xref uid=\"com.azure.search.documents.util.SearchPagedIterable.SearchPagedIterable(java.util.function.Supplier<com.azure.search.documents.util.SearchPagedResponse>,java.util.function.Function<java.lang.String,com.azure.search.documents.util.SearchPagedResponse>)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SearchPagedIterable#SearchPagedIterable(Supplier, Function)\"></xref>."
   parameters:
   - description: "The <xref uid=\"com.azure.search.documents.util.SearchPagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SearchPagedFlux\"></xref> that will be consumed as an iterable."
     name: "pagedFlux"
     type: "<xref href=\"com.azure.search.documents.util.SearchPagedFlux?alt=com.azure.search.documents.util.SearchPagedFlux&text=SearchPagedFlux\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public SearchPagedIterable(SearchPagedFlux pagedFlux)"
+  syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public SearchPagedIterable(SearchPagedFlux pagedFlux)"
   desc: "Creates an instance of <xref uid=\"com.azure.search.documents.util.SearchPagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SearchPagedIterable\"></xref>."
+  hasDeprecatedTag: true
 - uid: "com.azure.search.documents.util.SearchPagedIterable.SearchPagedIterable(java.util.function.Supplier<com.azure.search.documents.util.SearchPagedResponse>)"
   fullName: "com.azure.search.documents.util.SearchPagedIterable.SearchPagedIterable(Supplier<SearchPagedResponse> firstPageRetriever)"
   name: "SearchPagedIterable(Supplier<SearchPagedResponse> firstPageRetriever)"
@@ -82,8 +84,10 @@ methods:
   name: "getCoverage()"
   nameWithType: "SearchPagedIterable.getCoverage()"
   summary: "The percentage of the index covered in the search request."
-  syntax: "public Double getCoverage()"
+  deprecatedTag: "Use <xref uid=\"com.azure.search.documents.util.SearchPagedResponse.getCoverage()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SearchPagedResponse#getCoverage()\"></xref> when consuming <xref uid=\"com.azure.search.documents.util.SearchPagedIterable.streamByPage*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#streamByPage()\"></xref> or <xref uid=\"com.azure.search.documents.util.SearchPagedIterable.iterableByPage*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#iterableByPage()\"></xref>."
+  syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public Double getCoverage()"
   desc: "The percentage of the index covered in the search request.\n\nIf `minimumCoverage` wasn't supplied in the request this will be `null`."
+  hasDeprecatedTag: true
   returns:
     description: "The percentage of the index covered in the search request if <code>minimumCoverage</code> was set in the\n request, otherwise <code>null</code>."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html\">Double</a>"
@@ -92,8 +96,10 @@ methods:
   name: "getDebugInfo()"
   nameWithType: "SearchPagedIterable.getDebugInfo()"
   summary: "The debug information that can be used to further explore your search results."
-  syntax: "public DebugInfo getDebugInfo()"
+  deprecatedTag: "Use <xref uid=\"com.azure.search.documents.util.SearchPagedResponse.getDebugInfo()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SearchPagedResponse#getDebugInfo()\"></xref> when consuming <xref uid=\"com.azure.search.documents.util.SearchPagedIterable.streamByPage*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#streamByPage()\"></xref> or <xref uid=\"com.azure.search.documents.util.SearchPagedIterable.iterableByPage*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#iterableByPage()\"></xref>."
+  syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public DebugInfo getDebugInfo()"
   desc: "The debug information that can be used to further explore your search results."
+  hasDeprecatedTag: true
   returns:
     description: "The debug information that can be used to further explore your search results."
     type: "<xref href=\"com.azure.search.documents.models.DebugInfo?alt=com.azure.search.documents.models.DebugInfo&text=DebugInfo\" data-throw-if-not-resolved=\"False\" />"
@@ -102,8 +108,10 @@ methods:
   name: "getFacets()"
   nameWithType: "SearchPagedIterable.getFacets()"
   summary: "The facet query results based on the search request."
-  syntax: "public Map<String,List<FacetResult>> getFacets()"
+  deprecatedTag: "Use <xref uid=\"com.azure.search.documents.util.SearchPagedResponse.getFacets()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SearchPagedResponse#getFacets()\"></xref> when consuming <xref uid=\"com.azure.search.documents.util.SearchPagedIterable.streamByPage*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#streamByPage()\"></xref> or <xref uid=\"com.azure.search.documents.util.SearchPagedIterable.iterableByPage*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#iterableByPage()\"></xref>."
+  syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public Map<String,List<FacetResult>> getFacets()"
   desc: "The facet query results based on the search request.\n\nIf `facets` weren't supplied in the request this will be `null`."
+  hasDeprecatedTag: true
   returns:
     description: "The facet query results if <code>facets</code> were supplied in the request, otherwise <code>null</code>."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.search.documents.models.FacetResult?alt=com.azure.search.documents.models.FacetResult&text=FacetResult\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
@@ -112,8 +120,10 @@ methods:
   name: "getSemanticResults()"
   nameWithType: "SearchPagedIterable.getSemanticResults()"
   summary: "The semantic search results based on the search request."
-  syntax: "public SemanticSearchResults getSemanticResults()"
+  deprecatedTag: "Use <xref uid=\"com.azure.search.documents.util.SearchPagedResponse.getSemanticResults()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SearchPagedResponse#getSemanticResults()\"></xref> when consuming <xref uid=\"com.azure.search.documents.util.SearchPagedIterable.streamByPage*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#streamByPage()\"></xref> or <xref uid=\"com.azure.search.documents.util.SearchPagedIterable.iterableByPage*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#iterableByPage()\"></xref>."
+  syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public SemanticSearchResults getSemanticResults()"
   desc: "The semantic search results based on the search request.\n\nIf semantic search wasn't requested this will return a <xref uid=\"com.azure.search.documents.models.SemanticSearchResults\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SemanticSearchResults\"></xref> with no values."
+  hasDeprecatedTag: true
   returns:
     description: "The semantic search results if semantic search was requested, otherwise an empty\n <xref uid=\"com.azure.search.documents.models.SemanticSearchResults\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SemanticSearchResults\"></xref>."
     type: "<xref href=\"com.azure.search.documents.models.SemanticSearchResults?alt=com.azure.search.documents.models.SemanticSearchResults&text=SemanticSearchResults\" data-throw-if-not-resolved=\"False\" />"
@@ -122,8 +132,10 @@ methods:
   name: "getTotalCount()"
   nameWithType: "SearchPagedIterable.getTotalCount()"
   summary: "The approximate number of documents that matched the search and filter parameters in the request."
-  syntax: "public Long getTotalCount()"
+  deprecatedTag: "Use <xref uid=\"com.azure.search.documents.util.SearchPagedResponse.getCount()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SearchPagedResponse#getCount()\"></xref> when consuming <xref uid=\"com.azure.search.documents.util.SearchPagedIterable.streamByPage*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#streamByPage()\"></xref> or <xref uid=\"com.azure.search.documents.util.SearchPagedIterable.iterableByPage*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#iterableByPage()\"></xref>."
+  syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public Long getTotalCount()"
   desc: "The approximate number of documents that matched the search and filter parameters in the request.\n\nIf `count` is set to `false` in the request this will be `null`."
+  hasDeprecatedTag: true
   returns:
     description: "The approximate number of documents that match the request if <code>count</code> is <code>true</code>, otherwise\n <code>null</code>."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
@@ -131,4 +143,4 @@ type: "class"
 desc: "Implementation of <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ContinuablePagedIterable\"></xref> where the continuation token type is <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SearchRequest\"></xref>, the element type is <xref uid=\"com.azure.search.documents.models.SearchResult\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SearchResult\"></xref>, and the page type is <xref uid=\"com.azure.search.documents.util.SearchPagedResponse\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SearchPagedResponse\"></xref>."
 metadata: {}
 package: "com.azure.search.documents.util"
-artifact: com.azure:azure-search-documents:11.8.0-beta.8
+artifact: com.azure:azure-search-documents:11.9.0-beta.1

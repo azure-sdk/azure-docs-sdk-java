@@ -56,7 +56,7 @@ methods:
     name: "mapper"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html\">Function</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />,<xref href=\"S?alt=S&text=S\" data-throw-if-not-resolved=\"False\" />&gt;"
   syntax: "public static PagedFlux<S> <T,S>mapPage(PagedFlux<T> pagedFlux, Function<T,S> mapper)"
-  desc: "Applies map transform to elements of PagedFlux."
+  desc: "Applies map transform to elements of PagedFlux.\n\nDo not use it over PagedFlux generated from mergePagedFlux, as the continuationToken in that case cannot be used to continue the outer PagedFlux."
   returns:
     description: "the PagedFlux with elements in PagedResponse transformed."
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"S?alt=S&text=S\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -118,4 +118,4 @@ type: "class"
 desc: "Utility class for conversion of PagedResponse."
 metadata: {}
 package: "com.azure.resourcemanager.resources.fluentcore.utils"
-artifact: com.azure.resourcemanager:azure-resourcemanager-resources:2.53.4
+artifact: com.azure.resourcemanager:azure-resourcemanager-resources:2.53.5

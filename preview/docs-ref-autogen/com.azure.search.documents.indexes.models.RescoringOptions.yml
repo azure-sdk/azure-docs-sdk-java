@@ -69,15 +69,15 @@ methods:
   returns:
     description: "the rescoreStorageMethod value."
     type: "<xref href=\"com.azure.search.documents.indexes.models.VectorSearchCompressionRescoreStorageMethod?alt=com.azure.search.documents.indexes.models.VectorSearchCompressionRescoreStorageMethod&text=VectorSearchCompressionRescoreStorageMethod\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.search.documents.indexes.models.RescoringOptions.isEnableRescoring()"
-  fullName: "com.azure.search.documents.indexes.models.RescoringOptions.isEnableRescoring()"
-  name: "isEnableRescoring()"
-  nameWithType: "RescoringOptions.isEnableRescoring()"
-  summary: "Get the enable<wbr>Rescoring property: If set to true, after the initial search on the compressed vectors, the similarity scores are recalculated using the full-precision vectors."
-  syntax: "public Boolean isEnableRescoring()"
-  desc: "Get the enableRescoring property: If set to true, after the initial search on the compressed vectors, the similarity scores are recalculated using the full-precision vectors. This will improve recall at the expense of latency."
+- uid: "com.azure.search.documents.indexes.models.RescoringOptions.isRescoringEnabled()"
+  fullName: "com.azure.search.documents.indexes.models.RescoringOptions.isRescoringEnabled()"
+  name: "isRescoringEnabled()"
+  nameWithType: "RescoringOptions.isRescoringEnabled()"
+  summary: "Get the rescoring<wbr>Enabled property: If set to true, after the initial search on the compressed vectors, the similarity scores are recalculated using the full-precision vectors."
+  syntax: "public Boolean isRescoringEnabled()"
+  desc: "Get the rescoringEnabled property: If set to true, after the initial search on the compressed vectors, the similarity scores are recalculated using the full-precision vectors. This will improve recall at the expense of latency."
   returns:
-    description: "the enableRescoring value."
+    description: "the rescoringEnabled value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.search.documents.indexes.models.RescoringOptions.setDefaultOversampling(java.lang.Double)"
   fullName: "com.azure.search.documents.indexes.models.RescoringOptions.setDefaultOversampling(Double defaultOversampling)"
@@ -93,20 +93,6 @@ methods:
   returns:
     description: "the RescoringOptions object itself."
     type: "<xref href=\"com.azure.search.documents.indexes.models.RescoringOptions?alt=com.azure.search.documents.indexes.models.RescoringOptions&text=RescoringOptions\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.search.documents.indexes.models.RescoringOptions.setEnableRescoring(java.lang.Boolean)"
-  fullName: "com.azure.search.documents.indexes.models.RescoringOptions.setEnableRescoring(Boolean enableRescoring)"
-  name: "setEnableRescoring(Boolean enableRescoring)"
-  nameWithType: "RescoringOptions.setEnableRescoring(Boolean enableRescoring)"
-  summary: "Set the enable<wbr>Rescoring property: If set to true, after the initial search on the compressed vectors, the similarity scores are recalculated using the full-precision vectors."
-  parameters:
-  - description: "the enableRescoring value to set."
-    name: "enableRescoring"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
-  syntax: "public RescoringOptions setEnableRescoring(Boolean enableRescoring)"
-  desc: "Set the enableRescoring property: If set to true, after the initial search on the compressed vectors, the similarity scores are recalculated using the full-precision vectors. This will improve recall at the expense of latency."
-  returns:
-    description: "the RescoringOptions object itself."
-    type: "<xref href=\"com.azure.search.documents.indexes.models.RescoringOptions?alt=com.azure.search.documents.indexes.models.RescoringOptions&text=RescoringOptions\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.RescoringOptions.setRescoreStorageMethod(com.azure.search.documents.indexes.models.VectorSearchCompressionRescoreStorageMethod)"
   fullName: "com.azure.search.documents.indexes.models.RescoringOptions.setRescoreStorageMethod(VectorSearchCompressionRescoreStorageMethod rescoreStorageMethod)"
   name: "setRescoreStorageMethod(VectorSearchCompressionRescoreStorageMethod rescoreStorageMethod)"
@@ -118,6 +104,20 @@ methods:
     type: "<xref href=\"com.azure.search.documents.indexes.models.VectorSearchCompressionRescoreStorageMethod?alt=com.azure.search.documents.indexes.models.VectorSearchCompressionRescoreStorageMethod&text=VectorSearchCompressionRescoreStorageMethod\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public RescoringOptions setRescoreStorageMethod(VectorSearchCompressionRescoreStorageMethod rescoreStorageMethod)"
   desc: "Set the rescoreStorageMethod property: Controls the storage method for original vectors. This setting is immutable."
+  returns:
+    description: "the RescoringOptions object itself."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.RescoringOptions?alt=com.azure.search.documents.indexes.models.RescoringOptions&text=RescoringOptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.indexes.models.RescoringOptions.setRescoringEnabled(java.lang.Boolean)"
+  fullName: "com.azure.search.documents.indexes.models.RescoringOptions.setRescoringEnabled(Boolean rescoringEnabled)"
+  name: "setRescoringEnabled(Boolean rescoringEnabled)"
+  nameWithType: "RescoringOptions.setRescoringEnabled(Boolean rescoringEnabled)"
+  summary: "Set the rescoring<wbr>Enabled property: If set to true, after the initial search on the compressed vectors, the similarity scores are recalculated using the full-precision vectors."
+  parameters:
+  - description: "the rescoringEnabled value to set."
+    name: "rescoringEnabled"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+  syntax: "public RescoringOptions setRescoringEnabled(Boolean rescoringEnabled)"
+  desc: "Set the rescoringEnabled property: If set to true, after the initial search on the compressed vectors, the similarity scores are recalculated using the full-precision vectors. This will improve recall at the expense of latency."
   returns:
     description: "the RescoringOptions object itself."
     type: "<xref href=\"com.azure.search.documents.indexes.models.RescoringOptions?alt=com.azure.search.documents.indexes.models.RescoringOptions&text=RescoringOptions\" data-throw-if-not-resolved=\"False\" />"
@@ -139,4 +139,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.indexes.models.RescoringOptions?alt=com.azure.search.documents.indexes.models.RescoringOptions&text=RescoringOptions\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.search.documents.indexes.models"
-artifact: com.azure:azure-search-documents:11.8.0-beta.8
+artifact: com.azure:azure-search-documents:11.9.0-beta.1

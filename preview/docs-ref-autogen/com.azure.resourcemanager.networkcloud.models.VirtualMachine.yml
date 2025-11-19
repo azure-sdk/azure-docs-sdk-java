@@ -18,6 +18,37 @@ methods:
   returns:
     description: "the adminUsername value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.assignRelay()"
+  fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.assignRelay()"
+  name: "assignRelay()"
+  nameWithType: "VirtualMachine.assignRelay()"
+  summary: "Assigns a relay to the specified Microsoft.<wbr>Hybrid<wbr>Compute machine."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract OperationStatusResult assignRelay()"
+  desc: "Assigns a relay to the specified Microsoft.HybridCompute machine. Assigns a relay to the specified Microsoft.HybridCompute machine associated with the provided virtual machine."
+  returns:
+    description: "the current status of an async operation."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.assignRelay(com.azure.resourcemanager.networkcloud.models.VirtualMachineAssignRelayParameters,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.assignRelay(VirtualMachineAssignRelayParameters virtualMachineAssignRelayParameters, Context context)"
+  name: "assignRelay(VirtualMachineAssignRelayParameters virtualMachineAssignRelayParameters, Context context)"
+  nameWithType: "VirtualMachine.assignRelay(VirtualMachineAssignRelayParameters virtualMachineAssignRelayParameters, Context context)"
+  summary: "Assigns a relay to the specified Microsoft.<wbr>Hybrid<wbr>Compute machine."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The request body."
+    name: "virtualMachineAssignRelayParameters"
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.VirtualMachineAssignRelayParameters?alt=com.azure.resourcemanager.networkcloud.models.VirtualMachineAssignRelayParameters&text=VirtualMachineAssignRelayParameters\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract OperationStatusResult assignRelay(VirtualMachineAssignRelayParameters virtualMachineAssignRelayParameters, Context context)"
+  desc: "Assigns a relay to the specified Microsoft.HybridCompute machine. Assigns a relay to the specified Microsoft.HybridCompute machine associated with the provided virtual machine."
+  returns:
+    description: "the current status of an async operation."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.availabilityZone()"
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.availabilityZone()"
   name: "availabilityZone()"
@@ -126,6 +157,18 @@ methods:
   returns:
     description: "the detailedStatusMessage value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.etag()"
+  fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.etag()"
+  name: "etag()"
+  nameWithType: "VirtualMachine.etag()"
+  summary: "Gets the etag property: Resource ETag."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String etag()"
+  desc: "Gets the etag property: Resource ETag."
+  returns:
+    description: "the etag value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.extendedLocation()"
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.extendedLocation()"
   name: "extendedLocation()"
@@ -150,6 +193,18 @@ methods:
   returns:
     description: "the id value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.identity()"
+  fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.identity()"
+  name: "identity()"
+  nameWithType: "VirtualMachine.identity()"
+  summary: "Gets the identity property: The identity for the resource."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract ManagedServiceIdentity identity()"
+  desc: "Gets the identity property: The identity for the resource."
+  returns:
+    description: "the identity value."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.ManagedServiceIdentity?alt=com.azure.resourcemanager.networkcloud.models.ManagedServiceIdentity&text=ManagedServiceIdentity\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.innerModel()"
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.innerModel()"
   name: "innerModel()"
@@ -226,13 +281,25 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.networkData()"
   name: "networkData()"
   nameWithType: "VirtualMachine.networkData()"
-  summary: "Gets the network<wbr>Data property: The Base64 encoded cloud-init network data."
+  summary: "Gets the network<wbr>Data property: Deprecated: The Base64 encoded cloud-init network data."
   modifiers:
   - "abstract"
   syntax: "public abstract String networkData()"
-  desc: "Gets the networkData property: The Base64 encoded cloud-init network data."
+  desc: "Gets the networkData property: Deprecated: The Base64 encoded cloud-init network data. The networkDataContent property will be used in preference to this property."
   returns:
     description: "the networkData value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.networkDataContent()"
+  fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.networkDataContent()"
+  name: "networkDataContent()"
+  nameWithType: "VirtualMachine.networkDataContent()"
+  summary: "Gets the network<wbr>Data<wbr>Content property: The Base64 encoded cloud-init network data."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String networkDataContent()"
+  desc: "Gets the networkDataContent property: The Base64 encoded cloud-init network data."
+  returns:
+    description: "the networkDataContent value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.placementHints()"
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.placementHints()"
@@ -525,13 +592,25 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.userData()"
   name: "userData()"
   nameWithType: "VirtualMachine.userData()"
-  summary: "Gets the user<wbr>Data property: The Base64 encoded cloud-init user data."
+  summary: "Gets the user<wbr>Data property: Deprecated: The Base64 encoded cloud-init user data."
   modifiers:
   - "abstract"
   syntax: "public abstract String userData()"
-  desc: "Gets the userData property: The Base64 encoded cloud-init user data."
+  desc: "Gets the userData property: Deprecated: The Base64 encoded cloud-init user data. The userDataContent property will be used in preference to this property."
   returns:
     description: "the userData value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.userDataContent()"
+  fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.userDataContent()"
+  name: "userDataContent()"
+  nameWithType: "VirtualMachine.userDataContent()"
+  summary: "Gets the user<wbr>Data<wbr>Content property: The Base64 encoded cloud-init user data."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String userDataContent()"
+  desc: "Gets the userDataContent property: The Base64 encoded cloud-init user data."
+  returns:
+    description: "the userDataContent value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.virtioInterface()"
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.virtioInterface()"
@@ -597,4 +676,4 @@ type: "interface"
 desc: "An immutable client-side representation of VirtualMachine."
 metadata: {}
 package: "com.azure.resourcemanager.networkcloud.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:1.2.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.1.0-beta.1
