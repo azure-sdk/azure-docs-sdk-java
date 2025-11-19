@@ -1,7 +1,7 @@
 ---
 title: Azure News Search SDK for Java
 description: Reference for Azure News Search SDK for Java
-ms.date: 11/18/2025
+ms.date: 11/19/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: newssearch
