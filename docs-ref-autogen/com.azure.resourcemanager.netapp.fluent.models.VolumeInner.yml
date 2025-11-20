@@ -259,9 +259,9 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeInner.etag()"
   name: "etag()"
   nameWithType: "VolumeInner.etag()"
-  summary: "Get the etag property: A unique read-only string that changes whenever the resource is updated."
+  summary: "Get the etag property: \"If etag is provided in the response body, it may also be provided as a header per the normal etag convention."
   syntax: "public String etag()"
-  desc: "Get the etag property: A unique read-only string that changes whenever the resource is updated."
+  desc: "Get the etag property: \"If etag is provided in the response body, it may also be provided as a header per the normal etag convention. Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.\")."
   returns:
     description: "the etag value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -414,7 +414,7 @@ methods:
   desc: "Get the mountTargets property: List of mount targets."
   returns:
     description: "the mountTargets value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.netapp.fluent.models.MountTargetProperties?alt=com.azure.resourcemanager.netapp.fluent.models.MountTargetProperties&text=MountTargetProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.netapp.models.MountTargetProperties?alt=com.azure.resourcemanager.netapp.models.MountTargetProperties&text=MountTargetProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.netapp.fluent.models.VolumeInner.name()"
   fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeInner.name()"
   name: "name()"
@@ -713,7 +713,7 @@ methods:
   nameWithType: "VolumeInner.volumeType()"
   summary: "Get the volume<wbr>Type property: What type of volume is this."
   syntax: "public String volumeType()"
-  desc: "Get the volumeType property: What type of volume is this. For destination volumes in Cross Region Replication, set type to DataProtection."
+  desc: "Get the volumeType property: What type of volume is this. For destination volumes in Cross Region Replication, set type to DataProtection. For creating clone volume, set type to ShortTermClone."
   returns:
     description: "the volumeType value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -1281,7 +1281,7 @@ methods:
     name: "volumeType"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public VolumeInner withVolumeType(String volumeType)"
-  desc: "Set the volumeType property: What type of volume is this. For destination volumes in Cross Region Replication, set type to DataProtection."
+  desc: "Set the volumeType property: What type of volume is this. For destination volumes in Cross Region Replication, set type to DataProtection. For creating clone volume, set type to ShortTermClone."
   returns:
     description: "the VolumeInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.netapp.fluent.models.VolumeInner?alt=com.azure.resourcemanager.netapp.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />"
@@ -1289,13 +1289,13 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeInner.withZones(List<String> zones)"
   name: "withZones(List<String> zones)"
   nameWithType: "VolumeInner.withZones(List<String> zones)"
-  summary: "Set the zones property: Availability Zone."
+  summary: "Set the zones property: The availability zones."
   parameters:
   - description: "the zones value to set."
     name: "zones"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
   syntax: "public VolumeInner withZones(List<String> zones)"
-  desc: "Set the zones property: Availability Zone."
+  desc: "Set the zones property: The availability zones."
   returns:
     description: "the VolumeInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.netapp.fluent.models.VolumeInner?alt=com.azure.resourcemanager.netapp.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />"
@@ -1303,9 +1303,9 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeInner.zones()"
   name: "zones()"
   nameWithType: "VolumeInner.zones()"
-  summary: "Get the zones property: Availability Zone."
+  summary: "Get the zones property: The availability zones."
   syntax: "public List<String> zones()"
-  desc: "Get the zones property: Availability Zone."
+  desc: "Get the zones property: The availability zones."
   returns:
     description: "the zones value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
@@ -1313,4 +1313,4 @@ type: "class"
 desc: "Volume resource."
 metadata: {}
 package: "com.azure.resourcemanager.netapp.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:1.9.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:2.0.0

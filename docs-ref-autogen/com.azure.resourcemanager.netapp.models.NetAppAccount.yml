@@ -22,16 +22,16 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.models.NetAppAccount.changeKeyVault()"
   name: "changeKeyVault()"
   nameWithType: "NetAppAccount.changeKeyVault()"
-  summary: "Change Key Vault/Managed HSM that is used for encryption of volumes under Net<wbr>App account."
+  summary: "Affects existing volumes that are encrypted with Key Vault/Managed HSM, and new volumes."
   modifiers:
   - "abstract"
   syntax: "public abstract void changeKeyVault()"
-  desc: "Change Key Vault/Managed HSM that is used for encryption of volumes under NetApp account. Affects existing volumes that are encrypted with Key Vault/Managed HSM, and new volumes. Supports HSM to Key Vault, Key Vault to HSM, HSM to HSM and Key Vault to Key Vault."
+  desc: "Affects existing volumes that are encrypted with Key Vault/Managed HSM, and new volumes. Supports HSM to Key Vault, Key Vault to HSM, HSM to HSM and Key Vault to Key Vault."
 - uid: "com.azure.resourcemanager.netapp.models.NetAppAccount.changeKeyVault(com.azure.resourcemanager.netapp.models.ChangeKeyVault,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.netapp.models.NetAppAccount.changeKeyVault(ChangeKeyVault body, Context context)"
   name: "changeKeyVault(ChangeKeyVault body, Context context)"
   nameWithType: "NetAppAccount.changeKeyVault(ChangeKeyVault body, Context context)"
-  summary: "Change Key Vault/Managed HSM that is used for encryption of volumes under Net<wbr>App account."
+  summary: "Affects existing volumes that are encrypted with Key Vault/Managed HSM, and new volumes."
   modifiers:
   - "abstract"
   parameters:
@@ -42,7 +42,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract void changeKeyVault(ChangeKeyVault body, Context context)"
-  desc: "Change Key Vault/Managed HSM that is used for encryption of volumes under NetApp account. Affects existing volumes that are encrypted with Key Vault/Managed HSM, and new volumes. Supports HSM to Key Vault, Key Vault to HSM, HSM to HSM and Key Vault to Key Vault."
+  desc: "Affects existing volumes that are encrypted with Key Vault/Managed HSM, and new volumes. Supports HSM to Key Vault, Key Vault to HSM, HSM to HSM and Key Vault to Key Vault."
 - uid: "com.azure.resourcemanager.netapp.models.NetAppAccount.disableShowmount()"
   fullName: "com.azure.resourcemanager.netapp.models.NetAppAccount.disableShowmount()"
   name: "disableShowmount()"
@@ -71,11 +71,11 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.models.NetAppAccount.etag()"
   name: "etag()"
   nameWithType: "NetAppAccount.etag()"
-  summary: "Gets the etag property: A unique read-only string that changes whenever the resource is updated."
+  summary: "Gets the etag property: \"If etag is provided in the response body, it may also be provided as a header per the normal etag convention."
   modifiers:
   - "abstract"
   syntax: "public abstract String etag()"
-  desc: "Gets the etag property: A unique read-only string that changes whenever the resource is updated."
+  desc: "Gets the etag property: \"If etag is provided in the response body, it may also be provided as a header per the normal etag convention. Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.\")."
   returns:
     description: "the etag value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -83,19 +83,19 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.models.NetAppAccount.getChangeKeyVaultInformation()"
   name: "getChangeKeyVaultInformation()"
   nameWithType: "NetAppAccount.getChangeKeyVaultInformation()"
-  summary: "Get information about how volumes under Net<wbr>App account are encrypted."
+  summary: "Contains data from encryption.<wbr>key<wbr>Vault<wbr>Properties as well as information about which private endpoint is used by each encryption sibling set."
   modifiers:
   - "abstract"
   syntax: "public abstract GetKeyVaultStatusResponse getChangeKeyVaultInformation()"
-  desc: "Get information about how volumes under NetApp account are encrypted. Contains data from encryption.keyVaultProperties as well as information about which private endpoint is used by each encryption sibling set. Response from this endpoint can be modified and used as request body for POST request."
+  desc: "Contains data from encryption.keyVaultProperties as well as information about which private endpoint is used by each encryption sibling set. Response from this endpoint can be modified and used as request body for POST request."
   returns:
-    description: "result of getKeyVaultStatus with information about how volumes under NetApp account are encrypted."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.GetKeyVaultStatusResponse?alt=com.azure.resourcemanager.netapp.models.GetKeyVaultStatusResponse&text=GetKeyVaultStatusResponse\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.netapp.models.NetAppAccount.getChangeKeyVaultInformation(com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.netapp.models.NetAppAccount.getChangeKeyVaultInformation(Context context)"
   name: "getChangeKeyVaultInformation(Context context)"
   nameWithType: "NetAppAccount.getChangeKeyVaultInformation(Context context)"
-  summary: "Get information about how volumes under Net<wbr>App account are encrypted."
+  summary: "Contains data from encryption.<wbr>key<wbr>Vault<wbr>Properties as well as information about which private endpoint is used by each encryption sibling set."
   modifiers:
   - "abstract"
   parameters:
@@ -103,9 +103,9 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract GetKeyVaultStatusResponse getChangeKeyVaultInformation(Context context)"
-  desc: "Get information about how volumes under NetApp account are encrypted. Contains data from encryption.keyVaultProperties as well as information about which private endpoint is used by each encryption sibling set. Response from this endpoint can be modified and used as request body for POST request."
+  desc: "Contains data from encryption.keyVaultProperties as well as information about which private endpoint is used by each encryption sibling set. Response from this endpoint can be modified and used as request body for POST request."
   returns:
-    description: "result of getKeyVaultStatus with information about how volumes under NetApp account are encrypted."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.GetKeyVaultStatusResponse?alt=com.azure.resourcemanager.netapp.models.GetKeyVaultStatusResponse&text=GetKeyVaultStatusResponse\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.netapp.models.NetAppAccount.id()"
   fullName: "com.azure.resourcemanager.netapp.models.NetAppAccount.id()"
@@ -123,11 +123,11 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.models.NetAppAccount.identity()"
   name: "identity()"
   nameWithType: "NetAppAccount.identity()"
-  summary: "Gets the identity property: The identity used for the resource."
+  summary: "Gets the identity property: The managed service identities assigned to this resource."
   modifiers:
   - "abstract"
   syntax: "public abstract ManagedServiceIdentity identity()"
-  desc: "Gets the identity property: The identity used for the resource."
+  desc: "Gets the identity property: The managed service identities assigned to this resource."
   returns:
     description: "the identity value."
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.ManagedServiceIdentity?alt=com.azure.resourcemanager.netapp.models.ManagedServiceIdentity&text=ManagedServiceIdentity\" data-throw-if-not-resolved=\"False\" />"
@@ -259,16 +259,16 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.models.NetAppAccount.renewCredentials()"
   name: "renewCredentials()"
   nameWithType: "NetAppAccount.renewCredentials()"
-  summary: "Renew identity credentials Renew identity credentials that are used to authenticate to key vault, for customer-managed key encryption."
+  summary: "Renew identity credentials that are used to authenticate to key vault, for customer-managed key encryption."
   modifiers:
   - "abstract"
   syntax: "public abstract void renewCredentials()"
-  desc: "Renew identity credentials Renew identity credentials that are used to authenticate to key vault, for customer-managed key encryption. If encryption.identity.principalId does not match identity.principalId, running this operation will fix it."
+  desc: "Renew identity credentials that are used to authenticate to key vault, for customer-managed key encryption. If encryption.identity.principalId does not match identity.principalId, running this operation will fix it."
 - uid: "com.azure.resourcemanager.netapp.models.NetAppAccount.renewCredentials(com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.netapp.models.NetAppAccount.renewCredentials(Context context)"
   name: "renewCredentials(Context context)"
   nameWithType: "NetAppAccount.renewCredentials(Context context)"
-  summary: "Renew identity credentials Renew identity credentials that are used to authenticate to key vault, for customer-managed key encryption."
+  summary: "Renew identity credentials that are used to authenticate to key vault, for customer-managed key encryption."
   modifiers:
   - "abstract"
   parameters:
@@ -276,7 +276,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract void renewCredentials(Context context)"
-  desc: "Renew identity credentials Renew identity credentials that are used to authenticate to key vault, for customer-managed key encryption. If encryption.identity.principalId does not match identity.principalId, running this operation will fix it."
+  desc: "Renew identity credentials that are used to authenticate to key vault, for customer-managed key encryption. If encryption.identity.principalId does not match identity.principalId, running this operation will fix it."
 - uid: "com.azure.resourcemanager.netapp.models.NetAppAccount.resourceGroupName()"
   fullName: "com.azure.resourcemanager.netapp.models.NetAppAccount.resourceGroupName()"
   name: "resourceGroupName()"
@@ -317,16 +317,16 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.models.NetAppAccount.transitionToCmk()"
   name: "transitionToCmk()"
   nameWithType: "NetAppAccount.transitionToCmk()"
-  summary: "Transition volumes encryption from PMK to CMK."
+  summary: "Transitions all volumes in a VNet to a different encryption key source (Microsoft-managed key or Azure Key Vault)."
   modifiers:
   - "abstract"
   syntax: "public abstract void transitionToCmk()"
-  desc: "Transition volumes encryption from PMK to CMK. Transitions all volumes in a VNet to a different encryption key source (Microsoft-managed key or Azure Key Vault). Operation fails if targeted volumes share encryption sibling set with volumes from another account."
+  desc: "Transitions all volumes in a VNet to a different encryption key source (Microsoft-managed key or Azure Key Vault). Operation fails if targeted volumes share encryption sibling set with volumes from another account."
 - uid: "com.azure.resourcemanager.netapp.models.NetAppAccount.transitionToCmk(com.azure.resourcemanager.netapp.models.EncryptionTransitionRequest,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.netapp.models.NetAppAccount.transitionToCmk(EncryptionTransitionRequest body, Context context)"
   name: "transitionToCmk(EncryptionTransitionRequest body, Context context)"
   nameWithType: "NetAppAccount.transitionToCmk(EncryptionTransitionRequest body, Context context)"
-  summary: "Transition volumes encryption from PMK to CMK."
+  summary: "Transitions all volumes in a VNet to a different encryption key source (Microsoft-managed key or Azure Key Vault)."
   modifiers:
   - "abstract"
   parameters:
@@ -337,7 +337,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract void transitionToCmk(EncryptionTransitionRequest body, Context context)"
-  desc: "Transition volumes encryption from PMK to CMK. Transitions all volumes in a VNet to a different encryption key source (Microsoft-managed key or Azure Key Vault). Operation fails if targeted volumes share encryption sibling set with volumes from another account."
+  desc: "Transitions all volumes in a VNet to a different encryption key source (Microsoft-managed key or Azure Key Vault). Operation fails if targeted volumes share encryption sibling set with volumes from another account."
 - uid: "com.azure.resourcemanager.netapp.models.NetAppAccount.type()"
   fullName: "com.azure.resourcemanager.netapp.models.NetAppAccount.type()"
   name: "type()"
@@ -366,4 +366,4 @@ type: "interface"
 desc: "An immutable client-side representation of NetAppAccount."
 metadata: {}
 package: "com.azure.resourcemanager.netapp.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:1.9.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:2.0.0

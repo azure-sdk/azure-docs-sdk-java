@@ -49,6 +49,16 @@ methods:
   returns:
     description: "An instance of VectorIndex if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
     type: "<xref href=\"com.azure.resourcemanager.cosmos.models.VectorIndex?alt=com.azure.resourcemanager.cosmos.models.VectorIndex&text=VectorIndex\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cosmos.models.VectorIndex.indexingSearchListSize()"
+  fullName: "com.azure.resourcemanager.cosmos.models.VectorIndex.indexingSearchListSize()"
+  name: "indexingSearchListSize()"
+  nameWithType: "VectorIndex.indexingSearchListSize()"
+  summary: "Get the indexing<wbr>Search<wbr>List<wbr>Size property: This is the size of the candidate list of approximate neighbors stored while building the DiskANN index as part of the optimization processes."
+  syntax: "public Long indexingSearchListSize()"
+  desc: "Get the indexingSearchListSize property: This is the size of the candidate list of approximate neighbors stored while building the DiskANN index as part of the optimization processes. Large values may improve recall at the expense of latency. This is only applicable for the diskANN vector index type."
+  returns:
+    description: "the indexingSearchListSize value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
 - uid: "com.azure.resourcemanager.cosmos.models.VectorIndex.path()"
   fullName: "com.azure.resourcemanager.cosmos.models.VectorIndex.path()"
   name: "path()"
@@ -59,6 +69,16 @@ methods:
   returns:
     description: "the path value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.cosmos.models.VectorIndex.quantizationByteSize()"
+  fullName: "com.azure.resourcemanager.cosmos.models.VectorIndex.quantizationByteSize()"
+  name: "quantizationByteSize()"
+  nameWithType: "VectorIndex.quantizationByteSize()"
+  summary: "Get the quantization<wbr>Byte<wbr>Size property: The number of bytes used in product quantization of the vectors."
+  syntax: "public Long quantizationByteSize()"
+  desc: "Get the quantizationByteSize property: The number of bytes used in product quantization of the vectors. A larger value may result in better recall for vector searches at the expense of latency. This is only applicable for the quantizedFlat and diskANN vector index types."
+  returns:
+    description: "the quantizationByteSize value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
 - uid: "com.azure.resourcemanager.cosmos.models.VectorIndex.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.cosmos.models.VectorIndex.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -88,6 +108,30 @@ methods:
   summary: "Validates the instance."
   syntax: "public void validate()"
   desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.cosmos.models.VectorIndex.vectorIndexShardKey()"
+  fullName: "com.azure.resourcemanager.cosmos.models.VectorIndex.vectorIndexShardKey()"
+  name: "vectorIndexShardKey()"
+  nameWithType: "VectorIndex.vectorIndexShardKey()"
+  summary: "Get the vector<wbr>Index<wbr>Shard<wbr>Key property: Array of shard keys for the vector index."
+  syntax: "public List<String> vectorIndexShardKey()"
+  desc: "Get the vectorIndexShardKey property: Array of shard keys for the vector index. This is only applicable for the quantizedFlat and diskANN vector index types."
+  returns:
+    description: "the vectorIndexShardKey value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+- uid: "com.azure.resourcemanager.cosmos.models.VectorIndex.withIndexingSearchListSize(java.lang.Long)"
+  fullName: "com.azure.resourcemanager.cosmos.models.VectorIndex.withIndexingSearchListSize(Long indexingSearchListSize)"
+  name: "withIndexingSearchListSize(Long indexingSearchListSize)"
+  nameWithType: "VectorIndex.withIndexingSearchListSize(Long indexingSearchListSize)"
+  summary: "Set the indexing<wbr>Search<wbr>List<wbr>Size property: This is the size of the candidate list of approximate neighbors stored while building the DiskANN index as part of the optimization processes."
+  parameters:
+  - description: "the indexingSearchListSize value to set."
+    name: "indexingSearchListSize"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
+  syntax: "public VectorIndex withIndexingSearchListSize(Long indexingSearchListSize)"
+  desc: "Set the indexingSearchListSize property: This is the size of the candidate list of approximate neighbors stored while building the DiskANN index as part of the optimization processes. Large values may improve recall at the expense of latency. This is only applicable for the diskANN vector index type."
+  returns:
+    description: "the VectorIndex object itself."
+    type: "<xref href=\"com.azure.resourcemanager.cosmos.models.VectorIndex?alt=com.azure.resourcemanager.cosmos.models.VectorIndex&text=VectorIndex\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cosmos.models.VectorIndex.withPath(java.lang.String)"
   fullName: "com.azure.resourcemanager.cosmos.models.VectorIndex.withPath(String path)"
   name: "withPath(String path)"
@@ -99,6 +143,20 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public VectorIndex withPath(String path)"
   desc: "Set the path property: The path to the vector field in the document."
+  returns:
+    description: "the VectorIndex object itself."
+    type: "<xref href=\"com.azure.resourcemanager.cosmos.models.VectorIndex?alt=com.azure.resourcemanager.cosmos.models.VectorIndex&text=VectorIndex\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cosmos.models.VectorIndex.withQuantizationByteSize(java.lang.Long)"
+  fullName: "com.azure.resourcemanager.cosmos.models.VectorIndex.withQuantizationByteSize(Long quantizationByteSize)"
+  name: "withQuantizationByteSize(Long quantizationByteSize)"
+  nameWithType: "VectorIndex.withQuantizationByteSize(Long quantizationByteSize)"
+  summary: "Set the quantization<wbr>Byte<wbr>Size property: The number of bytes used in product quantization of the vectors."
+  parameters:
+  - description: "the quantizationByteSize value to set."
+    name: "quantizationByteSize"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
+  syntax: "public VectorIndex withQuantizationByteSize(Long quantizationByteSize)"
+  desc: "Set the quantizationByteSize property: The number of bytes used in product quantization of the vectors. A larger value may result in better recall for vector searches at the expense of latency. This is only applicable for the quantizedFlat and diskANN vector index types."
   returns:
     description: "the VectorIndex object itself."
     type: "<xref href=\"com.azure.resourcemanager.cosmos.models.VectorIndex?alt=com.azure.resourcemanager.cosmos.models.VectorIndex&text=VectorIndex\" data-throw-if-not-resolved=\"False\" />"
@@ -116,10 +174,24 @@ methods:
   returns:
     description: "the VectorIndex object itself."
     type: "<xref href=\"com.azure.resourcemanager.cosmos.models.VectorIndex?alt=com.azure.resourcemanager.cosmos.models.VectorIndex&text=VectorIndex\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cosmos.models.VectorIndex.withVectorIndexShardKey(java.util.List<java.lang.String>)"
+  fullName: "com.azure.resourcemanager.cosmos.models.VectorIndex.withVectorIndexShardKey(List<String> vectorIndexShardKey)"
+  name: "withVectorIndexShardKey(List<String> vectorIndexShardKey)"
+  nameWithType: "VectorIndex.withVectorIndexShardKey(List<String> vectorIndexShardKey)"
+  summary: "Set the vector<wbr>Index<wbr>Shard<wbr>Key property: Array of shard keys for the vector index."
+  parameters:
+  - description: "the vectorIndexShardKey value to set."
+    name: "vectorIndexShardKey"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+  syntax: "public VectorIndex withVectorIndexShardKey(List<String> vectorIndexShardKey)"
+  desc: "Set the vectorIndexShardKey property: Array of shard keys for the vector index. This is only applicable for the quantizedFlat and diskANN vector index types."
+  returns:
+    description: "the VectorIndex object itself."
+    type: "<xref href=\"com.azure.resourcemanager.cosmos.models.VectorIndex?alt=com.azure.resourcemanager.cosmos.models.VectorIndex&text=VectorIndex\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "The VectorIndex model."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cosmos.models.VectorIndex?alt=com.azure.resourcemanager.cosmos.models.VectorIndex&text=VectorIndex\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.cosmos.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-cosmos:2.53.4
+artifact: com.azure.resourcemanager:azure-resourcemanager-cosmos:2.54.0

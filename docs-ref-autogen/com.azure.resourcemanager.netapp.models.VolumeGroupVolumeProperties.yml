@@ -6,15 +6,7 @@ nameWithType: "VolumeGroupVolumeProperties"
 summary: "Volume resource."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.core.management.ProxyResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
-- classRef: "<xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
-  methodsRef:
-  - "<xref href=\"com.azure.core.management.ProxyResource.fromJson(com.azure.json.JsonReader)?alt=com.azure.core.management.ProxyResource.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.ProxyResource.id()?alt=com.azure.core.management.ProxyResource.id&text=id\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.ProxyResource.name()?alt=com.azure.core.management.ProxyResource.name&text=name\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.ProxyResource.toJson(com.azure.json.JsonWriter)?alt=com.azure.core.management.ProxyResource.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.ProxyResource.type()?alt=com.azure.core.management.ProxyResource.type&text=type\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -28,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **VolumeGroupVolumeProperties**</br> extends <xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
+syntax: "public final class **VolumeGroupVolumeProperties**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.netapp.models.VolumeGroupVolumeProperties?alt=com.azure.resourcemanager.netapp.models.VolumeGroupVolumeProperties&text=VolumeGroupVolumeProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.netapp.models.VolumeGroupVolumeProperties.VolumeGroupVolumeProperties()"
   fullName: "com.azure.resourcemanager.netapp.models.VolumeGroupVolumeProperties.VolumeGroupVolumeProperties()"
@@ -301,10 +293,9 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.models.VolumeGroupVolumeProperties.id()"
   name: "id()"
   nameWithType: "VolumeGroupVolumeProperties.id()"
-  summary: "Get the id property: Fully qualified resource Id for the resource."
-  overridden: "com.azure.core.management.ProxyResource.id()"
+  summary: "Get the id property: Resource Id."
   syntax: "public String id()"
-  desc: "Get the id property: Fully qualified resource Id for the resource."
+  desc: "Get the id property: Resource Id."
   returns:
     description: "the id value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -397,13 +388,12 @@ methods:
   desc: "Get the mountTargets property: List of mount targets."
   returns:
     description: "the mountTargets value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.netapp.fluent.models.MountTargetProperties?alt=com.azure.resourcemanager.netapp.fluent.models.MountTargetProperties&text=MountTargetProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.netapp.models.MountTargetProperties?alt=com.azure.resourcemanager.netapp.models.MountTargetProperties&text=MountTargetProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.netapp.models.VolumeGroupVolumeProperties.name()"
   fullName: "com.azure.resourcemanager.netapp.models.VolumeGroupVolumeProperties.name()"
   name: "name()"
   nameWithType: "VolumeGroupVolumeProperties.name()"
   summary: "Get the name property: Resource name."
-  overridden: "com.azure.core.management.ProxyResource.name()"
   syntax: "public String name()"
   desc: "Get the name property: Resource name."
   returns:
@@ -623,7 +613,6 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.models.VolumeGroupVolumeProperties.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
   nameWithType: "VolumeGroupVolumeProperties.toJson(JsonWriter jsonWriter)"
-  overridden: "com.azure.core.management.ProxyResource.toJson(com.azure.json.JsonWriter)"
   parameters:
   - name: "jsonWriter"
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
@@ -636,10 +625,9 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.models.VolumeGroupVolumeProperties.type()"
   name: "type()"
   nameWithType: "VolumeGroupVolumeProperties.type()"
-  summary: "Get the type property: The type of the resource."
-  overridden: "com.azure.core.management.ProxyResource.type()"
+  summary: "Get the type property: Resource type."
   syntax: "public String type()"
-  desc: "Get the type property: The type of the resource."
+  desc: "Get the type property: Resource type."
   returns:
     description: "the type value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -696,7 +684,7 @@ methods:
   nameWithType: "VolumeGroupVolumeProperties.volumeType()"
   summary: "Get the volume<wbr>Type property: What type of volume is this."
   syntax: "public String volumeType()"
-  desc: "Get the volumeType property: What type of volume is this. For destination volumes in Cross Region Replication, set type to DataProtection."
+  desc: "Get the volumeType property: What type of volume is this. For destination volumes in Cross Region Replication, set type to DataProtection. For creating clone volume, set type to ShortTermClone."
   returns:
     description: "the volumeType value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -1270,7 +1258,7 @@ methods:
     name: "volumeType"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public VolumeGroupVolumeProperties withVolumeType(String volumeType)"
-  desc: "Set the volumeType property: What type of volume is this. For destination volumes in Cross Region Replication, set type to DataProtection."
+  desc: "Set the volumeType property: What type of volume is this. For destination volumes in Cross Region Replication, set type to DataProtection. For creating clone volume, set type to ShortTermClone."
   returns:
     description: "the VolumeGroupVolumeProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.VolumeGroupVolumeProperties?alt=com.azure.resourcemanager.netapp.models.VolumeGroupVolumeProperties&text=VolumeGroupVolumeProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -1300,6 +1288,8 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 type: "class"
 desc: "Volume resource."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.netapp.models.VolumeGroupVolumeProperties?alt=com.azure.resourcemanager.netapp.models.VolumeGroupVolumeProperties&text=VolumeGroupVolumeProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.netapp.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:1.9.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:2.0.0
