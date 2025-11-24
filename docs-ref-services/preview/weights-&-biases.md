@@ -1,7 +1,7 @@
 ---
 title: Azure Weights & Biases SDK for Java
 description: Reference for Azure Weights & Biases SDK for Java
-ms.date: 11/21/2025
+ms.date: 11/24/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: weights&biases
