@@ -6,11 +6,11 @@ nameWithType: "VirtualNetworkSubnetUsages"
 summary: "Resource collection API of Virtual<wbr>Network<wbr>Subnet<wbr>Usages."
 syntax: "public interface **VirtualNetworkSubnetUsages**"
 methods:
-- uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.VirtualNetworkSubnetUsages.execute(java.lang.String,com.azure.resourcemanager.postgresqlflexibleserver.models.VirtualNetworkSubnetUsageParameter)"
-  fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.VirtualNetworkSubnetUsages.execute(String locationName, VirtualNetworkSubnetUsageParameter parameters)"
-  name: "execute(String locationName, VirtualNetworkSubnetUsageParameter parameters)"
-  nameWithType: "VirtualNetworkSubnetUsages.execute(String locationName, VirtualNetworkSubnetUsageParameter parameters)"
-  summary: "Get virtual network subnet usage for a given v<wbr>Net resource id."
+- uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.VirtualNetworkSubnetUsages.list(java.lang.String,com.azure.resourcemanager.postgresqlflexibleserver.models.VirtualNetworkSubnetUsageParameter)"
+  fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.VirtualNetworkSubnetUsages.list(String locationName, VirtualNetworkSubnetUsageParameter parameters)"
+  name: "list(String locationName, VirtualNetworkSubnetUsageParameter parameters)"
+  nameWithType: "VirtualNetworkSubnetUsages.list(String locationName, VirtualNetworkSubnetUsageParameter parameters)"
+  summary: "Lists the virtual network subnet usage for a given virtual network."
   modifiers:
   - "abstract"
   parameters:
@@ -20,16 +20,16 @@ methods:
   - description: "The required parameters for creating or updating a server."
     name: "parameters"
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.VirtualNetworkSubnetUsageParameter?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.VirtualNetworkSubnetUsageParameter&text=VirtualNetworkSubnetUsageParameter\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract VirtualNetworkSubnetUsageResult execute(String locationName, VirtualNetworkSubnetUsageParameter parameters)"
-  desc: "Get virtual network subnet usage for a given vNet resource id."
+  syntax: "public abstract VirtualNetworkSubnetUsageModel list(String locationName, VirtualNetworkSubnetUsageParameter parameters)"
+  desc: "Lists the virtual network subnet usage for a given virtual network."
   returns:
-    description: "virtual network subnet usage for a given vNet resource id."
-    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.VirtualNetworkSubnetUsageResult?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.VirtualNetworkSubnetUsageResult&text=VirtualNetworkSubnetUsageResult\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.VirtualNetworkSubnetUsages.executeWithResponse(java.lang.String,com.azure.resourcemanager.postgresqlflexibleserver.models.VirtualNetworkSubnetUsageParameter,com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.VirtualNetworkSubnetUsages.executeWithResponse(String locationName, VirtualNetworkSubnetUsageParameter parameters, Context context)"
-  name: "executeWithResponse(String locationName, VirtualNetworkSubnetUsageParameter parameters, Context context)"
-  nameWithType: "VirtualNetworkSubnetUsages.executeWithResponse(String locationName, VirtualNetworkSubnetUsageParameter parameters, Context context)"
-  summary: "Get virtual network subnet usage for a given v<wbr>Net resource id."
+    description: "virtual network subnet usage data."
+    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.VirtualNetworkSubnetUsageModel?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.VirtualNetworkSubnetUsageModel&text=VirtualNetworkSubnetUsageModel\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.VirtualNetworkSubnetUsages.listWithResponse(java.lang.String,com.azure.resourcemanager.postgresqlflexibleserver.models.VirtualNetworkSubnetUsageParameter,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.VirtualNetworkSubnetUsages.listWithResponse(String locationName, VirtualNetworkSubnetUsageParameter parameters, Context context)"
+  name: "listWithResponse(String locationName, VirtualNetworkSubnetUsageParameter parameters, Context context)"
+  nameWithType: "VirtualNetworkSubnetUsages.listWithResponse(String locationName, VirtualNetworkSubnetUsageParameter parameters, Context context)"
+  summary: "Lists the virtual network subnet usage for a given virtual network."
   modifiers:
   - "abstract"
   parameters:
@@ -42,13 +42,13 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract Response<VirtualNetworkSubnetUsageResult> executeWithResponse(String locationName, VirtualNetworkSubnetUsageParameter parameters, Context context)"
-  desc: "Get virtual network subnet usage for a given vNet resource id."
+  syntax: "public abstract Response<VirtualNetworkSubnetUsageModel> listWithResponse(String locationName, VirtualNetworkSubnetUsageParameter parameters, Context context)"
+  desc: "Lists the virtual network subnet usage for a given virtual network."
   returns:
-    description: "virtual network subnet usage for a given vNet resource id along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
-    type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.VirtualNetworkSubnetUsageResult?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.VirtualNetworkSubnetUsageResult&text=VirtualNetworkSubnetUsageResult\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "virtual network subnet usage data along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.VirtualNetworkSubnetUsageModel?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.VirtualNetworkSubnetUsageModel&text=VirtualNetworkSubnetUsageModel\" data-throw-if-not-resolved=\"False\" />&gt;"
 type: "interface"
 desc: "Resource collection API of VirtualNetworkSubnetUsages."
 metadata: {}
 package: "com.azure.resourcemanager.postgresqlflexibleserver.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-postgresqlflexibleserver:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-postgresqlflexibleserver:2.0.0

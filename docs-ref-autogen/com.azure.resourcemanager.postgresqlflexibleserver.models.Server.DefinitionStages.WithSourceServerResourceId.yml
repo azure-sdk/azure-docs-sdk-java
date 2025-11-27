@@ -10,15 +10,15 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.DefinitionStages.WithSourceServerResourceId.withSourceServerResourceId(String sourceServerResourceId)"
   name: "withSourceServerResourceId(String sourceServerResourceId)"
   nameWithType: "Server.DefinitionStages.WithSourceServerResourceId.withSourceServerResourceId(String sourceServerResourceId)"
-  summary: "Specifies the source<wbr>Server<wbr>Resource<wbr>Id property: The source server resource ID to restore from."
+  summary: "Specifies the source<wbr>Server<wbr>Resource<wbr>Id property: Identifier of the server to be used as the source of the new server."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The source server resource ID to restore from. It's required when\n 'createMode' is 'PointInTimeRestore' or 'GeoRestore' or 'Replica' or 'ReviveDropped'. This property is\n returned only for Replica server."
+  - description: "Identifier of the server to be used as the source of the new server.\n Required when 'createMode' is 'PointInTimeRestore', 'GeoRestore', 'Replica', or 'ReviveDropped'. This\n property is returned only when the target server is a read replica."
     name: "sourceServerResourceId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract Server.DefinitionStages.WithCreate withSourceServerResourceId(String sourceServerResourceId)"
-  desc: "Specifies the sourceServerResourceId property: The source server resource ID to restore from. It's required when 'createMode' is 'PointInTimeRestore' or 'GeoRestore' or 'Replica' or 'ReviveDropped'. This property is returned only for Replica server."
+  desc: "Specifies the sourceServerResourceId property: Identifier of the server to be used as the source of the new server. Required when 'createMode' is 'PointInTimeRestore', 'GeoRestore', 'Replica', or 'ReviveDropped'. This property is returned only when the target server is a read replica.."
   returns:
     description: "the next definition stage."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.Server.DefinitionStages.WithCreate?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.Server.DefinitionStages.WithCreate&text=WithCreate\" data-throw-if-not-resolved=\"False\" />"
@@ -26,4 +26,4 @@ type: "interface"
 desc: "The stage of the Server definition allowing to specify sourceServerResourceId."
 metadata: {}
 package: "com.azure.resourcemanager.postgresqlflexibleserver.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-postgresqlflexibleserver:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-postgresqlflexibleserver:2.0.0

@@ -34,9 +34,9 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Network.delegatedSubnetResourceId()"
   name: "delegatedSubnetResourceId()"
   nameWithType: "Network.delegatedSubnetResourceId()"
-  summary: "Get the delegated<wbr>Subnet<wbr>Resource<wbr>Id property: Delegated subnet arm resource id."
+  summary: "Get the delegated<wbr>Subnet<wbr>Resource<wbr>Id property: Resource identifier of the delegated subnet."
   syntax: "public String delegatedSubnetResourceId()"
-  desc: "Get the delegatedSubnetResourceId property: Delegated subnet arm resource id. This is required to be passed during create, in case we want the server to be VNET injected, i.e. Private access server. During update, pass this only if we want to update the value for Private DNS zone."
+  desc: "Get the delegatedSubnetResourceId property: Resource identifier of the delegated subnet. Required during creation of a new server, in case you want the server to be integrated into your own virtual network. For an update operation, you only have to provide this property if you want to change the value assigned for the private DNS zone."
   returns:
     description: "the delegatedSubnetResourceId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -63,9 +63,9 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Network.privateDnsZoneArmResourceId()"
   name: "privateDnsZoneArmResourceId()"
   nameWithType: "Network.privateDnsZoneArmResourceId()"
-  summary: "Get the private<wbr>Dns<wbr>Zone<wbr>Arm<wbr>Resource<wbr>Id property: Private dns zone arm resource id."
+  summary: "Get the private<wbr>Dns<wbr>Zone<wbr>Arm<wbr>Resource<wbr>Id property: Identifier of the private DNS zone."
   syntax: "public String privateDnsZoneArmResourceId()"
-  desc: "Get the privateDnsZoneArmResourceId property: Private dns zone arm resource id. This is required to be passed during create, in case we want the server to be VNET injected, i.e. Private access server. During update, pass this only if we want to update the value for Private DNS zone."
+  desc: "Get the privateDnsZoneArmResourceId property: Identifier of the private DNS zone. Required during creation of a new server, in case you want the server to be integrated into your own virtual network. For an update operation, you only have to provide this property if you want to change the value assigned for the private DNS zone."
   returns:
     description: "the privateDnsZoneArmResourceId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -73,9 +73,9 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Network.publicNetworkAccess()"
   name: "publicNetworkAccess()"
   nameWithType: "Network.publicNetworkAccess()"
-  summary: "Get the public<wbr>Network<wbr>Access property: public network access is enabled or not."
+  summary: "Get the public<wbr>Network<wbr>Access property: Indicates if public network access is enabled or not."
   syntax: "public ServerPublicNetworkAccessState publicNetworkAccess()"
-  desc: "Get the publicNetworkAccess property: public network access is enabled or not."
+  desc: "Get the publicNetworkAccess property: Indicates if public network access is enabled or not. This is only supported for servers that are not integrated into a virtual network which is owned and provided by customer when server is deployed."
   returns:
     description: "the publicNetworkAccess value."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.ServerPublicNetworkAccessState?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.ServerPublicNetworkAccessState&text=ServerPublicNetworkAccessState\" data-throw-if-not-resolved=\"False\" />"
@@ -102,13 +102,13 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Network.withDelegatedSubnetResourceId(String delegatedSubnetResourceId)"
   name: "withDelegatedSubnetResourceId(String delegatedSubnetResourceId)"
   nameWithType: "Network.withDelegatedSubnetResourceId(String delegatedSubnetResourceId)"
-  summary: "Set the delegated<wbr>Subnet<wbr>Resource<wbr>Id property: Delegated subnet arm resource id."
+  summary: "Set the delegated<wbr>Subnet<wbr>Resource<wbr>Id property: Resource identifier of the delegated subnet."
   parameters:
   - description: "the delegatedSubnetResourceId value to set."
     name: "delegatedSubnetResourceId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public Network withDelegatedSubnetResourceId(String delegatedSubnetResourceId)"
-  desc: "Set the delegatedSubnetResourceId property: Delegated subnet arm resource id. This is required to be passed during create, in case we want the server to be VNET injected, i.e. Private access server. During update, pass this only if we want to update the value for Private DNS zone."
+  desc: "Set the delegatedSubnetResourceId property: Resource identifier of the delegated subnet. Required during creation of a new server, in case you want the server to be integrated into your own virtual network. For an update operation, you only have to provide this property if you want to change the value assigned for the private DNS zone."
   returns:
     description: "the Network object itself."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.Network?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.Network&text=Network\" data-throw-if-not-resolved=\"False\" />"
@@ -116,13 +116,13 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Network.withPrivateDnsZoneArmResourceId(String privateDnsZoneArmResourceId)"
   name: "withPrivateDnsZoneArmResourceId(String privateDnsZoneArmResourceId)"
   nameWithType: "Network.withPrivateDnsZoneArmResourceId(String privateDnsZoneArmResourceId)"
-  summary: "Set the private<wbr>Dns<wbr>Zone<wbr>Arm<wbr>Resource<wbr>Id property: Private dns zone arm resource id."
+  summary: "Set the private<wbr>Dns<wbr>Zone<wbr>Arm<wbr>Resource<wbr>Id property: Identifier of the private DNS zone."
   parameters:
   - description: "the privateDnsZoneArmResourceId value to set."
     name: "privateDnsZoneArmResourceId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public Network withPrivateDnsZoneArmResourceId(String privateDnsZoneArmResourceId)"
-  desc: "Set the privateDnsZoneArmResourceId property: Private dns zone arm resource id. This is required to be passed during create, in case we want the server to be VNET injected, i.e. Private access server. During update, pass this only if we want to update the value for Private DNS zone."
+  desc: "Set the privateDnsZoneArmResourceId property: Identifier of the private DNS zone. Required during creation of a new server, in case you want the server to be integrated into your own virtual network. For an update operation, you only have to provide this property if you want to change the value assigned for the private DNS zone."
   returns:
     description: "the Network object itself."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.Network?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.Network&text=Network\" data-throw-if-not-resolved=\"False\" />"
@@ -130,13 +130,13 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Network.withPublicNetworkAccess(ServerPublicNetworkAccessState publicNetworkAccess)"
   name: "withPublicNetworkAccess(ServerPublicNetworkAccessState publicNetworkAccess)"
   nameWithType: "Network.withPublicNetworkAccess(ServerPublicNetworkAccessState publicNetworkAccess)"
-  summary: "Set the public<wbr>Network<wbr>Access property: public network access is enabled or not."
+  summary: "Set the public<wbr>Network<wbr>Access property: Indicates if public network access is enabled or not."
   parameters:
   - description: "the publicNetworkAccess value to set."
     name: "publicNetworkAccess"
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.ServerPublicNetworkAccessState?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.ServerPublicNetworkAccessState&text=ServerPublicNetworkAccessState\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public Network withPublicNetworkAccess(ServerPublicNetworkAccessState publicNetworkAccess)"
-  desc: "Set the publicNetworkAccess property: public network access is enabled or not."
+  desc: "Set the publicNetworkAccess property: Indicates if public network access is enabled or not. This is only supported for servers that are not integrated into a virtual network which is owned and provided by customer when server is deployed."
   returns:
     description: "the Network object itself."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.Network?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.Network&text=Network\" data-throw-if-not-resolved=\"False\" />"
@@ -146,4 +146,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.Network?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.Network&text=Network\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.postgresqlflexibleserver.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-postgresqlflexibleserver:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-postgresqlflexibleserver:2.0.0

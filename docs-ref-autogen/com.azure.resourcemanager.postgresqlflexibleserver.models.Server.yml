@@ -10,11 +10,11 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.administratorLogin()"
   name: "administratorLogin()"
   nameWithType: "Server.administratorLogin()"
-  summary: "Gets the administrator<wbr>Login property: The administrator's login name of a server."
+  summary: "Gets the administrator<wbr>Login property: Name of the login designated as the first password based administrator assigned to your instance of PostgreSQL."
   modifiers:
   - "abstract"
   syntax: "public abstract String administratorLogin()"
-  desc: "Gets the administratorLogin property: The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation)."
+  desc: "Gets the administratorLogin property: Name of the login designated as the first password based administrator assigned to your instance of PostgreSQL. Must be specified the first time that you enable password based authentication on a server. Once set to a given value, it cannot be changed for the rest of the life of a server. If you disable password based authentication on a server which had it enabled, this password based role isn't deleted."
   returns:
     description: "the administratorLogin value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -22,11 +22,11 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.administratorLoginPassword()"
   name: "administratorLoginPassword()"
   nameWithType: "Server.administratorLoginPassword()"
-  summary: "Gets the administrator<wbr>Login<wbr>Password property: The administrator login password (required for server creation)."
+  summary: "Gets the administrator<wbr>Login<wbr>Password property: Password assigned to the administrator login."
   modifiers:
   - "abstract"
   syntax: "public abstract String administratorLoginPassword()"
-  desc: "Gets the administratorLoginPassword property: The administrator login password (required for server creation)."
+  desc: "Gets the administratorLoginPassword property: Password assigned to the administrator login. As long as password authentication is enabled, this password can be changed at any time."
   returns:
     description: "the administratorLoginPassword value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -34,11 +34,11 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.authConfig()"
   name: "authConfig()"
   nameWithType: "Server.authConfig()"
-  summary: "Gets the auth<wbr>Config property: Auth<wbr>Config properties of a server."
+  summary: "Gets the auth<wbr>Config property: Authentication configuration properties of a server."
   modifiers:
   - "abstract"
   syntax: "public abstract AuthConfig authConfig()"
-  desc: "Gets the authConfig property: AuthConfig properties of a server."
+  desc: "Gets the authConfig property: Authentication configuration properties of a server."
   returns:
     description: "the authConfig value."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.AuthConfig?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.AuthConfig&text=AuthConfig\" data-throw-if-not-resolved=\"False\" />"
@@ -46,11 +46,11 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.availabilityZone()"
   name: "availabilityZone()"
   nameWithType: "Server.availabilityZone()"
-  summary: "Gets the availability<wbr>Zone property: availability zone information of the server."
+  summary: "Gets the availability<wbr>Zone property: Availability zone of a server."
   modifiers:
   - "abstract"
   syntax: "public abstract String availabilityZone()"
-  desc: "Gets the availabilityZone property: availability zone information of the server."
+  desc: "Gets the availabilityZone property: Availability zone of a server."
   returns:
     description: "the availabilityZone value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -66,15 +66,27 @@ methods:
   returns:
     description: "the backup value."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.Backup?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.Backup&text=Backup\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.cluster()"
+  fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.cluster()"
+  name: "cluster()"
+  nameWithType: "Server.cluster()"
+  summary: "Gets the cluster property: Cluster properties of a server."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Cluster cluster()"
+  desc: "Gets the cluster property: Cluster properties of a server."
+  returns:
+    description: "the cluster value."
+    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.Cluster?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.Cluster&text=Cluster\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.createMode()"
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.createMode()"
   name: "createMode()"
   nameWithType: "Server.createMode()"
-  summary: "Gets the create<wbr>Mode property: The mode to create a new PostgreSQL server."
+  summary: "Gets the create<wbr>Mode property: Creation mode of a new server."
   modifiers:
   - "abstract"
   syntax: "public abstract CreateMode createMode()"
-  desc: "Gets the createMode property: The mode to create a new PostgreSQL server."
+  desc: "Gets the createMode property: Creation mode of a new server."
   returns:
     description: "the createMode value."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.CreateMode?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.CreateMode&text=CreateMode\" data-throw-if-not-resolved=\"False\" />"
@@ -94,11 +106,11 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.fullyQualifiedDomainName()"
   name: "fullyQualifiedDomainName()"
   nameWithType: "Server.fullyQualifiedDomainName()"
-  summary: "Gets the fully<wbr>Qualified<wbr>Domain<wbr>Name property: The fully qualified domain name of a server."
+  summary: "Gets the fully<wbr>Qualified<wbr>Domain<wbr>Name property: Fully qualified domain name of a server."
   modifiers:
   - "abstract"
   syntax: "public abstract String fullyQualifiedDomainName()"
-  desc: "Gets the fullyQualifiedDomainName property: The fully qualified domain name of a server."
+  desc: "Gets the fullyQualifiedDomainName property: Fully qualified domain name of a server."
   returns:
     description: "the fullyQualifiedDomainName value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -130,11 +142,11 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.identity()"
   name: "identity()"
   nameWithType: "Server.identity()"
-  summary: "Gets the identity property: Describes the identity of the application."
+  summary: "Gets the identity property: User assigned managed identities assigned to the server."
   modifiers:
   - "abstract"
   syntax: "public abstract UserAssignedIdentity identity()"
-  desc: "Gets the identity property: Describes the identity of the application."
+  desc: "Gets the identity property: User assigned managed identities assigned to the server."
   returns:
     description: "the identity value."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIdentity?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIdentity&text=UserAssignedIdentity\" data-throw-if-not-resolved=\"False\" />"
@@ -178,11 +190,11 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.minorVersion()"
   name: "minorVersion()"
   nameWithType: "Server.minorVersion()"
-  summary: "Gets the minor<wbr>Version property: The minor version of the server."
+  summary: "Gets the minor<wbr>Version property: Minor version of PostgreSQL database engine."
   modifiers:
   - "abstract"
   syntax: "public abstract String minorVersion()"
-  desc: "Gets the minorVersion property: The minor version of the server."
+  desc: "Gets the minorVersion property: Minor version of PostgreSQL database engine."
   returns:
     description: "the minorVersion value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -206,7 +218,7 @@ methods:
   modifiers:
   - "abstract"
   syntax: "public abstract Network network()"
-  desc: "Gets the network property: Network properties of a server. This Network property is required to be passed only in case you want the server to be Private access server."
+  desc: "Gets the network property: Network properties of a server. Only required if you want your server to be integrated into a virtual network provided by customer."
   returns:
     description: "the network value."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.Network?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.Network&text=Network\" data-throw-if-not-resolved=\"False\" />"
@@ -214,11 +226,11 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.pointInTimeUtc()"
   name: "pointInTimeUtc()"
   nameWithType: "Server.pointInTimeUtc()"
-  summary: "Gets the point<wbr>InTime<wbr>Utc property: Restore point creation time (ISO8601 format), specifying the time to restore from."
+  summary: "Gets the point<wbr>InTime<wbr>Utc property: Creation time (in ISO8601 format) of the backup which you want to restore in the new server."
   modifiers:
   - "abstract"
   syntax: "public abstract OffsetDateTime pointInTimeUtc()"
-  desc: "Gets the pointInTimeUtc property: Restore point creation time (ISO8601 format), specifying the time to restore from. It's required when 'createMode' is 'PointInTimeRestore' or 'GeoRestore' or 'ReviveDropped'."
+  desc: "Gets the pointInTimeUtc property: Creation time (in ISO8601 format) of the backup which you want to restore in the new server. It's required when 'createMode' is 'PointInTimeRestore', 'GeoRestore', or 'ReviveDropped'."
   returns:
     description: "the pointInTimeUtc value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
@@ -226,11 +238,11 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.privateEndpointConnections()"
   name: "privateEndpointConnections()"
   nameWithType: "Server.privateEndpointConnections()"
-  summary: "Gets the private<wbr>Endpoint<wbr>Connections property: List of private endpoint connections associated with the specified resource."
+  summary: "Gets the private<wbr>Endpoint<wbr>Connections property: List of private endpoint connections associated with the specified server."
   modifiers:
   - "abstract"
   syntax: "public abstract List<PrivateEndpointConnection> privateEndpointConnections()"
-  desc: "Gets the privateEndpointConnections property: List of private endpoint connections associated with the specified resource."
+  desc: "Gets the privateEndpointConnections property: List of private endpoint connections associated with the specified server."
   returns:
     description: "the privateEndpointConnections value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.PrivateEndpointConnection?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.PrivateEndpointConnection&text=PrivateEndpointConnection\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -290,11 +302,11 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.replica()"
   name: "replica()"
   nameWithType: "Server.replica()"
-  summary: "Gets the replica property: Replica properties of a server."
+  summary: "Gets the replica property: Read replica properties of a server."
   modifiers:
   - "abstract"
   syntax: "public abstract Replica replica()"
-  desc: "Gets the replica property: Replica properties of a server. These Replica properties are required to be passed only in case you want to Promote a server."
+  desc: "Gets the replica property: Read replica properties of a server. Required only in case that you want to promote a server."
   returns:
     description: "the replica value."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.Replica?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.Replica&text=Replica\" data-throw-if-not-resolved=\"False\" />"
@@ -302,11 +314,11 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.replicaCapacity()"
   name: "replicaCapacity()"
   nameWithType: "Server.replicaCapacity()"
-  summary: "Gets the replica<wbr>Capacity property: Replicas allowed for a server."
+  summary: "Gets the replica<wbr>Capacity property: Maximum number of read replicas allowed for a server."
   modifiers:
   - "abstract"
   syntax: "public abstract Integer replicaCapacity()"
-  desc: "Gets the replicaCapacity property: Replicas allowed for a server."
+  desc: "Gets the replicaCapacity property: Maximum number of read replicas allowed for a server."
   returns:
     description: "the replicaCapacity value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
@@ -314,11 +326,11 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.replicationRole()"
   name: "replicationRole()"
   nameWithType: "Server.replicationRole()"
-  summary: "Gets the replication<wbr>Role property: Replication role of the server."
+  summary: "Gets the replication<wbr>Role property: Role of the server in a replication set."
   modifiers:
   - "abstract"
   syntax: "public abstract ReplicationRole replicationRole()"
-  desc: "Gets the replicationRole property: Replication role of the server."
+  desc: "Gets the replicationRole property: Role of the server in a replication set."
   returns:
     description: "the replicationRole value."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.ReplicationRole?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.ReplicationRole&text=ReplicationRole\" data-throw-if-not-resolved=\"False\" />"
@@ -338,36 +350,36 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.restart()"
   name: "restart()"
   nameWithType: "Server.restart()"
-  summary: "Restarts a server."
+  summary: "Restarts PostgreSQL database engine in a server."
   modifiers:
   - "abstract"
   syntax: "public abstract void restart()"
-  desc: "Restarts a server."
+  desc: "Restarts PostgreSQL database engine in a server."
 - uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.restart(com.azure.resourcemanager.postgresqlflexibleserver.models.RestartParameter,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.restart(RestartParameter parameters, Context context)"
   name: "restart(RestartParameter parameters, Context context)"
   nameWithType: "Server.restart(RestartParameter parameters, Context context)"
-  summary: "Restarts a server."
+  summary: "Restarts PostgreSQL database engine in a server."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The parameters for restarting a server."
+  - description: "Parameters to restart a server."
     name: "parameters"
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.RestartParameter?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.RestartParameter&text=RestartParameter\" data-throw-if-not-resolved=\"False\" />"
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract void restart(RestartParameter parameters, Context context)"
-  desc: "Restarts a server."
+  desc: "Restarts PostgreSQL database engine in a server."
 - uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.sku()"
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.sku()"
   name: "sku()"
   nameWithType: "Server.sku()"
-  summary: "Gets the sku property: The SKU (pricing tier) of the server."
+  summary: "Gets the sku property: Compute tier and size of a server."
   modifiers:
   - "abstract"
   syntax: "public abstract Sku sku()"
-  desc: "Gets the sku property: The SKU (pricing tier) of the server."
+  desc: "Gets the sku property: Compute tier and size of a server."
   returns:
     description: "the sku value."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.Sku?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.Sku&text=Sku\" data-throw-if-not-resolved=\"False\" />"
@@ -375,11 +387,11 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.sourceServerResourceId()"
   name: "sourceServerResourceId()"
   nameWithType: "Server.sourceServerResourceId()"
-  summary: "Gets the source<wbr>Server<wbr>Resource<wbr>Id property: The source server resource ID to restore from."
+  summary: "Gets the source<wbr>Server<wbr>Resource<wbr>Id property: Identifier of the server to be used as the source of the new server."
   modifiers:
   - "abstract"
   syntax: "public abstract String sourceServerResourceId()"
-  desc: "Gets the sourceServerResourceId property: The source server resource ID to restore from. It's required when 'createMode' is 'PointInTimeRestore' or 'GeoRestore' or 'Replica' or 'ReviveDropped'. This property is returned only for Replica server."
+  desc: "Gets the sourceServerResourceId property: Identifier of the server to be used as the source of the new server. Required when 'createMode' is 'PointInTimeRestore', 'GeoRestore', 'Replica', or 'ReviveDropped'. This property is returned only when the target server is a read replica."
   returns:
     description: "the sourceServerResourceId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -387,16 +399,16 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.start()"
   name: "start()"
   nameWithType: "Server.start()"
-  summary: "Starts a server."
+  summary: "Starts a stopped server."
   modifiers:
   - "abstract"
   syntax: "public abstract void start()"
-  desc: "Starts a server."
+  desc: "Starts a stopped server."
 - uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.start(com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.start(Context context)"
   name: "start(Context context)"
   nameWithType: "Server.start(Context context)"
-  summary: "Starts a server."
+  summary: "Starts a stopped server."
   modifiers:
   - "abstract"
   parameters:
@@ -404,16 +416,16 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract void start(Context context)"
-  desc: "Starts a server."
+  desc: "Starts a stopped server."
 - uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.state()"
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.state()"
   name: "state()"
   nameWithType: "Server.state()"
-  summary: "Gets the state property: A state of a server that is visible to user."
+  summary: "Gets the state property: Possible states of a server."
   modifiers:
   - "abstract"
   syntax: "public abstract ServerState state()"
-  desc: "Gets the state property: A state of a server that is visible to user."
+  desc: "Gets the state property: Possible states of a server."
   returns:
     description: "the state value."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.ServerState?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.ServerState&text=ServerState\" data-throw-if-not-resolved=\"False\" />"
@@ -503,16 +515,16 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.version()"
   name: "version()"
   nameWithType: "Server.version()"
-  summary: "Gets the version property: PostgreSQL Server version."
+  summary: "Gets the version property: Major version of PostgreSQL database engine."
   modifiers:
   - "abstract"
-  syntax: "public abstract ServerVersion version()"
-  desc: "Gets the version property: PostgreSQL Server version."
+  syntax: "public abstract PostgresMajorVersion version()"
+  desc: "Gets the version property: Major version of PostgreSQL database engine."
   returns:
     description: "the version value."
-    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.ServerVersion?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.ServerVersion&text=ServerVersion\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.PostgresMajorVersion?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.PostgresMajorVersion&text=PostgresMajorVersion\" data-throw-if-not-resolved=\"False\" />"
 type: "interface"
 desc: "An immutable client-side representation of Server."
 metadata: {}
 package: "com.azure.resourcemanager.postgresqlflexibleserver.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-postgresqlflexibleserver:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-postgresqlflexibleserver:2.0.0

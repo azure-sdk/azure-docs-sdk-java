@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.RestartParameter
 fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.RestartParameter"
 name: "RestartParameter"
 nameWithType: "RestartParameter"
-summary: "Represents server restart parameters."
+summary: "PostgreSQL database engine restart parameters."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -63,9 +63,9 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.RestartParameter.restartWithFailover()"
   name: "restartWithFailover()"
   nameWithType: "RestartParameter.restartWithFailover()"
-  summary: "Get the restart<wbr>With<wbr>Failover property: Indicates whether to restart the server with failover."
+  summary: "Get the restart<wbr>With<wbr>Failover property: Indicates if restart the PostgreSQL database engine should failover or switch over from primary to standby."
   syntax: "public Boolean restartWithFailover()"
-  desc: "Get the restartWithFailover property: Indicates whether to restart the server with failover."
+  desc: "Get the restartWithFailover property: Indicates if restart the PostgreSQL database engine should failover or switch over from primary to standby. This only works if server has high availability enabled."
   returns:
     description: "the restartWithFailover value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
@@ -106,20 +106,20 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.RestartParameter.withRestartWithFailover(Boolean restartWithFailover)"
   name: "withRestartWithFailover(Boolean restartWithFailover)"
   nameWithType: "RestartParameter.withRestartWithFailover(Boolean restartWithFailover)"
-  summary: "Set the restart<wbr>With<wbr>Failover property: Indicates whether to restart the server with failover."
+  summary: "Set the restart<wbr>With<wbr>Failover property: Indicates if restart the PostgreSQL database engine should failover or switch over from primary to standby."
   parameters:
   - description: "the restartWithFailover value to set."
     name: "restartWithFailover"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
   syntax: "public RestartParameter withRestartWithFailover(Boolean restartWithFailover)"
-  desc: "Set the restartWithFailover property: Indicates whether to restart the server with failover."
+  desc: "Set the restartWithFailover property: Indicates if restart the PostgreSQL database engine should failover or switch over from primary to standby. This only works if server has high availability enabled."
   returns:
     description: "the RestartParameter object itself."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.RestartParameter?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.RestartParameter&text=RestartParameter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Represents server restart parameters."
+desc: "PostgreSQL database engine restart parameters."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.RestartParameter?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.RestartParameter&text=RestartParameter\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.postgresqlflexibleserver.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-postgresqlflexibleserver:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-postgresqlflexibleserver:2.0.0

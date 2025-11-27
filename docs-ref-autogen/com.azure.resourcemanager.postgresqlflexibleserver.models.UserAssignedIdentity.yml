@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIden
 fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIdentity"
 name: "UserAssignedIdentity"
 nameWithType: "UserAssignedIdentity"
-summary: "Information describing the identities associated with this application."
+summary: "Identities associated with a server."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -49,13 +49,23 @@ methods:
   returns:
     description: "An instance of UserAssignedIdentity if the JsonReader was pointing to an instance of it, or null if it\n was pointing to JSON null."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIdentity?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIdentity&text=UserAssignedIdentity\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIdentity.principalId()"
+  fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIdentity.principalId()"
+  name: "principalId()"
+  nameWithType: "UserAssignedIdentity.principalId()"
+  summary: "Get the principal<wbr>Id property: Identifier of the object of the service principal associated to the user assigned managed identity."
+  syntax: "public String principalId()"
+  desc: "Get the principalId property: Identifier of the object of the service principal associated to the user assigned managed identity."
+  returns:
+    description: "the principalId value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIdentity.tenantId()"
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIdentity.tenantId()"
   name: "tenantId()"
   nameWithType: "UserAssignedIdentity.tenantId()"
-  summary: "Get the tenant<wbr>Id property: Tenant id of the server."
+  summary: "Get the tenant<wbr>Id property: Identifier of the tenant of a server."
   syntax: "public String tenantId()"
-  desc: "Get the tenantId property: Tenant id of the server."
+  desc: "Get the tenantId property: Identifier of the tenant of a server."
   returns:
     description: "the tenantId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -75,9 +85,9 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIdentity.type()"
   name: "type()"
   nameWithType: "UserAssignedIdentity.type()"
-  summary: "Get the type property: the types of identities associated with this resource; currently restricted to 'None and User<wbr>Assigned'."
+  summary: "Get the type property: Types of identities associated with a server."
   syntax: "public IdentityType type()"
-  desc: "Get the type property: the types of identities associated with this resource; currently restricted to 'None and UserAssigned'."
+  desc: "Get the type property: Types of identities associated with a server."
   returns:
     description: "the type value."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.IdentityType?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.IdentityType&text=IdentityType\" data-throw-if-not-resolved=\"False\" />"
@@ -85,9 +95,9 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIdentity.userAssignedIdentities()"
   name: "userAssignedIdentities()"
   nameWithType: "UserAssignedIdentity.userAssignedIdentities()"
-  summary: "Get the user<wbr>Assigned<wbr>Identities property: represents user assigned identities map."
+  summary: "Get the user<wbr>Assigned<wbr>Identities property: Map of user assigned managed identities."
   syntax: "public Map<String,UserIdentity> userAssignedIdentities()"
-  desc: "Get the userAssignedIdentities property: represents user assigned identities map."
+  desc: "Get the userAssignedIdentities property: Map of user assigned managed identities."
   returns:
     description: "the userAssignedIdentities value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.UserIdentity?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.UserIdentity&text=UserIdentity\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -98,17 +108,31 @@ methods:
   summary: "Validates the instance."
   syntax: "public void validate()"
   desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIdentity.withPrincipalId(java.lang.String)"
+  fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIdentity.withPrincipalId(String principalId)"
+  name: "withPrincipalId(String principalId)"
+  nameWithType: "UserAssignedIdentity.withPrincipalId(String principalId)"
+  summary: "Set the principal<wbr>Id property: Identifier of the object of the service principal associated to the user assigned managed identity."
+  parameters:
+  - description: "the principalId value to set."
+    name: "principalId"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public UserAssignedIdentity withPrincipalId(String principalId)"
+  desc: "Set the principalId property: Identifier of the object of the service principal associated to the user assigned managed identity."
+  returns:
+    description: "the UserAssignedIdentity object itself."
+    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIdentity?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIdentity&text=UserAssignedIdentity\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIdentity.withType(com.azure.resourcemanager.postgresqlflexibleserver.models.IdentityType)"
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIdentity.withType(IdentityType type)"
   name: "withType(IdentityType type)"
   nameWithType: "UserAssignedIdentity.withType(IdentityType type)"
-  summary: "Set the type property: the types of identities associated with this resource; currently restricted to 'None and User<wbr>Assigned'."
+  summary: "Set the type property: Types of identities associated with a server."
   parameters:
   - description: "the type value to set."
     name: "type"
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.IdentityType?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.IdentityType&text=IdentityType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public UserAssignedIdentity withType(IdentityType type)"
-  desc: "Set the type property: the types of identities associated with this resource; currently restricted to 'None and UserAssigned'."
+  desc: "Set the type property: Types of identities associated with a server."
   returns:
     description: "the UserAssignedIdentity object itself."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIdentity?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIdentity&text=UserAssignedIdentity\" data-throw-if-not-resolved=\"False\" />"
@@ -116,20 +140,20 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIdentity.withUserAssignedIdentities(Map<String,UserIdentity> userAssignedIdentities)"
   name: "withUserAssignedIdentities(Map<String,UserIdentity> userAssignedIdentities)"
   nameWithType: "UserAssignedIdentity.withUserAssignedIdentities(Map<String,UserIdentity> userAssignedIdentities)"
-  summary: "Set the user<wbr>Assigned<wbr>Identities property: represents user assigned identities map."
+  summary: "Set the user<wbr>Assigned<wbr>Identities property: Map of user assigned managed identities."
   parameters:
   - description: "the userAssignedIdentities value to set."
     name: "userAssignedIdentities"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.UserIdentity?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.UserIdentity&text=UserIdentity\" data-throw-if-not-resolved=\"False\" />&gt;"
   syntax: "public UserAssignedIdentity withUserAssignedIdentities(Map<String,UserIdentity> userAssignedIdentities)"
-  desc: "Set the userAssignedIdentities property: represents user assigned identities map."
+  desc: "Set the userAssignedIdentities property: Map of user assigned managed identities."
   returns:
     description: "the UserAssignedIdentity object itself."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIdentity?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIdentity&text=UserAssignedIdentity\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Information describing the identities associated with this application."
+desc: "Identities associated with a server."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIdentity?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.UserAssignedIdentity&text=UserAssignedIdentity\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.postgresqlflexibleserver.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-postgresqlflexibleserver:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-postgresqlflexibleserver:2.0.0

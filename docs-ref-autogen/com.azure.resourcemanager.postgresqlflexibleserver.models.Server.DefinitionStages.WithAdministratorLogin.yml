@@ -10,15 +10,15 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.DefinitionStages.WithAdministratorLogin.withAdministratorLogin(String administratorLogin)"
   name: "withAdministratorLogin(String administratorLogin)"
   nameWithType: "Server.DefinitionStages.WithAdministratorLogin.withAdministratorLogin(String administratorLogin)"
-  summary: "Specifies the administrator<wbr>Login property: The administrator's login name of a server."
+  summary: "Specifies the administrator<wbr>Login property: Name of the login designated as the first password based administrator assigned to your instance of PostgreSQL."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The administrator's login name of a server. Can only be specified when the\n server is being created (and is required for creation)."
+  - description: "Name of the login designated as the first password based administrator assigned\n to your instance of PostgreSQL. Must be specified the first time that you enable password based\n authentication on a server. Once set to a given value, it cannot be changed for the rest of the life of a\n server. If you disable password based authentication on a server which had it enabled, this password\n based role isn't deleted."
     name: "administratorLogin"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract Server.DefinitionStages.WithCreate withAdministratorLogin(String administratorLogin)"
-  desc: "Specifies the administratorLogin property: The administrator's login name of a server. Can only be specified when the server is being created (and is required for creation).."
+  desc: "Specifies the administratorLogin property: Name of the login designated as the first password based administrator assigned to your instance of PostgreSQL. Must be specified the first time that you enable password based authentication on a server. Once set to a given value, it cannot be changed for the rest of the life of a server. If you disable password based authentication on a server which had it enabled, this password based role isn't deleted.."
   returns:
     description: "the next definition stage."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.Server.DefinitionStages.WithCreate?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.Server.DefinitionStages.WithCreate&text=WithCreate\" data-throw-if-not-resolved=\"False\" />"
@@ -26,4 +26,4 @@ type: "interface"
 desc: "The stage of the Server definition allowing to specify administratorLogin."
 metadata: {}
 package: "com.azure.resourcemanager.postgresqlflexibleserver.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-postgresqlflexibleserver:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-postgresqlflexibleserver:2.0.0

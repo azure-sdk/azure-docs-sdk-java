@@ -53,9 +53,9 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.HighAvailability.mode()"
   name: "mode()"
   nameWithType: "HighAvailability.mode()"
-  summary: "Get the mode property: The HA mode for the server."
+  summary: "Get the mode property: High availability mode for a server."
   syntax: "public HighAvailabilityMode mode()"
-  desc: "Get the mode property: The HA mode for the server."
+  desc: "Get the mode property: High availability mode for a server."
   returns:
     description: "the mode value."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.HighAvailabilityMode?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.HighAvailabilityMode&text=HighAvailabilityMode\" data-throw-if-not-resolved=\"False\" />"
@@ -63,9 +63,9 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.HighAvailability.standbyAvailabilityZone()"
   name: "standbyAvailabilityZone()"
   nameWithType: "HighAvailability.standbyAvailabilityZone()"
-  summary: "Get the standby<wbr>Availability<wbr>Zone property: availability zone information of the standby."
+  summary: "Get the standby<wbr>Availability<wbr>Zone property: Availability zone associated to the standby server created when high availability is set to Same<wbr>Zone or Zone<wbr>Redundant."
   syntax: "public String standbyAvailabilityZone()"
-  desc: "Get the standbyAvailabilityZone property: availability zone information of the standby."
+  desc: "Get the standbyAvailabilityZone property: Availability zone associated to the standby server created when high availability is set to SameZone or ZoneRedundant."
   returns:
     description: "the standbyAvailabilityZone value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -73,12 +73,12 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.HighAvailability.state()"
   name: "state()"
   nameWithType: "HighAvailability.state()"
-  summary: "Get the state property: A state of a HA server that is visible to user."
-  syntax: "public ServerHAState state()"
-  desc: "Get the state property: A state of a HA server that is visible to user."
+  summary: "Get the state property: Possible states of the standby server created when high availability is set to Same<wbr>Zone or Zone<wbr>Redundant."
+  syntax: "public HighAvailabilityState state()"
+  desc: "Get the state property: Possible states of the standby server created when high availability is set to SameZone or ZoneRedundant."
   returns:
     description: "the state value."
-    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.ServerHAState?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.ServerHAState&text=ServerHAState\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.HighAvailabilityState?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.HighAvailabilityState&text=HighAvailabilityState\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.HighAvailability.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.HighAvailability.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -102,13 +102,13 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.HighAvailability.withMode(HighAvailabilityMode mode)"
   name: "withMode(HighAvailabilityMode mode)"
   nameWithType: "HighAvailability.withMode(HighAvailabilityMode mode)"
-  summary: "Set the mode property: The HA mode for the server."
+  summary: "Set the mode property: High availability mode for a server."
   parameters:
   - description: "the mode value to set."
     name: "mode"
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.HighAvailabilityMode?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.HighAvailabilityMode&text=HighAvailabilityMode\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public HighAvailability withMode(HighAvailabilityMode mode)"
-  desc: "Set the mode property: The HA mode for the server."
+  desc: "Set the mode property: High availability mode for a server."
   returns:
     description: "the HighAvailability object itself."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.HighAvailability?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.HighAvailability&text=HighAvailability\" data-throw-if-not-resolved=\"False\" />"
@@ -116,13 +116,13 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.HighAvailability.withStandbyAvailabilityZone(String standbyAvailabilityZone)"
   name: "withStandbyAvailabilityZone(String standbyAvailabilityZone)"
   nameWithType: "HighAvailability.withStandbyAvailabilityZone(String standbyAvailabilityZone)"
-  summary: "Set the standby<wbr>Availability<wbr>Zone property: availability zone information of the standby."
+  summary: "Set the standby<wbr>Availability<wbr>Zone property: Availability zone associated to the standby server created when high availability is set to Same<wbr>Zone or Zone<wbr>Redundant."
   parameters:
   - description: "the standbyAvailabilityZone value to set."
     name: "standbyAvailabilityZone"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public HighAvailability withStandbyAvailabilityZone(String standbyAvailabilityZone)"
-  desc: "Set the standbyAvailabilityZone property: availability zone information of the standby."
+  desc: "Set the standbyAvailabilityZone property: Availability zone associated to the standby server created when high availability is set to SameZone or ZoneRedundant."
   returns:
     description: "the HighAvailability object itself."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.HighAvailability?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.HighAvailability&text=HighAvailability\" data-throw-if-not-resolved=\"False\" />"
@@ -132,4 +132,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.HighAvailability?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.HighAvailability&text=HighAvailability\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.postgresqlflexibleserver.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-postgresqlflexibleserver:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-postgresqlflexibleserver:2.0.0
