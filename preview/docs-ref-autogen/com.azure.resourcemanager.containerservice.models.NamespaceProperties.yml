@@ -56,7 +56,7 @@ methods:
   nameWithType: "NamespaceProperties.defaultNetworkPolicy()"
   summary: "Get the default<wbr>Network<wbr>Policy property: The default network policy enforced upon the namespace."
   syntax: "public NetworkPolicies defaultNetworkPolicy()"
-  desc: "Get the defaultNetworkPolicy property: The default network policy enforced upon the namespace. Customers can have other Kubernetes network policy objects under the namespace. All the network policies will be enforced."
+  desc: "Get the defaultNetworkPolicy property: The default network policy enforced upon the namespace. Customers can have other Kubernetes network policy objects under the namespace. Network policies are additive; if a policy or policies apply to a given pod for a given direction, the connections allowed in that direction for the pod is the union of what all applicable policies allow."
   returns:
     description: "the defaultNetworkPolicy value."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.NetworkPolicies?alt=com.azure.resourcemanager.containerservice.models.NetworkPolicies&text=NetworkPolicies\" data-throw-if-not-resolved=\"False\" />"
@@ -66,7 +66,7 @@ methods:
   nameWithType: "NamespaceProperties.defaultResourceQuota()"
   summary: "Get the default<wbr>Resource<wbr>Quota property: The default resource quota enforced upon the namespace."
   syntax: "public ResourceQuota defaultResourceQuota()"
-  desc: "Get the defaultResourceQuota property: The default resource quota enforced upon the namespace. Customers can have other Kubernetes resource quota objects under the namespace. All the resource quotas will be enforced."
+  desc: "Get the defaultResourceQuota property: The default resource quota enforced upon the namespace. Customers can have other Kubernetes resource quota objects under the namespace. Resource quotas are additive; if multiple resource quotas are applied to a given namespace, then the effective limit will be one such that all quotas on the namespace can be satisfied."
   returns:
     description: "the defaultResourceQuota value."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ResourceQuota?alt=com.azure.resourcemanager.containerservice.models.ResourceQuota&text=ResourceQuota\" data-throw-if-not-resolved=\"False\" />"
@@ -186,7 +186,7 @@ methods:
     name: "defaultNetworkPolicy"
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.NetworkPolicies?alt=com.azure.resourcemanager.containerservice.models.NetworkPolicies&text=NetworkPolicies\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public NamespaceProperties withDefaultNetworkPolicy(NetworkPolicies defaultNetworkPolicy)"
-  desc: "Set the defaultNetworkPolicy property: The default network policy enforced upon the namespace. Customers can have other Kubernetes network policy objects under the namespace. All the network policies will be enforced."
+  desc: "Set the defaultNetworkPolicy property: The default network policy enforced upon the namespace. Customers can have other Kubernetes network policy objects under the namespace. Network policies are additive; if a policy or policies apply to a given pod for a given direction, the connections allowed in that direction for the pod is the union of what all applicable policies allow."
   returns:
     description: "the NamespaceProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.NamespaceProperties?alt=com.azure.resourcemanager.containerservice.models.NamespaceProperties&text=NamespaceProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -200,7 +200,7 @@ methods:
     name: "defaultResourceQuota"
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ResourceQuota?alt=com.azure.resourcemanager.containerservice.models.ResourceQuota&text=ResourceQuota\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public NamespaceProperties withDefaultResourceQuota(ResourceQuota defaultResourceQuota)"
-  desc: "Set the defaultResourceQuota property: The default resource quota enforced upon the namespace. Customers can have other Kubernetes resource quota objects under the namespace. All the resource quotas will be enforced."
+  desc: "Set the defaultResourceQuota property: The default resource quota enforced upon the namespace. Customers can have other Kubernetes resource quota objects under the namespace. Resource quotas are additive; if multiple resource quotas are applied to a given namespace, then the effective limit will be one such that all quotas on the namespace can be satisfied."
   returns:
     description: "the NamespaceProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.NamespaceProperties?alt=com.azure.resourcemanager.containerservice.models.NamespaceProperties&text=NamespaceProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -238,4 +238,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservice.models.NamespaceProperties?alt=com.azure.resourcemanager.containerservice.models.NamespaceProperties&text=NamespaceProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.56.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.57.0-beta.1
