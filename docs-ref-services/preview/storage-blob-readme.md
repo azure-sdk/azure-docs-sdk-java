@@ -1,12 +1,12 @@
 ---
 title: Azure Storage Blob client library for Java
 keywords: Azure, java, SDK, API, azure-storage-blob, storage
-ms.date: 07/09/2025
+ms.date: 12/03/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: storage
 ---
-# Azure Storage Blob client library for Java - version 12.32.0-beta.1 
+# Azure Storage Blob client library for Java - version 12.33.0-beta.1 
 
 
 Azure Blob Storage is Microsoft's object storage solution for the cloud. Blob
@@ -30,7 +30,7 @@ definition, such as text or binary data.
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on GA version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.32.0-beta.1/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.33.0-beta.1/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -65,7 +65,7 @@ add the direct dependency to your project as follows.
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-storage-blob</artifactId>
-    <version>12.32.0-beta.1</version>
+    <version>12.33.0-beta.1</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -260,7 +260,7 @@ BlobClient blobClient = blobContainerClient.getBlobClient("myblob");
 
 or
 
-Create a `BlobClient` from the builder [`sasToken`](#get-credentials) generated above.
+Create a `BlobClient` within a directory structure using `BlobContainerClient`. 
 
 ```java readme-sample-getBlobClient2
 BlobClient blobClient = new BlobClientBuilder()
@@ -273,8 +273,27 @@ BlobClient blobClient = new BlobClientBuilder()
 
 or
 
+Create a `BlobClient` from the builder [`sasToken`](#get-credentials) generated above.
+
 ```java readme-sample-getBlobClient3
-// Only one "?" is needed here. If the SAS token starts with "?", please removing one "?".
+BlobClient blobClient = blobContainerClient.getBlobClient("directory/myblob");
+```
+
+or
+
+```java readme-sample-getBlobClient4
+BlobClient blobClient = new BlobClientBuilder()
+    .endpoint("<your-storage-account-url>")
+    .sasToken("<your-sasToken>")
+    .containerName("mycontainer")
+    .blobName("directory/myblob")
+    .buildClient();
+```
+
+or
+
+```java readme-sample-getBlobClient5
+// Only one "?" is needed here. If the SAS token starts with "?", please remove one "?".
 BlobClient blobClient = new BlobClientBuilder()
     .endpoint("<your-storage-account-url>" + "/" + "mycontainer" + "/" + "myblob" + "?" + "<your-sasToken>")
     .buildClient();
@@ -617,8 +636,8 @@ When you submit a pull request, a CLA-bot will automatically determine whether y
 This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For more information see the [Code of Conduct FAQ][coc_faq] or contact [opencode@microsoft.com][coc_contact] with any additional questions or comments.
 
 <!-- LINKS -->
-[source]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.32.0-beta.1/sdk/storage/azure-storage-blob/src
-[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.32.0-beta.1/sdk/storage/azure-storage-blob/src/samples/README.md
+[source]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.33.0-beta.1/sdk/storage/azure-storage-blob/src
+[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.33.0-beta.1/sdk/storage/azure-storage-blob/src/samples/README.md
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [rest_docs]: https://learn.microsoft.com/rest/api/storageservices/blob-service-rest-api
 [product_docs]: https://learn.microsoft.com/azure/storage/blobs/storage-blobs-overview
@@ -628,9 +647,9 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [storage_account]: https://learn.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal
 [storage_account_create_cli]: https://learn.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=azure-cli
 [storage_account_create_portal]: https://learn.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal
-[identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.32.0-beta.1/sdk/identity/azure-identity/README.md
+[identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.33.0-beta.1/sdk/identity/azure-identity/README.md
 [error_codes]: https://learn.microsoft.com/rest/api/storageservices/blob-service-error-codes
-[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.32.0-beta.1/sdk/storage/azure-storage-blob/src/samples
+[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-storage-blob_12.33.0-beta.1/sdk/storage/azure-storage-blob/src/samples
 [cla]: https://cla.microsoft.com
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/

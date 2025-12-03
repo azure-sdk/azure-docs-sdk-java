@@ -1,6 +1,6 @@
 {
   "Name": "azure-storage-blob",
-  "Version": "12.32.0-beta.1",
+  "Version": "12.33.0-beta.1",
   "DevVersion": null,
   "DirectoryPath": "sdk/storage/azure-storage-blob",
   "ServiceDirectory": "storage",
@@ -10,32 +10,33 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-storage-blob",
-  "ReleaseStatus": "2025-07-09",
+  "ReleaseStatus": "2025-12-03",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": [
     "com.azure:azure-storage-perf",
     "com.azure:perf-test-core"
   ],
   "ArtifactDetails": {
-    "safeName": "azurestorageblob",
-    "groupId": "com.azure",
-    "releaseInBatch": "${{ parameters.release_azurestorageblob }}",
+    "name": "azure-storage-blob",
     "triggeringPaths": [
       "/sdk/storage/ci.yml"
     ],
-    "name": "azure-storage-blob"
+    "safeName": "azurestorageblob",
+    "releaseInBatch": "${{ parameters.release_azurestorageblob }}",
+    "groupId": "com.azure"
   },
   "CIParameters": {
     "CIMatrixConfigs": [
       {
-        "Selection": "sparse",
-        "Name": "Storage_ci",
         "NonSparseParameters": "Agent",
-        "GenerateVMJobs": true,
-        "Path": "sdk/storage/platform-matrix-ci.json"
+        "Path": "sdk/storage/platform-matrix-ci.json",
+        "Name": "Storage_ci",
+        "Selection": "sparse",
+        "GenerateVMJobs": true
       }
     ]
   },
+  "SpecProjectPath": null,
   "Namespaces": [
     "com.azure.storage.blob",
     "com.azure.storage.blob.models",
