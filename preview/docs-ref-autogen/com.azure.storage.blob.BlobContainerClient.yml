@@ -444,7 +444,7 @@ methods:
   nameWithType: "BlobContainerClient.getBlobClient(String blobName)"
   summary: "Initializes a new Blob<wbr>Client object by concatenating blob<wbr>Name to the end of Container<wbr>Async<wbr>Client's URL."
   parameters:
-  - description: "A <code>String</code> representing the name of the blob. If the blob name contains special characters,\n  pass in the url encoded version of the blob name.\n\n <p><strong>Code Samples</strong></p>\n\n <!-- src_embed com.azure.storage.blob.BlobContainerClient.getBlobClient#String -->\n <pre>\n BlobClient blobClient = client.getBlobClient&#40;blobName&#41;;\n </pre>\n <!-- end com.azure.storage.blob.BlobContainerClient.getBlobClient#String -->"
+  - description: "A <code>String</code> representing the name of the blob. This should not be encoded.\n <p><strong>Code Samples</strong></p>\n\n <!-- src_embed com.azure.storage.blob.BlobContainerClient.getBlobClient#String -->\n <pre>\n BlobClient blobClient = client.getBlobClient&#40;blobName&#41;;\n </pre>\n <!-- end com.azure.storage.blob.BlobContainerClient.getBlobClient#String -->"
     name: "blobName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public BlobClient getBlobClient(String blobName)"
@@ -458,7 +458,7 @@ methods:
   nameWithType: "BlobContainerClient.getBlobClient(String blobName, String snapshot)"
   summary: "Initializes a new Blob<wbr>Client object by concatenating blob<wbr>Name to the end of Container<wbr>Async<wbr>Client's URL."
   parameters:
-  - description: "A <code>String</code> representing the name of the blob. If the blob name contains special characters,\n pass in the url encoded version of the blob name."
+  - description: "A <code>String</code> representing the name of the blob. This should not be encoded."
     name: "blobName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "the snapshot identifier for the blob."
@@ -495,7 +495,7 @@ methods:
   nameWithType: "BlobContainerClient.getBlobVersionClient(String blobName, String versionId)"
   summary: "Initializes a new Blob<wbr>Client object by concatenating blob<wbr>Name to the end of Container<wbr>Async<wbr>Client's URL."
   parameters:
-  - description: "A <code>String</code> representing the name of the blob. If the blob name contains special characters,\n pass in the url encoded version of the blob name."
+  - description: "A <code>String</code> representing the name of the blob. This should not be encoded."
     name: "blobName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "the version identifier for the blob, pass <code>null</code> to interact with the latest blob version."
@@ -745,4 +745,4 @@ type: "class"
 desc: "Client to a container. It may only be instantiated through a <xref uid=\"com.azure.storage.blob.BlobContainerClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobContainerClientBuilder\"></xref> or via the method <xref uid=\"com.azure.storage.blob.BlobServiceClient.getBlobContainerClient(java.lang.String)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobServiceClient#getBlobContainerClient(String)\"></xref>. This class does not hold any state about a particular container but is instead a convenient way of sending off appropriate requests to the resource on the service. It may also be used to construct URLs to blobs.\n\nThis client contains operations on a container. Operations on a blob are available on <xref uid=\"com.azure.storage.blob.BlobClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobClient\"></xref> through <xref uid=\"com.azure.storage.blob.BlobContainerClient.getBlobClient(java.lang.String)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#getBlobClient(String)\"></xref>, and operations on the service are available on <xref uid=\"com.azure.storage.blob.BlobServiceClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobServiceClient\"></xref>.\n\nPlease refer to the [Azure Docs][] for more information on containers.\n\n\n[Azure Docs]: https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction"
 metadata: {}
 package: "com.azure.storage.blob"
-artifact: com.azure:azure-storage-blob:12.32.0-beta.1
+artifact: com.azure:azure-storage-blob:12.33.0-beta.1

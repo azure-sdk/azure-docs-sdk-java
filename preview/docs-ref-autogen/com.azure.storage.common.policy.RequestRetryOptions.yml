@@ -44,10 +44,10 @@ constructors:
   - description: "Optional. Specified the maximum time allowed before a request is cancelled and\n assumed failed, default is <xref uid=\"java.lang.Integer.MAX_VALUE\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Integer#MAX_VALUE\"></xref> s.\n\n <p>This value should be based on the bandwidth available to the host machine and proximity to the Storage\n service, a good starting point may be 60 seconds per MB of anticipated payload size.</p>"
     name: "tryTimeoutInSeconds"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
-  - description: "Optional. Specifies the amount of delay to use before retrying an operation, default value\n is <code>4ms</code> when <code>retryPolicyType</code> is <xref uid=\"com.azure.storage.common.policy.RetryPolicyType.EXPONENTIAL\" data-throw-if-not-resolved=\"false\" data-raw-source=\"EXPONENTIAL\"></xref> and <code>30ms</code>\n when <code>retryPolicyType</code> is <xref uid=\"com.azure.storage.common.policy.RetryPolicyType.FIXED\" data-throw-if-not-resolved=\"false\" data-raw-source=\"FIXED\"></xref>."
+  - description: "Optional. Specifies the amount of delay to use before retrying an operation, default value\n is <code>4_000ms</code> when <code>retryPolicyType</code> is <xref uid=\"com.azure.storage.common.policy.RetryPolicyType.EXPONENTIAL\" data-throw-if-not-resolved=\"false\" data-raw-source=\"EXPONENTIAL\"></xref> and <code>\n 30_000ms</code> when <code>retryPolicyType</code> is <xref uid=\"com.azure.storage.common.policy.RetryPolicyType.FIXED\" data-throw-if-not-resolved=\"false\" data-raw-source=\"FIXED\"></xref>."
     name: "retryDelayInMs"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
-  - description: "Optional. Specifies the maximum delay allowed before retrying an operation, default\n value is <code>120ms</code>."
+  - description: "Optional. Specifies the maximum delay allowed before retrying an operation, default\n value is <code>120_000ms</code>."
     name: "maxRetryDelayInMs"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
   - description: "Optional. Specified a secondary Storage account to retry requests against, default is none.\n\n <p>Before setting this understand the issues around reading stale and potentially-inconsistent data, view these\n <a href=https://docs.microsoft.com/azure/storage/common/storage-designing-ha-apps-with-ragrs>Azure Docs</a>\n for more information.</p>"
@@ -86,7 +86,7 @@ methods:
   fullName: "com.azure.storage.common.policy.RequestRetryOptions.fromRetryOptions(RetryOptions retryOptions, Duration tryTimeout, String secondaryHost)"
   name: "fromRetryOptions(RetryOptions retryOptions, Duration tryTimeout, String secondaryHost)"
   nameWithType: "RequestRetryOptions.fromRetryOptions(RetryOptions retryOptions, Duration tryTimeout, String secondaryHost)"
-  summary: "Creates new <xref uid=\"com.azure.storage.common.policy.RequestRetryOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RequestRetryOptions\"></xref> from <xref uid=\"com.azure.core.http.policy.RetryOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RetryOptions\"></xref> and let specify storage specific parameters."
+  summary: "Creates new <xref uid=\"com.azure.storage.common.policy.RequestRetryOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RequestRetryOptions\"></xref> from <xref uid=\"com.azure.core.http.policy.RetryOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RetryOptions\"></xref> and let the user specify storage specific parameters."
   modifiers:
   - "static"
   parameters:
@@ -100,7 +100,7 @@ methods:
     name: "secondaryHost"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public static RequestRetryOptions fromRetryOptions(RetryOptions retryOptions, Duration tryTimeout, String secondaryHost)"
-  desc: "Creates new <xref uid=\"com.azure.storage.common.policy.RequestRetryOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RequestRetryOptions\"></xref> from <xref uid=\"com.azure.core.http.policy.RetryOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RetryOptions\"></xref> and let specify storage specific parameters."
+  desc: "Creates new <xref uid=\"com.azure.storage.common.policy.RequestRetryOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RequestRetryOptions\"></xref> from <xref uid=\"com.azure.core.http.policy.RetryOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RetryOptions\"></xref> and let the user specify storage specific parameters."
   returns:
     description: "The <xref uid=\"com.azure.storage.common.policy.RequestRetryOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RequestRetryOptions\"></xref>"
     type: "<xref href=\"com.azure.storage.common.policy.RequestRetryOptions?alt=com.azure.storage.common.policy.RequestRetryOptions&text=RequestRetryOptions\" data-throw-if-not-resolved=\"False\" />"
@@ -194,4 +194,4 @@ type: "class"
 desc: "Configuration options for <xref uid=\"com.azure.storage.common.policy.RequestRetryPolicy\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RequestRetryPolicy\"></xref>."
 metadata: {}
 package: "com.azure.storage.common.policy"
-artifact: com.azure:azure-storage-common:12.31.0-beta.1
+artifact: com.azure:azure-storage-common:12.32.0-beta.1

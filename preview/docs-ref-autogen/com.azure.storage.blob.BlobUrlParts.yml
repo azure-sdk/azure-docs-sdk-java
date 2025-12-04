@@ -44,19 +44,19 @@ methods:
   fullName: "com.azure.storage.blob.BlobUrlParts.getBlobContainerName()"
   name: "getBlobContainerName()"
   nameWithType: "BlobUrlParts.getBlobContainerName()"
-  summary: "Gets the container name that will be used as part of the URL path."
+  summary: "Gets the decoded container name that will be used as part of the URL path."
   syntax: "public String getBlobContainerName()"
-  desc: "Gets the container name that will be used as part of the URL path."
+  desc: "Gets the decoded container name that will be used as part of the URL path.\n\nNote: This value may differ from the original value provided to <xref uid=\"com.azure.storage.blob.BlobUrlParts.setContainerName(java.lang.String)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#setContainerName(String)\"></xref> because the setter and getter do not guarantee round-trip consistency. This behavior is intentional to normalize names that may or may not be URL encoded."
   returns:
-    description: "the container name."
+    description: "the decoded container name."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.storage.blob.BlobUrlParts.getBlobName()"
   fullName: "com.azure.storage.blob.BlobUrlParts.getBlobName()"
   name: "getBlobName()"
   nameWithType: "BlobUrlParts.getBlobName()"
-  summary: "Decodes and gets the blob name that will be used as part of the URL path."
+  summary: "Gets the decoded blob name that will be used as part of the URL path."
   syntax: "public String getBlobName()"
-  desc: "Decodes and gets the blob name that will be used as part of the URL path."
+  desc: "Gets the decoded blob name that will be used as part of the URL path.\n\nNote: This value may differ from the original value provided to <xref uid=\"com.azure.storage.blob.BlobUrlParts.setBlobName(java.lang.String)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#setBlobName(String)\"></xref> because the setter and getter do not guarantee round-trip consistency. This behavior is intentional to normalize names that may or may not be URL encoded."
   returns:
     description: "the decoded blob name."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -198,11 +198,11 @@ methods:
   nameWithType: "BlobUrlParts.setBlobName(String blobName)"
   summary: "Sets the blob name that will be used as part of the URL path."
   parameters:
-  - description: "The blob name. If the blob name contains special characters, pass in the url encoded version\n of the blob name."
+  - description: "The blob name. If the blob name contains special characters, it should be URL encoded."
     name: "blobName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public BlobUrlParts setBlobName(String blobName)"
-  desc: "Sets the blob name that will be used as part of the URL path."
+  desc: "Sets the blob name that will be used as part of the URL path.\n\nNote: The setter and getter do not guarantee round-trip consistency. This is because blob names with special characters may need URL encoding, and this method normalizes the input by decoding and then encoding it. If the blob name contains special characters, it is recommended to URL encode it."
   returns:
     description: "the updated BlobUrlParts object."
     type: "<xref href=\"com.azure.storage.blob.BlobUrlParts?alt=com.azure.storage.blob.BlobUrlParts&text=BlobUrlParts\" data-throw-if-not-resolved=\"False\" />"
@@ -226,11 +226,11 @@ methods:
   nameWithType: "BlobUrlParts.setContainerName(String containerName)"
   summary: "Sets the container name that will be used as part of the URL path."
   parameters:
-  - description: "The container nme."
+  - description: "The container name. If the container name contains special characters, it should be URL encoded."
     name: "containerName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public BlobUrlParts setContainerName(String containerName)"
-  desc: "Sets the container name that will be used as part of the URL path."
+  desc: "Sets the container name that will be used as part of the URL path.\n\nNote: The setter and getter do not guarantee round-trip consistency. This is because container names with special characters may need URL encoding, and this method normalizes the input by decoding and then encoding it. If the container name contains special characters, it is recommended to URL encode it."
   returns:
     description: "the updated BlobUrlParts object."
     type: "<xref href=\"com.azure.storage.blob.BlobUrlParts?alt=com.azure.storage.blob.BlobUrlParts&text=BlobUrlParts\" data-throw-if-not-resolved=\"False\" />"
@@ -334,4 +334,4 @@ type: "class"
 desc: "This class represents the components that make up an Azure Storage Container/Blob URL. You may parse an existing URL into its parts with the <xref uid=\"com.azure.storage.blob.BlobUrlParts.parse(java.net.URL)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#parse(URL)\"></xref> class. You may construct a URL from parts by calling <xref uid=\"com.azure.storage.blob.BlobUrlParts.toUrl()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#toUrl()\"></xref>."
 metadata: {}
 package: "com.azure.storage.blob"
-artifact: com.azure:azure-storage-blob:12.32.0-beta.1
+artifact: com.azure:azure-storage-blob:12.33.0-beta.1

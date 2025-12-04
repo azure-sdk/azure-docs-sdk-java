@@ -60,6 +60,16 @@ methods:
   returns:
     description: "the prefix that a blob must match to be returned in the listing"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.storage.blob.models.ListBlobsOptions.getStartFrom()"
+  fullName: "com.azure.storage.blob.models.ListBlobsOptions.getStartFrom()"
+  name: "getStartFrom()"
+  nameWithType: "ListBlobsOptions.getStartFrom()"
+  summary: "Gets an optional parameter that specifies an absolute path within the container."
+  syntax: "public String getStartFrom()"
+  desc: "Gets an optional parameter that specifies an absolute path within the container. This parameter is similar to the prefix filter: it allows listing blobs starting from the specified path, rather than from the beginning of the container. For non-recursive lists, only one entity level is supported."
+  returns:
+    description: "the marker indicating where to start listing blobs"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.storage.blob.models.ListBlobsOptions.setDetails(com.azure.storage.blob.models.BlobListDetails)"
   fullName: "com.azure.storage.blob.models.ListBlobsOptions.setDetails(BlobListDetails details)"
   name: "setDetails(BlobListDetails details)"
@@ -102,8 +112,22 @@ methods:
   returns:
     description: "the updated ListBlobsOptions object"
     type: "<xref href=\"com.azure.storage.blob.models.ListBlobsOptions?alt=com.azure.storage.blob.models.ListBlobsOptions&text=ListBlobsOptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.blob.models.ListBlobsOptions.setStartFrom(java.lang.String)"
+  fullName: "com.azure.storage.blob.models.ListBlobsOptions.setStartFrom(String startFrom)"
+  name: "setStartFrom(String startFrom)"
+  nameWithType: "ListBlobsOptions.setStartFrom(String startFrom)"
+  summary: "Sets an optional parameter that specifies an absolute path within the container."
+  parameters:
+  - description: "The marker indicating where to start listing blobs"
+    name: "startFrom"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public ListBlobsOptions setStartFrom(String startFrom)"
+  desc: "Sets an optional parameter that specifies an absolute path within the container. This parameter is similar to the prefix filter: it allows listing blobs starting from the specified path, rather than from the beginning of the container. For non-recursive lists, only one entity level is supported."
+  returns:
+    description: "the updated ListBlobsOptions object"
+    type: "<xref href=\"com.azure.storage.blob.models.ListBlobsOptions?alt=com.azure.storage.blob.models.ListBlobsOptions&text=ListBlobsOptions\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Defines options available to configure the behavior of a call to listBlobsFlatSegment on a <xref uid=\"com.azure.storage.blob.BlobContainerClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobContainerClient\"></xref> object. See the constructor for details on each of the options."
 metadata: {}
 package: "com.azure.storage.blob.models"
-artifact: com.azure:azure-storage-blob:12.32.0-beta.1
+artifact: com.azure:azure-storage-blob:12.33.0-beta.1

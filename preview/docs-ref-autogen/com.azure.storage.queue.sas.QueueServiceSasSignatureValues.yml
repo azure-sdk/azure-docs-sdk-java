@@ -73,6 +73,16 @@ methods:
   returns:
     description: "A new <xref uid=\"com.azure.storage.queue.sas.QueueServiceSasQueryParameters\" data-throw-if-not-resolved=\"false\" data-raw-source=\"QueueServiceSasQueryParameters\"></xref> represented by the current builder."
     type: "<xref href=\"com.azure.storage.queue.sas.QueueServiceSasQueryParameters?alt=com.azure.storage.queue.sas.QueueServiceSasQueryParameters&text=QueueServiceSasQueryParameters\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.queue.sas.QueueServiceSasSignatureValues.getDelegatedUserObjectId()"
+  fullName: "com.azure.storage.queue.sas.QueueServiceSasSignatureValues.getDelegatedUserObjectId()"
+  name: "getDelegatedUserObjectId()"
+  nameWithType: "QueueServiceSasSignatureValues.getDelegatedUserObjectId()"
+  summary: "Optional."
+  syntax: "public String getDelegatedUserObjectId()"
+  desc: "Optional. Beginning in version 2025-07-05, this value specifies the Entra ID of the user that is authorized to use the resulting SAS URL. The resulting SAS URL must be used in conjunction with an Entra ID token that has been issued to the user specified in this value."
+  returns:
+    description: "The Entra ID of the user that is authorized to use the resulting SAS URL."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.storage.queue.sas.QueueServiceSasSignatureValues.getExpiryTime()"
   fullName: "com.azure.storage.queue.sas.QueueServiceSasSignatureValues.getExpiryTime()"
   name: "getExpiryTime()"
@@ -93,7 +103,7 @@ methods:
   desc: "Gets the name of the access policy on the queue this SAS references if any."
   hasDeprecatedTag: true
   returns:
-    description: "the name of the access policy on the queue this SAS references if any. Please see\n <a href=\"https://docs.microsoft.com/en-us/rest/api/storageservices/establishing-a-stored-access-policy\">here</a>\n for more information."
+    description: "the name of the access policy on the queue this SAS references if any. Please see\n <a href=\"https://docs.microsoft.com/rest/api/storageservices/establishing-a-stored-access-policy\">here</a>\n for more information."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.storage.queue.sas.QueueServiceSasSignatureValues.getIdentifier()"
   fullName: "com.azure.storage.queue.sas.QueueServiceSasSignatureValues.getIdentifier()"
@@ -103,7 +113,7 @@ methods:
   syntax: "public String getIdentifier()"
   desc: "Sets the name of the access policy on the queue this SAS references if any."
   returns:
-    description: "the name of the access policy on the queue this SAS references if any. Please see\n <a href=\"https://docs.microsoft.com/en-us/rest/api/storageservices/establishing-a-stored-access-policy\">here</a>\n for more information."
+    description: "the name of the access policy on the queue this SAS references if any. Please see\n <a href=\"https://docs.microsoft.com/rest/api/storageservices/establishing-a-stored-access-policy\">here</a>\n for more information."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.storage.queue.sas.QueueServiceSasSignatureValues.getPermissions()"
   fullName: "com.azure.storage.queue.sas.QueueServiceSasSignatureValues.getPermissions()"
@@ -130,7 +140,7 @@ methods:
   name: "getQueueName()"
   nameWithType: "QueueServiceSasSignatureValues.getQueueName()"
   summary: "Gets the name of the queue this SAS may access."
-  deprecatedTag: "Queue name is now auto-populated by the SAS generation methods provided on the desired queue client."
+  deprecatedTag: "Queue name is now autopopulated by the SAS generation methods provided on the desired queue client."
   syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public String getQueueName()"
   desc: "Gets the name of the queue this SAS may access."
   hasDeprecatedTag: true
@@ -167,6 +177,20 @@ methods:
   returns:
     description: "the version of the service this SAS will target. If not specified, it will default to the version\n targeted by the library."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.storage.queue.sas.QueueServiceSasSignatureValues.setDelegatedUserObjectId(java.lang.String)"
+  fullName: "com.azure.storage.queue.sas.QueueServiceSasSignatureValues.setDelegatedUserObjectId(String delegatedUserObjectId)"
+  name: "setDelegatedUserObjectId(String delegatedUserObjectId)"
+  nameWithType: "QueueServiceSasSignatureValues.setDelegatedUserObjectId(String delegatedUserObjectId)"
+  summary: "Optional."
+  parameters:
+  - description: "The Entra ID of the user that is authorized to use the resulting SAS URL."
+    name: "delegatedUserObjectId"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public QueueServiceSasSignatureValues setDelegatedUserObjectId(String delegatedUserObjectId)"
+  desc: "Optional. Beginning in version 2025-07-05, this value specifies the Entra ID of the user that is authorized to use the resulting SAS URL. The resulting SAS URL must be used in conjunction with an Entra ID token that has been issued to the user specified in this value."
+  returns:
+    description: "the updated QueueServiceSasSignatureValues object"
+    type: "<xref href=\"com.azure.storage.queue.sas.QueueServiceSasSignatureValues?alt=com.azure.storage.queue.sas.QueueServiceSasSignatureValues&text=QueueServiceSasSignatureValues\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.queue.sas.QueueServiceSasSignatureValues.setExpiryTime(java.time.OffsetDateTime)"
   fullName: "com.azure.storage.queue.sas.QueueServiceSasSignatureValues.setExpiryTime(OffsetDateTime expiryTime)"
   name: "setExpiryTime(OffsetDateTime expiryTime)"
@@ -191,7 +215,7 @@ methods:
     name: "identifier"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public QueueServiceSasSignatureValues setIdentifier(String identifier)"
-  desc: "Sets the name of the access policy on the queue this SAS references if any. Please see [here][] for more information.\n\n\n[here]: https://docs.microsoft.com/en-us/rest/api/storageservices/establishing-a-stored-access-policy"
+  desc: "Sets the name of the access policy on the queue this SAS references if any. Please see [here][] for more information.\n\n\n[here]: https://docs.microsoft.com/rest/api/storageservices/establishing-a-stored-access-policy"
   returns:
     description: "the updated QueueServiceSasSignatureValues object"
     type: "<xref href=\"com.azure.storage.queue.sas.QueueServiceSasSignatureValues?alt=com.azure.storage.queue.sas.QueueServiceSasSignatureValues&text=QueueServiceSasSignatureValues\" data-throw-if-not-resolved=\"False\" />"
@@ -228,7 +252,7 @@ methods:
   name: "setQueueName(String queueName)"
   nameWithType: "QueueServiceSasSignatureValues.setQueueName(String queueName)"
   summary: "Sets the name of the queue this SAS may access."
-  deprecatedTag: "Please use the generate<wbr>Sas methods provided on the desired queue client that will auto-populate the queue name."
+  deprecatedTag: "Please use the generate<wbr>Sas methods provided on the desired queue client that will autopopulate the queue name."
   parameters:
   - description: "Canonical name of the object the SAS grants access"
     name: "queueName"
@@ -287,4 +311,4 @@ type: "class"
 desc: "Used to initialize parameters for a Shared Access Signature (SAS) for an Azure Queue Storage service. Once all the values here are set, use the appropriate SAS generation method on the desired queue client to obtain a representation of the SAS which can then be applied to a new client using the .sasToken(String) method on the desired client builder."
 metadata: {}
 package: "com.azure.storage.queue.sas"
-artifact: com.azure:azure-storage-queue:12.27.0-beta.1
+artifact: com.azure:azure-storage-queue:12.28.0-beta.1
