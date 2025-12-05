@@ -10,7 +10,7 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.fluent.NetAppResourceQuotaLimitsAccountsClient.get(String resourceGroupName, String accountName, String quotaLimitName)"
   name: "get(String resourceGroupName, String accountName, String quotaLimitName)"
   nameWithType: "NetAppResourceQuotaLimitsAccountsClient.get(String resourceGroupName, String accountName, String quotaLimitName)"
-  summary: "Gets the quota limits for the specific quota that is provided under the account."
+  summary: "Get the default, current and usages account quota limit."
   modifiers:
   - "abstract"
   parameters:
@@ -23,16 +23,16 @@ methods:
   - description: "The name of the Quota Limit."
     name: "quotaLimitName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract QuotaItemInner get(String resourceGroupName, String accountName, String quotaLimitName)"
-  desc: "Gets the quota limits for the specific quota that is provided under the account. Get the default, current and usages account quota limit."
+  syntax: "public abstract SubscriptionQuotaItemInner get(String resourceGroupName, String accountName, String quotaLimitName)"
+  desc: "Get the default, current and usages account quota limit."
   returns:
     description: "the default, current and usages account quota limit."
-    type: "<xref href=\"com.azure.resourcemanager.netapp.fluent.models.QuotaItemInner?alt=com.azure.resourcemanager.netapp.fluent.models.QuotaItemInner&text=QuotaItemInner\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.resourcemanager.netapp.fluent.models.SubscriptionQuotaItemInner?alt=com.azure.resourcemanager.netapp.fluent.models.SubscriptionQuotaItemInner&text=SubscriptionQuotaItemInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.netapp.fluent.NetAppResourceQuotaLimitsAccountsClient.getWithResponse(java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.netapp.fluent.NetAppResourceQuotaLimitsAccountsClient.getWithResponse(String resourceGroupName, String accountName, String quotaLimitName, Context context)"
   name: "getWithResponse(String resourceGroupName, String accountName, String quotaLimitName, Context context)"
   nameWithType: "NetAppResourceQuotaLimitsAccountsClient.getWithResponse(String resourceGroupName, String accountName, String quotaLimitName, Context context)"
-  summary: "Gets the quota limits for the specific quota that is provided under the account."
+  summary: "Get the default, current and usages account quota limit."
   modifiers:
   - "abstract"
   parameters:
@@ -48,11 +48,11 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract Response<QuotaItemInner> getWithResponse(String resourceGroupName, String accountName, String quotaLimitName, Context context)"
-  desc: "Gets the quota limits for the specific quota that is provided under the account. Get the default, current and usages account quota limit."
+  syntax: "public abstract Response<SubscriptionQuotaItemInner> getWithResponse(String resourceGroupName, String accountName, String quotaLimitName, Context context)"
+  desc: "Get the default, current and usages account quota limit."
   returns:
     description: "the default, current and usages account quota limit along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
-    type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.netapp.fluent.models.QuotaItemInner?alt=com.azure.resourcemanager.netapp.fluent.models.QuotaItemInner&text=QuotaItemInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.netapp.fluent.models.SubscriptionQuotaItemInner?alt=com.azure.resourcemanager.netapp.fluent.models.SubscriptionQuotaItemInner&text=SubscriptionQuotaItemInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.netapp.fluent.NetAppResourceQuotaLimitsAccountsClient.list(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.netapp.fluent.NetAppResourceQuotaLimitsAccountsClient.list(String resourceGroupName, String accountName)"
   name: "list(String resourceGroupName, String accountName)"
@@ -67,11 +67,11 @@ methods:
   - description: "The name of the NetApp account."
     name: "accountName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract PagedIterable<QuotaItemInner> list(String resourceGroupName, String accountName)"
-  desc: "Gets a list of quota limits for all quotas that are under account. Gets a list of quota limits for all quotas that are under account. Currently PoolsPerAccount is the only one."
+  syntax: "public abstract PagedIterable<SubscriptionQuotaItemInner> list(String resourceGroupName, String accountName)"
+  desc: "Gets a list of quota limits for all quotas that are under account. Currently PoolsPerAccount is the only one."
   returns:
     description: "a list of quota limits for all quotas that are under account as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
-    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.netapp.fluent.models.QuotaItemInner?alt=com.azure.resourcemanager.netapp.fluent.models.QuotaItemInner&text=QuotaItemInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.netapp.fluent.models.SubscriptionQuotaItemInner?alt=com.azure.resourcemanager.netapp.fluent.models.SubscriptionQuotaItemInner&text=SubscriptionQuotaItemInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.netapp.fluent.NetAppResourceQuotaLimitsAccountsClient.list(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.netapp.fluent.NetAppResourceQuotaLimitsAccountsClient.list(String resourceGroupName, String accountName, Context context)"
   name: "list(String resourceGroupName, String accountName, Context context)"
@@ -89,13 +89,13 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract PagedIterable<QuotaItemInner> list(String resourceGroupName, String accountName, Context context)"
-  desc: "Gets a list of quota limits for all quotas that are under account. Gets a list of quota limits for all quotas that are under account. Currently PoolsPerAccount is the only one."
+  syntax: "public abstract PagedIterable<SubscriptionQuotaItemInner> list(String resourceGroupName, String accountName, Context context)"
+  desc: "Gets a list of quota limits for all quotas that are under account. Currently PoolsPerAccount is the only one."
   returns:
     description: "a list of quota limits for all quotas that are under account as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
-    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.netapp.fluent.models.QuotaItemInner?alt=com.azure.resourcemanager.netapp.fluent.models.QuotaItemInner&text=QuotaItemInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.netapp.fluent.models.SubscriptionQuotaItemInner?alt=com.azure.resourcemanager.netapp.fluent.models.SubscriptionQuotaItemInner&text=SubscriptionQuotaItemInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 type: "interface"
 desc: "An instance of this class provides access to all the operations defined in NetAppResourceQuotaLimitsAccountsClient."
 metadata: {}
 package: "com.azure.resourcemanager.netapp.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:1.10.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:2.1.0-beta.1

@@ -95,6 +95,16 @@ methods:
   returns:
     description: "the baremetalTenantId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.netapp.fluent.models.VolumeInner.breakthroughMode()"
+  fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeInner.breakthroughMode()"
+  name: "breakthroughMode()"
+  nameWithType: "VolumeInner.breakthroughMode()"
+  summary: "Get the breakthrough<wbr>Mode property: Specifies whether the volume operates in Breakthrough Mode."
+  syntax: "public BreakthroughMode breakthroughMode()"
+  desc: "Get the breakthroughMode property: Specifies whether the volume operates in Breakthrough Mode."
+  returns:
+    description: "the breakthroughMode value."
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.BreakthroughMode?alt=com.azure.resourcemanager.netapp.models.BreakthroughMode&text=BreakthroughMode\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.netapp.fluent.models.VolumeInner.capacityPoolResourceId()"
   fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeInner.capacityPoolResourceId()"
   name: "capacityPoolResourceId()"
@@ -259,9 +269,9 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeInner.etag()"
   name: "etag()"
   nameWithType: "VolumeInner.etag()"
-  summary: "Get the etag property: A unique read-only string that changes whenever the resource is updated."
+  summary: "Get the etag property: \"If etag is provided in the response body, it may also be provided as a header per the normal etag convention."
   syntax: "public String etag()"
-  desc: "Get the etag property: A unique read-only string that changes whenever the resource is updated."
+  desc: "Get the etag property: \"If etag is provided in the response body, it may also be provided as a header per the normal etag convention. Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.\")."
   returns:
     description: "the etag value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -395,6 +405,16 @@ methods:
   returns:
     description: "the language value."
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.VolumeLanguage?alt=com.azure.resourcemanager.netapp.models.VolumeLanguage&text=VolumeLanguage\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.netapp.fluent.models.VolumeInner.largeVolumeType()"
+  fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeInner.largeVolumeType()"
+  name: "largeVolumeType()"
+  nameWithType: "VolumeInner.largeVolumeType()"
+  summary: "Get the large<wbr>Volume<wbr>Type property: Specifies the type of the Large Volume."
+  syntax: "public LargeVolumeType largeVolumeType()"
+  desc: "Get the largeVolumeType property: Specifies the type of the Large Volume. When set to 'LargeVolume', the large volume is created with standard configuration. If it is set to 'ExtraLargeVolume7Dot2PiB', the extra large volume is created with higher capacity limit 7.2PiB with cool access enabled, delivering higher capacity limit with lower costs."
+  returns:
+    description: "the largeVolumeType value."
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.LargeVolumeType?alt=com.azure.resourcemanager.netapp.models.LargeVolumeType&text=LargeVolumeType\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.netapp.fluent.models.VolumeInner.ldapEnabled()"
   fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeInner.ldapEnabled()"
   name: "ldapEnabled()"
@@ -434,7 +454,7 @@ methods:
   desc: "Get the mountTargets property: List of mount targets."
   returns:
     description: "the mountTargets value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.netapp.fluent.models.MountTargetProperties?alt=com.azure.resourcemanager.netapp.fluent.models.MountTargetProperties&text=MountTargetProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.netapp.models.MountTargetProperties?alt=com.azure.resourcemanager.netapp.models.MountTargetProperties&text=MountTargetProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.netapp.fluent.models.VolumeInner.name()"
   fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeInner.name()"
   name: "name()"
@@ -686,7 +706,7 @@ methods:
   nameWithType: "VolumeInner.unixPermissions()"
   summary: "Get the unix<wbr>Permissions property: UNIX permissions for NFS volume accepted in octal 4 digit format."
   syntax: "public String unixPermissions()"
-  desc: "Get the unixPermissions property: UNIX permissions for NFS volume accepted in octal 4 digit format. First digit selects the set user ID(4), set group ID (2) and sticky (1) attributes. Second digit selects permission for the owner of the file: read (4), write (2) and execute (1). Third selects permissions for other users in the same group. the fourth for other users not in the group. 0755 - gives read/write/execute permissions to owner and read/execute to group and other users. Avoid passing null value for unixPermissions in volume update operation, As per the behavior, If Null value is passed then user-visible unixPermissions value will became null, and user will not be able to get unixPermissions value. On safer side, actual unixPermissions value on volume will remain as its last saved value only."
+  desc: "Get the unixPermissions property: UNIX permissions for NFS volume accepted in octal 4 digit format. First digit selects the set user ID(4), set group ID (2) and sticky (1) attributes. Second digit selects permission for the owner of the file: read (4), write (2) and execute (1). Third selects permissions for other users in the same group. the fourth for other users not in the group. 0755 - gives read/write/execute permissions to owner and read/execute to group and other users."
   returns:
     description: "the unixPermissions value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -696,7 +716,7 @@ methods:
   nameWithType: "VolumeInner.usageThreshold()"
   summary: "Get the usage<wbr>Threshold property: Maximum storage quota allowed for a file system in bytes."
   syntax: "public long usageThreshold()"
-  desc: "Get the usageThreshold property: Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. For regular volumes, valid values are in the range 50GiB to 100TiB. For large volumes, valid values are in the range 100TiB to 500TiB, and on an exceptional basis, from to 2400GiB to 2400TiB. Values expressed in bytes as multiples of 1 GiB."
+  desc: "Get the usageThreshold property: Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. For regular volumes, valid values are in the range 50GiB to 100TiB. For large volumes, valid values are in the range 100TiB to 500TiB, and on an exceptional basis, from to 2400GiB to 2400TiB. For extra large volumes, valid values are in the range 2400GiB to 7200TiB. Values expressed in bytes as multiples of 1 GiB."
   returns:
     description: "the usageThreshold value."
     type: "<xref href=\"long?alt=long&text=long\" data-throw-if-not-resolved=\"False\" />"
@@ -776,6 +796,20 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public VolumeInner withBackupId(String backupId)"
   desc: "Set the backupId property: Resource identifier used to identify the Backup."
+  returns:
+    description: "the VolumeInner object itself."
+    type: "<xref href=\"com.azure.resourcemanager.netapp.fluent.models.VolumeInner?alt=com.azure.resourcemanager.netapp.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.netapp.fluent.models.VolumeInner.withBreakthroughMode(com.azure.resourcemanager.netapp.models.BreakthroughMode)"
+  fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeInner.withBreakthroughMode(BreakthroughMode breakthroughMode)"
+  name: "withBreakthroughMode(BreakthroughMode breakthroughMode)"
+  nameWithType: "VolumeInner.withBreakthroughMode(BreakthroughMode breakthroughMode)"
+  summary: "Set the breakthrough<wbr>Mode property: Specifies whether the volume operates in Breakthrough Mode."
+  parameters:
+  - description: "the breakthroughMode value to set."
+    name: "breakthroughMode"
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.BreakthroughMode?alt=com.azure.resourcemanager.netapp.models.BreakthroughMode&text=BreakthroughMode\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public VolumeInner withBreakthroughMode(BreakthroughMode breakthroughMode)"
+  desc: "Set the breakthroughMode property: Specifies whether the volume operates in Breakthrough Mode."
   returns:
     description: "the VolumeInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.netapp.fluent.models.VolumeInner?alt=com.azure.resourcemanager.netapp.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />"
@@ -1028,6 +1062,20 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.VolumeLanguage?alt=com.azure.resourcemanager.netapp.models.VolumeLanguage&text=VolumeLanguage\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public VolumeInner withLanguage(VolumeLanguage language)"
   desc: "Set the language property: Language supported for volume."
+  returns:
+    description: "the VolumeInner object itself."
+    type: "<xref href=\"com.azure.resourcemanager.netapp.fluent.models.VolumeInner?alt=com.azure.resourcemanager.netapp.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.netapp.fluent.models.VolumeInner.withLargeVolumeType(com.azure.resourcemanager.netapp.models.LargeVolumeType)"
+  fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeInner.withLargeVolumeType(LargeVolumeType largeVolumeType)"
+  name: "withLargeVolumeType(LargeVolumeType largeVolumeType)"
+  nameWithType: "VolumeInner.withLargeVolumeType(LargeVolumeType largeVolumeType)"
+  summary: "Set the large<wbr>Volume<wbr>Type property: Specifies the type of the Large Volume."
+  parameters:
+  - description: "the largeVolumeType value to set."
+    name: "largeVolumeType"
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.LargeVolumeType?alt=com.azure.resourcemanager.netapp.models.LargeVolumeType&text=LargeVolumeType\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public VolumeInner withLargeVolumeType(LargeVolumeType largeVolumeType)"
+  desc: "Set the largeVolumeType property: Specifies the type of the Large Volume. When set to 'LargeVolume', the large volume is created with standard configuration. If it is set to 'ExtraLargeVolume7Dot2PiB', the extra large volume is created with higher capacity limit 7.2PiB with cool access enabled, delivering higher capacity limit with lower costs."
   returns:
     description: "the VolumeInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.netapp.fluent.models.VolumeInner?alt=com.azure.resourcemanager.netapp.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />"
@@ -1287,7 +1335,7 @@ methods:
     name: "unixPermissions"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public VolumeInner withUnixPermissions(String unixPermissions)"
-  desc: "Set the unixPermissions property: UNIX permissions for NFS volume accepted in octal 4 digit format. First digit selects the set user ID(4), set group ID (2) and sticky (1) attributes. Second digit selects permission for the owner of the file: read (4), write (2) and execute (1). Third selects permissions for other users in the same group. the fourth for other users not in the group. 0755 - gives read/write/execute permissions to owner and read/execute to group and other users. Avoid passing null value for unixPermissions in volume update operation, As per the behavior, If Null value is passed then user-visible unixPermissions value will became null, and user will not be able to get unixPermissions value. On safer side, actual unixPermissions value on volume will remain as its last saved value only."
+  desc: "Set the unixPermissions property: UNIX permissions for NFS volume accepted in octal 4 digit format. First digit selects the set user ID(4), set group ID (2) and sticky (1) attributes. Second digit selects permission for the owner of the file: read (4), write (2) and execute (1). Third selects permissions for other users in the same group. the fourth for other users not in the group. 0755 - gives read/write/execute permissions to owner and read/execute to group and other users."
   returns:
     description: "the VolumeInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.netapp.fluent.models.VolumeInner?alt=com.azure.resourcemanager.netapp.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />"
@@ -1301,7 +1349,7 @@ methods:
     name: "usageThreshold"
     type: "<xref href=\"long?alt=long&text=long\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public VolumeInner withUsageThreshold(long usageThreshold)"
-  desc: "Set the usageThreshold property: Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. For regular volumes, valid values are in the range 50GiB to 100TiB. For large volumes, valid values are in the range 100TiB to 500TiB, and on an exceptional basis, from to 2400GiB to 2400TiB. Values expressed in bytes as multiples of 1 GiB."
+  desc: "Set the usageThreshold property: Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. For regular volumes, valid values are in the range 50GiB to 100TiB. For large volumes, valid values are in the range 100TiB to 500TiB, and on an exceptional basis, from to 2400GiB to 2400TiB. For extra large volumes, valid values are in the range 2400GiB to 7200TiB. Values expressed in bytes as multiples of 1 GiB."
   returns:
     description: "the VolumeInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.netapp.fluent.models.VolumeInner?alt=com.azure.resourcemanager.netapp.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />"
@@ -1337,13 +1385,13 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeInner.withZones(List<String> zones)"
   name: "withZones(List<String> zones)"
   nameWithType: "VolumeInner.withZones(List<String> zones)"
-  summary: "Set the zones property: Availability Zone."
+  summary: "Set the zones property: The availability zones."
   parameters:
   - description: "the zones value to set."
     name: "zones"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
   syntax: "public VolumeInner withZones(List<String> zones)"
-  desc: "Set the zones property: Availability Zone."
+  desc: "Set the zones property: The availability zones."
   returns:
     description: "the VolumeInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.netapp.fluent.models.VolumeInner?alt=com.azure.resourcemanager.netapp.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />"
@@ -1351,9 +1399,9 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeInner.zones()"
   name: "zones()"
   nameWithType: "VolumeInner.zones()"
-  summary: "Get the zones property: Availability Zone."
+  summary: "Get the zones property: The availability zones."
   syntax: "public List<String> zones()"
-  desc: "Get the zones property: Availability Zone."
+  desc: "Get the zones property: The availability zones."
   returns:
     description: "the zones value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
@@ -1361,4 +1409,4 @@ type: "class"
 desc: "Volume resource."
 metadata: {}
 package: "com.azure.resourcemanager.netapp.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:1.10.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:2.1.0-beta.1

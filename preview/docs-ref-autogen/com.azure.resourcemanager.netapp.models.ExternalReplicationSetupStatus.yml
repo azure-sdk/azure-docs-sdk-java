@@ -42,62 +42,62 @@ fields:
   fullName: "com.azure.resourcemanager.netapp.models.ExternalReplicationSetupStatus.CLUSTER_PEER_PENDING"
   name: "CLUSTER_PEER_PENDING"
   nameWithType: "ExternalReplicationSetupStatus.CLUSTER_PEER_PENDING"
-  summary: "Static value Cluster<wbr>Peer<wbr>Pending for External<wbr>Replication<wbr>Setup<wbr>Status."
+  summary: "The peering needs to be accepted on your cluster before the setup can proceed."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.ExternalReplicationSetupStatus?alt=com.azure.resourcemanager.netapp.models.ExternalReplicationSetupStatus&text=ExternalReplicationSetupStatus\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final ExternalReplicationSetupStatus CLUSTER_PEER_PENDING"
-  desc: "Static value ClusterPeerPending for ExternalReplicationSetupStatus."
+  desc: "The peering needs to be accepted on your cluster before the setup can proceed."
 - uid: "com.azure.resourcemanager.netapp.models.ExternalReplicationSetupStatus.CLUSTER_PEER_REQUIRED"
   fullName: "com.azure.resourcemanager.netapp.models.ExternalReplicationSetupStatus.CLUSTER_PEER_REQUIRED"
   name: "CLUSTER_PEER_REQUIRED"
   nameWithType: "ExternalReplicationSetupStatus.CLUSTER_PEER_REQUIRED"
-  summary: "Static value Cluster<wbr>Peer<wbr>Required for External<wbr>Replication<wbr>Setup<wbr>Status."
+  summary: "Your cluster needs to be peered by using the 'peer<wbr>External<wbr>Cluster' action."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.ExternalReplicationSetupStatus?alt=com.azure.resourcemanager.netapp.models.ExternalReplicationSetupStatus&text=ExternalReplicationSetupStatus\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final ExternalReplicationSetupStatus CLUSTER_PEER_REQUIRED"
-  desc: "Static value ClusterPeerRequired for ExternalReplicationSetupStatus."
+  desc: "Your cluster needs to be peered by using the 'peerExternalCluster' action."
 - uid: "com.azure.resourcemanager.netapp.models.ExternalReplicationSetupStatus.NO_ACTION_REQUIRED"
   fullName: "com.azure.resourcemanager.netapp.models.ExternalReplicationSetupStatus.NO_ACTION_REQUIRED"
   name: "NO_ACTION_REQUIRED"
   nameWithType: "ExternalReplicationSetupStatus.NO_ACTION_REQUIRED"
-  summary: "Static value No<wbr>Action<wbr>Required for External<wbr>Replication<wbr>Setup<wbr>Status."
+  summary: "External Replication setup is complete, you can now monitor the 'mirror<wbr>State' in the replication status for the health of the replication."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.ExternalReplicationSetupStatus?alt=com.azure.resourcemanager.netapp.models.ExternalReplicationSetupStatus&text=ExternalReplicationSetupStatus\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final ExternalReplicationSetupStatus NO_ACTION_REQUIRED"
-  desc: "Static value NoActionRequired for ExternalReplicationSetupStatus."
+  desc: "External Replication setup is complete, you can now monitor the 'mirrorState' in the replication status for the health of the replication."
 - uid: "com.azure.resourcemanager.netapp.models.ExternalReplicationSetupStatus.REPLICATION_CREATE_REQUIRED"
   fullName: "com.azure.resourcemanager.netapp.models.ExternalReplicationSetupStatus.REPLICATION_CREATE_REQUIRED"
   name: "REPLICATION_CREATE_REQUIRED"
   nameWithType: "ExternalReplicationSetupStatus.REPLICATION_CREATE_REQUIRED"
-  summary: "Static value Replication<wbr>Create<wbr>Required for External<wbr>Replication<wbr>Setup<wbr>Status."
+  summary: "Need to call 'authorize<wbr>External<wbr>Replication' to finish setting up the external replication."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.ExternalReplicationSetupStatus?alt=com.azure.resourcemanager.netapp.models.ExternalReplicationSetupStatus&text=ExternalReplicationSetupStatus\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final ExternalReplicationSetupStatus REPLICATION_CREATE_REQUIRED"
-  desc: "Static value ReplicationCreateRequired for ExternalReplicationSetupStatus."
+  desc: "Need to call 'authorizeExternalReplication' to finish setting up the external replication."
 - uid: "com.azure.resourcemanager.netapp.models.ExternalReplicationSetupStatus.VSERVER_PEER_REQUIRED"
   fullName: "com.azure.resourcemanager.netapp.models.ExternalReplicationSetupStatus.VSERVER_PEER_REQUIRED"
   name: "VSERVER_PEER_REQUIRED"
   nameWithType: "ExternalReplicationSetupStatus.VSERVER_PEER_REQUIRED"
-  summary: "Static value VServer<wbr>Peer<wbr>Required for External<wbr>Replication<wbr>Setup<wbr>Status."
+  summary: "Need to call 'authorize<wbr>External<wbr>Replication' and accept the returned 'vserver peer accept' command on your cluster to finish setting up the external replication."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.ExternalReplicationSetupStatus?alt=com.azure.resourcemanager.netapp.models.ExternalReplicationSetupStatus&text=ExternalReplicationSetupStatus\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final ExternalReplicationSetupStatus VSERVER_PEER_REQUIRED"
-  desc: "Static value VServerPeerRequired for ExternalReplicationSetupStatus."
+  desc: "Need to call 'authorizeExternalReplication' and accept the returned 'vserver peer accept' command on your cluster to finish setting up the external replication."
 methods:
 - uid: "com.azure.resourcemanager.netapp.models.ExternalReplicationSetupStatus.fromString(java.lang.String)"
   fullName: "com.azure.resourcemanager.netapp.models.ExternalReplicationSetupStatus.fromString(String name)"
@@ -131,4 +131,4 @@ type: "class"
 desc: "Property that only applies to external replications. Provides a machine-readable value for the status of the external replication setup."
 metadata: {}
 package: "com.azure.resourcemanager.netapp.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:1.10.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:2.1.0-beta.1

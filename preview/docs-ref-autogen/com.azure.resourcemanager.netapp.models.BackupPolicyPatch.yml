@@ -6,22 +6,7 @@ nameWithType: "BackupPolicyPatch"
 summary: "Backup policy Details for create and update."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.core.management.ProxyResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.core.management.Resource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
-- classRef: "<xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
-  methodsRef:
-  - "<xref href=\"com.azure.core.management.ProxyResource.id()?alt=com.azure.core.management.ProxyResource.id&text=id\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.ProxyResource.name()?alt=com.azure.core.management.ProxyResource.name&text=name\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.ProxyResource.type()?alt=com.azure.core.management.ProxyResource.type&text=type\" data-throw-if-not-resolved=\"False\" />"
-- classRef: "<xref href=\"com.azure.core.management.Resource?alt=com.azure.core.management.Resource&text=Resource\" data-throw-if-not-resolved=\"False\" />"
-  methodsRef:
-  - "<xref href=\"com.azure.core.management.Resource.fromJson(com.azure.json.JsonReader)?alt=com.azure.core.management.Resource.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.location()?alt=com.azure.core.management.Resource.location&text=location\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.tags()?alt=com.azure.core.management.Resource.tags&text=tags\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.toJson(com.azure.json.JsonWriter)?alt=com.azure.core.management.Resource.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.withLocation(java.lang.String)?alt=com.azure.core.management.Resource.withLocation&text=withLocation\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.withTags(java.util.Map<java.lang.String,java.lang.String>)?alt=com.azure.core.management.Resource.withTags&text=withTags\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -35,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **BackupPolicyPatch**</br> extends <xref href=\"com.azure.core.management.Resource?alt=com.azure.core.management.Resource&text=Resource\" data-throw-if-not-resolved=\"False\" />"
+syntax: "public final class **BackupPolicyPatch**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.netapp.models.BackupPolicyPatch?alt=com.azure.resourcemanager.netapp.models.BackupPolicyPatch&text=BackupPolicyPatch\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.netapp.models.BackupPolicyPatch.BackupPolicyPatch()"
   fullName: "com.azure.resourcemanager.netapp.models.BackupPolicyPatch.BackupPolicyPatch()"
@@ -88,7 +73,7 @@ methods:
     type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static BackupPolicyPatch fromJson(JsonReader jsonReader)"
   exceptions:
-  - description: "If the deserialized JSON object was missing any required properties."
+  - description: "If an error occurs while reading the BackupPolicyPatch."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   desc: "Reads an instance of BackupPolicyPatch from the JsonReader."
   returns:
@@ -98,12 +83,21 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.models.BackupPolicyPatch.id()"
   name: "id()"
   nameWithType: "BackupPolicyPatch.id()"
-  summary: "Get the id property: Fully qualified resource Id for the resource."
-  overridden: "com.azure.core.management.ProxyResource.id()"
+  summary: "Get the id property: Resource Id."
   syntax: "public String id()"
-  desc: "Get the id property: Fully qualified resource Id for the resource."
+  desc: "Get the id property: Resource Id."
   returns:
     description: "the id value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.netapp.models.BackupPolicyPatch.location()"
+  fullName: "com.azure.resourcemanager.netapp.models.BackupPolicyPatch.location()"
+  name: "location()"
+  nameWithType: "BackupPolicyPatch.location()"
+  summary: "Get the location property: Resource location."
+  syntax: "public String location()"
+  desc: "Get the location property: Resource location."
+  returns:
+    description: "the location value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.netapp.models.BackupPolicyPatch.monthlyBackupsToKeep()"
   fullName: "com.azure.resourcemanager.netapp.models.BackupPolicyPatch.monthlyBackupsToKeep()"
@@ -119,10 +113,9 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.models.BackupPolicyPatch.name()"
   name: "name()"
   nameWithType: "BackupPolicyPatch.name()"
-  summary: "Get the name property: The name of the resource."
-  overridden: "com.azure.core.management.ProxyResource.name()"
+  summary: "Get the name property: Resource name."
   syntax: "public String name()"
-  desc: "Get the name property: The name of the resource."
+  desc: "Get the name property: Resource name."
   returns:
     description: "the name value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -136,11 +129,20 @@ methods:
   returns:
     description: "the provisioningState value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.netapp.models.BackupPolicyPatch.tags()"
+  fullName: "com.azure.resourcemanager.netapp.models.BackupPolicyPatch.tags()"
+  name: "tags()"
+  nameWithType: "BackupPolicyPatch.tags()"
+  summary: "Get the tags property: Resource tags."
+  syntax: "public Map<String,String> tags()"
+  desc: "Get the tags property: Resource tags."
+  returns:
+    description: "the tags value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.resourcemanager.netapp.models.BackupPolicyPatch.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.netapp.models.BackupPolicyPatch.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
   nameWithType: "BackupPolicyPatch.toJson(JsonWriter jsonWriter)"
-  overridden: "com.azure.core.management.Resource.toJson(com.azure.json.JsonWriter)"
   parameters:
   - name: "jsonWriter"
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
@@ -153,10 +155,9 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.models.BackupPolicyPatch.type()"
   name: "type()"
   nameWithType: "BackupPolicyPatch.type()"
-  summary: "Get the type property: The type of the resource."
-  overridden: "com.azure.core.management.ProxyResource.type()"
+  summary: "Get the type property: Resource type."
   syntax: "public String type()"
-  desc: "Get the type property: The type of the resource."
+  desc: "Get the type property: Resource type."
   returns:
     description: "the type value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -229,12 +230,15 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.models.BackupPolicyPatch.withLocation(String location)"
   name: "withLocation(String location)"
   nameWithType: "BackupPolicyPatch.withLocation(String location)"
-  overridden: "com.azure.core.management.Resource.withLocation(java.lang.String)"
+  summary: "Set the location property: Resource location."
   parameters:
-  - name: "location"
+  - description: "the location value to set."
+    name: "location"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public BackupPolicyPatch withLocation(String location)"
+  desc: "Set the location property: Resource location."
   returns:
+    description: "the BackupPolicyPatch object itself."
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.BackupPolicyPatch?alt=com.azure.resourcemanager.netapp.models.BackupPolicyPatch&text=BackupPolicyPatch\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.netapp.models.BackupPolicyPatch.withMonthlyBackupsToKeep(java.lang.Integer)"
   fullName: "com.azure.resourcemanager.netapp.models.BackupPolicyPatch.withMonthlyBackupsToKeep(Integer monthlyBackupsToKeep)"
@@ -254,12 +258,15 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.models.BackupPolicyPatch.withTags(Map<String,String> tags)"
   name: "withTags(Map<String,String> tags)"
   nameWithType: "BackupPolicyPatch.withTags(Map<String,String> tags)"
-  overridden: "com.azure.core.management.Resource.withTags(java.util.Map<java.lang.String,java.lang.String>)"
+  summary: "Set the tags property: Resource tags."
   parameters:
-  - name: "tags"
+  - description: "the tags value to set."
+    name: "tags"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
   syntax: "public BackupPolicyPatch withTags(Map<String,String> tags)"
+  desc: "Set the tags property: Resource tags."
   returns:
+    description: "the BackupPolicyPatch object itself."
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.BackupPolicyPatch?alt=com.azure.resourcemanager.netapp.models.BackupPolicyPatch&text=BackupPolicyPatch\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.netapp.models.BackupPolicyPatch.withWeeklyBackupsToKeep(java.lang.Integer)"
   fullName: "com.azure.resourcemanager.netapp.models.BackupPolicyPatch.withWeeklyBackupsToKeep(Integer weeklyBackupsToKeep)"
@@ -277,6 +284,8 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.BackupPolicyPatch?alt=com.azure.resourcemanager.netapp.models.BackupPolicyPatch&text=BackupPolicyPatch\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Backup policy Details for create and update."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.netapp.models.BackupPolicyPatch?alt=com.azure.resourcemanager.netapp.models.BackupPolicyPatch&text=BackupPolicyPatch\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.netapp.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:1.10.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:2.1.0-beta.1

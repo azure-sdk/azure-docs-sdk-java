@@ -14,11 +14,11 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "UNIX permissions for NFS volume accepted in octal 4 digit format. First digit\n selects the set user ID(4), set group ID (2) and sticky (1) attributes. Second digit selects permission\n for the owner of the file: read (4), write (2) and execute (1). Third selects permissions for other users\n in the same group. the fourth for other users not in the group. 0755 - gives read/write/execute\n permissions to owner and read/execute to group and other users. Avoid passing null value for\n unixPermissions in volume update operation, As per the behavior, If Null value is passed then\n user-visible unixPermissions value will became null, and user will not be able to get unixPermissions\n value. On safer side, actual unixPermissions value on volume will remain as its last saved value only."
+  - description: "UNIX permissions for NFS volume accepted in octal 4 digit format. First digit\n selects the set user ID(4), set group ID (2) and sticky (1) attributes. Second digit selects permission\n for the owner of the file: read (4), write (2) and execute (1). Third selects permissions for other users\n in the same group. the fourth for other users not in the group. 0755 - gives read/write/execute\n permissions to owner and read/execute to group and other users."
     name: "unixPermissions"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract Volume.DefinitionStages.WithCreate withUnixPermissions(String unixPermissions)"
-  desc: "Specifies the unixPermissions property: UNIX permissions for NFS volume accepted in octal 4 digit format. First digit selects the set user ID(4), set group ID (2) and sticky (1) attributes. Second digit selects permission for the owner of the file: read (4), write (2) and execute (1). Third selects permissions for other users in the same group. the fourth for other users not in the group. 0755 - gives read/write/execute permissions to owner and read/execute to group and other users. Avoid passing null value for unixPermissions in volume update operation, As per the behavior, If Null value is passed then user-visible unixPermissions value will became null, and user will not be able to get unixPermissions value. On safer side, actual unixPermissions value on volume will remain as its last saved value only.."
+  desc: "Specifies the unixPermissions property: UNIX permissions for NFS volume accepted in octal 4 digit format. First digit selects the set user ID(4), set group ID (2) and sticky (1) attributes. Second digit selects permission for the owner of the file: read (4), write (2) and execute (1). Third selects permissions for other users in the same group. the fourth for other users not in the group. 0755 - gives read/write/execute permissions to owner and read/execute to group and other users.."
   returns:
     description: "the next definition stage."
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.Volume.DefinitionStages.WithCreate?alt=com.azure.resourcemanager.netapp.models.Volume.DefinitionStages.WithCreate&text=WithCreate\" data-throw-if-not-resolved=\"False\" />"
@@ -26,4 +26,4 @@ type: "interface"
 desc: "The stage of the Volume definition allowing to specify unixPermissions."
 metadata: {}
 package: "com.azure.resourcemanager.netapp.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:1.10.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:2.1.0-beta.1

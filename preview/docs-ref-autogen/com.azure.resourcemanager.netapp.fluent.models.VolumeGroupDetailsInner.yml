@@ -6,7 +6,15 @@ nameWithType: "VolumeGroupDetailsInner"
 summary: "Volume group resource for create."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"com.azure.core.management.ProxyResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
+- classRef: "<xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
+  methodsRef:
+  - "<xref href=\"com.azure.core.management.ProxyResource.fromJson(com.azure.json.JsonReader)?alt=com.azure.core.management.ProxyResource.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.ProxyResource.id()?alt=com.azure.core.management.ProxyResource.id&text=id\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.ProxyResource.name()?alt=com.azure.core.management.ProxyResource.name&text=name\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.ProxyResource.toJson(com.azure.json.JsonWriter)?alt=com.azure.core.management.ProxyResource.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.ProxyResource.type()?alt=com.azure.core.management.ProxyResource.type&text=type\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -20,7 +28,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **VolumeGroupDetailsInner**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.netapp.fluent.models.VolumeGroupDetailsInner?alt=com.azure.resourcemanager.netapp.fluent.models.VolumeGroupDetailsInner&text=VolumeGroupDetailsInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+syntax: "public final class **VolumeGroupDetailsInner**</br> extends <xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
 constructors:
 - uid: "com.azure.resourcemanager.netapp.fluent.models.VolumeGroupDetailsInner.VolumeGroupDetailsInner()"
   fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeGroupDetailsInner.VolumeGroupDetailsInner()"
@@ -43,7 +51,7 @@ methods:
     type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static VolumeGroupDetailsInner fromJson(JsonReader jsonReader)"
   exceptions:
-  - description: "If an error occurs while reading the VolumeGroupDetailsInner."
+  - description: "If the deserialized JSON object was missing any required properties."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   desc: "Reads an instance of VolumeGroupDetailsInner from the JsonReader."
   returns:
@@ -63,9 +71,10 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeGroupDetailsInner.id()"
   name: "id()"
   nameWithType: "VolumeGroupDetailsInner.id()"
-  summary: "Get the id property: Resource Id."
+  summary: "Get the id property: Fully qualified resource Id for the resource."
+  overridden: "com.azure.core.management.ProxyResource.id()"
   syntax: "public String id()"
-  desc: "Get the id property: Resource Id."
+  desc: "Get the id property: Fully qualified resource Id for the resource."
   returns:
     description: "the id value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -83,9 +92,10 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeGroupDetailsInner.name()"
   name: "name()"
   nameWithType: "VolumeGroupDetailsInner.name()"
-  summary: "Get the name property: Resource name."
+  summary: "Get the name property: The name of the resource."
+  overridden: "com.azure.core.management.ProxyResource.name()"
   syntax: "public String name()"
-  desc: "Get the name property: Resource name."
+  desc: "Get the name property: The name of the resource."
   returns:
     description: "the name value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -99,10 +109,21 @@ methods:
   returns:
     description: "the provisioningState value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.netapp.fluent.models.VolumeGroupDetailsInner.systemData()"
+  fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeGroupDetailsInner.systemData()"
+  name: "systemData()"
+  nameWithType: "VolumeGroupDetailsInner.systemData()"
+  summary: "Get the system<wbr>Data property: Azure Resource Manager metadata containing created<wbr>By and modified<wbr>By information."
+  syntax: "public SystemData systemData()"
+  desc: "Get the systemData property: Azure Resource Manager metadata containing createdBy and modifiedBy information."
+  returns:
+    description: "the systemData value."
+    type: "<xref href=\"com.azure.core.management.SystemData?alt=com.azure.core.management.SystemData&text=SystemData\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.netapp.fluent.models.VolumeGroupDetailsInner.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeGroupDetailsInner.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
   nameWithType: "VolumeGroupDetailsInner.toJson(JsonWriter jsonWriter)"
+  overridden: "com.azure.core.management.ProxyResource.toJson(com.azure.json.JsonWriter)"
   parameters:
   - name: "jsonWriter"
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
@@ -115,9 +136,10 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeGroupDetailsInner.type()"
   name: "type()"
   nameWithType: "VolumeGroupDetailsInner.type()"
-  summary: "Get the type property: Resource type."
+  summary: "Get the type property: The type of the resource."
+  overridden: "com.azure.core.management.ProxyResource.type()"
   syntax: "public String type()"
-  desc: "Get the type property: Resource type."
+  desc: "Get the type property: The type of the resource."
   returns:
     description: "the type value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -182,8 +204,6 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.netapp.fluent.models.VolumeGroupDetailsInner?alt=com.azure.resourcemanager.netapp.fluent.models.VolumeGroupDetailsInner&text=VolumeGroupDetailsInner\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Volume group resource for create."
-implements:
-- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.netapp.fluent.models.VolumeGroupDetailsInner?alt=com.azure.resourcemanager.netapp.fluent.models.VolumeGroupDetailsInner&text=VolumeGroupDetailsInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.netapp.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:1.10.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:2.1.0-beta.1

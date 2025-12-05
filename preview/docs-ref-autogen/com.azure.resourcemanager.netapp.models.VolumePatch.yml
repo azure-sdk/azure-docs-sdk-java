@@ -6,22 +6,7 @@ nameWithType: "VolumePatch"
 summary: "Volume patch resource."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.core.management.ProxyResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.core.management.Resource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
-- classRef: "<xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
-  methodsRef:
-  - "<xref href=\"com.azure.core.management.ProxyResource.id()?alt=com.azure.core.management.ProxyResource.id&text=id\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.ProxyResource.name()?alt=com.azure.core.management.ProxyResource.name&text=name\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.ProxyResource.type()?alt=com.azure.core.management.ProxyResource.type&text=type\" data-throw-if-not-resolved=\"False\" />"
-- classRef: "<xref href=\"com.azure.core.management.Resource?alt=com.azure.core.management.Resource&text=Resource\" data-throw-if-not-resolved=\"False\" />"
-  methodsRef:
-  - "<xref href=\"com.azure.core.management.Resource.fromJson(com.azure.json.JsonReader)?alt=com.azure.core.management.Resource.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.location()?alt=com.azure.core.management.Resource.location&text=location\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.tags()?alt=com.azure.core.management.Resource.tags&text=tags\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.toJson(com.azure.json.JsonWriter)?alt=com.azure.core.management.Resource.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.withLocation(java.lang.String)?alt=com.azure.core.management.Resource.withLocation&text=withLocation\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.withTags(java.util.Map<java.lang.String,java.lang.String>)?alt=com.azure.core.management.Resource.withTags&text=withTags\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -35,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **VolumePatch**</br> extends <xref href=\"com.azure.core.management.Resource?alt=com.azure.core.management.Resource&text=Resource\" data-throw-if-not-resolved=\"False\" />"
+syntax: "public final class **VolumePatch**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.netapp.models.VolumePatch?alt=com.azure.resourcemanager.netapp.models.VolumePatch&text=VolumePatch\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.netapp.models.VolumePatch.VolumePatch()"
   fullName: "com.azure.resourcemanager.netapp.models.VolumePatch.VolumePatch()"
@@ -138,7 +123,7 @@ methods:
     type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static VolumePatch fromJson(JsonReader jsonReader)"
   exceptions:
-  - description: "If the deserialized JSON object was missing any required properties."
+  - description: "If an error occurs while reading the VolumePatch."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   desc: "Reads an instance of VolumePatch from the JsonReader."
   returns:
@@ -148,10 +133,9 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.models.VolumePatch.id()"
   name: "id()"
   nameWithType: "VolumePatch.id()"
-  summary: "Get the id property: Fully qualified resource Id for the resource."
-  overridden: "com.azure.core.management.ProxyResource.id()"
+  summary: "Get the id property: Resource Id."
   syntax: "public String id()"
-  desc: "Get the id property: Fully qualified resource Id for the resource."
+  desc: "Get the id property: Resource Id."
   returns:
     description: "the id value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -165,14 +149,23 @@ methods:
   returns:
     description: "the isDefaultQuotaEnabled value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.resourcemanager.netapp.models.VolumePatch.location()"
+  fullName: "com.azure.resourcemanager.netapp.models.VolumePatch.location()"
+  name: "location()"
+  nameWithType: "VolumePatch.location()"
+  summary: "Get the location property: Resource location."
+  syntax: "public String location()"
+  desc: "Get the location property: Resource location."
+  returns:
+    description: "the location value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.netapp.models.VolumePatch.name()"
   fullName: "com.azure.resourcemanager.netapp.models.VolumePatch.name()"
   name: "name()"
   nameWithType: "VolumePatch.name()"
-  summary: "Get the name property: The name of the resource."
-  overridden: "com.azure.core.management.ProxyResource.name()"
+  summary: "Get the name property: Resource name."
   syntax: "public String name()"
-  desc: "Get the name property: The name of the resource."
+  desc: "Get the name property: Resource name."
   returns:
     description: "the name value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -226,6 +219,16 @@ methods:
   returns:
     description: "the snapshotDirectoryVisible value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.resourcemanager.netapp.models.VolumePatch.tags()"
+  fullName: "com.azure.resourcemanager.netapp.models.VolumePatch.tags()"
+  name: "tags()"
+  nameWithType: "VolumePatch.tags()"
+  summary: "Get the tags property: Resource tags."
+  syntax: "public Map<String,String> tags()"
+  desc: "Get the tags property: Resource tags."
+  returns:
+    description: "the tags value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.resourcemanager.netapp.models.VolumePatch.throughputMibps()"
   fullName: "com.azure.resourcemanager.netapp.models.VolumePatch.throughputMibps()"
   name: "throughputMibps()"
@@ -240,7 +243,6 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.models.VolumePatch.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
   nameWithType: "VolumePatch.toJson(JsonWriter jsonWriter)"
-  overridden: "com.azure.core.management.Resource.toJson(com.azure.json.JsonWriter)"
   parameters:
   - name: "jsonWriter"
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
@@ -253,10 +255,9 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.models.VolumePatch.type()"
   name: "type()"
   nameWithType: "VolumePatch.type()"
-  summary: "Get the type property: The type of the resource."
-  overridden: "com.azure.core.management.ProxyResource.type()"
+  summary: "Get the type property: Resource type."
   syntax: "public String type()"
-  desc: "Get the type property: The type of the resource."
+  desc: "Get the type property: Resource type."
   returns:
     description: "the type value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -276,7 +277,7 @@ methods:
   nameWithType: "VolumePatch.usageThreshold()"
   summary: "Get the usage<wbr>Threshold property: Maximum storage quota allowed for a file system in bytes."
   syntax: "public Long usageThreshold()"
-  desc: "Get the usageThreshold property: Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. For regular volumes, valid values are in the range 50GiB to 100TiB. For large volumes, valid values are in the range 100TiB to 500TiB, and on an exceptional basis, from to 2400GiB to 2400TiB. Values expressed in bytes as multiples of 1 GiB."
+  desc: "Get the usageThreshold property: Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. For regular volumes, valid values are in the range 50GiB to 100TiB. For large volumes, valid values are in the range 100TiB to 500TiB, and on an exceptional basis, from to 2400GiB to 2400TiB. For extra large volumes, valid values are in the range 2400GiB to 7200TiB. Values expressed in bytes as multiples of 1 GiB."
   returns:
     description: "the usageThreshold value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
@@ -417,12 +418,15 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.models.VolumePatch.withLocation(String location)"
   name: "withLocation(String location)"
   nameWithType: "VolumePatch.withLocation(String location)"
-  overridden: "com.azure.core.management.Resource.withLocation(java.lang.String)"
+  summary: "Set the location property: Resource location."
   parameters:
-  - name: "location"
+  - description: "the location value to set."
+    name: "location"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public VolumePatch withLocation(String location)"
+  desc: "Set the location property: Resource location."
   returns:
+    description: "the VolumePatch object itself."
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.VolumePatch?alt=com.azure.resourcemanager.netapp.models.VolumePatch&text=VolumePatch\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.netapp.models.VolumePatch.withProtocolTypes(java.util.List<java.lang.String>)"
   fullName: "com.azure.resourcemanager.netapp.models.VolumePatch.withProtocolTypes(List<String> protocolTypes)"
@@ -498,12 +502,15 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.models.VolumePatch.withTags(Map<String,String> tags)"
   name: "withTags(Map<String,String> tags)"
   nameWithType: "VolumePatch.withTags(Map<String,String> tags)"
-  overridden: "com.azure.core.management.Resource.withTags(java.util.Map<java.lang.String,java.lang.String>)"
+  summary: "Set the tags property: Resource tags."
   parameters:
-  - name: "tags"
+  - description: "the tags value to set."
+    name: "tags"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
   syntax: "public VolumePatch withTags(Map<String,String> tags)"
+  desc: "Set the tags property: Resource tags."
   returns:
+    description: "the VolumePatch object itself."
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.VolumePatch?alt=com.azure.resourcemanager.netapp.models.VolumePatch&text=VolumePatch\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.netapp.models.VolumePatch.withThroughputMibps(java.lang.Float)"
   fullName: "com.azure.resourcemanager.netapp.models.VolumePatch.withThroughputMibps(Float throughputMibps)"
@@ -543,12 +550,14 @@ methods:
     name: "usageThreshold"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
   syntax: "public VolumePatch withUsageThreshold(Long usageThreshold)"
-  desc: "Set the usageThreshold property: Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. For regular volumes, valid values are in the range 50GiB to 100TiB. For large volumes, valid values are in the range 100TiB to 500TiB, and on an exceptional basis, from to 2400GiB to 2400TiB. Values expressed in bytes as multiples of 1 GiB."
+  desc: "Set the usageThreshold property: Maximum storage quota allowed for a file system in bytes. This is a soft quota used for alerting only. For regular volumes, valid values are in the range 50GiB to 100TiB. For large volumes, valid values are in the range 100TiB to 500TiB, and on an exceptional basis, from to 2400GiB to 2400TiB. For extra large volumes, valid values are in the range 2400GiB to 7200TiB. Values expressed in bytes as multiples of 1 GiB."
   returns:
     description: "the VolumePatch object itself."
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.VolumePatch?alt=com.azure.resourcemanager.netapp.models.VolumePatch&text=VolumePatch\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Volume patch resource."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.netapp.models.VolumePatch?alt=com.azure.resourcemanager.netapp.models.VolumePatch&text=VolumePatch\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.netapp.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:1.10.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:2.1.0-beta.1
