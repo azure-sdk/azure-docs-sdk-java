@@ -1,7 +1,7 @@
 ---
 title: Azure Purestorageblock SDK for Java
 description: Reference for Azure Purestorageblock SDK for Java
-ms.date: 12/08/2025
+ms.date: 12/09/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: purestorageblock
