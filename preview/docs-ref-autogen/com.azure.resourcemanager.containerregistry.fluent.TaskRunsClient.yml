@@ -14,10 +14,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
@@ -29,7 +29,7 @@ methods:
   syntax: "public abstract SyncPoller<PollResult<TaskRunInner>,TaskRunInner> beginCreate(String resourceGroupName, String registryName, String taskRunName, TaskRunInner taskRun)"
   desc: "Creates a task run for a container registry with the specified parameters."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the task run that has the ARM resource and properties."
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the task run that has the ARM resource and properties.\n The task run will have the information of request and result of a run."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner?alt=com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner&text=TaskRunInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner?alt=com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner&text=TaskRunInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.beginCreate(java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.beginCreate(String resourceGroupName, String registryName, String taskRunName, TaskRunInner taskRun, Context context)"
@@ -39,10 +39,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
@@ -57,7 +57,7 @@ methods:
   syntax: "public abstract SyncPoller<PollResult<TaskRunInner>,TaskRunInner> beginCreate(String resourceGroupName, String registryName, String taskRunName, TaskRunInner taskRun, Context context)"
   desc: "Creates a task run for a container registry with the specified parameters."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the task run that has the ARM resource and properties."
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the task run that has the ARM resource and properties.\n The task run will have the information of request and result of a run."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner?alt=com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner&text=TaskRunInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner?alt=com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner&text=TaskRunInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.beginCreateAsync(java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner)"
   fullName: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.beginCreateAsync(String resourceGroupName, String registryName, String taskRunName, TaskRunInner taskRun)"
@@ -67,10 +67,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
@@ -82,77 +82,8 @@ methods:
   syntax: "public abstract PollerFlux<PollResult<TaskRunInner>,TaskRunInner> beginCreateAsync(String resourceGroupName, String registryName, String taskRunName, TaskRunInner taskRun)"
   desc: "Creates a task run for a container registry with the specified parameters."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.PollerFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PollerFlux\"></xref> for polling of the task run that has the ARM resource and properties."
+    description: "the <xref uid=\"com.azure.core.util.polling.PollerFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PollerFlux\"></xref> for polling of the task run that has the ARM resource and properties.\n The task run will have the information of request and result of a run."
     type: "<xref href=\"com.azure.core.util.polling.PollerFlux?alt=com.azure.core.util.polling.PollerFlux&text=PollerFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner?alt=com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner&text=TaskRunInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner?alt=com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner&text=TaskRunInner\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.beginDelete(java.lang.String,java.lang.String,java.lang.String)"
-  fullName: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.beginDelete(String resourceGroupName, String registryName, String taskRunName)"
-  name: "beginDelete(String resourceGroupName, String registryName, String taskRunName)"
-  nameWithType: "TaskRunsClient.beginDelete(String resourceGroupName, String registryName, String taskRunName)"
-  summary: "Deletes a specified task run resource."
-  modifiers:
-  - "abstract"
-  parameters:
-  - description: "The name of the resource group to which the container registry belongs."
-    name: "resourceGroupName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
-    name: "registryName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the task run."
-    name: "taskRunName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginDelete(String resourceGroupName, String registryName, String taskRunName)"
-  desc: "Deletes a specified task run resource."
-  returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
-- uid: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.beginDelete(java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.beginDelete(String resourceGroupName, String registryName, String taskRunName, Context context)"
-  name: "beginDelete(String resourceGroupName, String registryName, String taskRunName, Context context)"
-  nameWithType: "TaskRunsClient.beginDelete(String resourceGroupName, String registryName, String taskRunName, Context context)"
-  summary: "Deletes a specified task run resource."
-  modifiers:
-  - "abstract"
-  parameters:
-  - description: "The name of the resource group to which the container registry belongs."
-    name: "resourceGroupName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
-    name: "registryName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the task run."
-    name: "taskRunName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The context to associate with this operation."
-    name: "context"
-    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginDelete(String resourceGroupName, String registryName, String taskRunName, Context context)"
-  desc: "Deletes a specified task run resource."
-  returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
-- uid: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.beginDeleteAsync(java.lang.String,java.lang.String,java.lang.String)"
-  fullName: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.beginDeleteAsync(String resourceGroupName, String registryName, String taskRunName)"
-  name: "beginDeleteAsync(String resourceGroupName, String registryName, String taskRunName)"
-  nameWithType: "TaskRunsClient.beginDeleteAsync(String resourceGroupName, String registryName, String taskRunName)"
-  summary: "Deletes a specified task run resource."
-  modifiers:
-  - "abstract"
-  parameters:
-  - description: "The name of the resource group to which the container registry belongs."
-    name: "resourceGroupName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
-    name: "registryName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the task run."
-    name: "taskRunName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract PollerFlux<PollResult<Void>,Void> beginDeleteAsync(String resourceGroupName, String registryName, String taskRunName)"
-  desc: "Deletes a specified task run resource."
-  returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.PollerFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PollerFlux\"></xref> for polling of long-running operation."
-    type: "<xref href=\"com.azure.core.util.polling.PollerFlux?alt=com.azure.core.util.polling.PollerFlux&text=PollerFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.beginUpdate(java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.containerregistry.models.TaskRunUpdateParameters)"
   fullName: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.beginUpdate(String resourceGroupName, String registryName, String taskRunName, TaskRunUpdateParameters updateParameters)"
   name: "beginUpdate(String resourceGroupName, String registryName, String taskRunName, TaskRunUpdateParameters updateParameters)"
@@ -161,10 +92,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
@@ -176,7 +107,7 @@ methods:
   syntax: "public abstract SyncPoller<PollResult<TaskRunInner>,TaskRunInner> beginUpdate(String resourceGroupName, String registryName, String taskRunName, TaskRunUpdateParameters updateParameters)"
   desc: "Updates a task run with the specified parameters."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the task run that has the ARM resource and properties."
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the task run that has the ARM resource and properties.\n The task run will have the information of request and result of a run."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner?alt=com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner&text=TaskRunInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner?alt=com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner&text=TaskRunInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.beginUpdate(java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.containerregistry.models.TaskRunUpdateParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.beginUpdate(String resourceGroupName, String registryName, String taskRunName, TaskRunUpdateParameters updateParameters, Context context)"
@@ -186,10 +117,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
@@ -204,7 +135,7 @@ methods:
   syntax: "public abstract SyncPoller<PollResult<TaskRunInner>,TaskRunInner> beginUpdate(String resourceGroupName, String registryName, String taskRunName, TaskRunUpdateParameters updateParameters, Context context)"
   desc: "Updates a task run with the specified parameters."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the task run that has the ARM resource and properties."
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the task run that has the ARM resource and properties.\n The task run will have the information of request and result of a run."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner?alt=com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner&text=TaskRunInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner?alt=com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner&text=TaskRunInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.beginUpdateAsync(java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.containerregistry.models.TaskRunUpdateParameters)"
   fullName: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.beginUpdateAsync(String resourceGroupName, String registryName, String taskRunName, TaskRunUpdateParameters updateParameters)"
@@ -214,10 +145,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
@@ -229,7 +160,7 @@ methods:
   syntax: "public abstract PollerFlux<PollResult<TaskRunInner>,TaskRunInner> beginUpdateAsync(String resourceGroupName, String registryName, String taskRunName, TaskRunUpdateParameters updateParameters)"
   desc: "Updates a task run with the specified parameters."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.PollerFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PollerFlux\"></xref> for polling of the task run that has the ARM resource and properties."
+    description: "the <xref uid=\"com.azure.core.util.polling.PollerFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PollerFlux\"></xref> for polling of the task run that has the ARM resource and properties.\n The task run will have the information of request and result of a run."
     type: "<xref href=\"com.azure.core.util.polling.PollerFlux?alt=com.azure.core.util.polling.PollerFlux&text=PollerFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner?alt=com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner&text=TaskRunInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner?alt=com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner&text=TaskRunInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.create(java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner)"
   fullName: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.create(String resourceGroupName, String registryName, String taskRunName, TaskRunInner taskRun)"
@@ -239,10 +170,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
@@ -254,7 +185,7 @@ methods:
   syntax: "public abstract TaskRunInner create(String resourceGroupName, String registryName, String taskRunName, TaskRunInner taskRun)"
   desc: "Creates a task run for a container registry with the specified parameters."
   returns:
-    description: "the task run that has the ARM resource and properties."
+    description: "the task run that has the ARM resource and properties.\n The task run will have the information of request and result of a run."
     type: "<xref href=\"com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner?alt=com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner&text=TaskRunInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.create(java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.create(String resourceGroupName, String registryName, String taskRunName, TaskRunInner taskRun, Context context)"
@@ -264,10 +195,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
@@ -282,7 +213,7 @@ methods:
   syntax: "public abstract TaskRunInner create(String resourceGroupName, String registryName, String taskRunName, TaskRunInner taskRun, Context context)"
   desc: "Creates a task run for a container registry with the specified parameters."
   returns:
-    description: "the task run that has the ARM resource and properties."
+    description: "the task run that has the ARM resource and properties.\n The task run will have the information of request and result of a run."
     type: "<xref href=\"com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner?alt=com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner&text=TaskRunInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.createAsync(java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner)"
   fullName: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.createAsync(String resourceGroupName, String registryName, String taskRunName, TaskRunInner taskRun)"
@@ -292,10 +223,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
@@ -307,7 +238,7 @@ methods:
   syntax: "public abstract Mono<TaskRunInner> createAsync(String resourceGroupName, String registryName, String taskRunName, TaskRunInner taskRun)"
   desc: "Creates a task run for a container registry with the specified parameters."
   returns:
-    description: "the task run that has the ARM resource and properties on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
+    description: "the task run that has the ARM resource and properties.\n The task run will have the information of request and result of a run on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner?alt=com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner&text=TaskRunInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.createWithResponseAsync(java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner)"
   fullName: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.createWithResponseAsync(String resourceGroupName, String registryName, String taskRunName, TaskRunInner taskRun)"
@@ -317,10 +248,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
@@ -332,7 +263,7 @@ methods:
   syntax: "public abstract Mono<Response<Flux<ByteBuffer>>> createWithResponseAsync(String resourceGroupName, String registryName, String taskRunName, TaskRunInner taskRun)"
   desc: "Creates a task run for a container registry with the specified parameters."
   returns:
-    description: "the task run that has the ARM resource and properties along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful\n completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
+    description: "the task run that has the ARM resource and properties.\n The task run will have the information of request and result of a run along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful\n completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;&gt;"
 - uid: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.delete(java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.delete(String resourceGroupName, String registryName, String taskRunName)"
@@ -342,38 +273,16 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
     name: "taskRunName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract void delete(String resourceGroupName, String registryName, String taskRunName)"
-  desc: "Deletes a specified task run resource."
-- uid: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.delete(java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.delete(String resourceGroupName, String registryName, String taskRunName, Context context)"
-  name: "delete(String resourceGroupName, String registryName, String taskRunName, Context context)"
-  nameWithType: "TaskRunsClient.delete(String resourceGroupName, String registryName, String taskRunName, Context context)"
-  summary: "Deletes a specified task run resource."
-  modifiers:
-  - "abstract"
-  parameters:
-  - description: "The name of the resource group to which the container registry belongs."
-    name: "resourceGroupName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
-    name: "registryName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the task run."
-    name: "taskRunName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The context to associate with this operation."
-    name: "context"
-    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract void delete(String resourceGroupName, String registryName, String taskRunName, Context context)"
   desc: "Deletes a specified task run resource."
 - uid: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.deleteAsync(java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.deleteAsync(String resourceGroupName, String registryName, String taskRunName)"
@@ -383,10 +292,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
@@ -397,6 +306,31 @@ methods:
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> that completes when a successful response is received."
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+- uid: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.deleteWithResponse(java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.deleteWithResponse(String resourceGroupName, String registryName, String taskRunName, Context context)"
+  name: "deleteWithResponse(String resourceGroupName, String registryName, String taskRunName, Context context)"
+  nameWithType: "TaskRunsClient.deleteWithResponse(String resourceGroupName, String registryName, String taskRunName, Context context)"
+  summary: "Deletes a specified task run resource."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The name of the Registry."
+    name: "registryName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The name of the task run."
+    name: "taskRunName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Response<Void> deleteWithResponse(String resourceGroupName, String registryName, String taskRunName, Context context)"
+  desc: "Deletes a specified task run resource."
+  returns:
+    description: "the <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.deleteWithResponseAsync(java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.deleteWithResponseAsync(String resourceGroupName, String registryName, String taskRunName)"
   name: "deleteWithResponseAsync(String resourceGroupName, String registryName, String taskRunName)"
@@ -405,20 +339,20 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
     name: "taskRunName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract Mono<Response<Flux<ByteBuffer>>> deleteWithResponseAsync(String resourceGroupName, String registryName, String taskRunName)"
+  syntax: "public abstract Mono<Response<Void>> deleteWithResponseAsync(String resourceGroupName, String registryName, String taskRunName)"
   desc: "Deletes a specified task run resource."
   returns:
     description: "the <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;&gt;"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
 - uid: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.get(java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.get(String resourceGroupName, String registryName, String taskRunName)"
   name: "get(String resourceGroupName, String registryName, String taskRunName)"
@@ -427,10 +361,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
@@ -449,10 +383,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
@@ -471,10 +405,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
@@ -493,10 +427,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
@@ -515,10 +449,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
@@ -540,10 +474,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
@@ -562,10 +496,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
@@ -587,10 +521,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
@@ -609,10 +543,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<TaskRunInner> list(String resourceGroupName, String registryName)"
@@ -628,10 +562,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
@@ -650,10 +584,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedFlux<TaskRunInner> listAsync(String resourceGroupName, String registryName)"
@@ -669,10 +603,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
@@ -684,7 +618,7 @@ methods:
   syntax: "public abstract TaskRunInner update(String resourceGroupName, String registryName, String taskRunName, TaskRunUpdateParameters updateParameters)"
   desc: "Updates a task run with the specified parameters."
   returns:
-    description: "the task run that has the ARM resource and properties."
+    description: "the task run that has the ARM resource and properties.\n The task run will have the information of request and result of a run."
     type: "<xref href=\"com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner?alt=com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner&text=TaskRunInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.update(java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.containerregistry.models.TaskRunUpdateParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.update(String resourceGroupName, String registryName, String taskRunName, TaskRunUpdateParameters updateParameters, Context context)"
@@ -694,10 +628,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
@@ -712,7 +646,7 @@ methods:
   syntax: "public abstract TaskRunInner update(String resourceGroupName, String registryName, String taskRunName, TaskRunUpdateParameters updateParameters, Context context)"
   desc: "Updates a task run with the specified parameters."
   returns:
-    description: "the task run that has the ARM resource and properties."
+    description: "the task run that has the ARM resource and properties.\n The task run will have the information of request and result of a run."
     type: "<xref href=\"com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner?alt=com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner&text=TaskRunInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.updateAsync(java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.containerregistry.models.TaskRunUpdateParameters)"
   fullName: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.updateAsync(String resourceGroupName, String registryName, String taskRunName, TaskRunUpdateParameters updateParameters)"
@@ -722,10 +656,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
@@ -737,7 +671,7 @@ methods:
   syntax: "public abstract Mono<TaskRunInner> updateAsync(String resourceGroupName, String registryName, String taskRunName, TaskRunUpdateParameters updateParameters)"
   desc: "Updates a task run with the specified parameters."
   returns:
-    description: "the task run that has the ARM resource and properties on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
+    description: "the task run that has the ARM resource and properties.\n The task run will have the information of request and result of a run on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner?alt=com.azure.resourcemanager.containerregistry.fluent.models.TaskRunInner&text=TaskRunInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.updateWithResponseAsync(java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.containerregistry.models.TaskRunUpdateParameters)"
   fullName: "com.azure.resourcemanager.containerregistry.fluent.TaskRunsClient.updateWithResponseAsync(String resourceGroupName, String registryName, String taskRunName, TaskRunUpdateParameters updateParameters)"
@@ -747,10 +681,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group to which the container registry belongs."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the container registry."
+  - description: "The name of the Registry."
     name: "registryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the task run."
@@ -762,10 +696,10 @@ methods:
   syntax: "public abstract Mono<Response<Flux<ByteBuffer>>> updateWithResponseAsync(String resourceGroupName, String registryName, String taskRunName, TaskRunUpdateParameters updateParameters)"
   desc: "Updates a task run with the specified parameters."
   returns:
-    description: "the task run that has the ARM resource and properties along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful\n completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
+    description: "the task run that has the ARM resource and properties.\n The task run will have the information of request and result of a run along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful\n completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;&gt;"
 type: "interface"
 desc: "An instance of this class provides access to all the operations defined in TaskRunsClient."
 metadata: {}
 package: "com.azure.resourcemanager.containerregistry.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerregistry:2.46.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerregistry:2.55.0-beta.1
