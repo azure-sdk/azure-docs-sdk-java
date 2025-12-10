@@ -1,7 +1,7 @@
 ---
 title: Azure Functions SDK for Java
 description: Reference for Azure Functions SDK for Java
-ms.date: 12/09/2025
+ms.date: 12/10/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: azure-functions
