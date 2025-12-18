@@ -352,10 +352,10 @@ methods:
   returns:
     description: "a list of consoles for the provided virtual machine as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner&text=ConsoleInner\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.networkcloud.fluent.ConsolesClient.listByVirtualMachine(java.lang.String,java.lang.String,com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.networkcloud.fluent.ConsolesClient.listByVirtualMachine(String resourceGroupName, String virtualMachineName, Context context)"
-  name: "listByVirtualMachine(String resourceGroupName, String virtualMachineName, Context context)"
-  nameWithType: "ConsolesClient.listByVirtualMachine(String resourceGroupName, String virtualMachineName, Context context)"
+- uid: "com.azure.resourcemanager.networkcloud.fluent.ConsolesClient.listByVirtualMachine(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.networkcloud.fluent.ConsolesClient.listByVirtualMachine(String resourceGroupName, String virtualMachineName, Integer top, String skipToken, Context context)"
+  name: "listByVirtualMachine(String resourceGroupName, String virtualMachineName, Integer top, String skipToken, Context context)"
+  nameWithType: "ConsolesClient.listByVirtualMachine(String resourceGroupName, String virtualMachineName, Integer top, String skipToken, Context context)"
   summary: "List consoles of the virtual machine."
   modifiers:
   - "abstract"
@@ -366,10 +366,16 @@ methods:
   - description: "The name of the virtual machine."
     name: "virtualMachineName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The maximum number of resources to return from the operation. Example: '$top=10'."
+    name: "top"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  - description: "The opaque token that the server returns to indicate where to continue listing resources from.\n This is used for paging through large result sets."
+    name: "skipToken"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract PagedIterable<ConsoleInner> listByVirtualMachine(String resourceGroupName, String virtualMachineName, Context context)"
+  syntax: "public abstract PagedIterable<ConsoleInner> listByVirtualMachine(String resourceGroupName, String virtualMachineName, Integer top, String skipToken, Context context)"
   desc: "List consoles of the virtual machine. Get a list of consoles for the provided virtual machine."
   returns:
     description: "a list of consoles for the provided virtual machine as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
@@ -434,4 +440,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in ConsolesClient."
 metadata: {}
 package: "com.azure.resourcemanager.networkcloud.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.0.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.1.0

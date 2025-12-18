@@ -259,18 +259,24 @@ methods:
   returns:
     description: "a list of trunked networks in the provided subscription as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner&text=TrunkedNetworkInner\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.list(com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.list(Context context)"
-  name: "list(Context context)"
-  nameWithType: "TrunkedNetworksClient.list(Context context)"
+- uid: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.list(java.lang.Integer,java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.list(Integer top, String skipToken, Context context)"
+  name: "list(Integer top, String skipToken, Context context)"
+  nameWithType: "TrunkedNetworksClient.list(Integer top, String skipToken, Context context)"
   summary: "List trunked networks in the subscription."
   modifiers:
   - "abstract"
   parameters:
+  - description: "The maximum number of resources to return from the operation. Example: '$top=10'."
+    name: "top"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  - description: "The opaque token that the server returns to indicate where to continue listing resources from.\n This is used for paging through large result sets."
+    name: "skipToken"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract PagedIterable<TrunkedNetworkInner> list(Context context)"
+  syntax: "public abstract PagedIterable<TrunkedNetworkInner> list(Integer top, String skipToken, Context context)"
   desc: "List trunked networks in the subscription. Get a list of trunked networks in the provided subscription."
   returns:
     description: "a list of trunked networks in the provided subscription as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
@@ -291,10 +297,10 @@ methods:
   returns:
     description: "a list of trunked networks in the provided resource group as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner&text=TrunkedNetworkInner\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.listByResourceGroup(java.lang.String,com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.listByResourceGroup(String resourceGroupName, Context context)"
-  name: "listByResourceGroup(String resourceGroupName, Context context)"
-  nameWithType: "TrunkedNetworksClient.listByResourceGroup(String resourceGroupName, Context context)"
+- uid: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.listByResourceGroup(java.lang.String,java.lang.Integer,java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
+  name: "listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
+  nameWithType: "TrunkedNetworksClient.listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
   summary: "List trunked networks in the resource group."
   modifiers:
   - "abstract"
@@ -302,10 +308,16 @@ methods:
   - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The maximum number of resources to return from the operation. Example: '$top=10'."
+    name: "top"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  - description: "The opaque token that the server returns to indicate where to continue listing resources from.\n This is used for paging through large result sets."
+    name: "skipToken"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract PagedIterable<TrunkedNetworkInner> listByResourceGroup(String resourceGroupName, Context context)"
+  syntax: "public abstract PagedIterable<TrunkedNetworkInner> listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
   desc: "List trunked networks in the resource group. Get a list of trunked networks in the provided resource group."
   returns:
     description: "a list of trunked networks in the provided resource group as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
@@ -364,4 +376,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in TrunkedNetworksClient."
 metadata: {}
 package: "com.azure.resourcemanager.networkcloud.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.0.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.1.0

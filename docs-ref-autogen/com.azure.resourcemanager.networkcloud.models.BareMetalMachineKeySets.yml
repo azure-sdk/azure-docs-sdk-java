@@ -217,10 +217,10 @@ methods:
   returns:
     description: "a list of bare metal machine key sets for the provided cluster as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.BareMetalMachineKeySet?alt=com.azure.resourcemanager.networkcloud.models.BareMetalMachineKeySet&text=BareMetalMachineKeySet\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachineKeySets.listByCluster(java.lang.String,java.lang.String,com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachineKeySets.listByCluster(String resourceGroupName, String clusterName, Context context)"
-  name: "listByCluster(String resourceGroupName, String clusterName, Context context)"
-  nameWithType: "BareMetalMachineKeySets.listByCluster(String resourceGroupName, String clusterName, Context context)"
+- uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachineKeySets.listByCluster(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachineKeySets.listByCluster(String resourceGroupName, String clusterName, Integer top, String skipToken, Context context)"
+  name: "listByCluster(String resourceGroupName, String clusterName, Integer top, String skipToken, Context context)"
+  nameWithType: "BareMetalMachineKeySets.listByCluster(String resourceGroupName, String clusterName, Integer top, String skipToken, Context context)"
   summary: "List bare metal machine key sets of the cluster."
   modifiers:
   - "abstract"
@@ -231,10 +231,16 @@ methods:
   - description: "The name of the cluster."
     name: "clusterName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The maximum number of resources to return from the operation. Example: '$top=10'."
+    name: "top"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  - description: "The opaque token that the server returns to indicate where to continue listing resources from.\n This is used for paging through large result sets."
+    name: "skipToken"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract PagedIterable<BareMetalMachineKeySet> listByCluster(String resourceGroupName, String clusterName, Context context)"
+  syntax: "public abstract PagedIterable<BareMetalMachineKeySet> listByCluster(String resourceGroupName, String clusterName, Integer top, String skipToken, Context context)"
   desc: "List bare metal machine key sets of the cluster. Get a list of bare metal machine key sets for the provided cluster."
   returns:
     description: "a list of bare metal machine key sets for the provided cluster as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
@@ -243,4 +249,4 @@ type: "interface"
 desc: "Resource collection API of BareMetalMachineKeySets."
 metadata: {}
 package: "com.azure.resourcemanager.networkcloud.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.0.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.1.0
