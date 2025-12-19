@@ -1,7 +1,7 @@
 ---
 title: Azure Hybrid Compute SDK for Java
 description: Reference for Azure Hybrid Compute SDK for Java
-ms.date: 12/18/2025
+ms.date: 12/19/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: hybridcompute
