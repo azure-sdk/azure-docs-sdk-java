@@ -1,0 +1,118 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.containerservicefleet.models.LabelSelector"
+fullName: "com.azure.resourcemanager.containerservicefleet.models.LabelSelector"
+name: "LabelSelector"
+nameWithType: "LabelSelector"
+summary: "A label selector is a label query over a set of resources."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **LabelSelector**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservicefleet.models.LabelSelector?alt=com.azure.resourcemanager.containerservicefleet.models.LabelSelector&text=LabelSelector\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.resourcemanager.containerservicefleet.models.LabelSelector.LabelSelector()"
+  fullName: "com.azure.resourcemanager.containerservicefleet.models.LabelSelector.LabelSelector()"
+  name: "LabelSelector()"
+  nameWithType: "LabelSelector.LabelSelector()"
+  summary: "Creates an instance of Label<wbr>Selector class."
+  syntax: "public LabelSelector()"
+  desc: "Creates an instance of LabelSelector class."
+methods:
+- uid: "com.azure.resourcemanager.containerservicefleet.models.LabelSelector.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.containerservicefleet.models.LabelSelector.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "LabelSelector.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Label<wbr>Selector from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static LabelSelector fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the LabelSelector."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of LabelSelector from the JsonReader."
+  returns:
+    description: "An instance of LabelSelector if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.models.LabelSelector?alt=com.azure.resourcemanager.containerservicefleet.models.LabelSelector&text=LabelSelector\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservicefleet.models.LabelSelector.matchExpressions()"
+  fullName: "com.azure.resourcemanager.containerservicefleet.models.LabelSelector.matchExpressions()"
+  name: "matchExpressions()"
+  nameWithType: "LabelSelector.matchExpressions()"
+  summary: "Get the match<wbr>Expressions property: match<wbr>Expressions is a list of label selector requirements."
+  syntax: "public List<LabelSelectorRequirement> matchExpressions()"
+  desc: "Get the matchExpressions property: matchExpressions is a list of label selector requirements. The requirements are ANDed."
+  returns:
+    description: "the matchExpressions value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.containerservicefleet.models.LabelSelectorRequirement?alt=com.azure.resourcemanager.containerservicefleet.models.LabelSelectorRequirement&text=LabelSelectorRequirement\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.containerservicefleet.models.LabelSelector.matchLabels()"
+  fullName: "com.azure.resourcemanager.containerservicefleet.models.LabelSelector.matchLabels()"
+  name: "matchLabels()"
+  nameWithType: "LabelSelector.matchLabels()"
+  summary: "Get the match<wbr>Labels property: match<wbr>Labels is a map of \\{key,value\\} pairs."
+  syntax: "public Map<String,String> matchLabels()"
+  desc: "Get the matchLabels property: matchLabels is a map of \\{key,value\\} pairs. A single \\{key,value\\} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+  returns:
+    description: "the matchLabels value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+- uid: "com.azure.resourcemanager.containerservicefleet.models.LabelSelector.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.containerservicefleet.models.LabelSelector.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "LabelSelector.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservicefleet.models.LabelSelector.withMatchExpressions(java.util.List<com.azure.resourcemanager.containerservicefleet.models.LabelSelectorRequirement>)"
+  fullName: "com.azure.resourcemanager.containerservicefleet.models.LabelSelector.withMatchExpressions(List<LabelSelectorRequirement> matchExpressions)"
+  name: "withMatchExpressions(List<LabelSelectorRequirement> matchExpressions)"
+  nameWithType: "LabelSelector.withMatchExpressions(List<LabelSelectorRequirement> matchExpressions)"
+  summary: "Set the match<wbr>Expressions property: match<wbr>Expressions is a list of label selector requirements."
+  parameters:
+  - description: "the matchExpressions value to set."
+    name: "matchExpressions"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.containerservicefleet.models.LabelSelectorRequirement?alt=com.azure.resourcemanager.containerservicefleet.models.LabelSelectorRequirement&text=LabelSelectorRequirement\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public LabelSelector withMatchExpressions(List<LabelSelectorRequirement> matchExpressions)"
+  desc: "Set the matchExpressions property: matchExpressions is a list of label selector requirements. The requirements are ANDed."
+  returns:
+    description: "the LabelSelector object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.models.LabelSelector?alt=com.azure.resourcemanager.containerservicefleet.models.LabelSelector&text=LabelSelector\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservicefleet.models.LabelSelector.withMatchLabels(java.util.Map<java.lang.String,java.lang.String>)"
+  fullName: "com.azure.resourcemanager.containerservicefleet.models.LabelSelector.withMatchLabels(Map<String,String> matchLabels)"
+  name: "withMatchLabels(Map<String,String> matchLabels)"
+  nameWithType: "LabelSelector.withMatchLabels(Map<String,String> matchLabels)"
+  summary: "Set the match<wbr>Labels property: match<wbr>Labels is a map of \\{key,value\\} pairs."
+  parameters:
+  - description: "the matchLabels value to set."
+    name: "matchLabels"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+  syntax: "public LabelSelector withMatchLabels(Map<String,String> matchLabels)"
+  desc: "Set the matchLabels property: matchLabels is a map of \\{key,value\\} pairs. A single \\{key,value\\} in the matchLabels map is equivalent to an element of matchExpressions, whose key field is \"key\", the operator is \"In\", and the values array contains only \"value\". The requirements are ANDed."
+  returns:
+    description: "the LabelSelector object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.models.LabelSelector?alt=com.azure.resourcemanager.containerservicefleet.models.LabelSelector&text=LabelSelector\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "A label selector is a label query over a set of resources. The result of matchLabels and matchExpressions are ANDed. An empty label selector matches all objects. A null label selector matches no objects."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservicefleet.models.LabelSelector?alt=com.azure.resourcemanager.containerservicefleet.models.LabelSelector&text=LabelSelector\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.containerservicefleet.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservicefleet:1.3.0-beta.2
