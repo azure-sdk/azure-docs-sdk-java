@@ -35,11 +35,11 @@ methods:
   name: "createdDate()"
   nameWithType: "WorkspaceProperties.createdDate()"
   summary: "Get the created<wbr>Date property: Workspace creation date."
-  syntax: "public String createdDate()"
+  syntax: "public OffsetDateTime createdDate()"
   desc: "Get the createdDate property: Workspace creation date."
   returns:
     description: "the createdDate value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
 - uid: "com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties.customerId()"
   fullName: "com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties.customerId()"
   name: "customerId()"
@@ -60,6 +60,16 @@ methods:
   returns:
     description: "the defaultDataCollectionRuleResourceId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties.failover()"
+  fullName: "com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties.failover()"
+  name: "failover()"
+  nameWithType: "WorkspaceProperties.failover()"
+  summary: "Get the failover property: workspace failover properties."
+  syntax: "public WorkspaceFailoverProperties failover()"
+  desc: "Get the failover property: workspace failover properties."
+  returns:
+    description: "the failover value."
+    type: "<xref href=\"com.azure.resourcemanager.loganalytics.models.WorkspaceFailoverProperties?alt=com.azure.resourcemanager.loganalytics.models.WorkspaceFailoverProperties&text=WorkspaceFailoverProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties.features()"
   fullName: "com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties.features()"
   name: "features()"
@@ -104,11 +114,11 @@ methods:
   name: "modifiedDate()"
   nameWithType: "WorkspaceProperties.modifiedDate()"
   summary: "Get the modified<wbr>Date property: Workspace modification date."
-  syntax: "public String modifiedDate()"
+  syntax: "public OffsetDateTime modifiedDate()"
   desc: "Get the modifiedDate property: Workspace modification date."
   returns:
     description: "the modifiedDate value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
 - uid: "com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties.privateLinkScopedResources()"
   fullName: "com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties.privateLinkScopedResources()"
   name: "privateLinkScopedResources()"
@@ -149,6 +159,16 @@ methods:
   returns:
     description: "the publicNetworkAccessForQuery value."
     type: "<xref href=\"com.azure.resourcemanager.loganalytics.models.PublicNetworkAccessType?alt=com.azure.resourcemanager.loganalytics.models.PublicNetworkAccessType&text=PublicNetworkAccessType\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties.replication()"
+  fullName: "com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties.replication()"
+  name: "replication()"
+  nameWithType: "WorkspaceProperties.replication()"
+  summary: "Get the replication property: workspace replication properties."
+  syntax: "public WorkspaceReplicationProperties replication()"
+  desc: "Get the replication property: workspace replication properties."
+  returns:
+    description: "the replication value."
+    type: "<xref href=\"com.azure.resourcemanager.loganalytics.models.WorkspaceReplicationProperties?alt=com.azure.resourcemanager.loganalytics.models.WorkspaceReplicationProperties&text=WorkspaceReplicationProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties.retentionInDays()"
   fullName: "com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties.retentionInDays()"
   name: "retentionInDays()"
@@ -199,6 +219,20 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public WorkspaceProperties withDefaultDataCollectionRuleResourceId(String defaultDataCollectionRuleResourceId)"
   desc: "Set the defaultDataCollectionRuleResourceId property: The resource ID of the default Data Collection Rule to use for this workspace. Expected format is - /subscriptions/\\{subscriptionId\\}/resourceGroups/\\{resourceGroupName\\}/providers/Microsoft.Insights/dataCollectionRules/\\{dcrName\\}."
+  returns:
+    description: "the WorkspaceProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties?alt=com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties&text=WorkspaceProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties.withFailover(com.azure.resourcemanager.loganalytics.models.WorkspaceFailoverProperties)"
+  fullName: "com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties.withFailover(WorkspaceFailoverProperties failover)"
+  name: "withFailover(WorkspaceFailoverProperties failover)"
+  nameWithType: "WorkspaceProperties.withFailover(WorkspaceFailoverProperties failover)"
+  summary: "Set the failover property: workspace failover properties."
+  parameters:
+  - description: "the failover value to set."
+    name: "failover"
+    type: "<xref href=\"com.azure.resourcemanager.loganalytics.models.WorkspaceFailoverProperties?alt=com.azure.resourcemanager.loganalytics.models.WorkspaceFailoverProperties&text=WorkspaceFailoverProperties\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public WorkspaceProperties withFailover(WorkspaceFailoverProperties failover)"
+  desc: "Set the failover property: workspace failover properties."
   returns:
     description: "the WorkspaceProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties?alt=com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties&text=WorkspaceProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -255,6 +289,20 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.loganalytics.models.PublicNetworkAccessType?alt=com.azure.resourcemanager.loganalytics.models.PublicNetworkAccessType&text=PublicNetworkAccessType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public WorkspaceProperties withPublicNetworkAccessForQuery(PublicNetworkAccessType publicNetworkAccessForQuery)"
   desc: "Set the publicNetworkAccessForQuery property: The network access type for accessing Log Analytics query."
+  returns:
+    description: "the WorkspaceProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties?alt=com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties&text=WorkspaceProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties.withReplication(com.azure.resourcemanager.loganalytics.models.WorkspaceReplicationProperties)"
+  fullName: "com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties.withReplication(WorkspaceReplicationProperties replication)"
+  name: "withReplication(WorkspaceReplicationProperties replication)"
+  nameWithType: "WorkspaceProperties.withReplication(WorkspaceReplicationProperties replication)"
+  summary: "Set the replication property: workspace replication properties."
+  parameters:
+  - description: "the replication value to set."
+    name: "replication"
+    type: "<xref href=\"com.azure.resourcemanager.loganalytics.models.WorkspaceReplicationProperties?alt=com.azure.resourcemanager.loganalytics.models.WorkspaceReplicationProperties&text=WorkspaceReplicationProperties\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public WorkspaceProperties withReplication(WorkspaceReplicationProperties replication)"
+  desc: "Set the replication property: workspace replication properties."
   returns:
     description: "the WorkspaceProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties?alt=com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties&text=WorkspaceProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -316,4 +364,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties?alt=com.azure.resourcemanager.loganalytics.fluent.models.WorkspaceProperties&text=WorkspaceProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.loganalytics.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-loganalytics:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-loganalytics:2.0.0

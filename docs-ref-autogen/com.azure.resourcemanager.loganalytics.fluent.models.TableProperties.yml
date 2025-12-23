@@ -34,9 +34,9 @@ methods:
   fullName: "com.azure.resourcemanager.loganalytics.fluent.models.TableProperties.archiveRetentionInDays()"
   name: "archiveRetentionInDays()"
   nameWithType: "TableProperties.archiveRetentionInDays()"
-  summary: "Get the archive<wbr>Retention<wbr>InDays property: The table data archive retention in days."
+  summary: "Get the archive<wbr>Retention<wbr>InDays property: The tables long-term retention in days."
   syntax: "public Integer archiveRetentionInDays()"
-  desc: "Get the archiveRetentionInDays property: The table data archive retention in days. Calculated as (totalRetentionInDays-retentionInDays)."
+  desc: "Get the archiveRetentionInDays property: The tables long-term retention in days. Calculated as (totalRetentionInDays-retentionInDays)."
   returns:
     description: "the archiveRetentionInDays value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
@@ -113,9 +113,9 @@ methods:
   fullName: "com.azure.resourcemanager.loganalytics.fluent.models.TableProperties.retentionInDays()"
   name: "retentionInDays()"
   nameWithType: "TableProperties.retentionInDays()"
-  summary: "Get the retention<wbr>InDays property: The table retention in days, between 4 and 730."
+  summary: "Get the retention<wbr>InDays property: In Analytics table: the tables analytics retention in days, between 4 and 730."
   syntax: "public Integer retentionInDays()"
-  desc: "Get the retentionInDays property: The table retention in days, between 4 and 730. Setting this property to -1 will default to the workspace retention."
+  desc: "Get the retentionInDays property: In Analytics table: the tables analytics retention in days, between 4 and 730. Setting this property to -1 will default to the workspace retention. In Basic and Auxiliary table: read only property."
   returns:
     description: "the retentionInDays value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
@@ -167,7 +167,7 @@ methods:
   nameWithType: "TableProperties.totalRetentionInDays()"
   summary: "Get the total<wbr>Retention<wbr>InDays property: The table total retention in days, between 4 and 4383."
   syntax: "public Integer totalRetentionInDays()"
-  desc: "Get the totalRetentionInDays property: The table total retention in days, between 4 and 4383. Setting this property to -1 will default to table retention."
+  desc: "Get the totalRetentionInDays property: The table total retention in days, between 4 and 4383. Setting this property to -1 will default to retentionInDays."
   returns:
     description: "the totalRetentionInDays value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
@@ -220,13 +220,13 @@ methods:
   fullName: "com.azure.resourcemanager.loganalytics.fluent.models.TableProperties.withRetentionInDays(Integer retentionInDays)"
   name: "withRetentionInDays(Integer retentionInDays)"
   nameWithType: "TableProperties.withRetentionInDays(Integer retentionInDays)"
-  summary: "Set the retention<wbr>InDays property: The table retention in days, between 4 and 730."
+  summary: "Set the retention<wbr>InDays property: In Analytics table: the tables analytics retention in days, between 4 and 730."
   parameters:
   - description: "the retentionInDays value to set."
     name: "retentionInDays"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
   syntax: "public TableProperties withRetentionInDays(Integer retentionInDays)"
-  desc: "Set the retentionInDays property: The table retention in days, between 4 and 730. Setting this property to -1 will default to the workspace retention."
+  desc: "Set the retentionInDays property: In Analytics table: the tables analytics retention in days, between 4 and 730. Setting this property to -1 will default to the workspace retention. In Basic and Auxiliary table: read only property."
   returns:
     description: "the TableProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.loganalytics.fluent.models.TableProperties?alt=com.azure.resourcemanager.loganalytics.fluent.models.TableProperties&text=TableProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -268,7 +268,7 @@ methods:
     name: "totalRetentionInDays"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
   syntax: "public TableProperties withTotalRetentionInDays(Integer totalRetentionInDays)"
-  desc: "Set the totalRetentionInDays property: The table total retention in days, between 4 and 4383. Setting this property to -1 will default to table retention."
+  desc: "Set the totalRetentionInDays property: The table total retention in days, between 4 and 4383. Setting this property to -1 will default to retentionInDays."
   returns:
     description: "the TableProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.loganalytics.fluent.models.TableProperties?alt=com.azure.resourcemanager.loganalytics.fluent.models.TableProperties&text=TableProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -278,4 +278,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.loganalytics.fluent.models.TableProperties?alt=com.azure.resourcemanager.loganalytics.fluent.models.TableProperties&text=TableProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.loganalytics.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-loganalytics:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-loganalytics:2.0.0

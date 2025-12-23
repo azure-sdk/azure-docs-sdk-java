@@ -90,11 +90,11 @@ methods:
   name: "createdDate()"
   nameWithType: "ClusterInner.createdDate()"
   summary: "Get the created<wbr>Date property: The cluster creation time."
-  syntax: "public String createdDate()"
+  syntax: "public OffsetDateTime createdDate()"
   desc: "Get the createdDate property: The cluster creation time."
   returns:
     description: "the createdDate value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
 - uid: "com.azure.resourcemanager.loganalytics.fluent.models.ClusterInner.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.resourcemanager.loganalytics.fluent.models.ClusterInner.fromJson(JsonReader jsonReader)"
   name: "fromJson(JsonReader jsonReader)"
@@ -170,11 +170,11 @@ methods:
   name: "lastModifiedDate()"
   nameWithType: "ClusterInner.lastModifiedDate()"
   summary: "Get the last<wbr>Modified<wbr>Date property: The last time the cluster was updated."
-  syntax: "public String lastModifiedDate()"
+  syntax: "public OffsetDateTime lastModifiedDate()"
   desc: "Get the lastModifiedDate property: The last time the cluster was updated."
   returns:
     description: "the lastModifiedDate value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
 - uid: "com.azure.resourcemanager.loganalytics.fluent.models.ClusterInner.name()"
   fullName: "com.azure.resourcemanager.loganalytics.fluent.models.ClusterInner.name()"
   name: "name()"
@@ -196,6 +196,16 @@ methods:
   returns:
     description: "the provisioningState value."
     type: "<xref href=\"com.azure.resourcemanager.loganalytics.models.ClusterEntityStatus?alt=com.azure.resourcemanager.loganalytics.models.ClusterEntityStatus&text=ClusterEntityStatus\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.loganalytics.fluent.models.ClusterInner.replication()"
+  fullName: "com.azure.resourcemanager.loganalytics.fluent.models.ClusterInner.replication()"
+  name: "replication()"
+  nameWithType: "ClusterInner.replication()"
+  summary: "Get the replication property: Cluster's replication properties."
+  syntax: "public ClusterReplicationProperties replication()"
+  desc: "Get the replication property: Cluster's replication properties."
+  returns:
+    description: "the replication value."
+    type: "<xref href=\"com.azure.resourcemanager.loganalytics.models.ClusterReplicationProperties?alt=com.azure.resourcemanager.loganalytics.models.ClusterReplicationProperties&text=ClusterReplicationProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.loganalytics.fluent.models.ClusterInner.sku()"
   fullName: "com.azure.resourcemanager.loganalytics.fluent.models.ClusterInner.sku()"
   name: "sku()"
@@ -346,6 +356,20 @@ methods:
   syntax: "public ClusterInner withLocation(String location)"
   returns:
     type: "<xref href=\"com.azure.resourcemanager.loganalytics.fluent.models.ClusterInner?alt=com.azure.resourcemanager.loganalytics.fluent.models.ClusterInner&text=ClusterInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.loganalytics.fluent.models.ClusterInner.withReplication(com.azure.resourcemanager.loganalytics.models.ClusterReplicationProperties)"
+  fullName: "com.azure.resourcemanager.loganalytics.fluent.models.ClusterInner.withReplication(ClusterReplicationProperties replication)"
+  name: "withReplication(ClusterReplicationProperties replication)"
+  nameWithType: "ClusterInner.withReplication(ClusterReplicationProperties replication)"
+  summary: "Set the replication property: Cluster's replication properties."
+  parameters:
+  - description: "the replication value to set."
+    name: "replication"
+    type: "<xref href=\"com.azure.resourcemanager.loganalytics.models.ClusterReplicationProperties?alt=com.azure.resourcemanager.loganalytics.models.ClusterReplicationProperties&text=ClusterReplicationProperties\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ClusterInner withReplication(ClusterReplicationProperties replication)"
+  desc: "Set the replication property: Cluster's replication properties."
+  returns:
+    description: "the ClusterInner object itself."
+    type: "<xref href=\"com.azure.resourcemanager.loganalytics.fluent.models.ClusterInner?alt=com.azure.resourcemanager.loganalytics.fluent.models.ClusterInner&text=ClusterInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.loganalytics.fluent.models.ClusterInner.withSku(com.azure.resourcemanager.loganalytics.models.ClusterSku)"
   fullName: "com.azure.resourcemanager.loganalytics.fluent.models.ClusterInner.withSku(ClusterSku sku)"
   name: "withSku(ClusterSku sku)"
@@ -375,4 +399,4 @@ type: "class"
 desc: "The top level Log Analytics cluster resource container."
 metadata: {}
 package: "com.azure.resourcemanager.loganalytics.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-loganalytics:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-loganalytics:2.0.0

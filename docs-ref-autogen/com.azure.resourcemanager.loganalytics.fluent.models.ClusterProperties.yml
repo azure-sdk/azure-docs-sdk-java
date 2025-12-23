@@ -75,11 +75,11 @@ methods:
   name: "createdDate()"
   nameWithType: "ClusterProperties.createdDate()"
   summary: "Get the created<wbr>Date property: The cluster creation time."
-  syntax: "public String createdDate()"
+  syntax: "public OffsetDateTime createdDate()"
   desc: "Get the createdDate property: The cluster creation time."
   returns:
     description: "the createdDate value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
 - uid: "com.azure.resourcemanager.loganalytics.fluent.models.ClusterProperties.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.resourcemanager.loganalytics.fluent.models.ClusterProperties.fromJson(JsonReader jsonReader)"
   name: "fromJson(JsonReader jsonReader)"
@@ -134,11 +134,11 @@ methods:
   name: "lastModifiedDate()"
   nameWithType: "ClusterProperties.lastModifiedDate()"
   summary: "Get the last<wbr>Modified<wbr>Date property: The last time the cluster was updated."
-  syntax: "public String lastModifiedDate()"
+  syntax: "public OffsetDateTime lastModifiedDate()"
   desc: "Get the lastModifiedDate property: The last time the cluster was updated."
   returns:
     description: "the lastModifiedDate value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
 - uid: "com.azure.resourcemanager.loganalytics.fluent.models.ClusterProperties.provisioningState()"
   fullName: "com.azure.resourcemanager.loganalytics.fluent.models.ClusterProperties.provisioningState()"
   name: "provisioningState()"
@@ -149,6 +149,16 @@ methods:
   returns:
     description: "the provisioningState value."
     type: "<xref href=\"com.azure.resourcemanager.loganalytics.models.ClusterEntityStatus?alt=com.azure.resourcemanager.loganalytics.models.ClusterEntityStatus&text=ClusterEntityStatus\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.loganalytics.fluent.models.ClusterProperties.replication()"
+  fullName: "com.azure.resourcemanager.loganalytics.fluent.models.ClusterProperties.replication()"
+  name: "replication()"
+  nameWithType: "ClusterProperties.replication()"
+  summary: "Get the replication property: Cluster's replication properties."
+  syntax: "public ClusterReplicationProperties replication()"
+  desc: "Get the replication property: Cluster's replication properties."
+  returns:
+    description: "the replication value."
+    type: "<xref href=\"com.azure.resourcemanager.loganalytics.models.ClusterReplicationProperties?alt=com.azure.resourcemanager.loganalytics.models.ClusterReplicationProperties&text=ClusterReplicationProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.loganalytics.fluent.models.ClusterProperties.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.loganalytics.fluent.models.ClusterProperties.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -252,10 +262,24 @@ methods:
   returns:
     description: "the ClusterProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.loganalytics.fluent.models.ClusterProperties?alt=com.azure.resourcemanager.loganalytics.fluent.models.ClusterProperties&text=ClusterProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.loganalytics.fluent.models.ClusterProperties.withReplication(com.azure.resourcemanager.loganalytics.models.ClusterReplicationProperties)"
+  fullName: "com.azure.resourcemanager.loganalytics.fluent.models.ClusterProperties.withReplication(ClusterReplicationProperties replication)"
+  name: "withReplication(ClusterReplicationProperties replication)"
+  nameWithType: "ClusterProperties.withReplication(ClusterReplicationProperties replication)"
+  summary: "Set the replication property: Cluster's replication properties."
+  parameters:
+  - description: "the replication value to set."
+    name: "replication"
+    type: "<xref href=\"com.azure.resourcemanager.loganalytics.models.ClusterReplicationProperties?alt=com.azure.resourcemanager.loganalytics.models.ClusterReplicationProperties&text=ClusterReplicationProperties\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ClusterProperties withReplication(ClusterReplicationProperties replication)"
+  desc: "Set the replication property: Cluster's replication properties."
+  returns:
+    description: "the ClusterProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.loganalytics.fluent.models.ClusterProperties?alt=com.azure.resourcemanager.loganalytics.fluent.models.ClusterProperties&text=ClusterProperties\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Cluster properties."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.loganalytics.fluent.models.ClusterProperties?alt=com.azure.resourcemanager.loganalytics.fluent.models.ClusterProperties&text=ClusterProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.loganalytics.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-loganalytics:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-loganalytics:2.0.0
