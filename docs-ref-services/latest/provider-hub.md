@@ -1,7 +1,7 @@
 ---
 title: Azure Provider Hub SDK for Java
 description: Reference for Azure Provider Hub SDK for Java
-ms.date: 12/25/2025
+ms.date: 12/26/2025
 ms.topic: reference
 ms.devlang: java
 ms.service: providerhub
