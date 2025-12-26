@@ -1,0 +1,87 @@
+### YamlMime:JavaType
+uid: "com.azure.spring.data.cosmos.core.mapping.CosmosIndexingPolicy"
+fullName: "com.azure.spring.data.cosmos.core.mapping.CosmosIndexingPolicy"
+name: "CosmosIndexingPolicy"
+nameWithType: "CosmosIndexingPolicy"
+summary: "Annotation for cosmos indexing policy."
+syntax: "public interface **CosmosIndexingPolicy**</br> implements <a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html\">Annotation</a>"
+methods:
+- uid: "com.azure.spring.data.cosmos.core.mapping.CosmosIndexingPolicy.automatic()"
+  fullName: "com.azure.spring.data.cosmos.core.mapping.CosmosIndexingPolicy.automatic()"
+  name: "automatic()"
+  nameWithType: "CosmosIndexingPolicy.automatic()"
+  summary: "To set automatic indexing"
+  modifiers:
+  - "abstract"
+  syntax: "public abstract boolean automatic()"
+  desc: "To set automatic indexing"
+  returns:
+    description: "default as true"
+    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.spring.data.cosmos.core.mapping.CosmosIndexingPolicy.compositeIndexes()"
+  fullName: "com.azure.spring.data.cosmos.core.mapping.CosmosIndexingPolicy.compositeIndexes()"
+  name: "compositeIndexes()"
+  nameWithType: "CosmosIndexingPolicy.compositeIndexes()"
+  summary: "Composite Indexes"
+  modifiers:
+  - "abstract"
+  syntax: "public abstract CompositeIndex[] compositeIndexes()"
+  desc: "Composite Indexes"
+  returns:
+    description: "CompositeIndexDefinition[]"
+    type: "<xref href=\"com.azure.spring.data.cosmos.core.mapping.CompositeIndex?alt=com.azure.spring.data.cosmos.core.mapping.CompositeIndex&text=CompositeIndex\" data-throw-if-not-resolved=\"False\" />[]"
+- uid: "com.azure.spring.data.cosmos.core.mapping.CosmosIndexingPolicy.excludePaths()"
+  fullName: "com.azure.spring.data.cosmos.core.mapping.CosmosIndexingPolicy.excludePaths()"
+  name: "excludePaths()"
+  nameWithType: "CosmosIndexingPolicy.excludePaths()"
+  summary: "To exclude paths"
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String[] excludePaths()"
+  desc: "To exclude paths"
+  returns:
+    description: "String[]"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>[]"
+- uid: "com.azure.spring.data.cosmos.core.mapping.CosmosIndexingPolicy.includePaths()"
+  fullName: "com.azure.spring.data.cosmos.core.mapping.CosmosIndexingPolicy.includePaths()"
+  name: "includePaths()"
+  nameWithType: "CosmosIndexingPolicy.includePaths()"
+  summary: "To include paths"
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String[] includePaths()"
+  desc: "To include paths"
+  returns:
+    description: "String[]"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>[]"
+- uid: "com.azure.spring.data.cosmos.core.mapping.CosmosIndexingPolicy.mode()"
+  fullName: "com.azure.spring.data.cosmos.core.mapping.CosmosIndexingPolicy.mode()"
+  name: "mode()"
+  nameWithType: "CosmosIndexingPolicy.mode()"
+  summary: "To set indexing mode"
+  modifiers:
+  - "abstract"
+  syntax: "public abstract IndexingMode mode()"
+  desc: "To set indexing mode"
+  returns:
+    description: "IndexingMode"
+    type: "<xref href=\"com.azure.cosmos.models.IndexingMode?alt=com.azure.cosmos.models.IndexingMode&text=IndexingMode\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.spring.data.cosmos.core.mapping.CosmosIndexingPolicy.overwritePolicy()"
+  fullName: "com.azure.spring.data.cosmos.core.mapping.CosmosIndexingPolicy.overwritePolicy()"
+  name: "overwritePolicy()"
+  nameWithType: "CosmosIndexingPolicy.overwritePolicy()"
+  summary: "Whether or not to overwrite the indexing policy specified in the Portal."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract boolean overwritePolicy()"
+  desc: "Whether or not to overwrite the indexing policy specified in the Portal."
+  returns:
+    description: "default as false"
+    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+type: "interface"
+desc: "Annotation for cosmos indexing policy. Using this annotation will NOT overwrite the cosmos indexing policy currently in Azure Portal by default. See \\`overwritePolicy()\\` for more details. To prevent overwriting the Indexing Policy defined on Azure Portal, Indexing Policy defined on the SDK through this annotation should be identical or set overwritePolicy flag to false."
+implements:
+- "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html\">Annotation</a>"
+metadata: {}
+package: "com.azure.spring.data.cosmos.core.mapping"
+artifact: com.azure:azure-spring-data-cosmos:7.0.0-beta.1

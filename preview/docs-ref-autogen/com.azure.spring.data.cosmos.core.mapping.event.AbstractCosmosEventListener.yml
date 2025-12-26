@@ -1,0 +1,61 @@
+### YamlMime:JavaType
+uid: "com.azure.spring.data.cosmos.core.mapping.event.AbstractCosmosEventListener"
+fullName: "com.azure.spring.data.cosmos.core.mapping.event.AbstractCosmosEventListener<E>"
+name: "AbstractCosmosEventListener<E>"
+nameWithType: "AbstractCosmosEventListener<E>"
+summary: "Abstract Event Listener."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public abstract class **AbstractCosmosEventListener<E>**</br> implements <xref href=\"org.springframework.context.ApplicationListener?alt=org.springframework.context.ApplicationListener&text=ApplicationListener\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.spring.data.cosmos.core.mapping.event.CosmosMappingEvent?alt=com.azure.spring.data.cosmos.core.mapping.event.CosmosMappingEvent&text=CosmosMappingEvent\" data-throw-if-not-resolved=\"False\" />&lt;?&gt;&gt;"
+constructors:
+- uid: "com.azure.spring.data.cosmos.core.mapping.event.AbstractCosmosEventListener.AbstractCosmosEventListener()"
+  fullName: "com.azure.spring.data.cosmos.core.mapping.event.AbstractCosmosEventListener<E>.AbstractCosmosEventListener()"
+  name: "AbstractCosmosEventListener()"
+  nameWithType: "AbstractCosmosEventListener<E>.AbstractCosmosEventListener()"
+  summary: "Creates a new <xref uid=\"com.azure.spring.data.cosmos.core.mapping.event.AbstractCosmosEventListener\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AbstractCosmosEventListener\"></xref>."
+  syntax: "public AbstractCosmosEventListener()"
+  desc: "Creates a new <xref uid=\"com.azure.spring.data.cosmos.core.mapping.event.AbstractCosmosEventListener\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AbstractCosmosEventListener\"></xref>."
+methods:
+- uid: "com.azure.spring.data.cosmos.core.mapping.event.AbstractCosmosEventListener.onAfterLoad(com.azure.spring.data.cosmos.core.mapping.event.AfterLoadEvent<E>)"
+  fullName: "com.azure.spring.data.cosmos.core.mapping.event.AbstractCosmosEventListener<E>.onAfterLoad(AfterLoadEvent<E> event)"
+  name: "onAfterLoad(AfterLoadEvent<E> event)"
+  nameWithType: "AbstractCosmosEventListener<E>.onAfterLoad(AfterLoadEvent<E> event)"
+  summary: "Captures <xref uid=\"com.azure.spring.data.cosmos.core.mapping.event.AfterLoadEvent\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AfterLoadEvent\"></xref>."
+  parameters:
+  - description: "will never be null."
+    name: "event"
+    type: "<xref href=\"com.azure.spring.data.cosmos.core.mapping.event.AfterLoadEvent?alt=com.azure.spring.data.cosmos.core.mapping.event.AfterLoadEvent&text=AfterLoadEvent\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"E?alt=E&text=E\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public void onAfterLoad(AfterLoadEvent<E> event)"
+  desc: "Captures <xref uid=\"com.azure.spring.data.cosmos.core.mapping.event.AfterLoadEvent\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AfterLoadEvent\"></xref>."
+- uid: "com.azure.spring.data.cosmos.core.mapping.event.AbstractCosmosEventListener.onApplicationEvent(com.azure.spring.data.cosmos.core.mapping.event.CosmosMappingEvent<?>)"
+  fullName: "com.azure.spring.data.cosmos.core.mapping.event.AbstractCosmosEventListener<E>.onApplicationEvent(CosmosMappingEvent<?> event)"
+  name: "onApplicationEvent(CosmosMappingEvent<?> event)"
+  nameWithType: "AbstractCosmosEventListener<E>.onApplicationEvent(CosmosMappingEvent<?> event)"
+  parameters:
+  - name: "event"
+    type: "<xref href=\"com.azure.spring.data.cosmos.core.mapping.event.CosmosMappingEvent?alt=com.azure.spring.data.cosmos.core.mapping.event.CosmosMappingEvent&text=CosmosMappingEvent\" data-throw-if-not-resolved=\"False\" />&lt;?&gt;"
+  syntax: "public void onApplicationEvent(CosmosMappingEvent<?> event)"
+type: "class"
+typeParameters:
+- description: "the type of the event."
+  name: "E"
+desc: "Abstract Event Listener. Can be extended and registered as a bean to capture spring application events Ported to cosmos from spring-data-mongo https://github.com/spring-projects/spring-data-mongodb/blob/main/spring-data-mongodb/src/main/java/org/springframework/data/mongodb/core/mapping/event/AbstractMongoEventListener.java"
+implements:
+- "<xref href=\"org.springframework.context.ApplicationListener?alt=org.springframework.context.ApplicationListener&text=ApplicationListener\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.spring.data.cosmos.core.mapping.event.CosmosMappingEvent?alt=com.azure.spring.data.cosmos.core.mapping.event.CosmosMappingEvent&text=CosmosMappingEvent\" data-throw-if-not-resolved=\"False\" />&lt;?&gt;&gt;"
+metadata: {}
+package: "com.azure.spring.data.cosmos.core.mapping.event"
+artifact: com.azure:azure-spring-data-cosmos:7.0.0-beta.1

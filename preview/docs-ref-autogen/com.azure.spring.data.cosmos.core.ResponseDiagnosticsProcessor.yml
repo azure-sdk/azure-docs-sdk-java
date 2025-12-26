@@ -1,0 +1,26 @@
+### YamlMime:JavaType
+uid: "com.azure.spring.data.cosmos.core.ResponseDiagnosticsProcessor"
+fullName: "com.azure.spring.data.cosmos.core.ResponseDiagnosticsProcessor"
+name: "ResponseDiagnosticsProcessor"
+nameWithType: "ResponseDiagnosticsProcessor"
+summary: "Interface for processing cosmosDB response"
+syntax: "public interface **ResponseDiagnosticsProcessor**"
+methods:
+- uid: "com.azure.spring.data.cosmos.core.ResponseDiagnosticsProcessor.processResponseDiagnostics(com.azure.spring.data.cosmos.core.ResponseDiagnostics)"
+  fullName: "com.azure.spring.data.cosmos.core.ResponseDiagnosticsProcessor.processResponseDiagnostics(ResponseDiagnostics responseDiagnostics)"
+  name: "processResponseDiagnostics(ResponseDiagnostics responseDiagnostics)"
+  nameWithType: "ResponseDiagnosticsProcessor.processResponseDiagnostics(ResponseDiagnostics responseDiagnostics)"
+  summary: "Gets called after receiving response from Cosmos<wbr>Db."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "responseDiagnostics object containing CosmosDb response diagnostics information"
+    name: "responseDiagnostics"
+    type: "<xref href=\"com.azure.spring.data.cosmos.core.ResponseDiagnostics?alt=com.azure.spring.data.cosmos.core.ResponseDiagnostics&text=ResponseDiagnostics\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void processResponseDiagnostics(ResponseDiagnostics responseDiagnostics)"
+  desc: "Gets called after receiving response from CosmosDb. Response Diagnostics are collected from API responses and then set in <xref uid=\"com.azure.spring.data.cosmos.core.ResponseDiagnostics\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ResponseDiagnostics\"></xref> object.\n\nIn case of missing diagnostics from CosmosDb, responseDiagnostics will be null.\n\nNOTE: Since processResponseDiagnostics() API will get called in every cosmos spring data implementation API to capture the diagnostics details, it is highly recommended to not have any long running / CPU intensive work in the implementation of this API."
+type: "interface"
+desc: "Interface for processing cosmosDB response"
+metadata: {}
+package: "com.azure.spring.data.cosmos.core"
+artifact: com.azure:azure-spring-data-cosmos:7.0.0-beta.1

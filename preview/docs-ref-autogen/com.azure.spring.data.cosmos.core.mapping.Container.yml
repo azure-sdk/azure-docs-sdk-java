@@ -1,0 +1,99 @@
+### YamlMime:JavaType
+uid: "com.azure.spring.data.cosmos.core.mapping.Container"
+fullName: "com.azure.spring.data.cosmos.core.mapping.Container"
+name: "Container"
+nameWithType: "Container"
+summary: "Annotation for Cosmos Container"
+syntax: "public interface **Container**</br> implements <a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html\">Annotation</a>"
+methods:
+- uid: "com.azure.spring.data.cosmos.core.mapping.Container.autoCreateContainer()"
+  fullName: "com.azure.spring.data.cosmos.core.mapping.Container.autoCreateContainer()"
+  name: "autoCreateContainer()"
+  nameWithType: "Container.autoCreateContainer()"
+  summary: "To set if create container automatically"
+  modifiers:
+  - "abstract"
+  syntax: "public abstract boolean autoCreateContainer()"
+  desc: "To set if create container automatically"
+  returns:
+    description: "default as true"
+    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.spring.data.cosmos.core.mapping.Container.autoScale()"
+  fullName: "com.azure.spring.data.cosmos.core.mapping.Container.autoScale()"
+  name: "autoScale()"
+  nameWithType: "Container.autoScale()"
+  summary: "To enable auto scale for container RU limit"
+  modifiers:
+  - "abstract"
+  syntax: "public abstract boolean autoScale()"
+  desc: "To enable auto scale for container RU limit"
+  returns:
+    description: "default as false"
+    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.spring.data.cosmos.core.mapping.Container.containerName()"
+  fullName: "com.azure.spring.data.cosmos.core.mapping.Container.containerName()"
+  name: "containerName()"
+  nameWithType: "Container.containerName()"
+  summary: "To set container name"
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String containerName()"
+  desc: "To set container name"
+  returns:
+    description: "String"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.spring.data.cosmos.core.mapping.Container.hierarchicalPartitionKeyPaths()"
+  fullName: "com.azure.spring.data.cosmos.core.mapping.Container.hierarchicalPartitionKeyPaths()"
+  name: "hierarchicalPartitionKeyPaths()"
+  nameWithType: "Container.hierarchicalPartitionKeyPaths()"
+  summary: "To set the partition key definition for container Should only be used for hierarchical partition key scenario."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String[] hierarchicalPartitionKeyPaths()"
+  desc: "To set the partition key definition for container Should only be used for hierarchical partition key scenario. For general partition key support, use the <xref uid=\"com.azure.spring.data.cosmos.core.mapping.PartitionKey\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PartitionKey\"></xref> annotation By default <xref uid=\"com.azure.spring.data.cosmos.core.mapping.PartitionKey\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PartitionKey\"></xref> annotation will take precedence, unless not specified."
+  returns:
+    description: "list of partition key paths"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>[]"
+- uid: "com.azure.spring.data.cosmos.core.mapping.Container.partitionKeyPath()"
+  fullName: "com.azure.spring.data.cosmos.core.mapping.Container.partitionKeyPath()"
+  name: "partitionKeyPath()"
+  nameWithType: "Container.partitionKeyPath()"
+  summary: "To set the partition key definition for container Should only be used for nested partition key scenario."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String partitionKeyPath()"
+  desc: "To set the partition key definition for container Should only be used for nested partition key scenario. For general partition key support, use the <xref uid=\"com.azure.spring.data.cosmos.core.mapping.PartitionKey\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PartitionKey\"></xref> annotation By default <xref uid=\"com.azure.spring.data.cosmos.core.mapping.PartitionKey\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PartitionKey\"></xref> annotation will take precedence, unless not specified."
+  returns:
+    description: "partition key path"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.spring.data.cosmos.core.mapping.Container.ru()"
+  fullName: "com.azure.spring.data.cosmos.core.mapping.Container.ru()"
+  name: "ru()"
+  nameWithType: "Container.ru()"
+  summary: "To set request unit"
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String ru()"
+  desc: "To set request unit"
+  returns:
+    description: "default as \"\""
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.spring.data.cosmos.core.mapping.Container.timeToLive()"
+  fullName: "com.azure.spring.data.cosmos.core.mapping.Container.timeToLive()"
+  name: "timeToLive()"
+  nameWithType: "Container.timeToLive()"
+  summary: "To set the ttl of container level"
+  modifiers:
+  - "abstract"
+  syntax: "public abstract int timeToLive()"
+  desc: "To set the ttl of container level"
+  returns:
+    description: "default as no ttl"
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
+type: "interface"
+desc: "Annotation for Cosmos Container"
+implements:
+- "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html\">Annotation</a>"
+metadata: {}
+package: "com.azure.spring.data.cosmos.core.mapping"
+artifact: com.azure:azure-spring-data-cosmos:7.0.0-beta.1

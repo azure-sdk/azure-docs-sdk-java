@@ -1,0 +1,123 @@
+### YamlMime:JavaType
+uid: "com.azure.spring.data.cosmos.config.CosmosConfigurationSupport"
+fullName: "com.azure.spring.data.cosmos.config.CosmosConfigurationSupport"
+name: "CosmosConfigurationSupport"
+nameWithType: "CosmosConfigurationSupport"
+summary: "A support class for cosmos configuration to scan beans and get initial entities"
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public abstract class **CosmosConfigurationSupport**"
+constructors:
+- uid: "com.azure.spring.data.cosmos.config.CosmosConfigurationSupport.CosmosConfigurationSupport()"
+  fullName: "com.azure.spring.data.cosmos.config.CosmosConfigurationSupport.CosmosConfigurationSupport()"
+  name: "CosmosConfigurationSupport()"
+  nameWithType: "CosmosConfigurationSupport.CosmosConfigurationSupport()"
+  summary: "Creates an instance of <xref uid=\"com.azure.spring.data.cosmos.config.CosmosConfigurationSupport\" data-throw-if-not-resolved=\"false\" data-raw-source=\"CosmosConfigurationSupport\"></xref>."
+  syntax: "public CosmosConfigurationSupport()"
+  desc: "Creates an instance of <xref uid=\"com.azure.spring.data.cosmos.config.CosmosConfigurationSupport\" data-throw-if-not-resolved=\"false\" data-raw-source=\"CosmosConfigurationSupport\"></xref>."
+methods:
+- uid: "com.azure.spring.data.cosmos.config.CosmosConfigurationSupport.cosmosMappingContext()"
+  fullName: "com.azure.spring.data.cosmos.config.CosmosConfigurationSupport.cosmosMappingContext()"
+  name: "cosmosMappingContext()"
+  nameWithType: "CosmosConfigurationSupport.cosmosMappingContext()"
+  summary: "Declare Cosmos<wbr>Mapping<wbr>Context bean."
+  syntax: "public CosmosMappingContext cosmosMappingContext()"
+  exceptions:
+  - description: "if the class type is invalid"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/ClassNotFoundException.html\">ClassNotFoundException</a>"
+  desc: "Declare CosmosMappingContext bean."
+  returns:
+    description: "CosmosMappingContext bean"
+    type: "<xref href=\"com.azure.spring.data.cosmos.core.mapping.CosmosMappingContext?alt=com.azure.spring.data.cosmos.core.mapping.CosmosMappingContext&text=CosmosMappingContext\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.spring.data.cosmos.config.CosmosConfigurationSupport.expressionResolver(org.springframework.beans.factory.BeanFactory)"
+  fullName: "com.azure.spring.data.cosmos.config.CosmosConfigurationSupport.expressionResolver(BeanFactory beanFactory)"
+  name: "expressionResolver(BeanFactory beanFactory)"
+  nameWithType: "CosmosConfigurationSupport.expressionResolver(BeanFactory beanFactory)"
+  summary: "Declare Expression<wbr>Resolver bean."
+  parameters:
+  - description: "used to initialize the embeddedValueResolver"
+    name: "beanFactory"
+    type: "<xref href=\"org.springframework.beans.factory.BeanFactory?alt=org.springframework.beans.factory.BeanFactory&text=BeanFactory\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ExpressionResolver expressionResolver(BeanFactory beanFactory)"
+  desc: "Declare ExpressionResolver bean."
+  returns:
+    description: "ExpressionResolver bean"
+    type: "<xref href=\"com.azure.spring.data.cosmos.common.ExpressionResolver?alt=com.azure.spring.data.cosmos.common.ExpressionResolver&text=ExpressionResolver\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.spring.data.cosmos.config.CosmosConfigurationSupport.getDatabaseName()"
+  fullName: "com.azure.spring.data.cosmos.config.CosmosConfigurationSupport.getDatabaseName()"
+  name: "getDatabaseName()"
+  nameWithType: "CosmosConfigurationSupport.getDatabaseName()"
+  summary: "Return the name of the database to connect to"
+  modifiers:
+  - "protected"
+  - "abstract"
+  syntax: "protected abstract String getDatabaseName()"
+  desc: "Return the name of the database to connect to"
+  returns:
+    description: "must not be null."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.spring.data.cosmos.config.CosmosConfigurationSupport.getInitialEntitySet()"
+  fullName: "com.azure.spring.data.cosmos.config.CosmosConfigurationSupport.getInitialEntitySet()"
+  name: "getInitialEntitySet()"
+  nameWithType: "CosmosConfigurationSupport.getInitialEntitySet()"
+  summary: "Scan all base packages and get all beans"
+  modifiers:
+  - "protected"
+  syntax: "protected Set<Class<?>> getInitialEntitySet()"
+  exceptions:
+  - description: "if the class type is invalid"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/ClassNotFoundException.html\">ClassNotFoundException</a>"
+  desc: "Scan all base packages and get all beans"
+  returns:
+    description: "initial entity set"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Set.html\">Set</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html\">Class</a>&lt;?&gt;&gt;"
+- uid: "com.azure.spring.data.cosmos.config.CosmosConfigurationSupport.getMappingBasePackages()"
+  fullName: "com.azure.spring.data.cosmos.config.CosmosConfigurationSupport.getMappingBasePackages()"
+  name: "getMappingBasePackages()"
+  nameWithType: "CosmosConfigurationSupport.getMappingBasePackages()"
+  summary: "Get the mapping base package name."
+  modifiers:
+  - "protected"
+  syntax: "protected Collection<String> getMappingBasePackages()"
+  desc: "Get the mapping base package name."
+  returns:
+    description: "Base mapping package name set."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html\">Collection</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+- uid: "com.azure.spring.data.cosmos.config.CosmosConfigurationSupport.scanForEntities(java.lang.String)"
+  fullName: "com.azure.spring.data.cosmos.config.CosmosConfigurationSupport.scanForEntities(String basePackage)"
+  name: "scanForEntities(String basePackage)"
+  nameWithType: "CosmosConfigurationSupport.scanForEntities(String basePackage)"
+  summary: "Scan all beans under the given base package"
+  modifiers:
+  - "protected"
+  parameters:
+  - description: "set the base location of beans"
+    name: "basePackage"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "protected Set<Class<?>> scanForEntities(String basePackage)"
+  exceptions:
+  - description: "if the class type is invalid"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/ClassNotFoundException.html\">ClassNotFoundException</a>"
+  desc: "Scan all beans under the given base package"
+  returns:
+    description: "initial entity set for found beans"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Set.html\">Set</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html\">Class</a>&lt;?&gt;&gt;"
+type: "class"
+desc: "A support class for cosmos configuration to scan beans and get initial entities"
+metadata: {}
+package: "com.azure.spring.data.cosmos.config"
+artifact: com.azure:azure-spring-data-cosmos:7.0.0-beta.1

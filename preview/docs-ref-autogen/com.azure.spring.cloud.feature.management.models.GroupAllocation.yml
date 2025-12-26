@@ -59,8 +59,11 @@ methods:
   - description: "the list of group identifiers to associate with this variant"
     name: "groups"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
-  syntax: "public void setGroups(List<String> groups)"
+  syntax: "public GroupAllocation setGroups(List<String> groups)"
   desc: "Sets the list of group identifiers that should receive this variant. When a user belongs to any of these groups, they will be assigned this variant during feature flag evaluation."
+  returns:
+    description: "the updated GroupAllocation object"
+    type: "<xref href=\"com.azure.spring.cloud.feature.management.models.GroupAllocation?alt=com.azure.spring.cloud.feature.management.models.GroupAllocation&text=GroupAllocation\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.spring.cloud.feature.management.models.GroupAllocation.setVariant(java.lang.String)"
   fullName: "com.azure.spring.cloud.feature.management.models.GroupAllocation.setVariant(String variant)"
   name: "setVariant(String variant)"
@@ -70,10 +73,13 @@ methods:
   - description: "the variant name to assign to the groups"
     name: "variant"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public void setVariant(String variant)"
+  syntax: "public GroupAllocation setVariant(String variant)"
   desc: "Sets the name of the variant that should be assigned to the specified groups. This should match a valid variant name defined in the feature flag configuration."
+  returns:
+    description: "the updated GroupAllocation object"
+    type: "<xref href=\"com.azure.spring.cloud.feature.management.models.GroupAllocation?alt=com.azure.spring.cloud.feature.management.models.GroupAllocation&text=GroupAllocation\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Group allocation of a variant for feature flag targeting. This class defines how specific user groups are assigned to a particular variant of a feature. It contains a reference to a variant name and a list of group identifiers that should receive this variant when the feature flag is evaluated."
 metadata: {}
 package: "com.azure.spring.cloud.feature.management.models"
-artifact: com.azure.spring:spring-cloud-azure-feature-management:6.0.0-beta.1
+artifact: com.azure.spring:spring-cloud-azure-feature-management:7.0.0-beta.1

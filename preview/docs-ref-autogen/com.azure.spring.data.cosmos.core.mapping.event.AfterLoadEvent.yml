@@ -1,0 +1,73 @@
+### YamlMime:JavaType
+uid: "com.azure.spring.data.cosmos.core.mapping.event.AfterLoadEvent"
+fullName: "com.azure.spring.data.cosmos.core.mapping.event.AfterLoadEvent<T>"
+name: "AfterLoadEvent<T>"
+nameWithType: "AfterLoadEvent<T>"
+summary: "Spring Application Event that fires for all reads after a document is loaded and before it is serialized to a domain object Ported to cosmos from spring-data-mongo https://github.<wbr>com/spring-projects/spring-data-mongodb/blob/main/spring-data-mongodb/src/main/java/org/springframework/data/mongodb/core/mapping/event/After<wbr>Load<wbr>Event.<wbr>java"
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"java.util.EventObject?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"org.springframework.context.ApplicationEvent?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"com.azure.spring.data.cosmos.core.mapping.event.CosmosMappingEvent?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "<xref href=\"com.azure.spring.data.cosmos.core.mapping.event.CosmosMappingEvent?alt=com.azure.spring.data.cosmos.core.mapping.event.CosmosMappingEvent&text=CosmosMappingEvent\" data-throw-if-not-resolved=\"False\" />"
+  methodsRef:
+  - "<xref href=\"com.azure.spring.data.cosmos.core.mapping.event.CosmosMappingEvent.getContainerName()?alt=com.azure.spring.data.cosmos.core.mapping.event.CosmosMappingEvent.getContainerName&text=getContainerName\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.spring.data.cosmos.core.mapping.event.CosmosMappingEvent.getDocument()?alt=com.azure.spring.data.cosmos.core.mapping.event.CosmosMappingEvent.getDocument&text=getDocument\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.spring.data.cosmos.core.mapping.event.CosmosMappingEvent.getSource()?alt=com.azure.spring.data.cosmos.core.mapping.event.CosmosMappingEvent.getSource&text=getSource\" data-throw-if-not-resolved=\"False\" />"
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+- classRef: "java.util.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/EventObject.html\">EventObject</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/EventObject.html#toString--\">toString</a>"
+- classRef: "<xref href=\"org.springframework.context.ApplicationEvent?alt=org.springframework.context.ApplicationEvent&text=ApplicationEvent\" data-throw-if-not-resolved=\"False\" />"
+  methodsRef:
+  - "<xref href=\"org.springframework.context.ApplicationEvent.getTimestamp()?alt=org.springframework.context.ApplicationEvent.getTimestamp&text=getTimestamp\" data-throw-if-not-resolved=\"False\" />"
+syntax: "public class **AfterLoadEvent<T>**</br> extends <xref href=\"com.azure.spring.data.cosmos.core.mapping.event.CosmosMappingEvent?alt=com.azure.spring.data.cosmos.core.mapping.event.CosmosMappingEvent&text=CosmosMappingEvent\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.fasterxml.jackson.databind.JsonNode?alt=com.fasterxml.jackson.databind.JsonNode&text=JsonNode\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.spring.data.cosmos.core.mapping.event.AfterLoadEvent.AfterLoadEvent(com.fasterxml.jackson.databind.JsonNode,java.lang.Class<T>,java.lang.String)"
+  fullName: "com.azure.spring.data.cosmos.core.mapping.event.AfterLoadEvent<T>.AfterLoadEvent(JsonNode document, Class<T> type, String containerName)"
+  name: "AfterLoadEvent(JsonNode document, Class<T> type, String containerName)"
+  nameWithType: "AfterLoadEvent<T>.AfterLoadEvent(JsonNode document, Class<T> type, String containerName)"
+  summary: "Creates a new <xref uid=\"com.azure.spring.data.cosmos.core.mapping.event.AfterLoadEvent\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AfterLoadEvent\"></xref> for the given <xref uid=\"com.fasterxml.jackson.databind.JsonNode\" data-throw-if-not-resolved=\"false\" data-raw-source=\"JsonNode\"></xref>, type and collection<wbr>Name."
+  parameters:
+  - description: "must not be null."
+    name: "document"
+    type: "<xref href=\"com.fasterxml.jackson.databind.JsonNode?alt=com.fasterxml.jackson.databind.JsonNode&text=JsonNode\" data-throw-if-not-resolved=\"False\" />"
+  - description: "must not be null."
+    name: "type"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html\">Class</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
+  - description: "must not be null."
+    name: "containerName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public AfterLoadEvent(JsonNode document, Class<T> type, String containerName)"
+  desc: "Creates a new <xref uid=\"com.azure.spring.data.cosmos.core.mapping.event.AfterLoadEvent\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AfterLoadEvent\"></xref> for the given <xref uid=\"com.fasterxml.jackson.databind.JsonNode\" data-throw-if-not-resolved=\"false\" data-raw-source=\"JsonNode\"></xref>, type and collectionName."
+methods:
+- uid: "com.azure.spring.data.cosmos.core.mapping.event.AfterLoadEvent.getType()"
+  fullName: "com.azure.spring.data.cosmos.core.mapping.event.AfterLoadEvent<T>.getType()"
+  name: "getType()"
+  nameWithType: "AfterLoadEvent<T>.getType()"
+  summary: "Returns the type for which the <xref uid=\"com.azure.spring.data.cosmos.core.mapping.event.AfterLoadEvent\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AfterLoadEvent\"></xref> shall be invoked for."
+  syntax: "public Class<T> getType()"
+  desc: "Returns the type for which the <xref uid=\"com.azure.spring.data.cosmos.core.mapping.event.AfterLoadEvent\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AfterLoadEvent\"></xref> shall be invoked for."
+  returns:
+    description: "never null."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html\">Class</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
+type: "class"
+typeParameters:
+- description: "the type of the event."
+  name: "T"
+desc: "Spring Application Event that fires for all reads after a document is loaded and before it is serialized to a domain object Ported to cosmos from spring-data-mongo https://github.com/spring-projects/spring-data-mongodb/blob/main/spring-data-mongodb/src/main/java/org/springframework/data/mongodb/core/mapping/event/AfterLoadEvent.java"
+metadata: {}
+package: "com.azure.spring.data.cosmos.core.mapping.event"
+artifact: com.azure:azure-spring-data-cosmos:7.0.0-beta.1

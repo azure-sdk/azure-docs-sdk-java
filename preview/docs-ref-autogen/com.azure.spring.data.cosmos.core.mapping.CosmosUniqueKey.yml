@@ -1,0 +1,27 @@
+### YamlMime:JavaType
+uid: "com.azure.spring.data.cosmos.core.mapping.CosmosUniqueKey"
+fullName: "com.azure.spring.data.cosmos.core.mapping.CosmosUniqueKey"
+name: "CosmosUniqueKey"
+nameWithType: "CosmosUniqueKey"
+summary: "Represents a unique key on that enforces uniqueness constraint on items in the container in the Azure Cosmos DB service."
+syntax: "public interface **CosmosUniqueKey**</br> implements <a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html\">Annotation</a>"
+methods:
+- uid: "com.azure.spring.data.cosmos.core.mapping.CosmosUniqueKey.paths()"
+  fullName: "com.azure.spring.data.cosmos.core.mapping.CosmosUniqueKey.paths()"
+  name: "paths()"
+  nameWithType: "CosmosUniqueKey.paths()"
+  summary: "A set of paths which must be unique for each item in the Azure Cosmos DB service."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String[] paths()"
+  desc: "A set of paths which must be unique for each item in the Azure Cosmos DB service.\n\nThe paths to enforce uniqueness on. Each path is a rooted path of the unique property in the item, such as \"/name/first\"."
+  returns:
+    description: "unique paths"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>[]"
+type: "interface"
+desc: "Represents a unique key on that enforces uniqueness constraint on items in the container in the Azure Cosmos DB service.\n\n1) For containers, the value of partition key is implicitly a part of each unique key.\n\n2) Uniqueness constraint is also enforced for missing values.\n\nFor instance, if unique key policy defines a unique key with single property path, there could be only one item that has missing value for this property."
+implements:
+- "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html\">Annotation</a>"
+metadata: {}
+package: "com.azure.spring.data.cosmos.core.mapping"
+artifact: com.azure:azure-spring-data-cosmos:7.0.0-beta.1
