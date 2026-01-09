@@ -30,13 +30,23 @@ constructors:
   syntax: "public PutAliasRequestProperties()"
   desc: "Creates an instance of PutAliasRequestProperties class."
 methods:
+- uid: "com.azure.resourcemanager.subscription.models.PutAliasRequestProperties.additionalProperties()"
+  fullName: "com.azure.resourcemanager.subscription.models.PutAliasRequestProperties.additionalProperties()"
+  name: "additionalProperties()"
+  nameWithType: "PutAliasRequestProperties.additionalProperties()"
+  summary: "Get the additional<wbr>Properties property: Put alias request additional properties."
+  syntax: "public PutAliasRequestAdditionalProperties additionalProperties()"
+  desc: "Get the additionalProperties property: Put alias request additional properties."
+  returns:
+    description: "the additionalProperties value."
+    type: "<xref href=\"com.azure.resourcemanager.subscription.models.PutAliasRequestAdditionalProperties?alt=com.azure.resourcemanager.subscription.models.PutAliasRequestAdditionalProperties&text=PutAliasRequestAdditionalProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.subscription.models.PutAliasRequestProperties.billingScope()"
   fullName: "com.azure.resourcemanager.subscription.models.PutAliasRequestProperties.billingScope()"
   name: "billingScope()"
   nameWithType: "PutAliasRequestProperties.billingScope()"
-  summary: "Get the billing<wbr>Scope property: Determines whether subscription is field<wbr>Led, partner<wbr>Led or LegacyEA."
+  summary: "Get the billing<wbr>Scope property: Billing scope of the subscription."
   syntax: "public String billingScope()"
-  desc: "Get the billingScope property: Determines whether subscription is fieldLed, partnerLed or LegacyEA."
+  desc: "Get the billingScope property: Billing scope of the subscription. For CustomerLed and FieldLed - /billingAccounts/\\{billingAccountName\\}/billingProfiles/\\{billingProfileName\\}/invoiceSections/\\{invoiceSectionName\\} For PartnerLed - /billingAccounts/\\{billingAccountName\\}/customers/\\{customerName\\} For Legacy EA - /billingAccounts/\\{billingAccountName\\}/enrollmentAccounts/\\{enrollmentAccountName\\}."
   returns:
     description: "the billingScope value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -73,9 +83,9 @@ methods:
   fullName: "com.azure.resourcemanager.subscription.models.PutAliasRequestProperties.resellerId()"
   name: "resellerId()"
   nameWithType: "PutAliasRequestProperties.resellerId()"
-  summary: "Get the reseller<wbr>Id property: Reseller ID, basically MPN Id."
+  summary: "Get the reseller<wbr>Id property: Reseller Id."
   syntax: "public String resellerId()"
-  desc: "Get the resellerId property: Reseller ID, basically MPN Id."
+  desc: "Get the resellerId property: Reseller Id."
   returns:
     description: "the resellerId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -108,17 +118,31 @@ methods:
   summary: "Validates the instance."
   syntax: "public void validate()"
   desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.subscription.models.PutAliasRequestProperties.withAdditionalProperties(com.azure.resourcemanager.subscription.models.PutAliasRequestAdditionalProperties)"
+  fullName: "com.azure.resourcemanager.subscription.models.PutAliasRequestProperties.withAdditionalProperties(PutAliasRequestAdditionalProperties additionalProperties)"
+  name: "withAdditionalProperties(PutAliasRequestAdditionalProperties additionalProperties)"
+  nameWithType: "PutAliasRequestProperties.withAdditionalProperties(PutAliasRequestAdditionalProperties additionalProperties)"
+  summary: "Set the additional<wbr>Properties property: Put alias request additional properties."
+  parameters:
+  - description: "the additionalProperties value to set."
+    name: "additionalProperties"
+    type: "<xref href=\"com.azure.resourcemanager.subscription.models.PutAliasRequestAdditionalProperties?alt=com.azure.resourcemanager.subscription.models.PutAliasRequestAdditionalProperties&text=PutAliasRequestAdditionalProperties\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public PutAliasRequestProperties withAdditionalProperties(PutAliasRequestAdditionalProperties additionalProperties)"
+  desc: "Set the additionalProperties property: Put alias request additional properties."
+  returns:
+    description: "the PutAliasRequestProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.subscription.models.PutAliasRequestProperties?alt=com.azure.resourcemanager.subscription.models.PutAliasRequestProperties&text=PutAliasRequestProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.subscription.models.PutAliasRequestProperties.withBillingScope(java.lang.String)"
   fullName: "com.azure.resourcemanager.subscription.models.PutAliasRequestProperties.withBillingScope(String billingScope)"
   name: "withBillingScope(String billingScope)"
   nameWithType: "PutAliasRequestProperties.withBillingScope(String billingScope)"
-  summary: "Set the billing<wbr>Scope property: Determines whether subscription is field<wbr>Led, partner<wbr>Led or LegacyEA."
+  summary: "Set the billing<wbr>Scope property: Billing scope of the subscription."
   parameters:
   - description: "the billingScope value to set."
     name: "billingScope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public PutAliasRequestProperties withBillingScope(String billingScope)"
-  desc: "Set the billingScope property: Determines whether subscription is fieldLed, partnerLed or LegacyEA."
+  desc: "Set the billingScope property: Billing scope of the subscription. For CustomerLed and FieldLed - /billingAccounts/\\{billingAccountName\\}/billingProfiles/\\{billingProfileName\\}/invoiceSections/\\{invoiceSectionName\\} For PartnerLed - /billingAccounts/\\{billingAccountName\\}/customers/\\{customerName\\} For Legacy EA - /billingAccounts/\\{billingAccountName\\}/enrollmentAccounts/\\{enrollmentAccountName\\}."
   returns:
     description: "the PutAliasRequestProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.subscription.models.PutAliasRequestProperties?alt=com.azure.resourcemanager.subscription.models.PutAliasRequestProperties&text=PutAliasRequestProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -140,13 +164,13 @@ methods:
   fullName: "com.azure.resourcemanager.subscription.models.PutAliasRequestProperties.withResellerId(String resellerId)"
   name: "withResellerId(String resellerId)"
   nameWithType: "PutAliasRequestProperties.withResellerId(String resellerId)"
-  summary: "Set the reseller<wbr>Id property: Reseller ID, basically MPN Id."
+  summary: "Set the reseller<wbr>Id property: Reseller Id."
   parameters:
   - description: "the resellerId value to set."
     name: "resellerId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public PutAliasRequestProperties withResellerId(String resellerId)"
-  desc: "Set the resellerId property: Reseller ID, basically MPN Id."
+  desc: "Set the resellerId property: Reseller Id."
   returns:
     description: "the PutAliasRequestProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.subscription.models.PutAliasRequestProperties?alt=com.azure.resourcemanager.subscription.models.PutAliasRequestProperties&text=PutAliasRequestProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -194,4 +218,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.subscription.models.PutAliasRequestProperties?alt=com.azure.resourcemanager.subscription.models.PutAliasRequestProperties&text=PutAliasRequestProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.subscription.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-subscription:1.0.0-beta.3
+artifact: com.azure.resourcemanager:azure-resourcemanager-subscription:1.1.0-beta.1

@@ -20,8 +20,27 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **TranslatedTextItem**"
+syntax: "public final class **TranslatedTextItem**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.translation.text.models.TranslatedTextItem?alt=com.azure.ai.translation.text.models.TranslatedTextItem&text=TranslatedTextItem\" data-throw-if-not-resolved=\"False\" />&gt;"
 methods:
+- uid: "com.azure.ai.translation.text.models.TranslatedTextItem.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.ai.translation.text.models.TranslatedTextItem.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "TranslatedTextItem.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Translated<wbr>Text<wbr>Item from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static TranslatedTextItem fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of TranslatedTextItem from the JsonReader."
+  returns:
+    description: "An instance of TranslatedTextItem if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.ai.translation.text.models.TranslatedTextItem?alt=com.azure.ai.translation.text.models.TranslatedTextItem&text=TranslatedTextItem\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.translation.text.models.TranslatedTextItem.getDetectedLanguage()"
   fullName: "com.azure.ai.translation.text.models.TranslatedTextItem.getDetectedLanguage()"
   name: "getDetectedLanguage()"
@@ -32,28 +51,32 @@ methods:
   returns:
     description: "the detectedLanguage value."
     type: "<xref href=\"com.azure.ai.translation.text.models.DetectedLanguage?alt=com.azure.ai.translation.text.models.DetectedLanguage&text=DetectedLanguage\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.ai.translation.text.models.TranslatedTextItem.getSourceText()"
-  fullName: "com.azure.ai.translation.text.models.TranslatedTextItem.getSourceText()"
-  name: "getSourceText()"
-  nameWithType: "TranslatedTextItem.getSourceText()"
-  summary: "Get the source<wbr>Text property: Input text in the default script of the source language."
-  syntax: "public SourceText getSourceText()"
-  desc: "Get the sourceText property: Input text in the default script of the source language. sourceText property is present only when the input is expressed in a script that's not the usual script for the language. For example, if the input were Arabic written in Latin script, then sourceText.text would be the same Arabic text converted into Arab script."
-  returns:
-    description: "the sourceText value."
-    type: "<xref href=\"com.azure.ai.translation.text.models.SourceText?alt=com.azure.ai.translation.text.models.SourceText&text=SourceText\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.translation.text.models.TranslatedTextItem.getTranslations()"
   fullName: "com.azure.ai.translation.text.models.TranslatedTextItem.getTranslations()"
   name: "getTranslations()"
   nameWithType: "TranslatedTextItem.getTranslations()"
   summary: "Get the translations property: An array of translation results."
-  syntax: "public List<Translation> getTranslations()"
+  syntax: "public List<TranslationText> getTranslations()"
   desc: "Get the translations property: An array of translation results. The size of the array matches the number of target languages specified through the to query parameter."
   returns:
     description: "the translations value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.ai.translation.text.models.Translation?alt=com.azure.ai.translation.text.models.Translation&text=Translation\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.ai.translation.text.models.TranslationText?alt=com.azure.ai.translation.text.models.TranslationText&text=TranslationText\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.ai.translation.text.models.TranslatedTextItem.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.ai.translation.text.models.TranslatedTextItem.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "TranslatedTextItem.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Element containing the translated text."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.translation.text.models.TranslatedTextItem?alt=com.azure.ai.translation.text.models.TranslatedTextItem&text=TranslatedTextItem\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.ai.translation.text.models"
-artifact: com.azure:azure-ai-translation-text:1.0.0-beta.1
+artifact: com.azure:azure-ai-translation-text:2.0.0-beta.1

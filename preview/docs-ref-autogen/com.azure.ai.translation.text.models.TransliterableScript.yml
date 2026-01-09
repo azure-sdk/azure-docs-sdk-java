@@ -6,14 +6,16 @@ nameWithType: "TransliterableScript"
 summary: "Script definition with list of script into which given script can be translitered."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.ai.translation.text.models.CommonScriptModel?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"com.azure.ai.translation.text.models.LanguageScript?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
-- classRef: "<xref href=\"com.azure.ai.translation.text.models.CommonScriptModel?alt=com.azure.ai.translation.text.models.CommonScriptModel&text=CommonScriptModel\" data-throw-if-not-resolved=\"False\" />"
+- classRef: "<xref href=\"com.azure.ai.translation.text.models.LanguageScript?alt=com.azure.ai.translation.text.models.LanguageScript&text=LanguageScript\" data-throw-if-not-resolved=\"False\" />"
   methodsRef:
-  - "<xref href=\"com.azure.ai.translation.text.models.CommonScriptModel.getCode()?alt=com.azure.ai.translation.text.models.CommonScriptModel.getCode&text=getCode\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.ai.translation.text.models.CommonScriptModel.getDir()?alt=com.azure.ai.translation.text.models.CommonScriptModel.getDir&text=getDir\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.ai.translation.text.models.CommonScriptModel.getName()?alt=com.azure.ai.translation.text.models.CommonScriptModel.getName&text=getName\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.ai.translation.text.models.CommonScriptModel.getNativeName()?alt=com.azure.ai.translation.text.models.CommonScriptModel.getNativeName&text=getNativeName\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.ai.translation.text.models.LanguageScript.fromJson(com.azure.json.JsonReader)?alt=com.azure.ai.translation.text.models.LanguageScript.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.ai.translation.text.models.LanguageScript.getCode()?alt=com.azure.ai.translation.text.models.LanguageScript.getCode&text=getCode\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.ai.translation.text.models.LanguageScript.getDirectionality()?alt=com.azure.ai.translation.text.models.LanguageScript.getDirectionality&text=getDirectionality\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.ai.translation.text.models.LanguageScript.getName()?alt=com.azure.ai.translation.text.models.LanguageScript.getName&text=getName\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.ai.translation.text.models.LanguageScript.getNativeName()?alt=com.azure.ai.translation.text.models.LanguageScript.getNativeName&text=getNativeName\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.ai.translation.text.models.LanguageScript.toJson(com.azure.json.JsonWriter)?alt=com.azure.ai.translation.text.models.LanguageScript.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -27,20 +29,52 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **TransliterableScript**</br> extends <xref href=\"com.azure.ai.translation.text.models.CommonScriptModel?alt=com.azure.ai.translation.text.models.CommonScriptModel&text=CommonScriptModel\" data-throw-if-not-resolved=\"False\" />"
+syntax: "public final class **TransliterableScript**</br> extends <xref href=\"com.azure.ai.translation.text.models.LanguageScript?alt=com.azure.ai.translation.text.models.LanguageScript&text=LanguageScript\" data-throw-if-not-resolved=\"False\" />"
 methods:
+- uid: "com.azure.ai.translation.text.models.TransliterableScript.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.ai.translation.text.models.TransliterableScript.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "TransliterableScript.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Transliterable<wbr>Script from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static TransliterableScript fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of TransliterableScript from the JsonReader."
+  returns:
+    description: "An instance of TransliterableScript if the JsonReader was pointing to an instance of it, or null if it\n was pointing to JSON null."
+    type: "<xref href=\"com.azure.ai.translation.text.models.TransliterableScript?alt=com.azure.ai.translation.text.models.TransliterableScript&text=TransliterableScript\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.translation.text.models.TransliterableScript.getToScripts()"
   fullName: "com.azure.ai.translation.text.models.TransliterableScript.getToScripts()"
   name: "getToScripts()"
   nameWithType: "TransliterableScript.getToScripts()"
   summary: "Get the to<wbr>Scripts property: List of scripts available to convert text to."
-  syntax: "public List<CommonScriptModel> getToScripts()"
+  syntax: "public List<LanguageScript> getToScripts()"
   desc: "Get the toScripts property: List of scripts available to convert text to."
   returns:
     description: "the toScripts value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.ai.translation.text.models.CommonScriptModel?alt=com.azure.ai.translation.text.models.CommonScriptModel&text=CommonScriptModel\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.ai.translation.text.models.LanguageScript?alt=com.azure.ai.translation.text.models.LanguageScript&text=LanguageScript\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.ai.translation.text.models.TransliterableScript.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.ai.translation.text.models.TransliterableScript.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "TransliterableScript.toJson(JsonWriter jsonWriter)"
+  overridden: "com.azure.ai.translation.text.models.LanguageScript.toJson(com.azure.json.JsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Script definition with list of script into which given script can be translitered."
 metadata: {}
 package: "com.azure.ai.translation.text.models"
-artifact: com.azure:azure-ai-translation-text:1.0.0-beta.1
+artifact: com.azure:azure-ai-translation-text:2.0.0-beta.1
