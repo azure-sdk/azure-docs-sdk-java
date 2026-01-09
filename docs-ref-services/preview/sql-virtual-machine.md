@@ -1,7 +1,7 @@
 ---
 title: Azure SQL Virtual Machine SDK for Java
 description: Reference for Azure SQL Virtual Machine SDK for Java
-ms.date: 01/08/2026
+ms.date: 01/09/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: sqlvirtualmachine
