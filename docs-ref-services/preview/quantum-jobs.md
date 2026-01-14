@@ -1,7 +1,7 @@
 ---
 title: Azure Quantum Jobs SDK for Java
 description: Reference for Azure Quantum Jobs SDK for Java
-ms.date: 01/13/2026
+ms.date: 01/14/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: quantumjobs
