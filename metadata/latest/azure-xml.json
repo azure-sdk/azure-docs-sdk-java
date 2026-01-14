@@ -1,6 +1,6 @@
 {
   "Name": "azure-xml",
-  "Version": "1.2.0",
+  "Version": "1.2.1",
   "DevVersion": null,
   "DirectoryPath": "sdk/serialization/azure-xml",
   "ServiceDirectory": "serialization",
@@ -10,17 +10,32 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-xml",
-  "ReleaseStatus": "2025-01-27",
+  "ReleaseStatus": "2026-01-14",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": null,
   "ArtifactDetails": {
-    "releaseInBatch": "${{ parameters.release_azurexml }}",
     "name": "azure-xml",
+    "safeName": "azurexml",
     "groupId": "com.azure",
-    "safeName": "azurexml"
+    "triggeringPaths": [
+      "/sdk/serialization/ci.yml"
+    ],
+    "releaseInBatch": "${{ parameters.release_azurexml }}"
   },
-  "CIMatrixConfigs": [],
+  "CIParameters": {
+    "CIMatrixConfigs": [
+      {
+        "Name": "Java_ci_test_base",
+        "NonSparseParameters": "Agent",
+        "GenerateVMJobs": true,
+        "Selection": "sparse",
+        "Path": "eng/pipelines/templates/stages/platform-matrix.json"
+      }
+    ]
+  },
+  "SpecProjectPath": null,
   "Namespaces": [
     "com.azure.xml"
-  ]
+  ],
+  "CIMatrixConfigs": []
 }

@@ -1,12 +1,12 @@
 ---
 title: Azure XML shared library for Java
 keywords: Azure, java, SDK, API, azure-xml, serialization
-ms.date: 01/27/2025
+ms.date: 01/14/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: serialization
 ---
-# Azure XML shared library for Java - version 1.2.0 
+# Azure XML shared library for Java - version 1.2.1 
 
 
 [![Build Documentation](https://img.shields.io/badge/documentation-published-blue.svg)](https://azure.github.io/azure-sdk-for-java)
@@ -31,7 +31,7 @@ add the direct dependency to your project as follows.
 <dependency>
   <groupId>com.azure</groupId>
   <artifactId>azure-xml</artifactId>
-  <version>1.2.0</version>
+  <version>1.2.1</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -176,9 +176,16 @@ Get started with Azure libraries that are [built using Azure Core](https://azure
 If you encounter any bugs, please file issues via [GitHub Issues](https://github.com/Azure/azure-sdk-for-java/issues/new/choose)
 or checkout [StackOverflow for Azure Java SDK](https://stackoverflow.com/questions/tagged/azure-java-sdk).
 
+### Android Support
+
+While the Azure SDKs for Java do not explicitly support Android, `azure-xml` is capable of being used in an Android
+application. However, for `azure-xml` to work on Android the Android application needs to add a dependency on
+[javax.xml.stream:stax-api](https://central.sonatype.com/artifact/javax.xml.stream/stax-api) which provides 
+`javax.xml.stream` to environments that don't have them (such as Android).
+
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-xml_1.2.0/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-xml_1.2.1/CONTRIBUTING.md).
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
