@@ -1,7 +1,7 @@
 ---
 title: Azure Health Data AI Services SDK for Java
 description: Reference for Azure Health Data AI Services SDK for Java
-ms.date: 01/14/2026
+ms.date: 01/15/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: healthdataaiservices
