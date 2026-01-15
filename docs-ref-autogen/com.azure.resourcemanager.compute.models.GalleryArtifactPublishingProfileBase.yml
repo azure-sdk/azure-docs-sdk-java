@@ -99,13 +99,23 @@ methods:
   returns:
     description: "the replicationMode value."
     type: "<xref href=\"com.azure.resourcemanager.compute.models.ReplicationMode?alt=com.azure.resourcemanager.compute.models.ReplicationMode&text=ReplicationMode\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.compute.models.GalleryArtifactPublishingProfileBase.storageAccountStrategy()"
+  fullName: "com.azure.resourcemanager.compute.models.GalleryArtifactPublishingProfileBase.storageAccountStrategy()"
+  name: "storageAccountStrategy()"
+  nameWithType: "GalleryArtifactPublishingProfileBase.storageAccountStrategy()"
+  summary: "Get the storage<wbr>Account<wbr>Strategy property: Specifies the strategy to be used when selecting the storage account type."
+  syntax: "public StorageAccountStrategy storageAccountStrategy()"
+  desc: "Get the storageAccountStrategy property: Specifies the strategy to be used when selecting the storage account type. Cannot be specified along with storageAccountType, but can be overridden per region by specifying targetRegions\\[\\].storageAccountType. This property is not updatable."
+  returns:
+    description: "the storageAccountStrategy value."
+    type: "<xref href=\"com.azure.resourcemanager.compute.models.StorageAccountStrategy?alt=com.azure.resourcemanager.compute.models.StorageAccountStrategy&text=StorageAccountStrategy\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.compute.models.GalleryArtifactPublishingProfileBase.storageAccountType()"
   fullName: "com.azure.resourcemanager.compute.models.GalleryArtifactPublishingProfileBase.storageAccountType()"
   name: "storageAccountType()"
   nameWithType: "GalleryArtifactPublishingProfileBase.storageAccountType()"
   summary: "Get the storage<wbr>Account<wbr>Type property: Specifies the storage account type to be used to store the image."
   syntax: "public StorageAccountType storageAccountType()"
-  desc: "Get the storageAccountType property: Specifies the storage account type to be used to store the image. This property is not updatable."
+  desc: "Get the storageAccountType property: Specifies the storage account type to be used to store the image. Cannot be specified along with storageAccountStrategy. This property is not updatable."
   returns:
     description: "the storageAccountType value."
     type: "<xref href=\"com.azure.resourcemanager.compute.models.StorageAccountType?alt=com.azure.resourcemanager.compute.models.StorageAccountType&text=StorageAccountType\" data-throw-if-not-resolved=\"False\" />"
@@ -204,6 +214,20 @@ methods:
   returns:
     description: "the GalleryArtifactPublishingProfileBase object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.models.GalleryArtifactPublishingProfileBase?alt=com.azure.resourcemanager.compute.models.GalleryArtifactPublishingProfileBase&text=GalleryArtifactPublishingProfileBase\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.compute.models.GalleryArtifactPublishingProfileBase.withStorageAccountStrategy(com.azure.resourcemanager.compute.models.StorageAccountStrategy)"
+  fullName: "com.azure.resourcemanager.compute.models.GalleryArtifactPublishingProfileBase.withStorageAccountStrategy(StorageAccountStrategy storageAccountStrategy)"
+  name: "withStorageAccountStrategy(StorageAccountStrategy storageAccountStrategy)"
+  nameWithType: "GalleryArtifactPublishingProfileBase.withStorageAccountStrategy(StorageAccountStrategy storageAccountStrategy)"
+  summary: "Set the storage<wbr>Account<wbr>Strategy property: Specifies the strategy to be used when selecting the storage account type."
+  parameters:
+  - description: "the storageAccountStrategy value to set."
+    name: "storageAccountStrategy"
+    type: "<xref href=\"com.azure.resourcemanager.compute.models.StorageAccountStrategy?alt=com.azure.resourcemanager.compute.models.StorageAccountStrategy&text=StorageAccountStrategy\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public GalleryArtifactPublishingProfileBase withStorageAccountStrategy(StorageAccountStrategy storageAccountStrategy)"
+  desc: "Set the storageAccountStrategy property: Specifies the strategy to be used when selecting the storage account type. Cannot be specified along with storageAccountType, but can be overridden per region by specifying targetRegions\\[\\].storageAccountType. This property is not updatable."
+  returns:
+    description: "the GalleryArtifactPublishingProfileBase object itself."
+    type: "<xref href=\"com.azure.resourcemanager.compute.models.GalleryArtifactPublishingProfileBase?alt=com.azure.resourcemanager.compute.models.GalleryArtifactPublishingProfileBase&text=GalleryArtifactPublishingProfileBase\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.compute.models.GalleryArtifactPublishingProfileBase.withStorageAccountType(com.azure.resourcemanager.compute.models.StorageAccountType)"
   fullName: "com.azure.resourcemanager.compute.models.GalleryArtifactPublishingProfileBase.withStorageAccountType(StorageAccountType storageAccountType)"
   name: "withStorageAccountType(StorageAccountType storageAccountType)"
@@ -214,7 +238,7 @@ methods:
     name: "storageAccountType"
     type: "<xref href=\"com.azure.resourcemanager.compute.models.StorageAccountType?alt=com.azure.resourcemanager.compute.models.StorageAccountType&text=StorageAccountType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public GalleryArtifactPublishingProfileBase withStorageAccountType(StorageAccountType storageAccountType)"
-  desc: "Set the storageAccountType property: Specifies the storage account type to be used to store the image. This property is not updatable."
+  desc: "Set the storageAccountType property: Specifies the storage account type to be used to store the image. Cannot be specified along with storageAccountStrategy. This property is not updatable."
   returns:
     description: "the GalleryArtifactPublishingProfileBase object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.models.GalleryArtifactPublishingProfileBase?alt=com.azure.resourcemanager.compute.models.GalleryArtifactPublishingProfileBase&text=GalleryArtifactPublishingProfileBase\" data-throw-if-not-resolved=\"False\" />"
@@ -252,4 +276,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.compute.models.GalleryArtifactPublishingProfileBase?alt=com.azure.resourcemanager.compute.models.GalleryArtifactPublishingProfileBase&text=GalleryArtifactPublishingProfileBase\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.compute.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.55.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.56.0
