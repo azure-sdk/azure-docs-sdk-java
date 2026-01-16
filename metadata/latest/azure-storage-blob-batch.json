@@ -1,6 +1,6 @@
 {
   "Name": "azure-storage-blob-batch",
-  "Version": "12.28.0",
+  "Version": "12.29.0",
   "DevVersion": null,
   "DirectoryPath": "sdk/storage/azure-storage-blob-batch",
   "ServiceDirectory": "storage",
@@ -10,7 +10,7 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-storage-blob-batch",
-  "ReleaseStatus": "2025-10-21",
+  "ReleaseStatus": "2026-01-15",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": [
     "com.azure:azure-storage-perf",
@@ -18,24 +18,25 @@
   ],
   "ArtifactDetails": {
     "groupId": "com.azure",
-    "name": "azure-storage-blob-batch",
     "triggeringPaths": [
       "/sdk/storage/ci.yml"
     ],
     "releaseInBatch": "${{ parameters.release_azurestorageblobbatch }}",
+    "name": "azure-storage-blob-batch",
     "safeName": "azurestorageblobbatch"
   },
   "CIParameters": {
     "CIMatrixConfigs": [
       {
+        "NonSparseParameters": "Agent",
+        "Path": "sdk/storage/platform-matrix-ci.json",
         "GenerateVMJobs": true,
         "Name": "Storage_ci",
-        "Selection": "sparse",
-        "Path": "sdk/storage/platform-matrix-ci.json",
-        "NonSparseParameters": "Agent"
+        "Selection": "sparse"
       }
     ]
   },
+  "SpecProjectPath": null,
   "Namespaces": [
     "com.azure.storage.blob.batch",
     "com.azure.storage.blob.batch.options"
