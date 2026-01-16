@@ -94,6 +94,23 @@ methods:
   returns:
     description: "The HTTP response."
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.HttpResponse?alt=com.azure.core.http.HttpResponse&text=HttpResponse\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.core.test.http.TestProxyPlaybackClient.send(com.azure.core.http.HttpRequest,com.azure.core.util.Context)"
+  fullName: "com.azure.core.test.http.TestProxyPlaybackClient.send(HttpRequest request, Context context)"
+  name: "send(HttpRequest request, Context context)"
+  nameWithType: "TestProxyPlaybackClient.send(HttpRequest request, Context context)"
+  summary: "Redirects the provided <xref uid=\"com.azure.core.http.HttpRequest\" data-throw-if-not-resolved=\"false\" data-raw-source=\"HttpRequest\"></xref> to the test proxy to retrieve the playback response."
+  parameters:
+  - description: "The <xref uid=\"com.azure.core.http.HttpRequest\" data-throw-if-not-resolved=\"false\" data-raw-source=\"HttpRequest\"></xref> to be sent."
+    name: "request"
+    type: "<xref href=\"com.azure.core.http.HttpRequest?alt=com.azure.core.http.HttpRequest&text=HttpRequest\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The <xref uid=\"com.azure.core.util.Context\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Context\"></xref> associated with the operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public Mono<HttpResponse> send(HttpRequest request, Context context)"
+  desc: "Redirects the provided <xref uid=\"com.azure.core.http.HttpRequest\" data-throw-if-not-resolved=\"false\" data-raw-source=\"HttpRequest\"></xref> to the test proxy to retrieve the playback response. This method is invoked during playback mode to simulate the expected response for a request."
+  returns:
+    description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> of <xref uid=\"com.azure.core.http.HttpResponse\" data-throw-if-not-resolved=\"false\" data-raw-source=\"HttpResponse\"></xref> containing the playback response."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.HttpResponse?alt=com.azure.core.http.HttpResponse&text=HttpResponse\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.core.test.http.TestProxyPlaybackClient.sendSync(com.azure.core.http.HttpRequest,com.azure.core.util.Context)"
   fullName: "com.azure.core.test.http.TestProxyPlaybackClient.sendSync(HttpRequest request, Context context)"
   name: "sendSync(HttpRequest request, Context context)"
@@ -140,4 +157,4 @@ implements:
 - "<xref href=\"com.azure.core.http.HttpClient?alt=com.azure.core.http.HttpClient&text=HttpClient\" data-throw-if-not-resolved=\"False\" />"
 metadata: {}
 package: "com.azure.core.test.http"
-artifact: com.azure:azure-core-test:1.27.0-beta.13
+artifact: com.azure:azure-core-test:1.27.0-beta.14
