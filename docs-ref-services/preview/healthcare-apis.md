@@ -1,7 +1,7 @@
 ---
 title: Azure Healthcare APIs SDK for Java
 description: Reference for Azure Healthcare APIs SDK for Java
-ms.date: 01/15/2026
+ms.date: 01/16/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: healthcareapis
