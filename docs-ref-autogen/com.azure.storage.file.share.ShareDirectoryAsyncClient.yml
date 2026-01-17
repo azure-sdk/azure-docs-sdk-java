@@ -489,12 +489,14 @@ methods:
   name: "generateSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues)"
   nameWithType: "ShareDirectoryAsyncClient.generateSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues)"
   summary: "Generates a service SAS for the directory using the specified <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>"
+  deprecatedTag: "The service does not support Directory-level SAS."
   parameters:
   - description: "<xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>"
     name: "shareServiceSasSignatureValues"
     type: "<xref href=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues?alt=com.azure.storage.file.share.sas.ShareServiceSasSignatureValues&text=ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public String generateSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues)"
+  syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public String generateSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues)"
   desc: "Generates a service SAS for the directory using the specified <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>\n\nNote : The client must be authenticated via <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"StorageSharedKeyCredential\"></xref>\n\nSee <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref> for more information on how to construct a service SAS.\n\n**Code Samples**\n\n```java\nOffsetDateTime expiryTime = OffsetDateTime.now().plusDays(1);\n ShareFileSasPermission permission = new ShareFileSasPermission().setReadPermission(true);\n\n ShareServiceSasSignatureValues values = new ShareServiceSasSignatureValues(expiryTime, permission)\n     .setStartTime(OffsetDateTime.now());\n\n shareDirectoryAsyncClient.generateSas(values); // Client must be authenticated via StorageSharedKeyCredential\n```"
+  hasDeprecatedTag: true
   returns:
     description: "A <code>String</code> representing the SAS query parameters."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -503,6 +505,7 @@ methods:
   name: "generateSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues, Consumer<String> stringToSignHandler, Context context)"
   nameWithType: "ShareDirectoryAsyncClient.generateSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues, Consumer<String> stringToSignHandler, Context context)"
   summary: "Generates a service SAS for the directory using the specified <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>"
+  deprecatedTag: "The service does not support Directory-level SAS."
   parameters:
   - description: "<xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>"
     name: "shareServiceSasSignatureValues"
@@ -513,8 +516,9 @@ methods:
   - description: "Additional context that is passed through the code when generating a SAS."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public String generateSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues, Consumer<String> stringToSignHandler, Context context)"
+  syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public String generateSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues, Consumer<String> stringToSignHandler, Context context)"
   desc: "Generates a service SAS for the directory using the specified <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>\n\nNote : The client must be authenticated via <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"StorageSharedKeyCredential\"></xref>\n\nSee <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref> for more information on how to construct a service SAS."
+  hasDeprecatedTag: true
   returns:
     description: "A <code>String</code> representing the SAS query parameters."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -523,6 +527,7 @@ methods:
   name: "generateSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues, Context context)"
   nameWithType: "ShareDirectoryAsyncClient.generateSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues, Context context)"
   summary: "Generates a service SAS for the directory using the specified <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>"
+  deprecatedTag: "The service does not support Directory-level SAS."
   parameters:
   - description: "<xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>"
     name: "shareServiceSasSignatureValues"
@@ -530,8 +535,9 @@ methods:
   - description: "Additional context that is passed through the code when generating a SAS."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public String generateSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues, Context context)"
+  syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public String generateSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues, Context context)"
   desc: "Generates a service SAS for the directory using the specified <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>\n\nNote : The client must be authenticated via <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"StorageSharedKeyCredential\"></xref>\n\nSee <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref> for more information on how to construct a service SAS.\n\n**Code Samples**\n\n```java\nOffsetDateTime expiryTime = OffsetDateTime.now().plusDays(1);\n ShareFileSasPermission permission = new ShareFileSasPermission().setReadPermission(true);\n\n ShareServiceSasSignatureValues values = new ShareServiceSasSignatureValues(expiryTime, permission)\n     .setStartTime(OffsetDateTime.now());\n\n // Client must be authenticated via StorageSharedKeyCredential\n shareDirectoryAsyncClient.generateSas(values, new Context(\"key\", \"value\"));\n```"
+  hasDeprecatedTag: true
   returns:
     description: "A <code>String</code> representing the SAS query parameters."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -819,4 +825,4 @@ type: "class"
 desc: "This class provides a client that contains all the operations for interacting with directory in Azure Storage File Service. Operations allowed by the client are creating, deleting and listing subdirectory and file, retrieving properties, setting metadata and list or force close handles of the directory or file.\n\n**Instantiating an Asynchronous Directory Client**\n\n```java\nShareDirectoryAsyncClient client = new ShareFileClientBuilder()\n     .connectionString(\"${connectionString}\")\n     .endpoint(\"${endpoint}\")\n     .buildDirectoryAsyncClient();\n```\n\nView <xref uid=\"com.azure.storage.file.share.ShareFileClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"this\"></xref> for additional ways to construct the client."
 metadata: {}
 package: "com.azure.storage.file.share"
-artifact: com.azure:azure-storage-file-share:12.28.0
+artifact: com.azure:azure-storage-file-share:12.29.0

@@ -132,6 +132,16 @@ methods:
   returns:
     description: "the correlation id value for the SAS."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.storage.file.datalake.sas.DataLakeServiceSasSignatureValues.getDelegatedUserObjectId()"
+  fullName: "com.azure.storage.file.datalake.sas.DataLakeServiceSasSignatureValues.getDelegatedUserObjectId()"
+  name: "getDelegatedUserObjectId()"
+  nameWithType: "DataLakeServiceSasSignatureValues.getDelegatedUserObjectId()"
+  summary: "Optional."
+  syntax: "public String getDelegatedUserObjectId()"
+  desc: "Optional. Beginning in version 2025-07-05, this value specifies the Entra ID of the user that is authorized to use the resulting SAS URL. The resulting SAS URL must be used in conjunction with an Entra ID token that has been issued to the user specified in this value."
+  returns:
+    description: "The Entra ID of the user that is authorized to use the resulting SAS URL."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.storage.file.datalake.sas.DataLakeServiceSasSignatureValues.getEncryptionScope()"
   fullName: "com.azure.storage.file.datalake.sas.DataLakeServiceSasSignatureValues.getEncryptionScope()"
   name: "getEncryptionScope()"
@@ -320,6 +330,20 @@ methods:
   returns:
     description: "the updated DataLakeServiceSasSignatureValues object"
     type: "<xref href=\"com.azure.storage.file.datalake.sas.DataLakeServiceSasSignatureValues?alt=com.azure.storage.file.datalake.sas.DataLakeServiceSasSignatureValues&text=DataLakeServiceSasSignatureValues\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.file.datalake.sas.DataLakeServiceSasSignatureValues.setDelegatedUserObjectId(java.lang.String)"
+  fullName: "com.azure.storage.file.datalake.sas.DataLakeServiceSasSignatureValues.setDelegatedUserObjectId(String delegatedUserObjectId)"
+  name: "setDelegatedUserObjectId(String delegatedUserObjectId)"
+  nameWithType: "DataLakeServiceSasSignatureValues.setDelegatedUserObjectId(String delegatedUserObjectId)"
+  summary: "Optional."
+  parameters:
+  - description: "The Entra ID of the user that is authorized to use the resulting SAS URL."
+    name: "delegatedUserObjectId"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public DataLakeServiceSasSignatureValues setDelegatedUserObjectId(String delegatedUserObjectId)"
+  desc: "Optional. Beginning in version 2025-07-05, this value specifies the Entra ID of the user that is authorized to use the resulting SAS URL. The resulting SAS URL must be used in conjunction with an Entra ID token that has been issued to the user specified in this value."
+  returns:
+    description: "the updated DataLakeServiceSasSignatureValues object"
+    type: "<xref href=\"com.azure.storage.file.datalake.sas.DataLakeServiceSasSignatureValues?alt=com.azure.storage.file.datalake.sas.DataLakeServiceSasSignatureValues&text=DataLakeServiceSasSignatureValues\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.file.datalake.sas.DataLakeServiceSasSignatureValues.setEncryptionScope(java.lang.String)"
   fullName: "com.azure.storage.file.datalake.sas.DataLakeServiceSasSignatureValues.setEncryptionScope(String encryptionScope)"
   name: "setEncryptionScope(String encryptionScope)"
@@ -466,4 +490,4 @@ type: "class"
 desc: "Used to initialize parameters for a Shared Access Signature (SAS) for an Azure Data Lake Storage service. Once all the values here are set, use the appropriate SAS generation method on the desired file system/path client to obtain a representation of the SAS which can then be applied to a new client using the .sasToken(String) method on the desired client builder."
 metadata: {}
 package: "com.azure.storage.file.datalake.sas"
-artifact: com.azure:azure-storage-file-datalake:12.25.0
+artifact: com.azure:azure-storage-file-datalake:12.26.0

@@ -137,6 +137,16 @@ methods:
   returns:
     description: "the content-type header for the SAS."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.storage.file.share.sas.ShareServiceSasSignatureValues.getDelegatedUserObjectId()"
+  fullName: "com.azure.storage.file.share.sas.ShareServiceSasSignatureValues.getDelegatedUserObjectId()"
+  name: "getDelegatedUserObjectId()"
+  nameWithType: "ShareServiceSasSignatureValues.getDelegatedUserObjectId()"
+  summary: "Optional."
+  syntax: "public String getDelegatedUserObjectId()"
+  desc: "Optional. Beginning in version 2025-07-05, this value specifies the Entra ID of the user that is authorized to use the resulting SAS URL. The resulting SAS URL must be used in conjunction with an Entra ID token that has been issued to the user specified in this value."
+  returns:
+    description: "The Entra ID of the user that is authorized to use the resulting SAS URL."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.storage.file.share.sas.ShareServiceSasSignatureValues.getExpiryTime()"
   fullName: "com.azure.storage.file.share.sas.ShareServiceSasSignatureValues.getExpiryTime()"
   name: "getExpiryTime()"
@@ -301,6 +311,20 @@ methods:
   returns:
     description: "the updated FileServiceSasSignatureValues object"
     type: "<xref href=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues?alt=com.azure.storage.file.share.sas.ShareServiceSasSignatureValues&text=ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.file.share.sas.ShareServiceSasSignatureValues.setDelegatedUserObjectId(java.lang.String)"
+  fullName: "com.azure.storage.file.share.sas.ShareServiceSasSignatureValues.setDelegatedUserObjectId(String delegatedUserObjectId)"
+  name: "setDelegatedUserObjectId(String delegatedUserObjectId)"
+  nameWithType: "ShareServiceSasSignatureValues.setDelegatedUserObjectId(String delegatedUserObjectId)"
+  summary: "Optional."
+  parameters:
+  - description: "The Entra ID of the user that is authorized to use the resulting SAS URL."
+    name: "delegatedUserObjectId"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public ShareServiceSasSignatureValues setDelegatedUserObjectId(String delegatedUserObjectId)"
+  desc: "Optional. Beginning in version 2025-07-05, this value specifies the Entra ID of the user that is authorized to use the resulting SAS URL. The resulting SAS URL must be used in conjunction with an Entra ID token that has been issued to the user specified in this value."
+  returns:
+    description: "the updated ShareServiceSasSignatureValues object"
+    type: "<xref href=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues?alt=com.azure.storage.file.share.sas.ShareServiceSasSignatureValues&text=ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.file.share.sas.ShareServiceSasSignatureValues.setExpiryTime(java.time.OffsetDateTime)"
   fullName: "com.azure.storage.file.share.sas.ShareServiceSasSignatureValues.setExpiryTime(OffsetDateTime expiryTime)"
   name: "setExpiryTime(OffsetDateTime expiryTime)"
@@ -451,4 +475,4 @@ type: "class"
 desc: "Used to initialize parameters for a Shared Access Signature (SAS) for an Azure File Storage service. Once all the values here are set, use the appropriate SAS generation method on the desired share/file/directory client to obtain a representation of the SAS which can then be applied to a new client using the .sasToken(String) method on the desired client builder."
 metadata: {}
 package: "com.azure.storage.file.share.sas"
-artifact: com.azure:azure-storage-file-share:12.28.0
+artifact: com.azure:azure-storage-file-share:12.29.0

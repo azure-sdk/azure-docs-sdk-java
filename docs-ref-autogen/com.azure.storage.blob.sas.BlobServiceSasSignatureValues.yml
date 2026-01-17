@@ -236,6 +236,16 @@ methods:
   returns:
     description: "the correlation id value for the SAS."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.storage.blob.sas.BlobServiceSasSignatureValues.getDelegatedUserObjectId()"
+  fullName: "com.azure.storage.blob.sas.BlobServiceSasSignatureValues.getDelegatedUserObjectId()"
+  name: "getDelegatedUserObjectId()"
+  nameWithType: "BlobServiceSasSignatureValues.getDelegatedUserObjectId()"
+  summary: "Optional."
+  syntax: "public String getDelegatedUserObjectId()"
+  desc: "Optional. Beginning in version 2025-07-05, this value specifies the Entra ID of the user that is authorized to use the resulting SAS URL. The resulting SAS URL must be used in conjunction with an Entra ID token that has been issued to the user specified in this value."
+  returns:
+    description: "The Entra ID of the user that is authorized to use the resulting SAS URL."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.storage.blob.sas.BlobServiceSasSignatureValues.getExpiryTime()"
   fullName: "com.azure.storage.blob.sas.BlobServiceSasSignatureValues.getExpiryTime()"
   name: "getExpiryTime()"
@@ -444,6 +454,20 @@ methods:
   returns:
     description: "the updated BlobServiceSasSignatureValues object"
     type: "<xref href=\"com.azure.storage.blob.sas.BlobServiceSasSignatureValues?alt=com.azure.storage.blob.sas.BlobServiceSasSignatureValues&text=BlobServiceSasSignatureValues\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.blob.sas.BlobServiceSasSignatureValues.setDelegatedUserObjectId(java.lang.String)"
+  fullName: "com.azure.storage.blob.sas.BlobServiceSasSignatureValues.setDelegatedUserObjectId(String delegatedUserObjectId)"
+  name: "setDelegatedUserObjectId(String delegatedUserObjectId)"
+  nameWithType: "BlobServiceSasSignatureValues.setDelegatedUserObjectId(String delegatedUserObjectId)"
+  summary: "Optional."
+  parameters:
+  - description: "The Entra ID of the user that is authorized to use the resulting SAS URL."
+    name: "delegatedUserObjectId"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public BlobServiceSasSignatureValues setDelegatedUserObjectId(String delegatedUserObjectId)"
+  desc: "Optional. Beginning in version 2025-07-05, this value specifies the Entra ID of the user that is authorized to use the resulting SAS URL. The resulting SAS URL must be used in conjunction with an Entra ID token that has been issued to the user specified in this value."
+  returns:
+    description: "the updated BlobServiceSasSignatureValues object"
+    type: "<xref href=\"com.azure.storage.blob.sas.BlobServiceSasSignatureValues?alt=com.azure.storage.blob.sas.BlobServiceSasSignatureValues&text=BlobServiceSasSignatureValues\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.blob.sas.BlobServiceSasSignatureValues.setExpiryTime(java.time.OffsetDateTime)"
   fullName: "com.azure.storage.blob.sas.BlobServiceSasSignatureValues.setExpiryTime(OffsetDateTime expiryTime)"
   name: "setExpiryTime(OffsetDateTime expiryTime)"
@@ -592,4 +616,4 @@ type: "class"
 desc: "Used to initialize parameters for a Shared Access Signature (SAS) for an Azure Blob Storage service. Once all the values here are set, use the appropriate SAS generation method on the desired container/blob client to obtain a representation of the SAS which can then be applied to a new client using the .sasToken(String) method on the desired client builder."
 metadata: {}
 package: "com.azure.storage.blob.sas"
-artifact: com.azure:azure-storage-blob:12.32.0
+artifact: com.azure:azure-storage-blob:12.33.0

@@ -527,13 +527,13 @@ methods:
   fullName: "com.azure.storage.file.share.ShareAsyncClient.generateSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues)"
   name: "generateSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues)"
   nameWithType: "ShareAsyncClient.generateSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues)"
-  summary: "Generates a service sas for the queue using the specified <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>"
+  summary: "Generates a service sas for the share using the specified <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>"
   parameters:
   - description: "<xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>"
     name: "shareServiceSasSignatureValues"
     type: "<xref href=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues?alt=com.azure.storage.file.share.sas.ShareServiceSasSignatureValues&text=ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public String generateSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues)"
-  desc: "Generates a service sas for the queue using the specified <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>\n\nNote : The client must be authenticated via <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"StorageSharedKeyCredential\"></xref>\n\nSee <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref> for more information on how to construct a service SAS.\n\n**Code Samples**\n\n```java\nOffsetDateTime expiryTime = OffsetDateTime.now().plusDays(1);\n ShareSasPermission permission = new ShareSasPermission().setReadPermission(true);\n\n ShareServiceSasSignatureValues values = new ShareServiceSasSignatureValues(expiryTime, permission)\n     .setStartTime(OffsetDateTime.now());\n\n shareAsyncClient.generateSas(values); // Client must be authenticated via StorageSharedKeyCredential\n```"
+  desc: "Generates a service sas for the share using the specified <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>\n\nNote : The client must be authenticated via <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"StorageSharedKeyCredential\"></xref>\n\nSee <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref> for more information on how to construct a service SAS.\n\n**Code Samples**\n\n```java\nOffsetDateTime expiryTime = OffsetDateTime.now().plusDays(1);\n ShareSasPermission permission = new ShareSasPermission().setReadPermission(true);\n\n ShareServiceSasSignatureValues values = new ShareServiceSasSignatureValues(expiryTime, permission)\n     .setStartTime(OffsetDateTime.now());\n\n shareAsyncClient.generateSas(values); // Client must be authenticated via StorageSharedKeyCredential\n```"
   returns:
     description: "A <code>String</code> representing the SAS query parameters."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -541,7 +541,7 @@ methods:
   fullName: "com.azure.storage.file.share.ShareAsyncClient.generateSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues, Consumer<String> stringToSignHandler, Context context)"
   name: "generateSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues, Consumer<String> stringToSignHandler, Context context)"
   nameWithType: "ShareAsyncClient.generateSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues, Consumer<String> stringToSignHandler, Context context)"
-  summary: "Generates a service sas for the queue using the specified <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>"
+  summary: "Generates a service sas for the share using the specified <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>"
   parameters:
   - description: "<xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>"
     name: "shareServiceSasSignatureValues"
@@ -553,7 +553,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public String generateSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues, Consumer<String> stringToSignHandler, Context context)"
-  desc: "Generates a service sas for the queue using the specified <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>\n\nNote : The client must be authenticated via <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"StorageSharedKeyCredential\"></xref>\n\nSee <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref> for more information on how to construct a service SAS."
+  desc: "Generates a service sas for the share using the specified <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>\n\nNote : The client must be authenticated via <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"StorageSharedKeyCredential\"></xref>\n\nSee <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref> for more information on how to construct a service SAS."
   returns:
     description: "A <code>String</code> representing the SAS query parameters."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -561,7 +561,7 @@ methods:
   fullName: "com.azure.storage.file.share.ShareAsyncClient.generateSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues, Context context)"
   name: "generateSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues, Context context)"
   nameWithType: "ShareAsyncClient.generateSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues, Context context)"
-  summary: "Generates a service sas for the queue using the specified <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>"
+  summary: "Generates a service sas for the share using the specified <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>"
   parameters:
   - description: "<xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>"
     name: "shareServiceSasSignatureValues"
@@ -570,7 +570,47 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public String generateSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues, Context context)"
-  desc: "Generates a service sas for the queue using the specified <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>\n\nNote : The client must be authenticated via <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"StorageSharedKeyCredential\"></xref>\n\nSee <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref> for more information on how to construct a service SAS.\n\n**Code Samples**\n\n```java\nOffsetDateTime expiryTime = OffsetDateTime.now().plusDays(1);\n ShareSasPermission permission = new ShareSasPermission().setReadPermission(true);\n\n ShareServiceSasSignatureValues values = new ShareServiceSasSignatureValues(expiryTime, permission)\n     .setStartTime(OffsetDateTime.now());\n\n // Client must be authenticated via StorageSharedKeyCredential\n shareAsyncClient.generateSas(values, new Context(\"key\", \"value\"));\n```"
+  desc: "Generates a service sas for the share using the specified <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>\n\nNote : The client must be authenticated via <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"StorageSharedKeyCredential\"></xref>\n\nSee <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref> for more information on how to construct a service SAS.\n\n**Code Samples**\n\n```java\nOffsetDateTime expiryTime = OffsetDateTime.now().plusDays(1);\n ShareSasPermission permission = new ShareSasPermission().setReadPermission(true);\n\n ShareServiceSasSignatureValues values = new ShareServiceSasSignatureValues(expiryTime, permission)\n     .setStartTime(OffsetDateTime.now());\n\n // Client must be authenticated via StorageSharedKeyCredential\n shareAsyncClient.generateSas(values, new Context(\"key\", \"value\"));\n```"
+  returns:
+    description: "A <code>String</code> representing the SAS query parameters."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.storage.file.share.ShareAsyncClient.generateUserDelegationSas(com.azure.storage.file.share.sas.ShareServiceSasSignatureValues,com.azure.storage.file.share.models.UserDelegationKey)"
+  fullName: "com.azure.storage.file.share.ShareAsyncClient.generateUserDelegationSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues, UserDelegationKey userDelegationKey)"
+  name: "generateUserDelegationSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues, UserDelegationKey userDelegationKey)"
+  nameWithType: "ShareAsyncClient.generateUserDelegationSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues, UserDelegationKey userDelegationKey)"
+  summary: "Generates a user delegation SAS for the share using the specified <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>."
+  parameters:
+  - description: "<xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>"
+    name: "shareServiceSasSignatureValues"
+    type: "<xref href=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues?alt=com.azure.storage.file.share.sas.ShareServiceSasSignatureValues&text=ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"False\" />"
+  - description: "A <xref uid=\"com.azure.storage.file.share.models.UserDelegationKey\" data-throw-if-not-resolved=\"false\" data-raw-source=\"UserDelegationKey\"></xref> object used to sign the SAS values."
+    name: "userDelegationKey"
+    type: "<xref href=\"com.azure.storage.file.share.models.UserDelegationKey?alt=com.azure.storage.file.share.models.UserDelegationKey&text=UserDelegationKey\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public String generateUserDelegationSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues, UserDelegationKey userDelegationKey)"
+  desc: "Generates a user delegation SAS for the share using the specified <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>.\n\nSee <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref> for more information on how to construct a user delegation SAS."
+  returns:
+    description: "A <code>String</code> representing the SAS query parameters."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.storage.file.share.ShareAsyncClient.generateUserDelegationSas(com.azure.storage.file.share.sas.ShareServiceSasSignatureValues,com.azure.storage.file.share.models.UserDelegationKey,java.util.function.Consumer<java.lang.String>,com.azure.core.util.Context)"
+  fullName: "com.azure.storage.file.share.ShareAsyncClient.generateUserDelegationSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues, UserDelegationKey userDelegationKey, Consumer<String> stringToSignHandler, Context context)"
+  name: "generateUserDelegationSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues, UserDelegationKey userDelegationKey, Consumer<String> stringToSignHandler, Context context)"
+  nameWithType: "ShareAsyncClient.generateUserDelegationSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues, UserDelegationKey userDelegationKey, Consumer<String> stringToSignHandler, Context context)"
+  summary: "Generates a user delegation SAS for the share using the specified <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>."
+  parameters:
+  - description: "<xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>"
+    name: "shareServiceSasSignatureValues"
+    type: "<xref href=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues?alt=com.azure.storage.file.share.sas.ShareServiceSasSignatureValues&text=ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"False\" />"
+  - description: "A <xref uid=\"com.azure.storage.file.share.models.UserDelegationKey\" data-throw-if-not-resolved=\"false\" data-raw-source=\"UserDelegationKey\"></xref> object used to sign the SAS values."
+    name: "userDelegationKey"
+    type: "<xref href=\"com.azure.storage.file.share.models.UserDelegationKey?alt=com.azure.storage.file.share.models.UserDelegationKey&text=UserDelegationKey\" data-throw-if-not-resolved=\"False\" />"
+  - description: "For debugging purposes only. Returns the string to sign that was used to generate the\n signature."
+    name: "stringToSignHandler"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html\">Consumer</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+  - description: "Additional context that is passed through the code when generating a SAS."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public String generateUserDelegationSas(ShareServiceSasSignatureValues shareServiceSasSignatureValues, UserDelegationKey userDelegationKey, Consumer<String> stringToSignHandler, Context context)"
+  desc: "Generates a user delegation SAS for the share using the specified <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref>.\n\nSee <xref uid=\"com.azure.storage.file.share.sas.ShareServiceSasSignatureValues\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareServiceSasSignatureValues\"></xref> for more information on how to construct a user delegation SAS."
   returns:
     description: "A <code>String</code> representing the SAS query parameters."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -582,7 +622,7 @@ methods:
   syntax: "public PagedFlux<ShareSignedIdentifier> getAccessPolicy()"
   desc: "Retrieves stored access policies specified for the share.\n\n**Code Samples**\n\nList the stored access policies\n\n```java\nshareAsyncClient.getAccessPolicy()\n     .subscribe(result -> System.out.printf(\"Access policy %s allows these permissions: %s\", result.getId(),\n         result.getAccessPolicy().getPermissions())\n     );\n```\n\nFor more information, see the [Azure Docs][].\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/get-share-acl"
   returns:
-    description: "The stored access policies specified on the queue."
+    description: "The stored access policies specified on the share."
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.models.ShareSignedIdentifier?alt=com.azure.storage.file.share.models.ShareSignedIdentifier&text=ShareSignedIdentifier\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.storage.file.share.ShareAsyncClient.getAccessPolicy(com.azure.storage.file.share.options.ShareGetAccessPolicyOptions)"
   fullName: "com.azure.storage.file.share.ShareAsyncClient.getAccessPolicy(ShareGetAccessPolicyOptions options)"
@@ -596,7 +636,7 @@ methods:
   syntax: "public PagedFlux<ShareSignedIdentifier> getAccessPolicy(ShareGetAccessPolicyOptions options)"
   desc: "Retrieves stored access policies specified for the share.\n\n**Code Samples**\n\nList the stored access policies\n\n```java\nshareAsyncClient.getAccessPolicy(new ShareGetAccessPolicyOptions()\n     .setRequestConditions(new ShareRequestConditions().setLeaseId(leaseId)))\n     .subscribe(result -> System.out.printf(\"Access policy %s allows these permissions: %s\", result.getId(),\n         result.getAccessPolicy().getPermissions())\n     );\n```\n\nFor more information, see the [Azure Docs][].\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/get-share-acl"
   returns:
-    description: "The stored access policies specified on the queue."
+    description: "The stored access policies specified on the share."
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.models.ShareSignedIdentifier?alt=com.azure.storage.file.share.models.ShareSignedIdentifier&text=ShareSignedIdentifier\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.storage.file.share.ShareAsyncClient.getAccountName()"
   fullName: "com.azure.storage.file.share.ShareAsyncClient.getAccountName()"
@@ -856,7 +896,7 @@ methods:
   nameWithType: "ShareAsyncClient.setAccessPolicy(List<ShareSignedIdentifier> permissions)"
   summary: "Sets stored access policies for the share."
   parameters:
-  - description: "Access policies to set on the queue"
+  - description: "Access policies to set on the share."
     name: "permissions"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.storage.file.share.models.ShareSignedIdentifier?alt=com.azure.storage.file.share.models.ShareSignedIdentifier&text=ShareSignedIdentifier\" data-throw-if-not-resolved=\"False\" />&gt;"
   syntax: "public Mono<ShareInfo> setAccessPolicy(List<ShareSignedIdentifier> permissions)"
@@ -870,7 +910,7 @@ methods:
   nameWithType: "ShareAsyncClient.setAccessPolicyWithResponse(List<ShareSignedIdentifier> permissions)"
   summary: "Sets stored access policies for the share."
   parameters:
-  - description: "Access policies to set on the queue"
+  - description: "Access policies to set on the share."
     name: "permissions"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.storage.file.share.models.ShareSignedIdentifier?alt=com.azure.storage.file.share.models.ShareSignedIdentifier&text=ShareSignedIdentifier\" data-throw-if-not-resolved=\"False\" />&gt;"
   syntax: "public Mono<Response<ShareInfo>> setAccessPolicyWithResponse(List<ShareSignedIdentifier> permissions)"
@@ -998,4 +1038,4 @@ type: "class"
 desc: "This class provides a azureFileStorageClient that contains all the operations for interacting with a share in Azure Storage Share. Operations allowed by the azureFileStorageClient are creating and deleting the share, creating snapshots for the share, creating and deleting directories in the share and retrieving and updating properties metadata and access policies of the share.\n\n**Instantiating an Asynchronous Share Client**\n\n```java\nShareAsyncClient client = new ShareClientBuilder()\n     .connectionString(\"${connectionString}\")\n     .endpoint(\"${endpoint}\")\n     .buildAsyncClient();\n```\n\nView <xref uid=\"com.azure.storage.file.share.ShareClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"this\"></xref> for additional ways to construct the azureFileStorageClient."
 metadata: {}
 package: "com.azure.storage.file.share"
-artifact: com.azure:azure-storage-file-share:12.28.0
+artifact: com.azure:azure-storage-file-share:12.29.0

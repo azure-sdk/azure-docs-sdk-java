@@ -660,6 +660,26 @@ methods:
   returns:
     description: "The list of files/directories."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.datalake.models.PathItem?alt=com.azure.storage.file.datalake.models.PathItem&text=PathItem\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.storage.file.datalake.DataLakeDirectoryClient.listPaths(com.azure.storage.file.datalake.models.ListPathsOptions,java.time.Duration,com.azure.core.util.Context)"
+  fullName: "com.azure.storage.file.datalake.DataLakeDirectoryClient.listPaths(ListPathsOptions options, Duration timeout, Context context)"
+  name: "listPaths(ListPathsOptions options, Duration timeout, Context context)"
+  nameWithType: "DataLakeDirectoryClient.listPaths(ListPathsOptions options, Duration timeout, Context context)"
+  summary: "Returns a lazy loaded list of files/directories in this directory."
+  parameters:
+  - description: "A <xref uid=\"com.azure.storage.file.datalake.models.ListPathsOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ListPathsOptions\"></xref> which specifies what data should be returned by the service. If\n iterating by page, the page size passed to byPage methods such as\n <xref uid=\"com.azure.core.http.rest.PagedIterable.iterableByPage*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable#iterableByPage(int)\"></xref> will be preferred over the value set on these options."
+    name: "options"
+    type: "<xref href=\"com.azure.storage.file.datalake.models.ListPathsOptions?alt=com.azure.storage.file.datalake.models.ListPathsOptions&text=ListPathsOptions\" data-throw-if-not-resolved=\"False\" />"
+  - description: "An optional timeout value beyond which a <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RuntimeException\"></xref> will be raised."
+    name: "timeout"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
+  - description: "Additional context that is passed through the Http pipeline during the service call."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public PagedIterable<PathItem> listPaths(ListPathsOptions options, Duration timeout, Context context)"
+  desc: "Returns a lazy loaded list of files/directories in this directory. The returned <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref> can be consumed while new items are automatically retrieved as needed. For more information, see the [Azure Docs][].\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/datalakestoragegen2/filesystem/list#filesystem"
+  returns:
+    description: "The list of files/directories."
+    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.datalake.models.PathItem?alt=com.azure.storage.file.datalake.models.PathItem&text=PathItem\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.storage.file.datalake.DataLakeDirectoryClient.rename(java.lang.String,java.lang.String)"
   fullName: "com.azure.storage.file.datalake.DataLakeDirectoryClient.rename(String destinationFileSystem, String destinationPath)"
   name: "rename(String destinationFileSystem, String destinationPath)"
@@ -710,4 +730,4 @@ type: "class"
 desc: "This class provides a client that contains directory operations for Azure Storage Data Lake. Operations provided by this client include creating a directory, deleting a directory, renaming a directory, setting metadata and http headers, setting and retrieving access control, getting properties and creating and deleting files and subdirectories.\n\nThis client is instantiated through <xref uid=\"com.azure.storage.file.datalake.DataLakePathClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DataLakePathClientBuilder\"></xref> or retrieved via <xref uid=\"com.azure.storage.file.datalake.DataLakeFileSystemClient.getDirectoryClient(java.lang.String)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"getDirectoryClient\"></xref>.\n\nPlease refer to the [Azure Docs][] for more information.\n\n\n[Azure Docs]: https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction"
 metadata: {}
 package: "com.azure.storage.file.datalake"
-artifact: com.azure:azure-storage-file-datalake:12.25.0
+artifact: com.azure:azure-storage-file-datalake:12.26.0
