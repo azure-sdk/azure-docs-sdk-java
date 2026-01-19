@@ -1,7 +1,7 @@
 ---
 title: Azure Peering SDK for Java
 description: Reference for Azure Peering SDK for Java
-ms.date: 01/16/2026
+ms.date: 01/19/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: peering
