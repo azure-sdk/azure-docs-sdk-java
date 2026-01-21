@@ -1,7 +1,7 @@
 ---
 title: Azure Event Hubs SDK for Java
 description: Reference for Azure Event Hubs SDK for Java
-ms.date: 01/20/2026
+ms.date: 01/21/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: azure-event-hubs
