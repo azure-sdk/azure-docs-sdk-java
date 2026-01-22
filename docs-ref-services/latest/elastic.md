@@ -1,7 +1,7 @@
 ---
 title: Azure Elastic SDK for Java
 description: Reference for Azure Elastic SDK for Java
-ms.date: 01/21/2026
+ms.date: 01/22/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: elastic
