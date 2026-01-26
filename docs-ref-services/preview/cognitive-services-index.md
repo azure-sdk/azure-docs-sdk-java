@@ -1,5 +1,6 @@
 | Reference | Package | Source |
 |---|---|---|
+|[AI Agents](ai-agents-readme.md)|[azure-ai-agents](https://repo1.maven.org/maven2/com/azure/azure-ai-agents)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/ai/azure-ai-agents)|
 |[AI Agents Persistent](ai-agents-persistent-readme.md)|[azure-ai-agents-persistent](https://repo1.maven.org/maven2/com/azure/azure-ai-agents-persistent)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/ai/azure-ai-agents-persistent)|
 |[Content Safety](ai-contentsafety-readme.md)|[azure-ai-contentsafety](https://repo1.maven.org/maven2/com/azure/azure-ai-contentsafety)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/contentsafety/azure-ai-contentsafety)|
 |[Document Intelligence](ai-documentintelligence-readme.md)|[azure-ai-documentintelligence](https://repo1.maven.org/maven2/com/azure/azure-ai-documentintelligence)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/documentintelligence/azure-ai-documentintelligence)|

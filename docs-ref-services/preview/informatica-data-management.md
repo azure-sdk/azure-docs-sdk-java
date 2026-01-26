@@ -1,7 +1,7 @@
 ---
 title: Azure Informatica Data Management SDK for Java
 description: Reference for Azure Informatica Data Management SDK for Java
-ms.date: 01/23/2026
+ms.date: 01/26/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: informaticadatamanagement
