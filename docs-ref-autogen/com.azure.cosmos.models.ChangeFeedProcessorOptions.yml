@@ -160,6 +160,16 @@ methods:
   returns:
     description: "the maximum number of items to be returned in the enumeration operation in the Azure Cosmos DB service."
     type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.cosmos.models.ChangeFeedProcessorOptions.getMaxLeasesToAcquirePerCycle()"
+  fullName: "com.azure.cosmos.models.ChangeFeedProcessorOptions.getMaxLeasesToAcquirePerCycle()"
+  name: "getMaxLeasesToAcquirePerCycle()"
+  nameWithType: "ChangeFeedProcessorOptions.getMaxLeasesToAcquirePerCycle()"
+  summary: "Gets the maximum number of leases the instance will try to acquire in a single load balancing cycle."
+  syntax: "public int getMaxLeasesToAcquirePerCycle()"
+  desc: "Gets the maximum number of leases the instance will try to acquire in a single load balancing cycle.\n\nA value of `0` keeps the legacy behavior."
+  returns:
+    description: "maximum leases to acquire per cycle, or <code>0</code> for legacy behavior."
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.cosmos.models.ChangeFeedProcessorOptions.getMaxScaleCount()"
   fullName: "com.azure.cosmos.models.ChangeFeedProcessorOptions.getMaxScaleCount()"
   name: "getMaxScaleCount()"
@@ -342,6 +352,20 @@ methods:
   returns:
     description: "the current ChangeFeedProcessorOptions instance."
     type: "<xref href=\"com.azure.cosmos.models.ChangeFeedProcessorOptions?alt=com.azure.cosmos.models.ChangeFeedProcessorOptions&text=ChangeFeedProcessorOptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.cosmos.models.ChangeFeedProcessorOptions.setMaxLeasesToAcquirePerCycle(int)"
+  fullName: "com.azure.cosmos.models.ChangeFeedProcessorOptions.setMaxLeasesToAcquirePerCycle(int maxLeasesToAcquirePerCycle)"
+  name: "setMaxLeasesToAcquirePerCycle(int maxLeasesToAcquirePerCycle)"
+  nameWithType: "ChangeFeedProcessorOptions.setMaxLeasesToAcquirePerCycle(int maxLeasesToAcquirePerCycle)"
+  summary: "Sets the maximum number of leases the instance will try to acquire in a single load balancing cycle."
+  parameters:
+  - description: "max leases to acquire per cycle, or <code>0</code> for legacy behavior."
+    name: "maxLeasesToAcquirePerCycle"
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ChangeFeedProcessorOptions setMaxLeasesToAcquirePerCycle(int maxLeasesToAcquirePerCycle)"
+  desc: "Sets the maximum number of leases the instance will try to acquire in a single load balancing cycle.\n\nUse this to speed up acquisition of unused/expired leases after scale-out or rolling deployments when using ephemeral host names. A value of `0` keeps the legacy behavior. Higher values may increase RU consumption in the lease container and can increase lease acquisition conflicts when many instances are starting at the same time."
+  returns:
+    description: "the current ChangeFeedProcessorOptions instance."
+    type: "<xref href=\"com.azure.cosmos.models.ChangeFeedProcessorOptions?alt=com.azure.cosmos.models.ChangeFeedProcessorOptions&text=ChangeFeedProcessorOptions\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.cosmos.models.ChangeFeedProcessorOptions.setMaxScaleCount(int)"
   fullName: "com.azure.cosmos.models.ChangeFeedProcessorOptions.setMaxScaleCount(int maxScaleCount)"
   name: "setMaxScaleCount(int maxScaleCount)"
@@ -430,4 +454,4 @@ type: "class"
 desc: "Specifies the options associated with <xref uid=\"com.azure.cosmos.ChangeFeedProcessor\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ChangeFeedProcessor\"></xref>."
 metadata: {}
 package: "com.azure.cosmos.models"
-artifact: com.azure:azure-cosmos:4.76.0
+artifact: com.azure:azure-cosmos:4.77.0
