@@ -1,12 +1,12 @@
 ---
 title: Azure Resource Manager Compute client library for Java
 keywords: Azure, java, SDK, API, azure-resourcemanager-compute, compute
-ms.date: 01/14/2026
+ms.date: 01/29/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: compute
 ---
-# Azure Resource Manager Compute client library for Java - version 2.56.0 
+# Azure Resource Manager Compute client library for Java - version 2.56.1 
 
 
 Azure Resource Manager Compute client library for Java
@@ -27,7 +27,7 @@ For documentation on how to use this package, please see [Azure Management Libra
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
     <artifactId>azure-resourcemanager-compute</artifactId>
-    <version>2.56.0</version>
+    <version>2.56.1</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -74,7 +74,7 @@ See [Samples][sample] for code snippets and samples.
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-compute_2.56.0/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-compute_2.56.1/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -85,10 +85,10 @@ For details on contributing to this repository, see the [contributing guide](htt
 <!-- LINKS -->
 [jdk]: https://learn.microsoft.com/azure/developer/java/fundamentals/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-compute_2.56.0/sdk/identity/azure-identity
-[azure_identity_credentials]: https://github.com/Azure/azure-sdk-for-java/tree/azure-resourcemanager-compute_2.56.0/sdk/identity/azure-identity#credentials
-[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-compute_2.56.0/sdk/core/azure-core-http-netty
-[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-compute_2.56.0/sdk/resourcemanager/docs/AUTH.md
-[sample]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-compute_2.56.0/sdk/resourcemanager/docs/SAMPLE.md
-[design]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-compute_2.56.0/sdk/resourcemanager/docs/DESIGN.md
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-compute_2.56.1/sdk/identity/azure-identity
+[azure_identity_credentials]: https://github.com/Azure/azure-sdk-for-java/tree/azure-resourcemanager-compute_2.56.1/sdk/identity/azure-identity#credentials
+[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-compute_2.56.1/sdk/core/azure-core-http-netty
+[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-compute_2.56.1/sdk/resourcemanager/docs/AUTH.md
+[sample]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-compute_2.56.1/sdk/resourcemanager/docs/SAMPLE.md
+[design]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-compute_2.56.1/sdk/resourcemanager/docs/DESIGN.md
 

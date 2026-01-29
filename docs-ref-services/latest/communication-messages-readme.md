@@ -1,12 +1,12 @@
 ---
 title: Azure Messages client library for Java
 keywords: Azure, java, SDK, API, azure-communication-messages, communication
-ms.date: 10/27/2025
+ms.date: 01/29/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: communication
 ---
-# Azure Messages client library for Java - version 1.1.8 
+# Azure Messages client library for Java - version 1.1.9 
 
 This package contains a Java SDK for Azure Communication Messages Services.
 
@@ -32,7 +32,7 @@ Various documentation is available to help you get started
 ### Adding the package to your product
 
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-communication-messages_1.1.8/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-communication-messages_1.1.9/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -67,7 +67,7 @@ add the direct dependency to your project as follows.
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-communication-messages</artifactId>
-    <version>1.1.8</version>
+    <version>1.1.9</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -333,7 +333,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [handle_advance_messaging_events]: https://learn.microsoft.com/azure/communication-services/quickstarts/advanced-messaging/whatsapp/handle-advanced-messaging-events
 [register_whatsapp_business_account]: https://learn.microsoft.com/azure/communication-services/quickstarts/advanced-messaging/whatsapp/connect-whatsapp-business-account
 [create-manage-whatsapp-template]: https://developers.facebook.com/docs/whatsapp/business-management-api/message-templates/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-communication-messages_1.1.8/sdk/identity/azure-identity
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-communication-messages_1.1.9/sdk/identity/azure-identity
 [defaultazurecredential]: https://github.com/Azure/azure-sdk-for-js/tree/main/sdk/identity/identity#defaultazurecredential
 [azure_cli]: /cli/azure
 [azure_sub]: https://azure.microsoft.com/free/

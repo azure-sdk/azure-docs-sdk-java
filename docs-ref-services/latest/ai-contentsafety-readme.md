@@ -1,12 +1,12 @@
 ---
 title: Azure ContentSafety client library for Java
 keywords: Azure, java, SDK, API, azure-ai-contentsafety, contentsafety
-ms.date: 10/27/2025
+ms.date: 01/29/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: contentsafety
 ---
-# Azure ContentSafety client library for Java - version 1.0.16 
+# Azure ContentSafety client library for Java - version 1.0.17 
 
 
 [Azure AI Content Safety][contentsafety_overview] detects harmful user-generated and AI-generated content in applications and services. Content Safety includes several APIs that allow you to detect material that is harmful:
@@ -37,7 +37,7 @@ Various documentation is available to help you get started
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-ai-contentsafety</artifactId>
-    <version>1.0.16</version>
+    <version>1.0.17</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -80,7 +80,7 @@ Please refer to this Cognitive Services authentication document [Authenticate wi
 
 - Step 2: Set the values of the client ID, tenant ID, and client secret of the Enable Microsoft Entra ID application as environment variables: `AZURE_CLIENT_ID`, `AZURE_TENANT_ID`, `AZURE_CLIENT_SECRET`.
 
-After setup, you can use [DefaultAzureCredential](https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-contentsafety_1.0.16/sdk/identity/azure-identity#authenticate-with-defaultazurecredential)
+After setup, you can use [DefaultAzureCredential](https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-contentsafety_1.0.17/sdk/identity/azure-identity#authenticate-with-defaultazurecredential)
 can be used to authenticate the client.
 
 DefaultAzureCredential will use the values from these environment variables.
@@ -313,7 +313,7 @@ For more extensive documentation on Azure Content Safety, see the [Azure AI Cont
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-contentsafety_1.0.16/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-contentsafety_1.0.17/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -326,7 +326,7 @@ For details on contributing to this repository, see the [contributing guide](htt
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: /java/azure/jdk/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-contentsafety_1.0.16/sdk/identity/azure-identity
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-contentsafety_1.0.17/sdk/identity/azure-identity
 [contentsafety_overview]: https://aka.ms/acs-doc
 [azure_portal]: https://ms.portal.azure.com/
 [azure_cli_endpoint_lookup]: /cli/azure/cognitiveservices/account?view=azure-cli-latest#az-cognitiveservices-account-show
