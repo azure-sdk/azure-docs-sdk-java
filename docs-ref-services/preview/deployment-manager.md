@@ -1,7 +1,7 @@
 ---
 title: Azure Deployment Manager SDK for Java
 description: Reference for Azure Deployment Manager SDK for Java
-ms.date: 01/29/2026
+ms.date: 01/30/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: deploymentmanager
