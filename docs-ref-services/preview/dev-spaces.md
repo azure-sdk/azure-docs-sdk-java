@@ -1,7 +1,7 @@
 ---
 title: Azure Dev Spaces SDK for Java
 description: Reference for Azure Dev Spaces SDK for Java
-ms.date: 03/03/2026
+ms.date: 03/04/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: devspaces

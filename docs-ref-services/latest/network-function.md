@@ -6,6 +6,6 @@ ms.topic: reference
 ms.devlang: java
 ms.service: networkfunction
 ---
-# Azure Network Function SDK for Java - preview
-## Packages - preview
+# Azure Network Function SDK for Java - latest
+## Packages - latest
 [!INCLUDE [packages](network-function-index.md)]
