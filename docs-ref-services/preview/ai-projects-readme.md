@@ -1,12 +1,12 @@
 ---
 title: Azure Projects client library for Java
 keywords: Azure, java, SDK, API, azure-ai-projects, ai
-ms.date: 02/25/2026
+ms.date: 03/04/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: ai
 ---
-# Azure Projects client library for Java - version 2.0.0-beta.1 
+# Azure Projects client library for Java - version 2.0.0-beta.2 
 
 
 The AI Projects client library is part of the Azure AI Foundry SDK and provides easy access to resources in your Azure AI Foundry Project. Use it to:
@@ -144,7 +144,7 @@ String indexVersion = Configuration.getGlobalConfiguration().get("INDEX_VERSION"
 String aiSearchConnectionName = Configuration.getGlobalConfiguration().get("AI_SEARCH_CONNECTION_NAME", "");
 String aiSearchIndexName = Configuration.getGlobalConfiguration().get("AI_SEARCH_INDEX_NAME", "");
 
-Index index = indexesClient.createOrUpdateVersion(
+AIProjectIndex index = indexesClient.createOrUpdateVersion(
     indexName,
     indexVersion,
     new AzureAISearchIndex()
@@ -176,7 +176,7 @@ Always ensure that the chosen API version is fully supported and operational for
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-projects_2.0.0-beta.1/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-projects_2.0.0-beta.2/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -186,11 +186,11 @@ For details on contributing to this repository, see the [contributing guide](htt
 
 <!-- LINKS -->
 [product_documentation]: https://learn.microsoft.com/azure/ai-studio/
-[docs]: https://learn.microsoft.com/rest/api/aifoundry/aiprojects/
+[docs]: https://learn.microsoft.com/rest/api/aifoundry/aiproject/
 [jdk]: https://learn.microsoft.com/azure/developer/java/fundamentals/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-projects_2.0.0-beta.1/sdk/identity/azure-identity
-[package_samples]: https://github.com/Azure/azure-sdk-for-java/tree/azure-ai-projects_2.0.0-beta.1/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-projects_2.0.0-beta.2/sdk/identity/azure-identity
+[package_samples]: https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-projects_2.0.0-beta.2/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects
 [openai_java_sdk]: https://github.com/openai/openai-java
 [openai_api_docs]: https://platform.openai.com/docs/overview
 

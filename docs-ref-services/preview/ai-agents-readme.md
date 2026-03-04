@@ -1,12 +1,12 @@
 ---
 title: Azure Agents client library for Java
 keywords: Azure, java, SDK, API, azure-ai-agents, ai
-ms.date: 02/25/2026
+ms.date: 03/04/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: ai
 ---
-# Azure Agents client library for Java - version 2.0.0-beta.1 
+# Azure Agents client library for Java - version 2.0.0-beta.2 
 
 
 Develop Agents using the Azure AI Foundry platform, leveraging an extensive ecosystem of models, tools, and capabilities from OpenAI, Microsoft, and other LLM providers.
@@ -89,7 +89,12 @@ ResponsesClient responsesClient = builder.buildResponsesClient();
 ResponsesAsyncClient responsesAsyncClient = builder.buildResponsesAsyncClient();
 ```
 
-The [OpenAI Official Java SDK][openai_java_sdk] is imported transitively and can be accessed from either the `ResponsesClient` or the `ConversationsClient` using the `getOpenAIClient()` method.
+The [OpenAI Official Java SDK][openai_java_sdk] is imported transitively and can be accessed from either the `ResponsesClient` or the `ConversationsClient` using the `getOpenAIClient()` method. Alternatively, you can build an `OpenAIClient` or `OpenAIClientAsync` directly from the `AgentsClientBuilder`:
+
+```java
+OpenAIClient openAIClient = builder.buildOpenAIClient();
+OpenAIClientAsync openAIAsyncClient = builder.buildOpenAIAsyncClient();
+```
 
 ### Agent tools
 
@@ -126,8 +131,8 @@ The SDK supports a variety of tools that can be attached to agent definitions. S
 
 Some features require an opt-in via the `Foundry-Features` HTTP header. The SDK provides two enums for these flags:
 
-- **`AgentDefinitionFeatureKeys`** — Used when creating or updating agents. Passed as a parameter to `createAgent`, `updateAgent`, `createAgentVersion`, and related methods. Available keys: `CONTAINER_AGENTS_V1_PREVIEW`, `HOSTED_AGENTS_V1_PREVIEW`, `WORKFLOW_AGENTS_V1_PREVIEW`.
-- **`FoundryFeaturesOptInKeys`** — Defines all known opt-in keys, including: `CONTAINER_AGENTS_V1_PREVIEW`, `HOSTED_AGENTS_V1_PREVIEW`, `WORKFLOW_AGENTS_V1_PREVIEW`, `EVALUATIONS_V1_PREVIEW`, `SCHEDULES_V1_PREVIEW`, `RED_TEAMS_V1_PREVIEW`, `INSIGHTS_V1_PREVIEW`, `MEMORY_STORES_V1_PREVIEW`.
+- **`AgentDefinitionFeatureKeys`** — Used when creating or updating agents. Passed as a parameter to `createAgent`, `updateAgent`, `createAgentVersion`, and related methods. Available keys: `HOSTED_AGENTS_V1_PREVIEW`, `WORKFLOW_AGENTS_V1_PREVIEW`.
+- **`FoundryFeaturesOptInKeys`** — Defines all known opt-in keys, including: `HOSTED_AGENTS_V1_PREVIEW`, `WORKFLOW_AGENTS_V1_PREVIEW`, `EVALUATIONS_V1_PREVIEW`, `SCHEDULES_V1_PREVIEW`, `RED_TEAMS_V1_PREVIEW`, `INSIGHTS_V1_PREVIEW`, `MEMORY_STORES_V1_PREVIEW`.
 
 > **Note:** The `MemoryStoresClient` automatically sets the `MemoryStores=V1Preview` opt-in flag on every request.
 
@@ -235,7 +240,7 @@ Always ensure that the chosen API version is fully supported and operational for
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-agents_2.0.0-beta.1/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-agents_2.0.0-beta.2/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -248,7 +253,7 @@ For details on contributing to this repository, see the [contributing guide](htt
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: https://learn.microsoft.com/azure/developer/java/fundamentals/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-ai-agents_2.0.0-beta.1/sdk/identity/azure-identity
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-agents_2.0.0-beta.2/sdk/identity/azure-identity
 [openai_java_sdk]: https://github.com/openai/openai-java/
 [openai_responses_api_docs]: https://platform.openai.com/docs/api-reference/responses
 [openai_conversations_api_docs]: https://platform.openai.com/docs/api-reference/conversations
