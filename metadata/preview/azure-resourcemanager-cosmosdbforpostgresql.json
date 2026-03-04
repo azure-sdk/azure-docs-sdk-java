@@ -1,6 +1,6 @@
 {
   "Name": "azure-resourcemanager-cosmosdbforpostgresql",
-  "Version": "1.1.0-beta.2",
+  "Version": "1.1.0-beta.3",
   "DevVersion": null,
   "DirectoryPath": "sdk/cosmosdbforpostgresql/azure-resourcemanager-cosmosdbforpostgresql",
   "ServiceDirectory": "cosmosdbforpostgresql",
@@ -10,20 +10,27 @@
   "SdkType": "mgmt",
   "IsNewSdk": true,
   "ArtifactName": "azure-resourcemanager-cosmosdbforpostgresql",
-  "ReleaseStatus": "2024-12-03",
+  "ReleaseStatus": "2026-03-04",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": null,
   "ArtifactDetails": {
     "name": "azure-resourcemanager-cosmosdbforpostgresql",
-    "groupId": "com.azure.resourcemanager",
     "safeName": "azureresourcemanagercosmosdbforpostgresql",
-    "releaseInBatch": "${{ parameters.release_azureresourcemanagercosmosdbforpostgresql }}"
+    "releaseInBatch": "${{ parameters.release_azureresourcemanagercosmosdbforpostgresql }}",
+    "triggeringPaths": [
+      "/sdk/cosmosdbforpostgresql/ci.yml"
+    ],
+    "groupId": "com.azure.resourcemanager"
   },
-  "CIMatrixConfigs": [],
+  "CIParameters": {
+    "CIMatrixConfigs": []
+  },
+  "SpecProjectPath": "specification/postgresqlhsc/resource-manager/Microsoft.DBforPostgreSQL/PostgresqlHsc",
   "Namespaces": [
     "com.azure.resourcemanager.cosmosdbforpostgresql",
     "com.azure.resourcemanager.cosmosdbforpostgresql.fluent",
     "com.azure.resourcemanager.cosmosdbforpostgresql.fluent.models",
     "com.azure.resourcemanager.cosmosdbforpostgresql.models"
-  ]
+  ],
+  "CIMatrixConfigs": []
 }
