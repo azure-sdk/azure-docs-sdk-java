@@ -27,7 +27,9 @@ constructors:
   name: "ServerProperties()"
   nameWithType: "ServerProperties.ServerProperties()"
   summary: "Creates an instance of Server<wbr>Properties class."
-  syntax: "public ServerProperties()"
+  modifiers:
+  - "protected"
+  syntax: "protected ServerProperties()"
   desc: "Creates an instance of ServerProperties class."
 methods:
 - uid: "com.azure.resourcemanager.cosmosdbforpostgresql.models.ServerProperties.administratorLogin()"
@@ -121,13 +123,6 @@ methods:
   - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.cosmosdbforpostgresql.models.ServerProperties.validate()"
-  fullName: "com.azure.resourcemanager.cosmosdbforpostgresql.models.ServerProperties.validate()"
-  name: "validate()"
-  nameWithType: "ServerProperties.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.cosmosdbforpostgresql.models.ServerProperties.vCores()"
   fullName: "com.azure.resourcemanager.cosmosdbforpostgresql.models.ServerProperties.vCores()"
   name: "vCores()"
@@ -138,66 +133,10 @@ methods:
   returns:
     description: "the vCores value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
-- uid: "com.azure.resourcemanager.cosmosdbforpostgresql.models.ServerProperties.withEnableHa(java.lang.Boolean)"
-  fullName: "com.azure.resourcemanager.cosmosdbforpostgresql.models.ServerProperties.withEnableHa(Boolean enableHa)"
-  name: "withEnableHa(Boolean enableHa)"
-  nameWithType: "ServerProperties.withEnableHa(Boolean enableHa)"
-  summary: "Set the enable<wbr>Ha property: If high availability (HA) is enabled or not for the server."
-  parameters:
-  - description: "the enableHa value to set."
-    name: "enableHa"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
-  syntax: "public ServerProperties withEnableHa(Boolean enableHa)"
-  desc: "Set the enableHa property: If high availability (HA) is enabled or not for the server."
-  returns:
-    description: "the ServerProperties object itself."
-    type: "<xref href=\"com.azure.resourcemanager.cosmosdbforpostgresql.models.ServerProperties?alt=com.azure.resourcemanager.cosmosdbforpostgresql.models.ServerProperties&text=ServerProperties\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.cosmosdbforpostgresql.models.ServerProperties.withServerEdition(java.lang.String)"
-  fullName: "com.azure.resourcemanager.cosmosdbforpostgresql.models.ServerProperties.withServerEdition(String serverEdition)"
-  name: "withServerEdition(String serverEdition)"
-  nameWithType: "ServerProperties.withServerEdition(String serverEdition)"
-  summary: "Set the server<wbr>Edition property: The edition of a server."
-  parameters:
-  - description: "the serverEdition value to set."
-    name: "serverEdition"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public ServerProperties withServerEdition(String serverEdition)"
-  desc: "Set the serverEdition property: The edition of a server."
-  returns:
-    description: "the ServerProperties object itself."
-    type: "<xref href=\"com.azure.resourcemanager.cosmosdbforpostgresql.models.ServerProperties?alt=com.azure.resourcemanager.cosmosdbforpostgresql.models.ServerProperties&text=ServerProperties\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.cosmosdbforpostgresql.models.ServerProperties.withStorageQuotaInMb(java.lang.Integer)"
-  fullName: "com.azure.resourcemanager.cosmosdbforpostgresql.models.ServerProperties.withStorageQuotaInMb(Integer storageQuotaInMb)"
-  name: "withStorageQuotaInMb(Integer storageQuotaInMb)"
-  nameWithType: "ServerProperties.withStorageQuotaInMb(Integer storageQuotaInMb)"
-  summary: "Set the storage<wbr>Quota<wbr>InMb property: The storage of a server in MB."
-  parameters:
-  - description: "the storageQuotaInMb value to set."
-    name: "storageQuotaInMb"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
-  syntax: "public ServerProperties withStorageQuotaInMb(Integer storageQuotaInMb)"
-  desc: "Set the storageQuotaInMb property: The storage of a server in MB."
-  returns:
-    description: "the ServerProperties object itself."
-    type: "<xref href=\"com.azure.resourcemanager.cosmosdbforpostgresql.models.ServerProperties?alt=com.azure.resourcemanager.cosmosdbforpostgresql.models.ServerProperties&text=ServerProperties\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.cosmosdbforpostgresql.models.ServerProperties.withVCores(java.lang.Integer)"
-  fullName: "com.azure.resourcemanager.cosmosdbforpostgresql.models.ServerProperties.withVCores(Integer vCores)"
-  name: "withVCores(Integer vCores)"
-  nameWithType: "ServerProperties.withVCores(Integer vCores)"
-  summary: "Set the v<wbr>Cores property: The v<wbr>Cores count of a server."
-  parameters:
-  - description: "the vCores value to set."
-    name: "vCores"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
-  syntax: "public ServerProperties withVCores(Integer vCores)"
-  desc: "Set the vCores property: The vCores count of a server."
-  returns:
-    description: "the ServerProperties object itself."
-    type: "<xref href=\"com.azure.resourcemanager.cosmosdbforpostgresql.models.ServerProperties?alt=com.azure.resourcemanager.cosmosdbforpostgresql.models.ServerProperties&text=ServerProperties\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "The properties of a server."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cosmosdbforpostgresql.models.ServerProperties?alt=com.azure.resourcemanager.cosmosdbforpostgresql.models.ServerProperties&text=ServerProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.cosmosdbforpostgresql.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-cosmosdbforpostgresql:1.1.0-beta.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-cosmosdbforpostgresql:1.1.0-beta.3

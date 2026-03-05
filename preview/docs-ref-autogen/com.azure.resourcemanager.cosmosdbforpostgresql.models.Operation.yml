@@ -6,15 +6,27 @@ nameWithType: "Operation"
 summary: "An immutable client-side representation of Operation."
 syntax: "public interface **Operation**"
 methods:
+- uid: "com.azure.resourcemanager.cosmosdbforpostgresql.models.Operation.actionType()"
+  fullName: "com.azure.resourcemanager.cosmosdbforpostgresql.models.Operation.actionType()"
+  name: "actionType()"
+  nameWithType: "Operation.actionType()"
+  summary: "Gets the action<wbr>Type property: Extensible enum."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract ActionType actionType()"
+  desc: "Gets the actionType property: Extensible enum. Indicates the action type. \"Internal\" refers to actions that are for internal only APIs."
+  returns:
+    description: "the actionType value."
+    type: "<xref href=\"com.azure.resourcemanager.cosmosdbforpostgresql.models.ActionType?alt=com.azure.resourcemanager.cosmosdbforpostgresql.models.ActionType&text=ActionType\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cosmosdbforpostgresql.models.Operation.display()"
   fullName: "com.azure.resourcemanager.cosmosdbforpostgresql.models.Operation.display()"
   name: "display()"
   nameWithType: "Operation.display()"
-  summary: "Gets the display property: The localized display information for this particular operation or action."
+  summary: "Gets the display property: Localized display information for this particular operation."
   modifiers:
   - "abstract"
   syntax: "public abstract OperationDisplay display()"
-  desc: "Gets the display property: The localized display information for this particular operation or action."
+  desc: "Gets the display property: Localized display information for this particular operation."
   returns:
     description: "the display value."
     type: "<xref href=\"com.azure.resourcemanager.cosmosdbforpostgresql.models.OperationDisplay?alt=com.azure.resourcemanager.cosmosdbforpostgresql.models.OperationDisplay&text=OperationDisplay\" data-throw-if-not-resolved=\"False\" />"
@@ -34,11 +46,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmosdbforpostgresql.models.Operation.isDataAction()"
   name: "isDataAction()"
   nameWithType: "Operation.isDataAction()"
-  summary: "Gets the is<wbr>Data<wbr>Action property: Indicates whether the operation is a data action."
+  summary: "Gets the is<wbr>Data<wbr>Action property: Whether the operation applies to data-plane."
   modifiers:
   - "abstract"
   syntax: "public abstract Boolean isDataAction()"
-  desc: "Gets the isDataAction property: Indicates whether the operation is a data action."
+  desc: "Gets the isDataAction property: Whether the operation applies to data-plane. This is \"true\" for data-plane operations and \"false\" for Azure Resource Manager/control-plane operations."
   returns:
     description: "the isDataAction value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
@@ -46,11 +58,11 @@ methods:
   fullName: "com.azure.resourcemanager.cosmosdbforpostgresql.models.Operation.name()"
   name: "name()"
   nameWithType: "Operation.name()"
-  summary: "Gets the name property: The name of the operation being performed on this particular object."
+  summary: "Gets the name property: The name of the operation, as per Resource-Based Access Control (RBAC)."
   modifiers:
   - "abstract"
   syntax: "public abstract String name()"
-  desc: "Gets the name property: The name of the operation being performed on this particular object."
+  desc: "Gets the name property: The name of the operation, as per Resource-Based Access Control (RBAC). Examples: \"Microsoft.Compute/virtualMachines/write\", \"Microsoft.Compute/virtualMachines/capture/action\"."
   returns:
     description: "the name value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -58,28 +70,16 @@ methods:
   fullName: "com.azure.resourcemanager.cosmosdbforpostgresql.models.Operation.origin()"
   name: "origin()"
   nameWithType: "Operation.origin()"
-  summary: "Gets the origin property: The intended executor of the operation."
+  summary: "Gets the origin property: The intended executor of the operation; as in Resource Based Access Control (RBAC) and audit logs UX."
   modifiers:
   - "abstract"
-  syntax: "public abstract OperationOrigin origin()"
-  desc: "Gets the origin property: The intended executor of the operation."
+  syntax: "public abstract Origin origin()"
+  desc: "Gets the origin property: The intended executor of the operation; as in Resource Based Access Control (RBAC) and audit logs UX. Default value is \"user,system\"."
   returns:
     description: "the origin value."
-    type: "<xref href=\"com.azure.resourcemanager.cosmosdbforpostgresql.models.OperationOrigin?alt=com.azure.resourcemanager.cosmosdbforpostgresql.models.OperationOrigin&text=OperationOrigin\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.cosmosdbforpostgresql.models.Operation.properties()"
-  fullName: "com.azure.resourcemanager.cosmosdbforpostgresql.models.Operation.properties()"
-  name: "properties()"
-  nameWithType: "Operation.properties()"
-  summary: "Gets the properties property: Additional descriptions for the operation."
-  modifiers:
-  - "abstract"
-  syntax: "public abstract Map<String,Object> properties()"
-  desc: "Gets the properties property: Additional descriptions for the operation."
-  returns:
-    description: "the properties value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>&gt;"
+    type: "<xref href=\"com.azure.resourcemanager.cosmosdbforpostgresql.models.Origin?alt=com.azure.resourcemanager.cosmosdbforpostgresql.models.Origin&text=Origin\" data-throw-if-not-resolved=\"False\" />"
 type: "interface"
 desc: "An immutable client-side representation of Operation."
 metadata: {}
 package: "com.azure.resourcemanager.cosmosdbforpostgresql.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-cosmosdbforpostgresql:1.1.0-beta.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-cosmosdbforpostgresql:1.1.0-beta.3
