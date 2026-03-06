@@ -59,16 +59,6 @@ methods:
   returns:
     description: "the applicationPackageReferences value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.BatchApplicationPackageReference?alt=com.azure.compute.batch.models.BatchApplicationPackageReference&text=BatchApplicationPackageReference\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.compute.batch.models.BatchPoolUpdateParameters.getCertificateReferences()"
-  fullName: "com.azure.compute.batch.models.BatchPoolUpdateParameters.getCertificateReferences()"
-  name: "getCertificateReferences()"
-  nameWithType: "BatchPoolUpdateParameters.getCertificateReferences()"
-  summary: "Get the certificate<wbr>References property: If this element is present, it replaces any existing Certificate references configured on the Pool."
-  syntax: "public List<BatchCertificateReference> getCertificateReferences()"
-  desc: "Get the certificateReferences property: If this element is present, it replaces any existing Certificate references configured on the Pool. If omitted, any existing Certificate references are left unchanged. For Windows Nodes, the Batch service installs the Certificates to the specified Certificate store and location. For Linux Compute Nodes, the Certificates are stored in a directory inside the Task working directory and an environment variable AZ\\_BATCH\\_CERTIFICATES\\_DIR is supplied to the Task to query for this location. For Certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/\\{user-name\\}/certs) and Certificates are placed in that directory. Warning: This property is deprecated and will be removed after February, 2024. Please use the \\[Azure KeyVault Extension\\](https://learn.microsoft.com/azure/batch/batch-certificate-migration-guide) instead."
-  returns:
-    description: "the certificateReferences value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.BatchCertificateReference?alt=com.azure.compute.batch.models.BatchCertificateReference&text=BatchCertificateReference\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.compute.batch.models.BatchPoolUpdateParameters.getDisplayName()"
   fullName: "com.azure.compute.batch.models.BatchPoolUpdateParameters.getDisplayName()"
   name: "getDisplayName()"
@@ -109,16 +99,6 @@ methods:
   returns:
     description: "the networkConfiguration value."
     type: "<xref href=\"com.azure.compute.batch.models.NetworkConfiguration?alt=com.azure.compute.batch.models.NetworkConfiguration&text=NetworkConfiguration\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.compute.batch.models.BatchPoolUpdateParameters.getResourceTags()"
-  fullName: "com.azure.compute.batch.models.BatchPoolUpdateParameters.getResourceTags()"
-  name: "getResourceTags()"
-  nameWithType: "BatchPoolUpdateParameters.getResourceTags()"
-  summary: "Get the resource<wbr>Tags property: The user-specified tags associated with the pool."
-  syntax: "public Map<String,String> getResourceTags()"
-  desc: "Get the resourceTags property: The user-specified tags associated with the pool. The user-defined tags to be associated with the Azure Batch Pool. When specified, these tags are propagated to the backing Azure resources associated with the pool. This property can only be specified when the Batch account was created with the poolAllocationMode property set to 'UserSubscription'.<br /><br />This field can be updated only when the pool is empty."
-  returns:
-    description: "the resourceTags value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.compute.batch.models.BatchPoolUpdateParameters.getStartTask()"
   fullName: "com.azure.compute.batch.models.BatchPoolUpdateParameters.getStartTask()"
   name: "getStartTask()"
@@ -129,16 +109,6 @@ methods:
   returns:
     description: "the startTask value."
     type: "<xref href=\"com.azure.compute.batch.models.BatchStartTask?alt=com.azure.compute.batch.models.BatchStartTask&text=BatchStartTask\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.compute.batch.models.BatchPoolUpdateParameters.getTargetNodeCommunicationMode()"
-  fullName: "com.azure.compute.batch.models.BatchPoolUpdateParameters.getTargetNodeCommunicationMode()"
-  name: "getTargetNodeCommunicationMode()"
-  nameWithType: "BatchPoolUpdateParameters.getTargetNodeCommunicationMode()"
-  summary: "Get the target<wbr>Node<wbr>Communication<wbr>Mode property: The desired node communication mode for the pool."
-  syntax: "public BatchNodeCommunicationMode getTargetNodeCommunicationMode()"
-  desc: "Get the targetNodeCommunicationMode property: The desired node communication mode for the pool. If this element is present, it replaces the existing targetNodeCommunicationMode configured on the Pool. If omitted, any existing metadata is left unchanged."
-  returns:
-    description: "the targetNodeCommunicationMode value."
-    type: "<xref href=\"com.azure.compute.batch.models.BatchNodeCommunicationMode?alt=com.azure.compute.batch.models.BatchNodeCommunicationMode&text=BatchNodeCommunicationMode\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.compute.batch.models.BatchPoolUpdateParameters.getTaskSchedulingPolicy()"
   fullName: "com.azure.compute.batch.models.BatchPoolUpdateParameters.getTaskSchedulingPolicy()"
   name: "getTaskSchedulingPolicy()"
@@ -223,20 +193,6 @@ methods:
   returns:
     description: "the BatchPoolUpdateParameters object itself."
     type: "<xref href=\"com.azure.compute.batch.models.BatchPoolUpdateParameters?alt=com.azure.compute.batch.models.BatchPoolUpdateParameters&text=BatchPoolUpdateParameters\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.compute.batch.models.BatchPoolUpdateParameters.setCertificateReferences(java.util.List<com.azure.compute.batch.models.BatchCertificateReference>)"
-  fullName: "com.azure.compute.batch.models.BatchPoolUpdateParameters.setCertificateReferences(List<BatchCertificateReference> certificateReferences)"
-  name: "setCertificateReferences(List<BatchCertificateReference> certificateReferences)"
-  nameWithType: "BatchPoolUpdateParameters.setCertificateReferences(List<BatchCertificateReference> certificateReferences)"
-  summary: "Set the certificate<wbr>References property: If this element is present, it replaces any existing Certificate references configured on the Pool."
-  parameters:
-  - description: "the certificateReferences value to set."
-    name: "certificateReferences"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.BatchCertificateReference?alt=com.azure.compute.batch.models.BatchCertificateReference&text=BatchCertificateReference\" data-throw-if-not-resolved=\"False\" />&gt;"
-  syntax: "public BatchPoolUpdateParameters setCertificateReferences(List<BatchCertificateReference> certificateReferences)"
-  desc: "Set the certificateReferences property: If this element is present, it replaces any existing Certificate references configured on the Pool. If omitted, any existing Certificate references are left unchanged. For Windows Nodes, the Batch service installs the Certificates to the specified Certificate store and location. For Linux Compute Nodes, the Certificates are stored in a directory inside the Task working directory and an environment variable AZ\\_BATCH\\_CERTIFICATES\\_DIR is supplied to the Task to query for this location. For Certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/\\{user-name\\}/certs) and Certificates are placed in that directory. Warning: This property is deprecated and will be removed after February, 2024. Please use the \\[Azure KeyVault Extension\\](https://learn.microsoft.com/azure/batch/batch-certificate-migration-guide) instead."
-  returns:
-    description: "the BatchPoolUpdateParameters object itself."
-    type: "<xref href=\"com.azure.compute.batch.models.BatchPoolUpdateParameters?alt=com.azure.compute.batch.models.BatchPoolUpdateParameters&text=BatchPoolUpdateParameters\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.compute.batch.models.BatchPoolUpdateParameters.setDisplayName(java.lang.String)"
   fullName: "com.azure.compute.batch.models.BatchPoolUpdateParameters.setDisplayName(String displayName)"
   name: "setDisplayName(String displayName)"
@@ -307,20 +263,6 @@ methods:
   returns:
     description: "the BatchPoolUpdateParameters object itself."
     type: "<xref href=\"com.azure.compute.batch.models.BatchPoolUpdateParameters?alt=com.azure.compute.batch.models.BatchPoolUpdateParameters&text=BatchPoolUpdateParameters\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.compute.batch.models.BatchPoolUpdateParameters.setResourceTags(java.util.Map<java.lang.String,java.lang.String>)"
-  fullName: "com.azure.compute.batch.models.BatchPoolUpdateParameters.setResourceTags(Map<String,String> resourceTags)"
-  name: "setResourceTags(Map<String,String> resourceTags)"
-  nameWithType: "BatchPoolUpdateParameters.setResourceTags(Map<String,String> resourceTags)"
-  summary: "Set the resource<wbr>Tags property: The user-specified tags associated with the pool."
-  parameters:
-  - description: "the resourceTags value to set."
-    name: "resourceTags"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
-  syntax: "public BatchPoolUpdateParameters setResourceTags(Map<String,String> resourceTags)"
-  desc: "Set the resourceTags property: The user-specified tags associated with the pool. The user-defined tags to be associated with the Azure Batch Pool. When specified, these tags are propagated to the backing Azure resources associated with the pool. This property can only be specified when the Batch account was created with the poolAllocationMode property set to 'UserSubscription'.<br /><br />This field can be updated only when the pool is empty."
-  returns:
-    description: "the BatchPoolUpdateParameters object itself."
-    type: "<xref href=\"com.azure.compute.batch.models.BatchPoolUpdateParameters?alt=com.azure.compute.batch.models.BatchPoolUpdateParameters&text=BatchPoolUpdateParameters\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.compute.batch.models.BatchPoolUpdateParameters.setStartTask(com.azure.compute.batch.models.BatchStartTask)"
   fullName: "com.azure.compute.batch.models.BatchPoolUpdateParameters.setStartTask(BatchStartTask startTask)"
   name: "setStartTask(BatchStartTask startTask)"
@@ -332,20 +274,6 @@ methods:
     type: "<xref href=\"com.azure.compute.batch.models.BatchStartTask?alt=com.azure.compute.batch.models.BatchStartTask&text=BatchStartTask\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public BatchPoolUpdateParameters setStartTask(BatchStartTask startTask)"
   desc: "Set the startTask property: A Task to run on each Compute Node as it joins the Pool. The Task runs when the Compute Node is added to the Pool or when the Compute Node is restarted. If this element is present, it overwrites any existing StartTask. If omitted, any existing StartTask is left unchanged."
-  returns:
-    description: "the BatchPoolUpdateParameters object itself."
-    type: "<xref href=\"com.azure.compute.batch.models.BatchPoolUpdateParameters?alt=com.azure.compute.batch.models.BatchPoolUpdateParameters&text=BatchPoolUpdateParameters\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.compute.batch.models.BatchPoolUpdateParameters.setTargetNodeCommunicationMode(com.azure.compute.batch.models.BatchNodeCommunicationMode)"
-  fullName: "com.azure.compute.batch.models.BatchPoolUpdateParameters.setTargetNodeCommunicationMode(BatchNodeCommunicationMode targetNodeCommunicationMode)"
-  name: "setTargetNodeCommunicationMode(BatchNodeCommunicationMode targetNodeCommunicationMode)"
-  nameWithType: "BatchPoolUpdateParameters.setTargetNodeCommunicationMode(BatchNodeCommunicationMode targetNodeCommunicationMode)"
-  summary: "Set the target<wbr>Node<wbr>Communication<wbr>Mode property: The desired node communication mode for the pool."
-  parameters:
-  - description: "the targetNodeCommunicationMode value to set."
-    name: "targetNodeCommunicationMode"
-    type: "<xref href=\"com.azure.compute.batch.models.BatchNodeCommunicationMode?alt=com.azure.compute.batch.models.BatchNodeCommunicationMode&text=BatchNodeCommunicationMode\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public BatchPoolUpdateParameters setTargetNodeCommunicationMode(BatchNodeCommunicationMode targetNodeCommunicationMode)"
-  desc: "Set the targetNodeCommunicationMode property: The desired node communication mode for the pool. If this element is present, it replaces the existing targetNodeCommunicationMode configured on the Pool. If omitted, any existing metadata is left unchanged."
   returns:
     description: "the BatchPoolUpdateParameters object itself."
     type: "<xref href=\"com.azure.compute.batch.models.BatchPoolUpdateParameters?alt=com.azure.compute.batch.models.BatchPoolUpdateParameters&text=BatchPoolUpdateParameters\" data-throw-if-not-resolved=\"False\" />"
@@ -451,4 +379,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.compute.batch.models.BatchPoolUpdateParameters?alt=com.azure.compute.batch.models.BatchPoolUpdateParameters&text=BatchPoolUpdateParameters\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.compute.batch.models"
-artifact: com.azure:azure-compute-batch:1.0.0-beta.5
+artifact: com.azure:azure-compute-batch:1.0.0-beta.6

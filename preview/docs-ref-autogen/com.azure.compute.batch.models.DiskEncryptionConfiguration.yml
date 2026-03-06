@@ -49,6 +49,16 @@ methods:
   returns:
     description: "An instance of DiskEncryptionConfiguration if the JsonReader was pointing to an instance of it, or null\n if it was pointing to JSON null."
     type: "<xref href=\"com.azure.compute.batch.models.DiskEncryptionConfiguration?alt=com.azure.compute.batch.models.DiskEncryptionConfiguration&text=DiskEncryptionConfiguration\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.compute.batch.models.DiskEncryptionConfiguration.getCustomerManagedKey()"
+  fullName: "com.azure.compute.batch.models.DiskEncryptionConfiguration.getCustomerManagedKey()"
+  name: "getCustomerManagedKey()"
+  nameWithType: "DiskEncryptionConfiguration.getCustomerManagedKey()"
+  summary: "Get the customer<wbr>Managed<wbr>Key property: The Customer Managed Key reference to encrypt the OS Disk."
+  syntax: "public DiskCustomerManagedKey getCustomerManagedKey()"
+  desc: "Get the customerManagedKey property: The Customer Managed Key reference to encrypt the OS Disk. Customer Managed Key will encrypt OS Disk by EncryptionAtRest, and by default we will encrypt the data disk as well. It can be used only when the pool is configured with an identity and OsDisk is set as one of the targets of DiskEncryption."
+  returns:
+    description: "the customerManagedKey value."
+    type: "<xref href=\"com.azure.compute.batch.models.DiskCustomerManagedKey?alt=com.azure.compute.batch.models.DiskCustomerManagedKey&text=DiskCustomerManagedKey\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.compute.batch.models.DiskEncryptionConfiguration.getTargets()"
   fullName: "com.azure.compute.batch.models.DiskEncryptionConfiguration.getTargets()"
   name: "getTargets()"
@@ -59,6 +69,20 @@ methods:
   returns:
     description: "the targets value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.DiskEncryptionTarget?alt=com.azure.compute.batch.models.DiskEncryptionTarget&text=DiskEncryptionTarget\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.compute.batch.models.DiskEncryptionConfiguration.setCustomerManagedKey(com.azure.compute.batch.models.DiskCustomerManagedKey)"
+  fullName: "com.azure.compute.batch.models.DiskEncryptionConfiguration.setCustomerManagedKey(DiskCustomerManagedKey customerManagedKey)"
+  name: "setCustomerManagedKey(DiskCustomerManagedKey customerManagedKey)"
+  nameWithType: "DiskEncryptionConfiguration.setCustomerManagedKey(DiskCustomerManagedKey customerManagedKey)"
+  summary: "Set the customer<wbr>Managed<wbr>Key property: The Customer Managed Key reference to encrypt the OS Disk."
+  parameters:
+  - description: "the customerManagedKey value to set."
+    name: "customerManagedKey"
+    type: "<xref href=\"com.azure.compute.batch.models.DiskCustomerManagedKey?alt=com.azure.compute.batch.models.DiskCustomerManagedKey&text=DiskCustomerManagedKey\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public DiskEncryptionConfiguration setCustomerManagedKey(DiskCustomerManagedKey customerManagedKey)"
+  desc: "Set the customerManagedKey property: The Customer Managed Key reference to encrypt the OS Disk. Customer Managed Key will encrypt OS Disk by EncryptionAtRest, and by default we will encrypt the data disk as well. It can be used only when the pool is configured with an identity and OsDisk is set as one of the targets of DiskEncryption."
+  returns:
+    description: "the DiskEncryptionConfiguration object itself."
+    type: "<xref href=\"com.azure.compute.batch.models.DiskEncryptionConfiguration?alt=com.azure.compute.batch.models.DiskEncryptionConfiguration&text=DiskEncryptionConfiguration\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.compute.batch.models.DiskEncryptionConfiguration.setTargets(java.util.List<com.azure.compute.batch.models.DiskEncryptionTarget>)"
   fullName: "com.azure.compute.batch.models.DiskEncryptionConfiguration.setTargets(List<DiskEncryptionTarget> targets)"
   name: "setTargets(List<DiskEncryptionTarget> targets)"
@@ -91,4 +115,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.compute.batch.models.DiskEncryptionConfiguration?alt=com.azure.compute.batch.models.DiskEncryptionConfiguration&text=DiskEncryptionConfiguration\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.compute.batch.models"
-artifact: com.azure:azure-compute-batch:1.0.0-beta.5
+artifact: com.azure:azure-compute-batch:1.0.0-beta.6

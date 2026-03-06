@@ -22,22 +22,19 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
 syntax: "public final class **BatchPoolReplaceParameters**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.compute.batch.models.BatchPoolReplaceParameters?alt=com.azure.compute.batch.models.BatchPoolReplaceParameters&text=BatchPoolReplaceParameters\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
-- uid: "com.azure.compute.batch.models.BatchPoolReplaceParameters.BatchPoolReplaceParameters(java.util.List<com.azure.compute.batch.models.BatchCertificateReference>,java.util.List<com.azure.compute.batch.models.BatchApplicationPackageReference>,java.util.List<com.azure.compute.batch.models.BatchMetadataItem>)"
-  fullName: "com.azure.compute.batch.models.BatchPoolReplaceParameters.BatchPoolReplaceParameters(List<BatchCertificateReference> certificateReferences, List<BatchApplicationPackageReference> applicationPackageReferences, List<BatchMetadataItem> metadata)"
-  name: "BatchPoolReplaceParameters(List<BatchCertificateReference> certificateReferences, List<BatchApplicationPackageReference> applicationPackageReferences, List<BatchMetadataItem> metadata)"
-  nameWithType: "BatchPoolReplaceParameters.BatchPoolReplaceParameters(List<BatchCertificateReference> certificateReferences, List<BatchApplicationPackageReference> applicationPackageReferences, List<BatchMetadataItem> metadata)"
+- uid: "com.azure.compute.batch.models.BatchPoolReplaceParameters.BatchPoolReplaceParameters(java.util.List<com.azure.compute.batch.models.BatchApplicationPackageReference>,java.util.List<com.azure.compute.batch.models.BatchMetadataItem>)"
+  fullName: "com.azure.compute.batch.models.BatchPoolReplaceParameters.BatchPoolReplaceParameters(List<BatchApplicationPackageReference> applicationPackageReferences, List<BatchMetadataItem> metadata)"
+  name: "BatchPoolReplaceParameters(List<BatchApplicationPackageReference> applicationPackageReferences, List<BatchMetadataItem> metadata)"
+  nameWithType: "BatchPoolReplaceParameters.BatchPoolReplaceParameters(List<BatchApplicationPackageReference> applicationPackageReferences, List<BatchMetadataItem> metadata)"
   summary: "Creates an instance of Batch<wbr>Pool<wbr>Replace<wbr>Parameters class."
   parameters:
-  - description: "the certificateReferences value to set."
-    name: "certificateReferences"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.BatchCertificateReference?alt=com.azure.compute.batch.models.BatchCertificateReference&text=BatchCertificateReference\" data-throw-if-not-resolved=\"False\" />&gt;"
   - description: "the applicationPackageReferences value to set."
     name: "applicationPackageReferences"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.BatchApplicationPackageReference?alt=com.azure.compute.batch.models.BatchApplicationPackageReference&text=BatchApplicationPackageReference\" data-throw-if-not-resolved=\"False\" />&gt;"
   - description: "the metadata value to set."
     name: "metadata"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.BatchMetadataItem?alt=com.azure.compute.batch.models.BatchMetadataItem&text=BatchMetadataItem\" data-throw-if-not-resolved=\"False\" />&gt;"
-  syntax: "public BatchPoolReplaceParameters(List<BatchCertificateReference> certificateReferences, List<BatchApplicationPackageReference> applicationPackageReferences, List<BatchMetadataItem> metadata)"
+  syntax: "public BatchPoolReplaceParameters(List<BatchApplicationPackageReference> applicationPackageReferences, List<BatchMetadataItem> metadata)"
   desc: "Creates an instance of BatchPoolReplaceParameters class."
 methods:
 - uid: "com.azure.compute.batch.models.BatchPoolReplaceParameters.fromJson(com.azure.json.JsonReader)"
@@ -69,16 +66,6 @@ methods:
   returns:
     description: "the applicationPackageReferences value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.BatchApplicationPackageReference?alt=com.azure.compute.batch.models.BatchApplicationPackageReference&text=BatchApplicationPackageReference\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.compute.batch.models.BatchPoolReplaceParameters.getCertificateReferences()"
-  fullName: "com.azure.compute.batch.models.BatchPoolReplaceParameters.getCertificateReferences()"
-  name: "getCertificateReferences()"
-  nameWithType: "BatchPoolReplaceParameters.getCertificateReferences()"
-  summary: "Get the certificate<wbr>References property: This list replaces any existing Certificate references configured on the Pool."
-  syntax: "public List<BatchCertificateReference> getCertificateReferences()"
-  desc: "Get the certificateReferences property: This list replaces any existing Certificate references configured on the Pool. If you specify an empty collection, any existing Certificate references are removed from the Pool. For Windows Nodes, the Batch service installs the Certificates to the specified Certificate store and location. For Linux Compute Nodes, the Certificates are stored in a directory inside the Task working directory and an environment variable AZ\\_BATCH\\_CERTIFICATES\\_DIR is supplied to the Task to query for this location. For Certificates with visibility of 'remoteUser', a 'certs' directory is created in the user's home directory (e.g., /home/\\{user-name\\}/certs) and Certificates are placed in that directory. Warning: This property is deprecated and will be removed after February, 2024. Please use the \\[Azure KeyVault Extension\\](https://learn.microsoft.com/azure/batch/batch-certificate-migration-guide) instead."
-  returns:
-    description: "the certificateReferences value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.compute.batch.models.BatchCertificateReference?alt=com.azure.compute.batch.models.BatchCertificateReference&text=BatchCertificateReference\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.compute.batch.models.BatchPoolReplaceParameters.getMetadata()"
   fullName: "com.azure.compute.batch.models.BatchPoolReplaceParameters.getMetadata()"
   name: "getMetadata()"
@@ -99,16 +86,6 @@ methods:
   returns:
     description: "the startTask value."
     type: "<xref href=\"com.azure.compute.batch.models.BatchStartTask?alt=com.azure.compute.batch.models.BatchStartTask&text=BatchStartTask\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.compute.batch.models.BatchPoolReplaceParameters.getTargetNodeCommunicationMode()"
-  fullName: "com.azure.compute.batch.models.BatchPoolReplaceParameters.getTargetNodeCommunicationMode()"
-  name: "getTargetNodeCommunicationMode()"
-  nameWithType: "BatchPoolReplaceParameters.getTargetNodeCommunicationMode()"
-  summary: "Get the target<wbr>Node<wbr>Communication<wbr>Mode property: The desired node communication mode for the pool."
-  syntax: "public BatchNodeCommunicationMode getTargetNodeCommunicationMode()"
-  desc: "Get the targetNodeCommunicationMode property: The desired node communication mode for the pool. This setting replaces any existing targetNodeCommunication setting on the Pool. If omitted, the existing setting is default."
-  returns:
-    description: "the targetNodeCommunicationMode value."
-    type: "<xref href=\"com.azure.compute.batch.models.BatchNodeCommunicationMode?alt=com.azure.compute.batch.models.BatchNodeCommunicationMode&text=BatchNodeCommunicationMode\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.compute.batch.models.BatchPoolReplaceParameters.setStartTask(com.azure.compute.batch.models.BatchStartTask)"
   fullName: "com.azure.compute.batch.models.BatchPoolReplaceParameters.setStartTask(BatchStartTask startTask)"
   name: "setStartTask(BatchStartTask startTask)"
@@ -120,20 +97,6 @@ methods:
     type: "<xref href=\"com.azure.compute.batch.models.BatchStartTask?alt=com.azure.compute.batch.models.BatchStartTask&text=BatchStartTask\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public BatchPoolReplaceParameters setStartTask(BatchStartTask startTask)"
   desc: "Set the startTask property: A Task to run on each Compute Node as it joins the Pool. The Task runs when the Compute Node is added to the Pool or when the Compute Node is restarted. If this element is present, it overwrites any existing StartTask. If omitted, any existing StartTask is removed from the Pool."
-  returns:
-    description: "the BatchPoolReplaceParameters object itself."
-    type: "<xref href=\"com.azure.compute.batch.models.BatchPoolReplaceParameters?alt=com.azure.compute.batch.models.BatchPoolReplaceParameters&text=BatchPoolReplaceParameters\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.compute.batch.models.BatchPoolReplaceParameters.setTargetNodeCommunicationMode(com.azure.compute.batch.models.BatchNodeCommunicationMode)"
-  fullName: "com.azure.compute.batch.models.BatchPoolReplaceParameters.setTargetNodeCommunicationMode(BatchNodeCommunicationMode targetNodeCommunicationMode)"
-  name: "setTargetNodeCommunicationMode(BatchNodeCommunicationMode targetNodeCommunicationMode)"
-  nameWithType: "BatchPoolReplaceParameters.setTargetNodeCommunicationMode(BatchNodeCommunicationMode targetNodeCommunicationMode)"
-  summary: "Set the target<wbr>Node<wbr>Communication<wbr>Mode property: The desired node communication mode for the pool."
-  parameters:
-  - description: "the targetNodeCommunicationMode value to set."
-    name: "targetNodeCommunicationMode"
-    type: "<xref href=\"com.azure.compute.batch.models.BatchNodeCommunicationMode?alt=com.azure.compute.batch.models.BatchNodeCommunicationMode&text=BatchNodeCommunicationMode\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public BatchPoolReplaceParameters setTargetNodeCommunicationMode(BatchNodeCommunicationMode targetNodeCommunicationMode)"
-  desc: "Set the targetNodeCommunicationMode property: The desired node communication mode for the pool. This setting replaces any existing targetNodeCommunication setting on the Pool. If omitted, the existing setting is default."
   returns:
     description: "the BatchPoolReplaceParameters object itself."
     type: "<xref href=\"com.azure.compute.batch.models.BatchPoolReplaceParameters?alt=com.azure.compute.batch.models.BatchPoolReplaceParameters&text=BatchPoolReplaceParameters\" data-throw-if-not-resolved=\"False\" />"
@@ -155,4 +118,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.compute.batch.models.BatchPoolReplaceParameters?alt=com.azure.compute.batch.models.BatchPoolReplaceParameters&text=BatchPoolReplaceParameters\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.compute.batch.models"
-artifact: com.azure:azure-compute-batch:1.0.0-beta.5
+artifact: com.azure:azure-compute-batch:1.0.0-beta.6
