@@ -5,8 +5,8 @@ ms.date: 03/10/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: mysql
-manager: douge
 keywords: Azure, Java, SDK, API, SQL, database , JDBC
+manager: douge
 ---
 # Azure SQL Database libraries for Java (Preview)
 

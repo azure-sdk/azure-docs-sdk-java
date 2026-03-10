@@ -5,8 +5,8 @@ ms.date: 03/10/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: datalakeanalytics
-manager: douge
 keywords: Azure, Java, SDK, API, big data, data lake
+manager: douge
 ---
 # Azure Data Lake Analytics libraries for Java
 
