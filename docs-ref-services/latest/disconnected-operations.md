@@ -6,6 +6,6 @@ ms.topic: reference
 ms.devlang: java
 ms.service: disconnectedoperations
 ---
-# Azure Disconnected Operations SDK for Java - preview
-## Packages - preview
+# Azure Disconnected Operations SDK for Java - latest
+## Packages - latest
 [!INCLUDE [packages](disconnected-operations-index.md)]
