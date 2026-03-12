@@ -1,7 +1,7 @@
 ---
 title: Azure Lab Services SDK for Java
 description: Reference for Azure Lab Services SDK for Java
-ms.date: 03/11/2026
+ms.date: 03/12/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: lab-services
