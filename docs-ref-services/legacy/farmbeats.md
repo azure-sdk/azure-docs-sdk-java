@@ -1,7 +1,7 @@
 ---
 title: Azure FarmBeats SDK for Java
 description: Reference for Azure FarmBeats SDK for Java
-ms.date: 03/12/2026
+ms.date: 03/13/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: farmbeats
