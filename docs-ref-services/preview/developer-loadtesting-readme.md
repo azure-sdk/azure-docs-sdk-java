@@ -1,12 +1,12 @@
 ---
 title: Azure Load Testing client library for Java
 keywords: Azure, java, SDK, API, azure-developer-loadtesting, load-testing
-ms.date: 05/27/2025
+ms.date: 03/17/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: load-testing
 ---
-# Azure Load Testing client library for Java - version 1.1.0-beta.1 
+# Azure Load Testing client library for Java - version 1.2.0-beta.1 
 
 
 Azure Load Testing provides client library in Java to the user by which they can interact natively with Azure Load Testing service. Azure Load Testing is a fully managed load-testing service that enables you to generate high-scale load. The service simulates traffic for your applications, regardless of where they're hosted. Developers, testers, and quality assurance (QA) engineers can use it to optimize application performance, scalability, or capacity
@@ -36,7 +36,7 @@ Various documentation is available to help you get started
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-developer-loadtesting</artifactId>
-    <version>1.1.0-beta.1</version>
+    <version>1.2.0-beta.1</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -278,7 +278,7 @@ See [Azure Load Testing samples][sample_code].
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-developer-loadtesting_1.1.0-beta.1/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-developer-loadtesting_1.2.0-beta.1/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -287,13 +287,13 @@ For details on contributing to this repository, see the [contributing guide](htt
 1. Create new Pull Request
 
 <!-- LINKS -->
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-developer-loadtesting_1.1.0-beta.1/sdk/loadtesting/azure-developer-loadtesting/src
-[sample_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-developer-loadtesting_1.1.0-beta.1/sdk/loadtesting/azure-developer-loadtesting/src/samples
-[data_plane_uri]: https://learn.microsoft.com/rest/api/loadtesting/data-plane-uri
-[api_reference_doc]: https://learn.microsoft.com/rest/api/loadtesting/
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-developer-loadtesting_1.2.0-beta.1/sdk/loadtesting/azure-developer-loadtesting/src
+[sample_code]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-developer-loadtesting_1.2.0-beta.1/sdk/loadtesting/azure-developer-loadtesting/src/samples
+[data_plane_uri]: https://learn.microsoft.com/rest/api/apptesting/loadtest/data-plane-uri
+[api_reference_doc]: https://learn.microsoft.com/rest/api/apptesting/loadtest/
 [product_documentation]: https://azure.microsoft.com/services/load-testing/
 [jdk]: https://learn.microsoft.com/java/azure/jdk/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-developer-loadtesting_1.1.0-beta.1/sdk/identity/azure-identity
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-developer-loadtesting_1.2.0-beta.1/sdk/identity/azure-identity
 [logging]: https://github.com/Azure/azure-sdk-for-java/wiki/Logging-in-Azure-SDK
 
