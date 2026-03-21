@@ -392,32 +392,29 @@ methods:
   returns:
     description: "the policy assignment on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.getByIdWithResponse(java.lang.String,java.lang.String,com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.getByIdWithResponse(String policyAssignmentId, String expand, Context context)"
-  name: "getByIdWithResponse(String policyAssignmentId, String expand, Context context)"
-  nameWithType: "PolicyAssignmentsClient.getByIdWithResponse(String policyAssignmentId, String expand, Context context)"
+- uid: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.getByIdWithResponse(java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.getByIdWithResponse(String policyAssignmentId, Context context)"
+  name: "getByIdWithResponse(String policyAssignmentId, Context context)"
+  nameWithType: "PolicyAssignmentsClient.getByIdWithResponse(String policyAssignmentId, Context context)"
   summary: "Retrieves the policy assignment with the given ID."
   modifiers:
   - "abstract"
   parameters:
   - description: "The ID of the policy assignment to get. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
     name: "policyAssignmentId"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Comma-separated list of additional properties to be included in the response. Supported values are\n 'LatestDefinitionVersion, EffectiveDefinitionVersion'."
-    name: "expand"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract Response<PolicyAssignmentInner> getByIdWithResponse(String policyAssignmentId, String expand, Context context)"
+  syntax: "public abstract Response<PolicyAssignmentInner> getByIdWithResponse(String policyAssignmentId, Context context)"
   desc: "Retrieves the policy assignment with the given ID. The operation retrieves the policy assignment with the given ID. Policy assignment IDs have this format: '\\{scope\\}/providers/Microsoft.Authorization/policyAssignments/\\{policyAssignmentName\\}'. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/\\{managementGroup\\}'), subscription (format: '/subscriptions/\\{subscriptionId\\}'), resource group (format: '/subscriptions/\\{subscriptionId\\}/resourceGroups/\\{resourceGroupName\\}', or resource (format: '/subscriptions/\\{subscriptionId\\}/resourceGroups/\\{resourceGroupName\\}/providers/\\{resourceProviderNamespace\\}/\\[\\{parentResourcePath\\}/\\]\\{resourceType\\}/\\{resourceName\\}'."
   returns:
     description: "the policy assignment along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.getByIdWithResponseAsync(java.lang.String,java.lang.String)"
-  fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.getByIdWithResponseAsync(String policyAssignmentId, String expand)"
-  name: "getByIdWithResponseAsync(String policyAssignmentId, String expand)"
-  nameWithType: "PolicyAssignmentsClient.getByIdWithResponseAsync(String policyAssignmentId, String expand)"
+- uid: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.getByIdWithResponseAsync(java.lang.String)"
+  fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.getByIdWithResponseAsync(String policyAssignmentId)"
+  name: "getByIdWithResponseAsync(String policyAssignmentId)"
+  nameWithType: "PolicyAssignmentsClient.getByIdWithResponseAsync(String policyAssignmentId)"
   summary: "Retrieves the policy assignment with the given ID."
   modifiers:
   - "abstract"
@@ -425,10 +422,7 @@ methods:
   - description: "The ID of the policy assignment to get. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
     name: "policyAssignmentId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Comma-separated list of additional properties to be included in the response. Supported values are\n 'LatestDefinitionVersion, EffectiveDefinitionVersion'."
-    name: "expand"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract Mono<Response<PolicyAssignmentInner>> getByIdWithResponseAsync(String policyAssignmentId, String expand)"
+  syntax: "public abstract Mono<Response<PolicyAssignmentInner>> getByIdWithResponseAsync(String policyAssignmentId)"
   desc: "Retrieves the policy assignment with the given ID. The operation retrieves the policy assignment with the given ID. Policy assignment IDs have this format: '\\{scope\\}/providers/Microsoft.Authorization/policyAssignments/\\{policyAssignmentName\\}'. Valid scopes are: management group (format: '/providers/Microsoft.Management/managementGroups/\\{managementGroup\\}'), subscription (format: '/subscriptions/\\{subscriptionId\\}'), resource group (format: '/subscriptions/\\{subscriptionId\\}/resourceGroups/\\{resourceGroupName\\}', or resource (format: '/subscriptions/\\{subscriptionId\\}/resourceGroups/\\{resourceGroupName\\}/providers/\\{resourceProviderNamespace\\}/\\[\\{parentResourcePath\\}/\\]\\{resourceType\\}/\\{resourceName\\}'."
   returns:
     description: "the policy assignment along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
@@ -1031,4 +1025,4 @@ implements:
 - "<xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsListing?alt=com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsListing&text=InnerSupportsListing\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.resources.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-resources:2.53.6
+artifact: com.azure.resourcemanager:azure-resourcemanager-resources:2.54.0

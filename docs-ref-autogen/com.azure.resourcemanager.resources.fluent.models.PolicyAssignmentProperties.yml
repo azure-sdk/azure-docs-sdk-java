@@ -30,6 +30,16 @@ constructors:
   syntax: "public PolicyAssignmentProperties()"
   desc: "Creates an instance of PolicyAssignmentProperties class."
 methods:
+- uid: "com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentProperties.assignmentType()"
+  fullName: "com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentProperties.assignmentType()"
+  name: "assignmentType()"
+  nameWithType: "PolicyAssignmentProperties.assignmentType()"
+  summary: "Get the assignment<wbr>Type property: The type of policy assignment."
+  syntax: "public AssignmentType assignmentType()"
+  desc: "Get the assignmentType property: The type of policy assignment. Possible values are NotSpecified, System, SystemHidden, and Custom. Immutable."
+  returns:
+    description: "the assignmentType value."
+    type: "<xref href=\"com.azure.resourcemanager.resources.models.AssignmentType?alt=com.azure.resourcemanager.resources.models.AssignmentType&text=AssignmentType\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentProperties.definitionVersion()"
   fullName: "com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentProperties.definitionVersion()"
   name: "definitionVersion()"
@@ -76,7 +86,7 @@ methods:
   nameWithType: "PolicyAssignmentProperties.enforcementMode()"
   summary: "Get the enforcement<wbr>Mode property: The policy assignment enforcement mode."
   syntax: "public EnforcementMode enforcementMode()"
-  desc: "Get the enforcementMode property: The policy assignment enforcement mode. Possible values are Default and DoNotEnforce."
+  desc: "Get the enforcementMode property: The policy assignment enforcement mode. Possible values are Default, DoNotEnforce, and Enroll."
   returns:
     description: "the enforcementMode value."
     type: "<xref href=\"com.azure.resourcemanager.resources.models.EnforcementMode?alt=com.azure.resourcemanager.resources.models.EnforcementMode&text=EnforcementMode\" data-throw-if-not-resolved=\"False\" />"
@@ -99,6 +109,16 @@ methods:
   returns:
     description: "An instance of PolicyAssignmentProperties if the JsonReader was pointing to an instance of it, or null if\n it was pointing to JSON null."
     type: "<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentProperties?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentProperties&text=PolicyAssignmentProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentProperties.instanceId()"
+  fullName: "com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentProperties.instanceId()"
+  name: "instanceId()"
+  nameWithType: "PolicyAssignmentProperties.instanceId()"
+  summary: "Get the instance<wbr>Id property: The instance ID of the policy assignment."
+  syntax: "public String instanceId()"
+  desc: "Get the instanceId property: The instance ID of the policy assignment. This ID only and always changes when the assignment is deleted and recreated."
+  returns:
+    description: "the instanceId value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentProperties.latestDefinitionVersion()"
   fullName: "com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentProperties.latestDefinitionVersion()"
   name: "latestDefinitionVersion()"
@@ -208,6 +228,20 @@ methods:
   summary: "Validates the instance."
   syntax: "public void validate()"
   desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentProperties.withAssignmentType(com.azure.resourcemanager.resources.models.AssignmentType)"
+  fullName: "com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentProperties.withAssignmentType(AssignmentType assignmentType)"
+  name: "withAssignmentType(AssignmentType assignmentType)"
+  nameWithType: "PolicyAssignmentProperties.withAssignmentType(AssignmentType assignmentType)"
+  summary: "Set the assignment<wbr>Type property: The type of policy assignment."
+  parameters:
+  - description: "the assignmentType value to set."
+    name: "assignmentType"
+    type: "<xref href=\"com.azure.resourcemanager.resources.models.AssignmentType?alt=com.azure.resourcemanager.resources.models.AssignmentType&text=AssignmentType\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public PolicyAssignmentProperties withAssignmentType(AssignmentType assignmentType)"
+  desc: "Set the assignmentType property: The type of policy assignment. Possible values are NotSpecified, System, SystemHidden, and Custom. Immutable."
+  returns:
+    description: "the PolicyAssignmentProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentProperties?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentProperties&text=PolicyAssignmentProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentProperties.withDefinitionVersion(java.lang.String)"
   fullName: "com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentProperties.withDefinitionVersion(String definitionVersion)"
   name: "withDefinitionVersion(String definitionVersion)"
@@ -260,7 +294,7 @@ methods:
     name: "enforcementMode"
     type: "<xref href=\"com.azure.resourcemanager.resources.models.EnforcementMode?alt=com.azure.resourcemanager.resources.models.EnforcementMode&text=EnforcementMode\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public PolicyAssignmentProperties withEnforcementMode(EnforcementMode enforcementMode)"
-  desc: "Set the enforcementMode property: The policy assignment enforcement mode. Possible values are Default and DoNotEnforce."
+  desc: "Set the enforcementMode property: The policy assignment enforcement mode. Possible values are Default, DoNotEnforce, and Enroll."
   returns:
     description: "the PolicyAssignmentProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentProperties?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentProperties&text=PolicyAssignmentProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -368,4 +402,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentProperties?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentProperties&text=PolicyAssignmentProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.resources.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-resources:2.53.6
+artifact: com.azure.resourcemanager:azure-resourcemanager-resources:2.54.0

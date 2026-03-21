@@ -119,6 +119,25 @@ methods:
   returns:
     description: "the spec value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.ai.agents.models.OpenApiFunctionDefinition.readSpecFromFile(java.nio.file.Path)"
+  fullName: "com.azure.ai.agents.models.OpenApiFunctionDefinition.readSpecFromFile(Path path)"
+  name: "readSpecFromFile(Path path)"
+  nameWithType: "OpenApiFunctionDefinition.readSpecFromFile(Path path)"
+  summary: "Reads an OpenAPI specification from a JSON file and returns it as a `Map` suitable for the `spec` parameter of <xref uid=\"com.azure.ai.agents.models.OpenApiFunctionDefinition.OpenApiFunctionDefinition(java.lang.String,java.util.Map<java.lang.String,com.azure.core.util.BinaryData>,com.azure.ai.agents.models.OpenApiAuthDetails)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#OpenApiFunctionDefinition(String, Map, OpenApiAuthDetails)\"></xref>."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "the path to the OpenAPI spec JSON file."
+    name: "path"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html\">Path</a>"
+  syntax: "public static Map<String,BinaryData> readSpecFromFile(Path path)"
+  exceptions:
+  - description: "if the file cannot be read or parsed."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an OpenAPI specification from a JSON file and returns it as a `Map` suitable for the `spec` parameter of <xref uid=\"com.azure.ai.agents.models.OpenApiFunctionDefinition.OpenApiFunctionDefinition(java.lang.String,java.util.Map<java.lang.String,com.azure.core.util.BinaryData>,com.azure.ai.agents.models.OpenApiAuthDetails)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#OpenApiFunctionDefinition(String, Map, OpenApiAuthDetails)\"></xref>."
+  returns:
+    description: "the spec as a map of top-level keys to their serialized values."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.ai.agents.models.OpenApiFunctionDefinition.setDefaultParameters(java.util.List<java.lang.String>)"
   fullName: "com.azure.ai.agents.models.OpenApiFunctionDefinition.setDefaultParameters(List<String> defaultParameters)"
   name: "setDefaultParameters(List<String> defaultParameters)"
@@ -165,4 +184,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.OpenApiFunctionDefinition?alt=com.azure.ai.agents.models.OpenApiFunctionDefinition&text=OpenApiFunctionDefinition\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.ai.agents.models"
-artifact: com.azure:azure-ai-agents:2.0.0-beta.2
+artifact: com.azure:azure-ai-agents:2.0.0-beta.3

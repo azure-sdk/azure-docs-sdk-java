@@ -1,9 +1,9 @@
 ### YamlMime:JavaType
-uid: "com.azure.ai.agents.ConversationsAsyncClient"
-fullName: "com.azure.ai.agents.ConversationsAsyncClient"
-name: "ConversationsAsyncClient"
-nameWithType: "ConversationsAsyncClient"
-summary: "Initializes a new instance of the asynchronous Conversations<wbr>Client type."
+uid: "com.azure.ai.agents.ResponsesUtils"
+fullName: "com.azure.ai.agents.ResponsesUtils"
+name: "ResponsesUtils"
+nameWithType: "ResponsesUtils"
+summary: "Utility methods for working with Azure-specific response properties."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -20,20 +20,26 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **ConversationsAsyncClient**"
+syntax: "public final class **ResponsesUtils**"
 methods:
-- uid: "com.azure.ai.agents.ConversationsAsyncClient.getConversationServiceAsync()"
-  fullName: "com.azure.ai.agents.ConversationsAsyncClient.getConversationServiceAsync()"
-  name: "getConversationServiceAsync()"
-  nameWithType: "ConversationsAsyncClient.getConversationServiceAsync()"
-  summary: "Get the OpenAI client for conversations."
-  syntax: "public ConversationServiceAsync getConversationServiceAsync()"
-  desc: "Get the OpenAI client for conversations."
+- uid: "com.azure.ai.agents.ResponsesUtils.getAzureFields(com.openai.models.responses.Response)"
+  fullName: "com.azure.ai.agents.ResponsesUtils.getAzureFields(Response response)"
+  name: "getAzureFields(Response response)"
+  nameWithType: "ResponsesUtils.getAzureFields(Response response)"
+  summary: "Extracts Azure-specific fields from a Response's additional properties."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "the OpenAI response."
+    name: "response"
+    type: "<xref href=\"com.openai.models.responses.Response?alt=com.openai.models.responses.Response&text=Response\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static AzureCreateResponseDetails getAzureFields(Response response)"
+  desc: "Extracts Azure-specific fields from a Response's additional properties."
   returns:
-    description: "the OpenAI conversation service client."
-    type: "<xref href=\"com.openai.services.async.ConversationServiceAsync?alt=com.openai.services.async.ConversationServiceAsync&text=ConversationServiceAsync\" data-throw-if-not-resolved=\"False\" />"
+    description: "the Azure-specific create response result, or null if not present."
+    type: "<xref href=\"com.azure.ai.agents.models.AzureCreateResponseDetails?alt=com.azure.ai.agents.models.AzureCreateResponseDetails&text=AzureCreateResponseDetails\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Initializes a new instance of the asynchronous ConversationsClient type."
+desc: "Utility methods for working with Azure-specific response properties."
 metadata: {}
 package: "com.azure.ai.agents"
-artifact: com.azure:azure-ai-agents:2.0.0-beta.2
+artifact: com.azure:azure-ai-agents:2.0.0-beta.3
