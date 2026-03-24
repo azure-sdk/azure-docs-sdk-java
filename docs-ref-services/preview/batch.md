@@ -1,12 +1,12 @@
 ---
 title: Azure Batch SDK for Java
 description: Reference for Azure Batch SDK for Java
-ms.date: 03/23/2026
+ms.date: 03/24/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: batch
-manager: douge
 keywords: Azure, Java, SDK, API, Batch, processing, scheduling, long-running
+manager: douge
 ---
 # Azure Batch libraries for Java
 
