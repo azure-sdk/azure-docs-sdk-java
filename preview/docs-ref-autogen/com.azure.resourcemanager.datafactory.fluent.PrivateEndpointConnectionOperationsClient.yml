@@ -7,14 +7,14 @@ summary: "An instance of this class provides access to all the operations define
 syntax: "public interface **PrivateEndpointConnectionOperationsClient**"
 methods:
 - uid: "com.azure.resourcemanager.datafactory.fluent.PrivateEndpointConnectionOperationsClient.createOrUpdate(java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.datafactory.models.PrivateLinkConnectionApprovalRequestResource)"
-  fullName: "com.azure.resourcemanager.datafactory.fluent.PrivateEndpointConnectionOperationsClient.createOrUpdate(String resourceGroupName, String factoryName, String privateEndpointConnectionName, PrivateLinkConnectionApprovalRequestResource privateEndpointWrapper)"
-  name: "createOrUpdate(String resourceGroupName, String factoryName, String privateEndpointConnectionName, PrivateLinkConnectionApprovalRequestResource privateEndpointWrapper)"
-  nameWithType: "PrivateEndpointConnectionOperationsClient.createOrUpdate(String resourceGroupName, String factoryName, String privateEndpointConnectionName, PrivateLinkConnectionApprovalRequestResource privateEndpointWrapper)"
+  fullName: "com.azure.resourcemanager.datafactory.fluent.PrivateEndpointConnectionOperationsClient.createOrUpdate(String resourceGroupName, String factoryName, String privateEndpointConnectionName, PrivateLinkConnectionApprovalRequestResource resource)"
+  name: "createOrUpdate(String resourceGroupName, String factoryName, String privateEndpointConnectionName, PrivateLinkConnectionApprovalRequestResource resource)"
+  nameWithType: "PrivateEndpointConnectionOperationsClient.createOrUpdate(String resourceGroupName, String factoryName, String privateEndpointConnectionName, PrivateLinkConnectionApprovalRequestResource resource)"
   summary: "Approves or rejects a private endpoint connection."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The resource group name."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The factory name."
@@ -23,23 +23,23 @@ methods:
   - description: "The private endpoint connection name."
     name: "privateEndpointConnectionName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The privateEndpointWrapper parameter."
-    name: "privateEndpointWrapper"
+  - description: "The resource parameter."
+    name: "resource"
     type: "<xref href=\"com.azure.resourcemanager.datafactory.models.PrivateLinkConnectionApprovalRequestResource?alt=com.azure.resourcemanager.datafactory.models.PrivateLinkConnectionApprovalRequestResource&text=PrivateLinkConnectionApprovalRequestResource\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract PrivateEndpointConnectionResourceInner createOrUpdate(String resourceGroupName, String factoryName, String privateEndpointConnectionName, PrivateLinkConnectionApprovalRequestResource privateEndpointWrapper)"
+  syntax: "public abstract PrivateEndpointConnectionResourceInner createOrUpdate(String resourceGroupName, String factoryName, String privateEndpointConnectionName, PrivateLinkConnectionApprovalRequestResource resource)"
   desc: "Approves or rejects a private endpoint connection."
   returns:
     description: "private Endpoint Connection ARM resource."
     type: "<xref href=\"com.azure.resourcemanager.datafactory.fluent.models.PrivateEndpointConnectionResourceInner?alt=com.azure.resourcemanager.datafactory.fluent.models.PrivateEndpointConnectionResourceInner&text=PrivateEndpointConnectionResourceInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.datafactory.fluent.PrivateEndpointConnectionOperationsClient.createOrUpdateWithResponse(java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.datafactory.models.PrivateLinkConnectionApprovalRequestResource,java.lang.String,com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.datafactory.fluent.PrivateEndpointConnectionOperationsClient.createOrUpdateWithResponse(String resourceGroupName, String factoryName, String privateEndpointConnectionName, PrivateLinkConnectionApprovalRequestResource privateEndpointWrapper, String ifMatch, Context context)"
-  name: "createOrUpdateWithResponse(String resourceGroupName, String factoryName, String privateEndpointConnectionName, PrivateLinkConnectionApprovalRequestResource privateEndpointWrapper, String ifMatch, Context context)"
-  nameWithType: "PrivateEndpointConnectionOperationsClient.createOrUpdateWithResponse(String resourceGroupName, String factoryName, String privateEndpointConnectionName, PrivateLinkConnectionApprovalRequestResource privateEndpointWrapper, String ifMatch, Context context)"
+  fullName: "com.azure.resourcemanager.datafactory.fluent.PrivateEndpointConnectionOperationsClient.createOrUpdateWithResponse(String resourceGroupName, String factoryName, String privateEndpointConnectionName, PrivateLinkConnectionApprovalRequestResource resource, String ifMatch, Context context)"
+  name: "createOrUpdateWithResponse(String resourceGroupName, String factoryName, String privateEndpointConnectionName, PrivateLinkConnectionApprovalRequestResource resource, String ifMatch, Context context)"
+  nameWithType: "PrivateEndpointConnectionOperationsClient.createOrUpdateWithResponse(String resourceGroupName, String factoryName, String privateEndpointConnectionName, PrivateLinkConnectionApprovalRequestResource resource, String ifMatch, Context context)"
   summary: "Approves or rejects a private endpoint connection."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The resource group name."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The factory name."
@@ -48,8 +48,8 @@ methods:
   - description: "The private endpoint connection name."
     name: "privateEndpointConnectionName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The privateEndpointWrapper parameter."
-    name: "privateEndpointWrapper"
+  - description: "The resource parameter."
+    name: "resource"
     type: "<xref href=\"com.azure.resourcemanager.datafactory.models.PrivateLinkConnectionApprovalRequestResource?alt=com.azure.resourcemanager.datafactory.models.PrivateLinkConnectionApprovalRequestResource&text=PrivateLinkConnectionApprovalRequestResource\" data-throw-if-not-resolved=\"False\" />"
   - description: "ETag of the private endpoint connection entity. Should only be specified for update, for which it\n should match existing entity or can be * for unconditional update."
     name: "ifMatch"
@@ -57,7 +57,7 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract Response<PrivateEndpointConnectionResourceInner> createOrUpdateWithResponse(String resourceGroupName, String factoryName, String privateEndpointConnectionName, PrivateLinkConnectionApprovalRequestResource privateEndpointWrapper, String ifMatch, Context context)"
+  syntax: "public abstract Response<PrivateEndpointConnectionResourceInner> createOrUpdateWithResponse(String resourceGroupName, String factoryName, String privateEndpointConnectionName, PrivateLinkConnectionApprovalRequestResource resource, String ifMatch, Context context)"
   desc: "Approves or rejects a private endpoint connection."
   returns:
     description: "private Endpoint Connection ARM resource along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
@@ -70,7 +70,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The resource group name."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The factory name."
@@ -89,7 +89,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The resource group name."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The factory name."
@@ -114,7 +114,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The resource group name."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The factory name."
@@ -136,7 +136,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The resource group name."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The factory name."
@@ -160,4 +160,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in PrivateEndpointConnectionOperationsClient."
 metadata: {}
 package: "com.azure.resourcemanager.datafactory.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-datafactory:1.0.0-beta.30
+artifact: com.azure.resourcemanager:azure-resourcemanager-datafactory:1.3.0-beta.1

@@ -56,7 +56,7 @@ methods:
   nameWithType: "MariaDBLinkedServiceTypeProperties.driverVersion()"
   summary: "Get the driver<wbr>Version property: The version of the MariaDB driver."
   syntax: "public Object driverVersion()"
-  desc: "Get the driverVersion property: The version of the MariaDB driver. Type: string. V1 or empty for legacy driver, V2 for new driver. V1 can support connection string and property bag, V2 can only support connection string."
+  desc: "Get the driverVersion property: The version of the MariaDB driver. Type: string. V1 or empty for legacy driver, V2 for new driver. V1 can support connection string and property bag, V2 can only support connection string. The legacy driver is scheduled for deprecation by October 2024."
   returns:
     description: "the driverVersion value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
@@ -119,6 +119,16 @@ methods:
   returns:
     description: "the server value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+- uid: "com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties.sslMode()"
+  fullName: "com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties.sslMode()"
+  name: "sslMode()"
+  nameWithType: "MariaDBLinkedServiceTypeProperties.sslMode()"
+  summary: "Get the ssl<wbr>Mode property: This option specifies whether the driver uses TLS encryption and verification when connecting to MariaDB."
+  syntax: "public Object sslMode()"
+  desc: "Get the sslMode property: This option specifies whether the driver uses TLS encryption and verification when connecting to MariaDB. E.g., SSLMode=<0/1/2/3/4>. Options: DISABLED (0) / PREFERRED (1) (Default) / REQUIRED (2) / VERIFY\\_CA (3) / VERIFY\\_IDENTITY (4), REQUIRED (2) is recommended to only allow connections encrypted with SSL/TLS."
+  returns:
+    description: "the sslMode value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
 - uid: "com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -141,13 +151,16 @@ methods:
   returns:
     description: "the username value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
-- uid: "com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties.validate()"
-  fullName: "com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties.validate()"
-  name: "validate()"
-  nameWithType: "MariaDBLinkedServiceTypeProperties.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties.useSystemTrustStore()"
+  fullName: "com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties.useSystemTrustStore()"
+  name: "useSystemTrustStore()"
+  nameWithType: "MariaDBLinkedServiceTypeProperties.useSystemTrustStore()"
+  summary: "Get the use<wbr>System<wbr>Trust<wbr>Store property: This option specifies whether to use a CA certificate from the system trust store, or from a specified PEM file."
+  syntax: "public Object useSystemTrustStore()"
+  desc: "Get the useSystemTrustStore property: This option specifies whether to use a CA certificate from the system trust store, or from a specified PEM file. E.g. UseSystemTrustStore=<0/1>; Options: Enabled (1) / Disabled (0) (Default)."
+  returns:
+    description: "the useSystemTrustStore value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
 - uid: "com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties.withConnectionString(java.lang.Object)"
   fullName: "com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties.withConnectionString(Object connectionString)"
   name: "withConnectionString(Object connectionString)"
@@ -186,7 +199,7 @@ methods:
     name: "driverVersion"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   syntax: "public MariaDBLinkedServiceTypeProperties withDriverVersion(Object driverVersion)"
-  desc: "Set the driverVersion property: The version of the MariaDB driver. Type: string. V1 or empty for legacy driver, V2 for new driver. V1 can support connection string and property bag, V2 can only support connection string."
+  desc: "Set the driverVersion property: The version of the MariaDB driver. Type: string. V1 or empty for legacy driver, V2 for new driver. V1 can support connection string and property bag, V2 can only support connection string. The legacy driver is scheduled for deprecation by October 2024."
   returns:
     description: "the MariaDBLinkedServiceTypeProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties?alt=com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties&text=MariaDBLinkedServiceTypeProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -246,6 +259,20 @@ methods:
   returns:
     description: "the MariaDBLinkedServiceTypeProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties?alt=com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties&text=MariaDBLinkedServiceTypeProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties.withSslMode(java.lang.Object)"
+  fullName: "com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties.withSslMode(Object sslMode)"
+  name: "withSslMode(Object sslMode)"
+  nameWithType: "MariaDBLinkedServiceTypeProperties.withSslMode(Object sslMode)"
+  summary: "Set the ssl<wbr>Mode property: This option specifies whether the driver uses TLS encryption and verification when connecting to MariaDB."
+  parameters:
+  - description: "the sslMode value to set."
+    name: "sslMode"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  syntax: "public MariaDBLinkedServiceTypeProperties withSslMode(Object sslMode)"
+  desc: "Set the sslMode property: This option specifies whether the driver uses TLS encryption and verification when connecting to MariaDB. E.g., SSLMode=<0/1/2/3/4>. Options: DISABLED (0) / PREFERRED (1) (Default) / REQUIRED (2) / VERIFY\\_CA (3) / VERIFY\\_IDENTITY (4), REQUIRED (2) is recommended to only allow connections encrypted with SSL/TLS."
+  returns:
+    description: "the MariaDBLinkedServiceTypeProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties?alt=com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties&text=MariaDBLinkedServiceTypeProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties.withUsername(java.lang.Object)"
   fullName: "com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties.withUsername(Object username)"
   name: "withUsername(Object username)"
@@ -260,10 +287,24 @@ methods:
   returns:
     description: "the MariaDBLinkedServiceTypeProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties?alt=com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties&text=MariaDBLinkedServiceTypeProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties.withUseSystemTrustStore(java.lang.Object)"
+  fullName: "com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties.withUseSystemTrustStore(Object useSystemTrustStore)"
+  name: "withUseSystemTrustStore(Object useSystemTrustStore)"
+  nameWithType: "MariaDBLinkedServiceTypeProperties.withUseSystemTrustStore(Object useSystemTrustStore)"
+  summary: "Set the use<wbr>System<wbr>Trust<wbr>Store property: This option specifies whether to use a CA certificate from the system trust store, or from a specified PEM file."
+  parameters:
+  - description: "the useSystemTrustStore value to set."
+    name: "useSystemTrustStore"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  syntax: "public MariaDBLinkedServiceTypeProperties withUseSystemTrustStore(Object useSystemTrustStore)"
+  desc: "Set the useSystemTrustStore property: This option specifies whether to use a CA certificate from the system trust store, or from a specified PEM file. E.g. UseSystemTrustStore=<0/1>; Options: Enabled (1) / Disabled (0) (Default)."
+  returns:
+    description: "the MariaDBLinkedServiceTypeProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties?alt=com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties&text=MariaDBLinkedServiceTypeProperties\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "MariaDB server linked service properties."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties?alt=com.azure.resourcemanager.datafactory.fluent.models.MariaDBLinkedServiceTypeProperties&text=MariaDBLinkedServiceTypeProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.datafactory.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-datafactory:1.0.0-beta.30
+artifact: com.azure.resourcemanager:azure-resourcemanager-datafactory:1.3.0-beta.1

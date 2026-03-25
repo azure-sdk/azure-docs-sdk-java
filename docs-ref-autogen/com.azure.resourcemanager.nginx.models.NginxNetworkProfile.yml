@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.nginx.models.NginxNetworkProfile"
 fullName: "com.azure.resourcemanager.nginx.models.NginxNetworkProfile"
 name: "NginxNetworkProfile"
 nameWithType: "NginxNetworkProfile"
-summary: "The Nginx<wbr>Network<wbr>Profile model."
+summary: "Nginx Network Profile."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -20,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **NginxNetworkProfile**"
+syntax: "public final class **NginxNetworkProfile**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.nginx.models.NginxNetworkProfile?alt=com.azure.resourcemanager.nginx.models.NginxNetworkProfile&text=NginxNetworkProfile\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.nginx.models.NginxNetworkProfile.NginxNetworkProfile()"
   fullName: "com.azure.resourcemanager.nginx.models.NginxNetworkProfile.NginxNetworkProfile()"
@@ -30,13 +30,32 @@ constructors:
   syntax: "public NginxNetworkProfile()"
   desc: "Creates an instance of NginxNetworkProfile class."
 methods:
+- uid: "com.azure.resourcemanager.nginx.models.NginxNetworkProfile.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.nginx.models.NginxNetworkProfile.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "NginxNetworkProfile.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Nginx<wbr>Network<wbr>Profile from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static NginxNetworkProfile fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the NginxNetworkProfile."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of NginxNetworkProfile from the JsonReader."
+  returns:
+    description: "An instance of NginxNetworkProfile if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.nginx.models.NginxNetworkProfile?alt=com.azure.resourcemanager.nginx.models.NginxNetworkProfile&text=NginxNetworkProfile\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.nginx.models.NginxNetworkProfile.frontEndIpConfiguration()"
   fullName: "com.azure.resourcemanager.nginx.models.NginxNetworkProfile.frontEndIpConfiguration()"
   name: "frontEndIpConfiguration()"
   nameWithType: "NginxNetworkProfile.frontEndIpConfiguration()"
-  summary: "Get the front<wbr>End<wbr>IpConfiguration property: The front<wbr>End<wbr>IPConfiguration property."
+  summary: "Get the front<wbr>End<wbr>IpConfiguration property: Nginx Frontend IP Configuration."
   syntax: "public NginxFrontendIpConfiguration frontEndIpConfiguration()"
-  desc: "Get the frontEndIpConfiguration property: The frontEndIPConfiguration property."
+  desc: "Get the frontEndIpConfiguration property: Nginx Frontend IP Configuration."
   returns:
     description: "the frontEndIpConfiguration value."
     type: "<xref href=\"com.azure.resourcemanager.nginx.models.NginxFrontendIpConfiguration?alt=com.azure.resourcemanager.nginx.models.NginxFrontendIpConfiguration&text=NginxFrontendIpConfiguration\" data-throw-if-not-resolved=\"False\" />"
@@ -44,30 +63,35 @@ methods:
   fullName: "com.azure.resourcemanager.nginx.models.NginxNetworkProfile.networkInterfaceConfiguration()"
   name: "networkInterfaceConfiguration()"
   nameWithType: "NginxNetworkProfile.networkInterfaceConfiguration()"
-  summary: "Get the network<wbr>Interface<wbr>Configuration property: The network<wbr>Interface<wbr>Configuration property."
+  summary: "Get the network<wbr>Interface<wbr>Configuration property: Nginx Network Interface Configuration."
   syntax: "public NginxNetworkInterfaceConfiguration networkInterfaceConfiguration()"
-  desc: "Get the networkInterfaceConfiguration property: The networkInterfaceConfiguration property."
+  desc: "Get the networkInterfaceConfiguration property: Nginx Network Interface Configuration."
   returns:
     description: "the networkInterfaceConfiguration value."
     type: "<xref href=\"com.azure.resourcemanager.nginx.models.NginxNetworkInterfaceConfiguration?alt=com.azure.resourcemanager.nginx.models.NginxNetworkInterfaceConfiguration&text=NginxNetworkInterfaceConfiguration\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.nginx.models.NginxNetworkProfile.validate()"
-  fullName: "com.azure.resourcemanager.nginx.models.NginxNetworkProfile.validate()"
-  name: "validate()"
-  nameWithType: "NginxNetworkProfile.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.nginx.models.NginxNetworkProfile.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.nginx.models.NginxNetworkProfile.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "NginxNetworkProfile.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.nginx.models.NginxNetworkProfile.withFrontEndIpConfiguration(com.azure.resourcemanager.nginx.models.NginxFrontendIpConfiguration)"
   fullName: "com.azure.resourcemanager.nginx.models.NginxNetworkProfile.withFrontEndIpConfiguration(NginxFrontendIpConfiguration frontEndIpConfiguration)"
   name: "withFrontEndIpConfiguration(NginxFrontendIpConfiguration frontEndIpConfiguration)"
   nameWithType: "NginxNetworkProfile.withFrontEndIpConfiguration(NginxFrontendIpConfiguration frontEndIpConfiguration)"
-  summary: "Set the front<wbr>End<wbr>IpConfiguration property: The front<wbr>End<wbr>IPConfiguration property."
+  summary: "Set the front<wbr>End<wbr>IpConfiguration property: Nginx Frontend IP Configuration."
   parameters:
   - description: "the frontEndIpConfiguration value to set."
     name: "frontEndIpConfiguration"
     type: "<xref href=\"com.azure.resourcemanager.nginx.models.NginxFrontendIpConfiguration?alt=com.azure.resourcemanager.nginx.models.NginxFrontendIpConfiguration&text=NginxFrontendIpConfiguration\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public NginxNetworkProfile withFrontEndIpConfiguration(NginxFrontendIpConfiguration frontEndIpConfiguration)"
-  desc: "Set the frontEndIpConfiguration property: The frontEndIPConfiguration property."
+  desc: "Set the frontEndIpConfiguration property: Nginx Frontend IP Configuration."
   returns:
     description: "the NginxNetworkProfile object itself."
     type: "<xref href=\"com.azure.resourcemanager.nginx.models.NginxNetworkProfile?alt=com.azure.resourcemanager.nginx.models.NginxNetworkProfile&text=NginxNetworkProfile\" data-throw-if-not-resolved=\"False\" />"
@@ -75,18 +99,20 @@ methods:
   fullName: "com.azure.resourcemanager.nginx.models.NginxNetworkProfile.withNetworkInterfaceConfiguration(NginxNetworkInterfaceConfiguration networkInterfaceConfiguration)"
   name: "withNetworkInterfaceConfiguration(NginxNetworkInterfaceConfiguration networkInterfaceConfiguration)"
   nameWithType: "NginxNetworkProfile.withNetworkInterfaceConfiguration(NginxNetworkInterfaceConfiguration networkInterfaceConfiguration)"
-  summary: "Set the network<wbr>Interface<wbr>Configuration property: The network<wbr>Interface<wbr>Configuration property."
+  summary: "Set the network<wbr>Interface<wbr>Configuration property: Nginx Network Interface Configuration."
   parameters:
   - description: "the networkInterfaceConfiguration value to set."
     name: "networkInterfaceConfiguration"
     type: "<xref href=\"com.azure.resourcemanager.nginx.models.NginxNetworkInterfaceConfiguration?alt=com.azure.resourcemanager.nginx.models.NginxNetworkInterfaceConfiguration&text=NginxNetworkInterfaceConfiguration\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public NginxNetworkProfile withNetworkInterfaceConfiguration(NginxNetworkInterfaceConfiguration networkInterfaceConfiguration)"
-  desc: "Set the networkInterfaceConfiguration property: The networkInterfaceConfiguration property."
+  desc: "Set the networkInterfaceConfiguration property: Nginx Network Interface Configuration."
   returns:
     description: "the NginxNetworkProfile object itself."
     type: "<xref href=\"com.azure.resourcemanager.nginx.models.NginxNetworkProfile?alt=com.azure.resourcemanager.nginx.models.NginxNetworkProfile&text=NginxNetworkProfile\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "The NginxNetworkProfile model."
+desc: "Nginx Network Profile."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.nginx.models.NginxNetworkProfile?alt=com.azure.resourcemanager.nginx.models.NginxNetworkProfile&text=NginxNetworkProfile\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.nginx.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-nginx:1.0.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-nginx:1.1.0

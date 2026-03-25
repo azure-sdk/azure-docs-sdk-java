@@ -649,7 +649,7 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.models.Volumes.listQuotaReport(String resourceGroupName, String accountName, String poolName, String volumeName)"
   name: "listQuotaReport(String resourceGroupName, String accountName, String poolName, String volumeName)"
   nameWithType: "Volumes.listQuotaReport(String resourceGroupName, String accountName, String poolName, String volumeName)"
-  summary: "A long-running resource action."
+  summary: "Get quota report for volume (with filter support)."
   modifiers:
   - "abstract"
   parameters:
@@ -665,16 +665,16 @@ methods:
   - description: "The name of the volume."
     name: "volumeName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract ListQuotaReportResponse listQuotaReport(String resourceGroupName, String accountName, String poolName, String volumeName)"
-  desc: "A long-running resource action."
+  syntax: "public abstract ListQuotaReportResult listQuotaReport(String resourceGroupName, String accountName, String poolName, String volumeName)"
+  desc: "Get quota report for volume (with filter support)."
   returns:
-    description: "the response."
-    type: "<xref href=\"com.azure.resourcemanager.netapp.models.ListQuotaReportResponse?alt=com.azure.resourcemanager.netapp.models.ListQuotaReportResponse&text=ListQuotaReportResponse\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.netapp.models.Volumes.listQuotaReport(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.netapp.models.Volumes.listQuotaReport(String resourceGroupName, String accountName, String poolName, String volumeName, Context context)"
-  name: "listQuotaReport(String resourceGroupName, String accountName, String poolName, String volumeName, Context context)"
-  nameWithType: "Volumes.listQuotaReport(String resourceGroupName, String accountName, String poolName, String volumeName, Context context)"
-  summary: "A long-running resource action."
+    description: "quota report for volume (with filter support)."
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.ListQuotaReportResult?alt=com.azure.resourcemanager.netapp.models.ListQuotaReportResult&text=ListQuotaReportResult\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.netapp.models.Volumes.listQuotaReport(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.netapp.models.QuotaReportFilterRequest,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.netapp.models.Volumes.listQuotaReport(String resourceGroupName, String accountName, String poolName, String volumeName, QuotaReportFilterRequest body, Context context)"
+  name: "listQuotaReport(String resourceGroupName, String accountName, String poolName, String volumeName, QuotaReportFilterRequest body, Context context)"
+  nameWithType: "Volumes.listQuotaReport(String resourceGroupName, String accountName, String poolName, String volumeName, QuotaReportFilterRequest body, Context context)"
+  summary: "Get quota report for volume (with filter support)."
   modifiers:
   - "abstract"
   parameters:
@@ -690,14 +690,17 @@ methods:
   - description: "The name of the volume."
     name: "volumeName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The content of the action request."
+    name: "body"
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.QuotaReportFilterRequest?alt=com.azure.resourcemanager.netapp.models.QuotaReportFilterRequest&text=QuotaReportFilterRequest\" data-throw-if-not-resolved=\"False\" />"
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract ListQuotaReportResponse listQuotaReport(String resourceGroupName, String accountName, String poolName, String volumeName, Context context)"
-  desc: "A long-running resource action."
+  syntax: "public abstract ListQuotaReportResult listQuotaReport(String resourceGroupName, String accountName, String poolName, String volumeName, QuotaReportFilterRequest body, Context context)"
+  desc: "Get quota report for volume (with filter support)."
   returns:
-    description: "the response."
-    type: "<xref href=\"com.azure.resourcemanager.netapp.models.ListQuotaReportResponse?alt=com.azure.resourcemanager.netapp.models.ListQuotaReportResponse&text=ListQuotaReportResponse\" data-throw-if-not-resolved=\"False\" />"
+    description: "quota report for volume (with filter support)."
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.ListQuotaReportResult?alt=com.azure.resourcemanager.netapp.models.ListQuotaReportResult&text=ListQuotaReportResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.netapp.models.Volumes.listReplications(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.netapp.models.Volumes.listReplications(String resourceGroupName, String accountName, String poolName, String volumeName)"
   name: "listReplications(String resourceGroupName, String accountName, String poolName, String volumeName)"
@@ -1420,4 +1423,4 @@ type: "interface"
 desc: "Resource collection API of Volumes."
 metadata: {}
 package: "com.azure.resourcemanager.netapp.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:2.1.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:2.2.0-beta.1

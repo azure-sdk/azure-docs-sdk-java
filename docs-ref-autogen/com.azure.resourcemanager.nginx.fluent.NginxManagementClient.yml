@@ -6,15 +6,27 @@ nameWithType: "NginxManagementClient"
 summary: "The interface for Nginx<wbr>Management<wbr>Client class."
 syntax: "public interface **NginxManagementClient**"
 methods:
+- uid: "com.azure.resourcemanager.nginx.fluent.NginxManagementClient.getApiKeys()"
+  fullName: "com.azure.resourcemanager.nginx.fluent.NginxManagementClient.getApiKeys()"
+  name: "getApiKeys()"
+  nameWithType: "NginxManagementClient.getApiKeys()"
+  summary: "Gets the Api<wbr>Keys<wbr>Client object to access its operations."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract ApiKeysClient getApiKeys()"
+  desc: "Gets the ApiKeysClient object to access its operations."
+  returns:
+    description: "the ApiKeysClient object."
+    type: "<xref href=\"com.azure.resourcemanager.nginx.fluent.ApiKeysClient?alt=com.azure.resourcemanager.nginx.fluent.ApiKeysClient&text=ApiKeysClient\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.nginx.fluent.NginxManagementClient.getApiVersion()"
   fullName: "com.azure.resourcemanager.nginx.fluent.NginxManagementClient.getApiVersion()"
   name: "getApiVersion()"
   nameWithType: "NginxManagementClient.getApiVersion()"
-  summary: "Gets Api Version."
+  summary: "Gets Version parameter."
   modifiers:
   - "abstract"
   syntax: "public abstract String getApiVersion()"
-  desc: "Gets Api Version."
+  desc: "Gets Version parameter."
   returns:
     description: "the apiVersion value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -54,6 +66,18 @@ methods:
   returns:
     description: "the defaultPollInterval value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
+- uid: "com.azure.resourcemanager.nginx.fluent.NginxManagementClient.getDefaultWafPolicies()"
+  fullName: "com.azure.resourcemanager.nginx.fluent.NginxManagementClient.getDefaultWafPolicies()"
+  name: "getDefaultWafPolicies()"
+  nameWithType: "NginxManagementClient.getDefaultWafPolicies()"
+  summary: "Gets the Default<wbr>Waf<wbr>Policies<wbr>Client object to access its operations."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract DefaultWafPoliciesClient getDefaultWafPolicies()"
+  desc: "Gets the DefaultWafPoliciesClient object to access its operations."
+  returns:
+    description: "the DefaultWafPoliciesClient object."
+    type: "<xref href=\"com.azure.resourcemanager.nginx.fluent.DefaultWafPoliciesClient?alt=com.azure.resourcemanager.nginx.fluent.DefaultWafPoliciesClient&text=DefaultWafPoliciesClient\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.nginx.fluent.NginxManagementClient.getDeployments()"
   fullName: "com.azure.resourcemanager.nginx.fluent.NginxManagementClient.getDeployments()"
   name: "getDeployments()"
@@ -70,11 +94,11 @@ methods:
   fullName: "com.azure.resourcemanager.nginx.fluent.NginxManagementClient.getEndpoint()"
   name: "getEndpoint()"
   nameWithType: "NginxManagementClient.getEndpoint()"
-  summary: "Gets server parameter."
+  summary: "Gets Service host."
   modifiers:
   - "abstract"
   syntax: "public abstract String getEndpoint()"
-  desc: "Gets server parameter."
+  desc: "Gets Service host."
   returns:
     description: "the endpoint value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -90,6 +114,18 @@ methods:
   returns:
     description: "the httpPipeline value."
     type: "<xref href=\"com.azure.core.http.HttpPipeline?alt=com.azure.core.http.HttpPipeline&text=HttpPipeline\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.nginx.fluent.NginxManagementClient.getNginxDeploymentWafPolicies()"
+  fullName: "com.azure.resourcemanager.nginx.fluent.NginxManagementClient.getNginxDeploymentWafPolicies()"
+  name: "getNginxDeploymentWafPolicies()"
+  nameWithType: "NginxManagementClient.getNginxDeploymentWafPolicies()"
+  summary: "Gets the Nginx<wbr>Deployment<wbr>Waf<wbr>Policies<wbr>Client object to access its operations."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract NginxDeploymentWafPoliciesClient getNginxDeploymentWafPolicies()"
+  desc: "Gets the NginxDeploymentWafPoliciesClient object to access its operations."
+  returns:
+    description: "the NginxDeploymentWafPoliciesClient object."
+    type: "<xref href=\"com.azure.resourcemanager.nginx.fluent.NginxDeploymentWafPoliciesClient?alt=com.azure.resourcemanager.nginx.fluent.NginxDeploymentWafPoliciesClient&text=NginxDeploymentWafPoliciesClient\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.nginx.fluent.NginxManagementClient.getOperations()"
   fullName: "com.azure.resourcemanager.nginx.fluent.NginxManagementClient.getOperations()"
   name: "getOperations()"
@@ -110,12 +146,24 @@ methods:
   modifiers:
   - "abstract"
   syntax: "public abstract String getSubscriptionId()"
-  desc: "Gets The ID of the target subscription."
+  desc: "Gets The ID of the target subscription. The value must be an UUID."
   returns:
     description: "the subscriptionId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.nginx.fluent.NginxManagementClient.getWafPolicies()"
+  fullName: "com.azure.resourcemanager.nginx.fluent.NginxManagementClient.getWafPolicies()"
+  name: "getWafPolicies()"
+  nameWithType: "NginxManagementClient.getWafPolicies()"
+  summary: "Gets the Waf<wbr>Policies<wbr>Client object to access its operations."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract WafPoliciesClient getWafPolicies()"
+  desc: "Gets the WafPoliciesClient object to access its operations."
+  returns:
+    description: "the WafPoliciesClient object."
+    type: "<xref href=\"com.azure.resourcemanager.nginx.fluent.WafPoliciesClient?alt=com.azure.resourcemanager.nginx.fluent.WafPoliciesClient&text=WafPoliciesClient\" data-throw-if-not-resolved=\"False\" />"
 type: "interface"
 desc: "The interface for NginxManagementClient class."
 metadata: {}
 package: "com.azure.resourcemanager.nginx.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-nginx:1.0.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-nginx:1.1.0

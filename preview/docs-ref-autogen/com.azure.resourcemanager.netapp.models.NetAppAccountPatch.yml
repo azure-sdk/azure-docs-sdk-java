@@ -40,16 +40,6 @@ methods:
   returns:
     description: "the activeDirectories value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.netapp.models.ActiveDirectory?alt=com.azure.resourcemanager.netapp.models.ActiveDirectory&text=ActiveDirectory\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.netapp.models.NetAppAccountPatch.disableShowmount()"
-  fullName: "com.azure.resourcemanager.netapp.models.NetAppAccountPatch.disableShowmount()"
-  name: "disableShowmount()"
-  nameWithType: "NetAppAccountPatch.disableShowmount()"
-  summary: "Get the disable<wbr>Showmount property: Shows the status of disable<wbr>Showmount for all volumes under the subscription, null equals false."
-  syntax: "public Boolean disableShowmount()"
-  desc: "Get the disableShowmount property: Shows the status of disableShowmount for all volumes under the subscription, null equals false."
-  returns:
-    description: "the disableShowmount value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.resourcemanager.netapp.models.NetAppAccountPatch.encryption()"
   fullName: "com.azure.resourcemanager.netapp.models.NetAppAccountPatch.encryption()"
   name: "encryption()"
@@ -60,6 +50,16 @@ methods:
   returns:
     description: "the encryption value."
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.AccountEncryption?alt=com.azure.resourcemanager.netapp.models.AccountEncryption&text=AccountEncryption\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.netapp.models.NetAppAccountPatch.entraIdConfig()"
+  fullName: "com.azure.resourcemanager.netapp.models.NetAppAccountPatch.entraIdConfig()"
+  name: "entraIdConfig()"
+  nameWithType: "NetAppAccountPatch.entraIdConfig()"
+  summary: "Get the entra<wbr>IdConfig property: Entra ID configuration for the account."
+  syntax: "public EntraIdConfigPatch entraIdConfig()"
+  desc: "Get the entraIdConfig property: Entra ID configuration for the account."
+  returns:
+    description: "the entraIdConfig value."
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.EntraIdConfigPatch?alt=com.azure.resourcemanager.netapp.models.EntraIdConfigPatch&text=EntraIdConfigPatch\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.netapp.models.NetAppAccountPatch.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.resourcemanager.netapp.models.NetAppAccountPatch.fromJson(JsonReader jsonReader)"
   name: "fromJson(JsonReader jsonReader)"
@@ -104,11 +104,11 @@ methods:
   name: "ldapConfiguration()"
   nameWithType: "NetAppAccountPatch.ldapConfiguration()"
   summary: "Get the ldap<wbr>Configuration property: LDAP Configuration for the account."
-  syntax: "public LdapConfiguration ldapConfiguration()"
+  syntax: "public LdapConfigurationPatch ldapConfiguration()"
   desc: "Get the ldapConfiguration property: LDAP Configuration for the account."
   returns:
     description: "the ldapConfiguration value."
-    type: "<xref href=\"com.azure.resourcemanager.netapp.models.LdapConfiguration?alt=com.azure.resourcemanager.netapp.models.LdapConfiguration&text=LdapConfiguration\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.LdapConfigurationPatch?alt=com.azure.resourcemanager.netapp.models.LdapConfigurationPatch&text=LdapConfigurationPatch\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.netapp.models.NetAppAccountPatch.location()"
   fullName: "com.azure.resourcemanager.netapp.models.NetAppAccountPatch.location()"
   name: "location()"
@@ -148,16 +148,6 @@ methods:
   desc: "Get the nfsV4IdDomain property: Domain for NFSv4 user ID mapping. This property will be set for all NetApp accounts in the subscription and region and only affect non ldap NFSv4 volumes."
   returns:
     description: "the nfsV4IdDomain value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-- uid: "com.azure.resourcemanager.netapp.models.NetAppAccountPatch.provisioningState()"
-  fullName: "com.azure.resourcemanager.netapp.models.NetAppAccountPatch.provisioningState()"
-  name: "provisioningState()"
-  nameWithType: "NetAppAccountPatch.provisioningState()"
-  summary: "Get the provisioning<wbr>State property: Azure lifecycle management."
-  syntax: "public String provisioningState()"
-  desc: "Get the provisioningState property: Azure lifecycle management."
-  returns:
-    description: "the provisioningState value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.netapp.models.NetAppAccountPatch.tags()"
   fullName: "com.azure.resourcemanager.netapp.models.NetAppAccountPatch.tags()"
@@ -226,6 +216,20 @@ methods:
   returns:
     description: "the NetAppAccountPatch object itself."
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.NetAppAccountPatch?alt=com.azure.resourcemanager.netapp.models.NetAppAccountPatch&text=NetAppAccountPatch\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.netapp.models.NetAppAccountPatch.withEntraIdConfig(com.azure.resourcemanager.netapp.models.EntraIdConfigPatch)"
+  fullName: "com.azure.resourcemanager.netapp.models.NetAppAccountPatch.withEntraIdConfig(EntraIdConfigPatch entraIdConfig)"
+  name: "withEntraIdConfig(EntraIdConfigPatch entraIdConfig)"
+  nameWithType: "NetAppAccountPatch.withEntraIdConfig(EntraIdConfigPatch entraIdConfig)"
+  summary: "Set the entra<wbr>IdConfig property: Entra ID configuration for the account."
+  parameters:
+  - description: "the entraIdConfig value to set."
+    name: "entraIdConfig"
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.EntraIdConfigPatch?alt=com.azure.resourcemanager.netapp.models.EntraIdConfigPatch&text=EntraIdConfigPatch\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public NetAppAccountPatch withEntraIdConfig(EntraIdConfigPatch entraIdConfig)"
+  desc: "Set the entraIdConfig property: Entra ID configuration for the account."
+  returns:
+    description: "the NetAppAccountPatch object itself."
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.NetAppAccountPatch?alt=com.azure.resourcemanager.netapp.models.NetAppAccountPatch&text=NetAppAccountPatch\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.netapp.models.NetAppAccountPatch.withIdentity(com.azure.resourcemanager.netapp.models.ManagedServiceIdentity)"
   fullName: "com.azure.resourcemanager.netapp.models.NetAppAccountPatch.withIdentity(ManagedServiceIdentity identity)"
   name: "withIdentity(ManagedServiceIdentity identity)"
@@ -240,16 +244,16 @@ methods:
   returns:
     description: "the NetAppAccountPatch object itself."
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.NetAppAccountPatch?alt=com.azure.resourcemanager.netapp.models.NetAppAccountPatch&text=NetAppAccountPatch\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.netapp.models.NetAppAccountPatch.withLdapConfiguration(com.azure.resourcemanager.netapp.models.LdapConfiguration)"
-  fullName: "com.azure.resourcemanager.netapp.models.NetAppAccountPatch.withLdapConfiguration(LdapConfiguration ldapConfiguration)"
-  name: "withLdapConfiguration(LdapConfiguration ldapConfiguration)"
-  nameWithType: "NetAppAccountPatch.withLdapConfiguration(LdapConfiguration ldapConfiguration)"
+- uid: "com.azure.resourcemanager.netapp.models.NetAppAccountPatch.withLdapConfiguration(com.azure.resourcemanager.netapp.models.LdapConfigurationPatch)"
+  fullName: "com.azure.resourcemanager.netapp.models.NetAppAccountPatch.withLdapConfiguration(LdapConfigurationPatch ldapConfiguration)"
+  name: "withLdapConfiguration(LdapConfigurationPatch ldapConfiguration)"
+  nameWithType: "NetAppAccountPatch.withLdapConfiguration(LdapConfigurationPatch ldapConfiguration)"
   summary: "Set the ldap<wbr>Configuration property: LDAP Configuration for the account."
   parameters:
   - description: "the ldapConfiguration value to set."
     name: "ldapConfiguration"
-    type: "<xref href=\"com.azure.resourcemanager.netapp.models.LdapConfiguration?alt=com.azure.resourcemanager.netapp.models.LdapConfiguration&text=LdapConfiguration\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public NetAppAccountPatch withLdapConfiguration(LdapConfiguration ldapConfiguration)"
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.LdapConfigurationPatch?alt=com.azure.resourcemanager.netapp.models.LdapConfigurationPatch&text=LdapConfigurationPatch\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public NetAppAccountPatch withLdapConfiguration(LdapConfigurationPatch ldapConfiguration)"
   desc: "Set the ldapConfiguration property: LDAP Configuration for the account."
   returns:
     description: "the NetAppAccountPatch object itself."
@@ -265,6 +269,20 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public NetAppAccountPatch withLocation(String location)"
   desc: "Set the location property: Resource location."
+  returns:
+    description: "the NetAppAccountPatch object itself."
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.NetAppAccountPatch?alt=com.azure.resourcemanager.netapp.models.NetAppAccountPatch&text=NetAppAccountPatch\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.netapp.models.NetAppAccountPatch.withMultiAdStatus(com.azure.resourcemanager.netapp.models.MultiAdStatus)"
+  fullName: "com.azure.resourcemanager.netapp.models.NetAppAccountPatch.withMultiAdStatus(MultiAdStatus multiAdStatus)"
+  name: "withMultiAdStatus(MultiAdStatus multiAdStatus)"
+  nameWithType: "NetAppAccountPatch.withMultiAdStatus(MultiAdStatus multiAdStatus)"
+  summary: "Set the multi<wbr>AdStatus property: MultiAD Status for the account."
+  parameters:
+  - description: "the multiAdStatus value to set."
+    name: "multiAdStatus"
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.MultiAdStatus?alt=com.azure.resourcemanager.netapp.models.MultiAdStatus&text=MultiAdStatus\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public NetAppAccountPatch withMultiAdStatus(MultiAdStatus multiAdStatus)"
+  desc: "Set the multiAdStatus property: MultiAD Status for the account."
   returns:
     description: "the NetAppAccountPatch object itself."
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.NetAppAccountPatch?alt=com.azure.resourcemanager.netapp.models.NetAppAccountPatch&text=NetAppAccountPatch\" data-throw-if-not-resolved=\"False\" />"
@@ -302,4 +320,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.netapp.models.NetAppAccountPatch?alt=com.azure.resourcemanager.netapp.models.NetAppAccountPatch&text=NetAppAccountPatch\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.netapp.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:2.1.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:2.2.0-beta.1

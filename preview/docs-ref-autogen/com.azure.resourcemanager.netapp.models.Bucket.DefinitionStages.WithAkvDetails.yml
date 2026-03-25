@@ -1,0 +1,29 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.netapp.models.Bucket.DefinitionStages.WithAkvDetails"
+fullName: "com.azure.resourcemanager.netapp.models.Bucket.DefinitionStages.WithAkvDetails"
+name: "Bucket.DefinitionStages.WithAkvDetails"
+nameWithType: "Bucket.DefinitionStages.WithAkvDetails"
+summary: "The stage of the Bucket definition allowing to specify akv<wbr>Details."
+syntax: "public static interface **Bucket.DefinitionStages.WithAkvDetails**"
+methods:
+- uid: "com.azure.resourcemanager.netapp.models.Bucket.DefinitionStages.WithAkvDetails.withAkvDetails(com.azure.resourcemanager.netapp.models.AzureKeyVaultDetails)"
+  fullName: "com.azure.resourcemanager.netapp.models.Bucket.DefinitionStages.WithAkvDetails.withAkvDetails(AzureKeyVaultDetails akvDetails)"
+  name: "withAkvDetails(AzureKeyVaultDetails akvDetails)"
+  nameWithType: "Bucket.DefinitionStages.WithAkvDetails.withAkvDetails(AzureKeyVaultDetails akvDetails)"
+  summary: "Specifies the akv<wbr>Details property: Specifies the Azure Key Vault settings."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "Specifies the Azure Key Vault settings. These are used when\n a) retrieving the bucket server certificate, and\n b) storing the bucket credentials\n \n Notes:\n \n 1. If a bucket certificate was previously provided directly using the certificateObject property, it is\n possible to subsequently use the Azure Key Vault for certificate management by using these 'akvDetails'\n properties. However, once Azure Key Vault is configured, it is no longer possible to provide the\n certificate directly via the certificateObject property.\n 2. These properties are mutually exclusive with the server.certificateObject property."
+    name: "akvDetails"
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.AzureKeyVaultDetails?alt=com.azure.resourcemanager.netapp.models.AzureKeyVaultDetails&text=AzureKeyVaultDetails\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Bucket.DefinitionStages.WithCreate withAkvDetails(AzureKeyVaultDetails akvDetails)"
+  desc: "Specifies the akvDetails property: Specifies the Azure Key Vault settings. These are used when a) retrieving the bucket server certificate, and b) storing the bucket credentials Notes: 1. If a bucket certificate was previously provided directly using the certificateObject property, it is possible to subsequently use the Azure Key Vault for certificate management by using these 'akvDetails' properties. However, once Azure Key Vault is configured, it is no longer possible to provide the certificate directly via the certificateObject property. 2. These properties are mutually exclusive with the server.certificateObject property.."
+  returns:
+    description: "the next definition stage."
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.Bucket.DefinitionStages.WithCreate?alt=com.azure.resourcemanager.netapp.models.Bucket.DefinitionStages.WithCreate&text=WithCreate\" data-throw-if-not-resolved=\"False\" />"
+type: "interface"
+desc: "The stage of the Bucket definition allowing to specify akvDetails."
+metadata: {}
+package: "com.azure.resourcemanager.netapp.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:2.2.0-beta.1

@@ -36,7 +36,7 @@ methods:
   nameWithType: "PrestoLinkedServiceTypeProperties.allowHostnameCNMismatch()"
   summary: "Get the allow<wbr>Hostname<wbr>CNMismatch property: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL."
   syntax: "public Object allowHostnameCNMismatch()"
-  desc: "Get the allowHostnameCNMismatch property: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false."
+  desc: "Get the allowHostnameCNMismatch property: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false. Only used for Version 1.0."
   returns:
     description: "the allowHostnameCNMismatch value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
@@ -46,7 +46,7 @@ methods:
   nameWithType: "PrestoLinkedServiceTypeProperties.allowSelfSignedServerCert()"
   summary: "Get the allow<wbr>Self<wbr>Signed<wbr>Server<wbr>Cert property: Specifies whether to allow self-signed certificates from the server."
   syntax: "public Object allowSelfSignedServerCert()"
-  desc: "Get the allowSelfSignedServerCert property: Specifies whether to allow self-signed certificates from the server. The default value is false."
+  desc: "Get the allowSelfSignedServerCert property: Specifies whether to allow self-signed certificates from the server. The default value is false. Only used for Version 1.0."
   returns:
     description: "the allowSelfSignedServerCert value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
@@ -70,13 +70,23 @@ methods:
   returns:
     description: "the catalog value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+- uid: "com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties.enableServerCertificateValidation()"
+  fullName: "com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties.enableServerCertificateValidation()"
+  name: "enableServerCertificateValidation()"
+  nameWithType: "PrestoLinkedServiceTypeProperties.enableServerCertificateValidation()"
+  summary: "Get the enable<wbr>Server<wbr>Certificate<wbr>Validation property: Specifies whether the connections to the server will validate server certificate, the default value is True."
+  syntax: "public Object enableServerCertificateValidation()"
+  desc: "Get the enableServerCertificateValidation property: Specifies whether the connections to the server will validate server certificate, the default value is True. Only used for Version 2.0."
+  returns:
+    description: "the enableServerCertificateValidation value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
 - uid: "com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties.enableSsl()"
   fullName: "com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties.enableSsl()"
   name: "enableSsl()"
   nameWithType: "PrestoLinkedServiceTypeProperties.enableSsl()"
   summary: "Get the enable<wbr>Ssl property: Specifies whether the connections to the server are encrypted using SSL."
   syntax: "public Object enableSsl()"
-  desc: "Get the enableSsl property: Specifies whether the connections to the server are encrypted using SSL. The default value is false."
+  desc: "Get the enableSsl property: Specifies whether the connections to the server are encrypted using SSL. The default value for legacy version is False. The default value for version 2.0 is True."
   returns:
     description: "the enableSsl value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
@@ -135,7 +145,7 @@ methods:
   nameWithType: "PrestoLinkedServiceTypeProperties.port()"
   summary: "Get the port property: The TCP port that the Presto server uses to listen for client connections."
   syntax: "public Object port()"
-  desc: "Get the port property: The TCP port that the Presto server uses to listen for client connections. The default value is 8080."
+  desc: "Get the port property: The TCP port that the Presto server uses to listen for client connections. The default value is 8080 when disable SSL, default value is 443 when enable SSL."
   returns:
     description: "the port value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
@@ -145,7 +155,7 @@ methods:
   nameWithType: "PrestoLinkedServiceTypeProperties.serverVersion()"
   summary: "Get the server<wbr>Version property: The version of the Presto server."
   syntax: "public Object serverVersion()"
-  desc: "Get the serverVersion property: The version of the Presto server. (i.e. 0.148-t)."
+  desc: "Get the serverVersion property: The version of the Presto server. (i.e. 0.148-t) Only used for Version 1.0."
   returns:
     description: "the serverVersion value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
@@ -155,7 +165,7 @@ methods:
   nameWithType: "PrestoLinkedServiceTypeProperties.timeZoneId()"
   summary: "Get the time<wbr>Zone<wbr>Id property: The local time zone used by the connection."
   syntax: "public Object timeZoneId()"
-  desc: "Get the timeZoneId property: The local time zone used by the connection. Valid values for this option are specified in the IANA Time Zone Database. The default value is the system time zone."
+  desc: "Get the timeZoneId property: The local time zone used by the connection. Valid values for this option are specified in the IANA Time Zone Database. The default value for Version 1.0 is the client system time zone. The default value for Version 2.0 is server system timeZone."
   returns:
     description: "the timeZoneId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
@@ -177,7 +187,7 @@ methods:
   nameWithType: "PrestoLinkedServiceTypeProperties.trustedCertPath()"
   summary: "Get the trusted<wbr>Cert<wbr>Path property: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL."
   syntax: "public Object trustedCertPath()"
-  desc: "Get the trustedCertPath property: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR."
+  desc: "Get the trustedCertPath property: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR. Only used for Version 1.0."
   returns:
     description: "the trustedCertPath value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
@@ -197,17 +207,10 @@ methods:
   nameWithType: "PrestoLinkedServiceTypeProperties.useSystemTrustStore()"
   summary: "Get the use<wbr>System<wbr>Trust<wbr>Store property: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file."
   syntax: "public Object useSystemTrustStore()"
-  desc: "Get the useSystemTrustStore property: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false."
+  desc: "Get the useSystemTrustStore property: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false. Only used for Version 1.0."
   returns:
     description: "the useSystemTrustStore value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
-- uid: "com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties.validate()"
-  fullName: "com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties.validate()"
-  name: "validate()"
-  nameWithType: "PrestoLinkedServiceTypeProperties.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties.withAllowHostnameCNMismatch(java.lang.Object)"
   fullName: "com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties.withAllowHostnameCNMismatch(Object allowHostnameCNMismatch)"
   name: "withAllowHostnameCNMismatch(Object allowHostnameCNMismatch)"
@@ -218,7 +221,7 @@ methods:
     name: "allowHostnameCNMismatch"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   syntax: "public PrestoLinkedServiceTypeProperties withAllowHostnameCNMismatch(Object allowHostnameCNMismatch)"
-  desc: "Set the allowHostnameCNMismatch property: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false."
+  desc: "Set the allowHostnameCNMismatch property: Specifies whether to require a CA-issued SSL certificate name to match the host name of the server when connecting over SSL. The default value is false. Only used for Version 1.0."
   returns:
     description: "the PrestoLinkedServiceTypeProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties?alt=com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties&text=PrestoLinkedServiceTypeProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -232,7 +235,7 @@ methods:
     name: "allowSelfSignedServerCert"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   syntax: "public PrestoLinkedServiceTypeProperties withAllowSelfSignedServerCert(Object allowSelfSignedServerCert)"
-  desc: "Set the allowSelfSignedServerCert property: Specifies whether to allow self-signed certificates from the server. The default value is false."
+  desc: "Set the allowSelfSignedServerCert property: Specifies whether to allow self-signed certificates from the server. The default value is false. Only used for Version 1.0."
   returns:
     description: "the PrestoLinkedServiceTypeProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties?alt=com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties&text=PrestoLinkedServiceTypeProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -264,6 +267,20 @@ methods:
   returns:
     description: "the PrestoLinkedServiceTypeProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties?alt=com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties&text=PrestoLinkedServiceTypeProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties.withEnableServerCertificateValidation(java.lang.Object)"
+  fullName: "com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties.withEnableServerCertificateValidation(Object enableServerCertificateValidation)"
+  name: "withEnableServerCertificateValidation(Object enableServerCertificateValidation)"
+  nameWithType: "PrestoLinkedServiceTypeProperties.withEnableServerCertificateValidation(Object enableServerCertificateValidation)"
+  summary: "Set the enable<wbr>Server<wbr>Certificate<wbr>Validation property: Specifies whether the connections to the server will validate server certificate, the default value is True."
+  parameters:
+  - description: "the enableServerCertificateValidation value to set."
+    name: "enableServerCertificateValidation"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  syntax: "public PrestoLinkedServiceTypeProperties withEnableServerCertificateValidation(Object enableServerCertificateValidation)"
+  desc: "Set the enableServerCertificateValidation property: Specifies whether the connections to the server will validate server certificate, the default value is True. Only used for Version 2.0."
+  returns:
+    description: "the PrestoLinkedServiceTypeProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties?alt=com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties&text=PrestoLinkedServiceTypeProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties.withEnableSsl(java.lang.Object)"
   fullName: "com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties.withEnableSsl(Object enableSsl)"
   name: "withEnableSsl(Object enableSsl)"
@@ -274,7 +291,7 @@ methods:
     name: "enableSsl"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   syntax: "public PrestoLinkedServiceTypeProperties withEnableSsl(Object enableSsl)"
-  desc: "Set the enableSsl property: Specifies whether the connections to the server are encrypted using SSL. The default value is false."
+  desc: "Set the enableSsl property: Specifies whether the connections to the server are encrypted using SSL. The default value for legacy version is False. The default value for version 2.0 is True."
   returns:
     description: "the PrestoLinkedServiceTypeProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties?alt=com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties&text=PrestoLinkedServiceTypeProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -330,7 +347,7 @@ methods:
     name: "port"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   syntax: "public PrestoLinkedServiceTypeProperties withPort(Object port)"
-  desc: "Set the port property: The TCP port that the Presto server uses to listen for client connections. The default value is 8080."
+  desc: "Set the port property: The TCP port that the Presto server uses to listen for client connections. The default value is 8080 when disable SSL, default value is 443 when enable SSL."
   returns:
     description: "the PrestoLinkedServiceTypeProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties?alt=com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties&text=PrestoLinkedServiceTypeProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -344,7 +361,7 @@ methods:
     name: "serverVersion"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   syntax: "public PrestoLinkedServiceTypeProperties withServerVersion(Object serverVersion)"
-  desc: "Set the serverVersion property: The version of the Presto server. (i.e. 0.148-t)."
+  desc: "Set the serverVersion property: The version of the Presto server. (i.e. 0.148-t) Only used for Version 1.0."
   returns:
     description: "the PrestoLinkedServiceTypeProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties?alt=com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties&text=PrestoLinkedServiceTypeProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -358,7 +375,7 @@ methods:
     name: "timeZoneId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   syntax: "public PrestoLinkedServiceTypeProperties withTimeZoneId(Object timeZoneId)"
-  desc: "Set the timeZoneId property: The local time zone used by the connection. Valid values for this option are specified in the IANA Time Zone Database. The default value is the system time zone."
+  desc: "Set the timeZoneId property: The local time zone used by the connection. Valid values for this option are specified in the IANA Time Zone Database. The default value for Version 1.0 is the client system time zone. The default value for Version 2.0 is server system timeZone."
   returns:
     description: "the PrestoLinkedServiceTypeProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties?alt=com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties&text=PrestoLinkedServiceTypeProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -372,7 +389,7 @@ methods:
     name: "trustedCertPath"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   syntax: "public PrestoLinkedServiceTypeProperties withTrustedCertPath(Object trustedCertPath)"
-  desc: "Set the trustedCertPath property: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR."
+  desc: "Set the trustedCertPath property: The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR. Only used for Version 1.0."
   returns:
     description: "the PrestoLinkedServiceTypeProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties?alt=com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties&text=PrestoLinkedServiceTypeProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -400,7 +417,7 @@ methods:
     name: "useSystemTrustStore"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   syntax: "public PrestoLinkedServiceTypeProperties withUseSystemTrustStore(Object useSystemTrustStore)"
-  desc: "Set the useSystemTrustStore property: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false."
+  desc: "Set the useSystemTrustStore property: Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false. Only used for Version 1.0."
   returns:
     description: "the PrestoLinkedServiceTypeProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties?alt=com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties&text=PrestoLinkedServiceTypeProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -410,4 +427,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties?alt=com.azure.resourcemanager.datafactory.fluent.models.PrestoLinkedServiceTypeProperties&text=PrestoLinkedServiceTypeProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.datafactory.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-datafactory:1.0.0-beta.30
+artifact: com.azure.resourcemanager:azure-resourcemanager-datafactory:1.3.0-beta.1

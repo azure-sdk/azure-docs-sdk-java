@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.nginx.models.IdentityProperties"
 fullName: "com.azure.resourcemanager.nginx.models.IdentityProperties"
 name: "IdentityProperties"
 nameWithType: "IdentityProperties"
-summary: "The Identity<wbr>Properties model."
+summary: "Identity Properties."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -20,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **IdentityProperties**"
+syntax: "public final class **IdentityProperties**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.nginx.models.IdentityProperties?alt=com.azure.resourcemanager.nginx.models.IdentityProperties&text=IdentityProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.nginx.models.IdentityProperties.IdentityProperties()"
   fullName: "com.azure.resourcemanager.nginx.models.IdentityProperties.IdentityProperties()"
@@ -30,6 +30,25 @@ constructors:
   syntax: "public IdentityProperties()"
   desc: "Creates an instance of IdentityProperties class."
 methods:
+- uid: "com.azure.resourcemanager.nginx.models.IdentityProperties.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.nginx.models.IdentityProperties.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "IdentityProperties.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Identity<wbr>Properties from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static IdentityProperties fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the IdentityProperties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of IdentityProperties from the JsonReader."
+  returns:
+    description: "An instance of IdentityProperties if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.nginx.models.IdentityProperties?alt=com.azure.resourcemanager.nginx.models.IdentityProperties&text=IdentityProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.nginx.models.IdentityProperties.principalId()"
   fullName: "com.azure.resourcemanager.nginx.models.IdentityProperties.principalId()"
   name: "principalId()"
@@ -50,13 +69,25 @@ methods:
   returns:
     description: "the tenantId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.nginx.models.IdentityProperties.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.nginx.models.IdentityProperties.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "IdentityProperties.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.nginx.models.IdentityProperties.type()"
   fullName: "com.azure.resourcemanager.nginx.models.IdentityProperties.type()"
   name: "type()"
   nameWithType: "IdentityProperties.type()"
-  summary: "Get the type property: The type property."
+  summary: "Get the type property: Identity Type."
   syntax: "public IdentityType type()"
-  desc: "Get the type property: The type property."
+  desc: "Get the type property: Identity Type."
   returns:
     description: "the type value."
     type: "<xref href=\"com.azure.resourcemanager.nginx.models.IdentityType?alt=com.azure.resourcemanager.nginx.models.IdentityType&text=IdentityType\" data-throw-if-not-resolved=\"False\" />"
@@ -70,24 +101,17 @@ methods:
   returns:
     description: "the userAssignedIdentities value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.resourcemanager.nginx.models.UserIdentityProperties?alt=com.azure.resourcemanager.nginx.models.UserIdentityProperties&text=UserIdentityProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.nginx.models.IdentityProperties.validate()"
-  fullName: "com.azure.resourcemanager.nginx.models.IdentityProperties.validate()"
-  name: "validate()"
-  nameWithType: "IdentityProperties.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.nginx.models.IdentityProperties.withType(com.azure.resourcemanager.nginx.models.IdentityType)"
   fullName: "com.azure.resourcemanager.nginx.models.IdentityProperties.withType(IdentityType type)"
   name: "withType(IdentityType type)"
   nameWithType: "IdentityProperties.withType(IdentityType type)"
-  summary: "Set the type property: The type property."
+  summary: "Set the type property: Identity Type."
   parameters:
   - description: "the type value to set."
     name: "type"
     type: "<xref href=\"com.azure.resourcemanager.nginx.models.IdentityType?alt=com.azure.resourcemanager.nginx.models.IdentityType&text=IdentityType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public IdentityProperties withType(IdentityType type)"
-  desc: "Set the type property: The type property."
+  desc: "Set the type property: Identity Type."
   returns:
     description: "the IdentityProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.nginx.models.IdentityProperties?alt=com.azure.resourcemanager.nginx.models.IdentityProperties&text=IdentityProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -106,7 +130,9 @@ methods:
     description: "the IdentityProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.nginx.models.IdentityProperties?alt=com.azure.resourcemanager.nginx.models.IdentityProperties&text=IdentityProperties\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "The IdentityProperties model."
+desc: "Identity Properties."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.nginx.models.IdentityProperties?alt=com.azure.resourcemanager.nginx.models.IdentityProperties&text=IdentityProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.nginx.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-nginx:1.0.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-nginx:1.1.0
