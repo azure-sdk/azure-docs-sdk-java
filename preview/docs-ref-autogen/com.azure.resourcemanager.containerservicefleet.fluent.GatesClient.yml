@@ -131,10 +131,10 @@ methods:
   returns:
     description: "the response of a Gate list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservicefleet.fluent.models.GateInner?alt=com.azure.resourcemanager.containerservicefleet.fluent.models.GateInner&text=GateInner\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.containerservicefleet.fluent.GatesClient.listByFleet(java.lang.String,java.lang.String,com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.containerservicefleet.fluent.GatesClient.listByFleet(String resourceGroupName, String fleetName, Context context)"
-  name: "listByFleet(String resourceGroupName, String fleetName, Context context)"
-  nameWithType: "GatesClient.listByFleet(String resourceGroupName, String fleetName, Context context)"
+- uid: "com.azure.resourcemanager.containerservicefleet.fluent.GatesClient.listByFleet(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.containerservicefleet.fluent.GatesClient.listByFleet(String resourceGroupName, String fleetName, String filter, Integer top, String skipToken, Context context)"
+  name: "listByFleet(String resourceGroupName, String fleetName, String filter, Integer top, String skipToken, Context context)"
+  nameWithType: "GatesClient.listByFleet(String resourceGroupName, String fleetName, String filter, Integer top, String skipToken, Context context)"
   summary: "List Gate resources by Fleet."
   modifiers:
   - "abstract"
@@ -145,10 +145,19 @@ methods:
   - description: "The name of the Fleet resource."
     name: "fleetName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Filter the result list using the given expression."
+    name: "filter"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The number of result items to return."
+    name: "top"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  - description: "The page-continuation token to use with a paged version of this API."
+    name: "skipToken"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract PagedIterable<GateInner> listByFleet(String resourceGroupName, String fleetName, Context context)"
+  syntax: "public abstract PagedIterable<GateInner> listByFleet(String resourceGroupName, String fleetName, String filter, Integer top, String skipToken, Context context)"
   desc: "List Gate resources by Fleet."
   returns:
     description: "the response of a Gate list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
@@ -216,4 +225,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in GatesClient."
 metadata: {}
 package: "com.azure.resourcemanager.containerservicefleet.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservicefleet:1.3.0-beta.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservicefleet:1.3.0-beta.3

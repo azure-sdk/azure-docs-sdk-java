@@ -44,9 +44,9 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterAgentPoolProfileProperties.capacityReservationGroupId()"
   name: "capacityReservationGroupId()"
   nameWithType: "ManagedClusterAgentPoolProfileProperties.capacityReservationGroupId()"
-  summary: "Get the capacity<wbr>Reservation<wbr>Group<wbr>Id property: AKS will associate the specified agent pool with the Capacity Reservation Group."
+  summary: "Get the capacity<wbr>Reservation<wbr>Group<wbr>Id property: The fully qualified resource ID of the Capacity Reservation Group to provide virtual machines from a reserved group of Virtual Machines."
   syntax: "public String capacityReservationGroupId()"
-  desc: "Get the capacityReservationGroupId property: AKS will associate the specified agent pool with the Capacity Reservation Group."
+  desc: "Get the capacityReservationGroupId property: The fully qualified resource ID of the Capacity Reservation Group to provide virtual machines from a reserved group of Virtual Machines. This is of the form: '/subscriptions/\\{subscriptionId\\}/resourcegroups/\\{resourceGroupName\\}/providers/Microsoft.Compute/capacityreservationgroups/\\{capacityReservationGroupName\\}' Customers use it to create an agentpool with a specified CRG. For more information see \\[Capacity Reservation\\](https://learn.microsoft.com/en-us/azure/virtual-machines/capacity-reservation-overview)."
   returns:
     description: "the capacityReservationGroupId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -383,9 +383,9 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterAgentPoolProfileProperties.osType()"
   name: "osType()"
   nameWithType: "ManagedClusterAgentPoolProfileProperties.osType()"
-  summary: "Get the os<wbr>Type property: Os<wbr>Type to be used to specify os type."
+  summary: "Get the os<wbr>Type property: The operating system type."
   syntax: "public OSType osType()"
-  desc: "Get the osType property: OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux."
+  desc: "Get the osType property: The operating system type. The default is Linux."
   returns:
     description: "the osType value."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.OSType?alt=com.azure.resourcemanager.containerservice.models.OSType&text=OSType\" data-throw-if-not-resolved=\"False\" />"
@@ -453,9 +453,9 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterAgentPoolProfileProperties.scaleSetEvictionPolicy()"
   name: "scaleSetEvictionPolicy()"
   nameWithType: "ManagedClusterAgentPoolProfileProperties.scaleSetEvictionPolicy()"
-  summary: "Get the scale<wbr>Set<wbr>Eviction<wbr>Policy property: The Virtual Machine Scale Set eviction policy to use."
+  summary: "Get the scale<wbr>Set<wbr>Eviction<wbr>Policy property: The Virtual Machine Scale Set eviction policy."
   syntax: "public ScaleSetEvictionPolicy scaleSetEvictionPolicy()"
-  desc: "Get the scaleSetEvictionPolicy property: The Virtual Machine Scale Set eviction policy to use. This cannot be specified unless the scaleSetPriority is 'Spot'. If not specified, the default is 'Delete'."
+  desc: "Get the scaleSetEvictionPolicy property: The Virtual Machine Scale Set eviction policy. The eviction policy specifies what to do with the VM when it is evicted. The default is Delete. For more information about eviction see \\[spot VMs\\](https://docs.microsoft.com/azure/virtual-machines/spot-vms)."
   returns:
     description: "the scaleSetEvictionPolicy value."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ScaleSetEvictionPolicy?alt=com.azure.resourcemanager.containerservice.models.ScaleSetEvictionPolicy&text=ScaleSetEvictionPolicy\" data-throw-if-not-resolved=\"False\" />"
@@ -465,7 +465,7 @@ methods:
   nameWithType: "ManagedClusterAgentPoolProfileProperties.scaleSetPriority()"
   summary: "Get the scale<wbr>Set<wbr>Priority property: The Virtual Machine Scale Set priority."
   syntax: "public ScaleSetPriority scaleSetPriority()"
-  desc: "Get the scaleSetPriority property: The Virtual Machine Scale Set priority. If not specified, the default is 'Regular'."
+  desc: "Get the scaleSetPriority property: The Virtual Machine Scale Set priority."
   returns:
     description: "the scaleSetPriority value."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ScaleSetPriority?alt=com.azure.resourcemanager.containerservice.models.ScaleSetPriority&text=ScaleSetPriority\" data-throw-if-not-resolved=\"False\" />"
@@ -616,13 +616,13 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterAgentPoolProfileProperties.withCapacityReservationGroupId(String capacityReservationGroupId)"
   name: "withCapacityReservationGroupId(String capacityReservationGroupId)"
   nameWithType: "ManagedClusterAgentPoolProfileProperties.withCapacityReservationGroupId(String capacityReservationGroupId)"
-  summary: "Set the capacity<wbr>Reservation<wbr>Group<wbr>Id property: AKS will associate the specified agent pool with the Capacity Reservation Group."
+  summary: "Set the capacity<wbr>Reservation<wbr>Group<wbr>Id property: The fully qualified resource ID of the Capacity Reservation Group to provide virtual machines from a reserved group of Virtual Machines."
   parameters:
   - description: "the capacityReservationGroupId value to set."
     name: "capacityReservationGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ManagedClusterAgentPoolProfileProperties withCapacityReservationGroupId(String capacityReservationGroupId)"
-  desc: "Set the capacityReservationGroupId property: AKS will associate the specified agent pool with the Capacity Reservation Group."
+  desc: "Set the capacityReservationGroupId property: The fully qualified resource ID of the Capacity Reservation Group to provide virtual machines from a reserved group of Virtual Machines. This is of the form: '/subscriptions/\\{subscriptionId\\}/resourcegroups/\\{resourceGroupName\\}/providers/Microsoft.Compute/capacityreservationgroups/\\{capacityReservationGroupName\\}' Customers use it to create an agentpool with a specified CRG. For more information see \\[Capacity Reservation\\](https://learn.microsoft.com/en-us/azure/virtual-machines/capacity-reservation-overview)."
   returns:
     description: "the ManagedClusterAgentPoolProfileProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterAgentPoolProfileProperties?alt=com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterAgentPoolProfileProperties&text=ManagedClusterAgentPoolProfileProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -1022,13 +1022,13 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterAgentPoolProfileProperties.withOsType(OSType osType)"
   name: "withOsType(OSType osType)"
   nameWithType: "ManagedClusterAgentPoolProfileProperties.withOsType(OSType osType)"
-  summary: "Set the os<wbr>Type property: Os<wbr>Type to be used to specify os type."
+  summary: "Set the os<wbr>Type property: The operating system type."
   parameters:
   - description: "the osType value to set."
     name: "osType"
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.OSType?alt=com.azure.resourcemanager.containerservice.models.OSType&text=OSType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public ManagedClusterAgentPoolProfileProperties withOsType(OSType osType)"
-  desc: "Set the osType property: OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux."
+  desc: "Set the osType property: The operating system type. The default is Linux."
   returns:
     description: "the ManagedClusterAgentPoolProfileProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterAgentPoolProfileProperties?alt=com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterAgentPoolProfileProperties&text=ManagedClusterAgentPoolProfileProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -1106,13 +1106,13 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterAgentPoolProfileProperties.withScaleSetEvictionPolicy(ScaleSetEvictionPolicy scaleSetEvictionPolicy)"
   name: "withScaleSetEvictionPolicy(ScaleSetEvictionPolicy scaleSetEvictionPolicy)"
   nameWithType: "ManagedClusterAgentPoolProfileProperties.withScaleSetEvictionPolicy(ScaleSetEvictionPolicy scaleSetEvictionPolicy)"
-  summary: "Set the scale<wbr>Set<wbr>Eviction<wbr>Policy property: The Virtual Machine Scale Set eviction policy to use."
+  summary: "Set the scale<wbr>Set<wbr>Eviction<wbr>Policy property: The Virtual Machine Scale Set eviction policy."
   parameters:
   - description: "the scaleSetEvictionPolicy value to set."
     name: "scaleSetEvictionPolicy"
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ScaleSetEvictionPolicy?alt=com.azure.resourcemanager.containerservice.models.ScaleSetEvictionPolicy&text=ScaleSetEvictionPolicy\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public ManagedClusterAgentPoolProfileProperties withScaleSetEvictionPolicy(ScaleSetEvictionPolicy scaleSetEvictionPolicy)"
-  desc: "Set the scaleSetEvictionPolicy property: The Virtual Machine Scale Set eviction policy to use. This cannot be specified unless the scaleSetPriority is 'Spot'. If not specified, the default is 'Delete'."
+  desc: "Set the scaleSetEvictionPolicy property: The Virtual Machine Scale Set eviction policy. The eviction policy specifies what to do with the VM when it is evicted. The default is Delete. For more information about eviction see \\[spot VMs\\](https://docs.microsoft.com/azure/virtual-machines/spot-vms)."
   returns:
     description: "the ManagedClusterAgentPoolProfileProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterAgentPoolProfileProperties?alt=com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterAgentPoolProfileProperties&text=ManagedClusterAgentPoolProfileProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -1126,7 +1126,7 @@ methods:
     name: "scaleSetPriority"
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ScaleSetPriority?alt=com.azure.resourcemanager.containerservice.models.ScaleSetPriority&text=ScaleSetPriority\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public ManagedClusterAgentPoolProfileProperties withScaleSetPriority(ScaleSetPriority scaleSetPriority)"
-  desc: "Set the scaleSetPriority property: The Virtual Machine Scale Set priority. If not specified, the default is 'Regular'."
+  desc: "Set the scaleSetPriority property: The Virtual Machine Scale Set priority."
   returns:
     description: "the ManagedClusterAgentPoolProfileProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterAgentPoolProfileProperties?alt=com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterAgentPoolProfileProperties&text=ManagedClusterAgentPoolProfileProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -1314,4 +1314,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterAgentPoolProfileProperties?alt=com.azure.resourcemanager.containerservice.fluent.models.ManagedClusterAgentPoolProfileProperties&text=ManagedClusterAgentPoolProfileProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.57.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.58.0

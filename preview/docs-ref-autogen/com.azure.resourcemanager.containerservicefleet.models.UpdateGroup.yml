@@ -69,6 +69,16 @@ methods:
   returns:
     description: "An instance of UpdateGroup if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
     type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.models.UpdateGroup?alt=com.azure.resourcemanager.containerservicefleet.models.UpdateGroup&text=UpdateGroup\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservicefleet.models.UpdateGroup.maxConcurrency()"
+  fullName: "com.azure.resourcemanager.containerservicefleet.models.UpdateGroup.maxConcurrency()"
+  name: "maxConcurrency()"
+  nameWithType: "UpdateGroup.maxConcurrency()"
+  summary: "Get the max<wbr>Concurrency property: The max number of upgrades that can run concurrently in this specific group."
+  syntax: "public String maxConcurrency()"
+  desc: "Get the maxConcurrency property: The max number of upgrades that can run concurrently in this specific group. Acts as a ceiling (and not a quota) for the number of concurrent upgrades within the group you want to tolerate at a time. Actual concurrency may be lower depending on stage-level concurrency limits or individual member conditions. Group maxConcurrency has a min value of \"1\". The max value is min(number of clusters in the group, the stage maxConcurrency). If no value is provided, defaults to 1. Accepts either: • A fixed count, e.g. \"3\" • A percentage, e.g. \"25%\" (range 1–100). Percentage is of the number of clusters in the group. Fractional results are rounded down. A minimum of 1 upgrade is enforced. Examples: • \"3\" --> up to 3 members from this group upgrade at once. • \"100%\" --> “all at once”, up to all members for this group upgrade at the same time. • \"25%\" --> up to 25% of the members in the group will be upgraded at the same time."
+  returns:
+    description: "the maxConcurrency value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.containerservicefleet.models.UpdateGroup.name()"
   fullName: "com.azure.resourcemanager.containerservicefleet.models.UpdateGroup.name()"
   name: "name()"
@@ -119,6 +129,20 @@ methods:
   returns:
     description: "the UpdateGroup object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.models.UpdateGroup?alt=com.azure.resourcemanager.containerservicefleet.models.UpdateGroup&text=UpdateGroup\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservicefleet.models.UpdateGroup.withMaxConcurrency(java.lang.String)"
+  fullName: "com.azure.resourcemanager.containerservicefleet.models.UpdateGroup.withMaxConcurrency(String maxConcurrency)"
+  name: "withMaxConcurrency(String maxConcurrency)"
+  nameWithType: "UpdateGroup.withMaxConcurrency(String maxConcurrency)"
+  summary: "Set the max<wbr>Concurrency property: The max number of upgrades that can run concurrently in this specific group."
+  parameters:
+  - description: "the maxConcurrency value to set."
+    name: "maxConcurrency"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public UpdateGroup withMaxConcurrency(String maxConcurrency)"
+  desc: "Set the maxConcurrency property: The max number of upgrades that can run concurrently in this specific group. Acts as a ceiling (and not a quota) for the number of concurrent upgrades within the group you want to tolerate at a time. Actual concurrency may be lower depending on stage-level concurrency limits or individual member conditions. Group maxConcurrency has a min value of \"1\". The max value is min(number of clusters in the group, the stage maxConcurrency). If no value is provided, defaults to 1. Accepts either: • A fixed count, e.g. \"3\" • A percentage, e.g. \"25%\" (range 1–100). Percentage is of the number of clusters in the group. Fractional results are rounded down. A minimum of 1 upgrade is enforced. Examples: • \"3\" --> up to 3 members from this group upgrade at once. • \"100%\" --> “all at once”, up to all members for this group upgrade at the same time. • \"25%\" --> up to 25% of the members in the group will be upgraded at the same time."
+  returns:
+    description: "the UpdateGroup object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.models.UpdateGroup?alt=com.azure.resourcemanager.containerservicefleet.models.UpdateGroup&text=UpdateGroup\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerservicefleet.models.UpdateGroup.withName(java.lang.String)"
   fullName: "com.azure.resourcemanager.containerservicefleet.models.UpdateGroup.withName(String name)"
   name: "withName(String name)"
@@ -139,4 +163,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservicefleet.models.UpdateGroup?alt=com.azure.resourcemanager.containerservicefleet.models.UpdateGroup&text=UpdateGroup\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.containerservicefleet.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservicefleet:1.3.0-beta.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservicefleet:1.3.0-beta.3

@@ -180,18 +180,24 @@ methods:
   returns:
     description: "the response of a Fleet list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservicefleet.models.Fleet?alt=com.azure.resourcemanager.containerservicefleet.models.Fleet&text=Fleet\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.containerservicefleet.models.Fleets.list(com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.containerservicefleet.models.Fleets.list(Context context)"
-  name: "list(Context context)"
-  nameWithType: "Fleets.list(Context context)"
+- uid: "com.azure.resourcemanager.containerservicefleet.models.Fleets.list(java.lang.Integer,java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.containerservicefleet.models.Fleets.list(Integer top, String skipToken, Context context)"
+  name: "list(Integer top, String skipToken, Context context)"
+  nameWithType: "Fleets.list(Integer top, String skipToken, Context context)"
   summary: "Lists fleets in the specified subscription."
   modifiers:
   - "abstract"
   parameters:
+  - description: "The number of result items to return."
+    name: "top"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  - description: "The page-continuation token to use with a paged version of this API."
+    name: "skipToken"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract PagedIterable<Fleet> list(Context context)"
+  syntax: "public abstract PagedIterable<Fleet> list(Integer top, String skipToken, Context context)"
   desc: "Lists fleets in the specified subscription."
   returns:
     description: "the response of a Fleet list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
@@ -276,4 +282,4 @@ type: "interface"
 desc: "Resource collection API of Fleets."
 metadata: {}
 package: "com.azure.resourcemanager.containerservicefleet.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservicefleet:1.3.0-beta.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservicefleet:1.3.0-beta.3

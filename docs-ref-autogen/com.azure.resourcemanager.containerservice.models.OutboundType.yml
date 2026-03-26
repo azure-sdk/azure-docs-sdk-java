@@ -42,62 +42,62 @@ fields:
   fullName: "com.azure.resourcemanager.containerservice.models.OutboundType.LOAD_BALANCER"
   name: "LOAD_BALANCER"
   nameWithType: "OutboundType.LOAD_BALANCER"
-  summary: "Static value load<wbr>Balancer for Outbound<wbr>Type."
+  summary: "The load balancer is used for egress through an AKS assigned public IP."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.OutboundType?alt=com.azure.resourcemanager.containerservice.models.OutboundType&text=OutboundType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final OutboundType LOAD_BALANCER"
-  desc: "Static value loadBalancer for OutboundType."
+  desc: "The load balancer is used for egress through an AKS assigned public IP. This supports Kubernetes services of type 'loadBalancer'. For more information see \\[outbound type loadbalancer\\](https://docs.microsoft.com/azure/aks/egress-outboundtype\\#outbound-type-of-loadbalancer)."
 - uid: "com.azure.resourcemanager.containerservice.models.OutboundType.MANAGED_NATGATEWAY"
   fullName: "com.azure.resourcemanager.containerservice.models.OutboundType.MANAGED_NATGATEWAY"
   name: "MANAGED_NATGATEWAY"
   nameWithType: "OutboundType.MANAGED_NATGATEWAY"
-  summary: "Static value managed<wbr>NATGateway for Outbound<wbr>Type."
+  summary: "The AKS-managed NAT gateway is used for egress."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.OutboundType?alt=com.azure.resourcemanager.containerservice.models.OutboundType&text=OutboundType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final OutboundType MANAGED_NATGATEWAY"
-  desc: "Static value managedNATGateway for OutboundType."
+  desc: "The AKS-managed NAT gateway is used for egress."
 - uid: "com.azure.resourcemanager.containerservice.models.OutboundType.NONE"
   fullName: "com.azure.resourcemanager.containerservice.models.OutboundType.NONE"
   name: "NONE"
   nameWithType: "OutboundType.NONE"
-  summary: "Static value none for Outbound<wbr>Type."
+  summary: "The AKS cluster is not set with any outbound-type."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.OutboundType?alt=com.azure.resourcemanager.containerservice.models.OutboundType&text=OutboundType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final OutboundType NONE"
-  desc: "Static value none for OutboundType."
+  desc: "The AKS cluster is not set with any outbound-type. All AKS nodes follows Azure VM default outbound behavior. Please refer to https://azure.microsoft.com/en-us/updates/default-outbound-access-for-vms-in-azure-will-be-retired-transition-to-a-new-method-of-internet-access/."
 - uid: "com.azure.resourcemanager.containerservice.models.OutboundType.USER_ASSIGNED_NATGATEWAY"
   fullName: "com.azure.resourcemanager.containerservice.models.OutboundType.USER_ASSIGNED_NATGATEWAY"
   name: "USER_ASSIGNED_NATGATEWAY"
   nameWithType: "OutboundType.USER_ASSIGNED_NATGATEWAY"
-  summary: "Static value user<wbr>Assigned<wbr>NATGateway for Outbound<wbr>Type."
+  summary: "The user-assigned NAT gateway associated to the cluster subnet is used for egress."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.OutboundType?alt=com.azure.resourcemanager.containerservice.models.OutboundType&text=OutboundType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final OutboundType USER_ASSIGNED_NATGATEWAY"
-  desc: "Static value userAssignedNATGateway for OutboundType."
+  desc: "The user-assigned NAT gateway associated to the cluster subnet is used for egress. This is an advanced scenario and requires proper network configuration."
 - uid: "com.azure.resourcemanager.containerservice.models.OutboundType.USER_DEFINED_ROUTING"
   fullName: "com.azure.resourcemanager.containerservice.models.OutboundType.USER_DEFINED_ROUTING"
   name: "USER_DEFINED_ROUTING"
   nameWithType: "OutboundType.USER_DEFINED_ROUTING"
-  summary: "Static value user<wbr>Defined<wbr>Routing for Outbound<wbr>Type."
+  summary: "Egress paths must be defined by the user."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.OutboundType?alt=com.azure.resourcemanager.containerservice.models.OutboundType&text=OutboundType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final OutboundType USER_DEFINED_ROUTING"
-  desc: "Static value userDefinedRouting for OutboundType."
+  desc: "Egress paths must be defined by the user. This is an advanced scenario and requires proper network configuration. For more information see \\[outbound type userDefinedRouting\\](https://docs.microsoft.com/azure/aks/egress-outboundtype\\#outbound-type-of-userdefinedrouting)."
 methods:
 - uid: "com.azure.resourcemanager.containerservice.models.OutboundType.fromString(java.lang.String)"
   fullName: "com.azure.resourcemanager.containerservice.models.OutboundType.fromString(String name)"
@@ -131,4 +131,4 @@ type: "class"
 desc: "The outbound (egress) routing method. This can only be set at cluster creation time and cannot be changed later. For more information see \\[egress outbound type\\](https://docs.microsoft.com/azure/aks/egress-outboundtype)."
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.57.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.58.0

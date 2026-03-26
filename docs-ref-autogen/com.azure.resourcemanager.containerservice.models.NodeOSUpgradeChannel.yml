@@ -42,50 +42,50 @@ fields:
   fullName: "com.azure.resourcemanager.containerservice.models.NodeOSUpgradeChannel.NODE_IMAGE"
   name: "NODE_IMAGE"
   nameWithType: "NodeOSUpgradeChannel.NODE_IMAGE"
-  summary: "Static value Node<wbr>Image for Node<wbr>OSUpgrade<wbr>Channel."
+  summary: "AKS will update the nodes with a newly patched VHD containing security fixes and bugfixes on a weekly cadence."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.NodeOSUpgradeChannel?alt=com.azure.resourcemanager.containerservice.models.NodeOSUpgradeChannel&text=NodeOSUpgradeChannel\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final NodeOSUpgradeChannel NODE_IMAGE"
-  desc: "Static value NodeImage for NodeOSUpgradeChannel."
+  desc: "AKS will update the nodes with a newly patched VHD containing security fixes and bugfixes on a weekly cadence. With the VHD update machines will be rolling reimaged to that VHD following maintenance windows and surge settings. No extra VHD cost is incurred when choosing this option as AKS hosts the images."
 - uid: "com.azure.resourcemanager.containerservice.models.NodeOSUpgradeChannel.NONE"
   fullName: "com.azure.resourcemanager.containerservice.models.NodeOSUpgradeChannel.NONE"
   name: "NONE"
   nameWithType: "NodeOSUpgradeChannel.NONE"
-  summary: "Static value None for Node<wbr>OSUpgrade<wbr>Channel."
+  summary: "No attempt to update your machines OS will be made either by OS or by rolling VHDs."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.NodeOSUpgradeChannel?alt=com.azure.resourcemanager.containerservice.models.NodeOSUpgradeChannel&text=NodeOSUpgradeChannel\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final NodeOSUpgradeChannel NONE"
-  desc: "Static value None for NodeOSUpgradeChannel."
+  desc: "No attempt to update your machines OS will be made either by OS or by rolling VHDs. This means you are responsible for your security updates."
 - uid: "com.azure.resourcemanager.containerservice.models.NodeOSUpgradeChannel.SECURITY_PATCH"
   fullName: "com.azure.resourcemanager.containerservice.models.NodeOSUpgradeChannel.SECURITY_PATCH"
   name: "SECURITY_PATCH"
   nameWithType: "NodeOSUpgradeChannel.SECURITY_PATCH"
-  summary: "Static value Security<wbr>Patch for Node<wbr>OSUpgrade<wbr>Channel."
+  summary: "AKS downloads and updates the nodes with tested security updates."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.NodeOSUpgradeChannel?alt=com.azure.resourcemanager.containerservice.models.NodeOSUpgradeChannel&text=NodeOSUpgradeChannel\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final NodeOSUpgradeChannel SECURITY_PATCH"
-  desc: "Static value SecurityPatch for NodeOSUpgradeChannel."
+  desc: "AKS downloads and updates the nodes with tested security updates. These updates honor the maintenance window settings and produce a new VHD that is used on new nodes. On some occasions it's not possible to apply the updates in place, in such cases the existing nodes will also be re-imaged to the newly produced VHD in order to apply the changes. This option incurs an extra cost of hosting the new Security Patch VHDs in your resource group for just in time consumption."
 - uid: "com.azure.resourcemanager.containerservice.models.NodeOSUpgradeChannel.UNMANAGED"
   fullName: "com.azure.resourcemanager.containerservice.models.NodeOSUpgradeChannel.UNMANAGED"
   name: "UNMANAGED"
   nameWithType: "NodeOSUpgradeChannel.UNMANAGED"
-  summary: "Static value Unmanaged for Node<wbr>OSUpgrade<wbr>Channel."
+  summary: "OS updates will be applied automatically through the OS built-in patching infrastructure."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.NodeOSUpgradeChannel?alt=com.azure.resourcemanager.containerservice.models.NodeOSUpgradeChannel&text=NodeOSUpgradeChannel\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final NodeOSUpgradeChannel UNMANAGED"
-  desc: "Static value Unmanaged for NodeOSUpgradeChannel."
+  desc: "OS updates will be applied automatically through the OS built-in patching infrastructure. Newly scaled in machines will be unpatched initially and will be patched at some point by the OS's infrastructure. Behavior of this option depends on the OS in question. Ubuntu and Mariner apply security patches through unattended upgrade roughly once a day around 06:00 UTC. Windows does not apply security patches automatically and so for them this option is equivalent to None till further notice."
 methods:
 - uid: "com.azure.resourcemanager.containerservice.models.NodeOSUpgradeChannel.fromString(java.lang.String)"
   fullName: "com.azure.resourcemanager.containerservice.models.NodeOSUpgradeChannel.fromString(String name)"
@@ -119,4 +119,4 @@ type: "class"
 desc: "Node OS Upgrade Channel. Manner in which the OS on your nodes is updated. The default is NodeImage."
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.57.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.58.0

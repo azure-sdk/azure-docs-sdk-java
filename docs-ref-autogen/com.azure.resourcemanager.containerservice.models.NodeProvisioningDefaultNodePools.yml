@@ -42,26 +42,26 @@ fields:
   fullName: "com.azure.resourcemanager.containerservice.models.NodeProvisioningDefaultNodePools.AUTO"
   name: "AUTO"
   nameWithType: "NodeProvisioningDefaultNodePools.AUTO"
-  summary: "Static value Auto for Node<wbr>Provisioning<wbr>Default<wbr>Node<wbr>Pools."
+  summary: "A standard set of Karpenter Node<wbr>Pools are provisioned."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.NodeProvisioningDefaultNodePools?alt=com.azure.resourcemanager.containerservice.models.NodeProvisioningDefaultNodePools&text=NodeProvisioningDefaultNodePools\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final NodeProvisioningDefaultNodePools AUTO"
-  desc: "Static value Auto for NodeProvisioningDefaultNodePools."
+  desc: "A standard set of Karpenter NodePools are provisioned."
 - uid: "com.azure.resourcemanager.containerservice.models.NodeProvisioningDefaultNodePools.NONE"
   fullName: "com.azure.resourcemanager.containerservice.models.NodeProvisioningDefaultNodePools.NONE"
   name: "NONE"
   nameWithType: "NodeProvisioningDefaultNodePools.NONE"
-  summary: "Static value None for Node<wbr>Provisioning<wbr>Default<wbr>Node<wbr>Pools."
+  summary: "No Karpenter Node<wbr>Pools are provisioned automatically."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.NodeProvisioningDefaultNodePools?alt=com.azure.resourcemanager.containerservice.models.NodeProvisioningDefaultNodePools&text=NodeProvisioningDefaultNodePools\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final NodeProvisioningDefaultNodePools NONE"
-  desc: "Static value None for NodeProvisioningDefaultNodePools."
+  desc: "No Karpenter NodePools are provisioned automatically. Automatic scaling will not happen unless the user creates one or more NodePool CRD instances."
 methods:
 - uid: "com.azure.resourcemanager.containerservice.models.NodeProvisioningDefaultNodePools.fromString(java.lang.String)"
   fullName: "com.azure.resourcemanager.containerservice.models.NodeProvisioningDefaultNodePools.fromString(String name)"
@@ -95,4 +95,4 @@ type: "class"
 desc: "The set of default Karpenter NodePools (CRDs) configured for node provisioning. This field has no effect unless mode is 'Auto'. Warning: Changing this from Auto to None on an existing cluster will cause the default Karpenter NodePools to be deleted, which will drain and delete the nodes associated with those pools. It is strongly recommended to not do this unless there are idle nodes ready to take the pods evicted by that action. If not specified, the default is Auto. For more information see aka.ms/aks/nap\\#node-pools."
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.57.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.58.0

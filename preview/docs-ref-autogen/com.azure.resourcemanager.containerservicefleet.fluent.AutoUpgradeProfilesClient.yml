@@ -284,10 +284,10 @@ methods:
   returns:
     description: "the response of a AutoUpgradeProfile list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileInner?alt=com.azure.resourcemanager.containerservicefleet.fluent.models.AutoUpgradeProfileInner&text=AutoUpgradeProfileInner\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.containerservicefleet.fluent.AutoUpgradeProfilesClient.listByFleet(java.lang.String,java.lang.String,com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.containerservicefleet.fluent.AutoUpgradeProfilesClient.listByFleet(String resourceGroupName, String fleetName, Context context)"
-  name: "listByFleet(String resourceGroupName, String fleetName, Context context)"
-  nameWithType: "AutoUpgradeProfilesClient.listByFleet(String resourceGroupName, String fleetName, Context context)"
+- uid: "com.azure.resourcemanager.containerservicefleet.fluent.AutoUpgradeProfilesClient.listByFleet(java.lang.String,java.lang.String,java.lang.Integer,java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.containerservicefleet.fluent.AutoUpgradeProfilesClient.listByFleet(String resourceGroupName, String fleetName, Integer top, String skipToken, Context context)"
+  name: "listByFleet(String resourceGroupName, String fleetName, Integer top, String skipToken, Context context)"
+  nameWithType: "AutoUpgradeProfilesClient.listByFleet(String resourceGroupName, String fleetName, Integer top, String skipToken, Context context)"
   summary: "List Auto<wbr>Upgrade<wbr>Profile resources by Fleet."
   modifiers:
   - "abstract"
@@ -298,10 +298,16 @@ methods:
   - description: "The name of the Fleet resource."
     name: "fleetName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The number of result items to return."
+    name: "top"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  - description: "The page-continuation token to use with a paged version of this API."
+    name: "skipToken"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract PagedIterable<AutoUpgradeProfileInner> listByFleet(String resourceGroupName, String fleetName, Context context)"
+  syntax: "public abstract PagedIterable<AutoUpgradeProfileInner> listByFleet(String resourceGroupName, String fleetName, Integer top, String skipToken, Context context)"
   desc: "List AutoUpgradeProfile resources by Fleet."
   returns:
     description: "the response of a AutoUpgradeProfile list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
@@ -310,4 +316,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in AutoUpgradeProfilesClient."
 metadata: {}
 package: "com.azure.resourcemanager.containerservicefleet.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservicefleet:1.3.0-beta.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservicefleet:1.3.0-beta.3

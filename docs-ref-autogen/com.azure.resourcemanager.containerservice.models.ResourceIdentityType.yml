@@ -35,20 +35,20 @@ fields:
   fullName: "com.azure.resourcemanager.containerservice.models.ResourceIdentityType.NONE"
   name: "NONE"
   nameWithType: "ResourceIdentityType.NONE"
-  summary: "Enum value None."
-  desc: "Enum value None."
+  summary: "Do not use a managed identity for the Managed Cluster, service principal will be used instead."
+  desc: "Do not use a managed identity for the Managed Cluster, service principal will be used instead."
 - uid: "com.azure.resourcemanager.containerservice.models.ResourceIdentityType.SYSTEM_ASSIGNED"
   fullName: "com.azure.resourcemanager.containerservice.models.ResourceIdentityType.SYSTEM_ASSIGNED"
   name: "SYSTEM_ASSIGNED"
   nameWithType: "ResourceIdentityType.SYSTEM_ASSIGNED"
-  summary: "Enum value System<wbr>Assigned."
-  desc: "Enum value SystemAssigned."
+  summary: "Use an implicitly created system assigned managed identity to manage cluster resources."
+  desc: "Use an implicitly created system assigned managed identity to manage cluster resources. Master components in the control plane such as kube-controller-manager will use the system assigned managed identity to manipulate Azure resources."
 - uid: "com.azure.resourcemanager.containerservice.models.ResourceIdentityType.USER_ASSIGNED"
   fullName: "com.azure.resourcemanager.containerservice.models.ResourceIdentityType.USER_ASSIGNED"
   name: "USER_ASSIGNED"
   nameWithType: "ResourceIdentityType.USER_ASSIGNED"
-  summary: "Enum value User<wbr>Assigned."
-  desc: "Enum value UserAssigned."
+  summary: "Use a user-specified identity to manage cluster resources."
+  desc: "Use a user-specified identity to manage cluster resources. Master components in the control plane such as kube-controller-manager will use the specified user assigned managed identity to manipulate Azure resources."
 methods:
 - uid: "com.azure.resourcemanager.containerservice.models.ResourceIdentityType.fromString(java.lang.String)"
   fullName: "com.azure.resourcemanager.containerservice.models.ResourceIdentityType.fromString(String value)"
@@ -98,4 +98,4 @@ methods:
 desc: "The type of identity used for the managed cluster. For more information see \\[use managed identities in AKS\\](https://docs.microsoft.com/azure/aks/use-managed-identity)."
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.57.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.58.0

@@ -42,26 +42,26 @@ fields:
   fullName: "com.azure.resourcemanager.containerservice.models.PodIpAllocationMode.DYNAMIC_INDIVIDUAL"
   name: "DYNAMIC_INDIVIDUAL"
   nameWithType: "PodIpAllocationMode.DYNAMIC_INDIVIDUAL"
-  summary: "Static value Dynamic<wbr>Individual for Pod<wbr>IpAllocation<wbr>Mode."
+  summary: "Each node gets allocated with a non-contiguous list of IP addresses assignable to pods."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.PodIpAllocationMode?alt=com.azure.resourcemanager.containerservice.models.PodIpAllocationMode&text=PodIpAllocationMode\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final PodIpAllocationMode DYNAMIC_INDIVIDUAL"
-  desc: "Static value DynamicIndividual for PodIpAllocationMode."
+  desc: "Each node gets allocated with a non-contiguous list of IP addresses assignable to pods. This is better for maximizing a small to medium subnet of size /16 or smaller. The Azure CNI cluster with dynamic IP allocation defaults to this mode if the customer does not explicitly specify a podIPAllocationMode."
 - uid: "com.azure.resourcemanager.containerservice.models.PodIpAllocationMode.STATIC_BLOCK"
   fullName: "com.azure.resourcemanager.containerservice.models.PodIpAllocationMode.STATIC_BLOCK"
   name: "STATIC_BLOCK"
   nameWithType: "PodIpAllocationMode.STATIC_BLOCK"
-  summary: "Static value Static<wbr>Block for Pod<wbr>IpAllocation<wbr>Mode."
+  summary: "Each node is statically allocated CIDR block(s) of size /28 = 16 IPs per block to satisfy the max<wbr>Pods per node."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.PodIpAllocationMode?alt=com.azure.resourcemanager.containerservice.models.PodIpAllocationMode&text=PodIpAllocationMode\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final PodIpAllocationMode STATIC_BLOCK"
-  desc: "Static value StaticBlock for PodIpAllocationMode."
+  desc: "Each node is statically allocated CIDR block(s) of size /28 = 16 IPs per block to satisfy the maxPods per node. Number of CIDR blocks >= (maxPods / 16). The block, rather than a single IP, counts against the Azure Vnet Private IP limit of 65K. Therefore block mode is suitable for running larger workloads with more than the current limit of 65K pods in a cluster. This mode is better suited to scale with larger subnets of /15 or bigger."
 methods:
 - uid: "com.azure.resourcemanager.containerservice.models.PodIpAllocationMode.fromString(java.lang.String)"
   fullName: "com.azure.resourcemanager.containerservice.models.PodIpAllocationMode.fromString(String name)"
@@ -95,4 +95,4 @@ type: "class"
 desc: "Pod IP Allocation Mode. The IP allocation mode for pods in the agent pool. Must be used with podSubnetId. The default is 'DynamicIndividual'."
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.57.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.58.0
