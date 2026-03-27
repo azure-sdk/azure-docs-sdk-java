@@ -1133,6 +1133,16 @@ methods:
   returns:
     description: "the x-ms-request id header value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.storage.blob.models.BlobProperties.getSmartAccessTier()"
+  fullName: "com.azure.storage.blob.models.BlobProperties.getSmartAccessTier()"
+  name: "getSmartAccessTier()"
+  nameWithType: "BlobProperties.getSmartAccessTier()"
+  summary: "Gets the underlying access tier of the blob when its access tier is <xref uid=\"com.azure.storage.blob.models.AccessTier.SMART\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AccessTier#SMART\"></xref>."
+  syntax: "public AccessTier getSmartAccessTier()"
+  desc: "Gets the underlying access tier of the blob when its access tier is <xref uid=\"com.azure.storage.blob.models.AccessTier.SMART\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AccessTier#SMART\"></xref>.\n\nThis value is only populated when <xref uid=\"com.azure.storage.blob.models.BlobProperties.getAccessTier()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#getAccessTier()\"></xref> returns <xref uid=\"com.azure.storage.blob.models.AccessTier.SMART\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AccessTier#SMART\"></xref>. In that case, it represents the concrete access tier (for example <xref uid=\"com.azure.storage.blob.models.AccessTier.HOT\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AccessTier#HOT\"></xref> or <xref uid=\"com.azure.storage.blob.models.AccessTier.COOL\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AccessTier#COOL\"></xref>) that the service has selected for the blob. For all other access tiers, this property is `null` and should be ignored."
+  returns:
+    description: "the underlying access tier chosen by the service when the blob's access tier is\n <xref uid=\"com.azure.storage.blob.models.AccessTier.SMART\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AccessTier#SMART\"></xref>, or <code>null</code> if the blob is not using the smart access tier."
+    type: "<xref href=\"com.azure.storage.blob.models.AccessTier?alt=com.azure.storage.blob.models.AccessTier&text=AccessTier\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.blob.models.BlobProperties.getTagCount()"
   fullName: "com.azure.storage.blob.models.BlobProperties.getTagCount()"
   name: "getTagCount()"
@@ -1217,4 +1227,4 @@ type: "class"
 desc: "This class contains the response information returned from the service when getting blob properties."
 metadata: {}
 package: "com.azure.storage.blob.models"
-artifact: com.azure:azure-storage-blob:12.33.0-beta.1
+artifact: com.azure:azure-storage-blob:12.35.0-beta.1

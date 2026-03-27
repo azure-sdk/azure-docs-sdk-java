@@ -34,6 +34,16 @@ constructors:
   syntax: "public ShareFileCreateOptions(long size)"
   desc: "Creates a new instance of <xref uid=\"com.azure.storage.file.share.options.ShareFileCreateOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareFileCreateOptions\"></xref>."
 methods:
+- uid: "com.azure.storage.file.share.options.ShareFileCreateOptions.getData()"
+  fullName: "com.azure.storage.file.share.options.ShareFileCreateOptions.getData()"
+  name: "getData()"
+  nameWithType: "ShareFileCreateOptions.getData()"
+  summary: "Optional, valid for version 2026-02-06 and later."
+  syntax: "public BinaryData getData()"
+  desc: "Optional, valid for version 2026-02-06 and later. Gets the content to upload to the file when it is created. Must be less than or equal to 4 MiB in size."
+  returns:
+    description: "The <xref uid=\"com.azure.core.util.BinaryData\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BinaryData\"></xref>."
+    type: "<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.file.share.options.ShareFileCreateOptions.getFilePermission()"
   fullName: "com.azure.storage.file.share.options.ShareFileCreateOptions.getFilePermission()"
   name: "getFilePermission()"
@@ -54,6 +64,16 @@ methods:
   returns:
     description: "file permission format."
     type: "<xref href=\"com.azure.storage.file.share.models.FilePermissionFormat?alt=com.azure.storage.file.share.models.FilePermissionFormat&text=FilePermissionFormat\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.file.share.options.ShareFileCreateOptions.getFilePropertySemantics()"
+  fullName: "com.azure.storage.file.share.options.ShareFileCreateOptions.getFilePropertySemantics()"
+  name: "getFilePropertySemantics()"
+  nameWithType: "ShareFileCreateOptions.getFilePropertySemantics()"
+  summary: "Optional, only applicable to SMB files."
+  syntax: "public FilePropertySemantics getFilePropertySemantics()"
+  desc: "Optional, only applicable to SMB files. Gets how attributes and permissions should be set on the file. New: automatically adds the ARCHIVE file attribute flag to the file and uses Windows create file permissions semantics (ex: inherit from parent). Restore: does not modify file attribute flag and uses Windows update file permissions semantics. If Restore is specified, the file permission must also be provided, otherwise PropertySemantics will default to New."
+  returns:
+    description: "<xref uid=\"com.azure.storage.file.share.models.FilePropertySemantics\" data-throw-if-not-resolved=\"false\" data-raw-source=\"FilePropertySemantics\"></xref>"
+    type: "<xref href=\"com.azure.storage.file.share.models.FilePropertySemantics?alt=com.azure.storage.file.share.models.FilePropertySemantics&text=FilePropertySemantics\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.file.share.options.ShareFileCreateOptions.getMetadata()"
   fullName: "com.azure.storage.file.share.options.ShareFileCreateOptions.getMetadata()"
   name: "getMetadata()"
@@ -114,6 +134,20 @@ methods:
   returns:
     description: "Optional SMB properties to set on the destination file or directory. The only properties that are\n considered are file attributes, file creation time, file last write time, and file permission key. The rest are\n ignored."
     type: "<xref href=\"com.azure.storage.file.share.FileSmbProperties?alt=com.azure.storage.file.share.FileSmbProperties&text=FileSmbProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.file.share.options.ShareFileCreateOptions.setData(com.azure.core.util.BinaryData)"
+  fullName: "com.azure.storage.file.share.options.ShareFileCreateOptions.setData(BinaryData binaryData)"
+  name: "setData(BinaryData binaryData)"
+  nameWithType: "ShareFileCreateOptions.setData(BinaryData binaryData)"
+  summary: "Optional, valid for version 2026-02-06 and later."
+  parameters:
+  - description: "The <xref uid=\"com.azure.core.util.BinaryData\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BinaryData\"></xref>."
+    name: "binaryData"
+    type: "<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ShareFileCreateOptions setData(BinaryData binaryData)"
+  desc: "Optional, valid for version 2026-02-06 and later. Sets the content to upload to the file when it is created. Must be less than or equal to 4 MiB in size."
+  returns:
+    description: "The updated options."
+    type: "<xref href=\"com.azure.storage.file.share.options.ShareFileCreateOptions?alt=com.azure.storage.file.share.options.ShareFileCreateOptions&text=ShareFileCreateOptions\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.file.share.options.ShareFileCreateOptions.setFilePermission(java.lang.String)"
   fullName: "com.azure.storage.file.share.options.ShareFileCreateOptions.setFilePermission(String filePermissionKey)"
   name: "setFilePermission(String filePermissionKey)"
@@ -139,6 +173,20 @@ methods:
     type: "<xref href=\"com.azure.storage.file.share.models.FilePermissionFormat?alt=com.azure.storage.file.share.models.FilePermissionFormat&text=FilePermissionFormat\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public ShareFileCreateOptions setFilePermissionFormat(FilePermissionFormat filePermissionFormat)"
   desc: "Sets the file permission format."
+  returns:
+    description: "The updated options."
+    type: "<xref href=\"com.azure.storage.file.share.options.ShareFileCreateOptions?alt=com.azure.storage.file.share.options.ShareFileCreateOptions&text=ShareFileCreateOptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.file.share.options.ShareFileCreateOptions.setFilePropertySemantics(com.azure.storage.file.share.models.FilePropertySemantics)"
+  fullName: "com.azure.storage.file.share.options.ShareFileCreateOptions.setFilePropertySemantics(FilePropertySemantics filePropertySemantics)"
+  name: "setFilePropertySemantics(FilePropertySemantics filePropertySemantics)"
+  nameWithType: "ShareFileCreateOptions.setFilePropertySemantics(FilePropertySemantics filePropertySemantics)"
+  summary: "Optional, only applicable to SMB files."
+  parameters:
+  - description: "<xref uid=\"com.azure.storage.file.share.models.FilePropertySemantics\" data-throw-if-not-resolved=\"false\" data-raw-source=\"FilePropertySemantics\"></xref>"
+    name: "filePropertySemantics"
+    type: "<xref href=\"com.azure.storage.file.share.models.FilePropertySemantics?alt=com.azure.storage.file.share.models.FilePropertySemantics&text=FilePropertySemantics\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ShareFileCreateOptions setFilePropertySemantics(FilePropertySemantics filePropertySemantics)"
+  desc: "Optional, only applicable to SMB files. Sets how attributes and permissions should be set on the file. New: automatically adds the ARCHIVE file attribute flag to the file and uses Windows create file permissions semantics (ex: inherit from parent). Restore: does not modify file attribute flag and uses Windows update file permissions semantics. If Restore is specified, the file permission must also be provided, otherwise PropertySemantics will default to New."
   returns:
     description: "The updated options."
     type: "<xref href=\"com.azure.storage.file.share.options.ShareFileCreateOptions?alt=com.azure.storage.file.share.options.ShareFileCreateOptions&text=ShareFileCreateOptions\" data-throw-if-not-resolved=\"False\" />"
@@ -216,4 +264,4 @@ type: "class"
 desc: "Extended options that may be passed when creating a share."
 metadata: {}
 package: "com.azure.storage.file.share.options"
-artifact: com.azure:azure-storage-file-share:12.29.0-beta.1
+artifact: com.azure:azure-storage-file-share:12.31.0-beta.1

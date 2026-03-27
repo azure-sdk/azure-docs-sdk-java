@@ -120,6 +120,16 @@ methods:
   returns:
     description: "the read permission status"
     type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.file.datalake.sas.FileSystemSasPermission.hasTagsPermission()"
+  fullName: "com.azure.storage.file.datalake.sas.FileSystemSasPermission.hasTagsPermission()"
+  name: "hasTagsPermission()"
+  nameWithType: "FileSystemSasPermission.hasTagsPermission()"
+  summary: "Gets the tags permission status."
+  syntax: "public boolean hasTagsPermission()"
+  desc: "Gets the tags permission status."
+  returns:
+    description: "the tags permission status."
+    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.file.datalake.sas.FileSystemSasPermission.hasWritePermission()"
   fullName: "com.azure.storage.file.datalake.sas.FileSystemSasPermission.hasWritePermission()"
   name: "hasWritePermission()"
@@ -272,6 +282,20 @@ methods:
   returns:
     description: "the updated FileSystemSasPermission object"
     type: "<xref href=\"com.azure.storage.file.datalake.sas.FileSystemSasPermission?alt=com.azure.storage.file.datalake.sas.FileSystemSasPermission&text=FileSystemSasPermission\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.file.datalake.sas.FileSystemSasPermission.setTagsPermission(boolean)"
+  fullName: "com.azure.storage.file.datalake.sas.FileSystemSasPermission.setTagsPermission(boolean hasTagsPermission)"
+  name: "setTagsPermission(boolean hasTagsPermission)"
+  nameWithType: "FileSystemSasPermission.setTagsPermission(boolean hasTagsPermission)"
+  summary: "Sets the tags permission status."
+  parameters:
+  - description: "Permission status to set"
+    name: "hasTagsPermission"
+    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public FileSystemSasPermission setTagsPermission(boolean hasTagsPermission)"
+  desc: "Sets the tags permission status."
+  returns:
+    description: "the updated FileSystemSasPermission object."
+    type: "<xref href=\"com.azure.storage.file.datalake.sas.FileSystemSasPermission?alt=com.azure.storage.file.datalake.sas.FileSystemSasPermission&text=FileSystemSasPermission\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.file.datalake.sas.FileSystemSasPermission.setWritePermission(boolean)"
   fullName: "com.azure.storage.file.datalake.sas.FileSystemSasPermission.setWritePermission(boolean hasWritePermission)"
   name: "setWritePermission(boolean hasWritePermission)"
@@ -301,4 +325,4 @@ type: "class"
 desc: "This is a helper class to construct a string representing the permissions granted by a ServiceSAS to a file system. Setting a value to true means that any SAS which uses these permissions will grant permissions for that operation. It is possible to construct the permissions string without this class, but the order of the permissions is particular and this class guarantees correctness."
 metadata: {}
 package: "com.azure.storage.file.datalake.sas"
-artifact: com.azure:azure-storage-file-datalake:12.26.0-beta.1
+artifact: com.azure:azure-storage-file-datalake:12.28.0-beta.1

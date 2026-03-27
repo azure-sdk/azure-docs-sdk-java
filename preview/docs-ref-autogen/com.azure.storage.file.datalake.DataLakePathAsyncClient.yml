@@ -424,6 +424,30 @@ methods:
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> containing the response and a resource's system properties."
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.datalake.models.PathSystemProperties?alt=com.azure.storage.file.datalake.models.PathSystemProperties&text=PathSystemProperties\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+- uid: "com.azure.storage.file.datalake.DataLakePathAsyncClient.getTags()"
+  fullName: "com.azure.storage.file.datalake.DataLakePathAsyncClient.getTags()"
+  name: "getTags()"
+  nameWithType: "DataLakePathAsyncClient.getTags()"
+  summary: "Gets the tags associated with the underlying path."
+  syntax: "public Mono<Map<String,String>> getTags()"
+  desc: "Gets the tags associated with the underlying path."
+  returns:
+    description: "The path's tags."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;"
+- uid: "com.azure.storage.file.datalake.DataLakePathAsyncClient.getTagsWithResponse(com.azure.storage.file.datalake.options.DataLakeGetTagsOptions)"
+  fullName: "com.azure.storage.file.datalake.DataLakePathAsyncClient.getTagsWithResponse(DataLakeGetTagsOptions options)"
+  name: "getTagsWithResponse(DataLakeGetTagsOptions options)"
+  nameWithType: "DataLakePathAsyncClient.getTagsWithResponse(DataLakeGetTagsOptions options)"
+  summary: "Gets the tags associated with the underlying path."
+  parameters:
+  - description: "<xref uid=\"com.azure.storage.file.datalake.options.DataLakeGetTagsOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DataLakeGetTagsOptions\"></xref>"
+    name: "options"
+    type: "<xref href=\"com.azure.storage.file.datalake.options.DataLakeGetTagsOptions?alt=com.azure.storage.file.datalake.options.DataLakeGetTagsOptions&text=DataLakeGetTagsOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public Mono<Response<Map<String,String>>> getTagsWithResponse(DataLakeGetTagsOptions options)"
+  desc: "Gets the tags associated with the underlying path."
+  returns:
+    description: "The path's tags."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;&gt;"
 - uid: "com.azure.storage.file.datalake.DataLakePathAsyncClient.removeAccessControlRecursive(java.util.List<com.azure.storage.file.datalake.models.PathRemoveAccessControlEntry>)"
   fullName: "com.azure.storage.file.datalake.DataLakePathAsyncClient.removeAccessControlRecursive(List<PathRemoveAccessControlEntry> accessControlList)"
   name: "removeAccessControlRecursive(List<PathRemoveAccessControlEntry> accessControlList)"
@@ -628,6 +652,34 @@ methods:
   returns:
     description: "A reactive response containing the resource info."
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.datalake.models.PathInfo?alt=com.azure.storage.file.datalake.models.PathInfo&text=PathInfo\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+- uid: "com.azure.storage.file.datalake.DataLakePathAsyncClient.setTags(java.util.Map<java.lang.String,java.lang.String>)"
+  fullName: "com.azure.storage.file.datalake.DataLakePathAsyncClient.setTags(Map<String,String> tags)"
+  name: "setTags(Map<String,String> tags)"
+  nameWithType: "DataLakePathAsyncClient.setTags(Map<String,String> tags)"
+  summary: "Sets user defined tags."
+  parameters:
+  - description: "Tags to associate with the path."
+    name: "tags"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+  syntax: "public Mono<Void> setTags(Map<String,String> tags)"
+  desc: "Sets user defined tags. The specified tags in this method will replace existing tags. If old values must be preserved, they must be downloaded and included in the call to this method."
+  returns:
+    description: "A reactive response signalling completion."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+- uid: "com.azure.storage.file.datalake.DataLakePathAsyncClient.setTagsWithResponse(com.azure.storage.file.datalake.options.DataLakeSetTagsOptions)"
+  fullName: "com.azure.storage.file.datalake.DataLakePathAsyncClient.setTagsWithResponse(DataLakeSetTagsOptions options)"
+  name: "setTagsWithResponse(DataLakeSetTagsOptions options)"
+  nameWithType: "DataLakePathAsyncClient.setTagsWithResponse(DataLakeSetTagsOptions options)"
+  summary: "Sets user defined tags."
+  parameters:
+  - description: "<xref uid=\"com.azure.storage.file.datalake.options.DataLakeSetTagsOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DataLakeSetTagsOptions\"></xref>"
+    name: "options"
+    type: "<xref href=\"com.azure.storage.file.datalake.options.DataLakeSetTagsOptions?alt=com.azure.storage.file.datalake.options.DataLakeSetTagsOptions&text=DataLakeSetTagsOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public Mono<Response<Void>> setTagsWithResponse(DataLakeSetTagsOptions options)"
+  desc: "Sets user defined tags. The specified tags in this method will replace existing tags. If old values must be preserved, they must be downloaded and included in the call to this method."
+  returns:
+    description: "A response containing status code and HTTP headers."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
 - uid: "com.azure.storage.file.datalake.DataLakePathAsyncClient.updateAccessControlRecursive(java.util.List<com.azure.storage.file.datalake.models.PathAccessControlEntry>)"
   fullName: "com.azure.storage.file.datalake.DataLakePathAsyncClient.updateAccessControlRecursive(List<PathAccessControlEntry> accessControlList)"
   name: "updateAccessControlRecursive(List<PathAccessControlEntry> accessControlList)"
@@ -660,4 +712,4 @@ type: "class"
 desc: "This class provides a client that contains all operations that apply to any path object."
 metadata: {}
 package: "com.azure.storage.file.datalake"
-artifact: com.azure:azure-storage-file-datalake:12.26.0-beta.1
+artifact: com.azure:azure-storage-file-datalake:12.28.0-beta.1

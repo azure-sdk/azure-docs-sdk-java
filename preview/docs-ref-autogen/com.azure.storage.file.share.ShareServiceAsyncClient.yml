@@ -280,6 +280,20 @@ methods:
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> containing a <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> whose <xref uid=\"com.azure.core.http.rest.Response.getValue*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"value\"></xref> containing the user\n delegation key."
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.models.UserDelegationKey?alt=com.azure.storage.file.share.models.UserDelegationKey&text=UserDelegationKey\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+- uid: "com.azure.storage.file.share.ShareServiceAsyncClient.getUserDelegationKeyWithResponse(com.azure.storage.file.share.options.ShareGetUserDelegationKeyOptions)"
+  fullName: "com.azure.storage.file.share.ShareServiceAsyncClient.getUserDelegationKeyWithResponse(ShareGetUserDelegationKeyOptions options)"
+  name: "getUserDelegationKeyWithResponse(ShareGetUserDelegationKeyOptions options)"
+  nameWithType: "ShareServiceAsyncClient.getUserDelegationKeyWithResponse(ShareGetUserDelegationKeyOptions options)"
+  summary: "Gets a user delegation key for use with this account's share."
+  parameters:
+  - description: "The <xref uid=\"com.azure.storage.file.share.options.ShareGetUserDelegationKeyOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"options\"></xref> to configure the request."
+    name: "options"
+    type: "<xref href=\"com.azure.storage.file.share.options.ShareGetUserDelegationKeyOptions?alt=com.azure.storage.file.share.options.ShareGetUserDelegationKeyOptions&text=ShareGetUserDelegationKeyOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public Mono<Response<UserDelegationKey>> getUserDelegationKeyWithResponse(ShareGetUserDelegationKeyOptions options)"
+  desc: "Gets a user delegation key for use with this account's share. Note: This method call is only valid when using <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"TokenCredential\"></xref> in this object's <xref uid=\"com.azure.core.http.HttpPipeline\" data-throw-if-not-resolved=\"false\" data-raw-source=\"HttpPipeline\"></xref>."
+  returns:
+    description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> containing a <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> whose <xref uid=\"com.azure.core.http.rest.Response.getValue*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"value\"></xref> containing the user\n delegation key."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.models.UserDelegationKey?alt=com.azure.storage.file.share.models.UserDelegationKey&text=UserDelegationKey\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.storage.file.share.ShareServiceAsyncClient.listShares()"
   fullName: "com.azure.storage.file.share.ShareServiceAsyncClient.listShares()"
   name: "listShares()"
@@ -370,4 +384,4 @@ type: "class"
 desc: "This class provides a azureFileStorageClient that contains all the operations for interacting with a file account in Azure Storage. Operations allowed by the azureFileStorageClient are creating, listing, and deleting shares and retrieving and updating properties of the account.\n\n**Instantiating an Asynchronous File Service Client**\n\n```java\nShareAsyncClient client = new ShareClientBuilder()\n     .connectionString(\"${connectionString}\")\n     .endpoint(\"${endpoint}\")\n     .buildAsyncClient();\n```\n\nView <xref uid=\"com.azure.storage.file.share.ShareServiceClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"this\"></xref> for additional ways to construct the azureFileStorageClient."
 metadata: {}
 package: "com.azure.storage.file.share"
-artifact: com.azure:azure-storage-file-share:12.29.0-beta.1
+artifact: com.azure:azure-storage-file-share:12.31.0-beta.1
