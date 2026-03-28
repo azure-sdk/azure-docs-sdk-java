@@ -73,6 +73,23 @@ methods:
   returns:
     description: "an <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> containing the single resource response with the created Cosmos item or an error."
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.cosmos.models.CosmosItemResponse?alt=com.azure.cosmos.models.CosmosItemResponse&text=CosmosItemResponse\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+- uid: "com.azure.cosmos.encryption.CosmosEncryptionAsyncContainer.deleteAllItemsByPartitionKey(com.azure.cosmos.models.PartitionKey,com.azure.cosmos.models.CosmosItemRequestOptions)"
+  fullName: "com.azure.cosmos.encryption.CosmosEncryptionAsyncContainer.deleteAllItemsByPartitionKey(PartitionKey partitionKey, CosmosItemRequestOptions requestOptions)"
+  name: "deleteAllItemsByPartitionKey(PartitionKey partitionKey, CosmosItemRequestOptions requestOptions)"
+  nameWithType: "CosmosEncryptionAsyncContainer.deleteAllItemsByPartitionKey(PartitionKey partitionKey, CosmosItemRequestOptions requestOptions)"
+  summary: "Deletes all items in the Container with the specified partition<wbr>Key value."
+  parameters:
+  - description: "partitionKey of the item."
+    name: "partitionKey"
+    type: "<xref href=\"com.azure.cosmos.models.PartitionKey?alt=com.azure.cosmos.models.PartitionKey&text=PartitionKey\" data-throw-if-not-resolved=\"False\" />"
+  - description: "the request options."
+    name: "requestOptions"
+    type: "<xref href=\"com.azure.cosmos.models.CosmosItemRequestOptions?alt=com.azure.cosmos.models.CosmosItemRequestOptions&text=CosmosItemRequestOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public Mono<CosmosItemResponse<Object>> deleteAllItemsByPartitionKey(PartitionKey partitionKey, CosmosItemRequestOptions requestOptions)"
+  desc: "Deletes all items in the Container with the specified partitionKey value. Starts an asynchronous Cosmos DB background operation which deletes all items in the Container with the specified value. The asynchronous Cosmos DB background operation runs using a percentage of user RUs. After subscription the operation will be performed. The <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> upon successful completion will contain a single Cosmos item response for all the deleted items."
+  returns:
+    description: "an <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> containing the Cosmos item resource response."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.cosmos.models.CosmosItemResponse?alt=com.azure.cosmos.models.CosmosItemResponse&text=CosmosItemResponse\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>&gt;&gt;"
 - uid: "com.azure.cosmos.encryption.CosmosEncryptionAsyncContainer.deleteItem(java.lang.String,com.azure.cosmos.models.PartitionKey)"
   fullName: "com.azure.cosmos.encryption.CosmosEncryptionAsyncContainer.deleteItem(String itemId, PartitionKey partitionKey)"
   name: "deleteItem(String itemId, PartitionKey partitionKey)"
@@ -225,6 +242,23 @@ methods:
   returns:
     description: "an <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> containing the Cosmos item resource response with the patched item or an error."
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.cosmos.models.CosmosItemResponse?alt=com.azure.cosmos.models.CosmosItemResponse&text=CosmosItemResponse\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+- uid: "com.azure.cosmos.encryption.CosmosEncryptionAsyncContainer.<T>queryChangeFeed(com.azure.cosmos.models.CosmosChangeFeedRequestOptions,java.lang.Class<T>)"
+  fullName: "com.azure.cosmos.encryption.CosmosEncryptionAsyncContainer.queryChangeFeed(CosmosChangeFeedRequestOptions options, Class<T> classType)"
+  name: "queryChangeFeed(CosmosChangeFeedRequestOptions options, Class<T> classType)"
+  nameWithType: "CosmosEncryptionAsyncContainer.queryChangeFeed(CosmosChangeFeedRequestOptions options, Class<T> classType)"
+  summary: "Query for items in the change feed of the current container using the <xref uid=\"com.azure.cosmos.models.CosmosChangeFeedRequestOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"CosmosChangeFeedRequestOptions\"></xref>."
+  parameters:
+  - description: "the change feed request options."
+    name: "options"
+    type: "<xref href=\"com.azure.cosmos.models.CosmosChangeFeedRequestOptions?alt=com.azure.cosmos.models.CosmosChangeFeedRequestOptions&text=CosmosChangeFeedRequestOptions\" data-throw-if-not-resolved=\"False\" />"
+  - description: "the class type."
+    name: "classType"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html\">Class</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public CosmosPagedFlux<T> <T>queryChangeFeed(CosmosChangeFeedRequestOptions options, Class<T> classType)"
+  desc: "Query for items in the change feed of the current container using the <xref uid=\"com.azure.cosmos.models.CosmosChangeFeedRequestOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"CosmosChangeFeedRequestOptions\"></xref>.\n\nAfter subscription the operation will be performed. The <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> will contain one or several feed response of the obtained items. In case of failure the <xref uid=\"com.azure.cosmos.util.CosmosPagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"CosmosPagedFlux\"></xref> will error."
+  returns:
+    description: "a <xref uid=\"com.azure.cosmos.util.CosmosPagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"CosmosPagedFlux\"></xref> containing one or several feed response pages of the obtained\n items or an error."
+    type: "<xref href=\"com.azure.cosmos.util.CosmosPagedFlux?alt=com.azure.cosmos.util.CosmosPagedFlux&text=CosmosPagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.cosmos.encryption.CosmosEncryptionAsyncContainer.<T>queryItems(com.azure.cosmos.models.SqlQuerySpec,com.azure.cosmos.models.CosmosQueryRequestOptions,java.lang.Class<T>)"
   fullName: "com.azure.cosmos.encryption.CosmosEncryptionAsyncContainer.queryItems(SqlQuerySpec query, CosmosQueryRequestOptions requestOptions, Class<T> classType)"
   name: "queryItems(SqlQuerySpec query, CosmosQueryRequestOptions requestOptions, Class<T> classType)"
@@ -460,4 +494,4 @@ type: "class"
 desc: "CosmosAsyncContainer with encryption capabilities."
 metadata: {}
 package: "com.azure.cosmos.encryption"
-artifact: com.azure:azure-cosmos-encryption:2.27.0
+artifact: com.azure:azure-cosmos-encryption:2.28.0

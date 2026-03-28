@@ -90,6 +90,16 @@ methods:
   returns:
     description: "the <xref uid=\"com.azure.cosmos.models.FeedRange\" data-throw-if-not-resolved=\"false\" data-raw-source=\"FeedRange\"></xref>"
     type: "<xref href=\"com.azure.cosmos.models.FeedRange?alt=com.azure.cosmos.models.FeedRange&text=FeedRange\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.cosmos.models.CosmosQueryRequestOptions.getFullTextScoreScope()"
+  fullName: "com.azure.cosmos.models.CosmosQueryRequestOptions.getFullTextScoreScope()"
+  name: "getFullTextScoreScope()"
+  nameWithType: "CosmosQueryRequestOptions.getFullTextScoreScope()"
+  summary: "Gets the scope for computing BM25 statistics used by Full<wbr>Text<wbr>Score in hybrid search queries."
+  syntax: "public CosmosFullTextScoreScope getFullTextScoreScope()"
+  desc: "Gets the scope for computing BM25 statistics used by FullTextScore in hybrid search queries."
+  returns:
+    description: "the scope for computing BM25 statistics. Defaults to <xref uid=\"com.azure.cosmos.models.CosmosFullTextScoreScope.GLOBAL\" data-throw-if-not-resolved=\"false\" data-raw-source=\"CosmosFullTextScoreScope#GLOBAL\"></xref>."
+    type: "<xref href=\"com.azure.cosmos.models.CosmosFullTextScoreScope?alt=com.azure.cosmos.models.CosmosFullTextScoreScope&text=CosmosFullTextScoreScope\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.cosmos.models.CosmosQueryRequestOptions.getKeywordIdentifiers()"
   fullName: "com.azure.cosmos.models.CosmosQueryRequestOptions.getKeywordIdentifiers()"
   name: "getKeywordIdentifiers()"
@@ -189,6 +199,16 @@ methods:
   desc: "Gets indexMetricsEnabled, which is used to obtain the index metrics to understand how the query engine used existing indexes and could use potential new indexes. The results will be displayed in QueryMetrics. Please note that this options will incurs overhead, so it should be enabled when debuging slow queries."
   returns:
     description: "indexMetricsEnabled (default: false)"
+    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.cosmos.models.CosmosQueryRequestOptions.isQueryAdviceEnabled()"
+  fullName: "com.azure.cosmos.models.CosmosQueryRequestOptions.isQueryAdviceEnabled()"
+  name: "isQueryAdviceEnabled()"
+  nameWithType: "CosmosQueryRequestOptions.isQueryAdviceEnabled()"
+  summary: "Gets query<wbr>Advice<wbr>Enabled, which is used to obtain query advice to understand aspects of the query that can be optimized."
+  syntax: "public boolean isQueryAdviceEnabled()"
+  desc: "Gets queryAdviceEnabled, which is used to obtain query advice to understand aspects of the query that can be optimized. The results will be displayed in FeedResponse.getQueryAdvice(). Please note that this option will incur additional latency overhead, so it should be enabled when debugging queries."
+  returns:
+    description: "queryAdviceEnabled (default: false)"
     type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.cosmos.models.CosmosQueryRequestOptions.isQueryMetricsEnabled()"
   fullName: "com.azure.cosmos.models.CosmosQueryRequestOptions.isQueryMetricsEnabled()"
@@ -308,6 +328,20 @@ methods:
   returns:
     description: "the CosmosQueryRequestOptions."
     type: "<xref href=\"com.azure.cosmos.models.CosmosQueryRequestOptions?alt=com.azure.cosmos.models.CosmosQueryRequestOptions&text=CosmosQueryRequestOptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.cosmos.models.CosmosQueryRequestOptions.setFullTextScoreScope(com.azure.cosmos.models.CosmosFullTextScoreScope)"
+  fullName: "com.azure.cosmos.models.CosmosQueryRequestOptions.setFullTextScoreScope(CosmosFullTextScoreScope fullTextScoreScope)"
+  name: "setFullTextScoreScope(CosmosFullTextScoreScope fullTextScoreScope)"
+  nameWithType: "CosmosQueryRequestOptions.setFullTextScoreScope(CosmosFullTextScoreScope fullTextScoreScope)"
+  summary: "Sets the scope for computing BM25 statistics used by Full<wbr>Text<wbr>Score in hybrid search queries."
+  parameters:
+  - description: "the scope for computing BM25 statistics."
+    name: "fullTextScoreScope"
+    type: "<xref href=\"com.azure.cosmos.models.CosmosFullTextScoreScope?alt=com.azure.cosmos.models.CosmosFullTextScoreScope&text=CosmosFullTextScoreScope\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public CosmosQueryRequestOptions setFullTextScoreScope(CosmosFullTextScoreScope fullTextScoreScope)"
+  desc: "Sets the scope for computing BM25 statistics used by FullTextScore in hybrid search queries.\n\nWhen set to <xref uid=\"com.azure.cosmos.models.CosmosFullTextScoreScope.GLOBAL\" data-throw-if-not-resolved=\"false\" data-raw-source=\"CosmosFullTextScoreScope#GLOBAL\"></xref>, BM25 statistics (term frequency, inverse document frequency, and document length) are computed across all documents in the container, including all physical and logical partitions.\n\nWhen set to <xref uid=\"com.azure.cosmos.models.CosmosFullTextScoreScope.LOCAL\" data-throw-if-not-resolved=\"false\" data-raw-source=\"CosmosFullTextScoreScope#LOCAL\"></xref>, statistics are computed only over the subset of documents within the partition key values specified in the query request. This is useful for multi-tenant scenarios where scoring should reflect statistics that are accurate for a specific tenant's dataset."
+  returns:
+    description: "the CosmosQueryRequestOptions."
+    type: "<xref href=\"com.azure.cosmos.models.CosmosQueryRequestOptions?alt=com.azure.cosmos.models.CosmosQueryRequestOptions&text=CosmosQueryRequestOptions\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.cosmos.models.CosmosQueryRequestOptions.setIndexMetricsEnabled(boolean)"
   fullName: "com.azure.cosmos.models.CosmosQueryRequestOptions.setIndexMetricsEnabled(boolean indexMetricsEnabled)"
   name: "setIndexMetricsEnabled(boolean indexMetricsEnabled)"
@@ -377,6 +411,20 @@ methods:
   desc: "Sets the partition key used to identify the current request's target partition."
   returns:
     description: "the CosmosQueryRequestOptions."
+    type: "<xref href=\"com.azure.cosmos.models.CosmosQueryRequestOptions?alt=com.azure.cosmos.models.CosmosQueryRequestOptions&text=CosmosQueryRequestOptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.cosmos.models.CosmosQueryRequestOptions.setQueryAdviceEnabled(boolean)"
+  fullName: "com.azure.cosmos.models.CosmosQueryRequestOptions.setQueryAdviceEnabled(boolean queryAdviceEnabled)"
+  name: "setQueryAdviceEnabled(boolean queryAdviceEnabled)"
+  nameWithType: "CosmosQueryRequestOptions.setQueryAdviceEnabled(boolean queryAdviceEnabled)"
+  summary: "Sets query<wbr>Advice<wbr>Enabled, which is used to obtain query advice to understand aspects of the query that can be optimized."
+  parameters:
+  - description: "a boolean used to obtain the query advice"
+    name: "queryAdviceEnabled"
+    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public CosmosQueryRequestOptions setQueryAdviceEnabled(boolean queryAdviceEnabled)"
+  desc: "Sets queryAdviceEnabled, which is used to obtain query advice to understand aspects of the query that can be optimized. The results will be displayed in FeedResponse.getQueryAdvice(). Please note that this option will incur additional latency overhead, so it should be enabled when debugging queries. By default, query advice is disabled."
+  returns:
+    description: "the CosmosQueryRequestOptions instance"
     type: "<xref href=\"com.azure.cosmos.models.CosmosQueryRequestOptions?alt=com.azure.cosmos.models.CosmosQueryRequestOptions&text=CosmosQueryRequestOptions\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.cosmos.models.CosmosQueryRequestOptions.setQueryMetricsEnabled(boolean)"
   fullName: "com.azure.cosmos.models.CosmosQueryRequestOptions.setQueryMetricsEnabled(boolean queryMetricsEnabled)"
@@ -494,4 +542,4 @@ type: "class"
 desc: "Specifies the options associated with query methods (enumeration operations) in the Azure Cosmos DB database service."
 metadata: {}
 package: "com.azure.cosmos.models"
-artifact: com.azure:azure-cosmos:4.78.0
+artifact: com.azure:azure-cosmos:4.79.0
