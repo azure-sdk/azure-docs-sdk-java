@@ -1,8 +1,10 @@
 | Reference | Package | Source |
 |---|---|---|
+|[AI Agents](ai-agents-readme.md)|[azure-ai-agents](https://repo1.maven.org/maven2/com/azure/azure-ai-agents)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/ai/azure-ai-agents)|
 |[Content Safety](ai-contentsafety-readme.md)|[azure-ai-contentsafety](https://repo1.maven.org/maven2/com/azure/azure-ai-contentsafety)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/contentsafety/azure-ai-contentsafety)|
 |[Document Intelligence](ai-documentintelligence-readme.md)|[azure-ai-documentintelligence](https://repo1.maven.org/maven2/com/azure/azure-ai-documentintelligence)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/documentintelligence/azure-ai-documentintelligence)|
 |[Form Recognizer](ai-formrecognizer-readme.md)|[azure-ai-formrecognizer](https://repo1.maven.org/maven2/com/azure/azure-ai-formrecognizer)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/formrecognizer/azure-ai-formrecognizer)|
+|[AI Projects](ai-projects-readme.md)|[azure-ai-projects](https://repo1.maven.org/maven2/com/azure/azure-ai-projects)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/ai/azure-ai-projects)|
 |[Text Analytics](ai-textanalytics-readme.md)|[azure-ai-textanalytics](https://repo1.maven.org/maven2/com/azure/azure-ai-textanalytics)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/textanalytics/azure-ai-textanalytics)|
 |[Document Translation](ai-translation-document-readme.md)|[azure-ai-translation-document](https://repo1.maven.org/maven2/com/azure/azure-ai-translation-document)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/translation/azure-ai-translation-document)|
 |[Text Translation](ai-translation-text-readme.md)|[azure-ai-translation-text](https://repo1.maven.org/maven2/com/azure/azure-ai-translation-text)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/translation/azure-ai-translation-text)|
