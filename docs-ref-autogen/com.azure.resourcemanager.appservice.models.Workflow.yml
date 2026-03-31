@@ -6,19 +6,15 @@ nameWithType: "Workflow"
 summary: "The workflow type."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.core.management.ProxyResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.core.management.Resource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 - "<xref href=\"com.azure.resourcemanager.appservice.models.WorkflowResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
-- classRef: "<xref href=\"com.azure.core.management.Resource?alt=com.azure.core.management.Resource&text=Resource\" data-throw-if-not-resolved=\"False\" />"
-  methodsRef:
-  - "<xref href=\"com.azure.core.management.Resource.location()?alt=com.azure.core.management.Resource.location&text=location\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.tags()?alt=com.azure.core.management.Resource.tags&text=tags\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "<xref href=\"com.azure.resourcemanager.appservice.models.WorkflowResource?alt=com.azure.resourcemanager.appservice.models.WorkflowResource&text=WorkflowResource\" data-throw-if-not-resolved=\"False\" />"
   methodsRef:
   - "<xref href=\"com.azure.resourcemanager.appservice.models.WorkflowResource.fromJson(com.azure.json.JsonReader)?alt=com.azure.resourcemanager.appservice.models.WorkflowResource.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.appservice.models.WorkflowResource.id()?alt=com.azure.resourcemanager.appservice.models.WorkflowResource.id&text=id\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.resourcemanager.appservice.models.WorkflowResource.location()?alt=com.azure.resourcemanager.appservice.models.WorkflowResource.location&text=location\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.appservice.models.WorkflowResource.name()?alt=com.azure.resourcemanager.appservice.models.WorkflowResource.name&text=name\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.resourcemanager.appservice.models.WorkflowResource.tags()?alt=com.azure.resourcemanager.appservice.models.WorkflowResource.tags&text=tags\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.appservice.models.WorkflowResource.toJson(com.azure.json.JsonWriter)?alt=com.azure.resourcemanager.appservice.models.WorkflowResource.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.appservice.models.WorkflowResource.type()?alt=com.azure.resourcemanager.appservice.models.WorkflowResource.type&text=type\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.appservice.models.WorkflowResource.validate()?alt=com.azure.resourcemanager.appservice.models.WorkflowResource.validate&text=validate\" data-throw-if-not-resolved=\"False\" />"
@@ -120,7 +116,7 @@ methods:
     type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static Workflow fromJson(JsonReader jsonReader)"
   exceptions:
-  - description: "If the deserialized JSON object was missing any required properties."
+  - description: "If an error occurs while reading the Workflow."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   desc: "Reads an instance of Workflow from the JsonReader."
   returns:
@@ -130,10 +126,10 @@ methods:
   fullName: "com.azure.resourcemanager.appservice.models.Workflow.id()"
   name: "id()"
   nameWithType: "Workflow.id()"
-  summary: "Get the id property: Fully qualified resource Id for the resource."
+  summary: "Get the id property: The resource id."
   overridden: "com.azure.resourcemanager.appservice.models.WorkflowResource.id()"
   syntax: "public String id()"
-  desc: "Get the id property: Fully qualified resource Id for the resource."
+  desc: "Get the id property: The resource id."
   returns:
     description: "the id value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -181,10 +177,10 @@ methods:
   fullName: "com.azure.resourcemanager.appservice.models.Workflow.name()"
   name: "name()"
   nameWithType: "Workflow.name()"
-  summary: "Get the name property: The name of the resource."
+  summary: "Get the name property: Gets the resource name."
   overridden: "com.azure.resourcemanager.appservice.models.WorkflowResource.name()"
   syntax: "public String name()"
-  desc: "Get the name property: The name of the resource."
+  desc: "Get the name property: Gets the resource name."
   returns:
     description: "the name value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -245,10 +241,10 @@ methods:
   fullName: "com.azure.resourcemanager.appservice.models.Workflow.type()"
   name: "type()"
   nameWithType: "Workflow.type()"
-  summary: "Get the type property: The type of the resource."
+  summary: "Get the type property: Gets the resource type."
   overridden: "com.azure.resourcemanager.appservice.models.WorkflowResource.type()"
   syntax: "public String type()"
-  desc: "Get the type property: The type of the resource."
+  desc: "Get the type property: Gets the resource type."
   returns:
     description: "the type value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -372,11 +368,13 @@ methods:
   fullName: "com.azure.resourcemanager.appservice.models.Workflow.withLocation(String location)"
   name: "withLocation(String location)"
   nameWithType: "Workflow.withLocation(String location)"
+  summary: "Set the location property: The resource location."
   overridden: "com.azure.resourcemanager.appservice.models.WorkflowResource.withLocation(java.lang.String)"
   parameters:
   - name: "location"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public Workflow withLocation(String location)"
+  desc: "Set the location property: The resource location."
   returns:
     type: "<xref href=\"com.azure.resourcemanager.appservice.models.Workflow?alt=com.azure.resourcemanager.appservice.models.Workflow&text=Workflow\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.appservice.models.Workflow.withParameters(java.util.Map<java.lang.String,com.azure.resourcemanager.appservice.models.WorkflowParameter>)"
@@ -411,15 +409,17 @@ methods:
   fullName: "com.azure.resourcemanager.appservice.models.Workflow.withTags(Map<String,String> tags)"
   name: "withTags(Map<String,String> tags)"
   nameWithType: "Workflow.withTags(Map<String,String> tags)"
+  summary: "Set the tags property: The resource tags."
   overridden: "com.azure.resourcemanager.appservice.models.WorkflowResource.withTags(java.util.Map<java.lang.String,java.lang.String>)"
   parameters:
   - name: "tags"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
   syntax: "public Workflow withTags(Map<String,String> tags)"
+  desc: "Set the tags property: The resource tags."
   returns:
     type: "<xref href=\"com.azure.resourcemanager.appservice.models.Workflow?alt=com.azure.resourcemanager.appservice.models.Workflow&text=Workflow\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "The workflow type."
 metadata: {}
 package: "com.azure.resourcemanager.appservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-appservice:2.54.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-appservice:2.55.0

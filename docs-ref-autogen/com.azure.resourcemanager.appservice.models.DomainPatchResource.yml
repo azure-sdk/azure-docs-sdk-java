@@ -6,7 +6,6 @@ nameWithType: "DomainPatchResource"
 summary: "ARM resource for a domain."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.core.management.ProxyResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 - "<xref href=\"com.azure.resourcemanager.appservice.models.ProxyOnlyResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
 - classRef: "<xref href=\"com.azure.resourcemanager.appservice.models.ProxyOnlyResource?alt=com.azure.resourcemanager.appservice.models.ProxyOnlyResource&text=ProxyOnlyResource\" data-throw-if-not-resolved=\"False\" />"
@@ -46,9 +45,9 @@ methods:
   fullName: "com.azure.resourcemanager.appservice.models.DomainPatchResource.authCode()"
   name: "authCode()"
   nameWithType: "DomainPatchResource.authCode()"
-  summary: "Get the auth<wbr>Code property: The auth<wbr>Code property."
+  summary: "Get the auth<wbr>Code property: Authorization code for the domain."
   syntax: "public String authCode()"
-  desc: "Get the authCode property: The authCode property."
+  desc: "Get the authCode property: Authorization code for the domain."
   returns:
     description: "the authCode value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -175,7 +174,7 @@ methods:
     type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static DomainPatchResource fromJson(JsonReader jsonReader)"
   exceptions:
-  - description: "If the deserialized JSON object was missing any required properties."
+  - description: "If an error occurs while reading the DomainPatchResource."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   desc: "Reads an instance of DomainPatchResource from the JsonReader."
   returns:
@@ -185,10 +184,10 @@ methods:
   fullName: "com.azure.resourcemanager.appservice.models.DomainPatchResource.id()"
   name: "id()"
   nameWithType: "DomainPatchResource.id()"
-  summary: "Get the id property: Fully qualified resource Id for the resource."
+  summary: "Get the id property: Resource Id."
   overridden: "com.azure.resourcemanager.appservice.models.ProxyOnlyResource.id()"
   syntax: "public String id()"
-  desc: "Get the id property: Fully qualified resource Id for the resource."
+  desc: "Get the id property: Resource Id."
   returns:
     description: "the id value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -216,10 +215,10 @@ methods:
   fullName: "com.azure.resourcemanager.appservice.models.DomainPatchResource.name()"
   name: "name()"
   nameWithType: "DomainPatchResource.name()"
-  summary: "Get the name property: The name of the resource."
+  summary: "Get the name property: Resource Name."
   overridden: "com.azure.resourcemanager.appservice.models.ProxyOnlyResource.name()"
   syntax: "public String name()"
-  desc: "Get the name property: The name of the resource."
+  desc: "Get the name property: Resource Name."
   returns:
     description: "the name value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -259,7 +258,7 @@ methods:
   nameWithType: "DomainPatchResource.readyForDnsRecordManagement()"
   summary: "Get the ready<wbr>For<wbr>Dns<wbr>Record<wbr>Management property: <code>true</code> if Azure can assign this domain to App Service apps; otherwise, <code>false</code>."
   syntax: "public Boolean readyForDnsRecordManagement()"
-  desc: "Get the readyForDnsRecordManagement property: <code>true</code> if Azure can assign this domain to App Service apps; otherwise, <code>false</code>. This value will be <code>true</code> if domain registration status is active and it is hosted on name servers Azure has programmatic access to."
+  desc: "Get the readyForDnsRecordManagement property: <code>true</code> if Azure can assign this domain to App Service apps; otherwise, <code>false</code>. This value will be <code>true</code> if domain registration status is active and \\\\n it is hosted on name servers Azure has programmatic access to."
   returns:
     description: "the readyForDnsRecordManagement value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
@@ -300,10 +299,10 @@ methods:
   fullName: "com.azure.resourcemanager.appservice.models.DomainPatchResource.type()"
   name: "type()"
   nameWithType: "DomainPatchResource.type()"
-  summary: "Get the type property: The type of the resource."
+  summary: "Get the type property: Resource type."
   overridden: "com.azure.resourcemanager.appservice.models.ProxyOnlyResource.type()"
   syntax: "public String type()"
-  desc: "Get the type property: The type of the resource."
+  desc: "Get the type property: Resource type."
   returns:
     description: "the type value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -319,13 +318,13 @@ methods:
   fullName: "com.azure.resourcemanager.appservice.models.DomainPatchResource.withAuthCode(String authCode)"
   name: "withAuthCode(String authCode)"
   nameWithType: "DomainPatchResource.withAuthCode(String authCode)"
-  summary: "Set the auth<wbr>Code property: The auth<wbr>Code property."
+  summary: "Set the auth<wbr>Code property: Authorization code for the domain."
   parameters:
   - description: "the authCode value to set."
     name: "authCode"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public DomainPatchResource withAuthCode(String authCode)"
-  desc: "Set the authCode property: The authCode property."
+  desc: "Set the authCode property: Authorization code for the domain."
   returns:
     description: "the DomainPatchResource object itself."
     type: "<xref href=\"com.azure.resourcemanager.appservice.models.DomainPatchResource?alt=com.azure.resourcemanager.appservice.models.DomainPatchResource&text=DomainPatchResource\" data-throw-if-not-resolved=\"False\" />"
@@ -486,4 +485,4 @@ type: "class"
 desc: "ARM resource for a domain."
 metadata: {}
 package: "com.azure.resourcemanager.appservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-appservice:2.54.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-appservice:2.55.0

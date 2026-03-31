@@ -6,7 +6,6 @@ nameWithType: "VnetValidationTestFailure"
 summary: "A class that describes a test that failed during NSG and UDR validation."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.core.management.ProxyResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 - "<xref href=\"com.azure.resourcemanager.appservice.models.ProxyOnlyResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
 - classRef: "<xref href=\"com.azure.resourcemanager.appservice.models.ProxyOnlyResource?alt=com.azure.resourcemanager.appservice.models.ProxyOnlyResource&text=ProxyOnlyResource\" data-throw-if-not-resolved=\"False\" />"
@@ -33,14 +32,6 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
 syntax: "public final class **VnetValidationTestFailure**</br> extends <xref href=\"com.azure.resourcemanager.appservice.models.ProxyOnlyResource?alt=com.azure.resourcemanager.appservice.models.ProxyOnlyResource&text=ProxyOnlyResource\" data-throw-if-not-resolved=\"False\" />"
-constructors:
-- uid: "com.azure.resourcemanager.appservice.models.VnetValidationTestFailure.VnetValidationTestFailure()"
-  fullName: "com.azure.resourcemanager.appservice.models.VnetValidationTestFailure.VnetValidationTestFailure()"
-  name: "VnetValidationTestFailure()"
-  nameWithType: "VnetValidationTestFailure.VnetValidationTestFailure()"
-  summary: "Creates an instance of Vnet<wbr>Validation<wbr>Test<wbr>Failure class."
-  syntax: "public VnetValidationTestFailure()"
-  desc: "Creates an instance of VnetValidationTestFailure class."
 methods:
 - uid: "com.azure.resourcemanager.appservice.models.VnetValidationTestFailure.details()"
   fullName: "com.azure.resourcemanager.appservice.models.VnetValidationTestFailure.details()"
@@ -65,7 +56,7 @@ methods:
     type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static VnetValidationTestFailure fromJson(JsonReader jsonReader)"
   exceptions:
-  - description: "If the deserialized JSON object was missing any required properties."
+  - description: "If an error occurs while reading the VnetValidationTestFailure."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   desc: "Reads an instance of VnetValidationTestFailure from the JsonReader."
   returns:
@@ -75,10 +66,10 @@ methods:
   fullName: "com.azure.resourcemanager.appservice.models.VnetValidationTestFailure.id()"
   name: "id()"
   nameWithType: "VnetValidationTestFailure.id()"
-  summary: "Get the id property: Fully qualified resource Id for the resource."
+  summary: "Get the id property: Resource Id."
   overridden: "com.azure.resourcemanager.appservice.models.ProxyOnlyResource.id()"
   syntax: "public String id()"
-  desc: "Get the id property: Fully qualified resource Id for the resource."
+  desc: "Get the id property: Resource Id."
   returns:
     description: "the id value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -86,10 +77,10 @@ methods:
   fullName: "com.azure.resourcemanager.appservice.models.VnetValidationTestFailure.name()"
   name: "name()"
   nameWithType: "VnetValidationTestFailure.name()"
-  summary: "Get the name property: The name of the resource."
+  summary: "Get the name property: Resource Name."
   overridden: "com.azure.resourcemanager.appservice.models.ProxyOnlyResource.name()"
   syntax: "public String name()"
-  desc: "Get the name property: The name of the resource."
+  desc: "Get the name property: Resource Name."
   returns:
     description: "the name value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -120,10 +111,10 @@ methods:
   fullName: "com.azure.resourcemanager.appservice.models.VnetValidationTestFailure.type()"
   name: "type()"
   nameWithType: "VnetValidationTestFailure.type()"
-  summary: "Get the type property: The type of the resource."
+  summary: "Get the type property: Resource type."
   overridden: "com.azure.resourcemanager.appservice.models.ProxyOnlyResource.type()"
   syntax: "public String type()"
-  desc: "Get the type property: The type of the resource."
+  desc: "Get the type property: Resource type."
   returns:
     description: "the type value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -135,49 +126,8 @@ methods:
   overridden: "com.azure.resourcemanager.appservice.models.ProxyOnlyResource.validate()"
   syntax: "public void validate()"
   desc: "Validates the instance."
-- uid: "com.azure.resourcemanager.appservice.models.VnetValidationTestFailure.withDetails(java.lang.String)"
-  fullName: "com.azure.resourcemanager.appservice.models.VnetValidationTestFailure.withDetails(String details)"
-  name: "withDetails(String details)"
-  nameWithType: "VnetValidationTestFailure.withDetails(String details)"
-  summary: "Set the details property: The details of what caused the failure, e.<wbr>g."
-  parameters:
-  - description: "the details value to set."
-    name: "details"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public VnetValidationTestFailure withDetails(String details)"
-  desc: "Set the details property: The details of what caused the failure, e.g. the blocking rule name, etc."
-  returns:
-    description: "the VnetValidationTestFailure object itself."
-    type: "<xref href=\"com.azure.resourcemanager.appservice.models.VnetValidationTestFailure?alt=com.azure.resourcemanager.appservice.models.VnetValidationTestFailure&text=VnetValidationTestFailure\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.appservice.models.VnetValidationTestFailure.withKind(java.lang.String)"
-  fullName: "com.azure.resourcemanager.appservice.models.VnetValidationTestFailure.withKind(String kind)"
-  name: "withKind(String kind)"
-  nameWithType: "VnetValidationTestFailure.withKind(String kind)"
-  summary: "Set the kind property: Kind of resource."
-  overridden: "com.azure.resourcemanager.appservice.models.ProxyOnlyResource.withKind(java.lang.String)"
-  parameters:
-  - name: "kind"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public VnetValidationTestFailure withKind(String kind)"
-  desc: "Set the kind property: Kind of resource."
-  returns:
-    type: "<xref href=\"com.azure.resourcemanager.appservice.models.VnetValidationTestFailure?alt=com.azure.resourcemanager.appservice.models.VnetValidationTestFailure&text=VnetValidationTestFailure\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.appservice.models.VnetValidationTestFailure.withTestName(java.lang.String)"
-  fullName: "com.azure.resourcemanager.appservice.models.VnetValidationTestFailure.withTestName(String testName)"
-  name: "withTestName(String testName)"
-  nameWithType: "VnetValidationTestFailure.withTestName(String testName)"
-  summary: "Set the test<wbr>Name property: The name of the test that failed."
-  parameters:
-  - description: "the testName value to set."
-    name: "testName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public VnetValidationTestFailure withTestName(String testName)"
-  desc: "Set the testName property: The name of the test that failed."
-  returns:
-    description: "the VnetValidationTestFailure object itself."
-    type: "<xref href=\"com.azure.resourcemanager.appservice.models.VnetValidationTestFailure?alt=com.azure.resourcemanager.appservice.models.VnetValidationTestFailure&text=VnetValidationTestFailure\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "A class that describes a test that failed during NSG and UDR validation."
 metadata: {}
 package: "com.azure.resourcemanager.appservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-appservice:2.54.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-appservice:2.55.0

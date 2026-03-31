@@ -49,9 +49,9 @@ methods:
   fullName: "com.azure.resourcemanager.appservice.fluent.models.DomainInner.authCode()"
   name: "authCode()"
   nameWithType: "DomainInner.authCode()"
-  summary: "Get the auth<wbr>Code property: The auth<wbr>Code property."
+  summary: "Get the auth<wbr>Code property: Authorization code for the domain."
   syntax: "public String authCode()"
-  desc: "Get the authCode property: The authCode property."
+  desc: "Get the authCode property: Authorization code for the domain."
   returns:
     description: "the authCode value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -201,7 +201,7 @@ methods:
   nameWithType: "DomainInner.kind()"
   summary: "Get the kind property: Kind of resource."
   syntax: "public String kind()"
-  desc: "Get the kind property: Kind of resource. If the resource is an app, you can refer to https://github.com/Azure/app-service-linux-docs/blob/master/Things\\_You\\_Should\\_Know/kind\\_property.md\\#app-service-resource-kind-reference for details supported values for kind."
+  desc: "Get the kind property: Kind of resource."
   returns:
     description: "the kind value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -272,7 +272,7 @@ methods:
   nameWithType: "DomainInner.readyForDnsRecordManagement()"
   summary: "Get the ready<wbr>For<wbr>Dns<wbr>Record<wbr>Management property: <code>true</code> if Azure can assign this domain to App Service apps; otherwise, <code>false</code>."
   syntax: "public Boolean readyForDnsRecordManagement()"
-  desc: "Get the readyForDnsRecordManagement property: <code>true</code> if Azure can assign this domain to App Service apps; otherwise, <code>false</code>. This value will be <code>true</code> if domain registration status is active and it is hosted on name servers Azure has programmatic access to."
+  desc: "Get the readyForDnsRecordManagement property: <code>true</code> if Azure can assign this domain to App Service apps; otherwise, <code>false</code>. This value will be <code>true</code> if domain registration status is active and \\\\n it is hosted on name servers Azure has programmatic access to."
   returns:
     description: "the readyForDnsRecordManagement value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
@@ -286,6 +286,16 @@ methods:
   returns:
     description: "the registrationStatus value."
     type: "<xref href=\"com.azure.resourcemanager.appservice.models.DomainStatus?alt=com.azure.resourcemanager.appservice.models.DomainStatus&text=DomainStatus\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.appservice.fluent.models.DomainInner.systemData()"
+  fullName: "com.azure.resourcemanager.appservice.fluent.models.DomainInner.systemData()"
+  name: "systemData()"
+  nameWithType: "DomainInner.systemData()"
+  summary: "Get the system<wbr>Data property: Azure Resource Manager metadata containing created<wbr>By and modified<wbr>By information."
+  syntax: "public SystemData systemData()"
+  desc: "Get the systemData property: Azure Resource Manager metadata containing createdBy and modifiedBy information."
+  returns:
+    description: "the systemData value."
+    type: "<xref href=\"com.azure.core.management.SystemData?alt=com.azure.core.management.SystemData&text=SystemData\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.appservice.fluent.models.DomainInner.targetDnsType()"
   fullName: "com.azure.resourcemanager.appservice.fluent.models.DomainInner.targetDnsType()"
   name: "targetDnsType()"
@@ -331,13 +341,13 @@ methods:
   fullName: "com.azure.resourcemanager.appservice.fluent.models.DomainInner.withAuthCode(String authCode)"
   name: "withAuthCode(String authCode)"
   nameWithType: "DomainInner.withAuthCode(String authCode)"
-  summary: "Set the auth<wbr>Code property: The auth<wbr>Code property."
+  summary: "Set the auth<wbr>Code property: Authorization code for the domain."
   parameters:
   - description: "the authCode value to set."
     name: "authCode"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public DomainInner withAuthCode(String authCode)"
-  desc: "Set the authCode property: The authCode property."
+  desc: "Set the authCode property: Authorization code for the domain."
   returns:
     description: "the DomainInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.appservice.fluent.models.DomainInner?alt=com.azure.resourcemanager.appservice.fluent.models.DomainInner&text=DomainInner\" data-throw-if-not-resolved=\"False\" />"
@@ -463,7 +473,7 @@ methods:
     name: "kind"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public DomainInner withKind(String kind)"
-  desc: "Set the kind property: Kind of resource. If the resource is an app, you can refer to https://github.com/Azure/app-service-linux-docs/blob/master/Things\\_You\\_Should\\_Know/kind\\_property.md\\#app-service-resource-kind-reference for details supported values for kind."
+  desc: "Set the kind property: Kind of resource."
   returns:
     description: "the DomainInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.appservice.fluent.models.DomainInner?alt=com.azure.resourcemanager.appservice.fluent.models.DomainInner&text=DomainInner\" data-throw-if-not-resolved=\"False\" />"
@@ -521,4 +531,4 @@ type: "class"
 desc: "Information about a domain."
 metadata: {}
 package: "com.azure.resourcemanager.appservice.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-appservice:2.54.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-appservice:2.55.0

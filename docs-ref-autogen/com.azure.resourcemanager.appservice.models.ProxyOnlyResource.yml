@@ -6,15 +6,7 @@ nameWithType: "ProxyOnlyResource"
 summary: "Azure proxy only resource."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.core.management.ProxyResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
-- classRef: "<xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
-  methodsRef:
-  - "<xref href=\"com.azure.core.management.ProxyResource.fromJson(com.azure.json.JsonReader)?alt=com.azure.core.management.ProxyResource.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.ProxyResource.id()?alt=com.azure.core.management.ProxyResource.id&text=id\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.ProxyResource.name()?alt=com.azure.core.management.ProxyResource.name&text=name\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.ProxyResource.toJson(com.azure.json.JsonWriter)?alt=com.azure.core.management.ProxyResource.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.ProxyResource.type()?alt=com.azure.core.management.ProxyResource.type&text=type\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -28,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public class **ProxyOnlyResource**</br> extends <xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
+syntax: "public class **ProxyOnlyResource**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.appservice.models.ProxyOnlyResource?alt=com.azure.resourcemanager.appservice.models.ProxyOnlyResource&text=ProxyOnlyResource\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.appservice.models.ProxyOnlyResource.ProxyOnlyResource()"
   fullName: "com.azure.resourcemanager.appservice.models.ProxyOnlyResource.ProxyOnlyResource()"
@@ -51,7 +43,7 @@ methods:
     type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static ProxyOnlyResource fromJson(JsonReader jsonReader)"
   exceptions:
-  - description: "If the deserialized JSON object was missing any required properties."
+  - description: "If an error occurs while reading the ProxyOnlyResource."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   desc: "Reads an instance of ProxyOnlyResource from the JsonReader."
   returns:
@@ -61,10 +53,9 @@ methods:
   fullName: "com.azure.resourcemanager.appservice.models.ProxyOnlyResource.id()"
   name: "id()"
   nameWithType: "ProxyOnlyResource.id()"
-  summary: "Get the id property: Fully qualified resource Id for the resource."
-  overridden: "com.azure.core.management.ProxyResource.id()"
+  summary: "Get the id property: Resource Id."
   syntax: "public String id()"
-  desc: "Get the id property: Fully qualified resource Id for the resource."
+  desc: "Get the id property: Resource Id."
   returns:
     description: "the id value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -82,10 +73,9 @@ methods:
   fullName: "com.azure.resourcemanager.appservice.models.ProxyOnlyResource.name()"
   name: "name()"
   nameWithType: "ProxyOnlyResource.name()"
-  summary: "Get the name property: The name of the resource."
-  overridden: "com.azure.core.management.ProxyResource.name()"
+  summary: "Get the name property: Resource Name."
   syntax: "public String name()"
-  desc: "Get the name property: The name of the resource."
+  desc: "Get the name property: Resource Name."
   returns:
     description: "the name value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -93,7 +83,6 @@ methods:
   fullName: "com.azure.resourcemanager.appservice.models.ProxyOnlyResource.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
   nameWithType: "ProxyOnlyResource.toJson(JsonWriter jsonWriter)"
-  overridden: "com.azure.core.management.ProxyResource.toJson(com.azure.json.JsonWriter)"
   parameters:
   - name: "jsonWriter"
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
@@ -106,10 +95,9 @@ methods:
   fullName: "com.azure.resourcemanager.appservice.models.ProxyOnlyResource.type()"
   name: "type()"
   nameWithType: "ProxyOnlyResource.type()"
-  summary: "Get the type property: The type of the resource."
-  overridden: "com.azure.core.management.ProxyResource.type()"
+  summary: "Get the type property: Resource type."
   syntax: "public String type()"
-  desc: "Get the type property: The type of the resource."
+  desc: "Get the type property: Resource type."
   returns:
     description: "the type value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -136,6 +124,8 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.appservice.models.ProxyOnlyResource?alt=com.azure.resourcemanager.appservice.models.ProxyOnlyResource&text=ProxyOnlyResource\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Azure proxy only resource. This resource is not tracked by Azure Resource Manager."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.appservice.models.ProxyOnlyResource?alt=com.azure.resourcemanager.appservice.models.ProxyOnlyResource&text=ProxyOnlyResource\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.appservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-appservice:2.54.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-appservice:2.55.0

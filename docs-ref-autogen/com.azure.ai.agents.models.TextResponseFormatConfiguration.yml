@@ -1,0 +1,80 @@
+### YamlMime:JavaType
+uid: "com.azure.ai.agents.models.TextResponseFormatConfiguration"
+fullName: "com.azure.ai.agents.models.TextResponseFormatConfiguration"
+name: "TextResponseFormatConfiguration"
+nameWithType: "TextResponseFormatConfiguration"
+summary: "An object specifying the format that the model must output."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public class **TextResponseFormatConfiguration**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.TextResponseFormatConfiguration?alt=com.azure.ai.agents.models.TextResponseFormatConfiguration&text=TextResponseFormatConfiguration\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.ai.agents.models.TextResponseFormatConfiguration.TextResponseFormatConfiguration()"
+  fullName: "com.azure.ai.agents.models.TextResponseFormatConfiguration.TextResponseFormatConfiguration()"
+  name: "TextResponseFormatConfiguration()"
+  nameWithType: "TextResponseFormatConfiguration.TextResponseFormatConfiguration()"
+  summary: "Creates an instance of Text<wbr>Response<wbr>Format<wbr>Configuration class."
+  syntax: "public TextResponseFormatConfiguration()"
+  desc: "Creates an instance of TextResponseFormatConfiguration class."
+methods:
+- uid: "com.azure.ai.agents.models.TextResponseFormatConfiguration.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.ai.agents.models.TextResponseFormatConfiguration.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "TextResponseFormatConfiguration.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Text<wbr>Response<wbr>Format<wbr>Configuration from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static TextResponseFormatConfiguration fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the TextResponseFormatConfiguration."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of TextResponseFormatConfiguration from the JsonReader."
+  returns:
+    description: "An instance of TextResponseFormatConfiguration if the JsonReader was pointing to an instance of it, or\n null if it was pointing to JSON null."
+    type: "<xref href=\"com.azure.ai.agents.models.TextResponseFormatConfiguration?alt=com.azure.ai.agents.models.TextResponseFormatConfiguration&text=TextResponseFormatConfiguration\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.TextResponseFormatConfiguration.getType()"
+  fullName: "com.azure.ai.agents.models.TextResponseFormatConfiguration.getType()"
+  name: "getType()"
+  nameWithType: "TextResponseFormatConfiguration.getType()"
+  summary: "Get the type property: The type property."
+  syntax: "public TextResponseFormatConfigurationType getType()"
+  desc: "Get the type property: The type property."
+  returns:
+    description: "the type value."
+    type: "<xref href=\"com.azure.ai.agents.models.TextResponseFormatConfigurationType?alt=com.azure.ai.agents.models.TextResponseFormatConfigurationType&text=TextResponseFormatConfigurationType\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.TextResponseFormatConfiguration.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.ai.agents.models.TextResponseFormatConfiguration.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "TextResponseFormatConfiguration.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "An object specifying the format that the model must output. Configuring \\`\\{ \"type\": \"json\\_schema\" \\}\\` enables Structured Outputs, which ensures the model will match your supplied JSON schema. Learn more in the \\[Structured Outputs guide\\](/docs/guides/structured-outputs). The default format is \\`\\{ \"type\": \"text\" \\}\\` with no additional options. \\*Not recommended for gpt-4o and newer models:\\*\\* Setting to \\`\\{ \"type\": \"json\\_object\" \\}\\` enables the older JSON mode, which ensures the message the model generates is valid JSON. Using \\`json\\_schema\\` is preferred for models that support it."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.TextResponseFormatConfiguration?alt=com.azure.ai.agents.models.TextResponseFormatConfiguration&text=TextResponseFormatConfiguration\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.ai.agents.models"
+artifact: com.azure:azure-ai-agents:2.0.0
