@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.search.models.SearchSemanticSearch"
 fullName: "com.azure.resourcemanager.search.models.SearchSemanticSearch"
 name: "SearchSemanticSearch"
 nameWithType: "SearchSemanticSearch"
-summary: "Sets options that control the availability of semantic search."
+summary: "Specifies the availability and billing plan for semantic search on the Azure AI Search service."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 - "<xref href=\"com.azure.core.util.ExpandableStringEnum?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
@@ -42,38 +42,38 @@ fields:
   fullName: "com.azure.resourcemanager.search.models.SearchSemanticSearch.DISABLED"
   name: "DISABLED"
   nameWithType: "SearchSemanticSearch.DISABLED"
-  summary: "Static value disabled for Search<wbr>Semantic<wbr>Search."
+  summary: "Indicates that semantic reranker is disabled for the search service."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.search.models.SearchSemanticSearch?alt=com.azure.resourcemanager.search.models.SearchSemanticSearch&text=SearchSemanticSearch\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final SearchSemanticSearch DISABLED"
-  desc: "Static value disabled for SearchSemanticSearch."
+  desc: "Indicates that semantic reranker is disabled for the search service."
 - uid: "com.azure.resourcemanager.search.models.SearchSemanticSearch.FREE"
   fullName: "com.azure.resourcemanager.search.models.SearchSemanticSearch.FREE"
   name: "FREE"
   nameWithType: "SearchSemanticSearch.FREE"
-  summary: "Static value free for Search<wbr>Semantic<wbr>Search."
+  summary: "Enables semantic reranker on a search service and indicates that it is to be used within the limits of the free plan."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.search.models.SearchSemanticSearch?alt=com.azure.resourcemanager.search.models.SearchSemanticSearch&text=SearchSemanticSearch\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final SearchSemanticSearch FREE"
-  desc: "Static value free for SearchSemanticSearch."
+  desc: "Enables semantic reranker on a search service and indicates that it is to be used within the limits of the free plan. The free plan would cap the volume of semantic ranking requests and is offered at no extra charge. This is the default for newly provisioned search services. This is the default."
 - uid: "com.azure.resourcemanager.search.models.SearchSemanticSearch.STANDARD"
   fullName: "com.azure.resourcemanager.search.models.SearchSemanticSearch.STANDARD"
   name: "STANDARD"
   nameWithType: "SearchSemanticSearch.STANDARD"
-  summary: "Static value standard for Search<wbr>Semantic<wbr>Search."
+  summary: "Enables semantic reranker on a search service as a billable feature after the free quota is exhausted, with higher throughput and volume of semantically reranked queries."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.search.models.SearchSemanticSearch?alt=com.azure.resourcemanager.search.models.SearchSemanticSearch&text=SearchSemanticSearch\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final SearchSemanticSearch STANDARD"
-  desc: "Static value standard for SearchSemanticSearch."
+  desc: "Enables semantic reranker on a search service as a billable feature after the free quota is exhausted, with higher throughput and volume of semantically reranked queries."
 methods:
 - uid: "com.azure.resourcemanager.search.models.SearchSemanticSearch.fromString(java.lang.String)"
   fullName: "com.azure.resourcemanager.search.models.SearchSemanticSearch.fromString(String name)"
@@ -104,7 +104,7 @@ methods:
     description: "known SearchSemanticSearch values."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html\">Collection</a>&lt;<xref href=\"com.azure.resourcemanager.search.models.SearchSemanticSearch?alt=com.azure.resourcemanager.search.models.SearchSemanticSearch&text=SearchSemanticSearch\" data-throw-if-not-resolved=\"False\" />&gt;"
 type: "class"
-desc: "Sets options that control the availability of semantic search. This configuration is only possible for certain Azure AI Search SKUs in certain locations."
+desc: "Specifies the availability and billing plan for semantic search on the Azure AI Search service. This configuration is only available for certain pricing tiers in certain regions."
 metadata: {}
 package: "com.azure.resourcemanager.search.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-search:2.50.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-search:2.55.0-beta.1

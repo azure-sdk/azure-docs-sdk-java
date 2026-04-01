@@ -14,7 +14,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group within the current subscription. You can obtain this\n value from the Azure Resource Manager API or the portal."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the Azure AI Search service associated with the specified resource group."
@@ -25,27 +25,24 @@ methods:
   returns:
     description: "a list of all supported private link resource types for the given service as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.search.fluent.models.PrivateLinkResourceInner?alt=com.azure.resourcemanager.search.fluent.models.PrivateLinkResourceInner&text=PrivateLinkResourceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.search.fluent.PrivateLinkResourcesClient.listSupported(java.lang.String,java.lang.String,java.util.UUID,com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.search.fluent.PrivateLinkResourcesClient.listSupported(String resourceGroupName, String searchServiceName, UUID clientRequestId, Context context)"
-  name: "listSupported(String resourceGroupName, String searchServiceName, UUID clientRequestId, Context context)"
-  nameWithType: "PrivateLinkResourcesClient.listSupported(String resourceGroupName, String searchServiceName, UUID clientRequestId, Context context)"
+- uid: "com.azure.resourcemanager.search.fluent.PrivateLinkResourcesClient.listSupported(java.lang.String,java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.search.fluent.PrivateLinkResourcesClient.listSupported(String resourceGroupName, String searchServiceName, Context context)"
+  name: "listSupported(String resourceGroupName, String searchServiceName, Context context)"
+  nameWithType: "PrivateLinkResourcesClient.listSupported(String resourceGroupName, String searchServiceName, Context context)"
   summary: "Gets a list of all supported private link resource types for the given service."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group within the current subscription. You can obtain this\n value from the Azure Resource Manager API or the portal."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the Azure AI Search service associated with the specified resource group."
     name: "searchServiceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "A client-generated GUID value that identifies this request. If specified, this will be\n included in response information as a way to track the request."
-    name: "clientRequestId"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html\">UUID</a>"
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract PagedIterable<PrivateLinkResourceInner> listSupported(String resourceGroupName, String searchServiceName, UUID clientRequestId, Context context)"
+  syntax: "public abstract PagedIterable<PrivateLinkResourceInner> listSupported(String resourceGroupName, String searchServiceName, Context context)"
   desc: "Gets a list of all supported private link resource types for the given service."
   returns:
     description: "a list of all supported private link resource types for the given service as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
@@ -58,7 +55,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group within the current subscription. You can obtain this\n value from the Azure Resource Manager API or the portal."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the Azure AI Search service associated with the specified resource group."
@@ -69,30 +66,8 @@ methods:
   returns:
     description: "a list of all supported private link resource types for the given service as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.search.fluent.models.PrivateLinkResourceInner?alt=com.azure.resourcemanager.search.fluent.models.PrivateLinkResourceInner&text=PrivateLinkResourceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.search.fluent.PrivateLinkResourcesClient.listSupportedAsync(java.lang.String,java.lang.String,java.util.UUID)"
-  fullName: "com.azure.resourcemanager.search.fluent.PrivateLinkResourcesClient.listSupportedAsync(String resourceGroupName, String searchServiceName, UUID clientRequestId)"
-  name: "listSupportedAsync(String resourceGroupName, String searchServiceName, UUID clientRequestId)"
-  nameWithType: "PrivateLinkResourcesClient.listSupportedAsync(String resourceGroupName, String searchServiceName, UUID clientRequestId)"
-  summary: "Gets a list of all supported private link resource types for the given service."
-  modifiers:
-  - "abstract"
-  parameters:
-  - description: "The name of the resource group within the current subscription. You can obtain this\n value from the Azure Resource Manager API or the portal."
-    name: "resourceGroupName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the Azure AI Search service associated with the specified resource group."
-    name: "searchServiceName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "A client-generated GUID value that identifies this request. If specified, this will be\n included in response information as a way to track the request."
-    name: "clientRequestId"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html\">UUID</a>"
-  syntax: "public abstract PagedFlux<PrivateLinkResourceInner> listSupportedAsync(String resourceGroupName, String searchServiceName, UUID clientRequestId)"
-  desc: "Gets a list of all supported private link resource types for the given service."
-  returns:
-    description: "a list of all supported private link resource types for the given service as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
-    type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.search.fluent.models.PrivateLinkResourceInner?alt=com.azure.resourcemanager.search.fluent.models.PrivateLinkResourceInner&text=PrivateLinkResourceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 type: "interface"
 desc: "An instance of this class provides access to all the operations defined in PrivateLinkResourcesClient."
 metadata: {}
 package: "com.azure.resourcemanager.search.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-search:2.50.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-search:2.55.0-beta.1

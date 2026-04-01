@@ -13,27 +13,11 @@ methods:
   summary: "Lists all of the features and SKUs offered by the Azure AI Search service in each region."
   modifiers:
   - "abstract"
-  syntax: "public abstract PagedIterable<OfferingsByRegionInner> list()"
-  desc: "Lists all of the features and SKUs offered by the Azure AI Search service in each region."
+  syntax: "public abstract OfferingsListResultInner list()"
+  desc: "Lists all of the features and SKUs offered by the Azure AI Search service in each region. Note: This API returns a non-ARM resource collection and is not RPC-compliant. It will be replaced with an action-style API in the next preview as a breaking change. Customers should avoid taking new dependencies on the current shape."
   returns:
-    description: "the response containing a list of features and SKUs offered in various regions as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
-    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.search.fluent.models.OfferingsByRegionInner?alt=com.azure.resourcemanager.search.fluent.models.OfferingsByRegionInner&text=OfferingsByRegionInner\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.search.fluent.OfferingsClient.list(com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.search.fluent.OfferingsClient.list(Context context)"
-  name: "list(Context context)"
-  nameWithType: "OfferingsClient.list(Context context)"
-  summary: "Lists all of the features and SKUs offered by the Azure AI Search service in each region."
-  modifiers:
-  - "abstract"
-  parameters:
-  - description: "The context to associate with this operation."
-    name: "context"
-    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract PagedIterable<OfferingsByRegionInner> list(Context context)"
-  desc: "Lists all of the features and SKUs offered by the Azure AI Search service in each region."
-  returns:
-    description: "the response containing a list of features and SKUs offered in various regions as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
-    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.search.fluent.models.OfferingsByRegionInner?alt=com.azure.resourcemanager.search.fluent.models.OfferingsByRegionInner&text=OfferingsByRegionInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "response containing the list of offerings available in Azure AI Search, organized by region."
+    type: "<xref href=\"com.azure.resourcemanager.search.fluent.models.OfferingsListResultInner?alt=com.azure.resourcemanager.search.fluent.models.OfferingsListResultInner&text=OfferingsListResultInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.search.fluent.OfferingsClient.listAsync()"
   fullName: "com.azure.resourcemanager.search.fluent.OfferingsClient.listAsync()"
   name: "listAsync()"
@@ -41,13 +25,41 @@ methods:
   summary: "Lists all of the features and SKUs offered by the Azure AI Search service in each region."
   modifiers:
   - "abstract"
-  syntax: "public abstract PagedFlux<OfferingsByRegionInner> listAsync()"
-  desc: "Lists all of the features and SKUs offered by the Azure AI Search service in each region."
+  syntax: "public abstract Mono<OfferingsListResultInner> listAsync()"
+  desc: "Lists all of the features and SKUs offered by the Azure AI Search service in each region. Note: This API returns a non-ARM resource collection and is not RPC-compliant. It will be replaced with an action-style API in the next preview as a breaking change. Customers should avoid taking new dependencies on the current shape."
   returns:
-    description: "the response containing a list of features and SKUs offered in various regions as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
-    type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.search.fluent.models.OfferingsByRegionInner?alt=com.azure.resourcemanager.search.fluent.models.OfferingsByRegionInner&text=OfferingsByRegionInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "response containing the list of offerings available in Azure AI Search, organized by region on successful\n completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.resourcemanager.search.fluent.models.OfferingsListResultInner?alt=com.azure.resourcemanager.search.fluent.models.OfferingsListResultInner&text=OfferingsListResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.search.fluent.OfferingsClient.listWithResponse(com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.search.fluent.OfferingsClient.listWithResponse(Context context)"
+  name: "listWithResponse(Context context)"
+  nameWithType: "OfferingsClient.listWithResponse(Context context)"
+  summary: "Lists all of the features and SKUs offered by the Azure AI Search service in each region."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Response<OfferingsListResultInner> listWithResponse(Context context)"
+  desc: "Lists all of the features and SKUs offered by the Azure AI Search service in each region. Note: This API returns a non-ARM resource collection and is not RPC-compliant. It will be replaced with an action-style API in the next preview as a breaking change. Customers should avoid taking new dependencies on the current shape."
+  returns:
+    description: "response containing the list of offerings available in Azure AI Search, organized by region along with\n <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.search.fluent.models.OfferingsListResultInner?alt=com.azure.resourcemanager.search.fluent.models.OfferingsListResultInner&text=OfferingsListResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.search.fluent.OfferingsClient.listWithResponseAsync()"
+  fullName: "com.azure.resourcemanager.search.fluent.OfferingsClient.listWithResponseAsync()"
+  name: "listWithResponseAsync()"
+  nameWithType: "OfferingsClient.listWithResponseAsync()"
+  summary: "Lists all of the features and SKUs offered by the Azure AI Search service in each region."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Mono<Response<OfferingsListResultInner>> listWithResponseAsync()"
+  desc: "Lists all of the features and SKUs offered by the Azure AI Search service in each region. Note: This API returns a non-ARM resource collection and is not RPC-compliant. It will be replaced with an action-style API in the next preview as a breaking change. Customers should avoid taking new dependencies on the current shape."
+  returns:
+    description: "response containing the list of offerings available in Azure AI Search, organized by region along with\n <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.search.fluent.models.OfferingsListResultInner?alt=com.azure.resourcemanager.search.fluent.models.OfferingsListResultInner&text=OfferingsListResultInner\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 type: "interface"
 desc: "An instance of this class provides access to all the operations defined in OfferingsClient."
 metadata: {}
 package: "com.azure.resourcemanager.search.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-search:2.50.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-search:2.55.0-beta.1

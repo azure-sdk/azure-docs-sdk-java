@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.search.models.SkuOffering"
 fullName: "com.azure.resourcemanager.search.models.SkuOffering"
 name: "SkuOffering"
 nameWithType: "SkuOffering"
-summary: "The Sku<wbr>Offering model."
+summary: "Describes a SKU offering with its limits in a specific region."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -21,14 +21,6 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
 syntax: "public final class **SkuOffering**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.search.models.SkuOffering?alt=com.azure.resourcemanager.search.models.SkuOffering&text=SkuOffering\" data-throw-if-not-resolved=\"False\" />&gt;"
-constructors:
-- uid: "com.azure.resourcemanager.search.models.SkuOffering.SkuOffering()"
-  fullName: "com.azure.resourcemanager.search.models.SkuOffering.SkuOffering()"
-  name: "SkuOffering()"
-  nameWithType: "SkuOffering.SkuOffering()"
-  summary: "Creates an instance of Sku<wbr>Offering class."
-  syntax: "public SkuOffering()"
-  desc: "Creates an instance of SkuOffering class."
 methods:
 - uid: "com.azure.resourcemanager.search.models.SkuOffering.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.resourcemanager.search.models.SkuOffering.fromJson(JsonReader jsonReader)"
@@ -54,18 +46,18 @@ methods:
   name: "limits()"
   nameWithType: "SkuOffering.limits()"
   summary: "Get the limits property: The limits associated with this SKU offered in this region."
-  syntax: "public SkuOfferingLimits limits()"
+  syntax: "public SkuLimits limits()"
   desc: "Get the limits property: The limits associated with this SKU offered in this region."
   returns:
     description: "the limits value."
-    type: "<xref href=\"com.azure.resourcemanager.search.models.SkuOfferingLimits?alt=com.azure.resourcemanager.search.models.SkuOfferingLimits&text=SkuOfferingLimits\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.resourcemanager.search.models.SkuLimits?alt=com.azure.resourcemanager.search.models.SkuLimits&text=SkuLimits\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.search.models.SkuOffering.sku()"
   fullName: "com.azure.resourcemanager.search.models.SkuOffering.sku()"
   name: "sku()"
   nameWithType: "SkuOffering.sku()"
-  summary: "Get the sku property: Defines the SKU of a search service, which determines billing rate and capacity limits."
+  summary: "Get the sku property: The SKU definition."
   syntax: "public Sku sku()"
-  desc: "Get the sku property: Defines the SKU of a search service, which determines billing rate and capacity limits."
+  desc: "Get the sku property: The SKU definition."
   returns:
     description: "the sku value."
     type: "<xref href=\"com.azure.resourcemanager.search.models.Sku?alt=com.azure.resourcemanager.search.models.Sku&text=Sku\" data-throw-if-not-resolved=\"False\" />"
@@ -88,38 +80,10 @@ methods:
   summary: "Validates the instance."
   syntax: "public void validate()"
   desc: "Validates the instance."
-- uid: "com.azure.resourcemanager.search.models.SkuOffering.withLimits(com.azure.resourcemanager.search.models.SkuOfferingLimits)"
-  fullName: "com.azure.resourcemanager.search.models.SkuOffering.withLimits(SkuOfferingLimits limits)"
-  name: "withLimits(SkuOfferingLimits limits)"
-  nameWithType: "SkuOffering.withLimits(SkuOfferingLimits limits)"
-  summary: "Set the limits property: The limits associated with this SKU offered in this region."
-  parameters:
-  - description: "the limits value to set."
-    name: "limits"
-    type: "<xref href=\"com.azure.resourcemanager.search.models.SkuOfferingLimits?alt=com.azure.resourcemanager.search.models.SkuOfferingLimits&text=SkuOfferingLimits\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public SkuOffering withLimits(SkuOfferingLimits limits)"
-  desc: "Set the limits property: The limits associated with this SKU offered in this region."
-  returns:
-    description: "the SkuOffering object itself."
-    type: "<xref href=\"com.azure.resourcemanager.search.models.SkuOffering?alt=com.azure.resourcemanager.search.models.SkuOffering&text=SkuOffering\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.search.models.SkuOffering.withSku(com.azure.resourcemanager.search.models.Sku)"
-  fullName: "com.azure.resourcemanager.search.models.SkuOffering.withSku(Sku sku)"
-  name: "withSku(Sku sku)"
-  nameWithType: "SkuOffering.withSku(Sku sku)"
-  summary: "Set the sku property: Defines the SKU of a search service, which determines billing rate and capacity limits."
-  parameters:
-  - description: "the sku value to set."
-    name: "sku"
-    type: "<xref href=\"com.azure.resourcemanager.search.models.Sku?alt=com.azure.resourcemanager.search.models.Sku&text=Sku\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public SkuOffering withSku(Sku sku)"
-  desc: "Set the sku property: Defines the SKU of a search service, which determines billing rate and capacity limits."
-  returns:
-    description: "the SkuOffering object itself."
-    type: "<xref href=\"com.azure.resourcemanager.search.models.SkuOffering?alt=com.azure.resourcemanager.search.models.SkuOffering&text=SkuOffering\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "The SkuOffering model."
+desc: "Describes a SKU offering with its limits in a specific region."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.search.models.SkuOffering?alt=com.azure.resourcemanager.search.models.SkuOffering&text=SkuOffering\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.search.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-search:2.50.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-search:2.55.0-beta.1

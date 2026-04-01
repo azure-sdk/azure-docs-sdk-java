@@ -22,11 +22,11 @@ methods:
   fullName: "com.azure.resourcemanager.search.fluent.SearchManagementClient.getApiVersion()"
   name: "getApiVersion()"
   nameWithType: "SearchManagementClient.getApiVersion()"
-  summary: "Gets Api Version."
+  summary: "Gets Version parameter."
   modifiers:
   - "abstract"
   syntax: "public abstract String getApiVersion()"
-  desc: "Gets Api Version."
+  desc: "Gets Version parameter."
   returns:
     description: "the apiVersion value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -46,11 +46,11 @@ methods:
   fullName: "com.azure.resourcemanager.search.fluent.SearchManagementClient.getEndpoint()"
   name: "getEndpoint()"
   nameWithType: "SearchManagementClient.getEndpoint()"
-  summary: "Gets server parameter."
+  summary: "Gets Service host."
   modifiers:
   - "abstract"
   syntax: "public abstract String getEndpoint()"
-  desc: "Gets server parameter."
+  desc: "Gets Service host."
   returns:
     description: "the endpoint value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -166,11 +166,11 @@ methods:
   fullName: "com.azure.resourcemanager.search.fluent.SearchManagementClient.getSubscriptionId()"
   name: "getSubscriptionId()"
   nameWithType: "SearchManagementClient.getSubscriptionId()"
-  summary: "Gets The unique identifier for a Microsoft Azure subscription."
+  summary: "Gets The ID of the target subscription."
   modifiers:
   - "abstract"
   syntax: "public abstract String getSubscriptionId()"
-  desc: "Gets The unique identifier for a Microsoft Azure subscription. You can obtain this value from the Azure Resource Manager API or the portal."
+  desc: "Gets The ID of the target subscription. The value must be an UUID."
   returns:
     description: "the subscriptionId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -194,7 +194,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The unique location name for a Microsoft Azure geographic region."
+  - description: "The name of the Azure region."
     name: "location"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The unique SKU name that identifies a billable tier."
@@ -213,7 +213,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The unique location name for a Microsoft Azure geographic region."
+  - description: "The name of the Azure region."
     name: "location"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The unique SKU name that identifies a billable tier."
@@ -224,49 +224,43 @@ methods:
   returns:
     description: "the quota usage for a search SKU in the given subscription on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.resourcemanager.search.fluent.models.QuotaUsageResultInner?alt=com.azure.resourcemanager.search.fluent.models.QuotaUsageResultInner&text=QuotaUsageResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.search.fluent.SearchManagementClient.usageBySubscriptionSkuWithResponse(java.lang.String,java.lang.String,java.util.UUID,com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.search.fluent.SearchManagementClient.usageBySubscriptionSkuWithResponse(String location, String skuName, UUID clientRequestId, Context context)"
-  name: "usageBySubscriptionSkuWithResponse(String location, String skuName, UUID clientRequestId, Context context)"
-  nameWithType: "SearchManagementClient.usageBySubscriptionSkuWithResponse(String location, String skuName, UUID clientRequestId, Context context)"
+- uid: "com.azure.resourcemanager.search.fluent.SearchManagementClient.usageBySubscriptionSkuWithResponse(java.lang.String,java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.search.fluent.SearchManagementClient.usageBySubscriptionSkuWithResponse(String location, String skuName, Context context)"
+  name: "usageBySubscriptionSkuWithResponse(String location, String skuName, Context context)"
+  nameWithType: "SearchManagementClient.usageBySubscriptionSkuWithResponse(String location, String skuName, Context context)"
   summary: "Gets the quota usage for a search SKU in the given subscription."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The unique location name for a Microsoft Azure geographic region."
+  - description: "The name of the Azure region."
     name: "location"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The unique SKU name that identifies a billable tier."
     name: "skuName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "A client-generated GUID value that identifies this request. If specified, this will be\n included in response information as a way to track the request."
-    name: "clientRequestId"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html\">UUID</a>"
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract Response<QuotaUsageResultInner> usageBySubscriptionSkuWithResponse(String location, String skuName, UUID clientRequestId, Context context)"
+  syntax: "public abstract Response<QuotaUsageResultInner> usageBySubscriptionSkuWithResponse(String location, String skuName, Context context)"
   desc: "Gets the quota usage for a search SKU in the given subscription."
   returns:
     description: "the quota usage for a search SKU in the given subscription along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.search.fluent.models.QuotaUsageResultInner?alt=com.azure.resourcemanager.search.fluent.models.QuotaUsageResultInner&text=QuotaUsageResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.search.fluent.SearchManagementClient.usageBySubscriptionSkuWithResponseAsync(java.lang.String,java.lang.String,java.util.UUID)"
-  fullName: "com.azure.resourcemanager.search.fluent.SearchManagementClient.usageBySubscriptionSkuWithResponseAsync(String location, String skuName, UUID clientRequestId)"
-  name: "usageBySubscriptionSkuWithResponseAsync(String location, String skuName, UUID clientRequestId)"
-  nameWithType: "SearchManagementClient.usageBySubscriptionSkuWithResponseAsync(String location, String skuName, UUID clientRequestId)"
+- uid: "com.azure.resourcemanager.search.fluent.SearchManagementClient.usageBySubscriptionSkuWithResponseAsync(java.lang.String,java.lang.String)"
+  fullName: "com.azure.resourcemanager.search.fluent.SearchManagementClient.usageBySubscriptionSkuWithResponseAsync(String location, String skuName)"
+  name: "usageBySubscriptionSkuWithResponseAsync(String location, String skuName)"
+  nameWithType: "SearchManagementClient.usageBySubscriptionSkuWithResponseAsync(String location, String skuName)"
   summary: "Gets the quota usage for a search SKU in the given subscription."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The unique location name for a Microsoft Azure geographic region."
+  - description: "The name of the Azure region."
     name: "location"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The unique SKU name that identifies a billable tier."
     name: "skuName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "A client-generated GUID value that identifies this request. If specified, this will be\n included in response information as a way to track the request."
-    name: "clientRequestId"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html\">UUID</a>"
-  syntax: "public abstract Mono<Response<QuotaUsageResultInner>> usageBySubscriptionSkuWithResponseAsync(String location, String skuName, UUID clientRequestId)"
+  syntax: "public abstract Mono<Response<QuotaUsageResultInner>> usageBySubscriptionSkuWithResponseAsync(String location, String skuName)"
   desc: "Gets the quota usage for a search SKU in the given subscription."
   returns:
     description: "the quota usage for a search SKU in the given subscription along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful\n completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
@@ -275,4 +269,4 @@ type: "interface"
 desc: "The interface for SearchManagementClient class."
 metadata: {}
 package: "com.azure.resourcemanager.search.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-search:2.50.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-search:2.55.0-beta.1
