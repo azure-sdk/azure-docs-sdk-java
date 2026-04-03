@@ -20,14 +20,26 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **UserDetail**"
+syntax: "public final class **UserDetail**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.confluent.models.UserDetail?alt=com.azure.resourcemanager.confluent.models.UserDetail&text=UserDetail\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.confluent.models.UserDetail.UserDetail()"
   fullName: "com.azure.resourcemanager.confluent.models.UserDetail.UserDetail()"
   name: "UserDetail()"
   nameWithType: "UserDetail.UserDetail()"
+  summary: "Creates an instance of User<wbr>Detail class."
   syntax: "public UserDetail()"
+  desc: "Creates an instance of UserDetail class."
 methods:
+- uid: "com.azure.resourcemanager.confluent.models.UserDetail.aadEmail()"
+  fullName: "com.azure.resourcemanager.confluent.models.UserDetail.aadEmail()"
+  name: "aadEmail()"
+  nameWithType: "UserDetail.aadEmail()"
+  summary: "Get the aad<wbr>Email property: AAD email address."
+  syntax: "public String aadEmail()"
+  desc: "Get the aadEmail property: AAD email address."
+  returns:
+    description: "the aadEmail value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.confluent.models.UserDetail.emailAddress()"
   fullName: "com.azure.resourcemanager.confluent.models.UserDetail.emailAddress()"
   name: "emailAddress()"
@@ -48,6 +60,25 @@ methods:
   returns:
     description: "the firstName value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.confluent.models.UserDetail.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.confluent.models.UserDetail.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "UserDetail.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of User<wbr>Detail from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static UserDetail fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of UserDetail from the JsonReader."
+  returns:
+    description: "An instance of UserDetail if the JsonReader was pointing to an instance of it, or null if it was pointing\n to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.confluent.models.UserDetail?alt=com.azure.resourcemanager.confluent.models.UserDetail&text=UserDetail\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.confluent.models.UserDetail.lastName()"
   fullName: "com.azure.resourcemanager.confluent.models.UserDetail.lastName()"
   name: "lastName()"
@@ -58,13 +89,42 @@ methods:
   returns:
     description: "the lastName value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-- uid: "com.azure.resourcemanager.confluent.models.UserDetail.validate()"
-  fullName: "com.azure.resourcemanager.confluent.models.UserDetail.validate()"
-  name: "validate()"
-  nameWithType: "UserDetail.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.confluent.models.UserDetail.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.confluent.models.UserDetail.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "UserDetail.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.confluent.models.UserDetail.userPrincipalName()"
+  fullName: "com.azure.resourcemanager.confluent.models.UserDetail.userPrincipalName()"
+  name: "userPrincipalName()"
+  nameWithType: "UserDetail.userPrincipalName()"
+  summary: "Get the user<wbr>Principal<wbr>Name property: User principal name."
+  syntax: "public String userPrincipalName()"
+  desc: "Get the userPrincipalName property: User principal name."
+  returns:
+    description: "the userPrincipalName value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.confluent.models.UserDetail.withAadEmail(java.lang.String)"
+  fullName: "com.azure.resourcemanager.confluent.models.UserDetail.withAadEmail(String aadEmail)"
+  name: "withAadEmail(String aadEmail)"
+  nameWithType: "UserDetail.withAadEmail(String aadEmail)"
+  summary: "Set the aad<wbr>Email property: AAD email address."
+  parameters:
+  - description: "the aadEmail value to set."
+    name: "aadEmail"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public UserDetail withAadEmail(String aadEmail)"
+  desc: "Set the aadEmail property: AAD email address."
+  returns:
+    description: "the UserDetail object itself."
+    type: "<xref href=\"com.azure.resourcemanager.confluent.models.UserDetail?alt=com.azure.resourcemanager.confluent.models.UserDetail&text=UserDetail\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.confluent.models.UserDetail.withEmailAddress(java.lang.String)"
   fullName: "com.azure.resourcemanager.confluent.models.UserDetail.withEmailAddress(String emailAddress)"
   name: "withEmailAddress(String emailAddress)"
@@ -107,8 +167,24 @@ methods:
   returns:
     description: "the UserDetail object itself."
     type: "<xref href=\"com.azure.resourcemanager.confluent.models.UserDetail?alt=com.azure.resourcemanager.confluent.models.UserDetail&text=UserDetail\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.confluent.models.UserDetail.withUserPrincipalName(java.lang.String)"
+  fullName: "com.azure.resourcemanager.confluent.models.UserDetail.withUserPrincipalName(String userPrincipalName)"
+  name: "withUserPrincipalName(String userPrincipalName)"
+  nameWithType: "UserDetail.withUserPrincipalName(String userPrincipalName)"
+  summary: "Set the user<wbr>Principal<wbr>Name property: User principal name."
+  parameters:
+  - description: "the userPrincipalName value to set."
+    name: "userPrincipalName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public UserDetail withUserPrincipalName(String userPrincipalName)"
+  desc: "Set the userPrincipalName property: User principal name."
+  returns:
+    description: "the UserDetail object itself."
+    type: "<xref href=\"com.azure.resourcemanager.confluent.models.UserDetail?alt=com.azure.resourcemanager.confluent.models.UserDetail&text=UserDetail\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Subscriber detail."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.confluent.models.UserDetail?alt=com.azure.resourcemanager.confluent.models.UserDetail&text=UserDetail\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.confluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-confluent:1.0.0-beta.3
+artifact: com.azure.resourcemanager:azure-resourcemanager-confluent:1.3.0-beta.1

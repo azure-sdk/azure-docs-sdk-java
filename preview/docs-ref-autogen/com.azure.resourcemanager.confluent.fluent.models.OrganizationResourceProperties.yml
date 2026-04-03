@@ -20,13 +20,15 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **OrganizationResourceProperties**"
+syntax: "public final class **OrganizationResourceProperties**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties?alt=com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties&text=OrganizationResourceProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties.OrganizationResourceProperties()"
   fullName: "com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties.OrganizationResourceProperties()"
   name: "OrganizationResourceProperties()"
   nameWithType: "OrganizationResourceProperties.OrganizationResourceProperties()"
+  summary: "Creates an instance of Organization<wbr>Resource<wbr>Properties class."
   syntax: "public OrganizationResourceProperties()"
+  desc: "Creates an instance of OrganizationResourceProperties class."
 methods:
 - uid: "com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties.createdTime()"
   fullName: "com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties.createdTime()"
@@ -38,6 +40,35 @@ methods:
   returns:
     description: "the createdTime value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
+- uid: "com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "OrganizationResourceProperties.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Organization<wbr>Resource<wbr>Properties from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static OrganizationResourceProperties fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of OrganizationResourceProperties from the JsonReader."
+  returns:
+    description: "An instance of OrganizationResourceProperties if the JsonReader was pointing to an instance of it, or\n null if it was pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties?alt=com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties&text=OrganizationResourceProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties.linkOrganization()"
+  fullName: "com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties.linkOrganization()"
+  name: "linkOrganization()"
+  nameWithType: "OrganizationResourceProperties.linkOrganization()"
+  summary: "Get the link<wbr>Organization property: Link an existing Confluent organization."
+  syntax: "public LinkOrganization linkOrganization()"
+  desc: "Get the linkOrganization property: Link an existing Confluent organization."
+  returns:
+    description: "the linkOrganization value."
+    type: "<xref href=\"com.azure.resourcemanager.confluent.models.LinkOrganization?alt=com.azure.resourcemanager.confluent.models.LinkOrganization&text=LinkOrganization\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties.offerDetail()"
   fullName: "com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties.offerDetail()"
   name: "offerDetail()"
@@ -62,9 +93,9 @@ methods:
   fullName: "com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties.provisioningState()"
   name: "provisioningState()"
   nameWithType: "OrganizationResourceProperties.provisioningState()"
-  summary: "Get the provisioning<wbr>State property: Provisioning<wbr>State Provision states for confluent RP."
+  summary: "Get the provisioning<wbr>State property: Provision states for confluent RP."
   syntax: "public ProvisionState provisioningState()"
-  desc: "Get the provisioningState property: ProvisioningState Provision states for confluent RP."
+  desc: "Get the provisioningState property: Provision states for confluent RP."
   returns:
     description: "the provisioningState value."
     type: "<xref href=\"com.azure.resourcemanager.confluent.models.ProvisionState?alt=com.azure.resourcemanager.confluent.models.ProvisionState&text=ProvisionState\" data-throw-if-not-resolved=\"False\" />"
@@ -78,6 +109,18 @@ methods:
   returns:
     description: "the ssoUrl value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "OrganizationResourceProperties.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties.userDetail()"
   fullName: "com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties.userDetail()"
   name: "userDetail()"
@@ -88,13 +131,20 @@ methods:
   returns:
     description: "the userDetail value."
     type: "<xref href=\"com.azure.resourcemanager.confluent.models.UserDetail?alt=com.azure.resourcemanager.confluent.models.UserDetail&text=UserDetail\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties.validate()"
-  fullName: "com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties.validate()"
-  name: "validate()"
-  nameWithType: "OrganizationResourceProperties.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties.withLinkOrganization(com.azure.resourcemanager.confluent.models.LinkOrganization)"
+  fullName: "com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties.withLinkOrganization(LinkOrganization linkOrganization)"
+  name: "withLinkOrganization(LinkOrganization linkOrganization)"
+  nameWithType: "OrganizationResourceProperties.withLinkOrganization(LinkOrganization linkOrganization)"
+  summary: "Set the link<wbr>Organization property: Link an existing Confluent organization."
+  parameters:
+  - description: "the linkOrganization value to set."
+    name: "linkOrganization"
+    type: "<xref href=\"com.azure.resourcemanager.confluent.models.LinkOrganization?alt=com.azure.resourcemanager.confluent.models.LinkOrganization&text=LinkOrganization\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public OrganizationResourceProperties withLinkOrganization(LinkOrganization linkOrganization)"
+  desc: "Set the linkOrganization property: Link an existing Confluent organization."
+  returns:
+    description: "the OrganizationResourceProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties?alt=com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties&text=OrganizationResourceProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties.withOfferDetail(com.azure.resourcemanager.confluent.models.OfferDetail)"
   fullName: "com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties.withOfferDetail(OfferDetail offerDetail)"
   name: "withOfferDetail(OfferDetail offerDetail)"
@@ -125,6 +175,8 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties?alt=com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties&text=OrganizationResourceProperties\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Organization resource property."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties?alt=com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceProperties&text=OrganizationResourceProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.confluent.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-confluent:1.0.0-beta.3
+artifact: com.azure.resourcemanager:azure-resourcemanager-confluent:1.3.0-beta.1

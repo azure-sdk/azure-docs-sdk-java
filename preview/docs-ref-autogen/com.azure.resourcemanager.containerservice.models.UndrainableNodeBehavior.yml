@@ -42,26 +42,26 @@ fields:
   fullName: "com.azure.resourcemanager.containerservice.models.UndrainableNodeBehavior.CORDON"
   name: "CORDON"
   nameWithType: "UndrainableNodeBehavior.CORDON"
-  summary: "Static value Cordon for Undrainable<wbr>Node<wbr>Behavior."
+  summary: "AKS will cordon the blocked nodes and replace them with surge nodes during upgrade."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.UndrainableNodeBehavior?alt=com.azure.resourcemanager.containerservice.models.UndrainableNodeBehavior&text=UndrainableNodeBehavior\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final UndrainableNodeBehavior CORDON"
-  desc: "Static value Cordon for UndrainableNodeBehavior."
+  desc: "AKS will cordon the blocked nodes and replace them with surge nodes during upgrade. The blocked nodes will be cordoned and replaced by surge nodes. The blocked nodes will have label 'kubernetes.azure.com/upgrade-status:Quarantined'. A surge node will be retained for each blocked node. A best-effort attempt will be made to delete all other surge nodes. If there are enough surge nodes to replace blocked nodes, then the upgrade operation and the managed cluster will be in failed state. Otherwise, the upgrade operation and the managed cluster will be in canceled state."
 - uid: "com.azure.resourcemanager.containerservice.models.UndrainableNodeBehavior.SCHEDULE"
   fullName: "com.azure.resourcemanager.containerservice.models.UndrainableNodeBehavior.SCHEDULE"
   name: "SCHEDULE"
   nameWithType: "UndrainableNodeBehavior.SCHEDULE"
-  summary: "Static value Schedule for Undrainable<wbr>Node<wbr>Behavior."
+  summary: "AKS will mark the blocked nodes schedulable, but the blocked nodes are not upgraded."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.UndrainableNodeBehavior?alt=com.azure.resourcemanager.containerservice.models.UndrainableNodeBehavior&text=UndrainableNodeBehavior\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final UndrainableNodeBehavior SCHEDULE"
-  desc: "Static value Schedule for UndrainableNodeBehavior."
+  desc: "AKS will mark the blocked nodes schedulable, but the blocked nodes are not upgraded. A best-effort attempt will be made to delete all surge nodes. The upgrade operation and the managed cluster will be in failed state if there are any blocked nodes."
 methods:
 - uid: "com.azure.resourcemanager.containerservice.models.UndrainableNodeBehavior.fromString(java.lang.String)"
   fullName: "com.azure.resourcemanager.containerservice.models.UndrainableNodeBehavior.fromString(String name)"
@@ -95,4 +95,4 @@ type: "class"
 desc: "Defines the behavior for undrainable nodes during upgrade. The most common cause of undrainable nodes is Pod Disruption Budgets (PDBs), but other issues, such as pod termination grace period is exceeding the remaining per-node drain timeout or pod is still being in a running state, can also cause undrainable nodes."
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.58.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.59.0-beta.1

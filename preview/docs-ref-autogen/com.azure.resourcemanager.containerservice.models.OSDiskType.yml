@@ -42,26 +42,26 @@ fields:
   fullName: "com.azure.resourcemanager.containerservice.models.OSDiskType.EPHEMERAL"
   name: "EPHEMERAL"
   nameWithType: "OSDiskType.EPHEMERAL"
-  summary: "Static value Ephemeral for OSDisk<wbr>Type."
+  summary: "Ephemeral OS disks are stored only on the host machine, just like a temporary disk."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.OSDiskType?alt=com.azure.resourcemanager.containerservice.models.OSDiskType&text=OSDiskType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final OSDiskType EPHEMERAL"
-  desc: "Static value Ephemeral for OSDiskType."
+  desc: "Ephemeral OS disks are stored only on the host machine, just like a temporary disk. This provides lower read/write latency, along with faster node scaling and cluster upgrades."
 - uid: "com.azure.resourcemanager.containerservice.models.OSDiskType.MANAGED"
   fullName: "com.azure.resourcemanager.containerservice.models.OSDiskType.MANAGED"
   name: "MANAGED"
   nameWithType: "OSDiskType.MANAGED"
-  summary: "Static value Managed for OSDisk<wbr>Type."
+  summary: "Azure replicates the operating system disk for a virtual machine to Azure storage to avoid data loss should the VM need to be relocated to another host."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.OSDiskType?alt=com.azure.resourcemanager.containerservice.models.OSDiskType&text=OSDiskType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final OSDiskType MANAGED"
-  desc: "Static value Managed for OSDiskType."
+  desc: "Azure replicates the operating system disk for a virtual machine to Azure storage to avoid data loss should the VM need to be relocated to another host. Since containers aren't designed to have local state persisted, this behavior offers limited value while providing some drawbacks, including slower node provisioning and higher read/write latency."
 methods:
 - uid: "com.azure.resourcemanager.containerservice.models.OSDiskType.fromString(java.lang.String)"
   fullName: "com.azure.resourcemanager.containerservice.models.OSDiskType.fromString(String name)"
@@ -95,4 +95,4 @@ type: "class"
 desc: "The OS disk type to be used for machines in the agent pool. The default is 'Ephemeral' if the VM supports it and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to 'Managed'. May not be changed after creation. For more information see \\[Ephemeral OS\\](https://docs.microsoft.com/azure/aks/cluster-configuration\\#ephemeral-os)."
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.58.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.59.0-beta.1

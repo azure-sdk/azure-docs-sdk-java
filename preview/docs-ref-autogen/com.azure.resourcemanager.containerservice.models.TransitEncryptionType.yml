@@ -38,30 +38,42 @@ constructors:
   desc: "Creates a new instance of TransitEncryptionType value."
   hasDeprecatedTag: true
 fields:
+- uid: "com.azure.resourcemanager.containerservice.models.TransitEncryptionType.M_TLS"
+  fullName: "com.azure.resourcemanager.containerservice.models.TransitEncryptionType.M_TLS"
+  name: "M_TLS"
+  nameWithType: "TransitEncryptionType.M_TLS"
+  summary: "Enables mTLS authentication and encryption for pod-to-pod traffic within the cluster."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.TransitEncryptionType?alt=com.azure.resourcemanager.containerservice.models.TransitEncryptionType&text=TransitEncryptionType\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final TransitEncryptionType M_TLS"
+  desc: "Enables mTLS authentication and encryption for pod-to-pod traffic within the cluster. Refer to https://aka.ms/acnsciliummtls for relevant documentation."
 - uid: "com.azure.resourcemanager.containerservice.models.TransitEncryptionType.NONE"
   fullName: "com.azure.resourcemanager.containerservice.models.TransitEncryptionType.NONE"
   name: "NONE"
   nameWithType: "TransitEncryptionType.NONE"
-  summary: "Static value None for Transit<wbr>Encryption<wbr>Type."
+  summary: "Disable Transit encryption."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.TransitEncryptionType?alt=com.azure.resourcemanager.containerservice.models.TransitEncryptionType&text=TransitEncryptionType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final TransitEncryptionType NONE"
-  desc: "Static value None for TransitEncryptionType."
+  desc: "Disable Transit encryption."
 - uid: "com.azure.resourcemanager.containerservice.models.TransitEncryptionType.WIRE_GUARD"
   fullName: "com.azure.resourcemanager.containerservice.models.TransitEncryptionType.WIRE_GUARD"
   name: "WIRE_GUARD"
   nameWithType: "TransitEncryptionType.WIRE_GUARD"
-  summary: "Static value Wire<wbr>Guard for Transit<wbr>Encryption<wbr>Type."
+  summary: "Enable Wire<wbr>Guard encryption."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.TransitEncryptionType?alt=com.azure.resourcemanager.containerservice.models.TransitEncryptionType&text=TransitEncryptionType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final TransitEncryptionType WIRE_GUARD"
-  desc: "Static value WireGuard for TransitEncryptionType."
+  desc: "Enable WireGuard encryption. Refer to https://docs.cilium.io/en/latest/security/network/encryption-wireguard/ on use cases and implementation details."
 methods:
 - uid: "com.azure.resourcemanager.containerservice.models.TransitEncryptionType.fromString(java.lang.String)"
   fullName: "com.azure.resourcemanager.containerservice.models.TransitEncryptionType.fromString(String name)"
@@ -95,4 +107,4 @@ type: "class"
 desc: "Configures pod-to-pod encryption. This can be enabled only on Cilium-based clusters. If not specified, the default value is None."
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.58.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.59.0-beta.1

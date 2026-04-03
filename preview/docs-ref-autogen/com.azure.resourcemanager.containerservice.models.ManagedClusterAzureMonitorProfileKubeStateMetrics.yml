@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.containerservice.models.ManagedClusterAzureMonit
 fullName: "com.azure.resourcemanager.containerservice.models.ManagedClusterAzureMonitorProfileKubeStateMetrics"
 name: "ManagedClusterAzureMonitorProfileKubeStateMetrics"
 nameWithType: "ManagedClusterAzureMonitorProfileKubeStateMetrics"
-summary: "Kube State Metrics for prometheus addon profile for the container service cluster."
+summary: "Kube State Metrics profile for the Azure Managed Prometheus addon."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -53,9 +53,9 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ManagedClusterAzureMonitorProfileKubeStateMetrics.metricAnnotationsAllowList()"
   name: "metricAnnotationsAllowList()"
   nameWithType: "ManagedClusterAzureMonitorProfileKubeStateMetrics.metricAnnotationsAllowList()"
-  summary: "Get the metric<wbr>Annotations<wbr>Allow<wbr>List property: Comma-separated list of additional Kubernetes label keys that will be used in the resource's labels metric."
+  summary: "Get the metric<wbr>Annotations<wbr>Allow<wbr>List property: Comma-separated list of Kubernetes annotation keys that will be used in the resource's labels metric (Example: 'namespaces=\\[kubernetes.<wbr>io/team,...\\],pods=\\[kubernetes.<wbr>io/team\\],...')."
   syntax: "public String metricAnnotationsAllowList()"
-  desc: "Get the metricAnnotationsAllowList property: Comma-separated list of additional Kubernetes label keys that will be used in the resource's labels metric."
+  desc: "Get the metricAnnotationsAllowList property: Comma-separated list of Kubernetes annotation keys that will be used in the resource's labels metric (Example: 'namespaces=\\[kubernetes.io/team,...\\],pods=\\[kubernetes.io/team\\],...'). By default the metric contains only resource name and namespace labels."
   returns:
     description: "the metricAnnotationsAllowList value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -63,9 +63,9 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ManagedClusterAzureMonitorProfileKubeStateMetrics.metricLabelsAllowlist()"
   name: "metricLabelsAllowlist()"
   nameWithType: "ManagedClusterAzureMonitorProfileKubeStateMetrics.metricLabelsAllowlist()"
-  summary: "Get the metric<wbr>Labels<wbr>Allowlist property: Comma-separated list of Kubernetes annotations keys that will be used in the resource's labels metric."
+  summary: "Get the metric<wbr>Labels<wbr>Allowlist property: Comma-separated list of additional Kubernetes label keys that will be used in the resource's labels metric (Example: 'namespaces=\\[k8s-label-1,k8s-label-n,...\\],pods=\\[app\\],...')."
   syntax: "public String metricLabelsAllowlist()"
-  desc: "Get the metricLabelsAllowlist property: Comma-separated list of Kubernetes annotations keys that will be used in the resource's labels metric."
+  desc: "Get the metricLabelsAllowlist property: Comma-separated list of additional Kubernetes label keys that will be used in the resource's labels metric (Example: 'namespaces=\\[k8s-label-1,k8s-label-n,...\\],pods=\\[app\\],...'). By default the metric contains only resource name and namespace labels."
   returns:
     description: "the metricLabelsAllowlist value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -92,13 +92,13 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ManagedClusterAzureMonitorProfileKubeStateMetrics.withMetricAnnotationsAllowList(String metricAnnotationsAllowList)"
   name: "withMetricAnnotationsAllowList(String metricAnnotationsAllowList)"
   nameWithType: "ManagedClusterAzureMonitorProfileKubeStateMetrics.withMetricAnnotationsAllowList(String metricAnnotationsAllowList)"
-  summary: "Set the metric<wbr>Annotations<wbr>Allow<wbr>List property: Comma-separated list of additional Kubernetes label keys that will be used in the resource's labels metric."
+  summary: "Set the metric<wbr>Annotations<wbr>Allow<wbr>List property: Comma-separated list of Kubernetes annotation keys that will be used in the resource's labels metric (Example: 'namespaces=\\[kubernetes.<wbr>io/team,...\\],pods=\\[kubernetes.<wbr>io/team\\],...')."
   parameters:
   - description: "the metricAnnotationsAllowList value to set."
     name: "metricAnnotationsAllowList"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ManagedClusterAzureMonitorProfileKubeStateMetrics withMetricAnnotationsAllowList(String metricAnnotationsAllowList)"
-  desc: "Set the metricAnnotationsAllowList property: Comma-separated list of additional Kubernetes label keys that will be used in the resource's labels metric."
+  desc: "Set the metricAnnotationsAllowList property: Comma-separated list of Kubernetes annotation keys that will be used in the resource's labels metric (Example: 'namespaces=\\[kubernetes.io/team,...\\],pods=\\[kubernetes.io/team\\],...'). By default the metric contains only resource name and namespace labels."
   returns:
     description: "the ManagedClusterAzureMonitorProfileKubeStateMetrics object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterAzureMonitorProfileKubeStateMetrics?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterAzureMonitorProfileKubeStateMetrics&text=ManagedClusterAzureMonitorProfileKubeStateMetrics\" data-throw-if-not-resolved=\"False\" />"
@@ -106,20 +106,20 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ManagedClusterAzureMonitorProfileKubeStateMetrics.withMetricLabelsAllowlist(String metricLabelsAllowlist)"
   name: "withMetricLabelsAllowlist(String metricLabelsAllowlist)"
   nameWithType: "ManagedClusterAzureMonitorProfileKubeStateMetrics.withMetricLabelsAllowlist(String metricLabelsAllowlist)"
-  summary: "Set the metric<wbr>Labels<wbr>Allowlist property: Comma-separated list of Kubernetes annotations keys that will be used in the resource's labels metric."
+  summary: "Set the metric<wbr>Labels<wbr>Allowlist property: Comma-separated list of additional Kubernetes label keys that will be used in the resource's labels metric (Example: 'namespaces=\\[k8s-label-1,k8s-label-n,...\\],pods=\\[app\\],...')."
   parameters:
   - description: "the metricLabelsAllowlist value to set."
     name: "metricLabelsAllowlist"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ManagedClusterAzureMonitorProfileKubeStateMetrics withMetricLabelsAllowlist(String metricLabelsAllowlist)"
-  desc: "Set the metricLabelsAllowlist property: Comma-separated list of Kubernetes annotations keys that will be used in the resource's labels metric."
+  desc: "Set the metricLabelsAllowlist property: Comma-separated list of additional Kubernetes label keys that will be used in the resource's labels metric (Example: 'namespaces=\\[k8s-label-1,k8s-label-n,...\\],pods=\\[app\\],...'). By default the metric contains only resource name and namespace labels."
   returns:
     description: "the ManagedClusterAzureMonitorProfileKubeStateMetrics object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterAzureMonitorProfileKubeStateMetrics?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterAzureMonitorProfileKubeStateMetrics&text=ManagedClusterAzureMonitorProfileKubeStateMetrics\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Kube State Metrics for prometheus addon profile for the container service cluster."
+desc: "Kube State Metrics profile for the Azure Managed Prometheus addon. These optional settings are for the kube-state-metrics pod that is deployed with the addon. See aka.ms/AzureManagedPrometheus-optional-parameters for details."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterAzureMonitorProfileKubeStateMetrics?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterAzureMonitorProfileKubeStateMetrics&text=ManagedClusterAzureMonitorProfileKubeStateMetrics\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.58.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.59.0-beta.1

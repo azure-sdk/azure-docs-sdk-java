@@ -42,62 +42,62 @@ fields:
   fullName: "com.azure.resourcemanager.containerservice.models.UpgradeChannel.NODE_IMAGE"
   name: "NODE_IMAGE"
   nameWithType: "UpgradeChannel.NODE_IMAGE"
-  summary: "Static value node-image for Upgrade<wbr>Channel."
+  summary: "Automatically upgrade the node image to the latest version available."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.UpgradeChannel?alt=com.azure.resourcemanager.containerservice.models.UpgradeChannel&text=UpgradeChannel\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final UpgradeChannel NODE_IMAGE"
-  desc: "Static value node-image for UpgradeChannel."
+  desc: "Automatically upgrade the node image to the latest version available. Consider using nodeOSUpgradeChannel instead as that allows you to configure node OS patching separate from Kubernetes version patching."
 - uid: "com.azure.resourcemanager.containerservice.models.UpgradeChannel.NONE"
   fullName: "com.azure.resourcemanager.containerservice.models.UpgradeChannel.NONE"
   name: "NONE"
   nameWithType: "UpgradeChannel.NONE"
-  summary: "Static value none for Upgrade<wbr>Channel."
+  summary: "Disables auto-upgrades and keeps the cluster at its current version of Kubernetes."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.UpgradeChannel?alt=com.azure.resourcemanager.containerservice.models.UpgradeChannel&text=UpgradeChannel\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final UpgradeChannel NONE"
-  desc: "Static value none for UpgradeChannel."
+  desc: "Disables auto-upgrades and keeps the cluster at its current version of Kubernetes."
 - uid: "com.azure.resourcemanager.containerservice.models.UpgradeChannel.PATCH"
   fullName: "com.azure.resourcemanager.containerservice.models.UpgradeChannel.PATCH"
   name: "PATCH"
   nameWithType: "UpgradeChannel.PATCH"
-  summary: "Static value patch for Upgrade<wbr>Channel."
+  summary: "Automatically upgrade the cluster to the latest supported patch version when it becomes available while keeping the minor version the same."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.UpgradeChannel?alt=com.azure.resourcemanager.containerservice.models.UpgradeChannel&text=UpgradeChannel\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final UpgradeChannel PATCH"
-  desc: "Static value patch for UpgradeChannel."
+  desc: "Automatically upgrade the cluster to the latest supported patch version when it becomes available while keeping the minor version the same. For example, if a cluster is running version 1.17.7 and versions 1.17.9, 1.18.4, 1.18.6, and 1.19.1 are available, your cluster is upgraded to 1.17.9."
 - uid: "com.azure.resourcemanager.containerservice.models.UpgradeChannel.RAPID"
   fullName: "com.azure.resourcemanager.containerservice.models.UpgradeChannel.RAPID"
   name: "RAPID"
   nameWithType: "UpgradeChannel.RAPID"
-  summary: "Static value rapid for Upgrade<wbr>Channel."
+  summary: "Automatically upgrade the cluster to the latest supported patch release on the latest supported minor version."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.UpgradeChannel?alt=com.azure.resourcemanager.containerservice.models.UpgradeChannel&text=UpgradeChannel\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final UpgradeChannel RAPID"
-  desc: "Static value rapid for UpgradeChannel."
+  desc: "Automatically upgrade the cluster to the latest supported patch release on the latest supported minor version. In cases where the cluster is at a version of Kubernetes that is at an N-2 minor version where N is the latest supported minor version, the cluster first upgrades to the latest supported patch version on N-1 minor version. For example, if a cluster is running version 1.17.7 and versions 1.17.9, 1.18.4, 1.18.6, and 1.19.1 are available, your cluster first is upgraded to 1.18.6, then is upgraded to 1.19.1."
 - uid: "com.azure.resourcemanager.containerservice.models.UpgradeChannel.STABLE"
   fullName: "com.azure.resourcemanager.containerservice.models.UpgradeChannel.STABLE"
   name: "STABLE"
   nameWithType: "UpgradeChannel.STABLE"
-  summary: "Static value stable for Upgrade<wbr>Channel."
+  summary: "Automatically upgrade the cluster to the latest supported patch release on minor version N-1, where N is the latest supported minor version."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.UpgradeChannel?alt=com.azure.resourcemanager.containerservice.models.UpgradeChannel&text=UpgradeChannel\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final UpgradeChannel STABLE"
-  desc: "Static value stable for UpgradeChannel."
+  desc: "Automatically upgrade the cluster to the latest supported patch release on minor version N-1, where N is the latest supported minor version. For example, if a cluster is running version 1.17.7 and versions 1.17.9, 1.18.4, 1.18.6, and 1.19.1 are available, your cluster is upgraded to 1.18.6."
 methods:
 - uid: "com.azure.resourcemanager.containerservice.models.UpgradeChannel.fromString(java.lang.String)"
   fullName: "com.azure.resourcemanager.containerservice.models.UpgradeChannel.fromString(String name)"
@@ -131,4 +131,4 @@ type: "class"
 desc: "The upgrade channel for auto upgrade. The default is 'none'. For more information see \\[setting the AKS cluster auto-upgrade channel\\](https://docs.microsoft.com/azure/aks/upgrade-cluster\\#set-auto-upgrade-channel)."
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.58.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.59.0-beta.1

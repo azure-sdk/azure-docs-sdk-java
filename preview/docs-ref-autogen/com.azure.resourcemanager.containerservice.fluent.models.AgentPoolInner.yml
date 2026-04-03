@@ -6,14 +6,15 @@ nameWithType: "AgentPoolInner"
 summary: "Agent Pool."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.core.management.SubResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"com.azure.core.management.ProxyResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
-- classRef: "<xref href=\"com.azure.core.management.SubResource?alt=com.azure.core.management.SubResource&text=SubResource\" data-throw-if-not-resolved=\"False\" />"
+- classRef: "<xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
   methodsRef:
-  - "<xref href=\"com.azure.core.management.SubResource.fromJson(com.azure.json.JsonReader)?alt=com.azure.core.management.SubResource.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.SubResource.id()?alt=com.azure.core.management.SubResource.id&text=id\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.SubResource.toJson(com.azure.json.JsonWriter)?alt=com.azure.core.management.SubResource.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.SubResource.withId(java.lang.String)?alt=com.azure.core.management.SubResource.withId&text=withId\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.ProxyResource.fromJson(com.azure.json.JsonReader)?alt=com.azure.core.management.ProxyResource.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.ProxyResource.id()?alt=com.azure.core.management.ProxyResource.id&text=id\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.ProxyResource.name()?alt=com.azure.core.management.ProxyResource.name&text=name\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.ProxyResource.toJson(com.azure.json.JsonWriter)?alt=com.azure.core.management.ProxyResource.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.ProxyResource.type()?alt=com.azure.core.management.ProxyResource.type&text=type\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -27,7 +28,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **AgentPoolInner**</br> extends <xref href=\"com.azure.core.management.SubResource?alt=com.azure.core.management.SubResource&text=SubResource\" data-throw-if-not-resolved=\"False\" />"
+syntax: "public final class **AgentPoolInner**</br> extends <xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
 constructors:
 - uid: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.AgentPoolInner()"
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.AgentPoolInner()"
@@ -61,9 +62,9 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.capacityReservationGroupId()"
   name: "capacityReservationGroupId()"
   nameWithType: "AgentPoolInner.capacityReservationGroupId()"
-  summary: "Get the capacity<wbr>Reservation<wbr>Group<wbr>Id property: AKS will associate the specified agent pool with the Capacity Reservation Group."
+  summary: "Get the capacity<wbr>Reservation<wbr>Group<wbr>Id property: The fully qualified resource ID of the Capacity Reservation Group to provide virtual machines from a reserved group of Virtual Machines."
   syntax: "public String capacityReservationGroupId()"
-  desc: "Get the capacityReservationGroupId property: AKS will associate the specified agent pool with the Capacity Reservation Group."
+  desc: "Get the capacityReservationGroupId property: The fully qualified resource ID of the Capacity Reservation Group to provide virtual machines from a reserved group of Virtual Machines. This is of the form: '/subscriptions/\\{subscriptionId\\}/resourcegroups/\\{resourceGroupName\\}/providers/Microsoft.Compute/capacityreservationgroups/\\{capacityReservationGroupName\\}' Customers use it to create an agentpool with a specified CRG. For more information see \\[Capacity Reservation\\](https://learn.microsoft.com/en-us/azure/virtual-machines/capacity-reservation-overview)."
   returns:
     description: "the capacityReservationGroupId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -91,9 +92,9 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.currentOrchestratorVersion()"
   name: "currentOrchestratorVersion()"
   nameWithType: "AgentPoolInner.currentOrchestratorVersion()"
-  summary: "Get the current<wbr>Orchestrator<wbr>Version property: The version of Kubernetes running on the Agent Pool."
+  summary: "Get the current<wbr>Orchestrator<wbr>Version property: The version of Kubernetes the Agent Pool is running."
   syntax: "public String currentOrchestratorVersion()"
-  desc: "Get the currentOrchestratorVersion property: The version of Kubernetes running on the Agent Pool. If orchestratorVersion was a fully specified version <major.minor.patch>, this field will be exactly equal to it. If orchestratorVersion was <major.minor>, this field will contain the full <major.minor.patch> version being used."
+  desc: "Get the currentOrchestratorVersion property: The version of Kubernetes the Agent Pool is running. If orchestratorVersion is a fully specified version <major.minor.patch>, this field will be exactly equal to it. If orchestratorVersion is <major.minor>, this field will contain the full <major.minor.patch> version being used."
   returns:
     description: "the currentOrchestratorVersion value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -137,6 +138,16 @@ methods:
   returns:
     description: "the enableNodePublicIp value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.enableOSDiskFullCaching()"
+  fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.enableOSDiskFullCaching()"
+  name: "enableOSDiskFullCaching()"
+  nameWithType: "AgentPoolInner.enableOSDiskFullCaching()"
+  summary: "Get the enable<wbr>OSDisk<wbr>Full<wbr>Caching property: Whether to enable the full-cache ephemeral OS disk feature."
+  syntax: "public Boolean enableOSDiskFullCaching()"
+  desc: "Get the enableOSDiskFullCaching property: Whether to enable the full-cache ephemeral OS disk feature. When this feature is enabled, the entire operating system will be locally cached on the ephemeral OS disk, preventing E17 events caused by network failures."
+  returns:
+    description: "the enableOSDiskFullCaching value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.enableUltraSsd()"
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.enableUltraSsd()"
   name: "enableUltraSsd()"
@@ -170,7 +181,7 @@ methods:
     type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static AgentPoolInner fromJson(JsonReader jsonReader)"
   exceptions:
-  - description: "If an error occurs while reading the AgentPoolInner."
+  - description: "If the deserialized JSON object was missing any required properties."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   desc: "Reads an instance of AgentPoolInner from the JsonReader."
   returns:
@@ -200,9 +211,9 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.gpuProfile()"
   name: "gpuProfile()"
   nameWithType: "AgentPoolInner.gpuProfile()"
-  summary: "Get the gpu<wbr>Profile property: The GPU settings of an agent pool."
+  summary: "Get the gpu<wbr>Profile property: GPU settings for the Agent Pool."
   syntax: "public GpuProfile gpuProfile()"
-  desc: "Get the gpuProfile property: The GPU settings of an agent pool."
+  desc: "Get the gpuProfile property: GPU settings for the Agent Pool."
   returns:
     description: "the gpuProfile value."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.GpuProfile?alt=com.azure.resourcemanager.containerservice.models.GpuProfile&text=GpuProfile\" data-throw-if-not-resolved=\"False\" />"
@@ -215,6 +226,17 @@ methods:
   desc: "Get the hostGroupId property: The fully qualified resource ID of the Dedicated Host Group to provision virtual machines from, used only in creation scenario and not allowed to changed once set. This is of the form: /subscriptions/\\{subscriptionId\\}/resourceGroups/\\{resourceGroupName\\}/providers/Microsoft.Compute/hostGroups/\\{hostGroupName\\}. For more information see \\[Azure dedicated hosts\\](https://docs.microsoft.com/azure/virtual-machines/dedicated-hosts)."
   returns:
     description: "the hostGroupId value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.id()"
+  fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.id()"
+  name: "id()"
+  nameWithType: "AgentPoolInner.id()"
+  summary: "Get the id property: Fully qualified resource Id for the resource."
+  overridden: "com.azure.core.management.ProxyResource.id()"
+  syntax: "public String id()"
+  desc: "Get the id property: Fully qualified resource Id for the resource."
+  returns:
+    description: "the id value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.kubeletConfig()"
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.kubeletConfig()"
@@ -310,9 +332,10 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.name()"
   name: "name()"
   nameWithType: "AgentPoolInner.name()"
-  summary: "Get the name property: The name of the resource that is unique within a resource group."
+  summary: "Get the name property: The name of the resource."
+  overridden: "com.azure.core.management.ProxyResource.name()"
   syntax: "public String name()"
-  desc: "Get the name property: The name of the resource that is unique within a resource group. This name can be used to access the resource."
+  desc: "Get the name property: The name of the resource."
   returns:
     description: "the name value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -392,7 +415,7 @@ methods:
   nameWithType: "AgentPoolInner.orchestratorVersion()"
   summary: "Get the orchestrator<wbr>Version property: The version of Kubernetes specified by the user."
   syntax: "public String orchestratorVersion()"
-  desc: "Get the orchestratorVersion property: The version of Kubernetes specified by the user. Both patch version <major.minor.patch> and <major.minor> are supported. When <major.minor> is specified, the latest supported patch version is chosen automatically. Updating the agent pool with the same <major.minor> once it has been created will not trigger an upgrade, even if a newer patch version is available. As a best practice, you should upgrade all node pools in an AKS cluster to the same Kubernetes version. The node pool version must have the same major version as the control plane. The node pool minor version must be within two minor versions of the control plane version. The node pool version cannot be greater than the control plane version. For more information see \\[upgrading a node pool\\](https://docs.microsoft.com/azure/aks/use-multiple-node-pools\\#upgrade-a-node-pool)."
+  desc: "Get the orchestratorVersion property: The version of Kubernetes specified by the user. Both patch version <major.minor.patch> (e.g. 1.20.13) and <major.minor> (e.g. 1.20) are supported. When <major.minor> is specified, the latest supported GA patch version is chosen automatically. Updating the cluster with the same <major.minor> once it has been created (e.g. 1.14.x -> 1.14) will not trigger an upgrade, even if a newer patch version is available. As a best practice, you should upgrade all node pools in an AKS cluster to the same Kubernetes version. The node pool version must have the same major version as the control plane. The node pool minor version must be within two minor versions of the control plane version. The node pool version cannot be greater than the control plane version. For more information see \\[upgrading a node pool\\](https://docs.microsoft.com/azure/aks/use-multiple-node-pools\\#upgrade-a-node-pool)."
   returns:
     description: "the orchestratorVersion value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -422,7 +445,7 @@ methods:
   nameWithType: "AgentPoolInner.osSku()"
   summary: "Get the os<wbr>Sku property: Specifies the OS SKU used by the agent pool."
   syntax: "public OSSku osSku()"
-  desc: "Get the osSku property: Specifies the OS SKU used by the agent pool. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated."
+  desc: "Get the osSku property: Specifies the OS SKU used by the agent pool. The default is Ubuntu if OSType is Linux. The default is Windows2019 when Kubernetes <= 1.24 or Windows2022 when Kubernetes >= 1.25 if OSType is Windows."
   returns:
     description: "the osSku value."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.OSSku?alt=com.azure.resourcemanager.containerservice.models.OSSku&text=OSSku\" data-throw-if-not-resolved=\"False\" />"
@@ -430,9 +453,9 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.osType()"
   name: "osType()"
   nameWithType: "AgentPoolInner.osType()"
-  summary: "Get the os<wbr>Type property: Os<wbr>Type to be used to specify os type."
+  summary: "Get the os<wbr>Type property: The operating system type."
   syntax: "public OSType osType()"
-  desc: "Get the osType property: OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux."
+  desc: "Get the osType property: The operating system type. The default is Linux."
   returns:
     description: "the osType value."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.OSType?alt=com.azure.resourcemanager.containerservice.models.OSType&text=OSType\" data-throw-if-not-resolved=\"False\" />"
@@ -500,9 +523,9 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.scaleSetEvictionPolicy()"
   name: "scaleSetEvictionPolicy()"
   nameWithType: "AgentPoolInner.scaleSetEvictionPolicy()"
-  summary: "Get the scale<wbr>Set<wbr>Eviction<wbr>Policy property: The Virtual Machine Scale Set eviction policy to use."
+  summary: "Get the scale<wbr>Set<wbr>Eviction<wbr>Policy property: The Virtual Machine Scale Set eviction policy."
   syntax: "public ScaleSetEvictionPolicy scaleSetEvictionPolicy()"
-  desc: "Get the scaleSetEvictionPolicy property: The Virtual Machine Scale Set eviction policy to use. This cannot be specified unless the scaleSetPriority is 'Spot'. If not specified, the default is 'Delete'."
+  desc: "Get the scaleSetEvictionPolicy property: The Virtual Machine Scale Set eviction policy. The eviction policy specifies what to do with the VM when it is evicted. The default is Delete. For more information about eviction see \\[spot VMs\\](https://docs.microsoft.com/azure/virtual-machines/spot-vms)."
   returns:
     description: "the scaleSetEvictionPolicy value."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ScaleSetEvictionPolicy?alt=com.azure.resourcemanager.containerservice.models.ScaleSetEvictionPolicy&text=ScaleSetEvictionPolicy\" data-throw-if-not-resolved=\"False\" />"
@@ -512,7 +535,7 @@ methods:
   nameWithType: "AgentPoolInner.scaleSetPriority()"
   summary: "Get the scale<wbr>Set<wbr>Priority property: The Virtual Machine Scale Set priority."
   syntax: "public ScaleSetPriority scaleSetPriority()"
-  desc: "Get the scaleSetPriority property: The Virtual Machine Scale Set priority. If not specified, the default is 'Regular'."
+  desc: "Get the scaleSetPriority property: The Virtual Machine Scale Set priority."
   returns:
     description: "the scaleSetPriority value."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ScaleSetPriority?alt=com.azure.resourcemanager.containerservice.models.ScaleSetPriority&text=ScaleSetPriority\" data-throw-if-not-resolved=\"False\" />"
@@ -546,6 +569,16 @@ methods:
   returns:
     description: "the status value."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.AgentPoolStatus?alt=com.azure.resourcemanager.containerservice.models.AgentPoolStatus&text=AgentPoolStatus\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.systemData()"
+  fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.systemData()"
+  name: "systemData()"
+  nameWithType: "AgentPoolInner.systemData()"
+  summary: "Get the system<wbr>Data property: Azure Resource Manager metadata containing created<wbr>By and modified<wbr>By information."
+  syntax: "public SystemData systemData()"
+  desc: "Get the systemData property: Azure Resource Manager metadata containing createdBy and modifiedBy information."
+  returns:
+    description: "the systemData value."
+    type: "<xref href=\"com.azure.core.management.SystemData?alt=com.azure.core.management.SystemData&text=SystemData\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.tags()"
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.tags()"
   name: "tags()"
@@ -560,7 +593,7 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
   nameWithType: "AgentPoolInner.toJson(JsonWriter jsonWriter)"
-  overridden: "com.azure.core.management.SubResource.toJson(com.azure.json.JsonWriter)"
+  overridden: "com.azure.core.management.ProxyResource.toJson(com.azure.json.JsonWriter)"
   parameters:
   - name: "jsonWriter"
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
@@ -573,9 +606,10 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.type()"
   name: "type()"
   nameWithType: "AgentPoolInner.type()"
-  summary: "Get the type property: Resource type."
+  summary: "Get the type property: The type of the resource."
+  overridden: "com.azure.core.management.ProxyResource.type()"
   syntax: "public String type()"
-  desc: "Get the type property: Resource type."
+  desc: "Get the type property: The type of the resource."
   returns:
     description: "the type value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -595,7 +629,7 @@ methods:
   nameWithType: "AgentPoolInner.upgradeSettings()"
   summary: "Get the upgrade<wbr>Settings property: Settings for upgrading the agentpool."
   syntax: "public AgentPoolUpgradeSettings upgradeSettings()"
-  desc: "Get the upgradeSettings property: Settings for upgrading the agentpool. Applies when upgrade strategy is set to Rolling."
+  desc: "Get the upgradeSettings property: Settings for upgrading the agentpool."
   returns:
     description: "the upgradeSettings value."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings?alt=com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings&text=AgentPoolUpgradeSettings\" data-throw-if-not-resolved=\"False\" />"
@@ -708,13 +742,13 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.withCapacityReservationGroupId(String capacityReservationGroupId)"
   name: "withCapacityReservationGroupId(String capacityReservationGroupId)"
   nameWithType: "AgentPoolInner.withCapacityReservationGroupId(String capacityReservationGroupId)"
-  summary: "Set the capacity<wbr>Reservation<wbr>Group<wbr>Id property: AKS will associate the specified agent pool with the Capacity Reservation Group."
+  summary: "Set the capacity<wbr>Reservation<wbr>Group<wbr>Id property: The fully qualified resource ID of the Capacity Reservation Group to provide virtual machines from a reserved group of Virtual Machines."
   parameters:
   - description: "the capacityReservationGroupId value to set."
     name: "capacityReservationGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public AgentPoolInner withCapacityReservationGroupId(String capacityReservationGroupId)"
-  desc: "Set the capacityReservationGroupId property: AKS will associate the specified agent pool with the Capacity Reservation Group."
+  desc: "Set the capacityReservationGroupId property: The fully qualified resource ID of the Capacity Reservation Group to provide virtual machines from a reserved group of Virtual Machines. This is of the form: '/subscriptions/\\{subscriptionId\\}/resourcegroups/\\{resourceGroupName\\}/providers/Microsoft.Compute/capacityreservationgroups/\\{capacityReservationGroupName\\}' Customers use it to create an agentpool with a specified CRG. For more information see \\[Capacity Reservation\\](https://learn.microsoft.com/en-us/azure/virtual-machines/capacity-reservation-overview)."
   returns:
     description: "the AgentPoolInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
@@ -802,6 +836,20 @@ methods:
   returns:
     description: "the AgentPoolInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.withEnableOSDiskFullCaching(java.lang.Boolean)"
+  fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.withEnableOSDiskFullCaching(Boolean enableOSDiskFullCaching)"
+  name: "withEnableOSDiskFullCaching(Boolean enableOSDiskFullCaching)"
+  nameWithType: "AgentPoolInner.withEnableOSDiskFullCaching(Boolean enableOSDiskFullCaching)"
+  summary: "Set the enable<wbr>OSDisk<wbr>Full<wbr>Caching property: Whether to enable the full-cache ephemeral OS disk feature."
+  parameters:
+  - description: "the enableOSDiskFullCaching value to set."
+    name: "enableOSDiskFullCaching"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+  syntax: "public AgentPoolInner withEnableOSDiskFullCaching(Boolean enableOSDiskFullCaching)"
+  desc: "Set the enableOSDiskFullCaching property: Whether to enable the full-cache ephemeral OS disk feature. When this feature is enabled, the entire operating system will be locally cached on the ephemeral OS disk, preventing E17 events caused by network failures."
+  returns:
+    description: "the AgentPoolInner object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.withEnableUltraSsd(java.lang.Boolean)"
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.withEnableUltraSsd(Boolean enableUltraSsd)"
   name: "withEnableUltraSsd(Boolean enableUltraSsd)"
@@ -848,13 +896,13 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.withGpuProfile(GpuProfile gpuProfile)"
   name: "withGpuProfile(GpuProfile gpuProfile)"
   nameWithType: "AgentPoolInner.withGpuProfile(GpuProfile gpuProfile)"
-  summary: "Set the gpu<wbr>Profile property: The GPU settings of an agent pool."
+  summary: "Set the gpu<wbr>Profile property: GPU settings for the Agent Pool."
   parameters:
   - description: "the gpuProfile value to set."
     name: "gpuProfile"
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.GpuProfile?alt=com.azure.resourcemanager.containerservice.models.GpuProfile&text=GpuProfile\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public AgentPoolInner withGpuProfile(GpuProfile gpuProfile)"
-  desc: "Set the gpuProfile property: The GPU settings of an agent pool."
+  desc: "Set the gpuProfile property: GPU settings for the Agent Pool."
   returns:
     description: "the AgentPoolInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
@@ -871,17 +919,6 @@ methods:
   desc: "Set the hostGroupId property: The fully qualified resource ID of the Dedicated Host Group to provision virtual machines from, used only in creation scenario and not allowed to changed once set. This is of the form: /subscriptions/\\{subscriptionId\\}/resourceGroups/\\{resourceGroupName\\}/providers/Microsoft.Compute/hostGroups/\\{hostGroupName\\}. For more information see \\[Azure dedicated hosts\\](https://docs.microsoft.com/azure/virtual-machines/dedicated-hosts)."
   returns:
     description: "the AgentPoolInner object itself."
-    type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.withId(java.lang.String)"
-  fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.withId(String id)"
-  name: "withId(String id)"
-  nameWithType: "AgentPoolInner.withId(String id)"
-  overridden: "com.azure.core.management.SubResource.withId(java.lang.String)"
-  parameters:
-  - name: "id"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public AgentPoolInner withId(String id)"
-  returns:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.withKubeletConfig(com.azure.resourcemanager.containerservice.models.KubeletConfig)"
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.withKubeletConfig(KubeletConfig kubeletConfig)"
@@ -1037,20 +1074,6 @@ methods:
   returns:
     description: "the AgentPoolInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.withNodeImageVersion(java.lang.String)"
-  fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.withNodeImageVersion(String nodeImageVersion)"
-  name: "withNodeImageVersion(String nodeImageVersion)"
-  nameWithType: "AgentPoolInner.withNodeImageVersion(String nodeImageVersion)"
-  summary: "Set the node<wbr>Image<wbr>Version property: The version of node image."
-  parameters:
-  - description: "the nodeImageVersion value to set."
-    name: "nodeImageVersion"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public AgentPoolInner withNodeImageVersion(String nodeImageVersion)"
-  desc: "Set the nodeImageVersion property: The version of node image."
-  returns:
-    description: "the AgentPoolInner object itself."
-    type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.withNodeInitializationTaints(java.util.List<java.lang.String>)"
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.withNodeInitializationTaints(List<String> nodeInitializationTaints)"
   name: "withNodeInitializationTaints(List<String> nodeInitializationTaints)"
@@ -1117,7 +1140,7 @@ methods:
     name: "orchestratorVersion"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public AgentPoolInner withOrchestratorVersion(String orchestratorVersion)"
-  desc: "Set the orchestratorVersion property: The version of Kubernetes specified by the user. Both patch version <major.minor.patch> and <major.minor> are supported. When <major.minor> is specified, the latest supported patch version is chosen automatically. Updating the agent pool with the same <major.minor> once it has been created will not trigger an upgrade, even if a newer patch version is available. As a best practice, you should upgrade all node pools in an AKS cluster to the same Kubernetes version. The node pool version must have the same major version as the control plane. The node pool minor version must be within two minor versions of the control plane version. The node pool version cannot be greater than the control plane version. For more information see \\[upgrading a node pool\\](https://docs.microsoft.com/azure/aks/use-multiple-node-pools\\#upgrade-a-node-pool)."
+  desc: "Set the orchestratorVersion property: The version of Kubernetes specified by the user. Both patch version <major.minor.patch> (e.g. 1.20.13) and <major.minor> (e.g. 1.20) are supported. When <major.minor> is specified, the latest supported GA patch version is chosen automatically. Updating the cluster with the same <major.minor> once it has been created (e.g. 1.14.x -> 1.14) will not trigger an upgrade, even if a newer patch version is available. As a best practice, you should upgrade all node pools in an AKS cluster to the same Kubernetes version. The node pool version must have the same major version as the control plane. The node pool minor version must be within two minor versions of the control plane version. The node pool version cannot be greater than the control plane version. For more information see \\[upgrading a node pool\\](https://docs.microsoft.com/azure/aks/use-multiple-node-pools\\#upgrade-a-node-pool)."
   returns:
     description: "the AgentPoolInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
@@ -1159,7 +1182,7 @@ methods:
     name: "osSku"
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.OSSku?alt=com.azure.resourcemanager.containerservice.models.OSSku&text=OSSku\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public AgentPoolInner withOsSku(OSSku osSku)"
-  desc: "Set the osSku property: Specifies the OS SKU used by the agent pool. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated."
+  desc: "Set the osSku property: Specifies the OS SKU used by the agent pool. The default is Ubuntu if OSType is Linux. The default is Windows2019 when Kubernetes <= 1.24 or Windows2022 when Kubernetes >= 1.25 if OSType is Windows."
   returns:
     description: "the AgentPoolInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
@@ -1167,13 +1190,13 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.withOsType(OSType osType)"
   name: "withOsType(OSType osType)"
   nameWithType: "AgentPoolInner.withOsType(OSType osType)"
-  summary: "Set the os<wbr>Type property: Os<wbr>Type to be used to specify os type."
+  summary: "Set the os<wbr>Type property: The operating system type."
   parameters:
   - description: "the osType value to set."
     name: "osType"
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.OSType?alt=com.azure.resourcemanager.containerservice.models.OSType&text=OSType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public AgentPoolInner withOsType(OSType osType)"
-  desc: "Set the osType property: OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux."
+  desc: "Set the osType property: The operating system type. The default is Linux."
   returns:
     description: "the AgentPoolInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
@@ -1251,13 +1274,13 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.withScaleSetEvictionPolicy(ScaleSetEvictionPolicy scaleSetEvictionPolicy)"
   name: "withScaleSetEvictionPolicy(ScaleSetEvictionPolicy scaleSetEvictionPolicy)"
   nameWithType: "AgentPoolInner.withScaleSetEvictionPolicy(ScaleSetEvictionPolicy scaleSetEvictionPolicy)"
-  summary: "Set the scale<wbr>Set<wbr>Eviction<wbr>Policy property: The Virtual Machine Scale Set eviction policy to use."
+  summary: "Set the scale<wbr>Set<wbr>Eviction<wbr>Policy property: The Virtual Machine Scale Set eviction policy."
   parameters:
   - description: "the scaleSetEvictionPolicy value to set."
     name: "scaleSetEvictionPolicy"
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ScaleSetEvictionPolicy?alt=com.azure.resourcemanager.containerservice.models.ScaleSetEvictionPolicy&text=ScaleSetEvictionPolicy\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public AgentPoolInner withScaleSetEvictionPolicy(ScaleSetEvictionPolicy scaleSetEvictionPolicy)"
-  desc: "Set the scaleSetEvictionPolicy property: The Virtual Machine Scale Set eviction policy to use. This cannot be specified unless the scaleSetPriority is 'Spot'. If not specified, the default is 'Delete'."
+  desc: "Set the scaleSetEvictionPolicy property: The Virtual Machine Scale Set eviction policy. The eviction policy specifies what to do with the VM when it is evicted. The default is Delete. For more information about eviction see \\[spot VMs\\](https://docs.microsoft.com/azure/virtual-machines/spot-vms)."
   returns:
     description: "the AgentPoolInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
@@ -1271,7 +1294,7 @@ methods:
     name: "scaleSetPriority"
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ScaleSetPriority?alt=com.azure.resourcemanager.containerservice.models.ScaleSetPriority&text=ScaleSetPriority\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public AgentPoolInner withScaleSetPriority(ScaleSetPriority scaleSetPriority)"
-  desc: "Set the scaleSetPriority property: The Virtual Machine Scale Set priority. If not specified, the default is 'Regular'."
+  desc: "Set the scaleSetPriority property: The Virtual Machine Scale Set priority."
   returns:
     description: "the AgentPoolInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
@@ -1355,7 +1378,7 @@ methods:
     name: "upgradeSettings"
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings?alt=com.azure.resourcemanager.containerservice.models.AgentPoolUpgradeSettings&text=AgentPoolUpgradeSettings\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public AgentPoolInner withUpgradeSettings(AgentPoolUpgradeSettings upgradeSettings)"
-  desc: "Set the upgradeSettings property: Settings for upgrading the agentpool. Applies when upgrade strategy is set to Rolling."
+  desc: "Set the upgradeSettings property: Settings for upgrading the agentpool."
   returns:
     description: "the AgentPoolInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
@@ -1485,4 +1508,4 @@ type: "class"
 desc: "Agent Pool."
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.58.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.59.0-beta.1

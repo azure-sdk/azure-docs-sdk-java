@@ -42,62 +42,62 @@ fields:
   fullName: "com.azure.resourcemanager.containerservice.models.AgentPoolMode.GATEWAY"
   name: "GATEWAY"
   nameWithType: "AgentPoolMode.GATEWAY"
-  summary: "Static value Gateway for Agent<wbr>Pool<wbr>Mode."
+  summary: "Gateway agent pools are dedicated to providing static egress IPs to pods."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.AgentPoolMode?alt=com.azure.resourcemanager.containerservice.models.AgentPoolMode&text=AgentPoolMode\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final AgentPoolMode GATEWAY"
-  desc: "Static value Gateway for AgentPoolMode."
+  desc: "Gateway agent pools are dedicated to providing static egress IPs to pods. For more details, see https://aka.ms/aks/static-egress-gateway."
 - uid: "com.azure.resourcemanager.containerservice.models.AgentPoolMode.MACHINES"
   fullName: "com.azure.resourcemanager.containerservice.models.AgentPoolMode.MACHINES"
   name: "MACHINES"
   nameWithType: "AgentPoolMode.MACHINES"
-  summary: "Static value Machines for Agent<wbr>Pool<wbr>Mode."
+  summary: "Machines agent pools are dedicated to hosting machines."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.AgentPoolMode?alt=com.azure.resourcemanager.containerservice.models.AgentPoolMode&text=AgentPoolMode\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final AgentPoolMode MACHINES"
-  desc: "Static value Machines for AgentPoolMode."
+  desc: "Machines agent pools are dedicated to hosting machines. Only limited operations, such as creation and deletion, are allowed at the pool level. Please use the machine APIs to manage the full machine lifecycle."
 - uid: "com.azure.resourcemanager.containerservice.models.AgentPoolMode.MANAGED_SYSTEM"
   fullName: "com.azure.resourcemanager.containerservice.models.AgentPoolMode.MANAGED_SYSTEM"
   name: "MANAGED_SYSTEM"
   nameWithType: "AgentPoolMode.MANAGED_SYSTEM"
-  summary: "Static value Managed<wbr>System for Agent<wbr>Pool<wbr>Mode."
+  summary: "Managed<wbr>System is a system pool managed by AKS."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.AgentPoolMode?alt=com.azure.resourcemanager.containerservice.models.AgentPoolMode&text=AgentPoolMode\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final AgentPoolMode MANAGED_SYSTEM"
-  desc: "Static value ManagedSystem for AgentPoolMode."
+  desc: "ManagedSystem is a system pool managed by AKS. The pool scales dynamically according to cluster usage, and has additional automated monitoring and healing capabilities. There can only be one ManagedSystem pool, and it is recommended to delete all other system pools for the best experience."
 - uid: "com.azure.resourcemanager.containerservice.models.AgentPoolMode.SYSTEM"
   fullName: "com.azure.resourcemanager.containerservice.models.AgentPoolMode.SYSTEM"
   name: "SYSTEM"
   nameWithType: "AgentPoolMode.SYSTEM"
-  summary: "Static value System for Agent<wbr>Pool<wbr>Mode."
+  summary: "System agent pools are primarily for hosting critical system pods such as CoreDNS and metrics-server."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.AgentPoolMode?alt=com.azure.resourcemanager.containerservice.models.AgentPoolMode&text=AgentPoolMode\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final AgentPoolMode SYSTEM"
-  desc: "Static value System for AgentPoolMode."
+  desc: "System agent pools are primarily for hosting critical system pods such as CoreDNS and metrics-server. System agent pools osType must be Linux. System agent pools VM SKU must have at least 2vCPUs and 4GB of memory."
 - uid: "com.azure.resourcemanager.containerservice.models.AgentPoolMode.USER"
   fullName: "com.azure.resourcemanager.containerservice.models.AgentPoolMode.USER"
   name: "USER"
   nameWithType: "AgentPoolMode.USER"
-  summary: "Static value User for Agent<wbr>Pool<wbr>Mode."
+  summary: "User agent pools are primarily for hosting your application pods."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.AgentPoolMode?alt=com.azure.resourcemanager.containerservice.models.AgentPoolMode&text=AgentPoolMode\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final AgentPoolMode USER"
-  desc: "Static value User for AgentPoolMode."
+  desc: "User agent pools are primarily for hosting your application pods."
 methods:
 - uid: "com.azure.resourcemanager.containerservice.models.AgentPoolMode.fromString(java.lang.String)"
   fullName: "com.azure.resourcemanager.containerservice.models.AgentPoolMode.fromString(String name)"
@@ -131,4 +131,4 @@ type: "class"
 desc: "The mode of an agent pool. A cluster must have at least one 'System' Agent Pool at all times. For additional information on agent pool restrictions and best practices, see: https://docs.microsoft.com/azure/aks/use-system-pools."
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.58.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.59.0-beta.1

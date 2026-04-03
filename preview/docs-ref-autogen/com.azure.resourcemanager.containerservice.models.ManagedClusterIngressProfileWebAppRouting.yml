@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.containerservice.models.ManagedClusterIngressPro
 fullName: "com.azure.resourcemanager.containerservice.models.ManagedClusterIngressProfileWebAppRouting"
 name: "ManagedClusterIngressProfileWebAppRouting"
 nameWithType: "ManagedClusterIngressProfileWebAppRouting"
-summary: "Web App Routing settings for the ingress profile."
+summary: "Application Routing add-on settings for the ingress profile."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -44,9 +44,9 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ManagedClusterIngressProfileWebAppRouting.dnsZoneResourceIds()"
   name: "dnsZoneResourceIds()"
   nameWithType: "ManagedClusterIngressProfileWebAppRouting.dnsZoneResourceIds()"
-  summary: "Get the dns<wbr>Zone<wbr>Resource<wbr>Ids property: Resource IDs of the DNS zones to be associated with the Web App Routing add-on."
+  summary: "Get the dns<wbr>Zone<wbr>Resource<wbr>Ids property: Resource IDs of the DNS zones to be associated with the Application Routing add-on."
   syntax: "public List<String> dnsZoneResourceIds()"
-  desc: "Get the dnsZoneResourceIds property: Resource IDs of the DNS zones to be associated with the Web App Routing add-on. Used only when Web App Routing is enabled. Public and private DNS zones can be in different resource groups, but all public DNS zones must be in the same resource group and all private DNS zones must be in the same resource group."
+  desc: "Get the dnsZoneResourceIds property: Resource IDs of the DNS zones to be associated with the Application Routing add-on. Used only when Application Routing add-on is enabled. Public and private DNS zones can be in different resource groups, but all public DNS zones must be in the same resource group and all private DNS zones must be in the same resource group."
   returns:
     description: "the dnsZoneResourceIds value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
@@ -54,9 +54,9 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ManagedClusterIngressProfileWebAppRouting.enabled()"
   name: "enabled()"
   nameWithType: "ManagedClusterIngressProfileWebAppRouting.enabled()"
-  summary: "Get the enabled property: Whether to enable Web App Routing."
+  summary: "Get the enabled property: Whether to enable the Application Routing add-on."
   syntax: "public Boolean enabled()"
-  desc: "Get the enabled property: Whether to enable Web App Routing."
+  desc: "Get the enabled property: Whether to enable the Application Routing add-on."
   returns:
     description: "the enabled value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
@@ -79,13 +79,23 @@ methods:
   returns:
     description: "An instance of ManagedClusterIngressProfileWebAppRouting if the JsonReader was pointing to an instance of\n it, or null if it was pointing to JSON null."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterIngressProfileWebAppRouting?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterIngressProfileWebAppRouting&text=ManagedClusterIngressProfileWebAppRouting\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservice.models.ManagedClusterIngressProfileWebAppRouting.gatewayApiImplementations()"
+  fullName: "com.azure.resourcemanager.containerservice.models.ManagedClusterIngressProfileWebAppRouting.gatewayApiImplementations()"
+  name: "gatewayApiImplementations()"
+  nameWithType: "ManagedClusterIngressProfileWebAppRouting.gatewayApiImplementations()"
+  summary: "Get the gateway<wbr>Api<wbr>Implementations property: Configurations for Gateway API providers to be used for managed ingress with App Routing."
+  syntax: "public ManagedClusterWebAppRoutingGatewayApiImplementations gatewayApiImplementations()"
+  desc: "Get the gatewayApiImplementations property: Configurations for Gateway API providers to be used for managed ingress with App Routing. See https://aka.ms/k8s-gateway-api for more information on the Gateway API."
+  returns:
+    description: "the gatewayApiImplementations value."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterWebAppRoutingGatewayApiImplementations?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterWebAppRoutingGatewayApiImplementations&text=ManagedClusterWebAppRoutingGatewayApiImplementations\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerservice.models.ManagedClusterIngressProfileWebAppRouting.identity()"
   fullName: "com.azure.resourcemanager.containerservice.models.ManagedClusterIngressProfileWebAppRouting.identity()"
   name: "identity()"
   nameWithType: "ManagedClusterIngressProfileWebAppRouting.identity()"
-  summary: "Get the identity property: Managed identity of the Web Application Routing add-on."
+  summary: "Get the identity property: Managed identity of the Application Routing add-on."
   syntax: "public UserAssignedIdentity identity()"
-  desc: "Get the identity property: Managed identity of the Web Application Routing add-on. This is the identity that should be granted permissions, for example, to manage the associated Azure DNS resource and get certificates from Azure Key Vault. See \\[this overview of the add-on\\](https://learn.microsoft.com/en-us/azure/aks/web-app-routing?tabs=with-osm) for more instructions."
+  desc: "Get the identity property: Managed identity of the Application Routing add-on. This is the identity that should be granted permissions, for example, to manage the associated Azure DNS resource and get certificates from Azure Key Vault. See \\[this overview of the add-on\\](https://learn.microsoft.com/en-us/azure/aks/web-app-routing?tabs=with-osm) for more instructions."
   returns:
     description: "the identity value."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.UserAssignedIdentity?alt=com.azure.resourcemanager.containerservice.models.UserAssignedIdentity&text=UserAssignedIdentity\" data-throw-if-not-resolved=\"False\" />"
@@ -136,13 +146,13 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ManagedClusterIngressProfileWebAppRouting.withDnsZoneResourceIds(List<String> dnsZoneResourceIds)"
   name: "withDnsZoneResourceIds(List<String> dnsZoneResourceIds)"
   nameWithType: "ManagedClusterIngressProfileWebAppRouting.withDnsZoneResourceIds(List<String> dnsZoneResourceIds)"
-  summary: "Set the dns<wbr>Zone<wbr>Resource<wbr>Ids property: Resource IDs of the DNS zones to be associated with the Web App Routing add-on."
+  summary: "Set the dns<wbr>Zone<wbr>Resource<wbr>Ids property: Resource IDs of the DNS zones to be associated with the Application Routing add-on."
   parameters:
   - description: "the dnsZoneResourceIds value to set."
     name: "dnsZoneResourceIds"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
   syntax: "public ManagedClusterIngressProfileWebAppRouting withDnsZoneResourceIds(List<String> dnsZoneResourceIds)"
-  desc: "Set the dnsZoneResourceIds property: Resource IDs of the DNS zones to be associated with the Web App Routing add-on. Used only when Web App Routing is enabled. Public and private DNS zones can be in different resource groups, but all public DNS zones must be in the same resource group and all private DNS zones must be in the same resource group."
+  desc: "Set the dnsZoneResourceIds property: Resource IDs of the DNS zones to be associated with the Application Routing add-on. Used only when Application Routing add-on is enabled. Public and private DNS zones can be in different resource groups, but all public DNS zones must be in the same resource group and all private DNS zones must be in the same resource group."
   returns:
     description: "the ManagedClusterIngressProfileWebAppRouting object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterIngressProfileWebAppRouting?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterIngressProfileWebAppRouting&text=ManagedClusterIngressProfileWebAppRouting\" data-throw-if-not-resolved=\"False\" />"
@@ -150,13 +160,27 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ManagedClusterIngressProfileWebAppRouting.withEnabled(Boolean enabled)"
   name: "withEnabled(Boolean enabled)"
   nameWithType: "ManagedClusterIngressProfileWebAppRouting.withEnabled(Boolean enabled)"
-  summary: "Set the enabled property: Whether to enable Web App Routing."
+  summary: "Set the enabled property: Whether to enable the Application Routing add-on."
   parameters:
   - description: "the enabled value to set."
     name: "enabled"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
   syntax: "public ManagedClusterIngressProfileWebAppRouting withEnabled(Boolean enabled)"
-  desc: "Set the enabled property: Whether to enable Web App Routing."
+  desc: "Set the enabled property: Whether to enable the Application Routing add-on."
+  returns:
+    description: "the ManagedClusterIngressProfileWebAppRouting object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterIngressProfileWebAppRouting?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterIngressProfileWebAppRouting&text=ManagedClusterIngressProfileWebAppRouting\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservice.models.ManagedClusterIngressProfileWebAppRouting.withGatewayApiImplementations(com.azure.resourcemanager.containerservice.models.ManagedClusterWebAppRoutingGatewayApiImplementations)"
+  fullName: "com.azure.resourcemanager.containerservice.models.ManagedClusterIngressProfileWebAppRouting.withGatewayApiImplementations(ManagedClusterWebAppRoutingGatewayApiImplementations gatewayApiImplementations)"
+  name: "withGatewayApiImplementations(ManagedClusterWebAppRoutingGatewayApiImplementations gatewayApiImplementations)"
+  nameWithType: "ManagedClusterIngressProfileWebAppRouting.withGatewayApiImplementations(ManagedClusterWebAppRoutingGatewayApiImplementations gatewayApiImplementations)"
+  summary: "Set the gateway<wbr>Api<wbr>Implementations property: Configurations for Gateway API providers to be used for managed ingress with App Routing."
+  parameters:
+  - description: "the gatewayApiImplementations value to set."
+    name: "gatewayApiImplementations"
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterWebAppRoutingGatewayApiImplementations?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterWebAppRoutingGatewayApiImplementations&text=ManagedClusterWebAppRoutingGatewayApiImplementations\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ManagedClusterIngressProfileWebAppRouting withGatewayApiImplementations(ManagedClusterWebAppRoutingGatewayApiImplementations gatewayApiImplementations)"
+  desc: "Set the gatewayApiImplementations property: Configurations for Gateway API providers to be used for managed ingress with App Routing. See https://aka.ms/k8s-gateway-api for more information on the Gateway API."
   returns:
     description: "the ManagedClusterIngressProfileWebAppRouting object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterIngressProfileWebAppRouting?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterIngressProfileWebAppRouting&text=ManagedClusterIngressProfileWebAppRouting\" data-throw-if-not-resolved=\"False\" />"
@@ -175,9 +199,9 @@ methods:
     description: "the ManagedClusterIngressProfileWebAppRouting object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterIngressProfileWebAppRouting?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterIngressProfileWebAppRouting&text=ManagedClusterIngressProfileWebAppRouting\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Web App Routing settings for the ingress profile."
+desc: "Application Routing add-on settings for the ingress profile."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterIngressProfileWebAppRouting?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterIngressProfileWebAppRouting&text=ManagedClusterIngressProfileWebAppRouting\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.58.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.59.0-beta.1

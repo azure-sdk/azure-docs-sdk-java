@@ -42,26 +42,26 @@ fields:
   fullName: "com.azure.resourcemanager.containerservice.models.ClusterServiceLoadBalancerHealthProbeMode.SERVICE_NODE_PORT"
   name: "SERVICE_NODE_PORT"
   nameWithType: "ClusterServiceLoadBalancerHealthProbeMode.SERVICE_NODE_PORT"
-  summary: "Static value Service<wbr>Node<wbr>Port for Cluster<wbr>Service<wbr>Load<wbr>Balancer<wbr>Health<wbr>Probe<wbr>Mode."
+  summary: "Each External Traffic Policy Cluster service will have its own health probe targeting service node<wbr>Port."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ClusterServiceLoadBalancerHealthProbeMode?alt=com.azure.resourcemanager.containerservice.models.ClusterServiceLoadBalancerHealthProbeMode&text=ClusterServiceLoadBalancerHealthProbeMode\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final ClusterServiceLoadBalancerHealthProbeMode SERVICE_NODE_PORT"
-  desc: "Static value ServiceNodePort for ClusterServiceLoadBalancerHealthProbeMode."
+  desc: "Each External Traffic Policy Cluster service will have its own health probe targeting service nodePort."
 - uid: "com.azure.resourcemanager.containerservice.models.ClusterServiceLoadBalancerHealthProbeMode.SHARED"
   fullName: "com.azure.resourcemanager.containerservice.models.ClusterServiceLoadBalancerHealthProbeMode.SHARED"
   name: "SHARED"
   nameWithType: "ClusterServiceLoadBalancerHealthProbeMode.SHARED"
-  summary: "Static value Shared for Cluster<wbr>Service<wbr>Load<wbr>Balancer<wbr>Health<wbr>Probe<wbr>Mode."
+  summary: "All External Traffic Policy Cluster services in a Standard Load Balancer will have a dedicated health probe targeting the backend nodes' kube-proxy health check port 10256."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ClusterServiceLoadBalancerHealthProbeMode?alt=com.azure.resourcemanager.containerservice.models.ClusterServiceLoadBalancerHealthProbeMode&text=ClusterServiceLoadBalancerHealthProbeMode\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final ClusterServiceLoadBalancerHealthProbeMode SHARED"
-  desc: "Static value Shared for ClusterServiceLoadBalancerHealthProbeMode."
+  desc: "All External Traffic Policy Cluster services in a Standard Load Balancer will have a dedicated health probe targeting the backend nodes' kube-proxy health check port 10256."
 methods:
 - uid: "com.azure.resourcemanager.containerservice.models.ClusterServiceLoadBalancerHealthProbeMode.fromString(java.lang.String)"
   fullName: "com.azure.resourcemanager.containerservice.models.ClusterServiceLoadBalancerHealthProbeMode.fromString(String name)"
@@ -95,4 +95,4 @@ type: "class"
 desc: "The health probing behavior for External Traffic Policy Cluster services."
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.58.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.59.0-beta.1

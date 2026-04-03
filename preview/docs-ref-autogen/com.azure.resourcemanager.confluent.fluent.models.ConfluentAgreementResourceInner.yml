@@ -6,13 +6,7 @@ nameWithType: "ConfluentAgreementResourceInner"
 summary: "Agreement Terms definition."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.core.management.ProxyResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
-- classRef: "<xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
-  methodsRef:
-  - "<xref href=\"com.azure.core.management.ProxyResource.id()?alt=com.azure.core.management.ProxyResource.id&text=id\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.ProxyResource.name()?alt=com.azure.core.management.ProxyResource.name&text=name\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.ProxyResource.type()?alt=com.azure.core.management.ProxyResource.type&text=type\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -26,13 +20,15 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **ConfluentAgreementResourceInner**</br> extends <xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
+syntax: "public final class **ConfluentAgreementResourceInner**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner?alt=com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner&text=ConfluentAgreementResourceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner.ConfluentAgreementResourceInner()"
   fullName: "com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner.ConfluentAgreementResourceInner()"
   name: "ConfluentAgreementResourceInner()"
   nameWithType: "ConfluentAgreementResourceInner.ConfluentAgreementResourceInner()"
+  summary: "Creates an instance of Confluent<wbr>Agreement<wbr>Resource<wbr>Inner class."
   syntax: "public ConfluentAgreementResourceInner()"
+  desc: "Creates an instance of ConfluentAgreementResourceInner class."
 methods:
 - uid: "com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner.accepted()"
   fullName: "com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner.accepted()"
@@ -44,6 +40,35 @@ methods:
   returns:
     description: "the accepted value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "ConfluentAgreementResourceInner.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Confluent<wbr>Agreement<wbr>Resource<wbr>Inner from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static ConfluentAgreementResourceInner fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the ConfluentAgreementResourceInner."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of ConfluentAgreementResourceInner from the JsonReader."
+  returns:
+    description: "An instance of ConfluentAgreementResourceInner if the JsonReader was pointing to an instance of it, or\n null if it was pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner?alt=com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner&text=ConfluentAgreementResourceInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner.id()"
+  fullName: "com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner.id()"
+  name: "id()"
+  nameWithType: "ConfluentAgreementResourceInner.id()"
+  summary: "Get the id property: The ARM id of the resource."
+  syntax: "public String id()"
+  desc: "Get the id property: The ARM id of the resource."
+  returns:
+    description: "the id value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner.licenseTextLink()"
   fullName: "com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner.licenseTextLink()"
   name: "licenseTextLink()"
@@ -53,6 +78,16 @@ methods:
   desc: "Get the licenseTextLink property: Link to HTML with Microsoft and Publisher terms."
   returns:
     description: "the licenseTextLink value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner.name()"
+  fullName: "com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner.name()"
+  name: "name()"
+  nameWithType: "ConfluentAgreementResourceInner.name()"
+  summary: "Get the name property: The name of the agreement."
+  syntax: "public String name()"
+  desc: "Get the name property: The name of the agreement."
+  returns:
+    description: "the name value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner.plan()"
   fullName: "com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner.plan()"
@@ -124,13 +159,28 @@ methods:
   returns:
     description: "the systemData value."
     type: "<xref href=\"com.azure.core.management.SystemData?alt=com.azure.core.management.SystemData&text=SystemData\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner.validate()"
-  fullName: "com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner.validate()"
-  name: "validate()"
-  nameWithType: "ConfluentAgreementResourceInner.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "ConfluentAgreementResourceInner.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner.type()"
+  fullName: "com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner.type()"
+  name: "type()"
+  nameWithType: "ConfluentAgreementResourceInner.type()"
+  summary: "Get the type property: The type of the agreement."
+  syntax: "public String type()"
+  desc: "Get the type property: The type of the agreement."
+  returns:
+    description: "the type value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner.withAccepted(java.lang.Boolean)"
   fullName: "com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner.withAccepted(Boolean accepted)"
   name: "withAccepted(Boolean accepted)"
@@ -245,6 +295,8 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner?alt=com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner&text=ConfluentAgreementResourceInner\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Agreement Terms definition."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner?alt=com.azure.resourcemanager.confluent.fluent.models.ConfluentAgreementResourceInner&text=ConfluentAgreementResourceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.confluent.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-confluent:1.0.0-beta.3
+artifact: com.azure.resourcemanager:azure-resourcemanager-confluent:1.3.0-beta.1

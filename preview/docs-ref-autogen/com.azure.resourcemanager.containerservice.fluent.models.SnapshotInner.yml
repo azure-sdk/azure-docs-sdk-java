@@ -132,7 +132,7 @@ methods:
   nameWithType: "SnapshotInner.osSku()"
   summary: "Get the os<wbr>Sku property: Specifies the OS SKU used by the agent pool."
   syntax: "public OSSku osSku()"
-  desc: "Get the osSku property: Specifies the OS SKU used by the agent pool. If not specified, the default is Ubuntu if OSType=Linux or Windows2019 if OSType=Windows. And the default Windows OSSKU will be changed to Windows2022 after Windows2019 is deprecated."
+  desc: "Get the osSku property: Specifies the OS SKU used by the agent pool. The default is Ubuntu if OSType is Linux. The default is Windows2019 when Kubernetes <= 1.24 or Windows2022 when Kubernetes >= 1.25 if OSType is Windows."
   returns:
     description: "the osSku value."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.OSSku?alt=com.azure.resourcemanager.containerservice.models.OSSku&text=OSSku\" data-throw-if-not-resolved=\"False\" />"
@@ -140,9 +140,9 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.SnapshotInner.osType()"
   name: "osType()"
   nameWithType: "SnapshotInner.osType()"
-  summary: "Get the os<wbr>Type property: Os<wbr>Type to be used to specify os type."
+  summary: "Get the os<wbr>Type property: The operating system type."
   syntax: "public OSType osType()"
-  desc: "Get the osType property: OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux."
+  desc: "Get the osType property: The operating system type. The default is Linux."
   returns:
     description: "the osType value."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.OSType?alt=com.azure.resourcemanager.containerservice.models.OSType&text=OSType\" data-throw-if-not-resolved=\"False\" />"
@@ -261,4 +261,4 @@ type: "class"
 desc: "A node pool snapshot resource."
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.58.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.59.0-beta.1

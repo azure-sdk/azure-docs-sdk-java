@@ -42,6 +42,53 @@ methods:
   returns:
     description: "the inner object."
     type: "<xref href=\"com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceInner?alt=com.azure.resourcemanager.confluent.fluent.models.OrganizationResourceInner&text=OrganizationResourceInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.confluent.models.OrganizationResource.linkOrganization()"
+  fullName: "com.azure.resourcemanager.confluent.models.OrganizationResource.linkOrganization()"
+  name: "linkOrganization()"
+  nameWithType: "OrganizationResource.linkOrganization()"
+  summary: "Gets the link<wbr>Organization property: Link an existing Confluent organization."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract LinkOrganization linkOrganization()"
+  desc: "Gets the linkOrganization property: Link an existing Confluent organization."
+  returns:
+    description: "the linkOrganization value."
+    type: "<xref href=\"com.azure.resourcemanager.confluent.models.LinkOrganization?alt=com.azure.resourcemanager.confluent.models.LinkOrganization&text=LinkOrganization\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.confluent.models.OrganizationResource.listRegions(com.azure.resourcemanager.confluent.models.ListAccessRequestModel)"
+  fullName: "com.azure.resourcemanager.confluent.models.OrganizationResource.listRegions(ListAccessRequestModel body)"
+  name: "listRegions(ListAccessRequestModel body)"
+  nameWithType: "OrganizationResource.listRegions(ListAccessRequestModel body)"
+  summary: "cloud provider regions available for creating Schema Registry clusters."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "List Access Request Model."
+    name: "body"
+    type: "<xref href=\"com.azure.resourcemanager.confluent.models.ListAccessRequestModel?alt=com.azure.resourcemanager.confluent.models.ListAccessRequestModel&text=ListAccessRequestModel\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract ListRegionsSuccessResponse listRegions(ListAccessRequestModel body)"
+  desc: "cloud provider regions available for creating Schema Registry clusters."
+  returns:
+    description: "result of POST request to list regions supported by confluent."
+    type: "<xref href=\"com.azure.resourcemanager.confluent.models.ListRegionsSuccessResponse?alt=com.azure.resourcemanager.confluent.models.ListRegionsSuccessResponse&text=ListRegionsSuccessResponse\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.confluent.models.OrganizationResource.listRegionsWithResponse(com.azure.resourcemanager.confluent.models.ListAccessRequestModel,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.confluent.models.OrganizationResource.listRegionsWithResponse(ListAccessRequestModel body, Context context)"
+  name: "listRegionsWithResponse(ListAccessRequestModel body, Context context)"
+  nameWithType: "OrganizationResource.listRegionsWithResponse(ListAccessRequestModel body, Context context)"
+  summary: "cloud provider regions available for creating Schema Registry clusters."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "List Access Request Model."
+    name: "body"
+    type: "<xref href=\"com.azure.resourcemanager.confluent.models.ListAccessRequestModel?alt=com.azure.resourcemanager.confluent.models.ListAccessRequestModel&text=ListAccessRequestModel\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Response<ListRegionsSuccessResponse> listRegionsWithResponse(ListAccessRequestModel body, Context context)"
+  desc: "cloud provider regions available for creating Schema Registry clusters."
+  returns:
+    description: "result of POST request to list regions supported by confluent along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.confluent.models.ListRegionsSuccessResponse?alt=com.azure.resourcemanager.confluent.models.ListRegionsSuccessResponse&text=ListRegionsSuccessResponse\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.confluent.models.OrganizationResource.location()"
   fullName: "com.azure.resourcemanager.confluent.models.OrganizationResource.location()"
   name: "location()"
@@ -94,11 +141,11 @@ methods:
   fullName: "com.azure.resourcemanager.confluent.models.OrganizationResource.provisioningState()"
   name: "provisioningState()"
   nameWithType: "OrganizationResource.provisioningState()"
-  summary: "Gets the provisioning<wbr>State property: Provisioning<wbr>State Provision states for confluent RP."
+  summary: "Gets the provisioning<wbr>State property: Provision states for confluent RP."
   modifiers:
   - "abstract"
   syntax: "public abstract ProvisionState provisioningState()"
-  desc: "Gets the provisioningState property: ProvisioningState Provision states for confluent RP."
+  desc: "Gets the provisioningState property: Provision states for confluent RP."
   returns:
     description: "the provisioningState value."
     type: "<xref href=\"com.azure.resourcemanager.confluent.models.ProvisionState?alt=com.azure.resourcemanager.confluent.models.ProvisionState&text=ProvisionState\" data-throw-if-not-resolved=\"False\" />"
@@ -154,6 +201,18 @@ methods:
   returns:
     description: "the name of the resource region."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.confluent.models.OrganizationResource.resourceGroupName()"
+  fullName: "com.azure.resourcemanager.confluent.models.OrganizationResource.resourceGroupName()"
+  name: "resourceGroupName()"
+  nameWithType: "OrganizationResource.resourceGroupName()"
+  summary: "Gets the name of the resource group."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String resourceGroupName()"
+  desc: "Gets the name of the resource group."
+  returns:
+    description: "the name of the resource group."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.confluent.models.OrganizationResource.ssoUrl()"
   fullName: "com.azure.resourcemanager.confluent.models.OrganizationResource.ssoUrl()"
   name: "ssoUrl()"
@@ -170,11 +229,11 @@ methods:
   fullName: "com.azure.resourcemanager.confluent.models.OrganizationResource.systemData()"
   name: "systemData()"
   nameWithType: "OrganizationResource.systemData()"
-  summary: "Gets the system<wbr>Data property: Metadata pertaining to creation and last modification of the resource."
+  summary: "Gets the system<wbr>Data property: Azure Resource Manager metadata containing created<wbr>By and modified<wbr>By information."
   modifiers:
   - "abstract"
   syntax: "public abstract SystemData systemData()"
-  desc: "Gets the systemData property: Metadata pertaining to creation and last modification of the resource."
+  desc: "Gets the systemData property: Azure Resource Manager metadata containing createdBy and modifiedBy information."
   returns:
     description: "the systemData value."
     type: "<xref href=\"com.azure.core.management.SystemData?alt=com.azure.core.management.SystemData&text=SystemData\" data-throw-if-not-resolved=\"False\" />"
@@ -230,4 +289,4 @@ type: "interface"
 desc: "An immutable client-side representation of OrganizationResource."
 metadata: {}
 package: "com.azure.resourcemanager.confluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-confluent:1.0.0-beta.3
+artifact: com.azure.resourcemanager:azure-resourcemanager-confluent:1.3.0-beta.1
