@@ -26,7 +26,7 @@ constructors:
   fullName: "com.azure.security.keyvault.certificates.models.ImportCertificateOptions.ImportCertificateOptions(String name, byte[] certificate)"
   name: "ImportCertificateOptions(String name, byte[] certificate)"
   nameWithType: "ImportCertificateOptions.ImportCertificateOptions(String name, byte[] certificate)"
-  summary: "Creates instance of <xref uid=\"com.azure.security.keyvault.certificates.models.ImportCertificateOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ImportCertificateOptions\"></xref>."
+  summary: "Creates an instance of <xref uid=\"com.azure.security.keyvault.certificates.models.ImportCertificateOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ImportCertificateOptions\"></xref>."
   parameters:
   - description: "The name of the key."
     name: "name"
@@ -35,7 +35,7 @@ constructors:
     name: "certificate"
     type: "<xref href=\"byte?alt=byte&text=byte\" data-throw-if-not-resolved=\"False\" />[]"
   syntax: "public ImportCertificateOptions(String name, byte[] certificate)"
-  desc: "Creates instance of <xref uid=\"com.azure.security.keyvault.certificates.models.ImportCertificateOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ImportCertificateOptions\"></xref>."
+  desc: "Creates an instance of <xref uid=\"com.azure.security.keyvault.certificates.models.ImportCertificateOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ImportCertificateOptions\"></xref>."
 methods:
 - uid: "com.azure.security.keyvault.certificates.models.ImportCertificateOptions.getCertificate()"
   fullName: "com.azure.security.keyvault.certificates.models.ImportCertificateOptions.getCertificate()"
@@ -61,9 +61,9 @@ methods:
   fullName: "com.azure.security.keyvault.certificates.models.ImportCertificateOptions.getPassword()"
   name: "getPassword()"
   nameWithType: "ImportCertificateOptions.getPassword()"
-  summary: "Get the password for encrypting the certificate, if its encrypted."
+  summary: "Get the password for decrypting the certificate, if it's encrypted."
   syntax: "public String getPassword()"
-  desc: "Get the password for encrypting the certificate, if its encrypted."
+  desc: "Get the password for decrypting the certificate, if it's encrypted."
   returns:
     description: "The password."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -81,19 +81,19 @@ methods:
   fullName: "com.azure.security.keyvault.certificates.models.ImportCertificateOptions.getTags()"
   name: "getTags()"
   nameWithType: "ImportCertificateOptions.getTags()"
-  summary: "Get the tags associated with the secret."
+  summary: "Get the tags associated with the certificate."
   syntax: "public Map<String,String> getTags()"
-  desc: "Get the tags associated with the secret."
+  desc: "Get the tags associated with the certificate."
   returns:
-    description: "The value of the tags."
+    description: "The tags associated with the certificate."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.security.keyvault.certificates.models.ImportCertificateOptions.isCertificateOrderPreserved()"
   fullName: "com.azure.security.keyvault.certificates.models.ImportCertificateOptions.isCertificateOrderPreserved()"
   name: "isCertificateOrderPreserved()"
   nameWithType: "ImportCertificateOptions.isCertificateOrderPreserved()"
-  summary: "Get a value indicating whether the order of the certificates in the certificate chain is preserved."
+  summary: "Get a value indicating the certificate order in the vault is to be preserved."
   syntax: "public Boolean isCertificateOrderPreserved()"
-  desc: "Get a value indicating whether the order of the certificates in the certificate chain is preserved."
+  desc: "Get a value indicating the certificate order in the vault is to be preserved. If true, the certificate chain will be preserved in its original order. If false (default), the leaf certificate will be placed at index 0."
   returns:
     description: "The certificate order preserved status."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
@@ -139,13 +139,13 @@ methods:
   fullName: "com.azure.security.keyvault.certificates.models.ImportCertificateOptions.setPassword(String password)"
   name: "setPassword(String password)"
   nameWithType: "ImportCertificateOptions.setPassword(String password)"
-  summary: "Set the password for encrypting the certificate, if its encrypted."
+  summary: "Set the password for decrypting the certificate, if it's encrypted."
   parameters:
   - description: "The password used to encrypt the certificate."
     name: "password"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ImportCertificateOptions setPassword(String password)"
-  desc: "Set the password for encrypting the certificate, if its encrypted."
+  desc: "Set the password for decrypting the certificate, if it's encrypted."
   returns:
     description: "The updated <xref uid=\"com.azure.security.keyvault.certificates.models.ImportCertificateOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ImportCertificateOptions\"></xref> object."
     type: "<xref href=\"com.azure.security.keyvault.certificates.models.ImportCertificateOptions?alt=com.azure.security.keyvault.certificates.models.ImportCertificateOptions&text=ImportCertificateOptions\" data-throw-if-not-resolved=\"False\" />"
@@ -167,13 +167,13 @@ methods:
   fullName: "com.azure.security.keyvault.certificates.models.ImportCertificateOptions.setTags(Map<String,String> tags)"
   name: "setTags(Map<String,String> tags)"
   nameWithType: "ImportCertificateOptions.setTags(Map<String,String> tags)"
-  summary: "Set the application specific metadata."
+  summary: "Set the tags associated with the certificate."
   parameters:
-  - description: "The metadata to set."
+  - description: "The tags to associate with the certificate."
     name: "tags"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
   syntax: "public ImportCertificateOptions setTags(Map<String,String> tags)"
-  desc: "Set the application specific metadata."
+  desc: "Set the tags associated with the certificate."
   returns:
     description: "The updated <xref uid=\"com.azure.security.keyvault.certificates.models.ImportCertificateOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ImportCertificateOptions\"></xref> object."
     type: "<xref href=\"com.azure.security.keyvault.certificates.models.ImportCertificateOptions?alt=com.azure.security.keyvault.certificates.models.ImportCertificateOptions&text=ImportCertificateOptions\" data-throw-if-not-resolved=\"False\" />"
@@ -181,4 +181,4 @@ type: "class"
 desc: "Represents the configuration used to import a certificate in the key vault."
 metadata: {}
 package: "com.azure.security.keyvault.certificates.models"
-artifact: com.azure:azure-security-keyvault-certificates:4.8.0-beta.1
+artifact: com.azure:azure-security-keyvault-certificates:4.9.0-beta.1
