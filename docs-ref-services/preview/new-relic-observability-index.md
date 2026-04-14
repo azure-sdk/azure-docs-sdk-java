@@ -1,3 +1,3 @@
 | Reference | Package | Source |
 |---|---|---|
-|[Resource Management - New Relic Observability](resourcemanager-newrelicobservability-readme.md)|[azure-resourcemanager-newrelicobservability](https://repo1.maven.org/maven2/com/azure/resourcemanager/azure-resourcemanager-newrelicobservability)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/newrelicobservability/azure-resourcemanager-newrelicobservability)|
+|[Resource Management - New Relic Observability](resourcemanager-newrelicobservability-readme.md)|[azure-resourcemanager-newrelicobservability](https://pkgs.dev.azure.com/azure-sdk/public/_packaging/azure-sdk-for-java/maven/v1/com/azure/resourcemanager/azure-resourcemanager-newrelicobservability)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/newrelicobservability/azure-resourcemanager-newrelicobservability)|
