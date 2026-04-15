@@ -1,7 +1,7 @@
 ---
 title: Azure Security SDK for Java
 description: Reference for Azure Security SDK for Java
-ms.date: 04/14/2026
+ms.date: 04/15/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: security
