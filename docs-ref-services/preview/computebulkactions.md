@@ -1,7 +1,7 @@
 ---
 title: Azure Computebulkactions SDK for Java
 description: Reference for Azure Computebulkactions SDK for Java
-ms.date: 04/16/2026
+ms.date: 04/17/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: computebulkactions
