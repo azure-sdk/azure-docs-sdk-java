@@ -33,6 +33,7 @@ inheritedClassMethods:
   - "<xref href=\"org.springframework.data.mapping.model.BasicPersistentEntity.doWithAssociations(org.springframework.data.mapping.SimpleAssociationHandler)?alt=org.springframework.data.mapping.model.BasicPersistentEntity.doWithAssociations&text=doWithAssociations\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"org.springframework.data.mapping.model.BasicPersistentEntity.doWithProperties(org.springframework.data.mapping.PropertyHandler<P>)?alt=org.springframework.data.mapping.model.BasicPersistentEntity.doWithProperties&text=doWithProperties\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"org.springframework.data.mapping.model.BasicPersistentEntity.doWithProperties(org.springframework.data.mapping.SimplePropertyHandler)?alt=org.springframework.data.mapping.model.BasicPersistentEntity.doWithProperties&text=doWithProperties\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"org.springframework.data.mapping.model.BasicPersistentEntity.getEnvironment()?alt=org.springframework.data.mapping.model.BasicPersistentEntity.getEnvironment&text=getEnvironment\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"org.springframework.data.mapping.model.BasicPersistentEntity.getEvaluationContext(java.lang.Object)?alt=org.springframework.data.mapping.model.BasicPersistentEntity.getEvaluationContext&text=getEvaluationContext\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"org.springframework.data.mapping.model.BasicPersistentEntity.getEvaluationContext(java.lang.Object,org.springframework.data.spel.ExpressionDependencies)?alt=org.springframework.data.mapping.model.BasicPersistentEntity.getEvaluationContext&text=getEvaluationContext\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"org.springframework.data.mapping.model.BasicPersistentEntity.getFallbackIsNewStrategy()?alt=org.springframework.data.mapping.model.BasicPersistentEntity.getFallbackIsNewStrategy&text=getFallbackIsNewStrategy\" data-throw-if-not-resolved=\"False\" />"
@@ -40,7 +41,6 @@ inheritedClassMethods:
   - "<xref href=\"org.springframework.data.mapping.model.BasicPersistentEntity.getIdentifierAccessor(java.lang.Object)?alt=org.springframework.data.mapping.model.BasicPersistentEntity.getIdentifierAccessor&text=getIdentifierAccessor\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"org.springframework.data.mapping.model.BasicPersistentEntity.getInstanceCreatorMetadata()?alt=org.springframework.data.mapping.model.BasicPersistentEntity.getInstanceCreatorMetadata&text=getInstanceCreatorMetadata\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"org.springframework.data.mapping.model.BasicPersistentEntity.getName()?alt=org.springframework.data.mapping.model.BasicPersistentEntity.getName&text=getName\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"org.springframework.data.mapping.model.BasicPersistentEntity.getPersistenceConstructor()?alt=org.springframework.data.mapping.model.BasicPersistentEntity.getPersistenceConstructor&text=getPersistenceConstructor\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"org.springframework.data.mapping.model.BasicPersistentEntity.getPersistentProperties(java.lang.Class<? extends java.lang.annotation.Annotation>)?alt=org.springframework.data.mapping.model.BasicPersistentEntity.getPersistentProperties&text=getPersistentProperties\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"org.springframework.data.mapping.model.BasicPersistentEntity.getPersistentProperty(java.lang.String)?alt=org.springframework.data.mapping.model.BasicPersistentEntity.getPersistentProperty&text=getPersistentProperty\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"org.springframework.data.mapping.model.BasicPersistentEntity.getType()?alt=org.springframework.data.mapping.model.BasicPersistentEntity.getType&text=getType\" data-throw-if-not-resolved=\"False\" />"
@@ -65,17 +65,17 @@ inheritedClassMethods:
   - "<xref href=\"org.springframework.data.mapping.model.BasicPersistentEntity.verify()?alt=org.springframework.data.mapping.model.BasicPersistentEntity.verify&text=verify\" data-throw-if-not-resolved=\"False\" />"
 syntax: "public class **BasicCosmosPersistentEntity<T>**</br> extends <xref href=\"org.springframework.data.mapping.model.BasicPersistentEntity?alt=org.springframework.data.mapping.model.BasicPersistentEntity&text=BasicPersistentEntity\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />,<xref href=\"com.azure.spring.data.cosmos.core.mapping.CosmosPersistentProperty?alt=com.azure.spring.data.cosmos.core.mapping.CosmosPersistentProperty&text=CosmosPersistentProperty\" data-throw-if-not-resolved=\"False\" />&gt;</br> implements <xref href=\"com.azure.spring.data.cosmos.core.mapping.CosmosPersistentEntity?alt=com.azure.spring.data.cosmos.core.mapping.CosmosPersistentEntity&text=CosmosPersistentEntity\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"org.springframework.context.ApplicationContextAware?alt=org.springframework.context.ApplicationContextAware&text=ApplicationContextAware\" data-throw-if-not-resolved=\"False\" />"
 constructors:
-- uid: "com.azure.spring.data.cosmos.core.mapping.BasicCosmosPersistentEntity.BasicCosmosPersistentEntity(org.springframework.data.util.TypeInformation<T>)"
+- uid: "com.azure.spring.data.cosmos.core.mapping.BasicCosmosPersistentEntity.BasicCosmosPersistentEntity(org.springframework.data.core.TypeInformation<T>)"
   fullName: "com.azure.spring.data.cosmos.core.mapping.BasicCosmosPersistentEntity<T>.BasicCosmosPersistentEntity(TypeInformation<T> typeInformation)"
   name: "BasicCosmosPersistentEntity(TypeInformation<T> typeInformation)"
   nameWithType: "BasicCosmosPersistentEntity<T>.BasicCosmosPersistentEntity(TypeInformation<T> typeInformation)"
-  summary: "Creates a new <xref uid=\"com.azure.spring.data.cosmos.core.mapping.BasicCosmosPersistentEntity\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BasicCosmosPersistentEntity\"></xref> from the given <xref uid=\"org.springframework.data.util.TypeInformation\" data-throw-if-not-resolved=\"false\" data-raw-source=\"TypeInformation\"></xref>."
+  summary: "Creates a new <xref uid=\"com.azure.spring.data.cosmos.core.mapping.BasicCosmosPersistentEntity\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BasicCosmosPersistentEntity\"></xref> from the given <xref uid=\"org.springframework.data.core.TypeInformation\" data-throw-if-not-resolved=\"false\" data-raw-source=\"TypeInformation\"></xref>."
   parameters:
   - description: "must not be null."
     name: "typeInformation"
-    type: "<xref href=\"org.springframework.data.util.TypeInformation?alt=org.springframework.data.util.TypeInformation&text=TypeInformation\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"org.springframework.data.core.TypeInformation?alt=org.springframework.data.core.TypeInformation&text=TypeInformation\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
   syntax: "public BasicCosmosPersistentEntity(TypeInformation<T> typeInformation)"
-  desc: "Creates a new <xref uid=\"com.azure.spring.data.cosmos.core.mapping.BasicCosmosPersistentEntity\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BasicCosmosPersistentEntity\"></xref> from the given <xref uid=\"org.springframework.data.util.TypeInformation\" data-throw-if-not-resolved=\"false\" data-raw-source=\"TypeInformation\"></xref>."
+  desc: "Creates a new <xref uid=\"com.azure.spring.data.cosmos.core.mapping.BasicCosmosPersistentEntity\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BasicCosmosPersistentEntity\"></xref> from the given <xref uid=\"org.springframework.data.core.TypeInformation\" data-throw-if-not-resolved=\"false\" data-raw-source=\"TypeInformation\"></xref>."
 methods:
 - uid: "com.azure.spring.data.cosmos.core.mapping.BasicCosmosPersistentEntity.getCollection()"
   fullName: "com.azure.spring.data.cosmos.core.mapping.BasicCosmosPersistentEntity<T>.getCollection()"
@@ -129,4 +129,4 @@ implements:
 - "<xref href=\"org.springframework.context.ApplicationContextAware?alt=org.springframework.context.ApplicationContextAware&text=ApplicationContextAware\" data-throw-if-not-resolved=\"False\" />"
 metadata: {}
 package: "com.azure.spring.data.cosmos.core.mapping"
-artifact: com.azure:azure-spring-data-cosmos:6.2.0
+artifact: com.azure:azure-spring-data-cosmos:7.2.0
