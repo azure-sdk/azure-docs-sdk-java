@@ -6,6 +6,6 @@ ms.topic: reference
 ms.devlang: java
 ms.service: computelimit
 ---
-# Azure Computelimit SDK for Java - preview
-## Packages - preview
+# Azure Computelimit SDK for Java - latest
+## Packages - latest
 [!INCLUDE [packages](computelimit-index.md)]
