@@ -32,7 +32,7 @@ methods:
     name: "options"
     type: "<xref href=\"com.azure.ai.speech.transcription.models.TranscriptionOptions?alt=com.azure.ai.speech.transcription.models.TranscriptionOptions&text=TranscriptionOptions\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public TranscriptionResult transcribe(TranscriptionOptions options)"
-  desc: "Transcribes the provided audio stream with the specified options."
+  desc: "Transcribes the provided audio stream with the specified options.\n\n**Sample**\n\n```java\nTranscriptionResult result = client.transcribe(new TranscriptionOptions(\"https://example.com/audio.wav\"));\n```"
   returns:
     description: "the result of the transcribe operation."
     type: "<xref href=\"com.azure.ai.speech.transcription.models.TranscriptionResult?alt=com.azure.ai.speech.transcription.models.TranscriptionResult&text=TranscriptionResult\" data-throw-if-not-resolved=\"False\" />"
@@ -40,18 +40,18 @@ methods:
   fullName: "com.azure.ai.speech.transcription.TranscriptionClient.transcribeWithResponse(TranscriptionOptions options)"
   name: "transcribeWithResponse(TranscriptionOptions options)"
   nameWithType: "TranscriptionClient.transcribeWithResponse(TranscriptionOptions options)"
-  summary: "Transcribes the provided audio stream with the specified options."
+  summary: "Transcribes the provided audio stream with the specified options and returns the full HTTP response, useful for inspecting status code and headers (for example the `x-ms-request-id` header used in support escalations)."
   parameters:
   - description: "the transcription options including audio file details or audio URL"
     name: "options"
     type: "<xref href=\"com.azure.ai.speech.transcription.models.TranscriptionOptions?alt=com.azure.ai.speech.transcription.models.TranscriptionOptions&text=TranscriptionOptions\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public Response<TranscriptionResult> transcribeWithResponse(TranscriptionOptions options)"
-  desc: "Transcribes the provided audio stream with the specified options."
+  desc: "Transcribes the provided audio stream with the specified options and returns the full HTTP response, useful for inspecting status code and headers (for example the `x-ms-request-id` header used in support escalations).\n\n**Sample**\n\n```java\nResponse<TranscriptionResult> response\n     = client.transcribeWithResponse(new TranscriptionOptions(\"https://example.com/audio.wav\"));\n System.out.println(\"Status: \" + response.getStatusCode());\n TranscriptionResult result = response.getValue();\n```"
   returns:
     description: "the response containing the result of the transcribe operation."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.speech.transcription.models.TranscriptionResult?alt=com.azure.ai.speech.transcription.models.TranscriptionResult&text=TranscriptionResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 type: "class"
-desc: "Initializes a new instance of the synchronous TranscriptionClient type."
+desc: "Initializes a new instance of the synchronous TranscriptionClient type.\n\nConstruct an instance using the <xref uid=\"com.azure.ai.speech.transcription.TranscriptionClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"TranscriptionClientBuilder\"></xref>:\n\n```java\nTranscriptionClient client\n     = new TranscriptionClientBuilder().endpoint(\"https://{resource}.cognitiveservices.azure.com/\")\n         .credential(new KeyCredential(\"{api-key}\"))\n         .buildClient();\n```"
 metadata: {}
 package: "com.azure.ai.speech.transcription"
-artifact: com.azure:azure-ai-speech-transcription:1.0.0-beta.2
+artifact: com.azure:azure-ai-speech-transcription:1.0.0-beta.3

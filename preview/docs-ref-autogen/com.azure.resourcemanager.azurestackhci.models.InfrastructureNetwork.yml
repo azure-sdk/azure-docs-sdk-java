@@ -30,6 +30,16 @@ constructors:
   syntax: "public InfrastructureNetwork()"
   desc: "Creates an instance of InfrastructureNetwork class."
 methods:
+- uid: "com.azure.resourcemanager.azurestackhci.models.InfrastructureNetwork.dnsServerConfig()"
+  fullName: "com.azure.resourcemanager.azurestackhci.models.InfrastructureNetwork.dnsServerConfig()"
+  name: "dnsServerConfig()"
+  nameWithType: "InfrastructureNetwork.dnsServerConfig()"
+  summary: "Get the dns<wbr>Server<wbr>Config property: Specifies how DNS servers are configured for the infrastructure network."
+  syntax: "public DnsServerConfig dnsServerConfig()"
+  desc: "Get the dnsServerConfig property: Specifies how DNS servers are configured for the infrastructure network. Allowed values are 'UseDnsServer' to use the provided DNS servers, and 'UseForwarder' to use DNS forwarders."
+  returns:
+    description: "the dnsServerConfig value."
+    type: "<xref href=\"com.azure.resourcemanager.azurestackhci.models.DnsServerConfig?alt=com.azure.resourcemanager.azurestackhci.models.DnsServerConfig&text=DnsServerConfig\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.azurestackhci.models.InfrastructureNetwork.dnsServers()"
   fullName: "com.azure.resourcemanager.azurestackhci.models.InfrastructureNetwork.dnsServers()"
   name: "dnsServers()"
@@ -40,6 +50,16 @@ methods:
   returns:
     description: "the dnsServers value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+- uid: "com.azure.resourcemanager.azurestackhci.models.InfrastructureNetwork.dnsZones()"
+  fullName: "com.azure.resourcemanager.azurestackhci.models.InfrastructureNetwork.dnsZones()"
+  name: "dnsZones()"
+  nameWithType: "InfrastructureNetwork.dnsZones()"
+  summary: "Get the dns<wbr>Zones property: Details of the DNS Zones to be configured."
+  syntax: "public List<DnsZones> dnsZones()"
+  desc: "Get the dnsZones property: Details of the DNS Zones to be configured."
+  returns:
+    description: "the dnsZones value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.azurestackhci.models.DnsZones?alt=com.azure.resourcemanager.azurestackhci.models.DnsZones&text=DnsZones\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.azurestackhci.models.InfrastructureNetwork.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.resourcemanager.azurestackhci.models.InfrastructureNetwork.fromJson(JsonReader jsonReader)"
   name: "fromJson(JsonReader jsonReader)"
@@ -111,13 +131,20 @@ methods:
   returns:
     description: "the useDhcp value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
-- uid: "com.azure.resourcemanager.azurestackhci.models.InfrastructureNetwork.validate()"
-  fullName: "com.azure.resourcemanager.azurestackhci.models.InfrastructureNetwork.validate()"
-  name: "validate()"
-  nameWithType: "InfrastructureNetwork.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.azurestackhci.models.InfrastructureNetwork.withDnsServerConfig(com.azure.resourcemanager.azurestackhci.models.DnsServerConfig)"
+  fullName: "com.azure.resourcemanager.azurestackhci.models.InfrastructureNetwork.withDnsServerConfig(DnsServerConfig dnsServerConfig)"
+  name: "withDnsServerConfig(DnsServerConfig dnsServerConfig)"
+  nameWithType: "InfrastructureNetwork.withDnsServerConfig(DnsServerConfig dnsServerConfig)"
+  summary: "Set the dns<wbr>Server<wbr>Config property: Specifies how DNS servers are configured for the infrastructure network."
+  parameters:
+  - description: "the dnsServerConfig value to set."
+    name: "dnsServerConfig"
+    type: "<xref href=\"com.azure.resourcemanager.azurestackhci.models.DnsServerConfig?alt=com.azure.resourcemanager.azurestackhci.models.DnsServerConfig&text=DnsServerConfig\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public InfrastructureNetwork withDnsServerConfig(DnsServerConfig dnsServerConfig)"
+  desc: "Set the dnsServerConfig property: Specifies how DNS servers are configured for the infrastructure network. Allowed values are 'UseDnsServer' to use the provided DNS servers, and 'UseForwarder' to use DNS forwarders."
+  returns:
+    description: "the InfrastructureNetwork object itself."
+    type: "<xref href=\"com.azure.resourcemanager.azurestackhci.models.InfrastructureNetwork?alt=com.azure.resourcemanager.azurestackhci.models.InfrastructureNetwork&text=InfrastructureNetwork\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.azurestackhci.models.InfrastructureNetwork.withDnsServers(java.util.List<java.lang.String>)"
   fullName: "com.azure.resourcemanager.azurestackhci.models.InfrastructureNetwork.withDnsServers(List<String> dnsServers)"
   name: "withDnsServers(List<String> dnsServers)"
@@ -129,6 +156,20 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
   syntax: "public InfrastructureNetwork withDnsServers(List<String> dnsServers)"
   desc: "Set the dnsServers property: IPv4 address of the DNS servers in your environment."
+  returns:
+    description: "the InfrastructureNetwork object itself."
+    type: "<xref href=\"com.azure.resourcemanager.azurestackhci.models.InfrastructureNetwork?alt=com.azure.resourcemanager.azurestackhci.models.InfrastructureNetwork&text=InfrastructureNetwork\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.azurestackhci.models.InfrastructureNetwork.withDnsZones(java.util.List<com.azure.resourcemanager.azurestackhci.models.DnsZones>)"
+  fullName: "com.azure.resourcemanager.azurestackhci.models.InfrastructureNetwork.withDnsZones(List<DnsZones> dnsZones)"
+  name: "withDnsZones(List<DnsZones> dnsZones)"
+  nameWithType: "InfrastructureNetwork.withDnsZones(List<DnsZones> dnsZones)"
+  summary: "Set the dns<wbr>Zones property: Details of the DNS Zones to be configured."
+  parameters:
+  - description: "the dnsZones value to set."
+    name: "dnsZones"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.azurestackhci.models.DnsZones?alt=com.azure.resourcemanager.azurestackhci.models.DnsZones&text=DnsZones\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public InfrastructureNetwork withDnsZones(List<DnsZones> dnsZones)"
+  desc: "Set the dnsZones property: Details of the DNS Zones to be configured."
   returns:
     description: "the InfrastructureNetwork object itself."
     type: "<xref href=\"com.azure.resourcemanager.azurestackhci.models.InfrastructureNetwork?alt=com.azure.resourcemanager.azurestackhci.models.InfrastructureNetwork&text=InfrastructureNetwork\" data-throw-if-not-resolved=\"False\" />"
@@ -194,4 +235,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.azurestackhci.models.InfrastructureNetwork?alt=com.azure.resourcemanager.azurestackhci.models.InfrastructureNetwork&text=InfrastructureNetwork\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.azurestackhci.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-azurestackhci:1.0.0-beta.5
+artifact: com.azure.resourcemanager:azure-resourcemanager-azurestackhci:1.1.0-beta.1

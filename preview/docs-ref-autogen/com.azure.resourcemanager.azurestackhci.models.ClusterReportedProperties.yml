@@ -21,14 +21,6 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
 syntax: "public final class **ClusterReportedProperties**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties?alt=com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties&text=ClusterReportedProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
-constructors:
-- uid: "com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties.ClusterReportedProperties()"
-  fullName: "com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties.ClusterReportedProperties()"
-  name: "ClusterReportedProperties()"
-  nameWithType: "ClusterReportedProperties.ClusterReportedProperties()"
-  summary: "Creates an instance of Cluster<wbr>Reported<wbr>Properties class."
-  syntax: "public ClusterReportedProperties()"
-  desc: "Creates an instance of ClusterReportedProperties class."
 methods:
 - uid: "com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties.clusterId()"
   fullName: "com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties.clusterId()"
@@ -54,9 +46,9 @@ methods:
   fullName: "com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties.clusterType()"
   name: "clusterType()"
   nameWithType: "ClusterReportedProperties.clusterType()"
-  summary: "Get the cluster<wbr>Type property: The node type of all the nodes of the cluster."
+  summary: "Get the cluster<wbr>Type property: Specifies the type of hardware vendor for all nodes in the cluster."
   syntax: "public ClusterNodeType clusterType()"
-  desc: "Get the clusterType property: The node type of all the nodes of the cluster."
+  desc: "Get the clusterType property: Specifies the type of hardware vendor for all nodes in the cluster. Indicates whether the nodes are provided by Microsoft or a third-party vendor."
   returns:
     description: "the clusterType value."
     type: "<xref href=\"com.azure.resourcemanager.azurestackhci.models.ClusterNodeType?alt=com.azure.resourcemanager.azurestackhci.models.ClusterNodeType&text=ClusterNodeType\" data-throw-if-not-resolved=\"False\" />"
@@ -99,6 +91,16 @@ methods:
   returns:
     description: "An instance of ClusterReportedProperties if the JsonReader was pointing to an instance of it, or null if\n it was pointing to JSON null."
     type: "<xref href=\"com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties?alt=com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties&text=ClusterReportedProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties.hardwareClass()"
+  fullName: "com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties.hardwareClass()"
+  name: "hardwareClass()"
+  nameWithType: "ClusterReportedProperties.hardwareClass()"
+  summary: "Get the hardware<wbr>Class property: Hardware class of the cluster."
+  syntax: "public HardwareClass hardwareClass()"
+  desc: "Get the hardwareClass property: Hardware class of the cluster."
+  returns:
+    description: "the hardwareClass value."
+    type: "<xref href=\"com.azure.resourcemanager.azurestackhci.models.HardwareClass?alt=com.azure.resourcemanager.azurestackhci.models.HardwareClass&text=HardwareClass\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties.imdsAttestation()"
   fullName: "com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties.imdsAttestation()"
   name: "imdsAttestation()"
@@ -129,6 +131,16 @@ methods:
   returns:
     description: "the manufacturer value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties.msiExpirationTimeStamp()"
+  fullName: "com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties.msiExpirationTimeStamp()"
+  name: "msiExpirationTimeStamp()"
+  nameWithType: "ClusterReportedProperties.msiExpirationTimeStamp()"
+  summary: "Get the msi<wbr>Expiration<wbr>Time<wbr>Stamp property: Specifies the expiration timestamp of the cluster's Managed Service Identity (MSI)."
+  syntax: "public OffsetDateTime msiExpirationTimeStamp()"
+  desc: "Get the msiExpirationTimeStamp property: Specifies the expiration timestamp of the cluster's Managed Service Identity (MSI). The value is expressed in Coordinated Universal Time (UTC)."
+  returns:
+    description: "the msiExpirationTimeStamp value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
 - uid: "com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties.nodes()"
   fullName: "com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties.nodes()"
   name: "nodes()"
@@ -171,31 +183,10 @@ methods:
   - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties.validate()"
-  fullName: "com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties.validate()"
-  name: "validate()"
-  nameWithType: "ClusterReportedProperties.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
-- uid: "com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties.withDiagnosticLevel(com.azure.resourcemanager.azurestackhci.models.DiagnosticLevel)"
-  fullName: "com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties.withDiagnosticLevel(DiagnosticLevel diagnosticLevel)"
-  name: "withDiagnosticLevel(DiagnosticLevel diagnosticLevel)"
-  nameWithType: "ClusterReportedProperties.withDiagnosticLevel(DiagnosticLevel diagnosticLevel)"
-  summary: "Set the diagnostic<wbr>Level property: Level of diagnostic data emitted by the cluster."
-  parameters:
-  - description: "the diagnosticLevel value to set."
-    name: "diagnosticLevel"
-    type: "<xref href=\"com.azure.resourcemanager.azurestackhci.models.DiagnosticLevel?alt=com.azure.resourcemanager.azurestackhci.models.DiagnosticLevel&text=DiagnosticLevel\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public ClusterReportedProperties withDiagnosticLevel(DiagnosticLevel diagnosticLevel)"
-  desc: "Set the diagnosticLevel property: Level of diagnostic data emitted by the cluster."
-  returns:
-    description: "the ClusterReportedProperties object itself."
-    type: "<xref href=\"com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties?alt=com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties&text=ClusterReportedProperties\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Properties reported by cluster agent."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties?alt=com.azure.resourcemanager.azurestackhci.models.ClusterReportedProperties&text=ClusterReportedProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.azurestackhci.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-azurestackhci:1.0.0-beta.5
+artifact: com.azure.resourcemanager:azure-resourcemanager-azurestackhci:1.1.0-beta.1

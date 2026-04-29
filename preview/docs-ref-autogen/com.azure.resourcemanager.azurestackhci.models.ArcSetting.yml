@@ -85,11 +85,11 @@ methods:
   summary: "Gets the connectivity<wbr>Properties property: contains connectivity related configuration for ARC resources."
   modifiers:
   - "abstract"
-  syntax: "public abstract Object connectivityProperties()"
+  syntax: "public abstract ArcConnectivityProperties connectivityProperties()"
   desc: "Gets the connectivityProperties property: contains connectivity related configuration for ARC resources."
   returns:
     description: "the connectivityProperties value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+    type: "<xref href=\"com.azure.resourcemanager.azurestackhci.models.ArcConnectivityProperties?alt=com.azure.resourcemanager.azurestackhci.models.ArcConnectivityProperties&text=ArcConnectivityProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.azurestackhci.models.ArcSetting.consentAndInstallDefaultExtensions()"
   fullName: "com.azure.resourcemanager.azurestackhci.models.ArcSetting.consentAndInstallDefaultExtensions()"
   name: "consentAndInstallDefaultExtensions()"
@@ -128,7 +128,7 @@ methods:
   syntax: "public abstract ArcIdentityResponse createIdentity()"
   desc: "Create Aad identity for arc settings."
   returns:
-    description: "arcIdentity details."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.azurestackhci.models.ArcIdentityResponse?alt=com.azure.resourcemanager.azurestackhci.models.ArcIdentityResponse&text=ArcIdentityResponse\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.azurestackhci.models.ArcSetting.createIdentity(com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.azurestackhci.models.ArcSetting.createIdentity(Context context)"
@@ -144,7 +144,7 @@ methods:
   syntax: "public abstract ArcIdentityResponse createIdentity(Context context)"
   desc: "Create Aad identity for arc settings."
   returns:
-    description: "arcIdentity details."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.azurestackhci.models.ArcIdentityResponse?alt=com.azure.resourcemanager.azurestackhci.models.ArcIdentityResponse&text=ArcIdentityResponse\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.azurestackhci.models.ArcSetting.defaultExtensions()"
   fullName: "com.azure.resourcemanager.azurestackhci.models.ArcSetting.defaultExtensions()"
@@ -268,6 +268,41 @@ methods:
   returns:
     description: "the provisioningState value."
     type: "<xref href=\"com.azure.resourcemanager.azurestackhci.models.ProvisioningState?alt=com.azure.resourcemanager.azurestackhci.models.ProvisioningState&text=ProvisioningState\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.azurestackhci.models.ArcSetting.reconcile(com.azure.resourcemanager.azurestackhci.models.ReconcileArcSettingsRequest)"
+  fullName: "com.azure.resourcemanager.azurestackhci.models.ArcSetting.reconcile(ReconcileArcSettingsRequest reconcileArcSettingsRequest)"
+  name: "reconcile(ReconcileArcSettingsRequest reconcileArcSettingsRequest)"
+  nameWithType: "ArcSetting.reconcile(ReconcileArcSettingsRequest reconcileArcSettingsRequest)"
+  summary: "Reconcile Arc Settings with information related to all nodes."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "Request for reconciling Arc Settings."
+    name: "reconcileArcSettingsRequest"
+    type: "<xref href=\"com.azure.resourcemanager.azurestackhci.models.ReconcileArcSettingsRequest?alt=com.azure.resourcemanager.azurestackhci.models.ReconcileArcSettingsRequest&text=ReconcileArcSettingsRequest\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract ArcSetting reconcile(ReconcileArcSettingsRequest reconcileArcSettingsRequest)"
+  desc: "Reconcile Arc Settings with information related to all nodes."
+  returns:
+    description: "the response."
+    type: "<xref href=\"com.azure.resourcemanager.azurestackhci.models.ArcSetting?alt=com.azure.resourcemanager.azurestackhci.models.ArcSetting&text=ArcSetting\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.azurestackhci.models.ArcSetting.reconcile(com.azure.resourcemanager.azurestackhci.models.ReconcileArcSettingsRequest,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.azurestackhci.models.ArcSetting.reconcile(ReconcileArcSettingsRequest reconcileArcSettingsRequest, Context context)"
+  name: "reconcile(ReconcileArcSettingsRequest reconcileArcSettingsRequest, Context context)"
+  nameWithType: "ArcSetting.reconcile(ReconcileArcSettingsRequest reconcileArcSettingsRequest, Context context)"
+  summary: "Reconcile Arc Settings with information related to all nodes."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "Request for reconciling Arc Settings."
+    name: "reconcileArcSettingsRequest"
+    type: "<xref href=\"com.azure.resourcemanager.azurestackhci.models.ReconcileArcSettingsRequest?alt=com.azure.resourcemanager.azurestackhci.models.ReconcileArcSettingsRequest&text=ReconcileArcSettingsRequest\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract ArcSetting reconcile(ReconcileArcSettingsRequest reconcileArcSettingsRequest, Context context)"
+  desc: "Reconcile Arc Settings with information related to all nodes."
+  returns:
+    description: "the response."
+    type: "<xref href=\"com.azure.resourcemanager.azurestackhci.models.ArcSetting?alt=com.azure.resourcemanager.azurestackhci.models.ArcSetting&text=ArcSetting\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.azurestackhci.models.ArcSetting.refresh()"
   fullName: "com.azure.resourcemanager.azurestackhci.models.ArcSetting.refresh()"
   name: "refresh()"
@@ -348,4 +383,4 @@ type: "interface"
 desc: "An immutable client-side representation of ArcSetting."
 metadata: {}
 package: "com.azure.resourcemanager.azurestackhci.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-azurestackhci:1.0.0-beta.5
+artifact: com.azure.resourcemanager:azure-resourcemanager-azurestackhci:1.1.0-beta.1
