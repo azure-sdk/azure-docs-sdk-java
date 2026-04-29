@@ -1,6 +1,6 @@
 {
   "Name": "azure-core-http-okhttp",
-  "Version": "1.13.3",
+  "Version": "1.13.4",
   "DevVersion": null,
   "DirectoryPath": "sdk/core/azure-core-http-okhttp",
   "ServiceDirectory": "core",
@@ -10,7 +10,7 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-core-http-okhttp",
-  "ReleaseStatus": "2026-01-15",
+  "ReleaseStatus": "2026-04-28",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": [
     "com.azure:azure-core-tracing-opentelemetry-samples",
@@ -18,36 +18,36 @@
     "com.azure:perf-test-core"
   ],
   "ArtifactDetails": {
-    "name": "azure-core-http-okhttp",
+    "groupId": "com.azure",
+    "safeName": "azurecorehttpokhttp",
     "triggeringPaths": [
       "/sdk/core/ci.yml"
     ],
-    "groupId": "com.azure",
-    "safeName": "azurecorehttpokhttp",
+    "name": "azure-core-http-okhttp",
     "releaseInBatch": "${{ parameters.release_azurecorehttpokhttp }}"
   },
   "CIParameters": {
     "CIMatrixConfigs": [
       {
-        "GenerateVMJobs": true,
-        "NonSparseParameters": "Agent",
+        "Name": "Java_ci_test_base",
         "Path": "eng/pipelines/templates/stages/platform-matrix.json",
         "Selection": "sparse",
-        "Name": "Java_ci_test_base"
+        "NonSparseParameters": "Agent",
+        "GenerateVMJobs": true
       },
       {
-        "GenerateVMJobs": true,
+        "Name": "version_overrides_tests",
         "Path": "sdk/core/version-overrides-matrix.json",
         "PRBatching": false,
         "Selection": "all",
-        "Name": "version_overrides_tests"
+        "GenerateVMJobs": true
       },
       {
-        "GenerateVMJobs": true,
+        "Name": "version_overrides_vertx_tests",
         "Path": "sdk/core/version-overrides-vertx-matrix.json",
         "PRBatching": false,
         "Selection": "all",
-        "Name": "version_overrides_vertx_tests"
+        "GenerateVMJobs": true
       }
     ]
   },

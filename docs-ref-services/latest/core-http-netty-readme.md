@@ -1,12 +1,12 @@
 ---
 title: Azure Core Netty HTTP plugin library for Java
 keywords: Azure, java, SDK, API, azure-core-http-netty, core
-ms.date: 01/15/2026
+ms.date: 04/29/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: core
 ---
-# Azure Core Netty HTTP plugin library for Java - version 1.16.3 
+# Azure Core Netty HTTP plugin library for Java - version 1.16.4 
 
 
 Azure Core Netty HTTP client is a plugin for the `azure-core` HTTP client API.
@@ -22,7 +22,7 @@ Azure Core Netty HTTP client is a plugin for the `azure-core` HTTP client API.
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-core-http-netty_1.16.3/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-core-http-netty_1.16.4/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -57,7 +57,7 @@ add the direct dependency to your project as follows.
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-core-http-netty</artifactId>
-    <version>1.16.3</version>
+    <version>1.16.4</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -217,7 +217,7 @@ locate the root issue. View the [logging][logging] wiki for guidance about enabl
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-core-http-netty_1.16.3/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-core-http-netty_1.16.4/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -226,7 +226,7 @@ For details on contributing to this repository, see the [contributing guide](htt
 1. Create new Pull Request
 
 <!-- Links -->
-[logging]: https://github.com/Azure/azure-sdk-for-java/wiki/Logging-in-Azure-SDK
+[logging]: https://learn.microsoft.com/azure/developer/java/sdk/logging-overview
 [jdk_link]: https://learn.microsoft.com/java/azure/jdk/?view=azure-java-stable
 [java8_client_compatibility]: https://learn.microsoft.com/azure/security/fundamentals/azure-ca-details?tabs=root-and-subordinate-cas-list#client-compatibility-for-public-pkis
 
