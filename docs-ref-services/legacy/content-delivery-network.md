@@ -1,7 +1,7 @@
 ---
 title: Azure Content Delivery Network SDK for Java
 description: Reference for Azure Content Delivery Network SDK for Java
-ms.date: 05/01/2026
+ms.date: 05/04/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: contentdeliverynetwork

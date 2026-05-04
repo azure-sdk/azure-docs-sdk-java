@@ -6,6 +6,6 @@ ms.topic: reference
 ms.devlang: java
 ms.service: contentunderstanding
 ---
-# Azure Content Understanding SDK for Java - latest
-## Packages - latest
+# Azure Content Understanding SDK for Java - preview
+## Packages - preview
 [!INCLUDE [packages](content-understanding-index.md)]
