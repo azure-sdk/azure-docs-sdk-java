@@ -1,7 +1,7 @@
 ---
 title: Azure Identity SDK for Java
 description: Reference for Azure Identity SDK for Java
-ms.date: 05/05/2026
+ms.date: 05/06/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: entra-id
