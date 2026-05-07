@@ -1,7 +1,7 @@
 ---
 title: Azure HANA on Azure SDK for Java
 description: Reference for Azure HANA on Azure SDK for Java
-ms.date: 05/06/2026
+ms.date: 05/07/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: hanaonazure
