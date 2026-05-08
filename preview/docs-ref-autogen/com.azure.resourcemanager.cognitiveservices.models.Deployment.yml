@@ -54,6 +54,34 @@ methods:
   returns:
     description: "the name value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.Deployment.pause()"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.Deployment.pause()"
+  name: "pause()"
+  nameWithType: "Deployment.pause()"
+  summary: "Pause a deployment Pauses inferencing on a deployment by setting the deployment<wbr>State to 'Paused' (see \\#/definitions/Deployment<wbr>Properties/properties/deployment<wbr>State)."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Deployment pause()"
+  desc: "Pause a deployment Pauses inferencing on a deployment by setting the deploymentState to 'Paused' (see \\#/definitions/DeploymentProperties/properties/deploymentState). Only Standard, DataZoneStandard, and GlobalStandard SKUs support this operation. Inference requests to the paused deployment endpoint will receive HTTP 423 (Locked). This operation is idempotent."
+  returns:
+    description: "cognitive Services account deployment."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.Deployment?alt=com.azure.resourcemanager.cognitiveservices.models.Deployment&text=Deployment\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.Deployment.pauseWithResponse(com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.Deployment.pauseWithResponse(Context context)"
+  name: "pauseWithResponse(Context context)"
+  nameWithType: "Deployment.pauseWithResponse(Context context)"
+  summary: "Pause a deployment Pauses inferencing on a deployment by setting the deployment<wbr>State to 'Paused' (see \\#/definitions/Deployment<wbr>Properties/properties/deployment<wbr>State)."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Response<Deployment> pauseWithResponse(Context context)"
+  desc: "Pause a deployment Pauses inferencing on a deployment by setting the deploymentState to 'Paused' (see \\#/definitions/DeploymentProperties/properties/deploymentState). Only Standard, DataZoneStandard, and GlobalStandard SKUs support this operation. Inference requests to the paused deployment endpoint will receive HTTP 423 (Locked). This operation is idempotent."
+  returns:
+    description: "cognitive Services account deployment along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.Deployment?alt=com.azure.resourcemanager.cognitiveservices.models.Deployment&text=Deployment\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.cognitiveservices.models.Deployment.properties()"
   fullName: "com.azure.resourcemanager.cognitiveservices.models.Deployment.properties()"
   name: "properties()"
@@ -106,6 +134,34 @@ methods:
   returns:
     description: "the name of the resource group."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.Deployment.resume()"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.Deployment.resume()"
+  name: "resume()"
+  nameWithType: "Deployment.resume()"
+  summary: "Resume a deployment Resumes inferencing on a previously paused deployment by setting the deployment<wbr>State to 'Running' (see \\#/definitions/Deployment<wbr>Properties/properties/deployment<wbr>State)."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Deployment resume()"
+  desc: "Resume a deployment Resumes inferencing on a previously paused deployment by setting the deploymentState to 'Running' (see \\#/definitions/DeploymentProperties/properties/deploymentState). This operation is idempotent and can be safely called on already running deployments."
+  returns:
+    description: "cognitive Services account deployment."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.Deployment?alt=com.azure.resourcemanager.cognitiveservices.models.Deployment&text=Deployment\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.Deployment.resumeWithResponse(com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.Deployment.resumeWithResponse(Context context)"
+  name: "resumeWithResponse(Context context)"
+  nameWithType: "Deployment.resumeWithResponse(Context context)"
+  summary: "Resume a deployment Resumes inferencing on a previously paused deployment by setting the deployment<wbr>State to 'Running' (see \\#/definitions/Deployment<wbr>Properties/properties/deployment<wbr>State)."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Response<Deployment> resumeWithResponse(Context context)"
+  desc: "Resume a deployment Resumes inferencing on a previously paused deployment by setting the deploymentState to 'Running' (see \\#/definitions/DeploymentProperties/properties/deploymentState). This operation is idempotent and can be safely called on already running deployments."
+  returns:
+    description: "cognitive Services account deployment along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.Deployment?alt=com.azure.resourcemanager.cognitiveservices.models.Deployment&text=Deployment\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.cognitiveservices.models.Deployment.sku()"
   fullName: "com.azure.resourcemanager.cognitiveservices.models.Deployment.sku()"
   name: "sku()"
@@ -122,11 +178,11 @@ methods:
   fullName: "com.azure.resourcemanager.cognitiveservices.models.Deployment.systemData()"
   name: "systemData()"
   nameWithType: "Deployment.systemData()"
-  summary: "Gets the system<wbr>Data property: Metadata pertaining to creation and last modification of the resource."
+  summary: "Gets the system<wbr>Data property: Azure Resource Manager metadata containing created<wbr>By and modified<wbr>By information."
   modifiers:
   - "abstract"
   syntax: "public abstract SystemData systemData()"
-  desc: "Gets the systemData property: Metadata pertaining to creation and last modification of the resource."
+  desc: "Gets the systemData property: Azure Resource Manager metadata containing createdBy and modifiedBy information."
   returns:
     description: "the systemData value."
     type: "<xref href=\"com.azure.core.management.SystemData?alt=com.azure.core.management.SystemData&text=SystemData\" data-throw-if-not-resolved=\"False\" />"
@@ -170,4 +226,4 @@ type: "interface"
 desc: "An immutable client-side representation of Deployment."
 metadata: {}
 package: "com.azure.resourcemanager.cognitiveservices.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-cognitiveservices:1.2.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-cognitiveservices:1.5.0-beta.1

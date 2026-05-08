@@ -33,14 +33,33 @@ constructors:
   fullName: "com.azure.search.documents.indexes.models.NGramTokenFilter.NGramTokenFilter(String name)"
   name: "NGramTokenFilter(String name)"
   nameWithType: "NGramTokenFilter.NGramTokenFilter(String name)"
-  summary: "Constructor of <xref uid=\"com.azure.search.documents.indexes.models.NGramTokenFilter\" data-throw-if-not-resolved=\"false\" data-raw-source=\"NGramTokenFilter\"></xref>."
+  summary: "Creates an instance of NGram<wbr>Token<wbr>Filter class."
   parameters:
-  - description: "The name of the token filter. It must only contain letters, digits,\n spaces, dashes or underscores, can only start and end with alphanumeric\n characters, and is limited to 128 characters."
+  - description: "the name value to set."
     name: "name"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public NGramTokenFilter(String name)"
-  desc: "Constructor of <xref uid=\"com.azure.search.documents.indexes.models.NGramTokenFilter\" data-throw-if-not-resolved=\"false\" data-raw-source=\"NGramTokenFilter\"></xref>."
+  desc: "Creates an instance of NGramTokenFilter class."
 methods:
+- uid: "com.azure.search.documents.indexes.models.NGramTokenFilter.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.search.documents.indexes.models.NGramTokenFilter.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "NGramTokenFilter.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of NGram<wbr>Token<wbr>Filter from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static NGramTokenFilter fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of NGramTokenFilter from the JsonReader."
+  returns:
+    description: "An instance of NGramTokenFilter if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.NGramTokenFilter?alt=com.azure.search.documents.indexes.models.NGramTokenFilter&text=NGramTokenFilter\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.NGramTokenFilter.getMaxGram()"
   fullName: "com.azure.search.documents.indexes.models.NGramTokenFilter.getMaxGram()"
   name: "getMaxGram()"
@@ -61,6 +80,17 @@ methods:
   returns:
     description: "the minGram value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+- uid: "com.azure.search.documents.indexes.models.NGramTokenFilter.getOdataType()"
+  fullName: "com.azure.search.documents.indexes.models.NGramTokenFilter.getOdataType()"
+  name: "getOdataType()"
+  nameWithType: "NGramTokenFilter.getOdataType()"
+  summary: "Get the odata<wbr>Type property: The discriminator for derived types."
+  overridden: "com.azure.search.documents.indexes.models.TokenFilter.getOdataType()"
+  syntax: "public String getOdataType()"
+  desc: "Get the odataType property: The discriminator for derived types."
+  returns:
+    description: "the odataType value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.search.documents.indexes.models.NGramTokenFilter.setMaxGram(java.lang.Integer)"
   fullName: "com.azure.search.documents.indexes.models.NGramTokenFilter.setMaxGram(Integer maxGram)"
   name: "setMaxGram(Integer maxGram)"
@@ -106,4 +136,4 @@ type: "class"
 desc: "Generates n-grams of the given size(s). This token filter is implemented using Apache Lucene."
 metadata: {}
 package: "com.azure.search.documents.indexes.models"
-artifact: com.azure:azure-search-documents:11.8.1
+artifact: com.azure:azure-search-documents:12.0.0

@@ -28,12 +28,16 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
 syntax: "public final class **RequestAudioContentPart**</br> extends <xref href=\"com.azure.ai.voicelive.models.VoiceLiveContentPart?alt=com.azure.ai.voicelive.models.VoiceLiveContentPart&text=VoiceLiveContentPart\" data-throw-if-not-resolved=\"False\" />"
 constructors:
-- uid: "com.azure.ai.voicelive.models.RequestAudioContentPart.RequestAudioContentPart()"
-  fullName: "com.azure.ai.voicelive.models.RequestAudioContentPart.RequestAudioContentPart()"
-  name: "RequestAudioContentPart()"
-  nameWithType: "RequestAudioContentPart.RequestAudioContentPart()"
+- uid: "com.azure.ai.voicelive.models.RequestAudioContentPart.RequestAudioContentPart(java.lang.String)"
+  fullName: "com.azure.ai.voicelive.models.RequestAudioContentPart.RequestAudioContentPart(String audio)"
+  name: "RequestAudioContentPart(String audio)"
+  nameWithType: "RequestAudioContentPart.RequestAudioContentPart(String audio)"
   summary: "Creates an instance of Request<wbr>Audio<wbr>Content<wbr>Part class."
-  syntax: "public RequestAudioContentPart()"
+  parameters:
+  - description: "the audio value to set."
+    name: "audio"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public RequestAudioContentPart(String audio)"
   desc: "Creates an instance of RequestAudioContentPart class."
 methods:
 - uid: "com.azure.ai.voicelive.models.RequestAudioContentPart.fromJson(com.azure.json.JsonReader)"
@@ -49,19 +53,29 @@ methods:
     type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static RequestAudioContentPart fromJson(JsonReader jsonReader)"
   exceptions:
-  - description: "If an error occurs while reading the RequestAudioContentPart."
+  - description: "If the deserialized JSON object was missing any required properties."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   desc: "Reads an instance of RequestAudioContentPart from the JsonReader."
   returns:
     description: "An instance of RequestAudioContentPart if the JsonReader was pointing to an instance of it, or null if it\n was pointing to JSON null."
     type: "<xref href=\"com.azure.ai.voicelive.models.RequestAudioContentPart?alt=com.azure.ai.voicelive.models.RequestAudioContentPart&text=RequestAudioContentPart\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.voicelive.models.RequestAudioContentPart.getAudio()"
+  fullName: "com.azure.ai.voicelive.models.RequestAudioContentPart.getAudio()"
+  name: "getAudio()"
+  nameWithType: "RequestAudioContentPart.getAudio()"
+  summary: "Get the audio property: Base64-encoded audio bytes, these will be parsed as the format specified in the session input audio type configuration."
+  syntax: "public String getAudio()"
+  desc: "Get the audio property: Base64-encoded audio bytes, these will be parsed as the format specified in the session input audio type configuration. This defaults to PCM 16-bit 24kHz mono if not specified."
+  returns:
+    description: "the audio value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.ai.voicelive.models.RequestAudioContentPart.getTranscript()"
   fullName: "com.azure.ai.voicelive.models.RequestAudioContentPart.getTranscript()"
   name: "getTranscript()"
   nameWithType: "RequestAudioContentPart.getTranscript()"
-  summary: "Get the transcript property: The transcript property."
+  summary: "Get the transcript property: Optional transcript of the audio content."
   syntax: "public String getTranscript()"
-  desc: "Get the transcript property: The transcript property."
+  desc: "Get the transcript property: Optional transcript of the audio content. This is not sent to the model, but will be attached to the message item for reference."
   returns:
     description: "the transcript value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -80,13 +94,13 @@ methods:
   fullName: "com.azure.ai.voicelive.models.RequestAudioContentPart.setTranscript(String transcript)"
   name: "setTranscript(String transcript)"
   nameWithType: "RequestAudioContentPart.setTranscript(String transcript)"
-  summary: "Set the transcript property: The transcript property."
+  summary: "Set the transcript property: Optional transcript of the audio content."
   parameters:
   - description: "the transcript value to set."
     name: "transcript"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public RequestAudioContentPart setTranscript(String transcript)"
-  desc: "Set the transcript property: The transcript property."
+  desc: "Set the transcript property: Optional transcript of the audio content. This is not sent to the model, but will be attached to the message item for reference."
   returns:
     description: "the RequestAudioContentPart object itself."
     type: "<xref href=\"com.azure.ai.voicelive.models.RequestAudioContentPart?alt=com.azure.ai.voicelive.models.RequestAudioContentPart&text=RequestAudioContentPart\" data-throw-if-not-resolved=\"False\" />"
@@ -104,7 +118,7 @@ methods:
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "An audio content part for a request."
+desc: "An audio content part for a request. This is supported only by realtime models (e.g., gpt-realtime). For text-based models, use \\`input\\_text\\` instead."
 metadata: {}
 package: "com.azure.ai.voicelive.models"
-artifact: com.azure:azure-ai-voicelive:1.0.0-beta.5
+artifact: com.azure:azure-ai-voicelive:1.0.0-beta.6

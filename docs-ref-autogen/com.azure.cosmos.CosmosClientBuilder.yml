@@ -30,6 +30,20 @@ constructors:
   syntax: "public CosmosClientBuilder()"
   desc: "Instantiates a new Cosmos client builder."
 methods:
+- uid: "com.azure.cosmos.CosmosClientBuilder.additionalHeaders(java.util.Map<com.azure.cosmos.models.CosmosAdditionalHeaderName,java.lang.String>)"
+  fullName: "com.azure.cosmos.CosmosClientBuilder.additionalHeaders(Map<CosmosAdditionalHeaderName,String> additionalHeaders)"
+  name: "additionalHeaders(Map<CosmosAdditionalHeaderName,String> additionalHeaders)"
+  nameWithType: "CosmosClientBuilder.additionalHeaders(Map<CosmosAdditionalHeaderName,String> additionalHeaders)"
+  summary: "Sets additional HTTP headers that will be included with every request from this client."
+  parameters:
+  - description: "map of <xref uid=\"com.azure.cosmos.models.CosmosAdditionalHeaderName\" data-throw-if-not-resolved=\"false\" data-raw-source=\"CosmosAdditionalHeaderName\"></xref> to value"
+    name: "additionalHeaders"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<xref href=\"com.azure.cosmos.models.CosmosAdditionalHeaderName?alt=com.azure.cosmos.models.CosmosAdditionalHeaderName&text=CosmosAdditionalHeaderName\" data-throw-if-not-resolved=\"False\" />,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+  syntax: "public CosmosClientBuilder additionalHeaders(Map<CosmosAdditionalHeaderName,String> additionalHeaders)"
+  desc: "Sets additional HTTP headers that will be included with every request from this client.\n\n<xref uid=\"com.azure.cosmos.models.CosmosAdditionalHeaderName\" data-throw-if-not-resolved=\"false\" data-raw-source=\"CosmosAdditionalHeaderName\"></xref> defines exactly which headers are supported. Currently the only supported header is <xref uid=\"com.azure.cosmos.models.CosmosAdditionalHeaderName.WORKLOAD_ID\" data-throw-if-not-resolved=\"false\" data-raw-source=\"CosmosAdditionalHeaderName#WORKLOAD_ID\"></xref> (`x-ms-cosmos-workload-id`).\n\nThis restriction exists because in Direct mode (RNTBD), only headers with explicit encoding support are sent on the wire. Using <xref uid=\"com.azure.cosmos.models.CosmosAdditionalHeaderName\" data-throw-if-not-resolved=\"false\" data-raw-source=\"CosmosAdditionalHeaderName\"></xref> ensures consistent behavior across both Gateway and Direct modes.\n\nIf the same header is also set on request options (e.g., `CosmosItemRequestOptions.setAdditionalHeaders(Map)`), the request-level value takes precedence over the client-level value."
+  returns:
+    description: "current CosmosClientBuilder"
+    type: "<xref href=\"com.azure.cosmos.CosmosClientBuilder?alt=com.azure.cosmos.CosmosClientBuilder&text=CosmosClientBuilder\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.cosmos.CosmosClientBuilder.addOperationPolicy(com.azure.cosmos.CosmosOperationPolicy)"
   fullName: "com.azure.cosmos.CosmosClientBuilder.addOperationPolicy(CosmosOperationPolicy policy)"
   name: "addOperationPolicy(CosmosOperationPolicy policy)"
@@ -517,4 +531,4 @@ implements:
 - "<xref href=\"com.azure.core.client.traits.TokenCredentialTrait?alt=com.azure.core.client.traits.TokenCredentialTrait&text=TokenCredentialTrait\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.cosmos.CosmosClientBuilder?alt=com.azure.cosmos.CosmosClientBuilder&text=CosmosClientBuilder\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.cosmos"
-artifact: com.azure:azure-cosmos:4.79.1
+artifact: com.azure:azure-cosmos:4.80.0

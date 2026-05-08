@@ -191,8 +191,10 @@ methods:
   name: "isHidden()"
   nameWithType: "SearchField.isHidden()"
   summary: "Get the hidden property: A value indicating whether the field will be returned in a search result."
-  syntax: "public Boolean isHidden()"
-  desc: "Get the hidden property: A value indicating whether the field will be returned in a search result. This property must be false for key fields, and must be null for complex fields. You can hide a field from search results if you want to use it only as a filter, for sorting, or for scoring. This property can also be changed on existing fields and enabling it does not cause an increase in index storage requirements."
+  deprecatedTag: "Use <xref uid=\"com.azure.search.documents.indexes.models.SearchField.isRetrievable()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#isRetrievable()\"></xref> instead and flip the boolean value."
+  syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public Boolean isHidden()"
+  desc: "Get the hidden property: A value indicating whether the field will be returned in a search result. This property must be false for key fields, and must be null for complex fields. You can hide a field from search results if you want to use it only as a filter, for sorting, or for scoring. This property can also be changed on existing fields and enabling it does not cause an increase in index storage requirements. Default is false for simple fields, true for vector fields, and null for complex fields."
+  hasDeprecatedTag: true
   returns:
     description: "the hidden value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
@@ -205,6 +207,16 @@ methods:
   desc: "Get the key property: A value indicating whether the field uniquely identifies documents in the index. Exactly one top-level field in each index must be chosen as the key field and it must be of type Edm.String. Key fields can be used to look up documents directly and update or delete specific documents. Default is false for simple fields and null for complex fields."
   returns:
     description: "the key value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.search.documents.indexes.models.SearchField.isRetrievable()"
+  fullName: "com.azure.search.documents.indexes.models.SearchField.isRetrievable()"
+  name: "isRetrievable()"
+  nameWithType: "SearchField.isRetrievable()"
+  summary: "Get the retrievable property: A value indicating whether the field can be returned in a search result."
+  syntax: "public Boolean isRetrievable()"
+  desc: "Get the retrievable property: A value indicating whether the field can be returned in a search result. You can disable this option if you want to use a field (for example, margin) as a filter, sorting, or scoring mechanism but do not want the field to be visible to the end user. This property must be true for key fields, and it must be null for complex fields. This property can be changed on existing fields. Enabling this property does not cause any increase in index storage requirements. Default is true for simple fields, false for vector fields, and null for complex fields."
+  returns:
+    description: "the retrievable value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.search.documents.indexes.models.SearchField.isSearchable()"
   fullName: "com.azure.search.documents.indexes.models.SearchField.isSearchable()"
@@ -311,12 +323,14 @@ methods:
   name: "setHidden(Boolean hidden)"
   nameWithType: "SearchField.setHidden(Boolean hidden)"
   summary: "Set the hidden property: A value indicating whether the field will be returned in a search result."
+  deprecatedTag: "Use <xref uid=\"com.azure.search.documents.indexes.models.SearchField.setRetrievable(java.lang.Boolean)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#setRetrievable(Boolean)\"></xref> instead and flip the boolean value."
   parameters:
   - description: "the hidden value to set."
     name: "hidden"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
-  syntax: "public SearchField setHidden(Boolean hidden)"
-  desc: "Set the hidden property: A value indicating whether the field will be returned in a search result. This property must be false for key fields, and must be null for complex fields. You can hide a field from search results if you want to use it only as a filter, for sorting, or for scoring. This property can also be changed on existing fields and enabling it does not cause an increase in index storage requirements."
+  syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public SearchField setHidden(Boolean hidden)"
+  desc: "Set the hidden property: A value indicating whether the field will be returned in a search result. This property must be false for key fields, and must be null for complex fields. You can hide a field from search results if you want to use it only as a filter, for sorting, or for scoring. This property can also be changed on existing fields and enabling it does not cause an increase in index storage requirements. Default is false for simple fields, true for vector fields, and null for complex fields."
+  hasDeprecatedTag: true
   returns:
     description: "the SearchField object itself."
     type: "<xref href=\"com.azure.search.documents.indexes.models.SearchField?alt=com.azure.search.documents.indexes.models.SearchField&text=SearchField\" data-throw-if-not-resolved=\"False\" />"
@@ -359,6 +373,20 @@ methods:
     type: "<xref href=\"com.azure.search.documents.indexes.models.LexicalNormalizerName?alt=com.azure.search.documents.indexes.models.LexicalNormalizerName&text=LexicalNormalizerName\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public SearchField setNormalizerName(LexicalNormalizerName normalizerName)"
   desc: "Set the normalizerName property: The name of the normalizer to use for the field. This option can be used only with fields with filterable, sortable, or facetable enabled. Once the normalizer is chosen, it cannot be changed for the field. Must be null for complex fields."
+  returns:
+    description: "the SearchField object itself."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.SearchField?alt=com.azure.search.documents.indexes.models.SearchField&text=SearchField\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.indexes.models.SearchField.setRetrievable(java.lang.Boolean)"
+  fullName: "com.azure.search.documents.indexes.models.SearchField.setRetrievable(Boolean retrievable)"
+  name: "setRetrievable(Boolean retrievable)"
+  nameWithType: "SearchField.setRetrievable(Boolean retrievable)"
+  summary: "Set the retrievable property: A value indicating whether the field can be returned in a search result."
+  parameters:
+  - description: "the retrievable value to set."
+    name: "retrievable"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+  syntax: "public SearchField setRetrievable(Boolean retrievable)"
+  desc: "Set the retrievable property: A value indicating whether the field can be returned in a search result. You can disable this option if you want to use a field (for example, margin) as a filter, sorting, or scoring mechanism but do not want the field to be visible to the end user. This property must be true for key fields, and it must be null for complex fields. This property can be changed on existing fields. Enabling this property does not cause any increase in index storage requirements. Default is true for simple fields, false for vector fields, and null for complex fields."
   returns:
     description: "the SearchField object itself."
     type: "<xref href=\"com.azure.search.documents.indexes.models.SearchField?alt=com.azure.search.documents.indexes.models.SearchField&text=SearchField\" data-throw-if-not-resolved=\"False\" />"
@@ -506,4 +534,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.indexes.models.SearchField?alt=com.azure.search.documents.indexes.models.SearchField&text=SearchField\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.search.documents.indexes.models"
-artifact: com.azure:azure-search-documents:11.8.1
+artifact: com.azure:azure-search-documents:12.0.0

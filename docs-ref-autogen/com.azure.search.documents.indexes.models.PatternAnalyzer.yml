@@ -41,16 +41,6 @@ constructors:
   syntax: "public PatternAnalyzer(String name)"
   desc: "Creates an instance of PatternAnalyzer class."
 methods:
-- uid: "com.azure.search.documents.indexes.models.PatternAnalyzer.areLowerCaseTerms()"
-  fullName: "com.azure.search.documents.indexes.models.PatternAnalyzer.areLowerCaseTerms()"
-  name: "areLowerCaseTerms()"
-  nameWithType: "PatternAnalyzer.areLowerCaseTerms()"
-  summary: "Get the lower<wbr>Case<wbr>Terms property: A value indicating whether terms should be lower-cased."
-  syntax: "public Boolean areLowerCaseTerms()"
-  desc: "Get the lowerCaseTerms property: A value indicating whether terms should be lower-cased. Default is true."
-  returns:
-    description: "the lowerCaseTerms value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.search.documents.indexes.models.PatternAnalyzer.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.search.documents.indexes.models.PatternAnalyzer.fromJson(JsonReader jsonReader)"
   name: "fromJson(JsonReader jsonReader)"
@@ -74,9 +64,9 @@ methods:
   fullName: "com.azure.search.documents.indexes.models.PatternAnalyzer.getFlags()"
   name: "getFlags()"
   nameWithType: "PatternAnalyzer.getFlags()"
-  summary: "Get the flags property: Regular expression flags."
+  summary: "Get the flags property: Regular expression flags, specified as a '|' separated string of Regex<wbr>Flags values."
   syntax: "public List<RegexFlags> getFlags()"
-  desc: "Get the flags property: Regular expression flags."
+  desc: "Get the flags property: Regular expression flags, specified as a '|' separated string of RegexFlags values."
   returns:
     description: "the flags value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.search.documents.indexes.models.RegexFlags?alt=com.azure.search.documents.indexes.models.RegexFlags&text=RegexFlags\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -84,10 +74,10 @@ methods:
   fullName: "com.azure.search.documents.indexes.models.PatternAnalyzer.getOdataType()"
   name: "getOdataType()"
   nameWithType: "PatternAnalyzer.getOdataType()"
-  summary: "Get the odata<wbr>Type property: A URI fragment specifying the type of analyzer."
+  summary: "Get the odata<wbr>Type property: The discriminator for derived types."
   overridden: "com.azure.search.documents.indexes.models.LexicalAnalyzer.getOdataType()"
   syntax: "public String getOdataType()"
-  desc: "Get the odataType property: A URI fragment specifying the type of analyzer."
+  desc: "Get the odataType property: The discriminator for derived types."
   returns:
     description: "the odataType value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -111,17 +101,27 @@ methods:
   returns:
     description: "the stopwords value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+- uid: "com.azure.search.documents.indexes.models.PatternAnalyzer.isLowerCaseTerms()"
+  fullName: "com.azure.search.documents.indexes.models.PatternAnalyzer.isLowerCaseTerms()"
+  name: "isLowerCaseTerms()"
+  nameWithType: "PatternAnalyzer.isLowerCaseTerms()"
+  summary: "Get the lower<wbr>Case<wbr>Terms property: A value indicating whether terms should be lower-cased."
+  syntax: "public Boolean isLowerCaseTerms()"
+  desc: "Get the lowerCaseTerms property: A value indicating whether terms should be lower-cased. Default is true."
+  returns:
+    description: "the lowerCaseTerms value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.search.documents.indexes.models.PatternAnalyzer.setFlags(java.util.List<com.azure.search.documents.indexes.models.RegexFlags>)"
   fullName: "com.azure.search.documents.indexes.models.PatternAnalyzer.setFlags(List<RegexFlags> flags)"
   name: "setFlags(List<RegexFlags> flags)"
   nameWithType: "PatternAnalyzer.setFlags(List<RegexFlags> flags)"
-  summary: "Set the flags property: Regular expression flags."
+  summary: "Set the flags property: Regular expression flags, specified as a '|' separated string of Regex<wbr>Flags values."
   parameters:
   - description: "the flags value to set."
     name: "flags"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.search.documents.indexes.models.RegexFlags?alt=com.azure.search.documents.indexes.models.RegexFlags&text=RegexFlags\" data-throw-if-not-resolved=\"False\" />&gt;"
   syntax: "public PatternAnalyzer setFlags(List<RegexFlags> flags)"
-  desc: "Set the flags property: Regular expression flags."
+  desc: "Set the flags property: Regular expression flags, specified as a '|' separated string of RegexFlags values."
   returns:
     description: "the PatternAnalyzer object itself."
     type: "<xref href=\"com.azure.search.documents.indexes.models.PatternAnalyzer?alt=com.azure.search.documents.indexes.models.PatternAnalyzer&text=PatternAnalyzer\" data-throw-if-not-resolved=\"False\" />"
@@ -129,13 +129,13 @@ methods:
   fullName: "com.azure.search.documents.indexes.models.PatternAnalyzer.setFlags(RegexFlags[] flags)"
   name: "setFlags(RegexFlags[] flags)"
   nameWithType: "PatternAnalyzer.setFlags(RegexFlags[] flags)"
-  summary: "Set the flags property: Regular expression flags."
+  summary: "Set the flags property: Regular expression flags, specified as a '|' separated string of Regex<wbr>Flags values."
   parameters:
   - description: "the flags value to set."
     name: "flags"
     type: "<xref href=\"com.azure.search.documents.indexes.models.RegexFlags?alt=com.azure.search.documents.indexes.models.RegexFlags&text=RegexFlags\" data-throw-if-not-resolved=\"False\" />[]"
   syntax: "public PatternAnalyzer setFlags(RegexFlags[] flags)"
-  desc: "Set the flags property: Regular expression flags."
+  desc: "Set the flags property: Regular expression flags, specified as a '|' separated string of RegexFlags values."
   returns:
     description: "the PatternAnalyzer object itself."
     type: "<xref href=\"com.azure.search.documents.indexes.models.PatternAnalyzer?alt=com.azure.search.documents.indexes.models.PatternAnalyzer&text=PatternAnalyzer\" data-throw-if-not-resolved=\"False\" />"
@@ -212,4 +212,4 @@ type: "class"
 desc: "Flexibly separates text into terms via a regular expression pattern. This analyzer is implemented using Apache Lucene."
 metadata: {}
 package: "com.azure.search.documents.indexes.models"
-artifact: com.azure:azure-search-documents:11.8.1
+artifact: com.azure:azure-search-documents:12.0.0

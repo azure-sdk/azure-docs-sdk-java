@@ -1,0 +1,118 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting"
+fullName: "com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting"
+name: "DeploymentRouting"
+nameWithType: "DeploymentRouting"
+summary: "Routing configuration for the model-router deployment."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **DeploymentRouting**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting?alt=com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting&text=DeploymentRouting\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting.DeploymentRouting()"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting.DeploymentRouting()"
+  name: "DeploymentRouting()"
+  nameWithType: "DeploymentRouting.DeploymentRouting()"
+  summary: "Creates an instance of Deployment<wbr>Routing class."
+  syntax: "public DeploymentRouting()"
+  desc: "Creates an instance of DeploymentRouting class."
+methods:
+- uid: "com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "DeploymentRouting.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Deployment<wbr>Routing from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static DeploymentRouting fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the DeploymentRouting."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of DeploymentRouting from the JsonReader."
+  returns:
+    description: "An instance of DeploymentRouting if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting?alt=com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting&text=DeploymentRouting\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting.mode()"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting.mode()"
+  name: "mode()"
+  nameWithType: "DeploymentRouting.mode()"
+  summary: "Get the mode property: The model-router routing mode that determines how requests are distributed across models."
+  syntax: "public RoutingMode mode()"
+  desc: "Get the mode property: The model-router routing mode that determines how requests are distributed across models."
+  returns:
+    description: "the mode value."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.RoutingMode?alt=com.azure.resourcemanager.cognitiveservices.models.RoutingMode&text=RoutingMode\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting.models()"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting.models()"
+  name: "models()"
+  nameWithType: "DeploymentRouting.models()"
+  summary: "Get the models property: Optional."
+  syntax: "public List<DeploymentModel> models()"
+  desc: "Get the models property: Optional. The list of model-router supported models that the model router can use to route requests across. If not specified, the model router will route to all available models specified in the model-router version."
+  returns:
+    description: "the models value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.DeploymentModel?alt=com.azure.resourcemanager.cognitiveservices.models.DeploymentModel&text=DeploymentModel\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "DeploymentRouting.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting.withMode(com.azure.resourcemanager.cognitiveservices.models.RoutingMode)"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting.withMode(RoutingMode mode)"
+  name: "withMode(RoutingMode mode)"
+  nameWithType: "DeploymentRouting.withMode(RoutingMode mode)"
+  summary: "Set the mode property: The model-router routing mode that determines how requests are distributed across models."
+  parameters:
+  - description: "the mode value to set."
+    name: "mode"
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.RoutingMode?alt=com.azure.resourcemanager.cognitiveservices.models.RoutingMode&text=RoutingMode\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public DeploymentRouting withMode(RoutingMode mode)"
+  desc: "Set the mode property: The model-router routing mode that determines how requests are distributed across models."
+  returns:
+    description: "the DeploymentRouting object itself."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting?alt=com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting&text=DeploymentRouting\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting.withModels(java.util.List<com.azure.resourcemanager.cognitiveservices.models.DeploymentModel>)"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting.withModels(List<DeploymentModel> models)"
+  name: "withModels(List<DeploymentModel> models)"
+  nameWithType: "DeploymentRouting.withModels(List<DeploymentModel> models)"
+  summary: "Set the models property: Optional."
+  parameters:
+  - description: "the models value to set."
+    name: "models"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.DeploymentModel?alt=com.azure.resourcemanager.cognitiveservices.models.DeploymentModel&text=DeploymentModel\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public DeploymentRouting withModels(List<DeploymentModel> models)"
+  desc: "Set the models property: Optional. The list of model-router supported models that the model router can use to route requests across. If not specified, the model router will route to all available models specified in the model-router version."
+  returns:
+    description: "the DeploymentRouting object itself."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting?alt=com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting&text=DeploymentRouting\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Routing configuration for the model-router deployment. Specifies how requests are routed across multiple models."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting?alt=com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting&text=DeploymentRouting\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.cognitiveservices.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-cognitiveservices:1.5.0-beta.1

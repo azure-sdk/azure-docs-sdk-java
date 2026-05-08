@@ -70,6 +70,16 @@ methods:
   returns:
     description: "the currentCapacity value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties.deploymentState()"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties.deploymentState()"
+  name: "deploymentState()"
+  nameWithType: "DeploymentProperties.deploymentState()"
+  summary: "Get the deployment<wbr>State property: The state of the deployment."
+  syntax: "public DeploymentState deploymentState()"
+  desc: "Get the deploymentState property: The state of the deployment. Controls whether the deployment is accepting inference requests. Use 'Running' for active deployments that process requests, or 'Paused' to temporarily stop inference while preserving the deployment configuration."
+  returns:
+    description: "the deploymentState value."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.DeploymentState?alt=com.azure.resourcemanager.cognitiveservices.models.DeploymentState&text=DeploymentState\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties.dynamicThrottlingEnabled()"
   fullName: "com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties.dynamicThrottlingEnabled()"
   name: "dynamicThrottlingEnabled()"
@@ -149,6 +159,16 @@ methods:
   returns:
     description: "the rateLimits value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.ThrottlingRule?alt=com.azure.resourcemanager.cognitiveservices.models.ThrottlingRule&text=ThrottlingRule\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties.routing()"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties.routing()"
+  name: "routing()"
+  nameWithType: "DeploymentProperties.routing()"
+  summary: "Get the routing property: Routing configuration for the model-router deployment."
+  syntax: "public DeploymentRouting routing()"
+  desc: "Get the routing property: Routing configuration for the model-router deployment. This property is only applicable when the deployed model is 'model-router' version 2025-11-18 or later. Allows you to select the models subset for routing and the routing mode (balanced, quality, cost) for routing across all supported models or the model subset."
+  returns:
+    description: "the routing value."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting?alt=com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting&text=DeploymentRouting\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties.scaleSettings()"
   fullName: "com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties.scaleSettings()"
   name: "scaleSettings()"
@@ -159,6 +179,16 @@ methods:
   returns:
     description: "the scaleSettings value."
     type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.DeploymentScaleSettings?alt=com.azure.resourcemanager.cognitiveservices.models.DeploymentScaleSettings&text=DeploymentScaleSettings\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties.serviceTier()"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties.serviceTier()"
+  name: "serviceTier()"
+  nameWithType: "DeploymentProperties.serviceTier()"
+  summary: "Get the service<wbr>Tier property: The service tier for the deployment."
+  syntax: "public ServiceTier serviceTier()"
+  desc: "Get the serviceTier property: The service tier for the deployment. Determines the pricing and performance level for request processing. Use 'Default' for standard pricing or 'Priority' for higher-priority processing with premium pricing. Note: Pause operations are only supported on Standard, DataZoneStandard, and GlobalStandard SKUs."
+  returns:
+    description: "the serviceTier value."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.ServiceTier?alt=com.azure.resourcemanager.cognitiveservices.models.ServiceTier&text=ServiceTier\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties.spilloverDeploymentName()"
   fullName: "com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties.spilloverDeploymentName()"
   name: "spilloverDeploymentName()"
@@ -181,13 +211,6 @@ methods:
   - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties.validate()"
-  fullName: "com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties.validate()"
-  name: "validate()"
-  nameWithType: "DeploymentProperties.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties.versionUpgradeOption()"
   fullName: "com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties.versionUpgradeOption()"
   name: "versionUpgradeOption()"
@@ -223,6 +246,20 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
   syntax: "public DeploymentProperties withCurrentCapacity(Integer currentCapacity)"
   desc: "Set the currentCapacity property: The current capacity."
+  returns:
+    description: "the DeploymentProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties?alt=com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties&text=DeploymentProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties.withDeploymentState(com.azure.resourcemanager.cognitiveservices.models.DeploymentState)"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties.withDeploymentState(DeploymentState deploymentState)"
+  name: "withDeploymentState(DeploymentState deploymentState)"
+  nameWithType: "DeploymentProperties.withDeploymentState(DeploymentState deploymentState)"
+  summary: "Set the deployment<wbr>State property: The state of the deployment."
+  parameters:
+  - description: "the deploymentState value to set."
+    name: "deploymentState"
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.DeploymentState?alt=com.azure.resourcemanager.cognitiveservices.models.DeploymentState&text=DeploymentState\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public DeploymentProperties withDeploymentState(DeploymentState deploymentState)"
+  desc: "Set the deploymentState property: The state of the deployment. Controls whether the deployment is accepting inference requests. Use 'Running' for active deployments that process requests, or 'Paused' to temporarily stop inference while preserving the deployment configuration."
   returns:
     description: "the DeploymentProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties?alt=com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties&text=DeploymentProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -268,6 +305,20 @@ methods:
   returns:
     description: "the DeploymentProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties?alt=com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties&text=DeploymentProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties.withRouting(com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting)"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties.withRouting(DeploymentRouting routing)"
+  name: "withRouting(DeploymentRouting routing)"
+  nameWithType: "DeploymentProperties.withRouting(DeploymentRouting routing)"
+  summary: "Set the routing property: Routing configuration for the model-router deployment."
+  parameters:
+  - description: "the routing value to set."
+    name: "routing"
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting?alt=com.azure.resourcemanager.cognitiveservices.models.DeploymentRouting&text=DeploymentRouting\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public DeploymentProperties withRouting(DeploymentRouting routing)"
+  desc: "Set the routing property: Routing configuration for the model-router deployment. This property is only applicable when the deployed model is 'model-router' version 2025-11-18 or later. Allows you to select the models subset for routing and the routing mode (balanced, quality, cost) for routing across all supported models or the model subset."
+  returns:
+    description: "the DeploymentProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties?alt=com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties&text=DeploymentProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties.withScaleSettings(com.azure.resourcemanager.cognitiveservices.models.DeploymentScaleSettings)"
   fullName: "com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties.withScaleSettings(DeploymentScaleSettings scaleSettings)"
   name: "withScaleSettings(DeploymentScaleSettings scaleSettings)"
@@ -279,6 +330,20 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.DeploymentScaleSettings?alt=com.azure.resourcemanager.cognitiveservices.models.DeploymentScaleSettings&text=DeploymentScaleSettings\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public DeploymentProperties withScaleSettings(DeploymentScaleSettings scaleSettings)"
   desc: "Set the scaleSettings property: Properties of Cognitive Services account deployment model. (Deprecated, please use Deployment.sku instead.)."
+  returns:
+    description: "the DeploymentProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties?alt=com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties&text=DeploymentProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties.withServiceTier(com.azure.resourcemanager.cognitiveservices.models.ServiceTier)"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties.withServiceTier(ServiceTier serviceTier)"
+  name: "withServiceTier(ServiceTier serviceTier)"
+  nameWithType: "DeploymentProperties.withServiceTier(ServiceTier serviceTier)"
+  summary: "Set the service<wbr>Tier property: The service tier for the deployment."
+  parameters:
+  - description: "the serviceTier value to set."
+    name: "serviceTier"
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.ServiceTier?alt=com.azure.resourcemanager.cognitiveservices.models.ServiceTier&text=ServiceTier\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public DeploymentProperties withServiceTier(ServiceTier serviceTier)"
+  desc: "Set the serviceTier property: The service tier for the deployment. Determines the pricing and performance level for request processing. Use 'Default' for standard pricing or 'Priority' for higher-priority processing with premium pricing. Note: Pause operations are only supported on Standard, DataZoneStandard, and GlobalStandard SKUs."
   returns:
     description: "the DeploymentProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties?alt=com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties&text=DeploymentProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -316,4 +381,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties?alt=com.azure.resourcemanager.cognitiveservices.models.DeploymentProperties&text=DeploymentProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.cognitiveservices.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-cognitiveservices:1.2.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-cognitiveservices:1.5.0-beta.1

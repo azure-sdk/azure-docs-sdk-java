@@ -1,0 +1,113 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.authorization.models.ActiveDirectoryApplication"
+fullName: "com.azure.resourcemanager.authorization.models.ActiveDirectoryApplication"
+name: "ActiveDirectoryApplication"
+nameWithType: "ActiveDirectoryApplication"
+summary: "An immutable client-side representation of an Azure AD application."
+syntax: "public interface **ActiveDirectoryApplication**</br> extends <xref href=\"com.azure.resourcemanager.authorization.models.ActiveDirectoryObject?alt=com.azure.resourcemanager.authorization.models.ActiveDirectoryObject&text=ActiveDirectoryObject\" data-throw-if-not-resolved=\"False\" />, <xref href=\"com.azure.resourcemanager.resources.fluentcore.model.HasInnerModel?alt=com.azure.resourcemanager.resources.fluentcore.model.HasInnerModel&text=HasInnerModel\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.authorization.fluent.models.MicrosoftGraphApplicationInner?alt=com.azure.resourcemanager.authorization.fluent.models.MicrosoftGraphApplicationInner&text=MicrosoftGraphApplicationInner\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.azure.resourcemanager.resources.fluentcore.model.Updatable?alt=com.azure.resourcemanager.resources.fluentcore.model.Updatable&text=Updatable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.authorization.models.ActiveDirectoryApplication.Update?alt=com.azure.resourcemanager.authorization.models.ActiveDirectoryApplication.Update&text=Update\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.azure.resourcemanager.authorization.models.ActiveDirectoryApplication.accountType()"
+  fullName: "com.azure.resourcemanager.authorization.models.ActiveDirectoryApplication.accountType()"
+  name: "accountType()"
+  nameWithType: "ActiveDirectoryApplication.accountType()"
+  summary: "Gets the application account type."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract ApplicationAccountType accountType()"
+  desc: "Gets the application account type."
+  returns:
+    description: "the application account type"
+    type: "<xref href=\"com.azure.resourcemanager.authorization.models.ApplicationAccountType?alt=com.azure.resourcemanager.authorization.models.ApplicationAccountType&text=ApplicationAccountType\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.authorization.models.ActiveDirectoryApplication.applicationId()"
+  fullName: "com.azure.resourcemanager.authorization.models.ActiveDirectoryApplication.applicationId()"
+  name: "applicationId()"
+  nameWithType: "ActiveDirectoryApplication.applicationId()"
+  summary: "Gets the application ID."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String applicationId()"
+  desc: "Gets the application ID."
+  returns:
+    description: "the application ID"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.authorization.models.ActiveDirectoryApplication.availableToOtherTenants()"
+  fullName: "com.azure.resourcemanager.authorization.models.ActiveDirectoryApplication.availableToOtherTenants()"
+  name: "availableToOtherTenants()"
+  nameWithType: "ActiveDirectoryApplication.availableToOtherTenants()"
+  deprecatedTag: "use <xref uid=\"com.azure.resourcemanager.authorization.models.ActiveDirectoryApplication.accountType()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#accountType()\"></xref>, false only when account type is \"Azure<wbr>ADMyOrg\""
+  modifiers:
+  - "abstract"
+  syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public abstract boolean availableToOtherTenants()"
+  hasDeprecatedTag: true
+  returns:
+    description: "whether the application is be available to other tenants"
+    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.authorization.models.ActiveDirectoryApplication.certificateCredentials()"
+  fullName: "com.azure.resourcemanager.authorization.models.ActiveDirectoryApplication.certificateCredentials()"
+  name: "certificateCredentials()"
+  nameWithType: "ActiveDirectoryApplication.certificateCredentials()"
+  summary: "Gets the mapping of certificate credentials from their names."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Map<String,CertificateCredential> certificateCredentials()"
+  desc: "Gets the mapping of certificate credentials from their names."
+  returns:
+    description: "the mapping of certificate credentials from their names"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.resourcemanager.authorization.models.CertificateCredential?alt=com.azure.resourcemanager.authorization.models.CertificateCredential&text=CertificateCredential\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.authorization.models.ActiveDirectoryApplication.identifierUris()"
+  fullName: "com.azure.resourcemanager.authorization.models.ActiveDirectoryApplication.identifierUris()"
+  name: "identifierUris()"
+  nameWithType: "ActiveDirectoryApplication.identifierUris()"
+  summary: "Gets a collection of URIs for the application."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Set<String> identifierUris()"
+  desc: "Gets a collection of URIs for the application."
+  returns:
+    description: "a collection of URIs for the application"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Set.html\">Set</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+- uid: "com.azure.resourcemanager.authorization.models.ActiveDirectoryApplication.passwordCredentials()"
+  fullName: "com.azure.resourcemanager.authorization.models.ActiveDirectoryApplication.passwordCredentials()"
+  name: "passwordCredentials()"
+  nameWithType: "ActiveDirectoryApplication.passwordCredentials()"
+  summary: "Gets the mapping of password credentials from their names."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Map<String,PasswordCredential> passwordCredentials()"
+  desc: "Gets the mapping of password credentials from their names."
+  returns:
+    description: "the mapping of password credentials from their names"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.resourcemanager.authorization.models.PasswordCredential?alt=com.azure.resourcemanager.authorization.models.PasswordCredential&text=PasswordCredential\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.authorization.models.ActiveDirectoryApplication.replyUrls()"
+  fullName: "com.azure.resourcemanager.authorization.models.ActiveDirectoryApplication.replyUrls()"
+  name: "replyUrls()"
+  nameWithType: "ActiveDirectoryApplication.replyUrls()"
+  summary: "Gets a collection of reply URLs for the application."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Set<String> replyUrls()"
+  desc: "Gets a collection of reply URLs for the application."
+  returns:
+    description: "a collection of reply URLs for the application"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Set.html\">Set</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+- uid: "com.azure.resourcemanager.authorization.models.ActiveDirectoryApplication.signOnUrl()"
+  fullName: "com.azure.resourcemanager.authorization.models.ActiveDirectoryApplication.signOnUrl()"
+  name: "signOnUrl()"
+  nameWithType: "ActiveDirectoryApplication.signOnUrl()"
+  summary: "Gets the home page of the application."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract URL signOnUrl()"
+  desc: "Gets the home page of the application."
+  returns:
+    description: "the home page of the application"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/net/URL.html\">URL</a>"
+type: "interface"
+desc: "An immutable client-side representation of an Azure AD application."
+implements:
+- "<xref href=\"com.azure.resourcemanager.authorization.models.ActiveDirectoryObject?alt=com.azure.resourcemanager.authorization.models.ActiveDirectoryObject&text=ActiveDirectoryObject\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"com.azure.resourcemanager.resources.fluentcore.model.HasInnerModel?alt=com.azure.resourcemanager.resources.fluentcore.model.HasInnerModel&text=HasInnerModel\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.authorization.fluent.models.MicrosoftGraphApplicationInner?alt=com.azure.resourcemanager.authorization.fluent.models.MicrosoftGraphApplicationInner&text=MicrosoftGraphApplicationInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- "<xref href=\"com.azure.resourcemanager.resources.fluentcore.model.Updatable?alt=com.azure.resourcemanager.resources.fluentcore.model.Updatable&text=Updatable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.authorization.models.ActiveDirectoryApplication.Update?alt=com.azure.resourcemanager.authorization.models.ActiveDirectoryApplication.Update&text=Update\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.authorization.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-authorization:2.54.0-beta.1

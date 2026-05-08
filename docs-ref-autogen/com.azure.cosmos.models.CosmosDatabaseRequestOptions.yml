@@ -28,6 +28,16 @@ constructors:
   nameWithType: "CosmosDatabaseRequestOptions.CosmosDatabaseRequestOptions()"
   syntax: "public CosmosDatabaseRequestOptions()"
 methods:
+- uid: "com.azure.cosmos.models.CosmosDatabaseRequestOptions.getAdditionalHeaders()"
+  fullName: "com.azure.cosmos.models.CosmosDatabaseRequestOptions.getAdditionalHeaders()"
+  name: "getAdditionalHeaders()"
+  nameWithType: "CosmosDatabaseRequestOptions.getAdditionalHeaders()"
+  summary: "Gets the additional headers configured on this request options instance."
+  syntax: "public Map<CosmosAdditionalHeaderName,String> getAdditionalHeaders()"
+  desc: "Gets the additional headers configured on this request options instance."
+  returns:
+    description: "unmodifiable map of additional headers, or <code>null</code> if none are set"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<xref href=\"com.azure.cosmos.models.CosmosAdditionalHeaderName?alt=com.azure.cosmos.models.CosmosAdditionalHeaderName&text=CosmosAdditionalHeaderName\" data-throw-if-not-resolved=\"False\" />,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.cosmos.models.CosmosDatabaseRequestOptions.getIfMatchETag()"
   fullName: "com.azure.cosmos.models.CosmosDatabaseRequestOptions.getIfMatchETag()"
   name: "getIfMatchETag()"
@@ -48,6 +58,20 @@ methods:
   returns:
     description: "the ifNoneMatchETag associated with the request."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.cosmos.models.CosmosDatabaseRequestOptions.setAdditionalHeaders(java.util.Map<com.azure.cosmos.models.CosmosAdditionalHeaderName,java.lang.String>)"
+  fullName: "com.azure.cosmos.models.CosmosDatabaseRequestOptions.setAdditionalHeaders(Map<CosmosAdditionalHeaderName,String> additionalHeaders)"
+  name: "setAdditionalHeaders(Map<CosmosAdditionalHeaderName,String> additionalHeaders)"
+  nameWithType: "CosmosDatabaseRequestOptions.setAdditionalHeaders(Map<CosmosAdditionalHeaderName,String> additionalHeaders)"
+  summary: "Sets additional headers to be included with this specific request."
+  parameters:
+  - description: "map of <xref uid=\"com.azure.cosmos.models.CosmosAdditionalHeaderName\" data-throw-if-not-resolved=\"false\" data-raw-source=\"CosmosAdditionalHeaderName\"></xref> to value"
+    name: "additionalHeaders"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<xref href=\"com.azure.cosmos.models.CosmosAdditionalHeaderName?alt=com.azure.cosmos.models.CosmosAdditionalHeaderName&text=CosmosAdditionalHeaderName\" data-throw-if-not-resolved=\"False\" />,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+  syntax: "public CosmosDatabaseRequestOptions setAdditionalHeaders(Map<CosmosAdditionalHeaderName,String> additionalHeaders)"
+  desc: "Sets additional headers to be included with this specific request.\n\nThe <xref uid=\"com.azure.cosmos.models.CosmosAdditionalHeaderName\" data-throw-if-not-resolved=\"false\" data-raw-source=\"CosmosAdditionalHeaderName\"></xref> class defines exactly which headers are supported. This allows per-request header customization, such as setting a workload ID that overrides the client-level default set via <xref uid=\"com.azure.cosmos.CosmosClientBuilder.additionalHeaders*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"com.azure.cosmos.CosmosClientBuilder#additionalHeaders(java.util.Map)\"></xref>.\n\nIf the same header is also set at the client level, the request-level value takes precedence.\n\n**Note:** This method uses additive (merge) semantics — headers from multiple calls are merged into the existing set. Passing `null` or an empty map does *not* clear previously set headers. To reset headers, create a new options instance."
+  returns:
+    description: "the CosmosDatabaseRequestOptions."
+    type: "<xref href=\"com.azure.cosmos.models.CosmosDatabaseRequestOptions?alt=com.azure.cosmos.models.CosmosDatabaseRequestOptions&text=CosmosDatabaseRequestOptions\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.cosmos.models.CosmosDatabaseRequestOptions.setIfMatchETag(java.lang.String)"
   fullName: "com.azure.cosmos.models.CosmosDatabaseRequestOptions.setIfMatchETag(String ifMatchETag)"
   name: "setIfMatchETag(String ifMatchETag)"
@@ -80,4 +104,4 @@ type: "class"
 desc: "Encapsulates options that can be specified for a request issued to cosmos database."
 metadata: {}
 package: "com.azure.cosmos.models"
-artifact: com.azure:azure-cosmos:4.79.1
+artifact: com.azure:azure-cosmos:4.80.0

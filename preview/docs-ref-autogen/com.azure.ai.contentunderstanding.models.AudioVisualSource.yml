@@ -1,0 +1,71 @@
+### YamlMime:JavaType
+uid: "com.azure.ai.contentunderstanding.models.AudioVisualSource"
+fullName: "com.azure.ai.contentunderstanding.models.AudioVisualSource"
+name: "AudioVisualSource"
+nameWithType: "AudioVisualSource"
+summary: "Represents a parsed audio/visual grounding source in the format `AV(time[,x,y,w,h])`."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"com.azure.ai.contentunderstanding.models.ContentSource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "<xref href=\"com.azure.ai.contentunderstanding.models.ContentSource?alt=com.azure.ai.contentunderstanding.models.ContentSource&text=ContentSource\" data-throw-if-not-resolved=\"False\" />"
+  methodsRef:
+  - "<xref href=\"com.azure.ai.contentunderstanding.models.ContentSource.equals(java.lang.Object)?alt=com.azure.ai.contentunderstanding.models.ContentSource.equals&text=equals\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.ai.contentunderstanding.models.ContentSource.getRawValue()?alt=com.azure.ai.contentunderstanding.models.ContentSource.getRawValue&text=getRawValue\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.ai.contentunderstanding.models.ContentSource.hashCode()?alt=com.azure.ai.contentunderstanding.models.ContentSource.hashCode&text=hashCode\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.ai.contentunderstanding.models.ContentSource.parseAll(java.lang.String)?alt=com.azure.ai.contentunderstanding.models.ContentSource.parseAll&text=parseAll\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.ai.contentunderstanding.models.ContentSource.toRawString(java.util.List<? extends com.azure.ai.contentunderstanding.models.ContentSource>)?alt=com.azure.ai.contentunderstanding.models.ContentSource.toRawString&text=toRawString\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.ai.contentunderstanding.models.ContentSource.toString()?alt=com.azure.ai.contentunderstanding.models.ContentSource.toString&text=toString\" data-throw-if-not-resolved=\"False\" />"
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **AudioVisualSource**</br> extends <xref href=\"com.azure.ai.contentunderstanding.models.ContentSource?alt=com.azure.ai.contentunderstanding.models.ContentSource&text=ContentSource\" data-throw-if-not-resolved=\"False\" />"
+methods:
+- uid: "com.azure.ai.contentunderstanding.models.AudioVisualSource.getBoundingBox()"
+  fullName: "com.azure.ai.contentunderstanding.models.AudioVisualSource.getBoundingBox()"
+  name: "getBoundingBox()"
+  nameWithType: "AudioVisualSource.getBoundingBox()"
+  summary: "Gets the bounding box in pixel coordinates, or `null` if no spatial information is available (e.<wbr>g., audio-only)."
+  syntax: "public Rectangle getBoundingBox()"
+  desc: "Gets the bounding box in pixel coordinates, or `null` if no spatial information is available (e.g., audio-only)."
+  returns:
+    description: "The bounding box, or <code>null</code>."
+    type: "<xref href=\"com.azure.ai.contentunderstanding.models.Rectangle?alt=com.azure.ai.contentunderstanding.models.Rectangle&text=Rectangle\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.contentunderstanding.models.AudioVisualSource.getTime()"
+  fullName: "com.azure.ai.contentunderstanding.models.AudioVisualSource.getTime()"
+  name: "getTime()"
+  nameWithType: "AudioVisualSource.getTime()"
+  summary: "Gets the time as a Duration."
+  syntax: "public Duration getTime()"
+  desc: "Gets the time as a Duration."
+  returns:
+    description: "The time as a Duration."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
+- uid: "com.azure.ai.contentunderstanding.models.AudioVisualSource.parse(java.lang.String)"
+  fullName: "com.azure.ai.contentunderstanding.models.AudioVisualSource.parse(String source)"
+  name: "parse(String source)"
+  nameWithType: "AudioVisualSource.parse(String source)"
+  summary: "Parses a source string containing one or more audio/visual source segments separated by `;`."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The source string (may contain <code>;</code> delimiters)."
+    name: "source"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public static List<AudioVisualSource> parse(String source)"
+  desc: "Parses a source string containing one or more audio/visual source segments separated by `;`."
+  returns:
+    description: "An unmodifiable list of <xref uid=\"com.azure.ai.contentunderstanding.models.AudioVisualSource\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AudioVisualSource\"></xref> instances."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.ai.contentunderstanding.models.AudioVisualSource?alt=com.azure.ai.contentunderstanding.models.AudioVisualSource&text=AudioVisualSource\" data-throw-if-not-resolved=\"False\" />&gt;"
+type: "class"
+desc: "Represents a parsed audio/visual grounding source in the format `AV(time[,x,y,w,h])`.\n\nThe time is in milliseconds. The bounding box (x, y, width, height) is optional and present only when spatial information is available (e.g., face detection)."
+metadata: {}
+package: "com.azure.ai.contentunderstanding.models"
+artifact: com.azure:azure-ai-contentunderstanding:1.1.0-beta.1

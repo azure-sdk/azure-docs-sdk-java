@@ -1,0 +1,153 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.authorization.models.RoleAssignments"
+fullName: "com.azure.resourcemanager.authorization.models.RoleAssignments"
+name: "RoleAssignments"
+nameWithType: "RoleAssignments"
+summary: "Entry point to role assignment management API."
+syntax: "public interface **RoleAssignments**</br> extends <xref href=\"com.azure.resourcemanager.resources.fluentcore.arm.collection.SupportsGettingById?alt=com.azure.resourcemanager.resources.fluentcore.arm.collection.SupportsGettingById&text=SupportsGettingById\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.authorization.models.RoleAssignment?alt=com.azure.resourcemanager.authorization.models.RoleAssignment&text=RoleAssignment\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.SupportsCreating?alt=com.azure.resourcemanager.resources.fluentcore.collection.SupportsCreating&text=SupportsCreating\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.authorization.models.RoleAssignment.DefinitionStages.Blank?alt=com.azure.resourcemanager.authorization.models.RoleAssignment.DefinitionStages.Blank&text=Blank\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.SupportsBatchCreation?alt=com.azure.resourcemanager.resources.fluentcore.collection.SupportsBatchCreation&text=SupportsBatchCreation\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.authorization.models.RoleAssignment?alt=com.azure.resourcemanager.authorization.models.RoleAssignment&text=RoleAssignment\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.SupportsDeletingById?alt=com.azure.resourcemanager.resources.fluentcore.collection.SupportsDeletingById&text=SupportsDeletingById\" data-throw-if-not-resolved=\"False\" />, <xref href=\"com.azure.resourcemanager.resources.fluentcore.arm.models.HasManager?alt=com.azure.resourcemanager.resources.fluentcore.arm.models.HasManager&text=HasManager\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.authorization.AuthorizationManager?alt=com.azure.resourcemanager.authorization.AuthorizationManager&text=AuthorizationManager\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.azure.resourcemanager.authorization.models.RoleAssignments.getByScope(java.lang.String,java.lang.String)"
+  fullName: "com.azure.resourcemanager.authorization.models.RoleAssignments.getByScope(String scope, String name)"
+  name: "getByScope(String scope, String name)"
+  nameWithType: "RoleAssignments.getByScope(String scope, String name)"
+  summary: "Gets the information about a role assignment based on scope and name."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the scope of the role assignment"
+    name: "scope"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "the name of the role assignment"
+    name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract RoleAssignment getByScope(String scope, String name)"
+  desc: "Gets the information about a role assignment based on scope and name."
+  returns:
+    description: "an immutable representation of the role assignment"
+    type: "<xref href=\"com.azure.resourcemanager.authorization.models.RoleAssignment?alt=com.azure.resourcemanager.authorization.models.RoleAssignment&text=RoleAssignment\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.authorization.models.RoleAssignments.getByScopeAsync(java.lang.String,java.lang.String)"
+  fullName: "com.azure.resourcemanager.authorization.models.RoleAssignments.getByScopeAsync(String scope, String name)"
+  name: "getByScopeAsync(String scope, String name)"
+  nameWithType: "RoleAssignments.getByScopeAsync(String scope, String name)"
+  summary: "Gets the information about a role assignment based on scope and name."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the scope of the role assignment"
+    name: "scope"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "the name of the role assignment"
+    name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract Mono<RoleAssignment> getByScopeAsync(String scope, String name)"
+  desc: "Gets the information about a role assignment based on scope and name."
+  returns:
+    description: "an immutable representation of the role assignment"
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.resourcemanager.authorization.models.RoleAssignment?alt=com.azure.resourcemanager.authorization.models.RoleAssignment&text=RoleAssignment\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.authorization.models.RoleAssignments.listByScope(java.lang.String)"
+  fullName: "com.azure.resourcemanager.authorization.models.RoleAssignments.listByScope(String scope)"
+  name: "listByScope(String scope)"
+  nameWithType: "RoleAssignments.listByScope(String scope)"
+  summary: "List role assignments in a scope."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the scope of the role assignments"
+    name: "scope"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract PagedIterable<RoleAssignment> listByScope(String scope)"
+  desc: "List role assignments in a scope."
+  returns:
+    description: "a list of role assignments"
+    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.authorization.models.RoleAssignment?alt=com.azure.resourcemanager.authorization.models.RoleAssignment&text=RoleAssignment\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.authorization.models.RoleAssignments.listByScopeAsync(java.lang.String)"
+  fullName: "com.azure.resourcemanager.authorization.models.RoleAssignments.listByScopeAsync(String scope)"
+  name: "listByScopeAsync(String scope)"
+  nameWithType: "RoleAssignments.listByScopeAsync(String scope)"
+  summary: "List role assignments in a scope."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the scope of the role assignments"
+    name: "scope"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract PagedFlux<RoleAssignment> listByScopeAsync(String scope)"
+  desc: "List role assignments in a scope."
+  returns:
+    description: "a list of role assignments"
+    type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.authorization.models.RoleAssignment?alt=com.azure.resourcemanager.authorization.models.RoleAssignment&text=RoleAssignment\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.authorization.models.RoleAssignments.listByServicePrincipal(com.azure.resourcemanager.authorization.models.ServicePrincipal)"
+  fullName: "com.azure.resourcemanager.authorization.models.RoleAssignments.listByServicePrincipal(ServicePrincipal servicePrincipal)"
+  name: "listByServicePrincipal(ServicePrincipal servicePrincipal)"
+  nameWithType: "RoleAssignments.listByServicePrincipal(ServicePrincipal servicePrincipal)"
+  summary: "List role assignments for a service principal."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the service principal"
+    name: "servicePrincipal"
+    type: "<xref href=\"com.azure.resourcemanager.authorization.models.ServicePrincipal?alt=com.azure.resourcemanager.authorization.models.ServicePrincipal&text=ServicePrincipal\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract PagedIterable<RoleAssignment> listByServicePrincipal(ServicePrincipal servicePrincipal)"
+  desc: "List role assignments for a service principal."
+  returns:
+    description: "a list of role assignments"
+    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.authorization.models.RoleAssignment?alt=com.azure.resourcemanager.authorization.models.RoleAssignment&text=RoleAssignment\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.authorization.models.RoleAssignments.listByServicePrincipal(java.lang.String)"
+  fullName: "com.azure.resourcemanager.authorization.models.RoleAssignments.listByServicePrincipal(String principalId)"
+  name: "listByServicePrincipal(String principalId)"
+  nameWithType: "RoleAssignments.listByServicePrincipal(String principalId)"
+  summary: "List role assignments for a service principal."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the ID of the service principal"
+    name: "principalId"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract PagedIterable<RoleAssignment> listByServicePrincipal(String principalId)"
+  desc: "List role assignments for a service principal."
+  returns:
+    description: "a list of role assignments"
+    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.authorization.models.RoleAssignment?alt=com.azure.resourcemanager.authorization.models.RoleAssignment&text=RoleAssignment\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.authorization.models.RoleAssignments.listByServicePrincipalAsync(com.azure.resourcemanager.authorization.models.ServicePrincipal)"
+  fullName: "com.azure.resourcemanager.authorization.models.RoleAssignments.listByServicePrincipalAsync(ServicePrincipal servicePrincipal)"
+  name: "listByServicePrincipalAsync(ServicePrincipal servicePrincipal)"
+  nameWithType: "RoleAssignments.listByServicePrincipalAsync(ServicePrincipal servicePrincipal)"
+  summary: "List role assignments for a service principal."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the service principal"
+    name: "servicePrincipal"
+    type: "<xref href=\"com.azure.resourcemanager.authorization.models.ServicePrincipal?alt=com.azure.resourcemanager.authorization.models.ServicePrincipal&text=ServicePrincipal\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract PagedFlux<RoleAssignment> listByServicePrincipalAsync(ServicePrincipal servicePrincipal)"
+  desc: "List role assignments for a service principal."
+  returns:
+    description: "a list of role assignments"
+    type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.authorization.models.RoleAssignment?alt=com.azure.resourcemanager.authorization.models.RoleAssignment&text=RoleAssignment\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.authorization.models.RoleAssignments.listByServicePrincipalAsync(java.lang.String)"
+  fullName: "com.azure.resourcemanager.authorization.models.RoleAssignments.listByServicePrincipalAsync(String principalId)"
+  name: "listByServicePrincipalAsync(String principalId)"
+  nameWithType: "RoleAssignments.listByServicePrincipalAsync(String principalId)"
+  summary: "List role assignments for a service principal."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the ID of the service principal"
+    name: "principalId"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract PagedFlux<RoleAssignment> listByServicePrincipalAsync(String principalId)"
+  desc: "List role assignments for a service principal."
+  returns:
+    description: "a list of role assignments"
+    type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.authorization.models.RoleAssignment?alt=com.azure.resourcemanager.authorization.models.RoleAssignment&text=RoleAssignment\" data-throw-if-not-resolved=\"False\" />&gt;"
+type: "interface"
+desc: "Entry point to role assignment management API."
+implements:
+- "<xref href=\"com.azure.resourcemanager.resources.fluentcore.arm.collection.SupportsGettingById?alt=com.azure.resourcemanager.resources.fluentcore.arm.collection.SupportsGettingById&text=SupportsGettingById\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.authorization.models.RoleAssignment?alt=com.azure.resourcemanager.authorization.models.RoleAssignment&text=RoleAssignment\" data-throw-if-not-resolved=\"False\" />&gt;"
+- "<xref href=\"com.azure.resourcemanager.resources.fluentcore.arm.models.HasManager?alt=com.azure.resourcemanager.resources.fluentcore.arm.models.HasManager&text=HasManager\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.authorization.AuthorizationManager?alt=com.azure.resourcemanager.authorization.AuthorizationManager&text=AuthorizationManager\" data-throw-if-not-resolved=\"False\" />&gt;"
+- "<xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.SupportsBatchCreation?alt=com.azure.resourcemanager.resources.fluentcore.collection.SupportsBatchCreation&text=SupportsBatchCreation\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.authorization.models.RoleAssignment?alt=com.azure.resourcemanager.authorization.models.RoleAssignment&text=RoleAssignment\" data-throw-if-not-resolved=\"False\" />&gt;"
+- "<xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.SupportsCreating?alt=com.azure.resourcemanager.resources.fluentcore.collection.SupportsCreating&text=SupportsCreating\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.authorization.models.RoleAssignment.DefinitionStages.Blank?alt=com.azure.resourcemanager.authorization.models.RoleAssignment.DefinitionStages.Blank&text=Blank\" data-throw-if-not-resolved=\"False\" />&gt;"
+- "<xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.SupportsDeletingById?alt=com.azure.resourcemanager.resources.fluentcore.collection.SupportsDeletingById&text=SupportsDeletingById\" data-throw-if-not-resolved=\"False\" />"
+metadata: {}
+package: "com.azure.resourcemanager.authorization.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-authorization:2.54.0-beta.1

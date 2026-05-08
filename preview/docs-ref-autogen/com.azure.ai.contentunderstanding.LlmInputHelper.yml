@@ -1,0 +1,86 @@
+### YamlMime:JavaType
+uid: "com.azure.ai.contentunderstanding.LlmInputHelper"
+fullName: "com.azure.ai.contentunderstanding.LlmInputHelper"
+name: "LlmInputHelper"
+nameWithType: "LlmInputHelper"
+summary: "Converts an <xref uid=\"com.azure.ai.contentunderstanding.models.AnalysisResult\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AnalysisResult\"></xref> into LLM-friendly text (YAML front matter + markdown)."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **LlmInputHelper**"
+methods:
+- uid: "com.azure.ai.contentunderstanding.LlmInputHelper.toLlmInput(com.azure.ai.contentunderstanding.models.AnalysisResult)"
+  fullName: "com.azure.ai.contentunderstanding.LlmInputHelper.toLlmInput(AnalysisResult result)"
+  name: "toLlmInput(AnalysisResult result)"
+  nameWithType: "LlmInputHelper.toLlmInput(AnalysisResult result)"
+  summary: "Convert a Content Understanding analysis result into LLM-friendly text."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "the <xref uid=\"com.azure.ai.contentunderstanding.models.AnalysisResult\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AnalysisResult\"></xref> from a Content Understanding analyze operation."
+    name: "result"
+    type: "<xref href=\"com.azure.ai.contentunderstanding.models.AnalysisResult?alt=com.azure.ai.contentunderstanding.models.AnalysisResult&text=AnalysisResult\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static String toLlmInput(AnalysisResult result)"
+  desc: "Convert a Content Understanding analysis result into LLM-friendly text.\n\nProduces a YAML front matter block (delimited by `---`) followed by a markdown body. The YAML front matter may include: `contentType` (document, audioVisual), `pages` (page number or range), `timeRange` (media time span for multi-segment audio/video), `category` (classification label), `fields` (extracted structured fields as YAML), `rai_warnings` (content safety flags), and any caller-supplied metadata entries.\n\nThe markdown body contains the extracted text with page-break markers (``) inserted at page boundaries so downstream consumers can locate content by page number."
+  returns:
+    description: "a formatted string with YAML front matter followed by markdown content.\n     Returns an empty string when <code>result.getContents()</code> is empty."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.ai.contentunderstanding.LlmInputHelper.toLlmInput(com.azure.ai.contentunderstanding.models.AnalysisResult,java.util.Map<java.lang.String,java.lang.Object>)"
+  fullName: "com.azure.ai.contentunderstanding.LlmInputHelper.toLlmInput(AnalysisResult result, Map<String,Object> metadata)"
+  name: "toLlmInput(AnalysisResult result, Map<String,Object> metadata)"
+  nameWithType: "LlmInputHelper.toLlmInput(AnalysisResult result, Map<String,Object> metadata)"
+  summary: "Convert a Content Understanding analysis result into LLM-friendly text with metadata."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "the <xref uid=\"com.azure.ai.contentunderstanding.models.AnalysisResult\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AnalysisResult\"></xref> from a Content Understanding analyze operation."
+    name: "result"
+    type: "<xref href=\"com.azure.ai.contentunderstanding.models.AnalysisResult?alt=com.azure.ai.contentunderstanding.models.AnalysisResult&text=AnalysisResult\" data-throw-if-not-resolved=\"False\" />"
+  - description: "user-supplied key-value pairs to include in the YAML front matter.\n     Keys must not conflict with helper-generated keys (<code>contentType</code>, <code>timeRange</code>,\n     <code>category</code>, <code>pages</code>, <code>fields</code>, <code>rai_warnings</code>)."
+    name: "metadata"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>&gt;"
+  syntax: "public static String toLlmInput(AnalysisResult result, Map<String,Object> metadata)"
+  desc: "Convert a Content Understanding analysis result into LLM-friendly text with metadata.\n\nThis is a convenience overload for the common case where only metadata needs to be supplied (e.g., `{\"source\": \"invoice.pdf\"}` for RAG pipelines)."
+  returns:
+    description: "a formatted string with YAML front matter followed by markdown content.\n     Returns an empty string when <code>result.getContents()</code> is empty."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.ai.contentunderstanding.LlmInputHelper.toLlmInput(com.azure.ai.contentunderstanding.models.AnalysisResult,java.util.Map<java.lang.String,java.lang.Object>,com.azure.ai.contentunderstanding.ToLlmInputOptions)"
+  fullName: "com.azure.ai.contentunderstanding.LlmInputHelper.toLlmInput(AnalysisResult result, Map<String,Object> metadata, ToLlmInputOptions options)"
+  name: "toLlmInput(AnalysisResult result, Map<String,Object> metadata, ToLlmInputOptions options)"
+  nameWithType: "LlmInputHelper.toLlmInput(AnalysisResult result, Map<String,Object> metadata, ToLlmInputOptions options)"
+  summary: "Convert a Content Understanding analysis result into LLM-friendly text with metadata and rendering options."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "the <xref uid=\"com.azure.ai.contentunderstanding.models.AnalysisResult\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AnalysisResult\"></xref> from a Content Understanding analyze operation."
+    name: "result"
+    type: "<xref href=\"com.azure.ai.contentunderstanding.models.AnalysisResult?alt=com.azure.ai.contentunderstanding.models.AnalysisResult&text=AnalysisResult\" data-throw-if-not-resolved=\"False\" />"
+  - description: "optional user-supplied key-value pairs to include in the YAML front matter.\n     Pass <code>null</code> for no metadata."
+    name: "metadata"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>&gt;"
+  - description: "optional rendering options controlling field/markdown inclusion.\n     Pass <code>null</code> for defaults (both fields and markdown included)."
+    name: "options"
+    type: "<xref href=\"com.azure.ai.contentunderstanding.ToLlmInputOptions?alt=com.azure.ai.contentunderstanding.ToLlmInputOptions&text=ToLlmInputOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static String toLlmInput(AnalysisResult result, Map<String,Object> metadata, ToLlmInputOptions options)"
+  desc: "Convert a Content Understanding analysis result into LLM-friendly text with metadata and rendering options."
+  returns:
+    description: "a formatted string with YAML front matter followed by markdown content.\n     Returns an empty string when <code>result.getContents()</code> is empty."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+type: "class"
+desc: "Converts an <xref uid=\"com.azure.ai.contentunderstanding.models.AnalysisResult\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AnalysisResult\"></xref> into LLM-friendly text (YAML front matter + markdown).\n\nThis helper produces a formatted string suitable for injecting into an LLM prompt, storing in a vector database, or passing as tool output.\n\nFor single-content results (documents, images), the output is a flat text block. For multi-segment results (video, audio), each segment is rendered with its time range. For document classification results (parent with nested segments), the helper automatically expands the parent into per-segment blocks with category labels and markdown slices.\n\n**Example usage:**\n\n```java\nAnalysisResult result = client.beginAnalyze(\"prebuilt-invoice\",\n     Arrays.asList(new AnalysisInput().setUrl(url)))\n     .getFinalResult();\n\n String text = LlmInputHelper.toLlmInput(result);\n```"
+metadata: {}
+package: "com.azure.ai.contentunderstanding"
+artifact: com.azure:azure-ai-contentunderstanding:1.1.0-beta.1

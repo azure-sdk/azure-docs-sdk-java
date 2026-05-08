@@ -74,10 +74,10 @@ methods:
   fullName: "com.azure.search.documents.indexes.models.CustomNormalizer.getOdataType()"
   name: "getOdataType()"
   nameWithType: "CustomNormalizer.getOdataType()"
-  summary: "Get the odata<wbr>Type property: A URI fragment specifying the type of normalizer."
+  summary: "Get the odata<wbr>Type property: The discriminator for derived types."
   overridden: "com.azure.search.documents.indexes.models.LexicalNormalizer.getOdataType()"
   syntax: "public String getOdataType()"
-  desc: "Get the odataType property: A URI fragment specifying the type of normalizer."
+  desc: "Get the odataType property: The discriminator for derived types."
   returns:
     description: "the odataType value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -91,6 +91,20 @@ methods:
   returns:
     description: "the tokenFilters value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.search.documents.indexes.models.TokenFilterName?alt=com.azure.search.documents.indexes.models.TokenFilterName&text=TokenFilterName\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.search.documents.indexes.models.CustomNormalizer.setCharFilters(com.azure.search.documents.indexes.models.CharFilterName...)"
+  fullName: "com.azure.search.documents.indexes.models.CustomNormalizer.setCharFilters(CharFilterName[] charFilters)"
+  name: "setCharFilters(CharFilterName[] charFilters)"
+  nameWithType: "CustomNormalizer.setCharFilters(CharFilterName[] charFilters)"
+  summary: "Set the char<wbr>Filters property: A list of character filters used to prepare input text before it is processed."
+  parameters:
+  - description: "the charFilters value to set."
+    name: "charFilters"
+    type: "<xref href=\"com.azure.search.documents.indexes.models.CharFilterName?alt=com.azure.search.documents.indexes.models.CharFilterName&text=CharFilterName\" data-throw-if-not-resolved=\"False\" />[]"
+  syntax: "public CustomNormalizer setCharFilters(CharFilterName[] charFilters)"
+  desc: "Set the charFilters property: A list of character filters used to prepare input text before it is processed. For instance, they can replace certain characters or symbols. The filters are run in the order in which they are listed."
+  returns:
+    description: "the CustomNormalizer object itself."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.CustomNormalizer?alt=com.azure.search.documents.indexes.models.CustomNormalizer&text=CustomNormalizer\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.CustomNormalizer.setCharFilters(java.util.List<com.azure.search.documents.indexes.models.CharFilterName>)"
   fullName: "com.azure.search.documents.indexes.models.CustomNormalizer.setCharFilters(List<CharFilterName> charFilters)"
   name: "setCharFilters(List<CharFilterName> charFilters)"
@@ -119,6 +133,20 @@ methods:
   returns:
     description: "the CustomNormalizer object itself."
     type: "<xref href=\"com.azure.search.documents.indexes.models.CustomNormalizer?alt=com.azure.search.documents.indexes.models.CustomNormalizer&text=CustomNormalizer\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.indexes.models.CustomNormalizer.setTokenFilters(com.azure.search.documents.indexes.models.TokenFilterName...)"
+  fullName: "com.azure.search.documents.indexes.models.CustomNormalizer.setTokenFilters(TokenFilterName[] tokenFilters)"
+  name: "setTokenFilters(TokenFilterName[] tokenFilters)"
+  nameWithType: "CustomNormalizer.setTokenFilters(TokenFilterName[] tokenFilters)"
+  summary: "Set the token<wbr>Filters property: A list of token filters used to filter out or modify the input token."
+  parameters:
+  - description: "the tokenFilters value to set."
+    name: "tokenFilters"
+    type: "<xref href=\"com.azure.search.documents.indexes.models.TokenFilterName?alt=com.azure.search.documents.indexes.models.TokenFilterName&text=TokenFilterName\" data-throw-if-not-resolved=\"False\" />[]"
+  syntax: "public CustomNormalizer setTokenFilters(TokenFilterName[] tokenFilters)"
+  desc: "Set the tokenFilters property: A list of token filters used to filter out or modify the input token. For example, you can specify a lowercase filter that converts all characters to lowercase. The filters are run in the order in which they are listed."
+  returns:
+    description: "the CustomNormalizer object itself."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.CustomNormalizer?alt=com.azure.search.documents.indexes.models.CustomNormalizer&text=CustomNormalizer\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.CustomNormalizer.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.search.documents.indexes.models.CustomNormalizer.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -136,4 +164,4 @@ type: "class"
 desc: "Allows you to configure normalization for filterable, sortable, and facetable fields, which by default operate with strict matching. This is a user-defined configuration consisting of at least one or more filters, which modify the token that is stored."
 metadata: {}
 package: "com.azure.search.documents.indexes.models"
-artifact: com.azure:azure-search-documents:11.8.1
+artifact: com.azure:azure-search-documents:12.0.0

@@ -22,16 +22,19 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
 syntax: "public final class **SearchIndexerSkillset**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.indexes.models.SearchIndexerSkillset?alt=com.azure.search.documents.indexes.models.SearchIndexerSkillset&text=SearchIndexerSkillset\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
-- uid: "com.azure.search.documents.indexes.models.SearchIndexerSkillset.SearchIndexerSkillset(java.lang.String)"
-  fullName: "com.azure.search.documents.indexes.models.SearchIndexerSkillset.SearchIndexerSkillset(String name)"
-  name: "SearchIndexerSkillset(String name)"
-  nameWithType: "SearchIndexerSkillset.SearchIndexerSkillset(String name)"
+- uid: "com.azure.search.documents.indexes.models.SearchIndexerSkillset.SearchIndexerSkillset(java.lang.String,com.azure.search.documents.indexes.models.SearchIndexerSkill...)"
+  fullName: "com.azure.search.documents.indexes.models.SearchIndexerSkillset.SearchIndexerSkillset(String name, SearchIndexerSkill[] skills)"
+  name: "SearchIndexerSkillset(String name, SearchIndexerSkill[] skills)"
+  nameWithType: "SearchIndexerSkillset.SearchIndexerSkillset(String name, SearchIndexerSkill[] skills)"
   summary: "Creates an instance of Search<wbr>Indexer<wbr>Skillset class."
   parameters:
   - description: "the name value to set."
     name: "name"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public SearchIndexerSkillset(String name)"
+  - description: "the skills value to set."
+    name: "skills"
+    type: "<xref href=\"com.azure.search.documents.indexes.models.SearchIndexerSkill?alt=com.azure.search.documents.indexes.models.SearchIndexerSkill&text=SearchIndexerSkill\" data-throw-if-not-resolved=\"False\" />[]"
+  syntax: "public SearchIndexerSkillset(String name, SearchIndexerSkill[] skills)"
   desc: "Creates an instance of SearchIndexerSkillset class."
 - uid: "com.azure.search.documents.indexes.models.SearchIndexerSkillset.SearchIndexerSkillset(java.lang.String,java.util.List<com.azure.search.documents.indexes.models.SearchIndexerSkill>)"
   fullName: "com.azure.search.documents.indexes.models.SearchIndexerSkillset.SearchIndexerSkillset(String name, List<SearchIndexerSkill> skills)"
@@ -39,10 +42,10 @@ constructors:
   nameWithType: "SearchIndexerSkillset.SearchIndexerSkillset(String name, List<SearchIndexerSkill> skills)"
   summary: "Creates an instance of Search<wbr>Indexer<wbr>Skillset class."
   parameters:
-  - description: "The name of the skillset."
+  - description: "the name value to set."
     name: "name"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The skills in the skillset."
+  - description: "the skills value to set."
     name: "skills"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.search.documents.indexes.models.SearchIndexerSkill?alt=com.azure.search.documents.indexes.models.SearchIndexerSkill&text=SearchIndexerSkill\" data-throw-if-not-resolved=\"False\" />&gt;"
   syntax: "public SearchIndexerSkillset(String name, List<SearchIndexerSkill> skills)"
@@ -231,34 +234,6 @@ methods:
   returns:
     description: "the SearchIndexerSkillset object itself."
     type: "<xref href=\"com.azure.search.documents.indexes.models.SearchIndexerSkillset?alt=com.azure.search.documents.indexes.models.SearchIndexerSkillset&text=SearchIndexerSkillset\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.search.documents.indexes.models.SearchIndexerSkillset.setSkills(java.util.List<com.azure.search.documents.indexes.models.SearchIndexerSkill>)"
-  fullName: "com.azure.search.documents.indexes.models.SearchIndexerSkillset.setSkills(List<SearchIndexerSkill> skills)"
-  name: "setSkills(List<SearchIndexerSkill> skills)"
-  nameWithType: "SearchIndexerSkillset.setSkills(List<SearchIndexerSkill> skills)"
-  summary: "Set the skills property: A list of skills in the skillset."
-  parameters:
-  - description: "the skills value to set."
-    name: "skills"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.search.documents.indexes.models.SearchIndexerSkill?alt=com.azure.search.documents.indexes.models.SearchIndexerSkill&text=SearchIndexerSkill\" data-throw-if-not-resolved=\"False\" />&gt;"
-  syntax: "public SearchIndexerSkillset setSkills(List<SearchIndexerSkill> skills)"
-  desc: "Set the skills property: A list of skills in the skillset."
-  returns:
-    description: "the SearchIndexerSkillset object itself."
-    type: "<xref href=\"com.azure.search.documents.indexes.models.SearchIndexerSkillset?alt=com.azure.search.documents.indexes.models.SearchIndexerSkillset&text=SearchIndexerSkillset\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.search.documents.indexes.models.SearchIndexerSkillset.setSkills(com.azure.search.documents.indexes.models.SearchIndexerSkill...)"
-  fullName: "com.azure.search.documents.indexes.models.SearchIndexerSkillset.setSkills(SearchIndexerSkill[] skills)"
-  name: "setSkills(SearchIndexerSkill[] skills)"
-  nameWithType: "SearchIndexerSkillset.setSkills(SearchIndexerSkill[] skills)"
-  summary: "Set the skills property: A list of skills in the skillset."
-  parameters:
-  - description: "the skills value to set."
-    name: "skills"
-    type: "<xref href=\"com.azure.search.documents.indexes.models.SearchIndexerSkill?alt=com.azure.search.documents.indexes.models.SearchIndexerSkill&text=SearchIndexerSkill\" data-throw-if-not-resolved=\"False\" />[]"
-  syntax: "public SearchIndexerSkillset setSkills(SearchIndexerSkill[] skills)"
-  desc: "Set the skills property: A list of skills in the skillset."
-  returns:
-    description: "the SearchIndexerSkillset object itself."
-    type: "<xref href=\"com.azure.search.documents.indexes.models.SearchIndexerSkillset?alt=com.azure.search.documents.indexes.models.SearchIndexerSkillset&text=SearchIndexerSkillset\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.SearchIndexerSkillset.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.search.documents.indexes.models.SearchIndexerSkillset.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -277,4 +252,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.indexes.models.SearchIndexerSkillset?alt=com.azure.search.documents.indexes.models.SearchIndexerSkillset&text=SearchIndexerSkillset\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.search.documents.indexes.models"
-artifact: com.azure:azure-search-documents:11.8.1
+artifact: com.azure:azure-search-documents:12.0.0

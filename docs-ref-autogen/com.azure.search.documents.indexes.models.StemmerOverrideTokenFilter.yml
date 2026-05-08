@@ -29,6 +29,20 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
 syntax: "public final class **StemmerOverrideTokenFilter**</br> extends <xref href=\"com.azure.search.documents.indexes.models.TokenFilter?alt=com.azure.search.documents.indexes.models.TokenFilter&text=TokenFilter\" data-throw-if-not-resolved=\"False\" />"
 constructors:
+- uid: "com.azure.search.documents.indexes.models.StemmerOverrideTokenFilter.StemmerOverrideTokenFilter(java.lang.String,java.lang.String...)"
+  fullName: "com.azure.search.documents.indexes.models.StemmerOverrideTokenFilter.StemmerOverrideTokenFilter(String name, String[] rules)"
+  name: "StemmerOverrideTokenFilter(String name, String[] rules)"
+  nameWithType: "StemmerOverrideTokenFilter.StemmerOverrideTokenFilter(String name, String[] rules)"
+  summary: "Creates an instance of Stemmer<wbr>Override<wbr>Token<wbr>Filter class."
+  parameters:
+  - description: "the name value to set."
+    name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "the rules value to set."
+    name: "rules"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>[]"
+  syntax: "public StemmerOverrideTokenFilter(String name, String[] rules)"
+  desc: "Creates an instance of StemmerOverrideTokenFilter class."
 - uid: "com.azure.search.documents.indexes.models.StemmerOverrideTokenFilter.StemmerOverrideTokenFilter(java.lang.String,java.util.List<java.lang.String>)"
   fullName: "com.azure.search.documents.indexes.models.StemmerOverrideTokenFilter.StemmerOverrideTokenFilter(String name, List<String> rules)"
   name: "StemmerOverrideTokenFilter(String name, List<String> rules)"
@@ -67,10 +81,10 @@ methods:
   fullName: "com.azure.search.documents.indexes.models.StemmerOverrideTokenFilter.getOdataType()"
   name: "getOdataType()"
   nameWithType: "StemmerOverrideTokenFilter.getOdataType()"
-  summary: "Get the odata<wbr>Type property: A URI fragment specifying the type of token filter."
+  summary: "Get the odata<wbr>Type property: The discriminator for derived types."
   overridden: "com.azure.search.documents.indexes.models.TokenFilter.getOdataType()"
   syntax: "public String getOdataType()"
-  desc: "Get the odataType property: A URI fragment specifying the type of token filter."
+  desc: "Get the odataType property: The discriminator for derived types."
   returns:
     description: "the odataType value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -98,7 +112,7 @@ methods:
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Provides the ability to override other stemming filters with custom dictionary-based stemming. Any dictionary-stemmed terms will be marked as keywords so that they will not be stemmed with stemmers down the chain. Must be placed before any stemming filters. This token filter is implemented using Apache Lucene."
+desc: "Provides the ability to override other stemming filters with custom dictionary-based stemming. Any dictionary-stemmed terms will be marked as keywords so that they will not be stemmed with stemmers down the chain. Must be placed before any stemming filters. This token filter is implemented using Apache Lucene. See http://lucene.apache.org/core/4\\_10\\_3/analyzers-common/org/apache/lucene/analysis/miscellaneous/StemmerOverrideFilter.html."
 metadata: {}
 package: "com.azure.search.documents.indexes.models"
-artifact: com.azure:azure-search-documents:11.8.1
+artifact: com.azure:azure-search-documents:12.0.0

@@ -104,10 +104,10 @@ methods:
   fullName: "com.azure.search.documents.indexes.models.DocumentIntelligenceLayoutSkill.getOdataType()"
   name: "getOdataType()"
   nameWithType: "DocumentIntelligenceLayoutSkill.getOdataType()"
-  summary: "Get the odata<wbr>Type property: A URI fragment specifying the type of skill."
+  summary: "Get the odata<wbr>Type property: The discriminator for derived types."
   overridden: "com.azure.search.documents.indexes.models.SearchIndexerSkill.getOdataType()"
   syntax: "public String getOdataType()"
-  desc: "Get the odataType property: A URI fragment specifying the type of skill."
+  desc: "Get the odataType property: The discriminator for derived types."
   returns:
     description: "the odataType value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -115,9 +115,9 @@ methods:
   fullName: "com.azure.search.documents.indexes.models.DocumentIntelligenceLayoutSkill.getOutputFormat()"
   name: "getOutputFormat()"
   nameWithType: "DocumentIntelligenceLayoutSkill.getOutputFormat()"
-  summary: "Get the output<wbr>Format property: Controls the cardinality of the output format."
+  summary: "Get the output<wbr>Format property: Controls the output format."
   syntax: "public DocumentIntelligenceLayoutSkillOutputFormat getOutputFormat()"
-  desc: "Get the outputFormat property: Controls the cardinality of the output format. Default is 'markdown'."
+  desc: "Get the outputFormat property: Controls the output format. Default is 'markdown'."
   returns:
     description: "the outputFormat value."
     type: "<xref href=\"com.azure.search.documents.indexes.models.DocumentIntelligenceLayoutSkillOutputFormat?alt=com.azure.search.documents.indexes.models.DocumentIntelligenceLayoutSkillOutputFormat&text=DocumentIntelligenceLayoutSkillOutputFormat\" data-throw-if-not-resolved=\"False\" />"
@@ -171,6 +171,20 @@ methods:
   desc: "Set the description property: The description of the skill which describes the inputs, outputs, and usage of the skill."
   returns:
     type: "<xref href=\"com.azure.search.documents.indexes.models.DocumentIntelligenceLayoutSkill?alt=com.azure.search.documents.indexes.models.DocumentIntelligenceLayoutSkill&text=DocumentIntelligenceLayoutSkill\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.indexes.models.DocumentIntelligenceLayoutSkill.setExtractionOptions(com.azure.search.documents.indexes.models.DocumentIntelligenceLayoutSkillExtractionOptions...)"
+  fullName: "com.azure.search.documents.indexes.models.DocumentIntelligenceLayoutSkill.setExtractionOptions(DocumentIntelligenceLayoutSkillExtractionOptions[] extractionOptions)"
+  name: "setExtractionOptions(DocumentIntelligenceLayoutSkillExtractionOptions[] extractionOptions)"
+  nameWithType: "DocumentIntelligenceLayoutSkill.setExtractionOptions(DocumentIntelligenceLayoutSkillExtractionOptions[] extractionOptions)"
+  summary: "Set the extraction<wbr>Options property: Controls the cardinality of the content extracted from the document by the skill."
+  parameters:
+  - description: "the extractionOptions value to set."
+    name: "extractionOptions"
+    type: "<xref href=\"com.azure.search.documents.indexes.models.DocumentIntelligenceLayoutSkillExtractionOptions?alt=com.azure.search.documents.indexes.models.DocumentIntelligenceLayoutSkillExtractionOptions&text=DocumentIntelligenceLayoutSkillExtractionOptions\" data-throw-if-not-resolved=\"False\" />[]"
+  syntax: "public DocumentIntelligenceLayoutSkill setExtractionOptions(DocumentIntelligenceLayoutSkillExtractionOptions[] extractionOptions)"
+  desc: "Set the extractionOptions property: Controls the cardinality of the content extracted from the document by the skill."
+  returns:
+    description: "the DocumentIntelligenceLayoutSkill object itself."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.DocumentIntelligenceLayoutSkill?alt=com.azure.search.documents.indexes.models.DocumentIntelligenceLayoutSkill&text=DocumentIntelligenceLayoutSkill\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.DocumentIntelligenceLayoutSkill.setExtractionOptions(java.util.List<com.azure.search.documents.indexes.models.DocumentIntelligenceLayoutSkillExtractionOptions>)"
   fullName: "com.azure.search.documents.indexes.models.DocumentIntelligenceLayoutSkill.setExtractionOptions(List<DocumentIntelligenceLayoutSkillExtractionOptions> extractionOptions)"
   name: "setExtractionOptions(List<DocumentIntelligenceLayoutSkillExtractionOptions> extractionOptions)"
@@ -216,13 +230,13 @@ methods:
   fullName: "com.azure.search.documents.indexes.models.DocumentIntelligenceLayoutSkill.setOutputFormat(DocumentIntelligenceLayoutSkillOutputFormat outputFormat)"
   name: "setOutputFormat(DocumentIntelligenceLayoutSkillOutputFormat outputFormat)"
   nameWithType: "DocumentIntelligenceLayoutSkill.setOutputFormat(DocumentIntelligenceLayoutSkillOutputFormat outputFormat)"
-  summary: "Set the output<wbr>Format property: Controls the cardinality of the output format."
+  summary: "Set the output<wbr>Format property: Controls the output format."
   parameters:
   - description: "the outputFormat value to set."
     name: "outputFormat"
     type: "<xref href=\"com.azure.search.documents.indexes.models.DocumentIntelligenceLayoutSkillOutputFormat?alt=com.azure.search.documents.indexes.models.DocumentIntelligenceLayoutSkillOutputFormat&text=DocumentIntelligenceLayoutSkillOutputFormat\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public DocumentIntelligenceLayoutSkill setOutputFormat(DocumentIntelligenceLayoutSkillOutputFormat outputFormat)"
-  desc: "Set the outputFormat property: Controls the cardinality of the output format. Default is 'markdown'."
+  desc: "Set the outputFormat property: Controls the output format. Default is 'markdown'."
   returns:
     description: "the DocumentIntelligenceLayoutSkill object itself."
     type: "<xref href=\"com.azure.search.documents.indexes.models.DocumentIntelligenceLayoutSkill?alt=com.azure.search.documents.indexes.models.DocumentIntelligenceLayoutSkill&text=DocumentIntelligenceLayoutSkill\" data-throw-if-not-resolved=\"False\" />"
@@ -257,4 +271,4 @@ type: "class"
 desc: "A skill that extracts content and layout information, via Azure AI Services, from files within the enrichment pipeline."
 metadata: {}
 package: "com.azure.search.documents.indexes.models"
-artifact: com.azure:azure-search-documents:11.8.1
+artifact: com.azure:azure-search-documents:12.0.0
