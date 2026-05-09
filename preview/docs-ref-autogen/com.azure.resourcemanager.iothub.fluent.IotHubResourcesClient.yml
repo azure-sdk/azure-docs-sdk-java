@@ -14,7 +14,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
@@ -36,7 +36,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
@@ -64,17 +64,17 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract SyncPoller<PollResult<IotHubDescriptionInner>,IotHubDescriptionInner> beginDelete(String resourceGroupName, String resourceName)"
+  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginDelete(String resourceGroupName, String resourceName)"
   desc: "Delete an IoT hub Delete an IoT hub."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the description of the IoT hub."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.iothub.fluent.models.IotHubDescriptionInner?alt=com.azure.resourcemanager.iothub.fluent.models.IotHubDescriptionInner&text=IotHubDescriptionInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.iothub.fluent.models.IotHubDescriptionInner?alt=com.azure.resourcemanager.iothub.fluent.models.IotHubDescriptionInner&text=IotHubDescriptionInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.beginDelete(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.beginDelete(String resourceGroupName, String resourceName, Context context)"
   name: "beginDelete(String resourceGroupName, String resourceName, Context context)"
@@ -83,7 +83,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
@@ -92,11 +92,11 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract SyncPoller<PollResult<IotHubDescriptionInner>,IotHubDescriptionInner> beginDelete(String resourceGroupName, String resourceName, Context context)"
+  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginDelete(String resourceGroupName, String resourceName, Context context)"
   desc: "Delete an IoT hub Delete an IoT hub."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the description of the IoT hub."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.iothub.fluent.models.IotHubDescriptionInner?alt=com.azure.resourcemanager.iothub.fluent.models.IotHubDescriptionInner&text=IotHubDescriptionInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.iothub.fluent.models.IotHubDescriptionInner?alt=com.azure.resourcemanager.iothub.fluent.models.IotHubDescriptionInner&text=IotHubDescriptionInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.beginUpdate(java.lang.String,java.lang.String,com.azure.resourcemanager.iothub.models.TagsResource)"
   fullName: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.beginUpdate(String resourceGroupName, String resourceName, TagsResource iotHubTags)"
   name: "beginUpdate(String resourceGroupName, String resourceName, TagsResource iotHubTags)"
@@ -105,10 +105,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Resource group identifier."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Name of iot hub to update."
+  - description: "The name of the IoT hub."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Updated tag information to set into the iot hub instance."
@@ -127,10 +127,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Resource group identifier."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Name of iot hub to update."
+  - description: "The name of the IoT hub."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Updated tag information to set into the iot hub instance."
@@ -152,7 +152,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Set the name parameter in the OperationInputs structure to the name of the IoT hub to\n check."
+  - description: "The request body."
     name: "operationInputs"
     type: "<xref href=\"com.azure.resourcemanager.iothub.models.OperationInputs?alt=com.azure.resourcemanager.iothub.models.OperationInputs&text=OperationInputs\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract IotHubNameAvailabilityInfoInner checkNameAvailability(OperationInputs operationInputs)"
@@ -168,7 +168,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Set the name parameter in the OperationInputs structure to the name of the IoT hub to\n check."
+  - description: "The request body."
     name: "operationInputs"
     type: "<xref href=\"com.azure.resourcemanager.iothub.models.OperationInputs?alt=com.azure.resourcemanager.iothub.models.OperationInputs&text=OperationInputs\" data-throw-if-not-resolved=\"False\" />"
   - description: "The context to associate with this operation."
@@ -187,16 +187,16 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the Event Hub-compatible endpoint in the IoT hub."
+  - description: "The name of the EventHubEndpoint."
     name: "eventHubEndpointName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the consumer group to add."
+  - description: "The name of the consumer group to retrieve."
     name: "name"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The consumer group to add."
@@ -215,16 +215,16 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the Event Hub-compatible endpoint in the IoT hub."
+  - description: "The name of the EventHubEndpoint."
     name: "eventHubEndpointName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the consumer group to add."
+  - description: "The name of the consumer group to retrieve."
     name: "name"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The consumer group to add."
@@ -246,7 +246,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
@@ -268,7 +268,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
@@ -296,17 +296,14 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract IotHubDescriptionInner delete(String resourceGroupName, String resourceName)"
+  syntax: "public abstract void delete(String resourceGroupName, String resourceName)"
   desc: "Delete an IoT hub Delete an IoT hub."
-  returns:
-    description: "the description of the IoT hub."
-    type: "<xref href=\"com.azure.resourcemanager.iothub.fluent.models.IotHubDescriptionInner?alt=com.azure.resourcemanager.iothub.fluent.models.IotHubDescriptionInner&text=IotHubDescriptionInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.delete(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.delete(String resourceGroupName, String resourceName, Context context)"
   name: "delete(String resourceGroupName, String resourceName, Context context)"
@@ -315,7 +312,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
@@ -324,11 +321,8 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract IotHubDescriptionInner delete(String resourceGroupName, String resourceName, Context context)"
+  syntax: "public abstract void delete(String resourceGroupName, String resourceName, Context context)"
   desc: "Delete an IoT hub Delete an IoT hub."
-  returns:
-    description: "the description of the IoT hub."
-    type: "<xref href=\"com.azure.resourcemanager.iothub.fluent.models.IotHubDescriptionInner?alt=com.azure.resourcemanager.iothub.fluent.models.IotHubDescriptionInner&text=IotHubDescriptionInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.deleteEventHubConsumerGroup(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.deleteEventHubConsumerGroup(String resourceGroupName, String resourceName, String eventHubEndpointName, String name)"
   name: "deleteEventHubConsumerGroup(String resourceGroupName, String resourceName, String eventHubEndpointName, String name)"
@@ -337,16 +331,16 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the Event Hub-compatible endpoint in the IoT hub."
+  - description: "The name of the EventHubEndpoint."
     name: "eventHubEndpointName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the consumer group to delete."
+  - description: "The name of the consumer group to retrieve."
     name: "name"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract void deleteEventHubConsumerGroup(String resourceGroupName, String resourceName, String eventHubEndpointName, String name)"
@@ -359,16 +353,16 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the Event Hub-compatible endpoint in the IoT hub."
+  - description: "The name of the EventHubEndpoint."
     name: "eventHubEndpointName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the consumer group to delete."
+  - description: "The name of the consumer group to retrieve."
     name: "name"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
@@ -387,7 +381,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
@@ -409,7 +403,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
@@ -434,7 +428,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
@@ -443,7 +437,7 @@ methods:
   syntax: "public abstract IotHubDescriptionInner getByResourceGroup(String resourceGroupName, String resourceName)"
   desc: "Get the non-security related metadata of an IoT hub Get the non-security related metadata of an IoT hub."
   returns:
-    description: "the non-security related metadata of an IoT hub."
+    description: "the non-security related metadata of an IoT hub\n \n Get the non-security related metadata of an IoT hub."
     type: "<xref href=\"com.azure.resourcemanager.iothub.fluent.models.IotHubDescriptionInner?alt=com.azure.resourcemanager.iothub.fluent.models.IotHubDescriptionInner&text=IotHubDescriptionInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.getByResourceGroupWithResponse(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.getByResourceGroupWithResponse(String resourceGroupName, String resourceName, Context context)"
@@ -453,7 +447,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
@@ -465,7 +459,7 @@ methods:
   syntax: "public abstract Response<IotHubDescriptionInner> getByResourceGroupWithResponse(String resourceGroupName, String resourceName, Context context)"
   desc: "Get the non-security related metadata of an IoT hub Get the non-security related metadata of an IoT hub."
   returns:
-    description: "the non-security related metadata of an IoT hub along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    description: "the non-security related metadata of an IoT hub\n \n Get the non-security related metadata of an IoT hub along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.iothub.fluent.models.IotHubDescriptionInner?alt=com.azure.resourcemanager.iothub.fluent.models.IotHubDescriptionInner&text=IotHubDescriptionInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.getEndpointHealth(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.getEndpointHealth(String resourceGroupName, String iotHubName)"
@@ -475,7 +469,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The resourceGroupName parameter."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The iotHubName parameter."
@@ -484,7 +478,7 @@ methods:
   syntax: "public abstract PagedIterable<EndpointHealthDataInner> getEndpointHealth(String resourceGroupName, String iotHubName)"
   desc: "Get the health for routing endpoints Get the health for routing endpoints."
   returns:
-    description: "the health for routing endpoints as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the health for routing endpoints\n \n Get the health for routing endpoints as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.iothub.fluent.models.EndpointHealthDataInner?alt=com.azure.resourcemanager.iothub.fluent.models.EndpointHealthDataInner&text=EndpointHealthDataInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.getEndpointHealth(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.getEndpointHealth(String resourceGroupName, String iotHubName, Context context)"
@@ -494,7 +488,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The resourceGroupName parameter."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The iotHubName parameter."
@@ -506,7 +500,7 @@ methods:
   syntax: "public abstract PagedIterable<EndpointHealthDataInner> getEndpointHealth(String resourceGroupName, String iotHubName, Context context)"
   desc: "Get the health for routing endpoints Get the health for routing endpoints."
   returns:
-    description: "the health for routing endpoints as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the health for routing endpoints\n \n Get the health for routing endpoints as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.iothub.fluent.models.EndpointHealthDataInner?alt=com.azure.resourcemanager.iothub.fluent.models.EndpointHealthDataInner&text=EndpointHealthDataInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.getEventHubConsumerGroup(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.getEventHubConsumerGroup(String resourceGroupName, String resourceName, String eventHubEndpointName, String name)"
@@ -516,13 +510,13 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the Event Hub-compatible endpoint in the IoT hub."
+  - description: "The name of the EventHubEndpoint."
     name: "eventHubEndpointName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the consumer group to retrieve."
@@ -531,7 +525,7 @@ methods:
   syntax: "public abstract EventHubConsumerGroupInfoInner getEventHubConsumerGroup(String resourceGroupName, String resourceName, String eventHubEndpointName, String name)"
   desc: "Get a consumer group from the Event Hub-compatible device-to-cloud endpoint for an IoT hub Get a consumer group from the Event Hub-compatible device-to-cloud endpoint for an IoT hub."
   returns:
-    description: "a consumer group from the Event Hub-compatible device-to-cloud endpoint for an IoT hub."
+    description: "a consumer group from the Event Hub-compatible device-to-cloud endpoint for an IoT hub\n \n Get a consumer group from the Event Hub-compatible device-to-cloud endpoint for an IoT hub."
     type: "<xref href=\"com.azure.resourcemanager.iothub.fluent.models.EventHubConsumerGroupInfoInner?alt=com.azure.resourcemanager.iothub.fluent.models.EventHubConsumerGroupInfoInner&text=EventHubConsumerGroupInfoInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.getEventHubConsumerGroupWithResponse(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.getEventHubConsumerGroupWithResponse(String resourceGroupName, String resourceName, String eventHubEndpointName, String name, Context context)"
@@ -541,13 +535,13 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the Event Hub-compatible endpoint in the IoT hub."
+  - description: "The name of the EventHubEndpoint."
     name: "eventHubEndpointName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the consumer group to retrieve."
@@ -559,7 +553,7 @@ methods:
   syntax: "public abstract Response<EventHubConsumerGroupInfoInner> getEventHubConsumerGroupWithResponse(String resourceGroupName, String resourceName, String eventHubEndpointName, String name, Context context)"
   desc: "Get a consumer group from the Event Hub-compatible device-to-cloud endpoint for an IoT hub Get a consumer group from the Event Hub-compatible device-to-cloud endpoint for an IoT hub."
   returns:
-    description: "a consumer group from the Event Hub-compatible device-to-cloud endpoint for an IoT hub along with\n <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    description: "a consumer group from the Event Hub-compatible device-to-cloud endpoint for an IoT hub\n \n Get a consumer group from the Event Hub-compatible device-to-cloud endpoint for an IoT hub along with\n <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.iothub.fluent.models.EventHubConsumerGroupInfoInner?alt=com.azure.resourcemanager.iothub.fluent.models.EventHubConsumerGroupInfoInner&text=EventHubConsumerGroupInfoInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.getJob(java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.getJob(String resourceGroupName, String resourceName, String jobId)"
@@ -569,7 +563,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
@@ -591,7 +585,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
@@ -616,7 +610,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
@@ -638,7 +632,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
@@ -663,7 +657,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
@@ -672,7 +666,7 @@ methods:
   syntax: "public abstract PagedIterable<IotHubQuotaMetricInfoInner> getQuotaMetrics(String resourceGroupName, String resourceName)"
   desc: "Get the quota metrics for an IoT hub Get the quota metrics for an IoT hub."
   returns:
-    description: "the quota metrics for an IoT hub as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the quota metrics for an IoT hub\n \n Get the quota metrics for an IoT hub as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.iothub.fluent.models.IotHubQuotaMetricInfoInner?alt=com.azure.resourcemanager.iothub.fluent.models.IotHubQuotaMetricInfoInner&text=IotHubQuotaMetricInfoInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.getQuotaMetrics(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.getQuotaMetrics(String resourceGroupName, String resourceName, Context context)"
@@ -682,7 +676,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
@@ -694,7 +688,7 @@ methods:
   syntax: "public abstract PagedIterable<IotHubQuotaMetricInfoInner> getQuotaMetrics(String resourceGroupName, String resourceName, Context context)"
   desc: "Get the quota metrics for an IoT hub Get the quota metrics for an IoT hub."
   returns:
-    description: "the quota metrics for an IoT hub as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the quota metrics for an IoT hub\n \n Get the quota metrics for an IoT hub as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.iothub.fluent.models.IotHubQuotaMetricInfoInner?alt=com.azure.resourcemanager.iothub.fluent.models.IotHubQuotaMetricInfoInner&text=IotHubQuotaMetricInfoInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.getStats(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.getStats(String resourceGroupName, String resourceName)"
@@ -704,16 +698,16 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the IoT hub."
+  - description: "The resourceName parameter."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract RegistryStatisticsInner getStats(String resourceGroupName, String resourceName)"
   desc: "Get the statistics from an IoT hub Get the statistics from an IoT hub."
   returns:
-    description: "the statistics from an IoT hub."
+    description: "the statistics from an IoT hub\n \n Get the statistics from an IoT hub."
     type: "<xref href=\"com.azure.resourcemanager.iothub.fluent.models.RegistryStatisticsInner?alt=com.azure.resourcemanager.iothub.fluent.models.RegistryStatisticsInner&text=RegistryStatisticsInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.getStatsWithResponse(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.getStatsWithResponse(String resourceGroupName, String resourceName, Context context)"
@@ -723,10 +717,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the IoT hub."
+  - description: "The resourceName parameter."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
@@ -735,7 +729,7 @@ methods:
   syntax: "public abstract Response<RegistryStatisticsInner> getStatsWithResponse(String resourceGroupName, String resourceName, Context context)"
   desc: "Get the statistics from an IoT hub Get the statistics from an IoT hub."
   returns:
-    description: "the statistics from an IoT hub along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    description: "the statistics from an IoT hub\n \n Get the statistics from an IoT hub along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.iothub.fluent.models.RegistryStatisticsInner?alt=com.azure.resourcemanager.iothub.fluent.models.RegistryStatisticsInner&text=RegistryStatisticsInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.getValidSkus(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.getValidSkus(String resourceGroupName, String resourceName)"
@@ -745,7 +739,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
@@ -754,7 +748,7 @@ methods:
   syntax: "public abstract PagedIterable<IotHubSkuDescriptionInner> getValidSkus(String resourceGroupName, String resourceName)"
   desc: "Get the list of valid SKUs for an IoT hub Get the list of valid SKUs for an IoT hub."
   returns:
-    description: "the list of valid SKUs for an IoT hub as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the list of valid SKUs for an IoT hub\n \n Get the list of valid SKUs for an IoT hub as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.iothub.fluent.models.IotHubSkuDescriptionInner?alt=com.azure.resourcemanager.iothub.fluent.models.IotHubSkuDescriptionInner&text=IotHubSkuDescriptionInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.getValidSkus(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.getValidSkus(String resourceGroupName, String resourceName, Context context)"
@@ -764,7 +758,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
@@ -776,7 +770,7 @@ methods:
   syntax: "public abstract PagedIterable<IotHubSkuDescriptionInner> getValidSkus(String resourceGroupName, String resourceName, Context context)"
   desc: "Get the list of valid SKUs for an IoT hub Get the list of valid SKUs for an IoT hub."
   returns:
-    description: "the list of valid SKUs for an IoT hub as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the list of valid SKUs for an IoT hub\n \n Get the list of valid SKUs for an IoT hub as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.iothub.fluent.models.IotHubSkuDescriptionInner?alt=com.azure.resourcemanager.iothub.fluent.models.IotHubSkuDescriptionInner&text=IotHubSkuDescriptionInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.importDevices(java.lang.String,java.lang.String,com.azure.resourcemanager.iothub.models.ImportDevicesRequest)"
   fullName: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.importDevices(String resourceGroupName, String resourceName, ImportDevicesRequest importDevicesParameters)"
@@ -786,7 +780,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
@@ -808,7 +802,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
@@ -835,7 +829,7 @@ methods:
   syntax: "public abstract PagedIterable<IotHubDescriptionInner> list()"
   desc: "Get all the IoT hubs in a subscription Get all the IoT hubs in a subscription."
   returns:
-    description: "all the IoT hubs in a subscription as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "all the IoT hubs in a subscription\n \n Get all the IoT hubs in a subscription as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.iothub.fluent.models.IotHubDescriptionInner?alt=com.azure.resourcemanager.iothub.fluent.models.IotHubDescriptionInner&text=IotHubDescriptionInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.list(com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.list(Context context)"
@@ -851,7 +845,7 @@ methods:
   syntax: "public abstract PagedIterable<IotHubDescriptionInner> list(Context context)"
   desc: "Get all the IoT hubs in a subscription Get all the IoT hubs in a subscription."
   returns:
-    description: "all the IoT hubs in a subscription as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "all the IoT hubs in a subscription\n \n Get all the IoT hubs in a subscription as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.iothub.fluent.models.IotHubDescriptionInner?alt=com.azure.resourcemanager.iothub.fluent.models.IotHubDescriptionInner&text=IotHubDescriptionInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.listByResourceGroup(java.lang.String)"
   fullName: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.listByResourceGroup(String resourceGroupName)"
@@ -861,13 +855,13 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<IotHubDescriptionInner> listByResourceGroup(String resourceGroupName)"
   desc: "Get all the IoT hubs in a resource group Get all the IoT hubs in a resource group."
   returns:
-    description: "all the IoT hubs in a resource group as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "all the IoT hubs in a resource group\n \n Get all the IoT hubs in a resource group as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.iothub.fluent.models.IotHubDescriptionInner?alt=com.azure.resourcemanager.iothub.fluent.models.IotHubDescriptionInner&text=IotHubDescriptionInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.listByResourceGroup(java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.listByResourceGroup(String resourceGroupName, Context context)"
@@ -877,7 +871,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
@@ -886,7 +880,7 @@ methods:
   syntax: "public abstract PagedIterable<IotHubDescriptionInner> listByResourceGroup(String resourceGroupName, Context context)"
   desc: "Get all the IoT hubs in a resource group Get all the IoT hubs in a resource group."
   returns:
-    description: "all the IoT hubs in a resource group as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "all the IoT hubs in a resource group\n \n Get all the IoT hubs in a resource group as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.iothub.fluent.models.IotHubDescriptionInner?alt=com.azure.resourcemanager.iothub.fluent.models.IotHubDescriptionInner&text=IotHubDescriptionInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.listEventHubConsumerGroups(java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.listEventHubConsumerGroups(String resourceGroupName, String resourceName, String eventHubEndpointName)"
@@ -896,19 +890,19 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the Event Hub-compatible endpoint."
+  - description: "The name of the EventHubEndpoint."
     name: "eventHubEndpointName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<EventHubConsumerGroupInfoInner> listEventHubConsumerGroups(String resourceGroupName, String resourceName, String eventHubEndpointName)"
   desc: "Get a list of the consumer groups in the Event Hub-compatible device-to-cloud endpoint in an IoT hub Get a list of the consumer groups in the Event Hub-compatible device-to-cloud endpoint in an IoT hub."
   returns:
-    description: "a list of the consumer groups in the Event Hub-compatible device-to-cloud endpoint in an IoT hub as\n paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "a list of the consumer groups in the Event Hub-compatible device-to-cloud endpoint in an IoT hub\n \n Get a list of the consumer groups in the Event Hub-compatible device-to-cloud endpoint in an IoT hub as paginated\n response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.iothub.fluent.models.EventHubConsumerGroupInfoInner?alt=com.azure.resourcemanager.iothub.fluent.models.EventHubConsumerGroupInfoInner&text=EventHubConsumerGroupInfoInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.listEventHubConsumerGroups(java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.listEventHubConsumerGroups(String resourceGroupName, String resourceName, String eventHubEndpointName, Context context)"
@@ -918,13 +912,13 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the Event Hub-compatible endpoint."
+  - description: "The name of the EventHubEndpoint."
     name: "eventHubEndpointName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
@@ -933,7 +927,7 @@ methods:
   syntax: "public abstract PagedIterable<EventHubConsumerGroupInfoInner> listEventHubConsumerGroups(String resourceGroupName, String resourceName, String eventHubEndpointName, Context context)"
   desc: "Get a list of the consumer groups in the Event Hub-compatible device-to-cloud endpoint in an IoT hub Get a list of the consumer groups in the Event Hub-compatible device-to-cloud endpoint in an IoT hub."
   returns:
-    description: "a list of the consumer groups in the Event Hub-compatible device-to-cloud endpoint in an IoT hub as\n paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "a list of the consumer groups in the Event Hub-compatible device-to-cloud endpoint in an IoT hub\n \n Get a list of the consumer groups in the Event Hub-compatible device-to-cloud endpoint in an IoT hub as paginated\n response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.iothub.fluent.models.EventHubConsumerGroupInfoInner?alt=com.azure.resourcemanager.iothub.fluent.models.EventHubConsumerGroupInfoInner&text=EventHubConsumerGroupInfoInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.listJobs(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.iothub.fluent.IotHubResourcesClient.listJobs(String resourceGroupName, String resourceName)"
@@ -943,7 +937,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
@@ -962,7 +956,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
@@ -984,7 +978,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
@@ -1003,7 +997,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the IoT hub."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the IoT hub."
@@ -1025,10 +1019,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "IotHub to be tested."
+  - description: "The iotHubName parameter."
     name: "iotHubName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "resource group which Iot Hub belongs to."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Input for testing all routes."
@@ -1047,10 +1041,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "IotHub to be tested."
+  - description: "The iotHubName parameter."
     name: "iotHubName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "resource group which Iot Hub belongs to."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Input for testing all routes."
@@ -1072,10 +1066,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "IotHub to be tested."
+  - description: "The iotHubName parameter."
     name: "iotHubName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "resource group which Iot Hub belongs to."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Route that needs to be tested."
@@ -1094,10 +1088,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "IotHub to be tested."
+  - description: "The iotHubName parameter."
     name: "iotHubName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "resource group which Iot Hub belongs to."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Route that needs to be tested."
@@ -1119,10 +1113,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Resource group identifier."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Name of iot hub to update."
+  - description: "The name of the IoT hub."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Updated tag information to set into the iot hub instance."
@@ -1141,10 +1135,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Resource group identifier."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Name of iot hub to update."
+  - description: "The name of the IoT hub."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Updated tag information to set into the iot hub instance."
@@ -1162,4 +1156,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in IotHubResourcesClient."
 metadata: {}
 package: "com.azure.resourcemanager.iothub.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-iothub:1.4.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-iothub:1.4.0-beta.2
