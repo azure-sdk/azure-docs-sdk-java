@@ -1,17 +1,17 @@
 ---
 title: Azure Resource Manager AppConfiguration client library for Java
 keywords: Azure, java, SDK, API, azure-resourcemanager-appconfiguration, appconfiguration
-ms.date: 02/04/2026
+ms.date: 05/11/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: appconfiguration
 ---
-# Azure Resource Manager AppConfiguration client library for Java - version 1.2.0-beta.1 
+# Azure Resource Manager AppConfiguration client library for Java - version 1.2.0-beta.2 
 
 
 Azure Resource Manager AppConfiguration client library for Java.
 
-This package contains Microsoft Azure SDK for AppConfiguration Management SDK. // (missing-service-description) Add service description. Package api-version 2025-06-01-preview. For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
+This package contains Microsoft Azure SDK for AppConfiguration Management SDK. // (missing-service-description) Add service description. Package api-version 2025-08-01-preview. For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
 
 ## We'd love to hear your feedback
 
@@ -41,7 +41,7 @@ Various documentation is available to help you get started
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
     <artifactId>azure-resourcemanager-appconfiguration</artifactId>
-    <version>1.2.0-beta.1</version>
+    <version>1.2.0-beta.2</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -79,7 +79,7 @@ See [API design][design] for general introduction on design and key concepts on 
 
 ## Examples
 
-[Code snippets and samples](https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-appconfiguration_1.2.0-beta.1/sdk/appconfiguration/azure-resourcemanager-appconfiguration/SAMPLE.md)
+[Code snippets and samples](https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-appconfiguration_1.2.0-beta.2/sdk/appconfiguration/azure-resourcemanager-appconfiguration/SAMPLE.md)
 
 
 ## Troubleshooting
@@ -101,12 +101,12 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: https://learn.microsoft.com/azure/developer/java/fundamentals/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-appconfiguration_1.2.0-beta.1/sdk/identity/azure-identity
-[azure_identity_credentials]: https://github.com/Azure/azure-sdk-for-java/tree/azure-resourcemanager-appconfiguration_1.2.0-beta.1/sdk/identity/azure-identity#credentials
-[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-appconfiguration_1.2.0-beta.1/sdk/core/azure-core-http-netty
-[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-appconfiguration_1.2.0-beta.1/sdk/resourcemanager/docs/AUTH.md
-[design]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-appconfiguration_1.2.0-beta.1/sdk/resourcemanager/docs/DESIGN.md
-[cg]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-appconfiguration_1.2.0-beta.1/CONTRIBUTING.md
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-appconfiguration_1.2.0-beta.2/sdk/identity/azure-identity
+[azure_identity_credentials]: https://github.com/Azure/azure-sdk-for-java/tree/com.azure.resourcemanager+azure-resourcemanager-appconfiguration_1.2.0-beta.2/sdk/identity/azure-identity#credentials
+[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-appconfiguration_1.2.0-beta.2/sdk/core/azure-core-http-netty
+[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-appconfiguration_1.2.0-beta.2/sdk/resourcemanager/docs/AUTH.md
+[design]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-appconfiguration_1.2.0-beta.2/sdk/resourcemanager/docs/DESIGN.md
+[cg]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-appconfiguration_1.2.0-beta.2/CONTRIBUTING.md
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
 
