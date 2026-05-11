@@ -1,7 +1,7 @@
 ---
 title: Azure Auto Suggest SDK for Java
 description: Reference for Azure Auto Suggest SDK for Java
-ms.date: 05/08/2026
+ms.date: 05/11/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: autosuggest
