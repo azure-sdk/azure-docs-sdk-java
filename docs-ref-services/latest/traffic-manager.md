@@ -1,7 +1,7 @@
 ---
 title: Azure Traffic Manager SDK for Java
 description: Reference for Azure Traffic Manager SDK for Java
-ms.date: 05/11/2026
+ms.date: 05/12/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: trafficmanager
