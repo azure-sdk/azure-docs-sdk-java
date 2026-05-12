@@ -54,6 +54,28 @@ methods:
   returns:
     description: "the etag value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.loganalytics.models.Workspace.failback()"
+  fullName: "com.azure.resourcemanager.loganalytics.models.Workspace.failback()"
+  name: "failback()"
+  nameWithType: "Workspace.failback()"
+  summary: "Deactivates failover for the specified workspace."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract void failback()"
+  desc: "Deactivates failover for the specified workspace. The failback operation is asynchronous and can take up to 30 minutes to complete. The status of the operation can be checked using the operationId returned in the response."
+- uid: "com.azure.resourcemanager.loganalytics.models.Workspace.failback(com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.loganalytics.models.Workspace.failback(Context context)"
+  name: "failback(Context context)"
+  nameWithType: "Workspace.failback(Context context)"
+  summary: "Deactivates failover for the specified workspace."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void failback(Context context)"
+  desc: "Deactivates failover for the specified workspace. The failback operation is asynchronous and can take up to 30 minutes to complete. The status of the operation can be checked using the operationId returned in the response."
 - uid: "com.azure.resourcemanager.loganalytics.models.Workspace.failover()"
   fullName: "com.azure.resourcemanager.loganalytics.models.Workspace.failover()"
   name: "failover()"
@@ -314,11 +336,11 @@ methods:
   fullName: "com.azure.resourcemanager.loganalytics.models.Workspace.systemData()"
   name: "systemData()"
   nameWithType: "Workspace.systemData()"
-  summary: "Gets the system<wbr>Data property: Metadata pertaining to creation and last modification of the resource."
+  summary: "Gets the system<wbr>Data property: Azure Resource Manager metadata containing created<wbr>By and modified<wbr>By information."
   modifiers:
   - "abstract"
   syntax: "public abstract SystemData systemData()"
-  desc: "Gets the systemData property: Metadata pertaining to creation and last modification of the resource."
+  desc: "Gets the systemData property: Azure Resource Manager metadata containing createdBy and modifiedBy information."
   returns:
     description: "the systemData value."
     type: "<xref href=\"com.azure.core.management.SystemData?alt=com.azure.core.management.SystemData&text=SystemData\" data-throw-if-not-resolved=\"False\" />"
@@ -374,4 +396,4 @@ type: "interface"
 desc: "An immutable client-side representation of Workspace."
 metadata: {}
 package: "com.azure.resourcemanager.loganalytics.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-loganalytics:2.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-loganalytics:2.2.0

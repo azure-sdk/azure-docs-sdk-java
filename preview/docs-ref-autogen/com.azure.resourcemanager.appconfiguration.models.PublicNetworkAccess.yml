@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.appconfiguration.models.PublicNetworkAccess"
 fullName: "com.azure.resourcemanager.appconfiguration.models.PublicNetworkAccess"
 name: "PublicNetworkAccess"
 nameWithType: "PublicNetworkAccess"
-summary: "Control permission for data plane traffic coming from public networks while private endpoint is enabled."
+summary: "Control permission for data plane traffic coming from public networks."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 - "<xref href=\"com.azure.core.util.ExpandableStringEnum?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
@@ -42,26 +42,38 @@ fields:
   fullName: "com.azure.resourcemanager.appconfiguration.models.PublicNetworkAccess.DISABLED"
   name: "DISABLED"
   nameWithType: "PublicNetworkAccess.DISABLED"
-  summary: "Static value Disabled for Public<wbr>Network<wbr>Access."
+  summary: "Disallow public network access to the data plane."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.appconfiguration.models.PublicNetworkAccess?alt=com.azure.resourcemanager.appconfiguration.models.PublicNetworkAccess&text=PublicNetworkAccess\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final PublicNetworkAccess DISABLED"
-  desc: "Static value Disabled for PublicNetworkAccess."
+  desc: "Disallow public network access to the data plane."
 - uid: "com.azure.resourcemanager.appconfiguration.models.PublicNetworkAccess.ENABLED"
   fullName: "com.azure.resourcemanager.appconfiguration.models.PublicNetworkAccess.ENABLED"
   name: "ENABLED"
   nameWithType: "PublicNetworkAccess.ENABLED"
-  summary: "Static value Enabled for Public<wbr>Network<wbr>Access."
+  summary: "Allow public network access to the data plane."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.appconfiguration.models.PublicNetworkAccess?alt=com.azure.resourcemanager.appconfiguration.models.PublicNetworkAccess&text=PublicNetworkAccess\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final PublicNetworkAccess ENABLED"
-  desc: "Static value Enabled for PublicNetworkAccess."
+  desc: "Allow public network access to the data plane."
+- uid: "com.azure.resourcemanager.appconfiguration.models.PublicNetworkAccess.SECURED_BY_PERIMETER"
+  fullName: "com.azure.resourcemanager.appconfiguration.models.PublicNetworkAccess.SECURED_BY_PERIMETER"
+  name: "SECURED_BY_PERIMETER"
+  nameWithType: "PublicNetworkAccess.SECURED_BY_PERIMETER"
+  summary: "Let network security perimeter configuration control public network access to the data plane."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.resourcemanager.appconfiguration.models.PublicNetworkAccess?alt=com.azure.resourcemanager.appconfiguration.models.PublicNetworkAccess&text=PublicNetworkAccess\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final PublicNetworkAccess SECURED_BY_PERIMETER"
+  desc: "Let network security perimeter configuration control public network access to the data plane."
 methods:
 - uid: "com.azure.resourcemanager.appconfiguration.models.PublicNetworkAccess.fromString(java.lang.String)"
   fullName: "com.azure.resourcemanager.appconfiguration.models.PublicNetworkAccess.fromString(String name)"
@@ -92,7 +104,7 @@ methods:
     description: "known PublicNetworkAccess values."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html\">Collection</a>&lt;<xref href=\"com.azure.resourcemanager.appconfiguration.models.PublicNetworkAccess?alt=com.azure.resourcemanager.appconfiguration.models.PublicNetworkAccess&text=PublicNetworkAccess\" data-throw-if-not-resolved=\"False\" />&gt;"
 type: "class"
-desc: "Control permission for data plane traffic coming from public networks while private endpoint is enabled."
+desc: "Control permission for data plane traffic coming from public networks."
 metadata: {}
 package: "com.azure.resourcemanager.appconfiguration.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-appconfiguration:1.2.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-appconfiguration:1.2.0-beta.2
