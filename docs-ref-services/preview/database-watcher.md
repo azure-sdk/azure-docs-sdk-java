@@ -1,7 +1,7 @@
 ---
 title: Azure Database Watcher SDK for Java
 description: Reference for Azure Database Watcher SDK for Java
-ms.date: 05/12/2026
+ms.date: 05/13/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: databasewatcher
