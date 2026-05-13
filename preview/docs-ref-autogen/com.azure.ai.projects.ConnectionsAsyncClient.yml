@@ -39,6 +39,23 @@ methods:
   returns:
     description: "a connection by name, without populating connection credentials."
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.ai.projects.models.Connection?alt=com.azure.ai.projects.models.Connection&text=Connection\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.ai.projects.ConnectionsAsyncClient.getDefaultConnection(com.azure.ai.projects.models.ConnectionType,boolean)"
+  fullName: "com.azure.ai.projects.ConnectionsAsyncClient.getDefaultConnection(ConnectionType connectionType, boolean includeCredentials)"
+  name: "getDefaultConnection(ConnectionType connectionType, boolean includeCredentials)"
+  nameWithType: "ConnectionsAsyncClient.getDefaultConnection(ConnectionType connectionType, boolean includeCredentials)"
+  summary: "Get the default connection for a given connection type."
+  parameters:
+  - description: "The type of the connection. Required."
+    name: "connectionType"
+    type: "<xref href=\"com.azure.ai.projects.models.ConnectionType?alt=com.azure.ai.projects.models.ConnectionType&text=ConnectionType\" data-throw-if-not-resolved=\"False\" />"
+  - description: "Whether to include credentials in the response."
+    name: "includeCredentials"
+    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public Mono<Connection> getDefaultConnection(ConnectionType connectionType, boolean includeCredentials)"
+  desc: "Get the default connection for a given connection type."
+  returns:
+    description: "a Mono that completes with the default connection for the given type."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.ai.projects.models.Connection?alt=com.azure.ai.projects.models.Connection&text=Connection\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.ai.projects.ConnectionsAsyncClient.listConnections()"
   fullName: "com.azure.ai.projects.ConnectionsAsyncClient.listConnections()"
   name: "listConnections()"
@@ -84,4 +101,4 @@ type: "class"
 desc: "Initializes a new instance of the asynchronous AIProjectClient type."
 metadata: {}
 package: "com.azure.ai.projects"
-artifact: com.azure:azure-ai-projects:2.0.0-beta.3
+artifact: com.azure:azure-ai-projects:2.1.0-beta.1

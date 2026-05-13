@@ -56,6 +56,22 @@ methods:
   returns:
     description: "An IterableStream of ResponseStreamEvent."
     type: "<xref href=\"com.azure.core.util.IterableStream?alt=com.azure.core.util.IterableStream&text=IterableStream\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.openai.models.responses.ResponseStreamEvent?alt=com.openai.models.responses.ResponseStreamEvent&text=ResponseStreamEvent\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.ai.agents.ResponsesClient.getAzureFields(com.openai.models.responses.Response)"
+  fullName: "com.azure.ai.agents.ResponsesClient.getAzureFields(Response response)"
+  name: "getAzureFields(Response response)"
+  nameWithType: "ResponsesClient.getAzureFields(Response response)"
+  summary: "Extracts Azure-specific fields from a Response's additional properties."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "the OpenAI response."
+    name: "response"
+    type: "<xref href=\"com.openai.models.responses.Response?alt=com.openai.models.responses.Response&text=Response\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static AzureCreateResponseDetails getAzureFields(Response response)"
+  desc: "Extracts Azure-specific fields from a Response's additional properties."
+  returns:
+    description: "the Azure-specific create response result, or null if not present."
+    type: "<xref href=\"com.azure.ai.agents.models.AzureCreateResponseDetails?alt=com.azure.ai.agents.models.AzureCreateResponseDetails&text=AzureCreateResponseDetails\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.agents.ResponsesClient.getResponseService()"
   fullName: "com.azure.ai.agents.ResponsesClient.getResponseService()"
   name: "getResponseService()"
@@ -70,4 +86,4 @@ type: "class"
 desc: "Initializes a new instance of the synchronous AgentsClient type."
 metadata: {}
 package: "com.azure.ai.agents"
-artifact: com.azure:azure-ai-agents:2.0.0-beta.3
+artifact: com.azure:azure-ai-agents:2.1.0-beta.1

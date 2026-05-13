@@ -42,6 +42,34 @@ methods:
   desc: "."
   returns:
     type: "<xref href=\"com.azure.ai.projects.AIProjectClientBuilder?alt=com.azure.ai.projects.AIProjectClientBuilder&text=AIProjectClientBuilder\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.AIProjectClientBuilder.buildAgentScopedOpenAIAsyncClient(java.lang.String)"
+  fullName: "com.azure.ai.projects.AIProjectClientBuilder.buildAgentScopedOpenAIAsyncClient(String agentName)"
+  name: "buildAgentScopedOpenAIAsyncClient(String agentName)"
+  nameWithType: "AIProjectClientBuilder.buildAgentScopedOpenAIAsyncClient(String agentName)"
+  summary: "Builds an instance of Open<wbr>AIAsync<wbr>Client class configured to use the specified agent's endpoint."
+  parameters:
+  - description: "the name of the agent whose endpoint to target. Must not be null or empty."
+    name: "agentName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public OpenAIClientAsync buildAgentScopedOpenAIAsyncClient(String agentName)"
+  desc: "Builds an instance of OpenAIAsyncClient class configured to use the specified agent's endpoint. The base URL is set to `{endpoint}/agents/{agentName}/endpoint/protocols/openai`."
+  returns:
+    description: "an instance of OpenAIAsyncClient"
+    type: "<xref href=\"com.openai.client.OpenAIClientAsync?alt=com.openai.client.OpenAIClientAsync&text=OpenAIClientAsync\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.AIProjectClientBuilder.buildAgentScopedOpenAIClient(java.lang.String)"
+  fullName: "com.azure.ai.projects.AIProjectClientBuilder.buildAgentScopedOpenAIClient(String agentName)"
+  name: "buildAgentScopedOpenAIClient(String agentName)"
+  nameWithType: "AIProjectClientBuilder.buildAgentScopedOpenAIClient(String agentName)"
+  summary: "Builds an instance of Open<wbr>AIClient class configured to use the specified agent's endpoint."
+  parameters:
+  - description: "the name of the agent whose endpoint to target. Must not be null or empty."
+    name: "agentName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public OpenAIClient buildAgentScopedOpenAIClient(String agentName)"
+  desc: "Builds an instance of OpenAIClient class configured to use the specified agent's endpoint. The base URL is set to `{endpoint}/agents/{agentName}/endpoint/protocols/openai`."
+  returns:
+    description: "an instance of OpenAIClient"
+    type: "<xref href=\"com.openai.client.OpenAIClient?alt=com.openai.client.OpenAIClient&text=OpenAIClient\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.projects.AIProjectClientBuilder.buildConnectionsAsyncClient()"
   fullName: "com.azure.ai.projects.AIProjectClientBuilder.buildConnectionsAsyncClient()"
   name: "buildConnectionsAsyncClient()"
@@ -206,9 +234,9 @@ methods:
   fullName: "com.azure.ai.projects.AIProjectClientBuilder.buildOpenAIAsyncClient()"
   name: "buildOpenAIAsyncClient()"
   nameWithType: "AIProjectClientBuilder.buildOpenAIAsyncClient()"
-  summary: "Builds an instance of Open<wbr>AIAsync<wbr>Client class with a default setup for OpenAI"
+  summary: "Builds an instance of Open<wbr>AIAsync<wbr>Client class with a default setup for OpenAI."
   syntax: "public OpenAIClientAsync buildOpenAIAsyncClient()"
-  desc: "Builds an instance of OpenAIAsyncClient class with a default setup for OpenAI"
+  desc: "Builds an instance of OpenAIAsyncClient class with a default setup for OpenAI. The base URL is set to `{endpoint}/openai/v1`."
   returns:
     description: "an instance of OpenAIAsyncClient"
     type: "<xref href=\"com.openai.client.OpenAIClientAsync?alt=com.openai.client.OpenAIClientAsync&text=OpenAIClientAsync\" data-throw-if-not-resolved=\"False\" />"
@@ -216,9 +244,9 @@ methods:
   fullName: "com.azure.ai.projects.AIProjectClientBuilder.buildOpenAIClient()"
   name: "buildOpenAIClient()"
   nameWithType: "AIProjectClientBuilder.buildOpenAIClient()"
-  summary: "Builds an instance of Open<wbr>AIClient class with a default setup for OpenAI"
+  summary: "Builds an instance of Open<wbr>AIClient class with a default setup for OpenAI."
   syntax: "public OpenAIClient buildOpenAIClient()"
-  desc: "Builds an instance of OpenAIClient class with a default setup for OpenAI"
+  desc: "Builds an instance of OpenAIClient class with a default setup for OpenAI. The base URL is set to `{endpoint}/openai/v1`."
   returns:
     description: "an instance of OpenAIClient"
     type: "<xref href=\"com.openai.client.OpenAIClient?alt=com.openai.client.OpenAIClient&text=OpenAIClient\" data-throw-if-not-resolved=\"False\" />"
@@ -262,6 +290,26 @@ methods:
   returns:
     description: "an instance of SchedulesClient."
     type: "<xref href=\"com.azure.ai.projects.SchedulesClient?alt=com.azure.ai.projects.SchedulesClient&text=SchedulesClient\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.AIProjectClientBuilder.buildSkillsAsyncClient()"
+  fullName: "com.azure.ai.projects.AIProjectClientBuilder.buildSkillsAsyncClient()"
+  name: "buildSkillsAsyncClient()"
+  nameWithType: "AIProjectClientBuilder.buildSkillsAsyncClient()"
+  summary: "Builds an instance of Skills<wbr>Async<wbr>Client class."
+  syntax: "public SkillsAsyncClient buildSkillsAsyncClient()"
+  desc: "Builds an instance of SkillsAsyncClient class."
+  returns:
+    description: "an instance of SkillsAsyncClient."
+    type: "<xref href=\"com.azure.ai.projects.SkillsAsyncClient?alt=com.azure.ai.projects.SkillsAsyncClient&text=SkillsAsyncClient\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.AIProjectClientBuilder.buildSkillsClient()"
+  fullName: "com.azure.ai.projects.AIProjectClientBuilder.buildSkillsClient()"
+  name: "buildSkillsClient()"
+  nameWithType: "AIProjectClientBuilder.buildSkillsClient()"
+  summary: "Builds an instance of Skills<wbr>Client class."
+  syntax: "public SkillsClient buildSkillsClient()"
+  desc: "Builds an instance of SkillsClient class."
+  returns:
+    description: "an instance of SkillsClient."
+    type: "<xref href=\"com.azure.ai.projects.SkillsClient?alt=com.azure.ai.projects.SkillsClient&text=SkillsClient\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.projects.AIProjectClientBuilder.clientOptions(com.azure.core.util.ClientOptions)"
   fullName: "com.azure.ai.projects.AIProjectClientBuilder.clientOptions(ClientOptions clientOptions)"
   name: "clientOptions(ClientOptions clientOptions)"
@@ -395,4 +443,4 @@ implements:
 - "<xref href=\"com.azure.core.client.traits.TokenCredentialTrait?alt=com.azure.core.client.traits.TokenCredentialTrait&text=TokenCredentialTrait\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.projects.AIProjectClientBuilder?alt=com.azure.ai.projects.AIProjectClientBuilder&text=AIProjectClientBuilder\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.ai.projects"
-artifact: com.azure:azure-ai-projects:2.0.0-beta.3
+artifact: com.azure:azure-ai-projects:2.1.0-beta.1

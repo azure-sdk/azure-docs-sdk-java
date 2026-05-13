@@ -1,0 +1,118 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.dataprotection.models.BackupSchedule"
+fullName: "com.azure.resourcemanager.dataprotection.models.BackupSchedule"
+name: "BackupSchedule"
+nameWithType: "BackupSchedule"
+summary: "Schedule for backup."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **BackupSchedule**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.dataprotection.models.BackupSchedule?alt=com.azure.resourcemanager.dataprotection.models.BackupSchedule&text=BackupSchedule\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.resourcemanager.dataprotection.models.BackupSchedule.BackupSchedule()"
+  fullName: "com.azure.resourcemanager.dataprotection.models.BackupSchedule.BackupSchedule()"
+  name: "BackupSchedule()"
+  nameWithType: "BackupSchedule.BackupSchedule()"
+  summary: "Creates an instance of Backup<wbr>Schedule class."
+  syntax: "public BackupSchedule()"
+  desc: "Creates an instance of BackupSchedule class."
+methods:
+- uid: "com.azure.resourcemanager.dataprotection.models.BackupSchedule.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.dataprotection.models.BackupSchedule.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "BackupSchedule.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Backup<wbr>Schedule from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static BackupSchedule fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of BackupSchedule from the JsonReader."
+  returns:
+    description: "An instance of BackupSchedule if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.dataprotection.models.BackupSchedule?alt=com.azure.resourcemanager.dataprotection.models.BackupSchedule&text=BackupSchedule\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.dataprotection.models.BackupSchedule.repeatingTimeIntervals()"
+  fullName: "com.azure.resourcemanager.dataprotection.models.BackupSchedule.repeatingTimeIntervals()"
+  name: "repeatingTimeIntervals()"
+  nameWithType: "BackupSchedule.repeatingTimeIntervals()"
+  summary: "Get the repeating<wbr>Time<wbr>Intervals property: Repeating time intervals that define the backup schedule."
+  syntax: "public List<String> repeatingTimeIntervals()"
+  desc: "Get the repeatingTimeIntervals property: Repeating time intervals that define the backup schedule. Each value must follow the format: \\`R/YYYY-MM-DDThh:mm:ss\\[.fff\\]\\[Z|(+/-)hh:mm\\]/Duration\\` Only the exact formats listed below are supported. Other ISO 8601 variations are not accepted. Supported time formats: - \\`Thh:mm:ss.fff\\` (with milliseconds) - \\`Thh:mm:ss\\` (with seconds) - \\`Thh:mm\\` (hours and minutes only) A timezone indicator (\\`Z\\`, \\`+hh:mm\\`, or \\`-hh:mm\\`) may be appended to any of the above. Unsupported formats include compact notation such as \\`T1430\\`, \\`T143045\\`, or \\`T14.5\\`. Examples: - \\`R/2023-10-15T14:30:00Z/P1W\\` - \\`R/2023-10-15T14:30:45.123+05:30/P1D\\` - \\`R/2023-10-15T14:30Z/P1D\\`."
+  returns:
+    description: "the repeatingTimeIntervals value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+- uid: "com.azure.resourcemanager.dataprotection.models.BackupSchedule.timeZone()"
+  fullName: "com.azure.resourcemanager.dataprotection.models.BackupSchedule.timeZone()"
+  name: "timeZone()"
+  nameWithType: "BackupSchedule.timeZone()"
+  summary: "Get the time<wbr>Zone property: Time Zone for a schedule."
+  syntax: "public String timeZone()"
+  desc: "Get the timeZone property: Time Zone for a schedule. Supported timezone indicators include: - 'Z' for UTC - '+00:00' - '+05:30' - '-08:00' Examples: - 2023-10-15T14:30:45Z - 2023-10-15T14:30:45.123+05:30 - 2023-10-15T14:30-08:00."
+  returns:
+    description: "the timeZone value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.dataprotection.models.BackupSchedule.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.dataprotection.models.BackupSchedule.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "BackupSchedule.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.dataprotection.models.BackupSchedule.withRepeatingTimeIntervals(java.util.List<java.lang.String>)"
+  fullName: "com.azure.resourcemanager.dataprotection.models.BackupSchedule.withRepeatingTimeIntervals(List<String> repeatingTimeIntervals)"
+  name: "withRepeatingTimeIntervals(List<String> repeatingTimeIntervals)"
+  nameWithType: "BackupSchedule.withRepeatingTimeIntervals(List<String> repeatingTimeIntervals)"
+  summary: "Set the repeating<wbr>Time<wbr>Intervals property: Repeating time intervals that define the backup schedule."
+  parameters:
+  - description: "the repeatingTimeIntervals value to set."
+    name: "repeatingTimeIntervals"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+  syntax: "public BackupSchedule withRepeatingTimeIntervals(List<String> repeatingTimeIntervals)"
+  desc: "Set the repeatingTimeIntervals property: Repeating time intervals that define the backup schedule. Each value must follow the format: \\`R/YYYY-MM-DDThh:mm:ss\\[.fff\\]\\[Z|(+/-)hh:mm\\]/Duration\\` Only the exact formats listed below are supported. Other ISO 8601 variations are not accepted. Supported time formats: - \\`Thh:mm:ss.fff\\` (with milliseconds) - \\`Thh:mm:ss\\` (with seconds) - \\`Thh:mm\\` (hours and minutes only) A timezone indicator (\\`Z\\`, \\`+hh:mm\\`, or \\`-hh:mm\\`) may be appended to any of the above. Unsupported formats include compact notation such as \\`T1430\\`, \\`T143045\\`, or \\`T14.5\\`. Examples: - \\`R/2023-10-15T14:30:00Z/P1W\\` - \\`R/2023-10-15T14:30:45.123+05:30/P1D\\` - \\`R/2023-10-15T14:30Z/P1D\\`."
+  returns:
+    description: "the BackupSchedule object itself."
+    type: "<xref href=\"com.azure.resourcemanager.dataprotection.models.BackupSchedule?alt=com.azure.resourcemanager.dataprotection.models.BackupSchedule&text=BackupSchedule\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.dataprotection.models.BackupSchedule.withTimeZone(java.lang.String)"
+  fullName: "com.azure.resourcemanager.dataprotection.models.BackupSchedule.withTimeZone(String timeZone)"
+  name: "withTimeZone(String timeZone)"
+  nameWithType: "BackupSchedule.withTimeZone(String timeZone)"
+  summary: "Set the time<wbr>Zone property: Time Zone for a schedule."
+  parameters:
+  - description: "the timeZone value to set."
+    name: "timeZone"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public BackupSchedule withTimeZone(String timeZone)"
+  desc: "Set the timeZone property: Time Zone for a schedule. Supported timezone indicators include: - 'Z' for UTC - '+00:00' - '+05:30' - '-08:00' Examples: - 2023-10-15T14:30:45Z - 2023-10-15T14:30:45.123+05:30 - 2023-10-15T14:30-08:00."
+  returns:
+    description: "the BackupSchedule object itself."
+    type: "<xref href=\"com.azure.resourcemanager.dataprotection.models.BackupSchedule?alt=com.azure.resourcemanager.dataprotection.models.BackupSchedule&text=BackupSchedule\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Schedule for backup."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.dataprotection.models.BackupSchedule?alt=com.azure.resourcemanager.dataprotection.models.BackupSchedule&text=BackupSchedule\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.dataprotection.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-dataprotection:1.6.0-beta.1
