@@ -1,17 +1,17 @@
 ---
 title: Azure Resource Manager Security client library for Java
 keywords: Azure, java, SDK, API, azure-resourcemanager-security, security
-ms.date: 12/23/2024
+ms.date: 05/17/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: security
 ---
-# Azure Resource Manager Security client library for Java - version 1.0.0-beta.8 
+# Azure Resource Manager Security client library for Java - version 1.1.0-beta.1 
 
 
 Azure Resource Manager Security client library for Java.
 
-This package contains Microsoft Azure SDK for Security Management SDK. API spec for Microsoft.Security (Azure Security Center) resource provider. Package tag package-composite-v3. For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
+This package contains Microsoft Azure SDK for Security Management SDK. API spec for Microsoft.Security (Azure Security Center) alerts resource provider. Package api-version AlertsAPI: 2022-01-01, AlertsSuppressionRulesAPI: 2019-01-01-preview, ApiCollectionsAPI: 2023-11-15, ApplicationsAPI: 2022-07-01-preview, AssessmentAPI: 2025-05-04, ATPSettingsAPI: 2019-01-01, AutomationsAPI: 2023-12-01-preview, ComplianceResultsAPI: 2017-08-01, DefenderForStorageAPI: 2025-09-01-preview, GovernanceAPI: 2022-01-01-preview, HealthReportsAPI: 2023-05-01-preview, IoTSecurityAPI: 2019-08-01, LegacySettingsAPI: 2017-08-01-preview, LocationsAPI: 2015-06-01-preview, MdeOnboardingAPI: 2021-10-01-preview, OperationsAPI: 2025-10-01-preview, PricingsAPI: 2024-01-01, PrivateLinksAPI: 2026-01-01, RegulatoryComplianceAPI: 2019-01-01-preview, SecureScoreAPI: 2020-01-01, SecurityConnectorsAPI: 2024-08-01-preview, SecurityConnectorsDevOpsAPI: 2025-11-01-preview, SecurityOperatorsAPI: 2023-01-01-preview, SecuritySolutionsAPI: 2020-01-01, SecurityStandardsAPI: 2024-08-01, SensitivitySettingsAPI: 2023-02-15-preview, ServerVulnerabilityAssessmentsSettingsAPI: 2023-05-01, SettingsAPI: 2022-05-01, SqlVulnerabilityAssessmentsAPI: 2026-04-01-preview, StandardsAPI: 2021-08-01-preview, SubAssessmentsAPI: 2019-01-01-preview, TasksAPI: 2015-06-01-preview. For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
 
 ## We'd love to hear your feedback
 
@@ -41,7 +41,7 @@ Various documentation is available to help you get started
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
     <artifactId>azure-resourcemanager-security</artifactId>
-    <version>1.0.0-beta.8</version>
+    <version>1.1.0-beta.1</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -61,7 +61,7 @@ Azure subscription ID can be configured via `AZURE_SUBSCRIPTION_ID` environment 
 Assuming the use of the `DefaultAzureCredential` credential class, the client can be authenticated using the following code:
 
 ```java
-AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
+AzureProfile profile = new AzureProfile(AzureCloud.AZURE_PUBLIC_CLOUD);
 TokenCredential credential = new DefaultAzureCredentialBuilder()
     .authorityHost(profile.getEnvironment().getActiveDirectoryEndpoint())
     .build();
@@ -69,7 +69,7 @@ SecurityManager manager = SecurityManager
     .authenticate(credential, profile);
 ```
 
-The sample code assumes global Azure. Please change `AzureEnvironment.AZURE` variable if otherwise.
+The sample code assumes global Azure. Please change the `AzureCloud.AZURE_PUBLIC_CLOUD` variable if otherwise.
 
 See [Authentication][authenticate] for more options.
 
@@ -79,7 +79,7 @@ See [API design][design] for general introduction on design and key concepts on 
 
 ## Examples
 
-[Code snippets and samples](https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-security_1.0.0-beta.8/sdk/security/azure-resourcemanager-security/SAMPLE.md)
+[Code snippets and samples](https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-security_1.1.0-beta.1/sdk/security/azure-resourcemanager-security/SAMPLE.md)
 
 
 ## Troubleshooting
@@ -101,14 +101,12 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: https://learn.microsoft.com/azure/developer/java/fundamentals/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-security_1.0.0-beta.8/sdk/identity/azure-identity
-[azure_identity_credentials]: https://github.com/Azure/azure-sdk-for-java/tree/azure-resourcemanager-security_1.0.0-beta.8/sdk/identity/azure-identity#credentials
-[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-security_1.0.0-beta.8/sdk/core/azure-core-http-netty
-[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-security_1.0.0-beta.8/sdk/resourcemanager/docs/AUTH.md
-[design]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-security_1.0.0-beta.8/sdk/resourcemanager/docs/DESIGN.md
-[cg]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-security_1.0.0-beta.8/CONTRIBUTING.md
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-security_1.1.0-beta.1/sdk/identity/azure-identity
+[azure_identity_credentials]: https://github.com/Azure/azure-sdk-for-java/tree/com.azure.resourcemanager+azure-resourcemanager-security_1.1.0-beta.1/sdk/identity/azure-identity#credentials
+[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-security_1.1.0-beta.1/sdk/core/azure-core-http-netty
+[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-security_1.1.0-beta.1/sdk/resourcemanager/docs/AUTH.md
+[design]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-security_1.1.0-beta.1/sdk/resourcemanager/docs/DESIGN.md
+[cg]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-security_1.1.0-beta.1/CONTRIBUTING.md
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
-
-
 
