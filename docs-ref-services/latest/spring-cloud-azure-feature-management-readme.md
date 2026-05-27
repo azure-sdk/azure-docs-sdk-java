@@ -1,7 +1,7 @@
 ---
 title: 
 keywords: Azure, java, SDK, API, spring-cloud-azure-feature-management, spring
-ms.date: 04/30/2026
+ms.date: 05/27/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: spring
