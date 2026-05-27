@@ -1,7 +1,7 @@
 ---
 title: Azure Grafana SDK for Java
 description: Reference for Azure Grafana SDK for Java
-ms.date: 05/26/2026
+ms.date: 05/27/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: grafana
