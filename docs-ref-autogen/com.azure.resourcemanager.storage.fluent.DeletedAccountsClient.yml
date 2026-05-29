@@ -17,7 +17,7 @@ methods:
   - description: "Name of the deleted storage account."
     name: "deletedAccountName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The location of the deleted storage account."
+  - description: "The name of the Azure region."
     name: "location"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract DeletedAccountInner get(String deletedAccountName, String location)"
@@ -36,7 +36,7 @@ methods:
   - description: "Name of the deleted storage account."
     name: "deletedAccountName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The location of the deleted storage account."
+  - description: "The name of the Azure region."
     name: "location"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract Mono<DeletedAccountInner> getAsync(String deletedAccountName, String location)"
@@ -55,7 +55,7 @@ methods:
   - description: "Name of the deleted storage account."
     name: "deletedAccountName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The location of the deleted storage account."
+  - description: "The name of the Azure region."
     name: "location"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
@@ -77,7 +77,7 @@ methods:
   - description: "Name of the deleted storage account."
     name: "deletedAccountName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The location of the deleted storage account."
+  - description: "The name of the Azure region."
     name: "location"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract Mono<Response<DeletedAccountInner>> getWithResponseAsync(String deletedAccountName, String location)"
@@ -95,7 +95,7 @@ methods:
   syntax: "public abstract PagedIterable<DeletedAccountInner> list()"
   desc: "Lists deleted accounts under the subscription."
   returns:
-    description: "the response from the List Deleted Accounts operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the response of a DeletedAccount list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.storage.fluent.models.DeletedAccountInner?alt=com.azure.resourcemanager.storage.fluent.models.DeletedAccountInner&text=DeletedAccountInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.storage.fluent.DeletedAccountsClient.list(com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.storage.fluent.DeletedAccountsClient.list(Context context)"
@@ -111,7 +111,7 @@ methods:
   syntax: "public abstract PagedIterable<DeletedAccountInner> list(Context context)"
   desc: "Lists deleted accounts under the subscription."
   returns:
-    description: "the response from the List Deleted Accounts operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the response of a DeletedAccount list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.storage.fluent.models.DeletedAccountInner?alt=com.azure.resourcemanager.storage.fluent.models.DeletedAccountInner&text=DeletedAccountInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.storage.fluent.DeletedAccountsClient.listAsync()"
   fullName: "com.azure.resourcemanager.storage.fluent.DeletedAccountsClient.listAsync()"
@@ -123,10 +123,10 @@ methods:
   syntax: "public abstract PagedFlux<DeletedAccountInner> listAsync()"
   desc: "Lists deleted accounts under the subscription."
   returns:
-    description: "the response from the List Deleted Accounts operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
+    description: "the response of a DeletedAccount list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.storage.fluent.models.DeletedAccountInner?alt=com.azure.resourcemanager.storage.fluent.models.DeletedAccountInner&text=DeletedAccountInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 type: "interface"
 desc: "An instance of this class provides access to all the operations defined in DeletedAccountsClient."
 metadata: {}
 package: "com.azure.resourcemanager.storage.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-storage:2.55.4
+artifact: com.azure.resourcemanager:azure-resourcemanager-storage:2.56.0

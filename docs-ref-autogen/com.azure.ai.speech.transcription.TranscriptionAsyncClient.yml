@@ -1,0 +1,60 @@
+### YamlMime:JavaType
+uid: "com.azure.ai.speech.transcription.TranscriptionAsyncClient"
+fullName: "com.azure.ai.speech.transcription.TranscriptionAsyncClient"
+name: "TranscriptionAsyncClient"
+nameWithType: "TranscriptionAsyncClient"
+summary: "Initializes a new instance of the asynchronous Transcription<wbr>Async<wbr>Client type."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **TranscriptionAsyncClient**"
+methods:
+- uid: "com.azure.ai.speech.transcription.TranscriptionAsyncClient.transcribe(com.azure.ai.speech.transcription.models.TranscriptionOptions)"
+  fullName: "com.azure.ai.speech.transcription.TranscriptionAsyncClient.transcribe(TranscriptionOptions options)"
+  name: "transcribe(TranscriptionOptions options)"
+  nameWithType: "TranscriptionAsyncClient.transcribe(TranscriptionOptions options)"
+  summary: "Transcribes the provided audio stream with the specified options."
+  parameters:
+  - description: "the transcription options including audio file details or audio URL"
+    name: "options"
+    type: "<xref href=\"com.azure.ai.speech.transcription.models.TranscriptionOptions?alt=com.azure.ai.speech.transcription.models.TranscriptionOptions&text=TranscriptionOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public Mono<TranscriptionResult> transcribe(TranscriptionOptions options)"
+  desc: "Transcribes the provided audio stream with the specified options.\n\n**Sample**\n\n```java\nclient.transcribe(new TranscriptionOptions(\"https://example.com/audio.wav\"))\n     .subscribe(result -> System.out.println(result.getCombinedPhrases().get(0).getText()));\n```"
+  returns:
+    description: "the result of the transcribe operation on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.ai.speech.transcription.models.TranscriptionResult?alt=com.azure.ai.speech.transcription.models.TranscriptionResult&text=TranscriptionResult\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.ai.speech.transcription.TranscriptionAsyncClient.transcribeWithResponse(com.azure.ai.speech.transcription.models.TranscriptionOptions,com.azure.core.http.rest.RequestOptions)"
+  fullName: "com.azure.ai.speech.transcription.TranscriptionAsyncClient.transcribeWithResponse(TranscriptionOptions options, RequestOptions requestOptions)"
+  name: "transcribeWithResponse(TranscriptionOptions options, RequestOptions requestOptions)"
+  nameWithType: "TranscriptionAsyncClient.transcribeWithResponse(TranscriptionOptions options, RequestOptions requestOptions)"
+  summary: "Transcribes the provided audio stream with the specified options and returns the full HTTP response, useful for inspecting status code and headers (for example the `x-ms-request-id` header used in support escalations)."
+  parameters:
+  - description: "the transcription options including audio file details or audio URL"
+    name: "options"
+    type: "<xref href=\"com.azure.ai.speech.transcription.models.TranscriptionOptions?alt=com.azure.ai.speech.transcription.models.TranscriptionOptions&text=TranscriptionOptions\" data-throw-if-not-resolved=\"False\" />"
+  - description: "the options to configure the HTTP request before HTTP client sends it"
+    name: "requestOptions"
+    type: "<xref href=\"com.azure.core.http.rest.RequestOptions?alt=com.azure.core.http.rest.RequestOptions&text=RequestOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public Mono<Response<TranscriptionResult>> transcribeWithResponse(TranscriptionOptions options, RequestOptions requestOptions)"
+  desc: "Transcribes the provided audio stream with the specified options and returns the full HTTP response, useful for inspecting status code and headers (for example the `x-ms-request-id` header used in support escalations).\n\n**Sample**\n\n```java\nclient.transcribeWithResponse(new TranscriptionOptions(\"https://example.com/audio.wav\"), new RequestOptions())\n     .subscribe(response -> System.out.println(\"Status: \" + response.getStatusCode()));\n```"
+  returns:
+    description: "the response containing the result of the transcribe operation on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.speech.transcription.models.TranscriptionResult?alt=com.azure.ai.speech.transcription.models.TranscriptionResult&text=TranscriptionResult\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+type: "class"
+desc: "Initializes a new instance of the asynchronous TranscriptionAsyncClient type.\n\nConstruct an instance using the <xref uid=\"com.azure.ai.speech.transcription.TranscriptionClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"TranscriptionClientBuilder\"></xref>:\n\n```java\nTranscriptionAsyncClient client\n     = new TranscriptionClientBuilder().endpoint(\"https://{resource}.cognitiveservices.azure.com/\")\n         .credential(new KeyCredential(\"{api-key}\"))\n         .buildAsyncClient();\n```"
+metadata: {}
+package: "com.azure.ai.speech.transcription"
+artifact: com.azure:azure-ai-speech-transcription:1.0.0

@@ -119,6 +119,16 @@ methods:
   returns:
     description: "An instance of KubeletConfig if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.KubeletConfig?alt=com.azure.resourcemanager.containerservice.models.KubeletConfig&text=KubeletConfig\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservice.models.KubeletConfig.hardEvictionThreshold()"
+  fullName: "com.azure.resourcemanager.containerservice.models.KubeletConfig.hardEvictionThreshold()"
+  name: "hardEvictionThreshold()"
+  nameWithType: "KubeletConfig.hardEvictionThreshold()"
+  summary: "Get the hard<wbr>Eviction<wbr>Threshold property: Hard eviction thresholds for kubelet."
+  syntax: "public HardEvictionThreshold hardEvictionThreshold()"
+  desc: "Get the hardEvictionThreshold property: Hard eviction thresholds for kubelet. When a threshold is not set, the system default is used. See \\[AKS node resource reservations\\](https://aka.ms/aks/nodereservations) for details on computed defaults. Only applicable for Linux nodepools."
+  returns:
+    description: "the hardEvictionThreshold value."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.HardEvictionThreshold?alt=com.azure.resourcemanager.containerservice.models.HardEvictionThreshold&text=HardEvictionThreshold\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerservice.models.KubeletConfig.imageGcHighThreshold()"
   fullName: "com.azure.resourcemanager.containerservice.models.KubeletConfig.imageGcHighThreshold()"
   name: "imageGcHighThreshold()"
@@ -139,6 +149,16 @@ methods:
   returns:
     description: "the imageGcLowThreshold value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+- uid: "com.azure.resourcemanager.containerservice.models.KubeletConfig.kubeReserved()"
+  fullName: "com.azure.resourcemanager.containerservice.models.KubeletConfig.kubeReserved()"
+  name: "kubeReserved()"
+  nameWithType: "KubeletConfig.kubeReserved()"
+  summary: "Get the kube<wbr>Reserved property: Kube-reserved values for kubelet."
+  syntax: "public KubeReserved kubeReserved()"
+  desc: "Get the kubeReserved property: Kube-reserved values for kubelet. When a value is not set, the system-computed default based on VM size is used. See \\[AKS node resource reservations\\](https://aka.ms/aks/nodereservations) for details on computed defaults. Only applicable for Linux nodepools."
+  returns:
+    description: "the kubeReserved value."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.KubeReserved?alt=com.azure.resourcemanager.containerservice.models.KubeReserved&text=KubeReserved\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerservice.models.KubeletConfig.podMaxPids()"
   fullName: "com.azure.resourcemanager.containerservice.models.KubeletConfig.podMaxPids()"
   name: "podMaxPids()"
@@ -286,6 +306,20 @@ methods:
   returns:
     description: "the KubeletConfig object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.KubeletConfig?alt=com.azure.resourcemanager.containerservice.models.KubeletConfig&text=KubeletConfig\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservice.models.KubeletConfig.withHardEvictionThreshold(com.azure.resourcemanager.containerservice.models.HardEvictionThreshold)"
+  fullName: "com.azure.resourcemanager.containerservice.models.KubeletConfig.withHardEvictionThreshold(HardEvictionThreshold hardEvictionThreshold)"
+  name: "withHardEvictionThreshold(HardEvictionThreshold hardEvictionThreshold)"
+  nameWithType: "KubeletConfig.withHardEvictionThreshold(HardEvictionThreshold hardEvictionThreshold)"
+  summary: "Set the hard<wbr>Eviction<wbr>Threshold property: Hard eviction thresholds for kubelet."
+  parameters:
+  - description: "the hardEvictionThreshold value to set."
+    name: "hardEvictionThreshold"
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.HardEvictionThreshold?alt=com.azure.resourcemanager.containerservice.models.HardEvictionThreshold&text=HardEvictionThreshold\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public KubeletConfig withHardEvictionThreshold(HardEvictionThreshold hardEvictionThreshold)"
+  desc: "Set the hardEvictionThreshold property: Hard eviction thresholds for kubelet. When a threshold is not set, the system default is used. See \\[AKS node resource reservations\\](https://aka.ms/aks/nodereservations) for details on computed defaults. Only applicable for Linux nodepools."
+  returns:
+    description: "the KubeletConfig object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.KubeletConfig?alt=com.azure.resourcemanager.containerservice.models.KubeletConfig&text=KubeletConfig\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerservice.models.KubeletConfig.withImageGcHighThreshold(java.lang.Integer)"
   fullName: "com.azure.resourcemanager.containerservice.models.KubeletConfig.withImageGcHighThreshold(Integer imageGcHighThreshold)"
   name: "withImageGcHighThreshold(Integer imageGcHighThreshold)"
@@ -311,6 +345,20 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
   syntax: "public KubeletConfig withImageGcLowThreshold(Integer imageGcLowThreshold)"
   desc: "Set the imageGcLowThreshold property: The percent of disk usage before which image garbage collection is never run. This cannot be set higher than imageGcHighThreshold. The default is 80%."
+  returns:
+    description: "the KubeletConfig object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.KubeletConfig?alt=com.azure.resourcemanager.containerservice.models.KubeletConfig&text=KubeletConfig\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservice.models.KubeletConfig.withKubeReserved(com.azure.resourcemanager.containerservice.models.KubeReserved)"
+  fullName: "com.azure.resourcemanager.containerservice.models.KubeletConfig.withKubeReserved(KubeReserved kubeReserved)"
+  name: "withKubeReserved(KubeReserved kubeReserved)"
+  nameWithType: "KubeletConfig.withKubeReserved(KubeReserved kubeReserved)"
+  summary: "Set the kube<wbr>Reserved property: Kube-reserved values for kubelet."
+  parameters:
+  - description: "the kubeReserved value to set."
+    name: "kubeReserved"
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.KubeReserved?alt=com.azure.resourcemanager.containerservice.models.KubeReserved&text=KubeReserved\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public KubeletConfig withKubeReserved(KubeReserved kubeReserved)"
+  desc: "Set the kubeReserved property: Kube-reserved values for kubelet. When a value is not set, the system-computed default based on VM size is used. See \\[AKS node resource reservations\\](https://aka.ms/aks/nodereservations) for details on computed defaults. Only applicable for Linux nodepools."
   returns:
     description: "the KubeletConfig object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.KubeletConfig?alt=com.azure.resourcemanager.containerservice.models.KubeletConfig&text=KubeletConfig\" data-throw-if-not-resolved=\"False\" />"
@@ -362,4 +410,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservice.models.KubeletConfig?alt=com.azure.resourcemanager.containerservice.models.KubeletConfig&text=KubeletConfig\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.59.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.61.0-beta.1

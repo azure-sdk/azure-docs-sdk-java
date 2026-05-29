@@ -90,7 +90,7 @@ methods:
   modifiers:
   - "abstract"
   syntax: "public abstract MalwareScan startMalwareScan()"
-  desc: "Initiate a Defender for Storage malware scan for the specified storage account."
+  desc: "Initiate a Defender for Storage malware scan for the specified storage account. Blobs and Files will be scanned for malware."
   returns:
     description: "describes the state of a malware scan operation."
     type: "<xref href=\"com.azure.resourcemanager.security.models.MalwareScan?alt=com.azure.resourcemanager.security.models.MalwareScan&text=MalwareScan\" data-throw-if-not-resolved=\"False\" />"
@@ -106,10 +106,22 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<MalwareScan> startMalwareScanWithResponse(Context context)"
-  desc: "Initiate a Defender for Storage malware scan for the specified storage account."
+  desc: "Initiate a Defender for Storage malware scan for the specified storage account. Blobs and Files will be scanned for malware."
   returns:
     description: "describes the state of a malware scan operation along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.security.models.MalwareScan?alt=com.azure.resourcemanager.security.models.MalwareScan&text=MalwareScan\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.security.models.DefenderForStorageSetting.systemData()"
+  fullName: "com.azure.resourcemanager.security.models.DefenderForStorageSetting.systemData()"
+  name: "systemData()"
+  nameWithType: "DefenderForStorageSetting.systemData()"
+  summary: "Gets the system<wbr>Data property: Azure Resource Manager metadata containing created<wbr>By and modified<wbr>By information."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract SystemData systemData()"
+  desc: "Gets the systemData property: Azure Resource Manager metadata containing createdBy and modifiedBy information."
+  returns:
+    description: "the systemData value."
+    type: "<xref href=\"com.azure.core.management.SystemData?alt=com.azure.core.management.SystemData&text=SystemData\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.security.models.DefenderForStorageSetting.type()"
   fullName: "com.azure.resourcemanager.security.models.DefenderForStorageSetting.type()"
   name: "type()"
@@ -126,4 +138,4 @@ type: "interface"
 desc: "An immutable client-side representation of DefenderForStorageSetting."
 metadata: {}
 package: "com.azure.resourcemanager.security.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-security:1.0.0-beta.8
+artifact: com.azure.resourcemanager:azure-resourcemanager-security:1.1.0-beta.1

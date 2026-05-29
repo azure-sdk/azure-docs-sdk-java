@@ -6,7 +6,15 @@ nameWithType: "StorageAccountMigrationInner"
 summary: "The parameters or status associated with an ongoing or enqueued storage account migration in order to update its current SKU or region."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"com.azure.core.management.ProxyResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
+- classRef: "<xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
+  methodsRef:
+  - "<xref href=\"com.azure.core.management.ProxyResource.fromJson(com.azure.json.JsonReader)?alt=com.azure.core.management.ProxyResource.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.ProxyResource.id()?alt=com.azure.core.management.ProxyResource.id&text=id\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.ProxyResource.name()?alt=com.azure.core.management.ProxyResource.name&text=name\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.ProxyResource.toJson(com.azure.json.JsonWriter)?alt=com.azure.core.management.ProxyResource.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.ProxyResource.type()?alt=com.azure.core.management.ProxyResource.type&text=type\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -20,7 +28,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **StorageAccountMigrationInner**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner?alt=com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner&text=StorageAccountMigrationInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+syntax: "public final class **StorageAccountMigrationInner**</br> extends <xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
 constructors:
 - uid: "com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner.StorageAccountMigrationInner()"
   fullName: "com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner.StorageAccountMigrationInner()"
@@ -53,9 +61,10 @@ methods:
   fullName: "com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner.id()"
   name: "id()"
   nameWithType: "StorageAccountMigrationInner.id()"
-  summary: "Get the id property: Migration Resource Id."
+  summary: "Get the id property: Fully qualified resource Id for the resource."
+  overridden: "com.azure.core.management.ProxyResource.id()"
   syntax: "public String id()"
-  desc: "Get the id property: Migration Resource Id."
+  desc: "Get the id property: Fully qualified resource Id for the resource."
   returns:
     description: "the id value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -93,12 +102,23 @@ methods:
   fullName: "com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner.name()"
   name: "name()"
   nameWithType: "StorageAccountMigrationInner.name()"
-  summary: "Get the name property: current value is 'default' for customer initiated migration."
+  summary: "Get the name property: The name of the resource."
+  overridden: "com.azure.core.management.ProxyResource.name()"
   syntax: "public String name()"
-  desc: "Get the name property: current value is 'default' for customer initiated migration."
+  desc: "Get the name property: The name of the resource."
   returns:
     description: "the name value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner.systemData()"
+  fullName: "com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner.systemData()"
+  name: "systemData()"
+  nameWithType: "StorageAccountMigrationInner.systemData()"
+  summary: "Get the system<wbr>Data property: Azure Resource Manager metadata containing created<wbr>By and modified<wbr>By information."
+  syntax: "public SystemData systemData()"
+  desc: "Get the systemData property: Azure Resource Manager metadata containing createdBy and modifiedBy information."
+  returns:
+    description: "the systemData value."
+    type: "<xref href=\"com.azure.core.management.SystemData?alt=com.azure.core.management.SystemData&text=SystemData\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner.targetSkuName()"
   fullName: "com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner.targetSkuName()"
   name: "targetSkuName()"
@@ -113,6 +133,7 @@ methods:
   fullName: "com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
   nameWithType: "StorageAccountMigrationInner.toJson(JsonWriter jsonWriter)"
+  overridden: "com.azure.core.management.ProxyResource.toJson(com.azure.json.JsonWriter)"
   parameters:
   - name: "jsonWriter"
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
@@ -125,9 +146,10 @@ methods:
   fullName: "com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner.type()"
   name: "type()"
   nameWithType: "StorageAccountMigrationInner.type()"
-  summary: "Get the type property: Srp<wbr>Account<wbr>Migration<wbr>Type in ARM contract which is 'account<wbr>Migrations'."
+  summary: "Get the type property: The type of the resource."
+  overridden: "com.azure.core.management.ProxyResource.type()"
   syntax: "public String type()"
-  desc: "Get the type property: SrpAccountMigrationType in ARM contract which is 'accountMigrations'."
+  desc: "Get the type property: The type of the resource."
   returns:
     description: "the type value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -138,20 +160,6 @@ methods:
   summary: "Validates the instance."
   syntax: "public void validate()"
   desc: "Validates the instance."
-- uid: "com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner.withName(java.lang.String)"
-  fullName: "com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner.withName(String name)"
-  name: "withName(String name)"
-  nameWithType: "StorageAccountMigrationInner.withName(String name)"
-  summary: "Set the name property: current value is 'default' for customer initiated migration."
-  parameters:
-  - description: "the name value to set."
-    name: "name"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public StorageAccountMigrationInner withName(String name)"
-  desc: "Set the name property: current value is 'default' for customer initiated migration."
-  returns:
-    description: "the StorageAccountMigrationInner object itself."
-    type: "<xref href=\"com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner?alt=com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner&text=StorageAccountMigrationInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner.withTargetSkuName(com.azure.resourcemanager.storage.models.SkuName)"
   fullName: "com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner.withTargetSkuName(SkuName targetSkuName)"
   name: "withTargetSkuName(SkuName targetSkuName)"
@@ -166,24 +174,8 @@ methods:
   returns:
     description: "the StorageAccountMigrationInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner?alt=com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner&text=StorageAccountMigrationInner\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner.withType(java.lang.String)"
-  fullName: "com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner.withType(String type)"
-  name: "withType(String type)"
-  nameWithType: "StorageAccountMigrationInner.withType(String type)"
-  summary: "Set the type property: Srp<wbr>Account<wbr>Migration<wbr>Type in ARM contract which is 'account<wbr>Migrations'."
-  parameters:
-  - description: "the type value to set."
-    name: "type"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public StorageAccountMigrationInner withType(String type)"
-  desc: "Set the type property: SrpAccountMigrationType in ARM contract which is 'accountMigrations'."
-  returns:
-    description: "the StorageAccountMigrationInner object itself."
-    type: "<xref href=\"com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner?alt=com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner&text=StorageAccountMigrationInner\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "The parameters or status associated with an ongoing or enqueued storage account migration in order to update its current SKU or region."
-implements:
-- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner?alt=com.azure.resourcemanager.storage.fluent.models.StorageAccountMigrationInner&text=StorageAccountMigrationInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.storage.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-storage:2.55.4
+artifact: com.azure.resourcemanager:azure-resourcemanager-storage:2.56.0

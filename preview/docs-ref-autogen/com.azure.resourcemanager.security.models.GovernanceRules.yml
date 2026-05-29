@@ -30,7 +30,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the Governance rules. Valid scopes are: management group (format:\n 'providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n 'subscriptions/{subscriptionId}'), or security connector (format:\n 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/securityConnectors/{securityConnectorName})'."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The governance rule key - unique key for the standard governance rule (GUID)."
@@ -78,7 +78,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the Governance rules. Valid scopes are: management group (format:\n 'providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n 'subscriptions/{subscriptionId}'), or security connector (format:\n 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/securityConnectors/{securityConnectorName})'."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The governance rule key - unique key for the standard governance rule (GUID)."
@@ -94,7 +94,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the Governance rules. Valid scopes are: management group (format:\n 'providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n 'subscriptions/{subscriptionId}'), or security connector (format:\n 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/securityConnectors/{securityConnectorName})'."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The governance rule key - unique key for the standard governance rule (GUID)."
@@ -110,7 +110,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the Governance rules. Valid scopes are: management group (format:\n 'providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n 'subscriptions/{subscriptionId}'), or security connector (format:\n 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/securityConnectors/{securityConnectorName})'."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The governance rule key - unique key for the standard governance rule (GUID)."
@@ -132,7 +132,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the Governance rules. Valid scopes are: management group (format:\n 'providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n 'subscriptions/{subscriptionId}'), or security connector (format:\n 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/securityConnectors/{securityConnectorName})'."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The governance rule key - unique key for the standard governance rule (GUID)."
@@ -186,7 +186,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the Governance rules. Valid scopes are: management group (format:\n 'providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n 'subscriptions/{subscriptionId}'), or security connector (format:\n 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/securityConnectors/{securityConnectorName})'."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The governance rule key - unique key for the standard governance rule (GUID)."
@@ -208,7 +208,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the Governance rules. Valid scopes are: management group (format:\n 'providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n 'subscriptions/{subscriptionId}'), or security connector (format:\n 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/securityConnectors/{securityConnectorName})'."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<GovernanceRule> list(String scope)"
@@ -224,7 +224,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the Governance rules. Valid scopes are: management group (format:\n 'providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n 'subscriptions/{subscriptionId}'), or security connector (format:\n 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/securityConnectors/{securityConnectorName})'."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
@@ -243,20 +243,20 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the Governance rules. Valid scopes are: management group (format:\n 'providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n 'subscriptions/{subscriptionId}'), or security connector (format:\n 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/securityConnectors/{securityConnectorName})'."
+  - description: "The scope of the governance rule."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The governance rule key - unique key for the standard governance rule (GUID)."
+  - description: "The governance rule key."
     name: "ruleId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The governance rule long running operation unique key."
     name: "operationId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract OperationResultAutoGenerated operationResults(String scope, String ruleId, String operationId)"
+  syntax: "public abstract OperationResult operationResults(String scope, String ruleId, String operationId)"
   desc: "Get governance rules long run operation result for the requested scope by ruleId and operationId."
   returns:
     description: "governance rules long run operation result for the requested scope by ruleId and operationId."
-    type: "<xref href=\"com.azure.resourcemanager.security.models.OperationResultAutoGenerated?alt=com.azure.resourcemanager.security.models.OperationResultAutoGenerated&text=OperationResultAutoGenerated\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.resourcemanager.security.models.OperationResult?alt=com.azure.resourcemanager.security.models.OperationResult&text=OperationResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.security.models.GovernanceRules.operationResultsWithResponse(java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.security.models.GovernanceRules.operationResultsWithResponse(String scope, String ruleId, String operationId, Context context)"
   name: "operationResultsWithResponse(String scope, String ruleId, String operationId, Context context)"
@@ -265,10 +265,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the Governance rules. Valid scopes are: management group (format:\n 'providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n 'subscriptions/{subscriptionId}'), or security connector (format:\n 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/securityConnectors/{securityConnectorName})'."
+  - description: "The scope of the governance rule."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The governance rule key - unique key for the standard governance rule (GUID)."
+  - description: "The governance rule key."
     name: "ruleId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The governance rule long running operation unique key."
@@ -277,13 +277,13 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract Response<OperationResultAutoGenerated> operationResultsWithResponse(String scope, String ruleId, String operationId, Context context)"
+  syntax: "public abstract Response<OperationResult> operationResultsWithResponse(String scope, String ruleId, String operationId, Context context)"
   desc: "Get governance rules long run operation result for the requested scope by ruleId and operationId."
   returns:
     description: "governance rules long run operation result for the requested scope by ruleId and operationId."
-    type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.security.models.OperationResultAutoGenerated?alt=com.azure.resourcemanager.security.models.OperationResultAutoGenerated&text=OperationResultAutoGenerated\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.security.models.OperationResult?alt=com.azure.resourcemanager.security.models.OperationResult&text=OperationResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 type: "interface"
 desc: "Resource collection API of GovernanceRules."
 metadata: {}
 package: "com.azure.resourcemanager.security.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-security:1.0.0-beta.8
+artifact: com.azure.resourcemanager:azure-resourcemanager-security:1.1.0-beta.1

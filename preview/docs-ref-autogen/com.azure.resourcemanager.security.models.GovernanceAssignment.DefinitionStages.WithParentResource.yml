@@ -14,10 +14,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the Governance assignments. Valid scopes are: subscription (format:\n 'subscriptions/{subscriptionId}'), or security connector (format:\n 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Security/securityConnectors/{securityConnectorName})'."
+  - description: "The scope of the governance assignment."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The Assessment Key - A unique key for the assessment type."
+  - description: "The assessment key of the governance assignment."
     name: "assessmentName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract GovernanceAssignment.DefinitionStages.WithCreate withExistingAssessment(String scope, String assessmentName)"
@@ -29,4 +29,4 @@ type: "interface"
 desc: "The stage of the GovernanceAssignment definition allowing to specify parent resource."
 metadata: {}
 package: "com.azure.resourcemanager.security.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-security:1.0.0-beta.8
+artifact: com.azure.resourcemanager:azure-resourcemanager-security:1.1.0-beta.1

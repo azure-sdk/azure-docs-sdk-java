@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.security.models.ProvisioningState"
 fullName: "com.azure.resourcemanager.security.models.ProvisioningState"
 name: "ProvisioningState"
 nameWithType: "ProvisioningState"
-summary: "The security family provisioning State."
+summary: "The current provisioning state of the resource."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 - "<xref href=\"com.azure.core.util.ExpandableStringEnum?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
@@ -38,42 +38,90 @@ constructors:
   desc: "Creates a new instance of ProvisioningState value."
   hasDeprecatedTag: true
 fields:
+- uid: "com.azure.resourcemanager.security.models.ProvisioningState.CANCELED"
+  fullName: "com.azure.resourcemanager.security.models.ProvisioningState.CANCELED"
+  name: "CANCELED"
+  nameWithType: "ProvisioningState.CANCELED"
+  summary: "The operation was canceled before completion."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.resourcemanager.security.models.ProvisioningState?alt=com.azure.resourcemanager.security.models.ProvisioningState&text=ProvisioningState\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final ProvisioningState CANCELED"
+  desc: "The operation was canceled before completion."
+- uid: "com.azure.resourcemanager.security.models.ProvisioningState.CREATING"
+  fullName: "com.azure.resourcemanager.security.models.ProvisioningState.CREATING"
+  name: "CREATING"
+  nameWithType: "ProvisioningState.CREATING"
+  summary: "The resource is being created."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.resourcemanager.security.models.ProvisioningState?alt=com.azure.resourcemanager.security.models.ProvisioningState&text=ProvisioningState\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final ProvisioningState CREATING"
+  desc: "The resource is being created. This is a transitional state."
+- uid: "com.azure.resourcemanager.security.models.ProvisioningState.DELETING"
+  fullName: "com.azure.resourcemanager.security.models.ProvisioningState.DELETING"
+  name: "DELETING"
+  nameWithType: "ProvisioningState.DELETING"
+  summary: "The resource is being deleted."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.resourcemanager.security.models.ProvisioningState?alt=com.azure.resourcemanager.security.models.ProvisioningState&text=ProvisioningState\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final ProvisioningState DELETING"
+  desc: "The resource is being deleted. This is a transitional state."
 - uid: "com.azure.resourcemanager.security.models.ProvisioningState.FAILED"
   fullName: "com.azure.resourcemanager.security.models.ProvisioningState.FAILED"
   name: "FAILED"
   nameWithType: "ProvisioningState.FAILED"
-  summary: "Static value Failed for Provisioning<wbr>State."
+  summary: "The last operation on the resource failed."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.security.models.ProvisioningState?alt=com.azure.resourcemanager.security.models.ProvisioningState&text=ProvisioningState\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final ProvisioningState FAILED"
-  desc: "Static value Failed for ProvisioningState."
+  desc: "The last operation on the resource failed. Check the error details for more information."
+- uid: "com.azure.resourcemanager.security.models.ProvisioningState.IN_PROGRESS"
+  fullName: "com.azure.resourcemanager.security.models.ProvisioningState.IN_PROGRESS"
+  name: "IN_PROGRESS"
+  nameWithType: "ProvisioningState.IN_PROGRESS"
+  summary: "In<wbr>Progress."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.resourcemanager.security.models.ProvisioningState?alt=com.azure.resourcemanager.security.models.ProvisioningState&text=ProvisioningState\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final ProvisioningState IN_PROGRESS"
+  desc: "InProgress."
 - uid: "com.azure.resourcemanager.security.models.ProvisioningState.SUCCEEDED"
   fullName: "com.azure.resourcemanager.security.models.ProvisioningState.SUCCEEDED"
   name: "SUCCEEDED"
   nameWithType: "ProvisioningState.SUCCEEDED"
-  summary: "Static value Succeeded for Provisioning<wbr>State."
+  summary: "The resource has been successfully provisioned and is ready for use."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.security.models.ProvisioningState?alt=com.azure.resourcemanager.security.models.ProvisioningState&text=ProvisioningState\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final ProvisioningState SUCCEEDED"
-  desc: "Static value Succeeded for ProvisioningState."
+  desc: "The resource has been successfully provisioned and is ready for use."
 - uid: "com.azure.resourcemanager.security.models.ProvisioningState.UPDATING"
   fullName: "com.azure.resourcemanager.security.models.ProvisioningState.UPDATING"
   name: "UPDATING"
   nameWithType: "ProvisioningState.UPDATING"
-  summary: "Static value Updating for Provisioning<wbr>State."
+  summary: "The resource is being updated."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.security.models.ProvisioningState?alt=com.azure.resourcemanager.security.models.ProvisioningState&text=ProvisioningState\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final ProvisioningState UPDATING"
-  desc: "Static value Updating for ProvisioningState."
+  desc: "The resource is being updated. This is a transitional state."
 methods:
 - uid: "com.azure.resourcemanager.security.models.ProvisioningState.fromString(java.lang.String)"
   fullName: "com.azure.resourcemanager.security.models.ProvisioningState.fromString(String name)"
@@ -104,7 +152,7 @@ methods:
     description: "known ProvisioningState values."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html\">Collection</a>&lt;<xref href=\"com.azure.resourcemanager.security.models.ProvisioningState?alt=com.azure.resourcemanager.security.models.ProvisioningState&text=ProvisioningState\" data-throw-if-not-resolved=\"False\" />&gt;"
 type: "class"
-desc: "The security family provisioning State."
+desc: "The current provisioning state of the resource. Indicates the status of the last operation performed on the resource."
 metadata: {}
 package: "com.azure.resourcemanager.security.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-security:1.0.0-beta.8
+artifact: com.azure.resourcemanager:azure-resourcemanager-security:1.1.0-beta.1

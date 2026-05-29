@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.storage.models.AccessTier"
 fullName: "com.azure.resourcemanager.storage.models.AccessTier"
 name: "AccessTier"
 nameWithType: "AccessTier"
-summary: "Required for storage accounts where kind = Blob<wbr>Storage."
+summary: "The default access tier for block blobs in the storage account."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 - "<xref href=\"java.lang.Enum?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
@@ -55,6 +55,12 @@ fields:
   nameWithType: "AccessTier.PREMIUM"
   summary: "Enum value Premium."
   desc: "Enum value Premium."
+- uid: "com.azure.resourcemanager.storage.models.AccessTier.SMART"
+  fullName: "com.azure.resourcemanager.storage.models.AccessTier.SMART"
+  name: "SMART"
+  nameWithType: "AccessTier.SMART"
+  summary: "Enum value Smart."
+  desc: "Enum value Smart."
 methods:
 - uid: "com.azure.resourcemanager.storage.models.AccessTier.fromString(java.lang.String)"
   fullName: "com.azure.resourcemanager.storage.models.AccessTier.fromString(String value)"
@@ -101,7 +107,7 @@ methods:
   syntax: "public static AccessTier[] values()"
   returns:
     type: "<xref href=\"com.azure.resourcemanager.storage.models.AccessTier?alt=com.azure.resourcemanager.storage.models.AccessTier&text=AccessTier\" data-throw-if-not-resolved=\"False\" />[]"
-desc: "Required for storage accounts where kind = BlobStorage. The access tier is used for billing. The 'Premium' access tier is the default value for premium block blobs storage account type and it cannot be changed for the premium block blobs storage account type."
+desc: "The default access tier for block blobs in the storage account. Required for storage accounts where kind = BlobStorage. See more details in: https://learn.microsoft.com/azure/storage/blobs/access-tiers-overview."
 metadata: {}
 package: "com.azure.resourcemanager.storage.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-storage:2.55.4
+artifact: com.azure.resourcemanager:azure-resourcemanager-storage:2.56.0

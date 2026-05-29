@@ -14,10 +14,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The identifier of the resource."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "resourceId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The health report Key - Unique key for the health report type."
+  - description: "The health report key."
     name: "healthReportName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract HealthReportInner get(String resourceId, String healthReportName)"
@@ -33,10 +33,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The identifier of the resource."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "resourceId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The health report Key - Unique key for the health report type."
+  - description: "The health report key."
     name: "healthReportName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
@@ -55,7 +55,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope at which the operation is performed."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<HealthReportInner> list(String scope)"
@@ -71,7 +71,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope at which the operation is performed."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
@@ -86,4 +86,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in HealthReportsClient."
 metadata: {}
 package: "com.azure.resourcemanager.security.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-security:1.0.0-beta.8
+artifact: com.azure.resourcemanager:azure-resourcemanager-security:1.1.0-beta.1

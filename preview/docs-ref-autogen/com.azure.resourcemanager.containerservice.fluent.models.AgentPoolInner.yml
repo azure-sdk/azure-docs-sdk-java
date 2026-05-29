@@ -349,16 +349,6 @@ methods:
   returns:
     description: "the networkProfile value."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.AgentPoolNetworkProfile?alt=com.azure.resourcemanager.containerservice.models.AgentPoolNetworkProfile&text=AgentPoolNetworkProfile\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.nodeCustomizationProfile()"
-  fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.nodeCustomizationProfile()"
-  name: "nodeCustomizationProfile()"
-  nameWithType: "AgentPoolInner.nodeCustomizationProfile()"
-  summary: "Get the node<wbr>Customization<wbr>Profile property: Settings to determine the node customization used to provision nodes in a pool."
-  syntax: "public NodeCustomizationProfile nodeCustomizationProfile()"
-  desc: "Get the nodeCustomizationProfile property: Settings to determine the node customization used to provision nodes in a pool."
-  returns:
-    description: "the nodeCustomizationProfile value."
-    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.NodeCustomizationProfile?alt=com.azure.resourcemanager.containerservice.models.NodeCustomizationProfile&text=NodeCustomizationProfile\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.nodeImageVersion()"
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.nodeImageVersion()"
   name: "nodeImageVersion()"
@@ -489,6 +479,16 @@ methods:
   returns:
     description: "the powerState value."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.PowerState?alt=com.azure.resourcemanager.containerservice.models.PowerState&text=PowerState\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.preparedImageSpecificationProfile()"
+  fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.preparedImageSpecificationProfile()"
+  name: "preparedImageSpecificationProfile()"
+  nameWithType: "AgentPoolInner.preparedImageSpecificationProfile()"
+  summary: "Get the prepared<wbr>Image<wbr>Specification<wbr>Profile property: Settings to determine the prepared image specification used to provision nodes in a pool."
+  syntax: "public PreparedImageSpecificationProfile preparedImageSpecificationProfile()"
+  desc: "Get the preparedImageSpecificationProfile property: Settings to determine the prepared image specification used to provision nodes in a pool."
+  returns:
+    description: "the preparedImageSpecificationProfile value."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.PreparedImageSpecificationProfile?alt=com.azure.resourcemanager.containerservice.models.PreparedImageSpecificationProfile&text=PreparedImageSpecificationProfile\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.provisioningState()"
   fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.provisioningState()"
   name: "provisioningState()"
@@ -1060,17 +1060,17 @@ methods:
   returns:
     description: "the AgentPoolInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.withNodeCustomizationProfile(com.azure.resourcemanager.containerservice.models.NodeCustomizationProfile)"
-  fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.withNodeCustomizationProfile(NodeCustomizationProfile nodeCustomizationProfile)"
-  name: "withNodeCustomizationProfile(NodeCustomizationProfile nodeCustomizationProfile)"
-  nameWithType: "AgentPoolInner.withNodeCustomizationProfile(NodeCustomizationProfile nodeCustomizationProfile)"
-  summary: "Set the node<wbr>Customization<wbr>Profile property: Settings to determine the node customization used to provision nodes in a pool."
+- uid: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.withNodeImageVersion(java.lang.String)"
+  fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.withNodeImageVersion(String nodeImageVersion)"
+  name: "withNodeImageVersion(String nodeImageVersion)"
+  nameWithType: "AgentPoolInner.withNodeImageVersion(String nodeImageVersion)"
+  summary: "Set the node<wbr>Image<wbr>Version property: The version of node image."
   parameters:
-  - description: "the nodeCustomizationProfile value to set."
-    name: "nodeCustomizationProfile"
-    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.NodeCustomizationProfile?alt=com.azure.resourcemanager.containerservice.models.NodeCustomizationProfile&text=NodeCustomizationProfile\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public AgentPoolInner withNodeCustomizationProfile(NodeCustomizationProfile nodeCustomizationProfile)"
-  desc: "Set the nodeCustomizationProfile property: Settings to determine the node customization used to provision nodes in a pool."
+  - description: "the nodeImageVersion value to set."
+    name: "nodeImageVersion"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public AgentPoolInner withNodeImageVersion(String nodeImageVersion)"
+  desc: "Set the nodeImageVersion property: The version of node image."
   returns:
     description: "the AgentPoolInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
@@ -1239,6 +1239,20 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.PowerState?alt=com.azure.resourcemanager.containerservice.models.PowerState&text=PowerState\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public AgentPoolInner withPowerState(PowerState powerState)"
   desc: "Set the powerState property: Whether the Agent Pool is running or stopped. When an Agent Pool is first created it is initially Running. The Agent Pool can be stopped by setting this field to Stopped. A stopped Agent Pool stops all of its VMs and does not accrue billing charges. An Agent Pool can only be stopped if it is Running and provisioning state is Succeeded."
+  returns:
+    description: "the AgentPoolInner object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.withPreparedImageSpecificationProfile(com.azure.resourcemanager.containerservice.models.PreparedImageSpecificationProfile)"
+  fullName: "com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner.withPreparedImageSpecificationProfile(PreparedImageSpecificationProfile preparedImageSpecificationProfile)"
+  name: "withPreparedImageSpecificationProfile(PreparedImageSpecificationProfile preparedImageSpecificationProfile)"
+  nameWithType: "AgentPoolInner.withPreparedImageSpecificationProfile(PreparedImageSpecificationProfile preparedImageSpecificationProfile)"
+  summary: "Set the prepared<wbr>Image<wbr>Specification<wbr>Profile property: Settings to determine the prepared image specification used to provision nodes in a pool."
+  parameters:
+  - description: "the preparedImageSpecificationProfile value to set."
+    name: "preparedImageSpecificationProfile"
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.PreparedImageSpecificationProfile?alt=com.azure.resourcemanager.containerservice.models.PreparedImageSpecificationProfile&text=PreparedImageSpecificationProfile\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public AgentPoolInner withPreparedImageSpecificationProfile(PreparedImageSpecificationProfile preparedImageSpecificationProfile)"
+  desc: "Set the preparedImageSpecificationProfile property: Settings to determine the prepared image specification used to provision nodes in a pool."
   returns:
     description: "the AgentPoolInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.containerservice.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
@@ -1508,4 +1522,4 @@ type: "class"
 desc: "Agent Pool."
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.59.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.61.0-beta.1

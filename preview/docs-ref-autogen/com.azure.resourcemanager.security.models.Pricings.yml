@@ -14,14 +14,14 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The identifier of the resource, (format:\n 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName})."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scopeId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "name of the pricing configuration."
     name: "pricingName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract void deleteByResourceGroup(String scopeId, String pricingName)"
-  desc: "Deletes a provided Microsoft Defender for Cloud pricing configuration in a specific resource. Valid only for resource scope (Supported resources are: 'VirtualMachines, VMSS and ARC MachinesS')."
+  desc: "Deletes a provided Microsoft Defender for Cloud pricing configuration in a specific resource. Valid only for resource scope (Supported resources are: 'VirtualMachines, VMSS, ARC Machines, and Containers')."
 - uid: "com.azure.resourcemanager.security.models.Pricings.deleteByResourceGroupWithResponse(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.security.models.Pricings.deleteByResourceGroupWithResponse(String scopeId, String pricingName, Context context)"
   name: "deleteByResourceGroupWithResponse(String scopeId, String pricingName, Context context)"
@@ -30,7 +30,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The identifier of the resource, (format:\n 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName})."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scopeId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "name of the pricing configuration."
@@ -40,7 +40,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<Void> deleteByResourceGroupWithResponse(String scopeId, String pricingName, Context context)"
-  desc: "Deletes a provided Microsoft Defender for Cloud pricing configuration in a specific resource. Valid only for resource scope (Supported resources are: 'VirtualMachines, VMSS and ARC MachinesS')."
+  desc: "Deletes a provided Microsoft Defender for Cloud pricing configuration in a specific resource. Valid only for resource scope (Supported resources are: 'VirtualMachines, VMSS, ARC Machines, and Containers')."
   returns:
     description: "the <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
@@ -52,7 +52,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope id of the pricing. Valid scopes are: subscription (format:\n 'subscriptions/{subscriptionId}'), or a specific resource (format:\n 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName})\n - Supported resources are (VirtualMachines)."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scopeId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "name of the pricing configuration."
@@ -71,7 +71,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope id of the pricing. Valid scopes are: subscription (format:\n 'subscriptions/{subscriptionId}'), or a specific resource (format:\n 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName})\n - Supported resources are (VirtualMachines)."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scopeId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "name of the pricing configuration."
@@ -93,7 +93,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope id of the pricing. Valid scopes are: subscription (format:\n 'subscriptions/{subscriptionId}'), or a specific resource (format:\n 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName})\n - Supported resources are (VirtualMachines)."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scopeId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PricingList list(String scopeId)"
@@ -109,7 +109,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope id of the pricing. Valid scopes are: subscription (format:\n 'subscriptions/{subscriptionId}'), or a specific resource (format:\n 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName})\n - Supported resources are (VirtualMachines)."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scopeId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "OData filter. Optional."
@@ -131,7 +131,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope id of the pricing. Valid scopes are: subscription (format:\n 'subscriptions/{subscriptionId}'), or a specific resource (format:\n 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName})\n - Supported resources are (VirtualMachines)."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scopeId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "name of the pricing configuration."
@@ -153,7 +153,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope id of the pricing. Valid scopes are: subscription (format:\n 'subscriptions/{subscriptionId}'), or a specific resource (format:\n 'subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName})\n - Supported resources are (VirtualMachines)."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scopeId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "name of the pricing configuration."
@@ -174,4 +174,4 @@ type: "interface"
 desc: "Resource collection API of Pricings."
 metadata: {}
 package: "com.azure.resourcemanager.security.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-security:1.0.0-beta.8
+artifact: com.azure.resourcemanager:azure-resourcemanager-security:1.1.0-beta.1

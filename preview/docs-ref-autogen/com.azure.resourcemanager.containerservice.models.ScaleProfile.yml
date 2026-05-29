@@ -35,11 +35,11 @@ methods:
   name: "autoscale()"
   nameWithType: "ScaleProfile.autoscale()"
   summary: "Get the autoscale property: Specifications on how to auto-scale the Virtual<wbr>Machines agent pool within a predefined size range."
-  syntax: "public AutoScaleProfile autoscale()"
-  desc: "Get the autoscale property: Specifications on how to auto-scale the VirtualMachines agent pool within a predefined size range."
+  syntax: "public List<AutoScaleProfile> autoscale()"
+  desc: "Get the autoscale property: Specifications on how to auto-scale the VirtualMachines agent pool within a predefined size range. Each profile targets a specific VM SKU and is evaluated independently. Scaling decisions across profiles are governed by the cluster autoscaler expander, configurable via \\`ManagedCluster.properties.autoScalerProfile.expander\\`."
   returns:
     description: "the autoscale value."
-    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.AutoScaleProfile?alt=com.azure.resourcemanager.containerservice.models.AutoScaleProfile&text=AutoScaleProfile\" data-throw-if-not-resolved=\"False\" />"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.containerservice.models.AutoScaleProfile?alt=com.azure.resourcemanager.containerservice.models.AutoScaleProfile&text=AutoScaleProfile\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.containerservice.models.ScaleProfile.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.resourcemanager.containerservice.models.ScaleProfile.fromJson(JsonReader jsonReader)"
   name: "fromJson(JsonReader jsonReader)"
@@ -88,17 +88,17 @@ methods:
   summary: "Validates the instance."
   syntax: "public void validate()"
   desc: "Validates the instance."
-- uid: "com.azure.resourcemanager.containerservice.models.ScaleProfile.withAutoscale(com.azure.resourcemanager.containerservice.models.AutoScaleProfile)"
-  fullName: "com.azure.resourcemanager.containerservice.models.ScaleProfile.withAutoscale(AutoScaleProfile autoscale)"
-  name: "withAutoscale(AutoScaleProfile autoscale)"
-  nameWithType: "ScaleProfile.withAutoscale(AutoScaleProfile autoscale)"
+- uid: "com.azure.resourcemanager.containerservice.models.ScaleProfile.withAutoscale(java.util.List<com.azure.resourcemanager.containerservice.models.AutoScaleProfile>)"
+  fullName: "com.azure.resourcemanager.containerservice.models.ScaleProfile.withAutoscale(List<AutoScaleProfile> autoscale)"
+  name: "withAutoscale(List<AutoScaleProfile> autoscale)"
+  nameWithType: "ScaleProfile.withAutoscale(List<AutoScaleProfile> autoscale)"
   summary: "Set the autoscale property: Specifications on how to auto-scale the Virtual<wbr>Machines agent pool within a predefined size range."
   parameters:
   - description: "the autoscale value to set."
     name: "autoscale"
-    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.AutoScaleProfile?alt=com.azure.resourcemanager.containerservice.models.AutoScaleProfile&text=AutoScaleProfile\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public ScaleProfile withAutoscale(AutoScaleProfile autoscale)"
-  desc: "Set the autoscale property: Specifications on how to auto-scale the VirtualMachines agent pool within a predefined size range."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.containerservice.models.AutoScaleProfile?alt=com.azure.resourcemanager.containerservice.models.AutoScaleProfile&text=AutoScaleProfile\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public ScaleProfile withAutoscale(List<AutoScaleProfile> autoscale)"
+  desc: "Set the autoscale property: Specifications on how to auto-scale the VirtualMachines agent pool within a predefined size range. Each profile targets a specific VM SKU and is evaluated independently. Scaling decisions across profiles are governed by the cluster autoscaler expander, configurable via \\`ManagedCluster.properties.autoScalerProfile.expander\\`."
   returns:
     description: "the ScaleProfile object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ScaleProfile?alt=com.azure.resourcemanager.containerservice.models.ScaleProfile&text=ScaleProfile\" data-throw-if-not-resolved=\"False\" />"
@@ -122,4 +122,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservice.models.ScaleProfile?alt=com.azure.resourcemanager.containerservice.models.ScaleProfile&text=ScaleProfile\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.59.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.61.0-beta.1

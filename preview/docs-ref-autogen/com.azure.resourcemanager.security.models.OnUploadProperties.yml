@@ -36,10 +36,20 @@ methods:
   nameWithType: "OnUploadProperties.capGBPerMonth()"
   summary: "Get the cap<wbr>GBPer<wbr>Month property: Defines the max GB to be scanned per Month."
   syntax: "public Integer capGBPerMonth()"
-  desc: "Get the capGBPerMonth property: Defines the max GB to be scanned per Month. Set to -1 if no capping is needed."
+  desc: "Get the capGBPerMonth property: Defines the max GB to be scanned per Month. Set to -1 if no capping is needed. If not specified, the default value is -1."
   returns:
     description: "the capGBPerMonth value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+- uid: "com.azure.resourcemanager.security.models.OnUploadProperties.filters()"
+  fullName: "com.azure.resourcemanager.security.models.OnUploadProperties.filters()"
+  name: "filters()"
+  nameWithType: "OnUploadProperties.filters()"
+  summary: "Get the filters property: Optional."
+  syntax: "public OnUploadFilters filters()"
+  desc: "Get the filters property: Optional. Determine which blobs get scanned by On Upload malware scanning. An Or operation is performed between each filter type."
+  returns:
+    description: "the filters value."
+    type: "<xref href=\"com.azure.resourcemanager.security.models.OnUploadFilters?alt=com.azure.resourcemanager.security.models.OnUploadFilters&text=OnUploadFilters\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.security.models.OnUploadProperties.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.resourcemanager.security.models.OnUploadProperties.fromJson(JsonReader jsonReader)"
   name: "fromJson(JsonReader jsonReader)"
@@ -98,7 +108,21 @@ methods:
     name: "capGBPerMonth"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
   syntax: "public OnUploadProperties withCapGBPerMonth(Integer capGBPerMonth)"
-  desc: "Set the capGBPerMonth property: Defines the max GB to be scanned per Month. Set to -1 if no capping is needed."
+  desc: "Set the capGBPerMonth property: Defines the max GB to be scanned per Month. Set to -1 if no capping is needed. If not specified, the default value is -1."
+  returns:
+    description: "the OnUploadProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.security.models.OnUploadProperties?alt=com.azure.resourcemanager.security.models.OnUploadProperties&text=OnUploadProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.security.models.OnUploadProperties.withFilters(com.azure.resourcemanager.security.models.OnUploadFilters)"
+  fullName: "com.azure.resourcemanager.security.models.OnUploadProperties.withFilters(OnUploadFilters filters)"
+  name: "withFilters(OnUploadFilters filters)"
+  nameWithType: "OnUploadProperties.withFilters(OnUploadFilters filters)"
+  summary: "Set the filters property: Optional."
+  parameters:
+  - description: "the filters value to set."
+    name: "filters"
+    type: "<xref href=\"com.azure.resourcemanager.security.models.OnUploadFilters?alt=com.azure.resourcemanager.security.models.OnUploadFilters&text=OnUploadFilters\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public OnUploadProperties withFilters(OnUploadFilters filters)"
+  desc: "Set the filters property: Optional. Determine which blobs get scanned by On Upload malware scanning. An Or operation is performed between each filter type."
   returns:
     description: "the OnUploadProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.security.models.OnUploadProperties?alt=com.azure.resourcemanager.security.models.OnUploadProperties&text=OnUploadProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -122,4 +146,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.security.models.OnUploadProperties?alt=com.azure.resourcemanager.security.models.OnUploadProperties&text=OnUploadProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.security.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-security:1.0.0-beta.8
+artifact: com.azure.resourcemanager:azure-resourcemanager-security:1.1.0-beta.1
