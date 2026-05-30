@@ -27,11 +27,13 @@ constructors:
   name: "KnowledgeBaseActivityRecord(int id)"
   nameWithType: "KnowledgeBaseActivityRecord.KnowledgeBaseActivityRecord(int id)"
   summary: "Creates an instance of Knowledge<wbr>Base<wbr>Activity<wbr>Record class."
+  modifiers:
+  - "protected"
   parameters:
   - description: "the id value to set."
     name: "id"
     type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public KnowledgeBaseActivityRecord(int id)"
+  syntax: "protected KnowledgeBaseActivityRecord(int id)"
   desc: "Creates an instance of KnowledgeBaseActivityRecord class."
 methods:
 - uid: "com.azure.search.documents.knowledgebases.models.KnowledgeBaseActivityRecord.fromJson(com.azure.json.JsonReader)"
@@ -88,39 +90,21 @@ methods:
   name: "getType()"
   nameWithType: "KnowledgeBaseActivityRecord.getType()"
   summary: "Get the type property: The type of the activity record."
-  syntax: "public String getType()"
+  syntax: "public KnowledgeBaseActivityRecordType getType()"
   desc: "Get the type property: The type of the activity record."
   returns:
     description: "the type value."
+    type: "<xref href=\"com.azure.search.documents.knowledgebases.models.KnowledgeBaseActivityRecordType?alt=com.azure.search.documents.knowledgebases.models.KnowledgeBaseActivityRecordType&text=KnowledgeBaseActivityRecordType\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.knowledgebases.models.KnowledgeBaseActivityRecord.getWarning()"
+  fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeBaseActivityRecord.getWarning()"
+  name: "getWarning()"
+  nameWithType: "KnowledgeBaseActivityRecord.getWarning()"
+  summary: "Get the warning property: A warning message surfacing potential configuration issues observed during the activity, such as documents dropped due to score thresholding, token limit truncation, or timeout conditions."
+  syntax: "public String getWarning()"
+  desc: "Get the warning property: A warning message surfacing potential configuration issues observed during the activity, such as documents dropped due to score thresholding, token limit truncation, or timeout conditions."
+  returns:
+    description: "the warning value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-- uid: "com.azure.search.documents.knowledgebases.models.KnowledgeBaseActivityRecord.setElapsedMs(java.lang.Integer)"
-  fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeBaseActivityRecord.setElapsedMs(Integer elapsedMs)"
-  name: "setElapsedMs(Integer elapsedMs)"
-  nameWithType: "KnowledgeBaseActivityRecord.setElapsedMs(Integer elapsedMs)"
-  summary: "Set the elapsed<wbr>Ms property: The elapsed time in milliseconds for the retrieval activity."
-  parameters:
-  - description: "the elapsedMs value to set."
-    name: "elapsedMs"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
-  syntax: "public KnowledgeBaseActivityRecord setElapsedMs(Integer elapsedMs)"
-  desc: "Set the elapsedMs property: The elapsed time in milliseconds for the retrieval activity."
-  returns:
-    description: "the KnowledgeBaseActivityRecord object itself."
-    type: "<xref href=\"com.azure.search.documents.knowledgebases.models.KnowledgeBaseActivityRecord?alt=com.azure.search.documents.knowledgebases.models.KnowledgeBaseActivityRecord&text=KnowledgeBaseActivityRecord\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.search.documents.knowledgebases.models.KnowledgeBaseActivityRecord.setError(com.azure.search.documents.knowledgebases.models.KnowledgeBaseErrorDetail)"
-  fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeBaseActivityRecord.setError(KnowledgeBaseErrorDetail error)"
-  name: "setError(KnowledgeBaseErrorDetail error)"
-  nameWithType: "KnowledgeBaseActivityRecord.setError(KnowledgeBaseErrorDetail error)"
-  summary: "Set the error property: The error detail explaining why the operation failed."
-  parameters:
-  - description: "the error value to set."
-    name: "error"
-    type: "<xref href=\"com.azure.search.documents.knowledgebases.models.KnowledgeBaseErrorDetail?alt=com.azure.search.documents.knowledgebases.models.KnowledgeBaseErrorDetail&text=KnowledgeBaseErrorDetail\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public KnowledgeBaseActivityRecord setError(KnowledgeBaseErrorDetail error)"
-  desc: "Set the error property: The error detail explaining why the operation failed. This property is only included when the activity does not succeed."
-  returns:
-    description: "the KnowledgeBaseActivityRecord object itself."
-    type: "<xref href=\"com.azure.search.documents.knowledgebases.models.KnowledgeBaseActivityRecord?alt=com.azure.search.documents.knowledgebases.models.KnowledgeBaseActivityRecord&text=KnowledgeBaseActivityRecord\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.knowledgebases.models.KnowledgeBaseActivityRecord.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeBaseActivityRecord.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -134,9 +118,9 @@ methods:
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Base type for activity records."
+desc: "Base type for activity records. Tracks execution details, timing, and errors for knowledge base operations."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.knowledgebases.models.KnowledgeBaseActivityRecord?alt=com.azure.search.documents.knowledgebases.models.KnowledgeBaseActivityRecord&text=KnowledgeBaseActivityRecord\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.search.documents.knowledgebases.models"
-artifact: com.azure:azure-search-documents:11.9.0-beta.1
+artifact: com.azure:azure-search-documents:12.1.0-beta.1

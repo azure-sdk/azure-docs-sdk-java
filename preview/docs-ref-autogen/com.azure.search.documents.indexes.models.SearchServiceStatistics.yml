@@ -21,21 +21,6 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
 syntax: "public final class **SearchServiceStatistics**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.indexes.models.SearchServiceStatistics?alt=com.azure.search.documents.indexes.models.SearchServiceStatistics&text=SearchServiceStatistics\" data-throw-if-not-resolved=\"False\" />&gt;"
-constructors:
-- uid: "com.azure.search.documents.indexes.models.SearchServiceStatistics.SearchServiceStatistics(com.azure.search.documents.indexes.models.SearchServiceCounters,com.azure.search.documents.indexes.models.SearchServiceLimits)"
-  fullName: "com.azure.search.documents.indexes.models.SearchServiceStatistics.SearchServiceStatistics(SearchServiceCounters counters, SearchServiceLimits limits)"
-  name: "SearchServiceStatistics(SearchServiceCounters counters, SearchServiceLimits limits)"
-  nameWithType: "SearchServiceStatistics.SearchServiceStatistics(SearchServiceCounters counters, SearchServiceLimits limits)"
-  summary: "Creates an instance of Search<wbr>Service<wbr>Statistics class."
-  parameters:
-  - description: "the counters value to set."
-    name: "counters"
-    type: "<xref href=\"com.azure.search.documents.indexes.models.SearchServiceCounters?alt=com.azure.search.documents.indexes.models.SearchServiceCounters&text=SearchServiceCounters\" data-throw-if-not-resolved=\"False\" />"
-  - description: "the limits value to set."
-    name: "limits"
-    type: "<xref href=\"com.azure.search.documents.indexes.models.SearchServiceLimits?alt=com.azure.search.documents.indexes.models.SearchServiceLimits&text=SearchServiceLimits\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public SearchServiceStatistics(SearchServiceCounters counters, SearchServiceLimits limits)"
-  desc: "Creates an instance of SearchServiceStatistics class."
 methods:
 - uid: "com.azure.search.documents.indexes.models.SearchServiceStatistics.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.search.documents.indexes.models.SearchServiceStatistics.fromJson(JsonReader jsonReader)"
@@ -70,9 +55,9 @@ methods:
   fullName: "com.azure.search.documents.indexes.models.SearchServiceStatistics.getIndexersRuntime()"
   name: "getIndexersRuntime()"
   nameWithType: "SearchServiceStatistics.getIndexersRuntime()"
-  summary: "Get the indexers<wbr>Runtime property: Service level indexers runtime information."
+  summary: "Get the indexers<wbr>Runtime property: Service level indexer runtime consumption."
   syntax: "public ServiceIndexersRuntime getIndexersRuntime()"
-  desc: "Get the indexersRuntime property: Service level indexers runtime information."
+  desc: "Get the indexersRuntime property: Service level indexer runtime consumption."
   returns:
     description: "the indexersRuntime value."
     type: "<xref href=\"com.azure.search.documents.indexes.models.ServiceIndexersRuntime?alt=com.azure.search.documents.indexes.models.ServiceIndexersRuntime&text=ServiceIndexersRuntime\" data-throw-if-not-resolved=\"False\" />"
@@ -86,20 +71,6 @@ methods:
   returns:
     description: "the limits value."
     type: "<xref href=\"com.azure.search.documents.indexes.models.SearchServiceLimits?alt=com.azure.search.documents.indexes.models.SearchServiceLimits&text=SearchServiceLimits\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.search.documents.indexes.models.SearchServiceStatistics.setIndexersRuntime(com.azure.search.documents.indexes.models.ServiceIndexersRuntime)"
-  fullName: "com.azure.search.documents.indexes.models.SearchServiceStatistics.setIndexersRuntime(ServiceIndexersRuntime indexersRuntime)"
-  name: "setIndexersRuntime(ServiceIndexersRuntime indexersRuntime)"
-  nameWithType: "SearchServiceStatistics.setIndexersRuntime(ServiceIndexersRuntime indexersRuntime)"
-  summary: "Set the indexers<wbr>Runtime property: Service level indexers runtime information."
-  parameters:
-  - description: "the indexersRuntime value to set."
-    name: "indexersRuntime"
-    type: "<xref href=\"com.azure.search.documents.indexes.models.ServiceIndexersRuntime?alt=com.azure.search.documents.indexes.models.ServiceIndexersRuntime&text=ServiceIndexersRuntime\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public SearchServiceStatistics setIndexersRuntime(ServiceIndexersRuntime indexersRuntime)"
-  desc: "Set the indexersRuntime property: Service level indexers runtime information."
-  returns:
-    description: "the SearchServiceStatistics object itself."
-    type: "<xref href=\"com.azure.search.documents.indexes.models.SearchServiceStatistics?alt=com.azure.search.documents.indexes.models.SearchServiceStatistics&text=SearchServiceStatistics\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.SearchServiceStatistics.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.search.documents.indexes.models.SearchServiceStatistics.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -113,9 +84,9 @@ methods:
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Response from a get service statistics request. If successful, it includes service level counters, indexer runtime information, and limits."
+desc: "Response from a get service statistics request. If successful, it includes service level counters and limits."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.indexes.models.SearchServiceStatistics?alt=com.azure.search.documents.indexes.models.SearchServiceStatistics&text=SearchServiceStatistics\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.search.documents.indexes.models"
-artifact: com.azure:azure-search-documents:11.9.0-beta.1
+artifact: com.azure:azure-search-documents:12.1.0-beta.1

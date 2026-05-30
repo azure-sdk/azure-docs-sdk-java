@@ -81,11 +81,11 @@ methods:
   name: "getCreatedResources()"
   nameWithType: "AzureBlobKnowledgeSourceParameters.getCreatedResources()"
   summary: "Get the created<wbr>Resources property: Resources created by the knowledge source."
-  syntax: "public Map<String,String> getCreatedResources()"
+  syntax: "public CreatedResources getCreatedResources()"
   desc: "Get the createdResources property: Resources created by the knowledge source."
   returns:
     description: "the createdResources value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+    type: "<xref href=\"com.azure.search.documents.indexes.models.CreatedResources?alt=com.azure.search.documents.indexes.models.CreatedResources&text=CreatedResources\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.AzureBlobKnowledgeSourceParameters.getFolderPath()"
   fullName: "com.azure.search.documents.indexes.models.AzureBlobKnowledgeSourceParameters.getFolderPath()"
   name: "getFolderPath()"
@@ -105,17 +105,31 @@ methods:
   desc: "Get the ingestionParameters property: Consolidates all general ingestion settings."
   returns:
     description: "the ingestionParameters value."
-    type: "<xref href=\"com.azure.search.documents.indexes.models.KnowledgeSourceIngestionParameters?alt=com.azure.search.documents.indexes.models.KnowledgeSourceIngestionParameters&text=KnowledgeSourceIngestionParameters\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.search.documents.knowledgebases.models.KnowledgeSourceIngestionParameters?alt=com.azure.search.documents.knowledgebases.models.KnowledgeSourceIngestionParameters&text=KnowledgeSourceIngestionParameters\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.AzureBlobKnowledgeSourceParameters.isAdlsGen2()"
   fullName: "com.azure.search.documents.indexes.models.AzureBlobKnowledgeSourceParameters.isAdlsGen2()"
   name: "isAdlsGen2()"
   nameWithType: "AzureBlobKnowledgeSourceParameters.isAdlsGen2()"
-  summary: "Get the is<wbr>Adls<wbr>Gen2 property: Set to true if connecting to an ADLS Gen2 storage account."
+  summary: "Get the adls<wbr>Gen2 property: Set to true if connecting to an ADLS Gen2 storage account."
   syntax: "public Boolean isAdlsGen2()"
-  desc: "Get the isAdlsGen2 property: Set to true if connecting to an ADLS Gen2 storage account. Default is false."
+  desc: "Get the adlsGen2 property: Set to true if connecting to an ADLS Gen2 storage account. Default is false."
   returns:
-    description: "the isAdlsGen2 value."
+    description: "the adlsGen2 value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.search.documents.indexes.models.AzureBlobKnowledgeSourceParameters.setAdlsGen2(java.lang.Boolean)"
+  fullName: "com.azure.search.documents.indexes.models.AzureBlobKnowledgeSourceParameters.setAdlsGen2(Boolean adlsGen2)"
+  name: "setAdlsGen2(Boolean adlsGen2)"
+  nameWithType: "AzureBlobKnowledgeSourceParameters.setAdlsGen2(Boolean adlsGen2)"
+  summary: "Set the adls<wbr>Gen2 property: Set to true if connecting to an ADLS Gen2 storage account."
+  parameters:
+  - description: "the adlsGen2 value to set."
+    name: "adlsGen2"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+  syntax: "public AzureBlobKnowledgeSourceParameters setAdlsGen2(Boolean adlsGen2)"
+  desc: "Set the adlsGen2 property: Set to true if connecting to an ADLS Gen2 storage account. Default is false."
+  returns:
+    description: "the AzureBlobKnowledgeSourceParameters object itself."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.AzureBlobKnowledgeSourceParameters?alt=com.azure.search.documents.indexes.models.AzureBlobKnowledgeSourceParameters&text=AzureBlobKnowledgeSourceParameters\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.AzureBlobKnowledgeSourceParameters.setFolderPath(java.lang.String)"
   fullName: "com.azure.search.documents.indexes.models.AzureBlobKnowledgeSourceParameters.setFolderPath(String folderPath)"
   name: "setFolderPath(String folderPath)"
@@ -130,7 +144,7 @@ methods:
   returns:
     description: "the AzureBlobKnowledgeSourceParameters object itself."
     type: "<xref href=\"com.azure.search.documents.indexes.models.AzureBlobKnowledgeSourceParameters?alt=com.azure.search.documents.indexes.models.AzureBlobKnowledgeSourceParameters&text=AzureBlobKnowledgeSourceParameters\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.search.documents.indexes.models.AzureBlobKnowledgeSourceParameters.setIngestionParameters(com.azure.search.documents.indexes.models.KnowledgeSourceIngestionParameters)"
+- uid: "com.azure.search.documents.indexes.models.AzureBlobKnowledgeSourceParameters.setIngestionParameters(com.azure.search.documents.knowledgebases.models.KnowledgeSourceIngestionParameters)"
   fullName: "com.azure.search.documents.indexes.models.AzureBlobKnowledgeSourceParameters.setIngestionParameters(KnowledgeSourceIngestionParameters ingestionParameters)"
   name: "setIngestionParameters(KnowledgeSourceIngestionParameters ingestionParameters)"
   nameWithType: "AzureBlobKnowledgeSourceParameters.setIngestionParameters(KnowledgeSourceIngestionParameters ingestionParameters)"
@@ -138,23 +152,9 @@ methods:
   parameters:
   - description: "the ingestionParameters value to set."
     name: "ingestionParameters"
-    type: "<xref href=\"com.azure.search.documents.indexes.models.KnowledgeSourceIngestionParameters?alt=com.azure.search.documents.indexes.models.KnowledgeSourceIngestionParameters&text=KnowledgeSourceIngestionParameters\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.search.documents.knowledgebases.models.KnowledgeSourceIngestionParameters?alt=com.azure.search.documents.knowledgebases.models.KnowledgeSourceIngestionParameters&text=KnowledgeSourceIngestionParameters\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public AzureBlobKnowledgeSourceParameters setIngestionParameters(KnowledgeSourceIngestionParameters ingestionParameters)"
   desc: "Set the ingestionParameters property: Consolidates all general ingestion settings."
-  returns:
-    description: "the AzureBlobKnowledgeSourceParameters object itself."
-    type: "<xref href=\"com.azure.search.documents.indexes.models.AzureBlobKnowledgeSourceParameters?alt=com.azure.search.documents.indexes.models.AzureBlobKnowledgeSourceParameters&text=AzureBlobKnowledgeSourceParameters\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.search.documents.indexes.models.AzureBlobKnowledgeSourceParameters.setIsAdlsGen2(java.lang.Boolean)"
-  fullName: "com.azure.search.documents.indexes.models.AzureBlobKnowledgeSourceParameters.setIsAdlsGen2(Boolean isAdlsGen2)"
-  name: "setIsAdlsGen2(Boolean isAdlsGen2)"
-  nameWithType: "AzureBlobKnowledgeSourceParameters.setIsAdlsGen2(Boolean isAdlsGen2)"
-  summary: "Set the is<wbr>Adls<wbr>Gen2 property: Set to true if connecting to an ADLS Gen2 storage account."
-  parameters:
-  - description: "the isAdlsGen2 value to set."
-    name: "isAdlsGen2"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
-  syntax: "public AzureBlobKnowledgeSourceParameters setIsAdlsGen2(Boolean isAdlsGen2)"
-  desc: "Set the isAdlsGen2 property: Set to true if connecting to an ADLS Gen2 storage account. Default is false."
   returns:
     description: "the AzureBlobKnowledgeSourceParameters object itself."
     type: "<xref href=\"com.azure.search.documents.indexes.models.AzureBlobKnowledgeSourceParameters?alt=com.azure.search.documents.indexes.models.AzureBlobKnowledgeSourceParameters&text=AzureBlobKnowledgeSourceParameters\" data-throw-if-not-resolved=\"False\" />"
@@ -176,4 +176,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.indexes.models.AzureBlobKnowledgeSourceParameters?alt=com.azure.search.documents.indexes.models.AzureBlobKnowledgeSourceParameters&text=AzureBlobKnowledgeSourceParameters\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.search.documents.indexes.models"
-artifact: com.azure:azure-search-documents:11.9.0-beta.1
+artifact: com.azure:azure-search-documents:12.1.0-beta.1

@@ -3,7 +3,7 @@ uid: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams"
 fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams"
 name: "KnowledgeSourceParams"
 nameWithType: "KnowledgeSourceParams"
-summary: "The Knowledge<wbr>Source<wbr>Params model."
+summary: "Base type for knowledge source runtime parameters."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -62,7 +62,7 @@ methods:
   desc: "Get the kind property: The type of the knowledge source."
   returns:
     description: "the kind value."
-    type: "<xref href=\"com.azure.search.documents.knowledgebases.models.KnowledgeSourceKind?alt=com.azure.search.documents.knowledgebases.models.KnowledgeSourceKind&text=KnowledgeSourceKind\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.search.documents.indexes.models.KnowledgeSourceKind?alt=com.azure.search.documents.indexes.models.KnowledgeSourceKind&text=KnowledgeSourceKind\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.getKnowledgeSourceName()"
   fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.getKnowledgeSourceName()"
   name: "getKnowledgeSourceName()"
@@ -73,6 +73,16 @@ methods:
   returns:
     description: "the knowledgeSourceName value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.getMaxOutputDocuments()"
+  fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.getMaxOutputDocuments()"
+  name: "getMaxOutputDocuments()"
+  nameWithType: "KnowledgeSourceParams.getMaxOutputDocuments()"
+  summary: "Get the max<wbr>Output<wbr>Documents property: Limits the maximum number of documents returned from this knowledge source."
+  syntax: "public Integer getMaxOutputDocuments()"
+  desc: "Get the maxOutputDocuments property: Limits the maximum number of documents returned from this knowledge source."
+  returns:
+    description: "the maxOutputDocuments value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
 - uid: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.getRerankerThreshold()"
   fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.getRerankerThreshold()"
   name: "getRerankerThreshold()"
@@ -92,6 +102,26 @@ methods:
   desc: "Get the alwaysQuerySource property: Indicates that this knowledge source should bypass source selection and always be queried at retrieval time."
   returns:
     description: "the alwaysQuerySource value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.isEnableImageServing()"
+  fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.isEnableImageServing()"
+  name: "isEnableImageServing()"
+  nameWithType: "KnowledgeSourceParams.isEnableImageServing()"
+  summary: "Get the enable<wbr>Image<wbr>Serving property: Indicates whether image serving should be enabled for this knowledge source at retrieval time."
+  syntax: "public Boolean isEnableImageServing()"
+  desc: "Get the enableImageServing property: Indicates whether image serving should be enabled for this knowledge source at retrieval time. When true, images extracted during ingestion are delivered to downstream models."
+  returns:
+    description: "the enableImageServing value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.isFailOnError()"
+  fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.isFailOnError()"
+  name: "isFailOnError()"
+  nameWithType: "KnowledgeSourceParams.isFailOnError()"
+  summary: "Get the fail<wbr>OnError property: Indicates that the entire retrieval request should fail if retrieval from this knowledge source encounters an error."
+  syntax: "public Boolean isFailOnError()"
+  desc: "Get the failOnError property: Indicates that the entire retrieval request should fail if retrieval from this knowledge source encounters an error. Defaults to false."
+  returns:
+    description: "the failOnError value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.isIncludeReferences()"
   fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.isIncludeReferences()"
@@ -127,6 +157,34 @@ methods:
   returns:
     description: "the KnowledgeSourceParams object itself."
     type: "<xref href=\"com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams?alt=com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams&text=KnowledgeSourceParams\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.setEnableImageServing(java.lang.Boolean)"
+  fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.setEnableImageServing(Boolean enableImageServing)"
+  name: "setEnableImageServing(Boolean enableImageServing)"
+  nameWithType: "KnowledgeSourceParams.setEnableImageServing(Boolean enableImageServing)"
+  summary: "Set the enable<wbr>Image<wbr>Serving property: Indicates whether image serving should be enabled for this knowledge source at retrieval time."
+  parameters:
+  - description: "the enableImageServing value to set."
+    name: "enableImageServing"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+  syntax: "public KnowledgeSourceParams setEnableImageServing(Boolean enableImageServing)"
+  desc: "Set the enableImageServing property: Indicates whether image serving should be enabled for this knowledge source at retrieval time. When true, images extracted during ingestion are delivered to downstream models."
+  returns:
+    description: "the KnowledgeSourceParams object itself."
+    type: "<xref href=\"com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams?alt=com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams&text=KnowledgeSourceParams\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.setFailOnError(java.lang.Boolean)"
+  fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.setFailOnError(Boolean failOnError)"
+  name: "setFailOnError(Boolean failOnError)"
+  nameWithType: "KnowledgeSourceParams.setFailOnError(Boolean failOnError)"
+  summary: "Set the fail<wbr>OnError property: Indicates that the entire retrieval request should fail if retrieval from this knowledge source encounters an error."
+  parameters:
+  - description: "the failOnError value to set."
+    name: "failOnError"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+  syntax: "public KnowledgeSourceParams setFailOnError(Boolean failOnError)"
+  desc: "Set the failOnError property: Indicates that the entire retrieval request should fail if retrieval from this knowledge source encounters an error. Defaults to false."
+  returns:
+    description: "the KnowledgeSourceParams object itself."
+    type: "<xref href=\"com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams?alt=com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams&text=KnowledgeSourceParams\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.setIncludeReferences(java.lang.Boolean)"
   fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.setIncludeReferences(Boolean includeReferences)"
   name: "setIncludeReferences(Boolean includeReferences)"
@@ -152,6 +210,20 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
   syntax: "public KnowledgeSourceParams setIncludeReferenceSourceData(Boolean includeReferenceSourceData)"
   desc: "Set the includeReferenceSourceData property: Indicates whether references should include the structured data obtained during retrieval in their payload."
+  returns:
+    description: "the KnowledgeSourceParams object itself."
+    type: "<xref href=\"com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams?alt=com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams&text=KnowledgeSourceParams\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.setMaxOutputDocuments(java.lang.Integer)"
+  fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.setMaxOutputDocuments(Integer maxOutputDocuments)"
+  name: "setMaxOutputDocuments(Integer maxOutputDocuments)"
+  nameWithType: "KnowledgeSourceParams.setMaxOutputDocuments(Integer maxOutputDocuments)"
+  summary: "Set the max<wbr>Output<wbr>Documents property: Limits the maximum number of documents returned from this knowledge source."
+  parameters:
+  - description: "the maxOutputDocuments value to set."
+    name: "maxOutputDocuments"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  syntax: "public KnowledgeSourceParams setMaxOutputDocuments(Integer maxOutputDocuments)"
+  desc: "Set the maxOutputDocuments property: Limits the maximum number of documents returned from this knowledge source."
   returns:
     description: "the KnowledgeSourceParams object itself."
     type: "<xref href=\"com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams?alt=com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams&text=KnowledgeSourceParams\" data-throw-if-not-resolved=\"False\" />"
@@ -182,9 +254,9 @@ methods:
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "The KnowledgeSourceParams model."
+desc: "Base type for knowledge source runtime parameters."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams?alt=com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams&text=KnowledgeSourceParams\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.search.documents.knowledgebases.models"
-artifact: com.azure:azure-search-documents:11.9.0-beta.1
+artifact: com.azure:azure-search-documents:12.1.0-beta.1
