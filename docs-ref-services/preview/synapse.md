@@ -1,7 +1,7 @@
 ---
 title: Azure Synapse SDK for Java
 description: Reference for Azure Synapse SDK for Java
-ms.date: 05/29/2026
+ms.date: 06/01/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: synapse-analytics
