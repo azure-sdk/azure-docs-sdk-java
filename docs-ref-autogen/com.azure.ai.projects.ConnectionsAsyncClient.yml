@@ -39,6 +39,26 @@ methods:
   returns:
     description: "a connection by name, without populating connection credentials."
     type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.ai.projects.models.Connection?alt=com.azure.ai.projects.models.Connection&text=Connection\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.ai.projects.ConnectionsAsyncClient.getConnectionWithResponse(java.lang.String,boolean,com.azure.core.http.rest.RequestOptions)"
+  fullName: "com.azure.ai.projects.ConnectionsAsyncClient.getConnectionWithResponse(String name, boolean includeCredentials, RequestOptions requestOptions)"
+  name: "getConnectionWithResponse(String name, boolean includeCredentials, RequestOptions requestOptions)"
+  nameWithType: "ConnectionsAsyncClient.getConnectionWithResponse(String name, boolean includeCredentials, RequestOptions requestOptions)"
+  summary: "Get a connection by name."
+  parameters:
+  - description: "The friendly name of the connection, provided by the user."
+    name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Whether to include connection credentials in the response."
+    name: "includeCredentials"
+    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The options to configure the HTTP request before HTTP client sends it."
+    name: "requestOptions"
+    type: "<xref href=\"com.azure.core.http.rest.RequestOptions?alt=com.azure.core.http.rest.RequestOptions&text=RequestOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public Mono<Response<BinaryData>> getConnectionWithResponse(String name, boolean includeCredentials, RequestOptions requestOptions)"
+  desc: "Get a connection by name."
+  returns:
+    description: "a connection by name along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
+    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.ai.projects.ConnectionsAsyncClient.getDefaultConnection(com.azure.ai.projects.models.ConnectionType,boolean)"
   fullName: "com.azure.ai.projects.ConnectionsAsyncClient.getDefaultConnection(ConnectionType connectionType, boolean includeCredentials)"
   name: "getDefaultConnection(ConnectionType connectionType, boolean includeCredentials)"
@@ -101,4 +121,4 @@ type: "class"
 desc: "Initializes a new instance of the asynchronous AIProjectClient type."
 metadata: {}
 package: "com.azure.ai.projects"
-artifact: com.azure:azure-ai-projects:2.0.1
+artifact: com.azure:azure-ai-projects:2.1.0

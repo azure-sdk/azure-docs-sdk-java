@@ -56,6 +56,16 @@ methods:
   returns:
     description: "An instance of MemoryStoreDefaultOptions if the JsonReader was pointing to an instance of it, or null if\n it was pointing to JSON null."
     type: "<xref href=\"com.azure.ai.agents.models.MemoryStoreDefaultOptions?alt=com.azure.ai.agents.models.MemoryStoreDefaultOptions&text=MemoryStoreDefaultOptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.MemoryStoreDefaultOptions.getDefaultTtlSeconds()"
+  fullName: "com.azure.ai.agents.models.MemoryStoreDefaultOptions.getDefaultTtlSeconds()"
+  name: "getDefaultTtlSeconds()"
+  nameWithType: "MemoryStoreDefaultOptions.getDefaultTtlSeconds()"
+  summary: "Get the default<wbr>Ttl<wbr>Seconds property: The default time-to-live for memories in seconds."
+  syntax: "public Duration getDefaultTtlSeconds()"
+  desc: "Get the defaultTtlSeconds property: The default time-to-live for memories in seconds. A value of \\`0\\` indicates that memories do not expire. Defaults to \\`0\\`."
+  returns:
+    description: "the defaultTtlSeconds value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
 - uid: "com.azure.ai.agents.models.MemoryStoreDefaultOptions.getUserProfileDetails()"
   fullName: "com.azure.ai.agents.models.MemoryStoreDefaultOptions.getUserProfileDetails()"
   name: "getUserProfileDetails()"
@@ -72,10 +82,20 @@ methods:
   nameWithType: "MemoryStoreDefaultOptions.isChatSummaryEnabled()"
   summary: "Get the chat<wbr>Summary<wbr>Enabled property: Whether to enable chat summary extraction and storage."
   syntax: "public boolean isChatSummaryEnabled()"
-  desc: "Get the chatSummaryEnabled property: Whether to enable chat summary extraction and storage. Default is true."
+  desc: "Get the chatSummaryEnabled property: Whether to enable chat summary extraction and storage. Defaults to \\`true\\`."
   returns:
     description: "the chatSummaryEnabled value."
     type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.MemoryStoreDefaultOptions.isProceduralMemoryEnabled()"
+  fullName: "com.azure.ai.agents.models.MemoryStoreDefaultOptions.isProceduralMemoryEnabled()"
+  name: "isProceduralMemoryEnabled()"
+  nameWithType: "MemoryStoreDefaultOptions.isProceduralMemoryEnabled()"
+  summary: "Get the procedural<wbr>Memory<wbr>Enabled property: Whether to enable procedural memory extraction and storage."
+  syntax: "public Boolean isProceduralMemoryEnabled()"
+  desc: "Get the proceduralMemoryEnabled property: Whether to enable procedural memory extraction and storage. The service defaults to \\`true\\` if a value is not specified by the caller."
+  returns:
+    description: "the proceduralMemoryEnabled value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.ai.agents.models.MemoryStoreDefaultOptions.isUserProfileEnabled()"
   fullName: "com.azure.ai.agents.models.MemoryStoreDefaultOptions.isUserProfileEnabled()"
   name: "isUserProfileEnabled()"
@@ -86,6 +106,34 @@ methods:
   returns:
     description: "the userProfileEnabled value."
     type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.MemoryStoreDefaultOptions.setDefaultTtlSeconds(java.time.Duration)"
+  fullName: "com.azure.ai.agents.models.MemoryStoreDefaultOptions.setDefaultTtlSeconds(Duration defaultTtlSeconds)"
+  name: "setDefaultTtlSeconds(Duration defaultTtlSeconds)"
+  nameWithType: "MemoryStoreDefaultOptions.setDefaultTtlSeconds(Duration defaultTtlSeconds)"
+  summary: "Set the default<wbr>Ttl<wbr>Seconds property: The default time-to-live for memories in seconds."
+  parameters:
+  - description: "the defaultTtlSeconds value to set."
+    name: "defaultTtlSeconds"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
+  syntax: "public MemoryStoreDefaultOptions setDefaultTtlSeconds(Duration defaultTtlSeconds)"
+  desc: "Set the defaultTtlSeconds property: The default time-to-live for memories in seconds. A value of \\`0\\` indicates that memories do not expire. Defaults to \\`0\\`."
+  returns:
+    description: "the MemoryStoreDefaultOptions object itself."
+    type: "<xref href=\"com.azure.ai.agents.models.MemoryStoreDefaultOptions?alt=com.azure.ai.agents.models.MemoryStoreDefaultOptions&text=MemoryStoreDefaultOptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.MemoryStoreDefaultOptions.setProceduralMemoryEnabled(java.lang.Boolean)"
+  fullName: "com.azure.ai.agents.models.MemoryStoreDefaultOptions.setProceduralMemoryEnabled(Boolean proceduralMemoryEnabled)"
+  name: "setProceduralMemoryEnabled(Boolean proceduralMemoryEnabled)"
+  nameWithType: "MemoryStoreDefaultOptions.setProceduralMemoryEnabled(Boolean proceduralMemoryEnabled)"
+  summary: "Set the procedural<wbr>Memory<wbr>Enabled property: Whether to enable procedural memory extraction and storage."
+  parameters:
+  - description: "the proceduralMemoryEnabled value to set."
+    name: "proceduralMemoryEnabled"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+  syntax: "public MemoryStoreDefaultOptions setProceduralMemoryEnabled(Boolean proceduralMemoryEnabled)"
+  desc: "Set the proceduralMemoryEnabled property: Whether to enable procedural memory extraction and storage. The service defaults to \\`true\\` if a value is not specified by the caller."
+  returns:
+    description: "the MemoryStoreDefaultOptions object itself."
+    type: "<xref href=\"com.azure.ai.agents.models.MemoryStoreDefaultOptions?alt=com.azure.ai.agents.models.MemoryStoreDefaultOptions&text=MemoryStoreDefaultOptions\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.agents.models.MemoryStoreDefaultOptions.setUserProfileDetails(java.lang.String)"
   fullName: "com.azure.ai.agents.models.MemoryStoreDefaultOptions.setUserProfileDetails(String userProfileDetails)"
   name: "setUserProfileDetails(String userProfileDetails)"
@@ -118,4 +166,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.MemoryStoreDefaultOptions?alt=com.azure.ai.agents.models.MemoryStoreDefaultOptions&text=MemoryStoreDefaultOptions\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.ai.agents.models"
-artifact: com.azure:azure-ai-agents:2.0.1
+artifact: com.azure:azure-ai-agents:2.1.0

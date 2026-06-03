@@ -1,0 +1,45 @@
+### YamlMime:JavaType
+uid: "com.azure.ai.projects.EvaluationsHelper"
+fullName: "com.azure.ai.projects.EvaluationsHelper"
+name: "EvaluationsHelper"
+nameWithType: "EvaluationsHelper"
+summary: "Helper methods for Azure AI evaluations."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **EvaluationsHelper**"
+methods:
+- uid: "com.azure.ai.projects.EvaluationsHelper.toTestingCriterion(com.azure.ai.projects.models.TestingCriterionAzureAIEvaluator)"
+  fullName: "com.azure.ai.projects.EvaluationsHelper.toTestingCriterion(TestingCriterionAzureAIEvaluator evaluator)"
+  name: "toTestingCriterion(TestingCriterionAzureAIEvaluator evaluator)"
+  nameWithType: "EvaluationsHelper.toTestingCriterion(TestingCriterionAzureAIEvaluator evaluator)"
+  summary: "Converts an Azure AI evaluator model to an OpenAI evaluation testing criterion."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The Azure AI evaluator to use as an evaluation testing criterion."
+    name: "evaluator"
+    type: "<xref href=\"com.azure.ai.projects.models.TestingCriterionAzureAIEvaluator?alt=com.azure.ai.projects.models.TestingCriterionAzureAIEvaluator&text=TestingCriterionAzureAIEvaluator\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static EvalCreateParams.TestingCriterion toTestingCriterion(TestingCriterionAzureAIEvaluator evaluator)"
+  desc: "Converts an Azure AI evaluator model to an OpenAI evaluation testing criterion.\n\nUse this helper when creating OpenAI evaluations with Azure-specific evaluator types such as <xref uid=\"com.azure.ai.projects.models.TestingCriterionAzureAIEvaluator\" data-throw-if-not-resolved=\"false\" data-raw-source=\"TestingCriterionAzureAIEvaluator\"></xref>. The helper preserves the Azure evaluator wire shape while hiding the serialization details needed to pass it to the OpenAI SDK."
+  returns:
+    description: "The OpenAI evaluation testing criterion."
+    type: "<xref href=\"com.openai.models.evals.EvalCreateParams.TestingCriterion?alt=com.openai.models.evals.EvalCreateParams.TestingCriterion&text=TestingCriterion\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Helper methods for Azure AI evaluations."
+metadata: {}
+package: "com.azure.ai.projects"
+artifact: com.azure:azure-ai-projects:2.1.0

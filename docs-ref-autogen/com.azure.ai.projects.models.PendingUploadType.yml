@@ -42,14 +42,14 @@ fields:
   fullName: "com.azure.ai.projects.models.PendingUploadType.BLOB_REFERENCE"
   name: "BLOB_REFERENCE"
   nameWithType: "PendingUploadType.BLOB_REFERENCE"
-  summary: "Blob Reference is the only supported type."
+  summary: "Deprecated: the service never read this value and silently ignored it."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.ai.projects.models.PendingUploadType?alt=com.azure.ai.projects.models.PendingUploadType&text=PendingUploadType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final PendingUploadType BLOB_REFERENCE"
-  desc: "Blob Reference is the only supported type."
+  desc: "Deprecated: the service never read this value and silently ignored it. Use TemporaryBlobReference instead."
 - uid: "com.azure.ai.projects.models.PendingUploadType.NONE"
   fullName: "com.azure.ai.projects.models.PendingUploadType.NONE"
   name: "NONE"
@@ -62,6 +62,18 @@ fields:
     type: "<xref href=\"com.azure.ai.projects.models.PendingUploadType?alt=com.azure.ai.projects.models.PendingUploadType&text=PendingUploadType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final PendingUploadType NONE"
   desc: "No pending upload."
+- uid: "com.azure.ai.projects.models.PendingUploadType.TEMPORARY_BLOB_REFERENCE"
+  fullName: "com.azure.ai.projects.models.PendingUploadType.TEMPORARY_BLOB_REFERENCE"
+  name: "TEMPORARY_BLOB_REFERENCE"
+  nameWithType: "PendingUploadType.TEMPORARY_BLOB_REFERENCE"
+  summary: "Temporary blob reference."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.ai.projects.models.PendingUploadType?alt=com.azure.ai.projects.models.PendingUploadType&text=PendingUploadType\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final PendingUploadType TEMPORARY_BLOB_REFERENCE"
+  desc: "Temporary blob reference."
 methods:
 - uid: "com.azure.ai.projects.models.PendingUploadType.fromString(java.lang.String)"
   fullName: "com.azure.ai.projects.models.PendingUploadType.fromString(String name)"
@@ -95,4 +107,4 @@ type: "class"
 desc: "The type of pending upload."
 metadata: {}
 package: "com.azure.ai.projects.models"
-artifact: com.azure:azure-ai-projects:2.0.1
+artifact: com.azure:azure-ai-projects:2.1.0

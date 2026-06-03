@@ -1,0 +1,82 @@
+### YamlMime:JavaType
+uid: "com.azure.ai.projects.models.EvaluatorGenerationArtifacts"
+fullName: "com.azure.ai.projects.models.EvaluatorGenerationArtifacts"
+name: "EvaluatorGenerationArtifacts"
+nameWithType: "EvaluatorGenerationArtifacts"
+summary: "Service-managed provenance artifacts produced by an evaluator generation job."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **EvaluatorGenerationArtifacts**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.projects.models.EvaluatorGenerationArtifacts?alt=com.azure.ai.projects.models.EvaluatorGenerationArtifacts&text=EvaluatorGenerationArtifacts\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.azure.ai.projects.models.EvaluatorGenerationArtifacts.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.ai.projects.models.EvaluatorGenerationArtifacts.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "EvaluatorGenerationArtifacts.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Evaluator<wbr>Generation<wbr>Artifacts from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static EvaluatorGenerationArtifacts fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of EvaluatorGenerationArtifacts from the JsonReader."
+  returns:
+    description: "An instance of EvaluatorGenerationArtifacts if the JsonReader was pointing to an instance of it, or null\n if it was pointing to JSON null."
+    type: "<xref href=\"com.azure.ai.projects.models.EvaluatorGenerationArtifacts?alt=com.azure.ai.projects.models.EvaluatorGenerationArtifacts&text=EvaluatorGenerationArtifacts\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.models.EvaluatorGenerationArtifacts.getDataset()"
+  fullName: "com.azure.ai.projects.models.EvaluatorGenerationArtifacts.getDataset()"
+  name: "getDataset()"
+  nameWithType: "EvaluatorGenerationArtifacts.getDataset()"
+  summary: "Get the dataset property: Reference to the single Foundry Dataset (one combined JSONL file, version-aligned to \\`Evaluator<wbr>Version.<wbr>version\\`) holding all artifacts produced by the generation pipeline."
+  syntax: "public DatasetReference getDataset()"
+  desc: "Get the dataset property: Reference to the single Foundry Dataset (one combined JSONL file, version-aligned to \\`EvaluatorVersion.version\\`) holding all artifacts produced by the generation pipeline. Each row in the JSONL carries a \\`kind\\` field discriminating its content (e.g. \\`spec\\`, \\`tools\\`, \\`context\\`)."
+  returns:
+    description: "the dataset value."
+    type: "<xref href=\"com.azure.ai.projects.models.DatasetReference?alt=com.azure.ai.projects.models.DatasetReference&text=DatasetReference\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.models.EvaluatorGenerationArtifacts.getKinds()"
+  fullName: "com.azure.ai.projects.models.EvaluatorGenerationArtifacts.getKinds()"
+  name: "getKinds()"
+  nameWithType: "EvaluatorGenerationArtifacts.getKinds()"
+  summary: "Get the kinds property: The kinds of rows present in \\`dataset\\`."
+  syntax: "public List<String> getKinds()"
+  desc: "Get the kinds property: The kinds of rows present in \\`dataset\\`. Always contains \\`\"spec\"\\` (the generated evaluation specification, a Markdown document describing what the evaluator measures). May additionally contain \\`\"tools\"\\` (when the generation pipeline produced or inferred OpenAI tool schemas) and/or \\`\"context\"\\` (when supplementary materials such as file uploads or trace samples were used during generation)."
+  returns:
+    description: "the kinds value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+- uid: "com.azure.ai.projects.models.EvaluatorGenerationArtifacts.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.ai.projects.models.EvaluatorGenerationArtifacts.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "EvaluatorGenerationArtifacts.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Service-managed provenance artifacts produced by an evaluator generation job. Present only on EvaluatorVersion resources created via the generation pipeline. The combined-JSONL Foundry Dataset is read-only and resolves to a versioned dataset in a service-reserved namespace."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.projects.models.EvaluatorGenerationArtifacts?alt=com.azure.ai.projects.models.EvaluatorGenerationArtifacts&text=EvaluatorGenerationArtifacts\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.ai.projects.models"
+artifact: com.azure:azure-ai-projects:2.1.0

@@ -169,6 +169,16 @@ methods:
   returns:
     description: "the serverUrl value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.ai.agents.models.McpTool.getToolConfigs()"
+  fullName: "com.azure.ai.agents.models.McpTool.getToolConfigs()"
+  name: "getToolConfigs()"
+  nameWithType: "McpTool.getToolConfigs()"
+  summary: "Get the tool<wbr>Configs property: Per-tool configuration map."
+  syntax: "public Map<String,ToolConfig> getToolConfigs()"
+  desc: "Get the toolConfigs property: Per-tool configuration map. Keys are tool names or \\`\\*\\` (catch-all default). Resolution order: exact tool name match takes priority over \\`\\*\\`. Unknown tool names are silently ignored at runtime."
+  returns:
+    description: "the toolConfigs value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.ai.agents.models.ToolConfig?alt=com.azure.ai.agents.models.ToolConfig&text=ToolConfig\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.ai.agents.models.McpTool.getType()"
   fullName: "com.azure.ai.agents.models.McpTool.getType()"
   name: "getType()"
@@ -320,6 +330,20 @@ methods:
   returns:
     description: "the McpTool object itself."
     type: "<xref href=\"com.azure.ai.agents.models.McpTool?alt=com.azure.ai.agents.models.McpTool&text=McpTool\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.McpTool.setToolConfigs(java.util.Map<java.lang.String,com.azure.ai.agents.models.ToolConfig>)"
+  fullName: "com.azure.ai.agents.models.McpTool.setToolConfigs(Map<String,ToolConfig> toolConfigs)"
+  name: "setToolConfigs(Map<String,ToolConfig> toolConfigs)"
+  nameWithType: "McpTool.setToolConfigs(Map<String,ToolConfig> toolConfigs)"
+  summary: "Set the tool<wbr>Configs property: Per-tool configuration map."
+  parameters:
+  - description: "the toolConfigs value to set."
+    name: "toolConfigs"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.ai.agents.models.ToolConfig?alt=com.azure.ai.agents.models.ToolConfig&text=ToolConfig\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public McpTool setToolConfigs(Map<String,ToolConfig> toolConfigs)"
+  desc: "Set the toolConfigs property: Per-tool configuration map. Keys are tool names or \\`\\*\\` (catch-all default). Resolution order: exact tool name match takes priority over \\`\\*\\`. Unknown tool names are silently ignored at runtime."
+  returns:
+    description: "the McpTool object itself."
+    type: "<xref href=\"com.azure.ai.agents.models.McpTool?alt=com.azure.ai.agents.models.McpTool&text=McpTool\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.agents.models.McpTool.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.ai.agents.models.McpTool.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -337,4 +361,4 @@ type: "class"
 desc: "MCP tool Give the model access to additional tools via remote Model Context Protocol (MCP) servers. \\[Learn more about MCP\\](/docs/guides/tools-remote-mcp)."
 metadata: {}
 package: "com.azure.ai.agents.models"
-artifact: com.azure:azure-ai-agents:2.0.1
+artifact: com.azure:azure-ai-agents:2.1.0

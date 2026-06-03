@@ -30,10 +30,10 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
 syntax: "public final class **EvaluationScheduleTask**</br> extends <xref href=\"com.azure.ai.projects.models.ScheduleTask?alt=com.azure.ai.projects.models.ScheduleTask&text=ScheduleTask\" data-throw-if-not-resolved=\"False\" />"
 constructors:
-- uid: "com.azure.ai.projects.models.EvaluationScheduleTask.EvaluationScheduleTask(java.lang.String,com.azure.ai.projects.models.EvaluationScheduleTaskEvalRun)"
-  fullName: "com.azure.ai.projects.models.EvaluationScheduleTask.EvaluationScheduleTask(String evalId, EvaluationScheduleTaskEvalRun evalRun)"
-  name: "EvaluationScheduleTask(String evalId, EvaluationScheduleTaskEvalRun evalRun)"
-  nameWithType: "EvaluationScheduleTask.EvaluationScheduleTask(String evalId, EvaluationScheduleTaskEvalRun evalRun)"
+- uid: "com.azure.ai.projects.models.EvaluationScheduleTask.EvaluationScheduleTask(java.lang.String,java.util.Map<java.lang.String,com.azure.core.util.BinaryData>)"
+  fullName: "com.azure.ai.projects.models.EvaluationScheduleTask.EvaluationScheduleTask(String evalId, Map<String,BinaryData> evalRun)"
+  name: "EvaluationScheduleTask(String evalId, Map<String,BinaryData> evalRun)"
+  nameWithType: "EvaluationScheduleTask.EvaluationScheduleTask(String evalId, Map<String,BinaryData> evalRun)"
   summary: "Creates an instance of Evaluation<wbr>Schedule<wbr>Task class."
   parameters:
   - description: "the evalId value to set."
@@ -41,8 +41,8 @@ constructors:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "the evalRun value to set."
     name: "evalRun"
-    type: "<xref href=\"com.azure.ai.projects.models.EvaluationScheduleTaskEvalRun?alt=com.azure.ai.projects.models.EvaluationScheduleTaskEvalRun&text=EvaluationScheduleTaskEvalRun\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public EvaluationScheduleTask(String evalId, EvaluationScheduleTaskEvalRun evalRun)"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public EvaluationScheduleTask(String evalId, Map<String,BinaryData> evalRun)"
   desc: "Creates an instance of EvaluationScheduleTask class."
 methods:
 - uid: "com.azure.ai.projects.models.EvaluationScheduleTask.fromJson(com.azure.json.JsonReader)"
@@ -79,11 +79,11 @@ methods:
   name: "getEvalRun()"
   nameWithType: "EvaluationScheduleTask.getEvalRun()"
   summary: "Get the eval<wbr>Run property: The evaluation run payload."
-  syntax: "public EvaluationScheduleTaskEvalRun getEvalRun()"
+  syntax: "public Map<String,BinaryData> getEvalRun()"
   desc: "Get the evalRun property: The evaluation run payload."
   returns:
     description: "the evalRun value."
-    type: "<xref href=\"com.azure.ai.projects.models.EvaluationScheduleTaskEvalRun?alt=com.azure.ai.projects.models.EvaluationScheduleTaskEvalRun&text=EvaluationScheduleTaskEvalRun\" data-throw-if-not-resolved=\"False\" />"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.ai.projects.models.EvaluationScheduleTask.getType()"
   fullName: "com.azure.ai.projects.models.EvaluationScheduleTask.getType()"
   name: "getType()"
@@ -125,4 +125,4 @@ type: "class"
 desc: "Evaluation task for the schedule."
 metadata: {}
 package: "com.azure.ai.projects.models"
-artifact: com.azure:azure-ai-projects:2.0.1
+artifact: com.azure:azure-ai-projects:2.1.0
