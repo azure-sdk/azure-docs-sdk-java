@@ -1,7 +1,7 @@
 ---
 title: Azure Azurestackhci-Vm SDK for Java
 description: Reference for Azure Azurestackhci-Vm SDK for Java
-ms.date: 06/03/2026
+ms.date: 06/04/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: azurestackhci-vm

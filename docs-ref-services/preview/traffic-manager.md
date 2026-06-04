@@ -1,11 +1,11 @@
 ---
-title: Azure Traffic Manager libraries for Java
-description: Reference documentation for the Java Traffic Manager management libraries
-keywords: Azure, Java, SDK, API, load balancing, load distribution, network, Traffic Manager
-ms.date: 07/11/2017
+title: Azure Traffic Manager SDK for Java
+description: Reference for Azure Traffic Manager SDK for Java
+ms.date: 06/04/2026
 ms.topic: reference
 ms.devlang: java
-ms.service: traffic-manager
+ms.service: trafficmanager
+keywords: Azure, Java, SDK, API, load balancing, load distribution, network, Traffic Manager
 manager: douge
 ---
 # Azure Traffic Manager libraries for Java
@@ -54,4 +54,3 @@ TrafficManagerProfile tmProfile = azure.trafficManagerProfiles().define("testTMP
 [Balance web app traffic across multiple regions](https://github.com/Azure-Samples/traffic-manager-java-manage-profiles)
 
 Explore more [sample Java code for Azure Traffic Manager](https://azure.microsoft.com/resources/samples/?platform=java&term=traffic) you can use in your apps.
-

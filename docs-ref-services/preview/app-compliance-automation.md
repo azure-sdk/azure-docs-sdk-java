@@ -1,7 +1,7 @@
 ---
 title: Azure App Compliance Automation SDK for Java
 description: Reference for Azure App Compliance Automation SDK for Java
-ms.date: 06/03/2026
+ms.date: 06/04/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: appcomplianceautomation
