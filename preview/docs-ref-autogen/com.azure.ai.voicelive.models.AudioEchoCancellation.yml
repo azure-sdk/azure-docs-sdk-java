@@ -49,6 +49,26 @@ methods:
   returns:
     description: "An instance of AudioEchoCancellation if the JsonReader was pointing to an instance of it, or null if it\n was pointing to JSON null."
     type: "<xref href=\"com.azure.ai.voicelive.models.AudioEchoCancellation?alt=com.azure.ai.voicelive.models.AudioEchoCancellation&text=AudioEchoCancellation\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.voicelive.models.AudioEchoCancellation.getChannels()"
+  fullName: "com.azure.ai.voicelive.models.AudioEchoCancellation.getChannels()"
+  name: "getChannels()"
+  nameWithType: "AudioEchoCancellation.getChannels()"
+  summary: "Get the channels property: Number of input audio channels."
+  syntax: "public Integer getChannels()"
+  desc: "Get the channels property: Number of input audio channels. - \\`1\\`: Mono input (default). - \\`2\\`: Interleaved stereo input where channel 0 is the microphone signal and channel 1 is the echo reference signal. When set to 2, \\`reference\\_source\\` must be \\`client\\` and \\`input\\_audio\\_format\\` must be \\`pcm16\\`."
+  returns:
+    description: "the channels value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+- uid: "com.azure.ai.voicelive.models.AudioEchoCancellation.getReferenceSource()"
+  fullName: "com.azure.ai.voicelive.models.AudioEchoCancellation.getReferenceSource()"
+  name: "getReferenceSource()"
+  nameWithType: "AudioEchoCancellation.getReferenceSource()"
+  summary: "Get the reference<wbr>Source property: The source of the echo cancellation reference signal."
+  syntax: "public EchoCancellationReferenceSource getReferenceSource()"
+  desc: "Get the referenceSource property: The source of the echo cancellation reference signal. - \\`server\\`: EC uses the internal TTS loopback as the reference signal (default, existing behavior). - \\`client\\`: EC uses the client-supplied reference channel (ch1 of stereo input). Internal TTS loopback is skipped."
+  returns:
+    description: "the referenceSource value."
+    type: "<xref href=\"com.azure.ai.voicelive.models.EchoCancellationReferenceSource?alt=com.azure.ai.voicelive.models.EchoCancellationReferenceSource&text=EchoCancellationReferenceSource\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.voicelive.models.AudioEchoCancellation.getType()"
   fullName: "com.azure.ai.voicelive.models.AudioEchoCancellation.getType()"
   name: "getType()"
@@ -59,6 +79,34 @@ methods:
   returns:
     description: "the type value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.ai.voicelive.models.AudioEchoCancellation.setChannels(java.lang.Integer)"
+  fullName: "com.azure.ai.voicelive.models.AudioEchoCancellation.setChannels(Integer channels)"
+  name: "setChannels(Integer channels)"
+  nameWithType: "AudioEchoCancellation.setChannels(Integer channels)"
+  summary: "Set the channels property: Number of input audio channels."
+  parameters:
+  - description: "the channels value to set."
+    name: "channels"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  syntax: "public AudioEchoCancellation setChannels(Integer channels)"
+  desc: "Set the channels property: Number of input audio channels. - \\`1\\`: Mono input (default). - \\`2\\`: Interleaved stereo input where channel 0 is the microphone signal and channel 1 is the echo reference signal. When set to 2, \\`reference\\_source\\` must be \\`client\\` and \\`input\\_audio\\_format\\` must be \\`pcm16\\`."
+  returns:
+    description: "the AudioEchoCancellation object itself."
+    type: "<xref href=\"com.azure.ai.voicelive.models.AudioEchoCancellation?alt=com.azure.ai.voicelive.models.AudioEchoCancellation&text=AudioEchoCancellation\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.voicelive.models.AudioEchoCancellation.setReferenceSource(com.azure.ai.voicelive.models.EchoCancellationReferenceSource)"
+  fullName: "com.azure.ai.voicelive.models.AudioEchoCancellation.setReferenceSource(EchoCancellationReferenceSource referenceSource)"
+  name: "setReferenceSource(EchoCancellationReferenceSource referenceSource)"
+  nameWithType: "AudioEchoCancellation.setReferenceSource(EchoCancellationReferenceSource referenceSource)"
+  summary: "Set the reference<wbr>Source property: The source of the echo cancellation reference signal."
+  parameters:
+  - description: "the referenceSource value to set."
+    name: "referenceSource"
+    type: "<xref href=\"com.azure.ai.voicelive.models.EchoCancellationReferenceSource?alt=com.azure.ai.voicelive.models.EchoCancellationReferenceSource&text=EchoCancellationReferenceSource\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public AudioEchoCancellation setReferenceSource(EchoCancellationReferenceSource referenceSource)"
+  desc: "Set the referenceSource property: The source of the echo cancellation reference signal. - \\`server\\`: EC uses the internal TTS loopback as the reference signal (default, existing behavior). - \\`client\\`: EC uses the client-supplied reference channel (ch1 of stereo input). Internal TTS loopback is skipped."
+  returns:
+    description: "the AudioEchoCancellation object itself."
+    type: "<xref href=\"com.azure.ai.voicelive.models.AudioEchoCancellation?alt=com.azure.ai.voicelive.models.AudioEchoCancellation&text=AudioEchoCancellation\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.voicelive.models.AudioEchoCancellation.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.ai.voicelive.models.AudioEchoCancellation.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -77,4 +125,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.voicelive.models.AudioEchoCancellation?alt=com.azure.ai.voicelive.models.AudioEchoCancellation&text=AudioEchoCancellation\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.ai.voicelive.models"
-artifact: com.azure:azure-ai-voicelive:1.0.0-beta.6
+artifact: com.azure:azure-ai-voicelive:1.1.0-beta.1

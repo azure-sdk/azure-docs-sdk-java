@@ -6,14 +6,14 @@ nameWithType: "SessionUpdateConversationItemInputAudioTranscriptionCompleted"
 summary: "This event is the output of audio transcription for user audio written to the user audio buffer."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.ai.voicelive.models.SessionUpdate?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"com.azure.ai.voicelive.models.SessionServerEvent?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
-- classRef: "<xref href=\"com.azure.ai.voicelive.models.SessionUpdate?alt=com.azure.ai.voicelive.models.SessionUpdate&text=SessionUpdate\" data-throw-if-not-resolved=\"False\" />"
+- classRef: "<xref href=\"com.azure.ai.voicelive.models.SessionServerEvent?alt=com.azure.ai.voicelive.models.SessionServerEvent&text=SessionServerEvent\" data-throw-if-not-resolved=\"False\" />"
   methodsRef:
-  - "<xref href=\"com.azure.ai.voicelive.models.SessionUpdate.fromJson(com.azure.json.JsonReader)?alt=com.azure.ai.voicelive.models.SessionUpdate.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.ai.voicelive.models.SessionUpdate.getEventId()?alt=com.azure.ai.voicelive.models.SessionUpdate.getEventId&text=getEventId\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.ai.voicelive.models.SessionUpdate.getType()?alt=com.azure.ai.voicelive.models.SessionUpdate.getType&text=getType\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.ai.voicelive.models.SessionUpdate.toJson(com.azure.json.JsonWriter)?alt=com.azure.ai.voicelive.models.SessionUpdate.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.ai.voicelive.models.SessionServerEvent.fromJson(com.azure.json.JsonReader)?alt=com.azure.ai.voicelive.models.SessionServerEvent.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.ai.voicelive.models.SessionServerEvent.getEventId()?alt=com.azure.ai.voicelive.models.SessionServerEvent.getEventId&text=getEventId\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.ai.voicelive.models.SessionServerEvent.getType()?alt=com.azure.ai.voicelive.models.SessionServerEvent.getType&text=getType\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.ai.voicelive.models.SessionServerEvent.toJson(com.azure.json.JsonWriter)?alt=com.azure.ai.voicelive.models.SessionServerEvent.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -27,7 +27,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **SessionUpdateConversationItemInputAudioTranscriptionCompleted**</br> extends <xref href=\"com.azure.ai.voicelive.models.SessionUpdate?alt=com.azure.ai.voicelive.models.SessionUpdate&text=SessionUpdate\" data-throw-if-not-resolved=\"False\" />"
+syntax: "public final class **SessionUpdateConversationItemInputAudioTranscriptionCompleted**</br> extends <xref href=\"com.azure.ai.voicelive.models.SessionServerEvent?alt=com.azure.ai.voicelive.models.SessionServerEvent&text=SessionServerEvent\" data-throw-if-not-resolved=\"False\" />"
 methods:
 - uid: "com.azure.ai.voicelive.models.SessionUpdateConversationItemInputAudioTranscriptionCompleted.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.ai.voicelive.models.SessionUpdateConversationItemInputAudioTranscriptionCompleted.fromJson(JsonReader jsonReader)"
@@ -68,6 +68,26 @@ methods:
   returns:
     description: "the itemId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.ai.voicelive.models.SessionUpdateConversationItemInputAudioTranscriptionCompleted.getLogProbs()"
+  fullName: "com.azure.ai.voicelive.models.SessionUpdateConversationItemInputAudioTranscriptionCompleted.getLogProbs()"
+  name: "getLogProbs()"
+  nameWithType: "SessionUpdateConversationItemInputAudioTranscriptionCompleted.getLogProbs()"
+  summary: "Get the log<wbr>Probs property: The log probabilities of the transcription tokens."
+  syntax: "public List<LogProbProperties> getLogProbs()"
+  desc: "Get the logProbs property: The log probabilities of the transcription tokens."
+  returns:
+    description: "the logProbs value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.ai.voicelive.models.LogProbProperties?alt=com.azure.ai.voicelive.models.LogProbProperties&text=LogProbProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.ai.voicelive.models.SessionUpdateConversationItemInputAudioTranscriptionCompleted.getPhrases()"
+  fullName: "com.azure.ai.voicelive.models.SessionUpdateConversationItemInputAudioTranscriptionCompleted.getPhrases()"
+  name: "getPhrases()"
+  nameWithType: "SessionUpdateConversationItemInputAudioTranscriptionCompleted.getPhrases()"
+  summary: "Get the phrases property: The transcription phrases with timing information."
+  syntax: "public List<TranscriptionPhrase> getPhrases()"
+  desc: "Get the phrases property: The transcription phrases with timing information."
+  returns:
+    description: "the phrases value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.ai.voicelive.models.TranscriptionPhrase?alt=com.azure.ai.voicelive.models.TranscriptionPhrase&text=TranscriptionPhrase\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.ai.voicelive.models.SessionUpdateConversationItemInputAudioTranscriptionCompleted.getTranscript()"
   fullName: "com.azure.ai.voicelive.models.SessionUpdateConversationItemInputAudioTranscriptionCompleted.getTranscript()"
   name: "getTranscript()"
@@ -83,7 +103,7 @@ methods:
   name: "getType()"
   nameWithType: "SessionUpdateConversationItemInputAudioTranscriptionCompleted.getType()"
   summary: "Get the type property: The type of event."
-  overridden: "com.azure.ai.voicelive.models.SessionUpdate.getType()"
+  overridden: "com.azure.ai.voicelive.models.SessionServerEvent.getType()"
   syntax: "public ServerEventType getType()"
   desc: "Get the type property: The type of event."
   returns:
@@ -93,7 +113,7 @@ methods:
   fullName: "com.azure.ai.voicelive.models.SessionUpdateConversationItemInputAudioTranscriptionCompleted.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
   nameWithType: "SessionUpdateConversationItemInputAudioTranscriptionCompleted.toJson(JsonWriter jsonWriter)"
-  overridden: "com.azure.ai.voicelive.models.SessionUpdate.toJson(com.azure.json.JsonWriter)"
+  overridden: "com.azure.ai.voicelive.models.SessionServerEvent.toJson(com.azure.json.JsonWriter)"
   parameters:
   - name: "jsonWriter"
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
@@ -106,4 +126,4 @@ type: "class"
 desc: "This event is the output of audio transcription for user audio written to the user audio buffer. Transcription begins when the input audio buffer is committed by the client or server (in \\`server\\_vad\\` mode). Transcription runs asynchronously with Response creation, so this event may come before or after the Response events. VoiceLive API models accept audio natively, and thus input transcription is a separate process run on a separate ASR (Automatic Speech Recognition) model. The transcript may diverge somewhat from the model's interpretation, and should be treated as a rough guide."
 metadata: {}
 package: "com.azure.ai.voicelive.models"
-artifact: com.azure:azure-ai-voicelive:1.0.0-beta.6
+artifact: com.azure:azure-ai-voicelive:1.1.0-beta.1

@@ -6,14 +6,14 @@ nameWithType: "SessionUpdateInputAudioBufferSpeechStarted"
 summary: "Sent by the server when in \\`server\\_vad\\` mode to indicate that speech has been detected in the audio buffer."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.ai.voicelive.models.SessionUpdate?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"com.azure.ai.voicelive.models.SessionServerEvent?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
-- classRef: "<xref href=\"com.azure.ai.voicelive.models.SessionUpdate?alt=com.azure.ai.voicelive.models.SessionUpdate&text=SessionUpdate\" data-throw-if-not-resolved=\"False\" />"
+- classRef: "<xref href=\"com.azure.ai.voicelive.models.SessionServerEvent?alt=com.azure.ai.voicelive.models.SessionServerEvent&text=SessionServerEvent\" data-throw-if-not-resolved=\"False\" />"
   methodsRef:
-  - "<xref href=\"com.azure.ai.voicelive.models.SessionUpdate.fromJson(com.azure.json.JsonReader)?alt=com.azure.ai.voicelive.models.SessionUpdate.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.ai.voicelive.models.SessionUpdate.getEventId()?alt=com.azure.ai.voicelive.models.SessionUpdate.getEventId&text=getEventId\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.ai.voicelive.models.SessionUpdate.getType()?alt=com.azure.ai.voicelive.models.SessionUpdate.getType&text=getType\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.ai.voicelive.models.SessionUpdate.toJson(com.azure.json.JsonWriter)?alt=com.azure.ai.voicelive.models.SessionUpdate.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.ai.voicelive.models.SessionServerEvent.fromJson(com.azure.json.JsonReader)?alt=com.azure.ai.voicelive.models.SessionServerEvent.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.ai.voicelive.models.SessionServerEvent.getEventId()?alt=com.azure.ai.voicelive.models.SessionServerEvent.getEventId&text=getEventId\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.ai.voicelive.models.SessionServerEvent.getType()?alt=com.azure.ai.voicelive.models.SessionServerEvent.getType&text=getType\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.ai.voicelive.models.SessionServerEvent.toJson(com.azure.json.JsonWriter)?alt=com.azure.ai.voicelive.models.SessionServerEvent.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -27,7 +27,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **SessionUpdateInputAudioBufferSpeechStarted**</br> extends <xref href=\"com.azure.ai.voicelive.models.SessionUpdate?alt=com.azure.ai.voicelive.models.SessionUpdate&text=SessionUpdate\" data-throw-if-not-resolved=\"False\" />"
+syntax: "public final class **SessionUpdateInputAudioBufferSpeechStarted**</br> extends <xref href=\"com.azure.ai.voicelive.models.SessionServerEvent?alt=com.azure.ai.voicelive.models.SessionServerEvent&text=SessionServerEvent\" data-throw-if-not-resolved=\"False\" />"
 methods:
 - uid: "com.azure.ai.voicelive.models.SessionUpdateInputAudioBufferSpeechStarted.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.ai.voicelive.models.SessionUpdateInputAudioBufferSpeechStarted.fromJson(JsonReader jsonReader)"
@@ -73,7 +73,7 @@ methods:
   name: "getType()"
   nameWithType: "SessionUpdateInputAudioBufferSpeechStarted.getType()"
   summary: "Get the type property: The type of event."
-  overridden: "com.azure.ai.voicelive.models.SessionUpdate.getType()"
+  overridden: "com.azure.ai.voicelive.models.SessionServerEvent.getType()"
   syntax: "public ServerEventType getType()"
   desc: "Get the type property: The type of event."
   returns:
@@ -83,7 +83,7 @@ methods:
   fullName: "com.azure.ai.voicelive.models.SessionUpdateInputAudioBufferSpeechStarted.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
   nameWithType: "SessionUpdateInputAudioBufferSpeechStarted.toJson(JsonWriter jsonWriter)"
-  overridden: "com.azure.ai.voicelive.models.SessionUpdate.toJson(com.azure.json.JsonWriter)"
+  overridden: "com.azure.ai.voicelive.models.SessionServerEvent.toJson(com.azure.json.JsonWriter)"
   parameters:
   - name: "jsonWriter"
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
@@ -96,4 +96,4 @@ type: "class"
 desc: "Sent by the server when in \\`server\\_vad\\` mode to indicate that speech has been detected in the audio buffer. This can happen any time audio is added to the buffer (unless speech is already detected). The client may want to use this event to interrupt audio playback or provide visual feedback to the user. The client should expect to receive a \\`input\\_audio\\_buffer.speech\\_stopped\\` event when speech stops. The \\`item\\_id\\` property is the ID of the user message item that will be created when speech stops and will also be included in the \\`input\\_audio\\_buffer.speech\\_stopped\\` event (unless the client manually commits the audio buffer during VAD activation)."
 metadata: {}
 package: "com.azure.ai.voicelive.models"
-artifact: com.azure:azure-ai-voicelive:1.0.0-beta.6
+artifact: com.azure:azure-ai-voicelive:1.1.0-beta.1
