@@ -68,6 +68,22 @@ constructors:
   syntax: "public CertificatePolicy(String issuerName, String subject, SubjectAlternativeNames subjectAlternativeNames)"
   desc: "Creates certificate policy."
 methods:
+- uid: "com.azure.security.keyvault.certificates.models.CertificatePolicy.forPlatformManaged(com.azure.security.keyvault.certificates.models.PlatformManaged)"
+  fullName: "com.azure.security.keyvault.certificates.models.CertificatePolicy.forPlatformManaged(PlatformManaged platformManaged)"
+  name: "forPlatformManaged(PlatformManaged platformManaged)"
+  nameWithType: "CertificatePolicy.forPlatformManaged(PlatformManaged platformManaged)"
+  summary: "Creates a certificate policy for a platform-managed certificate."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "the platform-managed certificate configuration."
+    name: "platformManaged"
+    type: "<xref href=\"com.azure.security.keyvault.certificates.models.PlatformManaged?alt=com.azure.security.keyvault.certificates.models.PlatformManaged&text=PlatformManaged\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static CertificatePolicy forPlatformManaged(PlatformManaged platformManaged)"
+  desc: "Creates a certificate policy for a platform-managed certificate. The returned policy contains only the platform-managed configuration (and optionally key properties set via subsequent calls such as <xref uid=\"com.azure.security.keyvault.certificates.models.CertificatePolicy.setKeyType(com.azure.security.keyvault.certificates.models.CertificateKeyType)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#setKeyType(CertificateKeyType)\"></xref> or <xref uid=\"com.azure.security.keyvault.certificates.models.CertificatePolicy.setKeySize(java.lang.Integer)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#setKeySize(Integer)\"></xref>). Issuer and X.509 certificate properties are intentionally left unset — the service rejects create requests that specify them when `platformManaged` is set.\n\n**Warning: this factory is currently intended for internal (first-party) Key Vault use only.** It targets the preview service version `2026-03-01-preview` and is not generally available. Third-party calls will be rejected by the service. Do not use in production code."
+  returns:
+    description: "a <xref uid=\"com.azure.security.keyvault.certificates.implementation.models.CertificatePolicy\" data-throw-if-not-resolved=\"false\" data-raw-source=\"CertificatePolicy\"></xref> suitable for creating a platform-managed certificate."
+    type: "<xref href=\"com.azure.security.keyvault.certificates.models.CertificatePolicy?alt=com.azure.security.keyvault.certificates.models.CertificatePolicy&text=CertificatePolicy\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.security.keyvault.certificates.models.CertificatePolicy.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.security.keyvault.certificates.models.CertificatePolicy.fromJson(JsonReader jsonReader)"
   name: "fromJson(JsonReader jsonReader)"
@@ -199,6 +215,16 @@ methods:
   returns:
     description: "the lifetime actions"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.security.keyvault.certificates.models.LifetimeAction?alt=com.azure.security.keyvault.certificates.models.LifetimeAction&text=LifetimeAction\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.security.keyvault.certificates.models.CertificatePolicy.getPlatformManaged()"
+  fullName: "com.azure.security.keyvault.certificates.models.CertificatePolicy.getPlatformManaged()"
+  name: "getPlatformManaged()"
+  nameWithType: "CertificatePolicy.getPlatformManaged()"
+  summary: "Get the platform managed certificate configuration."
+  syntax: "public PlatformManaged getPlatformManaged()"
+  desc: "Get the platform managed certificate configuration.\n\n**Warning: this property is currently intended for internal (first-party) Key Vault use only.** It is only populated when the policy was created against the preview service version `2026-03-01-preview`. Third-party callers should not rely on this property; the underlying service contract may change without notice."
+  returns:
+    description: "the platform managed certificate configuration."
+    type: "<xref href=\"com.azure.security.keyvault.certificates.models.PlatformManaged?alt=com.azure.security.keyvault.certificates.models.PlatformManaged&text=PlatformManaged\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.security.keyvault.certificates.models.CertificatePolicy.getSubject()"
   fullName: "com.azure.security.keyvault.certificates.models.CertificatePolicy.getSubject()"
   name: "getSubject()"
@@ -447,6 +473,20 @@ methods:
   returns:
     description: "the updated certificate policy object itself."
     type: "<xref href=\"com.azure.security.keyvault.certificates.models.CertificatePolicy?alt=com.azure.security.keyvault.certificates.models.CertificatePolicy&text=CertificatePolicy\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.security.keyvault.certificates.models.CertificatePolicy.setPlatformManaged(com.azure.security.keyvault.certificates.models.PlatformManaged)"
+  fullName: "com.azure.security.keyvault.certificates.models.CertificatePolicy.setPlatformManaged(PlatformManaged platformManaged)"
+  name: "setPlatformManaged(PlatformManaged platformManaged)"
+  nameWithType: "CertificatePolicy.setPlatformManaged(PlatformManaged platformManaged)"
+  summary: "Set the platform managed certificate configuration."
+  parameters:
+  - description: "the platform managed certificate configuration."
+    name: "platformManaged"
+    type: "<xref href=\"com.azure.security.keyvault.certificates.models.PlatformManaged?alt=com.azure.security.keyvault.certificates.models.PlatformManaged&text=PlatformManaged\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public CertificatePolicy setPlatformManaged(PlatformManaged platformManaged)"
+  desc: "Set the platform managed certificate configuration.\n\n**Warning: this property is currently intended for internal (first-party) Key Vault use only.** It is exposed under the preview service version `2026-03-01-preview` and is not generally available. Third-party calls that supply a <xref uid=\"com.azure.security.keyvault.certificates.models.PlatformManaged\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PlatformManaged\"></xref> configuration will be rejected by the service. Do not use this setter in production code."
+  returns:
+    description: "the updated CertificatePolicy object itself."
+    type: "<xref href=\"com.azure.security.keyvault.certificates.models.CertificatePolicy?alt=com.azure.security.keyvault.certificates.models.CertificatePolicy&text=CertificatePolicy\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.security.keyvault.certificates.models.CertificatePolicy.setSubject(java.lang.String)"
   fullName: "com.azure.security.keyvault.certificates.models.CertificatePolicy.setSubject(String subject)"
   name: "setSubject(String subject)"
@@ -507,4 +547,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.security.keyvault.certificates.models.CertificatePolicy?alt=com.azure.security.keyvault.certificates.models.CertificatePolicy&text=CertificatePolicy\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.security.keyvault.certificates.models"
-artifact: com.azure:azure-security-keyvault-certificates:4.9.0-beta.1
+artifact: com.azure:azure-security-keyvault-certificates:4.10.0-beta.1
