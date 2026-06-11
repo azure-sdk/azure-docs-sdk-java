@@ -1,7 +1,7 @@
 ---
 title: Azure Network Function SDK for Java
 description: Reference for Azure Network Function SDK for Java
-ms.date: 06/10/2026
+ms.date: 06/11/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: networkfunction
