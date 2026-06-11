@@ -4,7 +4,7 @@ fullName: "com.azure.core.amqp.AmqpConnection"
 name: "AmqpConnection"
 nameWithType: "AmqpConnection"
 summary: "Represents a TCP connection between the client and a service that uses the AMQP protocol."
-syntax: "public interface **AmqpConnection**</br> extends <a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/Disposable.html\">Disposable</a>, <xref href=\"com.azure.core.util.AsyncCloseable?alt=com.azure.core.util.AsyncCloseable&text=AsyncCloseable\" data-throw-if-not-resolved=\"False\" />"
+syntax: "public interface **AmqpConnection**</br> extends <xref href=\"reactor.core.Disposable?alt=reactor.core.Disposable&text=Disposable\" data-throw-if-not-resolved=\"False\" />, <xref href=\"com.azure.core.util.AsyncCloseable?alt=com.azure.core.util.AsyncCloseable&text=AsyncCloseable\" data-throw-if-not-resolved=\"False\" />"
 methods:
 - uid: "com.azure.core.amqp.AmqpConnection.closeAsync()"
   fullName: "com.azure.core.amqp.AmqpConnection.closeAsync()"
@@ -17,7 +17,7 @@ methods:
   desc: "Disposes of the AMQP connection."
   returns:
     description: "Mono that completes when the close operation is complete."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.core.amqp.AmqpConnection.createSession(java.lang.String)"
   fullName: "com.azure.core.amqp.AmqpConnection.createSession(String sessionName)"
   name: "createSession(String sessionName)"
@@ -33,7 +33,7 @@ methods:
   desc: "Creates a new session with the given session name."
   returns:
     description: "The AMQP session that was created."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.amqp.AmqpSession?alt=com.azure.core.amqp.AmqpSession&text=AmqpSession\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.amqp.AmqpSession?alt=com.azure.core.amqp.AmqpSession&text=AmqpSession\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.core.amqp.AmqpConnection.getClaimsBasedSecurityNode()"
   fullName: "com.azure.core.amqp.AmqpConnection.getClaimsBasedSecurityNode()"
   name: "getClaimsBasedSecurityNode()"
@@ -45,7 +45,7 @@ methods:
   desc: "Gets the claims-based security (CBS) node that authorizes access to resources."
   returns:
     description: "Provider that authorizes access to AMQP resources."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.amqp.ClaimsBasedSecurityNode?alt=com.azure.core.amqp.ClaimsBasedSecurityNode&text=ClaimsBasedSecurityNode\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.amqp.ClaimsBasedSecurityNode?alt=com.azure.core.amqp.ClaimsBasedSecurityNode&text=ClaimsBasedSecurityNode\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.core.amqp.AmqpConnection.getConnectionProperties()"
   fullName: "com.azure.core.amqp.AmqpConnection.getConnectionProperties()"
   name: "getConnectionProperties()"
@@ -69,7 +69,7 @@ methods:
   desc: "Gets the endpoint states for the AMQP connection. <xref uid=\"com.azure.core.amqp.exception.AmqpException\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AmqpExceptions\"></xref> that occur on the link are reported in the connection state. When the stream terminates, the connection is closed."
   returns:
     description: "A stream of endpoint states for the AMQP connection."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<xref href=\"com.azure.core.amqp.AmqpEndpointState?alt=com.azure.core.amqp.AmqpEndpointState&text=AmqpEndpointState\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.amqp.AmqpEndpointState?alt=com.azure.core.amqp.AmqpEndpointState&text=AmqpEndpointState\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.core.amqp.AmqpConnection.getFullyQualifiedNamespace()"
   fullName: "com.azure.core.amqp.AmqpConnection.getFullyQualifiedNamespace()"
   name: "getFullyQualifiedNamespace()"
@@ -109,7 +109,7 @@ methods:
   desc: "Gets or creates the management node."
   returns:
     description: "A Mono that completes with the management node."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.amqp.AmqpManagementNode?alt=com.azure.core.amqp.AmqpManagementNode&text=AmqpManagementNode\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.amqp.AmqpManagementNode?alt=com.azure.core.amqp.AmqpManagementNode&text=AmqpManagementNode\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.core.amqp.AmqpConnection.getMaxFrameSize()"
   fullName: "com.azure.core.amqp.AmqpConnection.getMaxFrameSize()"
   name: "getMaxFrameSize()"
@@ -133,7 +133,7 @@ methods:
   desc: "Gets any shutdown signals that occur in the AMQP endpoint."
   returns:
     description: "A stream of shutdown signals that occur in the AMQP endpoint."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<xref href=\"com.azure.core.amqp.AmqpShutdownSignal?alt=com.azure.core.amqp.AmqpShutdownSignal&text=AmqpShutdownSignal\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.amqp.AmqpShutdownSignal?alt=com.azure.core.amqp.AmqpShutdownSignal&text=AmqpShutdownSignal\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.core.amqp.AmqpConnection.removeSession(java.lang.String)"
   fullName: "com.azure.core.amqp.AmqpConnection.removeSession(String sessionName)"
   name: "removeSession(String sessionName)"
@@ -153,8 +153,8 @@ methods:
 type: "interface"
 desc: "Represents a TCP connection between the client and a service that uses the AMQP protocol."
 implements:
-- "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/Disposable.html\">Disposable</a>"
 - "<xref href=\"com.azure.core.util.AsyncCloseable?alt=com.azure.core.util.AsyncCloseable&text=AsyncCloseable\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"reactor.core.Disposable?alt=reactor.core.Disposable&text=Disposable\" data-throw-if-not-resolved=\"False\" />"
 metadata: {}
 package: "com.azure.core.amqp"
 artifact: com.azure:azure-core-amqp:2.9.0-beta.7

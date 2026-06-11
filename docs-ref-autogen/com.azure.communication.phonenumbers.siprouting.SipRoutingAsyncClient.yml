@@ -35,7 +35,7 @@ methods:
   desc: "Deletes SIP Trunk.\n\n**Code Samples**\n\n```java\nsipRoutingAsyncClient.deleteTrunk(\"<trunk fqdn>\").block();\n```"
   returns:
     description: "void."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.communication.phonenumbers.siprouting.SipRoutingAsyncClient.deleteTrunkWithResponse(java.lang.String)"
   fullName: "com.azure.communication.phonenumbers.siprouting.SipRoutingAsyncClient.deleteTrunkWithResponse(String fqdn)"
   name: "deleteTrunkWithResponse(String fqdn)"
@@ -49,7 +49,7 @@ methods:
   desc: "Deletes SIP Trunk.\n\n**Code Samples**\n\n```java\nsipRoutingAsyncClient.deleteTrunkWithResponse(\"<trunk fqdn>\").subscribe(response -> {\n     System.out.println(\"Response status \" + response.getStatusCode());\n });\n```"
   returns:
     description: "Response object."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
 - uid: "com.azure.communication.phonenumbers.siprouting.SipRoutingAsyncClient.getTrunk(java.lang.String)"
   fullName: "com.azure.communication.phonenumbers.siprouting.SipRoutingAsyncClient.getTrunk(String fqdn)"
   name: "getTrunk(String fqdn)"
@@ -63,7 +63,7 @@ methods:
   desc: "Gets SIP Trunk by FQDN.\n\n**Code Samples**\n\n```java\nsipRoutingAsyncClient.getTrunk(\"<trunk fqdn>\").subscribe(trunk ->\n     System.out.println(\"Trunk \" + trunk.getFqdn() + \":\" + trunk.getSipSignalingPort()));\n```"
   returns:
     description: "SIP Trunk if exists, null otherwise."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.communication.phonenumbers.siprouting.models.SipTrunk?alt=com.azure.communication.phonenumbers.siprouting.models.SipTrunk&text=SipTrunk\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.phonenumbers.siprouting.models.SipTrunk?alt=com.azure.communication.phonenumbers.siprouting.models.SipTrunk&text=SipTrunk\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.communication.phonenumbers.siprouting.SipRoutingAsyncClient.getTrunkWithResponse(java.lang.String)"
   fullName: "com.azure.communication.phonenumbers.siprouting.SipRoutingAsyncClient.getTrunkWithResponse(String fqdn)"
   name: "getTrunkWithResponse(String fqdn)"
@@ -77,7 +77,7 @@ methods:
   desc: "Gets SIP Trunk by FQDN.\n\n**Code Samples**\n\n```java\nsipRoutingAsyncClient.getTrunkWithResponse(\"<trunk fqdn>\")\n     .subscribe(response -> {\n         SipTrunk trunk = response.getValue();\n         System.out.println(\"Trunk \" + trunk.getFqdn() + \":\" + trunk.getSipSignalingPort());\n     });\n```"
   returns:
     description: "Response object with the SIP Trunk if exists, with null otherwise."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.phonenumbers.siprouting.models.SipTrunk?alt=com.azure.communication.phonenumbers.siprouting.models.SipTrunk&text=SipTrunk\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.phonenumbers.siprouting.models.SipTrunk?alt=com.azure.communication.phonenumbers.siprouting.models.SipTrunk&text=SipTrunk\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.communication.phonenumbers.siprouting.SipRoutingAsyncClient.listRoutes()"
   fullName: "com.azure.communication.phonenumbers.siprouting.SipRoutingAsyncClient.listRoutes()"
   name: "listRoutes()"
@@ -111,7 +111,7 @@ methods:
   desc: "Sets SIP Trunk Routes.\n\n**Code Samples**\n\n```java\nsipRoutingAsyncClient.setRoutes(asList(\n     new SipTrunkRoute(\"route name1\", \".*9\").setTrunks(asList(\"<first trunk fqdn>\", \"<second trunk fqdn>\")),\n     new SipTrunkRoute(\"route name2\", \".*\").setTrunks(asList(\"<second trunk fqdn>\"))\n )).block();\n```"
   returns:
     description: "void."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.communication.phonenumbers.siprouting.SipRoutingAsyncClient.setRoutesWithResponse(java.util.List<com.azure.communication.phonenumbers.siprouting.models.SipTrunkRoute>)"
   fullName: "com.azure.communication.phonenumbers.siprouting.SipRoutingAsyncClient.setRoutesWithResponse(List<SipTrunkRoute> routes)"
   name: "setRoutesWithResponse(List<SipTrunkRoute> routes)"
@@ -125,7 +125,7 @@ methods:
   desc: "Sets SIP Trunk Routes.\n\n**Code Samples**\n\n```java\nsipRoutingAsyncClient.setRoutesWithResponse(asList(\n     new SipTrunkRoute(\"route name1\", \".*9\").setTrunks(asList(\"<first trunk fqdn>\", \"<second trunk fqdn>\")),\n     new SipTrunkRoute(\"route name2\", \".*\").setTrunks(asList(\"<second trunk fqdn>\"))\n )).subscribe(response -> {\n     System.out.println(\"Response status \" + response.getStatusCode());\n });\n```"
   returns:
     description: "Response object."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
 - uid: "com.azure.communication.phonenumbers.siprouting.SipRoutingAsyncClient.setTrunk(com.azure.communication.phonenumbers.siprouting.models.SipTrunk)"
   fullName: "com.azure.communication.phonenumbers.siprouting.SipRoutingAsyncClient.setTrunk(SipTrunk trunk)"
   name: "setTrunk(SipTrunk trunk)"
@@ -139,7 +139,7 @@ methods:
   desc: "Sets SIP Trunk. If a trunk with specified FQDN already exists, it will be replaced, otherwise a new trunk will be added.\n\n**Code Samples**\n\n```java\nsipRoutingAsyncClient.setTrunk(new SipTrunk(\"<trunk fqdn>\", 12345)).block();\n```"
   returns:
     description: "void."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.communication.phonenumbers.siprouting.SipRoutingAsyncClient.setTrunks(java.util.List<com.azure.communication.phonenumbers.siprouting.models.SipTrunk>)"
   fullName: "com.azure.communication.phonenumbers.siprouting.SipRoutingAsyncClient.setTrunks(List<SipTrunk> trunks)"
   name: "setTrunks(List<SipTrunk> trunks)"
@@ -153,7 +153,7 @@ methods:
   desc: "Sets SIP Trunks.\n\n**Code Samples**\n\n```java\nsipRoutingAsyncClient.setTrunks(asList(\n     new SipTrunk(\"<first trunk fqdn>\", 12345),\n     new SipTrunk(\"<second trunk fqdn>\", 23456)\n )).block();\n```"
   returns:
     description: "void."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.communication.phonenumbers.siprouting.SipRoutingAsyncClient.setTrunksWithResponse(java.util.List<com.azure.communication.phonenumbers.siprouting.models.SipTrunk>)"
   fullName: "com.azure.communication.phonenumbers.siprouting.SipRoutingAsyncClient.setTrunksWithResponse(List<SipTrunk> trunks)"
   name: "setTrunksWithResponse(List<SipTrunk> trunks)"
@@ -167,7 +167,7 @@ methods:
   desc: "Sets SIP Trunks.\n\n**Code Samples**\n\n```java\nsipRoutingAsyncClient.setTrunksWithResponse(asList(\n     new SipTrunk(\"<first trunk fqdn>\", 12345),\n     new SipTrunk(\"<second trunk fqdn>\", 23456)\n )).subscribe(response -> {\n     System.out.println(\"Response status \" + response.getStatusCode());\n });\n```"
   returns:
     description: "Response object."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
 type: "class"
 desc: "Asynchronous SIP Routing Client. This client contains all the operations for <xref uid=\"com.azure.communication.phonenumbers.siprouting.models.SipTrunk\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SipTrunk\"></xref> and <xref uid=\"com.azure.communication.phonenumbers.siprouting.models.SipTrunkRoute\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SipTrunkRoute\"></xref>.\n\n**Instantiating an asynchronous SIP Routing Client using connection string**\n\n```java\nSipRoutingAsyncClient sipRoutingAsyncClient = new SipRoutingClientBuilder()\n     .connectionString(connectionString)\n     .buildAsyncClient();\n```"
 metadata: {}

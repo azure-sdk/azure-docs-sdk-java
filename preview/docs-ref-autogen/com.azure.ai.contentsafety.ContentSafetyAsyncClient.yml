@@ -38,7 +38,7 @@ methods:
   desc: "Add BlockItems To Text Blocklist\n\nAdd blockItems to a text blocklist. You can add at most 100 BlockItems in one request."
   returns:
     description: "the response of adding blockItems to text blocklist on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.ai.contentsafety.models.AddBlockItemsResult?alt=com.azure.ai.contentsafety.models.AddBlockItemsResult&text=AddBlockItemsResult\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.contentsafety.models.AddBlockItemsResult?alt=com.azure.ai.contentsafety.models.AddBlockItemsResult&text=AddBlockItemsResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.addBlockItemsWithResponse(java.lang.String,com.azure.core.util.BinaryData,com.azure.core.http.rest.RequestOptions)"
   fullName: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.addBlockItemsWithResponse(String blocklistName, BinaryData addBlockItemsOptions, RequestOptions requestOptions)"
   name: "addBlockItemsWithResponse(String blocklistName, BinaryData addBlockItemsOptions, RequestOptions requestOptions)"
@@ -58,7 +58,7 @@ methods:
   desc: "Add BlockItems To Text Blocklist\n\nAdd blockItems to a text blocklist. You can add at most 100 BlockItems in one request.\n\n**Request Body Schema**\n\n```java\n{\n     blockItems (Required): [\n          (Required){\n             description: String (Optional)\n             text: String (Required)\n         }\n     ]\n }\n```\n\n**Response Body Schema**\n\n```java\n{\n     value (Optional): [\n          (Optional){\n             blockItemId: String (Required)\n             description: String (Optional)\n             text: String (Required)\n         }\n     ]\n }\n```"
   returns:
     description: "the response of adding blockItems to text blocklist along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion\n     of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.analyzeImage(com.azure.ai.contentsafety.models.AnalyzeImageOptions)"
   fullName: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.analyzeImage(AnalyzeImageOptions body)"
   name: "analyzeImage(AnalyzeImageOptions body)"
@@ -72,7 +72,7 @@ methods:
   desc: "Analyze Image\n\nA sync API for harmful content analysis for image. Currently, we support four categories: Hate, SelfHarm, Sexual, Violence."
   returns:
     description: "the analysis response of the image on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.ai.contentsafety.models.AnalyzeImageResult?alt=com.azure.ai.contentsafety.models.AnalyzeImageResult&text=AnalyzeImageResult\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.contentsafety.models.AnalyzeImageResult?alt=com.azure.ai.contentsafety.models.AnalyzeImageResult&text=AnalyzeImageResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.analyzeImageWithResponse(com.azure.core.util.BinaryData,com.azure.core.http.rest.RequestOptions)"
   fullName: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.analyzeImageWithResponse(BinaryData body, RequestOptions requestOptions)"
   name: "analyzeImageWithResponse(BinaryData body, RequestOptions requestOptions)"
@@ -89,7 +89,7 @@ methods:
   desc: "Analyze Image\n\nA sync API for harmful content analysis for image. Currently, we support four categories: Hate, SelfHarm, Sexual, Violence.\n\n**Request Body Schema**\n\n```java\n{\n     image (Required): {\n         content: byte[] (Optional)\n         blobUrl: String (Optional)\n     }\n     categories (Optional): [\n         String(Hate/SelfHarm/Sexual/Violence) (Optional)\n     ]\n }\n```\n\n**Response Body Schema**\n\n```java\n{\n     hateResult (Optional): {\n         category: String(Hate/SelfHarm/Sexual/Violence) (Required)\n         severity: int (Required)\n     }\n     selfHarmResult (Optional): (recursive schema, see selfHarmResult above)\n     sexualResult (Optional): (recursive schema, see sexualResult above)\n     violenceResult (Optional): (recursive schema, see violenceResult above)\n }\n```"
   returns:
     description: "the analysis response of the image along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.analyzeText(com.azure.ai.contentsafety.models.AnalyzeTextOptions)"
   fullName: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.analyzeText(AnalyzeTextOptions body)"
   name: "analyzeText(AnalyzeTextOptions body)"
@@ -103,7 +103,7 @@ methods:
   desc: "Analyze Text\n\nA sync API for harmful content analysis for text. Currently, we support four categories: Hate, SelfHarm, Sexual, Violence."
   returns:
     description: "the analysis response of the text on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.ai.contentsafety.models.AnalyzeTextResult?alt=com.azure.ai.contentsafety.models.AnalyzeTextResult&text=AnalyzeTextResult\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.contentsafety.models.AnalyzeTextResult?alt=com.azure.ai.contentsafety.models.AnalyzeTextResult&text=AnalyzeTextResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.analyzeTextWithResponse(com.azure.core.util.BinaryData,com.azure.core.http.rest.RequestOptions)"
   fullName: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.analyzeTextWithResponse(BinaryData body, RequestOptions requestOptions)"
   name: "analyzeTextWithResponse(BinaryData body, RequestOptions requestOptions)"
@@ -120,7 +120,7 @@ methods:
   desc: "Analyze Text\n\nA sync API for harmful content analysis for text. Currently, we support four categories: Hate, SelfHarm, Sexual, Violence.\n\n**Request Body Schema**\n\n```java\n{\n     text: String (Required)\n     categories (Optional): [\n         String(Hate/SelfHarm/Sexual/Violence) (Optional)\n     ]\n     blocklistNames (Optional): [\n         String (Optional)\n     ]\n     breakByBlocklists: Boolean (Optional)\n }\n```\n\n**Response Body Schema**\n\n```java\n{\n     blocklistsMatchResults (Optional): [\n          (Optional){\n             blocklistName: String (Required)\n             blockItemId: String (Required)\n             blockItemText: String (Required)\n             offset: int (Required)\n             length: int (Required)\n         }\n     ]\n     hateResult (Optional): {\n         category: String(Hate/SelfHarm/Sexual/Violence) (Required)\n         severity: int (Required)\n     }\n     selfHarmResult (Optional): (recursive schema, see selfHarmResult above)\n     sexualResult (Optional): (recursive schema, see sexualResult above)\n     violenceResult (Optional): (recursive schema, see violenceResult above)\n }\n```"
   returns:
     description: "the analysis response of the text along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.createOrUpdateTextBlocklistWithResponse(java.lang.String,com.azure.core.util.BinaryData,com.azure.core.http.rest.RequestOptions)"
   fullName: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.createOrUpdateTextBlocklistWithResponse(String blocklistName, BinaryData resource, RequestOptions requestOptions)"
   name: "createOrUpdateTextBlocklistWithResponse(String blocklistName, BinaryData resource, RequestOptions requestOptions)"
@@ -140,7 +140,7 @@ methods:
   desc: "Create Or Update Text Blocklist\n\nUpdates a text blocklist, if blocklistName does not exist, create a new blocklist.\n\n**Request Body Schema**\n\n```java\n{\n     blocklistName: String (Required)\n     description: String (Optional)\n }\n```\n\n**Response Body Schema**\n\n```java\n{\n     blocklistName: String (Required)\n     description: String (Optional)\n }\n```"
   returns:
     description: "text Blocklist along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.deleteTextBlocklist(java.lang.String)"
   fullName: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.deleteTextBlocklist(String blocklistName)"
   name: "deleteTextBlocklist(String blocklistName)"
@@ -154,7 +154,7 @@ methods:
   desc: "Delete Text Blocklist By blocklistName\n\nDeletes a text blocklist."
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> that completes when a successful response is received."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.deleteTextBlocklistWithResponse(java.lang.String,com.azure.core.http.rest.RequestOptions)"
   fullName: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.deleteTextBlocklistWithResponse(String blocklistName, RequestOptions requestOptions)"
   name: "deleteTextBlocklistWithResponse(String blocklistName, RequestOptions requestOptions)"
@@ -171,7 +171,7 @@ methods:
   desc: "Delete Text Blocklist By blocklistName\n\nDeletes a text blocklist."
   returns:
     description: "the <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
 - uid: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.getTextBlocklist(java.lang.String)"
   fullName: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.getTextBlocklist(String blocklistName)"
   name: "getTextBlocklist(String blocklistName)"
@@ -185,7 +185,7 @@ methods:
   desc: "Get Text Blocklist By blocklistName\n\nReturns text blocklist details."
   returns:
     description: "text Blocklist on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.ai.contentsafety.models.TextBlocklist?alt=com.azure.ai.contentsafety.models.TextBlocklist&text=TextBlocklist\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.contentsafety.models.TextBlocklist?alt=com.azure.ai.contentsafety.models.TextBlocklist&text=TextBlocklist\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.getTextBlocklistItem(java.lang.String,java.lang.String)"
   fullName: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.getTextBlocklistItem(String blocklistName, String blockItemId)"
   name: "getTextBlocklistItem(String blocklistName, String blockItemId)"
@@ -202,7 +202,7 @@ methods:
   desc: "Get BlockItem By blocklistName And blockItemId\n\nGet blockItem By blockItemId from a text blocklist."
   returns:
     description: "blockItem By blockItemId from a text blocklist on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.ai.contentsafety.models.TextBlockItem?alt=com.azure.ai.contentsafety.models.TextBlockItem&text=TextBlockItem\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.contentsafety.models.TextBlockItem?alt=com.azure.ai.contentsafety.models.TextBlockItem&text=TextBlockItem\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.getTextBlocklistItemWithResponse(java.lang.String,java.lang.String,com.azure.core.http.rest.RequestOptions)"
   fullName: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.getTextBlocklistItemWithResponse(String blocklistName, String blockItemId, RequestOptions requestOptions)"
   name: "getTextBlocklistItemWithResponse(String blocklistName, String blockItemId, RequestOptions requestOptions)"
@@ -222,7 +222,7 @@ methods:
   desc: "Get BlockItem By blocklistName And blockItemId\n\nGet blockItem By blockItemId from a text blocklist.\n\n**Response Body Schema**\n\n```java\n{\n     blockItemId: String (Required)\n     description: String (Optional)\n     text: String (Required)\n }\n```"
   returns:
     description: "blockItem By blockItemId from a text blocklist along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of\n     <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.getTextBlocklistWithResponse(java.lang.String,com.azure.core.http.rest.RequestOptions)"
   fullName: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.getTextBlocklistWithResponse(String blocklistName, RequestOptions requestOptions)"
   name: "getTextBlocklistWithResponse(String blocklistName, RequestOptions requestOptions)"
@@ -239,7 +239,7 @@ methods:
   desc: "Get Text Blocklist By blocklistName\n\nReturns text blocklist details.\n\n**Response Body Schema**\n\n```java\n{\n     blocklistName: String (Required)\n     description: String (Optional)\n }\n```"
   returns:
     description: "text Blocklist along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.listTextBlocklistItems(java.lang.String)"
   fullName: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.listTextBlocklistItems(String blocklistName)"
   name: "listTextBlocklistItems(String blocklistName)"
@@ -331,7 +331,7 @@ methods:
   desc: "Remove BlockItems From Text Blocklist\n\nRemove blockItems from a text blocklist. You can remove at most 100 BlockItems in one request."
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> that completes when a successful response is received."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.removeBlockItemsWithResponse(java.lang.String,com.azure.core.util.BinaryData,com.azure.core.http.rest.RequestOptions)"
   fullName: "com.azure.ai.contentsafety.ContentSafetyAsyncClient.removeBlockItemsWithResponse(String blocklistName, BinaryData removeBlockItemsOptions, RequestOptions requestOptions)"
   name: "removeBlockItemsWithResponse(String blocklistName, BinaryData removeBlockItemsOptions, RequestOptions requestOptions)"
@@ -351,7 +351,7 @@ methods:
   desc: "Remove BlockItems From Text Blocklist\n\nRemove blockItems from a text blocklist. You can remove at most 100 BlockItems in one request.\n\n**Request Body Schema**\n\n```java\n{\n     blockItemIds (Required): [\n         String (Required)\n     ]\n }\n```"
   returns:
     description: "the <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
 type: "class"
 desc: "Initializes a new instance of the asynchronous ContentSafetyClient type."
 metadata: {}

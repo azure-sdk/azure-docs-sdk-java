@@ -45,7 +45,7 @@ methods:
   desc: "Creates a rule to the current subscription to filter the messages reaching from topic to the subscription."
   returns:
     description: "A Mono that completes when the rule is created."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.messaging.servicebus.ServiceBusRuleManagerAsyncClient.deleteRule(java.lang.String)"
   fullName: "com.azure.messaging.servicebus.ServiceBusRuleManagerAsyncClient.deleteRule(String ruleName)"
   name: "deleteRule(String ruleName)"
@@ -59,7 +59,7 @@ methods:
   desc: "Removes the rule on the subscription identified by `ruleName`."
   returns:
     description: "A Mono that completes when the rule is deleted."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.messaging.servicebus.ServiceBusRuleManagerAsyncClient.getEntityPath()"
   fullName: "com.azure.messaging.servicebus.ServiceBusRuleManagerAsyncClient.getEntityPath()"
   name: "getEntityPath()"
@@ -89,7 +89,7 @@ methods:
   desc: "Fetches all rules associated with the topic and subscription."
   returns:
     description: "A list of rules associated with the topic and subscription."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<xref href=\"com.azure.messaging.servicebus.administration.models.RuleProperties?alt=com.azure.messaging.servicebus.administration.models.RuleProperties&text=RuleProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.messaging.servicebus.administration.models.RuleProperties?alt=com.azure.messaging.servicebus.administration.models.RuleProperties&text=RuleProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 type: "class"
 desc: "An **asynchronous** rule manager responsible for managing rules for a specific topic subscription. The rule manager requires only Listen claims, whereas the <xref uid=\"com.azure.messaging.servicebus.administration.ServiceBusAdministrationAsyncClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ServiceBusAdministrationAsyncClient\"></xref> requires Manage claims.\n\n**Create an instance of rule manager**\n\n```java\n// The required parameters is connectionString, a way to authenticate with Service Bus using credentials.\n // The connectionString/queueName must be set by the application. The 'connectionString' format is shown below.\n // \"Endpoint={fully-qualified-namespace};SharedAccessKeyName={policy-name};SharedAccessKey={key}\"\n TokenCredential credential = new DefaultAzureCredentialBuilder().build();\n\n // 'fullyQualifiedNamespace' will look similar to \"{your-namespace}.servicebus.windows.net\"\n ServiceBusRuleManagerAsyncClient ruleManager = new ServiceBusClientBuilder()\n     .credential(fullyQualifiedNamespace, credential)\n     .ruleManager()\n     .topicName(topicName)\n     .subscriptionName(subscriptionName)\n     .buildAsyncClient();\n```\n\n**Create a rule to a Service Bus subscription**\n\n```java\nRuleFilter trueRuleFilter = new TrueRuleFilter();\n CreateRuleOptions options = new CreateRuleOptions(trueRuleFilter);\n\n // `subscribe` is a non-blocking call. After setting up the create rule operation, it will move onto the next\n // line of code to execute.\n // Consider using Mono.usingWhen to scope the creation, usage, and cleanup of the rule manager.\n ruleManager.createRule(\"new-rule\", options).subscribe(\n     unused -> {\n     },\n     err -> System.err.println(\"Error occurred when create a rule, err: \" + err),\n     () -> System.out.println(\"Create complete.\")\n );\n\n // Finally dispose of the rule manager when done using it.\n ruleManager.close();\n```\n\n**Fetch all rules.**\n\n```java\n// `subscribe` is a non-blocking call. After setting up the list rules operation, it will move onto the next\n // line of code to execute.\n ruleManager.listRules().subscribe(ruleProperties -> System.out.println(ruleProperties.getName()));\n```\n\n**Delete a rule.**\n\n```java\n// `subscribe` is a non-blocking call. After setting up the delete rule operation, it will move onto the next\n // line of code to execute.\n ruleManager.deleteRule(\"exist-rule\").subscribe(\n     unused -> { },\n     err -> System.err.println(\"Error occurred when delete rule, err: \" + err),\n     () -> System.out.println(\"Delete complete.\")\n );\n```"
 implements:

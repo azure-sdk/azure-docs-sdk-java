@@ -47,7 +47,7 @@ methods:
   desc: "This method returns the list of partitions that were owned successfully."
   returns:
     description: "Flux of PartitionOwnership objects"
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<xref href=\"com.azure.messaging.eventhubs.models.PartitionOwnership?alt=com.azure.messaging.eventhubs.models.PartitionOwnership&text=PartitionOwnership\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.messaging.eventhubs.models.PartitionOwnership?alt=com.azure.messaging.eventhubs.models.PartitionOwnership&text=PartitionOwnership\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.messaging.eventhubs.checkpointstore.jedis.JedisCheckpointStore.listCheckpoints(java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.messaging.eventhubs.checkpointstore.jedis.JedisCheckpointStore.listCheckpoints(String fullyQualifiedNamespace, String eventHubName, String consumerGroup)"
   name: "listCheckpoints(String fullyQualifiedNamespace, String eventHubName, String consumerGroup)"
@@ -67,7 +67,7 @@ methods:
   desc: "This method returns the list of checkpoints from the underlying data store, and if no checkpoints are available, then it returns empty results."
   returns:
     description: "Flux of Checkpoint objects"
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<xref href=\"com.azure.messaging.eventhubs.models.Checkpoint?alt=com.azure.messaging.eventhubs.models.Checkpoint&text=Checkpoint\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.messaging.eventhubs.models.Checkpoint?alt=com.azure.messaging.eventhubs.models.Checkpoint&text=Checkpoint\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.messaging.eventhubs.checkpointstore.jedis.JedisCheckpointStore.listOwnership(java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.messaging.eventhubs.checkpointstore.jedis.JedisCheckpointStore.listOwnership(String fullyQualifiedNamespace, String eventHubName, String consumerGroup)"
   name: "listOwnership(String fullyQualifiedNamespace, String eventHubName, String consumerGroup)"
@@ -87,7 +87,7 @@ methods:
   desc: "This method returns the list of ownership records from the underlying data store, and if no ownership records are available, then it returns empty results."
   returns:
     description: "Flux of PartitionOwnership objects"
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<xref href=\"com.azure.messaging.eventhubs.models.PartitionOwnership?alt=com.azure.messaging.eventhubs.models.PartitionOwnership&text=PartitionOwnership\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.messaging.eventhubs.models.PartitionOwnership?alt=com.azure.messaging.eventhubs.models.PartitionOwnership&text=PartitionOwnership\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.messaging.eventhubs.checkpointstore.jedis.JedisCheckpointStore.updateCheckpoint(com.azure.messaging.eventhubs.models.Checkpoint)"
   fullName: "com.azure.messaging.eventhubs.checkpointstore.jedis.JedisCheckpointStore.updateCheckpoint(Checkpoint checkpoint)"
   name: "updateCheckpoint(Checkpoint checkpoint)"
@@ -101,7 +101,7 @@ methods:
   desc: "This method updates the checkpoint in the Jedis resource for a given partition."
   returns:
     description: "Mono that completes if no errors take place"
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 type: "class"
 desc: "Implementation of <xref uid=\"com.azure.messaging.eventhubs.CheckpointStore\" data-throw-if-not-resolved=\"false\" data-raw-source=\"CheckpointStore\"></xref> that uses Azure Redis Cache, specifically Jedis.\n\n**Instantiate checkpoint store**\n\nDemonstrates one way to instantiate the checkpoint store. <xref uid=\"redis.clients.jedis.JedisPool\" data-throw-if-not-resolved=\"false\" data-raw-source=\"JedisPool\"></xref> has multiple ways to create an instance.\n\n```java\nJedisClientConfig clientConfig = DefaultJedisClientConfig.builder()\n     .password(\"<YOUR_REDIS_PRIMARY_ACCESS_KEY>\")\n     .ssl(true)\n     .build();\n\n String redisHostName = \"<YOUR_REDIS_HOST_NAME>.redis.cache.windows.net\";\n HostAndPort hostAndPort = new HostAndPort(redisHostName, 6380);\n JedisPool jedisPool = new JedisPool(hostAndPort, clientConfig);\n\n CheckpointStore checkpointStore = new JedisCheckpointStore(jedisPool);\n\n // DefaultAzureCredential tries to resolve the best credential to use based on your environment.\n TokenCredential credential = new DefaultAzureCredentialBuilder().build();\n EventProcessorClient processorClient = new EventProcessorClientBuilder()\n     .checkpointStore(checkpointStore)\n     .fullyQualifiedNamespace(\"<YOUR_EVENT_HUB_FULLY_QUALIFIED_NAMESPACE>\")\n     .eventHubName(\"<YOUR_EVENT_HUB_NAME>\")\n     .credential(credential)\n     .consumerGroup(\"<YOUR_CONSUMER_GROUP_NAME>\")\n     .processEvent(eventContext -> {\n         System.out.println(\"Partition id = \" + eventContext.getPartitionContext().getPartitionId() + \" and \"\n             + \"sequence number of event = \" + eventContext.getEventData().getSequenceNumber());\n     })\n     .processError(context -> {\n         System.out.println(\"Error occurred while processing events \" + context.getThrowable().getMessage());\n     })\n     .buildEventProcessorClient();\n```"
 implements:

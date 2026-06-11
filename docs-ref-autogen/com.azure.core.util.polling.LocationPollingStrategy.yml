@@ -107,7 +107,7 @@ methods:
   syntax: "public Mono<Boolean> canPoll(Response<?> initialResponse)"
   desc: "Checks if this strategy is able to handle polling for this long-running operation based on the information in the initial response."
   returns:
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>&gt;"
 - uid: "com.azure.core.util.polling.LocationPollingStrategy.getResult(com.azure.core.util.polling.PollingContext<T>,com.azure.core.util.serializer.TypeReference<U>)"
   fullName: "com.azure.core.util.polling.LocationPollingStrategy<T,U>.getResult(PollingContext<T> pollingContext, TypeReference<U> resultType)"
   name: "getResult(PollingContext<T> pollingContext, TypeReference<U> resultType)"
@@ -121,7 +121,7 @@ methods:
   syntax: "public Mono<U> getResult(PollingContext<T> pollingContext, TypeReference<U> resultType)"
   desc: "Parses the response from the final GET call into the result type of the long-running operation."
   returns:
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"U?alt=U&text=U\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"U?alt=U&text=U\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.core.util.polling.LocationPollingStrategy.onInitialResponse(com.azure.core.http.rest.Response<?>,com.azure.core.util.polling.PollingContext<T>,com.azure.core.util.serializer.TypeReference<T>)"
   fullName: "com.azure.core.util.polling.LocationPollingStrategy<T,U>.onInitialResponse(Response<?> response, PollingContext<T> pollingContext, TypeReference<T> pollResponseType)"
   name: "onInitialResponse(Response<?> response, PollingContext<T> pollingContext, TypeReference<T> pollResponseType)"
@@ -137,7 +137,7 @@ methods:
   syntax: "public Mono<PollResponse<T>> onInitialResponse(Response<?> response, PollingContext<T> pollingContext, TypeReference<T> pollResponseType)"
   desc: "Parses the initial response into a <xref uid=\"com.azure.core.util.polling.LongRunningOperationStatus\" data-throw-if-not-resolved=\"false\" data-raw-source=\"LongRunningOperationStatus\"></xref>, and stores information useful for polling in the <xref uid=\"com.azure.core.util.polling.PollingContext\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PollingContext\"></xref>. If the result is anything other than <xref uid=\"com.azure.core.util.polling.LongRunningOperationStatus.IN_PROGRESS\" data-throw-if-not-resolved=\"false\" data-raw-source=\"LongRunningOperationStatus#IN_PROGRESS\"></xref>, the long-running operation will be terminated and none of the other methods will be invoked."
   returns:
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.util.polling.PollResponse?alt=com.azure.core.util.polling.PollResponse&text=PollResponse\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.polling.PollResponse?alt=com.azure.core.util.polling.PollResponse&text=PollResponse\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.core.util.polling.LocationPollingStrategy.poll(com.azure.core.util.polling.PollingContext<T>,com.azure.core.util.serializer.TypeReference<T>)"
   fullName: "com.azure.core.util.polling.LocationPollingStrategy<T,U>.poll(PollingContext<T> pollingContext, TypeReference<T> pollResponseType)"
   name: "poll(PollingContext<T> pollingContext, TypeReference<T> pollResponseType)"
@@ -151,7 +151,7 @@ methods:
   syntax: "public Mono<PollResponse<T>> poll(PollingContext<T> pollingContext, TypeReference<T> pollResponseType)"
   desc: "Parses the response from the polling URL into a <xref uid=\"com.azure.core.util.polling.PollResponse\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PollResponse\"></xref>, and stores information useful for further polling and final response in the <xref uid=\"com.azure.core.util.polling.PollingContext\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PollingContext\"></xref>. The result must have the <xref uid=\"com.azure.core.util.polling.LongRunningOperationStatus\" data-throw-if-not-resolved=\"false\" data-raw-source=\"LongRunningOperationStatus\"></xref> specified, and the entire polling response content as a <xref uid=\"com.azure.core.util.BinaryData\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BinaryData\"></xref>."
   returns:
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.util.polling.PollResponse?alt=com.azure.core.util.polling.PollResponse&text=PollResponse\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.polling.PollResponse?alt=com.azure.core.util.polling.PollResponse&text=PollResponse\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 type: "class"
 typeParameters:
 - description: "the type of the response type from a polling call, or BinaryData if raw response body should be kept"

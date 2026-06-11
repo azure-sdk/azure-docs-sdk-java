@@ -35,7 +35,7 @@ methods:
   desc: "Delete the image identified by the given digest\n\n**Code Samples:**\n\n```java\ncontentClient.getManifest(\"latest\")\n     .flatMap(manifest -> contentClient.deleteBlob(manifest.getDigest()))\n     .block();\n```"
   returns:
     description: "The completion signal."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.containers.containerregistry.ContainerRegistryContentAsyncClient.deleteBlobWithResponse(java.lang.String)"
   fullName: "com.azure.containers.containerregistry.ContainerRegistryContentAsyncClient.deleteBlobWithResponse(String digest)"
   name: "deleteBlobWithResponse(String digest)"
@@ -49,7 +49,7 @@ methods:
   desc: "Delete the image identified by the given digest"
   returns:
     description: "The REST response for the completion."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
 - uid: "com.azure.containers.containerregistry.ContainerRegistryContentAsyncClient.deleteManifest(java.lang.String)"
   fullName: "com.azure.containers.containerregistry.ContainerRegistryContentAsyncClient.deleteManifest(String digest)"
   name: "deleteManifest(String digest)"
@@ -63,7 +63,7 @@ methods:
   desc: "Delete the manifest identified by the given digest.\n\n**Code Samples:**\n\n```java\ncontentClient.getManifest(\"latest\")\n     .flatMap(manifest -> contentClient.deleteManifest(manifest.getDigest()))\n     .block();\n```"
   returns:
     description: "The completion."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.containers.containerregistry.ContainerRegistryContentAsyncClient.deleteManifestWithResponse(java.lang.String)"
   fullName: "com.azure.containers.containerregistry.ContainerRegistryContentAsyncClient.deleteManifestWithResponse(String digest)"
   name: "deleteManifestWithResponse(String digest)"
@@ -77,7 +77,7 @@ methods:
   desc: "Delete the manifest identified by the given digest."
   returns:
     description: "The REST response for completion."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
 - uid: "com.azure.containers.containerregistry.ContainerRegistryContentAsyncClient.downloadStream(java.lang.String)"
   fullName: "com.azure.containers.containerregistry.ContainerRegistryContentAsyncClient.downloadStream(String digest)"
   name: "downloadStream(String digest)"
@@ -91,7 +91,7 @@ methods:
   desc: "Download the blob identified by the given digest. Content is downloaded in chunks of 4MB size each.\n\n**Code Samples:**\n\nWrite content to synchronous channel, for example [FileChannel][]:\n\n```java\ncontentClient\n     .downloadStream(digest)\n     .flatMap(downloadResult ->\n         Mono.using(() -> new FileOutputStream(trimSha(digest)),\n             fileStream -> FluxUtil.writeToWritableByteChannel(\n                 downloadResult.toFluxByteBuffer(), fileStream.getChannel()),\n             fileStream -> closeStream(fileStream)))\n     .block();\n```\n\nWrite content to asynchronous byte channel, for example [AsynchronousSocketChannel][]:\n\n```java\ncontentClient\n     .downloadStream(digest)\n     .flatMap(downloadResult ->\n         Mono.using(\n             () -> openSocket(),\n             socket -> FluxUtil.writeToAsynchronousByteChannel(downloadResult.toFluxByteBuffer(), socket),\n             socket -> closeStream(socket)))\n     .block();\n```\n\n\n[FileChannel]: https://docs.oracle.com/javase/8/docs/api/java/nio/channels/FileChannel.html\n[AsynchronousSocketChannel]: https://docs.oracle.com/javase/8/docs/api/java/nio/channels/AsynchronousSocketChannel.html"
   returns:
     description: "The image identified by the given digest."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.containers.containerregistry.ContainerRegistryContentAsyncClient.getEndpoint()"
   fullName: "com.azure.containers.containerregistry.ContainerRegistryContentAsyncClient.getEndpoint()"
   name: "getEndpoint()"
@@ -115,7 +115,7 @@ methods:
   desc: "Download the manifest identified by the given tag or digest.\n\n**Code Samples:**\n\n```java\ncontentClient.getManifest(\"latest\")\n     .doOnNext(downloadResult -> {\n         if (ManifestMediaType.OCI_IMAGE_MANIFEST.equals(downloadResult.getManifestMediaType())\n             || ManifestMediaType.DOCKER_MANIFEST.equals(downloadResult.getManifestMediaType())) {\n             OciImageManifest manifest = downloadResult.getManifest().toObject(OciImageManifest.class);\n             System.out.println(\"Got OCI manifest\");\n         } else {\n             throw new IllegalArgumentException(\"Unexpected manifest type: \" + downloadResult.getManifestMediaType());\n         }\n     })\n     .block();\n```"
   returns:
     description: "The manifest identified by the given tag or digest."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.containers.containerregistry.models.GetManifestResult?alt=com.azure.containers.containerregistry.models.GetManifestResult&text=GetManifestResult\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.containers.containerregistry.models.GetManifestResult?alt=com.azure.containers.containerregistry.models.GetManifestResult&text=GetManifestResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.containers.containerregistry.ContainerRegistryContentAsyncClient.getManifestWithResponse(java.lang.String)"
   fullName: "com.azure.containers.containerregistry.ContainerRegistryContentAsyncClient.getManifestWithResponse(String tagOrDigest)"
   name: "getManifestWithResponse(String tagOrDigest)"
@@ -129,7 +129,7 @@ methods:
   desc: "Download the manifest identified by the given tag or digest.\n\n**Code Samples:**\n\n```java\ncontentClient.getManifestWithResponse(\"latest\")\n     .doOnNext(response -> {\n         GetManifestResult manifestResult = response.getValue();\n         if (ManifestMediaType.OCI_IMAGE_MANIFEST.equals(manifestResult.getManifestMediaType())\n             || ManifestMediaType.DOCKER_MANIFEST.equals(manifestResult.getManifestMediaType())) {\n             OciImageManifest manifest = manifestResult.getManifest().toObject(OciImageManifest.class);\n             System.out.println(\"Got OCI manifest\");\n         } else {\n             throw new IllegalArgumentException(\"Unexpected manifest type: \" + manifestResult.getManifestMediaType());\n         }\n     })\n     .block();\n```"
   returns:
     description: "The response for the manifest identified by the given tag or digest."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.containers.containerregistry.models.GetManifestResult?alt=com.azure.containers.containerregistry.models.GetManifestResult&text=GetManifestResult\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.containers.containerregistry.models.GetManifestResult?alt=com.azure.containers.containerregistry.models.GetManifestResult&text=GetManifestResult\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.containers.containerregistry.ContainerRegistryContentAsyncClient.getRepositoryName()"
   fullName: "com.azure.containers.containerregistry.ContainerRegistryContentAsyncClient.getRepositoryName()"
   name: "getRepositoryName()"
@@ -156,7 +156,7 @@ methods:
   desc: "Upload the Oci manifest to the repository.\n\n**Code Samples:**\n\n```java\nOciImageManifest manifest = new OciImageManifest()\n         .setConfiguration(configDescriptor)\n         .setSchemaVersion(2)\n         .setLayers(Collections.singletonList(layerDescriptor));\n Mono<SetManifestResult> result = contentClient.setManifest(manifest, \"latest\");\n```"
   returns:
     description: "upload result."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.containers.containerregistry.models.SetManifestResult?alt=com.azure.containers.containerregistry.models.SetManifestResult&text=SetManifestResult\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.containers.containerregistry.models.SetManifestResult?alt=com.azure.containers.containerregistry.models.SetManifestResult&text=SetManifestResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.containers.containerregistry.ContainerRegistryContentAsyncClient.setManifestWithResponse(com.azure.containers.containerregistry.models.SetManifestOptions)"
   fullName: "com.azure.containers.containerregistry.ContainerRegistryContentAsyncClient.setManifestWithResponse(SetManifestOptions options)"
   name: "setManifestWithResponse(SetManifestOptions options)"
@@ -170,7 +170,7 @@ methods:
   desc: "Uploads a manifest to the repository.\n\n**Code Samples:**\n\n```java\nSetManifestOptions options = new SetManifestOptions(manifestList, DOCKER_MANIFEST_LIST_TYPE)\n     .setTag(\"v2\");\n\n contentClient.setManifestWithResponse(options)\n     .subscribe(response ->\n         System.out.println(\"Manifest uploaded, digest - \" + response.getValue().getDigest()));\n```"
   returns:
     description: "The rest response containing the upload result."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.containers.containerregistry.models.SetManifestResult?alt=com.azure.containers.containerregistry.models.SetManifestResult&text=SetManifestResult\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.containers.containerregistry.models.SetManifestResult?alt=com.azure.containers.containerregistry.models.SetManifestResult&text=SetManifestResult\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.containers.containerregistry.ContainerRegistryContentAsyncClient.uploadBlob(com.azure.core.util.BinaryData)"
   fullName: "com.azure.containers.containerregistry.ContainerRegistryContentAsyncClient.uploadBlob(BinaryData content)"
   name: "uploadBlob(BinaryData content)"
@@ -184,7 +184,7 @@ methods:
   desc: "Uploads a blob to the repository.\n\n**Code Samples:**\n\n```java\nBinaryData configContent = BinaryData.fromObject(Collections.singletonMap(\"hello\", \"world\"));\n\n contentClient\n     .uploadBlob(configContent)\n     .subscribe(uploadResult -> System.out.printf(\"Uploaded blob: digest - '%s', size - %s\\n\",\n             uploadResult.getDigest(), uploadResult.getSizeInBytes()));\n```\n\n```java\ncontentClient.uploadBlob(BinaryData.fromFile(Paths.get(\"artifact.tar.gz\"), CHUNK_SIZE))\n     .subscribe(uploadResult ->\n         System.out.printf(\"Uploaded blob: digest - '%s', size - %s\\n\",\n             uploadResult.getDigest(), uploadResult.getSizeInBytes()));\n```\n\n```java\nlayerContent\n     .flatMap(content -> contentClient.uploadBlob(content))\n     .doOnError(HttpResponseException.class, (ex) -> {\n         if (ex.getCause() instanceof AcrErrorsException) {\n             AcrErrorsException acrErrors = (AcrErrorsException) ex.getCause();\n             for (AcrErrorInfo info : acrErrors.getValue().getErrors()) {\n                 System.out.printf(\"Uploaded blob failed: code '%s'\\n\", info.getCode());\n             }\n         }\n     });\n```\n\nNote:\n\nContent may be uploaded in chunks of up to 4MB size. Chunk size depends on the passed <xref uid=\"com.azure.core.util.BinaryData\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BinaryData\"></xref> content. When <xref uid=\"com.azure.core.util.BinaryData\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BinaryData\"></xref> is created using <xref uid=\"com.azure.core.util.BinaryData.fromFlux*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BinaryData#fromFlux(Flux, Long, boolean)\"></xref>, it may be uploaded in chunks matching individual <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ByteBuffer\"></xref> in the <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> and up to 4MB size. Buffers that are bigger than 4MB can be broken down into smaller chunks, but small buffers are not aggregated. To decrease number of chunks for big content, use buffers of 4MB size."
   returns:
     description: "The operation result."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.containers.containerregistry.models.UploadRegistryBlobResult?alt=com.azure.containers.containerregistry.models.UploadRegistryBlobResult&text=UploadRegistryBlobResult\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.containers.containerregistry.models.UploadRegistryBlobResult?alt=com.azure.containers.containerregistry.models.UploadRegistryBlobResult&text=UploadRegistryBlobResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 type: "class"
 desc: "This class provides a client that exposes operations to push and pull images into container registry. It exposes methods that upload, download and delete artifacts from the registry i.e. images and manifests.\n\nView <xref uid=\"com.azure.containers.containerregistry.ContainerRegistryContentClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"this\"></xref> for additional ways to construct the client."
 metadata: {}

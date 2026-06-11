@@ -74,7 +74,7 @@ methods:
   desc: "This method is called by the <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"EventProcessorClient\"></xref> to claim ownership of a list of partitions. This will return the list of partitions that were owned successfully."
   returns:
     description: "A flux of partitions this instance successfully claimed ownership."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<xref href=\"com.azure.messaging.eventhubs.models.PartitionOwnership?alt=com.azure.messaging.eventhubs.models.PartitionOwnership&text=PartitionOwnership\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.messaging.eventhubs.models.PartitionOwnership?alt=com.azure.messaging.eventhubs.models.PartitionOwnership&text=PartitionOwnership\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.messaging.eventhubs.checkpointstore.blob.BlobCheckpointStore.listCheckpoints(java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.messaging.eventhubs.checkpointstore.blob.BlobCheckpointStore.listCheckpoints(String fullyQualifiedNamespace, String eventHubName, String consumerGroup)"
   name: "listCheckpoints(String fullyQualifiedNamespace, String eventHubName, String consumerGroup)"
@@ -88,7 +88,7 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public Flux<Checkpoint> listCheckpoints(String fullyQualifiedNamespace, String eventHubName, String consumerGroup)"
   returns:
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<xref href=\"com.azure.messaging.eventhubs.models.Checkpoint?alt=com.azure.messaging.eventhubs.models.Checkpoint&text=Checkpoint\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.messaging.eventhubs.models.Checkpoint?alt=com.azure.messaging.eventhubs.models.Checkpoint&text=Checkpoint\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.messaging.eventhubs.checkpointstore.blob.BlobCheckpointStore.listOwnership(java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.messaging.eventhubs.checkpointstore.blob.BlobCheckpointStore.listOwnership(String fullyQualifiedNamespace, String eventHubName, String consumerGroup)"
   name: "listOwnership(String fullyQualifiedNamespace, String eventHubName, String consumerGroup)"
@@ -107,7 +107,7 @@ methods:
   desc: "This method is called by the <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"EventProcessorClient\"></xref> to get the list of all existing partition ownership from the Storage Blobs. Could return empty results if there are is no existing ownership information."
   returns:
     description: "A flux of partition ownership details of all the partitions that have/had an owner."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<xref href=\"com.azure.messaging.eventhubs.models.PartitionOwnership?alt=com.azure.messaging.eventhubs.models.PartitionOwnership&text=PartitionOwnership\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.messaging.eventhubs.models.PartitionOwnership?alt=com.azure.messaging.eventhubs.models.PartitionOwnership&text=PartitionOwnership\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.messaging.eventhubs.checkpointstore.blob.BlobCheckpointStore.updateCheckpoint(com.azure.messaging.eventhubs.models.Checkpoint)"
   fullName: "com.azure.messaging.eventhubs.checkpointstore.blob.BlobCheckpointStore.updateCheckpoint(Checkpoint checkpoint)"
   name: "updateCheckpoint(Checkpoint checkpoint)"
@@ -121,7 +121,7 @@ methods:
   desc: "Updates the checkpoint in Storage Blobs for a partition."
   returns:
     description: "The new ETag on successful update."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 type: "class"
 desc: "Implementation of <xref uid=\"com.azure.messaging.eventhubs.CheckpointStore\" data-throw-if-not-resolved=\"false\" data-raw-source=\"CheckpointStore\"></xref> that uses [Storage Blobs][] for persisting partition ownership and checkpoint information. <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"EventProcessors\"></xref> can use this implementation to load balance and update checkpoints.\n\n\n[Storage Blobs]: https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction#blob-storage"
 implements:

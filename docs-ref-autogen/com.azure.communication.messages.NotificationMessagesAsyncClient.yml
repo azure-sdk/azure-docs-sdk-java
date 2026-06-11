@@ -35,7 +35,7 @@ methods:
   desc: "Download the Media payload from a User to Business message."
   returns:
     description: "the response body on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.communication.messages.NotificationMessagesAsyncClient.downloadMediaWithResponse(java.lang.String,com.azure.core.http.rest.RequestOptions)"
   fullName: "com.azure.communication.messages.NotificationMessagesAsyncClient.downloadMediaWithResponse(String mediaId, RequestOptions requestOptions)"
   name: "downloadMediaWithResponse(String mediaId, RequestOptions requestOptions)"
@@ -52,7 +52,7 @@ methods:
   desc: "Download the Media payload from a User to Business message.\n\n**Response Body Schema**\n\n```java\nBinaryData\n```"
   returns:
     description: "the response body along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.communication.messages.NotificationMessagesAsyncClient.send(com.azure.communication.messages.models.NotificationContent)"
   fullName: "com.azure.communication.messages.NotificationMessagesAsyncClient.send(NotificationContent notificationContent)"
   name: "send(NotificationContent notificationContent)"
@@ -66,7 +66,7 @@ methods:
   desc: "Sends a notification message from Business to User."
   returns:
     description: "result of the send message operation on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.communication.messages.models.SendMessageResult?alt=com.azure.communication.messages.models.SendMessageResult&text=SendMessageResult\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.messages.models.SendMessageResult?alt=com.azure.communication.messages.models.SendMessageResult&text=SendMessageResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.communication.messages.NotificationMessagesAsyncClient.sendWithResponse(com.azure.core.util.BinaryData,com.azure.core.http.rest.RequestOptions)"
   fullName: "com.azure.communication.messages.NotificationMessagesAsyncClient.sendWithResponse(BinaryData notificationContent, RequestOptions requestOptions)"
   name: "sendWithResponse(BinaryData notificationContent, RequestOptions requestOptions)"
@@ -83,7 +83,7 @@ methods:
   desc: "Sends a notification message from Business to User.\n\n**Header Parameters**\n\n    | ------------------------ | ------ | -------- | -------------------------------------------- |\n    | Name                     | Type   | Required | Description                                  |\n    | repeatability-request-id | String | No       | Repeatability request ID header              |\n    | repeatability-first-sent | String | No       | Repeatability first sent header as HTTP-date |\n\nYou can add these to a request with <xref uid=\"com.azure.core.http.rest.RequestOptions.addHeader\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RequestOptions#addHeader\"></xref>\n\n**Request Body Schema**\n\n```java\n{\n     kind: String(text/image/image_v0/document/video/audio/template) (Required)\n     channelRegistrationId: String (Required)\n     to (Required): [\n         String (Required)\n     ]\n }\n```\n\n**Response Body Schema**\n\n```java\n{\n     receipts (Required): [\n          (Required){\n             messageId: String (Required)\n             to: String (Required)\n         }\n     ]\n }\n```"
   returns:
     description: "result of the send message operation along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of\n <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 type: "class"
 desc: "Initializes a new instance of the asynchronous NotificationMessagesClient type."
 metadata: {}

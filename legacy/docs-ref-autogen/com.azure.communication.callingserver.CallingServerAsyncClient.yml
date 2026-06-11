@@ -41,7 +41,7 @@ methods:
   desc: "Create a call connection request from a source identity to targets identity."
   returns:
     description: "Response for a successful CreateCallConnection request.\n\n <pre>\n List&lt;CommunicationIdentifier&gt; targets = Arrays.asList&#40;firstCallee, secondCallee&#41;;\n List&lt;MediaType&gt; requestedMediaTypes = Arrays.asList&#40;MediaType.AUDIO, MediaType.VIDEO&#41;;\n List&lt;EventSubscriptionType&gt; requestedCallEvents = Arrays.asList&#40;\n     EventSubscriptionType.DTMF_RECEIVED,\n     EventSubscriptionType.PARTICIPANTS_UPDATED&#41;;\n CreateCallOptions createCallOptions = new CreateCallOptions&#40;\n     callbackUri,\n     requestedMediaTypes,\n     requestedCallEvents&#41;;\n CallConnectionAsync callAsyncConnection = callingServerAsyncClient\n     .createCallConnection&#40;source, targets, createCallOptions&#41;.block&#40;&#41;;\n </pre>"
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.communication.callingserver.CallConnectionAsync?alt=com.azure.communication.callingserver.CallConnectionAsync&text=CallConnectionAsync\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.callingserver.CallConnectionAsync?alt=com.azure.communication.callingserver.CallConnectionAsync&text=CallConnectionAsync\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.communication.callingserver.CallingServerAsyncClient.createCallConnectionWithResponse(com.azure.communication.common.CommunicationIdentifier,java.util.List<com.azure.communication.common.CommunicationIdentifier>,com.azure.communication.callingserver.models.CreateCallOptions)"
   fullName: "com.azure.communication.callingserver.CallingServerAsyncClient.createCallConnectionWithResponse(CommunicationIdentifier source, List<CommunicationIdentifier> targets, CreateCallOptions createCallOptions)"
   name: "createCallConnectionWithResponse(CommunicationIdentifier source, List<CommunicationIdentifier> targets, CreateCallOptions createCallOptions)"
@@ -61,7 +61,7 @@ methods:
   desc: "Create a Call Connection Request from source identity to targets identity."
   returns:
     description: "Response for a successful CreateCallConnection request."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.callingserver.CallConnectionAsync?alt=com.azure.communication.callingserver.CallConnectionAsync&text=CallConnectionAsync\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.callingserver.CallConnectionAsync?alt=com.azure.communication.callingserver.CallConnectionAsync&text=CallConnectionAsync\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.communication.callingserver.CallingServerAsyncClient.downloadStream(java.lang.String)"
   fullName: "com.azure.communication.callingserver.CallingServerAsyncClient.downloadStream(String sourceEndpoint)"
   name: "downloadStream(String sourceEndpoint)"
@@ -75,7 +75,7 @@ methods:
   desc: "Download the recording content, e.g. Recording's metadata, Recording video, from the ACS endpoint passed as parameter."
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> object containing the byte stream of the content requested."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
 - uid: "com.azure.communication.callingserver.CallingServerAsyncClient.downloadStream(java.lang.String,com.azure.core.http.HttpRange)"
   fullName: "com.azure.communication.callingserver.CallingServerAsyncClient.downloadStream(String sourceEndpoint, HttpRange httpRange)"
   name: "downloadStream(String sourceEndpoint, HttpRange httpRange)"
@@ -92,7 +92,7 @@ methods:
   desc: "Download the recording content, e.g. Recording's metadata, Recording video, from the ACS endpoint passed as parameter."
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> object containing the byte stream of the content requested."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
 - uid: "com.azure.communication.callingserver.CallingServerAsyncClient.downloadStreamWithResponse(java.lang.String,com.azure.core.http.HttpRange)"
   fullName: "com.azure.communication.callingserver.CallingServerAsyncClient.downloadStreamWithResponse(String sourceEndpoint, HttpRange range)"
   name: "downloadStreamWithResponse(String sourceEndpoint, HttpRange range)"
@@ -109,7 +109,7 @@ methods:
   desc: "Download the recording content, (e.g. Recording's metadata, Recording video, etc.) from the `endpoint`."
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> object containing a <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> with the byte stream of the content requested."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;&gt;"
 - uid: "com.azure.communication.callingserver.CallingServerAsyncClient.downloadTo(java.lang.String,java.nio.file.Path,com.azure.communication.callingserver.models.ParallelDownloadOptions,boolean)"
   fullName: "com.azure.communication.callingserver.CallingServerAsyncClient.downloadTo(String sourceEndpoint, Path destinationPath, ParallelDownloadOptions parallelDownloadOptions, boolean overwrite)"
   name: "downloadTo(String sourceEndpoint, Path destinationPath, ParallelDownloadOptions parallelDownloadOptions, boolean overwrite)"
@@ -132,7 +132,7 @@ methods:
   desc: "Download the content located in `endpoint` into a file marked by `path`. This download will be done using parallel workers."
   returns:
     description: "Response for a successful downloadTo request."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.communication.callingserver.CallingServerAsyncClient.downloadToWithResponse(java.lang.String,java.nio.file.Path,com.azure.communication.callingserver.models.ParallelDownloadOptions,boolean)"
   fullName: "com.azure.communication.callingserver.CallingServerAsyncClient.downloadToWithResponse(String sourceEndpoint, Path destinationPath, ParallelDownloadOptions parallelDownloadOptions, boolean overwrite)"
   name: "downloadToWithResponse(String sourceEndpoint, Path destinationPath, ParallelDownloadOptions parallelDownloadOptions, boolean overwrite)"
@@ -155,7 +155,7 @@ methods:
   desc: "Download the content located in `endpoint` into a file marked by `path`. This download will be done using parallel workers."
   returns:
     description: "Response containing the http response information from the download."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
 - uid: "com.azure.communication.callingserver.CallingServerAsyncClient.getCallConnection(java.lang.String)"
   fullName: "com.azure.communication.callingserver.CallingServerAsyncClient.getCallConnection(String callConnectionId)"
   name: "getCallConnection(String callConnectionId)"
@@ -203,7 +203,7 @@ methods:
   desc: "Join a Call"
   returns:
     description: "Response for a successful join request."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.communication.callingserver.CallConnectionAsync?alt=com.azure.communication.callingserver.CallConnectionAsync&text=CallConnectionAsync\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.callingserver.CallConnectionAsync?alt=com.azure.communication.callingserver.CallConnectionAsync&text=CallConnectionAsync\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.communication.callingserver.CallingServerAsyncClient.joinCallWithResponse(java.lang.String,com.azure.communication.common.CommunicationIdentifier,com.azure.communication.callingserver.models.JoinCallOptions)"
   fullName: "com.azure.communication.callingserver.CallingServerAsyncClient.joinCallWithResponse(String serverCallId, CommunicationIdentifier source, JoinCallOptions joinCallOptions)"
   name: "joinCallWithResponse(String serverCallId, CommunicationIdentifier source, JoinCallOptions joinCallOptions)"
@@ -223,7 +223,7 @@ methods:
   desc: "Join a call"
   returns:
     description: "Response for a successful join request."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.callingserver.CallConnectionAsync?alt=com.azure.communication.callingserver.CallConnectionAsync&text=CallConnectionAsync\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.communication.callingserver.CallConnectionAsync?alt=com.azure.communication.callingserver.CallConnectionAsync&text=CallConnectionAsync\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 type: "class"
 desc: "Asynchronous client that supports calling server operations.\n\n**Instantiating a asynchronous CallingServer client**\n\n```java\nHttpPipeline pipeline = new HttpPipelineBuilder()\n     .policies(/* add policies */)\n     .build();\n \n CallingServerAsyncClient callingServerAsyncClient = new CallingServerClientBuilder()\n     .pipeline(pipeline)\n     .connectionString(connectionString)\n     .buildAsyncClient();\n```\n\nView <xref uid=\"com.azure.communication.callingserver.CallingServerClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"this\"></xref> for additional ways to construct the client."
 metadata: {}

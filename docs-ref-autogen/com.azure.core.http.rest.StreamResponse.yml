@@ -27,7 +27,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **StreamResponse**</br> extends <xref href=\"com.azure.core.http.rest.SimpleResponse?alt=com.azure.core.http.rest.SimpleResponse&text=SimpleResponse\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;</br> implements <a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html\">Closeable</a>"
+syntax: "public final class **StreamResponse**</br> extends <xref href=\"com.azure.core.http.rest.SimpleResponse?alt=com.azure.core.http.rest.SimpleResponse&text=SimpleResponse\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;</br> implements <a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html\">Closeable</a>"
 constructors:
 - uid: "com.azure.core.http.rest.StreamResponse.StreamResponse(com.azure.core.http.HttpRequest,int,com.azure.core.http.HttpHeaders,reactor.core.publisher.Flux<java.nio.ByteBuffer>)"
   fullName: "com.azure.core.http.rest.StreamResponse.StreamResponse(HttpRequest request, int statusCode, HttpHeaders headers, Flux<ByteBuffer> value)"
@@ -47,7 +47,7 @@ constructors:
     type: "<xref href=\"com.azure.core.http.HttpHeaders?alt=com.azure.core.http.HttpHeaders&text=HttpHeaders\" data-throw-if-not-resolved=\"False\" />"
   - description: "The content of the HTTP response."
     name: "value"
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
   syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public StreamResponse(HttpRequest request, int statusCode, HttpHeaders headers, Flux<ByteBuffer> value)"
   desc: "Creates a <xref uid=\"com.azure.core.http.rest.StreamResponse\" data-throw-if-not-resolved=\"false\" data-raw-source=\"StreamResponse\"></xref>."
   hasDeprecatedTag: true
@@ -80,7 +80,7 @@ methods:
   desc: "The content of the HTTP response as a stream of <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"byte buffers\"></xref>."
   returns:
     description: "The content of the HTTP response as a stream of <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"byte buffers\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
 - uid: "com.azure.core.http.rest.StreamResponse.writeValueTo(java.nio.channels.WritableByteChannel)"
   fullName: "com.azure.core.http.rest.StreamResponse.writeValueTo(WritableByteChannel channel)"
   name: "writeValueTo(WritableByteChannel channel)"
@@ -105,7 +105,7 @@ methods:
   desc: "Transfers content bytes to the <xref uid=\"java.nio.channels.AsynchronousByteChannel\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AsynchronousByteChannel\"></xref>."
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> that completes when transfer is completed."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 type: "class"
 desc: "This class represents a REST response with a streaming content. It encapsulates the HTTP request that resulted in the response, the status code of the HTTP response, the headers of the HTTP response, and the content of the HTTP response as a stream of <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"byte buffers\"></xref>.\n\nIt also provides methods to write the content of the HTTP response to a <xref uid=\"java.nio.channels.AsynchronousByteChannel\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AsynchronousByteChannel\"></xref> or a <xref uid=\"java.nio.channels.WritableByteChannel\" data-throw-if-not-resolved=\"false\" data-raw-source=\"WritableByteChannel\"></xref>, and to dispose the connection associated with the response."
 implements:

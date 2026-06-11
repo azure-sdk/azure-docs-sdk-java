@@ -86,7 +86,7 @@ methods:
   desc: "Returns all the Azure Monitor metrics requested for the resource.\n\n**Query metrics for an Azure resource**\n\n```java\nMono<MetricsQueryResult> response = metricsQueryAsyncClient\n         .queryResource(\"{resource-id}\", Arrays.asList(\"{metric-1}\", \"{metric-2}\"));\n\n response.subscribe(result -> {\n     for (MetricResult metricResult : result.getMetrics()) {\n         System.out.println(\"Metric name \" + metricResult.getMetricName());\n         metricResult.getTimeSeries().stream()\n                 .flatMap(timeSeriesElement -> timeSeriesElement.getValues().stream())\n                 .forEach(metricValue ->\n                         System.out.println(\"Time stamp: \" + metricValue.getTimeStamp() + \"; Total:  \"\n                                 + metricValue.getTotal()));\n     }\n });\n```"
   returns:
     description: "A time-series metrics result for the requested metric names."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.monitor.query.models.MetricsQueryResult?alt=com.azure.monitor.query.models.MetricsQueryResult&text=MetricsQueryResult\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.monitor.query.models.MetricsQueryResult?alt=com.azure.monitor.query.models.MetricsQueryResult&text=MetricsQueryResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.monitor.query.MetricsQueryAsyncClient.queryResourceWithResponse(java.lang.String,java.util.List<java.lang.String>,com.azure.monitor.query.models.MetricsQueryOptions)"
   fullName: "com.azure.monitor.query.MetricsQueryAsyncClient.queryResourceWithResponse(String resourceUri, List<String> metricsNames, MetricsQueryOptions options)"
   name: "queryResourceWithResponse(String resourceUri, List<String> metricsNames, MetricsQueryOptions options)"
@@ -106,7 +106,7 @@ methods:
   desc: "Returns all the Azure Monitor metrics requested for the resource."
   returns:
     description: "A time-series metrics result for the requested metric names."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.monitor.query.models.MetricsQueryResult?alt=com.azure.monitor.query.models.MetricsQueryResult&text=MetricsQueryResult\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.monitor.query.models.MetricsQueryResult?alt=com.azure.monitor.query.models.MetricsQueryResult&text=MetricsQueryResult\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 type: "class"
 desc: "The asynchronous client for querying Azure Monitor metrics.\n\n**Instantiating an asynchronous Metrics query Client**\n\n```java\nMetricsQueryAsyncClient metricsQueryAsyncClient = new MetricsQueryClientBuilder()\n         .credential(tokenCredential)\n         .buildAsyncClient();\n```"
 metadata: {}

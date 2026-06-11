@@ -31,7 +31,7 @@ methods:
   desc: "Deletes the registry artifact with the matching digest in the given <xref uid=\"com.azure.containers.containerregistry.RegistryArtifactAsync.getRepositoryName()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"respository.\"></xref>\n\n**Code Samples**\n\nDelete the registry artifact.\n\n```java\nclient.delete().subscribe();\n```"
   returns:
     description: "the completion."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.containers.containerregistry.RegistryArtifactAsync.deleteTag(java.lang.String)"
   fullName: "com.azure.containers.containerregistry.RegistryArtifactAsync.deleteTag(String tag)"
   name: "deleteTag(String tag)"
@@ -45,7 +45,7 @@ methods:
   desc: "Deletes the tag with the matching tag name for the given <xref uid=\"com.azure.containers.containerregistry.RegistryArtifactAsync.getRepositoryName()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"repository\"></xref>.\n\n**Code Samples**\n\nDelete the tag for the given repository.\n\n```java\nString tag = getTag();\n client.deleteTag(tag).subscribe();\n```"
   returns:
     description: "The completion."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.containers.containerregistry.RegistryArtifactAsync.deleteTagWithResponse(java.lang.String)"
   fullName: "com.azure.containers.containerregistry.RegistryArtifactAsync.deleteTagWithResponse(String tag)"
   name: "deleteTagWithResponse(String tag)"
@@ -59,7 +59,7 @@ methods:
   desc: "Deletes the tag with the matching tag name for the given <xref uid=\"com.azure.containers.containerregistry.RegistryArtifactAsync.getRepositoryName()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"repository\"></xref>.\n\n**Code Samples**\n\nDelete the tag for the given repository.\n\n```java\nString tag = getTag();\n client.deleteTagWithResponse(tag).subscribe();\n```"
   returns:
     description: "A REST response with completion signal."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
 - uid: "com.azure.containers.containerregistry.RegistryArtifactAsync.deleteWithResponse()"
   fullName: "com.azure.containers.containerregistry.RegistryArtifactAsync.deleteWithResponse()"
   name: "deleteWithResponse()"
@@ -69,7 +69,7 @@ methods:
   desc: "Deletes the registry artifact with the matching digest in the given <xref uid=\"com.azure.containers.containerregistry.RegistryArtifactAsync.getRepositoryName()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"respository.\"></xref>\n\n**Code Samples**\n\nDelete the registry artifact.\n\n```java\nclient.deleteWithResponse().subscribe();\n```"
   returns:
     description: "A REST response with completion signal."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;&gt;"
 - uid: "com.azure.containers.containerregistry.RegistryArtifactAsync.getFullyQualifiedReference()"
   fullName: "com.azure.containers.containerregistry.RegistryArtifactAsync.getFullyQualifiedReference()"
   name: "getFullyQualifiedReference()"
@@ -89,7 +89,7 @@ methods:
   desc: "Gets the <xref uid=\"com.azure.containers.containerregistry.models.ArtifactManifestProperties\" data-throw-if-not-resolved=\"false\" data-raw-source=\"properties\"></xref> associated with an artifact in given <xref uid=\"com.azure.containers.containerregistry.RegistryArtifactAsync.getRepositoryName()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"repository\"></xref>.\n\nThis method can take in both a digest as well as a tag.\nIn case a tag is provided it calls the service to get the digest associated with the given tag.\n\n**Code Samples**\n\nGet the properties for the given repository.\n\n```java\nclient.getManifestProperties()\n     .subscribe(properties -> {\n         System.out.printf(\"Digest:%s,\", properties.getDigest());\n     });\n```"
   returns:
     description: "The <xref uid=\"com.azure.containers.containerregistry.models.ArtifactManifestProperties\" data-throw-if-not-resolved=\"false\" data-raw-source=\"properties\"></xref> associated with the given <code>Digest</code>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.containers.containerregistry.models.ArtifactManifestProperties?alt=com.azure.containers.containerregistry.models.ArtifactManifestProperties&text=ArtifactManifestProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.containers.containerregistry.models.ArtifactManifestProperties?alt=com.azure.containers.containerregistry.models.ArtifactManifestProperties&text=ArtifactManifestProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.containers.containerregistry.RegistryArtifactAsync.getManifestPropertiesWithResponse()"
   fullName: "com.azure.containers.containerregistry.RegistryArtifactAsync.getManifestPropertiesWithResponse()"
   name: "getManifestPropertiesWithResponse()"
@@ -99,7 +99,7 @@ methods:
   desc: "Gets the <xref uid=\"com.azure.containers.containerregistry.models.ArtifactManifestProperties\" data-throw-if-not-resolved=\"false\" data-raw-source=\"properties\"></xref> associated with an artifact in given <xref uid=\"com.azure.containers.containerregistry.RegistryArtifactAsync.getRepositoryName()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"repository\"></xref>.\n\nThis method can take in both a digest as well as a tag.\nIn case a tag is provided it calls the service to get the digest associated with the given tag.\n\n**Code Samples**\n\nGet the properties for the given repository.\n\n```java\nclient.getManifestPropertiesWithResponse()\n     .subscribe(response -> {\n         final ArtifactManifestProperties properties = response.getValue();\n         System.out.printf(\"Digest:%s,\", properties.getDigest());\n     });\n```"
   returns:
     description: "A REST response containing <xref uid=\"com.azure.containers.containerregistry.models.ArtifactManifestProperties\" data-throw-if-not-resolved=\"false\" data-raw-source=\"properties\"></xref> associated with the given <code>Digest</code>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.containers.containerregistry.models.ArtifactManifestProperties?alt=com.azure.containers.containerregistry.models.ArtifactManifestProperties&text=ArtifactManifestProperties\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.containers.containerregistry.models.ArtifactManifestProperties?alt=com.azure.containers.containerregistry.models.ArtifactManifestProperties&text=ArtifactManifestProperties\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.containers.containerregistry.RegistryArtifactAsync.getRegistryEndpoint()"
   fullName: "com.azure.containers.containerregistry.RegistryArtifactAsync.getRegistryEndpoint()"
   name: "getRegistryEndpoint()"
@@ -133,7 +133,7 @@ methods:
   desc: "Gets the tag properties associated with a given tag in the <xref uid=\"com.azure.containers.containerregistry.RegistryArtifactAsync.getRepositoryName()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"repository\"></xref>.\n\n**Code Samples**\n\nRetrieve the properties associated with the given tag.\n\n```java\nString tag = getTag();\n client.getTagProperties(tag).subscribe(properties -> {\n     System.out.printf(\"Digest:%s,\", properties.getDigest());\n });\n```"
   returns:
     description: "The <xref uid=\"com.azure.containers.containerregistry.models.ArtifactTagProperties\" data-throw-if-not-resolved=\"false\" data-raw-source=\"properties\"></xref> associated with the given tag."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.containers.containerregistry.models.ArtifactTagProperties?alt=com.azure.containers.containerregistry.models.ArtifactTagProperties&text=ArtifactTagProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.containers.containerregistry.models.ArtifactTagProperties?alt=com.azure.containers.containerregistry.models.ArtifactTagProperties&text=ArtifactTagProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.containers.containerregistry.RegistryArtifactAsync.getTagPropertiesWithResponse(java.lang.String)"
   fullName: "com.azure.containers.containerregistry.RegistryArtifactAsync.getTagPropertiesWithResponse(String tag)"
   name: "getTagPropertiesWithResponse(String tag)"
@@ -147,7 +147,7 @@ methods:
   desc: "Gets the tag properties associated with a given tag in the <xref uid=\"com.azure.containers.containerregistry.RegistryArtifactAsync.getRepositoryName()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"repository\"></xref>.\n\n**Code Samples**\n\nRetrieve the properties associated with the given tag.\n\n```java\nString tag = getTag();\n client.getTagPropertiesWithResponse(tag).subscribe(response -> {\n     final ArtifactTagProperties properties = response.getValue();\n     System.out.printf(\"Digest:%s,\", properties.getDigest());\n });\n```"
   returns:
     description: "A REST response with the <xref uid=\"com.azure.containers.containerregistry.models.ArtifactTagProperties\" data-throw-if-not-resolved=\"false\" data-raw-source=\"properties\"></xref> associated with the given tag."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.containers.containerregistry.models.ArtifactTagProperties?alt=com.azure.containers.containerregistry.models.ArtifactTagProperties&text=ArtifactTagProperties\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.containers.containerregistry.models.ArtifactTagProperties?alt=com.azure.containers.containerregistry.models.ArtifactTagProperties&text=ArtifactTagProperties\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.containers.containerregistry.RegistryArtifactAsync.listTagProperties()"
   fullName: "com.azure.containers.containerregistry.RegistryArtifactAsync.listTagProperties()"
   name: "listTagProperties()"
@@ -185,7 +185,7 @@ methods:
   desc: "Update the properties <xref uid=\"com.azure.containers.containerregistry.models.ArtifactManifestProperties\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ArtifactManifestProperties\"></xref> of the artifact with the given `digest`. These properties set whether the given manifest can be updated, deleted and retrieved.\n\n**Code Samples**\n\nUpdate the writeable properties of a given manifest.\n\n```java\nArtifactManifestProperties properties = getArtifactManifestProperties();\n client.updateManifestProperties(properties).subscribe();\n```"
   returns:
     description: "The completion."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.containers.containerregistry.models.ArtifactManifestProperties?alt=com.azure.containers.containerregistry.models.ArtifactManifestProperties&text=ArtifactManifestProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.containers.containerregistry.models.ArtifactManifestProperties?alt=com.azure.containers.containerregistry.models.ArtifactManifestProperties&text=ArtifactManifestProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.containers.containerregistry.RegistryArtifactAsync.updateManifestPropertiesWithResponse(com.azure.containers.containerregistry.models.ArtifactManifestProperties)"
   fullName: "com.azure.containers.containerregistry.RegistryArtifactAsync.updateManifestPropertiesWithResponse(ArtifactManifestProperties manifestProperties)"
   name: "updateManifestPropertiesWithResponse(ArtifactManifestProperties manifestProperties)"
@@ -199,7 +199,7 @@ methods:
   desc: "Update the properties <xref uid=\"com.azure.containers.containerregistry.models.ArtifactManifestProperties\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ArtifactManifestProperties\"></xref> of the artifact with the given `digest`. These properties set whether the given manifest can be updated, deleted and retrieved.\n\n**Code Samples**\n\nUpdate the writeable properties of a given manifest.\n\n```java\nArtifactManifestProperties properties = getArtifactManifestProperties();\n client.updateManifestPropertiesWithResponse(properties).subscribe();\n```"
   returns:
     description: "A REST response for the completion."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.containers.containerregistry.models.ArtifactManifestProperties?alt=com.azure.containers.containerregistry.models.ArtifactManifestProperties&text=ArtifactManifestProperties\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.containers.containerregistry.models.ArtifactManifestProperties?alt=com.azure.containers.containerregistry.models.ArtifactManifestProperties&text=ArtifactManifestProperties\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.containers.containerregistry.RegistryArtifactAsync.updateTagProperties(java.lang.String,com.azure.containers.containerregistry.models.ArtifactTagProperties)"
   fullName: "com.azure.containers.containerregistry.RegistryArtifactAsync.updateTagProperties(String tag, ArtifactTagProperties tagProperties)"
   name: "updateTagProperties(String tag, ArtifactTagProperties tagProperties)"
@@ -216,7 +216,7 @@ methods:
   desc: "Update the properties <xref uid=\"com.azure.containers.containerregistry.models.ArtifactTagProperties\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ArtifactTagProperties\"></xref> of the tag with the given name `tag`. These properties set whether the given tag can be updated, deleted and retrieved.\n\n**Code Samples**\n\nUpdate the writeable properties of a given tag.\n\n```java\nArtifactTagProperties properties = getTagProperties();\n String tag = getTag();\n client.updateTagPropertiesWithResponse(tag, properties).subscribe();\n```"
   returns:
     description: "The completion."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.containers.containerregistry.models.ArtifactTagProperties?alt=com.azure.containers.containerregistry.models.ArtifactTagProperties&text=ArtifactTagProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.containers.containerregistry.models.ArtifactTagProperties?alt=com.azure.containers.containerregistry.models.ArtifactTagProperties&text=ArtifactTagProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.containers.containerregistry.RegistryArtifactAsync.updateTagPropertiesWithResponse(java.lang.String,com.azure.containers.containerregistry.models.ArtifactTagProperties)"
   fullName: "com.azure.containers.containerregistry.RegistryArtifactAsync.updateTagPropertiesWithResponse(String tag, ArtifactTagProperties tagProperties)"
   name: "updateTagPropertiesWithResponse(String tag, ArtifactTagProperties tagProperties)"
@@ -233,7 +233,7 @@ methods:
   desc: "Update the properties <xref uid=\"com.azure.containers.containerregistry.models.ArtifactTagProperties\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ArtifactTagProperties\"></xref> of the tag with the given name `tag`.. These properties set whether the given tag can be updated, deleted and retrieved.\n\n**Code Samples**\n\nUpdate the writeable properties of a given tag.\n\n```java\nArtifactTagProperties properties = getTagProperties();\n String tag = getTag();\n client.updateTagPropertiesWithResponse(tag, properties).subscribe();\n```"
   returns:
     description: "A REST response for completion."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.containers.containerregistry.models.ArtifactTagProperties?alt=com.azure.containers.containerregistry.models.ArtifactTagProperties&text=ArtifactTagProperties\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.containers.containerregistry.models.ArtifactTagProperties?alt=com.azure.containers.containerregistry.models.ArtifactTagProperties&text=ArtifactTagProperties\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 type: "class"
 desc: "This class provides a helper type that contains all the operations for artifacts in a given repository.\n\n**Instantiating an asynchronous RegistryArtifact helper.**\n\n```java\nRegistryArtifactAsync registryArtifactAsync = new ContainerRegistryClientBuilder()\n     .endpoint(endpoint)\n     .credential(credential)\n     .buildAsyncClient().getArtifact(repository, digest);\n```\n\nView <xref uid=\"com.azure.containers.containerregistry.ContainerRegistryClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"this\"></xref> for additional ways to construct the client."
 metadata: {}

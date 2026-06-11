@@ -35,7 +35,7 @@ methods:
   desc: "Returns all the Azure Monitor logs matching the given batch of queries.\n\n**Execute a batch of logs queries**\n\n```java\nLogsBatchQuery batchQuery = new LogsBatchQuery();\n String queryId1 = batchQuery.addWorkspaceQuery(\"{workspace-id-1}\", \"{kusto-query-1}\", QueryTimeInterval.LAST_DAY);\n String queryId2 = batchQuery.addWorkspaceQuery(\"{workspace-id-2}\", \"{kusto-query-2}\",\n         QueryTimeInterval.LAST_7_DAYS, new LogsQueryOptions().setServerTimeout(Duration.ofMinutes(2)));\n\n Mono<LogsBatchQueryResultCollection> batchQueryResponse = logsQueryAsyncClient.queryBatch(batchQuery);\n\n batchQueryResponse.subscribe(result -> {\n     for (LogsBatchQueryResult queryResult : result.getBatchResults()) {\n         System.out.println(\"Logs query result for query id \" + queryResult.getId());\n         for (LogsTableRow row : queryResult.getTable().getRows()) {\n             System.out.println(row.getRow()\n                     .stream()\n                     .map(LogsTableCell::getValueAsString)\n                     .collect(Collectors.joining(\",\")));\n         }\n     }\n });\n```"
   returns:
     description: "A collection of query results corresponding to the input batch of queries.@return"
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.monitor.query.models.LogsBatchQueryResultCollection?alt=com.azure.monitor.query.models.LogsBatchQueryResultCollection&text=LogsBatchQueryResultCollection\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.monitor.query.models.LogsBatchQueryResultCollection?alt=com.azure.monitor.query.models.LogsBatchQueryResultCollection&text=LogsBatchQueryResultCollection\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.monitor.query.LogsQueryAsyncClient.queryBatchWithResponse(com.azure.monitor.query.models.LogsBatchQuery)"
   fullName: "com.azure.monitor.query.LogsQueryAsyncClient.queryBatchWithResponse(LogsBatchQuery logsBatchQuery)"
   name: "queryBatchWithResponse(LogsBatchQuery logsBatchQuery)"
@@ -49,7 +49,7 @@ methods:
   desc: "Returns all the Azure Monitor logs matching the given batch of queries."
   returns:
     description: "A collection of query results corresponding to the input batch of queries.@return"
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.monitor.query.models.LogsBatchQueryResultCollection?alt=com.azure.monitor.query.models.LogsBatchQueryResultCollection&text=LogsBatchQueryResultCollection\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.monitor.query.models.LogsBatchQueryResultCollection?alt=com.azure.monitor.query.models.LogsBatchQueryResultCollection&text=LogsBatchQueryResultCollection\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.monitor.query.LogsQueryAsyncClient.queryResource(java.lang.String,java.lang.String,com.azure.monitor.query.models.QueryTimeInterval)"
   fullName: "com.azure.monitor.query.LogsQueryAsyncClient.queryResource(String resourceId, String query, QueryTimeInterval timeInterval)"
   name: "queryResource(String resourceId, String query, QueryTimeInterval timeInterval)"
@@ -69,7 +69,7 @@ methods:
   desc: "Returns all the Azure Monitor logs matching the given query for an Azure resource.\n\n**Query logs from the last 24 hours**\n\n```java\nMono<LogsQueryResult> queryResult = logsQueryAsyncClient.queryResource(\"{resource-id}\", \"{kusto-query}\",\n     QueryTimeInterval.LAST_DAY);\n queryResult.subscribe(result -> {\n     for (LogsTableRow row : result.getTable().getRows()) {\n         System.out.println(row.getRow()\n             .stream()\n             .map(LogsTableCell::getValueAsString)\n             .collect(Collectors.joining(\",\")));\n     }\n });\n```"
   returns:
     description: "The logs matching the query."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.monitor.query.models.LogsQueryResult?alt=com.azure.monitor.query.models.LogsQueryResult&text=LogsQueryResult\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.monitor.query.models.LogsQueryResult?alt=com.azure.monitor.query.models.LogsQueryResult&text=LogsQueryResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.monitor.query.LogsQueryAsyncClient.<T>queryResource(java.lang.String,java.lang.String,com.azure.monitor.query.models.QueryTimeInterval,java.lang.Class<T>)"
   fullName: "com.azure.monitor.query.LogsQueryAsyncClient.queryResource(String resourceId, String query, QueryTimeInterval timeInterval, Class<T> type)"
   name: "queryResource(String resourceId, String query, QueryTimeInterval timeInterval, Class<T> type)"
@@ -92,7 +92,7 @@ methods:
   desc: "Returns all the Azure Monitor logs matching the given query for an Azure resource."
   returns:
     description: "The logs matching the query as a list of objects of type T."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.monitor.query.LogsQueryAsyncClient.<T>queryResource(java.lang.String,java.lang.String,com.azure.monitor.query.models.QueryTimeInterval,java.lang.Class<T>,com.azure.monitor.query.models.LogsQueryOptions)"
   fullName: "com.azure.monitor.query.LogsQueryAsyncClient.queryResource(String resourceId, String query, QueryTimeInterval timeInterval, Class<T> type, LogsQueryOptions options)"
   name: "queryResource(String resourceId, String query, QueryTimeInterval timeInterval, Class<T> type, LogsQueryOptions options)"
@@ -118,7 +118,7 @@ methods:
   desc: "Returns all the Azure Monitor logs matching the given query for an Azure resource."
   returns:
     description: "The logs matching the query as a list of objects of type T."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.monitor.query.LogsQueryAsyncClient.<T>queryResourceWithResponse(java.lang.String,java.lang.String,com.azure.monitor.query.models.QueryTimeInterval,java.lang.Class<T>,com.azure.monitor.query.models.LogsQueryOptions)"
   fullName: "com.azure.monitor.query.LogsQueryAsyncClient.queryResourceWithResponse(String resourceId, String query, QueryTimeInterval timeInterval, Class<T> type, LogsQueryOptions options)"
   name: "queryResourceWithResponse(String resourceId, String query, QueryTimeInterval timeInterval, Class<T> type, LogsQueryOptions options)"
@@ -144,7 +144,7 @@ methods:
   desc: "Returns all the Azure Monitor logs matching the given query for an Azure resource."
   returns:
     description: "The logs matching the query including the HTTP response."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;&gt;"
 - uid: "com.azure.monitor.query.LogsQueryAsyncClient.queryResourceWithResponse(java.lang.String,java.lang.String,com.azure.monitor.query.models.QueryTimeInterval,com.azure.monitor.query.models.LogsQueryOptions)"
   fullName: "com.azure.monitor.query.LogsQueryAsyncClient.queryResourceWithResponse(String resourceId, String query, QueryTimeInterval timeInterval, LogsQueryOptions options)"
   name: "queryResourceWithResponse(String resourceId, String query, QueryTimeInterval timeInterval, LogsQueryOptions options)"
@@ -167,7 +167,7 @@ methods:
   desc: "Returns all the Azure Monitor logs matching the given query for an Azure resource.\n\n**Query logs from the last 7 days and set the service timeout to 2 minutes**\n\n```java\nMono<Response<LogsQueryResult>> queryResult = logsQueryAsyncClient.queryResourceWithResponse(\"{resource-id}\",\n     \"{kusto-query}\",\n     QueryTimeInterval.LAST_7_DAYS,\n     new LogsQueryOptions().setServerTimeout(Duration.ofMinutes(2)));\n\n queryResult.subscribe(result -> {\n     for (LogsTableRow row : result.getValue().getTable().getRows()) {\n         System.out.println(row.getRow()\n             .stream()\n             .map(LogsTableCell::getValueAsString)\n             .collect(Collectors.joining(\",\")));\n     }\n });\n```"
   returns:
     description: "The logs matching the query."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.monitor.query.models.LogsQueryResult?alt=com.azure.monitor.query.models.LogsQueryResult&text=LogsQueryResult\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.monitor.query.models.LogsQueryResult?alt=com.azure.monitor.query.models.LogsQueryResult&text=LogsQueryResult\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.monitor.query.LogsQueryAsyncClient.queryWorkspace(java.lang.String,java.lang.String,com.azure.monitor.query.models.QueryTimeInterval)"
   fullName: "com.azure.monitor.query.LogsQueryAsyncClient.queryWorkspace(String workspaceId, String query, QueryTimeInterval timeInterval)"
   name: "queryWorkspace(String workspaceId, String query, QueryTimeInterval timeInterval)"
@@ -187,7 +187,7 @@ methods:
   desc: "Returns all the Azure Monitor logs matching the given query in the specified workspaceId.\n\n**Query logs from the last 24 hours**\n\n```java\nMono<LogsQueryResult> queryResult = logsQueryAsyncClient.queryWorkspace(\"{workspace-id}\", \"{kusto-query}\",\n         QueryTimeInterval.LAST_DAY);\n queryResult.subscribe(result -> {\n     for (LogsTableRow row : result.getTable().getRows()) {\n         System.out.println(row.getRow()\n                 .stream()\n                 .map(LogsTableCell::getValueAsString)\n                 .collect(Collectors.joining(\",\")));\n     }\n });\n```"
   returns:
     description: "The logs matching the query."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.monitor.query.models.LogsQueryResult?alt=com.azure.monitor.query.models.LogsQueryResult&text=LogsQueryResult\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.monitor.query.models.LogsQueryResult?alt=com.azure.monitor.query.models.LogsQueryResult&text=LogsQueryResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.monitor.query.LogsQueryAsyncClient.<T>queryWorkspace(java.lang.String,java.lang.String,com.azure.monitor.query.models.QueryTimeInterval,java.lang.Class<T>)"
   fullName: "com.azure.monitor.query.LogsQueryAsyncClient.queryWorkspace(String workspaceId, String query, QueryTimeInterval timeInterval, Class<T> type)"
   name: "queryWorkspace(String workspaceId, String query, QueryTimeInterval timeInterval, Class<T> type)"
@@ -210,7 +210,7 @@ methods:
   desc: "Returns all the Azure Monitor logs matching the given query in the specified workspaceId."
   returns:
     description: "The logs matching the query as a list of objects of type T."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.monitor.query.LogsQueryAsyncClient.<T>queryWorkspace(java.lang.String,java.lang.String,com.azure.monitor.query.models.QueryTimeInterval,java.lang.Class<T>,com.azure.monitor.query.models.LogsQueryOptions)"
   fullName: "com.azure.monitor.query.LogsQueryAsyncClient.queryWorkspace(String workspaceId, String query, QueryTimeInterval timeInterval, Class<T> type, LogsQueryOptions options)"
   name: "queryWorkspace(String workspaceId, String query, QueryTimeInterval timeInterval, Class<T> type, LogsQueryOptions options)"
@@ -236,7 +236,7 @@ methods:
   desc: "Returns all the Azure Monitor logs matching the given query in the specified workspaceId."
   returns:
     description: "The logs matching the query as a list of objects of type T."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.monitor.query.LogsQueryAsyncClient.<T>queryWorkspaceWithResponse(java.lang.String,java.lang.String,com.azure.monitor.query.models.QueryTimeInterval,java.lang.Class<T>,com.azure.monitor.query.models.LogsQueryOptions)"
   fullName: "com.azure.monitor.query.LogsQueryAsyncClient.queryWorkspaceWithResponse(String workspaceId, String query, QueryTimeInterval timeInterval, Class<T> type, LogsQueryOptions options)"
   name: "queryWorkspaceWithResponse(String workspaceId, String query, QueryTimeInterval timeInterval, Class<T> type, LogsQueryOptions options)"
@@ -262,7 +262,7 @@ methods:
   desc: "Returns all the Azure Monitor logs matching the given query in the specified workspaceId."
   returns:
     description: "The logs matching the query including the HTTP response."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;&gt;"
 - uid: "com.azure.monitor.query.LogsQueryAsyncClient.queryWorkspaceWithResponse(java.lang.String,java.lang.String,com.azure.monitor.query.models.QueryTimeInterval,com.azure.monitor.query.models.LogsQueryOptions)"
   fullName: "com.azure.monitor.query.LogsQueryAsyncClient.queryWorkspaceWithResponse(String workspaceId, String query, QueryTimeInterval timeInterval, LogsQueryOptions options)"
   name: "queryWorkspaceWithResponse(String workspaceId, String query, QueryTimeInterval timeInterval, LogsQueryOptions options)"
@@ -285,7 +285,7 @@ methods:
   desc: "Returns all the Azure Monitor logs matching the given query in the specified workspaceId.\n\n**Query logs from the last 7 days and set the service timeout to 2 minutes**\n\n```java\nMono<Response<LogsQueryResult>> queryResult = logsQueryAsyncClient.queryWorkspaceWithResponse(\"{workspace-id}\",\n         \"{kusto-query}\",\n         QueryTimeInterval.LAST_7_DAYS,\n         new LogsQueryOptions().setServerTimeout(Duration.ofMinutes(2)));\n\n queryResult.subscribe(result -> {\n     for (LogsTableRow row : result.getValue().getTable().getRows()) {\n         System.out.println(row.getRow()\n                 .stream()\n                 .map(LogsTableCell::getValueAsString)\n                 .collect(Collectors.joining(\",\")));\n     }\n });\n```"
   returns:
     description: "The logs matching the query."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.monitor.query.models.LogsQueryResult?alt=com.azure.monitor.query.models.LogsQueryResult&text=LogsQueryResult\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.monitor.query.models.LogsQueryResult?alt=com.azure.monitor.query.models.LogsQueryResult&text=LogsQueryResult\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 type: "class"
 desc: "The asynchronous client for querying Azure Monitor logs.\n\n**Instantiating an asynchronous Logs query Client**\n\n```java\nLogsQueryAsyncClient logsQueryAsyncClient = new LogsQueryClientBuilder()\n         .credential(tokenCredential)\n         .buildAsyncClient();\n```"
 metadata: {}

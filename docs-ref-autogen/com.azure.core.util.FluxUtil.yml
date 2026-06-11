@@ -32,7 +32,7 @@ methods:
   parameters:
   - description: "A <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> to report progress on."
     name: "flux"
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
   - description: "Optional <xref uid=\"com.azure.core.util.ProgressReporter\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ProgressReporter\"></xref>."
     name: "progressReporter"
     type: "<xref href=\"com.azure.core.util.ProgressReporter?alt=com.azure.core.util.ProgressReporter&text=ProgressReporter\" data-throw-if-not-resolved=\"False\" />"
@@ -40,7 +40,7 @@ methods:
   desc: "Adds progress reporting to the provided <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> of <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ByteBuffer\"></xref>.\n\nEach <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ByteBuffer\"></xref> that's emitted from the <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> will report <xref uid=\"java.nio.ByteBuffer.remaining*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ByteBuffer#remaining()\"></xref>.\n\nWhen <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> is resubscribed the progress is reset. If the flux is not replayable, resubscribing can result in empty or partial data then progress reporting might not be accurate.\n\nIf <xref uid=\"com.azure.core.util.ProgressReporter\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ProgressReporter\"></xref> is not provided, i.e. is `null`, then this method returns unmodified <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref>."
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> that reports progress, or original <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> if <xref uid=\"com.azure.core.util.ProgressReporter\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ProgressReporter\"></xref> is not\n provided."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
 - uid: "com.azure.core.util.FluxUtil.byteBufferToArray(java.nio.ByteBuffer)"
   fullName: "com.azure.core.util.FluxUtil.byteBufferToArray(ByteBuffer byteBuffer)"
   name: "byteBufferToArray(ByteBuffer byteBuffer)"
@@ -67,7 +67,7 @@ methods:
   parameters:
   - description: "A network response ByteBuffer stream."
     name: "stream"
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
   - description: "The HTTP headers of the response."
     name: "headers"
     type: "<xref href=\"com.azure.core.http.HttpHeaders?alt=com.azure.core.http.HttpHeaders&text=HttpHeaders\" data-throw-if-not-resolved=\"False\" />"
@@ -75,7 +75,7 @@ methods:
   desc: "Collects ByteBuffers returned in a network response into a byte array.\n\nThe `headers` are inspected for containing an `Content-Length` which determines if a size hinted collection, <xref uid=\"com.azure.core.util.FluxUtil.collectBytesInByteBufferStream(reactor.core.publisher.Flux<java.nio.ByteBuffer>,int)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#collectBytesInByteBufferStream(Flux, int)\"></xref>, or default collection, <xref uid=\"com.azure.core.util.FluxUtil.collectBytesInByteBufferStream(reactor.core.publisher.Flux<java.nio.ByteBuffer>)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#collectBytesInByteBufferStream(Flux)\"></xref>, will be used."
   returns:
     description: "A Mono which emits the collected network response ByteBuffers."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"byte?alt=byte&text=byte\" data-throw-if-not-resolved=\"False\" />[]&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"byte?alt=byte&text=byte\" data-throw-if-not-resolved=\"False\" />[]&gt;"
 - uid: "com.azure.core.util.FluxUtil.collectBytesInByteBufferStream(reactor.core.publisher.Flux<java.nio.ByteBuffer>)"
   fullName: "com.azure.core.util.FluxUtil.collectBytesInByteBufferStream(Flux<ByteBuffer> stream)"
   name: "collectBytesInByteBufferStream(Flux<ByteBuffer> stream)"
@@ -86,12 +86,12 @@ methods:
   parameters:
   - description: "A stream which emits ByteBuffer instances."
     name: "stream"
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
   syntax: "public static Mono<byte[]> collectBytesInByteBufferStream(Flux<ByteBuffer> stream)"
   desc: "Collects ByteBuffers emitted by a Flux into a byte array."
   returns:
     description: "A Mono which emits the concatenation of all the ByteBuffer instances given by the source Flux."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"byte?alt=byte&text=byte\" data-throw-if-not-resolved=\"False\" />[]&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"byte?alt=byte&text=byte\" data-throw-if-not-resolved=\"False\" />[]&gt;"
 - uid: "com.azure.core.util.FluxUtil.collectBytesInByteBufferStream(reactor.core.publisher.Flux<java.nio.ByteBuffer>,int)"
   fullName: "com.azure.core.util.FluxUtil.collectBytesInByteBufferStream(Flux<ByteBuffer> stream, int sizeHint)"
   name: "collectBytesInByteBufferStream(Flux<ByteBuffer> stream, int sizeHint)"
@@ -102,7 +102,7 @@ methods:
   parameters:
   - description: "A stream which emits ByteBuffer instances."
     name: "stream"
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
   - description: "A hint about the expected stream size."
     name: "sizeHint"
     type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
@@ -110,7 +110,7 @@ methods:
   desc: "Collects ByteBuffers emitted by a Flux into a byte array.\n\nUnlike <xref uid=\"com.azure.core.util.FluxUtil.collectBytesInByteBufferStream(reactor.core.publisher.Flux<java.nio.ByteBuffer>)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#collectBytesInByteBufferStream(Flux)\"></xref>, this method accepts a second parameter `sizeHint`. This size hint allows for optimizations when creating the initial buffer to reduce the number of times it needs to be resized while concatenating emitted ByteBuffers."
   returns:
     description: "A Mono which emits the concatenation of all the ByteBuffer instances given by the source Flux."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"byte?alt=byte&text=byte\" data-throw-if-not-resolved=\"False\" />[]&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"byte?alt=byte&text=byte\" data-throw-if-not-resolved=\"False\" />[]&gt;"
 - uid: "com.azure.core.util.FluxUtil.createRetriableDownloadFlux(java.util.function.Supplier<reactor.core.publisher.Flux<java.nio.ByteBuffer>>,java.util.function.BiFunction<java.lang.Throwable,java.lang.Long,reactor.core.publisher.Flux<java.nio.ByteBuffer>>,int)"
   fullName: "com.azure.core.util.FluxUtil.createRetriableDownloadFlux(Supplier<Flux<ByteBuffer>> downloadSupplier, BiFunction<Throwable,Long,Flux<ByteBuffer>> onDownloadErrorResume, int maxRetries)"
   name: "createRetriableDownloadFlux(Supplier<Flux<ByteBuffer>> downloadSupplier, BiFunction<Throwable,Long,Flux<ByteBuffer>> onDownloadErrorResume, int maxRetries)"
@@ -121,10 +121,10 @@ methods:
   parameters:
   - description: "Supplier of the initial download."
     name: "downloadSupplier"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html\">Supplier</a>&lt;<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html\">Supplier</a>&lt;<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;"
   - description: "<xref uid=\"java.util.function.BiFunction\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BiFunction\"></xref> of <xref uid=\"java.lang.Throwable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Throwable\"></xref> and <xref uid=\"java.lang.Long\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Long\"></xref> which is used to resume\n downloading when an error occurs."
     name: "onDownloadErrorResume"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html\">BiFunction</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html\">Throwable</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>,<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html\">BiFunction</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html\">Throwable</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>,<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;"
   - description: "The maximum number of times a download can be resumed when an error occurs."
     name: "maxRetries"
     type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
@@ -132,7 +132,7 @@ methods:
   desc: "Creates a <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> that is capable of resuming a download by applying retry logic when an error occurs."
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> that downloads reliably."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
 - uid: "com.azure.core.util.FluxUtil.createRetriableDownloadFlux(java.util.function.Supplier<reactor.core.publisher.Flux<java.nio.ByteBuffer>>,java.util.function.BiFunction<java.lang.Throwable,java.lang.Long,reactor.core.publisher.Flux<java.nio.ByteBuffer>>,int,long)"
   fullName: "com.azure.core.util.FluxUtil.createRetriableDownloadFlux(Supplier<Flux<ByteBuffer>> downloadSupplier, BiFunction<Throwable,Long,Flux<ByteBuffer>> onDownloadErrorResume, int maxRetries, long position)"
   name: "createRetriableDownloadFlux(Supplier<Flux<ByteBuffer>> downloadSupplier, BiFunction<Throwable,Long,Flux<ByteBuffer>> onDownloadErrorResume, int maxRetries, long position)"
@@ -143,10 +143,10 @@ methods:
   parameters:
   - description: "Supplier of the initial download."
     name: "downloadSupplier"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html\">Supplier</a>&lt;<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html\">Supplier</a>&lt;<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;"
   - description: "<xref uid=\"java.util.function.BiFunction\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BiFunction\"></xref> of <xref uid=\"java.lang.Throwable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Throwable\"></xref> and <xref uid=\"java.lang.Long\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Long\"></xref> which is used to resume\n downloading when an error occurs."
     name: "onDownloadErrorResume"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html\">BiFunction</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html\">Throwable</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>,<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html\">BiFunction</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html\">Throwable</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>,<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;"
   - description: "The maximum number of times a download can be resumed when an error occurs."
     name: "maxRetries"
     type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
@@ -157,7 +157,7 @@ methods:
   desc: "Creates a <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> that is capable of resuming a download by applying retry logic when an error occurs."
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> that downloads reliably."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
 - uid: "com.azure.core.util.FluxUtil.createRetriableDownloadFlux(java.util.function.Supplier<reactor.core.publisher.Flux<java.nio.ByteBuffer>>,java.util.function.BiFunction<java.lang.Throwable,java.lang.Long,reactor.core.publisher.Flux<java.nio.ByteBuffer>>,com.azure.core.http.policy.RetryOptions,long)"
   fullName: "com.azure.core.util.FluxUtil.createRetriableDownloadFlux(Supplier<Flux<ByteBuffer>> downloadSupplier, BiFunction<Throwable,Long,Flux<ByteBuffer>> onDownloadErrorResume, RetryOptions retryOptions, long position)"
   name: "createRetriableDownloadFlux(Supplier<Flux<ByteBuffer>> downloadSupplier, BiFunction<Throwable,Long,Flux<ByteBuffer>> onDownloadErrorResume, RetryOptions retryOptions, long position)"
@@ -168,10 +168,10 @@ methods:
   parameters:
   - description: "Supplier of the initial download."
     name: "downloadSupplier"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html\">Supplier</a>&lt;<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html\">Supplier</a>&lt;<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;"
   - description: "<xref uid=\"java.util.function.BiFunction\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BiFunction\"></xref> of <xref uid=\"java.lang.Throwable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Throwable\"></xref> and <xref uid=\"java.lang.Long\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Long\"></xref> which is used to resume\n downloading when an error occurs."
     name: "onDownloadErrorResume"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html\">BiFunction</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html\">Throwable</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>,<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/function/BiFunction.html\">BiFunction</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html\">Throwable</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>,<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;"
   - description: "The options for retrying."
     name: "retryOptions"
     type: "<xref href=\"com.azure.core.http.policy.RetryOptions?alt=com.azure.core.http.policy.RetryOptions&text=RetryOptions\" data-throw-if-not-resolved=\"False\" />"
@@ -182,7 +182,7 @@ methods:
   desc: "Creates a <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> that is capable of resuming a download by applying retry logic when an error occurs."
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> that downloads reliably."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
 - uid: "com.azure.core.util.FluxUtil.<T>fluxContext(java.util.function.Function<com.azure.core.util.Context,reactor.core.publisher.Flux<T>>)"
   fullName: "com.azure.core.util.FluxUtil.fluxContext(Function<Context,Flux<T>> serviceCall)"
   name: "fluxContext(Function<Context,Flux<T>> serviceCall)"
@@ -193,12 +193,12 @@ methods:
   parameters:
   - description: "The lambda function that makes the service call into which the context will be passed"
     name: "serviceCall"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html\">Function</a>&lt;<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />,<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html\">Function</a>&lt;<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />,<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
   syntax: "public static Flux<T> <T>fluxContext(Function<Context,Flux<T>> serviceCall)"
   desc: "This method converts the incoming `deferContextual` from <xref uid=\"reactor.util.context.Context\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Reactor\n Context\"></xref> to <xref uid=\"reactor.util.context.Context\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Azure Context\"></xref> and calls the given lambda function with this context and returns a collection of type `T`\n\nIf the reactor context is empty, <xref uid=\"com.azure.core.util.Context.NONE\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Context#NONE\"></xref> will be used to call the lambda function\n\n**Code samples**\n\n```java\nString prefix = \"Hello, \";\n Flux<String> response = FluxUtil\n     .fluxContext(context -> serviceCallReturnsCollection(prefix, context));\n```"
   returns:
     description: "The response from service call"
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.core.util.FluxUtil.<T>fluxError(com.azure.core.util.logging.ClientLogger,java.lang.RuntimeException)"
   fullName: "com.azure.core.util.FluxUtil.fluxError(ClientLogger logger, RuntimeException ex)"
   name: "fluxError(ClientLogger logger, RuntimeException ex)"
@@ -217,7 +217,7 @@ methods:
   desc: "Propagates a <xref uid=\"java.lang.RuntimeException\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RuntimeException\"></xref> through the error channel of <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref>."
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> that terminates with error wrapping the <xref uid=\"java.lang.RuntimeException\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RuntimeException\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.core.util.FluxUtil.isFluxByteBuffer(java.lang.reflect.Type)"
   fullName: "com.azure.core.util.FluxUtil.isFluxByteBuffer(Type entityType)"
   name: "isFluxByteBuffer(Type entityType)"
@@ -252,7 +252,7 @@ methods:
   desc: "Propagates a <xref uid=\"java.lang.RuntimeException\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RuntimeException\"></xref> through the error channel of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> that terminates with error wrapping the <xref uid=\"java.lang.RuntimeException\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RuntimeException\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.core.util.FluxUtil.<T>monoError(com.azure.core.util.logging.LoggingEventBuilder,java.lang.RuntimeException)"
   fullName: "com.azure.core.util.FluxUtil.monoError(LoggingEventBuilder logBuilder, RuntimeException ex)"
   name: "monoError(LoggingEventBuilder logBuilder, RuntimeException ex)"
@@ -271,7 +271,7 @@ methods:
   desc: "Propagates a <xref uid=\"java.lang.RuntimeException\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RuntimeException\"></xref> through the error channel of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> that terminates with error wrapping the <xref uid=\"java.lang.RuntimeException\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RuntimeException\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.core.util.FluxUtil.<T>pagedFluxError(com.azure.core.util.logging.ClientLogger,java.lang.RuntimeException)"
   fullName: "com.azure.core.util.FluxUtil.pagedFluxError(ClientLogger logger, RuntimeException ex)"
   name: "pagedFluxError(ClientLogger logger, RuntimeException ex)"
@@ -306,7 +306,7 @@ methods:
   desc: "Creates a <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> from an <xref uid=\"java.nio.channels.AsynchronousFileChannel\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AsynchronousFileChannel\"></xref> which reads the entire file."
   returns:
     description: "The AsyncInputStream."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
 - uid: "com.azure.core.util.FluxUtil.readFile(java.nio.channels.AsynchronousFileChannel,int,long,long)"
   fullName: "com.azure.core.util.FluxUtil.readFile(AsynchronousFileChannel fileChannel, int chunkSize, long offset, long length)"
   name: "readFile(AsynchronousFileChannel fileChannel, int chunkSize, long offset, long length)"
@@ -331,7 +331,7 @@ methods:
   desc: "Creates a <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> from an <xref uid=\"java.nio.channels.AsynchronousFileChannel\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AsynchronousFileChannel\"></xref> which reads part of a file into chunks of the given size."
   returns:
     description: "the Flux."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
 - uid: "com.azure.core.util.FluxUtil.readFile(java.nio.channels.AsynchronousFileChannel,long,long)"
   fullName: "com.azure.core.util.FluxUtil.readFile(AsynchronousFileChannel fileChannel, long offset, long length)"
   name: "readFile(AsynchronousFileChannel fileChannel, long offset, long length)"
@@ -353,7 +353,7 @@ methods:
   desc: "Creates a <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> from an <xref uid=\"java.nio.channels.AsynchronousFileChannel\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AsynchronousFileChannel\"></xref> which reads part of a file."
   returns:
     description: "the Flux."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
 - uid: "com.azure.core.util.FluxUtil.toFluxByteBuffer(java.io.InputStream)"
   fullName: "com.azure.core.util.FluxUtil.toFluxByteBuffer(InputStream inputStream)"
   name: "toFluxByteBuffer(InputStream inputStream)"
@@ -369,7 +369,7 @@ methods:
   desc: "Converts an <xref uid=\"java.io.InputStream\" data-throw-if-not-resolved=\"false\" data-raw-source=\"InputStream\"></xref> into a <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> of <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ByteBuffer\"></xref> using a chunk size of 4096.\n\nGiven that <xref uid=\"java.io.InputStream\" data-throw-if-not-resolved=\"false\" data-raw-source=\"InputStream\"></xref> is not guaranteed to be replayable the returned <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> should be considered non-replayable as well.\n\nIf the passed <xref uid=\"java.io.InputStream\" data-throw-if-not-resolved=\"false\" data-raw-source=\"InputStream\"></xref> is `null` <xref uid=\"reactor.core.publisher.Flux.empty*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux#empty()\"></xref> will be returned."
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> of <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ByteBuffers\"></xref> that contains the contents of the stream."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
 - uid: "com.azure.core.util.FluxUtil.toFluxByteBuffer(java.io.InputStream,int)"
   fullName: "com.azure.core.util.FluxUtil.toFluxByteBuffer(InputStream inputStream, int chunkSize)"
   name: "toFluxByteBuffer(InputStream inputStream, int chunkSize)"
@@ -388,7 +388,7 @@ methods:
   desc: "Converts an <xref uid=\"java.io.InputStream\" data-throw-if-not-resolved=\"false\" data-raw-source=\"InputStream\"></xref> into a <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> of <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ByteBuffer\"></xref>.\n\nGiven that <xref uid=\"java.io.InputStream\" data-throw-if-not-resolved=\"false\" data-raw-source=\"InputStream\"></xref> is not guaranteed to be replayable the returned <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> should be considered non-replayable as well.\n\nIf the passed <xref uid=\"java.io.InputStream\" data-throw-if-not-resolved=\"false\" data-raw-source=\"InputStream\"></xref> is `null` <xref uid=\"reactor.core.publisher.Flux.empty*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux#empty()\"></xref> will be returned."
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> of <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ByteBuffers\"></xref> that contains the contents of the stream."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
 - uid: "com.azure.core.util.FluxUtil.<T>toMono(com.azure.core.http.rest.Response<T>)"
   fullName: "com.azure.core.util.FluxUtil.toMono(Response<T> response)"
   name: "toMono(Response<T> response)"
@@ -404,7 +404,7 @@ methods:
   desc: "Converts the incoming content to Mono."
   returns:
     description: "The converted <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>"
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.core.util.FluxUtil.toReactorContext(com.azure.core.util.Context)"
   fullName: "com.azure.core.util.FluxUtil.toReactorContext(Context context)"
   name: "toReactorContext(Context context)"
@@ -417,10 +417,10 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static Context toReactorContext(Context context)"
-  desc: "Converts an Azure context to Reactor context. If the Azure context is `null` or empty, [Context\\#empty()][Context_empty] will be returned.\n\n\n[Context_empty]: https://projectreactor.io/docs/core/release/api/reactor/util/context/Context#empty%28%29.html"
+  desc: "Converts an Azure context to Reactor context. If the Azure context is `null` or empty, <xref uid=\"reactor.util.context.Context.empty*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"reactor.util.context.Context#empty()\"></xref> will be returned."
   returns:
     description: "The Reactor context."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/util/context/Context.html\">Context</a>"
+    type: "<xref href=\"reactor.util.context.Context?alt=reactor.util.context.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.core.util.FluxUtil.<T>withContext(java.util.function.Function<com.azure.core.util.Context,reactor.core.publisher.Mono<T>>)"
   fullName: "com.azure.core.util.FluxUtil.withContext(Function<Context,Mono<T>> serviceCall)"
   name: "withContext(Function<Context,Mono<T>> serviceCall)"
@@ -431,12 +431,12 @@ methods:
   parameters:
   - description: "The lambda function that makes the service call into which azure context will be passed"
     name: "serviceCall"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html\">Function</a>&lt;<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />,<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html\">Function</a>&lt;<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />,<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
   syntax: "public static Mono<T> <T>withContext(Function<Context,Mono<T>> serviceCall)"
   desc: "This method converts the incoming `deferContextual` from <xref uid=\"reactor.util.context.Context\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Reactor\n Context\"></xref> to <xref uid=\"reactor.util.context.Context\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Azure Context\"></xref> and calls the given lambda function with this context and returns a single entity of type `T`\n\nIf the reactor context is empty, <xref uid=\"com.azure.core.util.Context.NONE\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Context#NONE\"></xref> will be used to call the lambda function\n\n**Code samples**\n\n```java\nString prefix = \"Hello, \";\n Mono<String> response = FluxUtil\n     .withContext(context -> serviceCallReturnsSingle(prefix, context));\n```"
   returns:
     description: "The response from service call"
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.core.util.FluxUtil.<T>withContext(java.util.function.Function<com.azure.core.util.Context,reactor.core.publisher.Mono<T>>,java.util.Map<java.lang.String,java.lang.String>)"
   fullName: "com.azure.core.util.FluxUtil.withContext(Function<Context,Mono<T>> serviceCall, Map<String,String> contextAttributes)"
   name: "withContext(Function<Context,Mono<T>> serviceCall, Map<String,String> contextAttributes)"
@@ -447,7 +447,7 @@ methods:
   parameters:
   - description: "serviceCall The lambda function that makes the service call into which azure context will be\n passed"
     name: "serviceCall"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html\">Function</a>&lt;<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />,<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html\">Function</a>&lt;<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />,<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
   - description: "The map of attributes sent by the calling method to be set on <xref uid=\"reactor.util.context.Context\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Context\"></xref>."
     name: "contextAttributes"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
@@ -455,7 +455,7 @@ methods:
   desc: "This method converts the incoming `deferContextual` from <xref uid=\"reactor.util.context.Context\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Reactor\n Context\"></xref> to <xref uid=\"reactor.util.context.Context\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Azure Context\"></xref>, adds the specified context attributes and calls the given lambda function with this context and returns a single entity of type `T`\n\nIf the reactor context is empty, <xref uid=\"com.azure.core.util.Context.NONE\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Context#NONE\"></xref> will be used to call the lambda function"
   returns:
     description: "The response from service call"
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.core.util.FluxUtil.writeFile(reactor.core.publisher.Flux<java.nio.ByteBuffer>,java.nio.channels.AsynchronousFileChannel)"
   fullName: "com.azure.core.util.FluxUtil.writeFile(Flux<ByteBuffer> content, AsynchronousFileChannel outFile)"
   name: "writeFile(Flux<ByteBuffer> content, AsynchronousFileChannel outFile)"
@@ -466,7 +466,7 @@ methods:
   parameters:
   - description: "The <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> of <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ByteBuffer\"></xref> content."
     name: "content"
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
   - description: "The <xref uid=\"java.nio.channels.AsynchronousFileChannel\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AsynchronousFileChannel\"></xref>."
     name: "outFile"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/channels/AsynchronousFileChannel.html\">AsynchronousFileChannel</a>"
@@ -474,7 +474,7 @@ methods:
   desc: "Writes the <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ByteBuffers\"></xref> emitted by a <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> of <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ByteBuffer\"></xref> to an <xref uid=\"java.nio.channels.AsynchronousFileChannel\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AsynchronousFileChannel\"></xref>.\n\nThe `outFile` is not closed by this call, closing of the `outFile` is managed by the caller.\n\nThe response <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> will emit an error if `content` or `outFile` are null. Additionally, an error will be emitted if the `outFile` wasn't opened with the proper open options, such as <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"StandardOpenOption#WRITE\"></xref>."
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> which emits a completion status once the <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> has been written to the <xref uid=\"java.nio.channels.AsynchronousFileChannel\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AsynchronousFileChannel\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.core.util.FluxUtil.writeFile(reactor.core.publisher.Flux<java.nio.ByteBuffer>,java.nio.channels.AsynchronousFileChannel,long)"
   fullName: "com.azure.core.util.FluxUtil.writeFile(Flux<ByteBuffer> content, AsynchronousFileChannel outFile, long position)"
   name: "writeFile(Flux<ByteBuffer> content, AsynchronousFileChannel outFile, long position)"
@@ -485,7 +485,7 @@ methods:
   parameters:
   - description: "The <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> of <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ByteBuffer\"></xref> content."
     name: "content"
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
   - description: "The <xref uid=\"java.nio.channels.AsynchronousFileChannel\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AsynchronousFileChannel\"></xref>."
     name: "outFile"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/channels/AsynchronousFileChannel.html\">AsynchronousFileChannel</a>"
@@ -496,7 +496,7 @@ methods:
   desc: "Writes the <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ByteBuffers\"></xref> emitted by a <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> of <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ByteBuffer\"></xref> to an <xref uid=\"java.nio.channels.AsynchronousFileChannel\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AsynchronousFileChannel\"></xref> starting at the given `position` in the file.\n\nThe `outFile` is not closed by this call, closing of the `outFile` is managed by the caller.\n\nThe response <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> will emit an error if `content` or `outFile` are null or `position` is less than 0. Additionally, an error will be emitted if the `outFile` wasn't opened with the proper open options, such as <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"StandardOpenOption#WRITE\"></xref>."
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> which emits a completion status once the <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> has been written to the <xref uid=\"java.nio.channels.AsynchronousFileChannel\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AsynchronousFileChannel\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.core.util.FluxUtil.writeToAsynchronousByteChannel(reactor.core.publisher.Flux<java.nio.ByteBuffer>,java.nio.channels.AsynchronousByteChannel)"
   fullName: "com.azure.core.util.FluxUtil.writeToAsynchronousByteChannel(Flux<ByteBuffer> content, AsynchronousByteChannel channel)"
   name: "writeToAsynchronousByteChannel(Flux<ByteBuffer> content, AsynchronousByteChannel channel)"
@@ -507,7 +507,7 @@ methods:
   parameters:
   - description: "The <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> of <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ByteBuffer\"></xref> content."
     name: "content"
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
   - description: "The <xref uid=\"java.nio.channels.AsynchronousByteChannel\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AsynchronousByteChannel\"></xref>."
     name: "channel"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/channels/AsynchronousByteChannel.html\">AsynchronousByteChannel</a>"
@@ -515,7 +515,7 @@ methods:
   desc: "Writes the <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ByteBuffers\"></xref> emitted by a <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> of <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ByteBuffer\"></xref> to an <xref uid=\"java.nio.channels.AsynchronousByteChannel\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AsynchronousByteChannel\"></xref>.\n\nThe `channel` is not closed by this call, closing of the `channel` is managed by the caller.\n\nThe response <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> will emit an error if `content` or `channel` are null."
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> which emits a completion status once the <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> has been written to the <xref uid=\"java.nio.channels.AsynchronousByteChannel\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AsynchronousByteChannel\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.core.util.FluxUtil.writeToOutputStream(reactor.core.publisher.Flux<java.nio.ByteBuffer>,java.io.OutputStream)"
   fullName: "com.azure.core.util.FluxUtil.writeToOutputStream(Flux<ByteBuffer> content, OutputStream stream)"
   name: "writeToOutputStream(Flux<ByteBuffer> content, OutputStream stream)"
@@ -526,7 +526,7 @@ methods:
   parameters:
   - description: "The <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> of <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ByteBuffer\"></xref> content."
     name: "content"
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
   - description: "The <xref uid=\"java.io.OutputStream\" data-throw-if-not-resolved=\"false\" data-raw-source=\"OutputStream\"></xref> being written into."
     name: "stream"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html\">OutputStream</a>"
@@ -534,7 +534,7 @@ methods:
   desc: "Writes the <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ByteBuffers\"></xref> emitted by a <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> of <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ByteBuffer\"></xref> to an <xref uid=\"java.io.OutputStream\" data-throw-if-not-resolved=\"false\" data-raw-source=\"OutputStream\"></xref>.\n\nThe `stream` is not closed by this call, closing of the `stream` is managed by the caller.\n\nThe response <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> will emit an error if `content` or `stream` are null. Additionally, an error will be emitted if an exception occurs while writing the `content` to the `stream`."
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> which emits a completion status once the <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> has been written to the <xref uid=\"java.io.OutputStream\" data-throw-if-not-resolved=\"false\" data-raw-source=\"OutputStream\"></xref>, or an error status if writing fails."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.core.util.FluxUtil.writeToWritableByteChannel(reactor.core.publisher.Flux<java.nio.ByteBuffer>,java.nio.channels.WritableByteChannel)"
   fullName: "com.azure.core.util.FluxUtil.writeToWritableByteChannel(Flux<ByteBuffer> content, WritableByteChannel channel)"
   name: "writeToWritableByteChannel(Flux<ByteBuffer> content, WritableByteChannel channel)"
@@ -545,7 +545,7 @@ methods:
   parameters:
   - description: "The <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> of <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ByteBuffer\"></xref> content."
     name: "content"
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
   - description: "The <xref uid=\"java.nio.channels.WritableByteChannel\" data-throw-if-not-resolved=\"false\" data-raw-source=\"WritableByteChannel\"></xref>."
     name: "channel"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/channels/WritableByteChannel.html\">WritableByteChannel</a>"
@@ -553,7 +553,7 @@ methods:
   desc: "Writes the <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ByteBuffers\"></xref> emitted by a <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> of <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ByteBuffer\"></xref> to an <xref uid=\"java.nio.channels.WritableByteChannel\" data-throw-if-not-resolved=\"false\" data-raw-source=\"WritableByteChannel\"></xref>.\n\nThe `channel` is not closed by this call, closing of the `channel` is managed by the caller.\n\nThe response <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> will emit an error if `content` or `channel` are null."
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> which emits a completion status once the <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref> has been written to the <xref uid=\"java.nio.channels.WritableByteChannel\" data-throw-if-not-resolved=\"false\" data-raw-source=\"WritableByteChannel\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 type: "class"
 desc: "Utility type exposing methods to deal with <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref>."
 metadata: {}

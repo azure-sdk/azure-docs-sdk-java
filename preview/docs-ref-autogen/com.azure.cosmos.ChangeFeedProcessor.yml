@@ -17,7 +17,7 @@ methods:
   desc: "Returns a read only list of list of objects, each one represents one scoped worker item.\n\nAn empty list will be returned if the processor was not started or no lease items matching the current <xref uid=\"com.azure.cosmos.ChangeFeedProcessor\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ChangeFeedProcessor\"></xref> instance's lease prefix could be found."
   returns:
     description: "a Mono containing a read only list of objects, each one representing one scoped worker item."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.cosmos.models.ChangeFeedProcessorState?alt=com.azure.cosmos.models.ChangeFeedProcessorState&text=ChangeFeedProcessorState\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.cosmos.models.ChangeFeedProcessorState?alt=com.azure.cosmos.models.ChangeFeedProcessorState&text=ChangeFeedProcessorState\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.cosmos.ChangeFeedProcessor.getEstimatedLag()"
   fullName: "com.azure.cosmos.ChangeFeedProcessor.getEstimatedLag()"
   name: "getEstimatedLag()"
@@ -29,7 +29,7 @@ methods:
   desc: "Returns the current owner (host) and an approximation of the difference between the last processed item (defined by the state of the feed container) and the latest change in the container for each partition (lease item).\n\nAn empty map will be returned if the processor was not started or no lease items matching the current <xref uid=\"com.azure.cosmos.ChangeFeedProcessor\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ChangeFeedProcessor\"></xref> instance's lease prefix could be found."
   returns:
     description: "a map representing the current owner and lease token, the current LSN and latest LSN, and the estimated\n         lag, asynchronously."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>&gt;&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>&gt;&gt;"
 - uid: "com.azure.cosmos.ChangeFeedProcessor.isStarted()"
   fullName: "com.azure.cosmos.ChangeFeedProcessor.isStarted()"
   name: "isStarted()"
@@ -53,7 +53,7 @@ methods:
   desc: "Start listening for changes asynchronously."
   returns:
     description: "a representation of the deferred computation of this call."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.cosmos.ChangeFeedProcessor.stop()"
   fullName: "com.azure.cosmos.ChangeFeedProcessor.stop()"
   name: "stop()"
@@ -65,7 +65,7 @@ methods:
   desc: "Stops listening for changes asynchronously."
   returns:
     description: "a representation of the deferred computation of this call."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 type: "interface"
 desc: "Simple host for distributing change feed events across observers, simplifying the process of reading the change feeds and distributing the processing events across multiple consumers effectively.\n\nThere are four main components of implementing the change feed processor:\n\n *  The monitored container: the monitored container has the data from which the change feed is generated. Any inserts and updates to the monitored container are reflected in the change feed of the container.\n *  The lease container: the lease container acts as a state storage and coordinates processing the change feed across multiple workers. The lease container can be stored in the same account as the monitored container or in a separate account.\n *  The host: a host is an application instance that uses the change feed processor to listen for changes. Multiple instances with the same lease configuration can run in parallel, but each instance should have a different instance name.\n *  The delegate: the delegate is the code that defines what you, the developer, want to do with each batch of changes that the change feed processor reads.\n\nBelow is an example of building ChangeFeedProcessor for LatestVersion mode.\n\n```java\nChangeFeedProcessor changeFeedProcessor = new ChangeFeedProcessorBuilder()\n     .hostName(hostName)\n     .feedContainer(feedContainer)\n     .leaseContainer(leaseContainer)\n     .handleChanges(docs -> {\n         for (JsonNode item : docs) {\n             // Implementation for handling and processing of each JsonNode item goes here\n         }\n     })\n     .buildChangeFeedProcessor();\n```\n\nBelow is an example of building ChangeFeedProcessor for AllVersionsAndDeletes mode.\n\n```java\nChangeFeedProcessor changeFeedProcessor = new ChangeFeedProcessorBuilder()\n     .hostName(hostName)\n     .feedContainer(feedContainer)\n     .leaseContainer(leaseContainer)\n     .handleAllVersionsAndDeletesChanges(docs -> {\n         for (ChangeFeedProcessorItem item : docs) {\n             // Implementation for handling and processing of each ChangeFeedProcessorItem item goes here\n         }\n     })\n     .buildChangeFeedProcessor();\n```"
 metadata: {}

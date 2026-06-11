@@ -4,7 +4,7 @@ fullName: "com.azure.core.amqp.AmqpSession"
 name: "AmqpSession"
 nameWithType: "AmqpSession"
 summary: "An AMQP session representing bidirectional communication that supports multiple <xref uid=\"com.azure.core.amqp.AmqpLink\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AMQP links\"></xref>."
-syntax: "public interface **AmqpSession**</br> extends <a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/Disposable.html\">Disposable</a>, <xref href=\"com.azure.core.util.AsyncCloseable?alt=com.azure.core.util.AsyncCloseable&text=AsyncCloseable\" data-throw-if-not-resolved=\"False\" />"
+syntax: "public interface **AmqpSession**</br> extends <xref href=\"reactor.core.Disposable?alt=reactor.core.Disposable&text=Disposable\" data-throw-if-not-resolved=\"False\" />, <xref href=\"com.azure.core.util.AsyncCloseable?alt=com.azure.core.util.AsyncCloseable&text=AsyncCloseable\" data-throw-if-not-resolved=\"False\" />"
 methods:
 - uid: "com.azure.core.amqp.AmqpSession.closeAsync()"
   fullName: "com.azure.core.amqp.AmqpSession.closeAsync()"
@@ -14,7 +14,7 @@ methods:
   - "default"
   syntax: "public default Mono<Void> closeAsync()"
   returns:
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.core.amqp.AmqpSession.commitTransaction(com.azure.core.amqp.AmqpTransaction)"
   fullName: "com.azure.core.amqp.AmqpSession.commitTransaction(AmqpTransaction transaction)"
   name: "commitTransaction(AmqpTransaction transaction)"
@@ -30,7 +30,7 @@ methods:
   desc: "Commit the transaction on the message broker."
   returns:
     description: "A completable mono."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.core.amqp.AmqpSession.createConsumer(java.lang.String,java.lang.String,java.time.Duration,com.azure.core.amqp.AmqpRetryPolicy)"
   fullName: "com.azure.core.amqp.AmqpSession.createConsumer(String linkName, String entityPath, Duration timeout, AmqpRetryPolicy retryPolicy)"
   name: "createConsumer(String linkName, String entityPath, Duration timeout, AmqpRetryPolicy retryPolicy)"
@@ -55,7 +55,7 @@ methods:
   desc: "Creates a new AMQP link that consumes events from the message broker."
   returns:
     description: "A newly created AMQP link."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.amqp.AmqpLink?alt=com.azure.core.amqp.AmqpLink&text=AmqpLink\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.amqp.AmqpLink?alt=com.azure.core.amqp.AmqpLink&text=AmqpLink\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.core.amqp.AmqpSession.createProducer(java.lang.String,java.lang.String,java.time.Duration,com.azure.core.amqp.AmqpRetryPolicy)"
   fullName: "com.azure.core.amqp.AmqpSession.createProducer(String linkName, String entityPath, Duration timeout, AmqpRetryPolicy retryPolicy)"
   name: "createProducer(String linkName, String entityPath, Duration timeout, AmqpRetryPolicy retryPolicy)"
@@ -80,7 +80,7 @@ methods:
   desc: "Creates a new AMQP link that publishes events to the message broker."
   returns:
     description: "A newly created AMQP link."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.amqp.AmqpLink?alt=com.azure.core.amqp.AmqpLink&text=AmqpLink\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.amqp.AmqpLink?alt=com.azure.core.amqp.AmqpLink&text=AmqpLink\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.core.amqp.AmqpSession.createTransaction()"
   fullName: "com.azure.core.amqp.AmqpSession.createTransaction()"
   name: "createTransaction()"
@@ -92,7 +92,7 @@ methods:
   desc: "Creates the transaction on the message broker."
   returns:
     description: "A newly created AMQPTransaction."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"com.azure.core.amqp.AmqpTransaction?alt=com.azure.core.amqp.AmqpTransaction&text=AmqpTransaction\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.amqp.AmqpTransaction?alt=com.azure.core.amqp.AmqpTransaction&text=AmqpTransaction\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.core.amqp.AmqpSession.getEndpointStates()"
   fullName: "com.azure.core.amqp.AmqpSession.getEndpointStates()"
   name: "getEndpointStates()"
@@ -104,7 +104,7 @@ methods:
   desc: "Gets the endpoint states for the AMQP session. <xref uid=\"com.azure.core.amqp.exception.AmqpException\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AmqpExceptions\"></xref> that occur on the link are reported in the connection state. When the stream terminates, the session is closed."
   returns:
     description: "A stream of endpoint states for the AMQP session."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<xref href=\"com.azure.core.amqp.AmqpEndpointState?alt=com.azure.core.amqp.AmqpEndpointState&text=AmqpEndpointState\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.amqp.AmqpEndpointState?alt=com.azure.core.amqp.AmqpEndpointState&text=AmqpEndpointState\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.core.amqp.AmqpSession.getOperationTimeout()"
   fullName: "com.azure.core.amqp.AmqpSession.getOperationTimeout()"
   name: "getOperationTimeout()"
@@ -128,7 +128,7 @@ methods:
   desc: "Gets an existing or newly created <xref uid=\"? extends com.azure.core.amqp.AmqpTransactionCoordinator\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AmqpTransactionCoordinator\"></xref> on the <xref uid=\"com.azure.core.amqp.AmqpSession\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AmqpSession\"></xref> which maintains one instance of the <xref uid=\"? extends com.azure.core.amqp.AmqpTransactionCoordinator\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AmqpTransactionCoordinator\"></xref> object. The <xref uid=\"? extends com.azure.core.amqp.AmqpTransactionCoordinator\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AmqpTransactionCoordinator\"></xref> is used to create/commit or rollback the transaction which can span over one or more message broker entities. The interface <xref uid=\"com.azure.core.amqp.AmqpSession\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AmqpSession\"></xref> provides default implementation for back-word compatibility but it throws <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RuntimeException\"></xref> to warn that an implementing class must override and provide implementation of this API. Azure SDK already provides implementation for this API."
   returns:
     description: "An existing or if it does not exists newly created <xref uid=\"? extends com.azure.core.amqp.AmqpTransactionCoordinator\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AmqpTransactionCoordinator\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"? extends com.azure.core.amqp.AmqpTransactionCoordinator?alt=? extends com.azure.core.amqp.AmqpTransactionCoordinator&text=AmqpTransactionCoordinator\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"? extends com.azure.core.amqp.AmqpTransactionCoordinator?alt=? extends com.azure.core.amqp.AmqpTransactionCoordinator&text=AmqpTransactionCoordinator\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.core.amqp.AmqpSession.getSessionName()"
   fullName: "com.azure.core.amqp.AmqpSession.getSessionName()"
   name: "getSessionName()"
@@ -172,12 +172,12 @@ methods:
   desc: "Rollback the transaction on the message broker."
   returns:
     description: "A completable mono."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 type: "interface"
 desc: "An AMQP session representing bidirectional communication that supports multiple <xref uid=\"com.azure.core.amqp.AmqpLink\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AMQP links\"></xref>."
 implements:
-- "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/Disposable.html\">Disposable</a>"
 - "<xref href=\"com.azure.core.util.AsyncCloseable?alt=com.azure.core.util.AsyncCloseable&text=AsyncCloseable\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"reactor.core.Disposable?alt=reactor.core.Disposable&text=Disposable\" data-throw-if-not-resolved=\"False\" />"
 metadata: {}
 package: "com.azure.core.amqp"
 artifact: com.azure:azure-core-amqp:2.9.0-beta.7

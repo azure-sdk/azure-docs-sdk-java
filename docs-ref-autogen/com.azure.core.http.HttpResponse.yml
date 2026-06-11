@@ -64,7 +64,7 @@ methods:
   desc: "Get the publisher emitting response content chunks.\n\nReturns a stream of the response's body content. Emissions may occur on Reactor threads which should not be blocked. Blocking should be avoided as much as possible/practical in reactive programming but if you do use methods like `block()` on the stream then be sure to use `publishOn` before the blocking call."
   returns:
     description: "The response's content as a stream of <xref uid=\"java.nio.ByteBuffer\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ByteBuffer\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Flux.html\">Flux</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
 - uid: "com.azure.core.http.HttpResponse.getBodyAsBinaryData()"
   fullName: "com.azure.core.http.HttpResponse.getBodyAsBinaryData()"
   name: "getBodyAsBinaryData()"
@@ -86,7 +86,7 @@ methods:
   desc: "Gets the response content as a `byte[]`."
   returns:
     description: "The response content as a <code>byte[]</code>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<xref href=\"byte?alt=byte&text=byte\" data-throw-if-not-resolved=\"False\" />[]&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"byte?alt=byte&text=byte\" data-throw-if-not-resolved=\"False\" />[]&gt;"
 - uid: "com.azure.core.http.HttpResponse.getBodyAsInputStream()"
   fullName: "com.azure.core.http.HttpResponse.getBodyAsInputStream()"
   name: "getBodyAsInputStream()"
@@ -96,7 +96,7 @@ methods:
   desc: "Gets the response content as an <xref uid=\"java.io.InputStream\" data-throw-if-not-resolved=\"false\" data-raw-source=\"InputStream\"></xref> wrapped in a <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
   returns:
     description: "The response content as an <xref uid=\"java.io.InputStream\" data-throw-if-not-resolved=\"false\" data-raw-source=\"InputStream\"></xref> wrapped in a <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html\">InputStream</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/InputStream.html\">InputStream</a>&gt;"
 - uid: "com.azure.core.http.HttpResponse.getBodyAsInputStreamSync()"
   fullName: "com.azure.core.http.HttpResponse.getBodyAsInputStreamSync()"
   name: "getBodyAsInputStreamSync()"
@@ -118,7 +118,7 @@ methods:
   desc: "Gets the response content as a <xref uid=\"java.lang.String\" data-throw-if-not-resolved=\"false\" data-raw-source=\"String\"></xref>.\n\nBy default, this method will inspect the response body for containing a byte order mark (BOM) to determine the encoding of the string (UTF-8, UTF-16, etc.). If a BOM isn't found this will default to using UTF-8 as the encoding, if a specific encoding is required use <xref uid=\"com.azure.core.http.HttpResponse.getBodyAsString(java.nio.charset.Charset)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#getBodyAsString(Charset)\"></xref>."
   returns:
     description: "The response content as a <xref uid=\"java.lang.String\" data-throw-if-not-resolved=\"false\" data-raw-source=\"String\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.core.http.HttpResponse.getBodyAsString(java.nio.charset.Charset)"
   fullName: "com.azure.core.http.HttpResponse.getBodyAsString(Charset charset)"
   name: "getBodyAsString(Charset charset)"
@@ -134,7 +134,7 @@ methods:
   desc: "Gets the response content as a <xref uid=\"java.lang.String\" data-throw-if-not-resolved=\"false\" data-raw-source=\"String\"></xref>."
   returns:
     description: "The response content as a <xref uid=\"java.lang.String\" data-throw-if-not-resolved=\"false\" data-raw-source=\"String\"></xref>."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.core.http.HttpResponse.getHeaders()"
   fullName: "com.azure.core.http.HttpResponse.getHeaders()"
   name: "getHeaders()"
@@ -230,7 +230,7 @@ methods:
   desc: "Transfers body bytes to the <xref uid=\"java.nio.channels.AsynchronousByteChannel\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AsynchronousByteChannel\"></xref>."
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> that completes when transfer is completed."
-    type: "<a href=\"https://projectreactor.io/docs/core/release/api/reactor/core/publisher/Mono.html\">Mono</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 type: "class"
 desc: "Represents an incoming HTTP response.\n\nThis class encapsulates an HTTP response, including the HTTP status code, headers, and body. It provides methods to get these properties.\n\nThis class is useful when you want to process an HTTP response received from a server. For example, you can use it to get the status code to check if the request was successful, get the headers to check for any additional information, and get the body to process the content of the response.\n\nNote: This class implements <xref uid=\"java.io.Closeable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Closeable\"></xref>, so you should call the <xref uid=\"com.azure.core.http.HttpResponse.close()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#close()\"></xref> method when you're done with the HTTP response to free any resources associated with it."
 implements:
