@@ -5,8 +5,8 @@ ms.date: 06/12/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: trafficmanager
-keywords: Azure, Java, SDK, API, load balancing, load distribution, network, Traffic Manager
 manager: douge
+keywords: Azure, Java, SDK, API, load balancing, load distribution, network, Traffic Manager
 ---
 # Azure Traffic Manager libraries for Java
 
