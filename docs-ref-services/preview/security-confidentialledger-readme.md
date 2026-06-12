@@ -1,12 +1,12 @@
 ---
 title: Azure Confidential Ledger client library for Java
 keywords: Azure, java, SDK, API, azure-security-confidentialledger, confidentialledger
-ms.date: 04/24/2025
+ms.date: 06/12/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: confidentialledger
 ---
-# Azure Confidential Ledger client library for Java - version 1.1.0-beta.1 
+# Azure Confidential Ledger client library for Java - version 1.1.0-beta.3 
 
 
 Azure Confidential Ledger provides a service for logging to an immutable, tamper-proof ledger. As part of the [Azure Confidential Computing][azure_confidential_computing]
@@ -30,7 +30,7 @@ portfolio, Azure Confidential Ledger runs in SGX enclaves. It is built on Micros
 <dependency>
   <groupId>com.azure</groupId>
   <artifactId>azure-security-confidentialledger</artifactId>
-  <version>1.1.0-beta.1</version>
+  <version>1.1.0-beta.2</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -51,6 +51,10 @@ As an alternative to Azure Active Directory, clients may choose to use a client 
 
 You can authenticate with Azure Active Directory using the [Azure Identity library][azure_identity].
 
+After setup, you can choose which type of [credential][azure_identity_credential_type] from `azure-identity` to use.
+We recommend using [DefaultAzureCredential][identity_dac], configured through the `AZURE_TOKEN_CREDENTIALS` environment variable.
+Set this variable as described in the [Learn documentation][customize_defaultAzureCredential], which provides the most up-to-date guidance and examples.
+
 To use the [DefaultAzureCredential][DefaultAzureCredential] provider shown below, or other credential providers provided with the Azure SDK, please include the `azure-identity` package:
 
 [//]: # ({x-version-update-start;com.azure:azure-identity;dependency})
@@ -62,13 +66,16 @@ To use the [DefaultAzureCredential][DefaultAzureCredential] provider shown below
 </dependency>
 ```
 
-Set the values of the client ID, tenant ID, and client secret of the AAD application as environment variables: AZURE_CLIENT_ID, AZURE_TENANT_ID, AZURE_CLIENT_SECRET.
-
 ## Key concepts
 
 ### Ledger entries and transactions
 
 Every write to Azure Confidential Ledger generates an immutable ledger entry in the service. Writes, also referred to as transactions, are uniquely identified by transaction ids that increment with each write. Once written, ledger entries may be retrieved at any time.
+
+#### Tags
+It is possible to further organize data within a collection as part of the latest preview version dated `2024-12-09-preview` or newer.
+
+Specify the `tags` parameter as part of the create entry operation. Multiple tags can be specified using commas. There is a limit of five tags per transaction.
 
 ### Receipts
 
@@ -117,25 +124,26 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [ccf]: https://github.com/Microsoft/CCF
 [azure_confidential_computing]: https://azure.microsoft.com/solutions/confidential-compute
 [confidential_ledger_docs]: https://aka.ms/confidentialledger-servicedocs
-[samples]: https://github.com/Azure/azure-sdk-for-java/tree/azure-security-confidentialledger_1.1.0-beta.1/sdk/confidentialledger/azure-security-confidentialledger/src/samples/java/com/azure/security/confidentialledger/
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-security-confidentialledger_1.1.0-beta.1/sdk/confidentialledger/azure-security-confidentialledger/src
-[samples_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-security-confidentialledger_1.1.0-beta.1/sdk/confidentialledger/azure-security-confidentialledger/src/samples/
+[samples]: https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-security-confidentialledger_1.1.0-beta.3/sdk/confidentialledger/azure-security-confidentialledger/src/samples/java/com/azure/security/confidentialledger/
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-security-confidentialledger_1.1.0-beta.3/sdk/confidentialledger/azure-security-confidentialledger/src
+[samples_code]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-security-confidentialledger_1.1.0-beta.3/sdk/confidentialledger/azure-security-confidentialledger/src/samples/
 [azure_subscription]: https://azure.microsoft.com/free/
 [product_documentation]: https://aka.ms/confidentialledger-servicedocs
-[ledger_base_client_class]: https://github.com/Azure/azure-sdk-for-java/tree/azure-security-confidentialledger_1.1.0-beta.1/sdk/confidentialledger/azure-security-confidentialledger/src/main/java/com/azure/security/confidentialledger/LedgerBaseClient.java
+[ledger_base_client_class]: https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-security-confidentialledger_1.1.0-beta.3/sdk/confidentialledger/azure-security-confidentialledger/src/main/java/com/azure/security/confidentialledger/LedgerBaseClient.java
 [azure_portal]: https://portal.azure.com
 [jdk_link]: https://learn.microsoft.com/java/azure/jdk/?view=azure-java-stable
 [package]: https://central.sonatype.com/artifact/com.azure/azure-security-confidentialledger
-[samples_readme]: https://github.com/Azure/azure-sdk-for-java/tree/azure-security-confidentialledger_1.1.0-beta.1/sdk/confidentialledger/azure-security-confidentialledger/src/samples/README.md
+[samples_readme]: https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-security-confidentialledger_1.1.0-beta.3/sdk/confidentialledger/azure-security-confidentialledger/src/samples/README.md
 [azure_resource_manager]: https://learn.microsoft.com/azure/azure-resource-manager/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/tree/azure-security-confidentialledger_1.1.0-beta.1/sdk/identity/azure-identity
-[DefaultAzureCredential]: https://github.com/Azure/azure-sdk-for-java/blob/azure-security-confidentialledger_1.1.0-beta.1/sdk/identity/azure-identity/README.md#defaultazurecredential
-[logging]: https://github.com/Azure/azure-sdk-for-java/wiki/Logging-in-Azure-SDK
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-security-confidentialledger_1.1.0-beta.3/sdk/identity/azure-identity
+[DefaultAzureCredential]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-security-confidentialledger_1.1.0-beta.3/sdk/identity/azure-identity/README.md#defaultazurecredential
+[logging]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-security-confidentialledger_1.1.0-beta.3/docs/logging.md
 [cla]: https://cla.opensource.microsoft.com/
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
 [coc_contact]: mailto:opencode@microsoft.com
-
-
+[azure_identity_credential_type]: https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-security-confidentialledger_1.1.0-beta.3/sdk/identity/azure-identity#credentials
+[customize_defaultAzureCredential]: https://aka.ms/azsdk/java/identity/credential-chains#how-to-customize-defaultazurecredential
+[identity_dac]: https://aka.ms/azsdk/java/identity/credential-chains#defaultazurecredential-overview
 
 
