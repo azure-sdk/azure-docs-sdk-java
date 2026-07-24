@@ -80,6 +80,16 @@ methods:
   returns:
     description: "the baremetalTenantId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.netapp.fluent.models.VolumeProperties.breakthroughMode()"
+  fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeProperties.breakthroughMode()"
+  name: "breakthroughMode()"
+  nameWithType: "VolumeProperties.breakthroughMode()"
+  summary: "Get the breakthrough<wbr>Mode property: Specifies whether the volume operates in Breakthrough Mode."
+  syntax: "public BreakthroughMode breakthroughMode()"
+  desc: "Get the breakthroughMode property: Specifies whether the volume operates in Breakthrough Mode."
+  returns:
+    description: "the breakthroughMode value."
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.BreakthroughMode?alt=com.azure.resourcemanager.netapp.models.BreakthroughMode&text=BreakthroughMode\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.netapp.fluent.models.VolumeProperties.capacityPoolResourceId()"
   fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeProperties.capacityPoolResourceId()"
   name: "capacityPoolResourceId()"
@@ -214,9 +224,9 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeProperties.enableSubvolumes()"
   name: "enableSubvolumes()"
   nameWithType: "VolumeProperties.enableSubvolumes()"
-  summary: "Get the enable<wbr>Subvolumes property: Flag indicating whether subvolume operations are enabled on the volume."
+  summary: "Get the enable<wbr>Subvolumes property: Flag indicating whether subvolume operations are enabled on the volume Deprecated."
   syntax: "public EnableSubvolumes enableSubvolumes()"
-  desc: "Get the enableSubvolumes property: Flag indicating whether subvolume operations are enabled on the volume."
+  desc: "Get the enableSubvolumes property: Flag indicating whether subvolume operations are enabled on the volume Deprecated. Subvolume operations and this flag will be removed in a future API version."
   returns:
     description: "the enableSubvolumes value."
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.EnableSubvolumes?alt=com.azure.resourcemanager.netapp.models.EnableSubvolumes&text=EnableSubvolumes\" data-throw-if-not-resolved=\"False\" />"
@@ -690,6 +700,20 @@ methods:
   returns:
     description: "the VolumeProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.netapp.fluent.models.VolumeProperties?alt=com.azure.resourcemanager.netapp.fluent.models.VolumeProperties&text=VolumeProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.netapp.fluent.models.VolumeProperties.withBreakthroughMode(com.azure.resourcemanager.netapp.models.BreakthroughMode)"
+  fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeProperties.withBreakthroughMode(BreakthroughMode breakthroughMode)"
+  name: "withBreakthroughMode(BreakthroughMode breakthroughMode)"
+  nameWithType: "VolumeProperties.withBreakthroughMode(BreakthroughMode breakthroughMode)"
+  summary: "Set the breakthrough<wbr>Mode property: Specifies whether the volume operates in Breakthrough Mode."
+  parameters:
+  - description: "the breakthroughMode value to set."
+    name: "breakthroughMode"
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.BreakthroughMode?alt=com.azure.resourcemanager.netapp.models.BreakthroughMode&text=BreakthroughMode\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public VolumeProperties withBreakthroughMode(BreakthroughMode breakthroughMode)"
+  desc: "Set the breakthroughMode property: Specifies whether the volume operates in Breakthrough Mode."
+  returns:
+    description: "the VolumeProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.netapp.fluent.models.VolumeProperties?alt=com.azure.resourcemanager.netapp.fluent.models.VolumeProperties&text=VolumeProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.netapp.fluent.models.VolumeProperties.withCapacityPoolResourceId(java.lang.String)"
   fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeProperties.withCapacityPoolResourceId(String capacityPoolResourceId)"
   name: "withCapacityPoolResourceId(String capacityPoolResourceId)"
@@ -834,13 +858,13 @@ methods:
   fullName: "com.azure.resourcemanager.netapp.fluent.models.VolumeProperties.withEnableSubvolumes(EnableSubvolumes enableSubvolumes)"
   name: "withEnableSubvolumes(EnableSubvolumes enableSubvolumes)"
   nameWithType: "VolumeProperties.withEnableSubvolumes(EnableSubvolumes enableSubvolumes)"
-  summary: "Set the enable<wbr>Subvolumes property: Flag indicating whether subvolume operations are enabled on the volume."
+  summary: "Set the enable<wbr>Subvolumes property: Flag indicating whether subvolume operations are enabled on the volume Deprecated."
   parameters:
   - description: "the enableSubvolumes value to set."
     name: "enableSubvolumes"
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.EnableSubvolumes?alt=com.azure.resourcemanager.netapp.models.EnableSubvolumes&text=EnableSubvolumes\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public VolumeProperties withEnableSubvolumes(EnableSubvolumes enableSubvolumes)"
-  desc: "Set the enableSubvolumes property: Flag indicating whether subvolume operations are enabled on the volume."
+  desc: "Set the enableSubvolumes property: Flag indicating whether subvolume operations are enabled on the volume Deprecated. Subvolume operations and this flag will be removed in a future API version."
   returns:
     description: "the VolumeProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.netapp.fluent.models.VolumeProperties?alt=com.azure.resourcemanager.netapp.fluent.models.VolumeProperties&text=VolumeProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -1200,4 +1224,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.netapp.fluent.models.VolumeProperties?alt=com.azure.resourcemanager.netapp.fluent.models.VolumeProperties&text=VolumeProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.netapp.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:2.3.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:2.4.0

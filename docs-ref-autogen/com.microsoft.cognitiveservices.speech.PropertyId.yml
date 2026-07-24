@@ -510,7 +510,7 @@ fields:
   name: "SpeechServiceResponse_RequestSnr"
   nameWithType: "PropertyId.SpeechServiceResponse_RequestSnr"
   summary: "A boolean value specifying whether to include SNR (signal to noise ratio) in the response result."
-  desc: "A boolean value specifying whether to include SNR (signal to noise ratio) in the response result. Added in version 1.18.0"
+  desc: "A boolean value specifying whether to include SNR (signal to noise ratio) in the response result. Currently valid only in a pronunciation assessment scenario."
 - uid: "com.microsoft.cognitiveservices.speech.PropertyId.SpeechServiceResponse_RequestWordBoundary"
   fullName: "com.microsoft.cognitiveservices.speech.PropertyId.SpeechServiceResponse_RequestWordBoundary"
   name: "SpeechServiceResponse_RequestWordBoundary"
@@ -637,6 +637,12 @@ fields:
   nameWithType: "PropertyId.SpeechTranslation_ModelName"
   summary: "The name of a model to be used for speech translation."
   desc: "The name of a model to be used for speech translation. Do not use this property directly. Currently this is only valid when EmbeddedSpeechConfig is used."
+- uid: "com.microsoft.cognitiveservices.speech.PropertyId.Speech_EnableMultiChannelProcessing"
+  fullName: "com.microsoft.cognitiveservices.speech.PropertyId.Speech_EnableMultiChannelProcessing"
+  name: "Speech_EnableMultiChannelProcessing"
+  nameWithType: "PropertyId.Speech_EnableMultiChannelProcessing"
+  summary: "A boolean value specifying whether to process stereo input channels separately (instead of downmixing)."
+  desc: "A boolean value specifying whether to process stereo input channels separately (instead of downmixing). Default is false."
 - uid: "com.microsoft.cognitiveservices.speech.PropertyId.Speech_LogFilename"
   fullName: "com.microsoft.cognitiveservices.speech.PropertyId.Speech_LogFilename"
   name: "Speech_LogFilename"
@@ -708,4 +714,4 @@ methods:
 desc: "Defines property ids. Changed in version 1.8.0."
 metadata: {}
 package: "com.microsoft.cognitiveservices.speech"
-artifact: com.microsoft.cognitiveservices.speech:client-sdk:1.50.0
+artifact: com.microsoft.cognitiveservices.speech:client-sdk:1.51.0
