@@ -205,11 +205,11 @@ methods:
   summary: "Gets the identity property: Identity for the resource."
   modifiers:
   - "abstract"
-  syntax: "public abstract Identity identity()"
+  syntax: "public abstract ManagedServiceIdentity identity()"
   desc: "Gets the identity property: Identity for the resource."
   returns:
     description: "the identity value."
-    type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.Identity?alt=com.azure.resourcemanager.hybridcompute.models.Identity&text=Identity\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.ManagedServiceIdentity?alt=com.azure.resourcemanager.hybridcompute.models.ManagedServiceIdentity&text=ManagedServiceIdentity\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.hybridcompute.models.Machine.identityKeyStore()"
   fullName: "com.azure.resourcemanager.hybridcompute.models.Machine.identityKeyStore()"
   name: "identityKeyStore()"
@@ -450,6 +450,70 @@ methods:
   returns:
     description: "the provisioningState value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.hybridcompute.models.Machine.refresh()"
+  fullName: "com.azure.resourcemanager.hybridcompute.models.Machine.refresh()"
+  name: "refresh()"
+  nameWithType: "Machine.refresh()"
+  summary: "Refreshes the resource to sync with Azure."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Machine refresh()"
+  desc: "Refreshes the resource to sync with Azure."
+  returns:
+    description: "the refreshed resource."
+    type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.Machine?alt=com.azure.resourcemanager.hybridcompute.models.Machine&text=Machine\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.hybridcompute.models.Machine.refresh(com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.hybridcompute.models.Machine.refresh(Context context)"
+  name: "refresh(Context context)"
+  nameWithType: "Machine.refresh(Context context)"
+  summary: "Refreshes the resource to sync with Azure."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Machine refresh(Context context)"
+  desc: "Refreshes the resource to sync with Azure."
+  returns:
+    description: "the refreshed resource."
+    type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.Machine?alt=com.azure.resourcemanager.hybridcompute.models.Machine&text=Machine\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.hybridcompute.models.Machine.region()"
+  fullName: "com.azure.resourcemanager.hybridcompute.models.Machine.region()"
+  name: "region()"
+  nameWithType: "Machine.region()"
+  summary: "Gets the region of the resource."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Region region()"
+  desc: "Gets the region of the resource."
+  returns:
+    description: "the region of the resource."
+    type: "<xref href=\"com.azure.core.management.Region?alt=com.azure.core.management.Region&text=Region\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.hybridcompute.models.Machine.regionName()"
+  fullName: "com.azure.resourcemanager.hybridcompute.models.Machine.regionName()"
+  name: "regionName()"
+  nameWithType: "Machine.regionName()"
+  summary: "Gets the name of the resource region."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String regionName()"
+  desc: "Gets the name of the resource region."
+  returns:
+    description: "the name of the resource region."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.hybridcompute.models.Machine.resourceGroupName()"
+  fullName: "com.azure.resourcemanager.hybridcompute.models.Machine.resourceGroupName()"
+  name: "resourceGroupName()"
+  nameWithType: "Machine.resourceGroupName()"
+  summary: "Gets the name of the resource group."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String resourceGroupName()"
+  desc: "Gets the name of the resource group."
+  returns:
+    description: "the name of the resource group."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.hybridcompute.models.Machine.resources()"
   fullName: "com.azure.resourcemanager.hybridcompute.models.Machine.resources()"
   name: "resources()"
@@ -486,6 +550,18 @@ methods:
   returns:
     description: "the status value."
     type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.StatusTypes?alt=com.azure.resourcemanager.hybridcompute.models.StatusTypes&text=StatusTypes\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.hybridcompute.models.Machine.statusReason()"
+  fullName: "com.azure.resourcemanager.hybridcompute.models.Machine.statusReason()"
+  name: "statusReason()"
+  nameWithType: "Machine.statusReason()"
+  summary: "Gets the status<wbr>Reason property: Indicates whether the service has detected that this Arc machine is a clone of another onboarded machine."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract MachineStatusReason statusReason()"
+  desc: "Gets the statusReason property: Indicates whether the service has detected that this Arc machine is a clone of another onboarded machine. Service-computed; not settable by the user."
+  returns:
+    description: "the statusReason value."
+    type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.MachineStatusReason?alt=com.azure.resourcemanager.hybridcompute.models.MachineStatusReason&text=MachineStatusReason\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.hybridcompute.models.Machine.storageProfile()"
   fullName: "com.azure.resourcemanager.hybridcompute.models.Machine.storageProfile()"
   name: "storageProfile()"
@@ -546,6 +622,18 @@ methods:
   returns:
     description: "the type value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.hybridcompute.models.Machine.update()"
+  fullName: "com.azure.resourcemanager.hybridcompute.models.Machine.update()"
+  name: "update()"
+  nameWithType: "Machine.update()"
+  summary: "Begins update for the Machine resource."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Machine.Update update()"
+  desc: "Begins update for the Machine resource."
+  returns:
+    description: "the stage of resource update."
+    type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.Machine.Update?alt=com.azure.resourcemanager.hybridcompute.models.Machine.Update&text=Update\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.hybridcompute.models.Machine.vmId()"
   fullName: "com.azure.resourcemanager.hybridcompute.models.Machine.vmId()"
   name: "vmId()"
@@ -553,11 +641,11 @@ methods:
   summary: "Gets the vm<wbr>Id property: Specifies the hybrid machine unique ID."
   modifiers:
   - "abstract"
-  syntax: "public abstract UUID vmId()"
+  syntax: "public abstract String vmId()"
   desc: "Gets the vmId property: Specifies the hybrid machine unique ID."
   returns:
     description: "the vmId value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html\">UUID</a>"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.hybridcompute.models.Machine.vmUuid()"
   fullName: "com.azure.resourcemanager.hybridcompute.models.Machine.vmUuid()"
   name: "vmUuid()"
@@ -565,13 +653,13 @@ methods:
   summary: "Gets the vm<wbr>Uuid property: Specifies the Arc Machine's unique SMBIOS ID."
   modifiers:
   - "abstract"
-  syntax: "public abstract UUID vmUuid()"
+  syntax: "public abstract String vmUuid()"
   desc: "Gets the vmUuid property: Specifies the Arc Machine's unique SMBIOS ID."
   returns:
     description: "the vmUuid value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html\">UUID</a>"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 type: "interface"
 desc: "An immutable client-side representation of Machine."
 metadata: {}
 package: "com.azure.resourcemanager.hybridcompute.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-hybridcompute:1.1.0-beta.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-hybridcompute:1.1.0-beta.3

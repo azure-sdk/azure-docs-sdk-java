@@ -13,7 +13,6 @@ inheritedClassMethods:
   - "<xref href=\"com.azure.resourcemanager.hybridcompute.models.ResourceUpdate.fromJson(com.azure.json.JsonReader)?alt=com.azure.resourcemanager.hybridcompute.models.ResourceUpdate.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.hybridcompute.models.ResourceUpdate.tags()?alt=com.azure.resourcemanager.hybridcompute.models.ResourceUpdate.tags&text=tags\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.hybridcompute.models.ResourceUpdate.toJson(com.azure.json.JsonWriter)?alt=com.azure.resourcemanager.hybridcompute.models.ResourceUpdate.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.resourcemanager.hybridcompute.models.ResourceUpdate.validate()?alt=com.azure.resourcemanager.hybridcompute.models.ResourceUpdate.validate&text=validate\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.hybridcompute.models.ResourceUpdate.withTags(java.util.Map<java.lang.String,java.lang.String>)?alt=com.azure.resourcemanager.hybridcompute.models.ResourceUpdate.withTags&text=withTags\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
@@ -82,11 +81,11 @@ methods:
   name: "identity()"
   nameWithType: "MachineUpdate.identity()"
   summary: "Get the identity property: Identity for the resource."
-  syntax: "public Identity identity()"
+  syntax: "public ManagedServiceIdentity identity()"
   desc: "Get the identity property: Identity for the resource."
   returns:
     description: "the identity value."
-    type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.Identity?alt=com.azure.resourcemanager.hybridcompute.models.Identity&text=Identity\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.ManagedServiceIdentity?alt=com.azure.resourcemanager.hybridcompute.models.ManagedServiceIdentity&text=ManagedServiceIdentity\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.hybridcompute.models.MachineUpdate.identityKeyStore()"
   fullName: "com.azure.resourcemanager.hybridcompute.models.MachineUpdate.identityKeyStore()"
   name: "identityKeyStore()"
@@ -170,14 +169,6 @@ methods:
   returns:
     description: "the tpmEkCertificate value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-- uid: "com.azure.resourcemanager.hybridcompute.models.MachineUpdate.validate()"
-  fullName: "com.azure.resourcemanager.hybridcompute.models.MachineUpdate.validate()"
-  name: "validate()"
-  nameWithType: "MachineUpdate.validate()"
-  summary: "Validates the instance."
-  overridden: "com.azure.resourcemanager.hybridcompute.models.ResourceUpdate.validate()"
-  syntax: "public void validate()"
-  desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.hybridcompute.models.MachineUpdate.withAgentUpgrade(com.azure.resourcemanager.hybridcompute.models.AgentUpgrade)"
   fullName: "com.azure.resourcemanager.hybridcompute.models.MachineUpdate.withAgentUpgrade(AgentUpgrade agentUpgrade)"
   name: "withAgentUpgrade(AgentUpgrade agentUpgrade)"
@@ -206,16 +197,16 @@ methods:
   returns:
     description: "the MachineUpdate object itself."
     type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.MachineUpdate?alt=com.azure.resourcemanager.hybridcompute.models.MachineUpdate&text=MachineUpdate\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.hybridcompute.models.MachineUpdate.withIdentity(com.azure.resourcemanager.hybridcompute.models.Identity)"
-  fullName: "com.azure.resourcemanager.hybridcompute.models.MachineUpdate.withIdentity(Identity identity)"
-  name: "withIdentity(Identity identity)"
-  nameWithType: "MachineUpdate.withIdentity(Identity identity)"
+- uid: "com.azure.resourcemanager.hybridcompute.models.MachineUpdate.withIdentity(com.azure.resourcemanager.hybridcompute.models.ManagedServiceIdentity)"
+  fullName: "com.azure.resourcemanager.hybridcompute.models.MachineUpdate.withIdentity(ManagedServiceIdentity identity)"
+  name: "withIdentity(ManagedServiceIdentity identity)"
+  nameWithType: "MachineUpdate.withIdentity(ManagedServiceIdentity identity)"
   summary: "Set the identity property: Identity for the resource."
   parameters:
   - description: "the identity value to set."
     name: "identity"
-    type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.Identity?alt=com.azure.resourcemanager.hybridcompute.models.Identity&text=Identity\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public MachineUpdate withIdentity(Identity identity)"
+    type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.ManagedServiceIdentity?alt=com.azure.resourcemanager.hybridcompute.models.ManagedServiceIdentity&text=ManagedServiceIdentity\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public MachineUpdate withIdentity(ManagedServiceIdentity identity)"
   desc: "Set the identity property: Identity for the resource."
   returns:
     description: "the MachineUpdate object itself."
@@ -335,4 +326,4 @@ type: "class"
 desc: "Describes a hybrid machine Update."
 metadata: {}
 package: "com.azure.resourcemanager.hybridcompute.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-hybridcompute:1.1.0-beta.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-hybridcompute:1.1.0-beta.3

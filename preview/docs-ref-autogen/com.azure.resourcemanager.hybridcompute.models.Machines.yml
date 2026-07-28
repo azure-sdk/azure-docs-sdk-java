@@ -14,7 +14,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the hybrid machine."
@@ -33,7 +33,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the hybrid machine."
@@ -47,6 +47,22 @@ methods:
   returns:
     description: "describes the properties of an AssessPatches result."
     type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.MachineAssessPatchesResult?alt=com.azure.resourcemanager.hybridcompute.models.MachineAssessPatchesResult&text=MachineAssessPatchesResult\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.hybridcompute.models.Machines.define(java.lang.String)"
+  fullName: "com.azure.resourcemanager.hybridcompute.models.Machines.define(String name)"
+  name: "define(String name)"
+  nameWithType: "Machines.define(String name)"
+  summary: "Begins definition for a new Machine resource."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "resource name."
+    name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract Machine.DefinitionStages.Blank define(String name)"
+  desc: "Begins definition for a new Machine resource."
+  returns:
+    description: "the first stage of the new Machine definition."
+    type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.Machine.DefinitionStages.Blank?alt=com.azure.resourcemanager.hybridcompute.models.Machine.DefinitionStages.Blank&text=Blank\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.hybridcompute.models.Machines.delete(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.hybridcompute.models.Machines.delete(String resourceGroupName, String machineName, Context context)"
   name: "delete(String resourceGroupName, String machineName, Context context)"
@@ -66,6 +82,35 @@ methods:
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract void delete(String resourceGroupName, String machineName, Context context)"
   desc: "The operation to delete a hybrid machine."
+- uid: "com.azure.resourcemanager.hybridcompute.models.Machines.deleteById(java.lang.String)"
+  fullName: "com.azure.resourcemanager.hybridcompute.models.Machines.deleteById(String id)"
+  name: "deleteById(String id)"
+  nameWithType: "Machines.deleteById(String id)"
+  summary: "The operation to delete a hybrid machine."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the resource ID."
+    name: "id"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract void deleteById(String id)"
+  desc: "The operation to delete a hybrid machine."
+- uid: "com.azure.resourcemanager.hybridcompute.models.Machines.deleteByIdWithResponse(java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.hybridcompute.models.Machines.deleteByIdWithResponse(String id, Context context)"
+  name: "deleteByIdWithResponse(String id, Context context)"
+  nameWithType: "Machines.deleteByIdWithResponse(String id, Context context)"
+  summary: "The operation to delete a hybrid machine."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the resource ID."
+    name: "id"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void deleteByIdWithResponse(String id, Context context)"
+  desc: "The operation to delete a hybrid machine."
 - uid: "com.azure.resourcemanager.hybridcompute.models.Machines.deleteByResourceGroup(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.hybridcompute.models.Machines.deleteByResourceGroup(String resourceGroupName, String machineName)"
   name: "deleteByResourceGroup(String resourceGroupName, String machineName)"
@@ -82,6 +127,44 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract void deleteByResourceGroup(String resourceGroupName, String machineName)"
   desc: "The operation to delete a hybrid machine."
+- uid: "com.azure.resourcemanager.hybridcompute.models.Machines.getById(java.lang.String)"
+  fullName: "com.azure.resourcemanager.hybridcompute.models.Machines.getById(String id)"
+  name: "getById(String id)"
+  nameWithType: "Machines.getById(String id)"
+  summary: "Retrieves information about the model view or the instance view of a hybrid machine."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the resource ID."
+    name: "id"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract Machine getById(String id)"
+  desc: "Retrieves information about the model view or the instance view of a hybrid machine."
+  returns:
+    description: "describes a hybrid machine along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.Machine?alt=com.azure.resourcemanager.hybridcompute.models.Machine&text=Machine\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.hybridcompute.models.Machines.getByIdWithResponse(java.lang.String,com.azure.resourcemanager.hybridcompute.models.InstanceViewTypes,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.hybridcompute.models.Machines.getByIdWithResponse(String id, InstanceViewTypes expand, Context context)"
+  name: "getByIdWithResponse(String id, InstanceViewTypes expand, Context context)"
+  nameWithType: "Machines.getByIdWithResponse(String id, InstanceViewTypes expand, Context context)"
+  summary: "Retrieves information about the model view or the instance view of a hybrid machine."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the resource ID."
+    name: "id"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The expand expression to apply on the operation."
+    name: "expand"
+    type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.InstanceViewTypes?alt=com.azure.resourcemanager.hybridcompute.models.InstanceViewTypes&text=InstanceViewTypes\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Response<Machine> getByIdWithResponse(String id, InstanceViewTypes expand, Context context)"
+  desc: "Retrieves information about the model view or the instance view of a hybrid machine."
+  returns:
+    description: "describes a hybrid machine along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.hybridcompute.models.Machine?alt=com.azure.resourcemanager.hybridcompute.models.Machine&text=Machine\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.hybridcompute.models.Machines.getByResourceGroup(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.hybridcompute.models.Machines.getByResourceGroup(String resourceGroupName, String machineName)"
   name: "getByResourceGroup(String resourceGroupName, String machineName)"
@@ -134,7 +217,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the hybrid machine."
@@ -156,7 +239,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the hybrid machine."
@@ -183,7 +266,7 @@ methods:
   syntax: "public abstract PagedIterable<Machine> list()"
   desc: "Lists all the hybrid machines in the specified subscription. Use the nextLink property in the response to get the next page of hybrid machines."
   returns:
-    description: "the List hybrid machine operation response as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the response of a Machine list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.hybridcompute.models.Machine?alt=com.azure.resourcemanager.hybridcompute.models.Machine&text=Machine\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.hybridcompute.models.Machines.list(com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.hybridcompute.models.Machines.list(Context context)"
@@ -199,7 +282,7 @@ methods:
   syntax: "public abstract PagedIterable<Machine> list(Context context)"
   desc: "Lists all the hybrid machines in the specified subscription. Use the nextLink property in the response to get the next page of hybrid machines."
   returns:
-    description: "the List hybrid machine operation response as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the response of a Machine list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.hybridcompute.models.Machine?alt=com.azure.resourcemanager.hybridcompute.models.Machine&text=Machine\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.hybridcompute.models.Machines.listByResourceGroup(java.lang.String)"
   fullName: "com.azure.resourcemanager.hybridcompute.models.Machines.listByResourceGroup(String resourceGroupName)"
@@ -215,7 +298,7 @@ methods:
   syntax: "public abstract PagedIterable<Machine> listByResourceGroup(String resourceGroupName)"
   desc: "Lists all the hybrid machines in the specified resource group. Use the nextLink property in the response to get the next page of hybrid machines."
   returns:
-    description: "the List hybrid machine operation response as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the response of a Machine list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.hybridcompute.models.Machine?alt=com.azure.resourcemanager.hybridcompute.models.Machine&text=Machine\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.hybridcompute.models.Machines.listByResourceGroup(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.hybridcompute.models.Machines.listByResourceGroup(String resourceGroupName, String expand, Context context)"
@@ -237,10 +320,10 @@ methods:
   syntax: "public abstract PagedIterable<Machine> listByResourceGroup(String resourceGroupName, String expand, Context context)"
   desc: "Lists all the hybrid machines in the specified resource group. Use the nextLink property in the response to get the next page of hybrid machines."
   returns:
-    description: "the List hybrid machine operation response as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the response of a Machine list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.hybridcompute.models.Machine?alt=com.azure.resourcemanager.hybridcompute.models.Machine&text=Machine\" data-throw-if-not-resolved=\"False\" />&gt;"
 type: "interface"
 desc: "Resource collection API of Machines."
 metadata: {}
 package: "com.azure.resourcemanager.hybridcompute.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-hybridcompute:1.1.0-beta.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-hybridcompute:1.1.0-beta.3

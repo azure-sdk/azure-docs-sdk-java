@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.hybridcompute.models.GatewayUpdate"
 fullName: "com.azure.resourcemanager.hybridcompute.models.GatewayUpdate"
 name: "GatewayUpdate"
 nameWithType: "GatewayUpdate"
-summary: "Describes a License Update."
+summary: "Describes a Gateway Update."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 - "<xref href=\"com.azure.resourcemanager.hybridcompute.models.ResourceUpdate?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
@@ -13,7 +13,6 @@ inheritedClassMethods:
   - "<xref href=\"com.azure.resourcemanager.hybridcompute.models.ResourceUpdate.fromJson(com.azure.json.JsonReader)?alt=com.azure.resourcemanager.hybridcompute.models.ResourceUpdate.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.hybridcompute.models.ResourceUpdate.tags()?alt=com.azure.resourcemanager.hybridcompute.models.ResourceUpdate.tags&text=tags\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.hybridcompute.models.ResourceUpdate.toJson(com.azure.json.JsonWriter)?alt=com.azure.resourcemanager.hybridcompute.models.ResourceUpdate.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.resourcemanager.hybridcompute.models.ResourceUpdate.validate()?alt=com.azure.resourcemanager.hybridcompute.models.ResourceUpdate.validate&text=validate\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.hybridcompute.models.ResourceUpdate.withTags(java.util.Map<java.lang.String,java.lang.String>)?alt=com.azure.resourcemanager.hybridcompute.models.ResourceUpdate.withTags&text=withTags\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
@@ -67,6 +66,16 @@ methods:
   returns:
     description: "An instance of GatewayUpdate if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
     type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.GatewayUpdate?alt=com.azure.resourcemanager.hybridcompute.models.GatewayUpdate&text=GatewayUpdate\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.hybridcompute.models.GatewayUpdate.gatewayBypass()"
+  fullName: "com.azure.resourcemanager.hybridcompute.models.GatewayUpdate.gatewayBypass()"
+  name: "gatewayBypass()"
+  nameWithType: "GatewayUpdate.gatewayBypass()"
+  summary: "Get the gateway<wbr>Bypass property: Specifies the list of domain names that should bypass the gateway."
+  syntax: "public List<String> gatewayBypass()"
+  desc: "Get the gatewayBypass property: Specifies the list of domain names that should bypass the gateway. Each entry must be a valid DNS hostname."
+  returns:
+    description: "the gatewayBypass value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.resourcemanager.hybridcompute.models.GatewayUpdate.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.hybridcompute.models.GatewayUpdate.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -80,14 +89,6 @@ methods:
   - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.hybridcompute.models.GatewayUpdate.validate()"
-  fullName: "com.azure.resourcemanager.hybridcompute.models.GatewayUpdate.validate()"
-  name: "validate()"
-  nameWithType: "GatewayUpdate.validate()"
-  summary: "Validates the instance."
-  overridden: "com.azure.resourcemanager.hybridcompute.models.ResourceUpdate.validate()"
-  syntax: "public void validate()"
-  desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.hybridcompute.models.GatewayUpdate.withAllowedFeatures(java.util.List<java.lang.String>)"
   fullName: "com.azure.resourcemanager.hybridcompute.models.GatewayUpdate.withAllowedFeatures(List<String> allowedFeatures)"
   name: "withAllowedFeatures(List<String> allowedFeatures)"
@@ -99,6 +100,20 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
   syntax: "public GatewayUpdate withAllowedFeatures(List<String> allowedFeatures)"
   desc: "Set the allowedFeatures property: Specifies the list of features that are enabled for this Gateway."
+  returns:
+    description: "the GatewayUpdate object itself."
+    type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.GatewayUpdate?alt=com.azure.resourcemanager.hybridcompute.models.GatewayUpdate&text=GatewayUpdate\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.hybridcompute.models.GatewayUpdate.withGatewayBypass(java.util.List<java.lang.String>)"
+  fullName: "com.azure.resourcemanager.hybridcompute.models.GatewayUpdate.withGatewayBypass(List<String> gatewayBypass)"
+  name: "withGatewayBypass(List<String> gatewayBypass)"
+  nameWithType: "GatewayUpdate.withGatewayBypass(List<String> gatewayBypass)"
+  summary: "Set the gateway<wbr>Bypass property: Specifies the list of domain names that should bypass the gateway."
+  parameters:
+  - description: "the gatewayBypass value to set."
+    name: "gatewayBypass"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+  syntax: "public GatewayUpdate withGatewayBypass(List<String> gatewayBypass)"
+  desc: "Set the gatewayBypass property: Specifies the list of domain names that should bypass the gateway. Each entry must be a valid DNS hostname."
   returns:
     description: "the GatewayUpdate object itself."
     type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.GatewayUpdate?alt=com.azure.resourcemanager.hybridcompute.models.GatewayUpdate&text=GatewayUpdate\" data-throw-if-not-resolved=\"False\" />"
@@ -116,7 +131,7 @@ methods:
   returns:
     type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.GatewayUpdate?alt=com.azure.resourcemanager.hybridcompute.models.GatewayUpdate&text=GatewayUpdate\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Describes a License Update."
+desc: "Describes a Gateway Update."
 metadata: {}
 package: "com.azure.resourcemanager.hybridcompute.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-hybridcompute:1.1.0-beta.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-hybridcompute:1.1.0-beta.3

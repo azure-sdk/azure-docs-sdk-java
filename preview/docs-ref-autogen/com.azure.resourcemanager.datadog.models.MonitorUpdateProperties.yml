@@ -20,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **MonitorUpdateProperties**"
+syntax: "public final class **MonitorUpdateProperties**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datadog.models.MonitorUpdateProperties?alt=com.azure.resourcemanager.datadog.models.MonitorUpdateProperties&text=MonitorUpdateProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.datadog.models.MonitorUpdateProperties.MonitorUpdateProperties()"
   fullName: "com.azure.resourcemanager.datadog.models.MonitorUpdateProperties.MonitorUpdateProperties()"
@@ -30,6 +30,35 @@ constructors:
   syntax: "public MonitorUpdateProperties()"
   desc: "Creates an instance of MonitorUpdateProperties class."
 methods:
+- uid: "com.azure.resourcemanager.datadog.models.MonitorUpdateProperties.cspm()"
+  fullName: "com.azure.resourcemanager.datadog.models.MonitorUpdateProperties.cspm()"
+  name: "cspm()"
+  nameWithType: "MonitorUpdateProperties.cspm()"
+  summary: "Get the cspm property: The new cloud security posture management value of the monitor resource."
+  syntax: "public Boolean cspm()"
+  desc: "Get the cspm property: The new cloud security posture management value of the monitor resource. This collects configuration information for all resources in a subscription and track conformance to industry benchmarks."
+  returns:
+    description: "the cspm value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.resourcemanager.datadog.models.MonitorUpdateProperties.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.datadog.models.MonitorUpdateProperties.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "MonitorUpdateProperties.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Monitor<wbr>Update<wbr>Properties from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static MonitorUpdateProperties fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the MonitorUpdateProperties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of MonitorUpdateProperties from the JsonReader."
+  returns:
+    description: "An instance of MonitorUpdateProperties if the JsonReader was pointing to an instance of it, or null if it\n was pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.datadog.models.MonitorUpdateProperties?alt=com.azure.resourcemanager.datadog.models.MonitorUpdateProperties&text=MonitorUpdateProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.datadog.models.MonitorUpdateProperties.monitoringStatus()"
   fullName: "com.azure.resourcemanager.datadog.models.MonitorUpdateProperties.monitoringStatus()"
   name: "monitoringStatus()"
@@ -40,13 +69,42 @@ methods:
   returns:
     description: "the monitoringStatus value."
     type: "<xref href=\"com.azure.resourcemanager.datadog.models.MonitoringStatus?alt=com.azure.resourcemanager.datadog.models.MonitoringStatus&text=MonitoringStatus\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.datadog.models.MonitorUpdateProperties.validate()"
-  fullName: "com.azure.resourcemanager.datadog.models.MonitorUpdateProperties.validate()"
-  name: "validate()"
-  nameWithType: "MonitorUpdateProperties.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.datadog.models.MonitorUpdateProperties.resourceCollection()"
+  fullName: "com.azure.resourcemanager.datadog.models.MonitorUpdateProperties.resourceCollection()"
+  name: "resourceCollection()"
+  nameWithType: "MonitorUpdateProperties.resourceCollection()"
+  summary: "Get the resource<wbr>Collection property: The new resource collection value of the monitor resource."
+  syntax: "public Boolean resourceCollection()"
+  desc: "Get the resourceCollection property: The new resource collection value of the monitor resource. This collects configuration information for all resources in a subscription."
+  returns:
+    description: "the resourceCollection value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.resourcemanager.datadog.models.MonitorUpdateProperties.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.datadog.models.MonitorUpdateProperties.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "MonitorUpdateProperties.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.datadog.models.MonitorUpdateProperties.withCspm(java.lang.Boolean)"
+  fullName: "com.azure.resourcemanager.datadog.models.MonitorUpdateProperties.withCspm(Boolean cspm)"
+  name: "withCspm(Boolean cspm)"
+  nameWithType: "MonitorUpdateProperties.withCspm(Boolean cspm)"
+  summary: "Set the cspm property: The new cloud security posture management value of the monitor resource."
+  parameters:
+  - description: "the cspm value to set."
+    name: "cspm"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+  syntax: "public MonitorUpdateProperties withCspm(Boolean cspm)"
+  desc: "Set the cspm property: The new cloud security posture management value of the monitor resource. This collects configuration information for all resources in a subscription and track conformance to industry benchmarks."
+  returns:
+    description: "the MonitorUpdateProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.datadog.models.MonitorUpdateProperties?alt=com.azure.resourcemanager.datadog.models.MonitorUpdateProperties&text=MonitorUpdateProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.datadog.models.MonitorUpdateProperties.withMonitoringStatus(com.azure.resourcemanager.datadog.models.MonitoringStatus)"
   fullName: "com.azure.resourcemanager.datadog.models.MonitorUpdateProperties.withMonitoringStatus(MonitoringStatus monitoringStatus)"
   name: "withMonitoringStatus(MonitoringStatus monitoringStatus)"
@@ -61,8 +119,24 @@ methods:
   returns:
     description: "the MonitorUpdateProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.datadog.models.MonitorUpdateProperties?alt=com.azure.resourcemanager.datadog.models.MonitorUpdateProperties&text=MonitorUpdateProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.datadog.models.MonitorUpdateProperties.withResourceCollection(java.lang.Boolean)"
+  fullName: "com.azure.resourcemanager.datadog.models.MonitorUpdateProperties.withResourceCollection(Boolean resourceCollection)"
+  name: "withResourceCollection(Boolean resourceCollection)"
+  nameWithType: "MonitorUpdateProperties.withResourceCollection(Boolean resourceCollection)"
+  summary: "Set the resource<wbr>Collection property: The new resource collection value of the monitor resource."
+  parameters:
+  - description: "the resourceCollection value to set."
+    name: "resourceCollection"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+  syntax: "public MonitorUpdateProperties withResourceCollection(Boolean resourceCollection)"
+  desc: "Set the resourceCollection property: The new resource collection value of the monitor resource. This collects configuration information for all resources in a subscription."
+  returns:
+    description: "the MonitorUpdateProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.datadog.models.MonitorUpdateProperties?alt=com.azure.resourcemanager.datadog.models.MonitorUpdateProperties&text=MonitorUpdateProperties\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "The set of properties that can be update in a PATCH request to a monitor resource."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.datadog.models.MonitorUpdateProperties?alt=com.azure.resourcemanager.datadog.models.MonitorUpdateProperties&text=MonitorUpdateProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.datadog.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-datadog:1.0.0-beta.4
+artifact: com.azure.resourcemanager:azure-resourcemanager-datadog:1.2.0-beta.1
