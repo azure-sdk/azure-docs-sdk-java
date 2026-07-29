@@ -1,0 +1,118 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.compute.bulkactions.models.WinRMListener"
+fullName: "com.azure.resourcemanager.compute.bulkactions.models.WinRMListener"
+name: "WinRMListener"
+nameWithType: "WinRMListener"
+summary: "Describes Protocol and thumbprint of Windows Remote Management listener."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **WinRMListener**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.WinRMListener?alt=com.azure.resourcemanager.compute.bulkactions.models.WinRMListener&text=WinRMListener\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.resourcemanager.compute.bulkactions.models.WinRMListener.WinRMListener()"
+  fullName: "com.azure.resourcemanager.compute.bulkactions.models.WinRMListener.WinRMListener()"
+  name: "WinRMListener()"
+  nameWithType: "WinRMListener.WinRMListener()"
+  summary: "Creates an instance of Win<wbr>RMListener class."
+  syntax: "public WinRMListener()"
+  desc: "Creates an instance of WinRMListener class."
+methods:
+- uid: "com.azure.resourcemanager.compute.bulkactions.models.WinRMListener.certificateUrl()"
+  fullName: "com.azure.resourcemanager.compute.bulkactions.models.WinRMListener.certificateUrl()"
+  name: "certificateUrl()"
+  nameWithType: "WinRMListener.certificateUrl()"
+  summary: "Get the certificate<wbr>Url property: This is the URL of a certificate that has been uploaded to Key Vault as a secret."
+  syntax: "public String certificateUrl()"
+  desc: "Get the certificateUrl property: This is the URL of a certificate that has been uploaded to Key Vault as a secret. For adding a secret to the Key Vault, see \\[Add a key or secret to the key vault\\](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/\\#add). In this case, your certificate needs to be the Base64 encoding of the following JSON Object which is encoded in UTF-8: <br><br> \\{<br> \"data\":\"<Base64-encoded-certificate>\",<br> \"dataType\":\"pfx\",<br> \"password\":\"<pfx-file-password>\"<br>\\} <br> To install certificates on a virtual machine it is recommended to use the \\[Azure Key Vault virtual machine extension for Linux\\](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-linux) or the \\[Azure Key Vault virtual machine extension for Windows\\](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-windows)."
+  returns:
+    description: "the certificateUrl value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.compute.bulkactions.models.WinRMListener.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.compute.bulkactions.models.WinRMListener.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "WinRMListener.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Win<wbr>RMListener from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static WinRMListener fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the WinRMListener."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of WinRMListener from the JsonReader."
+  returns:
+    description: "An instance of WinRMListener if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.WinRMListener?alt=com.azure.resourcemanager.compute.bulkactions.models.WinRMListener&text=WinRMListener\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.compute.bulkactions.models.WinRMListener.protocol()"
+  fullName: "com.azure.resourcemanager.compute.bulkactions.models.WinRMListener.protocol()"
+  name: "protocol()"
+  nameWithType: "WinRMListener.protocol()"
+  summary: "Get the protocol property: Specifies the protocol of WinRM listener."
+  syntax: "public ProtocolTypes protocol()"
+  desc: "Get the protocol property: Specifies the protocol of WinRM listener. Possible values are: \\*\\*http,\\*\\* \\*\\*https.\\*\\*."
+  returns:
+    description: "the protocol value."
+    type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ProtocolTypes?alt=com.azure.resourcemanager.compute.bulkactions.models.ProtocolTypes&text=ProtocolTypes\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.compute.bulkactions.models.WinRMListener.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.compute.bulkactions.models.WinRMListener.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "WinRMListener.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.compute.bulkactions.models.WinRMListener.withCertificateUrl(java.lang.String)"
+  fullName: "com.azure.resourcemanager.compute.bulkactions.models.WinRMListener.withCertificateUrl(String certificateUrl)"
+  name: "withCertificateUrl(String certificateUrl)"
+  nameWithType: "WinRMListener.withCertificateUrl(String certificateUrl)"
+  summary: "Set the certificate<wbr>Url property: This is the URL of a certificate that has been uploaded to Key Vault as a secret."
+  parameters:
+  - description: "the certificateUrl value to set."
+    name: "certificateUrl"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public WinRMListener withCertificateUrl(String certificateUrl)"
+  desc: "Set the certificateUrl property: This is the URL of a certificate that has been uploaded to Key Vault as a secret. For adding a secret to the Key Vault, see \\[Add a key or secret to the key vault\\](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/\\#add). In this case, your certificate needs to be the Base64 encoding of the following JSON Object which is encoded in UTF-8: <br><br> \\{<br> \"data\":\"<Base64-encoded-certificate>\",<br> \"dataType\":\"pfx\",<br> \"password\":\"<pfx-file-password>\"<br>\\} <br> To install certificates on a virtual machine it is recommended to use the \\[Azure Key Vault virtual machine extension for Linux\\](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-linux) or the \\[Azure Key Vault virtual machine extension for Windows\\](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-windows)."
+  returns:
+    description: "the WinRMListener object itself."
+    type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.WinRMListener?alt=com.azure.resourcemanager.compute.bulkactions.models.WinRMListener&text=WinRMListener\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.compute.bulkactions.models.WinRMListener.withProtocol(com.azure.resourcemanager.compute.bulkactions.models.ProtocolTypes)"
+  fullName: "com.azure.resourcemanager.compute.bulkactions.models.WinRMListener.withProtocol(ProtocolTypes protocol)"
+  name: "withProtocol(ProtocolTypes protocol)"
+  nameWithType: "WinRMListener.withProtocol(ProtocolTypes protocol)"
+  summary: "Set the protocol property: Specifies the protocol of WinRM listener."
+  parameters:
+  - description: "the protocol value to set."
+    name: "protocol"
+    type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ProtocolTypes?alt=com.azure.resourcemanager.compute.bulkactions.models.ProtocolTypes&text=ProtocolTypes\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public WinRMListener withProtocol(ProtocolTypes protocol)"
+  desc: "Set the protocol property: Specifies the protocol of WinRM listener. Possible values are: \\*\\*http,\\*\\* \\*\\*https.\\*\\*."
+  returns:
+    description: "the WinRMListener object itself."
+    type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.WinRMListener?alt=com.azure.resourcemanager.compute.bulkactions.models.WinRMListener&text=WinRMListener\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Describes Protocol and thumbprint of Windows Remote Management listener."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.WinRMListener?alt=com.azure.resourcemanager.compute.bulkactions.models.WinRMListener&text=WinRMListener\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.compute.bulkactions.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute-bulkactions:1.0.0-beta.2

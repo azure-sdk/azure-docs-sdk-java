@@ -30,6 +30,16 @@ constructors:
   syntax: "public IdentityBindingProperties()"
   desc: "Creates an instance of IdentityBindingProperties class."
 methods:
+- uid: "com.azure.resourcemanager.containerservice.models.IdentityBindingProperties.allowedSubjects()"
+  fullName: "com.azure.resourcemanager.containerservice.models.IdentityBindingProperties.allowedSubjects()"
+  name: "allowedSubjects()"
+  nameWithType: "IdentityBindingProperties.allowedSubjects()"
+  summary: "Get the allowed<wbr>Subjects property: Optional list of subjects authorized to use this identity binding for token exchange."
+  syntax: "public List<AllowedSubject> allowedSubjects()"
+  desc: "Get the allowedSubjects property: Optional list of subjects authorized to use this identity binding for token exchange. Each entry pairs a required namespace label selector with an optional service account label selector; selectors within an entry are AND'd, and multiple entries are OR'd. When omitted or empty, authorization falls back exclusively to ClusterRole/ClusterRoleBinding evaluation. Maximum 100 entries."
+  returns:
+    description: "the allowedSubjects value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.containerservice.models.AllowedSubject?alt=com.azure.resourcemanager.containerservice.models.AllowedSubject&text=AllowedSubject\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.containerservice.models.IdentityBindingProperties.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.resourcemanager.containerservice.models.IdentityBindingProperties.fromJson(JsonReader jsonReader)"
   name: "fromJson(JsonReader jsonReader)"
@@ -98,6 +108,20 @@ methods:
   summary: "Validates the instance."
   syntax: "public void validate()"
   desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.containerservice.models.IdentityBindingProperties.withAllowedSubjects(java.util.List<com.azure.resourcemanager.containerservice.models.AllowedSubject>)"
+  fullName: "com.azure.resourcemanager.containerservice.models.IdentityBindingProperties.withAllowedSubjects(List<AllowedSubject> allowedSubjects)"
+  name: "withAllowedSubjects(List<AllowedSubject> allowedSubjects)"
+  nameWithType: "IdentityBindingProperties.withAllowedSubjects(List<AllowedSubject> allowedSubjects)"
+  summary: "Set the allowed<wbr>Subjects property: Optional list of subjects authorized to use this identity binding for token exchange."
+  parameters:
+  - description: "the allowedSubjects value to set."
+    name: "allowedSubjects"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.containerservice.models.AllowedSubject?alt=com.azure.resourcemanager.containerservice.models.AllowedSubject&text=AllowedSubject\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public IdentityBindingProperties withAllowedSubjects(List<AllowedSubject> allowedSubjects)"
+  desc: "Set the allowedSubjects property: Optional list of subjects authorized to use this identity binding for token exchange. Each entry pairs a required namespace label selector with an optional service account label selector; selectors within an entry are AND'd, and multiple entries are OR'd. When omitted or empty, authorization falls back exclusively to ClusterRole/ClusterRoleBinding evaluation. Maximum 100 entries."
+  returns:
+    description: "the IdentityBindingProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.IdentityBindingProperties?alt=com.azure.resourcemanager.containerservice.models.IdentityBindingProperties&text=IdentityBindingProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerservice.models.IdentityBindingProperties.withManagedIdentity(com.azure.resourcemanager.containerservice.models.IdentityBindingManagedIdentityProfile)"
   fullName: "com.azure.resourcemanager.containerservice.models.IdentityBindingProperties.withManagedIdentity(IdentityBindingManagedIdentityProfile managedIdentity)"
   name: "withManagedIdentity(IdentityBindingManagedIdentityProfile managedIdentity)"
@@ -118,4 +142,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservice.models.IdentityBindingProperties?alt=com.azure.resourcemanager.containerservice.models.IdentityBindingProperties&text=IdentityBindingProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.62.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.63.0-beta.1

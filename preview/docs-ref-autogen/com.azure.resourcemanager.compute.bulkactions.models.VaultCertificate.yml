@@ -1,0 +1,118 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate"
+fullName: "com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate"
+name: "VaultCertificate"
+nameWithType: "VaultCertificate"
+summary: "Describes a single certificate reference in a Key Vault, and where the certificate should reside on the VM."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **VaultCertificate**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate?alt=com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate&text=VaultCertificate\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate.VaultCertificate()"
+  fullName: "com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate.VaultCertificate()"
+  name: "VaultCertificate()"
+  nameWithType: "VaultCertificate.VaultCertificate()"
+  summary: "Creates an instance of Vault<wbr>Certificate class."
+  syntax: "public VaultCertificate()"
+  desc: "Creates an instance of VaultCertificate class."
+methods:
+- uid: "com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate.certificateStore()"
+  fullName: "com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate.certificateStore()"
+  name: "certificateStore()"
+  nameWithType: "VaultCertificate.certificateStore()"
+  summary: "Get the certificate<wbr>Store property: For Windows VMs, specifies the certificate store on the Virtual Machine to which the certificate should be added."
+  syntax: "public String certificateStore()"
+  desc: "Get the certificateStore property: For Windows VMs, specifies the certificate store on the Virtual Machine to which the certificate should be added. The specified certificate store is implicitly in the LocalMachine account. For Linux VMs, the certificate file is placed under the /var/lib/waagent directory, with the file name <UppercaseThumbprint>.crt for the X509 certificate file and <UppercaseThumbprint>.prv for private key. Both of these files are .pem formatted."
+  returns:
+    description: "the certificateStore value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate.certificateUrl()"
+  fullName: "com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate.certificateUrl()"
+  name: "certificateUrl()"
+  nameWithType: "VaultCertificate.certificateUrl()"
+  summary: "Get the certificate<wbr>Url property: This is the URL of a certificate that has been uploaded to Key Vault as a secret."
+  syntax: "public String certificateUrl()"
+  desc: "Get the certificateUrl property: This is the URL of a certificate that has been uploaded to Key Vault as a secret. For adding a secret to the Key Vault, see \\[Add a key or secret to the key vault\\](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/\\#add). In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8: <br><br> \\{<br> 'data':'<Base64-encoded-certificate>',<br> 'dataType':'pfx',<br> 'password':'<pfx-file-password>'<br>\\} <br> To install certificates on a virtual machine it is recommended to use the \\[Azure Key Vault virtual machine extension for Linux\\](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-linux) or the \\[Azure Key Vault virtual machine extension for Windows\\](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-windows)."
+  returns:
+    description: "the certificateUrl value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "VaultCertificate.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Vault<wbr>Certificate from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static VaultCertificate fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the VaultCertificate."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of VaultCertificate from the JsonReader."
+  returns:
+    description: "An instance of VaultCertificate if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate?alt=com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate&text=VaultCertificate\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "VaultCertificate.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate.withCertificateStore(java.lang.String)"
+  fullName: "com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate.withCertificateStore(String certificateStore)"
+  name: "withCertificateStore(String certificateStore)"
+  nameWithType: "VaultCertificate.withCertificateStore(String certificateStore)"
+  summary: "Set the certificate<wbr>Store property: For Windows VMs, specifies the certificate store on the Virtual Machine to which the certificate should be added."
+  parameters:
+  - description: "the certificateStore value to set."
+    name: "certificateStore"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public VaultCertificate withCertificateStore(String certificateStore)"
+  desc: "Set the certificateStore property: For Windows VMs, specifies the certificate store on the Virtual Machine to which the certificate should be added. The specified certificate store is implicitly in the LocalMachine account. For Linux VMs, the certificate file is placed under the /var/lib/waagent directory, with the file name <UppercaseThumbprint>.crt for the X509 certificate file and <UppercaseThumbprint>.prv for private key. Both of these files are .pem formatted."
+  returns:
+    description: "the VaultCertificate object itself."
+    type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate?alt=com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate&text=VaultCertificate\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate.withCertificateUrl(java.lang.String)"
+  fullName: "com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate.withCertificateUrl(String certificateUrl)"
+  name: "withCertificateUrl(String certificateUrl)"
+  nameWithType: "VaultCertificate.withCertificateUrl(String certificateUrl)"
+  summary: "Set the certificate<wbr>Url property: This is the URL of a certificate that has been uploaded to Key Vault as a secret."
+  parameters:
+  - description: "the certificateUrl value to set."
+    name: "certificateUrl"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public VaultCertificate withCertificateUrl(String certificateUrl)"
+  desc: "Set the certificateUrl property: This is the URL of a certificate that has been uploaded to Key Vault as a secret. For adding a secret to the Key Vault, see \\[Add a key or secret to the key vault\\](https://docs.microsoft.com/azure/key-vault/key-vault-get-started/\\#add). In this case, your certificate needs to be It is the Base64 encoding of the following JSON Object which is encoded in UTF-8: <br><br> \\{<br> 'data':'<Base64-encoded-certificate>',<br> 'dataType':'pfx',<br> 'password':'<pfx-file-password>'<br>\\} <br> To install certificates on a virtual machine it is recommended to use the \\[Azure Key Vault virtual machine extension for Linux\\](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-linux) or the \\[Azure Key Vault virtual machine extension for Windows\\](https://docs.microsoft.com/azure/virtual-machines/extensions/key-vault-windows)."
+  returns:
+    description: "the VaultCertificate object itself."
+    type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate?alt=com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate&text=VaultCertificate\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Describes a single certificate reference in a Key Vault, and where the certificate should reside on the VM."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate?alt=com.azure.resourcemanager.compute.bulkactions.models.VaultCertificate&text=VaultCertificate\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.compute.bulkactions.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute-bulkactions:1.0.0-beta.2

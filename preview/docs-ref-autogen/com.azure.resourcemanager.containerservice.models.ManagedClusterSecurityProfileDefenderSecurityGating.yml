@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityPr
 fullName: "com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGating"
 name: "ManagedClusterSecurityProfileDefenderSecurityGating"
 nameWithType: "ManagedClusterSecurityProfileDefenderSecurityGating"
-summary: "Microsoft Defender settings for security gating, validates container images eligibility for deployment based on Defender for Containers security findings."
+summary: "Microsoft Defender settings for security gating."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -34,9 +34,9 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGating.allowSecretAccess()"
   name: "allowSecretAccess()"
   nameWithType: "ManagedClusterSecurityProfileDefenderSecurityGating.allowSecretAccess()"
-  summary: "Get the allow<wbr>Secret<wbr>Access property: In use only while registry access granted by secret rather than managed identity."
+  summary: "Get the allow<wbr>Secret<wbr>Access property: In use only while registry access is granted by secret rather than managed identity."
   syntax: "public Boolean allowSecretAccess()"
-  desc: "Get the allowSecretAccess property: In use only while registry access granted by secret rather than managed identity. Set whether to grant the Defender gating agent access to the cluster's secrets for pulling images from registries. If secret access is denied and the registry requires pull secrets, the add-on will not perform any image validation. Default value is false."
+  desc: "Get the allowSecretAccess property: In use only while registry access is granted by secret rather than managed identity. Sets whether to grant the Defender gating agent access to cluster secrets for pulling images from registries. If secret access is denied and the registry requires pull secrets, the add-on will not perform image validation. Default value is false."
   returns:
     description: "the allowSecretAccess value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
@@ -46,7 +46,7 @@ methods:
   nameWithType: "ManagedClusterSecurityProfileDefenderSecurityGating.enabled()"
   summary: "Get the enabled property: Whether to enable Defender security gating."
   syntax: "public Boolean enabled()"
-  desc: "Get the enabled property: Whether to enable Defender security gating. When enabled, the gating feature will scan container images and audit or block the deployment of images that do not meet security standards according to the configured security rules."
+  desc: "Get the enabled property: Whether to enable Defender security gating. When enabled, the gating feature scans container images and audits or blocks deployment of images that do not meet security standards according to configured security rules. For more information, see https://aka.ms/KubernetesDefenderAuditRule."
   returns:
     description: "the enabled value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
@@ -73,12 +73,12 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGating.identities()"
   name: "identities()"
   nameWithType: "ManagedClusterSecurityProfileDefenderSecurityGating.identities()"
-  summary: "Get the identities property: List of identities that the admission controller will make use of in order to pull security artifacts from the registry."
-  syntax: "public List<ManagedClusterSecurityProfileDefenderSecurityGatingIdentitiesItem> identities()"
-  desc: "Get the identities property: List of identities that the admission controller will make use of in order to pull security artifacts from the registry. These are the same identities used by the cluster to pull container images. Each identity provided should have federated identity credential attached to it."
+  summary: "Get the identities property: List of identities that the admission controller uses to pull security artifacts from registries."
+  syntax: "public List<ManagedClusterSecurityProfileDefenderSecurityGatingIdentity> identities()"
+  desc: "Get the identities property: List of identities that the admission controller uses to pull security artifacts from registries. These are the same identities used by the cluster to pull container images. For more information on configuring this identity, see https://learn.microsoft.com/en-us/azure/defender-for-cloud/gated-deployment-infrastructure-as-code."
   returns:
     description: "the identities value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGatingIdentitiesItem?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGatingIdentitiesItem&text=ManagedClusterSecurityProfileDefenderSecurityGatingIdentitiesItem\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGatingIdentity?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGatingIdentity&text=ManagedClusterSecurityProfileDefenderSecurityGatingIdentity\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGating.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGating.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -102,13 +102,13 @@ methods:
   fullName: "com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGating.withAllowSecretAccess(Boolean allowSecretAccess)"
   name: "withAllowSecretAccess(Boolean allowSecretAccess)"
   nameWithType: "ManagedClusterSecurityProfileDefenderSecurityGating.withAllowSecretAccess(Boolean allowSecretAccess)"
-  summary: "Set the allow<wbr>Secret<wbr>Access property: In use only while registry access granted by secret rather than managed identity."
+  summary: "Set the allow<wbr>Secret<wbr>Access property: In use only while registry access is granted by secret rather than managed identity."
   parameters:
   - description: "the allowSecretAccess value to set."
     name: "allowSecretAccess"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
   syntax: "public ManagedClusterSecurityProfileDefenderSecurityGating withAllowSecretAccess(Boolean allowSecretAccess)"
-  desc: "Set the allowSecretAccess property: In use only while registry access granted by secret rather than managed identity. Set whether to grant the Defender gating agent access to the cluster's secrets for pulling images from registries. If secret access is denied and the registry requires pull secrets, the add-on will not perform any image validation. Default value is false."
+  desc: "Set the allowSecretAccess property: In use only while registry access is granted by secret rather than managed identity. Sets whether to grant the Defender gating agent access to cluster secrets for pulling images from registries. If secret access is denied and the registry requires pull secrets, the add-on will not perform image validation. Default value is false."
   returns:
     description: "the ManagedClusterSecurityProfileDefenderSecurityGating object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGating?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGating&text=ManagedClusterSecurityProfileDefenderSecurityGating\" data-throw-if-not-resolved=\"False\" />"
@@ -122,28 +122,28 @@ methods:
     name: "enabled"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
   syntax: "public ManagedClusterSecurityProfileDefenderSecurityGating withEnabled(Boolean enabled)"
-  desc: "Set the enabled property: Whether to enable Defender security gating. When enabled, the gating feature will scan container images and audit or block the deployment of images that do not meet security standards according to the configured security rules."
+  desc: "Set the enabled property: Whether to enable Defender security gating. When enabled, the gating feature scans container images and audits or blocks deployment of images that do not meet security standards according to configured security rules. For more information, see https://aka.ms/KubernetesDefenderAuditRule."
   returns:
     description: "the ManagedClusterSecurityProfileDefenderSecurityGating object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGating?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGating&text=ManagedClusterSecurityProfileDefenderSecurityGating\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGating.withIdentities(java.util.List<com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGatingIdentitiesItem>)"
-  fullName: "com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGating.withIdentities(List<ManagedClusterSecurityProfileDefenderSecurityGatingIdentitiesItem> identities)"
-  name: "withIdentities(List<ManagedClusterSecurityProfileDefenderSecurityGatingIdentitiesItem> identities)"
-  nameWithType: "ManagedClusterSecurityProfileDefenderSecurityGating.withIdentities(List<ManagedClusterSecurityProfileDefenderSecurityGatingIdentitiesItem> identities)"
-  summary: "Set the identities property: List of identities that the admission controller will make use of in order to pull security artifacts from the registry."
+- uid: "com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGating.withIdentities(java.util.List<com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGatingIdentity>)"
+  fullName: "com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGating.withIdentities(List<ManagedClusterSecurityProfileDefenderSecurityGatingIdentity> identities)"
+  name: "withIdentities(List<ManagedClusterSecurityProfileDefenderSecurityGatingIdentity> identities)"
+  nameWithType: "ManagedClusterSecurityProfileDefenderSecurityGating.withIdentities(List<ManagedClusterSecurityProfileDefenderSecurityGatingIdentity> identities)"
+  summary: "Set the identities property: List of identities that the admission controller uses to pull security artifacts from registries."
   parameters:
   - description: "the identities value to set."
     name: "identities"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGatingIdentitiesItem?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGatingIdentitiesItem&text=ManagedClusterSecurityProfileDefenderSecurityGatingIdentitiesItem\" data-throw-if-not-resolved=\"False\" />&gt;"
-  syntax: "public ManagedClusterSecurityProfileDefenderSecurityGating withIdentities(List<ManagedClusterSecurityProfileDefenderSecurityGatingIdentitiesItem> identities)"
-  desc: "Set the identities property: List of identities that the admission controller will make use of in order to pull security artifacts from the registry. These are the same identities used by the cluster to pull container images. Each identity provided should have federated identity credential attached to it."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGatingIdentity?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGatingIdentity&text=ManagedClusterSecurityProfileDefenderSecurityGatingIdentity\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public ManagedClusterSecurityProfileDefenderSecurityGating withIdentities(List<ManagedClusterSecurityProfileDefenderSecurityGatingIdentity> identities)"
+  desc: "Set the identities property: List of identities that the admission controller uses to pull security artifacts from registries. These are the same identities used by the cluster to pull container images. For more information on configuring this identity, see https://learn.microsoft.com/en-us/azure/defender-for-cloud/gated-deployment-infrastructure-as-code."
   returns:
     description: "the ManagedClusterSecurityProfileDefenderSecurityGating object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGating?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGating&text=ManagedClusterSecurityProfileDefenderSecurityGating\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Microsoft Defender settings for security gating, validates container images eligibility for deployment based on Defender for Containers security findings. Using Admission Controller, it either audits or prevents the deployment of images that do not meet security standards."
+desc: "Microsoft Defender settings for security gating. This validates container image eligibility for deployment based on Defender for Containers security findings. Using Admission Controller, it either audits or prevents deployment of images that do not meet security standards."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGating?alt=com.azure.resourcemanager.containerservice.models.ManagedClusterSecurityProfileDefenderSecurityGating&text=ManagedClusterSecurityProfileDefenderSecurityGating\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.62.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.63.0-beta.1

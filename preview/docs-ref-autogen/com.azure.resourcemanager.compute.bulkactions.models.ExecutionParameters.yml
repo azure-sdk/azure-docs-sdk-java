@@ -49,6 +49,16 @@ methods:
   returns:
     description: "An instance of ExecutionParameters if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ExecutionParameters?alt=com.azure.resourcemanager.compute.bulkactions.models.ExecutionParameters&text=ExecutionParameters\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.compute.bulkactions.models.ExecutionParameters.optimizationPreference()"
+  fullName: "com.azure.resourcemanager.compute.bulkactions.models.ExecutionParameters.optimizationPreference()"
+  name: "optimizationPreference()"
+  nameWithType: "ExecutionParameters.optimizationPreference()"
+  summary: "Get the optimization<wbr>Preference property: Details that could optimize the user's request."
+  syntax: "public OptimizationPreference optimizationPreference()"
+  desc: "Get the optimizationPreference property: Details that could optimize the user's request."
+  returns:
+    description: "the optimizationPreference value."
+    type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.OptimizationPreference?alt=com.azure.resourcemanager.compute.bulkactions.models.OptimizationPreference&text=OptimizationPreference\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.compute.bulkactions.models.ExecutionParameters.retryPolicy()"
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ExecutionParameters.retryPolicy()"
   name: "retryPolicy()"
@@ -71,6 +81,30 @@ methods:
   - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.compute.bulkactions.models.ExecutionParameters.verifyVmAgentHealth()"
+  fullName: "com.azure.resourcemanager.compute.bulkactions.models.ExecutionParameters.verifyVmAgentHealth()"
+  name: "verifyVmAgentHealth()"
+  nameWithType: "ExecutionParameters.verifyVmAgentHealth()"
+  summary: "Get the verify<wbr>VmAgent<wbr>Health property: When true on an execute<wbr>Start request, run a post-Start VM agent health check and engage the fallback chain if the guest agent does not report Ready."
+  syntax: "public Boolean verifyVmAgentHealth()"
+  desc: "Get the verifyVmAgentHealth property: When true on an executeStart request, run a post-Start VM agent health check and engage the fallback chain if the guest agent does not report Ready. Ignored for non-Start operations."
+  returns:
+    description: "the verifyVmAgentHealth value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.resourcemanager.compute.bulkactions.models.ExecutionParameters.withOptimizationPreference(com.azure.resourcemanager.compute.bulkactions.models.OptimizationPreference)"
+  fullName: "com.azure.resourcemanager.compute.bulkactions.models.ExecutionParameters.withOptimizationPreference(OptimizationPreference optimizationPreference)"
+  name: "withOptimizationPreference(OptimizationPreference optimizationPreference)"
+  nameWithType: "ExecutionParameters.withOptimizationPreference(OptimizationPreference optimizationPreference)"
+  summary: "Set the optimization<wbr>Preference property: Details that could optimize the user's request."
+  parameters:
+  - description: "the optimizationPreference value to set."
+    name: "optimizationPreference"
+    type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.OptimizationPreference?alt=com.azure.resourcemanager.compute.bulkactions.models.OptimizationPreference&text=OptimizationPreference\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ExecutionParameters withOptimizationPreference(OptimizationPreference optimizationPreference)"
+  desc: "Set the optimizationPreference property: Details that could optimize the user's request."
+  returns:
+    description: "the ExecutionParameters object itself."
+    type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ExecutionParameters?alt=com.azure.resourcemanager.compute.bulkactions.models.ExecutionParameters&text=ExecutionParameters\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.compute.bulkactions.models.ExecutionParameters.withRetryPolicy(com.azure.resourcemanager.compute.bulkactions.models.RetryPolicy)"
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ExecutionParameters.withRetryPolicy(RetryPolicy retryPolicy)"
   name: "withRetryPolicy(RetryPolicy retryPolicy)"
@@ -85,10 +119,24 @@ methods:
   returns:
     description: "the ExecutionParameters object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ExecutionParameters?alt=com.azure.resourcemanager.compute.bulkactions.models.ExecutionParameters&text=ExecutionParameters\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.compute.bulkactions.models.ExecutionParameters.withVerifyVmAgentHealth(java.lang.Boolean)"
+  fullName: "com.azure.resourcemanager.compute.bulkactions.models.ExecutionParameters.withVerifyVmAgentHealth(Boolean verifyVmAgentHealth)"
+  name: "withVerifyVmAgentHealth(Boolean verifyVmAgentHealth)"
+  nameWithType: "ExecutionParameters.withVerifyVmAgentHealth(Boolean verifyVmAgentHealth)"
+  summary: "Set the verify<wbr>VmAgent<wbr>Health property: When true on an execute<wbr>Start request, run a post-Start VM agent health check and engage the fallback chain if the guest agent does not report Ready."
+  parameters:
+  - description: "the verifyVmAgentHealth value to set."
+    name: "verifyVmAgentHealth"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+  syntax: "public ExecutionParameters withVerifyVmAgentHealth(Boolean verifyVmAgentHealth)"
+  desc: "Set the verifyVmAgentHealth property: When true on an executeStart request, run a post-Start VM agent health check and engage the fallback chain if the guest agent does not report Ready. Ignored for non-Start operations."
+  returns:
+    description: "the ExecutionParameters object itself."
+    type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ExecutionParameters?alt=com.azure.resourcemanager.compute.bulkactions.models.ExecutionParameters&text=ExecutionParameters\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Extra details needed to run the user's request."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ExecutionParameters?alt=com.azure.resourcemanager.compute.bulkactions.models.ExecutionParameters&text=ExecutionParameters\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.compute.bulkactions.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-compute-bulkactions:1.0.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute-bulkactions:1.0.0-beta.2
