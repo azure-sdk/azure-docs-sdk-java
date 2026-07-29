@@ -1,7 +1,7 @@
 ---
 title: Azure Compute-Bulkactions SDK for Java
 description: Reference for Azure Compute-Bulkactions SDK for Java
-ms.date: 07/28/2026
+ms.date: 07/29/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: compute-bulkactions
