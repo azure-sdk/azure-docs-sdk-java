@@ -6,6 +6,6 @@ ms.topic: reference
 ms.devlang: java
 ms.service: connectedcache
 ---
-# Azure Connected Cache SDK for Java - preview
-## Packages - preview
+# Azure Connected Cache SDK for Java - latest
+## Packages - latest
 [!INCLUDE [packages](connected-cache-index.md)]
