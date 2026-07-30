@@ -478,6 +478,20 @@ methods:
   returns:
     description: "A reactive response containing the blob data."
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadContentWithResponse(com.azure.storage.blob.options.BlobDownloadContentOptions)"
+  fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadContentWithResponse(BlobDownloadContentOptions options)"
+  name: "downloadContentWithResponse(BlobDownloadContentOptions options)"
+  nameWithType: "BlobAsyncClientBase.downloadContentWithResponse(BlobDownloadContentOptions options)"
+  summary: "Reads blob content (full blob or range) with options."
+  parameters:
+  - description: "<xref uid=\"com.azure.storage.blob.options.BlobDownloadContentOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobDownloadContentOptions\"></xref>"
+    name: "options"
+    type: "<xref href=\"com.azure.storage.blob.options.BlobDownloadContentOptions?alt=com.azure.storage.blob.options.BlobDownloadContentOptions&text=BlobDownloadContentOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public Mono<BlobDownloadContentAsyncResponse> downloadContentWithResponse(BlobDownloadContentOptions options)"
+  desc: "Reads blob content (full blob or range) with options."
+  returns:
+    description: "A reactive response containing the blob content."
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.BlobDownloadContentAsyncResponse?alt=com.azure.storage.blob.models.BlobDownloadContentAsyncResponse&text=BlobDownloadContentAsyncResponse\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadContentWithResponse(com.azure.storage.blob.models.DownloadRetryOptions,com.azure.storage.blob.models.BlobRequestConditions)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadContentWithResponse(DownloadRetryOptions options, BlobRequestConditions requestConditions)"
   name: "downloadContentWithResponse(DownloadRetryOptions options, BlobRequestConditions requestConditions)"
@@ -505,6 +519,20 @@ methods:
   returns:
     description: "A reactive response containing the blob data."
     type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;"
+- uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadStreamWithResponse(com.azure.storage.blob.options.BlobDownloadStreamOptions)"
+  fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadStreamWithResponse(BlobDownloadStreamOptions options)"
+  name: "downloadStreamWithResponse(BlobDownloadStreamOptions options)"
+  nameWithType: "BlobAsyncClientBase.downloadStreamWithResponse(BlobDownloadStreamOptions options)"
+  summary: "Reads a range of bytes from a blob with options."
+  parameters:
+  - description: "<xref uid=\"com.azure.storage.blob.options.BlobDownloadStreamOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobDownloadStreamOptions\"></xref>"
+    name: "options"
+    type: "<xref href=\"com.azure.storage.blob.options.BlobDownloadStreamOptions?alt=com.azure.storage.blob.options.BlobDownloadStreamOptions&text=BlobDownloadStreamOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public Mono<BlobDownloadAsyncResponse> downloadStreamWithResponse(BlobDownloadStreamOptions options)"
+  desc: "Reads a range of bytes from a blob with options."
+  returns:
+    description: "A reactive response containing the blob data."
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.models.BlobDownloadAsyncResponse?alt=com.azure.storage.blob.models.BlobDownloadAsyncResponse&text=BlobDownloadAsyncResponse\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadStreamWithResponse(com.azure.storage.blob.models.BlobRange,com.azure.storage.blob.models.DownloadRetryOptions,com.azure.storage.blob.models.BlobRequestConditions,boolean)"
   fullName: "com.azure.storage.blob.specialized.BlobAsyncClientBase.downloadStreamWithResponse(BlobRange range, DownloadRetryOptions options, BlobRequestConditions requestConditions, boolean getRangeContentMd5)"
   name: "downloadStreamWithResponse(BlobRange range, DownloadRetryOptions options, BlobRequestConditions requestConditions, boolean getRangeContentMd5)"
@@ -1305,4 +1333,4 @@ type: "class"
 desc: "This class provides a client that contains all operations that apply to any blob type.\n\nThis client offers the ability to download blobs. Note that uploading data is specific to each type of blob. Please refer to the <xref uid=\"com.azure.storage.blob.specialized.BlockBlobClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlockBlobClient\"></xref>, <xref uid=\"com.azure.storage.blob.specialized.PageBlobClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PageBlobClient\"></xref>, or <xref uid=\"com.azure.storage.blob.specialized.AppendBlobClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AppendBlobClient\"></xref> for upload options."
 metadata: {}
 package: "com.azure.storage.blob.specialized"
-artifact: com.azure:azure-storage-blob:12.35.0-beta.1
+artifact: com.azure:azure-storage-blob:12.36.0-beta.1

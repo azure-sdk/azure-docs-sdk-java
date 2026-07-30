@@ -1,0 +1,51 @@
+### YamlMime:JavaType
+uid: "com.azure.storage.common.policy.StorageContentValidationDecodingPolicy"
+fullName: "com.azure.storage.common.policy.StorageContentValidationDecodingPolicy"
+name: "StorageContentValidationDecodingPolicy"
+nameWithType: "StorageContentValidationDecodingPolicy"
+summary: "HTTP pipeline policy that decodes the storage structured message body returned for downloads when CRC64 content validation is active."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public class **StorageContentValidationDecodingPolicy**</br> implements <xref href=\"com.azure.core.http.policy.HttpPipelinePolicy?alt=com.azure.core.http.policy.HttpPipelinePolicy&text=HttpPipelinePolicy\" data-throw-if-not-resolved=\"False\" />"
+constructors:
+- uid: "com.azure.storage.common.policy.StorageContentValidationDecodingPolicy.StorageContentValidationDecodingPolicy()"
+  fullName: "com.azure.storage.common.policy.StorageContentValidationDecodingPolicy.StorageContentValidationDecodingPolicy()"
+  name: "StorageContentValidationDecodingPolicy()"
+  nameWithType: "StorageContentValidationDecodingPolicy.StorageContentValidationDecodingPolicy()"
+  summary: "Creates a new instance of <xref uid=\"com.azure.storage.common.policy.StorageContentValidationDecodingPolicy\" data-throw-if-not-resolved=\"false\" data-raw-source=\"StorageContentValidationDecodingPolicy\"></xref>."
+  syntax: "public StorageContentValidationDecodingPolicy()"
+  desc: "Creates a new instance of <xref uid=\"com.azure.storage.common.policy.StorageContentValidationDecodingPolicy\" data-throw-if-not-resolved=\"false\" data-raw-source=\"StorageContentValidationDecodingPolicy\"></xref>."
+methods:
+- uid: "com.azure.storage.common.policy.StorageContentValidationDecodingPolicy.process(com.azure.core.http.HttpPipelineCallContext,com.azure.core.http.HttpPipelineNextPolicy)"
+  fullName: "com.azure.storage.common.policy.StorageContentValidationDecodingPolicy.process(HttpPipelineCallContext context, HttpPipelineNextPolicy next)"
+  name: "process(HttpPipelineCallContext context, HttpPipelineNextPolicy next)"
+  nameWithType: "StorageContentValidationDecodingPolicy.process(HttpPipelineCallContext context, HttpPipelineNextPolicy next)"
+  parameters:
+  - name: "context"
+    type: "<xref href=\"com.azure.core.http.HttpPipelineCallContext?alt=com.azure.core.http.HttpPipelineCallContext&text=HttpPipelineCallContext\" data-throw-if-not-resolved=\"False\" />"
+  - name: "next"
+    type: "<xref href=\"com.azure.core.http.HttpPipelineNextPolicy?alt=com.azure.core.http.HttpPipelineNextPolicy&text=HttpPipelineNextPolicy\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public Mono<HttpResponse> process(HttpPipelineCallContext context, HttpPipelineNextPolicy next)"
+  returns:
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.HttpResponse?alt=com.azure.core.http.HttpResponse&text=HttpResponse\" data-throw-if-not-resolved=\"False\" />&gt;"
+type: "class"
+desc: "HTTP pipeline policy that decodes the storage structured message body returned for downloads when CRC64 content validation is active.\n\nThe policy decides when to opt in (via the context key), tells the service to encode the response (via the request header), constructs the decoder and the wrapper response, and translates decoder-level failures (malformed framing, CRC mismatch, premature end-of-stream) into reactive <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"IOException\"></xref> errors.\n\nThis policy uses <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PER_RETRY\"></xref> semantics by default, so each retry produces a fresh response that this policy wraps with a fresh decoder. A CRC failure on one attempt cannot pollute another, and the storage download retry logic (`BlobAsyncClientBase.downloadStream...`) can resume by reissuing range requests; each new range response is validated end-to-end on its own.\n\nBecause the wrapped <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"StructuredMessageDecoder\"></xref> only releases payload bytes after the corresponding segment's CRC has been verified, the <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DecodedResponse\"></xref>'s body Flux is guaranteed to contain only validated bytes – callers never see a byte that could later fail validation, even when retries are involved."
+implements:
+- "<xref href=\"com.azure.core.http.policy.HttpPipelinePolicy?alt=com.azure.core.http.policy.HttpPipelinePolicy&text=HttpPipelinePolicy\" data-throw-if-not-resolved=\"False\" />"
+metadata: {}
+package: "com.azure.storage.common.policy"
+artifact: com.azure:azure-storage-common:12.35.0-beta.1

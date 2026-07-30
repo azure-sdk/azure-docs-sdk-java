@@ -788,6 +788,58 @@ methods:
   returns:
     description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> containing a <xref uid=\"com.azure.storage.file.share.models.ShareFileSymbolicLinkInfo\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareFileSymbolicLinkInfo\"></xref> describing the symbolic link."
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.models.ShareFileSymbolicLinkInfo?alt=com.azure.storage.file.share.models.ShareFileSymbolicLinkInfo&text=ShareFileSymbolicLinkInfo\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
+- uid: "com.azure.storage.file.share.ShareFileAsyncClient.listAllRanges()"
+  fullName: "com.azure.storage.file.share.ShareFileAsyncClient.listAllRanges()"
+  name: "listAllRanges()"
+  nameWithType: "ShareFileAsyncClient.listAllRanges()"
+  summary: "Lists all ranges for the file as a paged flux."
+  syntax: "public PagedFlux<ShareFileRangeItem> listAllRanges()"
+  desc: "Lists all ranges for the file as a paged flux.\n\nFor more information, see the [Azure Docs][].\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/list-ranges"
+  returns:
+    description: "<xref uid=\"com.azure.storage.file.share.models.ShareFileRangeItem\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ranges\"></xref> in the file."
+    type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.models.ShareFileRangeItem?alt=com.azure.storage.file.share.models.ShareFileRangeItem&text=ShareFileRangeItem\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.storage.file.share.ShareFileAsyncClient.listAllRanges(com.azure.storage.file.share.options.ShareFileListRangesOptions)"
+  fullName: "com.azure.storage.file.share.ShareFileAsyncClient.listAllRanges(ShareFileListRangesOptions options)"
+  name: "listAllRanges(ShareFileListRangesOptions options)"
+  nameWithType: "ShareFileAsyncClient.listAllRanges(ShareFileListRangesOptions options)"
+  summary: "Lists all ranges for the file as a paged flux."
+  parameters:
+  - description: "Optional parameters."
+    name: "options"
+    type: "<xref href=\"com.azure.storage.file.share.options.ShareFileListRangesOptions?alt=com.azure.storage.file.share.options.ShareFileListRangesOptions&text=ShareFileListRangesOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public PagedFlux<ShareFileRangeItem> listAllRanges(ShareFileListRangesOptions options)"
+  desc: "Lists all ranges for the file as a paged flux.\n\nFor more information, see the [Azure Docs][].\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/list-ranges"
+  returns:
+    description: "<xref uid=\"com.azure.storage.file.share.models.ShareFileRangeItem\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ranges\"></xref> in the file."
+    type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.models.ShareFileRangeItem?alt=com.azure.storage.file.share.models.ShareFileRangeItem&text=ShareFileRangeItem\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.storage.file.share.ShareFileAsyncClient.listAllRangesDiff(com.azure.storage.file.share.options.ShareFileListRangesDiffOptions)"
+  fullName: "com.azure.storage.file.share.ShareFileAsyncClient.listAllRangesDiff(ShareFileListRangesDiffOptions options)"
+  name: "listAllRangesDiff(ShareFileListRangesDiffOptions options)"
+  nameWithType: "ShareFileAsyncClient.listAllRangesDiff(ShareFileListRangesDiffOptions options)"
+  summary: "Lists ranges that have changed between the file and the specified snapshot as a paged flux."
+  parameters:
+  - description: "<xref uid=\"com.azure.storage.file.share.options.ShareFileListRangesDiffOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareFileListRangesDiffOptions\"></xref>"
+    name: "options"
+    type: "<xref href=\"com.azure.storage.file.share.options.ShareFileListRangesDiffOptions?alt=com.azure.storage.file.share.options.ShareFileListRangesDiffOptions&text=ShareFileListRangesDiffOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public PagedFlux<ShareFileRangeItem> listAllRangesDiff(ShareFileListRangesDiffOptions options)"
+  desc: "Lists ranges that have changed between the file and the specified snapshot as a paged flux.\n\nFor more information, see the [Azure Docs][].\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/list-ranges"
+  returns:
+    description: "<xref uid=\"com.azure.storage.file.share.models.ShareFileRangeItem\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ranges\"></xref> in the file."
+    type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.models.ShareFileRangeItem?alt=com.azure.storage.file.share.models.ShareFileRangeItem&text=ShareFileRangeItem\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.storage.file.share.ShareFileAsyncClient.listAllRangesDiff(java.lang.String)"
+  fullName: "com.azure.storage.file.share.ShareFileAsyncClient.listAllRangesDiff(String previousSnapshot)"
+  name: "listAllRangesDiff(String previousSnapshot)"
+  nameWithType: "ShareFileAsyncClient.listAllRangesDiff(String previousSnapshot)"
+  summary: "Lists ranges that have changed between the file and the specified snapshot as a paged flux."
+  parameters:
+  - description: "Specifies that the response will contain only ranges that were changed between target\n file and previous snapshot. Changed ranges include both updated and cleared ranges. The target file may be a\n snapshot, as long as the snapshot specified by previousSnapshot is the older of the two."
+    name: "previousSnapshot"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public PagedFlux<ShareFileRangeItem> listAllRangesDiff(String previousSnapshot)"
+  desc: "Lists ranges that have changed between the file and the specified snapshot as a paged flux.\n\nFor more information, see the [Azure Docs][].\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/list-ranges"
+  returns:
+    description: "<xref uid=\"com.azure.storage.file.share.models.ShareFileRangeItem\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ranges\"></xref> in the file."
+    type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.models.ShareFileRangeItem?alt=com.azure.storage.file.share.models.ShareFileRangeItem&text=ShareFileRangeItem\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.storage.file.share.ShareFileAsyncClient.listHandles()"
   fullName: "com.azure.storage.file.share.ShareFileAsyncClient.listHandles()"
   name: "listHandles()"
@@ -817,8 +869,10 @@ methods:
   name: "listRanges()"
   nameWithType: "ShareFileAsyncClient.listRanges()"
   summary: "List of valid ranges for a file."
-  syntax: "public PagedFlux<ShareFileRange> listRanges()"
+  deprecatedTag: "Use <xref uid=\"com.azure.storage.file.share.ShareFileAsyncClient.listAllRanges()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#listAllRanges()\"></xref> instead."
+  syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public PagedFlux<ShareFileRange> listRanges()"
   desc: "List of valid ranges for a file.\n\n**Code Samples**\n\nList all ranges for the file client.\n\n```java\nshareFileAsyncClient.listRanges().subscribe(range ->\n     System.out.printf(\"List ranges completed with start: %d, end: %d\", range.getStart(), range.getEnd()));\n```\n\nFor more information, see the [Azure Docs][].\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/list-ranges"
+  hasDeprecatedTag: true
   returns:
     description: "<xref uid=\"com.azure.storage.file.share.models.ShareFileRange\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ranges\"></xref> in the files."
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.models.ShareFileRange?alt=com.azure.storage.file.share.models.ShareFileRange&text=ShareFileRange\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -827,12 +881,14 @@ methods:
   name: "listRanges(ShareFileRange range)"
   nameWithType: "ShareFileAsyncClient.listRanges(ShareFileRange range)"
   summary: "List of valid ranges for a file."
+  deprecatedTag: "Use <xref uid=\"com.azure.storage.file.share.ShareFileAsyncClient.listAllRanges(com.azure.storage.file.share.options.ShareFileListRangesOptions)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#listAllRanges(ShareFileListRangesOptions)\"></xref> instead."
   parameters:
   - description: "Optional byte range which returns file data only from the specified range."
     name: "range"
     type: "<xref href=\"com.azure.storage.file.share.models.ShareFileRange?alt=com.azure.storage.file.share.models.ShareFileRange&text=ShareFileRange\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public PagedFlux<ShareFileRange> listRanges(ShareFileRange range)"
+  syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public PagedFlux<ShareFileRange> listRanges(ShareFileRange range)"
   desc: "List of valid ranges for a file.\n\n**Code Samples**\n\nList all ranges within the file range from 1KB to 2KB.\n\n```java\nshareFileAsyncClient.listRanges(new ShareFileRange(1024, 2048L))\n     .subscribe(result -> System.out.printf(\"List ranges completed with start: %d, end: %d\",\n         result.getStart(), result.getEnd()));\n```\n\nFor more information, see the [Azure Docs][].\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/list-ranges"
+  hasDeprecatedTag: true
   returns:
     description: "<xref uid=\"com.azure.storage.file.share.models.ShareFileRange\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ranges\"></xref> in the files that satisfy the requirements"
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.models.ShareFileRange?alt=com.azure.storage.file.share.models.ShareFileRange&text=ShareFileRange\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -841,6 +897,7 @@ methods:
   name: "listRanges(ShareFileRange range, ShareRequestConditions requestConditions)"
   nameWithType: "ShareFileAsyncClient.listRanges(ShareFileRange range, ShareRequestConditions requestConditions)"
   summary: "List of valid ranges for a file."
+  deprecatedTag: "Use <xref uid=\"com.azure.storage.file.share.ShareFileAsyncClient.listAllRanges(com.azure.storage.file.share.options.ShareFileListRangesOptions)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#listAllRanges(ShareFileListRangesOptions)\"></xref> instead."
   parameters:
   - description: "Optional byte range which returns file data only from the specified range."
     name: "range"
@@ -848,8 +905,9 @@ methods:
   - description: "<xref uid=\"com.azure.storage.file.share.models.ShareRequestConditions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareRequestConditions\"></xref>"
     name: "requestConditions"
     type: "<xref href=\"com.azure.storage.file.share.models.ShareRequestConditions?alt=com.azure.storage.file.share.models.ShareRequestConditions&text=ShareRequestConditions\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public PagedFlux<ShareFileRange> listRanges(ShareFileRange range, ShareRequestConditions requestConditions)"
+  syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public PagedFlux<ShareFileRange> listRanges(ShareFileRange range, ShareRequestConditions requestConditions)"
   desc: "List of valid ranges for a file.\n\n**Code Samples**\n\nList all ranges within the file range from 1KB to 2KB.\n\n```java\nShareRequestConditions requestConditions = new ShareRequestConditions().setLeaseId(leaseId);\n shareFileAsyncClient.listRanges(new ShareFileRange(1024, 2048L), requestConditions)\n     .subscribe(result -> System.out.printf(\"List ranges completed with start: %d, end: %d\",\n         result.getStart(), result.getEnd()));\n```\n\nFor more information, see the [Azure Docs][].\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/list-ranges"
+  hasDeprecatedTag: true
   returns:
     description: "<xref uid=\"com.azure.storage.file.share.models.ShareFileRange\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ranges\"></xref> in the files that satisfy the requirements"
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.models.ShareFileRange?alt=com.azure.storage.file.share.models.ShareFileRange&text=ShareFileRange\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -858,12 +916,14 @@ methods:
   name: "listRangesDiff(String previousSnapshot)"
   nameWithType: "ShareFileAsyncClient.listRangesDiff(String previousSnapshot)"
   summary: "List of valid ranges for a file between the file and the specified snapshot."
+  deprecatedTag: "Use <xref uid=\"com.azure.storage.file.share.ShareFileAsyncClient.listAllRangesDiff(java.lang.String)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#listAllRangesDiff(String)\"></xref> instead."
   parameters:
   - description: "Specifies that the response will contain only ranges that were changed between target\n file and previous snapshot. Changed ranges include both updated and cleared ranges. The target file may be a\n snapshot, as long as the snapshot specified by previousSnapshot is the older of the two."
     name: "previousSnapshot"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public Mono<ShareFileRangeList> listRangesDiff(String previousSnapshot)"
+  syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public Mono<ShareFileRangeList> listRangesDiff(String previousSnapshot)"
   desc: "List of valid ranges for a file between the file and the specified snapshot.\n\n**Code Samples**\n\n```java\nfinal String prevSnapshot = \"previoussnapshot\";\n shareFileAsyncClient.listRangesDiff(prevSnapshot).subscribe(response -> {\n     System.out.println(\"Valid Share File Ranges are:\");\n     for (FileRange range : response.getRanges()) {\n         System.out.printf(\"Start: %s, End: %s%n\", range.getStart(), range.getEnd());\n     }\n });\n```\n\nFor more information, see the [Azure Docs][].\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/list-ranges"
+  hasDeprecatedTag: true
   returns:
     description: "<xref uid=\"com.azure.storage.file.share.models.ShareFileRange\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ranges\"></xref> in the files that satisfy the requirements"
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.models.ShareFileRangeList?alt=com.azure.storage.file.share.models.ShareFileRangeList&text=ShareFileRangeList\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -872,12 +932,14 @@ methods:
   name: "listRangesDiffWithResponse(ShareFileListRangesDiffOptions options)"
   nameWithType: "ShareFileAsyncClient.listRangesDiffWithResponse(ShareFileListRangesDiffOptions options)"
   summary: "List of valid ranges for a file."
+  deprecatedTag: "Use <xref uid=\"com.azure.storage.file.share.ShareFileAsyncClient.listAllRangesDiff(com.azure.storage.file.share.options.ShareFileListRangesDiffOptions)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#listAllRangesDiff(ShareFileListRangesDiffOptions)\"></xref> instead."
   parameters:
   - description: "<xref uid=\"com.azure.storage.file.share.options.ShareFileListRangesDiffOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareFileListRangesDiffOptions\"></xref>."
     name: "options"
     type: "<xref href=\"com.azure.storage.file.share.options.ShareFileListRangesDiffOptions?alt=com.azure.storage.file.share.options.ShareFileListRangesDiffOptions&text=ShareFileListRangesDiffOptions\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public Mono<Response<ShareFileRangeList>> listRangesDiffWithResponse(ShareFileListRangesDiffOptions options)"
+  syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public Mono<Response<ShareFileRangeList>> listRangesDiffWithResponse(ShareFileListRangesDiffOptions options)"
   desc: "List of valid ranges for a file.\n\n**Code Samples**\n\nList all ranges within the file range from 1KB to 2KB.\n\n```java\nshareFileAsyncClient.listRangesDiffWithResponse(new ShareFileListRangesDiffOptions(\"previoussnapshot\")\n     .setRange(new ShareFileRange(1024, 2048L))).subscribe(response -> {\n         System.out.println(\"Valid Share File Ranges are:\");\n         for (FileRange range : response.getValue().getRanges()) {\n             System.out.printf(\"Start: %s, End: %s%n\", range.getStart(), range.getEnd());\n         }\n     });\n```\n\nFor more information, see the [Azure Docs][].\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/list-ranges"
+  hasDeprecatedTag: true
   returns:
     description: "<xref uid=\"com.azure.storage.file.share.models.ShareFileRange\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ranges\"></xref> in the files that satisfy the requirements"
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.models.ShareFileRangeList?alt=com.azure.storage.file.share.models.ShareFileRangeList&text=ShareFileRangeList\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
@@ -1289,4 +1351,4 @@ type: "class"
 desc: "This class provides a client that contains all the operations for interacting with file in Azure Storage File Service. Operations allowed by the client are creating, copying, uploading, downloading, deleting and listing on a file, retrieving properties, setting metadata and list or force close handles of the file.\n\n**Instantiating an Asynchronous File Client**\n\n```java\nShareFileAsyncClient client = new ShareFileClientBuilder()\n     .connectionString(\"${connectionString}\")\n     .endpoint(\"${endpoint}\")\n     .buildFileAsyncClient();\n```\n\nView <xref uid=\"com.azure.storage.file.share.ShareFileClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"this\"></xref> for additional ways to construct the client."
 metadata: {}
 package: "com.azure.storage.file.share"
-artifact: com.azure:azure-storage-file-share:12.31.0-beta.1
+artifact: com.azure:azure-storage-file-share:12.32.0-beta.1

@@ -34,6 +34,16 @@ constructors:
   syntax: "public BlobDownloadToFileOptions(String filePath)"
   desc: "Constructs a <xref uid=\"com.azure.storage.blob.options.BlobDownloadToFileOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobDownloadToFileOptions\"></xref>."
 methods:
+- uid: "com.azure.storage.blob.options.BlobDownloadToFileOptions.getContentValidationAlgorithm()"
+  fullName: "com.azure.storage.blob.options.BlobDownloadToFileOptions.getContentValidationAlgorithm()"
+  name: "getContentValidationAlgorithm()"
+  nameWithType: "BlobDownloadToFileOptions.getContentValidationAlgorithm()"
+  summary: "Gets the algorithm to use for transfer content validation on the response."
+  syntax: "public ContentValidationAlgorithm getContentValidationAlgorithm()"
+  desc: "Gets the algorithm to use for transfer content validation on the response. See <xref uid=\"com.azure.storage.common.ContentValidationAlgorithm\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ContentValidationAlgorithm\"></xref> for more details."
+  returns:
+    description: "The transfer validation checksum algorithm."
+    type: "<xref href=\"com.azure.storage.common.ContentValidationAlgorithm?alt=com.azure.storage.common.ContentValidationAlgorithm&text=ContentValidationAlgorithm\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.blob.options.BlobDownloadToFileOptions.getDownloadRetryOptions()"
   fullName: "com.azure.storage.blob.options.BlobDownloadToFileOptions.getDownloadRetryOptions()"
   name: "getDownloadRetryOptions()"
@@ -104,6 +114,20 @@ methods:
   returns:
     description: "Whether the contentMD5 for the specified blob range should be returned."
     type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.blob.options.BlobDownloadToFileOptions.setContentValidationAlgorithm(com.azure.storage.common.ContentValidationAlgorithm)"
+  fullName: "com.azure.storage.blob.options.BlobDownloadToFileOptions.setContentValidationAlgorithm(ContentValidationAlgorithm contentValidationAlgorithm)"
+  name: "setContentValidationAlgorithm(ContentValidationAlgorithm contentValidationAlgorithm)"
+  nameWithType: "BlobDownloadToFileOptions.setContentValidationAlgorithm(ContentValidationAlgorithm contentValidationAlgorithm)"
+  summary: "Sets the algorithm to use for transfer content validation on the response."
+  parameters:
+  - description: "The transfer validation checksum algorithm."
+    name: "contentValidationAlgorithm"
+    type: "<xref href=\"com.azure.storage.common.ContentValidationAlgorithm?alt=com.azure.storage.common.ContentValidationAlgorithm&text=ContentValidationAlgorithm\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public BlobDownloadToFileOptions setContentValidationAlgorithm(ContentValidationAlgorithm contentValidationAlgorithm)"
+  desc: "Sets the algorithm to use for transfer content validation on the response. See <xref uid=\"com.azure.storage.common.ContentValidationAlgorithm\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ContentValidationAlgorithm\"></xref> for more details."
+  returns:
+    description: "The updated options."
+    type: "<xref href=\"com.azure.storage.blob.options.BlobDownloadToFileOptions?alt=com.azure.storage.blob.options.BlobDownloadToFileOptions&text=BlobDownloadToFileOptions\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.blob.options.BlobDownloadToFileOptions.setDownloadRetryOptions(com.azure.storage.blob.models.DownloadRetryOptions)"
   fullName: "com.azure.storage.blob.options.BlobDownloadToFileOptions.setDownloadRetryOptions(DownloadRetryOptions downloadRetryOptions)"
   name: "setDownloadRetryOptions(DownloadRetryOptions downloadRetryOptions)"
@@ -192,4 +216,4 @@ type: "class"
 desc: "Extended options that may be passed when downloading a blob to a file."
 metadata: {}
 package: "com.azure.storage.blob.options"
-artifact: com.azure:azure-storage-blob:12.35.0-beta.1
+artifact: com.azure:azure-storage-blob:12.36.0-beta.1

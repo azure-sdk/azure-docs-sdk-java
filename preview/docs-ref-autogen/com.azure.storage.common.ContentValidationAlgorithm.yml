@@ -1,0 +1,77 @@
+### YamlMime:JavaEnum
+uid: "com.azure.storage.common.ContentValidationAlgorithm"
+fullName: "com.azure.storage.common.ContentValidationAlgorithm"
+name: "ContentValidationAlgorithm"
+nameWithType: "ContentValidationAlgorithm"
+summary: "Algorithm for content validation on upload and download operations."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"java.lang.Enum?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html\">Enum</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#valueOf-java.lang.Class-java.lang.String-\">valueOf</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#compareTo-E-\">compareTo</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#describeConstable--\">describeConstable</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#getDeclaringClass--\">getDeclaringClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#name--\">name</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#ordinal--\">ordinal</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#toString--\">toString</a>"
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public enum **ContentValidationAlgorithm**</br> extends <a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html\">Enum</a>&lt;<xref href=\"com.azure.storage.common.ContentValidationAlgorithm?alt=com.azure.storage.common.ContentValidationAlgorithm&text=ContentValidationAlgorithm\" data-throw-if-not-resolved=\"False\" />&gt;"
+fields:
+- uid: "com.azure.storage.common.ContentValidationAlgorithm.AUTO"
+  fullName: "com.azure.storage.common.ContentValidationAlgorithm.AUTO"
+  name: "AUTO"
+  nameWithType: "ContentValidationAlgorithm.AUTO"
+  summary: "Allow the SDK to choose the validation algorithm."
+  desc: "Allow the SDK to choose the validation algorithm. Currently resolves to CRC64 where supported. Different library versions may make different choices. The resolution may change in the future. Please set an explicit algorithm if you need a specific behavior."
+- uid: "com.azure.storage.common.ContentValidationAlgorithm.CRC64"
+  fullName: "com.azure.storage.common.ContentValidationAlgorithm.CRC64"
+  name: "CRC64"
+  nameWithType: "ContentValidationAlgorithm.CRC64"
+  summary: "Azure Storage custom 64-bit CRC."
+  desc: "Azure Storage custom 64-bit CRC. The SDK computes and validates CRC64 checksums for the transfer."
+- uid: "com.azure.storage.common.ContentValidationAlgorithm.NONE"
+  fullName: "com.azure.storage.common.ContentValidationAlgorithm.NONE"
+  name: "NONE"
+  nameWithType: "ContentValidationAlgorithm.NONE"
+  summary: "No content validation."
+  desc: "No content validation. This is the default; no checksum is computed or validated."
+methods:
+- uid: "com.azure.storage.common.ContentValidationAlgorithm.valueOf(java.lang.String)"
+  fullName: "com.azure.storage.common.ContentValidationAlgorithm.valueOf(String name)"
+  name: "valueOf(String name)"
+  nameWithType: "ContentValidationAlgorithm.valueOf(String name)"
+  modifiers:
+  - "static"
+  parameters:
+  - name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public static ContentValidationAlgorithm valueOf(String name)"
+  returns:
+    type: "<xref href=\"com.azure.storage.common.ContentValidationAlgorithm?alt=com.azure.storage.common.ContentValidationAlgorithm&text=ContentValidationAlgorithm\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.common.ContentValidationAlgorithm.values()"
+  fullName: "com.azure.storage.common.ContentValidationAlgorithm.values()"
+  name: "values()"
+  nameWithType: "ContentValidationAlgorithm.values()"
+  modifiers:
+  - "static"
+  syntax: "public static ContentValidationAlgorithm[] values()"
+  returns:
+    type: "<xref href=\"com.azure.storage.common.ContentValidationAlgorithm?alt=com.azure.storage.common.ContentValidationAlgorithm&text=ContentValidationAlgorithm\" data-throw-if-not-resolved=\"False\" />[]"
+desc: "Algorithm for content validation on upload and download operations. When enabled, the SDK computes checksums and validates content integrity using the selected algorithm. Content validation is off by default.\n\nSupported in Azure Storage Blob, Data Lake, and File Share packages for methods that use APIs supporting transactional CRC64, or structured message format."
+metadata: {}
+package: "com.azure.storage.common"
+artifact: com.azure:azure-storage-common:12.35.0-beta.1

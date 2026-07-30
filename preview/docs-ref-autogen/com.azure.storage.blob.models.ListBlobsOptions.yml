@@ -40,6 +40,16 @@ methods:
   returns:
     description: "the details for listing specific blobs"
     type: "<xref href=\"com.azure.storage.blob.models.BlobListDetails?alt=com.azure.storage.blob.models.BlobListDetails&text=BlobListDetails\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.blob.models.ListBlobsOptions.getEndBefore()"
+  fullName: "com.azure.storage.blob.models.ListBlobsOptions.getEndBefore()"
+  name: "getEndBefore()"
+  nameWithType: "ListBlobsOptions.getEndBefore()"
+  summary: "Gets the end<wbr>Before value."
+  syntax: "public String getEndBefore()"
+  desc: "Gets the endBefore value. Only supported with Arrow listings. The listing will end before this path (exclusive)."
+  returns:
+    description: "the endBefore value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.storage.blob.models.ListBlobsOptions.getMaxResultsPerPage()"
   fullName: "com.azure.storage.blob.models.ListBlobsOptions.getMaxResultsPerPage()"
   name: "getMaxResultsPerPage()"
@@ -68,8 +78,18 @@ methods:
   syntax: "public String getStartFrom()"
   desc: "Gets an optional parameter that specifies an absolute path within the container. This parameter is similar to the prefix filter: it allows listing blobs starting from the specified path, rather than from the beginning of the container. For non-recursive lists, only one entity level is supported."
   returns:
-    description: "the marker indicating where to start listing blobs"
+    description: "the marker indicating where to start listing blobs (inclusive)"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.storage.blob.models.ListBlobsOptions.getStorageResponseSerializationFormat()"
+  fullName: "com.azure.storage.blob.models.ListBlobsOptions.getStorageResponseSerializationFormat()"
+  name: "getStorageResponseSerializationFormat()"
+  nameWithType: "ListBlobsOptions.getStorageResponseSerializationFormat()"
+  summary: "Gets the response serialization format the service should use when listing blobs."
+  syntax: "public StorageResponseSerializationFormat getStorageResponseSerializationFormat()"
+  desc: "Gets the response serialization format the service should use when listing blobs."
+  returns:
+    description: "the <xref uid=\"com.azure.storage.blob.models.StorageResponseSerializationFormat\" data-throw-if-not-resolved=\"false\" data-raw-source=\"StorageResponseSerializationFormat\"></xref>, or <code>null</code> if unset\n (equivalent to <xref uid=\"com.azure.storage.blob.models.StorageResponseSerializationFormat.AUTO\" data-throw-if-not-resolved=\"false\" data-raw-source=\"StorageResponseSerializationFormat#AUTO\"></xref>)."
+    type: "<xref href=\"com.azure.storage.blob.models.StorageResponseSerializationFormat?alt=com.azure.storage.blob.models.StorageResponseSerializationFormat&text=StorageResponseSerializationFormat\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.blob.models.ListBlobsOptions.setDetails(com.azure.storage.blob.models.BlobListDetails)"
   fullName: "com.azure.storage.blob.models.ListBlobsOptions.setDetails(BlobListDetails details)"
   name: "setDetails(BlobListDetails details)"
@@ -83,6 +103,20 @@ methods:
   desc: "Sets the details for listing specific blobs."
   returns:
     description: "the updated ListBlobsOptions object"
+    type: "<xref href=\"com.azure.storage.blob.models.ListBlobsOptions?alt=com.azure.storage.blob.models.ListBlobsOptions&text=ListBlobsOptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.blob.models.ListBlobsOptions.setEndBefore(java.lang.String)"
+  fullName: "com.azure.storage.blob.models.ListBlobsOptions.setEndBefore(String endBefore)"
+  name: "setEndBefore(String endBefore)"
+  nameWithType: "ListBlobsOptions.setEndBefore(String endBefore)"
+  summary: "Sets the end<wbr>Before value."
+  parameters:
+  - description: "the endBefore value to set."
+    name: "endBefore"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public ListBlobsOptions setEndBefore(String endBefore)"
+  desc: "Sets the endBefore value. Only supported with Arrow listings. The listing will end before this path (exclusive)."
+  returns:
+    description: "the updated ListBlobsOptions object."
     type: "<xref href=\"com.azure.storage.blob.models.ListBlobsOptions?alt=com.azure.storage.blob.models.ListBlobsOptions&text=ListBlobsOptions\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.blob.models.ListBlobsOptions.setMaxResultsPerPage(java.lang.Integer)"
   fullName: "com.azure.storage.blob.models.ListBlobsOptions.setMaxResultsPerPage(Integer maxResultsPerPage)"
@@ -118,7 +152,7 @@ methods:
   nameWithType: "ListBlobsOptions.setStartFrom(String startFrom)"
   summary: "Sets an optional parameter that specifies an absolute path within the container."
   parameters:
-  - description: "The marker indicating where to start listing blobs"
+  - description: "The marker indicating where to start listing blobs (inclusive)"
     name: "startFrom"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ListBlobsOptions setStartFrom(String startFrom)"
@@ -126,8 +160,22 @@ methods:
   returns:
     description: "the updated ListBlobsOptions object"
     type: "<xref href=\"com.azure.storage.blob.models.ListBlobsOptions?alt=com.azure.storage.blob.models.ListBlobsOptions&text=ListBlobsOptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.blob.models.ListBlobsOptions.setStorageResponseSerializationFormat(com.azure.storage.blob.models.StorageResponseSerializationFormat)"
+  fullName: "com.azure.storage.blob.models.ListBlobsOptions.setStorageResponseSerializationFormat(StorageResponseSerializationFormat storageResponseSerializationFormat)"
+  name: "setStorageResponseSerializationFormat(StorageResponseSerializationFormat storageResponseSerializationFormat)"
+  nameWithType: "ListBlobsOptions.setStorageResponseSerializationFormat(StorageResponseSerializationFormat storageResponseSerializationFormat)"
+  summary: "Sets the response serialization format the service should use when listing blobs."
+  parameters:
+  - description: "the format to request. <code>null</code> and\n <xref uid=\"com.azure.storage.blob.models.StorageResponseSerializationFormat.AUTO\" data-throw-if-not-resolved=\"false\" data-raw-source=\"StorageResponseSerializationFormat#AUTO\"></xref> both let the SDK pick."
+    name: "storageResponseSerializationFormat"
+    type: "<xref href=\"com.azure.storage.blob.models.StorageResponseSerializationFormat?alt=com.azure.storage.blob.models.StorageResponseSerializationFormat&text=StorageResponseSerializationFormat\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ListBlobsOptions setStorageResponseSerializationFormat(StorageResponseSerializationFormat storageResponseSerializationFormat)"
+  desc: "Sets the response serialization format the service should use when listing blobs."
+  returns:
+    description: "the updated <xref uid=\"com.azure.storage.blob.models.ListBlobsOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ListBlobsOptions\"></xref> object."
+    type: "<xref href=\"com.azure.storage.blob.models.ListBlobsOptions?alt=com.azure.storage.blob.models.ListBlobsOptions&text=ListBlobsOptions\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Defines options available to configure the behavior of a call to listBlobsFlatSegment on a <xref uid=\"com.azure.storage.blob.BlobContainerClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobContainerClient\"></xref> object. See the constructor for details on each of the options."
 metadata: {}
 package: "com.azure.storage.blob.models"
-artifact: com.azure:azure-storage-blob:12.35.0-beta.1
+artifact: com.azure:azure-storage-blob:12.36.0-beta.1
