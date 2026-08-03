@@ -1,12 +1,12 @@
 ---
 title: Azure VoiceLive client library for Java
 keywords: Azure, java, SDK, API, azure-ai-voicelive, voicelive
-ms.date: 06/02/2026
+ms.date: 08/03/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: voicelive
 ---
-# Azure VoiceLive client library for Java - version 1.0.0 
+# Azure VoiceLive client library for Java - version 1.1.0 
 
 
 The Azure VoiceLive client library for Java enables real-time, bidirectional voice conversations with AI assistants. Built on WebSocket technology, it provides low-latency audio streaming with support for voice activity detection, interruption handling, and flexible authentication.
@@ -109,7 +109,7 @@ Represents an active WebSocket connection for bidirectional streaming communicat
 ### VoiceLiveSessionOptions
 
 Configuration options for customizing session behavior:
-- **Model selection**: Specify the AI model (e.g., "gpt-4o-realtime-preview")
+- **Model selection**: Specify the AI model (e.g., "gpt-realtime")
 - **Voice settings**: Choose from OpenAI voices (Alloy, Ash, Ballad, Coral, Echo, Sage, Shimmer, Verse) or Azure voices
 - **Modalities**: Configure text and/or audio interaction modes
 - **Turn detection**: Server-side voice activity detection with configurable thresholds
@@ -534,7 +534,7 @@ OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT=true
 When tracing is active, the following span hierarchy is emitted for each voice session:
 
 ```
-connect gpt-4o-realtime-preview        ← session lifetime span
+connect gpt-realtime                    ← session lifetime span
 ├── send session.update                 ← one span per sent event
 ├── send input_audio_buffer.append
 ├── send response.create
@@ -616,7 +616,7 @@ VoiceLiveSessionOptions sessionOptions = new VoiceLiveSessionOptions()
     .setTurnDetection(turnDetection);
 
 // Start session (null VoiceLiveRequestOptions), then handle events
-client.startSession("gpt-4o-realtime-preview", null)
+client.startSession("gpt-realtime", null)
     .flatMap(session -> {
         // Subscribe to receive server events
         session.receiveEvents()
@@ -702,5 +702,5 @@ For details on contributing to this repository, see the [contributing guide][con
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: https://learn.microsoft.com/azure/developer/java/fundamentals/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-voicelive_1.0.0/sdk/identity/azure-identity
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-voicelive_1.1.0/sdk/identity/azure-identity
 
