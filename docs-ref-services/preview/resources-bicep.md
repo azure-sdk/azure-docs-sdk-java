@@ -1,10 +1,10 @@
 ---
-title: Azure Resources-Bicep SDK for Java
-description: Reference for Azure Resources-Bicep SDK for Java
-ms.date: 07/31/2026
+title: Azure Resources Bicep SDK for Java
+description: Reference for Azure Resources Bicep SDK for Java
+ms.date: 08/03/2026
 ms.topic: reference
 ms.devlang: java
-ms.service: resources-bicep
+ms.service: resourcesbicep
 ---
 # Azure Resources-Bicep SDK for Java - preview
 ## Packages - preview

@@ -1,3 +1,4 @@
 | Reference | Package | Source |
 |---|---|---|
 |[Online Experimentation](analytics-onlineexperimentation-readme.md)|[azure-analytics-onlineexperimentation](https://pkgs.dev.azure.com/azure-sdk/public/_packaging/azure-sdk-for-java/maven/v1/com/azure/azure-analytics-onlineexperimentation)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/onlineexperimentation/azure-analytics-onlineexperimentation)|
+|[Resource Management - Online Experimentation](resourcemanager-onlineexperimentation-readme.md)|[azure-resourcemanager-onlineexperimentation](https://pkgs.dev.azure.com/azure-sdk/public/_packaging/azure-sdk-for-java/maven/v1/com/azure/resourcemanager/azure-resourcemanager-onlineexperimentation)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/onlineexperimentation/azure-resourcemanager-onlineexperimentation)|

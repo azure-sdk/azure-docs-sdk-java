@@ -1,0 +1,3 @@
+| Reference | Package | Source |
+|---|---|---|
+|[Resource Management - Container Service Safeguards](resourcemanager-containerservicesafeguards-readme.md)|[azure-resourcemanager-containerservicesafeguards](https://pkgs.dev.azure.com/azure-sdk/public/_packaging/azure-sdk-for-java/maven/v1/com/azure/resourcemanager/azure-resourcemanager-containerservicesafeguards)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/containerservicesafeguards/azure-resourcemanager-containerservicesafeguards)|

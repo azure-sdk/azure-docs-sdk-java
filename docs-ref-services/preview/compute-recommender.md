@@ -1,10 +1,10 @@
 ---
-title: Azure Compute-Recommender SDK for Java
-description: Reference for Azure Compute-Recommender SDK for Java
-ms.date: 07/31/2026
+title: Azure Compute Recommender SDK for Java
+description: Reference for Azure Compute Recommender SDK for Java
+ms.date: 08/03/2026
 ms.topic: reference
 ms.devlang: java
-ms.service: compute-recommender
+ms.service: computerecommender
 ---
 # Azure Compute-Recommender SDK for Java - preview
 ## Packages - preview

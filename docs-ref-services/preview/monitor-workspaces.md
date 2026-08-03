@@ -1,10 +1,10 @@
 ---
-title: Azure Monitor-Workspaces SDK for Java
-description: Reference for Azure Monitor-Workspaces SDK for Java
-ms.date: 07/31/2026
+title: Azure Monitor Workspaces SDK for Java
+description: Reference for Azure Monitor Workspaces SDK for Java
+ms.date: 08/03/2026
 ms.topic: reference
 ms.devlang: java
-ms.service: monitor-workspaces
+ms.service: monitorworkspaces
 ---
 # Azure Monitor-Workspaces SDK for Java - preview
 ## Packages - preview
