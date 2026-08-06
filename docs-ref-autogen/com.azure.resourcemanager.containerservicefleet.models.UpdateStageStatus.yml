@@ -22,6 +22,16 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
 syntax: "public final class **UpdateStageStatus**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservicefleet.models.UpdateStageStatus?alt=com.azure.resourcemanager.containerservicefleet.models.UpdateStageStatus&text=UpdateStageStatus\" data-throw-if-not-resolved=\"False\" />&gt;"
 methods:
+- uid: "com.azure.resourcemanager.containerservicefleet.models.UpdateStageStatus.afterGates()"
+  fullName: "com.azure.resourcemanager.containerservicefleet.models.UpdateStageStatus.afterGates()"
+  name: "afterGates()"
+  nameWithType: "UpdateStageStatus.afterGates()"
+  summary: "Get the after<wbr>Gates property: The list of Gates that will run after this Update<wbr>Stage."
+  syntax: "public List<UpdateRunGateStatus> afterGates()"
+  desc: "Get the afterGates property: The list of Gates that will run after this UpdateStage."
+  returns:
+    description: "the afterGates value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.containerservicefleet.models.UpdateRunGateStatus?alt=com.azure.resourcemanager.containerservicefleet.models.UpdateRunGateStatus&text=UpdateRunGateStatus\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.containerservicefleet.models.UpdateStageStatus.afterStageWaitStatus()"
   fullName: "com.azure.resourcemanager.containerservicefleet.models.UpdateStageStatus.afterStageWaitStatus()"
   name: "afterStageWaitStatus()"
@@ -32,6 +42,16 @@ methods:
   returns:
     description: "the afterStageWaitStatus value."
     type: "<xref href=\"com.azure.resourcemanager.containerservicefleet.models.WaitStatus?alt=com.azure.resourcemanager.containerservicefleet.models.WaitStatus&text=WaitStatus\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservicefleet.models.UpdateStageStatus.beforeGates()"
+  fullName: "com.azure.resourcemanager.containerservicefleet.models.UpdateStageStatus.beforeGates()"
+  name: "beforeGates()"
+  nameWithType: "UpdateStageStatus.beforeGates()"
+  summary: "Get the before<wbr>Gates property: The list of Gates that will run before this Update<wbr>Stage."
+  syntax: "public List<UpdateRunGateStatus> beforeGates()"
+  desc: "Get the beforeGates property: The list of Gates that will run before this UpdateStage."
+  returns:
+    description: "the beforeGates value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.containerservicefleet.models.UpdateRunGateStatus?alt=com.azure.resourcemanager.containerservicefleet.models.UpdateRunGateStatus&text=UpdateRunGateStatus\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.containerservicefleet.models.UpdateStageStatus.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.resourcemanager.containerservicefleet.models.UpdateStageStatus.fromJson(JsonReader jsonReader)"
   name: "fromJson(JsonReader jsonReader)"
@@ -61,6 +81,16 @@ methods:
   returns:
     description: "the groups value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.containerservicefleet.models.UpdateGroupStatus?alt=com.azure.resourcemanager.containerservicefleet.models.UpdateGroupStatus&text=UpdateGroupStatus\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.containerservicefleet.models.UpdateStageStatus.maxConcurrency()"
+  fullName: "com.azure.resourcemanager.containerservicefleet.models.UpdateStageStatus.maxConcurrency()"
+  name: "maxConcurrency()"
+  nameWithType: "UpdateStageStatus.maxConcurrency()"
+  summary: "Get the max<wbr>Concurrency property: The max number of upgrades that can run concurrently across all groups in this stage, resolved from the Update<wbr>Strategy.<wbr>Update<wbr>Stage.<wbr>max<wbr>Concurrency value."
+  syntax: "public Integer maxConcurrency()"
+  desc: "Get the maxConcurrency property: The max number of upgrades that can run concurrently across all groups in this stage, resolved from the UpdateStrategy.UpdateStage.maxConcurrency value."
+  returns:
+    description: "the maxConcurrency value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
 - uid: "com.azure.resourcemanager.containerservicefleet.models.UpdateStageStatus.name()"
   fullName: "com.azure.resourcemanager.containerservicefleet.models.UpdateStageStatus.name()"
   name: "name()"
@@ -93,17 +123,10 @@ methods:
   - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.containerservicefleet.models.UpdateStageStatus.validate()"
-  fullName: "com.azure.resourcemanager.containerservicefleet.models.UpdateStageStatus.validate()"
-  name: "validate()"
-  nameWithType: "UpdateStageStatus.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
 type: "class"
 desc: "The status of a UpdateStage."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservicefleet.models.UpdateStageStatus?alt=com.azure.resourcemanager.containerservicefleet.models.UpdateStageStatus&text=UpdateStageStatus\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.containerservicefleet.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservicefleet:1.2.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservicefleet:1.3.0
