@@ -1,7 +1,7 @@
 ---
 title: Azure Compute Bulk Actions SDK for Java
 description: Reference for Azure Compute Bulk Actions SDK for Java
-ms.date: 08/06/2026
+ms.date: 08/07/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: computebulkactions

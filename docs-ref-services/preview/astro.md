@@ -1,7 +1,7 @@
 ---
 title: Azure Astro SDK for Java
 description: Reference for Azure Astro SDK for Java
-ms.date: 08/06/2026
+ms.date: 08/07/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: astro
