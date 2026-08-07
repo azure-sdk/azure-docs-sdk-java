@@ -65,6 +65,16 @@ methods:
   returns:
     description: "An instance of McpToolboxTool if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
     type: "<xref href=\"com.azure.ai.agents.models.McpToolboxTool?alt=com.azure.ai.agents.models.McpToolboxTool&text=McpToolboxTool\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.McpToolboxTool.getAllowedCallers()"
+  fullName: "com.azure.ai.agents.models.McpToolboxTool.getAllowedCallers()"
+  name: "getAllowedCallers()"
+  nameWithType: "McpToolboxTool.getAllowedCallers()"
+  summary: "Get the allowed<wbr>Callers property: The allowed\\_callers property."
+  syntax: "public List<CallableToolAllowedCaller> getAllowedCallers()"
+  desc: "Get the allowedCallers property: The allowed\\_callers property."
+  returns:
+    description: "the allowedCallers value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.ai.agents.models.CallableToolAllowedCaller?alt=com.azure.ai.agents.models.CallableToolAllowedCaller&text=CallableToolAllowedCaller\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.ai.agents.models.McpToolboxTool.getAllowedTools()"
   fullName: "com.azure.ai.agents.models.McpToolboxTool.getAllowedTools()"
   name: "getAllowedTools()"
@@ -91,7 +101,7 @@ methods:
   nameWithType: "McpToolboxTool.getConnectorType()"
   summary: "Get the connector<wbr>Type property: Identifier for service connectors, like those available in ChatGPT."
   syntax: "public McpToolConnectorId getConnectorType()"
-  desc: "Get the connectorType property: Identifier for service connectors, like those available in ChatGPT. One of \\`server\\_url\\` or \\`connector\\_id\\` must be provided. Learn more about service connectors \\[here\\](/docs/guides/tools-remote-mcp\\#connectors). Currently supported \\`connector\\_id\\` values are: - Dropbox: \\`connector\\_dropbox\\` - Gmail: \\`connector\\_gmail\\` - Google Calendar: \\`connector\\_googlecalendar\\` - Google Drive: \\`connector\\_googledrive\\` - Microsoft Teams: \\`connector\\_microsoftteams\\` - Outlook Calendar: \\`connector\\_outlookcalendar\\` - Outlook Email: \\`connector\\_outlookemail\\` - SharePoint: \\`connector\\_sharepoint\\`."
+  desc: "Get the connectorType property: Identifier for service connectors, like those available in ChatGPT. One of \\`server\\_url\\`, \\`connector\\_id\\`, or \\`tunnel\\_id\\` must be provided. Learn more about service connectors \\[here\\](/docs/guides/tools-remote-mcp\\#connectors). Currently supported \\`connector\\_id\\` values are: - Dropbox: \\`connector\\_dropbox\\` - Gmail: \\`connector\\_gmail\\` - Google Calendar: \\`connector\\_googlecalendar\\` - Google Drive: \\`connector\\_googledrive\\` - Microsoft Teams: \\`connector\\_microsoftteams\\` - Outlook Calendar: \\`connector\\_outlookcalendar\\` - Outlook Email: \\`connector\\_outlookemail\\` - SharePoint: \\`connector\\_sharepoint\\`."
   returns:
     description: "the connectorType value."
     type: "<xref href=\"com.azure.ai.agents.models.McpToolConnectorId?alt=com.azure.ai.agents.models.McpToolConnectorId&text=McpToolConnectorId\" data-throw-if-not-resolved=\"False\" />"
@@ -151,9 +161,19 @@ methods:
   nameWithType: "McpToolboxTool.getServerUrl()"
   summary: "Get the server<wbr>Url property: The URL for the MCP server."
   syntax: "public String getServerUrl()"
-  desc: "Get the serverUrl property: The URL for the MCP server. One of \\`server\\_url\\` or \\`connector\\_id\\` must be provided."
+  desc: "Get the serverUrl property: The URL for the MCP server. One of \\`server\\_url\\`, \\`connector\\_id\\`, or \\`tunnel\\_id\\` must be provided."
   returns:
     description: "the serverUrl value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.ai.agents.models.McpToolboxTool.getTunnelId()"
+  fullName: "com.azure.ai.agents.models.McpToolboxTool.getTunnelId()"
+  name: "getTunnelId()"
+  nameWithType: "McpToolboxTool.getTunnelId()"
+  summary: "Get the tunnel<wbr>Id property: The Secure MCP Tunnel ID to use instead of a direct server URL."
+  syntax: "public String getTunnelId()"
+  desc: "Get the tunnelId property: The Secure MCP Tunnel ID to use instead of a direct server URL. One of \\`server\\_url\\`, \\`connector\\_id\\`, or \\`tunnel\\_id\\` must be provided."
+  returns:
+    description: "the tunnelId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.ai.agents.models.McpToolboxTool.getType()"
   fullName: "com.azure.ai.agents.models.McpToolboxTool.getType()"
@@ -176,6 +196,20 @@ methods:
   returns:
     description: "the deferLoading value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.ai.agents.models.McpToolboxTool.setAllowedCallers(java.util.List<com.azure.ai.agents.models.CallableToolAllowedCaller>)"
+  fullName: "com.azure.ai.agents.models.McpToolboxTool.setAllowedCallers(List<CallableToolAllowedCaller> allowedCallers)"
+  name: "setAllowedCallers(List<CallableToolAllowedCaller> allowedCallers)"
+  nameWithType: "McpToolboxTool.setAllowedCallers(List<CallableToolAllowedCaller> allowedCallers)"
+  summary: "Set the allowed<wbr>Callers property: The allowed\\_callers property."
+  parameters:
+  - description: "the allowedCallers value to set."
+    name: "allowedCallers"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.ai.agents.models.CallableToolAllowedCaller?alt=com.azure.ai.agents.models.CallableToolAllowedCaller&text=CallableToolAllowedCaller\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public McpToolboxTool setAllowedCallers(List<CallableToolAllowedCaller> allowedCallers)"
+  desc: "Set the allowedCallers property: The allowed\\_callers property."
+  returns:
+    description: "the McpToolboxTool object itself."
+    type: "<xref href=\"com.azure.ai.agents.models.McpToolboxTool?alt=com.azure.ai.agents.models.McpToolboxTool&text=McpToolboxTool\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.agents.models.McpToolboxTool.setAllowedTools(com.azure.core.util.BinaryData)"
   fullName: "com.azure.ai.agents.models.McpToolboxTool.setAllowedTools(BinaryData allowedTools)"
   name: "setAllowedTools(BinaryData allowedTools)"
@@ -214,7 +248,7 @@ methods:
     name: "connectorType"
     type: "<xref href=\"com.azure.ai.agents.models.McpToolConnectorId?alt=com.azure.ai.agents.models.McpToolConnectorId&text=McpToolConnectorId\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public McpToolboxTool setConnectorType(McpToolConnectorId connectorType)"
-  desc: "Set the connectorType property: Identifier for service connectors, like those available in ChatGPT. One of \\`server\\_url\\` or \\`connector\\_id\\` must be provided. Learn more about service connectors \\[here\\](/docs/guides/tools-remote-mcp\\#connectors). Currently supported \\`connector\\_id\\` values are: - Dropbox: \\`connector\\_dropbox\\` - Gmail: \\`connector\\_gmail\\` - Google Calendar: \\`connector\\_googlecalendar\\` - Google Drive: \\`connector\\_googledrive\\` - Microsoft Teams: \\`connector\\_microsoftteams\\` - Outlook Calendar: \\`connector\\_outlookcalendar\\` - Outlook Email: \\`connector\\_outlookemail\\` - SharePoint: \\`connector\\_sharepoint\\`."
+  desc: "Set the connectorType property: Identifier for service connectors, like those available in ChatGPT. One of \\`server\\_url\\`, \\`connector\\_id\\`, or \\`tunnel\\_id\\` must be provided. Learn more about service connectors \\[here\\](/docs/guides/tools-remote-mcp\\#connectors). Currently supported \\`connector\\_id\\` values are: - Dropbox: \\`connector\\_dropbox\\` - Gmail: \\`connector\\_gmail\\` - Google Calendar: \\`connector\\_googlecalendar\\` - Google Drive: \\`connector\\_googledrive\\` - Microsoft Teams: \\`connector\\_microsoftteams\\` - Outlook Calendar: \\`connector\\_outlookcalendar\\` - Outlook Email: \\`connector\\_outlookemail\\` - SharePoint: \\`connector\\_sharepoint\\`."
   returns:
     description: "the McpToolboxTool object itself."
     type: "<xref href=\"com.azure.ai.agents.models.McpToolboxTool?alt=com.azure.ai.agents.models.McpToolboxTool&text=McpToolboxTool\" data-throw-if-not-resolved=\"False\" />"
@@ -324,7 +358,7 @@ methods:
     name: "serverUrl"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public McpToolboxTool setServerUrl(String serverUrl)"
-  desc: "Set the serverUrl property: The URL for the MCP server. One of \\`server\\_url\\` or \\`connector\\_id\\` must be provided."
+  desc: "Set the serverUrl property: The URL for the MCP server. One of \\`server\\_url\\`, \\`connector\\_id\\`, or \\`tunnel\\_id\\` must be provided."
   returns:
     description: "the McpToolboxTool object itself."
     type: "<xref href=\"com.azure.ai.agents.models.McpToolboxTool?alt=com.azure.ai.agents.models.McpToolboxTool&text=McpToolboxTool\" data-throw-if-not-resolved=\"False\" />"
@@ -340,6 +374,20 @@ methods:
   syntax: "public McpToolboxTool setToolConfigs(Map<String,ToolConfig> toolConfigs)"
   desc: "Set the toolConfigs property: Per-tool configuration map. Keys are tool names or \\`\\*\\` (catch-all default). Resolution order: exact tool name match takes priority over \\`\\*\\`. Unknown tool names are silently ignored at runtime."
   returns:
+    type: "<xref href=\"com.azure.ai.agents.models.McpToolboxTool?alt=com.azure.ai.agents.models.McpToolboxTool&text=McpToolboxTool\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.McpToolboxTool.setTunnelId(java.lang.String)"
+  fullName: "com.azure.ai.agents.models.McpToolboxTool.setTunnelId(String tunnelId)"
+  name: "setTunnelId(String tunnelId)"
+  nameWithType: "McpToolboxTool.setTunnelId(String tunnelId)"
+  summary: "Set the tunnel<wbr>Id property: The Secure MCP Tunnel ID to use instead of a direct server URL."
+  parameters:
+  - description: "the tunnelId value to set."
+    name: "tunnelId"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public McpToolboxTool setTunnelId(String tunnelId)"
+  desc: "Set the tunnelId property: The Secure MCP Tunnel ID to use instead of a direct server URL. One of \\`server\\_url\\`, \\`connector\\_id\\`, or \\`tunnel\\_id\\` must be provided."
+  returns:
+    description: "the McpToolboxTool object itself."
     type: "<xref href=\"com.azure.ai.agents.models.McpToolboxTool?alt=com.azure.ai.agents.models.McpToolboxTool&text=McpToolboxTool\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.agents.models.McpToolboxTool.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.ai.agents.models.McpToolboxTool.toJson(JsonWriter jsonWriter)"
@@ -358,4 +406,4 @@ type: "class"
 desc: "An MCP tool stored in a toolbox."
 metadata: {}
 package: "com.azure.ai.agents.models"
-artifact: com.azure:azure-ai-agents:2.2.0
+artifact: com.azure:azure-ai-agents:2.3.0

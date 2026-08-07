@@ -139,6 +139,16 @@ methods:
   returns:
     description: "the generationArtifacts value."
     type: "<xref href=\"com.azure.ai.projects.models.EvaluatorGenerationArtifacts?alt=com.azure.ai.projects.models.EvaluatorGenerationArtifacts&text=EvaluatorGenerationArtifacts\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.models.EvaluatorVersion.getGenerationJobId()"
+  fullName: "com.azure.ai.projects.models.EvaluatorVersion.getGenerationJobId()"
+  name: "getGenerationJobId()"
+  nameWithType: "EvaluatorVersion.getGenerationJobId()"
+  summary: "Get the generation<wbr>Job<wbr>Id property: Read-only provenance link back to the Evaluator<wbr>Generation<wbr>Job that produced this version."
+  syntax: "public String getGenerationJobId()"
+  desc: "Get the generationJobId property: Read-only provenance link back to the EvaluatorGenerationJob that produced this version. Present only on evaluator versions created via the generation pipeline; absent for manually-created versions and unaffected by subsequent \\`PATCH\\` calls."
+  returns:
+    description: "the generationJobId value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.ai.projects.models.EvaluatorVersion.getId()"
   fullName: "com.azure.ai.projects.models.EvaluatorVersion.getId()"
   name: "getId()"
@@ -209,6 +219,16 @@ methods:
   returns:
     description: "the version value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.ai.projects.models.EvaluatorVersion.getWarnings()"
+  fullName: "com.azure.ai.projects.models.EvaluatorVersion.getWarnings()"
+  name: "getWarnings()"
+  nameWithType: "EvaluatorVersion.getWarnings()"
+  summary: "Get the warnings property: Categories of warnings surfaced on this generated evaluator version."
+  syntax: "public List<GenerationWarningType> getWarnings()"
+  desc: "Get the warnings property: Categories of warnings surfaced on this generated evaluator version. Present only on versions created via an EvaluatorGenerationJob when the paired job produced non-empty warnings. Absent (treat as no warnings) when the version is not from generation, when the paired job was clean, or when a subsequent \\`PATCH\\` to \\`definition\\` cleared the paired job's advisories. Follow \\`generation\\_job\\_id\\` to fetch the detailed warning payloads."
+  returns:
+    description: "the warnings value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.ai.projects.models.GenerationWarningType?alt=com.azure.ai.projects.models.GenerationWarningType&text=GenerationWarningType\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.ai.projects.models.EvaluatorVersion.setDescription(java.lang.String)"
   fullName: "com.azure.ai.projects.models.EvaluatorVersion.setDescription(String description)"
   name: "setDescription(String description)"
@@ -297,4 +317,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.projects.models.EvaluatorVersion?alt=com.azure.ai.projects.models.EvaluatorVersion&text=EvaluatorVersion\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.ai.projects.models"
-artifact: com.azure:azure-ai-projects:2.2.0
+artifact: com.azure:azure-ai-projects:2.3.0

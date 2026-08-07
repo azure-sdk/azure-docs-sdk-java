@@ -1,0 +1,102 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.containerserviceaimanager.fluent.models.NamespaceAccessInfoInner"
+fullName: "com.azure.resourcemanager.containerserviceaimanager.fluent.models.NamespaceAccessInfoInner"
+name: "NamespaceAccessInfoInner"
+nameWithType: "NamespaceAccessInfoInner"
+summary: "Access information for an AI Manager namespace, including the OpenAI-compatible gateway endpoint and the API keys used to authenticate against it."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **NamespaceAccessInfoInner**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerserviceaimanager.fluent.models.NamespaceAccessInfoInner?alt=com.azure.resourcemanager.containerserviceaimanager.fluent.models.NamespaceAccessInfoInner&text=NamespaceAccessInfoInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.azure.resourcemanager.containerserviceaimanager.fluent.models.NamespaceAccessInfoInner.endpoint()"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.fluent.models.NamespaceAccessInfoInner.endpoint()"
+  name: "endpoint()"
+  nameWithType: "NamespaceAccessInfoInner.endpoint()"
+  summary: "Get the endpoint property: OpenAI-compatible inference gateway base URL (for example, \\`https://team-alpha.<cluster>.<region>.aksapp.<wbr>io/v1\\`)."
+  syntax: "public String endpoint()"
+  desc: "Get the endpoint property: OpenAI-compatible inference gateway base URL (for example, \\`https://team-alpha.<cluster>.<region>.aksapp.io/v1\\`)."
+  returns:
+    description: "the endpoint value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.containerserviceaimanager.fluent.models.NamespaceAccessInfoInner.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.fluent.models.NamespaceAccessInfoInner.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "NamespaceAccessInfoInner.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Namespace<wbr>Access<wbr>Info<wbr>Inner from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static NamespaceAccessInfoInner fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of NamespaceAccessInfoInner from the JsonReader."
+  returns:
+    description: "An instance of NamespaceAccessInfoInner if the JsonReader was pointing to an instance of it, or null if\n it was pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.containerserviceaimanager.fluent.models.NamespaceAccessInfoInner?alt=com.azure.resourcemanager.containerserviceaimanager.fluent.models.NamespaceAccessInfoInner&text=NamespaceAccessInfoInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerserviceaimanager.fluent.models.NamespaceAccessInfoInner.lastRotatedAt()"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.fluent.models.NamespaceAccessInfoInner.lastRotatedAt()"
+  name: "lastRotatedAt()"
+  nameWithType: "NamespaceAccessInfoInner.lastRotatedAt()"
+  summary: "Get the last<wbr>Rotated<wbr>At property: UTC time the keys were last rotated by \\`rotate<wbr>Keys\\`."
+  syntax: "public OffsetDateTime lastRotatedAt()"
+  desc: "Get the lastRotatedAt property: UTC time the keys were last rotated by \\`rotateKeys\\`. Absent until the first rotation. Clients can use this to detect rotation and refresh cached credentials."
+  returns:
+    description: "the lastRotatedAt value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
+- uid: "com.azure.resourcemanager.containerserviceaimanager.fluent.models.NamespaceAccessInfoInner.primaryKey()"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.fluent.models.NamespaceAccessInfoInner.primaryKey()"
+  name: "primaryKey()"
+  nameWithType: "NamespaceAccessInfoInner.primaryKey()"
+  summary: "Get the primary<wbr>Key property: Primary API key."
+  syntax: "public String primaryKey()"
+  desc: "Get the primaryKey property: Primary API key. Send as \\`Authorization: Bearer <key>\\` or \\`api-key: <key>\\`. Treat as secret; do not log or persist in plaintext."
+  returns:
+    description: "the primaryKey value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.containerserviceaimanager.fluent.models.NamespaceAccessInfoInner.secondaryKey()"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.fluent.models.NamespaceAccessInfoInner.secondaryKey()"
+  name: "secondaryKey()"
+  nameWithType: "NamespaceAccessInfoInner.secondaryKey()"
+  summary: "Get the secondary<wbr>Key property: Secondary API key, accepted by the gateway in the same headers as \\`primary<wbr>Key\\`."
+  syntax: "public String secondaryKey()"
+  desc: "Get the secondaryKey property: Secondary API key, accepted by the gateway in the same headers as \\`primaryKey\\`. Generated independently when the namespace is created, then overwritten by the previous \\`primaryKey\\` on each \\`rotateKeys\\` call so clients can roll over without downtime. Treat as secret; do not log or persist in plaintext."
+  returns:
+    description: "the secondaryKey value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.containerserviceaimanager.fluent.models.NamespaceAccessInfoInner.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.fluent.models.NamespaceAccessInfoInner.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "NamespaceAccessInfoInner.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Access information for an AI Manager namespace, including the OpenAI-compatible gateway endpoint and the API keys used to authenticate against it."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerserviceaimanager.fluent.models.NamespaceAccessInfoInner?alt=com.azure.resourcemanager.containerserviceaimanager.fluent.models.NamespaceAccessInfoInner&text=NamespaceAccessInfoInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.containerserviceaimanager.fluent.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerserviceaimanager:1.0.0-beta.1

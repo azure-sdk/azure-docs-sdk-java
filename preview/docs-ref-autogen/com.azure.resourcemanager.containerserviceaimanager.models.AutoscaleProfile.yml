@@ -1,0 +1,118 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile"
+fullName: "com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile"
+name: "AutoscaleProfile"
+nameWithType: "AutoscaleProfile"
+summary: "Autoscaling configuration: scale replica count between a minimum and maximum."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **AutoscaleProfile**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile?alt=com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile&text=AutoscaleProfile\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile.AutoscaleProfile()"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile.AutoscaleProfile()"
+  name: "AutoscaleProfile()"
+  nameWithType: "AutoscaleProfile.AutoscaleProfile()"
+  summary: "Creates an instance of Autoscale<wbr>Profile class."
+  syntax: "public AutoscaleProfile()"
+  desc: "Creates an instance of AutoscaleProfile class."
+methods:
+- uid: "com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "AutoscaleProfile.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Autoscale<wbr>Profile from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static AutoscaleProfile fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of AutoscaleProfile from the JsonReader."
+  returns:
+    description: "An instance of AutoscaleProfile if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile?alt=com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile&text=AutoscaleProfile\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile.maxReplicas()"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile.maxReplicas()"
+  name: "maxReplicas()"
+  nameWithType: "AutoscaleProfile.maxReplicas()"
+  summary: "Get the max<wbr>Replicas property: The maximum number of replicas."
+  syntax: "public Integer maxReplicas()"
+  desc: "Get the maxReplicas property: The maximum number of replicas. If not specified, the service derives a default from the subscription GPU quota."
+  returns:
+    description: "the maxReplicas value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+- uid: "com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile.minReplicas()"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile.minReplicas()"
+  name: "minReplicas()"
+  nameWithType: "AutoscaleProfile.minReplicas()"
+  summary: "Get the min<wbr>Replicas property: The minimum number of replicas."
+  syntax: "public int minReplicas()"
+  desc: "Get the minReplicas property: The minimum number of replicas. Must be at least \\`1\\`; scale-to-zero is not supported in autoscale mode (see \\`ScalingProfile\\`)."
+  returns:
+    description: "the minReplicas value."
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "AutoscaleProfile.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile.withMaxReplicas(java.lang.Integer)"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile.withMaxReplicas(Integer maxReplicas)"
+  name: "withMaxReplicas(Integer maxReplicas)"
+  nameWithType: "AutoscaleProfile.withMaxReplicas(Integer maxReplicas)"
+  summary: "Set the max<wbr>Replicas property: The maximum number of replicas."
+  parameters:
+  - description: "the maxReplicas value to set."
+    name: "maxReplicas"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  syntax: "public AutoscaleProfile withMaxReplicas(Integer maxReplicas)"
+  desc: "Set the maxReplicas property: The maximum number of replicas. If not specified, the service derives a default from the subscription GPU quota."
+  returns:
+    description: "the AutoscaleProfile object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile?alt=com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile&text=AutoscaleProfile\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile.withMinReplicas(int)"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile.withMinReplicas(int minReplicas)"
+  name: "withMinReplicas(int minReplicas)"
+  nameWithType: "AutoscaleProfile.withMinReplicas(int minReplicas)"
+  summary: "Set the min<wbr>Replicas property: The minimum number of replicas."
+  parameters:
+  - description: "the minReplicas value to set."
+    name: "minReplicas"
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public AutoscaleProfile withMinReplicas(int minReplicas)"
+  desc: "Set the minReplicas property: The minimum number of replicas. Must be at least \\`1\\`; scale-to-zero is not supported in autoscale mode (see \\`ScalingProfile\\`)."
+  returns:
+    description: "the AutoscaleProfile object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile?alt=com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile&text=AutoscaleProfile\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Autoscaling configuration: scale replica count between a minimum and maximum."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile?alt=com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile&text=AutoscaleProfile\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.containerserviceaimanager.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerserviceaimanager:1.0.0-beta.1

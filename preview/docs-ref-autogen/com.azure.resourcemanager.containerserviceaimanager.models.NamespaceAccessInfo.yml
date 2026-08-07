@@ -1,0 +1,73 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.containerserviceaimanager.models.NamespaceAccessInfo"
+fullName: "com.azure.resourcemanager.containerserviceaimanager.models.NamespaceAccessInfo"
+name: "NamespaceAccessInfo"
+nameWithType: "NamespaceAccessInfo"
+summary: "An immutable client-side representation of Namespace<wbr>Access<wbr>Info."
+syntax: "public interface **NamespaceAccessInfo**"
+methods:
+- uid: "com.azure.resourcemanager.containerserviceaimanager.models.NamespaceAccessInfo.endpoint()"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.models.NamespaceAccessInfo.endpoint()"
+  name: "endpoint()"
+  nameWithType: "NamespaceAccessInfo.endpoint()"
+  summary: "Gets the endpoint property: OpenAI-compatible inference gateway base URL (for example, \\`https://team-alpha.<cluster>.<region>.aksapp.<wbr>io/v1\\`)."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String endpoint()"
+  desc: "Gets the endpoint property: OpenAI-compatible inference gateway base URL (for example, \\`https://team-alpha.<cluster>.<region>.aksapp.io/v1\\`)."
+  returns:
+    description: "the endpoint value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.containerserviceaimanager.models.NamespaceAccessInfo.innerModel()"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.models.NamespaceAccessInfo.innerModel()"
+  name: "innerModel()"
+  nameWithType: "NamespaceAccessInfo.innerModel()"
+  summary: "Gets the inner com.<wbr>azure.<wbr>resourcemanager.<wbr>containerserviceaimanager.<wbr>fluent.<wbr>models.<wbr>Namespace<wbr>Access<wbr>Info<wbr>Inner object."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract NamespaceAccessInfoInner innerModel()"
+  desc: "Gets the inner com.azure.resourcemanager.containerserviceaimanager.fluent.models.NamespaceAccessInfoInner object."
+  returns:
+    description: "the inner object."
+    type: "<xref href=\"com.azure.resourcemanager.containerserviceaimanager.fluent.models.NamespaceAccessInfoInner?alt=com.azure.resourcemanager.containerserviceaimanager.fluent.models.NamespaceAccessInfoInner&text=NamespaceAccessInfoInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerserviceaimanager.models.NamespaceAccessInfo.lastRotatedAt()"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.models.NamespaceAccessInfo.lastRotatedAt()"
+  name: "lastRotatedAt()"
+  nameWithType: "NamespaceAccessInfo.lastRotatedAt()"
+  summary: "Gets the last<wbr>Rotated<wbr>At property: UTC time the keys were last rotated by \\`rotate<wbr>Keys\\`."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract OffsetDateTime lastRotatedAt()"
+  desc: "Gets the lastRotatedAt property: UTC time the keys were last rotated by \\`rotateKeys\\`. Absent until the first rotation. Clients can use this to detect rotation and refresh cached credentials."
+  returns:
+    description: "the lastRotatedAt value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
+- uid: "com.azure.resourcemanager.containerserviceaimanager.models.NamespaceAccessInfo.primaryKey()"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.models.NamespaceAccessInfo.primaryKey()"
+  name: "primaryKey()"
+  nameWithType: "NamespaceAccessInfo.primaryKey()"
+  summary: "Gets the primary<wbr>Key property: Primary API key."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String primaryKey()"
+  desc: "Gets the primaryKey property: Primary API key. Send as \\`Authorization: Bearer <key>\\` or \\`api-key: <key>\\`. Treat as secret; do not log or persist in plaintext."
+  returns:
+    description: "the primaryKey value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.containerserviceaimanager.models.NamespaceAccessInfo.secondaryKey()"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.models.NamespaceAccessInfo.secondaryKey()"
+  name: "secondaryKey()"
+  nameWithType: "NamespaceAccessInfo.secondaryKey()"
+  summary: "Gets the secondary<wbr>Key property: Secondary API key, accepted by the gateway in the same headers as \\`primary<wbr>Key\\`."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String secondaryKey()"
+  desc: "Gets the secondaryKey property: Secondary API key, accepted by the gateway in the same headers as \\`primaryKey\\`. Generated independently when the namespace is created, then overwritten by the previous \\`primaryKey\\` on each \\`rotateKeys\\` call so clients can roll over without downtime. Treat as secret; do not log or persist in plaintext."
+  returns:
+    description: "the secondaryKey value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+type: "interface"
+desc: "An immutable client-side representation of NamespaceAccessInfo."
+metadata: {}
+package: "com.azure.resourcemanager.containerserviceaimanager.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerserviceaimanager:1.0.0-beta.1

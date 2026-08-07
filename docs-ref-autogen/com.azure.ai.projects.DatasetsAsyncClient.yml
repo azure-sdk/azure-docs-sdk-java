@@ -290,7 +290,7 @@ methods:
   fullName: "com.azure.ai.projects.DatasetsAsyncClient.getCredentials(String name, String version)"
   name: "getCredentials(String name, String version)"
   nameWithType: "DatasetsAsyncClient.getCredentials(String name, String version)"
-  summary: "Get dataset credentials Gets the SAS credential to access the storage account associated with a Dataset version."
+  summary: "Get dataset credentials Retrieves the SAS credential to access the storage account associated with a dataset version."
   parameters:
   - description: "The name of the resource."
     name: "name"
@@ -299,15 +299,15 @@ methods:
     name: "version"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public Mono<DatasetCredential> getCredentials(String name, String version)"
-  desc: "Get dataset credentials Gets the SAS credential to access the storage account associated with a Dataset version."
+  desc: "Get dataset credentials Retrieves the SAS credential to access the storage account associated with a dataset version."
   returns:
-    description: "dataset credentials\n\n Gets the SAS credential to access the storage account associated with a Dataset version on successful completion\n of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
+    description: "dataset credentials\n\n Retrieves the SAS credential to access the storage account associated with a dataset version on successful\n completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.projects.models.DatasetCredential?alt=com.azure.ai.projects.models.DatasetCredential&text=DatasetCredential\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.ai.projects.DatasetsAsyncClient.getCredentialsWithResponse(java.lang.String,java.lang.String,com.azure.core.http.rest.RequestOptions)"
   fullName: "com.azure.ai.projects.DatasetsAsyncClient.getCredentialsWithResponse(String name, String version, RequestOptions requestOptions)"
   name: "getCredentialsWithResponse(String name, String version, RequestOptions requestOptions)"
   nameWithType: "DatasetsAsyncClient.getCredentialsWithResponse(String name, String version, RequestOptions requestOptions)"
-  summary: "Get dataset credentials Gets the SAS credential to access the storage account associated with a Dataset version."
+  summary: "Get dataset credentials Retrieves the SAS credential to access the storage account associated with a dataset version."
   parameters:
   - description: "The name of the resource."
     name: "name"
@@ -319,9 +319,9 @@ methods:
     name: "requestOptions"
     type: "<xref href=\"com.azure.core.http.rest.RequestOptions?alt=com.azure.core.http.rest.RequestOptions&text=RequestOptions\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public Mono<Response<BinaryData>> getCredentialsWithResponse(String name, String version, RequestOptions requestOptions)"
-  desc: "Get dataset credentials Gets the SAS credential to access the storage account associated with a Dataset version.\n\n**Response Body Schema**\n\n```java\n{\n     blobReference (Required): {\n         blobUri: String (Required)\n         storageAccountArmId: String (Required)\n         credential (Required): {\n             sasUri: String (Required)\n             type: String(ApiKey/AAD/SAS/CustomKeys/None/AgenticIdentityToken_Preview) (Required)\n         }\n     }\n }\n```"
+  desc: "Get dataset credentials Retrieves the SAS credential to access the storage account associated with a dataset version.\n\n**Response Body Schema**\n\n```java\n{\n     blobReference (Required): {\n         blobUri: String (Required)\n         storageAccountArmId: String (Required)\n         credential (Required): {\n             sasUri: String (Required)\n             type: String(ApiKey/AAD/SAS/CustomKeys/None/AgenticIdentityToken_Preview) (Required)\n         }\n     }\n }\n```"
   returns:
-    description: "dataset credentials\n\n Gets the SAS credential to access the storage account associated with a Dataset version along with\n <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
+    description: "dataset credentials\n\n Retrieves the SAS credential to access the storage account associated with a dataset version along with\n <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.ai.projects.DatasetsAsyncClient.getDatasetVersion(java.lang.String,java.lang.String)"
   fullName: "com.azure.ai.projects.DatasetsAsyncClient.getDatasetVersion(String name, String version)"
@@ -462,4 +462,4 @@ type: "class"
 desc: "Initializes a new instance of the asynchronous AIProjectClient type."
 metadata: {}
 package: "com.azure.ai.projects"
-artifact: com.azure:azure-ai-projects:2.2.0
+artifact: com.azure:azure-ai-projects:2.3.0

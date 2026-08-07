@@ -79,6 +79,16 @@ methods:
   returns:
     description: "the maxCandidates value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+- uid: "com.azure.ai.agents.models.OptimizationOptions.getMaxStalls()"
+  fullName: "com.azure.ai.agents.models.OptimizationOptions.getMaxStalls()"
+  name: "getMaxStalls()"
+  nameWithType: "OptimizationOptions.getMaxStalls()"
+  summary: "Get the max<wbr>Stalls property: Maximum number of consecutive reflective minibatch rejections before stopping early."
+  syntax: "public Integer getMaxStalls()"
+  desc: "Get the maxStalls property: Maximum number of consecutive reflective minibatch rejections before stopping early. A 'stall' occurs when the optimizer proposes a prompt change, evaluates it on a small subset, and the score does not improve — so no full validation-set evaluation is triggered. The counter resets whenever a minibatch passes and its full-validation score beats the current best. Only a sustained plateau of \\`max\\_stalls\\` consecutive minibatch failures triggers the stop. The service defaults to 5 if a value is not specified by the caller. Must be >= 1 when set."
+  returns:
+    description: "the maxStalls value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
 - uid: "com.azure.ai.agents.models.OptimizationOptions.getOptimizationConfig()"
   fullName: "com.azure.ai.agents.models.OptimizationOptions.getOptimizationConfig()"
   name: "getOptimizationConfig()"
@@ -141,6 +151,20 @@ methods:
   returns:
     description: "the OptimizationOptions object itself."
     type: "<xref href=\"com.azure.ai.agents.models.OptimizationOptions?alt=com.azure.ai.agents.models.OptimizationOptions&text=OptimizationOptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.OptimizationOptions.setMaxStalls(java.lang.Integer)"
+  fullName: "com.azure.ai.agents.models.OptimizationOptions.setMaxStalls(Integer maxStalls)"
+  name: "setMaxStalls(Integer maxStalls)"
+  nameWithType: "OptimizationOptions.setMaxStalls(Integer maxStalls)"
+  summary: "Set the max<wbr>Stalls property: Maximum number of consecutive reflective minibatch rejections before stopping early."
+  parameters:
+  - description: "the maxStalls value to set."
+    name: "maxStalls"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  syntax: "public OptimizationOptions setMaxStalls(Integer maxStalls)"
+  desc: "Set the maxStalls property: Maximum number of consecutive reflective minibatch rejections before stopping early. A 'stall' occurs when the optimizer proposes a prompt change, evaluates it on a small subset, and the score does not improve — so no full validation-set evaluation is triggered. The counter resets whenever a minibatch passes and its full-validation score beats the current best. Only a sustained plateau of \\`max\\_stalls\\` consecutive minibatch failures triggers the stop. The service defaults to 5 if a value is not specified by the caller. Must be >= 1 when set."
+  returns:
+    description: "the OptimizationOptions object itself."
+    type: "<xref href=\"com.azure.ai.agents.models.OptimizationOptions?alt=com.azure.ai.agents.models.OptimizationOptions&text=OptimizationOptions\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.agents.models.OptimizationOptions.setOptimizationConfig(java.util.Map<java.lang.String,com.azure.core.util.BinaryData>)"
   fullName: "com.azure.ai.agents.models.OptimizationOptions.setOptimizationConfig(Map<String,BinaryData> optimizationConfig)"
   name: "setOptimizationConfig(Map<String,BinaryData> optimizationConfig)"
@@ -187,4 +211,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.OptimizationOptions?alt=com.azure.ai.agents.models.OptimizationOptions&text=OptimizationOptions\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.ai.agents.models"
-artifact: com.azure:azure-ai-agents:2.2.0
+artifact: com.azure:azure-ai-agents:2.3.0

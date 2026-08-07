@@ -1,0 +1,118 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile"
+fullName: "com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile"
+name: "ScalingProfile"
+nameWithType: "ScalingProfile"
+summary: "Scaling configuration for a model deployment."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **ScalingProfile**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile?alt=com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile&text=ScalingProfile\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile.ScalingProfile()"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile.ScalingProfile()"
+  name: "ScalingProfile()"
+  nameWithType: "ScalingProfile.ScalingProfile()"
+  summary: "Creates an instance of Scaling<wbr>Profile class."
+  syntax: "public ScalingProfile()"
+  desc: "Creates an instance of ScalingProfile class."
+methods:
+- uid: "com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile.autoscale()"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile.autoscale()"
+  name: "autoscale()"
+  nameWithType: "ScalingProfile.autoscale()"
+  summary: "Get the autoscale property: Autoscaling configuration."
+  syntax: "public AutoscaleProfile autoscale()"
+  desc: "Get the autoscale property: Autoscaling configuration. Mutually exclusive with \\`manual\\`."
+  returns:
+    description: "the autoscale value."
+    type: "<xref href=\"com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile?alt=com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile&text=AutoscaleProfile\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "ScalingProfile.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Scaling<wbr>Profile from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static ScalingProfile fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the ScalingProfile."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of ScalingProfile from the JsonReader."
+  returns:
+    description: "An instance of ScalingProfile if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile?alt=com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile&text=ScalingProfile\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile.manual()"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile.manual()"
+  name: "manual()"
+  nameWithType: "ScalingProfile.manual()"
+  summary: "Get the manual property: Manual scaling configuration with a fixed replica count."
+  syntax: "public ManualScalingProfile manual()"
+  desc: "Get the manual property: Manual scaling configuration with a fixed replica count. Mutually exclusive with \\`autoscale\\`."
+  returns:
+    description: "the manual value."
+    type: "<xref href=\"com.azure.resourcemanager.containerserviceaimanager.models.ManualScalingProfile?alt=com.azure.resourcemanager.containerserviceaimanager.models.ManualScalingProfile&text=ManualScalingProfile\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "ScalingProfile.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile.withAutoscale(com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile)"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile.withAutoscale(AutoscaleProfile autoscale)"
+  name: "withAutoscale(AutoscaleProfile autoscale)"
+  nameWithType: "ScalingProfile.withAutoscale(AutoscaleProfile autoscale)"
+  summary: "Set the autoscale property: Autoscaling configuration."
+  parameters:
+  - description: "the autoscale value to set."
+    name: "autoscale"
+    type: "<xref href=\"com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile?alt=com.azure.resourcemanager.containerserviceaimanager.models.AutoscaleProfile&text=AutoscaleProfile\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ScalingProfile withAutoscale(AutoscaleProfile autoscale)"
+  desc: "Set the autoscale property: Autoscaling configuration. Mutually exclusive with \\`manual\\`."
+  returns:
+    description: "the ScalingProfile object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile?alt=com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile&text=ScalingProfile\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile.withManual(com.azure.resourcemanager.containerserviceaimanager.models.ManualScalingProfile)"
+  fullName: "com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile.withManual(ManualScalingProfile manual)"
+  name: "withManual(ManualScalingProfile manual)"
+  nameWithType: "ScalingProfile.withManual(ManualScalingProfile manual)"
+  summary: "Set the manual property: Manual scaling configuration with a fixed replica count."
+  parameters:
+  - description: "the manual value to set."
+    name: "manual"
+    type: "<xref href=\"com.azure.resourcemanager.containerserviceaimanager.models.ManualScalingProfile?alt=com.azure.resourcemanager.containerserviceaimanager.models.ManualScalingProfile&text=ManualScalingProfile\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ScalingProfile withManual(ManualScalingProfile manual)"
+  desc: "Set the manual property: Manual scaling configuration with a fixed replica count. Mutually exclusive with \\`autoscale\\`."
+  returns:
+    description: "the ScalingProfile object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile?alt=com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile&text=ScalingProfile\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Scaling configuration for a model deployment. Exactly one of \\`manual\\` or \\`autoscale\\` must be set. This mutual-exclusion constraint is enforced by the service at request validation time, not by the schema. A PUT request that sets both \\`manual\\` and \\`autoscale\\`, or sets neither, is rejected with HTTP 400 (Bad Request) and an \\`InvalidScalingProfile\\` error code; Scale-to-zero semantics differ between the two modes: - \\`manual\\` permits \\`replicas: 0\\`. This is an explicit operator action to stop serving traffic while keeping the \\`ModelDeployment\\` resource (and its configuration) in place. While at zero replicas the endpoint returns errors for inference requests, and the deployment releases its GPU capacity. - \\`autoscale\\` does not permit \\`minReplicas: 0\\`. Autoscaling decisions are driven by serving-server runtime metrics (request rate, queue depth, GPU utilization); at zero replicas there is no signal for the autoscaler to scale back up from. Combined with GPU cold-start time (on the order of minutes) and constrained regional GPU capacity, a scale-from-zero event would produce unacceptable first-request latency and a high risk of capacity unavailability. Callers that want autoscaling with an idle state should delete the \\`ModelDeployment\\` instead."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile?alt=com.azure.resourcemanager.containerserviceaimanager.models.ScalingProfile&text=ScalingProfile\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.containerserviceaimanager.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerserviceaimanager:1.0.0-beta.1
