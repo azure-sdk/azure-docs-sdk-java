@@ -1,12 +1,12 @@
 ---
 title: Azure Resource Manager Test shared library for Java
 keywords: Azure, java, SDK, API, azure-resourcemanager-test, resourcemanager
-ms.date: 08/21/2025
+ms.date: 08/12/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: resourcemanager
 ---
-# Azure Resource Manager Test shared library for Java - version 2.0.0-beta.2 
+# Azure Resource Manager Test shared library for Java - version 2.0.0-beta.3 
 
 
 Azure Resource Manager test library for Java
@@ -26,7 +26,7 @@ For documentation on how to use this package, please see [Azure Management Libra
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
     <artifactId>azure-resourcemanager-test</artifactId>
-    <version>2.0.0-beta.1</version>
+    <version>2.0.0-beta.3</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -153,6 +153,25 @@ ContainerAppsApiManager manager = ContainerAppsApiManager
 // instead of ContainerAppsApiManager.authenticate(httpPipeline, profile);
 ```
 
+## Record test
+
+When updating SDK for service api-version upgrade, you may want to run recording tests and update test recordings.
+
+### Run tests in recording mode
+
+Make sure you have `AZURE_TEST_MODE`, `AZURE_TENANT_ID` and `AZURE_SUBSCRIPTION_ID` environment variables properly set.
+
+Either run mvn command:
+```
+mvn test -f sdk/<service>/azure-resourcemanager-<service>/pom.xml -DAZURE_TEST_MODE=RECORD -DAZURE_TENANT_ID=<tenant-id> -DAZURE_SUBSCRIPTION_ID=<subscription-id>
+```
+
+Or individual tests in your IDE. Local test recordings will be automatically updated.
+
+### Push test recordings update
+
+To update recording file (assets.json), refer to [Update test recordings](https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-test_2.0.0-beta.3/sdk/core/azure-core-test/README.md#update-test-recordings).
+
 ## Troubleshooting
 
 ### Common Issues
@@ -179,7 +198,7 @@ export AZURE_TEST_LOG_LEVEL=BODY_AND_HEADERS
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-test_2.0.0-beta.2/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-test_2.0.0-beta.3/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
