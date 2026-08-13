@@ -1,7 +1,7 @@
 ---
 title: Azure Site Manager SDK for Java
 description: Reference for Azure Site Manager SDK for Java
-ms.date: 08/12/2026
+ms.date: 08/13/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: sitemanager
