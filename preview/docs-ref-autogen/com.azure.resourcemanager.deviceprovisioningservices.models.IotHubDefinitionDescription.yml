@@ -50,13 +50,23 @@ methods:
   returns:
     description: "the applyAllocationPolicy value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription.authenticationType()"
+  fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription.authenticationType()"
+  name: "authenticationType()"
+  nameWithType: "IotHubDefinitionDescription.authenticationType()"
+  summary: "Get the authentication<wbr>Type property: Iot<wbr>Hub MI authentication type: Key<wbr>Based, User<wbr>Assigned, System<wbr>Assigned."
+  syntax: "public IotHubAuthenticationType authenticationType()"
+  desc: "Get the authenticationType property: IotHub MI authentication type: KeyBased, UserAssigned, SystemAssigned."
+  returns:
+    description: "the authenticationType value."
+    type: "<xref href=\"com.azure.resourcemanager.deviceprovisioningservices.models.IotHubAuthenticationType?alt=com.azure.resourcemanager.deviceprovisioningservices.models.IotHubAuthenticationType&text=IotHubAuthenticationType\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription.connectionString()"
   fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription.connectionString()"
   name: "connectionString()"
   nameWithType: "IotHubDefinitionDescription.connectionString()"
   summary: "Get the connection<wbr>String property: Connection string of the IoT hub."
   syntax: "public String connectionString()"
-  desc: "Get the connectionString property: Connection string of the IoT hub."
+  desc: "Get the connectionString property: Connection string of the IoT hub. This is required when authenticationType is KeyBased."
   returns:
     description: "the connectionString value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -79,6 +89,16 @@ methods:
   returns:
     description: "An instance of IotHubDefinitionDescription if the JsonReader was pointing to an instance of it, or null\n if it was pointing to JSON null."
     type: "<xref href=\"com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription?alt=com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription&text=IotHubDefinitionDescription\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription.hostName()"
+  fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription.hostName()"
+  name: "hostName()"
+  nameWithType: "IotHubDefinitionDescription.hostName()"
+  summary: "Get the host<wbr>Name property: Host name of the IoT hub."
+  syntax: "public String hostName()"
+  desc: "Get the hostName property: Host name of the IoT hub. This is required when connectionString is not provided."
+  returns:
+    description: "the hostName value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription.location()"
   fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription.location()"
   name: "location()"
@@ -98,6 +118,16 @@ methods:
   desc: "Get the name property: Host name of the IoT hub."
   returns:
     description: "the name value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription.selectedUserAssignedIdentityResourceId()"
+  fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription.selectedUserAssignedIdentityResourceId()"
+  name: "selectedUserAssignedIdentityResourceId()"
+  nameWithType: "IotHubDefinitionDescription.selectedUserAssignedIdentityResourceId()"
+  summary: "Get the selected<wbr>User<wbr>Assigned<wbr>Identity<wbr>Resource<wbr>Id property: The selected user-assigned identity resource Id associated with IoT hub."
+  syntax: "public String selectedUserAssignedIdentityResourceId()"
+  desc: "Get the selectedUserAssignedIdentityResourceId property: The selected user-assigned identity resource Id associated with IoT hub. This is required when authenticationType is UserAssigned."
+  returns:
+    description: "the selectedUserAssignedIdentityResourceId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription.toJson(JsonWriter jsonWriter)"
@@ -139,6 +169,20 @@ methods:
   returns:
     description: "the IotHubDefinitionDescription object itself."
     type: "<xref href=\"com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription?alt=com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription&text=IotHubDefinitionDescription\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription.withAuthenticationType(com.azure.resourcemanager.deviceprovisioningservices.models.IotHubAuthenticationType)"
+  fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription.withAuthenticationType(IotHubAuthenticationType authenticationType)"
+  name: "withAuthenticationType(IotHubAuthenticationType authenticationType)"
+  nameWithType: "IotHubDefinitionDescription.withAuthenticationType(IotHubAuthenticationType authenticationType)"
+  summary: "Set the authentication<wbr>Type property: Iot<wbr>Hub MI authentication type: Key<wbr>Based, User<wbr>Assigned, System<wbr>Assigned."
+  parameters:
+  - description: "the authenticationType value to set."
+    name: "authenticationType"
+    type: "<xref href=\"com.azure.resourcemanager.deviceprovisioningservices.models.IotHubAuthenticationType?alt=com.azure.resourcemanager.deviceprovisioningservices.models.IotHubAuthenticationType&text=IotHubAuthenticationType\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public IotHubDefinitionDescription withAuthenticationType(IotHubAuthenticationType authenticationType)"
+  desc: "Set the authenticationType property: IotHub MI authentication type: KeyBased, UserAssigned, SystemAssigned."
+  returns:
+    description: "the IotHubDefinitionDescription object itself."
+    type: "<xref href=\"com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription?alt=com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription&text=IotHubDefinitionDescription\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription.withConnectionString(java.lang.String)"
   fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription.withConnectionString(String connectionString)"
   name: "withConnectionString(String connectionString)"
@@ -149,7 +193,21 @@ methods:
     name: "connectionString"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public IotHubDefinitionDescription withConnectionString(String connectionString)"
-  desc: "Set the connectionString property: Connection string of the IoT hub."
+  desc: "Set the connectionString property: Connection string of the IoT hub. This is required when authenticationType is KeyBased."
+  returns:
+    description: "the IotHubDefinitionDescription object itself."
+    type: "<xref href=\"com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription?alt=com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription&text=IotHubDefinitionDescription\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription.withHostName(java.lang.String)"
+  fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription.withHostName(String hostName)"
+  name: "withHostName(String hostName)"
+  nameWithType: "IotHubDefinitionDescription.withHostName(String hostName)"
+  summary: "Set the host<wbr>Name property: Host name of the IoT hub."
+  parameters:
+  - description: "the hostName value to set."
+    name: "hostName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public IotHubDefinitionDescription withHostName(String hostName)"
+  desc: "Set the hostName property: Host name of the IoT hub. This is required when connectionString is not provided."
   returns:
     description: "the IotHubDefinitionDescription object itself."
     type: "<xref href=\"com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription?alt=com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription&text=IotHubDefinitionDescription\" data-throw-if-not-resolved=\"False\" />"
@@ -167,10 +225,24 @@ methods:
   returns:
     description: "the IotHubDefinitionDescription object itself."
     type: "<xref href=\"com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription?alt=com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription&text=IotHubDefinitionDescription\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription.withSelectedUserAssignedIdentityResourceId(java.lang.String)"
+  fullName: "com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription.withSelectedUserAssignedIdentityResourceId(String selectedUserAssignedIdentityResourceId)"
+  name: "withSelectedUserAssignedIdentityResourceId(String selectedUserAssignedIdentityResourceId)"
+  nameWithType: "IotHubDefinitionDescription.withSelectedUserAssignedIdentityResourceId(String selectedUserAssignedIdentityResourceId)"
+  summary: "Set the selected<wbr>User<wbr>Assigned<wbr>Identity<wbr>Resource<wbr>Id property: The selected user-assigned identity resource Id associated with IoT hub."
+  parameters:
+  - description: "the selectedUserAssignedIdentityResourceId value to set."
+    name: "selectedUserAssignedIdentityResourceId"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public IotHubDefinitionDescription withSelectedUserAssignedIdentityResourceId(String selectedUserAssignedIdentityResourceId)"
+  desc: "Set the selectedUserAssignedIdentityResourceId property: The selected user-assigned identity resource Id associated with IoT hub. This is required when authenticationType is UserAssigned."
+  returns:
+    description: "the IotHubDefinitionDescription object itself."
+    type: "<xref href=\"com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription?alt=com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription&text=IotHubDefinitionDescription\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Description of the IoT hub."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription?alt=com.azure.resourcemanager.deviceprovisioningservices.models.IotHubDefinitionDescription&text=IotHubDefinitionDescription\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.deviceprovisioningservices.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-deviceprovisioningservices:1.2.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-deviceprovisioningservices:1.2.0-beta.2
