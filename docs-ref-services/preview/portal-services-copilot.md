@@ -1,7 +1,7 @@
 ---
 title: Azure Portal Services Copilot SDK for Java
 description: Reference for Azure Portal Services Copilot SDK for Java
-ms.date: 08/14/2026
+ms.date: 08/17/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: portalservicescopilot
