@@ -1,17 +1,17 @@
 ---
-title: Azure Resource Manager RecoveryServicesBackup client library for Java
+title: Azure Resource Manager Recovery Services Backup client library for Java
 keywords: Azure, java, SDK, API, azure-resourcemanager-recoveryservicesbackup, recoveryservicesbackup
-ms.date: 04/17/2025
+ms.date: 08/17/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: recoveryservicesbackup
 ---
-# Azure Resource Manager RecoveryServicesBackup client library for Java - version 1.6.0 
+# Azure Resource Manager Recovery Services Backup client library for Java - version 1.7.0 
 
 
-Azure Resource Manager RecoveryServicesBackup client library for Java.
+Azure Resource Manager Recovery Services Backup client library for Java.
 
-This package contains Microsoft Azure SDK for RecoveryServicesBackup Management SDK. Open API 2.0 Specs for Azure RecoveryServices Backup service. Package tag package-2025-02-01. For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
+This package contains Microsoft Azure SDK for Recovery Services Backup Management SDK. Open API 2.0 Specs for Azure RecoveryServices Backup service. Package api-version 2026-07-01. For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
 
 ## We'd love to hear your feedback
 
@@ -41,7 +41,7 @@ Various documentation is available to help you get started
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
     <artifactId>azure-resourcemanager-recoveryservicesbackup</artifactId>
-    <version>1.6.0</version>
+    <version>1.7.0</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -146,14 +146,14 @@ vault = recoveryServicesManager.vaults()
 
 protectionPolicyResource = recoveryServicesBackupManager.protectionPolicies()
     .define(policyName)
-    .withRegion(REGION)
     .withExistingVault(vaultName, resourceGroupName)
+    .withRegion(REGION)
     .withProperties(new AzureVmWorkloadProtectionPolicy().withWorkLoadType(WorkloadType.SQLDATA_BASE)
         .withSettings(new Settings().withTimeZone("Pacific Standard Time").withIssqlcompression(false))
         .withSubProtectionPolicy(lstSubProtectionPolicy))
     .create();
 ```
-[Code snippets and samples](https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-recoveryservicesbackup_1.6.0/sdk/recoveryservicesbackup/azure-resourcemanager-recoveryservicesbackup/SAMPLE.md)
+[Code snippets and samples](https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-recoveryservicesbackup_1.7.0/sdk/recoveryservicesbackup/azure-resourcemanager-recoveryservicesbackup/SAMPLE.md)
 
 
 ## Troubleshooting
@@ -175,12 +175,12 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: https://learn.microsoft.com/azure/developer/java/fundamentals/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-recoveryservicesbackup_1.6.0/sdk/identity/azure-identity
-[azure_identity_credentials]: https://github.com/Azure/azure-sdk-for-java/tree/azure-resourcemanager-recoveryservicesbackup_1.6.0/sdk/identity/azure-identity#credentials
-[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-recoveryservicesbackup_1.6.0/sdk/core/azure-core-http-netty
-[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-recoveryservicesbackup_1.6.0/sdk/resourcemanager/docs/AUTH.md
-[design]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-recoveryservicesbackup_1.6.0/sdk/resourcemanager/docs/DESIGN.md
-[cg]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-recoveryservicesbackup_1.6.0/CONTRIBUTING.md
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-recoveryservicesbackup_1.7.0/sdk/identity/azure-identity
+[azure_identity_credentials]: https://github.com/Azure/azure-sdk-for-java/tree/com.azure.resourcemanager+azure-resourcemanager-recoveryservicesbackup_1.7.0/sdk/identity/azure-identity#credentials
+[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-recoveryservicesbackup_1.7.0/sdk/core/azure-core-http-netty
+[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-recoveryservicesbackup_1.7.0/sdk/resourcemanager/docs/AUTH.md
+[design]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-recoveryservicesbackup_1.7.0/sdk/resourcemanager/docs/DESIGN.md
+[cg]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-recoveryservicesbackup_1.7.0/CONTRIBUTING.md
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
 
