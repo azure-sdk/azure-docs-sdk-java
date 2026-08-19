@@ -27,7 +27,9 @@ constructors:
   name: "RecoveryPoint()"
   nameWithType: "RecoveryPoint.RecoveryPoint()"
   summary: "Creates an instance of Recovery<wbr>Point class."
-  syntax: "public RecoveryPoint()"
+  modifiers:
+  - "protected"
+  syntax: "protected RecoveryPoint()"
   desc: "Creates an instance of RecoveryPoint class."
 methods:
 - uid: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPoint.fromJson(com.azure.json.JsonReader)"
@@ -59,6 +61,26 @@ methods:
   returns:
     description: "the objectType value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPoint.threatInfo()"
+  fullName: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPoint.threatInfo()"
+  name: "threatInfo()"
+  nameWithType: "RecoveryPoint.threatInfo()"
+  summary: "Get the threat<wbr>Info property: Recovery point threat information."
+  syntax: "public List<ThreatInfo> threatInfo()"
+  desc: "Get the threatInfo property: Recovery point threat information."
+  returns:
+    description: "the threatInfo value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.recoveryservicesbackup.models.ThreatInfo?alt=com.azure.resourcemanager.recoveryservicesbackup.models.ThreatInfo&text=ThreatInfo\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPoint.threatStatus()"
+  fullName: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPoint.threatStatus()"
+  name: "threatStatus()"
+  nameWithType: "RecoveryPoint.threatStatus()"
+  summary: "Get the threat<wbr>Status property: Threat status of the recovery point."
+  syntax: "public ThreatStatus threatStatus()"
+  desc: "Get the threatStatus property: Threat status of the recovery point."
+  returns:
+    description: "the threatStatus value."
+    type: "<xref href=\"com.azure.resourcemanager.recoveryservicesbackup.models.ThreatStatus?alt=com.azure.resourcemanager.recoveryservicesbackup.models.ThreatStatus&text=ThreatStatus\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPoint.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPoint.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -71,17 +93,10 @@ methods:
   - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPoint.validate()"
-  fullName: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPoint.validate()"
-  name: "validate()"
-  nameWithType: "RecoveryPoint.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
 type: "class"
 desc: "Base class for backup copies. Workload-specific backup copies are derived from this class."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPoint?alt=com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPoint&text=RecoveryPoint\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.recoveryservicesbackup.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-recoveryservicesbackup:1.6.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-recoveryservicesbackup:1.7.0

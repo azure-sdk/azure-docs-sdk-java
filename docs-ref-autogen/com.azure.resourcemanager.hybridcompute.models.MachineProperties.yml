@@ -150,6 +150,54 @@ methods:
   returns:
     description: "the extensions value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.hybridcompute.models.MachineExtensionInstanceView?alt=com.azure.resourcemanager.hybridcompute.models.MachineExtensionInstanceView&text=MachineExtensionInstanceView\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.hybridcompute.models.MachineProperties.firmwareProfile()"
+  fullName: "com.azure.resourcemanager.hybridcompute.models.MachineProperties.firmwareProfile()"
+  name: "firmwareProfile()"
+  nameWithType: "MachineProperties.firmwareProfile()"
+  summary: "Gets the firmware<wbr>Profile property: Information about the machine's firmware."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract FirmwareProfile firmwareProfile()"
+  desc: "Gets the firmwareProfile property: Information about the machine's firmware."
+  returns:
+    description: "the firmwareProfile value."
+    type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.FirmwareProfile?alt=com.azure.resourcemanager.hybridcompute.models.FirmwareProfile&text=FirmwareProfile\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.hybridcompute.models.MachineProperties.hardwareProfile()"
+  fullName: "com.azure.resourcemanager.hybridcompute.models.MachineProperties.hardwareProfile()"
+  name: "hardwareProfile()"
+  nameWithType: "MachineProperties.hardwareProfile()"
+  summary: "Gets the hardware<wbr>Profile property: Information about the machine's hardware."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract HardwareProfile hardwareProfile()"
+  desc: "Gets the hardwareProfile property: Information about the machine's hardware."
+  returns:
+    description: "the hardwareProfile value."
+    type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.HardwareProfile?alt=com.azure.resourcemanager.hybridcompute.models.HardwareProfile&text=HardwareProfile\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.hybridcompute.models.MachineProperties.hardwareResourceId()"
+  fullName: "com.azure.resourcemanager.hybridcompute.models.MachineProperties.hardwareResourceId()"
+  name: "hardwareResourceId()"
+  nameWithType: "MachineProperties.hardwareResourceId()"
+  summary: "Gets the hardware<wbr>Resource<wbr>Id property: Specifies the resource ID of the associated hardware device."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String hardwareResourceId()"
+  desc: "Gets the hardwareResourceId property: Specifies the resource ID of the associated hardware device. Only settable by HCI RP."
+  returns:
+    description: "the hardwareResourceId value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.hybridcompute.models.MachineProperties.identityKeyStore()"
+  fullName: "com.azure.resourcemanager.hybridcompute.models.MachineProperties.identityKeyStore()"
+  name: "identityKeyStore()"
+  nameWithType: "MachineProperties.identityKeyStore()"
+  summary: "Gets the identity<wbr>Key<wbr>Store property: Specifies the identity key store a machine is using."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract IdentityKeyStore identityKeyStore()"
+  desc: "Gets the identityKeyStore property: Specifies the identity key store a machine is using."
+  returns:
+    description: "the identityKeyStore value."
+    type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.IdentityKeyStore?alt=com.azure.resourcemanager.hybridcompute.models.IdentityKeyStore&text=IdentityKeyStore\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.hybridcompute.models.MachineProperties.innerModel()"
   fullName: "com.azure.resourcemanager.hybridcompute.models.MachineProperties.innerModel()"
   name: "innerModel()"
@@ -366,6 +414,42 @@ methods:
   returns:
     description: "the status value."
     type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.StatusTypes?alt=com.azure.resourcemanager.hybridcompute.models.StatusTypes&text=StatusTypes\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.hybridcompute.models.MachineProperties.statusReason()"
+  fullName: "com.azure.resourcemanager.hybridcompute.models.MachineProperties.statusReason()"
+  name: "statusReason()"
+  nameWithType: "MachineProperties.statusReason()"
+  summary: "Gets the status<wbr>Reason property: Indicates whether the service has detected that this Arc machine is a clone of another onboarded machine."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract MachineStatusReason statusReason()"
+  desc: "Gets the statusReason property: Indicates whether the service has detected that this Arc machine is a clone of another onboarded machine. Service-computed; not settable by the user."
+  returns:
+    description: "the statusReason value."
+    type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.MachineStatusReason?alt=com.azure.resourcemanager.hybridcompute.models.MachineStatusReason&text=MachineStatusReason\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.hybridcompute.models.MachineProperties.storageProfile()"
+  fullName: "com.azure.resourcemanager.hybridcompute.models.MachineProperties.storageProfile()"
+  name: "storageProfile()"
+  nameWithType: "MachineProperties.storageProfile()"
+  summary: "Gets the storage<wbr>Profile property: Information about the machine's storage."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract StorageProfile storageProfile()"
+  desc: "Gets the storageProfile property: Information about the machine's storage."
+  returns:
+    description: "the storageProfile value."
+    type: "<xref href=\"com.azure.resourcemanager.hybridcompute.models.StorageProfile?alt=com.azure.resourcemanager.hybridcompute.models.StorageProfile&text=StorageProfile\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.hybridcompute.models.MachineProperties.tpmEkCertificate()"
+  fullName: "com.azure.resourcemanager.hybridcompute.models.MachineProperties.tpmEkCertificate()"
+  name: "tpmEkCertificate()"
+  nameWithType: "MachineProperties.tpmEkCertificate()"
+  summary: "Gets the tpm<wbr>EkCertificate property: Endorsement Key Certificate of the Trusted Platform Module (TPM) that the client provides to be used during initial resource onboarding."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String tpmEkCertificate()"
+  desc: "Gets the tpmEkCertificate property: Endorsement Key Certificate of the Trusted Platform Module (TPM) that the client provides to be used during initial resource onboarding."
+  returns:
+    description: "the tpmEkCertificate value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.hybridcompute.models.MachineProperties.vmId()"
   fullName: "com.azure.resourcemanager.hybridcompute.models.MachineProperties.vmId()"
   name: "vmId()"
@@ -373,11 +457,11 @@ methods:
   summary: "Gets the vm<wbr>Id property: Specifies the hybrid machine unique ID."
   modifiers:
   - "abstract"
-  syntax: "public abstract UUID vmId()"
+  syntax: "public abstract String vmId()"
   desc: "Gets the vmId property: Specifies the hybrid machine unique ID."
   returns:
     description: "the vmId value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html\">UUID</a>"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.hybridcompute.models.MachineProperties.vmUuid()"
   fullName: "com.azure.resourcemanager.hybridcompute.models.MachineProperties.vmUuid()"
   name: "vmUuid()"
@@ -385,13 +469,13 @@ methods:
   summary: "Gets the vm<wbr>Uuid property: Specifies the Arc Machine's unique SMBIOS ID."
   modifiers:
   - "abstract"
-  syntax: "public abstract UUID vmUuid()"
+  syntax: "public abstract String vmUuid()"
   desc: "Gets the vmUuid property: Specifies the Arc Machine's unique SMBIOS ID."
   returns:
     description: "the vmUuid value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html\">UUID</a>"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 type: "interface"
 desc: "An immutable client-side representation of MachineProperties."
 metadata: {}
 package: "com.azure.resourcemanager.hybridcompute.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-hybridcompute:1.0.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-hybridcompute:1.1.0

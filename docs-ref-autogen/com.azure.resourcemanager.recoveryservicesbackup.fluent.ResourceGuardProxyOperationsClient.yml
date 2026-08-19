@@ -14,10 +14,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the recovery services vault."
+  - description: "The name of the VaultResource."
     name: "vaultName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The resourceGuardProxyName parameter."
@@ -33,10 +33,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the recovery services vault."
+  - description: "The name of the VaultResource."
     name: "vaultName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The resourceGuardProxyName parameter."
@@ -58,10 +58,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the recovery services vault."
+  - description: "The name of the VaultResource."
     name: "vaultName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The resourceGuardProxyName parameter."
@@ -80,10 +80,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the recovery services vault."
+  - description: "The name of the VaultResource."
     name: "vaultName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The resourceGuardProxyName parameter."
@@ -97,6 +97,47 @@ methods:
   returns:
     description: "the response body along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.recoveryservicesbackup.fluent.models.ResourceGuardProxyBaseResourceInner?alt=com.azure.resourcemanager.recoveryservicesbackup.fluent.models.ResourceGuardProxyBaseResourceInner&text=ResourceGuardProxyBaseResourceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.recoveryservicesbackup.fluent.ResourceGuardProxyOperationsClient.list(java.lang.String,java.lang.String)"
+  fullName: "com.azure.resourcemanager.recoveryservicesbackup.fluent.ResourceGuardProxyOperationsClient.list(String vaultName, String resourceGroupName)"
+  name: "list(String vaultName, String resourceGroupName)"
+  nameWithType: "ResourceGuardProxyOperationsClient.list(String vaultName, String resourceGroupName)"
+  summary: "List the Resource<wbr>Guard<wbr>Proxies under vault."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the VaultResource."
+    name: "vaultName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract PagedIterable<ResourceGuardProxyBaseResourceInner> list(String vaultName, String resourceGroupName)"
+  desc: "List the ResourceGuardProxies under vault."
+  returns:
+    description: "list of ResourceGuardProxyBase resources as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.recoveryservicesbackup.fluent.models.ResourceGuardProxyBaseResourceInner?alt=com.azure.resourcemanager.recoveryservicesbackup.fluent.models.ResourceGuardProxyBaseResourceInner&text=ResourceGuardProxyBaseResourceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.recoveryservicesbackup.fluent.ResourceGuardProxyOperationsClient.list(java.lang.String,java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.recoveryservicesbackup.fluent.ResourceGuardProxyOperationsClient.list(String vaultName, String resourceGroupName, Context context)"
+  name: "list(String vaultName, String resourceGroupName, Context context)"
+  nameWithType: "ResourceGuardProxyOperationsClient.list(String vaultName, String resourceGroupName, Context context)"
+  summary: "List the Resource<wbr>Guard<wbr>Proxies under vault."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the VaultResource."
+    name: "vaultName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract PagedIterable<ResourceGuardProxyBaseResourceInner> list(String vaultName, String resourceGroupName, Context context)"
+  desc: "List the ResourceGuardProxies under vault."
+  returns:
+    description: "list of ResourceGuardProxyBase resources as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.recoveryservicesbackup.fluent.models.ResourceGuardProxyBaseResourceInner?alt=com.azure.resourcemanager.recoveryservicesbackup.fluent.models.ResourceGuardProxyBaseResourceInner&text=ResourceGuardProxyBaseResourceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.recoveryservicesbackup.fluent.ResourceGuardProxyOperationsClient.put(java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.recoveryservicesbackup.fluent.models.ResourceGuardProxyBaseResourceInner)"
   fullName: "com.azure.resourcemanager.recoveryservicesbackup.fluent.ResourceGuardProxyOperationsClient.put(String vaultName, String resourceGroupName, String resourceGuardProxyName, ResourceGuardProxyBaseResourceInner parameters)"
   name: "put(String vaultName, String resourceGroupName, String resourceGuardProxyName, ResourceGuardProxyBaseResourceInner parameters)"
@@ -105,10 +146,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the recovery services vault."
+  - description: "The name of the VaultResource."
     name: "vaultName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The resourceGuardProxyName parameter."
@@ -130,10 +171,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the recovery services vault."
+  - description: "The name of the VaultResource."
     name: "vaultName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The resourceGuardProxyName parameter."
@@ -158,10 +199,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the recovery services vault."
+  - description: "The name of the VaultResource."
     name: "vaultName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The resourceGuardProxyName parameter."
@@ -183,10 +224,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the recovery services vault."
+  - description: "The name of the VaultResource."
     name: "vaultName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The resourceGuardProxyName parameter."
@@ -207,4 +248,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in ResourceGuardProxyOperationsClient."
 metadata: {}
 package: "com.azure.resourcemanager.recoveryservicesbackup.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-recoveryservicesbackup:1.6.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-recoveryservicesbackup:1.7.0

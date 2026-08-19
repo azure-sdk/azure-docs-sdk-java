@@ -489,7 +489,7 @@ methods:
   - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the capacity."
+  - description: "The name of the Microsoft Fabric capacity. It must be a minimum of 3 characters, and a\n maximum of 63."
     name: "capacityName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<RpSkuDetailsForExistingResourceInner> listSkusForCapacity(String resourceGroupName, String capacityName)"
@@ -508,7 +508,7 @@ methods:
   - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the capacity."
+  - description: "The name of the Microsoft Fabric capacity. It must be a minimum of 3 characters, and a\n maximum of 63."
     name: "capacityName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
@@ -519,6 +519,41 @@ methods:
   returns:
     description: "an object that represents enumerating SKUs for existing resources as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.fabric.fluent.models.RpSkuDetailsForExistingResourceInner?alt=com.azure.resourcemanager.fabric.fluent.models.RpSkuDetailsForExistingResourceInner&text=RpSkuDetailsForExistingResourceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.fabric.fluent.FabricCapacitiesClient.listUsages(java.lang.String)"
+  fullName: "com.azure.resourcemanager.fabric.fluent.FabricCapacitiesClient.listUsages(String location)"
+  name: "listUsages(String location)"
+  nameWithType: "FabricCapacitiesClient.listUsages(String location)"
+  summary: "List the current consumption and limit in this location for the provided subscription."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the Azure region."
+    name: "location"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract PagedIterable<QuotaInner> listUsages(String location)"
+  desc: "List the current consumption and limit in this location for the provided subscription."
+  returns:
+    description: "paged collection of Quota items as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.fabric.fluent.models.QuotaInner?alt=com.azure.resourcemanager.fabric.fluent.models.QuotaInner&text=QuotaInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.fabric.fluent.FabricCapacitiesClient.listUsages(java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.fabric.fluent.FabricCapacitiesClient.listUsages(String location, Context context)"
+  name: "listUsages(String location, Context context)"
+  nameWithType: "FabricCapacitiesClient.listUsages(String location, Context context)"
+  summary: "List the current consumption and limit in this location for the provided subscription."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the Azure region."
+    name: "location"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract PagedIterable<QuotaInner> listUsages(String location, Context context)"
+  desc: "List the current consumption and limit in this location for the provided subscription."
+  returns:
+    description: "paged collection of Quota items as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.fabric.fluent.models.QuotaInner?alt=com.azure.resourcemanager.fabric.fluent.models.QuotaInner&text=QuotaInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.fabric.fluent.FabricCapacitiesClient.resume(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.fabric.fluent.FabricCapacitiesClient.resume(String resourceGroupName, String capacityName)"
   name: "resume(String resourceGroupName, String capacityName)"
@@ -640,4 +675,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in FabricCapacitiesClient."
 metadata: {}
 package: "com.azure.resourcemanager.fabric.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-fabric:1.0.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-fabric:1.1.0-beta.1

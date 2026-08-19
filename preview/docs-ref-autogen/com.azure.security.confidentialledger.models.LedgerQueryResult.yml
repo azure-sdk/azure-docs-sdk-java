@@ -1,0 +1,82 @@
+### YamlMime:JavaType
+uid: "com.azure.security.confidentialledger.models.LedgerQueryResult"
+fullName: "com.azure.security.confidentialledger.models.LedgerQueryResult"
+name: "LedgerQueryResult"
+nameWithType: "LedgerQueryResult"
+summary: "The result of querying for a ledger entry from an older transaction id."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **LedgerQueryResult**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.security.confidentialledger.models.LedgerQueryResult?alt=com.azure.security.confidentialledger.models.LedgerQueryResult&text=LedgerQueryResult\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.azure.security.confidentialledger.models.LedgerQueryResult.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.security.confidentialledger.models.LedgerQueryResult.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "LedgerQueryResult.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Ledger<wbr>Query<wbr>Result from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static LedgerQueryResult fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of LedgerQueryResult from the JsonReader."
+  returns:
+    description: "An instance of LedgerQueryResult if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.security.confidentialledger.models.LedgerQueryResult?alt=com.azure.security.confidentialledger.models.LedgerQueryResult&text=LedgerQueryResult\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.security.confidentialledger.models.LedgerQueryResult.getEntry()"
+  fullName: "com.azure.security.confidentialledger.models.LedgerQueryResult.getEntry()"
+  name: "getEntry()"
+  nameWithType: "LedgerQueryResult.getEntry()"
+  summary: "Get the entry property: The ledger entry found as a result of the query."
+  syntax: "public LedgerEntry getEntry()"
+  desc: "Get the entry property: The ledger entry found as a result of the query. This is only available if the query is in Ready state."
+  returns:
+    description: "the entry value."
+    type: "<xref href=\"com.azure.security.confidentialledger.models.LedgerEntry?alt=com.azure.security.confidentialledger.models.LedgerEntry&text=LedgerEntry\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.security.confidentialledger.models.LedgerQueryResult.getState()"
+  fullName: "com.azure.security.confidentialledger.models.LedgerQueryResult.getState()"
+  name: "getState()"
+  nameWithType: "LedgerQueryResult.getState()"
+  summary: "Get the state property: State of a ledger query."
+  syntax: "public ConfidentialLedgerQueryState getState()"
+  desc: "Get the state property: State of a ledger query."
+  returns:
+    description: "the state value."
+    type: "<xref href=\"com.azure.security.confidentialledger.models.ConfidentialLedgerQueryState?alt=com.azure.security.confidentialledger.models.ConfidentialLedgerQueryState&text=ConfidentialLedgerQueryState\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.security.confidentialledger.models.LedgerQueryResult.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.security.confidentialledger.models.LedgerQueryResult.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "LedgerQueryResult.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "The result of querying for a ledger entry from an older transaction id. The ledger entry is available in the response only if the returned state is Ready."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.security.confidentialledger.models.LedgerQueryResult?alt=com.azure.security.confidentialledger.models.LedgerQueryResult&text=LedgerQueryResult\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.security.confidentialledger.models"
+artifact: com.azure:azure-security-confidentialledger:2.0.2-beta.1

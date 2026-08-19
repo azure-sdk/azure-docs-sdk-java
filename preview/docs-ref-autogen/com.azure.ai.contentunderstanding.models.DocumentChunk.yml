@@ -1,0 +1,82 @@
+### YamlMime:JavaType
+uid: "com.azure.ai.contentunderstanding.models.DocumentChunk"
+fullName: "com.azure.ai.contentunderstanding.models.DocumentChunk"
+name: "DocumentChunk"
+nameWithType: "DocumentChunk"
+summary: "A chunk of document content, defined by one or more spans in the markdown."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **DocumentChunk**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.contentunderstanding.models.DocumentChunk?alt=com.azure.ai.contentunderstanding.models.DocumentChunk&text=DocumentChunk\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.azure.ai.contentunderstanding.models.DocumentChunk.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.ai.contentunderstanding.models.DocumentChunk.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "DocumentChunk.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Document<wbr>Chunk from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static DocumentChunk fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of DocumentChunk from the JsonReader."
+  returns:
+    description: "An instance of DocumentChunk if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.ai.contentunderstanding.models.DocumentChunk?alt=com.azure.ai.contentunderstanding.models.DocumentChunk&text=DocumentChunk\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.contentunderstanding.models.DocumentChunk.getSource()"
+  fullName: "com.azure.ai.contentunderstanding.models.DocumentChunk.getSource()"
+  name: "getSource()"
+  nameWithType: "DocumentChunk.getSource()"
+  summary: "Get the source property: Encoded source expression describing the visual bounding polygons of the chunk's content on the page."
+  syntax: "public String getSource()"
+  desc: "Get the source property: Encoded source expression describing the visual bounding polygons of the chunk's content on the page. Derived from the union of layout objects (paragraphs, tables, figures) that compose the chunk."
+  returns:
+    description: "the source value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.ai.contentunderstanding.models.DocumentChunk.getSpans()"
+  fullName: "com.azure.ai.contentunderstanding.models.DocumentChunk.getSpans()"
+  name: "getSpans()"
+  nameWithType: "DocumentChunk.getSpans()"
+  summary: "Get the spans property: List of spans defining the chunk's position(s) in the markdown content."
+  syntax: "public List<ContentSpan> getSpans()"
+  desc: "Get the spans property: List of spans defining the chunk's position(s) in the markdown content."
+  returns:
+    description: "the spans value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.ai.contentunderstanding.models.ContentSpan?alt=com.azure.ai.contentunderstanding.models.ContentSpan&text=ContentSpan\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.ai.contentunderstanding.models.DocumentChunk.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.ai.contentunderstanding.models.DocumentChunk.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "DocumentChunk.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "A chunk of document content, defined by one or more spans in the markdown."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.contentunderstanding.models.DocumentChunk?alt=com.azure.ai.contentunderstanding.models.DocumentChunk&text=DocumentChunk\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.ai.contentunderstanding.models"
+artifact: com.azure:azure-ai-contentunderstanding:1.1.0-beta.3

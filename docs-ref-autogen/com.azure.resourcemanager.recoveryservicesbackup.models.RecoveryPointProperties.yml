@@ -21,14 +21,6 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
 syntax: "public final class **RecoveryPointProperties**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties?alt=com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties&text=RecoveryPointProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
-constructors:
-- uid: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties.RecoveryPointProperties()"
-  fullName: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties.RecoveryPointProperties()"
-  name: "RecoveryPointProperties()"
-  nameWithType: "RecoveryPointProperties.RecoveryPointProperties()"
-  summary: "Creates an instance of Recovery<wbr>Point<wbr>Properties class."
-  syntax: "public RecoveryPointProperties()"
-  desc: "Creates an instance of RecoveryPointProperties class."
 methods:
 - uid: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties.expiryTime()"
   fullName: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties.expiryTime()"
@@ -59,6 +51,16 @@ methods:
   returns:
     description: "An instance of RecoveryPointProperties if the JsonReader was pointing to an instance of it, or null if it\n was pointing to JSON null."
     type: "<xref href=\"com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties?alt=com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties&text=RecoveryPointProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties.immutabilityProperties()"
+  fullName: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties.immutabilityProperties()"
+  name: "immutabilityProperties()"
+  nameWithType: "RecoveryPointProperties.immutabilityProperties()"
+  summary: "Get the immutability<wbr>Properties property: Immutability properties of the recovery point."
+  syntax: "public RecoveryPointImmutabilityProperties immutabilityProperties()"
+  desc: "Get the immutabilityProperties property: Immutability properties of the recovery point."
+  returns:
+    description: "the immutabilityProperties value."
+    type: "<xref href=\"com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointImmutabilityProperties?alt=com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointImmutabilityProperties&text=RecoveryPointImmutabilityProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties.isSoftDeleted()"
   fullName: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties.isSoftDeleted()"
   name: "isSoftDeleted()"
@@ -91,59 +93,10 @@ methods:
   - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties.validate()"
-  fullName: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties.validate()"
-  name: "validate()"
-  nameWithType: "RecoveryPointProperties.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
-- uid: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties.withExpiryTime(java.lang.String)"
-  fullName: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties.withExpiryTime(String expiryTime)"
-  name: "withExpiryTime(String expiryTime)"
-  nameWithType: "RecoveryPointProperties.withExpiryTime(String expiryTime)"
-  summary: "Set the expiry<wbr>Time property: Expiry time of Recovery Point in UTC."
-  parameters:
-  - description: "the expiryTime value to set."
-    name: "expiryTime"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public RecoveryPointProperties withExpiryTime(String expiryTime)"
-  desc: "Set the expiryTime property: Expiry time of Recovery Point in UTC."
-  returns:
-    description: "the RecoveryPointProperties object itself."
-    type: "<xref href=\"com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties?alt=com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties&text=RecoveryPointProperties\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties.withIsSoftDeleted(java.lang.Boolean)"
-  fullName: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties.withIsSoftDeleted(Boolean isSoftDeleted)"
-  name: "withIsSoftDeleted(Boolean isSoftDeleted)"
-  nameWithType: "RecoveryPointProperties.withIsSoftDeleted(Boolean isSoftDeleted)"
-  summary: "Set the is<wbr>Soft<wbr>Deleted property: Bool to indicate whether RP is in soft delete state or not."
-  parameters:
-  - description: "the isSoftDeleted value to set."
-    name: "isSoftDeleted"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
-  syntax: "public RecoveryPointProperties withIsSoftDeleted(Boolean isSoftDeleted)"
-  desc: "Set the isSoftDeleted property: Bool to indicate whether RP is in soft delete state or not."
-  returns:
-    description: "the RecoveryPointProperties object itself."
-    type: "<xref href=\"com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties?alt=com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties&text=RecoveryPointProperties\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties.withRuleName(java.lang.String)"
-  fullName: "com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties.withRuleName(String ruleName)"
-  name: "withRuleName(String ruleName)"
-  nameWithType: "RecoveryPointProperties.withRuleName(String ruleName)"
-  summary: "Set the rule<wbr>Name property: Rule name tagged on Recovery Point that governs life cycle."
-  parameters:
-  - description: "the ruleName value to set."
-    name: "ruleName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public RecoveryPointProperties withRuleName(String ruleName)"
-  desc: "Set the ruleName property: Rule name tagged on Recovery Point that governs life cycle."
-  returns:
-    description: "the RecoveryPointProperties object itself."
-    type: "<xref href=\"com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties?alt=com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties&text=RecoveryPointProperties\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Properties of Recovery Point."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties?alt=com.azure.resourcemanager.recoveryservicesbackup.models.RecoveryPointProperties&text=RecoveryPointProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.recoveryservicesbackup.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-recoveryservicesbackup:1.6.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-recoveryservicesbackup:1.7.0
