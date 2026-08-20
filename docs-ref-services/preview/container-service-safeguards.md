@@ -1,7 +1,7 @@
 ---
 title: Azure Container Service Safeguards SDK for Java
 description: Reference for Azure Container Service Safeguards SDK for Java
-ms.date: 08/19/2026
+ms.date: 08/20/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: containerservicesafeguards
