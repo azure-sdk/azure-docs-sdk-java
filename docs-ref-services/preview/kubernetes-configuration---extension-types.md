@@ -1,7 +1,7 @@
 ---
 title: Azure Kubernetes Configuration - Extension Types SDK for Java
 description: Reference for Azure Kubernetes Configuration - Extension Types SDK for Java
-ms.date: 08/20/2026
+ms.date: 08/21/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: kubernetesconfiguration-extensiontypes
