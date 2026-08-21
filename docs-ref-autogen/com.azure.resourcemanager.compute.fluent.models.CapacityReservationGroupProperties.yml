@@ -75,7 +75,7 @@ methods:
   nameWithType: "CapacityReservationGroupProperties.reservationType()"
   summary: "Get the reservation<wbr>Type property: Indicates the type of capacity reservation."
   syntax: "public ReservationType reservationType()"
-  desc: "Get the reservationType property: Indicates the type of capacity reservation. Allowed values are 'Block' for block capacity reservations and 'Targeted' for reservations that enable a VM to consume a specific capacity reservation when a capacity reservation group is provided. The reservation type is immutable and cannot be changed after it is assigned."
+  desc: "Get the reservationType property: Indicates the type of capacity reservation. Allowed values are 'Block' for block capacity reservations that enable a VM to consume capacity only from this capacity block when it is associated using a capacity reservation group, 'Targeted' for reservations that enable a VM to consume capacity from an explicitly associated capacity reservation group and fall back to the publicly available capacity if the reservation is full, and 'Open' for reservations that a VM consumes when it is eligible from an implicitly associated capacity reservation group with the matching VM size and zone without associating that capacity reservation group and fall back to the publicly available capacity if the reservation is full. The reservation type is immutable and cannot be changed after the capacity reservation group is created."
   returns:
     description: "the reservationType value."
     type: "<xref href=\"com.azure.resourcemanager.compute.models.ReservationType?alt=com.azure.resourcemanager.compute.models.ReservationType&text=ReservationType\" data-throw-if-not-resolved=\"False\" />"
@@ -128,7 +128,7 @@ methods:
     name: "reservationType"
     type: "<xref href=\"com.azure.resourcemanager.compute.models.ReservationType?alt=com.azure.resourcemanager.compute.models.ReservationType&text=ReservationType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public CapacityReservationGroupProperties withReservationType(ReservationType reservationType)"
-  desc: "Set the reservationType property: Indicates the type of capacity reservation. Allowed values are 'Block' for block capacity reservations and 'Targeted' for reservations that enable a VM to consume a specific capacity reservation when a capacity reservation group is provided. The reservation type is immutable and cannot be changed after it is assigned."
+  desc: "Set the reservationType property: Indicates the type of capacity reservation. Allowed values are 'Block' for block capacity reservations that enable a VM to consume capacity only from this capacity block when it is associated using a capacity reservation group, 'Targeted' for reservations that enable a VM to consume capacity from an explicitly associated capacity reservation group and fall back to the publicly available capacity if the reservation is full, and 'Open' for reservations that a VM consumes when it is eligible from an implicitly associated capacity reservation group with the matching VM size and zone without associating that capacity reservation group and fall back to the publicly available capacity if the reservation is full. The reservation type is immutable and cannot be changed after the capacity reservation group is created."
   returns:
     description: "the CapacityReservationGroupProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.fluent.models.CapacityReservationGroupProperties?alt=com.azure.resourcemanager.compute.fluent.models.CapacityReservationGroupProperties&text=CapacityReservationGroupProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -152,4 +152,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.compute.fluent.models.CapacityReservationGroupProperties?alt=com.azure.resourcemanager.compute.fluent.models.CapacityReservationGroupProperties&text=CapacityReservationGroupProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.compute.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.59.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.60.0

@@ -42,38 +42,50 @@ fields:
   fullName: "com.azure.resourcemanager.compute.models.VirtualMachinePriorityTypes.LOW"
   name: "LOW"
   nameWithType: "VirtualMachinePriorityTypes.LOW"
-  summary: "Static value Low for Virtual<wbr>Machine<wbr>Priority<wbr>Types."
+  summary: "Low priority for a standalone virtual machine or the virtual machines in the scale set."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.compute.models.VirtualMachinePriorityTypes?alt=com.azure.resourcemanager.compute.models.VirtualMachinePriorityTypes&text=VirtualMachinePriorityTypes\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final VirtualMachinePriorityTypes LOW"
-  desc: "Static value Low for VirtualMachinePriorityTypes."
+  desc: "Low priority for a standalone virtual machine or the virtual machines in the scale set. Will be Deprecated, use Spot instead."
 - uid: "com.azure.resourcemanager.compute.models.VirtualMachinePriorityTypes.REGULAR"
   fullName: "com.azure.resourcemanager.compute.models.VirtualMachinePriorityTypes.REGULAR"
   name: "REGULAR"
   nameWithType: "VirtualMachinePriorityTypes.REGULAR"
-  summary: "Static value Regular for Virtual<wbr>Machine<wbr>Priority<wbr>Types."
+  summary: "Regular Priority for a standalone virtual machine or the virtual machines in the scale set."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.compute.models.VirtualMachinePriorityTypes?alt=com.azure.resourcemanager.compute.models.VirtualMachinePriorityTypes&text=VirtualMachinePriorityTypes\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final VirtualMachinePriorityTypes REGULAR"
-  desc: "Static value Regular for VirtualMachinePriorityTypes."
+  desc: "Regular Priority for a standalone virtual machine or the virtual machines in the scale set. This is the default priority and it will be used to deploy regular VM/VMSS."
 - uid: "com.azure.resourcemanager.compute.models.VirtualMachinePriorityTypes.SPOT"
   fullName: "com.azure.resourcemanager.compute.models.VirtualMachinePriorityTypes.SPOT"
   name: "SPOT"
   nameWithType: "VirtualMachinePriorityTypes.SPOT"
-  summary: "Static value Spot for Virtual<wbr>Machine<wbr>Priority<wbr>Types."
+  summary: "Spot priority for a standalone virtual machine or the virtual machines in the scale set."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.compute.models.VirtualMachinePriorityTypes?alt=com.azure.resourcemanager.compute.models.VirtualMachinePriorityTypes&text=VirtualMachinePriorityTypes\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final VirtualMachinePriorityTypes SPOT"
-  desc: "Static value Spot for VirtualMachinePriorityTypes."
+  desc: "Spot priority for a standalone virtual machine or the virtual machines in the scale set."
+- uid: "com.azure.resourcemanager.compute.models.VirtualMachinePriorityTypes.SPOT_PLUS"
+  fullName: "com.azure.resourcemanager.compute.models.VirtualMachinePriorityTypes.SPOT_PLUS"
+  name: "SPOT_PLUS"
+  nameWithType: "VirtualMachinePriorityTypes.SPOT_PLUS"
+  summary: "Spot<wbr>Plus priority for a standalone virtual machine or the virtual machines in the scale set."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.resourcemanager.compute.models.VirtualMachinePriorityTypes?alt=com.azure.resourcemanager.compute.models.VirtualMachinePriorityTypes&text=VirtualMachinePriorityTypes\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final VirtualMachinePriorityTypes SPOT_PLUS"
+  desc: "SpotPlus priority for a standalone virtual machine or the virtual machines in the scale set. This is an enum value that will be used to deploy Azure Spot Plus VM/VMSS, which is the next generation of Azure Spot VM/VMSS with more reliability and longer running time."
 methods:
 - uid: "com.azure.resourcemanager.compute.models.VirtualMachinePriorityTypes.fromString(java.lang.String)"
   fullName: "com.azure.resourcemanager.compute.models.VirtualMachinePriorityTypes.fromString(String name)"
@@ -104,7 +116,7 @@ methods:
     description: "known VirtualMachinePriorityTypes values."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html\">Collection</a>&lt;<xref href=\"com.azure.resourcemanager.compute.models.VirtualMachinePriorityTypes?alt=com.azure.resourcemanager.compute.models.VirtualMachinePriorityTypes&text=VirtualMachinePriorityTypes\" data-throw-if-not-resolved=\"False\" />&gt;"
 type: "class"
-desc: "Specifies the priority for a standalone virtual machine or the virtual machines in the scale set. 'Low' enum will be deprecated in the future, please use 'Spot' as the enum to deploy Azure Spot VM/VMSS."
+desc: "Specifies the priority for a standalone virtual machine or the virtual machines in the scale set."
 metadata: {}
 package: "com.azure.resourcemanager.compute.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.59.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.60.0

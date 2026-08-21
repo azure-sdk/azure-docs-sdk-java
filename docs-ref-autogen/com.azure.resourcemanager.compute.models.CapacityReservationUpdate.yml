@@ -111,9 +111,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.models.CapacityReservationUpdate.scheduleProfile()"
   name: "scheduleProfile()"
   nameWithType: "CapacityReservationUpdate.scheduleProfile()"
-  summary: "Get the schedule<wbr>Profile property: Defines the schedule for Block-type capacity reservations."
+  summary: "Get the schedule<wbr>Profile property: Defines the schedule for Block and Future capacity reservations."
   syntax: "public ScheduleProfile scheduleProfile()"
-  desc: "Get the scheduleProfile property: Defines the schedule for Block-type capacity reservations. Specifies the schedule during which capacity reservation is active and VM or VMSS resource can be allocated using reservation. This property is required and only supported when the capacity reservation group type is 'Block'. The scheduleProfile, start, and end fields are immutable after creation. Minimum API version: 2025-04-01. Please refer to https://aka.ms/blockcapacityreservation for more details."
+  desc: "Get the scheduleProfile property: Defines the schedule for Block and Future capacity reservations. Specifies the schedule during which capacity reservation is active and VM or VMSS resource can be allocated using reservation. For Block capacity reservations, the scheduleProfile, start, and end fields are immutable after creation. Please refer to https://aka.ms/blockcapacityreservation for more details. Minimum API version for Block capacity reservations: 2025-04-01. Future capacity reservations must use this property with only a start time, which can be changed until the ‘modifiableUntil’ time. Please refer to https://aka.ms/futurecapacityreservation for more details. Minimum API version for Future capacity reservations: 2026-04-01."
   returns:
     description: "the scheduleProfile value."
     type: "<xref href=\"com.azure.resourcemanager.compute.models.ScheduleProfile?alt=com.azure.resourcemanager.compute.models.ScheduleProfile&text=ScheduleProfile\" data-throw-if-not-resolved=\"False\" />"
@@ -172,13 +172,13 @@ methods:
   fullName: "com.azure.resourcemanager.compute.models.CapacityReservationUpdate.withScheduleProfile(ScheduleProfile scheduleProfile)"
   name: "withScheduleProfile(ScheduleProfile scheduleProfile)"
   nameWithType: "CapacityReservationUpdate.withScheduleProfile(ScheduleProfile scheduleProfile)"
-  summary: "Set the schedule<wbr>Profile property: Defines the schedule for Block-type capacity reservations."
+  summary: "Set the schedule<wbr>Profile property: Defines the schedule for Block and Future capacity reservations."
   parameters:
   - description: "the scheduleProfile value to set."
     name: "scheduleProfile"
     type: "<xref href=\"com.azure.resourcemanager.compute.models.ScheduleProfile?alt=com.azure.resourcemanager.compute.models.ScheduleProfile&text=ScheduleProfile\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public CapacityReservationUpdate withScheduleProfile(ScheduleProfile scheduleProfile)"
-  desc: "Set the scheduleProfile property: Defines the schedule for Block-type capacity reservations. Specifies the schedule during which capacity reservation is active and VM or VMSS resource can be allocated using reservation. This property is required and only supported when the capacity reservation group type is 'Block'. The scheduleProfile, start, and end fields are immutable after creation. Minimum API version: 2025-04-01. Please refer to https://aka.ms/blockcapacityreservation for more details."
+  desc: "Set the scheduleProfile property: Defines the schedule for Block and Future capacity reservations. Specifies the schedule during which capacity reservation is active and VM or VMSS resource can be allocated using reservation. For Block capacity reservations, the scheduleProfile, start, and end fields are immutable after creation. Please refer to https://aka.ms/blockcapacityreservation for more details. Minimum API version for Block capacity reservations: 2025-04-01. Future capacity reservations must use this property with only a start time, which can be changed until the ‘modifiableUntil’ time. Please refer to https://aka.ms/futurecapacityreservation for more details. Minimum API version for Future capacity reservations: 2026-04-01."
   returns:
     description: "the CapacityReservationUpdate object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.models.CapacityReservationUpdate?alt=com.azure.resourcemanager.compute.models.CapacityReservationUpdate&text=CapacityReservationUpdate\" data-throw-if-not-resolved=\"False\" />"
@@ -213,4 +213,4 @@ type: "class"
 desc: "Specifies information about the capacity reservation. sku.capacity cannot be updated for Block Capacity Reservation. Tags can be update for all Capacity Reservation Types."
 metadata: {}
 package: "com.azure.resourcemanager.compute.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.59.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.60.0

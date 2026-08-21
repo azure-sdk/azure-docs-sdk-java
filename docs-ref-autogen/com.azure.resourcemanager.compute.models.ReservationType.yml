@@ -42,26 +42,38 @@ fields:
   fullName: "com.azure.resourcemanager.compute.models.ReservationType.BLOCK"
   name: "BLOCK"
   nameWithType: "ReservationType.BLOCK"
-  summary: "To consume scheduled allocated block capacity reservation when a capacity reservation group is provided."
+  summary: "Block capacity reservations that enable a VM to consume capacity only from this capacity block when it is associated using a capacity reservation group."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.compute.models.ReservationType?alt=com.azure.resourcemanager.compute.models.ReservationType&text=ReservationType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final ReservationType BLOCK"
-  desc: "To consume scheduled allocated block capacity reservation when a capacity reservation group is provided."
+  desc: "Block capacity reservations that enable a VM to consume capacity only from this capacity block when it is associated using a capacity reservation group."
+- uid: "com.azure.resourcemanager.compute.models.ReservationType.OPEN"
+  fullName: "com.azure.resourcemanager.compute.models.ReservationType.OPEN"
+  name: "OPEN"
+  nameWithType: "ReservationType.OPEN"
+  summary: "Reservations that a VM consumes when it is eligible from an implicitly associated capacity reservation group with the matching VM size and zone without associating that capacity reservation group, and fall back to the publicly available capacity if the reservation is full."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.resourcemanager.compute.models.ReservationType?alt=com.azure.resourcemanager.compute.models.ReservationType&text=ReservationType\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final ReservationType OPEN"
+  desc: "Reservations that a VM consumes when it is eligible from an implicitly associated capacity reservation group with the matching VM size and zone without associating that capacity reservation group, and fall back to the publicly available capacity if the reservation is full. Minimum api-version: 2026-04-01."
 - uid: "com.azure.resourcemanager.compute.models.ReservationType.TARGETED"
   fullName: "com.azure.resourcemanager.compute.models.ReservationType.TARGETED"
   name: "TARGETED"
   nameWithType: "ReservationType.TARGETED"
-  summary: "To consume on demand allocated capacity reservation when a capacity reservation group is provided."
+  summary: "Reservations that enable a VM to consume capacity from an explicitly associated capacity reservation group and fall back to the publicly available capacity if the reservation is full."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.compute.models.ReservationType?alt=com.azure.resourcemanager.compute.models.ReservationType&text=ReservationType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final ReservationType TARGETED"
-  desc: "To consume on demand allocated capacity reservation when a capacity reservation group is provided."
+  desc: "Reservations that enable a VM to consume capacity from an explicitly associated capacity reservation group and fall back to the publicly available capacity if the reservation is full."
 methods:
 - uid: "com.azure.resourcemanager.compute.models.ReservationType.fromString(java.lang.String)"
   fullName: "com.azure.resourcemanager.compute.models.ReservationType.fromString(String name)"
@@ -92,7 +104,7 @@ methods:
     description: "known ReservationType values."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html\">Collection</a>&lt;<xref href=\"com.azure.resourcemanager.compute.models.ReservationType?alt=com.azure.resourcemanager.compute.models.ReservationType&text=ReservationType\" data-throw-if-not-resolved=\"False\" />&gt;"
 type: "class"
-desc: "Indicates the type of capacity reservation. Allowed values are 'Block' for block capacity reservations and 'Targeted' for reservations that enable a VM to consume a specific capacity reservation when a capacity reservation group is provided. The reservation type is immutable and cannot be changed after it is assigned."
+desc: "Indicates the type of capacity reservation. Allowed values are 'Block' for block capacity reservations that enable a VM to consume capacity only from this capacity block when it is associated using a capacity reservation group, 'Targeted' for reservations that enable a VM to consume capacity from an explicitly associated capacity reservation group and fall back to the publicly available capacity if the reservation is full, and 'Open' for reservations that a VM consumes when it is eligible from an implicitly associated capacity reservation group with the matching VM size and zone without associating that capacity reservation group and fall back to the publicly available capacity if the reservation is full. Future capacity reservations can be created in 'Targeted' or 'Open' capacity reservation groups. The reservation type is immutable and cannot be changed after the capacity reservation group is created."
 metadata: {}
 package: "com.azure.resourcemanager.compute.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.59.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.60.0
