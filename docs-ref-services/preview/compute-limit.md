@@ -1,7 +1,7 @@
 ---
 title: Azure Compute Limit SDK for Java
 description: Reference for Azure Compute Limit SDK for Java
-ms.date: 08/24/2026
+ms.date: 08/25/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: computelimit

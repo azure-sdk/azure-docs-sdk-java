@@ -1,7 +1,7 @@
 ---
 title: Azure Enclave SDK for Java
 description: Reference for Azure Enclave SDK for Java
-ms.date: 08/24/2026
+ms.date: 08/25/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: enclave
