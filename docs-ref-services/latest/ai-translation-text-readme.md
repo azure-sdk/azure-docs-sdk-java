@@ -1,12 +1,12 @@
 ---
 title: Azure Text Translation client library for Java
 keywords: Azure, java, SDK, API, azure-ai-translation-text, translation
-ms.date: 05/28/2026
+ms.date: 08/25/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: translation
 ---
-# Azure Text Translation client library for Java - version 2.0.0 
+# Azure Text Translation client library for Java - version 2.0.3 
 
 
 Azure text translation is a cloud-based REST API provided by the Azure Translator service. It utilizes neural machine translation technology to deliver precise, contextually relevant, and semantically accurate real-time text translations across all supported languages.
@@ -192,7 +192,7 @@ Samples are provided for each main functional area, and for each area, samples a
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.0/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.3/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -205,7 +205,7 @@ For details on contributing to this repository, see the [contributing guide](htt
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: https://learn.microsoft.com/java/azure/jdk/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.0/sdk/identity/azure-identity
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.3/sdk/identity/azure-identity
 
 [azure_cli]: https://learn.microsoft.com/cli/azure
 [azure_portal]: https://portal.azure.com
@@ -217,20 +217,20 @@ For details on contributing to this repository, see the [contributing guide](htt
 [translate_doc]: https://learn.microsoft.com/azure/ai-services/translator/text-translation/preview/translate-api
 [transliterate_doc]: https://learn.microsoft.com/azure/ai-services/translator/text-translation/preview/transliterate-api
 
-[sample_getlanguages]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.0/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/GetLanguages.java
-[sample_getlanguagesaccept]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.0/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/GetLanguagesAcceptLanguage.java
-[sample_getlanguagesscope]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.0/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/GetLanguagesScope.java
-[sample_translate]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.0/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/Translate.java
-[sample_translatelargelanguagemodel]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.0/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/TranslateLlm.java
-[sample_translatecustom]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.0/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/TranslateCustom.java
-[sample_translatedetection]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.0/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/TranslateDetection.java
-[sample_translatesources]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.0/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/TranslateMultipleSources.java
-[sample_translatetargets]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.0/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/TranslateMultipleTargets.java
-[sample_translatenotranslate]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.0/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/TranslateNoTranslate.java
-[sample_translateprofanity]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.0/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/TranslateProfanity.java
-[sample_translatetexttypes]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.0/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/TranslateTextType.java
-[sample_translatetransliteration]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.0/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/TranslateWithTransliteration.java
-[sample_transliterate]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.0/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/Transliterate.java
+[sample_getlanguages]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.3/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/GetLanguages.java
+[sample_getlanguagesaccept]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.3/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/GetLanguagesAcceptLanguage.java
+[sample_getlanguagesscope]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.3/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/GetLanguagesScope.java
+[sample_translate]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.3/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/Translate.java
+[sample_translatelargelanguagemodel]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.3/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/TranslateLlm.java
+[sample_translatecustom]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.3/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/TranslateCustom.java
+[sample_translatedetection]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.3/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/TranslateDetection.java
+[sample_translatesources]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.3/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/TranslateMultipleSources.java
+[sample_translatetargets]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.3/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/TranslateMultipleTargets.java
+[sample_translatenotranslate]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.3/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/TranslateNoTranslate.java
+[sample_translateprofanity]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.3/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/TranslateProfanity.java
+[sample_translatetexttypes]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.3/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/TranslateTextType.java
+[sample_translatetransliteration]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.3/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/TranslateWithTransliteration.java
+[sample_transliterate]: https://github.com/azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.3/sdk/translation/azure-ai-translation-text/src/samples/java/com/azure/ai/translation/text/Transliterate.java
 
-[translator_client_class]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.0/sdk/translation/azure-ai-translation-text/src/main/java/com/azure/ai/translation/text/TextTranslationClient.java
+[translator_client_class]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-translation-text_2.0.3/sdk/translation/azure-ai-translation-text/src/main/java/com/azure/ai/translation/text/TextTranslationClient.java
 
