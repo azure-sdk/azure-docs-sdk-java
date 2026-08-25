@@ -44,6 +44,16 @@ methods:
   returns:
     description: "The last time a message was sent, or the last time there was a receive request to this topic."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
+- uid: "com.azure.messaging.servicebus.administration.models.TopicRuntimeProperties.getCorrelationFilterCount()"
+  fullName: "com.azure.messaging.servicebus.administration.models.TopicRuntimeProperties.getCorrelationFilterCount()"
+  name: "getCorrelationFilterCount()"
+  nameWithType: "TopicRuntimeProperties.getCorrelationFilterCount()"
+  summary: "Gets the total number of correlation filters across all subscriptions of the topic."
+  syntax: "public int getCorrelationFilterCount()"
+  desc: "Gets the total number of correlation filters across all subscriptions of the topic.\n\nThe service supplies this count only from api-version `2024-05` onwards, and only in regions that have deployed the topic filter count feature. The value is `0` when the client targets an earlier <xref uid=\"com.azure.messaging.servicebus.ServiceBusServiceVersion\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ServiceBusServiceVersion\"></xref> or the region does not supply it."
+  returns:
+    description: "The total number of correlation filters across all subscriptions of the topic."
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.messaging.servicebus.administration.models.TopicRuntimeProperties.getCreatedAt()"
   fullName: "com.azure.messaging.servicebus.administration.models.TopicRuntimeProperties.getCreatedAt()"
   name: "getCreatedAt()"
@@ -84,6 +94,16 @@ methods:
   returns:
     description: "The size of the topic, in bytes."
     type: "<xref href=\"long?alt=long&text=long\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.messaging.servicebus.administration.models.TopicRuntimeProperties.getSqlFilterCount()"
+  fullName: "com.azure.messaging.servicebus.administration.models.TopicRuntimeProperties.getSqlFilterCount()"
+  name: "getSqlFilterCount()"
+  nameWithType: "TopicRuntimeProperties.getSqlFilterCount()"
+  summary: "Gets the total number of SQL filters across all subscriptions of the topic."
+  syntax: "public int getSqlFilterCount()"
+  desc: "Gets the total number of SQL filters across all subscriptions of the topic.\n\nThe service supplies this count only from api-version `2024-05` onwards, and only in regions that have deployed the topic filter count feature. The value is `0` when the client targets an earlier <xref uid=\"com.azure.messaging.servicebus.ServiceBusServiceVersion\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ServiceBusServiceVersion\"></xref> or the region does not supply it."
+  returns:
+    description: "The total number of SQL filters across all subscriptions of the topic."
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.messaging.servicebus.administration.models.TopicRuntimeProperties.getSubscriptionCount()"
   fullName: "com.azure.messaging.servicebus.administration.models.TopicRuntimeProperties.getSubscriptionCount()"
   name: "getSubscriptionCount()"
@@ -108,4 +128,4 @@ type: "class"
 desc: "Runtime properties about the topic."
 metadata: {}
 package: "com.azure.messaging.servicebus.administration.models"
-artifact: com.azure:azure-messaging-servicebus:7.18.0-beta.2
+artifact: com.azure:azure-messaging-servicebus:7.18.0-beta.3
