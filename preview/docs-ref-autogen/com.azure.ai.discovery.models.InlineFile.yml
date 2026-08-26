@@ -1,0 +1,97 @@
+### YamlMime:JavaType
+uid: "com.azure.ai.discovery.models.InlineFile"
+fullName: "com.azure.ai.discovery.models.InlineFile"
+name: "InlineFile"
+nameWithType: "InlineFile"
+summary: "A file to be included in the input data for a tool run and the path where it will be mounted, relative to the working directory."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **InlineFile**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.discovery.models.InlineFile?alt=com.azure.ai.discovery.models.InlineFile&text=InlineFile\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.ai.discovery.models.InlineFile.InlineFile(java.lang.String,java.lang.String)"
+  fullName: "com.azure.ai.discovery.models.InlineFile.InlineFile(String mountPath, String encodedFile)"
+  name: "InlineFile(String mountPath, String encodedFile)"
+  nameWithType: "InlineFile.InlineFile(String mountPath, String encodedFile)"
+  summary: "Creates an instance of Inline<wbr>File class."
+  parameters:
+  - description: "the mountPath value to set."
+    name: "mountPath"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "the encodedFile value to set."
+    name: "encodedFile"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public InlineFile(String mountPath, String encodedFile)"
+  desc: "Creates an instance of InlineFile class."
+methods:
+- uid: "com.azure.ai.discovery.models.InlineFile.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.ai.discovery.models.InlineFile.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "InlineFile.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Inline<wbr>File from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static InlineFile fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of InlineFile from the JsonReader."
+  returns:
+    description: "An instance of InlineFile if the JsonReader was pointing to an instance of it, or null if it was pointing\n to JSON null."
+    type: "<xref href=\"com.azure.ai.discovery.models.InlineFile?alt=com.azure.ai.discovery.models.InlineFile&text=InlineFile\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.discovery.models.InlineFile.getEncodedFile()"
+  fullName: "com.azure.ai.discovery.models.InlineFile.getEncodedFile()"
+  name: "getEncodedFile()"
+  nameWithType: "InlineFile.getEncodedFile()"
+  summary: "Get the encoded<wbr>File property: File contents: Compressed using .gz then base64-encoded."
+  syntax: "public String getEncodedFile()"
+  desc: "Get the encodedFile property: File contents: Compressed using .gz then base64-encoded."
+  returns:
+    description: "the encodedFile value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.ai.discovery.models.InlineFile.getMountPath()"
+  fullName: "com.azure.ai.discovery.models.InlineFile.getMountPath()"
+  name: "getMountPath()"
+  nameWithType: "InlineFile.getMountPath()"
+  summary: "Get the mount<wbr>Path property: Absolute path within the container at which to mount this file."
+  syntax: "public String getMountPath()"
+  desc: "Get the mountPath property: Absolute path within the container at which to mount this file."
+  returns:
+    description: "the mountPath value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.ai.discovery.models.InlineFile.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.ai.discovery.models.InlineFile.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "InlineFile.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "A file to be included in the input data for a tool run and the path where it will be mounted, relative to the working directory."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.discovery.models.InlineFile?alt=com.azure.ai.discovery.models.InlineFile&text=InlineFile\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.ai.discovery.models"
+artifact: com.azure:azure-ai-discovery:1.0.0-beta.1
