@@ -4,7 +4,7 @@ description: Reference for Azure Schema Registry SDK for Java
 ms.date: 08/26/2026
 ms.topic: reference
 ms.devlang: java
-ms.service: schemaregistry
+ms.service: schema-registry
 ---
 # Azure Schema Registry SDK for Java - latest
 ## Packages - latest
