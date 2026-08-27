@@ -1,7 +1,7 @@
 ---
 title: Azure Managed Service Identity SDK for Java
 description: Reference for Azure Managed Service Identity SDK for Java
-ms.date: 08/26/2026
+ms.date: 08/27/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: azure-resource-manager

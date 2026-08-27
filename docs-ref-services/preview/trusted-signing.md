@@ -1,7 +1,7 @@
 ---
 title: Azure Trusted Signing SDK for Java
 description: Reference for Azure Trusted Signing SDK for Java
-ms.date: 08/26/2026
+ms.date: 08/27/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: trustedsigning
