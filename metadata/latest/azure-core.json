@@ -1,6 +1,6 @@
 {
   "Name": "azure-core",
-  "Version": "1.59.0",
+  "Version": "1.59.1",
   "DevVersion": null,
   "DirectoryPath": "sdk/core/azure-core",
   "ServiceDirectory": "core",
@@ -10,7 +10,7 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-core",
-  "ReleaseStatus": "2026-08-12",
+  "ReleaseStatus": "2026-08-27",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": [
     "com.azure:azure-core-tracing-opentelemetry-samples",
@@ -18,38 +18,38 @@
     "com.azure:perf-test-core"
   ],
   "ArtifactDetails": {
-    "name": "azure-core",
+    "groupId": "com.azure",
+    "safeName": "azurecore",
     "triggeringPaths": [
       "/sdk/parents/azure-sdk-parent",
       "/sdk/parents/azure-client-sdk-parent",
       "/sdk/core/ci.yml"
     ],
-    "releaseInBatch": "${{ parameters.release_azurecore }}",
-    "groupId": "com.azure",
-    "safeName": "azurecore"
+    "name": "azure-core",
+    "releaseInBatch": "${{ parameters.release_azurecore }}"
   },
   "CIParameters": {
     "CIMatrixConfigs": [
       {
-        "NonSparseParameters": "Agent",
         "Name": "Java_ci_test_base",
-        "Selection": "sparse",
+        "GenerateVMJobs": true,
         "Path": "eng/pipelines/templates/stages/platform-matrix.json",
-        "GenerateVMJobs": true
+        "NonSparseParameters": "Agent",
+        "Selection": "sparse"
       },
       {
-        "GenerateVMJobs": true,
         "Name": "version_overrides_tests",
-        "Selection": "all",
+        "PRBatching": false,
+        "GenerateVMJobs": true,
         "Path": "sdk/core/version-overrides-matrix.json",
-        "PRBatching": false
+        "Selection": "all"
       },
       {
-        "GenerateVMJobs": true,
         "Name": "version_overrides_vertx_tests",
-        "Selection": "all",
+        "PRBatching": false,
+        "GenerateVMJobs": true,
         "Path": "sdk/core/version-overrides-vertx-matrix.json",
-        "PRBatching": false
+        "Selection": "all"
       }
     ]
   },

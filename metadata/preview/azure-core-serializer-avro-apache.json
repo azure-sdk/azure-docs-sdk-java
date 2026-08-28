@@ -1,6 +1,6 @@
 {
   "Name": "azure-core-serializer-avro-apache",
-  "Version": "1.0.0-beta.66",
+  "Version": "1.0.0-beta.67",
   "DevVersion": null,
   "DirectoryPath": "sdk/core/azure-core-serializer-avro-apache",
   "ServiceDirectory": "core",
@@ -10,7 +10,7 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-core-serializer-avro-apache",
-  "ReleaseStatus": "2026-08-12",
+  "ReleaseStatus": "2026-08-27",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": [
     "com.azure:azure-core-tracing-opentelemetry-samples",
@@ -18,36 +18,36 @@
     "com.azure:perf-test-core"
   ],
   "ArtifactDetails": {
-    "name": "azure-core-serializer-avro-apache",
+    "groupId": "com.azure",
+    "safeName": "azurecoreserializeravroapache",
     "triggeringPaths": [
       "/sdk/core/ci.yml"
     ],
-    "releaseInBatch": "${{ parameters.release_azurecoreserializeravroapache }}",
-    "groupId": "com.azure",
-    "safeName": "azurecoreserializeravroapache"
+    "name": "azure-core-serializer-avro-apache",
+    "releaseInBatch": "${{ parameters.release_azurecoreserializeravroapache }}"
   },
   "CIParameters": {
     "CIMatrixConfigs": [
       {
-        "NonSparseParameters": "Agent",
         "Name": "Java_ci_test_base",
-        "Selection": "sparse",
+        "GenerateVMJobs": true,
         "Path": "eng/pipelines/templates/stages/platform-matrix.json",
-        "GenerateVMJobs": true
+        "NonSparseParameters": "Agent",
+        "Selection": "sparse"
       },
       {
-        "GenerateVMJobs": true,
         "Name": "version_overrides_tests",
-        "Selection": "all",
+        "PRBatching": false,
+        "GenerateVMJobs": true,
         "Path": "sdk/core/version-overrides-matrix.json",
-        "PRBatching": false
+        "Selection": "all"
       },
       {
-        "GenerateVMJobs": true,
         "Name": "version_overrides_vertx_tests",
-        "Selection": "all",
+        "PRBatching": false,
+        "GenerateVMJobs": true,
         "Path": "sdk/core/version-overrides-vertx-matrix.json",
-        "PRBatching": false
+        "Selection": "all"
       }
     ]
   },
