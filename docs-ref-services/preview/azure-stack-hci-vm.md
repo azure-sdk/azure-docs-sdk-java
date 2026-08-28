@@ -1,7 +1,7 @@
 ---
 title: Azure Azure Stack HCI VM SDK for Java
 description: Reference for Azure Azure Stack HCI VM SDK for Java
-ms.date: 08/27/2026
+ms.date: 08/28/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: azurestackhcivm
