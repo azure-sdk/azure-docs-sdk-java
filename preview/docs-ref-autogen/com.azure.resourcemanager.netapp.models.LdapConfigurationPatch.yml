@@ -119,16 +119,6 @@ methods:
   returns:
     description: "the groupDN value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-- uid: "com.azure.resourcemanager.netapp.models.LdapConfigurationPatch.ldapOverTLS()"
-  fullName: "com.azure.resourcemanager.netapp.models.LdapConfigurationPatch.ldapOverTLS()"
-  name: "ldapOverTLS()"
-  nameWithType: "LdapConfigurationPatch.ldapOverTLS()"
-  summary: "Get the ldap<wbr>OverTLS property: Specifies whether or not the LDAP traffic needs to be secured via TLS."
-  syntax: "public Boolean ldapOverTLS()"
-  desc: "Get the ldapOverTLS property: Specifies whether or not the LDAP traffic needs to be secured via TLS."
-  returns:
-    description: "the ldapOverTLS value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.resourcemanager.netapp.models.LdapConfigurationPatch.ldapPort()"
   fullName: "com.azure.resourcemanager.netapp.models.LdapConfigurationPatch.ldapPort()"
   name: "ldapPort()"
@@ -159,6 +149,16 @@ methods:
   returns:
     description: "the netGroupDN value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.netapp.models.LdapConfigurationPatch.secureLdapType()"
+  fullName: "com.azure.resourcemanager.netapp.models.LdapConfigurationPatch.secureLdapType()"
+  name: "secureLdapType()"
+  nameWithType: "LdapConfigurationPatch.secureLdapType()"
+  summary: "Get the secure<wbr>Ldap<wbr>Type property: Indicates the secure LDAP mode for encrypting communication between ANF storage and customer LDAP servers."
+  syntax: "public SecureLdapType secureLdapType()"
+  desc: "Get the secureLdapType property: Indicates the secure LDAP mode for encrypting communication between ANF storage and customer LDAP servers."
+  returns:
+    description: "the secureLdapType value."
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.SecureLdapType?alt=com.azure.resourcemanager.netapp.models.SecureLdapType&text=SecureLdapType\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.netapp.models.LdapConfigurationPatch.serverCACertificate()"
   fullName: "com.azure.resourcemanager.netapp.models.LdapConfigurationPatch.serverCACertificate()"
   name: "serverCACertificate()"
@@ -296,20 +296,6 @@ methods:
   returns:
     description: "the LdapConfigurationPatch object itself."
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.LdapConfigurationPatch?alt=com.azure.resourcemanager.netapp.models.LdapConfigurationPatch&text=LdapConfigurationPatch\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.netapp.models.LdapConfigurationPatch.withLdapOverTLS(java.lang.Boolean)"
-  fullName: "com.azure.resourcemanager.netapp.models.LdapConfigurationPatch.withLdapOverTLS(Boolean ldapOverTLS)"
-  name: "withLdapOverTLS(Boolean ldapOverTLS)"
-  nameWithType: "LdapConfigurationPatch.withLdapOverTLS(Boolean ldapOverTLS)"
-  summary: "Set the ldap<wbr>OverTLS property: Specifies whether or not the LDAP traffic needs to be secured via TLS."
-  parameters:
-  - description: "the ldapOverTLS value to set."
-    name: "ldapOverTLS"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
-  syntax: "public LdapConfigurationPatch withLdapOverTLS(Boolean ldapOverTLS)"
-  desc: "Set the ldapOverTLS property: Specifies whether or not the LDAP traffic needs to be secured via TLS."
-  returns:
-    description: "the LdapConfigurationPatch object itself."
-    type: "<xref href=\"com.azure.resourcemanager.netapp.models.LdapConfigurationPatch?alt=com.azure.resourcemanager.netapp.models.LdapConfigurationPatch&text=LdapConfigurationPatch\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.netapp.models.LdapConfigurationPatch.withLdapPort(java.lang.Integer)"
   fullName: "com.azure.resourcemanager.netapp.models.LdapConfigurationPatch.withLdapPort(Integer ldapPort)"
   name: "withLdapPort(Integer ldapPort)"
@@ -352,6 +338,20 @@ methods:
   returns:
     description: "the LdapConfigurationPatch object itself."
     type: "<xref href=\"com.azure.resourcemanager.netapp.models.LdapConfigurationPatch?alt=com.azure.resourcemanager.netapp.models.LdapConfigurationPatch&text=LdapConfigurationPatch\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.netapp.models.LdapConfigurationPatch.withSecureLdapType(com.azure.resourcemanager.netapp.models.SecureLdapType)"
+  fullName: "com.azure.resourcemanager.netapp.models.LdapConfigurationPatch.withSecureLdapType(SecureLdapType secureLdapType)"
+  name: "withSecureLdapType(SecureLdapType secureLdapType)"
+  nameWithType: "LdapConfigurationPatch.withSecureLdapType(SecureLdapType secureLdapType)"
+  summary: "Set the secure<wbr>Ldap<wbr>Type property: Indicates the secure LDAP mode for encrypting communication between ANF storage and customer LDAP servers."
+  parameters:
+  - description: "the secureLdapType value to set."
+    name: "secureLdapType"
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.SecureLdapType?alt=com.azure.resourcemanager.netapp.models.SecureLdapType&text=SecureLdapType\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public LdapConfigurationPatch withSecureLdapType(SecureLdapType secureLdapType)"
+  desc: "Set the secureLdapType property: Indicates the secure LDAP mode for encrypting communication between ANF storage and customer LDAP servers."
+  returns:
+    description: "the LdapConfigurationPatch object itself."
+    type: "<xref href=\"com.azure.resourcemanager.netapp.models.LdapConfigurationPatch?alt=com.azure.resourcemanager.netapp.models.LdapConfigurationPatch&text=LdapConfigurationPatch\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.netapp.models.LdapConfigurationPatch.withServerCACertificate(java.lang.String)"
   fullName: "com.azure.resourcemanager.netapp.models.LdapConfigurationPatch.withServerCACertificate(String serverCACertificate)"
   name: "withServerCACertificate(String serverCACertificate)"
@@ -386,4 +386,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.netapp.models.LdapConfigurationPatch?alt=com.azure.resourcemanager.netapp.models.LdapConfigurationPatch&text=LdapConfigurationPatch\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.netapp.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:2.5.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-netapp:2.5.0-beta.2

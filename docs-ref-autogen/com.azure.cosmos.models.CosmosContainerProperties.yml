@@ -131,6 +131,16 @@ methods:
   returns:
     description: "the FullTextPolicy"
     type: "<xref href=\"com.azure.cosmos.models.CosmosFullTextPolicy?alt=com.azure.cosmos.models.CosmosFullTextPolicy&text=CosmosFullTextPolicy\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.cosmos.models.CosmosContainerProperties.getGlobalSecondaryIndexDefinition()"
+  fullName: "com.azure.cosmos.models.CosmosContainerProperties.getGlobalSecondaryIndexDefinition()"
+  name: "getGlobalSecondaryIndexDefinition()"
+  nameWithType: "CosmosContainerProperties.getGlobalSecondaryIndexDefinition()"
+  summary: "Gets the global secondary index definition for this container in the Azure Cosmos DB service."
+  syntax: "public CosmosGlobalSecondaryIndexDefinition getGlobalSecondaryIndexDefinition()"
+  desc: "Gets the global secondary index definition for this container in the Azure Cosmos DB service. A global secondary index is derived from a source container and is defined by a SQL-like query."
+  returns:
+    description: "the CosmosGlobalSecondaryIndexDefinition"
+    type: "<xref href=\"com.azure.cosmos.models.CosmosGlobalSecondaryIndexDefinition?alt=com.azure.cosmos.models.CosmosGlobalSecondaryIndexDefinition&text=CosmosGlobalSecondaryIndexDefinition\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.cosmos.models.CosmosContainerProperties.getId()"
   fullName: "com.azure.cosmos.models.CosmosContainerProperties.getId()"
   name: "getId()"
@@ -299,6 +309,20 @@ methods:
   returns:
     description: "the CosmosContainerProperties."
     type: "<xref href=\"com.azure.cosmos.models.CosmosContainerProperties?alt=com.azure.cosmos.models.CosmosContainerProperties&text=CosmosContainerProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.cosmos.models.CosmosContainerProperties.setGlobalSecondaryIndexDefinition(com.azure.cosmos.models.CosmosGlobalSecondaryIndexDefinition)"
+  fullName: "com.azure.cosmos.models.CosmosContainerProperties.setGlobalSecondaryIndexDefinition(CosmosGlobalSecondaryIndexDefinition value)"
+  name: "setGlobalSecondaryIndexDefinition(CosmosGlobalSecondaryIndexDefinition value)"
+  nameWithType: "CosmosContainerProperties.setGlobalSecondaryIndexDefinition(CosmosGlobalSecondaryIndexDefinition value)"
+  summary: "Sets the global secondary index definition for this container in the Azure Cosmos DB service."
+  parameters:
+  - description: "the CosmosGlobalSecondaryIndexDefinition to be used."
+    name: "value"
+    type: "<xref href=\"com.azure.cosmos.models.CosmosGlobalSecondaryIndexDefinition?alt=com.azure.cosmos.models.CosmosGlobalSecondaryIndexDefinition&text=CosmosGlobalSecondaryIndexDefinition\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public CosmosContainerProperties setGlobalSecondaryIndexDefinition(CosmosGlobalSecondaryIndexDefinition value)"
+  desc: "Sets the global secondary index definition for this container in the Azure Cosmos DB service. A global secondary index is derived from a source container and is defined by a SQL-like query.\n\nExample:\n\n```java\nCosmosGlobalSecondaryIndexDefinition gsiDef =\n     new CosmosGlobalSecondaryIndexDefinition(\"gsi-src\", \"SELECT c.customerId, c.emailAddress FROM c\");\n containerProperties.setGlobalSecondaryIndexDefinition(gsiDef);\n```"
+  returns:
+    description: "the CosmosContainerProperties."
+    type: "<xref href=\"com.azure.cosmos.models.CosmosContainerProperties?alt=com.azure.cosmos.models.CosmosContainerProperties&text=CosmosContainerProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.cosmos.models.CosmosContainerProperties.setId(java.lang.String)"
   fullName: "com.azure.cosmos.models.CosmosContainerProperties.setId(String id)"
   name: "setId(String id)"
@@ -373,4 +397,4 @@ type: "class"
 desc: "Represents a container in the Azure Cosmos DB database service. A cosmos container is a named logical container for cosmos items.\n\nA database may contain zero or more named containers and each container consists of zero or more JSON items. Being schema-free, the items in a container do not need to share the same structure or fields. Since containers are application resources, they can be authorized using either the master key or resource keys."
 metadata: {}
 package: "com.azure.cosmos.models"
-artifact: com.azure:azure-cosmos:4.80.0
+artifact: com.azure:azure-cosmos:4.82.0

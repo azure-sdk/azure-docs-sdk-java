@@ -382,7 +382,7 @@ methods:
     name: "readConsistencyStrategy"
     type: "<xref href=\"com.azure.cosmos.ReadConsistencyStrategy?alt=com.azure.cosmos.ReadConsistencyStrategy&text=ReadConsistencyStrategy\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public CosmosReadManyByPartitionKeysRequestOptions setReadConsistencyStrategy(ReadConsistencyStrategy readConsistencyStrategy)"
-  desc: "Sets the read consistency strategy required for the request."
+  desc: "Sets the read consistency strategy required for the request.\n\nHonored across Direct, Gateway V1 (compute gateway), and Gateway V2 (thin client proxy) connection modes. `GLOBAL_STRONG` is rejected client-side with a <xref uid=\"com.azure.cosmos.CosmosException\" data-throw-if-not-resolved=\"false\" data-raw-source=\"com.azure.cosmos.CosmosException\"></xref> (HTTP 400) when the account's default consistency is not <xref uid=\"com.azure.cosmos.ConsistencyLevel.STRONG\" data-throw-if-not-resolved=\"false\" data-raw-source=\"com.azure.cosmos.ConsistencyLevel#STRONG\"></xref>. Such failures must NOT be retried."
   returns:
     description: "the <xref uid=\"com.azure.cosmos.models.CosmosReadManyByPartitionKeysRequestOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"CosmosReadManyByPartitionKeysRequestOptions\"></xref> for fluent chaining."
     type: "<xref href=\"com.azure.cosmos.models.CosmosReadManyByPartitionKeysRequestOptions?alt=com.azure.cosmos.models.CosmosReadManyByPartitionKeysRequestOptions&text=CosmosReadManyByPartitionKeysRequestOptions\" data-throw-if-not-resolved=\"False\" />"
@@ -432,4 +432,4 @@ type: "class"
 desc: "Specifies the options associated with the `readManyByPartitionKeys` operation in the Azure Cosmos DB database service.\n\nThis is distinct from <xref uid=\"com.azure.cosmos.models.CosmosReadManyRequestOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"CosmosReadManyRequestOptions\"></xref> (used by the `readMany(List<CosmosItemIdentity>)` API). It exposes only the knobs that are applicable to `readManyByPartitionKeys` — for example, properties that influence query parallelism inside a single physical partition or a feed range filter are intentionally not exposed because the operation is fully managed by the SDK."
 metadata: {}
 package: "com.azure.cosmos.models"
-artifact: com.azure:azure-cosmos:4.80.0
+artifact: com.azure:azure-cosmos:4.82.0
