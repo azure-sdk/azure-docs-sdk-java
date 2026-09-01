@@ -1,0 +1,51 @@
+### YamlMime:JavaType
+uid: "com.azure.search.documents.models.ServerSentEventListener"
+fullName: "com.azure.search.documents.models.ServerSentEventListener<T>"
+name: "ServerSentEventListener<T>"
+nameWithType: "ServerSentEventListener<T>"
+summary: "A listener for receiving server-sent events."
+syntax: "public interface **ServerSentEventListener<T>**"
+methods:
+- uid: "com.azure.search.documents.models.ServerSentEventListener.onClose()"
+  fullName: "com.azure.search.documents.models.ServerSentEventListener<T>.onClose()"
+  name: "onClose()"
+  nameWithType: "ServerSentEventListener<T>.onClose()"
+  summary: "Handles closure of the event stream."
+  modifiers:
+  - "default"
+  syntax: "public default void onClose()"
+  desc: "Handles closure of the event stream."
+- uid: "com.azure.search.documents.models.ServerSentEventListener.onError(java.lang.Throwable)"
+  fullName: "com.azure.search.documents.models.ServerSentEventListener<T>.onError(Throwable error)"
+  name: "onError(Throwable error)"
+  nameWithType: "ServerSentEventListener<T>.onError(Throwable error)"
+  summary: "Handles an error that terminates event processing."
+  modifiers:
+  - "default"
+  parameters:
+  - description: "The error that terminated event processing."
+    name: "error"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Throwable.html\">Throwable</a>"
+  syntax: "public default void onError(Throwable error)"
+  desc: "Handles an error that terminates event processing."
+- uid: "com.azure.search.documents.models.ServerSentEventListener.onEvent(com.azure.search.documents.models.ServerSentEvent<T>)"
+  fullName: "com.azure.search.documents.models.ServerSentEventListener<T>.onEvent(ServerSentEvent<T> event)"
+  name: "onEvent(ServerSentEvent<T> event)"
+  nameWithType: "ServerSentEventListener<T>.onEvent(ServerSentEvent<T> event)"
+  summary: "Handles a server-sent event."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The server-sent event."
+    name: "event"
+    type: "<xref href=\"com.azure.search.documents.models.ServerSentEvent?alt=com.azure.search.documents.models.ServerSentEvent&text=ServerSentEvent\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public abstract void onEvent(ServerSentEvent<T> event)"
+  desc: "Handles a server-sent event."
+type: "interface"
+typeParameters:
+- description: "The type of the event data."
+  name: "T"
+desc: "A listener for receiving server-sent events.\n\nErrors terminate processing, invoke <xref uid=\"com.azure.search.documents.models.ServerSentEventListener.onError(java.lang.Throwable)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#onError(Throwable)\"></xref> and <xref uid=\"com.azure.search.documents.models.ServerSentEventListener.onClose()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#onClose()\"></xref>, and are rethrown to the synchronous service caller as unchecked exceptions."
+metadata: {}
+package: "com.azure.search.documents.models"
+artifact: com.azure:azure-search-documents:12.1.0-beta.2

@@ -49,16 +49,6 @@ methods:
   returns:
     description: "An instance of McpServerTool if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
     type: "<xref href=\"com.azure.search.documents.indexes.models.McpServerTool?alt=com.azure.search.documents.indexes.models.McpServerTool&text=McpServerTool\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.search.documents.indexes.models.McpServerTool.getInclusionMode()"
-  fullName: "com.azure.search.documents.indexes.models.McpServerTool.getInclusionMode()"
-  name: "getInclusionMode()"
-  nameWithType: "McpServerTool.getInclusionMode()"
-  summary: "Get the inclusion<wbr>Mode property: Controls how the parsed results from this tool are integrated into the final result set."
-  syntax: "public McpServerToolInclusionMode getInclusionMode()"
-  desc: "Get the inclusionMode property: Controls how the parsed results from this tool are integrated into the final result set. Defaults to 'reranked' when not specified."
-  returns:
-    description: "the inclusionMode value."
-    type: "<xref href=\"com.azure.search.documents.indexes.models.McpServerToolInclusionMode?alt=com.azure.search.documents.indexes.models.McpServerToolInclusionMode&text=McpServerToolInclusionMode\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.McpServerTool.getMaxOutputTokens()"
   fullName: "com.azure.search.documents.indexes.models.McpServerTool.getMaxOutputTokens()"
   name: "getMaxOutputTokens()"
@@ -89,20 +79,16 @@ methods:
   returns:
     description: "the outputParsing value."
     type: "<xref href=\"com.azure.search.documents.indexes.models.McpServerOutputParsing?alt=com.azure.search.documents.indexes.models.McpServerOutputParsing&text=McpServerOutputParsing\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.search.documents.indexes.models.McpServerTool.setInclusionMode(com.azure.search.documents.indexes.models.McpServerToolInclusionMode)"
-  fullName: "com.azure.search.documents.indexes.models.McpServerTool.setInclusionMode(McpServerToolInclusionMode inclusionMode)"
-  name: "setInclusionMode(McpServerToolInclusionMode inclusionMode)"
-  nameWithType: "McpServerTool.setInclusionMode(McpServerToolInclusionMode inclusionMode)"
-  summary: "Set the inclusion<wbr>Mode property: Controls how the parsed results from this tool are integrated into the final result set."
-  parameters:
-  - description: "the inclusionMode value to set."
-    name: "inclusionMode"
-    type: "<xref href=\"com.azure.search.documents.indexes.models.McpServerToolInclusionMode?alt=com.azure.search.documents.indexes.models.McpServerToolInclusionMode&text=McpServerToolInclusionMode\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public McpServerTool setInclusionMode(McpServerToolInclusionMode inclusionMode)"
-  desc: "Set the inclusionMode property: Controls how the parsed results from this tool are integrated into the final result set. Defaults to 'reranked' when not specified."
+- uid: "com.azure.search.documents.indexes.models.McpServerTool.getResultsProcessing()"
+  fullName: "com.azure.search.documents.indexes.models.McpServerTool.getResultsProcessing()"
+  name: "getResultsProcessing()"
+  nameWithType: "McpServerTool.getResultsProcessing()"
+  summary: "Get the results<wbr>Processing property: Controls whether the parsed results from this tool are reranked."
+  syntax: "public KnowledgeSourceResultsProcessing getResultsProcessing()"
+  desc: "Get the resultsProcessing property: Controls whether the parsed results from this tool are reranked. Defaults to 'rerank' when not specified."
   returns:
-    description: "the McpServerTool object itself."
-    type: "<xref href=\"com.azure.search.documents.indexes.models.McpServerTool?alt=com.azure.search.documents.indexes.models.McpServerTool&text=McpServerTool\" data-throw-if-not-resolved=\"False\" />"
+    description: "the resultsProcessing value."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.KnowledgeSourceResultsProcessing?alt=com.azure.search.documents.indexes.models.KnowledgeSourceResultsProcessing&text=KnowledgeSourceResultsProcessing\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.McpServerTool.setMaxOutputTokens(java.lang.Integer)"
   fullName: "com.azure.search.documents.indexes.models.McpServerTool.setMaxOutputTokens(Integer maxOutputTokens)"
   name: "setMaxOutputTokens(Integer maxOutputTokens)"
@@ -145,6 +131,20 @@ methods:
   returns:
     description: "the McpServerTool object itself."
     type: "<xref href=\"com.azure.search.documents.indexes.models.McpServerTool?alt=com.azure.search.documents.indexes.models.McpServerTool&text=McpServerTool\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.indexes.models.McpServerTool.setResultsProcessing(com.azure.search.documents.indexes.models.KnowledgeSourceResultsProcessing)"
+  fullName: "com.azure.search.documents.indexes.models.McpServerTool.setResultsProcessing(KnowledgeSourceResultsProcessing resultsProcessing)"
+  name: "setResultsProcessing(KnowledgeSourceResultsProcessing resultsProcessing)"
+  nameWithType: "McpServerTool.setResultsProcessing(KnowledgeSourceResultsProcessing resultsProcessing)"
+  summary: "Set the results<wbr>Processing property: Controls whether the parsed results from this tool are reranked."
+  parameters:
+  - description: "the resultsProcessing value to set."
+    name: "resultsProcessing"
+    type: "<xref href=\"com.azure.search.documents.indexes.models.KnowledgeSourceResultsProcessing?alt=com.azure.search.documents.indexes.models.KnowledgeSourceResultsProcessing&text=KnowledgeSourceResultsProcessing\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public McpServerTool setResultsProcessing(KnowledgeSourceResultsProcessing resultsProcessing)"
+  desc: "Set the resultsProcessing property: Controls whether the parsed results from this tool are reranked. Defaults to 'rerank' when not specified."
+  returns:
+    description: "the McpServerTool object itself."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.McpServerTool?alt=com.azure.search.documents.indexes.models.McpServerTool&text=McpServerTool\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.McpServerTool.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.search.documents.indexes.models.McpServerTool.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -163,4 +163,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.indexes.models.McpServerTool?alt=com.azure.search.documents.indexes.models.McpServerTool&text=McpServerTool\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.search.documents.indexes.models"
-artifact: com.azure:azure-search-documents:12.1.0-beta.1
+artifact: com.azure:azure-search-documents:12.1.0-beta.2

@@ -16,9 +16,11 @@ inheritedClassMethods:
   - "<xref href=\"com.azure.search.documents.indexes.models.KnowledgeSource.getEncryptionKey()?alt=com.azure.search.documents.indexes.models.KnowledgeSource.getEncryptionKey&text=getEncryptionKey\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.search.documents.indexes.models.KnowledgeSource.getKind()?alt=com.azure.search.documents.indexes.models.KnowledgeSource.getKind&text=getKind\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.search.documents.indexes.models.KnowledgeSource.getName()?alt=com.azure.search.documents.indexes.models.KnowledgeSource.getName&text=getName\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.search.documents.indexes.models.KnowledgeSource.getResultsProcessing()?alt=com.azure.search.documents.indexes.models.KnowledgeSource.getResultsProcessing&text=getResultsProcessing\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.search.documents.indexes.models.KnowledgeSource.setDescription(java.lang.String)?alt=com.azure.search.documents.indexes.models.KnowledgeSource.setDescription&text=setDescription\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.search.documents.indexes.models.KnowledgeSource.setETag(java.lang.String)?alt=com.azure.search.documents.indexes.models.KnowledgeSource.setETag&text=setETag\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.search.documents.indexes.models.KnowledgeSource.setEncryptionKey(com.azure.search.documents.indexes.models.SearchResourceEncryptionKey)?alt=com.azure.search.documents.indexes.models.KnowledgeSource.setEncryptionKey&text=setEncryptionKey\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.search.documents.indexes.models.KnowledgeSource.setResultsProcessing(com.azure.search.documents.indexes.models.KnowledgeSourceResultsProcessing)?alt=com.azure.search.documents.indexes.models.KnowledgeSource.setResultsProcessing&text=setResultsProcessing\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.search.documents.indexes.models.KnowledgeSource.toJson(com.azure.json.JsonWriter)?alt=com.azure.search.documents.indexes.models.KnowledgeSource.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
@@ -35,16 +37,19 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
 syntax: "public final class **WorkIQKnowledgeSource**</br> extends <xref href=\"com.azure.search.documents.indexes.models.KnowledgeSource?alt=com.azure.search.documents.indexes.models.KnowledgeSource&text=KnowledgeSource\" data-throw-if-not-resolved=\"False\" />"
 constructors:
-- uid: "com.azure.search.documents.indexes.models.WorkIQKnowledgeSource.WorkIQKnowledgeSource(java.lang.String)"
-  fullName: "com.azure.search.documents.indexes.models.WorkIQKnowledgeSource.WorkIQKnowledgeSource(String name)"
-  name: "WorkIQKnowledgeSource(String name)"
-  nameWithType: "WorkIQKnowledgeSource.WorkIQKnowledgeSource(String name)"
+- uid: "com.azure.search.documents.indexes.models.WorkIQKnowledgeSource.WorkIQKnowledgeSource(java.lang.String,com.azure.search.documents.indexes.models.WorkIQKnowledgeSourceParameters)"
+  fullName: "com.azure.search.documents.indexes.models.WorkIQKnowledgeSource.WorkIQKnowledgeSource(String name, WorkIQKnowledgeSourceParameters workIQParameters)"
+  name: "WorkIQKnowledgeSource(String name, WorkIQKnowledgeSourceParameters workIQParameters)"
+  nameWithType: "WorkIQKnowledgeSource.WorkIQKnowledgeSource(String name, WorkIQKnowledgeSourceParameters workIQParameters)"
   summary: "Creates an instance of Work<wbr>IQKnowledge<wbr>Source class."
   parameters:
   - description: "the name value to set."
     name: "name"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public WorkIQKnowledgeSource(String name)"
+  - description: "the workIQParameters value to set."
+    name: "workIQParameters"
+    type: "<xref href=\"com.azure.search.documents.indexes.models.WorkIQKnowledgeSourceParameters?alt=com.azure.search.documents.indexes.models.WorkIQKnowledgeSourceParameters&text=WorkIQKnowledgeSourceParameters\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public WorkIQKnowledgeSource(String name, WorkIQKnowledgeSourceParameters workIQParameters)"
   desc: "Creates an instance of WorkIQKnowledgeSource class."
 methods:
 - uid: "com.azure.search.documents.indexes.models.WorkIQKnowledgeSource.fromJson(com.azure.json.JsonReader)"
@@ -77,6 +82,16 @@ methods:
   returns:
     description: "the kind value."
     type: "<xref href=\"com.azure.search.documents.indexes.models.KnowledgeSourceKind?alt=com.azure.search.documents.indexes.models.KnowledgeSourceKind&text=KnowledgeSourceKind\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.indexes.models.WorkIQKnowledgeSource.getWorkIQParameters()"
+  fullName: "com.azure.search.documents.indexes.models.WorkIQKnowledgeSource.getWorkIQParameters()"
+  name: "getWorkIQParameters()"
+  nameWithType: "WorkIQKnowledgeSource.getWorkIQParameters()"
+  summary: "Get the work<wbr>IQParameters property: The parameters for the WorkIQ knowledge source, including the customer-owned Entra app configuration used for on-behalf-of authentication."
+  syntax: "public WorkIQKnowledgeSourceParameters getWorkIQParameters()"
+  desc: "Get the workIQParameters property: The parameters for the WorkIQ knowledge source, including the customer-owned Entra app configuration used for on-behalf-of authentication."
+  returns:
+    description: "the workIQParameters value."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.WorkIQKnowledgeSourceParameters?alt=com.azure.search.documents.indexes.models.WorkIQKnowledgeSourceParameters&text=WorkIQKnowledgeSourceParameters\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.WorkIQKnowledgeSource.setDescription(java.lang.String)"
   fullName: "com.azure.search.documents.indexes.models.WorkIQKnowledgeSource.setDescription(String description)"
   name: "setDescription(String description)"
@@ -116,6 +131,19 @@ methods:
   desc: "Set the eTag property: The ETag of the knowledge source."
   returns:
     type: "<xref href=\"com.azure.search.documents.indexes.models.WorkIQKnowledgeSource?alt=com.azure.search.documents.indexes.models.WorkIQKnowledgeSource&text=WorkIQKnowledgeSource\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.indexes.models.WorkIQKnowledgeSource.setResultsProcessing(com.azure.search.documents.indexes.models.KnowledgeSourceResultsProcessing)"
+  fullName: "com.azure.search.documents.indexes.models.WorkIQKnowledgeSource.setResultsProcessing(KnowledgeSourceResultsProcessing resultsProcessing)"
+  name: "setResultsProcessing(KnowledgeSourceResultsProcessing resultsProcessing)"
+  nameWithType: "WorkIQKnowledgeSource.setResultsProcessing(KnowledgeSourceResultsProcessing resultsProcessing)"
+  summary: "Set the results<wbr>Processing property: Controls whether results from this knowledge source are reranked before they are included in the final result set."
+  overridden: "com.azure.search.documents.indexes.models.KnowledgeSource.setResultsProcessing(com.azure.search.documents.indexes.models.KnowledgeSourceResultsProcessing)"
+  parameters:
+  - name: "resultsProcessing"
+    type: "<xref href=\"com.azure.search.documents.indexes.models.KnowledgeSourceResultsProcessing?alt=com.azure.search.documents.indexes.models.KnowledgeSourceResultsProcessing&text=KnowledgeSourceResultsProcessing\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public WorkIQKnowledgeSource setResultsProcessing(KnowledgeSourceResultsProcessing resultsProcessing)"
+  desc: "Set the resultsProcessing property: Controls whether results from this knowledge source are reranked before they are included in the final result set. Defaults to 'rerank' when not specified."
+  returns:
+    type: "<xref href=\"com.azure.search.documents.indexes.models.WorkIQKnowledgeSource?alt=com.azure.search.documents.indexes.models.WorkIQKnowledgeSource&text=WorkIQKnowledgeSource\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.WorkIQKnowledgeSource.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.search.documents.indexes.models.WorkIQKnowledgeSource.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -133,4 +161,4 @@ type: "class"
 desc: "Configuration for WorkIQ knowledge source."
 metadata: {}
 package: "com.azure.search.documents.indexes.models"
-artifact: com.azure:azure-search-documents:12.1.0-beta.1
+artifact: com.azure:azure-search-documents:12.1.0-beta.2

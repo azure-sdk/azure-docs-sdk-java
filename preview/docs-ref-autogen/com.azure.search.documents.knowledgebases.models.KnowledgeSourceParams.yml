@@ -93,6 +93,16 @@ methods:
   returns:
     description: "the rerankerThreshold value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Float.html\">Float</a>"
+- uid: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.getResultsProcessing()"
+  fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.getResultsProcessing()"
+  name: "getResultsProcessing()"
+  nameWithType: "KnowledgeSourceParams.getResultsProcessing()"
+  summary: "Get the results<wbr>Processing property: Overrides the knowledge source's stored results<wbr>Processing for this retrieve call only."
+  syntax: "public KnowledgeSourceResultsProcessing getResultsProcessing()"
+  desc: "Get the resultsProcessing property: Overrides the knowledge source's stored resultsProcessing for this retrieve call only. When omitted, the stored knowledge source value applies."
+  returns:
+    description: "the resultsProcessing value."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.KnowledgeSourceResultsProcessing?alt=com.azure.search.documents.indexes.models.KnowledgeSourceResultsProcessing&text=KnowledgeSourceResultsProcessing\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.isAlwaysQuerySource()"
   fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.isAlwaysQuerySource()"
   name: "isAlwaysQuerySource()"
@@ -142,6 +152,16 @@ methods:
   desc: "Get the includeReferenceSourceData property: Indicates whether references should include the structured data obtained during retrieval in their payload."
   returns:
     description: "the includeReferenceSourceData value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.isNeverQuerySource()"
+  fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.isNeverQuerySource()"
+  name: "isNeverQuerySource()"
+  nameWithType: "KnowledgeSourceParams.isNeverQuerySource()"
+  summary: "Get the never<wbr>Query<wbr>Source property: Indicates that this knowledge source should be excluded from the request's candidate set and never queried at retrieval time."
+  syntax: "public Boolean isNeverQuerySource()"
+  desc: "Get the neverQuerySource property: Indicates that this knowledge source should be excluded from the request's candidate set and never queried at retrieval time. The exclusion is request-local and does not modify knowledge base membership. Cannot be combined with alwaysQuerySource on the same knowledge source."
+  returns:
+    description: "the neverQuerySource value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.setAlwaysQuerySource(java.lang.Boolean)"
   fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.setAlwaysQuerySource(Boolean alwaysQuerySource)"
@@ -227,6 +247,20 @@ methods:
   returns:
     description: "the KnowledgeSourceParams object itself."
     type: "<xref href=\"com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams?alt=com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams&text=KnowledgeSourceParams\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.setNeverQuerySource(java.lang.Boolean)"
+  fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.setNeverQuerySource(Boolean neverQuerySource)"
+  name: "setNeverQuerySource(Boolean neverQuerySource)"
+  nameWithType: "KnowledgeSourceParams.setNeverQuerySource(Boolean neverQuerySource)"
+  summary: "Set the never<wbr>Query<wbr>Source property: Indicates that this knowledge source should be excluded from the request's candidate set and never queried at retrieval time."
+  parameters:
+  - description: "the neverQuerySource value to set."
+    name: "neverQuerySource"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+  syntax: "public KnowledgeSourceParams setNeverQuerySource(Boolean neverQuerySource)"
+  desc: "Set the neverQuerySource property: Indicates that this knowledge source should be excluded from the request's candidate set and never queried at retrieval time. The exclusion is request-local and does not modify knowledge base membership. Cannot be combined with alwaysQuerySource on the same knowledge source."
+  returns:
+    description: "the KnowledgeSourceParams object itself."
+    type: "<xref href=\"com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams?alt=com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams&text=KnowledgeSourceParams\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.setRerankerThreshold(java.lang.Float)"
   fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.setRerankerThreshold(Float rerankerThreshold)"
   name: "setRerankerThreshold(Float rerankerThreshold)"
@@ -238,6 +272,20 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Float.html\">Float</a>"
   syntax: "public KnowledgeSourceParams setRerankerThreshold(Float rerankerThreshold)"
   desc: "Set the rerankerThreshold property: The reranker threshold all retrieved documents must meet to be included in the response."
+  returns:
+    description: "the KnowledgeSourceParams object itself."
+    type: "<xref href=\"com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams?alt=com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams&text=KnowledgeSourceParams\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.setResultsProcessing(com.azure.search.documents.indexes.models.KnowledgeSourceResultsProcessing)"
+  fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams.setResultsProcessing(KnowledgeSourceResultsProcessing resultsProcessing)"
+  name: "setResultsProcessing(KnowledgeSourceResultsProcessing resultsProcessing)"
+  nameWithType: "KnowledgeSourceParams.setResultsProcessing(KnowledgeSourceResultsProcessing resultsProcessing)"
+  summary: "Set the results<wbr>Processing property: Overrides the knowledge source's stored results<wbr>Processing for this retrieve call only."
+  parameters:
+  - description: "the resultsProcessing value to set."
+    name: "resultsProcessing"
+    type: "<xref href=\"com.azure.search.documents.indexes.models.KnowledgeSourceResultsProcessing?alt=com.azure.search.documents.indexes.models.KnowledgeSourceResultsProcessing&text=KnowledgeSourceResultsProcessing\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public KnowledgeSourceParams setResultsProcessing(KnowledgeSourceResultsProcessing resultsProcessing)"
+  desc: "Set the resultsProcessing property: Overrides the knowledge source's stored resultsProcessing for this retrieve call only. When omitted, the stored knowledge source value applies."
   returns:
     description: "the KnowledgeSourceParams object itself."
     type: "<xref href=\"com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams?alt=com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams&text=KnowledgeSourceParams\" data-throw-if-not-resolved=\"False\" />"
@@ -259,4 +307,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams?alt=com.azure.search.documents.knowledgebases.models.KnowledgeSourceParams&text=KnowledgeSourceParams\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.search.documents.knowledgebases.models"
-artifact: com.azure:azure-search-documents:12.1.0-beta.1
+artifact: com.azure:azure-search-documents:12.1.0-beta.2
