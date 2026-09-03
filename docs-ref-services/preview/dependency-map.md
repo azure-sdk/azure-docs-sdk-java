@@ -1,7 +1,7 @@
 ---
 title: Azure Dependency Map SDK for Java
 description: Reference for Azure Dependency Map SDK for Java
-ms.date: 09/02/2026
+ms.date: 09/03/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: dependencymap
