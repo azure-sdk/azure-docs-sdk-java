@@ -1,0 +1,118 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror"
+fullName: "com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror"
+name: "ImageDigestMirror"
+nameWithType: "ImageDigestMirror"
+summary: "Image<wbr>Digest<wbr>Mirror specifies a set of mirror registries to redirect image pulls targeting the specified source registries."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **ImageDigestMirror**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror?alt=com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror&text=ImageDigestMirror\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror.ImageDigestMirror()"
+  fullName: "com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror.ImageDigestMirror()"
+  name: "ImageDigestMirror()"
+  nameWithType: "ImageDigestMirror.ImageDigestMirror()"
+  summary: "Creates an instance of Image<wbr>Digest<wbr>Mirror class."
+  syntax: "public ImageDigestMirror()"
+  desc: "Creates an instance of ImageDigestMirror class."
+methods:
+- uid: "com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "ImageDigestMirror.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Image<wbr>Digest<wbr>Mirror from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static ImageDigestMirror fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of ImageDigestMirror from the JsonReader."
+  returns:
+    description: "An instance of ImageDigestMirror if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror?alt=com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror&text=ImageDigestMirror\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror.mirrors()"
+  fullName: "com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror.mirrors()"
+  name: "mirrors()"
+  nameWithType: "ImageDigestMirror.mirrors()"
+  summary: "Get the mirrors property: mirrors is zero or more locations that may also contain the same images."
+  syntax: "public List<String> mirrors()"
+  desc: "Get the mirrors property: mirrors is zero or more locations that may also contain the same images. No mirror will be configured if not specified. Images can be pulled from these mirrors only if they are referenced by their digests. The mirrored location is obtained by replacing the part of the input reference that matches source by the mirrors entry, e.g. for registry.redhat.io/product/repo reference, a (source, mirror) pair \\*.redhat.io, mirror.local/redhat causes a mirror.local/redhat/product/repo repository to be used. The order of mirrors in this list is treated as the user's desired priority, while source is by default considered lower priority than all mirrors. If no mirror is specified or all image pulls from the mirror list fail, the image will continue to be pulled from the repository in the pull spec. Other cluster configuration, including (but not limited to) other imageDigestMirrors objects, may impact the exact order mirrors are contacted in, or some mirrors may be contacted in parallel, so this should be considered a preference rather than a guarantee of ordering. mirrors uses one of the following formats: \\* host\\[:port\\] \\* host\\[:port\\]/namespace\\[/namespace...\\] \\* host\\[:port\\]/namespace\\[/namespace...\\]/repo for more information about the format, see: https://github.com/containers/image/blob/main/docs/containers-registries.conf.5.md\\#choosing-a-registry-toml-table."
+  returns:
+    description: "the mirrors value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+- uid: "com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror.source()"
+  fullName: "com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror.source()"
+  name: "source()"
+  nameWithType: "ImageDigestMirror.source()"
+  summary: "Get the source property: source matches the repository that users refer to, e.<wbr>g."
+  syntax: "public String source()"
+  desc: "Get the source property: source matches the repository that users refer to, e.g. in image pull specifications. Setting source to a registry hostname, e.g. docker.io, quay.io, or registry.redhat.io, will match the image pull specification of the corresponding registry. source uses one of the following formats: \\* host\\[:port\\] \\* host\\[:port\\]/namespace\\[/namespace...\\] \\* host\\[:port\\]/namespace\\[/namespace...\\]/repo \\* \\[\\*.\\]host for more information about the format, see: https://github.com/containers/image/blob/main/docs/containers-registries.conf.5.md\\#choosing-a-registry-toml-table."
+  returns:
+    description: "the source value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "ImageDigestMirror.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror.withMirrors(java.util.List<java.lang.String>)"
+  fullName: "com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror.withMirrors(List<String> mirrors)"
+  name: "withMirrors(List<String> mirrors)"
+  nameWithType: "ImageDigestMirror.withMirrors(List<String> mirrors)"
+  summary: "Set the mirrors property: mirrors is zero or more locations that may also contain the same images."
+  parameters:
+  - description: "the mirrors value to set."
+    name: "mirrors"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+  syntax: "public ImageDigestMirror withMirrors(List<String> mirrors)"
+  desc: "Set the mirrors property: mirrors is zero or more locations that may also contain the same images. No mirror will be configured if not specified. Images can be pulled from these mirrors only if they are referenced by their digests. The mirrored location is obtained by replacing the part of the input reference that matches source by the mirrors entry, e.g. for registry.redhat.io/product/repo reference, a (source, mirror) pair \\*.redhat.io, mirror.local/redhat causes a mirror.local/redhat/product/repo repository to be used. The order of mirrors in this list is treated as the user's desired priority, while source is by default considered lower priority than all mirrors. If no mirror is specified or all image pulls from the mirror list fail, the image will continue to be pulled from the repository in the pull spec. Other cluster configuration, including (but not limited to) other imageDigestMirrors objects, may impact the exact order mirrors are contacted in, or some mirrors may be contacted in parallel, so this should be considered a preference rather than a guarantee of ordering. mirrors uses one of the following formats: \\* host\\[:port\\] \\* host\\[:port\\]/namespace\\[/namespace...\\] \\* host\\[:port\\]/namespace\\[/namespace...\\]/repo for more information about the format, see: https://github.com/containers/image/blob/main/docs/containers-registries.conf.5.md\\#choosing-a-registry-toml-table."
+  returns:
+    description: "the ImageDigestMirror object itself."
+    type: "<xref href=\"com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror?alt=com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror&text=ImageDigestMirror\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror.withSource(java.lang.String)"
+  fullName: "com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror.withSource(String source)"
+  name: "withSource(String source)"
+  nameWithType: "ImageDigestMirror.withSource(String source)"
+  summary: "Set the source property: source matches the repository that users refer to, e.<wbr>g."
+  parameters:
+  - description: "the source value to set."
+    name: "source"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public ImageDigestMirror withSource(String source)"
+  desc: "Set the source property: source matches the repository that users refer to, e.g. in image pull specifications. Setting source to a registry hostname, e.g. docker.io, quay.io, or registry.redhat.io, will match the image pull specification of the corresponding registry. source uses one of the following formats: \\* host\\[:port\\] \\* host\\[:port\\]/namespace\\[/namespace...\\] \\* host\\[:port\\]/namespace\\[/namespace...\\]/repo \\* \\[\\*.\\]host for more information about the format, see: https://github.com/containers/image/blob/main/docs/containers-registries.conf.5.md\\#choosing-a-registry-toml-table."
+  returns:
+    description: "the ImageDigestMirror object itself."
+    type: "<xref href=\"com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror?alt=com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror&text=ImageDigestMirror\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "ImageDigestMirror specifies a set of mirror registries to redirect image pulls targeting the specified source registries."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror?alt=com.azure.resourcemanager.redhatopenshifthcp.models.ImageDigestMirror&text=ImageDigestMirror\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.redhatopenshifthcp.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-redhatopenshifthcp:1.0.0-beta.1

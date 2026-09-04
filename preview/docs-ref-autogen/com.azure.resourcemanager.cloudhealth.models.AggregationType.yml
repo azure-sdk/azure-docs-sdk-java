@@ -1,0 +1,122 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.cloudhealth.models.AggregationType"
+fullName: "com.azure.resourcemanager.cloudhealth.models.AggregationType"
+name: "AggregationType"
+nameWithType: "AggregationType"
+summary: "Aggregation strategy for combining a set of health states into one."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"com.azure.core.util.ExpandableStringEnum?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "<xref href=\"com.azure.core.util.ExpandableStringEnum?alt=com.azure.core.util.ExpandableStringEnum&text=ExpandableStringEnum\" data-throw-if-not-resolved=\"False\" />"
+  methodsRef:
+  - "<xref href=\"com.azure.core.util.ExpandableStringEnum.<T>fromString(java.lang.String,java.lang.Class<T>)?alt=com.azure.core.util.ExpandableStringEnum.<T>fromString&text=<T>fromString\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.util.ExpandableStringEnum.<T>values(java.lang.Class<T>)?alt=com.azure.core.util.ExpandableStringEnum.<T>values&text=<T>values\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.util.ExpandableStringEnum.equals(java.lang.Object)?alt=com.azure.core.util.ExpandableStringEnum.equals&text=equals\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.util.ExpandableStringEnum.getValue()?alt=com.azure.core.util.ExpandableStringEnum.getValue&text=getValue\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.util.ExpandableStringEnum.hashCode()?alt=com.azure.core.util.ExpandableStringEnum.hashCode&text=hashCode\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.util.ExpandableStringEnum.toString()?alt=com.azure.core.util.ExpandableStringEnum.toString&text=toString\" data-throw-if-not-resolved=\"False\" />"
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **AggregationType**</br> extends <xref href=\"com.azure.core.util.ExpandableStringEnum?alt=com.azure.core.util.ExpandableStringEnum&text=ExpandableStringEnum\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cloudhealth.models.AggregationType?alt=com.azure.resourcemanager.cloudhealth.models.AggregationType&text=AggregationType\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.resourcemanager.cloudhealth.models.AggregationType.AggregationType()"
+  fullName: "com.azure.resourcemanager.cloudhealth.models.AggregationType.AggregationType()"
+  name: "AggregationType()"
+  nameWithType: "AggregationType.AggregationType()"
+  summary: "Creates a new instance of Aggregation<wbr>Type value."
+  deprecatedTag: "Use the <xref uid=\"com.azure.resourcemanager.cloudhealth.models.AggregationType.fromString(java.lang.String)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#fromString(String)\"></xref> factory method."
+  syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public AggregationType()"
+  desc: "Creates a new instance of AggregationType value."
+  hasDeprecatedTag: true
+fields:
+- uid: "com.azure.resourcemanager.cloudhealth.models.AggregationType.BEST_OF"
+  fullName: "com.azure.resourcemanager.cloudhealth.models.AggregationType.BEST_OF"
+  name: "BEST_OF"
+  nameWithType: "AggregationType.BEST_OF"
+  summary: "Best (least severe) health state across the non-Unknown members is propagated."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.resourcemanager.cloudhealth.models.AggregationType?alt=com.azure.resourcemanager.cloudhealth.models.AggregationType&text=AggregationType\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final AggregationType BEST_OF"
+  desc: "Best (least severe) health state across the non-Unknown members is propagated. Unknown members are excluded from the selection; if every member is Unknown the group resolves to Unknown. The 'ignoreUnknown' flag has no observable effect for this strategy and is documented as such."
+- uid: "com.azure.resourcemanager.cloudhealth.models.AggregationType.MAX_NOT_HEALTHY"
+  fullName: "com.azure.resourcemanager.cloudhealth.models.AggregationType.MAX_NOT_HEALTHY"
+  name: "MAX_NOT_HEALTHY"
+  nameWithType: "AggregationType.MAX_NOT_HEALTHY"
+  summary: "Healthy if the count/percentage of not-healthy members stays below the threshold."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.resourcemanager.cloudhealth.models.AggregationType?alt=com.azure.resourcemanager.cloudhealth.models.AggregationType&text=AggregationType\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final AggregationType MAX_NOT_HEALTHY"
+  desc: "Healthy if the count/percentage of not-healthy members stays below the threshold."
+- uid: "com.azure.resourcemanager.cloudhealth.models.AggregationType.MIN_HEALTHY"
+  fullName: "com.azure.resourcemanager.cloudhealth.models.AggregationType.MIN_HEALTHY"
+  name: "MIN_HEALTHY"
+  nameWithType: "AggregationType.MIN_HEALTHY"
+  summary: "Healthy if the count/percentage of healthy members meets the threshold."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.resourcemanager.cloudhealth.models.AggregationType?alt=com.azure.resourcemanager.cloudhealth.models.AggregationType&text=AggregationType\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final AggregationType MIN_HEALTHY"
+  desc: "Healthy if the count/percentage of healthy members meets the threshold."
+- uid: "com.azure.resourcemanager.cloudhealth.models.AggregationType.WORST_OF"
+  fullName: "com.azure.resourcemanager.cloudhealth.models.AggregationType.WORST_OF"
+  name: "WORST_OF"
+  nameWithType: "AggregationType.WORST_OF"
+  summary: "Worst health state across members is propagated."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.resourcemanager.cloudhealth.models.AggregationType?alt=com.azure.resourcemanager.cloudhealth.models.AggregationType&text=AggregationType\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final AggregationType WORST_OF"
+  desc: "Worst health state across members is propagated. Default behavior."
+methods:
+- uid: "com.azure.resourcemanager.cloudhealth.models.AggregationType.fromString(java.lang.String)"
+  fullName: "com.azure.resourcemanager.cloudhealth.models.AggregationType.fromString(String name)"
+  name: "fromString(String name)"
+  nameWithType: "AggregationType.fromString(String name)"
+  summary: "Creates or finds a Aggregation<wbr>Type from its string representation."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "a name to look for."
+    name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public static AggregationType fromString(String name)"
+  desc: "Creates or finds a AggregationType from its string representation."
+  returns:
+    description: "the corresponding AggregationType."
+    type: "<xref href=\"com.azure.resourcemanager.cloudhealth.models.AggregationType?alt=com.azure.resourcemanager.cloudhealth.models.AggregationType&text=AggregationType\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cloudhealth.models.AggregationType.values()"
+  fullName: "com.azure.resourcemanager.cloudhealth.models.AggregationType.values()"
+  name: "values()"
+  nameWithType: "AggregationType.values()"
+  summary: "Gets known Aggregation<wbr>Type values."
+  modifiers:
+  - "static"
+  syntax: "public static Collection<AggregationType> values()"
+  desc: "Gets known AggregationType values."
+  returns:
+    description: "known AggregationType values."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html\">Collection</a>&lt;<xref href=\"com.azure.resourcemanager.cloudhealth.models.AggregationType?alt=com.azure.resourcemanager.cloudhealth.models.AggregationType&text=AggregationType\" data-throw-if-not-resolved=\"False\" />&gt;"
+type: "class"
+desc: "Aggregation strategy for combining a set of health states into one."
+metadata: {}
+package: "com.azure.resourcemanager.cloudhealth.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-cloudhealth:1.0.0-beta.4

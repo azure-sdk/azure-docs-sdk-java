@@ -30,6 +30,16 @@ constructors:
   syntax: "public AccountProperties()"
   desc: "Creates an instance of AccountProperties class."
 methods:
+- uid: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.a365LoggingEnabled()"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.a365LoggingEnabled()"
+  name: "a365LoggingEnabled()"
+  nameWithType: "AccountProperties.a365LoggingEnabled()"
+  summary: "Get the a365Logging<wbr>Enabled property: Specifies whether A365 logging is enabled."
+  syntax: "public Boolean a365LoggingEnabled()"
+  desc: "Get the a365LoggingEnabled property: Specifies whether A365 logging is enabled. Defaults to true. Set to false to opt out."
+  returns:
+    description: "the a365LoggingEnabled value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.abusePenalty()"
   fullName: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.abusePenalty()"
   name: "abusePenalty()"
@@ -40,6 +50,16 @@ methods:
   returns:
     description: "the abusePenalty value."
     type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.AbusePenalty?alt=com.azure.resourcemanager.cognitiveservices.models.AbusePenalty&text=AbusePenalty\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.agentHostingConfigurations()"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.agentHostingConfigurations()"
+  name: "agentHostingConfigurations()"
+  nameWithType: "AccountProperties.agentHostingConfigurations()"
+  summary: "Get the agent<wbr>Hosting<wbr>Configurations property: Customer-owned AKS hosting configurations for Foundry agents."
+  syntax: "public List<AgentHostingConfiguration> agentHostingConfigurations()"
+  desc: "Get the agentHostingConfigurations property: Customer-owned AKS hosting configurations for Foundry agents. This property can only be specified when the account is created; an existing account without a hosting configuration cannot add one later. This API version supports exactly one configuration, while the array shape is reserved for future API versions that may support multiple configurations. Once set, the configuration cannot be changed, removed, or reordered. Account update requests should omit this property or send the complete existing value unchanged. Responses only include hosting configuration types defined by the requested API version."
+  returns:
+    description: "the agentHostingConfigurations value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.AgentHostingConfiguration?alt=com.azure.resourcemanager.cognitiveservices.models.AgentHostingConfiguration&text=AgentHostingConfiguration\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.allowedFqdnList()"
   fullName: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.allowedFqdnList()"
   name: "allowedFqdnList()"
@@ -110,6 +130,16 @@ methods:
   returns:
     description: "the capabilities value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.SkuCapability?alt=com.azure.resourcemanager.cognitiveservices.models.SkuCapability&text=SkuCapability\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.capabilitySettings()"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.capabilitySettings()"
+  name: "capabilitySettings()"
+  nameWithType: "AccountProperties.capabilitySettings()"
+  summary: "Get the capability<wbr>Settings property: Reusable default agent capability settings inherited by child projects."
+  syntax: "public CapabilitySettings capabilitySettings()"
+  desc: "Get the capabilitySettings property: Reusable default agent capability settings inherited by child projects."
+  returns:
+    description: "the capabilitySettings value."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.CapabilitySettings?alt=com.azure.resourcemanager.cognitiveservices.models.CapabilitySettings&text=CapabilitySettings\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.commitmentPlanAssociations()"
   fullName: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.commitmentPlanAssociations()"
   name: "commitmentPlanAssociations()"
@@ -421,6 +451,34 @@ methods:
   returns:
     description: "the userOwnedStorage value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.UserOwnedStorage?alt=com.azure.resourcemanager.cognitiveservices.models.UserOwnedStorage&text=UserOwnedStorage\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.withA365LoggingEnabled(java.lang.Boolean)"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.withA365LoggingEnabled(Boolean a365LoggingEnabled)"
+  name: "withA365LoggingEnabled(Boolean a365LoggingEnabled)"
+  nameWithType: "AccountProperties.withA365LoggingEnabled(Boolean a365LoggingEnabled)"
+  summary: "Set the a365Logging<wbr>Enabled property: Specifies whether A365 logging is enabled."
+  parameters:
+  - description: "the a365LoggingEnabled value to set."
+    name: "a365LoggingEnabled"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+  syntax: "public AccountProperties withA365LoggingEnabled(Boolean a365LoggingEnabled)"
+  desc: "Set the a365LoggingEnabled property: Specifies whether A365 logging is enabled. Defaults to true. Set to false to opt out."
+  returns:
+    description: "the AccountProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.AccountProperties?alt=com.azure.resourcemanager.cognitiveservices.models.AccountProperties&text=AccountProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.withAgentHostingConfigurations(java.util.List<com.azure.resourcemanager.cognitiveservices.models.AgentHostingConfiguration>)"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.withAgentHostingConfigurations(List<AgentHostingConfiguration> agentHostingConfigurations)"
+  name: "withAgentHostingConfigurations(List<AgentHostingConfiguration> agentHostingConfigurations)"
+  nameWithType: "AccountProperties.withAgentHostingConfigurations(List<AgentHostingConfiguration> agentHostingConfigurations)"
+  summary: "Set the agent<wbr>Hosting<wbr>Configurations property: Customer-owned AKS hosting configurations for Foundry agents."
+  parameters:
+  - description: "the agentHostingConfigurations value to set."
+    name: "agentHostingConfigurations"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.AgentHostingConfiguration?alt=com.azure.resourcemanager.cognitiveservices.models.AgentHostingConfiguration&text=AgentHostingConfiguration\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public AccountProperties withAgentHostingConfigurations(List<AgentHostingConfiguration> agentHostingConfigurations)"
+  desc: "Set the agentHostingConfigurations property: Customer-owned AKS hosting configurations for Foundry agents. This property can only be specified when the account is created; an existing account without a hosting configuration cannot add one later. This API version supports exactly one configuration, while the array shape is reserved for future API versions that may support multiple configurations. Once set, the configuration cannot be changed, removed, or reordered. Account update requests should omit this property or send the complete existing value unchanged. Responses only include hosting configuration types defined by the requested API version."
+  returns:
+    description: "the AccountProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.AccountProperties?alt=com.azure.resourcemanager.cognitiveservices.models.AccountProperties&text=AccountProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.withAllowedFqdnList(java.util.List<java.lang.String>)"
   fullName: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.withAllowedFqdnList(List<String> allowedFqdnList)"
   name: "withAllowedFqdnList(List<String> allowedFqdnList)"
@@ -488,6 +546,20 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
   syntax: "public AccountProperties withAssociatedProjects(List<String> associatedProjects)"
   desc: "Set the associatedProjects property: Specifies the projects, by project name, that are associated with this resource."
+  returns:
+    description: "the AccountProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.AccountProperties?alt=com.azure.resourcemanager.cognitiveservices.models.AccountProperties&text=AccountProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.withCapabilitySettings(com.azure.resourcemanager.cognitiveservices.models.CapabilitySettings)"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.withCapabilitySettings(CapabilitySettings capabilitySettings)"
+  name: "withCapabilitySettings(CapabilitySettings capabilitySettings)"
+  nameWithType: "AccountProperties.withCapabilitySettings(CapabilitySettings capabilitySettings)"
+  summary: "Set the capability<wbr>Settings property: Reusable default agent capability settings inherited by child projects."
+  parameters:
+  - description: "the capabilitySettings value to set."
+    name: "capabilitySettings"
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.CapabilitySettings?alt=com.azure.resourcemanager.cognitiveservices.models.CapabilitySettings&text=CapabilitySettings\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public AccountProperties withCapabilitySettings(CapabilitySettings capabilitySettings)"
+  desc: "Set the capabilitySettings property: Reusable default agent capability settings inherited by child projects."
   returns:
     description: "the AccountProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.AccountProperties?alt=com.azure.resourcemanager.cognitiveservices.models.AccountProperties&text=AccountProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -721,4 +793,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.AccountProperties?alt=com.azure.resourcemanager.cognitiveservices.models.AccountProperties&text=AccountProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.cognitiveservices.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-cognitiveservices:1.5.0-beta.3
+artifact: com.azure.resourcemanager:azure-resourcemanager-cognitiveservices:1.5.0-beta.4

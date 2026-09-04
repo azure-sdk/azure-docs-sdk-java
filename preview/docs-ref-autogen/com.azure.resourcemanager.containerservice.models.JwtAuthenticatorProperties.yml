@@ -30,6 +30,16 @@ constructors:
   syntax: "public JWTAuthenticatorProperties()"
   desc: "Creates an instance of JWTAuthenticatorProperties class."
 methods:
+- uid: "com.azure.resourcemanager.containerservice.models.JWTAuthenticatorProperties.certificateAuthorityBundle()"
+  fullName: "com.azure.resourcemanager.containerservice.models.JWTAuthenticatorProperties.certificateAuthorityBundle()"
+  name: "certificateAuthorityBundle()"
+  nameWithType: "JWTAuthenticatorProperties.certificateAuthorityBundle()"
+  summary: "Get the certificate<wbr>Authority<wbr>Bundle property: PEM-encoded CA certificate bundle used to validate the connection when fetching discovery information."
+  syntax: "public String certificateAuthorityBundle()"
+  desc: "Get the certificateAuthorityBundle property: PEM-encoded CA certificate bundle used to validate the connection when fetching discovery information. Use this for issuer endpoints that use private certificate authorities or environments where TLS inspection is performed. The bundle must contain only CERTIFICATE PEM blocks, up to 10 CA certificates, and must be no larger than 20 KB in total. Include all CA certificates needed to validate the issuer endpoint's TLS certificate. Certificate revocation checking is not supported. If provided, only these CAs are trusted instead of the well-known root CAs. If not provided and the managed cluster's properties.securityProfile.customCATrustCertificates is set, those certificates will be used instead. Otherwise, only the well-known root CAs are trusted."
+  returns:
+    description: "the certificateAuthorityBundle value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.containerservice.models.JWTAuthenticatorProperties.claimMappings()"
   fullName: "com.azure.resourcemanager.containerservice.models.JWTAuthenticatorProperties.claimMappings()"
   name: "claimMappings()"
@@ -118,6 +128,20 @@ methods:
   summary: "Validates the instance."
   syntax: "public void validate()"
   desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.containerservice.models.JWTAuthenticatorProperties.withCertificateAuthorityBundle(java.lang.String)"
+  fullName: "com.azure.resourcemanager.containerservice.models.JWTAuthenticatorProperties.withCertificateAuthorityBundle(String certificateAuthorityBundle)"
+  name: "withCertificateAuthorityBundle(String certificateAuthorityBundle)"
+  nameWithType: "JWTAuthenticatorProperties.withCertificateAuthorityBundle(String certificateAuthorityBundle)"
+  summary: "Set the certificate<wbr>Authority<wbr>Bundle property: PEM-encoded CA certificate bundle used to validate the connection when fetching discovery information."
+  parameters:
+  - description: "the certificateAuthorityBundle value to set."
+    name: "certificateAuthorityBundle"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public JWTAuthenticatorProperties withCertificateAuthorityBundle(String certificateAuthorityBundle)"
+  desc: "Set the certificateAuthorityBundle property: PEM-encoded CA certificate bundle used to validate the connection when fetching discovery information. Use this for issuer endpoints that use private certificate authorities or environments where TLS inspection is performed. The bundle must contain only CERTIFICATE PEM blocks, up to 10 CA certificates, and must be no larger than 20 KB in total. Include all CA certificates needed to validate the issuer endpoint's TLS certificate. Certificate revocation checking is not supported. If provided, only these CAs are trusted instead of the well-known root CAs. If not provided and the managed cluster's properties.securityProfile.customCATrustCertificates is set, those certificates will be used instead. Otherwise, only the well-known root CAs are trusted."
+  returns:
+    description: "the JWTAuthenticatorProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.JWTAuthenticatorProperties?alt=com.azure.resourcemanager.containerservice.models.JWTAuthenticatorProperties&text=JWTAuthenticatorProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerservice.models.JWTAuthenticatorProperties.withClaimMappings(com.azure.resourcemanager.containerservice.models.JWTAuthenticatorClaimMappings)"
   fullName: "com.azure.resourcemanager.containerservice.models.JWTAuthenticatorProperties.withClaimMappings(JWTAuthenticatorClaimMappings claimMappings)"
   name: "withClaimMappings(JWTAuthenticatorClaimMappings claimMappings)"
@@ -180,4 +204,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservice.models.JWTAuthenticatorProperties?alt=com.azure.resourcemanager.containerservice.models.JWTAuthenticatorProperties&text=JWTAuthenticatorProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.63.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.64.0-beta.1

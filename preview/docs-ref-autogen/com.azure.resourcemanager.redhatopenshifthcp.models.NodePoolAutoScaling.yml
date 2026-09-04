@@ -1,0 +1,118 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling"
+fullName: "com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling"
+name: "NodePoolAutoScaling"
+nameWithType: "NodePoolAutoScaling"
+summary: "Node pool autoscaling."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **NodePoolAutoScaling**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling?alt=com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling&text=NodePoolAutoScaling\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling.NodePoolAutoScaling()"
+  fullName: "com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling.NodePoolAutoScaling()"
+  name: "NodePoolAutoScaling()"
+  nameWithType: "NodePoolAutoScaling.NodePoolAutoScaling()"
+  summary: "Creates an instance of Node<wbr>Pool<wbr>Auto<wbr>Scaling class."
+  syntax: "public NodePoolAutoScaling()"
+  desc: "Creates an instance of NodePoolAutoScaling class."
+methods:
+- uid: "com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "NodePoolAutoScaling.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Node<wbr>Pool<wbr>Auto<wbr>Scaling from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static NodePoolAutoScaling fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the NodePoolAutoScaling."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of NodePoolAutoScaling from the JsonReader."
+  returns:
+    description: "An instance of NodePoolAutoScaling if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling?alt=com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling&text=NodePoolAutoScaling\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling.max()"
+  fullName: "com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling.max()"
+  name: "max()"
+  nameWithType: "NodePoolAutoScaling.max()"
+  summary: "Get the max property: The maximum number of nodes in the node pool."
+  syntax: "public Integer max()"
+  desc: "Get the max property: The maximum number of nodes in the node pool. Validation: - Minimum: 0 (must be >= min) - Maximum: 200 (only when availabilityZone is not specified) - No maximum when availabilityZone is specified."
+  returns:
+    description: "the max value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+- uid: "com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling.min()"
+  fullName: "com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling.min()"
+  name: "min()"
+  nameWithType: "NodePoolAutoScaling.min()"
+  summary: "Get the min property: The minimum number of nodes in the node pool."
+  syntax: "public Integer min()"
+  desc: "Get the min property: The minimum number of nodes in the node pool. Validation: - Minimum: 0 - Maximum: 200 (only when availabilityZone is not specified) - No maximum when availabilityZone is specified."
+  returns:
+    description: "the min value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+- uid: "com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "NodePoolAutoScaling.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling.withMax(java.lang.Integer)"
+  fullName: "com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling.withMax(Integer max)"
+  name: "withMax(Integer max)"
+  nameWithType: "NodePoolAutoScaling.withMax(Integer max)"
+  summary: "Set the max property: The maximum number of nodes in the node pool."
+  parameters:
+  - description: "the max value to set."
+    name: "max"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  syntax: "public NodePoolAutoScaling withMax(Integer max)"
+  desc: "Set the max property: The maximum number of nodes in the node pool. Validation: - Minimum: 0 (must be >= min) - Maximum: 200 (only when availabilityZone is not specified) - No maximum when availabilityZone is specified."
+  returns:
+    description: "the NodePoolAutoScaling object itself."
+    type: "<xref href=\"com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling?alt=com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling&text=NodePoolAutoScaling\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling.withMin(java.lang.Integer)"
+  fullName: "com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling.withMin(Integer min)"
+  name: "withMin(Integer min)"
+  nameWithType: "NodePoolAutoScaling.withMin(Integer min)"
+  summary: "Set the min property: The minimum number of nodes in the node pool."
+  parameters:
+  - description: "the min value to set."
+    name: "min"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  syntax: "public NodePoolAutoScaling withMin(Integer min)"
+  desc: "Set the min property: The minimum number of nodes in the node pool. Validation: - Minimum: 0 - Maximum: 200 (only when availabilityZone is not specified) - No maximum when availabilityZone is specified."
+  returns:
+    description: "the NodePoolAutoScaling object itself."
+    type: "<xref href=\"com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling?alt=com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling&text=NodePoolAutoScaling\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Node pool autoscaling."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling?alt=com.azure.resourcemanager.redhatopenshifthcp.models.NodePoolAutoScaling&text=NodePoolAutoScaling\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.redhatopenshifthcp.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-redhatopenshifthcp:1.0.0-beta.1

@@ -90,6 +90,16 @@ methods:
   returns:
     description: "the cpuManagerPolicy value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.containerservice.models.KubeletConfig.evictionMaxPodGracePeriodInSeconds()"
+  fullName: "com.azure.resourcemanager.containerservice.models.KubeletConfig.evictionMaxPodGracePeriodInSeconds()"
+  name: "evictionMaxPodGracePeriodInSeconds()"
+  nameWithType: "KubeletConfig.evictionMaxPodGracePeriodInSeconds()"
+  summary: "Get the eviction<wbr>Max<wbr>Pod<wbr>Grace<wbr>Period<wbr>InSeconds property: Maximum grace period, in seconds, for pods to terminate during a soft eviction; caps the pod's termination<wbr>Grace<wbr>Period<wbr>Seconds."
+  syntax: "public Integer evictionMaxPodGracePeriodInSeconds()"
+  desc: "Get the evictionMaxPodGracePeriodInSeconds property: Maximum grace period, in seconds, for pods to terminate during a soft eviction; caps the pod's terminationGracePeriodSeconds. Default is 60, applied when the cluster's \\`enableNodeHardening\\` property is true. Only applicable for Linux nodepools."
+  returns:
+    description: "the evictionMaxPodGracePeriodInSeconds value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
 - uid: "com.azure.resourcemanager.containerservice.models.KubeletConfig.failSwapOn()"
   fullName: "com.azure.resourcemanager.containerservice.models.KubeletConfig.failSwapOn()"
   name: "failSwapOn()"
@@ -179,6 +189,26 @@ methods:
   returns:
     description: "the seccompDefault value."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.SeccompDefault?alt=com.azure.resourcemanager.containerservice.models.SeccompDefault&text=SeccompDefault\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservice.models.KubeletConfig.softEvictionGracePeriod()"
+  fullName: "com.azure.resourcemanager.containerservice.models.KubeletConfig.softEvictionGracePeriod()"
+  name: "softEvictionGracePeriod()"
+  nameWithType: "KubeletConfig.softEvictionGracePeriod()"
+  summary: "Get the soft<wbr>Eviction<wbr>Grace<wbr>Period property: Grace periods for soft eviction signals — how long a threshold must be held before pod eviction."
+  syntax: "public SoftEvictionGracePeriod softEvictionGracePeriod()"
+  desc: "Get the softEvictionGracePeriod property: Grace periods for soft eviction signals — how long a threshold must be held before pod eviction. Same defaulting and pairing rules as softEvictionThreshold. Values are Go-style duration strings (e.g. '1m30s'); supported units are 'ns', 'us', 'ms', 's', 'm', and 'h'. Only applicable for Linux nodepools."
+  returns:
+    description: "the softEvictionGracePeriod value."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.SoftEvictionGracePeriod?alt=com.azure.resourcemanager.containerservice.models.SoftEvictionGracePeriod&text=SoftEvictionGracePeriod\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservice.models.KubeletConfig.softEvictionThreshold()"
+  fullName: "com.azure.resourcemanager.containerservice.models.KubeletConfig.softEvictionThreshold()"
+  name: "softEvictionThreshold()"
+  nameWithType: "KubeletConfig.softEvictionThreshold()"
+  summary: "Get the soft<wbr>Eviction<wbr>Threshold property: Soft eviction thresholds for kubelet."
+  syntax: "public SoftEvictionThreshold softEvictionThreshold()"
+  desc: "Get the softEvictionThreshold property: Soft eviction thresholds for kubelet. When crossed, pods are evicted after the paired softEvictionGracePeriod. System defaults apply when the cluster's \\`enableNodeHardening\\` property is true; otherwise no soft eviction is configured. For each signal (memoryAvailable, nodeFsAvailable, nodeFsInodesFree), the entries in softEvictionThreshold and softEvictionGracePeriod must be in the same state: both omitted (default), both non-empty (override), or both empty strings (opt that signal out). Only applicable for Linux nodepools. See https://kubernetes.io/docs/concepts/scheduling-eviction/node-pressure-eviction/\\#soft-eviction-thresholds."
+  returns:
+    description: "the softEvictionThreshold value."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.SoftEvictionThreshold?alt=com.azure.resourcemanager.containerservice.models.SoftEvictionThreshold&text=SoftEvictionThreshold\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerservice.models.KubeletConfig.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.containerservice.models.KubeletConfig.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -292,6 +322,20 @@ methods:
   returns:
     description: "the KubeletConfig object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.KubeletConfig?alt=com.azure.resourcemanager.containerservice.models.KubeletConfig&text=KubeletConfig\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservice.models.KubeletConfig.withEvictionMaxPodGracePeriodInSeconds(java.lang.Integer)"
+  fullName: "com.azure.resourcemanager.containerservice.models.KubeletConfig.withEvictionMaxPodGracePeriodInSeconds(Integer evictionMaxPodGracePeriodInSeconds)"
+  name: "withEvictionMaxPodGracePeriodInSeconds(Integer evictionMaxPodGracePeriodInSeconds)"
+  nameWithType: "KubeletConfig.withEvictionMaxPodGracePeriodInSeconds(Integer evictionMaxPodGracePeriodInSeconds)"
+  summary: "Set the eviction<wbr>Max<wbr>Pod<wbr>Grace<wbr>Period<wbr>InSeconds property: Maximum grace period, in seconds, for pods to terminate during a soft eviction; caps the pod's termination<wbr>Grace<wbr>Period<wbr>Seconds."
+  parameters:
+  - description: "the evictionMaxPodGracePeriodInSeconds value to set."
+    name: "evictionMaxPodGracePeriodInSeconds"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  syntax: "public KubeletConfig withEvictionMaxPodGracePeriodInSeconds(Integer evictionMaxPodGracePeriodInSeconds)"
+  desc: "Set the evictionMaxPodGracePeriodInSeconds property: Maximum grace period, in seconds, for pods to terminate during a soft eviction; caps the pod's terminationGracePeriodSeconds. Default is 60, applied when the cluster's \\`enableNodeHardening\\` property is true. Only applicable for Linux nodepools."
+  returns:
+    description: "the KubeletConfig object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.KubeletConfig?alt=com.azure.resourcemanager.containerservice.models.KubeletConfig&text=KubeletConfig\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerservice.models.KubeletConfig.withFailSwapOn(java.lang.Boolean)"
   fullName: "com.azure.resourcemanager.containerservice.models.KubeletConfig.withFailSwapOn(Boolean failSwapOn)"
   name: "withFailSwapOn(Boolean failSwapOn)"
@@ -390,6 +434,34 @@ methods:
   returns:
     description: "the KubeletConfig object itself."
     type: "<xref href=\"com.azure.resourcemanager.containerservice.models.KubeletConfig?alt=com.azure.resourcemanager.containerservice.models.KubeletConfig&text=KubeletConfig\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservice.models.KubeletConfig.withSoftEvictionGracePeriod(com.azure.resourcemanager.containerservice.models.SoftEvictionGracePeriod)"
+  fullName: "com.azure.resourcemanager.containerservice.models.KubeletConfig.withSoftEvictionGracePeriod(SoftEvictionGracePeriod softEvictionGracePeriod)"
+  name: "withSoftEvictionGracePeriod(SoftEvictionGracePeriod softEvictionGracePeriod)"
+  nameWithType: "KubeletConfig.withSoftEvictionGracePeriod(SoftEvictionGracePeriod softEvictionGracePeriod)"
+  summary: "Set the soft<wbr>Eviction<wbr>Grace<wbr>Period property: Grace periods for soft eviction signals — how long a threshold must be held before pod eviction."
+  parameters:
+  - description: "the softEvictionGracePeriod value to set."
+    name: "softEvictionGracePeriod"
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.SoftEvictionGracePeriod?alt=com.azure.resourcemanager.containerservice.models.SoftEvictionGracePeriod&text=SoftEvictionGracePeriod\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public KubeletConfig withSoftEvictionGracePeriod(SoftEvictionGracePeriod softEvictionGracePeriod)"
+  desc: "Set the softEvictionGracePeriod property: Grace periods for soft eviction signals — how long a threshold must be held before pod eviction. Same defaulting and pairing rules as softEvictionThreshold. Values are Go-style duration strings (e.g. '1m30s'); supported units are 'ns', 'us', 'ms', 's', 'm', and 'h'. Only applicable for Linux nodepools."
+  returns:
+    description: "the KubeletConfig object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.KubeletConfig?alt=com.azure.resourcemanager.containerservice.models.KubeletConfig&text=KubeletConfig\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.containerservice.models.KubeletConfig.withSoftEvictionThreshold(com.azure.resourcemanager.containerservice.models.SoftEvictionThreshold)"
+  fullName: "com.azure.resourcemanager.containerservice.models.KubeletConfig.withSoftEvictionThreshold(SoftEvictionThreshold softEvictionThreshold)"
+  name: "withSoftEvictionThreshold(SoftEvictionThreshold softEvictionThreshold)"
+  nameWithType: "KubeletConfig.withSoftEvictionThreshold(SoftEvictionThreshold softEvictionThreshold)"
+  summary: "Set the soft<wbr>Eviction<wbr>Threshold property: Soft eviction thresholds for kubelet."
+  parameters:
+  - description: "the softEvictionThreshold value to set."
+    name: "softEvictionThreshold"
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.SoftEvictionThreshold?alt=com.azure.resourcemanager.containerservice.models.SoftEvictionThreshold&text=SoftEvictionThreshold\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public KubeletConfig withSoftEvictionThreshold(SoftEvictionThreshold softEvictionThreshold)"
+  desc: "Set the softEvictionThreshold property: Soft eviction thresholds for kubelet. When crossed, pods are evicted after the paired softEvictionGracePeriod. System defaults apply when the cluster's \\`enableNodeHardening\\` property is true; otherwise no soft eviction is configured. For each signal (memoryAvailable, nodeFsAvailable, nodeFsInodesFree), the entries in softEvictionThreshold and softEvictionGracePeriod must be in the same state: both omitted (default), both non-empty (override), or both empty strings (opt that signal out). Only applicable for Linux nodepools. See https://kubernetes.io/docs/concepts/scheduling-eviction/node-pressure-eviction/\\#soft-eviction-thresholds."
+  returns:
+    description: "the KubeletConfig object itself."
+    type: "<xref href=\"com.azure.resourcemanager.containerservice.models.KubeletConfig?alt=com.azure.resourcemanager.containerservice.models.KubeletConfig&text=KubeletConfig\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerservice.models.KubeletConfig.withTopologyManagerPolicy(java.lang.String)"
   fullName: "com.azure.resourcemanager.containerservice.models.KubeletConfig.withTopologyManagerPolicy(String topologyManagerPolicy)"
   name: "withTopologyManagerPolicy(String topologyManagerPolicy)"
@@ -410,4 +482,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerservice.models.KubeletConfig?alt=com.azure.resourcemanager.containerservice.models.KubeletConfig&text=KubeletConfig\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.containerservice.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.63.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerservice:2.64.0-beta.1

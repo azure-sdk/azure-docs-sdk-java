@@ -6,6 +6,30 @@ nameWithType: "SkuMixPlacementResponse"
 summary: "An immutable client-side representation of Sku<wbr>Mix<wbr>Placement<wbr>Response."
 syntax: "public interface **SkuMixPlacementResponse**"
 methods:
+- uid: "com.azure.resourcemanager.compute.recommender.models.SkuMixPlacementResponse.capacityLimits()"
+  fullName: "com.azure.resourcemanager.compute.recommender.models.SkuMixPlacementResponse.capacityLimits()"
+  name: "capacityLimits()"
+  nameWithType: "SkuMixPlacementResponse.capacityLimits()"
+  summary: "Gets the capacity<wbr>Limits property: Capacity availability for each requested (VM size, zone) combination, independent of the recommended placement."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract List<SkuMixPlacementCapacityLimit> capacityLimits()"
+  desc: "Gets the capacityLimits property: Capacity availability for each requested (VM size, zone) combination, independent of the recommended placement. An entry is present for every requested combination, including those excluded by capacity or quota. Only returned for requests that describe instances by VM sizes."
+  returns:
+    description: "the capacityLimits value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.compute.recommender.models.SkuMixPlacementCapacityLimit?alt=com.azure.resourcemanager.compute.recommender.models.SkuMixPlacementCapacityLimit&text=SkuMixPlacementCapacityLimit\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.compute.recommender.models.SkuMixPlacementResponse.id()"
+  fullName: "com.azure.resourcemanager.compute.recommender.models.SkuMixPlacementResponse.id()"
+  name: "id()"
+  nameWithType: "SkuMixPlacementResponse.id()"
+  summary: "Gets the id property: Unique identifier for this placement response, including responses that contain no placement choices."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String id()"
+  desc: "Gets the id property: Unique identifier for this placement response, including responses that contain no placement choices. Replaces the per-choice id that was present on placementChoices in earlier API versions."
+  returns:
+    description: "the id value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.compute.recommender.models.SkuMixPlacementResponse.innerModel()"
   fullName: "com.azure.resourcemanager.compute.recommender.models.SkuMixPlacementResponse.innerModel()"
   name: "innerModel()"
@@ -58,4 +82,4 @@ type: "interface"
 desc: "An immutable client-side representation of SkuMixPlacementResponse."
 metadata: {}
 package: "com.azure.resourcemanager.compute.recommender.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-compute-recommender:1.0.0-beta.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute-recommender:1.0.0-beta.3

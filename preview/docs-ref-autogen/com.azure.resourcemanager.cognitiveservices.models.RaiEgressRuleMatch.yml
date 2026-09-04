@@ -53,9 +53,9 @@ methods:
   fullName: "com.azure.resourcemanager.cognitiveservices.models.RaiEgressRuleMatch.host()"
   name: "host()"
   nameWithType: "RaiEgressRuleMatch.host()"
-  summary: "Get the host property: Host pattern to match using DNS wildcard syntax (e.<wbr>g., \"\\*.openai.<wbr>com\")."
+  summary: "Get the host property: Host pattern to match using DNS wildcard syntax (e.<wbr>g., \"\\\\\\*.openai.<wbr>com\")."
   syntax: "public String host()"
-  desc: "Get the host property: Host pattern to match using DNS wildcard syntax (e.g., \"\\*.openai.com\"). A leading \"\\*.\" matches any subdomain. Omit to match all hosts."
+  desc: "Get the host property: Host pattern to match using DNS wildcard syntax (e.g., \"\\\\\\*.openai.com\"). A leading \"\\\\\\*.\" matches any subdomain. Omit to match all hosts."
   returns:
     description: "the host value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -63,9 +63,9 @@ methods:
   fullName: "com.azure.resourcemanager.cognitiveservices.models.RaiEgressRuleMatch.path()"
   name: "path()"
   nameWithType: "RaiEgressRuleMatch.path()"
-  summary: "Get the path property: Path pattern to match using URI prefix with '\\*' wildcard (e.<wbr>g., \"/v1/\\*\")."
+  summary: "Get the path property: Path pattern to match using URI prefix matching."
   syntax: "public String path()"
-  desc: "Get the path property: Path pattern to match using URI prefix with '\\*' wildcard (e.g., \"/v1/\\*\"). Omit to match all paths."
+  desc: "Get the path property: Path pattern to match using URI prefix matching. An asterisk serves as a single-segment wildcard. For example, \"/v1/\\\\\\*\" matches \"/v1/chat\". Omit to match all paths."
   returns:
     description: "the path value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -85,13 +85,13 @@ methods:
   fullName: "com.azure.resourcemanager.cognitiveservices.models.RaiEgressRuleMatch.withHost(String host)"
   name: "withHost(String host)"
   nameWithType: "RaiEgressRuleMatch.withHost(String host)"
-  summary: "Set the host property: Host pattern to match using DNS wildcard syntax (e.<wbr>g., \"\\*.openai.<wbr>com\")."
+  summary: "Set the host property: Host pattern to match using DNS wildcard syntax (e.<wbr>g., \"\\\\\\*.openai.<wbr>com\")."
   parameters:
   - description: "the host value to set."
     name: "host"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public RaiEgressRuleMatch withHost(String host)"
-  desc: "Set the host property: Host pattern to match using DNS wildcard syntax (e.g., \"\\*.openai.com\"). A leading \"\\*.\" matches any subdomain. Omit to match all hosts."
+  desc: "Set the host property: Host pattern to match using DNS wildcard syntax (e.g., \"\\\\\\*.openai.com\"). A leading \"\\\\\\*.\" matches any subdomain. Omit to match all hosts."
   returns:
     description: "the RaiEgressRuleMatch object itself."
     type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.RaiEgressRuleMatch?alt=com.azure.resourcemanager.cognitiveservices.models.RaiEgressRuleMatch&text=RaiEgressRuleMatch\" data-throw-if-not-resolved=\"False\" />"
@@ -99,20 +99,20 @@ methods:
   fullName: "com.azure.resourcemanager.cognitiveservices.models.RaiEgressRuleMatch.withPath(String path)"
   name: "withPath(String path)"
   nameWithType: "RaiEgressRuleMatch.withPath(String path)"
-  summary: "Set the path property: Path pattern to match using URI prefix with '\\*' wildcard (e.<wbr>g., \"/v1/\\*\")."
+  summary: "Set the path property: Path pattern to match using URI prefix matching."
   parameters:
   - description: "the path value to set."
     name: "path"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public RaiEgressRuleMatch withPath(String path)"
-  desc: "Set the path property: Path pattern to match using URI prefix with '\\*' wildcard (e.g., \"/v1/\\*\"). Omit to match all paths."
+  desc: "Set the path property: Path pattern to match using URI prefix matching. An asterisk serves as a single-segment wildcard. For example, \"/v1/\\\\\\*\" matches \"/v1/chat\". Omit to match all paths."
   returns:
     description: "the RaiEgressRuleMatch object itself."
     type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.RaiEgressRuleMatch?alt=com.azure.resourcemanager.cognitiveservices.models.RaiEgressRuleMatch&text=RaiEgressRuleMatch\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "The match criteria for an egress rule. If both host and path are omitted, the rule matches all traffic. Host uses DNS wildcard syntax (e.g., \"\\*.openai.com\" matches \"api.openai.com\"). Path uses URI prefix matching with '\\*' as a single-segment wildcard (e.g., \"/v1/\\*\" matches \"/v1/chat\")."
+desc: "The match criteria for an egress rule. If both host and path are omitted, the rule matches all traffic. Host uses DNS wildcard syntax (e.g., \"\\\\\\*.openai.com\" matches \"api.openai.com\"). Path uses URI prefix matching with an asterisk as a single-segment wildcard. For example, \"/v1/\\\\\\*\" matches \"/v1/chat\"."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.RaiEgressRuleMatch?alt=com.azure.resourcemanager.cognitiveservices.models.RaiEgressRuleMatch&text=RaiEgressRuleMatch\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.cognitiveservices.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-cognitiveservices:1.5.0-beta.3
+artifact: com.azure.resourcemanager:azure-resourcemanager-cognitiveservices:1.5.0-beta.4

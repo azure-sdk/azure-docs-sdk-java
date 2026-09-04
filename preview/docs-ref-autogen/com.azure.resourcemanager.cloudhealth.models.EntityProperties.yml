@@ -139,6 +139,16 @@ methods:
   returns:
     description: "the provisioningState value."
     type: "<xref href=\"com.azure.resourcemanager.cloudhealth.models.HealthModelProvisioningState?alt=com.azure.resourcemanager.cloudhealth.models.HealthModelProvisioningState&text=HealthModelProvisioningState\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cloudhealth.models.EntityProperties.signalAggregationGroups()"
+  fullName: "com.azure.resourcemanager.cloudhealth.models.EntityProperties.signalAggregationGroups()"
+  name: "signalAggregationGroups()"
+  nameWithType: "EntityProperties.signalAggregationGroups()"
+  summary: "Get the signal<wbr>Aggregation<wbr>Groups property: Logical aggregation groups over the signals on this entity."
+  syntax: "public List<SignalAggregationGroup> signalAggregationGroups()"
+  desc: "Get the signalAggregationGroups property: Logical aggregation groups over the signals on this entity. Overlap is allowed: the same signal may appear in more than one group's members. Each group is evaluated independently according to its strategy, and a shared signal can contribute to multiple group states and related per-group telemetry. Group states contribute alongside any ungrouped signals and the dependency-aggregated child health to the entity's overall worst-of composite."
+  returns:
+    description: "the signalAggregationGroups value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cloudhealth.models.SignalAggregationGroup?alt=com.azure.resourcemanager.cloudhealth.models.SignalAggregationGroup&text=SignalAggregationGroup\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.cloudhealth.models.EntityProperties.signalGroups()"
   fullName: "com.azure.resourcemanager.cloudhealth.models.EntityProperties.signalGroups()"
   name: "signalGroups()"
@@ -255,6 +265,20 @@ methods:
   returns:
     description: "the EntityProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.cloudhealth.models.EntityProperties?alt=com.azure.resourcemanager.cloudhealth.models.EntityProperties&text=EntityProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cloudhealth.models.EntityProperties.withSignalAggregationGroups(java.util.List<com.azure.resourcemanager.cloudhealth.models.SignalAggregationGroup>)"
+  fullName: "com.azure.resourcemanager.cloudhealth.models.EntityProperties.withSignalAggregationGroups(List<SignalAggregationGroup> signalAggregationGroups)"
+  name: "withSignalAggregationGroups(List<SignalAggregationGroup> signalAggregationGroups)"
+  nameWithType: "EntityProperties.withSignalAggregationGroups(List<SignalAggregationGroup> signalAggregationGroups)"
+  summary: "Set the signal<wbr>Aggregation<wbr>Groups property: Logical aggregation groups over the signals on this entity."
+  parameters:
+  - description: "the signalAggregationGroups value to set."
+    name: "signalAggregationGroups"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cloudhealth.models.SignalAggregationGroup?alt=com.azure.resourcemanager.cloudhealth.models.SignalAggregationGroup&text=SignalAggregationGroup\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public EntityProperties withSignalAggregationGroups(List<SignalAggregationGroup> signalAggregationGroups)"
+  desc: "Set the signalAggregationGroups property: Logical aggregation groups over the signals on this entity. Overlap is allowed: the same signal may appear in more than one group's members. Each group is evaluated independently according to its strategy, and a shared signal can contribute to multiple group states and related per-group telemetry. Group states contribute alongside any ungrouped signals and the dependency-aggregated child health to the entity's overall worst-of composite."
+  returns:
+    description: "the EntityProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.cloudhealth.models.EntityProperties?alt=com.azure.resourcemanager.cloudhealth.models.EntityProperties&text=EntityProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cloudhealth.models.EntityProperties.withSignalGroups(com.azure.resourcemanager.cloudhealth.models.SignalGroups)"
   fullName: "com.azure.resourcemanager.cloudhealth.models.EntityProperties.withSignalGroups(SignalGroups signalGroups)"
   name: "withSignalGroups(SignalGroups signalGroups)"
@@ -289,4 +313,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cloudhealth.models.EntityProperties?alt=com.azure.resourcemanager.cloudhealth.models.EntityProperties&text=EntityProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.cloudhealth.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-cloudhealth:1.0.0-beta.3
+artifact: com.azure.resourcemanager:azure-resourcemanager-cloudhealth:1.0.0-beta.4
