@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsSched
 fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate"
 name: "ScheduledActionsScheduleUpdate"
 nameWithType: "ScheduledActionsScheduleUpdate"
-summary: "Schedule properties for update (PATCH)."
+summary: "Schedule changes for a scheduled action."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -34,9 +34,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate.deadlineType()"
   name: "deadlineType()"
   nameWithType: "ScheduledActionsScheduleUpdate.deadlineType()"
-  summary: "Get the deadline<wbr>Type property: The type of deadline the scheduled action is supposed to follow for the schedule."
+  summary: "Get the deadline<wbr>Type property: How the scheduled time is interpreted."
   syntax: "public ScheduledActionsDeadlineType deadlineType()"
-  desc: "Get the deadlineType property: The type of deadline the scheduled action is supposed to follow for the schedule. If no value is passed, it will default to InitiateAt."
+  desc: "Get the deadlineType property: How the scheduled time is interpreted. The default is \\`InitiateAt\\`."
   returns:
     description: "the deadlineType value."
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsDeadlineType?alt=com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsDeadlineType&text=ScheduledActionsDeadlineType\" data-throw-if-not-resolved=\"False\" />"
@@ -44,9 +44,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate.executionParameters()"
   name: "executionParameters()"
   nameWithType: "ScheduledActionsScheduleUpdate.executionParameters()"
-  summary: "Get the execution<wbr>Parameters property: The execution parameters the scheduled action is supposed to follow."
+  summary: "Get the execution<wbr>Parameters property: Settings that control operation execution and retries."
   syntax: "public ScheduledActionsExecutionParameters executionParameters()"
-  desc: "Get the executionParameters property: The execution parameters the scheduled action is supposed to follow."
+  desc: "Get the executionParameters property: Settings that control operation execution and retries."
   returns:
     description: "the executionParameters value."
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsExecutionParameters?alt=com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsExecutionParameters&text=ScheduledActionsExecutionParameters\" data-throw-if-not-resolved=\"False\" />"
@@ -73,9 +73,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate.requestedDaysOfTheMonth()"
   name: "requestedDaysOfTheMonth()"
   nameWithType: "ScheduledActionsScheduleUpdate.requestedDaysOfTheMonth()"
-  summary: "Get the requested<wbr>Days<wbr>OfThe<wbr>Month property: The days of the month the scheduled action is supposed to run on."
+  summary: "Get the requested<wbr>Days<wbr>OfThe<wbr>Month property: The calendar days when the action runs."
   syntax: "public List<Integer> requestedDaysOfTheMonth()"
-  desc: "Get the requestedDaysOfTheMonth property: The days of the month the scheduled action is supposed to run on. If empty, it means it will run on every day of the month."
+  desc: "Get the requestedDaysOfTheMonth property: The calendar days when the action runs. An empty array means every day of the month."
   returns:
     description: "the requestedDaysOfTheMonth value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>&gt;"
@@ -83,9 +83,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate.requestedMonths()"
   name: "requestedMonths()"
   nameWithType: "ScheduledActionsScheduleUpdate.requestedMonths()"
-  summary: "Get the requested<wbr>Months property: The months the scheduled action is supposed to run on."
+  summary: "Get the requested<wbr>Months property: The months when the action runs."
   syntax: "public List<Month> requestedMonths()"
-  desc: "Get the requestedMonths property: The months the scheduled action is supposed to run on. If empty, it means it will run on every month."
+  desc: "Get the requestedMonths property: The months when the action runs. An empty array means every month."
   returns:
     description: "the requestedMonths value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.Month?alt=com.azure.resourcemanager.compute.bulkactions.models.Month&text=Month\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -93,9 +93,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate.requestedWeekDays()"
   name: "requestedWeekDays()"
   nameWithType: "ScheduledActionsScheduleUpdate.requestedWeekDays()"
-  summary: "Get the requested<wbr>Week<wbr>Days property: The week days the scheduled action is supposed to run on."
+  summary: "Get the requested<wbr>Week<wbr>Days property: The days of the week when the action runs."
   syntax: "public List<WeekDay> requestedWeekDays()"
-  desc: "Get the requestedWeekDays property: The week days the scheduled action is supposed to run on. If empty, it means it will run on every week day."
+  desc: "Get the requestedWeekDays property: The days of the week when the action runs. An empty array means every day of the week."
   returns:
     description: "the requestedWeekDays value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.WeekDay?alt=com.azure.resourcemanager.compute.bulkactions.models.WeekDay&text=WeekDay\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -103,9 +103,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate.scheduledTime()"
   name: "scheduledTime()"
   nameWithType: "ScheduledActionsScheduleUpdate.scheduledTime()"
-  summary: "Get the scheduled<wbr>Time property: The time the scheduled action is supposed to run on."
+  summary: "Get the scheduled<wbr>Time property: The local time of day when the scheduled action runs."
   syntax: "public String scheduledTime()"
-  desc: "Get the scheduledTime property: The time the scheduled action is supposed to run on."
+  desc: "Get the scheduledTime property: The local time of day when the scheduled action runs."
   returns:
     description: "the scheduledTime value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -113,9 +113,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate.timeZone()"
   name: "timeZone()"
   nameWithType: "ScheduledActionsScheduleUpdate.timeZone()"
-  summary: "Get the time<wbr>Zone property: The timezone the scheduled time is specified on."
+  summary: "Get the time<wbr>Zone property: The time zone used to interpret the scheduled time."
   syntax: "public String timeZone()"
-  desc: "Get the timeZone property: The timezone the scheduled time is specified on."
+  desc: "Get the timeZone property: The time zone used to interpret the scheduled time."
   returns:
     description: "the timeZone value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -135,13 +135,13 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate.withDeadlineType(ScheduledActionsDeadlineType deadlineType)"
   name: "withDeadlineType(ScheduledActionsDeadlineType deadlineType)"
   nameWithType: "ScheduledActionsScheduleUpdate.withDeadlineType(ScheduledActionsDeadlineType deadlineType)"
-  summary: "Set the deadline<wbr>Type property: The type of deadline the scheduled action is supposed to follow for the schedule."
+  summary: "Set the deadline<wbr>Type property: How the scheduled time is interpreted."
   parameters:
   - description: "the deadlineType value to set."
     name: "deadlineType"
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsDeadlineType?alt=com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsDeadlineType&text=ScheduledActionsDeadlineType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public ScheduledActionsScheduleUpdate withDeadlineType(ScheduledActionsDeadlineType deadlineType)"
-  desc: "Set the deadlineType property: The type of deadline the scheduled action is supposed to follow for the schedule. If no value is passed, it will default to InitiateAt."
+  desc: "Set the deadlineType property: How the scheduled time is interpreted. The default is \\`InitiateAt\\`."
   returns:
     description: "the ScheduledActionsScheduleUpdate object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate?alt=com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate&text=ScheduledActionsScheduleUpdate\" data-throw-if-not-resolved=\"False\" />"
@@ -149,13 +149,13 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate.withExecutionParameters(ScheduledActionsExecutionParameters executionParameters)"
   name: "withExecutionParameters(ScheduledActionsExecutionParameters executionParameters)"
   nameWithType: "ScheduledActionsScheduleUpdate.withExecutionParameters(ScheduledActionsExecutionParameters executionParameters)"
-  summary: "Set the execution<wbr>Parameters property: The execution parameters the scheduled action is supposed to follow."
+  summary: "Set the execution<wbr>Parameters property: Settings that control operation execution and retries."
   parameters:
   - description: "the executionParameters value to set."
     name: "executionParameters"
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsExecutionParameters?alt=com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsExecutionParameters&text=ScheduledActionsExecutionParameters\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public ScheduledActionsScheduleUpdate withExecutionParameters(ScheduledActionsExecutionParameters executionParameters)"
-  desc: "Set the executionParameters property: The execution parameters the scheduled action is supposed to follow."
+  desc: "Set the executionParameters property: Settings that control operation execution and retries."
   returns:
     description: "the ScheduledActionsScheduleUpdate object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate?alt=com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate&text=ScheduledActionsScheduleUpdate\" data-throw-if-not-resolved=\"False\" />"
@@ -163,13 +163,13 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate.withRequestedDaysOfTheMonth(List<Integer> requestedDaysOfTheMonth)"
   name: "withRequestedDaysOfTheMonth(List<Integer> requestedDaysOfTheMonth)"
   nameWithType: "ScheduledActionsScheduleUpdate.withRequestedDaysOfTheMonth(List<Integer> requestedDaysOfTheMonth)"
-  summary: "Set the requested<wbr>Days<wbr>OfThe<wbr>Month property: The days of the month the scheduled action is supposed to run on."
+  summary: "Set the requested<wbr>Days<wbr>OfThe<wbr>Month property: The calendar days when the action runs."
   parameters:
   - description: "the requestedDaysOfTheMonth value to set."
     name: "requestedDaysOfTheMonth"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>&gt;"
   syntax: "public ScheduledActionsScheduleUpdate withRequestedDaysOfTheMonth(List<Integer> requestedDaysOfTheMonth)"
-  desc: "Set the requestedDaysOfTheMonth property: The days of the month the scheduled action is supposed to run on. If empty, it means it will run on every day of the month."
+  desc: "Set the requestedDaysOfTheMonth property: The calendar days when the action runs. An empty array means every day of the month."
   returns:
     description: "the ScheduledActionsScheduleUpdate object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate?alt=com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate&text=ScheduledActionsScheduleUpdate\" data-throw-if-not-resolved=\"False\" />"
@@ -177,13 +177,13 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate.withRequestedMonths(List<Month> requestedMonths)"
   name: "withRequestedMonths(List<Month> requestedMonths)"
   nameWithType: "ScheduledActionsScheduleUpdate.withRequestedMonths(List<Month> requestedMonths)"
-  summary: "Set the requested<wbr>Months property: The months the scheduled action is supposed to run on."
+  summary: "Set the requested<wbr>Months property: The months when the action runs."
   parameters:
   - description: "the requestedMonths value to set."
     name: "requestedMonths"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.Month?alt=com.azure.resourcemanager.compute.bulkactions.models.Month&text=Month\" data-throw-if-not-resolved=\"False\" />&gt;"
   syntax: "public ScheduledActionsScheduleUpdate withRequestedMonths(List<Month> requestedMonths)"
-  desc: "Set the requestedMonths property: The months the scheduled action is supposed to run on. If empty, it means it will run on every month."
+  desc: "Set the requestedMonths property: The months when the action runs. An empty array means every month."
   returns:
     description: "the ScheduledActionsScheduleUpdate object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate?alt=com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate&text=ScheduledActionsScheduleUpdate\" data-throw-if-not-resolved=\"False\" />"
@@ -191,13 +191,13 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate.withRequestedWeekDays(List<WeekDay> requestedWeekDays)"
   name: "withRequestedWeekDays(List<WeekDay> requestedWeekDays)"
   nameWithType: "ScheduledActionsScheduleUpdate.withRequestedWeekDays(List<WeekDay> requestedWeekDays)"
-  summary: "Set the requested<wbr>Week<wbr>Days property: The week days the scheduled action is supposed to run on."
+  summary: "Set the requested<wbr>Week<wbr>Days property: The days of the week when the action runs."
   parameters:
   - description: "the requestedWeekDays value to set."
     name: "requestedWeekDays"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.WeekDay?alt=com.azure.resourcemanager.compute.bulkactions.models.WeekDay&text=WeekDay\" data-throw-if-not-resolved=\"False\" />&gt;"
   syntax: "public ScheduledActionsScheduleUpdate withRequestedWeekDays(List<WeekDay> requestedWeekDays)"
-  desc: "Set the requestedWeekDays property: The week days the scheduled action is supposed to run on. If empty, it means it will run on every week day."
+  desc: "Set the requestedWeekDays property: The days of the week when the action runs. An empty array means every day of the week."
   returns:
     description: "the ScheduledActionsScheduleUpdate object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate?alt=com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate&text=ScheduledActionsScheduleUpdate\" data-throw-if-not-resolved=\"False\" />"
@@ -205,13 +205,13 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate.withScheduledTime(String scheduledTime)"
   name: "withScheduledTime(String scheduledTime)"
   nameWithType: "ScheduledActionsScheduleUpdate.withScheduledTime(String scheduledTime)"
-  summary: "Set the scheduled<wbr>Time property: The time the scheduled action is supposed to run on."
+  summary: "Set the scheduled<wbr>Time property: The local time of day when the scheduled action runs."
   parameters:
   - description: "the scheduledTime value to set."
     name: "scheduledTime"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ScheduledActionsScheduleUpdate withScheduledTime(String scheduledTime)"
-  desc: "Set the scheduledTime property: The time the scheduled action is supposed to run on."
+  desc: "Set the scheduledTime property: The local time of day when the scheduled action runs."
   returns:
     description: "the ScheduledActionsScheduleUpdate object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate?alt=com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate&text=ScheduledActionsScheduleUpdate\" data-throw-if-not-resolved=\"False\" />"
@@ -219,20 +219,20 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate.withTimeZone(String timeZone)"
   name: "withTimeZone(String timeZone)"
   nameWithType: "ScheduledActionsScheduleUpdate.withTimeZone(String timeZone)"
-  summary: "Set the time<wbr>Zone property: The timezone the scheduled time is specified on."
+  summary: "Set the time<wbr>Zone property: The time zone used to interpret the scheduled time."
   parameters:
   - description: "the timeZone value to set."
     name: "timeZone"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ScheduledActionsScheduleUpdate withTimeZone(String timeZone)"
-  desc: "Set the timeZone property: The timezone the scheduled time is specified on."
+  desc: "Set the timeZone property: The time zone used to interpret the scheduled time."
   returns:
     description: "the ScheduledActionsScheduleUpdate object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate?alt=com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate&text=ScheduledActionsScheduleUpdate\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Schedule properties for update (PATCH). All properties are optional so individual fields can be patched (merge semantics); omitting a property preserves the current value."
+desc: "Schedule changes for a scheduled action. Omitted properties keep their current values."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate?alt=com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsScheduleUpdate&text=ScheduledActionsScheduleUpdate\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.compute.bulkactions.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-compute-bulkactions:1.0.0-beta.3
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute-bulkactions:1.0.0-beta.4

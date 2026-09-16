@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsExten
 fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsExtensionProperties"
 name: "ScheduledActionsExtensionProperties"
 nameWithType: "ScheduledActionsExtensionProperties"
-summary: "Scheduled action extension properties."
+summary: "A scheduled action associated with a specific compute resource."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -26,9 +26,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsExtensionProperties.actionType()"
   name: "actionType()"
   nameWithType: "ScheduledActionsExtensionProperties.actionType()"
-  summary: "Get the action<wbr>Type property: The action the scheduled action should perform in the resources."
+  summary: "Get the action<wbr>Type property: The operation performed on the targeted resources."
   syntax: "public ScheduledActionType actionType()"
-  desc: "Get the actionType property: The action the scheduled action should perform in the resources."
+  desc: "Get the actionType property: The operation performed on the targeted resources."
   returns:
     description: "the actionType value."
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionType?alt=com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionType&text=ScheduledActionType\" data-throw-if-not-resolved=\"False\" />"
@@ -36,9 +36,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsExtensionProperties.disabled()"
   name: "disabled()"
   nameWithType: "ScheduledActionsExtensionProperties.disabled()"
-  summary: "Get the disabled property: Tell if the scheduled action is disabled or not."
+  summary: "Get the disabled property: Indicates whether new occurrences are disabled."
   syntax: "public Boolean disabled()"
-  desc: "Get the disabled property: Tell if the scheduled action is disabled or not."
+  desc: "Get the disabled property: Indicates whether new occurrences are disabled."
   returns:
     description: "the disabled value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
@@ -46,9 +46,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsExtensionProperties.endTime()"
   name: "endTime()"
   nameWithType: "ScheduledActionsExtensionProperties.endTime()"
-  summary: "Get the end<wbr>Time property: The time when the scheduled action is supposed to stop scheduling."
+  summary: "Get the end<wbr>Time property: The date and time, including UTC offset, after which no new occurrences are scheduled."
   syntax: "public OffsetDateTime endTime()"
-  desc: "Get the endTime property: The time when the scheduled action is supposed to stop scheduling."
+  desc: "Get the endTime property: The date and time, including UTC offset, after which no new occurrences are scheduled."
   returns:
     description: "the endTime value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
@@ -75,9 +75,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsExtensionProperties.notificationSettings()"
   name: "notificationSettings()"
   nameWithType: "ScheduledActionsExtensionProperties.notificationSettings()"
-  summary: "Get the notification<wbr>Settings property: The notification settings for the scheduled action."
+  summary: "Get the notification<wbr>Settings property: Notification settings that apply to the scheduled action."
   syntax: "public List<NotificationProperties> notificationSettings()"
-  desc: "Get the notificationSettings property: The notification settings for the scheduled action."
+  desc: "Get the notificationSettings property: Notification settings that apply to the scheduled action."
   returns:
     description: "the notificationSettings value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.NotificationProperties?alt=com.azure.resourcemanager.compute.bulkactions.models.NotificationProperties&text=NotificationProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -85,9 +85,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsExtensionProperties.provisioningState()"
   name: "provisioningState()"
   nameWithType: "ScheduledActionsExtensionProperties.provisioningState()"
-  summary: "Get the provisioning<wbr>State property: The status of the last provisioning operation performed on the resource."
+  summary: "Get the provisioning<wbr>State property: Read-only."
   syntax: "public ScheduledActionsProvisioningState provisioningState()"
-  desc: "Get the provisioningState property: The status of the last provisioning operation performed on the resource."
+  desc: "Get the provisioningState property: Read-only. The provisioning state of the scheduled action."
   returns:
     description: "the provisioningState value."
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsProvisioningState?alt=com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsProvisioningState&text=ScheduledActionsProvisioningState\" data-throw-if-not-resolved=\"False\" />"
@@ -95,9 +95,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsExtensionProperties.resourceNotificationSettings()"
   name: "resourceNotificationSettings()"
   nameWithType: "ScheduledActionsExtensionProperties.resourceNotificationSettings()"
-  summary: "Get the resource<wbr>Notification<wbr>Settings property: The notification settings for the scheduled action at a resource level."
+  summary: "Get the resource<wbr>Notification<wbr>Settings property: Read-only."
   syntax: "public List<NotificationProperties> resourceNotificationSettings()"
-  desc: "Get the resourceNotificationSettings property: The notification settings for the scheduled action at a resource level. Resource level notification settings are scope to specific resources only and submitted through attach requests."
+  desc: "Get the resourceNotificationSettings property: Read-only. Notification settings that apply only to the specified compute resource."
   returns:
     description: "the resourceNotificationSettings value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.NotificationProperties?alt=com.azure.resourcemanager.compute.bulkactions.models.NotificationProperties&text=NotificationProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -105,9 +105,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsExtensionProperties.resourceType()"
   name: "resourceType()"
   nameWithType: "ScheduledActionsExtensionProperties.resourceType()"
-  summary: "Get the resource<wbr>Type property: The type of resource the scheduled action is targeting."
+  summary: "Get the resource<wbr>Type property: The type of compute resource targeted by the action."
   syntax: "public ResourceType resourceType()"
-  desc: "Get the resourceType property: The type of resource the scheduled action is targeting."
+  desc: "Get the resourceType property: The type of compute resource targeted by the action."
   returns:
     description: "the resourceType value."
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ResourceType?alt=com.azure.resourcemanager.compute.bulkactions.models.ResourceType&text=ResourceType\" data-throw-if-not-resolved=\"False\" />"
@@ -115,9 +115,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsExtensionProperties.schedule()"
   name: "schedule()"
   nameWithType: "ScheduledActionsExtensionProperties.schedule()"
-  summary: "Get the schedule property: The schedule the scheduled action is supposed to follow."
+  summary: "Get the schedule property: The recurring schedule."
   syntax: "public ScheduledActionsSchedule schedule()"
-  desc: "Get the schedule property: The schedule the scheduled action is supposed to follow."
+  desc: "Get the schedule property: The recurring schedule."
   returns:
     description: "the schedule value."
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsSchedule?alt=com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsSchedule&text=ScheduledActionsSchedule\" data-throw-if-not-resolved=\"False\" />"
@@ -125,9 +125,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsExtensionProperties.startTime()"
   name: "startTime()"
   nameWithType: "ScheduledActionsExtensionProperties.startTime()"
-  summary: "Get the start<wbr>Time property: The time which the scheduled action is supposed to start running."
+  summary: "Get the start<wbr>Time property: The date and time, including UTC offset, when the schedule becomes active."
   syntax: "public OffsetDateTime startTime()"
-  desc: "Get the startTime property: The time which the scheduled action is supposed to start running."
+  desc: "Get the startTime property: The date and time, including UTC offset, when the schedule becomes active."
   returns:
     description: "the startTime value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
@@ -144,9 +144,9 @@ methods:
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Scheduled action extension properties."
+desc: "A scheduled action associated with a specific compute resource."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsExtensionProperties?alt=com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsExtensionProperties&text=ScheduledActionsExtensionProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.compute.bulkactions.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-compute-bulkactions:1.0.0-beta.3
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute-bulkactions:1.0.0-beta.4

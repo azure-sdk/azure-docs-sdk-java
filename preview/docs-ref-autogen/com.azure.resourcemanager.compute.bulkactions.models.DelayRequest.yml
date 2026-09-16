@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.compute.bulkactions.models.DelayRequest"
 fullName: "com.azure.resourcemanager.compute.bulkactions.models.DelayRequest"
 name: "DelayRequest"
 nameWithType: "DelayRequest"
-summary: "Request to ask for a delay in an occurrence, delay should be set to client local time eg (PST) 2025-05-30T06:35:00-07:00."
+summary: "Request body for delaying a scheduled action occurrence."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -34,9 +34,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.DelayRequest.delay()"
   name: "delay()"
   nameWithType: "DelayRequest.delay()"
-  summary: "Get the delay property: The exact time to delay the operations to."
+  summary: "Get the delay property: The new date and time for the occurrence, including the UTC offset."
   syntax: "public OffsetDateTime delay()"
-  desc: "Get the delay property: The exact time to delay the operations to."
+  desc: "Get the delay property: The new date and time for the occurrence, including the UTC offset."
   returns:
     description: "the delay value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
@@ -63,9 +63,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.DelayRequest.resourceIds()"
   name: "resourceIds()"
   nameWithType: "DelayRequest.resourceIds()"
-  summary: "Get the resource<wbr>Ids property: The resources that should be delayed."
+  summary: "Get the resource<wbr>Ids property: The resources to delay."
   syntax: "public List<String> resourceIds()"
-  desc: "Get the resourceIds property: The resources that should be delayed. If empty, the delay will apply to the all resources in the occurrence."
+  desc: "Get the resourceIds property: The resources to delay. An empty array delays all resources in the occurrence."
   returns:
     description: "the resourceIds value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
@@ -85,13 +85,13 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.DelayRequest.withDelay(OffsetDateTime delay)"
   name: "withDelay(OffsetDateTime delay)"
   nameWithType: "DelayRequest.withDelay(OffsetDateTime delay)"
-  summary: "Set the delay property: The exact time to delay the operations to."
+  summary: "Set the delay property: The new date and time for the occurrence, including the UTC offset."
   parameters:
   - description: "the delay value to set."
     name: "delay"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
   syntax: "public DelayRequest withDelay(OffsetDateTime delay)"
-  desc: "Set the delay property: The exact time to delay the operations to."
+  desc: "Set the delay property: The new date and time for the occurrence, including the UTC offset."
   returns:
     description: "the DelayRequest object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.DelayRequest?alt=com.azure.resourcemanager.compute.bulkactions.models.DelayRequest&text=DelayRequest\" data-throw-if-not-resolved=\"False\" />"
@@ -99,20 +99,20 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.DelayRequest.withResourceIds(List<String> resourceIds)"
   name: "withResourceIds(List<String> resourceIds)"
   nameWithType: "DelayRequest.withResourceIds(List<String> resourceIds)"
-  summary: "Set the resource<wbr>Ids property: The resources that should be delayed."
+  summary: "Set the resource<wbr>Ids property: The resources to delay."
   parameters:
   - description: "the resourceIds value to set."
     name: "resourceIds"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
   syntax: "public DelayRequest withResourceIds(List<String> resourceIds)"
-  desc: "Set the resourceIds property: The resources that should be delayed. If empty, the delay will apply to the all resources in the occurrence."
+  desc: "Set the resourceIds property: The resources to delay. An empty array delays all resources in the occurrence."
   returns:
     description: "the DelayRequest object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.DelayRequest?alt=com.azure.resourcemanager.compute.bulkactions.models.DelayRequest&text=DelayRequest\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Request to ask for a delay in an occurrence, delay should be set to client local time eg (PST) 2025-05-30T06:35:00-07:00."
+desc: "Request body for delaying a scheduled action occurrence."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.DelayRequest?alt=com.azure.resourcemanager.compute.bulkactions.models.DelayRequest&text=DelayRequest\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.compute.bulkactions.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-compute-bulkactions:1.0.0-beta.3
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute-bulkactions:1.0.0-beta.4

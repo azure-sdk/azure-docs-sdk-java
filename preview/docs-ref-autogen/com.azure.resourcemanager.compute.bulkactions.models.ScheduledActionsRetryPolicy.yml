@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsRetry
 fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsRetryPolicy"
 name: "ScheduledActionsRetryPolicy"
 nameWithType: "ScheduledActionsRetryPolicy"
-summary: "Retry policy the scheduled action can pass."
+summary: "Retry settings for a scheduled action operation."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -53,9 +53,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsRetryPolicy.onFailureAction()"
   name: "onFailureAction()"
   nameWithType: "ScheduledActionsRetryPolicy.onFailureAction()"
-  summary: "Get the on<wbr>Failure<wbr>Action property: Action to take on failure."
+  summary: "Get the on<wbr>Failure<wbr>Action property: The resource operation to retry after a failure."
   syntax: "public ScheduledActionsResourceOperationType onFailureAction()"
-  desc: "Get the onFailureAction property: Action to take on failure."
+  desc: "Get the onFailureAction property: The resource operation to retry after a failure."
   returns:
     description: "the onFailureAction value."
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsResourceOperationType?alt=com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsResourceOperationType&text=ScheduledActionsResourceOperationType\" data-throw-if-not-resolved=\"False\" />"
@@ -63,9 +63,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsRetryPolicy.retryCount()"
   name: "retryCount()"
   nameWithType: "ScheduledActionsRetryPolicy.retryCount()"
-  summary: "Get the retry<wbr>Count property: Retry count for the request."
+  summary: "Get the retry<wbr>Count property: The maximum number of retry attempts."
   syntax: "public Integer retryCount()"
-  desc: "Get the retryCount property: Retry count for the request."
+  desc: "Get the retryCount property: The maximum number of retry attempts."
   returns:
     description: "the retryCount value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
@@ -73,9 +73,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsRetryPolicy.retryWindowInMinutes()"
   name: "retryWindowInMinutes()"
   nameWithType: "ScheduledActionsRetryPolicy.retryWindowInMinutes()"
-  summary: "Get the retry<wbr>Window<wbr>InMinutes property: Retry window in minutes for the request."
+  summary: "Get the retry<wbr>Window<wbr>InMinutes property: The time window, in minutes, during which retries can occur."
   syntax: "public Integer retryWindowInMinutes()"
-  desc: "Get the retryWindowInMinutes property: Retry window in minutes for the request."
+  desc: "Get the retryWindowInMinutes property: The time window, in minutes, during which retries can occur."
   returns:
     description: "the retryWindowInMinutes value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
@@ -95,13 +95,13 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsRetryPolicy.withOnFailureAction(ScheduledActionsResourceOperationType onFailureAction)"
   name: "withOnFailureAction(ScheduledActionsResourceOperationType onFailureAction)"
   nameWithType: "ScheduledActionsRetryPolicy.withOnFailureAction(ScheduledActionsResourceOperationType onFailureAction)"
-  summary: "Set the on<wbr>Failure<wbr>Action property: Action to take on failure."
+  summary: "Set the on<wbr>Failure<wbr>Action property: The resource operation to retry after a failure."
   parameters:
   - description: "the onFailureAction value to set."
     name: "onFailureAction"
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsResourceOperationType?alt=com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsResourceOperationType&text=ScheduledActionsResourceOperationType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public ScheduledActionsRetryPolicy withOnFailureAction(ScheduledActionsResourceOperationType onFailureAction)"
-  desc: "Set the onFailureAction property: Action to take on failure."
+  desc: "Set the onFailureAction property: The resource operation to retry after a failure."
   returns:
     description: "the ScheduledActionsRetryPolicy object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsRetryPolicy?alt=com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsRetryPolicy&text=ScheduledActionsRetryPolicy\" data-throw-if-not-resolved=\"False\" />"
@@ -109,13 +109,13 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsRetryPolicy.withRetryCount(Integer retryCount)"
   name: "withRetryCount(Integer retryCount)"
   nameWithType: "ScheduledActionsRetryPolicy.withRetryCount(Integer retryCount)"
-  summary: "Set the retry<wbr>Count property: Retry count for the request."
+  summary: "Set the retry<wbr>Count property: The maximum number of retry attempts."
   parameters:
   - description: "the retryCount value to set."
     name: "retryCount"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
   syntax: "public ScheduledActionsRetryPolicy withRetryCount(Integer retryCount)"
-  desc: "Set the retryCount property: Retry count for the request."
+  desc: "Set the retryCount property: The maximum number of retry attempts."
   returns:
     description: "the ScheduledActionsRetryPolicy object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsRetryPolicy?alt=com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsRetryPolicy&text=ScheduledActionsRetryPolicy\" data-throw-if-not-resolved=\"False\" />"
@@ -123,20 +123,20 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsRetryPolicy.withRetryWindowInMinutes(Integer retryWindowInMinutes)"
   name: "withRetryWindowInMinutes(Integer retryWindowInMinutes)"
   nameWithType: "ScheduledActionsRetryPolicy.withRetryWindowInMinutes(Integer retryWindowInMinutes)"
-  summary: "Set the retry<wbr>Window<wbr>InMinutes property: Retry window in minutes for the request."
+  summary: "Set the retry<wbr>Window<wbr>InMinutes property: The time window, in minutes, during which retries can occur."
   parameters:
   - description: "the retryWindowInMinutes value to set."
     name: "retryWindowInMinutes"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
   syntax: "public ScheduledActionsRetryPolicy withRetryWindowInMinutes(Integer retryWindowInMinutes)"
-  desc: "Set the retryWindowInMinutes property: Retry window in minutes for the request."
+  desc: "Set the retryWindowInMinutes property: The time window, in minutes, during which retries can occur."
   returns:
     description: "the ScheduledActionsRetryPolicy object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsRetryPolicy?alt=com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsRetryPolicy&text=ScheduledActionsRetryPolicy\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Retry policy the scheduled action can pass."
+desc: "Retry settings for a scheduled action operation."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsRetryPolicy?alt=com.azure.resourcemanager.compute.bulkactions.models.ScheduledActionsRetryPolicy&text=ScheduledActionsRetryPolicy\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.compute.bulkactions.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-compute-bulkactions:1.0.0-beta.3
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute-bulkactions:1.0.0-beta.4

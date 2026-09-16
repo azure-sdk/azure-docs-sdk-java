@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.compute.bulkactions.models.ResourceResultSummary
 fullName: "com.azure.resourcemanager.compute.bulkactions.models.ResourceResultSummary"
 name: "ResourceResultSummary"
 nameWithType: "ResourceResultSummary"
-summary: "The status of the resources."
+summary: "Summary of operation results across targeted resources."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -26,9 +26,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ResourceResultSummary.code()"
   name: "code()"
   nameWithType: "ResourceResultSummary.code()"
-  summary: "Get the code property: The error code for those resources."
+  summary: "Get the code property: The result code shared by the resources in this group."
   syntax: "public String code()"
-  desc: "Get the code property: The error code for those resources. In case of success, code is populated with Success."
+  desc: "Get the code property: The result code shared by the resources in this group. A successful result uses \\`Success\\`."
   returns:
     description: "the code value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -36,9 +36,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ResourceResultSummary.count()"
   name: "count()"
   nameWithType: "ResourceResultSummary.count()"
-  summary: "Get the count property: The number of resources that the code applies to."
+  summary: "Get the count property: The number of resources with this result code."
   syntax: "public int count()"
-  desc: "Get the count property: The number of resources that the code applies to."
+  desc: "Get the count property: The number of resources with this result code."
   returns:
     description: "the count value."
     type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
@@ -46,9 +46,9 @@ methods:
   fullName: "com.azure.resourcemanager.compute.bulkactions.models.ResourceResultSummary.errorDetails()"
   name: "errorDetails()"
   nameWithType: "ResourceResultSummary.errorDetails()"
-  summary: "Get the error<wbr>Details property: The error details for the resources."
+  summary: "Get the error<wbr>Details property: Error details for failed resources."
   syntax: "public Error errorDetails()"
-  desc: "Get the errorDetails property: The error details for the resources. Not populated on success cases."
+  desc: "Get the errorDetails property: Error details for failed resources. This property is omitted for successful results."
   returns:
     description: "the errorDetails value."
     type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.Error?alt=com.azure.resourcemanager.compute.bulkactions.models.Error&text=Error\" data-throw-if-not-resolved=\"False\" />"
@@ -84,9 +84,9 @@ methods:
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "The status of the resources."
+desc: "Summary of operation results across targeted resources."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.ResourceResultSummary?alt=com.azure.resourcemanager.compute.bulkactions.models.ResourceResultSummary&text=ResourceResultSummary\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.compute.bulkactions.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-compute-bulkactions:1.0.0-beta.3
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute-bulkactions:1.0.0-beta.4
