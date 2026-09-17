@@ -10,7 +10,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.beginCreateOrUpdate(String resourceGroupName, String trunkedNetworkName, TrunkedNetworkInner trunkedNetworkParameters)"
   name: "beginCreateOrUpdate(String resourceGroupName, String trunkedNetworkName, TrunkedNetworkInner trunkedNetworkParameters)"
   nameWithType: "TrunkedNetworksClient.beginCreateOrUpdate(String resourceGroupName, String trunkedNetworkName, TrunkedNetworkInner trunkedNetworkParameters)"
-  summary: "Create or update the trunked network."
+  summary: "Create a new trunked network or update the properties of the existing trunked network."
   modifiers:
   - "abstract"
   parameters:
@@ -24,7 +24,7 @@ methods:
     name: "trunkedNetworkParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner&text=TrunkedNetworkInner\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SyncPoller<PollResult<TrunkedNetworkInner>,TrunkedNetworkInner> beginCreateOrUpdate(String resourceGroupName, String trunkedNetworkName, TrunkedNetworkInner trunkedNetworkParameters)"
-  desc: "Create or update the trunked network. Create a new trunked network or update the properties of the existing trunked network."
+  desc: "Create a new trunked network or update the properties of the existing trunked network."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of trunkedNetwork represents a network that utilizes multiple\n isolation domains and specified VLANs to create a trunked network."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner&text=TrunkedNetworkInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner&text=TrunkedNetworkInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -32,7 +32,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.beginCreateOrUpdate(String resourceGroupName, String trunkedNetworkName, TrunkedNetworkInner trunkedNetworkParameters, String ifMatch, String ifNoneMatch, Context context)"
   name: "beginCreateOrUpdate(String resourceGroupName, String trunkedNetworkName, TrunkedNetworkInner trunkedNetworkParameters, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "TrunkedNetworksClient.beginCreateOrUpdate(String resourceGroupName, String trunkedNetworkName, TrunkedNetworkInner trunkedNetworkParameters, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Create or update the trunked network."
+  summary: "Create a new trunked network or update the properties of the existing trunked network."
   modifiers:
   - "abstract"
   parameters:
@@ -55,7 +55,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SyncPoller<PollResult<TrunkedNetworkInner>,TrunkedNetworkInner> beginCreateOrUpdate(String resourceGroupName, String trunkedNetworkName, TrunkedNetworkInner trunkedNetworkParameters, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Create or update the trunked network. Create a new trunked network or update the properties of the existing trunked network."
+  desc: "Create a new trunked network or update the properties of the existing trunked network."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of trunkedNetwork represents a network that utilizes multiple\n isolation domains and specified VLANs to create a trunked network."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner&text=TrunkedNetworkInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner&text=TrunkedNetworkInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -63,7 +63,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.beginDelete(String resourceGroupName, String trunkedNetworkName)"
   name: "beginDelete(String resourceGroupName, String trunkedNetworkName)"
   nameWithType: "TrunkedNetworksClient.beginDelete(String resourceGroupName, String trunkedNetworkName)"
-  summary: "Delete the trunked network."
+  summary: "Delete the provided trunked network."
   modifiers:
   - "abstract"
   parameters:
@@ -73,16 +73,16 @@ methods:
   - description: "The name of the trunked network."
     name: "trunkedNetworkName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract SyncPoller<PollResult<OperationStatusResultInner>,OperationStatusResultInner> beginDelete(String resourceGroupName, String trunkedNetworkName)"
-  desc: "Delete the trunked network. Delete the provided trunked network."
+  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginDelete(String resourceGroupName, String trunkedNetworkName)"
+  desc: "Delete the provided trunked network."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the current status of an async operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.beginDelete(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.beginDelete(String resourceGroupName, String trunkedNetworkName, String ifMatch, String ifNoneMatch, Context context)"
   name: "beginDelete(String resourceGroupName, String trunkedNetworkName, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "TrunkedNetworksClient.beginDelete(String resourceGroupName, String trunkedNetworkName, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Delete the trunked network."
+  summary: "Delete the provided trunked network."
   modifiers:
   - "abstract"
   parameters:
@@ -101,16 +101,16 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract SyncPoller<PollResult<OperationStatusResultInner>,OperationStatusResultInner> beginDelete(String resourceGroupName, String trunkedNetworkName, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Delete the trunked network. Delete the provided trunked network."
+  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginDelete(String resourceGroupName, String trunkedNetworkName, String ifMatch, String ifNoneMatch, Context context)"
+  desc: "Delete the provided trunked network."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the current status of an async operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.createOrUpdate(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.createOrUpdate(String resourceGroupName, String trunkedNetworkName, TrunkedNetworkInner trunkedNetworkParameters)"
   name: "createOrUpdate(String resourceGroupName, String trunkedNetworkName, TrunkedNetworkInner trunkedNetworkParameters)"
   nameWithType: "TrunkedNetworksClient.createOrUpdate(String resourceGroupName, String trunkedNetworkName, TrunkedNetworkInner trunkedNetworkParameters)"
-  summary: "Create or update the trunked network."
+  summary: "Create a new trunked network or update the properties of the existing trunked network."
   modifiers:
   - "abstract"
   parameters:
@@ -124,7 +124,7 @@ methods:
     name: "trunkedNetworkParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner&text=TrunkedNetworkInner\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract TrunkedNetworkInner createOrUpdate(String resourceGroupName, String trunkedNetworkName, TrunkedNetworkInner trunkedNetworkParameters)"
-  desc: "Create or update the trunked network. Create a new trunked network or update the properties of the existing trunked network."
+  desc: "Create a new trunked network or update the properties of the existing trunked network."
   returns:
     description: "trunkedNetwork represents a network that utilizes multiple isolation domains and specified VLANs to\n create a trunked network."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner&text=TrunkedNetworkInner\" data-throw-if-not-resolved=\"False\" />"
@@ -132,7 +132,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.createOrUpdate(String resourceGroupName, String trunkedNetworkName, TrunkedNetworkInner trunkedNetworkParameters, String ifMatch, String ifNoneMatch, Context context)"
   name: "createOrUpdate(String resourceGroupName, String trunkedNetworkName, TrunkedNetworkInner trunkedNetworkParameters, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "TrunkedNetworksClient.createOrUpdate(String resourceGroupName, String trunkedNetworkName, TrunkedNetworkInner trunkedNetworkParameters, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Create or update the trunked network."
+  summary: "Create a new trunked network or update the properties of the existing trunked network."
   modifiers:
   - "abstract"
   parameters:
@@ -155,7 +155,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract TrunkedNetworkInner createOrUpdate(String resourceGroupName, String trunkedNetworkName, TrunkedNetworkInner trunkedNetworkParameters, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Create or update the trunked network. Create a new trunked network or update the properties of the existing trunked network."
+  desc: "Create a new trunked network or update the properties of the existing trunked network."
   returns:
     description: "trunkedNetwork represents a network that utilizes multiple isolation domains and specified VLANs to\n create a trunked network."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner&text=TrunkedNetworkInner\" data-throw-if-not-resolved=\"False\" />"
@@ -163,7 +163,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.delete(String resourceGroupName, String trunkedNetworkName)"
   name: "delete(String resourceGroupName, String trunkedNetworkName)"
   nameWithType: "TrunkedNetworksClient.delete(String resourceGroupName, String trunkedNetworkName)"
-  summary: "Delete the trunked network."
+  summary: "Delete the provided trunked network."
   modifiers:
   - "abstract"
   parameters:
@@ -173,16 +173,13 @@ methods:
   - description: "The name of the trunked network."
     name: "trunkedNetworkName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract OperationStatusResultInner delete(String resourceGroupName, String trunkedNetworkName)"
-  desc: "Delete the trunked network. Delete the provided trunked network."
-  returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void delete(String resourceGroupName, String trunkedNetworkName)"
+  desc: "Delete the provided trunked network."
 - uid: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.delete(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.delete(String resourceGroupName, String trunkedNetworkName, String ifMatch, String ifNoneMatch, Context context)"
   name: "delete(String resourceGroupName, String trunkedNetworkName, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "TrunkedNetworksClient.delete(String resourceGroupName, String trunkedNetworkName, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Delete the trunked network."
+  summary: "Delete the provided trunked network."
   modifiers:
   - "abstract"
   parameters:
@@ -201,16 +198,13 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract OperationStatusResultInner delete(String resourceGroupName, String trunkedNetworkName, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Delete the trunked network. Delete the provided trunked network."
-  returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void delete(String resourceGroupName, String trunkedNetworkName, String ifMatch, String ifNoneMatch, Context context)"
+  desc: "Delete the provided trunked network."
 - uid: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.getByResourceGroup(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.getByResourceGroup(String resourceGroupName, String trunkedNetworkName)"
   name: "getByResourceGroup(String resourceGroupName, String trunkedNetworkName)"
   nameWithType: "TrunkedNetworksClient.getByResourceGroup(String resourceGroupName, String trunkedNetworkName)"
-  summary: "Retrieve the trunked network."
+  summary: "Get properties of the provided trunked network."
   modifiers:
   - "abstract"
   parameters:
@@ -221,7 +215,7 @@ methods:
     name: "trunkedNetworkName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract TrunkedNetworkInner getByResourceGroup(String resourceGroupName, String trunkedNetworkName)"
-  desc: "Retrieve the trunked network. Get properties of the provided trunked network."
+  desc: "Get properties of the provided trunked network."
   returns:
     description: "properties of the provided trunked network."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner&text=TrunkedNetworkInner\" data-throw-if-not-resolved=\"False\" />"
@@ -229,7 +223,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.getByResourceGroupWithResponse(String resourceGroupName, String trunkedNetworkName, Context context)"
   name: "getByResourceGroupWithResponse(String resourceGroupName, String trunkedNetworkName, Context context)"
   nameWithType: "TrunkedNetworksClient.getByResourceGroupWithResponse(String resourceGroupName, String trunkedNetworkName, Context context)"
-  summary: "Retrieve the trunked network."
+  summary: "Get properties of the provided trunked network."
   modifiers:
   - "abstract"
   parameters:
@@ -243,7 +237,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<TrunkedNetworkInner> getByResourceGroupWithResponse(String resourceGroupName, String trunkedNetworkName, Context context)"
-  desc: "Retrieve the trunked network. Get properties of the provided trunked network."
+  desc: "Get properties of the provided trunked network."
   returns:
     description: "properties of the provided trunked network along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner&text=TrunkedNetworkInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -251,11 +245,11 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.list()"
   name: "list()"
   nameWithType: "TrunkedNetworksClient.list()"
-  summary: "List trunked networks in the subscription."
+  summary: "Get a list of trunked networks in the provided subscription."
   modifiers:
   - "abstract"
   syntax: "public abstract PagedIterable<TrunkedNetworkInner> list()"
-  desc: "List trunked networks in the subscription. Get a list of trunked networks in the provided subscription."
+  desc: "Get a list of trunked networks in the provided subscription."
   returns:
     description: "a list of trunked networks in the provided subscription as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner&text=TrunkedNetworkInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -263,7 +257,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.list(Integer top, String skipToken, Context context)"
   name: "list(Integer top, String skipToken, Context context)"
   nameWithType: "TrunkedNetworksClient.list(Integer top, String skipToken, Context context)"
-  summary: "List trunked networks in the subscription."
+  summary: "Get a list of trunked networks in the provided subscription."
   modifiers:
   - "abstract"
   parameters:
@@ -277,7 +271,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<TrunkedNetworkInner> list(Integer top, String skipToken, Context context)"
-  desc: "List trunked networks in the subscription. Get a list of trunked networks in the provided subscription."
+  desc: "Get a list of trunked networks in the provided subscription."
   returns:
     description: "a list of trunked networks in the provided subscription as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner&text=TrunkedNetworkInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -285,7 +279,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.listByResourceGroup(String resourceGroupName)"
   name: "listByResourceGroup(String resourceGroupName)"
   nameWithType: "TrunkedNetworksClient.listByResourceGroup(String resourceGroupName)"
-  summary: "List trunked networks in the resource group."
+  summary: "Get a list of trunked networks in the provided resource group."
   modifiers:
   - "abstract"
   parameters:
@@ -293,7 +287,7 @@ methods:
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<TrunkedNetworkInner> listByResourceGroup(String resourceGroupName)"
-  desc: "List trunked networks in the resource group. Get a list of trunked networks in the provided resource group."
+  desc: "Get a list of trunked networks in the provided resource group."
   returns:
     description: "a list of trunked networks in the provided resource group as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner&text=TrunkedNetworkInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -301,7 +295,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
   name: "listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
   nameWithType: "TrunkedNetworksClient.listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
-  summary: "List trunked networks in the resource group."
+  summary: "Get a list of trunked networks in the provided resource group."
   modifiers:
   - "abstract"
   parameters:
@@ -318,7 +312,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<TrunkedNetworkInner> listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
-  desc: "List trunked networks in the resource group. Get a list of trunked networks in the provided resource group."
+  desc: "Get a list of trunked networks in the provided resource group."
   returns:
     description: "a list of trunked networks in the provided resource group as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner&text=TrunkedNetworkInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -326,7 +320,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.update(String resourceGroupName, String trunkedNetworkName)"
   name: "update(String resourceGroupName, String trunkedNetworkName)"
   nameWithType: "TrunkedNetworksClient.update(String resourceGroupName, String trunkedNetworkName)"
-  summary: "Patch the trunked network."
+  summary: "Update tags associated with the provided trunked network."
   modifiers:
   - "abstract"
   parameters:
@@ -337,7 +331,7 @@ methods:
     name: "trunkedNetworkName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract TrunkedNetworkInner update(String resourceGroupName, String trunkedNetworkName)"
-  desc: "Patch the trunked network. Update tags associated with the provided trunked network."
+  desc: "Update tags associated with the provided trunked network."
   returns:
     description: "trunkedNetwork represents a network that utilizes multiple isolation domains and specified VLANs to\n create a trunked network."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner&text=TrunkedNetworkInner\" data-throw-if-not-resolved=\"False\" />"
@@ -345,7 +339,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.TrunkedNetworksClient.updateWithResponse(String resourceGroupName, String trunkedNetworkName, String ifMatch, String ifNoneMatch, TrunkedNetworkPatchParameters trunkedNetworkUpdateParameters, Context context)"
   name: "updateWithResponse(String resourceGroupName, String trunkedNetworkName, String ifMatch, String ifNoneMatch, TrunkedNetworkPatchParameters trunkedNetworkUpdateParameters, Context context)"
   nameWithType: "TrunkedNetworksClient.updateWithResponse(String resourceGroupName, String trunkedNetworkName, String ifMatch, String ifNoneMatch, TrunkedNetworkPatchParameters trunkedNetworkUpdateParameters, Context context)"
-  summary: "Patch the trunked network."
+  summary: "Update tags associated with the provided trunked network."
   modifiers:
   - "abstract"
   parameters:
@@ -368,7 +362,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<TrunkedNetworkInner> updateWithResponse(String resourceGroupName, String trunkedNetworkName, String ifMatch, String ifNoneMatch, TrunkedNetworkPatchParameters trunkedNetworkUpdateParameters, Context context)"
-  desc: "Patch the trunked network. Update tags associated with the provided trunked network."
+  desc: "Update tags associated with the provided trunked network."
   returns:
     description: "trunkedNetwork represents a network that utilizes multiple isolation domains and specified VLANs to\n create a trunked network along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.TrunkedNetworkInner&text=TrunkedNetworkInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -376,4 +370,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in TrunkedNetworksClient."
 metadata: {}
 package: "com.azure.resourcemanager.networkcloud.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.2.0

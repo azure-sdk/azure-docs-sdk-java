@@ -10,7 +10,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.cordon(String resourceGroupName, String bareMetalMachineName)"
   name: "cordon(String resourceGroupName, String bareMetalMachineName)"
   nameWithType: "BareMetalMachines.cordon(String resourceGroupName, String bareMetalMachineName)"
-  summary: "Cordon the bare metal machine."
+  summary: "Cordon the provided bare metal machine's Kubernetes node."
   modifiers:
   - "abstract"
   parameters:
@@ -21,15 +21,15 @@ methods:
     name: "bareMetalMachineName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract OperationStatusResult cordon(String resourceGroupName, String bareMetalMachineName)"
-  desc: "Cordon the bare metal machine. Cordon the provided bare metal machine's Kubernetes node."
+  desc: "Cordon the provided bare metal machine's Kubernetes node."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.cordon(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.BareMetalMachineCordonParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.cordon(String resourceGroupName, String bareMetalMachineName, BareMetalMachineCordonParameters bareMetalMachineCordonParameters, Context context)"
   name: "cordon(String resourceGroupName, String bareMetalMachineName, BareMetalMachineCordonParameters bareMetalMachineCordonParameters, Context context)"
   nameWithType: "BareMetalMachines.cordon(String resourceGroupName, String bareMetalMachineName, BareMetalMachineCordonParameters bareMetalMachineCordonParameters, Context context)"
-  summary: "Cordon the bare metal machine."
+  summary: "Cordon the provided bare metal machine's Kubernetes node."
   modifiers:
   - "abstract"
   parameters:
@@ -46,9 +46,9 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult cordon(String resourceGroupName, String bareMetalMachineName, BareMetalMachineCordonParameters bareMetalMachineCordonParameters, Context context)"
-  desc: "Cordon the bare metal machine. Cordon the provided bare metal machine's Kubernetes node."
+  desc: "Cordon the provided bare metal machine's Kubernetes node."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.define(java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.define(String name)"
@@ -70,7 +70,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.delete(String resourceGroupName, String bareMetalMachineName, String ifMatch, String ifNoneMatch, Context context)"
   name: "delete(String resourceGroupName, String bareMetalMachineName, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "BareMetalMachines.delete(String resourceGroupName, String bareMetalMachineName, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Delete the bare metal machine."
+  summary: "Delete the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -89,32 +89,26 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract OperationStatusResult delete(String resourceGroupName, String bareMetalMachineName, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Delete the bare metal machine. Delete the provided bare metal machine. All customer initiated requests will be rejected as the life cycle of this resource is managed by the system."
-  returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void delete(String resourceGroupName, String bareMetalMachineName, String ifMatch, String ifNoneMatch, Context context)"
+  desc: "Delete the provided bare metal machine. All customer initiated requests will be rejected as the life cycle of this resource is managed by the system."
 - uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.deleteById(java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.deleteById(String id)"
   name: "deleteById(String id)"
   nameWithType: "BareMetalMachines.deleteById(String id)"
-  summary: "Delete the bare metal machine."
+  summary: "Delete the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
   - description: "the resource ID."
     name: "id"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract OperationStatusResult deleteById(String id)"
-  desc: "Delete the bare metal machine. Delete the provided bare metal machine. All customer initiated requests will be rejected as the life cycle of this resource is managed by the system."
-  returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void deleteById(String id)"
+  desc: "Delete the provided bare metal machine. All customer initiated requests will be rejected as the life cycle of this resource is managed by the system."
 - uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.deleteByIdWithResponse(java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.deleteByIdWithResponse(String id, String ifMatch, String ifNoneMatch, Context context)"
   name: "deleteByIdWithResponse(String id, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "BareMetalMachines.deleteByIdWithResponse(String id, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Delete the bare metal machine."
+  summary: "Delete the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -130,16 +124,13 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract OperationStatusResult deleteByIdWithResponse(String id, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Delete the bare metal machine. Delete the provided bare metal machine. All customer initiated requests will be rejected as the life cycle of this resource is managed by the system."
-  returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void deleteByIdWithResponse(String id, String ifMatch, String ifNoneMatch, Context context)"
+  desc: "Delete the provided bare metal machine. All customer initiated requests will be rejected as the life cycle of this resource is managed by the system."
 - uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.deleteByResourceGroup(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.deleteByResourceGroup(String resourceGroupName, String bareMetalMachineName)"
   name: "deleteByResourceGroup(String resourceGroupName, String bareMetalMachineName)"
   nameWithType: "BareMetalMachines.deleteByResourceGroup(String resourceGroupName, String bareMetalMachineName)"
-  summary: "Delete the bare metal machine."
+  summary: "Delete the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -149,16 +140,13 @@ methods:
   - description: "The name of the bare metal machine."
     name: "bareMetalMachineName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract OperationStatusResult deleteByResourceGroup(String resourceGroupName, String bareMetalMachineName)"
-  desc: "Delete the bare metal machine. Delete the provided bare metal machine. All customer initiated requests will be rejected as the life cycle of this resource is managed by the system."
-  returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void deleteByResourceGroup(String resourceGroupName, String bareMetalMachineName)"
+  desc: "Delete the provided bare metal machine. All customer initiated requests will be rejected as the life cycle of this resource is managed by the system."
 - uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.getById(java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.getById(String id)"
   name: "getById(String id)"
   nameWithType: "BareMetalMachines.getById(String id)"
-  summary: "Retrieve the bare metal machine."
+  summary: "Get properties of the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -166,7 +154,7 @@ methods:
     name: "id"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract BareMetalMachine getById(String id)"
-  desc: "Retrieve the bare metal machine. Get properties of the provided bare metal machine."
+  desc: "Get properties of the provided bare metal machine."
   returns:
     description: "properties of the provided bare metal machine along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.BareMetalMachine?alt=com.azure.resourcemanager.networkcloud.models.BareMetalMachine&text=BareMetalMachine\" data-throw-if-not-resolved=\"False\" />"
@@ -174,7 +162,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.getByIdWithResponse(String id, Context context)"
   name: "getByIdWithResponse(String id, Context context)"
   nameWithType: "BareMetalMachines.getByIdWithResponse(String id, Context context)"
-  summary: "Retrieve the bare metal machine."
+  summary: "Get properties of the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -185,7 +173,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<BareMetalMachine> getByIdWithResponse(String id, Context context)"
-  desc: "Retrieve the bare metal machine. Get properties of the provided bare metal machine."
+  desc: "Get properties of the provided bare metal machine."
   returns:
     description: "properties of the provided bare metal machine along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.BareMetalMachine?alt=com.azure.resourcemanager.networkcloud.models.BareMetalMachine&text=BareMetalMachine\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -193,7 +181,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.getByResourceGroup(String resourceGroupName, String bareMetalMachineName)"
   name: "getByResourceGroup(String resourceGroupName, String bareMetalMachineName)"
   nameWithType: "BareMetalMachines.getByResourceGroup(String resourceGroupName, String bareMetalMachineName)"
-  summary: "Retrieve the bare metal machine."
+  summary: "Get properties of the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -204,7 +192,7 @@ methods:
     name: "bareMetalMachineName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract BareMetalMachine getByResourceGroup(String resourceGroupName, String bareMetalMachineName)"
-  desc: "Retrieve the bare metal machine. Get properties of the provided bare metal machine."
+  desc: "Get properties of the provided bare metal machine."
   returns:
     description: "properties of the provided bare metal machine."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.BareMetalMachine?alt=com.azure.resourcemanager.networkcloud.models.BareMetalMachine&text=BareMetalMachine\" data-throw-if-not-resolved=\"False\" />"
@@ -212,7 +200,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.getByResourceGroupWithResponse(String resourceGroupName, String bareMetalMachineName, Context context)"
   name: "getByResourceGroupWithResponse(String resourceGroupName, String bareMetalMachineName, Context context)"
   nameWithType: "BareMetalMachines.getByResourceGroupWithResponse(String resourceGroupName, String bareMetalMachineName, Context context)"
-  summary: "Retrieve the bare metal machine."
+  summary: "Get properties of the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -226,7 +214,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<BareMetalMachine> getByResourceGroupWithResponse(String resourceGroupName, String bareMetalMachineName, Context context)"
-  desc: "Retrieve the bare metal machine. Get properties of the provided bare metal machine."
+  desc: "Get properties of the provided bare metal machine."
   returns:
     description: "properties of the provided bare metal machine along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.BareMetalMachine?alt=com.azure.resourcemanager.networkcloud.models.BareMetalMachine&text=BareMetalMachine\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -234,11 +222,11 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.list()"
   name: "list()"
   nameWithType: "BareMetalMachines.list()"
-  summary: "List bare metal machines in the subscription."
+  summary: "Get a list of bare metal machines in the provided subscription."
   modifiers:
   - "abstract"
   syntax: "public abstract PagedIterable<BareMetalMachine> list()"
-  desc: "List bare metal machines in the subscription. Get a list of bare metal machines in the provided subscription."
+  desc: "Get a list of bare metal machines in the provided subscription."
   returns:
     description: "a list of bare metal machines in the provided subscription as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.BareMetalMachine?alt=com.azure.resourcemanager.networkcloud.models.BareMetalMachine&text=BareMetalMachine\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -246,7 +234,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.list(Integer top, String skipToken, Context context)"
   name: "list(Integer top, String skipToken, Context context)"
   nameWithType: "BareMetalMachines.list(Integer top, String skipToken, Context context)"
-  summary: "List bare metal machines in the subscription."
+  summary: "Get a list of bare metal machines in the provided subscription."
   modifiers:
   - "abstract"
   parameters:
@@ -260,7 +248,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<BareMetalMachine> list(Integer top, String skipToken, Context context)"
-  desc: "List bare metal machines in the subscription. Get a list of bare metal machines in the provided subscription."
+  desc: "Get a list of bare metal machines in the provided subscription."
   returns:
     description: "a list of bare metal machines in the provided subscription as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.BareMetalMachine?alt=com.azure.resourcemanager.networkcloud.models.BareMetalMachine&text=BareMetalMachine\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -268,7 +256,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.listByResourceGroup(String resourceGroupName)"
   name: "listByResourceGroup(String resourceGroupName)"
   nameWithType: "BareMetalMachines.listByResourceGroup(String resourceGroupName)"
-  summary: "List bare metal machines in the resource group."
+  summary: "Get a list of bare metal machines in the provided resource group."
   modifiers:
   - "abstract"
   parameters:
@@ -276,7 +264,7 @@ methods:
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<BareMetalMachine> listByResourceGroup(String resourceGroupName)"
-  desc: "List bare metal machines in the resource group. Get a list of bare metal machines in the provided resource group."
+  desc: "Get a list of bare metal machines in the provided resource group."
   returns:
     description: "a list of bare metal machines in the provided resource group as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.BareMetalMachine?alt=com.azure.resourcemanager.networkcloud.models.BareMetalMachine&text=BareMetalMachine\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -284,7 +272,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
   name: "listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
   nameWithType: "BareMetalMachines.listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
-  summary: "List bare metal machines in the resource group."
+  summary: "Get a list of bare metal machines in the provided resource group."
   modifiers:
   - "abstract"
   parameters:
@@ -301,7 +289,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<BareMetalMachine> listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
-  desc: "List bare metal machines in the resource group. Get a list of bare metal machines in the provided resource group."
+  desc: "Get a list of bare metal machines in the provided resource group."
   returns:
     description: "a list of bare metal machines in the provided resource group as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.BareMetalMachine?alt=com.azure.resourcemanager.networkcloud.models.BareMetalMachine&text=BareMetalMachine\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -309,7 +297,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.powerOff(String resourceGroupName, String bareMetalMachineName)"
   name: "powerOff(String resourceGroupName, String bareMetalMachineName)"
   nameWithType: "BareMetalMachines.powerOff(String resourceGroupName, String bareMetalMachineName)"
-  summary: "Power off the bare metal machine."
+  summary: "Power off the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -320,15 +308,15 @@ methods:
     name: "bareMetalMachineName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract OperationStatusResult powerOff(String resourceGroupName, String bareMetalMachineName)"
-  desc: "Power off the bare metal machine. Power off the provided bare metal machine."
+  desc: "Power off the provided bare metal machine."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.powerOff(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.BareMetalMachinePowerOffParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.powerOff(String resourceGroupName, String bareMetalMachineName, BareMetalMachinePowerOffParameters bareMetalMachinePowerOffParameters, Context context)"
   name: "powerOff(String resourceGroupName, String bareMetalMachineName, BareMetalMachinePowerOffParameters bareMetalMachinePowerOffParameters, Context context)"
   nameWithType: "BareMetalMachines.powerOff(String resourceGroupName, String bareMetalMachineName, BareMetalMachinePowerOffParameters bareMetalMachinePowerOffParameters, Context context)"
-  summary: "Power off the bare metal machine."
+  summary: "Power off the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -345,15 +333,15 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult powerOff(String resourceGroupName, String bareMetalMachineName, BareMetalMachinePowerOffParameters bareMetalMachinePowerOffParameters, Context context)"
-  desc: "Power off the bare metal machine. Power off the provided bare metal machine."
+  desc: "Power off the provided bare metal machine."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.reimage(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.reimage(String resourceGroupName, String bareMetalMachineName)"
   name: "reimage(String resourceGroupName, String bareMetalMachineName)"
   nameWithType: "BareMetalMachines.reimage(String resourceGroupName, String bareMetalMachineName)"
-  summary: "Reimage the bare metal machine."
+  summary: "Reimage the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -364,15 +352,15 @@ methods:
     name: "bareMetalMachineName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract OperationStatusResult reimage(String resourceGroupName, String bareMetalMachineName)"
-  desc: "Reimage the bare metal machine. Reimage the provided bare metal machine."
+  desc: "Reimage the provided bare metal machine."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.reimage(java.lang.String,java.lang.String,com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.reimage(String resourceGroupName, String bareMetalMachineName, Context context)"
-  name: "reimage(String resourceGroupName, String bareMetalMachineName, Context context)"
-  nameWithType: "BareMetalMachines.reimage(String resourceGroupName, String bareMetalMachineName, Context context)"
-  summary: "Reimage the bare metal machine."
+- uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.reimage(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.BareMetalMachineReimageParameters,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.reimage(String resourceGroupName, String bareMetalMachineName, BareMetalMachineReimageParameters body, Context context)"
+  name: "reimage(String resourceGroupName, String bareMetalMachineName, BareMetalMachineReimageParameters body, Context context)"
+  nameWithType: "BareMetalMachines.reimage(String resourceGroupName, String bareMetalMachineName, BareMetalMachineReimageParameters body, Context context)"
+  summary: "Reimage the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -382,19 +370,22 @@ methods:
   - description: "The name of the bare metal machine."
     name: "bareMetalMachineName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The content of the action request."
+    name: "body"
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.BareMetalMachineReimageParameters?alt=com.azure.resourcemanager.networkcloud.models.BareMetalMachineReimageParameters&text=BareMetalMachineReimageParameters\" data-throw-if-not-resolved=\"False\" />"
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract OperationStatusResult reimage(String resourceGroupName, String bareMetalMachineName, Context context)"
-  desc: "Reimage the bare metal machine. Reimage the provided bare metal machine."
+  syntax: "public abstract OperationStatusResult reimage(String resourceGroupName, String bareMetalMachineName, BareMetalMachineReimageParameters body, Context context)"
+  desc: "Reimage the provided bare metal machine."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.replace(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.replace(String resourceGroupName, String bareMetalMachineName)"
   name: "replace(String resourceGroupName, String bareMetalMachineName)"
   nameWithType: "BareMetalMachines.replace(String resourceGroupName, String bareMetalMachineName)"
-  summary: "Replace (service) the bare metal machine."
+  summary: "Replace the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -405,15 +396,15 @@ methods:
     name: "bareMetalMachineName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract OperationStatusResult replace(String resourceGroupName, String bareMetalMachineName)"
-  desc: "Replace (service) the bare metal machine. Replace the provided bare metal machine."
+  desc: "Replace the provided bare metal machine."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.replace(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.BareMetalMachineReplaceParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.replace(String resourceGroupName, String bareMetalMachineName, BareMetalMachineReplaceParameters bareMetalMachineReplaceParameters, Context context)"
   name: "replace(String resourceGroupName, String bareMetalMachineName, BareMetalMachineReplaceParameters bareMetalMachineReplaceParameters, Context context)"
   nameWithType: "BareMetalMachines.replace(String resourceGroupName, String bareMetalMachineName, BareMetalMachineReplaceParameters bareMetalMachineReplaceParameters, Context context)"
-  summary: "Replace (service) the bare metal machine."
+  summary: "Replace the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -430,15 +421,15 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult replace(String resourceGroupName, String bareMetalMachineName, BareMetalMachineReplaceParameters bareMetalMachineReplaceParameters, Context context)"
-  desc: "Replace (service) the bare metal machine. Replace the provided bare metal machine."
+  desc: "Replace the provided bare metal machine."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.restart(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.restart(String resourceGroupName, String bareMetalMachineName)"
   name: "restart(String resourceGroupName, String bareMetalMachineName)"
   nameWithType: "BareMetalMachines.restart(String resourceGroupName, String bareMetalMachineName)"
-  summary: "Restart the bare metal machine."
+  summary: "Restart the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -449,15 +440,15 @@ methods:
     name: "bareMetalMachineName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract OperationStatusResult restart(String resourceGroupName, String bareMetalMachineName)"
-  desc: "Restart the bare metal machine. Restart the provided bare metal machine."
+  desc: "Restart the provided bare metal machine."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.restart(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.restart(String resourceGroupName, String bareMetalMachineName, Context context)"
   name: "restart(String resourceGroupName, String bareMetalMachineName, Context context)"
   nameWithType: "BareMetalMachines.restart(String resourceGroupName, String bareMetalMachineName, Context context)"
-  summary: "Restart the bare metal machine."
+  summary: "Restart the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -471,15 +462,15 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult restart(String resourceGroupName, String bareMetalMachineName, Context context)"
-  desc: "Restart the bare metal machine. Restart the provided bare metal machine."
+  desc: "Restart the provided bare metal machine."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.runCommand(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.BareMetalMachineRunCommandParameters)"
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.runCommand(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunCommandParameters bareMetalMachineRunCommandParameters)"
   name: "runCommand(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunCommandParameters bareMetalMachineRunCommandParameters)"
   nameWithType: "BareMetalMachines.runCommand(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunCommandParameters bareMetalMachineRunCommandParameters)"
-  summary: "Run the command on the bare metal machine."
+  summary: "Run the command or the script on the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -493,15 +484,15 @@ methods:
     name: "bareMetalMachineRunCommandParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.BareMetalMachineRunCommandParameters?alt=com.azure.resourcemanager.networkcloud.models.BareMetalMachineRunCommandParameters&text=BareMetalMachineRunCommandParameters\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult runCommand(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunCommandParameters bareMetalMachineRunCommandParameters)"
-  desc: "Run the command on the bare metal machine. Run the command or the script on the provided bare metal machine. The URL to storage account with the command execution results and the command exit code can be retrieved from the operation status API once available."
+  desc: "Run the command or the script on the provided bare metal machine. The URL to storage account with the command execution results and the command exit code can be retrieved from the operation status API once available."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.runCommand(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.BareMetalMachineRunCommandParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.runCommand(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunCommandParameters bareMetalMachineRunCommandParameters, Context context)"
   name: "runCommand(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunCommandParameters bareMetalMachineRunCommandParameters, Context context)"
   nameWithType: "BareMetalMachines.runCommand(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunCommandParameters bareMetalMachineRunCommandParameters, Context context)"
-  summary: "Run the command on the bare metal machine."
+  summary: "Run the command or the script on the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -518,15 +509,15 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult runCommand(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunCommandParameters bareMetalMachineRunCommandParameters, Context context)"
-  desc: "Run the command on the bare metal machine. Run the command or the script on the provided bare metal machine. The URL to storage account with the command execution results and the command exit code can be retrieved from the operation status API once available."
+  desc: "Run the command or the script on the provided bare metal machine. The URL to storage account with the command execution results and the command exit code can be retrieved from the operation status API once available."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.runDataExtracts(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.BareMetalMachineRunDataExtractsParameters)"
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.runDataExtracts(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunDataExtractsParameters bareMetalMachineRunDataExtractsParameters)"
   name: "runDataExtracts(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunDataExtractsParameters bareMetalMachineRunDataExtractsParameters)"
   nameWithType: "BareMetalMachines.runDataExtracts(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunDataExtractsParameters bareMetalMachineRunDataExtractsParameters)"
-  summary: "Run data extraction for a bare metal machine."
+  summary: "Run one or more data extractions on the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -540,15 +531,15 @@ methods:
     name: "bareMetalMachineRunDataExtractsParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.BareMetalMachineRunDataExtractsParameters?alt=com.azure.resourcemanager.networkcloud.models.BareMetalMachineRunDataExtractsParameters&text=BareMetalMachineRunDataExtractsParameters\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult runDataExtracts(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunDataExtractsParameters bareMetalMachineRunDataExtractsParameters)"
-  desc: "Run data extraction for a bare metal machine. Run one or more data extractions on the provided bare metal machine. The URL to storage account with the command execution results and the command exit code can be retrieved from the operation status API once available."
+  desc: "Run one or more data extractions on the provided bare metal machine. The URL to storage account with the command execution results and the command exit code can be retrieved from the operation status API once available."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.runDataExtracts(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.BareMetalMachineRunDataExtractsParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.runDataExtracts(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunDataExtractsParameters bareMetalMachineRunDataExtractsParameters, Context context)"
   name: "runDataExtracts(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunDataExtractsParameters bareMetalMachineRunDataExtractsParameters, Context context)"
   nameWithType: "BareMetalMachines.runDataExtracts(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunDataExtractsParameters bareMetalMachineRunDataExtractsParameters, Context context)"
-  summary: "Run data extraction for a bare metal machine."
+  summary: "Run one or more data extractions on the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -565,15 +556,15 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult runDataExtracts(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunDataExtractsParameters bareMetalMachineRunDataExtractsParameters, Context context)"
-  desc: "Run data extraction for a bare metal machine. Run one or more data extractions on the provided bare metal machine. The URL to storage account with the command execution results and the command exit code can be retrieved from the operation status API once available."
+  desc: "Run one or more data extractions on the provided bare metal machine. The URL to storage account with the command execution results and the command exit code can be retrieved from the operation status API once available."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.runDataExtractsRestricted(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.BareMetalMachineRunDataExtractsParameters)"
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.runDataExtractsRestricted(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunDataExtractsParameters bareMetalMachineRunDataExtractsRestrictedParameters)"
   name: "runDataExtractsRestricted(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunDataExtractsParameters bareMetalMachineRunDataExtractsRestrictedParameters)"
   nameWithType: "BareMetalMachines.runDataExtractsRestricted(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunDataExtractsParameters bareMetalMachineRunDataExtractsRestrictedParameters)"
-  summary: "Run restricted data extraction for a bare metal machine."
+  summary: "Run one or more restricted data extractions on the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -587,15 +578,15 @@ methods:
     name: "bareMetalMachineRunDataExtractsRestrictedParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.BareMetalMachineRunDataExtractsParameters?alt=com.azure.resourcemanager.networkcloud.models.BareMetalMachineRunDataExtractsParameters&text=BareMetalMachineRunDataExtractsParameters\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult runDataExtractsRestricted(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunDataExtractsParameters bareMetalMachineRunDataExtractsRestrictedParameters)"
-  desc: "Run restricted data extraction for a bare metal machine. Run one or more restricted data extractions on the provided bare metal machine. The URL to storage account with the command execution results and the command exit code can be retrieved from the operation status API once available."
+  desc: "Run one or more restricted data extractions on the provided bare metal machine. The URL to storage account with the command execution results and the command exit code can be retrieved from the operation status API once available."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.runDataExtractsRestricted(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.BareMetalMachineRunDataExtractsParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.runDataExtractsRestricted(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunDataExtractsParameters bareMetalMachineRunDataExtractsRestrictedParameters, Context context)"
   name: "runDataExtractsRestricted(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunDataExtractsParameters bareMetalMachineRunDataExtractsRestrictedParameters, Context context)"
   nameWithType: "BareMetalMachines.runDataExtractsRestricted(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunDataExtractsParameters bareMetalMachineRunDataExtractsRestrictedParameters, Context context)"
-  summary: "Run restricted data extraction for a bare metal machine."
+  summary: "Run one or more restricted data extractions on the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -612,15 +603,15 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult runDataExtractsRestricted(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunDataExtractsParameters bareMetalMachineRunDataExtractsRestrictedParameters, Context context)"
-  desc: "Run restricted data extraction for a bare metal machine. Run one or more restricted data extractions on the provided bare metal machine. The URL to storage account with the command execution results and the command exit code can be retrieved from the operation status API once available."
+  desc: "Run one or more restricted data extractions on the provided bare metal machine. The URL to storage account with the command execution results and the command exit code can be retrieved from the operation status API once available."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.runReadCommands(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.BareMetalMachineRunReadCommandsParameters)"
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.runReadCommands(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunReadCommandsParameters bareMetalMachineRunReadCommandsParameters)"
   name: "runReadCommands(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunReadCommandsParameters bareMetalMachineRunReadCommandsParameters)"
   nameWithType: "BareMetalMachines.runReadCommands(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunReadCommandsParameters bareMetalMachineRunReadCommandsParameters)"
-  summary: "Run read-only commands against a bare metal machine."
+  summary: "Run one or more read-only commands on the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -634,15 +625,15 @@ methods:
     name: "bareMetalMachineRunReadCommandsParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.BareMetalMachineRunReadCommandsParameters?alt=com.azure.resourcemanager.networkcloud.models.BareMetalMachineRunReadCommandsParameters&text=BareMetalMachineRunReadCommandsParameters\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult runReadCommands(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunReadCommandsParameters bareMetalMachineRunReadCommandsParameters)"
-  desc: "Run read-only commands against a bare metal machine. Run one or more read-only commands on the provided bare metal machine. The URL to storage account with the command execution results and the command exit code can be retrieved from the operation status API once available."
+  desc: "Run one or more read-only commands on the provided bare metal machine. The URL to storage account with the command execution results and the command exit code can be retrieved from the operation status API once available."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.runReadCommands(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.BareMetalMachineRunReadCommandsParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.runReadCommands(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunReadCommandsParameters bareMetalMachineRunReadCommandsParameters, Context context)"
   name: "runReadCommands(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunReadCommandsParameters bareMetalMachineRunReadCommandsParameters, Context context)"
   nameWithType: "BareMetalMachines.runReadCommands(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunReadCommandsParameters bareMetalMachineRunReadCommandsParameters, Context context)"
-  summary: "Run read-only commands against a bare metal machine."
+  summary: "Run one or more read-only commands on the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -659,15 +650,15 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult runReadCommands(String resourceGroupName, String bareMetalMachineName, BareMetalMachineRunReadCommandsParameters bareMetalMachineRunReadCommandsParameters, Context context)"
-  desc: "Run read-only commands against a bare metal machine. Run one or more read-only commands on the provided bare metal machine. The URL to storage account with the command execution results and the command exit code can be retrieved from the operation status API once available."
+  desc: "Run one or more read-only commands on the provided bare metal machine. The URL to storage account with the command execution results and the command exit code can be retrieved from the operation status API once available."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.start(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.start(String resourceGroupName, String bareMetalMachineName)"
   name: "start(String resourceGroupName, String bareMetalMachineName)"
   nameWithType: "BareMetalMachines.start(String resourceGroupName, String bareMetalMachineName)"
-  summary: "Start the bare metal machine."
+  summary: "Start the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -678,15 +669,15 @@ methods:
     name: "bareMetalMachineName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract OperationStatusResult start(String resourceGroupName, String bareMetalMachineName)"
-  desc: "Start the bare metal machine. Start the provided bare metal machine."
+  desc: "Start the provided bare metal machine."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.start(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.start(String resourceGroupName, String bareMetalMachineName, Context context)"
   name: "start(String resourceGroupName, String bareMetalMachineName, Context context)"
   nameWithType: "BareMetalMachines.start(String resourceGroupName, String bareMetalMachineName, Context context)"
-  summary: "Start the bare metal machine."
+  summary: "Start the provided bare metal machine."
   modifiers:
   - "abstract"
   parameters:
@@ -700,15 +691,15 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult start(String resourceGroupName, String bareMetalMachineName, Context context)"
-  desc: "Start the bare metal machine. Start the provided bare metal machine."
+  desc: "Start the provided bare metal machine."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.uncordon(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.uncordon(String resourceGroupName, String bareMetalMachineName)"
   name: "uncordon(String resourceGroupName, String bareMetalMachineName)"
   nameWithType: "BareMetalMachines.uncordon(String resourceGroupName, String bareMetalMachineName)"
-  summary: "Uncordon the bare metal machine."
+  summary: "Uncordon the provided bare metal machine's Kubernetes node."
   modifiers:
   - "abstract"
   parameters:
@@ -719,15 +710,15 @@ methods:
     name: "bareMetalMachineName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract OperationStatusResult uncordon(String resourceGroupName, String bareMetalMachineName)"
-  desc: "Uncordon the bare metal machine. Uncordon the provided bare metal machine's Kubernetes node."
+  desc: "Uncordon the provided bare metal machine's Kubernetes node."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.uncordon(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.BareMetalMachines.uncordon(String resourceGroupName, String bareMetalMachineName, Context context)"
   name: "uncordon(String resourceGroupName, String bareMetalMachineName, Context context)"
   nameWithType: "BareMetalMachines.uncordon(String resourceGroupName, String bareMetalMachineName, Context context)"
-  summary: "Uncordon the bare metal machine."
+  summary: "Uncordon the provided bare metal machine's Kubernetes node."
   modifiers:
   - "abstract"
   parameters:
@@ -741,12 +732,12 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult uncordon(String resourceGroupName, String bareMetalMachineName, Context context)"
-  desc: "Uncordon the bare metal machine. Uncordon the provided bare metal machine's Kubernetes node."
+  desc: "Uncordon the provided bare metal machine's Kubernetes node."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 type: "interface"
 desc: "Resource collection API of BareMetalMachines."
 metadata: {}
 package: "com.azure.resourcemanager.networkcloud.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.2.0

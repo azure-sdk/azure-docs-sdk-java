@@ -53,9 +53,9 @@ methods:
   fullName: "com.azure.resourcemanager.dataprotection.models.BackupSchedule.repeatingTimeIntervals()"
   name: "repeatingTimeIntervals()"
   nameWithType: "BackupSchedule.repeatingTimeIntervals()"
-  summary: "Get the repeating<wbr>Time<wbr>Intervals property: Repeating time interval which only support the following ISO 8601 format \\[R/start<wbr>Date<wbr>Time/Duration\\]."
+  summary: "Get the repeating<wbr>Time<wbr>Intervals property: Repeating time intervals that define the backup schedule."
   syntax: "public List<String> repeatingTimeIntervals()"
-  desc: "Get the repeatingTimeIntervals property: Repeating time interval which only support the following ISO 8601 format \\[R/startDateTime/Duration\\]. Example: R/2007-03-01T13:00:00Z/P1Y2M10DT2H30M."
+  desc: "Get the repeatingTimeIntervals property: Repeating time intervals that define the backup schedule. Each value must follow the format: \\`R/YYYY-MM-DDThh:mm:ss\\[.fff\\]\\[Z|(+/-)hh:mm\\]/Duration\\` Only the exact formats listed below are supported. Other ISO 8601 variations are not accepted. Supported time formats: - \\`Thh:mm:ss.fff\\` (with milliseconds) - \\`Thh:mm:ss\\` (with seconds) - \\`Thh:mm\\` (hours and minutes only) A timezone indicator (\\`Z\\`, \\`+hh:mm\\`, or \\`-hh:mm\\`) may be appended to any of the above. Unsupported formats include compact notation such as \\`T1430\\`, \\`T143045\\`, or \\`T14.5\\`. Examples: - \\`R/2023-10-15T14:30:00Z/P1W\\` - \\`R/2023-10-15T14:30:45.123+05:30/P1D\\` - \\`R/2023-10-15T14:30Z/P1D\\`."
   returns:
     description: "the repeatingTimeIntervals value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
@@ -63,9 +63,9 @@ methods:
   fullName: "com.azure.resourcemanager.dataprotection.models.BackupSchedule.timeZone()"
   name: "timeZone()"
   nameWithType: "BackupSchedule.timeZone()"
-  summary: "Get the time<wbr>Zone property: Time zone for a schedule."
+  summary: "Get the time<wbr>Zone property: Time Zone for a schedule."
   syntax: "public String timeZone()"
-  desc: "Get the timeZone property: Time zone for a schedule. Example: Pacific Standard Time."
+  desc: "Get the timeZone property: Time Zone for a schedule. Supported timezone indicators include: - 'Z' for UTC - '+00:00' - '+05:30' - '-08:00' Examples: - 2023-10-15T14:30:45Z - 2023-10-15T14:30:45.123+05:30 - 2023-10-15T14:30-08:00."
   returns:
     description: "the timeZone value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -85,13 +85,13 @@ methods:
   fullName: "com.azure.resourcemanager.dataprotection.models.BackupSchedule.withRepeatingTimeIntervals(List<String> repeatingTimeIntervals)"
   name: "withRepeatingTimeIntervals(List<String> repeatingTimeIntervals)"
   nameWithType: "BackupSchedule.withRepeatingTimeIntervals(List<String> repeatingTimeIntervals)"
-  summary: "Set the repeating<wbr>Time<wbr>Intervals property: Repeating time interval which only support the following ISO 8601 format \\[R/start<wbr>Date<wbr>Time/Duration\\]."
+  summary: "Set the repeating<wbr>Time<wbr>Intervals property: Repeating time intervals that define the backup schedule."
   parameters:
   - description: "the repeatingTimeIntervals value to set."
     name: "repeatingTimeIntervals"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
   syntax: "public BackupSchedule withRepeatingTimeIntervals(List<String> repeatingTimeIntervals)"
-  desc: "Set the repeatingTimeIntervals property: Repeating time interval which only support the following ISO 8601 format \\[R/startDateTime/Duration\\]. Example: R/2007-03-01T13:00:00Z/P1Y2M10DT2H30M."
+  desc: "Set the repeatingTimeIntervals property: Repeating time intervals that define the backup schedule. Each value must follow the format: \\`R/YYYY-MM-DDThh:mm:ss\\[.fff\\]\\[Z|(+/-)hh:mm\\]/Duration\\` Only the exact formats listed below are supported. Other ISO 8601 variations are not accepted. Supported time formats: - \\`Thh:mm:ss.fff\\` (with milliseconds) - \\`Thh:mm:ss\\` (with seconds) - \\`Thh:mm\\` (hours and minutes only) A timezone indicator (\\`Z\\`, \\`+hh:mm\\`, or \\`-hh:mm\\`) may be appended to any of the above. Unsupported formats include compact notation such as \\`T1430\\`, \\`T143045\\`, or \\`T14.5\\`. Examples: - \\`R/2023-10-15T14:30:00Z/P1W\\` - \\`R/2023-10-15T14:30:45.123+05:30/P1D\\` - \\`R/2023-10-15T14:30Z/P1D\\`."
   returns:
     description: "the BackupSchedule object itself."
     type: "<xref href=\"com.azure.resourcemanager.dataprotection.models.BackupSchedule?alt=com.azure.resourcemanager.dataprotection.models.BackupSchedule&text=BackupSchedule\" data-throw-if-not-resolved=\"False\" />"
@@ -99,13 +99,13 @@ methods:
   fullName: "com.azure.resourcemanager.dataprotection.models.BackupSchedule.withTimeZone(String timeZone)"
   name: "withTimeZone(String timeZone)"
   nameWithType: "BackupSchedule.withTimeZone(String timeZone)"
-  summary: "Set the time<wbr>Zone property: Time zone for a schedule."
+  summary: "Set the time<wbr>Zone property: Time Zone for a schedule."
   parameters:
   - description: "the timeZone value to set."
     name: "timeZone"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public BackupSchedule withTimeZone(String timeZone)"
-  desc: "Set the timeZone property: Time zone for a schedule. Example: Pacific Standard Time."
+  desc: "Set the timeZone property: Time Zone for a schedule. Supported timezone indicators include: - 'Z' for UTC - '+00:00' - '+05:30' - '-08:00' Examples: - 2023-10-15T14:30:45Z - 2023-10-15T14:30:45.123+05:30 - 2023-10-15T14:30-08:00."
   returns:
     description: "the BackupSchedule object itself."
     type: "<xref href=\"com.azure.resourcemanager.dataprotection.models.BackupSchedule?alt=com.azure.resourcemanager.dataprotection.models.BackupSchedule&text=BackupSchedule\" data-throw-if-not-resolved=\"False\" />"
@@ -115,4 +115,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.dataprotection.models.BackupSchedule?alt=com.azure.resourcemanager.dataprotection.models.BackupSchedule&text=BackupSchedule\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.dataprotection.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-dataprotection:1.5.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-dataprotection:1.6.0

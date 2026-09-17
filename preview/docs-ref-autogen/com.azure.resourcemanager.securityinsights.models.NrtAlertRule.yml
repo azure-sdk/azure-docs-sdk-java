@@ -7,11 +7,11 @@ summary: "Represents NRT alert rule."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 - "<xref href=\"com.azure.core.management.ProxyResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.resourcemanager.securityinsights.models.ResourceWithEtag?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
 - classRef: "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner?alt=com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner&text=AlertRuleInner\" data-throw-if-not-resolved=\"False\" />"
   methodsRef:
+  - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.etag()?alt=com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.etag&text=etag\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.fromJson(com.azure.json.JsonReader)?alt=com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.id()?alt=com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.id&text=id\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.kind()?alt=com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.kind&text=kind\" data-throw-if-not-resolved=\"False\" />"
@@ -19,11 +19,7 @@ inheritedClassMethods:
   - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.systemData()?alt=com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.systemData&text=systemData\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.toJson(com.azure.json.JsonWriter)?alt=com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.type()?alt=com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.type&text=type\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.validate()?alt=com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.validate&text=validate\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.withEtag(java.lang.String)?alt=com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.withEtag&text=withEtag\" data-throw-if-not-resolved=\"False\" />"
-- classRef: "<xref href=\"com.azure.resourcemanager.securityinsights.models.ResourceWithEtag?alt=com.azure.resourcemanager.securityinsights.models.ResourceWithEtag&text=ResourceWithEtag\" data-throw-if-not-resolved=\"False\" />"
-  methodsRef:
-  - "<xref href=\"com.azure.resourcemanager.securityinsights.models.ResourceWithEtag.etag()?alt=com.azure.resourcemanager.securityinsights.models.ResourceWithEtag.etag&text=etag\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -171,10 +167,10 @@ methods:
   fullName: "com.azure.resourcemanager.securityinsights.models.NrtAlertRule.kind()"
   name: "kind()"
   nameWithType: "NrtAlertRule.kind()"
-  summary: "Get the kind property: The kind of the alert rule."
+  summary: "Get the kind property: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.<wbr>g."
   overridden: "com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.kind()"
   syntax: "public AlertRuleKind kind()"
-  desc: "Get the kind property: The kind of the alert rule."
+  desc: "Get the kind property: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type. If supported, the resource provider must validate and persist this value."
   returns:
     description: "the kind value."
     type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.AlertRuleKind?alt=com.azure.resourcemanager.securityinsights.models.AlertRuleKind&text=AlertRuleKind\" data-throw-if-not-resolved=\"False\" />"
@@ -209,6 +205,16 @@ methods:
   returns:
     description: "the query value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.securityinsights.models.NrtAlertRule.sentinelEntitiesMappings()"
+  fullName: "com.azure.resourcemanager.securityinsights.models.NrtAlertRule.sentinelEntitiesMappings()"
+  name: "sentinelEntitiesMappings()"
+  nameWithType: "NrtAlertRule.sentinelEntitiesMappings()"
+  summary: "Get the sentinel<wbr>Entities<wbr>Mappings property: Array of the sentinel entity mappings of the alert rule."
+  syntax: "public List<SentinelEntityMapping> sentinelEntitiesMappings()"
+  desc: "Get the sentinelEntitiesMappings property: Array of the sentinel entity mappings of the alert rule."
+  returns:
+    description: "the sentinelEntitiesMappings value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.securityinsights.models.SentinelEntityMapping?alt=com.azure.resourcemanager.securityinsights.models.SentinelEntityMapping&text=SentinelEntityMapping\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.securityinsights.models.NrtAlertRule.severity()"
   fullName: "com.azure.resourcemanager.securityinsights.models.NrtAlertRule.severity()"
   name: "severity()"
@@ -219,6 +225,16 @@ methods:
   returns:
     description: "the severity value."
     type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.AlertSeverity?alt=com.azure.resourcemanager.securityinsights.models.AlertSeverity&text=AlertSeverity\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.securityinsights.models.NrtAlertRule.subTechniques()"
+  fullName: "com.azure.resourcemanager.securityinsights.models.NrtAlertRule.subTechniques()"
+  name: "subTechniques()"
+  nameWithType: "NrtAlertRule.subTechniques()"
+  summary: "Get the sub<wbr>Techniques property: The sub-techniques of the alert rule."
+  syntax: "public List<String> subTechniques()"
+  desc: "Get the subTechniques property: The sub-techniques of the alert rule."
+  returns:
+    description: "the subTechniques value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.resourcemanager.securityinsights.models.NrtAlertRule.suppressionDuration()"
   fullName: "com.azure.resourcemanager.securityinsights.models.NrtAlertRule.suppressionDuration()"
   name: "suppressionDuration()"
@@ -304,14 +320,6 @@ methods:
   returns:
     description: "the type value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-- uid: "com.azure.resourcemanager.securityinsights.models.NrtAlertRule.validate()"
-  fullName: "com.azure.resourcemanager.securityinsights.models.NrtAlertRule.validate()"
-  name: "validate()"
-  nameWithType: "NrtAlertRule.validate()"
-  summary: "Validates the instance."
-  overridden: "com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.validate()"
-  syntax: "public void validate()"
-  desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.securityinsights.models.NrtAlertRule.withAlertDetailsOverride(com.azure.resourcemanager.securityinsights.models.AlertDetailsOverride)"
   fullName: "com.azure.resourcemanager.securityinsights.models.NrtAlertRule.withAlertDetailsOverride(AlertDetailsOverride alertDetailsOverride)"
   name: "withAlertDetailsOverride(AlertDetailsOverride alertDetailsOverride)"
@@ -465,6 +473,20 @@ methods:
   returns:
     description: "the NrtAlertRule object itself."
     type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.NrtAlertRule?alt=com.azure.resourcemanager.securityinsights.models.NrtAlertRule&text=NrtAlertRule\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.securityinsights.models.NrtAlertRule.withSentinelEntitiesMappings(java.util.List<com.azure.resourcemanager.securityinsights.models.SentinelEntityMapping>)"
+  fullName: "com.azure.resourcemanager.securityinsights.models.NrtAlertRule.withSentinelEntitiesMappings(List<SentinelEntityMapping> sentinelEntitiesMappings)"
+  name: "withSentinelEntitiesMappings(List<SentinelEntityMapping> sentinelEntitiesMappings)"
+  nameWithType: "NrtAlertRule.withSentinelEntitiesMappings(List<SentinelEntityMapping> sentinelEntitiesMappings)"
+  summary: "Set the sentinel<wbr>Entities<wbr>Mappings property: Array of the sentinel entity mappings of the alert rule."
+  parameters:
+  - description: "the sentinelEntitiesMappings value to set."
+    name: "sentinelEntitiesMappings"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.securityinsights.models.SentinelEntityMapping?alt=com.azure.resourcemanager.securityinsights.models.SentinelEntityMapping&text=SentinelEntityMapping\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public NrtAlertRule withSentinelEntitiesMappings(List<SentinelEntityMapping> sentinelEntitiesMappings)"
+  desc: "Set the sentinelEntitiesMappings property: Array of the sentinel entity mappings of the alert rule."
+  returns:
+    description: "the NrtAlertRule object itself."
+    type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.NrtAlertRule?alt=com.azure.resourcemanager.securityinsights.models.NrtAlertRule&text=NrtAlertRule\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.securityinsights.models.NrtAlertRule.withSeverity(com.azure.resourcemanager.securityinsights.models.AlertSeverity)"
   fullName: "com.azure.resourcemanager.securityinsights.models.NrtAlertRule.withSeverity(AlertSeverity severity)"
   name: "withSeverity(AlertSeverity severity)"
@@ -476,6 +498,20 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.AlertSeverity?alt=com.azure.resourcemanager.securityinsights.models.AlertSeverity&text=AlertSeverity\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public NrtAlertRule withSeverity(AlertSeverity severity)"
   desc: "Set the severity property: The severity for alerts created by this alert rule."
+  returns:
+    description: "the NrtAlertRule object itself."
+    type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.NrtAlertRule?alt=com.azure.resourcemanager.securityinsights.models.NrtAlertRule&text=NrtAlertRule\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.securityinsights.models.NrtAlertRule.withSubTechniques(java.util.List<java.lang.String>)"
+  fullName: "com.azure.resourcemanager.securityinsights.models.NrtAlertRule.withSubTechniques(List<String> subTechniques)"
+  name: "withSubTechniques(List<String> subTechniques)"
+  nameWithType: "NrtAlertRule.withSubTechniques(List<String> subTechniques)"
+  summary: "Set the sub<wbr>Techniques property: The sub-techniques of the alert rule."
+  parameters:
+  - description: "the subTechniques value to set."
+    name: "subTechniques"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+  syntax: "public NrtAlertRule withSubTechniques(List<String> subTechniques)"
+  desc: "Set the subTechniques property: The sub-techniques of the alert rule."
   returns:
     description: "the NrtAlertRule object itself."
     type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.NrtAlertRule?alt=com.azure.resourcemanager.securityinsights.models.NrtAlertRule&text=NrtAlertRule\" data-throw-if-not-resolved=\"False\" />"
@@ -553,4 +589,4 @@ type: "class"
 desc: "Represents NRT alert rule."
 metadata: {}
 package: "com.azure.resourcemanager.securityinsights.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-securityinsights:1.0.0-beta.5
+artifact: com.azure.resourcemanager:azure-resourcemanager-securityinsights:1.1.0-beta.1

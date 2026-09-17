@@ -56,7 +56,7 @@ methods:
   nameWithType: "MetadataPropertiesPatch.contentId()"
   summary: "Get the content<wbr>Id property: Static ID for the content."
   syntax: "public String contentId()"
-  desc: "Get the contentId property: Static ID for the content. Used to identify dependencies and content from solutions or community. Hard-coded/static for out of the box content and solutions. Dynamic for user-created. This is the resource name."
+  desc: "Get the contentId property: Static ID for the content. Used to identify dependencies and content from solutions or community. Hard-coded/static for out of the box content and solutions. Can be optionally set for user created content to define dependencies. If an active content item is made from a template, both will have the same contentId."
   returns:
     description: "the contentId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -94,9 +94,9 @@ methods:
   fullName: "com.azure.resourcemanager.securityinsights.fluent.models.MetadataPropertiesPatch.firstPublishDate()"
   name: "firstPublishDate()"
   nameWithType: "MetadataPropertiesPatch.firstPublishDate()"
-  summary: "Get the first<wbr>Publish<wbr>Date property: first publish date solution content item."
+  summary: "Get the first<wbr>Publish<wbr>Date property: first publish date of solution content item."
   syntax: "public LocalDate firstPublishDate()"
-  desc: "Get the firstPublishDate property: first publish date solution content item."
+  desc: "Get the firstPublishDate property: first publish date of solution content item."
   returns:
     description: "the firstPublishDate value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html\">LocalDate</a>"
@@ -134,18 +134,18 @@ methods:
   name: "kind()"
   nameWithType: "MetadataPropertiesPatch.kind()"
   summary: "Get the kind property: The kind of content the metadata is for."
-  syntax: "public Kind kind()"
+  syntax: "public String kind()"
   desc: "Get the kind property: The kind of content the metadata is for."
   returns:
     description: "the kind value."
-    type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.Kind?alt=com.azure.resourcemanager.securityinsights.models.Kind&text=Kind\" data-throw-if-not-resolved=\"False\" />"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.securityinsights.fluent.models.MetadataPropertiesPatch.lastPublishDate()"
   fullName: "com.azure.resourcemanager.securityinsights.fluent.models.MetadataPropertiesPatch.lastPublishDate()"
   name: "lastPublishDate()"
   nameWithType: "MetadataPropertiesPatch.lastPublishDate()"
-  summary: "Get the last<wbr>Publish<wbr>Date property: last publish date for the solution content item."
+  summary: "Get the last<wbr>Publish<wbr>Date property: last publish date of solution content item."
   syntax: "public LocalDate lastPublishDate()"
-  desc: "Get the lastPublishDate property: last publish date for the solution content item."
+  desc: "Get the lastPublishDate property: last publish date of solution content item."
   returns:
     description: "the lastPublishDate value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html\">LocalDate</a>"
@@ -241,13 +241,6 @@ methods:
   - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.securityinsights.fluent.models.MetadataPropertiesPatch.validate()"
-  fullName: "com.azure.resourcemanager.securityinsights.fluent.models.MetadataPropertiesPatch.validate()"
-  name: "validate()"
-  nameWithType: "MetadataPropertiesPatch.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.securityinsights.fluent.models.MetadataPropertiesPatch.version()"
   fullName: "com.azure.resourcemanager.securityinsights.fluent.models.MetadataPropertiesPatch.version()"
   name: "version()"
@@ -296,7 +289,7 @@ methods:
     name: "contentId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public MetadataPropertiesPatch withContentId(String contentId)"
-  desc: "Set the contentId property: Static ID for the content. Used to identify dependencies and content from solutions or community. Hard-coded/static for out of the box content and solutions. Dynamic for user-created. This is the resource name."
+  desc: "Set the contentId property: Static ID for the content. Used to identify dependencies and content from solutions or community. Hard-coded/static for out of the box content and solutions. Can be optionally set for user created content to define dependencies. If an active content item is made from a template, both will have the same contentId."
   returns:
     description: "the MetadataPropertiesPatch object itself."
     type: "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.MetadataPropertiesPatch?alt=com.azure.resourcemanager.securityinsights.fluent.models.MetadataPropertiesPatch&text=MetadataPropertiesPatch\" data-throw-if-not-resolved=\"False\" />"
@@ -346,13 +339,13 @@ methods:
   fullName: "com.azure.resourcemanager.securityinsights.fluent.models.MetadataPropertiesPatch.withFirstPublishDate(LocalDate firstPublishDate)"
   name: "withFirstPublishDate(LocalDate firstPublishDate)"
   nameWithType: "MetadataPropertiesPatch.withFirstPublishDate(LocalDate firstPublishDate)"
-  summary: "Set the first<wbr>Publish<wbr>Date property: first publish date solution content item."
+  summary: "Set the first<wbr>Publish<wbr>Date property: first publish date of solution content item."
   parameters:
   - description: "the firstPublishDate value to set."
     name: "firstPublishDate"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html\">LocalDate</a>"
   syntax: "public MetadataPropertiesPatch withFirstPublishDate(LocalDate firstPublishDate)"
-  desc: "Set the firstPublishDate property: first publish date solution content item."
+  desc: "Set the firstPublishDate property: first publish date of solution content item."
   returns:
     description: "the MetadataPropertiesPatch object itself."
     type: "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.MetadataPropertiesPatch?alt=com.azure.resourcemanager.securityinsights.fluent.models.MetadataPropertiesPatch&text=MetadataPropertiesPatch\" data-throw-if-not-resolved=\"False\" />"
@@ -370,16 +363,16 @@ methods:
   returns:
     description: "the MetadataPropertiesPatch object itself."
     type: "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.MetadataPropertiesPatch?alt=com.azure.resourcemanager.securityinsights.fluent.models.MetadataPropertiesPatch&text=MetadataPropertiesPatch\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.securityinsights.fluent.models.MetadataPropertiesPatch.withKind(com.azure.resourcemanager.securityinsights.models.Kind)"
-  fullName: "com.azure.resourcemanager.securityinsights.fluent.models.MetadataPropertiesPatch.withKind(Kind kind)"
-  name: "withKind(Kind kind)"
-  nameWithType: "MetadataPropertiesPatch.withKind(Kind kind)"
+- uid: "com.azure.resourcemanager.securityinsights.fluent.models.MetadataPropertiesPatch.withKind(java.lang.String)"
+  fullName: "com.azure.resourcemanager.securityinsights.fluent.models.MetadataPropertiesPatch.withKind(String kind)"
+  name: "withKind(String kind)"
+  nameWithType: "MetadataPropertiesPatch.withKind(String kind)"
   summary: "Set the kind property: The kind of content the metadata is for."
   parameters:
   - description: "the kind value to set."
     name: "kind"
-    type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.Kind?alt=com.azure.resourcemanager.securityinsights.models.Kind&text=Kind\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public MetadataPropertiesPatch withKind(Kind kind)"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public MetadataPropertiesPatch withKind(String kind)"
   desc: "Set the kind property: The kind of content the metadata is for."
   returns:
     description: "the MetadataPropertiesPatch object itself."
@@ -388,13 +381,13 @@ methods:
   fullName: "com.azure.resourcemanager.securityinsights.fluent.models.MetadataPropertiesPatch.withLastPublishDate(LocalDate lastPublishDate)"
   name: "withLastPublishDate(LocalDate lastPublishDate)"
   nameWithType: "MetadataPropertiesPatch.withLastPublishDate(LocalDate lastPublishDate)"
-  summary: "Set the last<wbr>Publish<wbr>Date property: last publish date for the solution content item."
+  summary: "Set the last<wbr>Publish<wbr>Date property: last publish date of solution content item."
   parameters:
   - description: "the lastPublishDate value to set."
     name: "lastPublishDate"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html\">LocalDate</a>"
   syntax: "public MetadataPropertiesPatch withLastPublishDate(LocalDate lastPublishDate)"
-  desc: "Set the lastPublishDate property: last publish date for the solution content item."
+  desc: "Set the lastPublishDate property: last publish date of solution content item."
   returns:
     description: "the MetadataPropertiesPatch object itself."
     type: "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.MetadataPropertiesPatch?alt=com.azure.resourcemanager.securityinsights.fluent.models.MetadataPropertiesPatch&text=MetadataPropertiesPatch\" data-throw-if-not-resolved=\"False\" />"
@@ -530,4 +523,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.MetadataPropertiesPatch?alt=com.azure.resourcemanager.securityinsights.fluent.models.MetadataPropertiesPatch&text=MetadataPropertiesPatch\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.securityinsights.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-securityinsights:1.0.0-beta.5
+artifact: com.azure.resourcemanager:azure-resourcemanager-securityinsights:1.1.0-beta.1

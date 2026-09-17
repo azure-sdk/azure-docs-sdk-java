@@ -10,7 +10,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.AgentPoolsClient.beginCreateOrUpdate(String resourceGroupName, String kubernetesClusterName, String agentPoolName, AgentPoolInner agentPoolParameters)"
   name: "beginCreateOrUpdate(String resourceGroupName, String kubernetesClusterName, String agentPoolName, AgentPoolInner agentPoolParameters)"
   nameWithType: "AgentPoolsClient.beginCreateOrUpdate(String resourceGroupName, String kubernetesClusterName, String agentPoolName, AgentPoolInner agentPoolParameters)"
-  summary: "Create or update the Kubernetes cluster agent pool."
+  summary: "Create a new Kubernetes cluster agent pool or update the properties of the existing one."
   modifiers:
   - "abstract"
   parameters:
@@ -27,7 +27,7 @@ methods:
     name: "agentPoolParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SyncPoller<PollResult<AgentPoolInner>,AgentPoolInner> beginCreateOrUpdate(String resourceGroupName, String kubernetesClusterName, String agentPoolName, AgentPoolInner agentPoolParameters)"
-  desc: "Create or update the Kubernetes cluster agent pool. Create a new Kubernetes cluster agent pool or update the properties of the existing one."
+  desc: "Create a new Kubernetes cluster agent pool or update the properties of the existing one."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of agentPool represents the agent pool of Kubernetes cluster."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -35,7 +35,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.AgentPoolsClient.beginCreateOrUpdate(String resourceGroupName, String kubernetesClusterName, String agentPoolName, AgentPoolInner agentPoolParameters, String ifMatch, String ifNoneMatch, Context context)"
   name: "beginCreateOrUpdate(String resourceGroupName, String kubernetesClusterName, String agentPoolName, AgentPoolInner agentPoolParameters, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "AgentPoolsClient.beginCreateOrUpdate(String resourceGroupName, String kubernetesClusterName, String agentPoolName, AgentPoolInner agentPoolParameters, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Create or update the Kubernetes cluster agent pool."
+  summary: "Create a new Kubernetes cluster agent pool or update the properties of the existing one."
   modifiers:
   - "abstract"
   parameters:
@@ -61,7 +61,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SyncPoller<PollResult<AgentPoolInner>,AgentPoolInner> beginCreateOrUpdate(String resourceGroupName, String kubernetesClusterName, String agentPoolName, AgentPoolInner agentPoolParameters, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Create or update the Kubernetes cluster agent pool. Create a new Kubernetes cluster agent pool or update the properties of the existing one."
+  desc: "Create a new Kubernetes cluster agent pool or update the properties of the existing one."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of agentPool represents the agent pool of Kubernetes cluster."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -69,7 +69,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.AgentPoolsClient.beginDelete(String resourceGroupName, String kubernetesClusterName, String agentPoolName)"
   name: "beginDelete(String resourceGroupName, String kubernetesClusterName, String agentPoolName)"
   nameWithType: "AgentPoolsClient.beginDelete(String resourceGroupName, String kubernetesClusterName, String agentPoolName)"
-  summary: "Delete the Kubernetes cluster agent pool."
+  summary: "Delete the provided Kubernetes cluster agent pool."
   modifiers:
   - "abstract"
   parameters:
@@ -82,16 +82,16 @@ methods:
   - description: "The name of the Kubernetes cluster agent pool."
     name: "agentPoolName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract SyncPoller<PollResult<OperationStatusResultInner>,OperationStatusResultInner> beginDelete(String resourceGroupName, String kubernetesClusterName, String agentPoolName)"
-  desc: "Delete the Kubernetes cluster agent pool. Delete the provided Kubernetes cluster agent pool."
+  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginDelete(String resourceGroupName, String kubernetesClusterName, String agentPoolName)"
+  desc: "Delete the provided Kubernetes cluster agent pool."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the current status of an async operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.AgentPoolsClient.beginDelete(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.AgentPoolsClient.beginDelete(String resourceGroupName, String kubernetesClusterName, String agentPoolName, String ifMatch, String ifNoneMatch, Context context)"
   name: "beginDelete(String resourceGroupName, String kubernetesClusterName, String agentPoolName, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "AgentPoolsClient.beginDelete(String resourceGroupName, String kubernetesClusterName, String agentPoolName, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Delete the Kubernetes cluster agent pool."
+  summary: "Delete the provided Kubernetes cluster agent pool."
   modifiers:
   - "abstract"
   parameters:
@@ -113,16 +113,16 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract SyncPoller<PollResult<OperationStatusResultInner>,OperationStatusResultInner> beginDelete(String resourceGroupName, String kubernetesClusterName, String agentPoolName, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Delete the Kubernetes cluster agent pool. Delete the provided Kubernetes cluster agent pool."
+  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginDelete(String resourceGroupName, String kubernetesClusterName, String agentPoolName, String ifMatch, String ifNoneMatch, Context context)"
+  desc: "Delete the provided Kubernetes cluster agent pool."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the current status of an async operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.AgentPoolsClient.beginUpdate(java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.AgentPoolsClient.beginUpdate(String resourceGroupName, String kubernetesClusterName, String agentPoolName)"
   name: "beginUpdate(String resourceGroupName, String kubernetesClusterName, String agentPoolName)"
   nameWithType: "AgentPoolsClient.beginUpdate(String resourceGroupName, String kubernetesClusterName, String agentPoolName)"
-  summary: "Patch the Kubernetes cluster agent pool."
+  summary: "Patch the properties of the provided Kubernetes cluster agent pool, or update the tags associated with the Kubernetes cluster agent pool."
   modifiers:
   - "abstract"
   parameters:
@@ -136,7 +136,7 @@ methods:
     name: "agentPoolName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract SyncPoller<PollResult<AgentPoolInner>,AgentPoolInner> beginUpdate(String resourceGroupName, String kubernetesClusterName, String agentPoolName)"
-  desc: "Patch the Kubernetes cluster agent pool. Patch the properties of the provided Kubernetes cluster agent pool, or update the tags associated with the Kubernetes cluster agent pool. Properties and tag updates can be done independently."
+  desc: "Patch the properties of the provided Kubernetes cluster agent pool, or update the tags associated with the Kubernetes cluster agent pool. Properties and tag updates can be done independently."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of agentPool represents the agent pool of Kubernetes cluster."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -144,7 +144,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.AgentPoolsClient.beginUpdate(String resourceGroupName, String kubernetesClusterName, String agentPoolName, String ifMatch, String ifNoneMatch, AgentPoolPatchParameters agentPoolUpdateParameters, Context context)"
   name: "beginUpdate(String resourceGroupName, String kubernetesClusterName, String agentPoolName, String ifMatch, String ifNoneMatch, AgentPoolPatchParameters agentPoolUpdateParameters, Context context)"
   nameWithType: "AgentPoolsClient.beginUpdate(String resourceGroupName, String kubernetesClusterName, String agentPoolName, String ifMatch, String ifNoneMatch, AgentPoolPatchParameters agentPoolUpdateParameters, Context context)"
-  summary: "Patch the Kubernetes cluster agent pool."
+  summary: "Patch the properties of the provided Kubernetes cluster agent pool, or update the tags associated with the Kubernetes cluster agent pool."
   modifiers:
   - "abstract"
   parameters:
@@ -170,7 +170,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SyncPoller<PollResult<AgentPoolInner>,AgentPoolInner> beginUpdate(String resourceGroupName, String kubernetesClusterName, String agentPoolName, String ifMatch, String ifNoneMatch, AgentPoolPatchParameters agentPoolUpdateParameters, Context context)"
-  desc: "Patch the Kubernetes cluster agent pool. Patch the properties of the provided Kubernetes cluster agent pool, or update the tags associated with the Kubernetes cluster agent pool. Properties and tag updates can be done independently."
+  desc: "Patch the properties of the provided Kubernetes cluster agent pool, or update the tags associated with the Kubernetes cluster agent pool. Properties and tag updates can be done independently."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of agentPool represents the agent pool of Kubernetes cluster."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -178,7 +178,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.AgentPoolsClient.createOrUpdate(String resourceGroupName, String kubernetesClusterName, String agentPoolName, AgentPoolInner agentPoolParameters)"
   name: "createOrUpdate(String resourceGroupName, String kubernetesClusterName, String agentPoolName, AgentPoolInner agentPoolParameters)"
   nameWithType: "AgentPoolsClient.createOrUpdate(String resourceGroupName, String kubernetesClusterName, String agentPoolName, AgentPoolInner agentPoolParameters)"
-  summary: "Create or update the Kubernetes cluster agent pool."
+  summary: "Create a new Kubernetes cluster agent pool or update the properties of the existing one."
   modifiers:
   - "abstract"
   parameters:
@@ -195,7 +195,7 @@ methods:
     name: "agentPoolParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract AgentPoolInner createOrUpdate(String resourceGroupName, String kubernetesClusterName, String agentPoolName, AgentPoolInner agentPoolParameters)"
-  desc: "Create or update the Kubernetes cluster agent pool. Create a new Kubernetes cluster agent pool or update the properties of the existing one."
+  desc: "Create a new Kubernetes cluster agent pool or update the properties of the existing one."
   returns:
     description: "agentPool represents the agent pool of Kubernetes cluster."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
@@ -203,7 +203,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.AgentPoolsClient.createOrUpdate(String resourceGroupName, String kubernetesClusterName, String agentPoolName, AgentPoolInner agentPoolParameters, String ifMatch, String ifNoneMatch, Context context)"
   name: "createOrUpdate(String resourceGroupName, String kubernetesClusterName, String agentPoolName, AgentPoolInner agentPoolParameters, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "AgentPoolsClient.createOrUpdate(String resourceGroupName, String kubernetesClusterName, String agentPoolName, AgentPoolInner agentPoolParameters, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Create or update the Kubernetes cluster agent pool."
+  summary: "Create a new Kubernetes cluster agent pool or update the properties of the existing one."
   modifiers:
   - "abstract"
   parameters:
@@ -229,7 +229,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract AgentPoolInner createOrUpdate(String resourceGroupName, String kubernetesClusterName, String agentPoolName, AgentPoolInner agentPoolParameters, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Create or update the Kubernetes cluster agent pool. Create a new Kubernetes cluster agent pool or update the properties of the existing one."
+  desc: "Create a new Kubernetes cluster agent pool or update the properties of the existing one."
   returns:
     description: "agentPool represents the agent pool of Kubernetes cluster."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
@@ -237,7 +237,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.AgentPoolsClient.delete(String resourceGroupName, String kubernetesClusterName, String agentPoolName)"
   name: "delete(String resourceGroupName, String kubernetesClusterName, String agentPoolName)"
   nameWithType: "AgentPoolsClient.delete(String resourceGroupName, String kubernetesClusterName, String agentPoolName)"
-  summary: "Delete the Kubernetes cluster agent pool."
+  summary: "Delete the provided Kubernetes cluster agent pool."
   modifiers:
   - "abstract"
   parameters:
@@ -250,16 +250,13 @@ methods:
   - description: "The name of the Kubernetes cluster agent pool."
     name: "agentPoolName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract OperationStatusResultInner delete(String resourceGroupName, String kubernetesClusterName, String agentPoolName)"
-  desc: "Delete the Kubernetes cluster agent pool. Delete the provided Kubernetes cluster agent pool."
-  returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void delete(String resourceGroupName, String kubernetesClusterName, String agentPoolName)"
+  desc: "Delete the provided Kubernetes cluster agent pool."
 - uid: "com.azure.resourcemanager.networkcloud.fluent.AgentPoolsClient.delete(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.AgentPoolsClient.delete(String resourceGroupName, String kubernetesClusterName, String agentPoolName, String ifMatch, String ifNoneMatch, Context context)"
   name: "delete(String resourceGroupName, String kubernetesClusterName, String agentPoolName, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "AgentPoolsClient.delete(String resourceGroupName, String kubernetesClusterName, String agentPoolName, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Delete the Kubernetes cluster agent pool."
+  summary: "Delete the provided Kubernetes cluster agent pool."
   modifiers:
   - "abstract"
   parameters:
@@ -281,16 +278,13 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract OperationStatusResultInner delete(String resourceGroupName, String kubernetesClusterName, String agentPoolName, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Delete the Kubernetes cluster agent pool. Delete the provided Kubernetes cluster agent pool."
-  returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void delete(String resourceGroupName, String kubernetesClusterName, String agentPoolName, String ifMatch, String ifNoneMatch, Context context)"
+  desc: "Delete the provided Kubernetes cluster agent pool."
 - uid: "com.azure.resourcemanager.networkcloud.fluent.AgentPoolsClient.get(java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.AgentPoolsClient.get(String resourceGroupName, String kubernetesClusterName, String agentPoolName)"
   name: "get(String resourceGroupName, String kubernetesClusterName, String agentPoolName)"
   nameWithType: "AgentPoolsClient.get(String resourceGroupName, String kubernetesClusterName, String agentPoolName)"
-  summary: "Retrieve the Kubernetes cluster agent pool."
+  summary: "Get properties of the provided Kubernetes cluster agent pool."
   modifiers:
   - "abstract"
   parameters:
@@ -304,7 +298,7 @@ methods:
     name: "agentPoolName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract AgentPoolInner get(String resourceGroupName, String kubernetesClusterName, String agentPoolName)"
-  desc: "Retrieve the Kubernetes cluster agent pool. Get properties of the provided Kubernetes cluster agent pool."
+  desc: "Get properties of the provided Kubernetes cluster agent pool."
   returns:
     description: "properties of the provided Kubernetes cluster agent pool."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
@@ -312,7 +306,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.AgentPoolsClient.getWithResponse(String resourceGroupName, String kubernetesClusterName, String agentPoolName, Context context)"
   name: "getWithResponse(String resourceGroupName, String kubernetesClusterName, String agentPoolName, Context context)"
   nameWithType: "AgentPoolsClient.getWithResponse(String resourceGroupName, String kubernetesClusterName, String agentPoolName, Context context)"
-  summary: "Retrieve the Kubernetes cluster agent pool."
+  summary: "Get properties of the provided Kubernetes cluster agent pool."
   modifiers:
   - "abstract"
   parameters:
@@ -329,7 +323,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<AgentPoolInner> getWithResponse(String resourceGroupName, String kubernetesClusterName, String agentPoolName, Context context)"
-  desc: "Retrieve the Kubernetes cluster agent pool. Get properties of the provided Kubernetes cluster agent pool."
+  desc: "Get properties of the provided Kubernetes cluster agent pool."
   returns:
     description: "properties of the provided Kubernetes cluster agent pool along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -337,7 +331,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.AgentPoolsClient.listByKubernetesCluster(String resourceGroupName, String kubernetesClusterName)"
   name: "listByKubernetesCluster(String resourceGroupName, String kubernetesClusterName)"
   nameWithType: "AgentPoolsClient.listByKubernetesCluster(String resourceGroupName, String kubernetesClusterName)"
-  summary: "List agent pools of the Kubernetes cluster."
+  summary: "Get a list of agent pools for the provided Kubernetes cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -348,7 +342,7 @@ methods:
     name: "kubernetesClusterName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<AgentPoolInner> listByKubernetesCluster(String resourceGroupName, String kubernetesClusterName)"
-  desc: "List agent pools of the Kubernetes cluster. Get a list of agent pools for the provided Kubernetes cluster."
+  desc: "Get a list of agent pools for the provided Kubernetes cluster."
   returns:
     description: "a list of agent pools for the provided Kubernetes cluster as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -356,7 +350,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.AgentPoolsClient.listByKubernetesCluster(String resourceGroupName, String kubernetesClusterName, Integer top, String skipToken, Context context)"
   name: "listByKubernetesCluster(String resourceGroupName, String kubernetesClusterName, Integer top, String skipToken, Context context)"
   nameWithType: "AgentPoolsClient.listByKubernetesCluster(String resourceGroupName, String kubernetesClusterName, Integer top, String skipToken, Context context)"
-  summary: "List agent pools of the Kubernetes cluster."
+  summary: "Get a list of agent pools for the provided Kubernetes cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -376,7 +370,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<AgentPoolInner> listByKubernetesCluster(String resourceGroupName, String kubernetesClusterName, Integer top, String skipToken, Context context)"
-  desc: "List agent pools of the Kubernetes cluster. Get a list of agent pools for the provided Kubernetes cluster."
+  desc: "Get a list of agent pools for the provided Kubernetes cluster."
   returns:
     description: "a list of agent pools for the provided Kubernetes cluster as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -384,7 +378,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.AgentPoolsClient.update(String resourceGroupName, String kubernetesClusterName, String agentPoolName)"
   name: "update(String resourceGroupName, String kubernetesClusterName, String agentPoolName)"
   nameWithType: "AgentPoolsClient.update(String resourceGroupName, String kubernetesClusterName, String agentPoolName)"
-  summary: "Patch the Kubernetes cluster agent pool."
+  summary: "Patch the properties of the provided Kubernetes cluster agent pool, or update the tags associated with the Kubernetes cluster agent pool."
   modifiers:
   - "abstract"
   parameters:
@@ -398,7 +392,7 @@ methods:
     name: "agentPoolName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract AgentPoolInner update(String resourceGroupName, String kubernetesClusterName, String agentPoolName)"
-  desc: "Patch the Kubernetes cluster agent pool. Patch the properties of the provided Kubernetes cluster agent pool, or update the tags associated with the Kubernetes cluster agent pool. Properties and tag updates can be done independently."
+  desc: "Patch the properties of the provided Kubernetes cluster agent pool, or update the tags associated with the Kubernetes cluster agent pool. Properties and tag updates can be done independently."
   returns:
     description: "agentPool represents the agent pool of Kubernetes cluster."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
@@ -406,7 +400,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.AgentPoolsClient.update(String resourceGroupName, String kubernetesClusterName, String agentPoolName, String ifMatch, String ifNoneMatch, AgentPoolPatchParameters agentPoolUpdateParameters, Context context)"
   name: "update(String resourceGroupName, String kubernetesClusterName, String agentPoolName, String ifMatch, String ifNoneMatch, AgentPoolPatchParameters agentPoolUpdateParameters, Context context)"
   nameWithType: "AgentPoolsClient.update(String resourceGroupName, String kubernetesClusterName, String agentPoolName, String ifMatch, String ifNoneMatch, AgentPoolPatchParameters agentPoolUpdateParameters, Context context)"
-  summary: "Patch the Kubernetes cluster agent pool."
+  summary: "Patch the properties of the provided Kubernetes cluster agent pool, or update the tags associated with the Kubernetes cluster agent pool."
   modifiers:
   - "abstract"
   parameters:
@@ -432,7 +426,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract AgentPoolInner update(String resourceGroupName, String kubernetesClusterName, String agentPoolName, String ifMatch, String ifNoneMatch, AgentPoolPatchParameters agentPoolUpdateParameters, Context context)"
-  desc: "Patch the Kubernetes cluster agent pool. Patch the properties of the provided Kubernetes cluster agent pool, or update the tags associated with the Kubernetes cluster agent pool. Properties and tag updates can be done independently."
+  desc: "Patch the properties of the provided Kubernetes cluster agent pool, or update the tags associated with the Kubernetes cluster agent pool. Properties and tag updates can be done independently."
   returns:
     description: "agentPool represents the agent pool of Kubernetes cluster."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.AgentPoolInner&text=AgentPoolInner\" data-throw-if-not-resolved=\"False\" />"
@@ -440,4 +434,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in AgentPoolsClient."
 metadata: {}
 package: "com.azure.resourcemanager.networkcloud.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.2.0

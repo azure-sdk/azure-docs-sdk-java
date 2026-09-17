@@ -10,7 +10,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.BmcKeySetsClient.beginCreateOrUpdate(String resourceGroupName, String clusterName, String bmcKeySetName, BmcKeySetInner bmcKeySetParameters)"
   name: "beginCreateOrUpdate(String resourceGroupName, String clusterName, String bmcKeySetName, BmcKeySetInner bmcKeySetParameters)"
   nameWithType: "BmcKeySetsClient.beginCreateOrUpdate(String resourceGroupName, String clusterName, String bmcKeySetName, BmcKeySetInner bmcKeySetParameters)"
-  summary: "Create or update the baseboard management controller key set of the cluster."
+  summary: "Create a new baseboard management controller key set or update the existing one for the provided cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -27,7 +27,7 @@ methods:
     name: "bmcKeySetParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner&text=BmcKeySetInner\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SyncPoller<PollResult<BmcKeySetInner>,BmcKeySetInner> beginCreateOrUpdate(String resourceGroupName, String clusterName, String bmcKeySetName, BmcKeySetInner bmcKeySetParameters)"
-  desc: "Create or update the baseboard management controller key set of the cluster. Create a new baseboard management controller key set or update the existing one for the provided cluster."
+  desc: "Create a new baseboard management controller key set or update the existing one for the provided cluster."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of bmcKeySet represents the baseboard management controller key set."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner&text=BmcKeySetInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner&text=BmcKeySetInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -35,7 +35,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.BmcKeySetsClient.beginCreateOrUpdate(String resourceGroupName, String clusterName, String bmcKeySetName, BmcKeySetInner bmcKeySetParameters, String ifMatch, String ifNoneMatch, Context context)"
   name: "beginCreateOrUpdate(String resourceGroupName, String clusterName, String bmcKeySetName, BmcKeySetInner bmcKeySetParameters, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "BmcKeySetsClient.beginCreateOrUpdate(String resourceGroupName, String clusterName, String bmcKeySetName, BmcKeySetInner bmcKeySetParameters, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Create or update the baseboard management controller key set of the cluster."
+  summary: "Create a new baseboard management controller key set or update the existing one for the provided cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -61,7 +61,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SyncPoller<PollResult<BmcKeySetInner>,BmcKeySetInner> beginCreateOrUpdate(String resourceGroupName, String clusterName, String bmcKeySetName, BmcKeySetInner bmcKeySetParameters, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Create or update the baseboard management controller key set of the cluster. Create a new baseboard management controller key set or update the existing one for the provided cluster."
+  desc: "Create a new baseboard management controller key set or update the existing one for the provided cluster."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of bmcKeySet represents the baseboard management controller key set."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner&text=BmcKeySetInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner&text=BmcKeySetInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -69,7 +69,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.BmcKeySetsClient.beginDelete(String resourceGroupName, String clusterName, String bmcKeySetName)"
   name: "beginDelete(String resourceGroupName, String clusterName, String bmcKeySetName)"
   nameWithType: "BmcKeySetsClient.beginDelete(String resourceGroupName, String clusterName, String bmcKeySetName)"
-  summary: "Delete the baseboard management controller key set of the cluster."
+  summary: "Delete the baseboard management controller key set of the provided cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -82,16 +82,16 @@ methods:
   - description: "The name of the baseboard management controller key set."
     name: "bmcKeySetName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract SyncPoller<PollResult<OperationStatusResultInner>,OperationStatusResultInner> beginDelete(String resourceGroupName, String clusterName, String bmcKeySetName)"
-  desc: "Delete the baseboard management controller key set of the cluster. Delete the baseboard management controller key set of the provided cluster."
+  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginDelete(String resourceGroupName, String clusterName, String bmcKeySetName)"
+  desc: "Delete the baseboard management controller key set of the provided cluster."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the current status of an async operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.BmcKeySetsClient.beginDelete(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.BmcKeySetsClient.beginDelete(String resourceGroupName, String clusterName, String bmcKeySetName, String ifMatch, String ifNoneMatch, Context context)"
   name: "beginDelete(String resourceGroupName, String clusterName, String bmcKeySetName, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "BmcKeySetsClient.beginDelete(String resourceGroupName, String clusterName, String bmcKeySetName, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Delete the baseboard management controller key set of the cluster."
+  summary: "Delete the baseboard management controller key set of the provided cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -113,16 +113,16 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract SyncPoller<PollResult<OperationStatusResultInner>,OperationStatusResultInner> beginDelete(String resourceGroupName, String clusterName, String bmcKeySetName, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Delete the baseboard management controller key set of the cluster. Delete the baseboard management controller key set of the provided cluster."
+  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginDelete(String resourceGroupName, String clusterName, String bmcKeySetName, String ifMatch, String ifNoneMatch, Context context)"
+  desc: "Delete the baseboard management controller key set of the provided cluster."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the current status of an async operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.BmcKeySetsClient.beginUpdate(java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.BmcKeySetsClient.beginUpdate(String resourceGroupName, String clusterName, String bmcKeySetName)"
   name: "beginUpdate(String resourceGroupName, String clusterName, String bmcKeySetName)"
   nameWithType: "BmcKeySetsClient.beginUpdate(String resourceGroupName, String clusterName, String bmcKeySetName)"
-  summary: "Patch baseboard management controller key set of the cluster."
+  summary: "Patch properties of baseboard management controller key set for the provided cluster, or update the tags associated with it."
   modifiers:
   - "abstract"
   parameters:
@@ -136,7 +136,7 @@ methods:
     name: "bmcKeySetName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract SyncPoller<PollResult<BmcKeySetInner>,BmcKeySetInner> beginUpdate(String resourceGroupName, String clusterName, String bmcKeySetName)"
-  desc: "Patch baseboard management controller key set of the cluster. Patch properties of baseboard management controller key set for the provided cluster, or update the tags associated with it. Properties and tag updates can be done independently."
+  desc: "Patch properties of baseboard management controller key set for the provided cluster, or update the tags associated with it. Properties and tag updates can be done independently."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of bmcKeySet represents the baseboard management controller key set."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner&text=BmcKeySetInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner&text=BmcKeySetInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -144,7 +144,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.BmcKeySetsClient.beginUpdate(String resourceGroupName, String clusterName, String bmcKeySetName, String ifMatch, String ifNoneMatch, BmcKeySetPatchParameters bmcKeySetUpdateParameters, Context context)"
   name: "beginUpdate(String resourceGroupName, String clusterName, String bmcKeySetName, String ifMatch, String ifNoneMatch, BmcKeySetPatchParameters bmcKeySetUpdateParameters, Context context)"
   nameWithType: "BmcKeySetsClient.beginUpdate(String resourceGroupName, String clusterName, String bmcKeySetName, String ifMatch, String ifNoneMatch, BmcKeySetPatchParameters bmcKeySetUpdateParameters, Context context)"
-  summary: "Patch baseboard management controller key set of the cluster."
+  summary: "Patch properties of baseboard management controller key set for the provided cluster, or update the tags associated with it."
   modifiers:
   - "abstract"
   parameters:
@@ -170,7 +170,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SyncPoller<PollResult<BmcKeySetInner>,BmcKeySetInner> beginUpdate(String resourceGroupName, String clusterName, String bmcKeySetName, String ifMatch, String ifNoneMatch, BmcKeySetPatchParameters bmcKeySetUpdateParameters, Context context)"
-  desc: "Patch baseboard management controller key set of the cluster. Patch properties of baseboard management controller key set for the provided cluster, or update the tags associated with it. Properties and tag updates can be done independently."
+  desc: "Patch properties of baseboard management controller key set for the provided cluster, or update the tags associated with it. Properties and tag updates can be done independently."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of bmcKeySet represents the baseboard management controller key set."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner&text=BmcKeySetInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner&text=BmcKeySetInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -178,7 +178,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.BmcKeySetsClient.createOrUpdate(String resourceGroupName, String clusterName, String bmcKeySetName, BmcKeySetInner bmcKeySetParameters)"
   name: "createOrUpdate(String resourceGroupName, String clusterName, String bmcKeySetName, BmcKeySetInner bmcKeySetParameters)"
   nameWithType: "BmcKeySetsClient.createOrUpdate(String resourceGroupName, String clusterName, String bmcKeySetName, BmcKeySetInner bmcKeySetParameters)"
-  summary: "Create or update the baseboard management controller key set of the cluster."
+  summary: "Create a new baseboard management controller key set or update the existing one for the provided cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -195,7 +195,7 @@ methods:
     name: "bmcKeySetParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner&text=BmcKeySetInner\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract BmcKeySetInner createOrUpdate(String resourceGroupName, String clusterName, String bmcKeySetName, BmcKeySetInner bmcKeySetParameters)"
-  desc: "Create or update the baseboard management controller key set of the cluster. Create a new baseboard management controller key set or update the existing one for the provided cluster."
+  desc: "Create a new baseboard management controller key set or update the existing one for the provided cluster."
   returns:
     description: "bmcKeySet represents the baseboard management controller key set."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner&text=BmcKeySetInner\" data-throw-if-not-resolved=\"False\" />"
@@ -203,7 +203,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.BmcKeySetsClient.createOrUpdate(String resourceGroupName, String clusterName, String bmcKeySetName, BmcKeySetInner bmcKeySetParameters, String ifMatch, String ifNoneMatch, Context context)"
   name: "createOrUpdate(String resourceGroupName, String clusterName, String bmcKeySetName, BmcKeySetInner bmcKeySetParameters, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "BmcKeySetsClient.createOrUpdate(String resourceGroupName, String clusterName, String bmcKeySetName, BmcKeySetInner bmcKeySetParameters, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Create or update the baseboard management controller key set of the cluster."
+  summary: "Create a new baseboard management controller key set or update the existing one for the provided cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -229,7 +229,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract BmcKeySetInner createOrUpdate(String resourceGroupName, String clusterName, String bmcKeySetName, BmcKeySetInner bmcKeySetParameters, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Create or update the baseboard management controller key set of the cluster. Create a new baseboard management controller key set or update the existing one for the provided cluster."
+  desc: "Create a new baseboard management controller key set or update the existing one for the provided cluster."
   returns:
     description: "bmcKeySet represents the baseboard management controller key set."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner&text=BmcKeySetInner\" data-throw-if-not-resolved=\"False\" />"
@@ -237,7 +237,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.BmcKeySetsClient.delete(String resourceGroupName, String clusterName, String bmcKeySetName)"
   name: "delete(String resourceGroupName, String clusterName, String bmcKeySetName)"
   nameWithType: "BmcKeySetsClient.delete(String resourceGroupName, String clusterName, String bmcKeySetName)"
-  summary: "Delete the baseboard management controller key set of the cluster."
+  summary: "Delete the baseboard management controller key set of the provided cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -250,16 +250,13 @@ methods:
   - description: "The name of the baseboard management controller key set."
     name: "bmcKeySetName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract OperationStatusResultInner delete(String resourceGroupName, String clusterName, String bmcKeySetName)"
-  desc: "Delete the baseboard management controller key set of the cluster. Delete the baseboard management controller key set of the provided cluster."
-  returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void delete(String resourceGroupName, String clusterName, String bmcKeySetName)"
+  desc: "Delete the baseboard management controller key set of the provided cluster."
 - uid: "com.azure.resourcemanager.networkcloud.fluent.BmcKeySetsClient.delete(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.BmcKeySetsClient.delete(String resourceGroupName, String clusterName, String bmcKeySetName, String ifMatch, String ifNoneMatch, Context context)"
   name: "delete(String resourceGroupName, String clusterName, String bmcKeySetName, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "BmcKeySetsClient.delete(String resourceGroupName, String clusterName, String bmcKeySetName, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Delete the baseboard management controller key set of the cluster."
+  summary: "Delete the baseboard management controller key set of the provided cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -281,16 +278,13 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract OperationStatusResultInner delete(String resourceGroupName, String clusterName, String bmcKeySetName, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Delete the baseboard management controller key set of the cluster. Delete the baseboard management controller key set of the provided cluster."
-  returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void delete(String resourceGroupName, String clusterName, String bmcKeySetName, String ifMatch, String ifNoneMatch, Context context)"
+  desc: "Delete the baseboard management controller key set of the provided cluster."
 - uid: "com.azure.resourcemanager.networkcloud.fluent.BmcKeySetsClient.get(java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.BmcKeySetsClient.get(String resourceGroupName, String clusterName, String bmcKeySetName)"
   name: "get(String resourceGroupName, String clusterName, String bmcKeySetName)"
   nameWithType: "BmcKeySetsClient.get(String resourceGroupName, String clusterName, String bmcKeySetName)"
-  summary: "Retrieve the baseboard management controller key set of the cluster."
+  summary: "Get baseboard management controller key set of the provided cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -304,7 +298,7 @@ methods:
     name: "bmcKeySetName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract BmcKeySetInner get(String resourceGroupName, String clusterName, String bmcKeySetName)"
-  desc: "Retrieve the baseboard management controller key set of the cluster. Get baseboard management controller key set of the provided cluster."
+  desc: "Get baseboard management controller key set of the provided cluster."
   returns:
     description: "baseboard management controller key set of the provided cluster."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner&text=BmcKeySetInner\" data-throw-if-not-resolved=\"False\" />"
@@ -312,7 +306,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.BmcKeySetsClient.getWithResponse(String resourceGroupName, String clusterName, String bmcKeySetName, Context context)"
   name: "getWithResponse(String resourceGroupName, String clusterName, String bmcKeySetName, Context context)"
   nameWithType: "BmcKeySetsClient.getWithResponse(String resourceGroupName, String clusterName, String bmcKeySetName, Context context)"
-  summary: "Retrieve the baseboard management controller key set of the cluster."
+  summary: "Get baseboard management controller key set of the provided cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -329,7 +323,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<BmcKeySetInner> getWithResponse(String resourceGroupName, String clusterName, String bmcKeySetName, Context context)"
-  desc: "Retrieve the baseboard management controller key set of the cluster. Get baseboard management controller key set of the provided cluster."
+  desc: "Get baseboard management controller key set of the provided cluster."
   returns:
     description: "baseboard management controller key set of the provided cluster along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner&text=BmcKeySetInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -337,7 +331,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.BmcKeySetsClient.listByCluster(String resourceGroupName, String clusterName)"
   name: "listByCluster(String resourceGroupName, String clusterName)"
   nameWithType: "BmcKeySetsClient.listByCluster(String resourceGroupName, String clusterName)"
-  summary: "List baseboard management controller key sets of the cluster."
+  summary: "Get a list of baseboard management controller key sets for the provided cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -348,7 +342,7 @@ methods:
     name: "clusterName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<BmcKeySetInner> listByCluster(String resourceGroupName, String clusterName)"
-  desc: "List baseboard management controller key sets of the cluster. Get a list of baseboard management controller key sets for the provided cluster."
+  desc: "Get a list of baseboard management controller key sets for the provided cluster."
   returns:
     description: "a list of baseboard management controller key sets for the provided cluster as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner&text=BmcKeySetInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -356,7 +350,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.BmcKeySetsClient.listByCluster(String resourceGroupName, String clusterName, Integer top, String skipToken, Context context)"
   name: "listByCluster(String resourceGroupName, String clusterName, Integer top, String skipToken, Context context)"
   nameWithType: "BmcKeySetsClient.listByCluster(String resourceGroupName, String clusterName, Integer top, String skipToken, Context context)"
-  summary: "List baseboard management controller key sets of the cluster."
+  summary: "Get a list of baseboard management controller key sets for the provided cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -376,7 +370,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<BmcKeySetInner> listByCluster(String resourceGroupName, String clusterName, Integer top, String skipToken, Context context)"
-  desc: "List baseboard management controller key sets of the cluster. Get a list of baseboard management controller key sets for the provided cluster."
+  desc: "Get a list of baseboard management controller key sets for the provided cluster."
   returns:
     description: "a list of baseboard management controller key sets for the provided cluster as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner&text=BmcKeySetInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -384,7 +378,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.BmcKeySetsClient.update(String resourceGroupName, String clusterName, String bmcKeySetName)"
   name: "update(String resourceGroupName, String clusterName, String bmcKeySetName)"
   nameWithType: "BmcKeySetsClient.update(String resourceGroupName, String clusterName, String bmcKeySetName)"
-  summary: "Patch baseboard management controller key set of the cluster."
+  summary: "Patch properties of baseboard management controller key set for the provided cluster, or update the tags associated with it."
   modifiers:
   - "abstract"
   parameters:
@@ -398,7 +392,7 @@ methods:
     name: "bmcKeySetName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract BmcKeySetInner update(String resourceGroupName, String clusterName, String bmcKeySetName)"
-  desc: "Patch baseboard management controller key set of the cluster. Patch properties of baseboard management controller key set for the provided cluster, or update the tags associated with it. Properties and tag updates can be done independently."
+  desc: "Patch properties of baseboard management controller key set for the provided cluster, or update the tags associated with it. Properties and tag updates can be done independently."
   returns:
     description: "bmcKeySet represents the baseboard management controller key set."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner&text=BmcKeySetInner\" data-throw-if-not-resolved=\"False\" />"
@@ -406,7 +400,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.BmcKeySetsClient.update(String resourceGroupName, String clusterName, String bmcKeySetName, String ifMatch, String ifNoneMatch, BmcKeySetPatchParameters bmcKeySetUpdateParameters, Context context)"
   name: "update(String resourceGroupName, String clusterName, String bmcKeySetName, String ifMatch, String ifNoneMatch, BmcKeySetPatchParameters bmcKeySetUpdateParameters, Context context)"
   nameWithType: "BmcKeySetsClient.update(String resourceGroupName, String clusterName, String bmcKeySetName, String ifMatch, String ifNoneMatch, BmcKeySetPatchParameters bmcKeySetUpdateParameters, Context context)"
-  summary: "Patch baseboard management controller key set of the cluster."
+  summary: "Patch properties of baseboard management controller key set for the provided cluster, or update the tags associated with it."
   modifiers:
   - "abstract"
   parameters:
@@ -432,7 +426,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract BmcKeySetInner update(String resourceGroupName, String clusterName, String bmcKeySetName, String ifMatch, String ifNoneMatch, BmcKeySetPatchParameters bmcKeySetUpdateParameters, Context context)"
-  desc: "Patch baseboard management controller key set of the cluster. Patch properties of baseboard management controller key set for the provided cluster, or update the tags associated with it. Properties and tag updates can be done independently."
+  desc: "Patch properties of baseboard management controller key set for the provided cluster, or update the tags associated with it. Properties and tag updates can be done independently."
   returns:
     description: "bmcKeySet represents the baseboard management controller key set."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.BmcKeySetInner&text=BmcKeySetInner\" data-throw-if-not-resolved=\"False\" />"
@@ -440,4 +434,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in BmcKeySetsClient."
 metadata: {}
 package: "com.azure.resourcemanager.networkcloud.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.2.0

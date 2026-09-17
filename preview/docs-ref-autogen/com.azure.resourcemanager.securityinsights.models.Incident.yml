@@ -66,41 +66,6 @@ methods:
   returns:
     description: "the createdTimeUtc value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
-- uid: "com.azure.resourcemanager.securityinsights.models.Incident.createTeam(com.azure.resourcemanager.securityinsights.models.TeamProperties)"
-  fullName: "com.azure.resourcemanager.securityinsights.models.Incident.createTeam(TeamProperties teamProperties)"
-  name: "createTeam(TeamProperties teamProperties)"
-  nameWithType: "Incident.createTeam(TeamProperties teamProperties)"
-  summary: "Creates a Microsoft team to investigate the incident by sharing information and insights between participants."
-  modifiers:
-  - "abstract"
-  parameters:
-  - description: "Team properties."
-    name: "teamProperties"
-    type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.TeamProperties?alt=com.azure.resourcemanager.securityinsights.models.TeamProperties&text=TeamProperties\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract TeamInformation createTeam(TeamProperties teamProperties)"
-  desc: "Creates a Microsoft team to investigate the incident by sharing information and insights between participants."
-  returns:
-    description: "describes team information."
-    type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.TeamInformation?alt=com.azure.resourcemanager.securityinsights.models.TeamInformation&text=TeamInformation\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.securityinsights.models.Incident.createTeamWithResponse(com.azure.resourcemanager.securityinsights.models.TeamProperties,com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.securityinsights.models.Incident.createTeamWithResponse(TeamProperties teamProperties, Context context)"
-  name: "createTeamWithResponse(TeamProperties teamProperties, Context context)"
-  nameWithType: "Incident.createTeamWithResponse(TeamProperties teamProperties, Context context)"
-  summary: "Creates a Microsoft team to investigate the incident by sharing information and insights between participants."
-  modifiers:
-  - "abstract"
-  parameters:
-  - description: "Team properties."
-    name: "teamProperties"
-    type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.TeamProperties?alt=com.azure.resourcemanager.securityinsights.models.TeamProperties&text=TeamProperties\" data-throw-if-not-resolved=\"False\" />"
-  - description: "The context to associate with this operation."
-    name: "context"
-    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract Response<TeamInformation> createTeamWithResponse(TeamProperties teamProperties, Context context)"
-  desc: "Creates a Microsoft team to investigate the incident by sharing information and insights between participants."
-  returns:
-    description: "describes team information along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
-    type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.securityinsights.models.TeamInformation?alt=com.azure.resourcemanager.securityinsights.models.TeamInformation&text=TeamInformation\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.securityinsights.models.Incident.description()"
   fullName: "com.azure.resourcemanager.securityinsights.models.Incident.description()"
   name: "description()"
@@ -225,19 +190,19 @@ methods:
   fullName: "com.azure.resourcemanager.securityinsights.models.Incident.listAlerts()"
   name: "listAlerts()"
   nameWithType: "Incident.listAlerts()"
-  summary: "Gets all incident alerts."
+  summary: "Gets all alerts for an incident."
   modifiers:
   - "abstract"
   syntax: "public abstract IncidentAlertList listAlerts()"
-  desc: "Gets all incident alerts."
+  desc: "Gets all alerts for an incident."
   returns:
-    description: "all incident alerts."
+    description: "all alerts for an incident."
     type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.IncidentAlertList?alt=com.azure.resourcemanager.securityinsights.models.IncidentAlertList&text=IncidentAlertList\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.securityinsights.models.Incident.listAlertsWithResponse(com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.securityinsights.models.Incident.listAlertsWithResponse(Context context)"
   name: "listAlertsWithResponse(Context context)"
   nameWithType: "Incident.listAlertsWithResponse(Context context)"
-  summary: "Gets all incident alerts."
+  summary: "Gets all alerts for an incident."
   modifiers:
   - "abstract"
   parameters:
@@ -245,27 +210,27 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<IncidentAlertList> listAlertsWithResponse(Context context)"
-  desc: "Gets all incident alerts."
+  desc: "Gets all alerts for an incident."
   returns:
-    description: "all incident alerts along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    description: "all alerts for an incident along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.securityinsights.models.IncidentAlertList?alt=com.azure.resourcemanager.securityinsights.models.IncidentAlertList&text=IncidentAlertList\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.securityinsights.models.Incident.listBookmarks()"
   fullName: "com.azure.resourcemanager.securityinsights.models.Incident.listBookmarks()"
   name: "listBookmarks()"
   nameWithType: "Incident.listBookmarks()"
-  summary: "Gets all incident bookmarks."
+  summary: "Gets all bookmarks for an incident."
   modifiers:
   - "abstract"
   syntax: "public abstract IncidentBookmarkList listBookmarks()"
-  desc: "Gets all incident bookmarks."
+  desc: "Gets all bookmarks for an incident."
   returns:
-    description: "all incident bookmarks."
+    description: "all bookmarks for an incident."
     type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.IncidentBookmarkList?alt=com.azure.resourcemanager.securityinsights.models.IncidentBookmarkList&text=IncidentBookmarkList\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.securityinsights.models.Incident.listBookmarksWithResponse(com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.securityinsights.models.Incident.listBookmarksWithResponse(Context context)"
   name: "listBookmarksWithResponse(Context context)"
   nameWithType: "Incident.listBookmarksWithResponse(Context context)"
-  summary: "Gets all incident bookmarks."
+  summary: "Gets all bookmarks for an incident."
   modifiers:
   - "abstract"
   parameters:
@@ -273,27 +238,27 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<IncidentBookmarkList> listBookmarksWithResponse(Context context)"
-  desc: "Gets all incident bookmarks."
+  desc: "Gets all bookmarks for an incident."
   returns:
-    description: "all incident bookmarks along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    description: "all bookmarks for an incident along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.securityinsights.models.IncidentBookmarkList?alt=com.azure.resourcemanager.securityinsights.models.IncidentBookmarkList&text=IncidentBookmarkList\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.securityinsights.models.Incident.listEntities()"
   fullName: "com.azure.resourcemanager.securityinsights.models.Incident.listEntities()"
   name: "listEntities()"
   nameWithType: "Incident.listEntities()"
-  summary: "Gets all incident related entities."
+  summary: "Gets all entities for an incident."
   modifiers:
   - "abstract"
   syntax: "public abstract IncidentEntitiesResponse listEntities()"
-  desc: "Gets all incident related entities."
+  desc: "Gets all entities for an incident."
   returns:
-    description: "all incident related entities."
+    description: "all entities for an incident."
     type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.IncidentEntitiesResponse?alt=com.azure.resourcemanager.securityinsights.models.IncidentEntitiesResponse&text=IncidentEntitiesResponse\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.securityinsights.models.Incident.listEntitiesWithResponse(com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.securityinsights.models.Incident.listEntitiesWithResponse(Context context)"
   name: "listEntitiesWithResponse(Context context)"
   nameWithType: "Incident.listEntitiesWithResponse(Context context)"
-  summary: "Gets all incident related entities."
+  summary: "Gets all entities for an incident."
   modifiers:
   - "abstract"
   parameters:
@@ -301,9 +266,9 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<IncidentEntitiesResponse> listEntitiesWithResponse(Context context)"
-  desc: "Gets all incident related entities."
+  desc: "Gets all entities for an incident."
   returns:
-    description: "all incident related entities along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    description: "all entities for an incident along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.securityinsights.models.IncidentEntitiesResponse?alt=com.azure.resourcemanager.securityinsights.models.IncidentEntitiesResponse&text=IncidentEntitiesResponse\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.securityinsights.models.Incident.name()"
   fullName: "com.azure.resourcemanager.securityinsights.models.Incident.name()"
@@ -493,4 +458,4 @@ type: "interface"
 desc: "An immutable client-side representation of Incident."
 metadata: {}
 package: "com.azure.resourcemanager.securityinsights.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-securityinsights:1.0.0-beta.5
+artifact: com.azure.resourcemanager:azure-resourcemanager-securityinsights:1.1.0-beta.1

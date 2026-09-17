@@ -43,7 +43,7 @@ methods:
     type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static PlaybookActionProperties fromJson(JsonReader jsonReader)"
   exceptions:
-  - description: "If an error occurs while reading the PlaybookActionProperties."
+  - description: "If the deserialized JSON object was missing any required properties."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   desc: "Reads an instance of PlaybookActionProperties from the JsonReader."
   returns:
@@ -64,11 +64,11 @@ methods:
   name: "tenantId()"
   nameWithType: "PlaybookActionProperties.tenantId()"
   summary: "Get the tenant<wbr>Id property: The tenant id of the playbook resource."
-  syntax: "public UUID tenantId()"
+  syntax: "public String tenantId()"
   desc: "Get the tenantId property: The tenant id of the playbook resource."
   returns:
     description: "the tenantId value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html\">UUID</a>"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.securityinsights.models.PlaybookActionProperties.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.securityinsights.models.PlaybookActionProperties.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -81,13 +81,6 @@ methods:
   - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.securityinsights.models.PlaybookActionProperties.validate()"
-  fullName: "com.azure.resourcemanager.securityinsights.models.PlaybookActionProperties.validate()"
-  name: "validate()"
-  nameWithType: "PlaybookActionProperties.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.securityinsights.models.PlaybookActionProperties.withLogicAppResourceId(java.lang.String)"
   fullName: "com.azure.resourcemanager.securityinsights.models.PlaybookActionProperties.withLogicAppResourceId(String logicAppResourceId)"
   name: "withLogicAppResourceId(String logicAppResourceId)"
@@ -102,16 +95,16 @@ methods:
   returns:
     description: "the PlaybookActionProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.PlaybookActionProperties?alt=com.azure.resourcemanager.securityinsights.models.PlaybookActionProperties&text=PlaybookActionProperties\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.securityinsights.models.PlaybookActionProperties.withTenantId(java.util.UUID)"
-  fullName: "com.azure.resourcemanager.securityinsights.models.PlaybookActionProperties.withTenantId(UUID tenantId)"
-  name: "withTenantId(UUID tenantId)"
-  nameWithType: "PlaybookActionProperties.withTenantId(UUID tenantId)"
+- uid: "com.azure.resourcemanager.securityinsights.models.PlaybookActionProperties.withTenantId(java.lang.String)"
+  fullName: "com.azure.resourcemanager.securityinsights.models.PlaybookActionProperties.withTenantId(String tenantId)"
+  name: "withTenantId(String tenantId)"
+  nameWithType: "PlaybookActionProperties.withTenantId(String tenantId)"
   summary: "Set the tenant<wbr>Id property: The tenant id of the playbook resource."
   parameters:
   - description: "the tenantId value to set."
     name: "tenantId"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html\">UUID</a>"
-  syntax: "public PlaybookActionProperties withTenantId(UUID tenantId)"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public PlaybookActionProperties withTenantId(String tenantId)"
   desc: "Set the tenantId property: The tenant id of the playbook resource."
   returns:
     description: "the PlaybookActionProperties object itself."
@@ -122,4 +115,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.securityinsights.models.PlaybookActionProperties?alt=com.azure.resourcemanager.securityinsights.models.PlaybookActionProperties&text=PlaybookActionProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.securityinsights.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-securityinsights:1.0.0-beta.5
+artifact: com.azure.resourcemanager:azure-resourcemanager-securityinsights:1.1.0-beta.1

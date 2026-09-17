@@ -111,15 +111,15 @@ methods:
   - description: "The name of the workspace."
     name: "workspaceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract SettingListInner list(String resourceGroupName, String workspaceName)"
+  syntax: "public abstract PagedIterable<SettingsInner> list(String resourceGroupName, String workspaceName)"
   desc: "List of all the settings."
   returns:
-    description: "list of all the settings."
-    type: "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.SettingListInner?alt=com.azure.resourcemanager.securityinsights.fluent.models.SettingListInner&text=SettingListInner\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.securityinsights.fluent.ProductSettingsClient.listWithResponse(java.lang.String,java.lang.String,com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.securityinsights.fluent.ProductSettingsClient.listWithResponse(String resourceGroupName, String workspaceName, Context context)"
-  name: "listWithResponse(String resourceGroupName, String workspaceName, Context context)"
-  nameWithType: "ProductSettingsClient.listWithResponse(String resourceGroupName, String workspaceName, Context context)"
+    description: "list of all the settings as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.SettingsInner?alt=com.azure.resourcemanager.securityinsights.fluent.models.SettingsInner&text=SettingsInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.securityinsights.fluent.ProductSettingsClient.list(java.lang.String,java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.securityinsights.fluent.ProductSettingsClient.list(String resourceGroupName, String workspaceName, Context context)"
+  name: "list(String resourceGroupName, String workspaceName, Context context)"
+  nameWithType: "ProductSettingsClient.list(String resourceGroupName, String workspaceName, Context context)"
   summary: "List of all the settings."
   modifiers:
   - "abstract"
@@ -133,11 +133,11 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract Response<SettingListInner> listWithResponse(String resourceGroupName, String workspaceName, Context context)"
+  syntax: "public abstract PagedIterable<SettingsInner> list(String resourceGroupName, String workspaceName, Context context)"
   desc: "List of all the settings."
   returns:
-    description: "list of all the settings along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
-    type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.SettingListInner?alt=com.azure.resourcemanager.securityinsights.fluent.models.SettingListInner&text=SettingListInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "list of all the settings as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.SettingsInner?alt=com.azure.resourcemanager.securityinsights.fluent.models.SettingsInner&text=SettingsInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.securityinsights.fluent.ProductSettingsClient.update(java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.securityinsights.fluent.models.SettingsInner)"
   fullName: "com.azure.resourcemanager.securityinsights.fluent.ProductSettingsClient.update(String resourceGroupName, String workspaceName, String settingsName, SettingsInner settings)"
   name: "update(String resourceGroupName, String workspaceName, String settingsName, SettingsInner settings)"
@@ -195,4 +195,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in ProductSettingsClient."
 metadata: {}
 package: "com.azure.resourcemanager.securityinsights.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-securityinsights:1.0.0-beta.5
+artifact: com.azure.resourcemanager:azure-resourcemanager-securityinsights:1.1.0-beta.1

@@ -10,7 +10,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.VolumesClient.beginCreateOrUpdate(String resourceGroupName, String volumeName, VolumeInner volumeParameters)"
   name: "beginCreateOrUpdate(String resourceGroupName, String volumeName, VolumeInner volumeParameters)"
   nameWithType: "VolumesClient.beginCreateOrUpdate(String resourceGroupName, String volumeName, VolumeInner volumeParameters)"
-  summary: "Create or update the volume."
+  summary: "Create a new volume or update the properties of the existing one."
   modifiers:
   - "abstract"
   parameters:
@@ -24,7 +24,7 @@ methods:
     name: "volumeParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SyncPoller<PollResult<VolumeInner>,VolumeInner> beginCreateOrUpdate(String resourceGroupName, String volumeName, VolumeInner volumeParameters)"
-  desc: "Create or update the volume. Create a new volume or update the properties of the existing one."
+  desc: "Create a new volume or update the properties of the existing one."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of volume represents storage made available for use by resources\n running on the cluster."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -32,7 +32,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.VolumesClient.beginCreateOrUpdate(String resourceGroupName, String volumeName, VolumeInner volumeParameters, String ifMatch, String ifNoneMatch, Context context)"
   name: "beginCreateOrUpdate(String resourceGroupName, String volumeName, VolumeInner volumeParameters, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "VolumesClient.beginCreateOrUpdate(String resourceGroupName, String volumeName, VolumeInner volumeParameters, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Create or update the volume."
+  summary: "Create a new volume or update the properties of the existing one."
   modifiers:
   - "abstract"
   parameters:
@@ -55,7 +55,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SyncPoller<PollResult<VolumeInner>,VolumeInner> beginCreateOrUpdate(String resourceGroupName, String volumeName, VolumeInner volumeParameters, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Create or update the volume. Create a new volume or update the properties of the existing one."
+  desc: "Create a new volume or update the properties of the existing one."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of volume represents storage made available for use by resources\n running on the cluster."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -63,7 +63,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.VolumesClient.beginDelete(String resourceGroupName, String volumeName)"
   name: "beginDelete(String resourceGroupName, String volumeName)"
   nameWithType: "VolumesClient.beginDelete(String resourceGroupName, String volumeName)"
-  summary: "Delete the volume."
+  summary: "Delete the provided volume."
   modifiers:
   - "abstract"
   parameters:
@@ -73,16 +73,16 @@ methods:
   - description: "The name of the volume."
     name: "volumeName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract SyncPoller<PollResult<OperationStatusResultInner>,OperationStatusResultInner> beginDelete(String resourceGroupName, String volumeName)"
-  desc: "Delete the volume. Delete the provided volume."
+  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginDelete(String resourceGroupName, String volumeName)"
+  desc: "Delete the provided volume."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the current status of an async operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.VolumesClient.beginDelete(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.VolumesClient.beginDelete(String resourceGroupName, String volumeName, String ifMatch, String ifNoneMatch, Context context)"
   name: "beginDelete(String resourceGroupName, String volumeName, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "VolumesClient.beginDelete(String resourceGroupName, String volumeName, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Delete the volume."
+  summary: "Delete the provided volume."
   modifiers:
   - "abstract"
   parameters:
@@ -101,16 +101,16 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract SyncPoller<PollResult<OperationStatusResultInner>,OperationStatusResultInner> beginDelete(String resourceGroupName, String volumeName, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Delete the volume. Delete the provided volume."
+  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginDelete(String resourceGroupName, String volumeName, String ifMatch, String ifNoneMatch, Context context)"
+  desc: "Delete the provided volume."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the current status of an async operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.VolumesClient.createOrUpdate(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.VolumesClient.createOrUpdate(String resourceGroupName, String volumeName, VolumeInner volumeParameters)"
   name: "createOrUpdate(String resourceGroupName, String volumeName, VolumeInner volumeParameters)"
   nameWithType: "VolumesClient.createOrUpdate(String resourceGroupName, String volumeName, VolumeInner volumeParameters)"
-  summary: "Create or update the volume."
+  summary: "Create a new volume or update the properties of the existing one."
   modifiers:
   - "abstract"
   parameters:
@@ -124,7 +124,7 @@ methods:
     name: "volumeParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract VolumeInner createOrUpdate(String resourceGroupName, String volumeName, VolumeInner volumeParameters)"
-  desc: "Create or update the volume. Create a new volume or update the properties of the existing one."
+  desc: "Create a new volume or update the properties of the existing one."
   returns:
     description: "volume represents storage made available for use by resources running on the cluster."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />"
@@ -132,7 +132,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.VolumesClient.createOrUpdate(String resourceGroupName, String volumeName, VolumeInner volumeParameters, String ifMatch, String ifNoneMatch, Context context)"
   name: "createOrUpdate(String resourceGroupName, String volumeName, VolumeInner volumeParameters, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "VolumesClient.createOrUpdate(String resourceGroupName, String volumeName, VolumeInner volumeParameters, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Create or update the volume."
+  summary: "Create a new volume or update the properties of the existing one."
   modifiers:
   - "abstract"
   parameters:
@@ -155,7 +155,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract VolumeInner createOrUpdate(String resourceGroupName, String volumeName, VolumeInner volumeParameters, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Create or update the volume. Create a new volume or update the properties of the existing one."
+  desc: "Create a new volume or update the properties of the existing one."
   returns:
     description: "volume represents storage made available for use by resources running on the cluster."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />"
@@ -163,7 +163,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.VolumesClient.delete(String resourceGroupName, String volumeName)"
   name: "delete(String resourceGroupName, String volumeName)"
   nameWithType: "VolumesClient.delete(String resourceGroupName, String volumeName)"
-  summary: "Delete the volume."
+  summary: "Delete the provided volume."
   modifiers:
   - "abstract"
   parameters:
@@ -173,16 +173,13 @@ methods:
   - description: "The name of the volume."
     name: "volumeName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract OperationStatusResultInner delete(String resourceGroupName, String volumeName)"
-  desc: "Delete the volume. Delete the provided volume."
-  returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void delete(String resourceGroupName, String volumeName)"
+  desc: "Delete the provided volume."
 - uid: "com.azure.resourcemanager.networkcloud.fluent.VolumesClient.delete(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.VolumesClient.delete(String resourceGroupName, String volumeName, String ifMatch, String ifNoneMatch, Context context)"
   name: "delete(String resourceGroupName, String volumeName, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "VolumesClient.delete(String resourceGroupName, String volumeName, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Delete the volume."
+  summary: "Delete the provided volume."
   modifiers:
   - "abstract"
   parameters:
@@ -201,16 +198,13 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract OperationStatusResultInner delete(String resourceGroupName, String volumeName, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Delete the volume. Delete the provided volume."
-  returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void delete(String resourceGroupName, String volumeName, String ifMatch, String ifNoneMatch, Context context)"
+  desc: "Delete the provided volume."
 - uid: "com.azure.resourcemanager.networkcloud.fluent.VolumesClient.getByResourceGroup(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.VolumesClient.getByResourceGroup(String resourceGroupName, String volumeName)"
   name: "getByResourceGroup(String resourceGroupName, String volumeName)"
   nameWithType: "VolumesClient.getByResourceGroup(String resourceGroupName, String volumeName)"
-  summary: "Retrieve the volume."
+  summary: "Get properties of the provided volume."
   modifiers:
   - "abstract"
   parameters:
@@ -221,7 +215,7 @@ methods:
     name: "volumeName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract VolumeInner getByResourceGroup(String resourceGroupName, String volumeName)"
-  desc: "Retrieve the volume. Get properties of the provided volume."
+  desc: "Get properties of the provided volume."
   returns:
     description: "properties of the provided volume."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />"
@@ -229,7 +223,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.VolumesClient.getByResourceGroupWithResponse(String resourceGroupName, String volumeName, Context context)"
   name: "getByResourceGroupWithResponse(String resourceGroupName, String volumeName, Context context)"
   nameWithType: "VolumesClient.getByResourceGroupWithResponse(String resourceGroupName, String volumeName, Context context)"
-  summary: "Retrieve the volume."
+  summary: "Get properties of the provided volume."
   modifiers:
   - "abstract"
   parameters:
@@ -243,7 +237,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<VolumeInner> getByResourceGroupWithResponse(String resourceGroupName, String volumeName, Context context)"
-  desc: "Retrieve the volume. Get properties of the provided volume."
+  desc: "Get properties of the provided volume."
   returns:
     description: "properties of the provided volume along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -251,11 +245,11 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.VolumesClient.list()"
   name: "list()"
   nameWithType: "VolumesClient.list()"
-  summary: "List volumes in the subscription."
+  summary: "Get a list of volumes in the provided subscription."
   modifiers:
   - "abstract"
   syntax: "public abstract PagedIterable<VolumeInner> list()"
-  desc: "List volumes in the subscription. Get a list of volumes in the provided subscription."
+  desc: "Get a list of volumes in the provided subscription."
   returns:
     description: "a list of volumes in the provided subscription as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -263,7 +257,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.VolumesClient.list(Integer top, String skipToken, Context context)"
   name: "list(Integer top, String skipToken, Context context)"
   nameWithType: "VolumesClient.list(Integer top, String skipToken, Context context)"
-  summary: "List volumes in the subscription."
+  summary: "Get a list of volumes in the provided subscription."
   modifiers:
   - "abstract"
   parameters:
@@ -277,7 +271,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<VolumeInner> list(Integer top, String skipToken, Context context)"
-  desc: "List volumes in the subscription. Get a list of volumes in the provided subscription."
+  desc: "Get a list of volumes in the provided subscription."
   returns:
     description: "a list of volumes in the provided subscription as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -285,7 +279,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.VolumesClient.listByResourceGroup(String resourceGroupName)"
   name: "listByResourceGroup(String resourceGroupName)"
   nameWithType: "VolumesClient.listByResourceGroup(String resourceGroupName)"
-  summary: "List volumes in the resource group."
+  summary: "Get a list of volumes in the provided resource group."
   modifiers:
   - "abstract"
   parameters:
@@ -293,7 +287,7 @@ methods:
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<VolumeInner> listByResourceGroup(String resourceGroupName)"
-  desc: "List volumes in the resource group. Get a list of volumes in the provided resource group."
+  desc: "Get a list of volumes in the provided resource group."
   returns:
     description: "a list of volumes in the provided resource group as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -301,7 +295,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.VolumesClient.listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
   name: "listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
   nameWithType: "VolumesClient.listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
-  summary: "List volumes in the resource group."
+  summary: "Get a list of volumes in the provided resource group."
   modifiers:
   - "abstract"
   parameters:
@@ -318,7 +312,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<VolumeInner> listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
-  desc: "List volumes in the resource group. Get a list of volumes in the provided resource group."
+  desc: "Get a list of volumes in the provided resource group."
   returns:
     description: "a list of volumes in the provided resource group as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -326,7 +320,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.VolumesClient.update(String resourceGroupName, String volumeName)"
   name: "update(String resourceGroupName, String volumeName)"
   nameWithType: "VolumesClient.update(String resourceGroupName, String volumeName)"
-  summary: "Patch the volume."
+  summary: "Update tags associated with the provided volume."
   modifiers:
   - "abstract"
   parameters:
@@ -337,7 +331,7 @@ methods:
     name: "volumeName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract VolumeInner update(String resourceGroupName, String volumeName)"
-  desc: "Patch the volume. Update tags associated with the provided volume."
+  desc: "Update tags associated with the provided volume."
   returns:
     description: "volume represents storage made available for use by resources running on the cluster."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />"
@@ -345,7 +339,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.VolumesClient.updateWithResponse(String resourceGroupName, String volumeName, String ifMatch, String ifNoneMatch, VolumePatchParameters volumeUpdateParameters, Context context)"
   name: "updateWithResponse(String resourceGroupName, String volumeName, String ifMatch, String ifNoneMatch, VolumePatchParameters volumeUpdateParameters, Context context)"
   nameWithType: "VolumesClient.updateWithResponse(String resourceGroupName, String volumeName, String ifMatch, String ifNoneMatch, VolumePatchParameters volumeUpdateParameters, Context context)"
-  summary: "Patch the volume."
+  summary: "Update tags associated with the provided volume."
   modifiers:
   - "abstract"
   parameters:
@@ -368,7 +362,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<VolumeInner> updateWithResponse(String resourceGroupName, String volumeName, String ifMatch, String ifNoneMatch, VolumePatchParameters volumeUpdateParameters, Context context)"
-  desc: "Patch the volume. Update tags associated with the provided volume."
+  desc: "Update tags associated with the provided volume."
   returns:
     description: "volume represents storage made available for use by resources running on the cluster along with\n <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.VolumeInner&text=VolumeInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -376,4 +370,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in VolumesClient."
 metadata: {}
 package: "com.azure.resourcemanager.networkcloud.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.2.0

@@ -7,11 +7,11 @@ summary: "Represents Fusion alert rule."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 - "<xref href=\"com.azure.core.management.ProxyResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.resourcemanager.securityinsights.models.ResourceWithEtag?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
 - classRef: "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner?alt=com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner&text=AlertRuleInner\" data-throw-if-not-resolved=\"False\" />"
   methodsRef:
+  - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.etag()?alt=com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.etag&text=etag\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.fromJson(com.azure.json.JsonReader)?alt=com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.id()?alt=com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.id&text=id\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.kind()?alt=com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.kind&text=kind\" data-throw-if-not-resolved=\"False\" />"
@@ -19,11 +19,7 @@ inheritedClassMethods:
   - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.systemData()?alt=com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.systemData&text=systemData\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.toJson(com.azure.json.JsonWriter)?alt=com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.type()?alt=com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.type&text=type\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.validate()?alt=com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.validate&text=validate\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.withEtag(java.lang.String)?alt=com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.withEtag&text=withEtag\" data-throw-if-not-resolved=\"False\" />"
-- classRef: "<xref href=\"com.azure.resourcemanager.securityinsights.models.ResourceWithEtag?alt=com.azure.resourcemanager.securityinsights.models.ResourceWithEtag&text=ResourceWithEtag\" data-throw-if-not-resolved=\"False\" />"
-  methodsRef:
-  - "<xref href=\"com.azure.resourcemanager.securityinsights.models.ResourceWithEtag.etag()?alt=com.azure.resourcemanager.securityinsights.models.ResourceWithEtag.etag&text=etag\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -121,10 +117,10 @@ methods:
   fullName: "com.azure.resourcemanager.securityinsights.models.FusionAlertRule.kind()"
   name: "kind()"
   nameWithType: "FusionAlertRule.kind()"
-  summary: "Get the kind property: The kind of the alert rule."
+  summary: "Get the kind property: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.<wbr>g."
   overridden: "com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.kind()"
   syntax: "public AlertRuleKind kind()"
-  desc: "Get the kind property: The kind of the alert rule."
+  desc: "Get the kind property: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type. If supported, the resource provider must validate and persist this value."
   returns:
     description: "the kind value."
     type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.AlertRuleKind?alt=com.azure.resourcemanager.securityinsights.models.AlertRuleKind&text=AlertRuleKind\" data-throw-if-not-resolved=\"False\" />"
@@ -179,6 +175,16 @@ methods:
   returns:
     description: "the sourceSettings value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.securityinsights.models.FusionSourceSettings?alt=com.azure.resourcemanager.securityinsights.models.FusionSourceSettings&text=FusionSourceSettings\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.securityinsights.models.FusionAlertRule.subTechniques()"
+  fullName: "com.azure.resourcemanager.securityinsights.models.FusionAlertRule.subTechniques()"
+  name: "subTechniques()"
+  nameWithType: "FusionAlertRule.subTechniques()"
+  summary: "Get the sub<wbr>Techniques property: The sub-techniques of the alert rule."
+  syntax: "public List<String> subTechniques()"
+  desc: "Get the subTechniques property: The sub-techniques of the alert rule."
+  returns:
+    description: "the subTechniques value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.resourcemanager.securityinsights.models.FusionAlertRule.systemData()"
   fullName: "com.azure.resourcemanager.securityinsights.models.FusionAlertRule.systemData()"
   name: "systemData()"
@@ -234,14 +240,6 @@ methods:
   returns:
     description: "the type value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-- uid: "com.azure.resourcemanager.securityinsights.models.FusionAlertRule.validate()"
-  fullName: "com.azure.resourcemanager.securityinsights.models.FusionAlertRule.validate()"
-  name: "validate()"
-  nameWithType: "FusionAlertRule.validate()"
-  summary: "Validates the instance."
-  overridden: "com.azure.resourcemanager.securityinsights.fluent.models.AlertRuleInner.validate()"
-  syntax: "public void validate()"
-  desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.securityinsights.models.FusionAlertRule.withAlertRuleTemplateName(java.lang.String)"
   fullName: "com.azure.resourcemanager.securityinsights.models.FusionAlertRule.withAlertRuleTemplateName(String alertRuleTemplateName)"
   name: "withAlertRuleTemplateName(String alertRuleTemplateName)"
@@ -315,4 +313,4 @@ type: "class"
 desc: "Represents Fusion alert rule."
 metadata: {}
 package: "com.azure.resourcemanager.securityinsights.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-securityinsights:1.0.0-beta.5
+artifact: com.azure.resourcemanager:azure-resourcemanager-securityinsights:1.1.0-beta.1

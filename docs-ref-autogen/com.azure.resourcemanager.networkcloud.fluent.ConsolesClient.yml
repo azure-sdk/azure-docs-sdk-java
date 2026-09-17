@@ -10,7 +10,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ConsolesClient.beginCreateOrUpdate(String resourceGroupName, String virtualMachineName, String consoleName, ConsoleInner consoleParameters)"
   name: "beginCreateOrUpdate(String resourceGroupName, String virtualMachineName, String consoleName, ConsoleInner consoleParameters)"
   nameWithType: "ConsolesClient.beginCreateOrUpdate(String resourceGroupName, String virtualMachineName, String consoleName, ConsoleInner consoleParameters)"
-  summary: "Create or update the virtual machine console."
+  summary: "Create a new virtual machine console or update the properties of the existing virtual machine console."
   modifiers:
   - "abstract"
   parameters:
@@ -27,7 +27,7 @@ methods:
     name: "consoleParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner&text=ConsoleInner\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SyncPoller<PollResult<ConsoleInner>,ConsoleInner> beginCreateOrUpdate(String resourceGroupName, String virtualMachineName, String consoleName, ConsoleInner consoleParameters)"
-  desc: "Create or update the virtual machine console. Create a new virtual machine console or update the properties of the existing virtual machine console."
+  desc: "Create a new virtual machine console or update the properties of the existing virtual machine console."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of console represents the console of an on-premises Network Cloud\n virtual machine."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner&text=ConsoleInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner&text=ConsoleInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -35,7 +35,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ConsolesClient.beginCreateOrUpdate(String resourceGroupName, String virtualMachineName, String consoleName, ConsoleInner consoleParameters, String ifMatch, String ifNoneMatch, Context context)"
   name: "beginCreateOrUpdate(String resourceGroupName, String virtualMachineName, String consoleName, ConsoleInner consoleParameters, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "ConsolesClient.beginCreateOrUpdate(String resourceGroupName, String virtualMachineName, String consoleName, ConsoleInner consoleParameters, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Create or update the virtual machine console."
+  summary: "Create a new virtual machine console or update the properties of the existing virtual machine console."
   modifiers:
   - "abstract"
   parameters:
@@ -61,7 +61,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SyncPoller<PollResult<ConsoleInner>,ConsoleInner> beginCreateOrUpdate(String resourceGroupName, String virtualMachineName, String consoleName, ConsoleInner consoleParameters, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Create or update the virtual machine console. Create a new virtual machine console or update the properties of the existing virtual machine console."
+  desc: "Create a new virtual machine console or update the properties of the existing virtual machine console."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of console represents the console of an on-premises Network Cloud\n virtual machine."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner&text=ConsoleInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner&text=ConsoleInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -69,7 +69,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ConsolesClient.beginDelete(String resourceGroupName, String virtualMachineName, String consoleName)"
   name: "beginDelete(String resourceGroupName, String virtualMachineName, String consoleName)"
   nameWithType: "ConsolesClient.beginDelete(String resourceGroupName, String virtualMachineName, String consoleName)"
-  summary: "Delete the virtual machine console."
+  summary: "Delete the provided virtual machine console."
   modifiers:
   - "abstract"
   parameters:
@@ -82,16 +82,16 @@ methods:
   - description: "The name of the virtual machine console."
     name: "consoleName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract SyncPoller<PollResult<OperationStatusResultInner>,OperationStatusResultInner> beginDelete(String resourceGroupName, String virtualMachineName, String consoleName)"
-  desc: "Delete the virtual machine console. Delete the provided virtual machine console."
+  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginDelete(String resourceGroupName, String virtualMachineName, String consoleName)"
+  desc: "Delete the provided virtual machine console."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the current status of an async operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.ConsolesClient.beginDelete(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ConsolesClient.beginDelete(String resourceGroupName, String virtualMachineName, String consoleName, String ifMatch, String ifNoneMatch, Context context)"
   name: "beginDelete(String resourceGroupName, String virtualMachineName, String consoleName, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "ConsolesClient.beginDelete(String resourceGroupName, String virtualMachineName, String consoleName, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Delete the virtual machine console."
+  summary: "Delete the provided virtual machine console."
   modifiers:
   - "abstract"
   parameters:
@@ -113,16 +113,16 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract SyncPoller<PollResult<OperationStatusResultInner>,OperationStatusResultInner> beginDelete(String resourceGroupName, String virtualMachineName, String consoleName, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Delete the virtual machine console. Delete the provided virtual machine console."
+  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginDelete(String resourceGroupName, String virtualMachineName, String consoleName, String ifMatch, String ifNoneMatch, Context context)"
+  desc: "Delete the provided virtual machine console."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the current status of an async operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.ConsolesClient.beginUpdate(java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ConsolesClient.beginUpdate(String resourceGroupName, String virtualMachineName, String consoleName)"
   name: "beginUpdate(String resourceGroupName, String virtualMachineName, String consoleName)"
   nameWithType: "ConsolesClient.beginUpdate(String resourceGroupName, String virtualMachineName, String consoleName)"
-  summary: "Patch the virtual machine console."
+  summary: "Patch the properties of the provided virtual machine console, or update the tags associated with the virtual machine console."
   modifiers:
   - "abstract"
   parameters:
@@ -136,7 +136,7 @@ methods:
     name: "consoleName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract SyncPoller<PollResult<ConsoleInner>,ConsoleInner> beginUpdate(String resourceGroupName, String virtualMachineName, String consoleName)"
-  desc: "Patch the virtual machine console. Patch the properties of the provided virtual machine console, or update the tags associated with the virtual machine console. Properties and tag updates can be done independently."
+  desc: "Patch the properties of the provided virtual machine console, or update the tags associated with the virtual machine console. Properties and tag updates can be done independently."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of console represents the console of an on-premises Network Cloud\n virtual machine."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner&text=ConsoleInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner&text=ConsoleInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -144,7 +144,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ConsolesClient.beginUpdate(String resourceGroupName, String virtualMachineName, String consoleName, String ifMatch, String ifNoneMatch, ConsolePatchParameters consoleUpdateParameters, Context context)"
   name: "beginUpdate(String resourceGroupName, String virtualMachineName, String consoleName, String ifMatch, String ifNoneMatch, ConsolePatchParameters consoleUpdateParameters, Context context)"
   nameWithType: "ConsolesClient.beginUpdate(String resourceGroupName, String virtualMachineName, String consoleName, String ifMatch, String ifNoneMatch, ConsolePatchParameters consoleUpdateParameters, Context context)"
-  summary: "Patch the virtual machine console."
+  summary: "Patch the properties of the provided virtual machine console, or update the tags associated with the virtual machine console."
   modifiers:
   - "abstract"
   parameters:
@@ -170,7 +170,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SyncPoller<PollResult<ConsoleInner>,ConsoleInner> beginUpdate(String resourceGroupName, String virtualMachineName, String consoleName, String ifMatch, String ifNoneMatch, ConsolePatchParameters consoleUpdateParameters, Context context)"
-  desc: "Patch the virtual machine console. Patch the properties of the provided virtual machine console, or update the tags associated with the virtual machine console. Properties and tag updates can be done independently."
+  desc: "Patch the properties of the provided virtual machine console, or update the tags associated with the virtual machine console. Properties and tag updates can be done independently."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of console represents the console of an on-premises Network Cloud\n virtual machine."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner&text=ConsoleInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner&text=ConsoleInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -178,7 +178,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ConsolesClient.createOrUpdate(String resourceGroupName, String virtualMachineName, String consoleName, ConsoleInner consoleParameters)"
   name: "createOrUpdate(String resourceGroupName, String virtualMachineName, String consoleName, ConsoleInner consoleParameters)"
   nameWithType: "ConsolesClient.createOrUpdate(String resourceGroupName, String virtualMachineName, String consoleName, ConsoleInner consoleParameters)"
-  summary: "Create or update the virtual machine console."
+  summary: "Create a new virtual machine console or update the properties of the existing virtual machine console."
   modifiers:
   - "abstract"
   parameters:
@@ -195,7 +195,7 @@ methods:
     name: "consoleParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner&text=ConsoleInner\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract ConsoleInner createOrUpdate(String resourceGroupName, String virtualMachineName, String consoleName, ConsoleInner consoleParameters)"
-  desc: "Create or update the virtual machine console. Create a new virtual machine console or update the properties of the existing virtual machine console."
+  desc: "Create a new virtual machine console or update the properties of the existing virtual machine console."
   returns:
     description: "console represents the console of an on-premises Network Cloud virtual machine."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner&text=ConsoleInner\" data-throw-if-not-resolved=\"False\" />"
@@ -203,7 +203,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ConsolesClient.createOrUpdate(String resourceGroupName, String virtualMachineName, String consoleName, ConsoleInner consoleParameters, String ifMatch, String ifNoneMatch, Context context)"
   name: "createOrUpdate(String resourceGroupName, String virtualMachineName, String consoleName, ConsoleInner consoleParameters, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "ConsolesClient.createOrUpdate(String resourceGroupName, String virtualMachineName, String consoleName, ConsoleInner consoleParameters, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Create or update the virtual machine console."
+  summary: "Create a new virtual machine console or update the properties of the existing virtual machine console."
   modifiers:
   - "abstract"
   parameters:
@@ -229,7 +229,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract ConsoleInner createOrUpdate(String resourceGroupName, String virtualMachineName, String consoleName, ConsoleInner consoleParameters, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Create or update the virtual machine console. Create a new virtual machine console or update the properties of the existing virtual machine console."
+  desc: "Create a new virtual machine console or update the properties of the existing virtual machine console."
   returns:
     description: "console represents the console of an on-premises Network Cloud virtual machine."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner&text=ConsoleInner\" data-throw-if-not-resolved=\"False\" />"
@@ -237,7 +237,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ConsolesClient.delete(String resourceGroupName, String virtualMachineName, String consoleName)"
   name: "delete(String resourceGroupName, String virtualMachineName, String consoleName)"
   nameWithType: "ConsolesClient.delete(String resourceGroupName, String virtualMachineName, String consoleName)"
-  summary: "Delete the virtual machine console."
+  summary: "Delete the provided virtual machine console."
   modifiers:
   - "abstract"
   parameters:
@@ -250,16 +250,13 @@ methods:
   - description: "The name of the virtual machine console."
     name: "consoleName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract OperationStatusResultInner delete(String resourceGroupName, String virtualMachineName, String consoleName)"
-  desc: "Delete the virtual machine console. Delete the provided virtual machine console."
-  returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void delete(String resourceGroupName, String virtualMachineName, String consoleName)"
+  desc: "Delete the provided virtual machine console."
 - uid: "com.azure.resourcemanager.networkcloud.fluent.ConsolesClient.delete(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ConsolesClient.delete(String resourceGroupName, String virtualMachineName, String consoleName, String ifMatch, String ifNoneMatch, Context context)"
   name: "delete(String resourceGroupName, String virtualMachineName, String consoleName, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "ConsolesClient.delete(String resourceGroupName, String virtualMachineName, String consoleName, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Delete the virtual machine console."
+  summary: "Delete the provided virtual machine console."
   modifiers:
   - "abstract"
   parameters:
@@ -281,16 +278,13 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract OperationStatusResultInner delete(String resourceGroupName, String virtualMachineName, String consoleName, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Delete the virtual machine console. Delete the provided virtual machine console."
-  returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void delete(String resourceGroupName, String virtualMachineName, String consoleName, String ifMatch, String ifNoneMatch, Context context)"
+  desc: "Delete the provided virtual machine console."
 - uid: "com.azure.resourcemanager.networkcloud.fluent.ConsolesClient.get(java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ConsolesClient.get(String resourceGroupName, String virtualMachineName, String consoleName)"
   name: "get(String resourceGroupName, String virtualMachineName, String consoleName)"
   nameWithType: "ConsolesClient.get(String resourceGroupName, String virtualMachineName, String consoleName)"
-  summary: "Retrieve the virtual machine console."
+  summary: "Get properties of the provided virtual machine console."
   modifiers:
   - "abstract"
   parameters:
@@ -304,7 +298,7 @@ methods:
     name: "consoleName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract ConsoleInner get(String resourceGroupName, String virtualMachineName, String consoleName)"
-  desc: "Retrieve the virtual machine console. Get properties of the provided virtual machine console."
+  desc: "Get properties of the provided virtual machine console."
   returns:
     description: "properties of the provided virtual machine console."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner&text=ConsoleInner\" data-throw-if-not-resolved=\"False\" />"
@@ -312,7 +306,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ConsolesClient.getWithResponse(String resourceGroupName, String virtualMachineName, String consoleName, Context context)"
   name: "getWithResponse(String resourceGroupName, String virtualMachineName, String consoleName, Context context)"
   nameWithType: "ConsolesClient.getWithResponse(String resourceGroupName, String virtualMachineName, String consoleName, Context context)"
-  summary: "Retrieve the virtual machine console."
+  summary: "Get properties of the provided virtual machine console."
   modifiers:
   - "abstract"
   parameters:
@@ -329,7 +323,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<ConsoleInner> getWithResponse(String resourceGroupName, String virtualMachineName, String consoleName, Context context)"
-  desc: "Retrieve the virtual machine console. Get properties of the provided virtual machine console."
+  desc: "Get properties of the provided virtual machine console."
   returns:
     description: "properties of the provided virtual machine console along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner&text=ConsoleInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -337,7 +331,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ConsolesClient.listByVirtualMachine(String resourceGroupName, String virtualMachineName)"
   name: "listByVirtualMachine(String resourceGroupName, String virtualMachineName)"
   nameWithType: "ConsolesClient.listByVirtualMachine(String resourceGroupName, String virtualMachineName)"
-  summary: "List consoles of the virtual machine."
+  summary: "Get a list of consoles for the provided virtual machine."
   modifiers:
   - "abstract"
   parameters:
@@ -348,7 +342,7 @@ methods:
     name: "virtualMachineName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<ConsoleInner> listByVirtualMachine(String resourceGroupName, String virtualMachineName)"
-  desc: "List consoles of the virtual machine. Get a list of consoles for the provided virtual machine."
+  desc: "Get a list of consoles for the provided virtual machine."
   returns:
     description: "a list of consoles for the provided virtual machine as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner&text=ConsoleInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -356,7 +350,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ConsolesClient.listByVirtualMachine(String resourceGroupName, String virtualMachineName, Integer top, String skipToken, Context context)"
   name: "listByVirtualMachine(String resourceGroupName, String virtualMachineName, Integer top, String skipToken, Context context)"
   nameWithType: "ConsolesClient.listByVirtualMachine(String resourceGroupName, String virtualMachineName, Integer top, String skipToken, Context context)"
-  summary: "List consoles of the virtual machine."
+  summary: "Get a list of consoles for the provided virtual machine."
   modifiers:
   - "abstract"
   parameters:
@@ -376,7 +370,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<ConsoleInner> listByVirtualMachine(String resourceGroupName, String virtualMachineName, Integer top, String skipToken, Context context)"
-  desc: "List consoles of the virtual machine. Get a list of consoles for the provided virtual machine."
+  desc: "Get a list of consoles for the provided virtual machine."
   returns:
     description: "a list of consoles for the provided virtual machine as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner&text=ConsoleInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -384,7 +378,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ConsolesClient.update(String resourceGroupName, String virtualMachineName, String consoleName)"
   name: "update(String resourceGroupName, String virtualMachineName, String consoleName)"
   nameWithType: "ConsolesClient.update(String resourceGroupName, String virtualMachineName, String consoleName)"
-  summary: "Patch the virtual machine console."
+  summary: "Patch the properties of the provided virtual machine console, or update the tags associated with the virtual machine console."
   modifiers:
   - "abstract"
   parameters:
@@ -398,7 +392,7 @@ methods:
     name: "consoleName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract ConsoleInner update(String resourceGroupName, String virtualMachineName, String consoleName)"
-  desc: "Patch the virtual machine console. Patch the properties of the provided virtual machine console, or update the tags associated with the virtual machine console. Properties and tag updates can be done independently."
+  desc: "Patch the properties of the provided virtual machine console, or update the tags associated with the virtual machine console. Properties and tag updates can be done independently."
   returns:
     description: "console represents the console of an on-premises Network Cloud virtual machine."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner&text=ConsoleInner\" data-throw-if-not-resolved=\"False\" />"
@@ -406,7 +400,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ConsolesClient.update(String resourceGroupName, String virtualMachineName, String consoleName, String ifMatch, String ifNoneMatch, ConsolePatchParameters consoleUpdateParameters, Context context)"
   name: "update(String resourceGroupName, String virtualMachineName, String consoleName, String ifMatch, String ifNoneMatch, ConsolePatchParameters consoleUpdateParameters, Context context)"
   nameWithType: "ConsolesClient.update(String resourceGroupName, String virtualMachineName, String consoleName, String ifMatch, String ifNoneMatch, ConsolePatchParameters consoleUpdateParameters, Context context)"
-  summary: "Patch the virtual machine console."
+  summary: "Patch the properties of the provided virtual machine console, or update the tags associated with the virtual machine console."
   modifiers:
   - "abstract"
   parameters:
@@ -432,7 +426,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract ConsoleInner update(String resourceGroupName, String virtualMachineName, String consoleName, String ifMatch, String ifNoneMatch, ConsolePatchParameters consoleUpdateParameters, Context context)"
-  desc: "Patch the virtual machine console. Patch the properties of the provided virtual machine console, or update the tags associated with the virtual machine console. Properties and tag updates can be done independently."
+  desc: "Patch the properties of the provided virtual machine console, or update the tags associated with the virtual machine console. Properties and tag updates can be done independently."
   returns:
     description: "console represents the console of an on-premises Network Cloud virtual machine."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ConsoleInner&text=ConsoleInner\" data-throw-if-not-resolved=\"False\" />"
@@ -440,4 +434,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in ConsolesClient."
 metadata: {}
 package: "com.azure.resourcemanager.networkcloud.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.2.0

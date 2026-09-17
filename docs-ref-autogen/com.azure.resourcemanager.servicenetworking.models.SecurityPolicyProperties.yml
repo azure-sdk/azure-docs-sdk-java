@@ -49,6 +49,16 @@ methods:
   returns:
     description: "An instance of SecurityPolicyProperties if the JsonReader was pointing to an instance of it, or null if\n it was pointing to JSON null."
     type: "<xref href=\"com.azure.resourcemanager.servicenetworking.models.SecurityPolicyProperties?alt=com.azure.resourcemanager.servicenetworking.models.SecurityPolicyProperties&text=SecurityPolicyProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.servicenetworking.models.SecurityPolicyProperties.ipAccessRulesPolicy()"
+  fullName: "com.azure.resourcemanager.servicenetworking.models.SecurityPolicyProperties.ipAccessRulesPolicy()"
+  name: "ipAccessRulesPolicy()"
+  nameWithType: "SecurityPolicyProperties.ipAccessRulesPolicy()"
+  summary: "Get the ip<wbr>Access<wbr>Rules<wbr>Policy property: Ip Access Policy of the Traffic Controller Security Policy."
+  syntax: "public IpAccessRulesPolicy ipAccessRulesPolicy()"
+  desc: "Get the ipAccessRulesPolicy property: Ip Access Policy of the Traffic Controller Security Policy. Single Security Policy can have only one policy type set."
+  returns:
+    description: "the ipAccessRulesPolicy value."
+    type: "<xref href=\"com.azure.resourcemanager.servicenetworking.models.IpAccessRulesPolicy?alt=com.azure.resourcemanager.servicenetworking.models.IpAccessRulesPolicy&text=IpAccessRulesPolicy\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.servicenetworking.models.SecurityPolicyProperties.policyType()"
   fullName: "com.azure.resourcemanager.servicenetworking.models.SecurityPolicyProperties.policyType()"
   name: "policyType()"
@@ -81,23 +91,30 @@ methods:
   - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.servicenetworking.models.SecurityPolicyProperties.validate()"
-  fullName: "com.azure.resourcemanager.servicenetworking.models.SecurityPolicyProperties.validate()"
-  name: "validate()"
-  nameWithType: "SecurityPolicyProperties.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.servicenetworking.models.SecurityPolicyProperties.wafPolicy()"
   fullName: "com.azure.resourcemanager.servicenetworking.models.SecurityPolicyProperties.wafPolicy()"
   name: "wafPolicy()"
   nameWithType: "SecurityPolicyProperties.wafPolicy()"
   summary: "Get the waf<wbr>Policy property: Web Application Firewall Policy of the Traffic Controller Security Policy."
   syntax: "public WafPolicy wafPolicy()"
-  desc: "Get the wafPolicy property: Web Application Firewall Policy of the Traffic Controller Security Policy."
+  desc: "Get the wafPolicy property: Web Application Firewall Policy of the Traffic Controller Security Policy. Single Security Policy can have only one policy type set."
   returns:
     description: "the wafPolicy value."
     type: "<xref href=\"com.azure.resourcemanager.servicenetworking.models.WafPolicy?alt=com.azure.resourcemanager.servicenetworking.models.WafPolicy&text=WafPolicy\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.servicenetworking.models.SecurityPolicyProperties.withIpAccessRulesPolicy(com.azure.resourcemanager.servicenetworking.models.IpAccessRulesPolicy)"
+  fullName: "com.azure.resourcemanager.servicenetworking.models.SecurityPolicyProperties.withIpAccessRulesPolicy(IpAccessRulesPolicy ipAccessRulesPolicy)"
+  name: "withIpAccessRulesPolicy(IpAccessRulesPolicy ipAccessRulesPolicy)"
+  nameWithType: "SecurityPolicyProperties.withIpAccessRulesPolicy(IpAccessRulesPolicy ipAccessRulesPolicy)"
+  summary: "Set the ip<wbr>Access<wbr>Rules<wbr>Policy property: Ip Access Policy of the Traffic Controller Security Policy."
+  parameters:
+  - description: "the ipAccessRulesPolicy value to set."
+    name: "ipAccessRulesPolicy"
+    type: "<xref href=\"com.azure.resourcemanager.servicenetworking.models.IpAccessRulesPolicy?alt=com.azure.resourcemanager.servicenetworking.models.IpAccessRulesPolicy&text=IpAccessRulesPolicy\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public SecurityPolicyProperties withIpAccessRulesPolicy(IpAccessRulesPolicy ipAccessRulesPolicy)"
+  desc: "Set the ipAccessRulesPolicy property: Ip Access Policy of the Traffic Controller Security Policy. Single Security Policy can have only one policy type set."
+  returns:
+    description: "the SecurityPolicyProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.servicenetworking.models.SecurityPolicyProperties?alt=com.azure.resourcemanager.servicenetworking.models.SecurityPolicyProperties&text=SecurityPolicyProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.servicenetworking.models.SecurityPolicyProperties.withWafPolicy(com.azure.resourcemanager.servicenetworking.models.WafPolicy)"
   fullName: "com.azure.resourcemanager.servicenetworking.models.SecurityPolicyProperties.withWafPolicy(WafPolicy wafPolicy)"
   name: "withWafPolicy(WafPolicy wafPolicy)"
@@ -108,7 +125,7 @@ methods:
     name: "wafPolicy"
     type: "<xref href=\"com.azure.resourcemanager.servicenetworking.models.WafPolicy?alt=com.azure.resourcemanager.servicenetworking.models.WafPolicy&text=WafPolicy\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public SecurityPolicyProperties withWafPolicy(WafPolicy wafPolicy)"
-  desc: "Set the wafPolicy property: Web Application Firewall Policy of the Traffic Controller Security Policy."
+  desc: "Set the wafPolicy property: Web Application Firewall Policy of the Traffic Controller Security Policy. Single Security Policy can have only one policy type set."
   returns:
     description: "the SecurityPolicyProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.servicenetworking.models.SecurityPolicyProperties?alt=com.azure.resourcemanager.servicenetworking.models.SecurityPolicyProperties&text=SecurityPolicyProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -118,4 +135,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.servicenetworking.models.SecurityPolicyProperties?alt=com.azure.resourcemanager.servicenetworking.models.SecurityPolicyProperties&text=SecurityPolicyProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.servicenetworking.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-servicenetworking:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-servicenetworking:1.2.0

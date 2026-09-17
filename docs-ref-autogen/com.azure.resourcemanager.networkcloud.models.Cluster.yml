@@ -214,7 +214,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.continueUpdateVersion(ClusterContinueUpdateVersionParameters clusterContinueUpdateVersionParameters)"
   name: "continueUpdateVersion(ClusterContinueUpdateVersionParameters clusterContinueUpdateVersionParameters)"
   nameWithType: "Cluster.continueUpdateVersion(ClusterContinueUpdateVersionParameters clusterContinueUpdateVersionParameters)"
-  summary: "Continue a paused update to the cluster version."
+  summary: "Trigger the continuation of an update for a cluster with a matching update strategy that has paused after completing a segment of the update."
   modifiers:
   - "abstract"
   parameters:
@@ -222,15 +222,15 @@ methods:
     name: "clusterContinueUpdateVersionParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.ClusterContinueUpdateVersionParameters?alt=com.azure.resourcemanager.networkcloud.models.ClusterContinueUpdateVersionParameters&text=ClusterContinueUpdateVersionParameters\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult continueUpdateVersion(ClusterContinueUpdateVersionParameters clusterContinueUpdateVersionParameters)"
-  desc: "Continue a paused update to the cluster version. Trigger the continuation of an update for a cluster with a matching update strategy that has paused after completing a segment of the update."
+  desc: "Trigger the continuation of an update for a cluster with a matching update strategy that has paused after completing a segment of the update."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.Cluster.continueUpdateVersion(com.azure.resourcemanager.networkcloud.models.ClusterContinueUpdateVersionParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.continueUpdateVersion(ClusterContinueUpdateVersionParameters clusterContinueUpdateVersionParameters, Context context)"
   name: "continueUpdateVersion(ClusterContinueUpdateVersionParameters clusterContinueUpdateVersionParameters, Context context)"
   nameWithType: "Cluster.continueUpdateVersion(ClusterContinueUpdateVersionParameters clusterContinueUpdateVersionParameters, Context context)"
-  summary: "Continue a paused update to the cluster version."
+  summary: "Trigger the continuation of an update for a cluster with a matching update strategy that has paused after completing a segment of the update."
   modifiers:
   - "abstract"
   parameters:
@@ -241,27 +241,27 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult continueUpdateVersion(ClusterContinueUpdateVersionParameters clusterContinueUpdateVersionParameters, Context context)"
-  desc: "Continue a paused update to the cluster version. Trigger the continuation of an update for a cluster with a matching update strategy that has paused after completing a segment of the update."
+  desc: "Trigger the continuation of an update for a cluster with a matching update strategy that has paused after completing a segment of the update."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.Cluster.deploy()"
   fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.deploy()"
   name: "deploy()"
   nameWithType: "Cluster.deploy()"
-  summary: "Deploy the cluster."
+  summary: "Deploy the cluster using the rack configuration provided during creation."
   modifiers:
   - "abstract"
   syntax: "public abstract OperationStatusResult deploy()"
-  desc: "Deploy the cluster. Deploy the cluster using the rack configuration provided during creation."
+  desc: "Deploy the cluster using the rack configuration provided during creation."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.Cluster.deploy(com.azure.resourcemanager.networkcloud.models.ClusterDeployParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.deploy(ClusterDeployParameters clusterDeployParameters, Context context)"
   name: "deploy(ClusterDeployParameters clusterDeployParameters, Context context)"
   nameWithType: "Cluster.deploy(ClusterDeployParameters clusterDeployParameters, Context context)"
-  summary: "Deploy the cluster."
+  summary: "Deploy the cluster using the rack configuration provided during creation."
   modifiers:
   - "abstract"
   parameters:
@@ -272,9 +272,9 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult deploy(ClusterDeployParameters clusterDeployParameters, Context context)"
-  desc: "Deploy the cluster. Deploy the cluster using the rack configuration provided during creation."
+  desc: "Deploy the cluster using the rack configuration provided during creation."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.Cluster.detailedStatus()"
   fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.detailedStatus()"
@@ -304,11 +304,11 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.etag()"
   name: "etag()"
   nameWithType: "Cluster.etag()"
-  summary: "Gets the etag property: Resource ETag."
+  summary: "Gets the etag property: \"If etag is provided in the response body, it may also be provided as a header per the normal etag convention."
   modifiers:
   - "abstract"
   syntax: "public abstract String etag()"
-  desc: "Gets the etag property: Resource ETag."
+  desc: "Gets the etag property: \"If etag is provided in the response body, it may also be provided as a header per the normal etag convention. Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.\")."
   returns:
     description: "the etag value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -316,11 +316,11 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.extendedLocation()"
   name: "extendedLocation()"
   nameWithType: "Cluster.extendedLocation()"
-  summary: "Gets the extended<wbr>Location property: The extended location of the cluster manager associated with the cluster."
+  summary: "Gets the extended<wbr>Location property: The extended location of the resource."
   modifiers:
   - "abstract"
   syntax: "public abstract ExtendedLocation extendedLocation()"
-  desc: "Gets the extendedLocation property: The extended location of the cluster manager associated with the cluster."
+  desc: "Gets the extendedLocation property: The extended location of the resource. This property is required when creating the resource."
   returns:
     description: "the extendedLocation value."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.ExtendedLocation?alt=com.azure.resourcemanager.networkcloud.models.ExtendedLocation&text=ExtendedLocation\" data-throw-if-not-resolved=\"False\" />"
@@ -352,11 +352,11 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.identity()"
   name: "identity()"
   nameWithType: "Cluster.identity()"
-  summary: "Gets the identity property: The identity for the resource."
+  summary: "Gets the identity property: The managed service identities assigned to this resource."
   modifiers:
   - "abstract"
   syntax: "public abstract ManagedServiceIdentity identity()"
-  desc: "Gets the identity property: The identity for the resource."
+  desc: "Gets the identity property: The managed service identities assigned to this resource."
   returns:
     description: "the identity value."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.ManagedServiceIdentity?alt=com.azure.resourcemanager.networkcloud.models.ManagedServiceIdentity&text=ManagedServiceIdentity\" data-throw-if-not-resolved=\"False\" />"
@@ -372,6 +372,61 @@ methods:
   returns:
     description: "the inner object."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ClusterInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ClusterInner&text=ClusterInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.networkcloud.models.Cluster.inspect()"
+  fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.inspect()"
+  name: "inspect()"
+  nameWithType: "Cluster.inspect()"
+  summary: "Trigger an inspection of the cluster to perform validation and optional corrective actions based on the supplied additional actions and filters."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract OperationStatusResult inspect()"
+  desc: "Trigger an inspection of the cluster to perform validation and optional corrective actions based on the supplied additional actions and filters."
+  returns:
+    description: "the response."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.networkcloud.models.Cluster.inspect(com.azure.resourcemanager.networkcloud.models.ClusterInspectParameters,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.inspect(ClusterInspectParameters clusterInspectParameters, Context context)"
+  name: "inspect(ClusterInspectParameters clusterInspectParameters, Context context)"
+  nameWithType: "Cluster.inspect(ClusterInspectParameters clusterInspectParameters, Context context)"
+  summary: "Trigger an inspection of the cluster to perform validation and optional corrective actions based on the supplied additional actions and filters."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The request body."
+    name: "clusterInspectParameters"
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.ClusterInspectParameters?alt=com.azure.resourcemanager.networkcloud.models.ClusterInspectParameters&text=ClusterInspectParameters\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract OperationStatusResult inspect(ClusterInspectParameters clusterInspectParameters, Context context)"
+  desc: "Trigger an inspection of the cluster to perform validation and optional corrective actions based on the supplied additional actions and filters."
+  returns:
+    description: "the response."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.networkcloud.models.Cluster.kind()"
+  fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.kind()"
+  name: "kind()"
+  nameWithType: "Cluster.kind()"
+  summary: "Gets the kind property: The type (kind) of the cluster."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract DeploymentType kind()"
+  desc: "Gets the kind property: The type (kind) of the cluster. When specified, the value must exactly match the kind configured on the cluster manager that manages the cluster. If omitted, the service will default the value to the kind value of the cluster manager."
+  returns:
+    description: "the kind value."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.DeploymentType?alt=com.azure.resourcemanager.networkcloud.models.DeploymentType&text=DeploymentType\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.networkcloud.models.Cluster.lastSuccessfulVersionUpdateTime()"
+  fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.lastSuccessfulVersionUpdateTime()"
+  name: "lastSuccessfulVersionUpdateTime()"
+  nameWithType: "Cluster.lastSuccessfulVersionUpdateTime()"
+  summary: "Gets the last<wbr>Successful<wbr>Version<wbr>Update<wbr>Time property: The date and time of the end of the last successful version update for the cluster."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract OffsetDateTime lastSuccessfulVersionUpdateTime()"
+  desc: "Gets the lastSuccessfulVersionUpdateTime property: The date and time of the end of the last successful version update for the cluster."
+  returns:
+    description: "the lastSuccessfulVersionUpdateTime value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
 - uid: "com.azure.resourcemanager.networkcloud.models.Cluster.location()"
   fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.location()"
   name: "location()"
@@ -384,6 +439,18 @@ methods:
   returns:
     description: "the location value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.networkcloud.models.Cluster.managedCredentials()"
+  fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.managedCredentials()"
+  name: "managedCredentials()"
+  nameWithType: "Cluster.managedCredentials()"
+  summary: "Gets the managed<wbr>Credentials property: The list of credentials that are managed for the cluster and can be rotated on-demand."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract List<String> managedCredentials()"
+  desc: "Gets the managedCredentials property: The list of credentials that are managed for the cluster and can be rotated on-demand."
+  returns:
+    description: "the managedCredentials value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.models.Cluster.managedResourceGroupConfiguration()"
   fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.managedResourceGroupConfiguration()"
   name: "managedResourceGroupConfiguration()"
@@ -508,6 +575,41 @@ methods:
   returns:
     description: "the name of the resource group."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.networkcloud.models.Cluster.rotateCredential(com.azure.resourcemanager.networkcloud.models.ClusterRotateCredentialParameters)"
+  fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.rotateCredential(ClusterRotateCredentialParameters body)"
+  name: "rotateCredential(ClusterRotateCredentialParameters body)"
+  nameWithType: "Cluster.rotateCredential(ClusterRotateCredentialParameters body)"
+  summary: "Rotate the specified cluster credential."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The content of the action request."
+    name: "body"
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.ClusterRotateCredentialParameters?alt=com.azure.resourcemanager.networkcloud.models.ClusterRotateCredentialParameters&text=ClusterRotateCredentialParameters\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract OperationStatusResult rotateCredential(ClusterRotateCredentialParameters body)"
+  desc: "Rotate the specified cluster credential."
+  returns:
+    description: "the response."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.networkcloud.models.Cluster.rotateCredential(com.azure.resourcemanager.networkcloud.models.ClusterRotateCredentialParameters,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.rotateCredential(ClusterRotateCredentialParameters body, Context context)"
+  name: "rotateCredential(ClusterRotateCredentialParameters body, Context context)"
+  nameWithType: "Cluster.rotateCredential(ClusterRotateCredentialParameters body, Context context)"
+  summary: "Rotate the specified cluster credential."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The content of the action request."
+    name: "body"
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.ClusterRotateCredentialParameters?alt=com.azure.resourcemanager.networkcloud.models.ClusterRotateCredentialParameters&text=ClusterRotateCredentialParameters\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract OperationStatusResult rotateCredential(ClusterRotateCredentialParameters body, Context context)"
+  desc: "Rotate the specified cluster credential."
+  returns:
+    description: "the response."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.Cluster.runtimeProtectionConfiguration()"
   fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.runtimeProtectionConfiguration()"
   name: "runtimeProtectionConfiguration()"
@@ -524,19 +626,19 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.scanRuntime()"
   name: "scanRuntime()"
   nameWithType: "Cluster.scanRuntime()"
-  summary: "Execute a runtime protection scan on the cluster."
+  summary: "Triggers the execution of a runtime protection scan to detect and remediate detected issues, in accordance with the cluster configuration."
   modifiers:
   - "abstract"
   syntax: "public abstract OperationStatusResult scanRuntime()"
-  desc: "Execute a runtime protection scan on the cluster. Triggers the execution of a runtime protection scan to detect and remediate detected issues, in accordance with the cluster configuration."
+  desc: "Triggers the execution of a runtime protection scan to detect and remediate detected issues, in accordance with the cluster configuration."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.Cluster.scanRuntime(com.azure.resourcemanager.networkcloud.models.ClusterScanRuntimeParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.scanRuntime(ClusterScanRuntimeParameters clusterScanRuntimeParameters, Context context)"
   name: "scanRuntime(ClusterScanRuntimeParameters clusterScanRuntimeParameters, Context context)"
   nameWithType: "Cluster.scanRuntime(ClusterScanRuntimeParameters clusterScanRuntimeParameters, Context context)"
-  summary: "Execute a runtime protection scan on the cluster."
+  summary: "Triggers the execution of a runtime protection scan to detect and remediate detected issues, in accordance with the cluster configuration."
   modifiers:
   - "abstract"
   parameters:
@@ -547,9 +649,9 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult scanRuntime(ClusterScanRuntimeParameters clusterScanRuntimeParameters, Context context)"
-  desc: "Execute a runtime protection scan on the cluster. Triggers the execution of a runtime protection scan to detect and remediate detected issues, in accordance with the cluster configuration."
+  desc: "Triggers the execution of a runtime protection scan to detect and remediate detected issues, in accordance with the cluster configuration."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.Cluster.secretArchive()"
   fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.secretArchive()"
@@ -651,7 +753,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.updateVersion(ClusterUpdateVersionParameters clusterUpdateVersionParameters)"
   name: "updateVersion(ClusterUpdateVersionParameters clusterUpdateVersionParameters)"
   nameWithType: "Cluster.updateVersion(ClusterUpdateVersionParameters clusterUpdateVersionParameters)"
-  summary: "Update the cluster version."
+  summary: "Update the version of the provided cluster to one of the available supported versions."
   modifiers:
   - "abstract"
   parameters:
@@ -659,15 +761,15 @@ methods:
     name: "clusterUpdateVersionParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.ClusterUpdateVersionParameters?alt=com.azure.resourcemanager.networkcloud.models.ClusterUpdateVersionParameters&text=ClusterUpdateVersionParameters\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult updateVersion(ClusterUpdateVersionParameters clusterUpdateVersionParameters)"
-  desc: "Update the cluster version. Update the version of the provided cluster to one of the available supported versions."
+  desc: "Update the version of the provided cluster to one of the available supported versions."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.Cluster.updateVersion(com.azure.resourcemanager.networkcloud.models.ClusterUpdateVersionParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.updateVersion(ClusterUpdateVersionParameters clusterUpdateVersionParameters, Context context)"
   name: "updateVersion(ClusterUpdateVersionParameters clusterUpdateVersionParameters, Context context)"
   nameWithType: "Cluster.updateVersion(ClusterUpdateVersionParameters clusterUpdateVersionParameters, Context context)"
-  summary: "Update the cluster version."
+  summary: "Update the version of the provided cluster to one of the available supported versions."
   modifiers:
   - "abstract"
   parameters:
@@ -678,9 +780,9 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult updateVersion(ClusterUpdateVersionParameters clusterUpdateVersionParameters, Context context)"
-  desc: "Update the cluster version. Update the version of the provided cluster to one of the available supported versions."
+  desc: "Update the version of the provided cluster to one of the available supported versions."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.Cluster.vulnerabilityScanningSettings()"
   fullName: "com.azure.resourcemanager.networkcloud.models.Cluster.vulnerabilityScanningSettings()"
@@ -710,4 +812,4 @@ type: "interface"
 desc: "An immutable client-side representation of Cluster."
 metadata: {}
 package: "com.azure.resourcemanager.networkcloud.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.2.0

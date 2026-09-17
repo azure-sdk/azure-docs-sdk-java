@@ -22,19 +22,19 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.assignRelay()"
   name: "assignRelay()"
   nameWithType: "VirtualMachine.assignRelay()"
-  summary: "Assigns a relay to the specified Microsoft.<wbr>Hybrid<wbr>Compute machine."
+  summary: "Assigns a relay to the specified Microsoft.<wbr>Hybrid<wbr>Compute machine associated with the provided virtual machine."
   modifiers:
   - "abstract"
   syntax: "public abstract OperationStatusResult assignRelay()"
-  desc: "Assigns a relay to the specified Microsoft.HybridCompute machine. Assigns a relay to the specified Microsoft.HybridCompute machine associated with the provided virtual machine."
+  desc: "Assigns a relay to the specified Microsoft.HybridCompute machine associated with the provided virtual machine."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.assignRelay(com.azure.resourcemanager.networkcloud.models.VirtualMachineAssignRelayParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.assignRelay(VirtualMachineAssignRelayParameters virtualMachineAssignRelayParameters, Context context)"
   name: "assignRelay(VirtualMachineAssignRelayParameters virtualMachineAssignRelayParameters, Context context)"
   nameWithType: "VirtualMachine.assignRelay(VirtualMachineAssignRelayParameters virtualMachineAssignRelayParameters, Context context)"
-  summary: "Assigns a relay to the specified Microsoft.<wbr>Hybrid<wbr>Compute machine."
+  summary: "Assigns a relay to the specified Microsoft.<wbr>Hybrid<wbr>Compute machine associated with the provided virtual machine."
   modifiers:
   - "abstract"
   parameters:
@@ -45,9 +45,9 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult assignRelay(VirtualMachineAssignRelayParameters virtualMachineAssignRelayParameters, Context context)"
-  desc: "Assigns a relay to the specified Microsoft.HybridCompute machine. Assigns a relay to the specified Microsoft.HybridCompute machine associated with the provided virtual machine."
+  desc: "Assigns a relay to the specified Microsoft.HybridCompute machine associated with the provided virtual machine."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.availabilityZone()"
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.availabilityZone()"
@@ -161,11 +161,11 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.etag()"
   name: "etag()"
   nameWithType: "VirtualMachine.etag()"
-  summary: "Gets the etag property: Resource ETag."
+  summary: "Gets the etag property: \"If etag is provided in the response body, it may also be provided as a header per the normal etag convention."
   modifiers:
   - "abstract"
   syntax: "public abstract String etag()"
-  desc: "Gets the etag property: Resource ETag."
+  desc: "Gets the etag property: \"If etag is provided in the response body, it may also be provided as a header per the normal etag convention. Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.\")."
   returns:
     description: "the etag value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -173,11 +173,11 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.extendedLocation()"
   name: "extendedLocation()"
   nameWithType: "VirtualMachine.extendedLocation()"
-  summary: "Gets the extended<wbr>Location property: The extended location of the cluster associated with the resource."
+  summary: "Gets the extended<wbr>Location property: The extended location of the resource."
   modifiers:
   - "abstract"
   syntax: "public abstract ExtendedLocation extendedLocation()"
-  desc: "Gets the extendedLocation property: The extended location of the cluster associated with the resource."
+  desc: "Gets the extendedLocation property: The extended location of the resource. This property is required when creating the resource."
   returns:
     description: "the extendedLocation value."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.ExtendedLocation?alt=com.azure.resourcemanager.networkcloud.models.ExtendedLocation&text=ExtendedLocation\" data-throw-if-not-resolved=\"False\" />"
@@ -197,11 +197,11 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.identity()"
   name: "identity()"
   nameWithType: "VirtualMachine.identity()"
-  summary: "Gets the identity property: The identity for the resource."
+  summary: "Gets the identity property: The managed service identities assigned to this resource."
   modifiers:
   - "abstract"
   syntax: "public abstract ManagedServiceIdentity identity()"
-  desc: "Gets the identity property: The identity for the resource."
+  desc: "Gets the identity property: The managed service identities assigned to this resource."
   returns:
     description: "the identity value."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.ManagedServiceIdentity?alt=com.azure.resourcemanager.networkcloud.models.ManagedServiceIdentity&text=ManagedServiceIdentity\" data-throw-if-not-resolved=\"False\" />"
@@ -317,19 +317,19 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.powerOff()"
   name: "powerOff()"
   nameWithType: "VirtualMachine.powerOff()"
-  summary: "Power off the virtual machine."
+  summary: "Power off the provided virtual machine."
   modifiers:
   - "abstract"
   syntax: "public abstract OperationStatusResult powerOff()"
-  desc: "Power off the virtual machine. Power off the provided virtual machine."
+  desc: "Power off the provided virtual machine."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.powerOff(com.azure.resourcemanager.networkcloud.models.VirtualMachinePowerOffParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.powerOff(VirtualMachinePowerOffParameters virtualMachinePowerOffParameters, Context context)"
   name: "powerOff(VirtualMachinePowerOffParameters virtualMachinePowerOffParameters, Context context)"
   nameWithType: "VirtualMachine.powerOff(VirtualMachinePowerOffParameters virtualMachinePowerOffParameters, Context context)"
-  summary: "Power off the virtual machine."
+  summary: "Power off the provided virtual machine."
   modifiers:
   - "abstract"
   parameters:
@@ -340,9 +340,9 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult powerOff(VirtualMachinePowerOffParameters virtualMachinePowerOffParameters, Context context)"
-  desc: "Power off the virtual machine. Power off the provided virtual machine."
+  desc: "Power off the provided virtual machine."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.powerState()"
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.powerState()"
@@ -424,19 +424,19 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.reimage()"
   name: "reimage()"
   nameWithType: "VirtualMachine.reimage()"
-  summary: "Reimage the virtual machine."
+  summary: "Reimage the provided virtual machine."
   modifiers:
   - "abstract"
   syntax: "public abstract OperationStatusResult reimage()"
-  desc: "Reimage the virtual machine. Reimage the provided virtual machine."
+  desc: "Reimage the provided virtual machine."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.reimage(com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.reimage(Context context)"
   name: "reimage(Context context)"
   nameWithType: "VirtualMachine.reimage(Context context)"
-  summary: "Reimage the virtual machine."
+  summary: "Reimage the provided virtual machine."
   modifiers:
   - "abstract"
   parameters:
@@ -444,9 +444,9 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult reimage(Context context)"
-  desc: "Reimage the virtual machine. Reimage the provided virtual machine."
+  desc: "Reimage the provided virtual machine."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.resourceGroupName()"
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.resourceGroupName()"
@@ -464,19 +464,19 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.restart()"
   name: "restart()"
   nameWithType: "VirtualMachine.restart()"
-  summary: "Restart the virtual machine."
+  summary: "Restart the provided virtual machine."
   modifiers:
   - "abstract"
   syntax: "public abstract OperationStatusResult restart()"
-  desc: "Restart the virtual machine. Restart the provided virtual machine."
+  desc: "Restart the provided virtual machine."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.restart(com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.restart(Context context)"
   name: "restart(Context context)"
   nameWithType: "VirtualMachine.restart(Context context)"
-  summary: "Restart the virtual machine."
+  summary: "Restart the provided virtual machine."
   modifiers:
   - "abstract"
   parameters:
@@ -484,9 +484,9 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult restart(Context context)"
-  desc: "Restart the virtual machine. Restart the provided virtual machine."
+  desc: "Restart the provided virtual machine."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.sshPublicKeys()"
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.sshPublicKeys()"
@@ -504,19 +504,19 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.start()"
   name: "start()"
   nameWithType: "VirtualMachine.start()"
-  summary: "Start the virtual machine."
+  summary: "Start the provided virtual machine."
   modifiers:
   - "abstract"
   syntax: "public abstract OperationStatusResult start()"
-  desc: "Start the virtual machine. Start the provided virtual machine."
+  desc: "Start the provided virtual machine."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.start(com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.start(Context context)"
   name: "start(Context context)"
   nameWithType: "VirtualMachine.start(Context context)"
-  summary: "Start the virtual machine."
+  summary: "Start the provided virtual machine."
   modifiers:
   - "abstract"
   parameters:
@@ -524,9 +524,9 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult start(Context context)"
-  desc: "Start the virtual machine. Start the provided virtual machine."
+  desc: "Start the provided virtual machine."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.storageProfile()"
   fullName: "com.azure.resourcemanager.networkcloud.models.VirtualMachine.storageProfile()"
@@ -676,4 +676,4 @@ type: "interface"
 desc: "An immutable client-side representation of VirtualMachine."
 metadata: {}
 package: "com.azure.resourcemanager.networkcloud.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.2.0

@@ -38,7 +38,7 @@ methods:
   modifiers:
   - "abstract"
   syntax: "public abstract String contentId()"
-  desc: "Gets the contentId property: Static ID for the content. Used to identify dependencies and content from solutions or community. Hard-coded/static for out of the box content and solutions. Dynamic for user-created. This is the resource name."
+  desc: "Gets the contentId property: Static ID for the content. Used to identify dependencies and content from solutions or community. Hard-coded/static for out of the box content and solutions. Can be optionally set for user created content to define dependencies. If an active content item is made from a template, both will have the same contentId."
   returns:
     description: "the contentId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -94,11 +94,11 @@ methods:
   fullName: "com.azure.resourcemanager.securityinsights.models.MetadataModel.firstPublishDate()"
   name: "firstPublishDate()"
   nameWithType: "MetadataModel.firstPublishDate()"
-  summary: "Gets the first<wbr>Publish<wbr>Date property: first publish date solution content item."
+  summary: "Gets the first<wbr>Publish<wbr>Date property: first publish date of solution content item."
   modifiers:
   - "abstract"
   syntax: "public abstract LocalDate firstPublishDate()"
-  desc: "Gets the firstPublishDate property: first publish date solution content item."
+  desc: "Gets the firstPublishDate property: first publish date of solution content item."
   returns:
     description: "the firstPublishDate value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html\">LocalDate</a>"
@@ -145,20 +145,20 @@ methods:
   summary: "Gets the kind property: The kind of content the metadata is for."
   modifiers:
   - "abstract"
-  syntax: "public abstract Kind kind()"
+  syntax: "public abstract String kind()"
   desc: "Gets the kind property: The kind of content the metadata is for."
   returns:
     description: "the kind value."
-    type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.Kind?alt=com.azure.resourcemanager.securityinsights.models.Kind&text=Kind\" data-throw-if-not-resolved=\"False\" />"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.securityinsights.models.MetadataModel.lastPublishDate()"
   fullName: "com.azure.resourcemanager.securityinsights.models.MetadataModel.lastPublishDate()"
   name: "lastPublishDate()"
   nameWithType: "MetadataModel.lastPublishDate()"
-  summary: "Gets the last<wbr>Publish<wbr>Date property: last publish date for the solution content item."
+  summary: "Gets the last<wbr>Publish<wbr>Date property: last publish date of solution content item."
   modifiers:
   - "abstract"
   syntax: "public abstract LocalDate lastPublishDate()"
-  desc: "Gets the lastPublishDate property: last publish date for the solution content item."
+  desc: "Gets the lastPublishDate property: last publish date of solution content item."
   returns:
     description: "the lastPublishDate value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html\">LocalDate</a>"
@@ -362,4 +362,4 @@ type: "interface"
 desc: "An immutable client-side representation of MetadataModel."
 metadata: {}
 package: "com.azure.resourcemanager.securityinsights.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-securityinsights:1.0.0-beta.5
+artifact: com.azure.resourcemanager:azure-resourcemanager-securityinsights:1.1.0-beta.1

@@ -70,11 +70,11 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.ClusterManager.etag()"
   name: "etag()"
   nameWithType: "ClusterManager.etag()"
-  summary: "Gets the etag property: Resource ETag."
+  summary: "Gets the etag property: \"If etag is provided in the response body, it may also be provided as a header per the normal etag convention."
   modifiers:
   - "abstract"
   syntax: "public abstract String etag()"
-  desc: "Gets the etag property: Resource ETag."
+  desc: "Gets the etag property: \"If etag is provided in the response body, it may also be provided as a header per the normal etag convention. Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields.\")."
   returns:
     description: "the etag value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -106,11 +106,11 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.ClusterManager.identity()"
   name: "identity()"
   nameWithType: "ClusterManager.identity()"
-  summary: "Gets the identity property: The identity of the cluster manager."
+  summary: "Gets the identity property: The managed service identities assigned to this resource."
   modifiers:
   - "abstract"
   syntax: "public abstract ManagedServiceIdentity identity()"
-  desc: "Gets the identity property: The identity of the cluster manager."
+  desc: "Gets the identity property: The managed service identities assigned to this resource."
   returns:
     description: "the identity value."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.ManagedServiceIdentity?alt=com.azure.resourcemanager.networkcloud.models.ManagedServiceIdentity&text=ManagedServiceIdentity\" data-throw-if-not-resolved=\"False\" />"
@@ -126,6 +126,18 @@ methods:
   returns:
     description: "the inner object."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner&text=ClusterManagerInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.networkcloud.models.ClusterManager.kind()"
+  fullName: "com.azure.resourcemanager.networkcloud.models.ClusterManager.kind()"
+  name: "kind()"
+  nameWithType: "ClusterManager.kind()"
+  summary: "Gets the kind property: The kind of the cluster manager."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract DeploymentType kind()"
+  desc: "Gets the kind property: The kind of the cluster manager."
+  returns:
+    description: "the kind value."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.DeploymentType?alt=com.azure.resourcemanager.networkcloud.models.DeploymentType&text=DeploymentType\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.ClusterManager.location()"
   fullName: "com.azure.resourcemanager.networkcloud.models.ClusterManager.location()"
   name: "location()"
@@ -238,6 +250,18 @@ methods:
   returns:
     description: "the name of the resource region."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.networkcloud.models.ClusterManager.relayConfiguration()"
+  fullName: "com.azure.resourcemanager.networkcloud.models.ClusterManager.relayConfiguration()"
+  name: "relayConfiguration()"
+  nameWithType: "ClusterManager.relayConfiguration()"
+  summary: "Gets the relay<wbr>Configuration property: The relay configuration for the cluster manager."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract ClusterManagerRelayConfiguration relayConfiguration()"
+  desc: "Gets the relayConfiguration property: The relay configuration for the cluster manager."
+  returns:
+    description: "the relayConfiguration value."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.ClusterManagerRelayConfiguration?alt=com.azure.resourcemanager.networkcloud.models.ClusterManagerRelayConfiguration&text=ClusterManagerRelayConfiguration\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.ClusterManager.resourceGroupName()"
   fullName: "com.azure.resourcemanager.networkcloud.models.ClusterManager.resourceGroupName()"
   name: "resourceGroupName()"
@@ -298,6 +322,37 @@ methods:
   returns:
     description: "the stage of resource update."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.ClusterManager.Update?alt=com.azure.resourcemanager.networkcloud.models.ClusterManager.Update&text=Update\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.networkcloud.models.ClusterManager.updateRelayPrivateEndpointConnection()"
+  fullName: "com.azure.resourcemanager.networkcloud.models.ClusterManager.updateRelayPrivateEndpointConnection()"
+  name: "updateRelayPrivateEndpointConnection()"
+  nameWithType: "ClusterManager.updateRelayPrivateEndpointConnection()"
+  summary: "Update the private endpoint connection for the Azure Relay namespace managed by the specified cluster manager."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract OperationStatusResult updateRelayPrivateEndpointConnection()"
+  desc: "Update the private endpoint connection for the Azure Relay namespace managed by the specified cluster manager. Use this operation to approve or reject a pending private endpoint connection request for the relay namespace managed by the cluster manager."
+  returns:
+    description: "the response."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.networkcloud.models.ClusterManager.updateRelayPrivateEndpointConnection(com.azure.resourcemanager.networkcloud.models.ClusterManagerUpdateRelayPrivateEndpointConnectionParameters,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.networkcloud.models.ClusterManager.updateRelayPrivateEndpointConnection(ClusterManagerUpdateRelayPrivateEndpointConnectionParameters clusterManagerUpdateRelayPrivateEndpointConnectionParameters, Context context)"
+  name: "updateRelayPrivateEndpointConnection(ClusterManagerUpdateRelayPrivateEndpointConnectionParameters clusterManagerUpdateRelayPrivateEndpointConnectionParameters, Context context)"
+  nameWithType: "ClusterManager.updateRelayPrivateEndpointConnection(ClusterManagerUpdateRelayPrivateEndpointConnectionParameters clusterManagerUpdateRelayPrivateEndpointConnectionParameters, Context context)"
+  summary: "Update the private endpoint connection for the Azure Relay namespace managed by the specified cluster manager."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The request body."
+    name: "clusterManagerUpdateRelayPrivateEndpointConnectionParameters"
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.ClusterManagerUpdateRelayPrivateEndpointConnectionParameters?alt=com.azure.resourcemanager.networkcloud.models.ClusterManagerUpdateRelayPrivateEndpointConnectionParameters&text=ClusterManagerUpdateRelayPrivateEndpointConnectionParameters\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract OperationStatusResult updateRelayPrivateEndpointConnection(ClusterManagerUpdateRelayPrivateEndpointConnectionParameters clusterManagerUpdateRelayPrivateEndpointConnectionParameters, Context context)"
+  desc: "Update the private endpoint connection for the Azure Relay namespace managed by the specified cluster manager. Use this operation to approve or reject a pending private endpoint connection request for the relay namespace managed by the cluster manager."
+  returns:
+    description: "the response."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.ClusterManager.vmSize()"
   fullName: "com.azure.resourcemanager.networkcloud.models.ClusterManager.vmSize()"
   name: "vmSize()"
@@ -314,4 +369,4 @@ type: "interface"
 desc: "An immutable client-side representation of ClusterManager."
 metadata: {}
 package: "com.azure.resourcemanager.networkcloud.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.2.0

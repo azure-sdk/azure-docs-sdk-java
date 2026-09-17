@@ -7,11 +7,11 @@ summary: "Represents Anomaly Security ML Analytics Settings."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 - "<xref href=\"com.azure.core.management.ProxyResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.resourcemanager.securityinsights.models.ResourceWithEtag?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.SecurityMLAnalyticsSettingInner?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
 - classRef: "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.SecurityMLAnalyticsSettingInner?alt=com.azure.resourcemanager.securityinsights.fluent.models.SecurityMLAnalyticsSettingInner&text=SecurityMLAnalyticsSettingInner\" data-throw-if-not-resolved=\"False\" />"
   methodsRef:
+  - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.SecurityMLAnalyticsSettingInner.etag()?alt=com.azure.resourcemanager.securityinsights.fluent.models.SecurityMLAnalyticsSettingInner.etag&text=etag\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.SecurityMLAnalyticsSettingInner.fromJson(com.azure.json.JsonReader)?alt=com.azure.resourcemanager.securityinsights.fluent.models.SecurityMLAnalyticsSettingInner.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.SecurityMLAnalyticsSettingInner.id()?alt=com.azure.resourcemanager.securityinsights.fluent.models.SecurityMLAnalyticsSettingInner.id&text=id\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.SecurityMLAnalyticsSettingInner.kind()?alt=com.azure.resourcemanager.securityinsights.fluent.models.SecurityMLAnalyticsSettingInner.kind&text=kind\" data-throw-if-not-resolved=\"False\" />"
@@ -19,11 +19,7 @@ inheritedClassMethods:
   - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.SecurityMLAnalyticsSettingInner.systemData()?alt=com.azure.resourcemanager.securityinsights.fluent.models.SecurityMLAnalyticsSettingInner.systemData&text=systemData\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.SecurityMLAnalyticsSettingInner.toJson(com.azure.json.JsonWriter)?alt=com.azure.resourcemanager.securityinsights.fluent.models.SecurityMLAnalyticsSettingInner.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.SecurityMLAnalyticsSettingInner.type()?alt=com.azure.resourcemanager.securityinsights.fluent.models.SecurityMLAnalyticsSettingInner.type&text=type\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.SecurityMLAnalyticsSettingInner.validate()?alt=com.azure.resourcemanager.securityinsights.fluent.models.SecurityMLAnalyticsSettingInner.validate&text=validate\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.SecurityMLAnalyticsSettingInner.withEtag(java.lang.String)?alt=com.azure.resourcemanager.securityinsights.fluent.models.SecurityMLAnalyticsSettingInner.withEtag&text=withEtag\" data-throw-if-not-resolved=\"False\" />"
-- classRef: "<xref href=\"com.azure.resourcemanager.securityinsights.models.ResourceWithEtag?alt=com.azure.resourcemanager.securityinsights.models.ResourceWithEtag&text=ResourceWithEtag\" data-throw-if-not-resolved=\"False\" />"
-  methodsRef:
-  - "<xref href=\"com.azure.resourcemanager.securityinsights.models.ResourceWithEtag.etag()?alt=com.azure.resourcemanager.securityinsights.models.ResourceWithEtag.etag&text=etag\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -161,10 +157,10 @@ methods:
   fullName: "com.azure.resourcemanager.securityinsights.models.AnomalySecurityMLAnalyticsSettings.kind()"
   name: "kind()"
   nameWithType: "AnomalySecurityMLAnalyticsSettings.kind()"
-  summary: "Get the kind property: The kind of security ML Analytics Settings."
+  summary: "Get the kind property: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.<wbr>g."
   overridden: "com.azure.resourcemanager.securityinsights.fluent.models.SecurityMLAnalyticsSettingInner.kind()"
   syntax: "public SecurityMLAnalyticsSettingsKind kind()"
-  desc: "Get the kind property: The kind of security ML Analytics Settings."
+  desc: "Get the kind property: Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type. If supported, the resource provider must validate and persist this value."
   returns:
     description: "the kind value."
     type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.SecurityMLAnalyticsSettingsKind?alt=com.azure.resourcemanager.securityinsights.models.SecurityMLAnalyticsSettingsKind&text=SecurityMLAnalyticsSettingsKind\" data-throw-if-not-resolved=\"False\" />"
@@ -204,11 +200,11 @@ methods:
   name: "settingsDefinitionId()"
   nameWithType: "AnomalySecurityMLAnalyticsSettings.settingsDefinitionId()"
   summary: "Get the settings<wbr>Definition<wbr>Id property: The anomaly settings definition Id."
-  syntax: "public UUID settingsDefinitionId()"
+  syntax: "public String settingsDefinitionId()"
   desc: "Get the settingsDefinitionId property: The anomaly settings definition Id."
   returns:
     description: "the settingsDefinitionId value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html\">UUID</a>"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.securityinsights.models.AnomalySecurityMLAnalyticsSettings.settingsStatus()"
   fullName: "com.azure.resourcemanager.securityinsights.models.AnomalySecurityMLAnalyticsSettings.settingsStatus()"
   name: "settingsStatus()"
@@ -274,14 +270,6 @@ methods:
   returns:
     description: "the type value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-- uid: "com.azure.resourcemanager.securityinsights.models.AnomalySecurityMLAnalyticsSettings.validate()"
-  fullName: "com.azure.resourcemanager.securityinsights.models.AnomalySecurityMLAnalyticsSettings.validate()"
-  name: "validate()"
-  nameWithType: "AnomalySecurityMLAnalyticsSettings.validate()"
-  summary: "Validates the instance."
-  overridden: "com.azure.resourcemanager.securityinsights.fluent.models.SecurityMLAnalyticsSettingInner.validate()"
-  syntax: "public void validate()"
-  desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.securityinsights.models.AnomalySecurityMLAnalyticsSettings.withAnomalySettingsVersion(java.lang.Integer)"
   fullName: "com.azure.resourcemanager.securityinsights.models.AnomalySecurityMLAnalyticsSettings.withAnomalySettingsVersion(Integer anomalySettingsVersion)"
   name: "withAnomalySettingsVersion(Integer anomalySettingsVersion)"
@@ -421,16 +409,16 @@ methods:
   returns:
     description: "the AnomalySecurityMLAnalyticsSettings object itself."
     type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.AnomalySecurityMLAnalyticsSettings?alt=com.azure.resourcemanager.securityinsights.models.AnomalySecurityMLAnalyticsSettings&text=AnomalySecurityMLAnalyticsSettings\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.securityinsights.models.AnomalySecurityMLAnalyticsSettings.withSettingsDefinitionId(java.util.UUID)"
-  fullName: "com.azure.resourcemanager.securityinsights.models.AnomalySecurityMLAnalyticsSettings.withSettingsDefinitionId(UUID settingsDefinitionId)"
-  name: "withSettingsDefinitionId(UUID settingsDefinitionId)"
-  nameWithType: "AnomalySecurityMLAnalyticsSettings.withSettingsDefinitionId(UUID settingsDefinitionId)"
+- uid: "com.azure.resourcemanager.securityinsights.models.AnomalySecurityMLAnalyticsSettings.withSettingsDefinitionId(java.lang.String)"
+  fullName: "com.azure.resourcemanager.securityinsights.models.AnomalySecurityMLAnalyticsSettings.withSettingsDefinitionId(String settingsDefinitionId)"
+  name: "withSettingsDefinitionId(String settingsDefinitionId)"
+  nameWithType: "AnomalySecurityMLAnalyticsSettings.withSettingsDefinitionId(String settingsDefinitionId)"
   summary: "Set the settings<wbr>Definition<wbr>Id property: The anomaly settings definition Id."
   parameters:
   - description: "the settingsDefinitionId value to set."
     name: "settingsDefinitionId"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html\">UUID</a>"
-  syntax: "public AnomalySecurityMLAnalyticsSettings withSettingsDefinitionId(UUID settingsDefinitionId)"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public AnomalySecurityMLAnalyticsSettings withSettingsDefinitionId(String settingsDefinitionId)"
   desc: "Set the settingsDefinitionId property: The anomaly settings definition Id."
   returns:
     description: "the AnomalySecurityMLAnalyticsSettings object itself."
@@ -481,4 +469,4 @@ type: "class"
 desc: "Represents Anomaly Security ML Analytics Settings."
 metadata: {}
 package: "com.azure.resourcemanager.securityinsights.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-securityinsights:1.0.0-beta.5
+artifact: com.azure.resourcemanager:azure-resourcemanager-securityinsights:1.1.0-beta.1

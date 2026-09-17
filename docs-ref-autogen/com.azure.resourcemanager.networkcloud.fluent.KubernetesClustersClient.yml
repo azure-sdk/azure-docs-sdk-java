@@ -10,7 +10,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.beginCreateOrUpdate(String resourceGroupName, String kubernetesClusterName, KubernetesClusterInner kubernetesClusterParameters)"
   name: "beginCreateOrUpdate(String resourceGroupName, String kubernetesClusterName, KubernetesClusterInner kubernetesClusterParameters)"
   nameWithType: "KubernetesClustersClient.beginCreateOrUpdate(String resourceGroupName, String kubernetesClusterName, KubernetesClusterInner kubernetesClusterParameters)"
-  summary: "Create or update the Kubernetes cluster."
+  summary: "Create a new Kubernetes cluster or update the properties of the existing one."
   modifiers:
   - "abstract"
   parameters:
@@ -24,7 +24,7 @@ methods:
     name: "kubernetesClusterParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner&text=KubernetesClusterInner\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SyncPoller<PollResult<KubernetesClusterInner>,KubernetesClusterInner> beginCreateOrUpdate(String resourceGroupName, String kubernetesClusterName, KubernetesClusterInner kubernetesClusterParameters)"
-  desc: "Create or update the Kubernetes cluster. Create a new Kubernetes cluster or update the properties of the existing one."
+  desc: "Create a new Kubernetes cluster or update the properties of the existing one."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of kubernetesCluster represents the Kubernetes cluster hosted on\n Network Cloud."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner&text=KubernetesClusterInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner&text=KubernetesClusterInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -32,7 +32,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.beginCreateOrUpdate(String resourceGroupName, String kubernetesClusterName, KubernetesClusterInner kubernetesClusterParameters, String ifMatch, String ifNoneMatch, Context context)"
   name: "beginCreateOrUpdate(String resourceGroupName, String kubernetesClusterName, KubernetesClusterInner kubernetesClusterParameters, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "KubernetesClustersClient.beginCreateOrUpdate(String resourceGroupName, String kubernetesClusterName, KubernetesClusterInner kubernetesClusterParameters, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Create or update the Kubernetes cluster."
+  summary: "Create a new Kubernetes cluster or update the properties of the existing one."
   modifiers:
   - "abstract"
   parameters:
@@ -55,7 +55,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SyncPoller<PollResult<KubernetesClusterInner>,KubernetesClusterInner> beginCreateOrUpdate(String resourceGroupName, String kubernetesClusterName, KubernetesClusterInner kubernetesClusterParameters, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Create or update the Kubernetes cluster. Create a new Kubernetes cluster or update the properties of the existing one."
+  desc: "Create a new Kubernetes cluster or update the properties of the existing one."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of kubernetesCluster represents the Kubernetes cluster hosted on\n Network Cloud."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner&text=KubernetesClusterInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner&text=KubernetesClusterInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -63,7 +63,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.beginDelete(String resourceGroupName, String kubernetesClusterName)"
   name: "beginDelete(String resourceGroupName, String kubernetesClusterName)"
   nameWithType: "KubernetesClustersClient.beginDelete(String resourceGroupName, String kubernetesClusterName)"
-  summary: "Delete the Kubernetes cluster."
+  summary: "Delete the provided Kubernetes cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -73,16 +73,16 @@ methods:
   - description: "The name of the Kubernetes cluster."
     name: "kubernetesClusterName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract SyncPoller<PollResult<OperationStatusResultInner>,OperationStatusResultInner> beginDelete(String resourceGroupName, String kubernetesClusterName)"
-  desc: "Delete the Kubernetes cluster. Delete the provided Kubernetes cluster."
+  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginDelete(String resourceGroupName, String kubernetesClusterName)"
+  desc: "Delete the provided Kubernetes cluster."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the current status of an async operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.beginDelete(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.beginDelete(String resourceGroupName, String kubernetesClusterName, String ifMatch, String ifNoneMatch, Context context)"
   name: "beginDelete(String resourceGroupName, String kubernetesClusterName, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "KubernetesClustersClient.beginDelete(String resourceGroupName, String kubernetesClusterName, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Delete the Kubernetes cluster."
+  summary: "Delete the provided Kubernetes cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -101,16 +101,16 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract SyncPoller<PollResult<OperationStatusResultInner>,OperationStatusResultInner> beginDelete(String resourceGroupName, String kubernetesClusterName, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Delete the Kubernetes cluster. Delete the provided Kubernetes cluster."
+  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginDelete(String resourceGroupName, String kubernetesClusterName, String ifMatch, String ifNoneMatch, Context context)"
+  desc: "Delete the provided Kubernetes cluster."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the current status of an async operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.beginRestartNode(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.KubernetesClusterRestartNodeParameters)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.beginRestartNode(String resourceGroupName, String kubernetesClusterName, KubernetesClusterRestartNodeParameters kubernetesClusterRestartNodeParameters)"
   name: "beginRestartNode(String resourceGroupName, String kubernetesClusterName, KubernetesClusterRestartNodeParameters kubernetesClusterRestartNodeParameters)"
   nameWithType: "KubernetesClustersClient.beginRestartNode(String resourceGroupName, String kubernetesClusterName, KubernetesClusterRestartNodeParameters kubernetesClusterRestartNodeParameters)"
-  summary: "Restart a targeted node."
+  summary: "Restart a targeted node of a Kubernetes cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -123,16 +123,16 @@ methods:
   - description: "The request body."
     name: "kubernetesClusterRestartNodeParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.KubernetesClusterRestartNodeParameters?alt=com.azure.resourcemanager.networkcloud.models.KubernetesClusterRestartNodeParameters&text=KubernetesClusterRestartNodeParameters\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract SyncPoller<PollResult<OperationStatusResultInner>,OperationStatusResultInner> beginRestartNode(String resourceGroupName, String kubernetesClusterName, KubernetesClusterRestartNodeParameters kubernetesClusterRestartNodeParameters)"
-  desc: "Restart a targeted node. Restart a targeted node of a Kubernetes cluster."
+  syntax: "public abstract SyncPoller<PollResult<OperationStatusResult>,OperationStatusResult> beginRestartNode(String resourceGroupName, String kubernetesClusterName, KubernetesClusterRestartNodeParameters kubernetesClusterRestartNodeParameters)"
+  desc: "Restart a targeted node of a Kubernetes cluster."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the current status of an async operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.beginRestartNode(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.KubernetesClusterRestartNodeParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.beginRestartNode(String resourceGroupName, String kubernetesClusterName, KubernetesClusterRestartNodeParameters kubernetesClusterRestartNodeParameters, Context context)"
   name: "beginRestartNode(String resourceGroupName, String kubernetesClusterName, KubernetesClusterRestartNodeParameters kubernetesClusterRestartNodeParameters, Context context)"
   nameWithType: "KubernetesClustersClient.beginRestartNode(String resourceGroupName, String kubernetesClusterName, KubernetesClusterRestartNodeParameters kubernetesClusterRestartNodeParameters, Context context)"
-  summary: "Restart a targeted node."
+  summary: "Restart a targeted node of a Kubernetes cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -148,16 +148,16 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract SyncPoller<PollResult<OperationStatusResultInner>,OperationStatusResultInner> beginRestartNode(String resourceGroupName, String kubernetesClusterName, KubernetesClusterRestartNodeParameters kubernetesClusterRestartNodeParameters, Context context)"
-  desc: "Restart a targeted node. Restart a targeted node of a Kubernetes cluster."
+  syntax: "public abstract SyncPoller<PollResult<OperationStatusResult>,OperationStatusResult> beginRestartNode(String resourceGroupName, String kubernetesClusterName, KubernetesClusterRestartNodeParameters kubernetesClusterRestartNodeParameters, Context context)"
+  desc: "Restart a targeted node of a Kubernetes cluster."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the current status of an async operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.beginUpdate(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.beginUpdate(String resourceGroupName, String kubernetesClusterName)"
   name: "beginUpdate(String resourceGroupName, String kubernetesClusterName)"
   nameWithType: "KubernetesClustersClient.beginUpdate(String resourceGroupName, String kubernetesClusterName)"
-  summary: "Patch the Kubernetes cluster."
+  summary: "Patch the properties of the provided Kubernetes cluster, or update the tags associated with the Kubernetes cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -168,7 +168,7 @@ methods:
     name: "kubernetesClusterName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract SyncPoller<PollResult<KubernetesClusterInner>,KubernetesClusterInner> beginUpdate(String resourceGroupName, String kubernetesClusterName)"
-  desc: "Patch the Kubernetes cluster. Patch the properties of the provided Kubernetes cluster, or update the tags associated with the Kubernetes cluster. Properties and tag updates can be done independently."
+  desc: "Patch the properties of the provided Kubernetes cluster, or update the tags associated with the Kubernetes cluster. Properties and tag updates can be done independently."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of kubernetesCluster represents the Kubernetes cluster hosted on\n Network Cloud."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner&text=KubernetesClusterInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner&text=KubernetesClusterInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -176,7 +176,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.beginUpdate(String resourceGroupName, String kubernetesClusterName, String ifMatch, String ifNoneMatch, KubernetesClusterPatchParameters kubernetesClusterUpdateParameters, Context context)"
   name: "beginUpdate(String resourceGroupName, String kubernetesClusterName, String ifMatch, String ifNoneMatch, KubernetesClusterPatchParameters kubernetesClusterUpdateParameters, Context context)"
   nameWithType: "KubernetesClustersClient.beginUpdate(String resourceGroupName, String kubernetesClusterName, String ifMatch, String ifNoneMatch, KubernetesClusterPatchParameters kubernetesClusterUpdateParameters, Context context)"
-  summary: "Patch the Kubernetes cluster."
+  summary: "Patch the properties of the provided Kubernetes cluster, or update the tags associated with the Kubernetes cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -199,7 +199,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SyncPoller<PollResult<KubernetesClusterInner>,KubernetesClusterInner> beginUpdate(String resourceGroupName, String kubernetesClusterName, String ifMatch, String ifNoneMatch, KubernetesClusterPatchParameters kubernetesClusterUpdateParameters, Context context)"
-  desc: "Patch the Kubernetes cluster. Patch the properties of the provided Kubernetes cluster, or update the tags associated with the Kubernetes cluster. Properties and tag updates can be done independently."
+  desc: "Patch the properties of the provided Kubernetes cluster, or update the tags associated with the Kubernetes cluster. Properties and tag updates can be done independently."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of kubernetesCluster represents the Kubernetes cluster hosted on\n Network Cloud."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner&text=KubernetesClusterInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner&text=KubernetesClusterInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -207,7 +207,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.createOrUpdate(String resourceGroupName, String kubernetesClusterName, KubernetesClusterInner kubernetesClusterParameters)"
   name: "createOrUpdate(String resourceGroupName, String kubernetesClusterName, KubernetesClusterInner kubernetesClusterParameters)"
   nameWithType: "KubernetesClustersClient.createOrUpdate(String resourceGroupName, String kubernetesClusterName, KubernetesClusterInner kubernetesClusterParameters)"
-  summary: "Create or update the Kubernetes cluster."
+  summary: "Create a new Kubernetes cluster or update the properties of the existing one."
   modifiers:
   - "abstract"
   parameters:
@@ -221,7 +221,7 @@ methods:
     name: "kubernetesClusterParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner&text=KubernetesClusterInner\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract KubernetesClusterInner createOrUpdate(String resourceGroupName, String kubernetesClusterName, KubernetesClusterInner kubernetesClusterParameters)"
-  desc: "Create or update the Kubernetes cluster. Create a new Kubernetes cluster or update the properties of the existing one."
+  desc: "Create a new Kubernetes cluster or update the properties of the existing one."
   returns:
     description: "kubernetesCluster represents the Kubernetes cluster hosted on Network Cloud."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner&text=KubernetesClusterInner\" data-throw-if-not-resolved=\"False\" />"
@@ -229,7 +229,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.createOrUpdate(String resourceGroupName, String kubernetesClusterName, KubernetesClusterInner kubernetesClusterParameters, String ifMatch, String ifNoneMatch, Context context)"
   name: "createOrUpdate(String resourceGroupName, String kubernetesClusterName, KubernetesClusterInner kubernetesClusterParameters, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "KubernetesClustersClient.createOrUpdate(String resourceGroupName, String kubernetesClusterName, KubernetesClusterInner kubernetesClusterParameters, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Create or update the Kubernetes cluster."
+  summary: "Create a new Kubernetes cluster or update the properties of the existing one."
   modifiers:
   - "abstract"
   parameters:
@@ -252,7 +252,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract KubernetesClusterInner createOrUpdate(String resourceGroupName, String kubernetesClusterName, KubernetesClusterInner kubernetesClusterParameters, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Create or update the Kubernetes cluster. Create a new Kubernetes cluster or update the properties of the existing one."
+  desc: "Create a new Kubernetes cluster or update the properties of the existing one."
   returns:
     description: "kubernetesCluster represents the Kubernetes cluster hosted on Network Cloud."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner&text=KubernetesClusterInner\" data-throw-if-not-resolved=\"False\" />"
@@ -260,7 +260,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.delete(String resourceGroupName, String kubernetesClusterName)"
   name: "delete(String resourceGroupName, String kubernetesClusterName)"
   nameWithType: "KubernetesClustersClient.delete(String resourceGroupName, String kubernetesClusterName)"
-  summary: "Delete the Kubernetes cluster."
+  summary: "Delete the provided Kubernetes cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -270,16 +270,13 @@ methods:
   - description: "The name of the Kubernetes cluster."
     name: "kubernetesClusterName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract OperationStatusResultInner delete(String resourceGroupName, String kubernetesClusterName)"
-  desc: "Delete the Kubernetes cluster. Delete the provided Kubernetes cluster."
-  returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void delete(String resourceGroupName, String kubernetesClusterName)"
+  desc: "Delete the provided Kubernetes cluster."
 - uid: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.delete(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.delete(String resourceGroupName, String kubernetesClusterName, String ifMatch, String ifNoneMatch, Context context)"
   name: "delete(String resourceGroupName, String kubernetesClusterName, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "KubernetesClustersClient.delete(String resourceGroupName, String kubernetesClusterName, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Delete the Kubernetes cluster."
+  summary: "Delete the provided Kubernetes cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -298,16 +295,13 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract OperationStatusResultInner delete(String resourceGroupName, String kubernetesClusterName, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Delete the Kubernetes cluster. Delete the provided Kubernetes cluster."
-  returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void delete(String resourceGroupName, String kubernetesClusterName, String ifMatch, String ifNoneMatch, Context context)"
+  desc: "Delete the provided Kubernetes cluster."
 - uid: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.getByResourceGroup(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.getByResourceGroup(String resourceGroupName, String kubernetesClusterName)"
   name: "getByResourceGroup(String resourceGroupName, String kubernetesClusterName)"
   nameWithType: "KubernetesClustersClient.getByResourceGroup(String resourceGroupName, String kubernetesClusterName)"
-  summary: "Retrieve the Kubernetes cluster."
+  summary: "Get properties of the provided the Kubernetes cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -318,7 +312,7 @@ methods:
     name: "kubernetesClusterName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract KubernetesClusterInner getByResourceGroup(String resourceGroupName, String kubernetesClusterName)"
-  desc: "Retrieve the Kubernetes cluster. Get properties of the provided the Kubernetes cluster."
+  desc: "Get properties of the provided the Kubernetes cluster."
   returns:
     description: "properties of the provided the Kubernetes cluster."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner&text=KubernetesClusterInner\" data-throw-if-not-resolved=\"False\" />"
@@ -326,7 +320,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.getByResourceGroupWithResponse(String resourceGroupName, String kubernetesClusterName, Context context)"
   name: "getByResourceGroupWithResponse(String resourceGroupName, String kubernetesClusterName, Context context)"
   nameWithType: "KubernetesClustersClient.getByResourceGroupWithResponse(String resourceGroupName, String kubernetesClusterName, Context context)"
-  summary: "Retrieve the Kubernetes cluster."
+  summary: "Get properties of the provided the Kubernetes cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -340,7 +334,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<KubernetesClusterInner> getByResourceGroupWithResponse(String resourceGroupName, String kubernetesClusterName, Context context)"
-  desc: "Retrieve the Kubernetes cluster. Get properties of the provided the Kubernetes cluster."
+  desc: "Get properties of the provided the Kubernetes cluster."
   returns:
     description: "properties of the provided the Kubernetes cluster along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner&text=KubernetesClusterInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -348,11 +342,11 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.list()"
   name: "list()"
   nameWithType: "KubernetesClustersClient.list()"
-  summary: "List Kubernetes clusters in the subscription."
+  summary: "Get a list of Kubernetes clusters in the provided subscription."
   modifiers:
   - "abstract"
   syntax: "public abstract PagedIterable<KubernetesClusterInner> list()"
-  desc: "List Kubernetes clusters in the subscription. Get a list of Kubernetes clusters in the provided subscription."
+  desc: "Get a list of Kubernetes clusters in the provided subscription."
   returns:
     description: "a list of Kubernetes clusters in the provided subscription as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner&text=KubernetesClusterInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -360,7 +354,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.list(Integer top, String skipToken, Context context)"
   name: "list(Integer top, String skipToken, Context context)"
   nameWithType: "KubernetesClustersClient.list(Integer top, String skipToken, Context context)"
-  summary: "List Kubernetes clusters in the subscription."
+  summary: "Get a list of Kubernetes clusters in the provided subscription."
   modifiers:
   - "abstract"
   parameters:
@@ -374,7 +368,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<KubernetesClusterInner> list(Integer top, String skipToken, Context context)"
-  desc: "List Kubernetes clusters in the subscription. Get a list of Kubernetes clusters in the provided subscription."
+  desc: "Get a list of Kubernetes clusters in the provided subscription."
   returns:
     description: "a list of Kubernetes clusters in the provided subscription as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner&text=KubernetesClusterInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -382,7 +376,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.listByResourceGroup(String resourceGroupName)"
   name: "listByResourceGroup(String resourceGroupName)"
   nameWithType: "KubernetesClustersClient.listByResourceGroup(String resourceGroupName)"
-  summary: "List Kubernetes clusters in the resource group."
+  summary: "Get a list of Kubernetes clusters in the provided resource group."
   modifiers:
   - "abstract"
   parameters:
@@ -390,7 +384,7 @@ methods:
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<KubernetesClusterInner> listByResourceGroup(String resourceGroupName)"
-  desc: "List Kubernetes clusters in the resource group. Get a list of Kubernetes clusters in the provided resource group."
+  desc: "Get a list of Kubernetes clusters in the provided resource group."
   returns:
     description: "a list of Kubernetes clusters in the provided resource group as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner&text=KubernetesClusterInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -398,7 +392,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
   name: "listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
   nameWithType: "KubernetesClustersClient.listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
-  summary: "List Kubernetes clusters in the resource group."
+  summary: "Get a list of Kubernetes clusters in the provided resource group."
   modifiers:
   - "abstract"
   parameters:
@@ -415,7 +409,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<KubernetesClusterInner> listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
-  desc: "List Kubernetes clusters in the resource group. Get a list of Kubernetes clusters in the provided resource group."
+  desc: "Get a list of Kubernetes clusters in the provided resource group."
   returns:
     description: "a list of Kubernetes clusters in the provided resource group as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner&text=KubernetesClusterInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -423,7 +417,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.restartNode(String resourceGroupName, String kubernetesClusterName, KubernetesClusterRestartNodeParameters kubernetesClusterRestartNodeParameters)"
   name: "restartNode(String resourceGroupName, String kubernetesClusterName, KubernetesClusterRestartNodeParameters kubernetesClusterRestartNodeParameters)"
   nameWithType: "KubernetesClustersClient.restartNode(String resourceGroupName, String kubernetesClusterName, KubernetesClusterRestartNodeParameters kubernetesClusterRestartNodeParameters)"
-  summary: "Restart a targeted node."
+  summary: "Restart a targeted node of a Kubernetes cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -436,16 +430,16 @@ methods:
   - description: "The request body."
     name: "kubernetesClusterRestartNodeParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.KubernetesClusterRestartNodeParameters?alt=com.azure.resourcemanager.networkcloud.models.KubernetesClusterRestartNodeParameters&text=KubernetesClusterRestartNodeParameters\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract OperationStatusResultInner restartNode(String resourceGroupName, String kubernetesClusterName, KubernetesClusterRestartNodeParameters kubernetesClusterRestartNodeParameters)"
-  desc: "Restart a targeted node. Restart a targeted node of a Kubernetes cluster."
+  syntax: "public abstract OperationStatusResult restartNode(String resourceGroupName, String kubernetesClusterName, KubernetesClusterRestartNodeParameters kubernetesClusterRestartNodeParameters)"
+  desc: "Restart a targeted node of a Kubernetes cluster."
   returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />"
+    description: "the response."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.restartNode(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.KubernetesClusterRestartNodeParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.restartNode(String resourceGroupName, String kubernetesClusterName, KubernetesClusterRestartNodeParameters kubernetesClusterRestartNodeParameters, Context context)"
   name: "restartNode(String resourceGroupName, String kubernetesClusterName, KubernetesClusterRestartNodeParameters kubernetesClusterRestartNodeParameters, Context context)"
   nameWithType: "KubernetesClustersClient.restartNode(String resourceGroupName, String kubernetesClusterName, KubernetesClusterRestartNodeParameters kubernetesClusterRestartNodeParameters, Context context)"
-  summary: "Restart a targeted node."
+  summary: "Restart a targeted node of a Kubernetes cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -461,16 +455,16 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract OperationStatusResultInner restartNode(String resourceGroupName, String kubernetesClusterName, KubernetesClusterRestartNodeParameters kubernetesClusterRestartNodeParameters, Context context)"
-  desc: "Restart a targeted node. Restart a targeted node of a Kubernetes cluster."
+  syntax: "public abstract OperationStatusResult restartNode(String resourceGroupName, String kubernetesClusterName, KubernetesClusterRestartNodeParameters kubernetesClusterRestartNodeParameters, Context context)"
+  desc: "Restart a targeted node of a Kubernetes cluster."
   returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />"
+    description: "the response."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.update(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.update(String resourceGroupName, String kubernetesClusterName)"
   name: "update(String resourceGroupName, String kubernetesClusterName)"
   nameWithType: "KubernetesClustersClient.update(String resourceGroupName, String kubernetesClusterName)"
-  summary: "Patch the Kubernetes cluster."
+  summary: "Patch the properties of the provided Kubernetes cluster, or update the tags associated with the Kubernetes cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -481,7 +475,7 @@ methods:
     name: "kubernetesClusterName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract KubernetesClusterInner update(String resourceGroupName, String kubernetesClusterName)"
-  desc: "Patch the Kubernetes cluster. Patch the properties of the provided Kubernetes cluster, or update the tags associated with the Kubernetes cluster. Properties and tag updates can be done independently."
+  desc: "Patch the properties of the provided Kubernetes cluster, or update the tags associated with the Kubernetes cluster. Properties and tag updates can be done independently."
   returns:
     description: "kubernetesCluster represents the Kubernetes cluster hosted on Network Cloud."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner&text=KubernetesClusterInner\" data-throw-if-not-resolved=\"False\" />"
@@ -489,7 +483,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.KubernetesClustersClient.update(String resourceGroupName, String kubernetesClusterName, String ifMatch, String ifNoneMatch, KubernetesClusterPatchParameters kubernetesClusterUpdateParameters, Context context)"
   name: "update(String resourceGroupName, String kubernetesClusterName, String ifMatch, String ifNoneMatch, KubernetesClusterPatchParameters kubernetesClusterUpdateParameters, Context context)"
   nameWithType: "KubernetesClustersClient.update(String resourceGroupName, String kubernetesClusterName, String ifMatch, String ifNoneMatch, KubernetesClusterPatchParameters kubernetesClusterUpdateParameters, Context context)"
-  summary: "Patch the Kubernetes cluster."
+  summary: "Patch the properties of the provided Kubernetes cluster, or update the tags associated with the Kubernetes cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -512,7 +506,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract KubernetesClusterInner update(String resourceGroupName, String kubernetesClusterName, String ifMatch, String ifNoneMatch, KubernetesClusterPatchParameters kubernetesClusterUpdateParameters, Context context)"
-  desc: "Patch the Kubernetes cluster. Patch the properties of the provided Kubernetes cluster, or update the tags associated with the Kubernetes cluster. Properties and tag updates can be done independently."
+  desc: "Patch the properties of the provided Kubernetes cluster, or update the tags associated with the Kubernetes cluster. Properties and tag updates can be done independently."
   returns:
     description: "kubernetesCluster represents the Kubernetes cluster hosted on Network Cloud."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.KubernetesClusterInner&text=KubernetesClusterInner\" data-throw-if-not-resolved=\"False\" />"
@@ -520,4 +514,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in KubernetesClustersClient."
 metadata: {}
 package: "com.azure.resourcemanager.networkcloud.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.2.0

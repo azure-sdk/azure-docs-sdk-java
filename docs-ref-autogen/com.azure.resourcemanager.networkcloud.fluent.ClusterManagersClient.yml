@@ -10,7 +10,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.beginCreateOrUpdate(String resourceGroupName, String clusterManagerName, ClusterManagerInner clusterManagerParameters)"
   name: "beginCreateOrUpdate(String resourceGroupName, String clusterManagerName, ClusterManagerInner clusterManagerParameters)"
   nameWithType: "ClusterManagersClient.beginCreateOrUpdate(String resourceGroupName, String clusterManagerName, ClusterManagerInner clusterManagerParameters)"
-  summary: "Create or update the cluster manager."
+  summary: "Create a new cluster manager or update properties of the cluster manager if it exists."
   modifiers:
   - "abstract"
   parameters:
@@ -24,7 +24,7 @@ methods:
     name: "clusterManagerParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner&text=ClusterManagerInner\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SyncPoller<PollResult<ClusterManagerInner>,ClusterManagerInner> beginCreateOrUpdate(String resourceGroupName, String clusterManagerName, ClusterManagerInner clusterManagerParameters)"
-  desc: "Create or update the cluster manager. Create a new cluster manager or update properties of the cluster manager if it exists."
+  desc: "Create a new cluster manager or update properties of the cluster manager if it exists."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of clusterManager represents a control-plane to manage one or more\n on-premises clusters."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner&text=ClusterManagerInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner&text=ClusterManagerInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -32,7 +32,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.beginCreateOrUpdate(String resourceGroupName, String clusterManagerName, ClusterManagerInner clusterManagerParameters, String ifMatch, String ifNoneMatch, Context context)"
   name: "beginCreateOrUpdate(String resourceGroupName, String clusterManagerName, ClusterManagerInner clusterManagerParameters, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "ClusterManagersClient.beginCreateOrUpdate(String resourceGroupName, String clusterManagerName, ClusterManagerInner clusterManagerParameters, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Create or update the cluster manager."
+  summary: "Create a new cluster manager or update properties of the cluster manager if it exists."
   modifiers:
   - "abstract"
   parameters:
@@ -55,7 +55,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SyncPoller<PollResult<ClusterManagerInner>,ClusterManagerInner> beginCreateOrUpdate(String resourceGroupName, String clusterManagerName, ClusterManagerInner clusterManagerParameters, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Create or update the cluster manager. Create a new cluster manager or update properties of the cluster manager if it exists."
+  desc: "Create a new cluster manager or update properties of the cluster manager if it exists."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of clusterManager represents a control-plane to manage one or more\n on-premises clusters."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner&text=ClusterManagerInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner&text=ClusterManagerInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -63,7 +63,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.beginDelete(String resourceGroupName, String clusterManagerName)"
   name: "beginDelete(String resourceGroupName, String clusterManagerName)"
   nameWithType: "ClusterManagersClient.beginDelete(String resourceGroupName, String clusterManagerName)"
-  summary: "Delete the cluster manager."
+  summary: "Delete the provided cluster manager."
   modifiers:
   - "abstract"
   parameters:
@@ -73,16 +73,16 @@ methods:
   - description: "The name of the cluster manager."
     name: "clusterManagerName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract SyncPoller<PollResult<OperationStatusResultInner>,OperationStatusResultInner> beginDelete(String resourceGroupName, String clusterManagerName)"
-  desc: "Delete the cluster manager. Delete the provided cluster manager."
+  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginDelete(String resourceGroupName, String clusterManagerName)"
+  desc: "Delete the provided cluster manager."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the current status of an async operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.beginDelete(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.beginDelete(String resourceGroupName, String clusterManagerName, String ifMatch, String ifNoneMatch, Context context)"
   name: "beginDelete(String resourceGroupName, String clusterManagerName, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "ClusterManagersClient.beginDelete(String resourceGroupName, String clusterManagerName, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Delete the cluster manager."
+  summary: "Delete the provided cluster manager."
   modifiers:
   - "abstract"
   parameters:
@@ -101,16 +101,60 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract SyncPoller<PollResult<OperationStatusResultInner>,OperationStatusResultInner> beginDelete(String resourceGroupName, String clusterManagerName, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Delete the cluster manager. Delete the provided cluster manager."
+  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginDelete(String resourceGroupName, String clusterManagerName, String ifMatch, String ifNoneMatch, Context context)"
+  desc: "Delete the provided cluster manager."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the current status of an async operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+- uid: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.beginUpdateRelayPrivateEndpointConnection(java.lang.String,java.lang.String)"
+  fullName: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.beginUpdateRelayPrivateEndpointConnection(String resourceGroupName, String clusterManagerName)"
+  name: "beginUpdateRelayPrivateEndpointConnection(String resourceGroupName, String clusterManagerName)"
+  nameWithType: "ClusterManagersClient.beginUpdateRelayPrivateEndpointConnection(String resourceGroupName, String clusterManagerName)"
+  summary: "Update the private endpoint connection for the Azure Relay namespace managed by the specified cluster manager."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The name of the cluster manager."
+    name: "clusterManagerName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract SyncPoller<PollResult<OperationStatusResult>,OperationStatusResult> beginUpdateRelayPrivateEndpointConnection(String resourceGroupName, String clusterManagerName)"
+  desc: "Update the private endpoint connection for the Azure Relay namespace managed by the specified cluster manager. Use this operation to approve or reject a pending private endpoint connection request for the relay namespace managed by the cluster manager."
+  returns:
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.beginUpdateRelayPrivateEndpointConnection(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.ClusterManagerUpdateRelayPrivateEndpointConnectionParameters,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.beginUpdateRelayPrivateEndpointConnection(String resourceGroupName, String clusterManagerName, ClusterManagerUpdateRelayPrivateEndpointConnectionParameters clusterManagerUpdateRelayPrivateEndpointConnectionParameters, Context context)"
+  name: "beginUpdateRelayPrivateEndpointConnection(String resourceGroupName, String clusterManagerName, ClusterManagerUpdateRelayPrivateEndpointConnectionParameters clusterManagerUpdateRelayPrivateEndpointConnectionParameters, Context context)"
+  nameWithType: "ClusterManagersClient.beginUpdateRelayPrivateEndpointConnection(String resourceGroupName, String clusterManagerName, ClusterManagerUpdateRelayPrivateEndpointConnectionParameters clusterManagerUpdateRelayPrivateEndpointConnectionParameters, Context context)"
+  summary: "Update the private endpoint connection for the Azure Relay namespace managed by the specified cluster manager."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The name of the cluster manager."
+    name: "clusterManagerName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The request body."
+    name: "clusterManagerUpdateRelayPrivateEndpointConnectionParameters"
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.ClusterManagerUpdateRelayPrivateEndpointConnectionParameters?alt=com.azure.resourcemanager.networkcloud.models.ClusterManagerUpdateRelayPrivateEndpointConnectionParameters&text=ClusterManagerUpdateRelayPrivateEndpointConnectionParameters\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract SyncPoller<PollResult<OperationStatusResult>,OperationStatusResult> beginUpdateRelayPrivateEndpointConnection(String resourceGroupName, String clusterManagerName, ClusterManagerUpdateRelayPrivateEndpointConnectionParameters clusterManagerUpdateRelayPrivateEndpointConnectionParameters, Context context)"
+  desc: "Update the private endpoint connection for the Azure Relay namespace managed by the specified cluster manager. Use this operation to approve or reject a pending private endpoint connection request for the relay namespace managed by the cluster manager."
+  returns:
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.createOrUpdate(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.createOrUpdate(String resourceGroupName, String clusterManagerName, ClusterManagerInner clusterManagerParameters)"
   name: "createOrUpdate(String resourceGroupName, String clusterManagerName, ClusterManagerInner clusterManagerParameters)"
   nameWithType: "ClusterManagersClient.createOrUpdate(String resourceGroupName, String clusterManagerName, ClusterManagerInner clusterManagerParameters)"
-  summary: "Create or update the cluster manager."
+  summary: "Create a new cluster manager or update properties of the cluster manager if it exists."
   modifiers:
   - "abstract"
   parameters:
@@ -124,7 +168,7 @@ methods:
     name: "clusterManagerParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner&text=ClusterManagerInner\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract ClusterManagerInner createOrUpdate(String resourceGroupName, String clusterManagerName, ClusterManagerInner clusterManagerParameters)"
-  desc: "Create or update the cluster manager. Create a new cluster manager or update properties of the cluster manager if it exists."
+  desc: "Create a new cluster manager or update properties of the cluster manager if it exists."
   returns:
     description: "clusterManager represents a control-plane to manage one or more on-premises clusters."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner&text=ClusterManagerInner\" data-throw-if-not-resolved=\"False\" />"
@@ -132,7 +176,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.createOrUpdate(String resourceGroupName, String clusterManagerName, ClusterManagerInner clusterManagerParameters, String ifMatch, String ifNoneMatch, Context context)"
   name: "createOrUpdate(String resourceGroupName, String clusterManagerName, ClusterManagerInner clusterManagerParameters, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "ClusterManagersClient.createOrUpdate(String resourceGroupName, String clusterManagerName, ClusterManagerInner clusterManagerParameters, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Create or update the cluster manager."
+  summary: "Create a new cluster manager or update properties of the cluster manager if it exists."
   modifiers:
   - "abstract"
   parameters:
@@ -155,7 +199,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract ClusterManagerInner createOrUpdate(String resourceGroupName, String clusterManagerName, ClusterManagerInner clusterManagerParameters, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Create or update the cluster manager. Create a new cluster manager or update properties of the cluster manager if it exists."
+  desc: "Create a new cluster manager or update properties of the cluster manager if it exists."
   returns:
     description: "clusterManager represents a control-plane to manage one or more on-premises clusters."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner&text=ClusterManagerInner\" data-throw-if-not-resolved=\"False\" />"
@@ -163,7 +207,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.delete(String resourceGroupName, String clusterManagerName)"
   name: "delete(String resourceGroupName, String clusterManagerName)"
   nameWithType: "ClusterManagersClient.delete(String resourceGroupName, String clusterManagerName)"
-  summary: "Delete the cluster manager."
+  summary: "Delete the provided cluster manager."
   modifiers:
   - "abstract"
   parameters:
@@ -173,16 +217,13 @@ methods:
   - description: "The name of the cluster manager."
     name: "clusterManagerName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract OperationStatusResultInner delete(String resourceGroupName, String clusterManagerName)"
-  desc: "Delete the cluster manager. Delete the provided cluster manager."
-  returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void delete(String resourceGroupName, String clusterManagerName)"
+  desc: "Delete the provided cluster manager."
 - uid: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.delete(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.delete(String resourceGroupName, String clusterManagerName, String ifMatch, String ifNoneMatch, Context context)"
   name: "delete(String resourceGroupName, String clusterManagerName, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "ClusterManagersClient.delete(String resourceGroupName, String clusterManagerName, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Delete the cluster manager."
+  summary: "Delete the provided cluster manager."
   modifiers:
   - "abstract"
   parameters:
@@ -201,16 +242,13 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract OperationStatusResultInner delete(String resourceGroupName, String clusterManagerName, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Delete the cluster manager. Delete the provided cluster manager."
-  returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void delete(String resourceGroupName, String clusterManagerName, String ifMatch, String ifNoneMatch, Context context)"
+  desc: "Delete the provided cluster manager."
 - uid: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.getByResourceGroup(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.getByResourceGroup(String resourceGroupName, String clusterManagerName)"
   name: "getByResourceGroup(String resourceGroupName, String clusterManagerName)"
   nameWithType: "ClusterManagersClient.getByResourceGroup(String resourceGroupName, String clusterManagerName)"
-  summary: "Retrieve the cluster manager."
+  summary: "Get the properties of the provided cluster manager."
   modifiers:
   - "abstract"
   parameters:
@@ -221,7 +259,7 @@ methods:
     name: "clusterManagerName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract ClusterManagerInner getByResourceGroup(String resourceGroupName, String clusterManagerName)"
-  desc: "Retrieve the cluster manager. Get the properties of the provided cluster manager."
+  desc: "Get the properties of the provided cluster manager."
   returns:
     description: "the properties of the provided cluster manager."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner&text=ClusterManagerInner\" data-throw-if-not-resolved=\"False\" />"
@@ -229,7 +267,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.getByResourceGroupWithResponse(String resourceGroupName, String clusterManagerName, Context context)"
   name: "getByResourceGroupWithResponse(String resourceGroupName, String clusterManagerName, Context context)"
   nameWithType: "ClusterManagersClient.getByResourceGroupWithResponse(String resourceGroupName, String clusterManagerName, Context context)"
-  summary: "Retrieve the cluster manager."
+  summary: "Get the properties of the provided cluster manager."
   modifiers:
   - "abstract"
   parameters:
@@ -243,7 +281,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<ClusterManagerInner> getByResourceGroupWithResponse(String resourceGroupName, String clusterManagerName, Context context)"
-  desc: "Retrieve the cluster manager. Get the properties of the provided cluster manager."
+  desc: "Get the properties of the provided cluster manager."
   returns:
     description: "the properties of the provided cluster manager along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner&text=ClusterManagerInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -251,11 +289,11 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.list()"
   name: "list()"
   nameWithType: "ClusterManagersClient.list()"
-  summary: "List cluster managers in the subscription."
+  summary: "Get a list of cluster managers in the provided subscription."
   modifiers:
   - "abstract"
   syntax: "public abstract PagedIterable<ClusterManagerInner> list()"
-  desc: "List cluster managers in the subscription. Get a list of cluster managers in the provided subscription."
+  desc: "Get a list of cluster managers in the provided subscription."
   returns:
     description: "a list of cluster managers in the provided subscription as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner&text=ClusterManagerInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -263,7 +301,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.list(Integer top, String skipToken, Context context)"
   name: "list(Integer top, String skipToken, Context context)"
   nameWithType: "ClusterManagersClient.list(Integer top, String skipToken, Context context)"
-  summary: "List cluster managers in the subscription."
+  summary: "Get a list of cluster managers in the provided subscription."
   modifiers:
   - "abstract"
   parameters:
@@ -277,7 +315,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<ClusterManagerInner> list(Integer top, String skipToken, Context context)"
-  desc: "List cluster managers in the subscription. Get a list of cluster managers in the provided subscription."
+  desc: "Get a list of cluster managers in the provided subscription."
   returns:
     description: "a list of cluster managers in the provided subscription as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner&text=ClusterManagerInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -285,7 +323,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.listByResourceGroup(String resourceGroupName)"
   name: "listByResourceGroup(String resourceGroupName)"
   nameWithType: "ClusterManagersClient.listByResourceGroup(String resourceGroupName)"
-  summary: "List cluster managers in the resource group."
+  summary: "Get a list of cluster managers in the provided resource group."
   modifiers:
   - "abstract"
   parameters:
@@ -293,7 +331,7 @@ methods:
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<ClusterManagerInner> listByResourceGroup(String resourceGroupName)"
-  desc: "List cluster managers in the resource group. Get a list of cluster managers in the provided resource group."
+  desc: "Get a list of cluster managers in the provided resource group."
   returns:
     description: "a list of cluster managers in the provided resource group as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner&text=ClusterManagerInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -301,7 +339,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
   name: "listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
   nameWithType: "ClusterManagersClient.listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
-  summary: "List cluster managers in the resource group."
+  summary: "Get a list of cluster managers in the provided resource group."
   modifiers:
   - "abstract"
   parameters:
@@ -318,7 +356,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<ClusterManagerInner> listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
-  desc: "List cluster managers in the resource group. Get a list of cluster managers in the provided resource group."
+  desc: "Get a list of cluster managers in the provided resource group."
   returns:
     description: "a list of cluster managers in the provided resource group as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner&text=ClusterManagerInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -326,7 +364,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.update(String resourceGroupName, String clusterManagerName)"
   name: "update(String resourceGroupName, String clusterManagerName)"
   nameWithType: "ClusterManagersClient.update(String resourceGroupName, String clusterManagerName)"
-  summary: "Patch the cluster manager."
+  summary: "Patch properties of the provided cluster manager, or update the tags assigned to the cluster manager."
   modifiers:
   - "abstract"
   parameters:
@@ -337,15 +375,59 @@ methods:
     name: "clusterManagerName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract ClusterManagerInner update(String resourceGroupName, String clusterManagerName)"
-  desc: "Patch the cluster manager. Patch properties of the provided cluster manager, or update the tags assigned to the cluster manager. Properties and tag updates can be done independently."
+  desc: "Patch properties of the provided cluster manager, or update the tags assigned to the cluster manager. Properties and tag updates can be done independently."
   returns:
     description: "clusterManager represents a control-plane to manage one or more on-premises clusters."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner&text=ClusterManagerInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.updateRelayPrivateEndpointConnection(java.lang.String,java.lang.String)"
+  fullName: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.updateRelayPrivateEndpointConnection(String resourceGroupName, String clusterManagerName)"
+  name: "updateRelayPrivateEndpointConnection(String resourceGroupName, String clusterManagerName)"
+  nameWithType: "ClusterManagersClient.updateRelayPrivateEndpointConnection(String resourceGroupName, String clusterManagerName)"
+  summary: "Update the private endpoint connection for the Azure Relay namespace managed by the specified cluster manager."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The name of the cluster manager."
+    name: "clusterManagerName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract OperationStatusResult updateRelayPrivateEndpointConnection(String resourceGroupName, String clusterManagerName)"
+  desc: "Update the private endpoint connection for the Azure Relay namespace managed by the specified cluster manager. Use this operation to approve or reject a pending private endpoint connection request for the relay namespace managed by the cluster manager."
+  returns:
+    description: "the response."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.updateRelayPrivateEndpointConnection(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.ClusterManagerUpdateRelayPrivateEndpointConnectionParameters,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.updateRelayPrivateEndpointConnection(String resourceGroupName, String clusterManagerName, ClusterManagerUpdateRelayPrivateEndpointConnectionParameters clusterManagerUpdateRelayPrivateEndpointConnectionParameters, Context context)"
+  name: "updateRelayPrivateEndpointConnection(String resourceGroupName, String clusterManagerName, ClusterManagerUpdateRelayPrivateEndpointConnectionParameters clusterManagerUpdateRelayPrivateEndpointConnectionParameters, Context context)"
+  nameWithType: "ClusterManagersClient.updateRelayPrivateEndpointConnection(String resourceGroupName, String clusterManagerName, ClusterManagerUpdateRelayPrivateEndpointConnectionParameters clusterManagerUpdateRelayPrivateEndpointConnectionParameters, Context context)"
+  summary: "Update the private endpoint connection for the Azure Relay namespace managed by the specified cluster manager."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The name of the cluster manager."
+    name: "clusterManagerName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The request body."
+    name: "clusterManagerUpdateRelayPrivateEndpointConnectionParameters"
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.ClusterManagerUpdateRelayPrivateEndpointConnectionParameters?alt=com.azure.resourcemanager.networkcloud.models.ClusterManagerUpdateRelayPrivateEndpointConnectionParameters&text=ClusterManagerUpdateRelayPrivateEndpointConnectionParameters\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract OperationStatusResult updateRelayPrivateEndpointConnection(String resourceGroupName, String clusterManagerName, ClusterManagerUpdateRelayPrivateEndpointConnectionParameters clusterManagerUpdateRelayPrivateEndpointConnectionParameters, Context context)"
+  desc: "Update the private endpoint connection for the Azure Relay namespace managed by the specified cluster manager. Use this operation to approve or reject a pending private endpoint connection request for the relay namespace managed by the cluster manager."
+  returns:
+    description: "the response."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.updateWithResponse(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.ClusterManagerPatchParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.ClusterManagersClient.updateWithResponse(String resourceGroupName, String clusterManagerName, String ifMatch, String ifNoneMatch, ClusterManagerPatchParameters clusterManagerUpdateParameters, Context context)"
   name: "updateWithResponse(String resourceGroupName, String clusterManagerName, String ifMatch, String ifNoneMatch, ClusterManagerPatchParameters clusterManagerUpdateParameters, Context context)"
   nameWithType: "ClusterManagersClient.updateWithResponse(String resourceGroupName, String clusterManagerName, String ifMatch, String ifNoneMatch, ClusterManagerPatchParameters clusterManagerUpdateParameters, Context context)"
-  summary: "Patch the cluster manager."
+  summary: "Patch properties of the provided cluster manager, or update the tags assigned to the cluster manager."
   modifiers:
   - "abstract"
   parameters:
@@ -368,7 +450,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<ClusterManagerInner> updateWithResponse(String resourceGroupName, String clusterManagerName, String ifMatch, String ifNoneMatch, ClusterManagerPatchParameters clusterManagerUpdateParameters, Context context)"
-  desc: "Patch the cluster manager. Patch properties of the provided cluster manager, or update the tags assigned to the cluster manager. Properties and tag updates can be done independently."
+  desc: "Patch properties of the provided cluster manager, or update the tags assigned to the cluster manager. Properties and tag updates can be done independently."
   returns:
     description: "clusterManager represents a control-plane to manage one or more on-premises clusters along with\n <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.ClusterManagerInner&text=ClusterManagerInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -376,4 +458,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in ClusterManagersClient."
 metadata: {}
 package: "com.azure.resourcemanager.networkcloud.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.2.0

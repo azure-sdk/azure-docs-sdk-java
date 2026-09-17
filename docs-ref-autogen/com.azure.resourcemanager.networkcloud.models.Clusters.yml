@@ -10,7 +10,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.continueUpdateVersion(String resourceGroupName, String clusterName, ClusterContinueUpdateVersionParameters clusterContinueUpdateVersionParameters)"
   name: "continueUpdateVersion(String resourceGroupName, String clusterName, ClusterContinueUpdateVersionParameters clusterContinueUpdateVersionParameters)"
   nameWithType: "Clusters.continueUpdateVersion(String resourceGroupName, String clusterName, ClusterContinueUpdateVersionParameters clusterContinueUpdateVersionParameters)"
-  summary: "Continue a paused update to the cluster version."
+  summary: "Trigger the continuation of an update for a cluster with a matching update strategy that has paused after completing a segment of the update."
   modifiers:
   - "abstract"
   parameters:
@@ -24,15 +24,15 @@ methods:
     name: "clusterContinueUpdateVersionParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.ClusterContinueUpdateVersionParameters?alt=com.azure.resourcemanager.networkcloud.models.ClusterContinueUpdateVersionParameters&text=ClusterContinueUpdateVersionParameters\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult continueUpdateVersion(String resourceGroupName, String clusterName, ClusterContinueUpdateVersionParameters clusterContinueUpdateVersionParameters)"
-  desc: "Continue a paused update to the cluster version. Trigger the continuation of an update for a cluster with a matching update strategy that has paused after completing a segment of the update."
+  desc: "Trigger the continuation of an update for a cluster with a matching update strategy that has paused after completing a segment of the update."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.Clusters.continueUpdateVersion(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.ClusterContinueUpdateVersionParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.continueUpdateVersion(String resourceGroupName, String clusterName, ClusterContinueUpdateVersionParameters clusterContinueUpdateVersionParameters, Context context)"
   name: "continueUpdateVersion(String resourceGroupName, String clusterName, ClusterContinueUpdateVersionParameters clusterContinueUpdateVersionParameters, Context context)"
   nameWithType: "Clusters.continueUpdateVersion(String resourceGroupName, String clusterName, ClusterContinueUpdateVersionParameters clusterContinueUpdateVersionParameters, Context context)"
-  summary: "Continue a paused update to the cluster version."
+  summary: "Trigger the continuation of an update for a cluster with a matching update strategy that has paused after completing a segment of the update."
   modifiers:
   - "abstract"
   parameters:
@@ -49,9 +49,9 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult continueUpdateVersion(String resourceGroupName, String clusterName, ClusterContinueUpdateVersionParameters clusterContinueUpdateVersionParameters, Context context)"
-  desc: "Continue a paused update to the cluster version. Trigger the continuation of an update for a cluster with a matching update strategy that has paused after completing a segment of the update."
+  desc: "Trigger the continuation of an update for a cluster with a matching update strategy that has paused after completing a segment of the update."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.Clusters.define(java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.define(String name)"
@@ -73,7 +73,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.delete(String resourceGroupName, String clusterName, String ifMatch, String ifNoneMatch, Context context)"
   name: "delete(String resourceGroupName, String clusterName, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "Clusters.delete(String resourceGroupName, String clusterName, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Delete the cluster."
+  summary: "Delete the provided cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -92,32 +92,26 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract OperationStatusResult delete(String resourceGroupName, String clusterName, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Delete the cluster. Delete the provided cluster."
-  returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void delete(String resourceGroupName, String clusterName, String ifMatch, String ifNoneMatch, Context context)"
+  desc: "Delete the provided cluster."
 - uid: "com.azure.resourcemanager.networkcloud.models.Clusters.deleteById(java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.deleteById(String id)"
   name: "deleteById(String id)"
   nameWithType: "Clusters.deleteById(String id)"
-  summary: "Delete the cluster."
+  summary: "Delete the provided cluster."
   modifiers:
   - "abstract"
   parameters:
   - description: "the resource ID."
     name: "id"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract OperationStatusResult deleteById(String id)"
-  desc: "Delete the cluster. Delete the provided cluster."
-  returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void deleteById(String id)"
+  desc: "Delete the provided cluster."
 - uid: "com.azure.resourcemanager.networkcloud.models.Clusters.deleteByIdWithResponse(java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.deleteByIdWithResponse(String id, String ifMatch, String ifNoneMatch, Context context)"
   name: "deleteByIdWithResponse(String id, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "Clusters.deleteByIdWithResponse(String id, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Delete the cluster."
+  summary: "Delete the provided cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -133,16 +127,13 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract OperationStatusResult deleteByIdWithResponse(String id, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Delete the cluster. Delete the provided cluster."
-  returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void deleteByIdWithResponse(String id, String ifMatch, String ifNoneMatch, Context context)"
+  desc: "Delete the provided cluster."
 - uid: "com.azure.resourcemanager.networkcloud.models.Clusters.deleteByResourceGroup(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.deleteByResourceGroup(String resourceGroupName, String clusterName)"
   name: "deleteByResourceGroup(String resourceGroupName, String clusterName)"
   nameWithType: "Clusters.deleteByResourceGroup(String resourceGroupName, String clusterName)"
-  summary: "Delete the cluster."
+  summary: "Delete the provided cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -152,16 +143,13 @@ methods:
   - description: "The name of the cluster."
     name: "clusterName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract OperationStatusResult deleteByResourceGroup(String resourceGroupName, String clusterName)"
-  desc: "Delete the cluster. Delete the provided cluster."
-  returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void deleteByResourceGroup(String resourceGroupName, String clusterName)"
+  desc: "Delete the provided cluster."
 - uid: "com.azure.resourcemanager.networkcloud.models.Clusters.deploy(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.deploy(String resourceGroupName, String clusterName)"
   name: "deploy(String resourceGroupName, String clusterName)"
   nameWithType: "Clusters.deploy(String resourceGroupName, String clusterName)"
-  summary: "Deploy the cluster."
+  summary: "Deploy the cluster using the rack configuration provided during creation."
   modifiers:
   - "abstract"
   parameters:
@@ -172,15 +160,15 @@ methods:
     name: "clusterName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract OperationStatusResult deploy(String resourceGroupName, String clusterName)"
-  desc: "Deploy the cluster. Deploy the cluster using the rack configuration provided during creation."
+  desc: "Deploy the cluster using the rack configuration provided during creation."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.Clusters.deploy(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.ClusterDeployParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.deploy(String resourceGroupName, String clusterName, ClusterDeployParameters clusterDeployParameters, Context context)"
   name: "deploy(String resourceGroupName, String clusterName, ClusterDeployParameters clusterDeployParameters, Context context)"
   nameWithType: "Clusters.deploy(String resourceGroupName, String clusterName, ClusterDeployParameters clusterDeployParameters, Context context)"
-  summary: "Deploy the cluster."
+  summary: "Deploy the cluster using the rack configuration provided during creation."
   modifiers:
   - "abstract"
   parameters:
@@ -197,15 +185,15 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult deploy(String resourceGroupName, String clusterName, ClusterDeployParameters clusterDeployParameters, Context context)"
-  desc: "Deploy the cluster. Deploy the cluster using the rack configuration provided during creation."
+  desc: "Deploy the cluster using the rack configuration provided during creation."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.Clusters.getById(java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.getById(String id)"
   name: "getById(String id)"
   nameWithType: "Clusters.getById(String id)"
-  summary: "Retrieve the cluster."
+  summary: "Get properties of the provided cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -213,7 +201,7 @@ methods:
     name: "id"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract Cluster getById(String id)"
-  desc: "Retrieve the cluster. Get properties of the provided cluster."
+  desc: "Get properties of the provided cluster."
   returns:
     description: "properties of the provided cluster along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.Cluster?alt=com.azure.resourcemanager.networkcloud.models.Cluster&text=Cluster\" data-throw-if-not-resolved=\"False\" />"
@@ -221,7 +209,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.getByIdWithResponse(String id, Context context)"
   name: "getByIdWithResponse(String id, Context context)"
   nameWithType: "Clusters.getByIdWithResponse(String id, Context context)"
-  summary: "Retrieve the cluster."
+  summary: "Get properties of the provided cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -232,7 +220,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<Cluster> getByIdWithResponse(String id, Context context)"
-  desc: "Retrieve the cluster. Get properties of the provided cluster."
+  desc: "Get properties of the provided cluster."
   returns:
     description: "properties of the provided cluster along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.Cluster?alt=com.azure.resourcemanager.networkcloud.models.Cluster&text=Cluster\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -240,7 +228,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.getByResourceGroup(String resourceGroupName, String clusterName)"
   name: "getByResourceGroup(String resourceGroupName, String clusterName)"
   nameWithType: "Clusters.getByResourceGroup(String resourceGroupName, String clusterName)"
-  summary: "Retrieve the cluster."
+  summary: "Get properties of the provided cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -251,7 +239,7 @@ methods:
     name: "clusterName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract Cluster getByResourceGroup(String resourceGroupName, String clusterName)"
-  desc: "Retrieve the cluster. Get properties of the provided cluster."
+  desc: "Get properties of the provided cluster."
   returns:
     description: "properties of the provided cluster."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.Cluster?alt=com.azure.resourcemanager.networkcloud.models.Cluster&text=Cluster\" data-throw-if-not-resolved=\"False\" />"
@@ -259,7 +247,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.getByResourceGroupWithResponse(String resourceGroupName, String clusterName, Context context)"
   name: "getByResourceGroupWithResponse(String resourceGroupName, String clusterName, Context context)"
   nameWithType: "Clusters.getByResourceGroupWithResponse(String resourceGroupName, String clusterName, Context context)"
-  summary: "Retrieve the cluster."
+  summary: "Get properties of the provided cluster."
   modifiers:
   - "abstract"
   parameters:
@@ -273,19 +261,63 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<Cluster> getByResourceGroupWithResponse(String resourceGroupName, String clusterName, Context context)"
-  desc: "Retrieve the cluster. Get properties of the provided cluster."
+  desc: "Get properties of the provided cluster."
   returns:
     description: "properties of the provided cluster along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.Cluster?alt=com.azure.resourcemanager.networkcloud.models.Cluster&text=Cluster\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.networkcloud.models.Clusters.inspect(java.lang.String,java.lang.String)"
+  fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.inspect(String resourceGroupName, String clusterName)"
+  name: "inspect(String resourceGroupName, String clusterName)"
+  nameWithType: "Clusters.inspect(String resourceGroupName, String clusterName)"
+  summary: "Trigger an inspection of the cluster to perform validation and optional corrective actions based on the supplied additional actions and filters."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The name of the cluster."
+    name: "clusterName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract OperationStatusResult inspect(String resourceGroupName, String clusterName)"
+  desc: "Trigger an inspection of the cluster to perform validation and optional corrective actions based on the supplied additional actions and filters."
+  returns:
+    description: "the response."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.networkcloud.models.Clusters.inspect(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.ClusterInspectParameters,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.inspect(String resourceGroupName, String clusterName, ClusterInspectParameters clusterInspectParameters, Context context)"
+  name: "inspect(String resourceGroupName, String clusterName, ClusterInspectParameters clusterInspectParameters, Context context)"
+  nameWithType: "Clusters.inspect(String resourceGroupName, String clusterName, ClusterInspectParameters clusterInspectParameters, Context context)"
+  summary: "Trigger an inspection of the cluster to perform validation and optional corrective actions based on the supplied additional actions and filters."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The name of the cluster."
+    name: "clusterName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The request body."
+    name: "clusterInspectParameters"
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.ClusterInspectParameters?alt=com.azure.resourcemanager.networkcloud.models.ClusterInspectParameters&text=ClusterInspectParameters\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract OperationStatusResult inspect(String resourceGroupName, String clusterName, ClusterInspectParameters clusterInspectParameters, Context context)"
+  desc: "Trigger an inspection of the cluster to perform validation and optional corrective actions based on the supplied additional actions and filters."
+  returns:
+    description: "the response."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.Clusters.list()"
   fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.list()"
   name: "list()"
   nameWithType: "Clusters.list()"
-  summary: "List clusters in the subscription."
+  summary: "Get a list of clusters in the provided subscription."
   modifiers:
   - "abstract"
   syntax: "public abstract PagedIterable<Cluster> list()"
-  desc: "List clusters in the subscription. Get a list of clusters in the provided subscription."
+  desc: "Get a list of clusters in the provided subscription."
   returns:
     description: "a list of clusters in the provided subscription as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.Cluster?alt=com.azure.resourcemanager.networkcloud.models.Cluster&text=Cluster\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -293,7 +325,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.list(Integer top, String skipToken, Context context)"
   name: "list(Integer top, String skipToken, Context context)"
   nameWithType: "Clusters.list(Integer top, String skipToken, Context context)"
-  summary: "List clusters in the subscription."
+  summary: "Get a list of clusters in the provided subscription."
   modifiers:
   - "abstract"
   parameters:
@@ -307,7 +339,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<Cluster> list(Integer top, String skipToken, Context context)"
-  desc: "List clusters in the subscription. Get a list of clusters in the provided subscription."
+  desc: "Get a list of clusters in the provided subscription."
   returns:
     description: "a list of clusters in the provided subscription as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.Cluster?alt=com.azure.resourcemanager.networkcloud.models.Cluster&text=Cluster\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -315,7 +347,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.listByResourceGroup(String resourceGroupName)"
   name: "listByResourceGroup(String resourceGroupName)"
   nameWithType: "Clusters.listByResourceGroup(String resourceGroupName)"
-  summary: "List clusters in the resource group."
+  summary: "Get a list of clusters in the provided resource group."
   modifiers:
   - "abstract"
   parameters:
@@ -323,7 +355,7 @@ methods:
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<Cluster> listByResourceGroup(String resourceGroupName)"
-  desc: "List clusters in the resource group. Get a list of clusters in the provided resource group."
+  desc: "Get a list of clusters in the provided resource group."
   returns:
     description: "a list of clusters in the provided resource group as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.Cluster?alt=com.azure.resourcemanager.networkcloud.models.Cluster&text=Cluster\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -331,7 +363,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
   name: "listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
   nameWithType: "Clusters.listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
-  summary: "List clusters in the resource group."
+  summary: "Get a list of clusters in the provided resource group."
   modifiers:
   - "abstract"
   parameters:
@@ -348,15 +380,62 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<Cluster> listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
-  desc: "List clusters in the resource group. Get a list of clusters in the provided resource group."
+  desc: "Get a list of clusters in the provided resource group."
   returns:
     description: "a list of clusters in the provided resource group as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.Cluster?alt=com.azure.resourcemanager.networkcloud.models.Cluster&text=Cluster\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.networkcloud.models.Clusters.rotateCredential(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.ClusterRotateCredentialParameters)"
+  fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.rotateCredential(String resourceGroupName, String clusterName, ClusterRotateCredentialParameters body)"
+  name: "rotateCredential(String resourceGroupName, String clusterName, ClusterRotateCredentialParameters body)"
+  nameWithType: "Clusters.rotateCredential(String resourceGroupName, String clusterName, ClusterRotateCredentialParameters body)"
+  summary: "Rotate the specified cluster credential."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The name of the cluster."
+    name: "clusterName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The content of the action request."
+    name: "body"
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.ClusterRotateCredentialParameters?alt=com.azure.resourcemanager.networkcloud.models.ClusterRotateCredentialParameters&text=ClusterRotateCredentialParameters\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract OperationStatusResult rotateCredential(String resourceGroupName, String clusterName, ClusterRotateCredentialParameters body)"
+  desc: "Rotate the specified cluster credential."
+  returns:
+    description: "the response."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.networkcloud.models.Clusters.rotateCredential(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.ClusterRotateCredentialParameters,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.rotateCredential(String resourceGroupName, String clusterName, ClusterRotateCredentialParameters body, Context context)"
+  name: "rotateCredential(String resourceGroupName, String clusterName, ClusterRotateCredentialParameters body, Context context)"
+  nameWithType: "Clusters.rotateCredential(String resourceGroupName, String clusterName, ClusterRotateCredentialParameters body, Context context)"
+  summary: "Rotate the specified cluster credential."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The name of the cluster."
+    name: "clusterName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The content of the action request."
+    name: "body"
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.ClusterRotateCredentialParameters?alt=com.azure.resourcemanager.networkcloud.models.ClusterRotateCredentialParameters&text=ClusterRotateCredentialParameters\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract OperationStatusResult rotateCredential(String resourceGroupName, String clusterName, ClusterRotateCredentialParameters body, Context context)"
+  desc: "Rotate the specified cluster credential."
+  returns:
+    description: "the response."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.Clusters.scanRuntime(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.scanRuntime(String resourceGroupName, String clusterName)"
   name: "scanRuntime(String resourceGroupName, String clusterName)"
   nameWithType: "Clusters.scanRuntime(String resourceGroupName, String clusterName)"
-  summary: "Execute a runtime protection scan on the cluster."
+  summary: "Triggers the execution of a runtime protection scan to detect and remediate detected issues, in accordance with the cluster configuration."
   modifiers:
   - "abstract"
   parameters:
@@ -367,15 +446,15 @@ methods:
     name: "clusterName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract OperationStatusResult scanRuntime(String resourceGroupName, String clusterName)"
-  desc: "Execute a runtime protection scan on the cluster. Triggers the execution of a runtime protection scan to detect and remediate detected issues, in accordance with the cluster configuration."
+  desc: "Triggers the execution of a runtime protection scan to detect and remediate detected issues, in accordance with the cluster configuration."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.Clusters.scanRuntime(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.ClusterScanRuntimeParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.scanRuntime(String resourceGroupName, String clusterName, ClusterScanRuntimeParameters clusterScanRuntimeParameters, Context context)"
   name: "scanRuntime(String resourceGroupName, String clusterName, ClusterScanRuntimeParameters clusterScanRuntimeParameters, Context context)"
   nameWithType: "Clusters.scanRuntime(String resourceGroupName, String clusterName, ClusterScanRuntimeParameters clusterScanRuntimeParameters, Context context)"
-  summary: "Execute a runtime protection scan on the cluster."
+  summary: "Triggers the execution of a runtime protection scan to detect and remediate detected issues, in accordance with the cluster configuration."
   modifiers:
   - "abstract"
   parameters:
@@ -392,15 +471,15 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult scanRuntime(String resourceGroupName, String clusterName, ClusterScanRuntimeParameters clusterScanRuntimeParameters, Context context)"
-  desc: "Execute a runtime protection scan on the cluster. Triggers the execution of a runtime protection scan to detect and remediate detected issues, in accordance with the cluster configuration."
+  desc: "Triggers the execution of a runtime protection scan to detect and remediate detected issues, in accordance with the cluster configuration."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.Clusters.updateVersion(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.ClusterUpdateVersionParameters)"
   fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.updateVersion(String resourceGroupName, String clusterName, ClusterUpdateVersionParameters clusterUpdateVersionParameters)"
   name: "updateVersion(String resourceGroupName, String clusterName, ClusterUpdateVersionParameters clusterUpdateVersionParameters)"
   nameWithType: "Clusters.updateVersion(String resourceGroupName, String clusterName, ClusterUpdateVersionParameters clusterUpdateVersionParameters)"
-  summary: "Update the cluster version."
+  summary: "Update the version of the provided cluster to one of the available supported versions."
   modifiers:
   - "abstract"
   parameters:
@@ -414,15 +493,15 @@ methods:
     name: "clusterUpdateVersionParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.ClusterUpdateVersionParameters?alt=com.azure.resourcemanager.networkcloud.models.ClusterUpdateVersionParameters&text=ClusterUpdateVersionParameters\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult updateVersion(String resourceGroupName, String clusterName, ClusterUpdateVersionParameters clusterUpdateVersionParameters)"
-  desc: "Update the cluster version. Update the version of the provided cluster to one of the available supported versions."
+  desc: "Update the version of the provided cluster to one of the available supported versions."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.models.Clusters.updateVersion(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.ClusterUpdateVersionParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.models.Clusters.updateVersion(String resourceGroupName, String clusterName, ClusterUpdateVersionParameters clusterUpdateVersionParameters, Context context)"
   name: "updateVersion(String resourceGroupName, String clusterName, ClusterUpdateVersionParameters clusterUpdateVersionParameters, Context context)"
   nameWithType: "Clusters.updateVersion(String resourceGroupName, String clusterName, ClusterUpdateVersionParameters clusterUpdateVersionParameters, Context context)"
-  summary: "Update the cluster version."
+  summary: "Update the version of the provided cluster to one of the available supported versions."
   modifiers:
   - "abstract"
   parameters:
@@ -439,12 +518,12 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract OperationStatusResult updateVersion(String resourceGroupName, String clusterName, ClusterUpdateVersionParameters clusterUpdateVersionParameters, Context context)"
-  desc: "Update the cluster version. Update the version of the provided cluster to one of the available supported versions."
+  desc: "Update the version of the provided cluster to one of the available supported versions."
   returns:
-    description: "the current status of an async operation."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 type: "interface"
 desc: "Resource collection API of Clusters."
 metadata: {}
 package: "com.azure.resourcemanager.networkcloud.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.2.0

@@ -18,6 +18,41 @@ methods:
   returns:
     description: "the contentTypes value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.securityinsights.models.ContentType?alt=com.azure.resourcemanager.securityinsights.models.ContentType&text=ContentType\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.securityinsights.models.SourceControl.delete(com.azure.resourcemanager.securityinsights.models.RepositoryAccessProperties)"
+  fullName: "com.azure.resourcemanager.securityinsights.models.SourceControl.delete(RepositoryAccessProperties repositoryAccess)"
+  name: "delete(RepositoryAccessProperties repositoryAccess)"
+  nameWithType: "SourceControl.delete(RepositoryAccessProperties repositoryAccess)"
+  summary: "Delete a source control."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The repository access credentials."
+    name: "repositoryAccess"
+    type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.RepositoryAccessProperties?alt=com.azure.resourcemanager.securityinsights.models.RepositoryAccessProperties&text=RepositoryAccessProperties\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Warning delete(RepositoryAccessProperties repositoryAccess)"
+  desc: "Delete a source control."
+  returns:
+    description: "warning response structure."
+    type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.Warning?alt=com.azure.resourcemanager.securityinsights.models.Warning&text=Warning\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.securityinsights.models.SourceControl.deleteWithResponse(com.azure.resourcemanager.securityinsights.models.RepositoryAccessProperties,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.securityinsights.models.SourceControl.deleteWithResponse(RepositoryAccessProperties repositoryAccess, Context context)"
+  name: "deleteWithResponse(RepositoryAccessProperties repositoryAccess, Context context)"
+  nameWithType: "SourceControl.deleteWithResponse(RepositoryAccessProperties repositoryAccess, Context context)"
+  summary: "Delete a source control."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The repository access credentials."
+    name: "repositoryAccess"
+    type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.RepositoryAccessProperties?alt=com.azure.resourcemanager.securityinsights.models.RepositoryAccessProperties&text=RepositoryAccessProperties\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Response<Warning> deleteWithResponse(RepositoryAccessProperties repositoryAccess, Context context)"
+  desc: "Delete a source control."
+  returns:
+    description: "warning response structure along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.securityinsights.models.Warning?alt=com.azure.resourcemanager.securityinsights.models.Warning&text=Warning\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.securityinsights.models.SourceControl.description()"
   fullName: "com.azure.resourcemanager.securityinsights.models.SourceControl.description()"
   name: "description()"
@@ -114,6 +149,18 @@ methods:
   returns:
     description: "the name value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.securityinsights.models.SourceControl.pullRequest()"
+  fullName: "com.azure.resourcemanager.securityinsights.models.SourceControl.pullRequest()"
+  name: "pullRequest()"
+  nameWithType: "SourceControl.pullRequest()"
+  summary: "Gets the pull<wbr>Request property: Information regarding the pull request of the source control."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract PullRequest pullRequest()"
+  desc: "Gets the pullRequest property: Information regarding the pull request of the source control."
+  returns:
+    description: "the pullRequest value."
+    type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.PullRequest?alt=com.azure.resourcemanager.securityinsights.models.PullRequest&text=PullRequest\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.securityinsights.models.SourceControl.refresh()"
   fullName: "com.azure.resourcemanager.securityinsights.models.SourceControl.refresh()"
   name: "refresh()"
@@ -154,6 +201,18 @@ methods:
   returns:
     description: "the repository value."
     type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.Repository?alt=com.azure.resourcemanager.securityinsights.models.Repository&text=Repository\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.securityinsights.models.SourceControl.repositoryAccess()"
+  fullName: "com.azure.resourcemanager.securityinsights.models.SourceControl.repositoryAccess()"
+  name: "repositoryAccess()"
+  nameWithType: "SourceControl.repositoryAccess()"
+  summary: "Gets the repository<wbr>Access property: Repository access credentials."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract RepositoryAccess repositoryAccess()"
+  desc: "Gets the repositoryAccess property: Repository access credentials. This is write-only object and it never returns back to a user."
+  returns:
+    description: "the repositoryAccess value."
+    type: "<xref href=\"com.azure.resourcemanager.securityinsights.fluent.models.RepositoryAccess?alt=com.azure.resourcemanager.securityinsights.fluent.models.RepositoryAccess&text=RepositoryAccess\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.securityinsights.models.SourceControl.repositoryResourceInfo()"
   fullName: "com.azure.resourcemanager.securityinsights.models.SourceControl.repositoryResourceInfo()"
   name: "repositoryResourceInfo()"
@@ -178,6 +237,18 @@ methods:
   returns:
     description: "the repoType value."
     type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.RepoType?alt=com.azure.resourcemanager.securityinsights.models.RepoType&text=RepoType\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.securityinsights.models.SourceControl.servicePrincipal()"
+  fullName: "com.azure.resourcemanager.securityinsights.models.SourceControl.servicePrincipal()"
+  name: "servicePrincipal()"
+  nameWithType: "SourceControl.servicePrincipal()"
+  summary: "Gets the service<wbr>Principal property: Service principal metadata."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract ServicePrincipal servicePrincipal()"
+  desc: "Gets the servicePrincipal property: Service principal metadata."
+  returns:
+    description: "the servicePrincipal value."
+    type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.ServicePrincipal?alt=com.azure.resourcemanager.securityinsights.models.ServicePrincipal&text=ServicePrincipal\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.securityinsights.models.SourceControl.systemData()"
   fullName: "com.azure.resourcemanager.securityinsights.models.SourceControl.systemData()"
   name: "systemData()"
@@ -214,8 +285,20 @@ methods:
   returns:
     description: "the version value."
     type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.Version?alt=com.azure.resourcemanager.securityinsights.models.Version&text=Version\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.securityinsights.models.SourceControl.workloadIdentityFederation()"
+  fullName: "com.azure.resourcemanager.securityinsights.models.SourceControl.workloadIdentityFederation()"
+  name: "workloadIdentityFederation()"
+  nameWithType: "SourceControl.workloadIdentityFederation()"
+  summary: "Gets the workload<wbr>Identity<wbr>Federation property: Workload Identity metadata."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract WorkloadIdentityFederation workloadIdentityFederation()"
+  desc: "Gets the workloadIdentityFederation property: Workload Identity metadata."
+  returns:
+    description: "the workloadIdentityFederation value."
+    type: "<xref href=\"com.azure.resourcemanager.securityinsights.models.WorkloadIdentityFederation?alt=com.azure.resourcemanager.securityinsights.models.WorkloadIdentityFederation&text=WorkloadIdentityFederation\" data-throw-if-not-resolved=\"False\" />"
 type: "interface"
 desc: "An immutable client-side representation of SourceControl."
 metadata: {}
 package: "com.azure.resourcemanager.securityinsights.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-securityinsights:1.0.0-beta.5
+artifact: com.azure.resourcemanager:azure-resourcemanager-securityinsights:1.1.0-beta.1

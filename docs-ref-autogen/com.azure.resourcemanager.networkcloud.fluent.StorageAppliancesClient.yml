@@ -10,7 +10,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.beginCreateOrUpdate(String resourceGroupName, String storageApplianceName, StorageApplianceInner storageApplianceParameters)"
   name: "beginCreateOrUpdate(String resourceGroupName, String storageApplianceName, StorageApplianceInner storageApplianceParameters)"
   nameWithType: "StorageAppliancesClient.beginCreateOrUpdate(String resourceGroupName, String storageApplianceName, StorageApplianceInner storageApplianceParameters)"
-  summary: "Create or update the storage appliance."
+  summary: "Create a new storage appliance or update the properties of the existing one."
   modifiers:
   - "abstract"
   parameters:
@@ -24,7 +24,7 @@ methods:
     name: "storageApplianceParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner&text=StorageApplianceInner\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SyncPoller<PollResult<StorageApplianceInner>,StorageApplianceInner> beginCreateOrUpdate(String resourceGroupName, String storageApplianceName, StorageApplianceInner storageApplianceParameters)"
-  desc: "Create or update the storage appliance. Create a new storage appliance or update the properties of the existing one. All customer initiated requests will be rejected as the life cycle of this resource is managed by the system."
+  desc: "Create a new storage appliance or update the properties of the existing one. All customer initiated requests will be rejected as the life cycle of this resource is managed by the system."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of storageAppliance represents on-premises Network Cloud storage\n appliance."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner&text=StorageApplianceInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner&text=StorageApplianceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -32,7 +32,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.beginCreateOrUpdate(String resourceGroupName, String storageApplianceName, StorageApplianceInner storageApplianceParameters, String ifMatch, String ifNoneMatch, Context context)"
   name: "beginCreateOrUpdate(String resourceGroupName, String storageApplianceName, StorageApplianceInner storageApplianceParameters, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "StorageAppliancesClient.beginCreateOrUpdate(String resourceGroupName, String storageApplianceName, StorageApplianceInner storageApplianceParameters, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Create or update the storage appliance."
+  summary: "Create a new storage appliance or update the properties of the existing one."
   modifiers:
   - "abstract"
   parameters:
@@ -55,7 +55,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SyncPoller<PollResult<StorageApplianceInner>,StorageApplianceInner> beginCreateOrUpdate(String resourceGroupName, String storageApplianceName, StorageApplianceInner storageApplianceParameters, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Create or update the storage appliance. Create a new storage appliance or update the properties of the existing one. All customer initiated requests will be rejected as the life cycle of this resource is managed by the system."
+  desc: "Create a new storage appliance or update the properties of the existing one. All customer initiated requests will be rejected as the life cycle of this resource is managed by the system."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of storageAppliance represents on-premises Network Cloud storage\n appliance."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner&text=StorageApplianceInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner&text=StorageApplianceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -63,7 +63,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.beginDelete(String resourceGroupName, String storageApplianceName)"
   name: "beginDelete(String resourceGroupName, String storageApplianceName)"
   nameWithType: "StorageAppliancesClient.beginDelete(String resourceGroupName, String storageApplianceName)"
-  summary: "Delete the storage appliance."
+  summary: "Delete the provided storage appliance."
   modifiers:
   - "abstract"
   parameters:
@@ -73,16 +73,16 @@ methods:
   - description: "The name of the storage appliance."
     name: "storageApplianceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract SyncPoller<PollResult<OperationStatusResultInner>,OperationStatusResultInner> beginDelete(String resourceGroupName, String storageApplianceName)"
-  desc: "Delete the storage appliance. Delete the provided storage appliance. All customer initiated requests will be rejected as the life cycle of this resource is managed by the system."
+  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginDelete(String resourceGroupName, String storageApplianceName)"
+  desc: "Delete the provided storage appliance. All customer initiated requests will be rejected as the life cycle of this resource is managed by the system."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the current status of an async operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.beginDelete(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.beginDelete(String resourceGroupName, String storageApplianceName, String ifMatch, String ifNoneMatch, Context context)"
   name: "beginDelete(String resourceGroupName, String storageApplianceName, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "StorageAppliancesClient.beginDelete(String resourceGroupName, String storageApplianceName, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Delete the storage appliance."
+  summary: "Delete the provided storage appliance."
   modifiers:
   - "abstract"
   parameters:
@@ -101,16 +101,16 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract SyncPoller<PollResult<OperationStatusResultInner>,OperationStatusResultInner> beginDelete(String resourceGroupName, String storageApplianceName, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Delete the storage appliance. Delete the provided storage appliance. All customer initiated requests will be rejected as the life cycle of this resource is managed by the system."
+  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginDelete(String resourceGroupName, String storageApplianceName, String ifMatch, String ifNoneMatch, Context context)"
+  desc: "Delete the provided storage appliance. All customer initiated requests will be rejected as the life cycle of this resource is managed by the system."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the current status of an async operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.beginDisableRemoteVendorManagement(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.beginDisableRemoteVendorManagement(String resourceGroupName, String storageApplianceName)"
   name: "beginDisableRemoteVendorManagement(String resourceGroupName, String storageApplianceName)"
   nameWithType: "StorageAppliancesClient.beginDisableRemoteVendorManagement(String resourceGroupName, String storageApplianceName)"
-  summary: "Turn off remote vendor management for a storage appliance, if supported."
+  summary: "Disable remote vendor management of the provided storage appliance."
   modifiers:
   - "abstract"
   parameters:
@@ -120,16 +120,16 @@ methods:
   - description: "The name of the storage appliance."
     name: "storageApplianceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract SyncPoller<PollResult<OperationStatusResultInner>,OperationStatusResultInner> beginDisableRemoteVendorManagement(String resourceGroupName, String storageApplianceName)"
-  desc: "Turn off remote vendor management for a storage appliance, if supported. Disable remote vendor management of the provided storage appliance."
+  syntax: "public abstract SyncPoller<PollResult<OperationStatusResult>,OperationStatusResult> beginDisableRemoteVendorManagement(String resourceGroupName, String storageApplianceName)"
+  desc: "Disable remote vendor management of the provided storage appliance."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the current status of an async operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.beginDisableRemoteVendorManagement(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.beginDisableRemoteVendorManagement(String resourceGroupName, String storageApplianceName, Context context)"
   name: "beginDisableRemoteVendorManagement(String resourceGroupName, String storageApplianceName, Context context)"
   nameWithType: "StorageAppliancesClient.beginDisableRemoteVendorManagement(String resourceGroupName, String storageApplianceName, Context context)"
-  summary: "Turn off remote vendor management for a storage appliance, if supported."
+  summary: "Disable remote vendor management of the provided storage appliance."
   modifiers:
   - "abstract"
   parameters:
@@ -142,16 +142,16 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract SyncPoller<PollResult<OperationStatusResultInner>,OperationStatusResultInner> beginDisableRemoteVendorManagement(String resourceGroupName, String storageApplianceName, Context context)"
-  desc: "Turn off remote vendor management for a storage appliance, if supported. Disable remote vendor management of the provided storage appliance."
+  syntax: "public abstract SyncPoller<PollResult<OperationStatusResult>,OperationStatusResult> beginDisableRemoteVendorManagement(String resourceGroupName, String storageApplianceName, Context context)"
+  desc: "Disable remote vendor management of the provided storage appliance."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the current status of an async operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.beginEnableRemoteVendorManagement(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.beginEnableRemoteVendorManagement(String resourceGroupName, String storageApplianceName)"
   name: "beginEnableRemoteVendorManagement(String resourceGroupName, String storageApplianceName)"
   nameWithType: "StorageAppliancesClient.beginEnableRemoteVendorManagement(String resourceGroupName, String storageApplianceName)"
-  summary: "Turn on remote vendor management for a storage appliance, if supported."
+  summary: "Enable remote vendor management of the provided storage appliance."
   modifiers:
   - "abstract"
   parameters:
@@ -161,16 +161,16 @@ methods:
   - description: "The name of the storage appliance."
     name: "storageApplianceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract SyncPoller<PollResult<OperationStatusResultInner>,OperationStatusResultInner> beginEnableRemoteVendorManagement(String resourceGroupName, String storageApplianceName)"
-  desc: "Turn on remote vendor management for a storage appliance, if supported. Enable remote vendor management of the provided storage appliance."
+  syntax: "public abstract SyncPoller<PollResult<OperationStatusResult>,OperationStatusResult> beginEnableRemoteVendorManagement(String resourceGroupName, String storageApplianceName)"
+  desc: "Enable remote vendor management of the provided storage appliance."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the current status of an async operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.beginEnableRemoteVendorManagement(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.StorageApplianceEnableRemoteVendorManagementParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.beginEnableRemoteVendorManagement(String resourceGroupName, String storageApplianceName, StorageApplianceEnableRemoteVendorManagementParameters storageApplianceEnableRemoteVendorManagementParameters, Context context)"
   name: "beginEnableRemoteVendorManagement(String resourceGroupName, String storageApplianceName, StorageApplianceEnableRemoteVendorManagementParameters storageApplianceEnableRemoteVendorManagementParameters, Context context)"
   nameWithType: "StorageAppliancesClient.beginEnableRemoteVendorManagement(String resourceGroupName, String storageApplianceName, StorageApplianceEnableRemoteVendorManagementParameters storageApplianceEnableRemoteVendorManagementParameters, Context context)"
-  summary: "Turn on remote vendor management for a storage appliance, if supported."
+  summary: "Enable remote vendor management of the provided storage appliance."
   modifiers:
   - "abstract"
   parameters:
@@ -186,16 +186,16 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract SyncPoller<PollResult<OperationStatusResultInner>,OperationStatusResultInner> beginEnableRemoteVendorManagement(String resourceGroupName, String storageApplianceName, StorageApplianceEnableRemoteVendorManagementParameters storageApplianceEnableRemoteVendorManagementParameters, Context context)"
-  desc: "Turn on remote vendor management for a storage appliance, if supported. Enable remote vendor management of the provided storage appliance."
+  syntax: "public abstract SyncPoller<PollResult<OperationStatusResult>,OperationStatusResult> beginEnableRemoteVendorManagement(String resourceGroupName, String storageApplianceName, StorageApplianceEnableRemoteVendorManagementParameters storageApplianceEnableRemoteVendorManagementParameters, Context context)"
+  desc: "Enable remote vendor management of the provided storage appliance."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the current status of an async operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.beginRunReadCommands(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.StorageApplianceRunReadCommandsParameters)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.beginRunReadCommands(String resourceGroupName, String storageApplianceName, StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters)"
   name: "beginRunReadCommands(String resourceGroupName, String storageApplianceName, StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters)"
   nameWithType: "StorageAppliancesClient.beginRunReadCommands(String resourceGroupName, String storageApplianceName, StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters)"
-  summary: "Run read-only commands against a storage appliance."
+  summary: "Run one or more read-only commands on the provided storage appliance."
   modifiers:
   - "abstract"
   parameters:
@@ -208,16 +208,16 @@ methods:
   - description: "The request body."
     name: "storageApplianceRunReadCommandsParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.StorageApplianceRunReadCommandsParameters?alt=com.azure.resourcemanager.networkcloud.models.StorageApplianceRunReadCommandsParameters&text=StorageApplianceRunReadCommandsParameters\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract SyncPoller<PollResult<OperationStatusResultInner>,OperationStatusResultInner> beginRunReadCommands(String resourceGroupName, String storageApplianceName, StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters)"
-  desc: "Run read-only commands against a storage appliance. Run one or more read-only commands on the provided storage appliance."
+  syntax: "public abstract SyncPoller<PollResult<OperationStatusResult>,OperationStatusResult> beginRunReadCommands(String resourceGroupName, String storageApplianceName, StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters)"
+  desc: "Run one or more read-only commands on the provided storage appliance."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the current status of an async operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.beginRunReadCommands(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.StorageApplianceRunReadCommandsParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.beginRunReadCommands(String resourceGroupName, String storageApplianceName, StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters, Context context)"
   name: "beginRunReadCommands(String resourceGroupName, String storageApplianceName, StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters, Context context)"
   nameWithType: "StorageAppliancesClient.beginRunReadCommands(String resourceGroupName, String storageApplianceName, StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters, Context context)"
-  summary: "Run read-only commands against a storage appliance."
+  summary: "Run one or more read-only commands on the provided storage appliance."
   modifiers:
   - "abstract"
   parameters:
@@ -233,16 +233,16 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract SyncPoller<PollResult<OperationStatusResultInner>,OperationStatusResultInner> beginRunReadCommands(String resourceGroupName, String storageApplianceName, StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters, Context context)"
-  desc: "Run read-only commands against a storage appliance. Run one or more read-only commands on the provided storage appliance."
+  syntax: "public abstract SyncPoller<PollResult<OperationStatusResult>,OperationStatusResult> beginRunReadCommands(String resourceGroupName, String storageApplianceName, StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters, Context context)"
+  desc: "Run one or more read-only commands on the provided storage appliance."
   returns:
-    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of the current status of an async operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.beginUpdate(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.beginUpdate(String resourceGroupName, String storageApplianceName)"
   name: "beginUpdate(String resourceGroupName, String storageApplianceName)"
   nameWithType: "StorageAppliancesClient.beginUpdate(String resourceGroupName, String storageApplianceName)"
-  summary: "Patch the storage appliance."
+  summary: "Update properties of the provided storage appliance, or update tags associated with the storage appliance Properties and tag updates can be done independently."
   modifiers:
   - "abstract"
   parameters:
@@ -253,7 +253,7 @@ methods:
     name: "storageApplianceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract SyncPoller<PollResult<StorageApplianceInner>,StorageApplianceInner> beginUpdate(String resourceGroupName, String storageApplianceName)"
-  desc: "Patch the storage appliance. Update properties of the provided storage appliance, or update tags associated with the storage appliance Properties and tag updates can be done independently."
+  desc: "Update properties of the provided storage appliance, or update tags associated with the storage appliance Properties and tag updates can be done independently."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of storageAppliance represents on-premises Network Cloud storage\n appliance."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner&text=StorageApplianceInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner&text=StorageApplianceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -261,7 +261,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.beginUpdate(String resourceGroupName, String storageApplianceName, String ifMatch, String ifNoneMatch, StorageAppliancePatchParameters storageApplianceUpdateParameters, Context context)"
   name: "beginUpdate(String resourceGroupName, String storageApplianceName, String ifMatch, String ifNoneMatch, StorageAppliancePatchParameters storageApplianceUpdateParameters, Context context)"
   nameWithType: "StorageAppliancesClient.beginUpdate(String resourceGroupName, String storageApplianceName, String ifMatch, String ifNoneMatch, StorageAppliancePatchParameters storageApplianceUpdateParameters, Context context)"
-  summary: "Patch the storage appliance."
+  summary: "Update properties of the provided storage appliance, or update tags associated with the storage appliance Properties and tag updates can be done independently."
   modifiers:
   - "abstract"
   parameters:
@@ -284,7 +284,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract SyncPoller<PollResult<StorageApplianceInner>,StorageApplianceInner> beginUpdate(String resourceGroupName, String storageApplianceName, String ifMatch, String ifNoneMatch, StorageAppliancePatchParameters storageApplianceUpdateParameters, Context context)"
-  desc: "Patch the storage appliance. Update properties of the provided storage appliance, or update tags associated with the storage appliance Properties and tag updates can be done independently."
+  desc: "Update properties of the provided storage appliance, or update tags associated with the storage appliance Properties and tag updates can be done independently."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of storageAppliance represents on-premises Network Cloud storage\n appliance."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner&text=StorageApplianceInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner&text=StorageApplianceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -292,7 +292,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.createOrUpdate(String resourceGroupName, String storageApplianceName, StorageApplianceInner storageApplianceParameters)"
   name: "createOrUpdate(String resourceGroupName, String storageApplianceName, StorageApplianceInner storageApplianceParameters)"
   nameWithType: "StorageAppliancesClient.createOrUpdate(String resourceGroupName, String storageApplianceName, StorageApplianceInner storageApplianceParameters)"
-  summary: "Create or update the storage appliance."
+  summary: "Create a new storage appliance or update the properties of the existing one."
   modifiers:
   - "abstract"
   parameters:
@@ -306,7 +306,7 @@ methods:
     name: "storageApplianceParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner&text=StorageApplianceInner\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract StorageApplianceInner createOrUpdate(String resourceGroupName, String storageApplianceName, StorageApplianceInner storageApplianceParameters)"
-  desc: "Create or update the storage appliance. Create a new storage appliance or update the properties of the existing one. All customer initiated requests will be rejected as the life cycle of this resource is managed by the system."
+  desc: "Create a new storage appliance or update the properties of the existing one. All customer initiated requests will be rejected as the life cycle of this resource is managed by the system."
   returns:
     description: "storageAppliance represents on-premises Network Cloud storage appliance."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner&text=StorageApplianceInner\" data-throw-if-not-resolved=\"False\" />"
@@ -314,7 +314,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.createOrUpdate(String resourceGroupName, String storageApplianceName, StorageApplianceInner storageApplianceParameters, String ifMatch, String ifNoneMatch, Context context)"
   name: "createOrUpdate(String resourceGroupName, String storageApplianceName, StorageApplianceInner storageApplianceParameters, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "StorageAppliancesClient.createOrUpdate(String resourceGroupName, String storageApplianceName, StorageApplianceInner storageApplianceParameters, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Create or update the storage appliance."
+  summary: "Create a new storage appliance or update the properties of the existing one."
   modifiers:
   - "abstract"
   parameters:
@@ -337,7 +337,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract StorageApplianceInner createOrUpdate(String resourceGroupName, String storageApplianceName, StorageApplianceInner storageApplianceParameters, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Create or update the storage appliance. Create a new storage appliance or update the properties of the existing one. All customer initiated requests will be rejected as the life cycle of this resource is managed by the system."
+  desc: "Create a new storage appliance or update the properties of the existing one. All customer initiated requests will be rejected as the life cycle of this resource is managed by the system."
   returns:
     description: "storageAppliance represents on-premises Network Cloud storage appliance."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner&text=StorageApplianceInner\" data-throw-if-not-resolved=\"False\" />"
@@ -345,7 +345,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.delete(String resourceGroupName, String storageApplianceName)"
   name: "delete(String resourceGroupName, String storageApplianceName)"
   nameWithType: "StorageAppliancesClient.delete(String resourceGroupName, String storageApplianceName)"
-  summary: "Delete the storage appliance."
+  summary: "Delete the provided storage appliance."
   modifiers:
   - "abstract"
   parameters:
@@ -355,16 +355,13 @@ methods:
   - description: "The name of the storage appliance."
     name: "storageApplianceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract OperationStatusResultInner delete(String resourceGroupName, String storageApplianceName)"
-  desc: "Delete the storage appliance. Delete the provided storage appliance. All customer initiated requests will be rejected as the life cycle of this resource is managed by the system."
-  returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void delete(String resourceGroupName, String storageApplianceName)"
+  desc: "Delete the provided storage appliance. All customer initiated requests will be rejected as the life cycle of this resource is managed by the system."
 - uid: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.delete(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.delete(String resourceGroupName, String storageApplianceName, String ifMatch, String ifNoneMatch, Context context)"
   name: "delete(String resourceGroupName, String storageApplianceName, String ifMatch, String ifNoneMatch, Context context)"
   nameWithType: "StorageAppliancesClient.delete(String resourceGroupName, String storageApplianceName, String ifMatch, String ifNoneMatch, Context context)"
-  summary: "Delete the storage appliance."
+  summary: "Delete the provided storage appliance."
   modifiers:
   - "abstract"
   parameters:
@@ -383,16 +380,13 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract OperationStatusResultInner delete(String resourceGroupName, String storageApplianceName, String ifMatch, String ifNoneMatch, Context context)"
-  desc: "Delete the storage appliance. Delete the provided storage appliance. All customer initiated requests will be rejected as the life cycle of this resource is managed by the system."
-  returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void delete(String resourceGroupName, String storageApplianceName, String ifMatch, String ifNoneMatch, Context context)"
+  desc: "Delete the provided storage appliance. All customer initiated requests will be rejected as the life cycle of this resource is managed by the system."
 - uid: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.disableRemoteVendorManagement(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.disableRemoteVendorManagement(String resourceGroupName, String storageApplianceName)"
   name: "disableRemoteVendorManagement(String resourceGroupName, String storageApplianceName)"
   nameWithType: "StorageAppliancesClient.disableRemoteVendorManagement(String resourceGroupName, String storageApplianceName)"
-  summary: "Turn off remote vendor management for a storage appliance, if supported."
+  summary: "Disable remote vendor management of the provided storage appliance."
   modifiers:
   - "abstract"
   parameters:
@@ -402,16 +396,16 @@ methods:
   - description: "The name of the storage appliance."
     name: "storageApplianceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract OperationStatusResultInner disableRemoteVendorManagement(String resourceGroupName, String storageApplianceName)"
-  desc: "Turn off remote vendor management for a storage appliance, if supported. Disable remote vendor management of the provided storage appliance."
+  syntax: "public abstract OperationStatusResult disableRemoteVendorManagement(String resourceGroupName, String storageApplianceName)"
+  desc: "Disable remote vendor management of the provided storage appliance."
   returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />"
+    description: "the response."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.disableRemoteVendorManagement(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.disableRemoteVendorManagement(String resourceGroupName, String storageApplianceName, Context context)"
   name: "disableRemoteVendorManagement(String resourceGroupName, String storageApplianceName, Context context)"
   nameWithType: "StorageAppliancesClient.disableRemoteVendorManagement(String resourceGroupName, String storageApplianceName, Context context)"
-  summary: "Turn off remote vendor management for a storage appliance, if supported."
+  summary: "Disable remote vendor management of the provided storage appliance."
   modifiers:
   - "abstract"
   parameters:
@@ -424,16 +418,16 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract OperationStatusResultInner disableRemoteVendorManagement(String resourceGroupName, String storageApplianceName, Context context)"
-  desc: "Turn off remote vendor management for a storage appliance, if supported. Disable remote vendor management of the provided storage appliance."
+  syntax: "public abstract OperationStatusResult disableRemoteVendorManagement(String resourceGroupName, String storageApplianceName, Context context)"
+  desc: "Disable remote vendor management of the provided storage appliance."
   returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />"
+    description: "the response."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.enableRemoteVendorManagement(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.enableRemoteVendorManagement(String resourceGroupName, String storageApplianceName)"
   name: "enableRemoteVendorManagement(String resourceGroupName, String storageApplianceName)"
   nameWithType: "StorageAppliancesClient.enableRemoteVendorManagement(String resourceGroupName, String storageApplianceName)"
-  summary: "Turn on remote vendor management for a storage appliance, if supported."
+  summary: "Enable remote vendor management of the provided storage appliance."
   modifiers:
   - "abstract"
   parameters:
@@ -443,16 +437,16 @@ methods:
   - description: "The name of the storage appliance."
     name: "storageApplianceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract OperationStatusResultInner enableRemoteVendorManagement(String resourceGroupName, String storageApplianceName)"
-  desc: "Turn on remote vendor management for a storage appliance, if supported. Enable remote vendor management of the provided storage appliance."
+  syntax: "public abstract OperationStatusResult enableRemoteVendorManagement(String resourceGroupName, String storageApplianceName)"
+  desc: "Enable remote vendor management of the provided storage appliance."
   returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />"
+    description: "the response."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.enableRemoteVendorManagement(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.StorageApplianceEnableRemoteVendorManagementParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.enableRemoteVendorManagement(String resourceGroupName, String storageApplianceName, StorageApplianceEnableRemoteVendorManagementParameters storageApplianceEnableRemoteVendorManagementParameters, Context context)"
   name: "enableRemoteVendorManagement(String resourceGroupName, String storageApplianceName, StorageApplianceEnableRemoteVendorManagementParameters storageApplianceEnableRemoteVendorManagementParameters, Context context)"
   nameWithType: "StorageAppliancesClient.enableRemoteVendorManagement(String resourceGroupName, String storageApplianceName, StorageApplianceEnableRemoteVendorManagementParameters storageApplianceEnableRemoteVendorManagementParameters, Context context)"
-  summary: "Turn on remote vendor management for a storage appliance, if supported."
+  summary: "Enable remote vendor management of the provided storage appliance."
   modifiers:
   - "abstract"
   parameters:
@@ -468,16 +462,16 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract OperationStatusResultInner enableRemoteVendorManagement(String resourceGroupName, String storageApplianceName, StorageApplianceEnableRemoteVendorManagementParameters storageApplianceEnableRemoteVendorManagementParameters, Context context)"
-  desc: "Turn on remote vendor management for a storage appliance, if supported. Enable remote vendor management of the provided storage appliance."
+  syntax: "public abstract OperationStatusResult enableRemoteVendorManagement(String resourceGroupName, String storageApplianceName, StorageApplianceEnableRemoteVendorManagementParameters storageApplianceEnableRemoteVendorManagementParameters, Context context)"
+  desc: "Enable remote vendor management of the provided storage appliance."
   returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />"
+    description: "the response."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.getByResourceGroup(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.getByResourceGroup(String resourceGroupName, String storageApplianceName)"
   name: "getByResourceGroup(String resourceGroupName, String storageApplianceName)"
   nameWithType: "StorageAppliancesClient.getByResourceGroup(String resourceGroupName, String storageApplianceName)"
-  summary: "Retrieve the storage appliance."
+  summary: "Get properties of the provided storage appliance."
   modifiers:
   - "abstract"
   parameters:
@@ -488,7 +482,7 @@ methods:
     name: "storageApplianceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract StorageApplianceInner getByResourceGroup(String resourceGroupName, String storageApplianceName)"
-  desc: "Retrieve the storage appliance. Get properties of the provided storage appliance."
+  desc: "Get properties of the provided storage appliance."
   returns:
     description: "properties of the provided storage appliance."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner&text=StorageApplianceInner\" data-throw-if-not-resolved=\"False\" />"
@@ -496,7 +490,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.getByResourceGroupWithResponse(String resourceGroupName, String storageApplianceName, Context context)"
   name: "getByResourceGroupWithResponse(String resourceGroupName, String storageApplianceName, Context context)"
   nameWithType: "StorageAppliancesClient.getByResourceGroupWithResponse(String resourceGroupName, String storageApplianceName, Context context)"
-  summary: "Retrieve the storage appliance."
+  summary: "Get properties of the provided storage appliance."
   modifiers:
   - "abstract"
   parameters:
@@ -510,7 +504,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<StorageApplianceInner> getByResourceGroupWithResponse(String resourceGroupName, String storageApplianceName, Context context)"
-  desc: "Retrieve the storage appliance. Get properties of the provided storage appliance."
+  desc: "Get properties of the provided storage appliance."
   returns:
     description: "properties of the provided storage appliance along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner&text=StorageApplianceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -518,11 +512,11 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.list()"
   name: "list()"
   nameWithType: "StorageAppliancesClient.list()"
-  summary: "List storage appliances in the subscription."
+  summary: "Get a list of storage appliances in the provided subscription."
   modifiers:
   - "abstract"
   syntax: "public abstract PagedIterable<StorageApplianceInner> list()"
-  desc: "List storage appliances in the subscription. Get a list of storage appliances in the provided subscription."
+  desc: "Get a list of storage appliances in the provided subscription."
   returns:
     description: "a list of storage appliances in the provided subscription as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner&text=StorageApplianceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -530,7 +524,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.list(Integer top, String skipToken, Context context)"
   name: "list(Integer top, String skipToken, Context context)"
   nameWithType: "StorageAppliancesClient.list(Integer top, String skipToken, Context context)"
-  summary: "List storage appliances in the subscription."
+  summary: "Get a list of storage appliances in the provided subscription."
   modifiers:
   - "abstract"
   parameters:
@@ -544,7 +538,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<StorageApplianceInner> list(Integer top, String skipToken, Context context)"
-  desc: "List storage appliances in the subscription. Get a list of storage appliances in the provided subscription."
+  desc: "Get a list of storage appliances in the provided subscription."
   returns:
     description: "a list of storage appliances in the provided subscription as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner&text=StorageApplianceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -552,7 +546,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.listByResourceGroup(String resourceGroupName)"
   name: "listByResourceGroup(String resourceGroupName)"
   nameWithType: "StorageAppliancesClient.listByResourceGroup(String resourceGroupName)"
-  summary: "List storage appliances in the resource group."
+  summary: "Get a list of storage appliances in the provided resource group."
   modifiers:
   - "abstract"
   parameters:
@@ -560,7 +554,7 @@ methods:
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<StorageApplianceInner> listByResourceGroup(String resourceGroupName)"
-  desc: "List storage appliances in the resource group. Get a list of storage appliances in the provided resource group."
+  desc: "Get a list of storage appliances in the provided resource group."
   returns:
     description: "a list of storage appliances in the provided resource group as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner&text=StorageApplianceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -568,7 +562,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
   name: "listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
   nameWithType: "StorageAppliancesClient.listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
-  summary: "List storage appliances in the resource group."
+  summary: "Get a list of storage appliances in the provided resource group."
   modifiers:
   - "abstract"
   parameters:
@@ -585,7 +579,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<StorageApplianceInner> listByResourceGroup(String resourceGroupName, Integer top, String skipToken, Context context)"
-  desc: "List storage appliances in the resource group. Get a list of storage appliances in the provided resource group."
+  desc: "Get a list of storage appliances in the provided resource group."
   returns:
     description: "a list of storage appliances in the provided resource group as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner&text=StorageApplianceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -593,7 +587,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.runReadCommands(String resourceGroupName, String storageApplianceName, StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters)"
   name: "runReadCommands(String resourceGroupName, String storageApplianceName, StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters)"
   nameWithType: "StorageAppliancesClient.runReadCommands(String resourceGroupName, String storageApplianceName, StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters)"
-  summary: "Run read-only commands against a storage appliance."
+  summary: "Run one or more read-only commands on the provided storage appliance."
   modifiers:
   - "abstract"
   parameters:
@@ -606,16 +600,16 @@ methods:
   - description: "The request body."
     name: "storageApplianceRunReadCommandsParameters"
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.StorageApplianceRunReadCommandsParameters?alt=com.azure.resourcemanager.networkcloud.models.StorageApplianceRunReadCommandsParameters&text=StorageApplianceRunReadCommandsParameters\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract OperationStatusResultInner runReadCommands(String resourceGroupName, String storageApplianceName, StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters)"
-  desc: "Run read-only commands against a storage appliance. Run one or more read-only commands on the provided storage appliance."
+  syntax: "public abstract OperationStatusResult runReadCommands(String resourceGroupName, String storageApplianceName, StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters)"
+  desc: "Run one or more read-only commands on the provided storage appliance."
   returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />"
+    description: "the response."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.runReadCommands(java.lang.String,java.lang.String,com.azure.resourcemanager.networkcloud.models.StorageApplianceRunReadCommandsParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.runReadCommands(String resourceGroupName, String storageApplianceName, StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters, Context context)"
   name: "runReadCommands(String resourceGroupName, String storageApplianceName, StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters, Context context)"
   nameWithType: "StorageAppliancesClient.runReadCommands(String resourceGroupName, String storageApplianceName, StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters, Context context)"
-  summary: "Run read-only commands against a storage appliance."
+  summary: "Run one or more read-only commands on the provided storage appliance."
   modifiers:
   - "abstract"
   parameters:
@@ -631,16 +625,16 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract OperationStatusResultInner runReadCommands(String resourceGroupName, String storageApplianceName, StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters, Context context)"
-  desc: "Run read-only commands against a storage appliance. Run one or more read-only commands on the provided storage appliance."
+  syntax: "public abstract OperationStatusResult runReadCommands(String resourceGroupName, String storageApplianceName, StorageApplianceRunReadCommandsParameters storageApplianceRunReadCommandsParameters, Context context)"
+  desc: "Run one or more read-only commands on the provided storage appliance."
   returns:
-    description: "the current status of an async operation."
-    type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.OperationStatusResultInner&text=OperationStatusResultInner\" data-throw-if-not-resolved=\"False\" />"
+    description: "the response."
+    type: "<xref href=\"com.azure.resourcemanager.networkcloud.models.OperationStatusResult?alt=com.azure.resourcemanager.networkcloud.models.OperationStatusResult&text=OperationStatusResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.update(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.update(String resourceGroupName, String storageApplianceName)"
   name: "update(String resourceGroupName, String storageApplianceName)"
   nameWithType: "StorageAppliancesClient.update(String resourceGroupName, String storageApplianceName)"
-  summary: "Patch the storage appliance."
+  summary: "Update properties of the provided storage appliance, or update tags associated with the storage appliance Properties and tag updates can be done independently."
   modifiers:
   - "abstract"
   parameters:
@@ -651,7 +645,7 @@ methods:
     name: "storageApplianceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract StorageApplianceInner update(String resourceGroupName, String storageApplianceName)"
-  desc: "Patch the storage appliance. Update properties of the provided storage appliance, or update tags associated with the storage appliance Properties and tag updates can be done independently."
+  desc: "Update properties of the provided storage appliance, or update tags associated with the storage appliance Properties and tag updates can be done independently."
   returns:
     description: "storageAppliance represents on-premises Network Cloud storage appliance."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner&text=StorageApplianceInner\" data-throw-if-not-resolved=\"False\" />"
@@ -659,7 +653,7 @@ methods:
   fullName: "com.azure.resourcemanager.networkcloud.fluent.StorageAppliancesClient.update(String resourceGroupName, String storageApplianceName, String ifMatch, String ifNoneMatch, StorageAppliancePatchParameters storageApplianceUpdateParameters, Context context)"
   name: "update(String resourceGroupName, String storageApplianceName, String ifMatch, String ifNoneMatch, StorageAppliancePatchParameters storageApplianceUpdateParameters, Context context)"
   nameWithType: "StorageAppliancesClient.update(String resourceGroupName, String storageApplianceName, String ifMatch, String ifNoneMatch, StorageAppliancePatchParameters storageApplianceUpdateParameters, Context context)"
-  summary: "Patch the storage appliance."
+  summary: "Update properties of the provided storage appliance, or update tags associated with the storage appliance Properties and tag updates can be done independently."
   modifiers:
   - "abstract"
   parameters:
@@ -682,7 +676,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract StorageApplianceInner update(String resourceGroupName, String storageApplianceName, String ifMatch, String ifNoneMatch, StorageAppliancePatchParameters storageApplianceUpdateParameters, Context context)"
-  desc: "Patch the storage appliance. Update properties of the provided storage appliance, or update tags associated with the storage appliance Properties and tag updates can be done independently."
+  desc: "Update properties of the provided storage appliance, or update tags associated with the storage appliance Properties and tag updates can be done independently."
   returns:
     description: "storageAppliance represents on-premises Network Cloud storage appliance."
     type: "<xref href=\"com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner?alt=com.azure.resourcemanager.networkcloud.fluent.models.StorageApplianceInner&text=StorageApplianceInner\" data-throw-if-not-resolved=\"False\" />"
@@ -690,4 +684,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in StorageAppliancesClient."
 metadata: {}
 package: "com.azure.resourcemanager.networkcloud.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-networkcloud:2.2.0

@@ -28,10 +28,10 @@ methods:
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of backup Vault Resource."
     type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.dataprotection.fluent.models.BackupVaultResourceInner?alt=com.azure.resourcemanager.dataprotection.fluent.models.BackupVaultResourceInner&text=BackupVaultResourceInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.dataprotection.fluent.models.BackupVaultResourceInner?alt=com.azure.resourcemanager.dataprotection.fluent.models.BackupVaultResourceInner&text=BackupVaultResourceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.dataprotection.fluent.BackupVaultsClient.beginCreateOrUpdate(java.lang.String,java.lang.String,com.azure.resourcemanager.dataprotection.fluent.models.BackupVaultResourceInner,com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.dataprotection.fluent.BackupVaultsClient.beginCreateOrUpdate(String resourceGroupName, String vaultName, BackupVaultResourceInner parameters, Context context)"
-  name: "beginCreateOrUpdate(String resourceGroupName, String vaultName, BackupVaultResourceInner parameters, Context context)"
-  nameWithType: "BackupVaultsClient.beginCreateOrUpdate(String resourceGroupName, String vaultName, BackupVaultResourceInner parameters, Context context)"
+- uid: "com.azure.resourcemanager.dataprotection.fluent.BackupVaultsClient.beginCreateOrUpdate(java.lang.String,java.lang.String,com.azure.resourcemanager.dataprotection.fluent.models.BackupVaultResourceInner,java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.dataprotection.fluent.BackupVaultsClient.beginCreateOrUpdate(String resourceGroupName, String vaultName, BackupVaultResourceInner parameters, String xMsDeletedVaultId, Context context)"
+  name: "beginCreateOrUpdate(String resourceGroupName, String vaultName, BackupVaultResourceInner parameters, String xMsDeletedVaultId, Context context)"
+  nameWithType: "BackupVaultsClient.beginCreateOrUpdate(String resourceGroupName, String vaultName, BackupVaultResourceInner parameters, String xMsDeletedVaultId, Context context)"
   summary: "Creates or updates a Backup<wbr>Vault resource belonging to a resource group."
   modifiers:
   - "abstract"
@@ -45,10 +45,13 @@ methods:
   - description: "Request body for operation."
     name: "parameters"
     type: "<xref href=\"com.azure.resourcemanager.dataprotection.fluent.models.BackupVaultResourceInner?alt=com.azure.resourcemanager.dataprotection.fluent.models.BackupVaultResourceInner&text=BackupVaultResourceInner\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The ID of the deleted backup vault to restore from during undelete flow."
+    name: "xMsDeletedVaultId"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract SyncPoller<PollResult<BackupVaultResourceInner>,BackupVaultResourceInner> beginCreateOrUpdate(String resourceGroupName, String vaultName, BackupVaultResourceInner parameters, Context context)"
+  syntax: "public abstract SyncPoller<PollResult<BackupVaultResourceInner>,BackupVaultResourceInner> beginCreateOrUpdate(String resourceGroupName, String vaultName, BackupVaultResourceInner parameters, String xMsDeletedVaultId, Context context)"
   desc: "Creates or updates a BackupVault resource belonging to a resource group."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of backup Vault Resource."
@@ -210,10 +213,10 @@ methods:
   returns:
     description: "backup Vault Resource."
     type: "<xref href=\"com.azure.resourcemanager.dataprotection.fluent.models.BackupVaultResourceInner?alt=com.azure.resourcemanager.dataprotection.fluent.models.BackupVaultResourceInner&text=BackupVaultResourceInner\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.dataprotection.fluent.BackupVaultsClient.createOrUpdate(java.lang.String,java.lang.String,com.azure.resourcemanager.dataprotection.fluent.models.BackupVaultResourceInner,com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.dataprotection.fluent.BackupVaultsClient.createOrUpdate(String resourceGroupName, String vaultName, BackupVaultResourceInner parameters, Context context)"
-  name: "createOrUpdate(String resourceGroupName, String vaultName, BackupVaultResourceInner parameters, Context context)"
-  nameWithType: "BackupVaultsClient.createOrUpdate(String resourceGroupName, String vaultName, BackupVaultResourceInner parameters, Context context)"
+- uid: "com.azure.resourcemanager.dataprotection.fluent.BackupVaultsClient.createOrUpdate(java.lang.String,java.lang.String,com.azure.resourcemanager.dataprotection.fluent.models.BackupVaultResourceInner,java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.dataprotection.fluent.BackupVaultsClient.createOrUpdate(String resourceGroupName, String vaultName, BackupVaultResourceInner parameters, String xMsDeletedVaultId, Context context)"
+  name: "createOrUpdate(String resourceGroupName, String vaultName, BackupVaultResourceInner parameters, String xMsDeletedVaultId, Context context)"
+  nameWithType: "BackupVaultsClient.createOrUpdate(String resourceGroupName, String vaultName, BackupVaultResourceInner parameters, String xMsDeletedVaultId, Context context)"
   summary: "Creates or updates a Backup<wbr>Vault resource belonging to a resource group."
   modifiers:
   - "abstract"
@@ -227,10 +230,13 @@ methods:
   - description: "Request body for operation."
     name: "parameters"
     type: "<xref href=\"com.azure.resourcemanager.dataprotection.fluent.models.BackupVaultResourceInner?alt=com.azure.resourcemanager.dataprotection.fluent.models.BackupVaultResourceInner&text=BackupVaultResourceInner\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The ID of the deleted backup vault to restore from during undelete flow."
+    name: "xMsDeletedVaultId"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract BackupVaultResourceInner createOrUpdate(String resourceGroupName, String vaultName, BackupVaultResourceInner parameters, Context context)"
+  syntax: "public abstract BackupVaultResourceInner createOrUpdate(String resourceGroupName, String vaultName, BackupVaultResourceInner parameters, String xMsDeletedVaultId, Context context)"
   desc: "Creates or updates a BackupVault resource belonging to a resource group."
   returns:
     description: "backup Vault Resource."
@@ -425,4 +431,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in BackupVaultsClient."
 metadata: {}
 package: "com.azure.resourcemanager.dataprotection.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-dataprotection:1.5.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-dataprotection:1.6.0
