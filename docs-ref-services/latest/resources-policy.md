@@ -6,6 +6,6 @@ ms.topic: reference
 ms.devlang: java
 ms.service: resources-policy
 ---
-# Azure Resources-Policy SDK for Java - preview
-## Packages - preview
+# Azure Resources-Policy SDK for Java - latest
+## Packages - latest
 [!INCLUDE [packages](resources-policy-index.md)]
