@@ -6,6 +6,6 @@ ms.topic: reference
 ms.devlang: java
 ms.service: relationships
 ---
-# Azure Relationships SDK for Java - preview
-## Packages - preview
+# Azure Relationships SDK for Java - latest
+## Packages - latest
 [!INCLUDE [packages](relationships-index.md)]

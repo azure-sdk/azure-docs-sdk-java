@@ -1,7 +1,7 @@
 ---
 title: Azure Planetary Computer SDK for Java
 description: Reference for Azure Planetary Computer SDK for Java
-ms.date: 09/21/2026
+ms.date: 09/22/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: planetarycomputer
