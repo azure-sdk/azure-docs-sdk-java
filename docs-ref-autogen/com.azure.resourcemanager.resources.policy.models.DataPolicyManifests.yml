@@ -1,0 +1,79 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.resources.policy.models.DataPolicyManifests"
+fullName: "com.azure.resourcemanager.resources.policy.models.DataPolicyManifests"
+name: "DataPolicyManifests"
+nameWithType: "DataPolicyManifests"
+summary: "Resource collection API of Data<wbr>Policy<wbr>Manifests."
+syntax: "public interface **DataPolicyManifests**"
+methods:
+- uid: "com.azure.resourcemanager.resources.policy.models.DataPolicyManifests.getByPolicyMode(java.lang.String)"
+  fullName: "com.azure.resourcemanager.resources.policy.models.DataPolicyManifests.getByPolicyMode(String policyMode)"
+  name: "getByPolicyMode(String policyMode)"
+  nameWithType: "DataPolicyManifests.getByPolicyMode(String policyMode)"
+  summary: "Retrieves a data policy manifest."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The policy mode of the data policy manifest to get."
+    name: "policyMode"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract DataPolicyManifest getByPolicyMode(String policyMode)"
+  desc: "Retrieves a data policy manifest. This operation retrieves the data policy manifest with the given policy mode."
+  returns:
+    description: "the data policy manifest."
+    type: "<xref href=\"com.azure.resourcemanager.resources.policy.models.DataPolicyManifest?alt=com.azure.resourcemanager.resources.policy.models.DataPolicyManifest&text=DataPolicyManifest\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.resources.policy.models.DataPolicyManifests.getByPolicyModeWithResponse(java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.resources.policy.models.DataPolicyManifests.getByPolicyModeWithResponse(String policyMode, Context context)"
+  name: "getByPolicyModeWithResponse(String policyMode, Context context)"
+  nameWithType: "DataPolicyManifests.getByPolicyModeWithResponse(String policyMode, Context context)"
+  summary: "Retrieves a data policy manifest."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The policy mode of the data policy manifest to get."
+    name: "policyMode"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Response<DataPolicyManifest> getByPolicyModeWithResponse(String policyMode, Context context)"
+  desc: "Retrieves a data policy manifest. This operation retrieves the data policy manifest with the given policy mode."
+  returns:
+    description: "the data policy manifest along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.policy.models.DataPolicyManifest?alt=com.azure.resourcemanager.resources.policy.models.DataPolicyManifest&text=DataPolicyManifest\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.resources.policy.models.DataPolicyManifests.list()"
+  fullName: "com.azure.resourcemanager.resources.policy.models.DataPolicyManifests.list()"
+  name: "list()"
+  nameWithType: "DataPolicyManifests.list()"
+  summary: "Retrieves data policy manifests."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract PagedIterable<DataPolicyManifest> list()"
+  desc: "Retrieves data policy manifests. This operation retrieves a list of all the data policy manifests that match the optional given $filter. Valid values for $filter are: \\\\\"$filter=namespace eq '\\{0\\}'\\\\\". If $filter is not provided, the unfiltered list includes all data policy manifests for data resource types. If $filter=namespace is provided, the returned list only includes all data policy manifests that have a namespace matching the provided value."
+  returns:
+    description: "the response of a DataPolicyManifest list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.policy.models.DataPolicyManifest?alt=com.azure.resourcemanager.resources.policy.models.DataPolicyManifest&text=DataPolicyManifest\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.resources.policy.models.DataPolicyManifests.list(java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.resources.policy.models.DataPolicyManifests.list(String filter, Context context)"
+  name: "list(String filter, Context context)"
+  nameWithType: "DataPolicyManifests.list(String filter, Context context)"
+  summary: "Retrieves data policy manifests."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The filter to apply on the operation. Valid values for $filter are: \\\"namespace eq '{value}'\\\". If\n $filter is not provided, no filtering is performed. If $filter=namespace eq '{value}' is provided, the returned\n list only includes all data policy manifests that have a namespace matching the provided value."
+    name: "filter"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract PagedIterable<DataPolicyManifest> list(String filter, Context context)"
+  desc: "Retrieves data policy manifests. This operation retrieves a list of all the data policy manifests that match the optional given $filter. Valid values for $filter are: \\\\\"$filter=namespace eq '\\{0\\}'\\\\\". If $filter is not provided, the unfiltered list includes all data policy manifests for data resource types. If $filter=namespace is provided, the returned list only includes all data policy manifests that have a namespace matching the provided value."
+  returns:
+    description: "the response of a DataPolicyManifest list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.policy.models.DataPolicyManifest?alt=com.azure.resourcemanager.resources.policy.models.DataPolicyManifest&text=DataPolicyManifest\" data-throw-if-not-resolved=\"False\" />&gt;"
+type: "interface"
+desc: "Resource collection API of DataPolicyManifests."
+metadata: {}
+package: "com.azure.resourcemanager.resources.policy.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-resources-policy:1.0.0

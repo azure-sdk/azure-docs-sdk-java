@@ -11,7 +11,6 @@ inheritedClassMethods:
 - classRef: "<xref href=\"com.azure.ai.projects.models.DataGenerationJobOptions?alt=com.azure.ai.projects.models.DataGenerationJobOptions&text=DataGenerationJobOptions\" data-throw-if-not-resolved=\"False\" />"
   methodsRef:
   - "<xref href=\"com.azure.ai.projects.models.DataGenerationJobOptions.fromJson(com.azure.json.JsonReader)?alt=com.azure.ai.projects.models.DataGenerationJobOptions.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.ai.projects.models.DataGenerationJobOptions.getMaxSamples()?alt=com.azure.ai.projects.models.DataGenerationJobOptions.getMaxSamples&text=getMaxSamples\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.ai.projects.models.DataGenerationJobOptions.getModelOptions()?alt=com.azure.ai.projects.models.DataGenerationJobOptions.getModelOptions&text=getModelOptions\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.ai.projects.models.DataGenerationJobOptions.getTrainSplit()?alt=com.azure.ai.projects.models.DataGenerationJobOptions.getTrainSplit&text=getTrainSplit\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.ai.projects.models.DataGenerationJobOptions.getType()?alt=com.azure.ai.projects.models.DataGenerationJobOptions.getType&text=getType\" data-throw-if-not-resolved=\"False\" />"
@@ -33,16 +32,12 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
 syntax: "public final class **TracesDataGenerationJobOptions**</br> extends <xref href=\"com.azure.ai.projects.models.DataGenerationJobOptions?alt=com.azure.ai.projects.models.DataGenerationJobOptions&text=DataGenerationJobOptions\" data-throw-if-not-resolved=\"False\" />"
 constructors:
-- uid: "com.azure.ai.projects.models.TracesDataGenerationJobOptions.TracesDataGenerationJobOptions(int)"
-  fullName: "com.azure.ai.projects.models.TracesDataGenerationJobOptions.TracesDataGenerationJobOptions(int maxSamples)"
-  name: "TracesDataGenerationJobOptions(int maxSamples)"
-  nameWithType: "TracesDataGenerationJobOptions.TracesDataGenerationJobOptions(int maxSamples)"
+- uid: "com.azure.ai.projects.models.TracesDataGenerationJobOptions.TracesDataGenerationJobOptions()"
+  fullName: "com.azure.ai.projects.models.TracesDataGenerationJobOptions.TracesDataGenerationJobOptions()"
+  name: "TracesDataGenerationJobOptions()"
+  nameWithType: "TracesDataGenerationJobOptions.TracesDataGenerationJobOptions()"
   summary: "Creates an instance of Traces<wbr>Data<wbr>Generation<wbr>Job<wbr>Options class."
-  parameters:
-  - description: "the maxSamples value to set."
-    name: "maxSamples"
-    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public TracesDataGenerationJobOptions(int maxSamples)"
+  syntax: "public TracesDataGenerationJobOptions()"
   desc: "Creates an instance of TracesDataGenerationJobOptions class."
 methods:
 - uid: "com.azure.ai.projects.models.TracesDataGenerationJobOptions.fromJson(com.azure.json.JsonReader)"
@@ -58,12 +53,22 @@ methods:
     type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static TracesDataGenerationJobOptions fromJson(JsonReader jsonReader)"
   exceptions:
-  - description: "If the deserialized JSON object was missing any required properties."
+  - description: "If an error occurs while reading the TracesDataGenerationJobOptions."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   desc: "Reads an instance of TracesDataGenerationJobOptions from the JsonReader."
   returns:
     description: "An instance of TracesDataGenerationJobOptions if the JsonReader was pointing to an instance of it, or\n null if it was pointing to JSON null."
     type: "<xref href=\"com.azure.ai.projects.models.TracesDataGenerationJobOptions?alt=com.azure.ai.projects.models.TracesDataGenerationJobOptions&text=TracesDataGenerationJobOptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.models.TracesDataGenerationJobOptions.getMaxSamples()"
+  fullName: "com.azure.ai.projects.models.TracesDataGenerationJobOptions.getMaxSamples()"
+  name: "getMaxSamples()"
+  nameWithType: "TracesDataGenerationJobOptions.getMaxSamples()"
+  summary: "Get the max<wbr>Samples property: Maximum number of samples to generate, up to service-defined limits."
+  syntax: "public Integer getMaxSamples()"
+  desc: "Get the maxSamples property: Maximum number of samples to generate, up to service-defined limits. If omitted, sampling is turned off."
+  returns:
+    description: "the maxSamples value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
 - uid: "com.azure.ai.projects.models.TracesDataGenerationJobOptions.getType()"
   fullName: "com.azure.ai.projects.models.TracesDataGenerationJobOptions.getType()"
   name: "getType()"
@@ -85,6 +90,20 @@ methods:
   returns:
     description: "the redactPrivateContent value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.ai.projects.models.TracesDataGenerationJobOptions.setMaxSamples(java.lang.Integer)"
+  fullName: "com.azure.ai.projects.models.TracesDataGenerationJobOptions.setMaxSamples(Integer maxSamples)"
+  name: "setMaxSamples(Integer maxSamples)"
+  nameWithType: "TracesDataGenerationJobOptions.setMaxSamples(Integer maxSamples)"
+  summary: "Set the max<wbr>Samples property: Maximum number of samples to generate, up to service-defined limits."
+  parameters:
+  - description: "the maxSamples value to set."
+    name: "maxSamples"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  syntax: "public TracesDataGenerationJobOptions setMaxSamples(Integer maxSamples)"
+  desc: "Set the maxSamples property: Maximum number of samples to generate, up to service-defined limits. If omitted, sampling is turned off."
+  returns:
+    description: "the TracesDataGenerationJobOptions object itself."
+    type: "<xref href=\"com.azure.ai.projects.models.TracesDataGenerationJobOptions?alt=com.azure.ai.projects.models.TracesDataGenerationJobOptions&text=TracesDataGenerationJobOptions\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.projects.models.TracesDataGenerationJobOptions.setModelOptions(com.azure.ai.projects.models.DataGenerationModelOptions)"
   fullName: "com.azure.ai.projects.models.TracesDataGenerationJobOptions.setModelOptions(DataGenerationModelOptions modelOptions)"
   name: "setModelOptions(DataGenerationModelOptions modelOptions)"
@@ -142,4 +161,4 @@ type: "class"
 desc: "The options for a data generation job with Traces type."
 metadata: {}
 package: "com.azure.ai.projects.models"
-artifact: com.azure:azure-ai-projects:2.5.0
+artifact: com.azure:azure-ai-projects:2.6.0

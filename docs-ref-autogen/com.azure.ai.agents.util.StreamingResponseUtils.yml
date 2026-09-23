@@ -1,0 +1,61 @@
+### YamlMime:JavaType
+uid: "com.azure.ai.agents.util.StreamingResponseUtils"
+fullName: "com.azure.ai.agents.util.StreamingResponseUtils"
+name: "StreamingResponseUtils"
+nameWithType: "StreamingResponseUtils"
+summary: "Utility methods for bridging OpenAI streaming types to Azure SDK / Reactor types."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **StreamingResponseUtils**"
+methods:
+- uid: "com.azure.ai.agents.util.StreamingResponseUtils.<T>toFlux(com.openai.core.http.AsyncStreamResponse<T>)"
+  fullName: "com.azure.ai.agents.util.StreamingResponseUtils.toFlux(AsyncStreamResponse<T> asyncStream)"
+  name: "toFlux(AsyncStreamResponse<T> asyncStream)"
+  nameWithType: "StreamingResponseUtils.toFlux(AsyncStreamResponse<T> asyncStream)"
+  summary: "Bridges an OpenAI <xref uid=\"com.openai.core.http.AsyncStreamResponse\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AsyncStreamResponse\"></xref> into a Reactor <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref>, forwarding events, errors, and completion signals while closing the underlying stream on disposal."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The OpenAI async stream response."
+    name: "asyncStream"
+    type: "<xref href=\"com.openai.core.http.AsyncStreamResponse?alt=com.openai.core.http.AsyncStreamResponse&text=AsyncStreamResponse\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public static Flux<T> <T>toFlux(AsyncStreamResponse<T> asyncStream)"
+  desc: "Bridges an OpenAI <xref uid=\"com.openai.core.http.AsyncStreamResponse\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AsyncStreamResponse\"></xref> into a Reactor <xref uid=\"reactor.core.publisher.Flux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Flux\"></xref>, forwarding events, errors, and completion signals while closing the underlying stream on disposal.\n\nThread safety: `Flux.create` defaults to `PUSH_PULL` mode, which wraps the sink in a `SerializedFluxSink` that serializes `next/error/complete` calls. Additionally, the OpenAI `AsyncStreamResponse` implementation invokes the handler sequentially on a single executor thread (via `Stream.forEach`), so concurrent emission cannot occur in practice."
+  returns:
+    description: "A Flux wrapping the given AsyncStreamResponse."
+    type: "<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.ai.agents.util.StreamingResponseUtils.<T>toIterableStream(com.openai.core.http.StreamResponse<T>)"
+  fullName: "com.azure.ai.agents.util.StreamingResponseUtils.toIterableStream(StreamResponse<T> streamResponse)"
+  name: "toIterableStream(StreamResponse<T> streamResponse)"
+  nameWithType: "StreamingResponseUtils.toIterableStream(StreamResponse<T> streamResponse)"
+  summary: "Converts an OpenAI <xref uid=\"com.openai.core.http.StreamResponse\" data-throw-if-not-resolved=\"false\" data-raw-source=\"StreamResponse\"></xref> into an <xref uid=\"com.azure.core.util.IterableStream\" data-throw-if-not-resolved=\"false\" data-raw-source=\"IterableStream\"></xref> that automatically closes the underlying stream resource when all events have been consumed."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The OpenAI stream response."
+    name: "streamResponse"
+    type: "<xref href=\"com.openai.core.http.StreamResponse?alt=com.openai.core.http.StreamResponse&text=StreamResponse\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public static IterableStream<T> <T>toIterableStream(StreamResponse<T> streamResponse)"
+  desc: "Converts an OpenAI <xref uid=\"com.openai.core.http.StreamResponse\" data-throw-if-not-resolved=\"false\" data-raw-source=\"StreamResponse\"></xref> into an <xref uid=\"com.azure.core.util.IterableStream\" data-throw-if-not-resolved=\"false\" data-raw-source=\"IterableStream\"></xref> that automatically closes the underlying stream resource when all events have been consumed.\n\nThe returned <xref uid=\"com.azure.core.util.IterableStream\" data-throw-if-not-resolved=\"false\" data-raw-source=\"IterableStream\"></xref> is single-use: calling `iterator()` or `stream()` more than once will throw <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"IllegalStateException\"></xref>, because the underlying <xref uid=\"com.openai.core.http.StreamResponse\" data-throw-if-not-resolved=\"false\" data-raw-source=\"StreamResponse\"></xref> can only be consumed once."
+  returns:
+    description: "An IterableStream wrapping the given StreamResponse."
+    type: "<xref href=\"com.azure.core.util.IterableStream?alt=com.azure.core.util.IterableStream&text=IterableStream\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
+type: "class"
+desc: "Utility methods for bridging OpenAI streaming types to Azure SDK / Reactor types."
+metadata: {}
+package: "com.azure.ai.agents.util"
+artifact: com.azure:azure-ai-agents:2.6.0

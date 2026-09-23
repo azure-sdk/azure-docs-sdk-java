@@ -154,7 +154,7 @@ methods:
     name: "throughputProperties"
     type: "<xref href=\"com.azure.cosmos.models.ThroughputProperties?alt=com.azure.cosmos.models.ThroughputProperties&text=ThroughputProperties\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public CosmosContainerResponse createContainerIfNotExists(CosmosContainerProperties containerProperties, ThroughputProperties throughputProperties)"
-  desc: "Creates a Cosmos container if one matching the id in the properties object does not exist.\n\n```java\nCosmosContainerProperties containerProperties =\n     new CosmosContainerProperties(containerId, partitionKeyDefinition);\n ThroughputProperties throughputProperties =\n     ThroughputProperties.createAutoscaledThroughput(autoScaleMaxThroughput);\n CosmosContainerResponse container = cosmosDatabase.createContainerIfNotExists(\n     containerProperties,\n     throughputProperties\n );\n```\n\nThe throughput properties will only be used if the specified container does not exist and therefor a new container will be created."
+  desc: "Creates a Cosmos container if one matching the id in the properties object does not exist.\n\n```java\nCosmosContainerProperties containerProperties =\n     new CosmosContainerProperties(containerId, partitionKeyDefinition);\n ThroughputProperties throughputProperties =\n     ThroughputProperties.createAutoscaledThroughput(autoScaleMaxThroughput);\n CosmosContainerResponse container = cosmosDatabase.createContainerIfNotExists(\n     containerProperties,\n     throughputProperties\n );\n```\n\nThe throughput properties will only be used if the specified container does not exist and therefore a new container will be created."
   returns:
     description: "the cosmos container response."
     type: "<xref href=\"com.azure.cosmos.models.CosmosContainerResponse?alt=com.azure.cosmos.models.CosmosContainerResponse&text=CosmosContainerResponse\" data-throw-if-not-resolved=\"False\" />"
@@ -191,7 +191,7 @@ methods:
     name: "throughputProperties"
     type: "<xref href=\"com.azure.cosmos.models.ThroughputProperties?alt=com.azure.cosmos.models.ThroughputProperties&text=ThroughputProperties\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public CosmosContainerResponse createContainerIfNotExists(String id, String partitionKeyPath, ThroughputProperties throughputProperties)"
-  desc: "Creates a Cosmos container if one matching the id does not exist.\n\n```java\nThroughputProperties throughputProperties =\n     ThroughputProperties.createAutoscaledThroughput(autoscaledThroughput);\n CosmosContainerResponse container = cosmosDatabase.createContainerIfNotExists(\n     containerId,\n     partitionKeyPath,\n     throughputProperties\n );\n```\n\nThe throughput properties will only be used if the specified container does not exist and therefor a new container will be created."
+  desc: "Creates a Cosmos container if one matching the id does not exist.\n\n```java\nThroughputProperties throughputProperties =\n     ThroughputProperties.createAutoscaledThroughput(autoscaledThroughput);\n CosmosContainerResponse container = cosmosDatabase.createContainerIfNotExists(\n     containerId,\n     partitionKeyPath,\n     throughputProperties\n );\n```\n\nThe throughput properties will only be used if the specified container does not exist and therefore a new container will be created."
   returns:
     description: "the cosmos container response."
     type: "<xref href=\"com.azure.cosmos.models.CosmosContainerResponse?alt=com.azure.cosmos.models.CosmosContainerResponse&text=CosmosContainerResponse\" data-throw-if-not-resolved=\"False\" />"
@@ -505,4 +505,4 @@ type: "class"
 desc: "Perform read and delete databases, update database throughput, and perform operations on child resources in a synchronous way"
 metadata: {}
 package: "com.azure.cosmos"
-artifact: com.azure:azure-cosmos:4.81.1
+artifact: com.azure:azure-cosmos:4.83.0

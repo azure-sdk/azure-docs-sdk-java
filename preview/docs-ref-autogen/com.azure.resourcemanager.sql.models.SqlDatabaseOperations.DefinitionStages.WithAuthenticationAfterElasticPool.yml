@@ -25,6 +25,22 @@ methods:
   returns:
     description: "next definition stage"
     type: "<xref href=\"com.azure.resourcemanager.sql.models.SqlDatabaseOperations.DefinitionStages.WithCreateAfterElasticPoolOptions?alt=com.azure.resourcemanager.sql.models.SqlDatabaseOperations.DefinitionStages.WithCreateAfterElasticPoolOptions&text=WithCreateAfterElasticPoolOptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.sql.models.SqlDatabaseOperations.DefinitionStages.WithAuthenticationAfterElasticPool.withManagedIdentity(java.lang.String)"
+  fullName: "com.azure.resourcemanager.sql.models.SqlDatabaseOperations.DefinitionStages.WithAuthenticationAfterElasticPool.withManagedIdentity(String managedIdentityResourceId)"
+  name: "withManagedIdentity(String managedIdentityResourceId)"
+  nameWithType: "SqlDatabaseOperations.DefinitionStages.WithAuthenticationAfterElasticPool.withManagedIdentity(String managedIdentityResourceId)"
+  summary: "Specifies the user-assigned managed identity (UAMI) used to authenticate to the SQL database for import."
+  modifiers:
+  - "default"
+  parameters:
+  - description: "the Azure resource ID of the user-assigned managed identity to use\n                                  for both SQL and storage access"
+    name: "managedIdentityResourceId"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public default SqlDatabaseOperations.DefinitionStages.WithCreateAfterElasticPoolOptions withManagedIdentity(String managedIdentityResourceId)"
+  desc: "Specifies the user-assigned managed identity (UAMI) used to authenticate to the SQL database for import.\n\nThe SQL server must have the specified UAMI assigned (and typically set as its primary identity), the UAMI must be granted the appropriate role on the source storage account (e.g. `Storage Blob Data Contributor`), and it must be mapped to a database user with the required privileges. When this method is used, no administrator password is sent to the service.\n\nThis method is for user-assigned managed identity. System-assigned managed identity is not supported. See [Limitations][]\n\n\n[Limitations]: https://learn.microsoft.com/azure/azure-sql/database/database-import-export-managed-identity?view=azuresql&tabs=azure-portal#limitations"
+  returns:
+    description: "next definition stage"
+    type: "<xref href=\"com.azure.resourcemanager.sql.models.SqlDatabaseOperations.DefinitionStages.WithCreateAfterElasticPoolOptions?alt=com.azure.resourcemanager.sql.models.SqlDatabaseOperations.DefinitionStages.WithCreateAfterElasticPoolOptions&text=WithCreateAfterElasticPoolOptions\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.sql.models.SqlDatabaseOperations.DefinitionStages.WithAuthenticationAfterElasticPool.withSqlAdministratorLoginAndPassword(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.sql.models.SqlDatabaseOperations.DefinitionStages.WithAuthenticationAfterElasticPool.withSqlAdministratorLoginAndPassword(String administratorLogin, String administratorPassword)"
   name: "withSqlAdministratorLoginAndPassword(String administratorLogin, String administratorPassword)"
@@ -48,4 +64,4 @@ type: "interface"
 desc: "Sets the authentication type and SQL or Active Directory administrator login and password."
 metadata: {}
 package: "com.azure.resourcemanager.sql.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-sql:2.54.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-sql:2.55.0-beta.1

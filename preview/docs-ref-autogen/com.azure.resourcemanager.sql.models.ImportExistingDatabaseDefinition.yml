@@ -36,7 +36,7 @@ methods:
   nameWithType: "ImportExistingDatabaseDefinition.administratorLogin()"
   summary: "Get the administrator<wbr>Login property: Administrator login name."
   syntax: "public String administratorLogin()"
-  desc: "Get the administratorLogin property: Administrator login name."
+  desc: "Get the administratorLogin property: Administrator login name. If AuthenticationType is ManagedIdentity, this field should specify the Managed Identity's resource ID."
   returns:
     description: "the administratorLogin value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -46,7 +46,7 @@ methods:
   nameWithType: "ImportExistingDatabaseDefinition.administratorLoginPassword()"
   summary: "Get the administrator<wbr>Login<wbr>Password property: Administrator login password."
   syntax: "public String administratorLoginPassword()"
-  desc: "Get the administratorLoginPassword property: Administrator login password."
+  desc: "Get the administratorLoginPassword property: Administrator login password. If AuthenticationType is ManagedIdentity, this field should not be specified."
   returns:
     description: "the administratorLoginPassword value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -54,9 +54,9 @@ methods:
   fullName: "com.azure.resourcemanager.sql.models.ImportExistingDatabaseDefinition.authenticationType()"
   name: "authenticationType()"
   nameWithType: "ImportExistingDatabaseDefinition.authenticationType()"
-  summary: "Get the authentication<wbr>Type property: Authentication type."
+  summary: "Get the authentication<wbr>Type property: Type of credentials provided for access to the target SQL server: SQL, ADPassword or Managed<wbr>Identity."
   syntax: "public String authenticationType()"
-  desc: "Get the authenticationType property: Authentication type."
+  desc: "Get the authenticationType property: Type of credentials provided for access to the target SQL server: SQL, ADPassword or ManagedIdentity."
   returns:
     description: "the authenticationType value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -93,9 +93,9 @@ methods:
   fullName: "com.azure.resourcemanager.sql.models.ImportExistingDatabaseDefinition.storageKey()"
   name: "storageKey()"
   nameWithType: "ImportExistingDatabaseDefinition.storageKey()"
-  summary: "Get the storage<wbr>Key property: Storage key."
+  summary: "Get the storage<wbr>Key property: Storage key for the storage account."
   syntax: "public String storageKey()"
-  desc: "Get the storageKey property: Storage key."
+  desc: "Get the storageKey property: Storage key for the storage account. If StorageKeyType is ManagedIdentity, this field should specify the Managed Identity's resource ID."
   returns:
     description: "the storageKey value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -103,9 +103,9 @@ methods:
   fullName: "com.azure.resourcemanager.sql.models.ImportExistingDatabaseDefinition.storageKeyType()"
   name: "storageKeyType()"
   nameWithType: "ImportExistingDatabaseDefinition.storageKeyType()"
-  summary: "Get the storage<wbr>Key<wbr>Type property: Storage key type."
+  summary: "Get the storage<wbr>Key<wbr>Type property: Storage key type: Storage<wbr>Access<wbr>Key, Shared<wbr>Access<wbr>Key, or Managed<wbr>Identity."
   syntax: "public StorageKeyType storageKeyType()"
-  desc: "Get the storageKeyType property: Storage key type."
+  desc: "Get the storageKeyType property: Storage key type: StorageAccessKey, SharedAccessKey, or ManagedIdentity."
   returns:
     description: "the storageKeyType value."
     type: "<xref href=\"com.azure.resourcemanager.sql.models.StorageKeyType?alt=com.azure.resourcemanager.sql.models.StorageKeyType&text=StorageKeyType\" data-throw-if-not-resolved=\"False\" />"
@@ -148,7 +148,7 @@ methods:
     name: "administratorLogin"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ImportExistingDatabaseDefinition withAdministratorLogin(String administratorLogin)"
-  desc: "Set the administratorLogin property: Administrator login name."
+  desc: "Set the administratorLogin property: Administrator login name. If AuthenticationType is ManagedIdentity, this field should specify the Managed Identity's resource ID."
   returns:
     description: "the ImportExistingDatabaseDefinition object itself."
     type: "<xref href=\"com.azure.resourcemanager.sql.models.ImportExistingDatabaseDefinition?alt=com.azure.resourcemanager.sql.models.ImportExistingDatabaseDefinition&text=ImportExistingDatabaseDefinition\" data-throw-if-not-resolved=\"False\" />"
@@ -162,7 +162,7 @@ methods:
     name: "administratorLoginPassword"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ImportExistingDatabaseDefinition withAdministratorLoginPassword(String administratorLoginPassword)"
-  desc: "Set the administratorLoginPassword property: Administrator login password."
+  desc: "Set the administratorLoginPassword property: Administrator login password. If AuthenticationType is ManagedIdentity, this field should not be specified."
   returns:
     description: "the ImportExistingDatabaseDefinition object itself."
     type: "<xref href=\"com.azure.resourcemanager.sql.models.ImportExistingDatabaseDefinition?alt=com.azure.resourcemanager.sql.models.ImportExistingDatabaseDefinition&text=ImportExistingDatabaseDefinition\" data-throw-if-not-resolved=\"False\" />"
@@ -170,13 +170,13 @@ methods:
   fullName: "com.azure.resourcemanager.sql.models.ImportExistingDatabaseDefinition.withAuthenticationType(String authenticationType)"
   name: "withAuthenticationType(String authenticationType)"
   nameWithType: "ImportExistingDatabaseDefinition.withAuthenticationType(String authenticationType)"
-  summary: "Set the authentication<wbr>Type property: Authentication type."
+  summary: "Set the authentication<wbr>Type property: Type of credentials provided for access to the target SQL server: SQL, ADPassword or Managed<wbr>Identity."
   parameters:
   - description: "the authenticationType value to set."
     name: "authenticationType"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ImportExistingDatabaseDefinition withAuthenticationType(String authenticationType)"
-  desc: "Set the authenticationType property: Authentication type."
+  desc: "Set the authenticationType property: Type of credentials provided for access to the target SQL server: SQL, ADPassword or ManagedIdentity."
   returns:
     description: "the ImportExistingDatabaseDefinition object itself."
     type: "<xref href=\"com.azure.resourcemanager.sql.models.ImportExistingDatabaseDefinition?alt=com.azure.resourcemanager.sql.models.ImportExistingDatabaseDefinition&text=ImportExistingDatabaseDefinition\" data-throw-if-not-resolved=\"False\" />"
@@ -198,13 +198,13 @@ methods:
   fullName: "com.azure.resourcemanager.sql.models.ImportExistingDatabaseDefinition.withStorageKey(String storageKey)"
   name: "withStorageKey(String storageKey)"
   nameWithType: "ImportExistingDatabaseDefinition.withStorageKey(String storageKey)"
-  summary: "Set the storage<wbr>Key property: Storage key."
+  summary: "Set the storage<wbr>Key property: Storage key for the storage account."
   parameters:
   - description: "the storageKey value to set."
     name: "storageKey"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ImportExistingDatabaseDefinition withStorageKey(String storageKey)"
-  desc: "Set the storageKey property: Storage key."
+  desc: "Set the storageKey property: Storage key for the storage account. If StorageKeyType is ManagedIdentity, this field should specify the Managed Identity's resource ID."
   returns:
     description: "the ImportExistingDatabaseDefinition object itself."
     type: "<xref href=\"com.azure.resourcemanager.sql.models.ImportExistingDatabaseDefinition?alt=com.azure.resourcemanager.sql.models.ImportExistingDatabaseDefinition&text=ImportExistingDatabaseDefinition\" data-throw-if-not-resolved=\"False\" />"
@@ -212,13 +212,13 @@ methods:
   fullName: "com.azure.resourcemanager.sql.models.ImportExistingDatabaseDefinition.withStorageKeyType(StorageKeyType storageKeyType)"
   name: "withStorageKeyType(StorageKeyType storageKeyType)"
   nameWithType: "ImportExistingDatabaseDefinition.withStorageKeyType(StorageKeyType storageKeyType)"
-  summary: "Set the storage<wbr>Key<wbr>Type property: Storage key type."
+  summary: "Set the storage<wbr>Key<wbr>Type property: Storage key type: Storage<wbr>Access<wbr>Key, Shared<wbr>Access<wbr>Key, or Managed<wbr>Identity."
   parameters:
   - description: "the storageKeyType value to set."
     name: "storageKeyType"
     type: "<xref href=\"com.azure.resourcemanager.sql.models.StorageKeyType?alt=com.azure.resourcemanager.sql.models.StorageKeyType&text=StorageKeyType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public ImportExistingDatabaseDefinition withStorageKeyType(StorageKeyType storageKeyType)"
-  desc: "Set the storageKeyType property: Storage key type."
+  desc: "Set the storageKeyType property: Storage key type: StorageAccessKey, SharedAccessKey, or ManagedIdentity."
   returns:
     description: "the ImportExistingDatabaseDefinition object itself."
     type: "<xref href=\"com.azure.resourcemanager.sql.models.ImportExistingDatabaseDefinition?alt=com.azure.resourcemanager.sql.models.ImportExistingDatabaseDefinition&text=ImportExistingDatabaseDefinition\" data-throw-if-not-resolved=\"False\" />"
@@ -242,4 +242,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.sql.models.ImportExistingDatabaseDefinition?alt=com.azure.resourcemanager.sql.models.ImportExistingDatabaseDefinition&text=ImportExistingDatabaseDefinition\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.sql.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-sql:2.54.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-sql:2.55.0-beta.1

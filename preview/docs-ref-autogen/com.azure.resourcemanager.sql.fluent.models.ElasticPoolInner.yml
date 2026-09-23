@@ -45,6 +45,16 @@ constructors:
   syntax: "public ElasticPoolInner()"
   desc: "Creates an instance of ElasticPoolInner class."
 methods:
+- uid: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolInner.autoPauseDelay()"
+  fullName: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolInner.autoPauseDelay()"
+  name: "autoPauseDelay()"
+  nameWithType: "ElasticPoolInner.autoPauseDelay()"
+  summary: "Get the auto<wbr>Pause<wbr>Delay property: Time in minutes after which elastic pool is automatically paused."
+  syntax: "public Integer autoPauseDelay()"
+  desc: "Get the autoPauseDelay property: Time in minutes after which elastic pool is automatically paused. A value of -1 means that automatic pause is disabled."
+  returns:
+    description: "the autoPauseDelay value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
 - uid: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolInner.availabilityZone()"
   fullName: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolInner.availabilityZone()"
   name: "availabilityZone()"
@@ -65,6 +75,16 @@ methods:
   returns:
     description: "the creationDate value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
+- uid: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolInner.currentSku()"
+  fullName: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolInner.currentSku()"
+  name: "currentSku()"
+  nameWithType: "ElasticPoolInner.currentSku()"
+  summary: "Get the current<wbr>Sku property: The name and tier of the current SKU."
+  syntax: "public Sku currentSku()"
+  desc: "Get the currentSku property: The name and tier of the current SKU."
+  returns:
+    description: "the currentSku value."
+    type: "<xref href=\"com.azure.resourcemanager.sql.models.Sku?alt=com.azure.resourcemanager.sql.models.Sku&text=Sku\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolInner.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolInner.fromJson(JsonReader jsonReader)"
   name: "fromJson(JsonReader jsonReader)"
@@ -88,9 +108,9 @@ methods:
   fullName: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolInner.highAvailabilityReplicaCount()"
   name: "highAvailabilityReplicaCount()"
   nameWithType: "ElasticPoolInner.highAvailabilityReplicaCount()"
-  summary: "Get the high<wbr>Availability<wbr>Replica<wbr>Count property: The number of secondary replicas associated with the elastic pool that are used to provide high availability."
+  summary: "Get the high<wbr>Availability<wbr>Replica<wbr>Count property: The number of secondary replicas associated with the Business Critical, Premium, or Hyperscale edition elastic pool that are used to provide high availability."
   syntax: "public Integer highAvailabilityReplicaCount()"
-  desc: "Get the highAvailabilityReplicaCount property: The number of secondary replicas associated with the elastic pool that are used to provide high availability. Applicable only to Hyperscale elastic pools."
+  desc: "Get the highAvailabilityReplicaCount property: The number of secondary replicas associated with the Business Critical, Premium, or Hyperscale edition elastic pool that are used to provide high availability. Applicable only to Hyperscale elastic pools."
   returns:
     description: "the highAvailabilityReplicaCount value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
@@ -192,7 +212,7 @@ methods:
   nameWithType: "ElasticPoolInner.sku()"
   summary: "Get the sku property: The elastic pool SKU."
   syntax: "public Sku sku()"
-  desc: "Get the sku property: The elastic pool SKU. The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the \\`Capabilities\\_ListByLocation\\` REST API or the following command: \\`\\`\\`azurecli az sql elastic-pool list-editions -l <location> -o table \\`\\`\\`\\`."
+  desc: "Get the sku property: The elastic pool SKU. The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the \\`Capabilities\\_ListByLocation\\` REST API or the following command: \\`\\`\\`azurecli az sql elastic-pool list-editions -l <location> -o table \\`\\`\\`."
   returns:
     description: "the sku value."
     type: "<xref href=\"com.azure.resourcemanager.sql.models.Sku?alt=com.azure.resourcemanager.sql.models.Sku&text=Sku\" data-throw-if-not-resolved=\"False\" />"
@@ -206,6 +226,16 @@ methods:
   returns:
     description: "the state value."
     type: "<xref href=\"com.azure.resourcemanager.sql.models.ElasticPoolState?alt=com.azure.resourcemanager.sql.models.ElasticPoolState&text=ElasticPoolState\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolInner.systemData()"
+  fullName: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolInner.systemData()"
+  name: "systemData()"
+  nameWithType: "ElasticPoolInner.systemData()"
+  summary: "Get the system<wbr>Data property: Azure Resource Manager metadata containing created<wbr>By and modified<wbr>By information."
+  syntax: "public SystemData systemData()"
+  desc: "Get the systemData property: Azure Resource Manager metadata containing createdBy and modifiedBy information."
+  returns:
+    description: "the systemData value."
+    type: "<xref href=\"com.azure.core.management.SystemData?alt=com.azure.core.management.SystemData&text=SystemData\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolInner.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolInner.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -237,6 +267,20 @@ methods:
   summary: "Validates the instance."
   syntax: "public void validate()"
   desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolInner.withAutoPauseDelay(java.lang.Integer)"
+  fullName: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolInner.withAutoPauseDelay(Integer autoPauseDelay)"
+  name: "withAutoPauseDelay(Integer autoPauseDelay)"
+  nameWithType: "ElasticPoolInner.withAutoPauseDelay(Integer autoPauseDelay)"
+  summary: "Set the auto<wbr>Pause<wbr>Delay property: Time in minutes after which elastic pool is automatically paused."
+  parameters:
+  - description: "the autoPauseDelay value to set."
+    name: "autoPauseDelay"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  syntax: "public ElasticPoolInner withAutoPauseDelay(Integer autoPauseDelay)"
+  desc: "Set the autoPauseDelay property: Time in minutes after which elastic pool is automatically paused. A value of -1 means that automatic pause is disabled."
+  returns:
+    description: "the ElasticPoolInner object itself."
+    type: "<xref href=\"com.azure.resourcemanager.sql.fluent.models.ElasticPoolInner?alt=com.azure.resourcemanager.sql.fluent.models.ElasticPoolInner&text=ElasticPoolInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolInner.withAvailabilityZone(com.azure.resourcemanager.sql.models.AvailabilityZoneType)"
   fullName: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolInner.withAvailabilityZone(AvailabilityZoneType availabilityZone)"
   name: "withAvailabilityZone(AvailabilityZoneType availabilityZone)"
@@ -255,13 +299,13 @@ methods:
   fullName: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolInner.withHighAvailabilityReplicaCount(Integer highAvailabilityReplicaCount)"
   name: "withHighAvailabilityReplicaCount(Integer highAvailabilityReplicaCount)"
   nameWithType: "ElasticPoolInner.withHighAvailabilityReplicaCount(Integer highAvailabilityReplicaCount)"
-  summary: "Set the high<wbr>Availability<wbr>Replica<wbr>Count property: The number of secondary replicas associated with the elastic pool that are used to provide high availability."
+  summary: "Set the high<wbr>Availability<wbr>Replica<wbr>Count property: The number of secondary replicas associated with the Business Critical, Premium, or Hyperscale edition elastic pool that are used to provide high availability."
   parameters:
   - description: "the highAvailabilityReplicaCount value to set."
     name: "highAvailabilityReplicaCount"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
   syntax: "public ElasticPoolInner withHighAvailabilityReplicaCount(Integer highAvailabilityReplicaCount)"
-  desc: "Set the highAvailabilityReplicaCount property: The number of secondary replicas associated with the elastic pool that are used to provide high availability. Applicable only to Hyperscale elastic pools."
+  desc: "Set the highAvailabilityReplicaCount property: The number of secondary replicas associated with the Business Critical, Premium, or Hyperscale edition elastic pool that are used to provide high availability. Applicable only to Hyperscale elastic pools."
   returns:
     description: "the ElasticPoolInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.sql.fluent.models.ElasticPoolInner?alt=com.azure.resourcemanager.sql.fluent.models.ElasticPoolInner&text=ElasticPoolInner\" data-throw-if-not-resolved=\"False\" />"
@@ -370,7 +414,7 @@ methods:
     name: "sku"
     type: "<xref href=\"com.azure.resourcemanager.sql.models.Sku?alt=com.azure.resourcemanager.sql.models.Sku&text=Sku\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public ElasticPoolInner withSku(Sku sku)"
-  desc: "Set the sku property: The elastic pool SKU. The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the \\`Capabilities\\_ListByLocation\\` REST API or the following command: \\`\\`\\`azurecli az sql elastic-pool list-editions -l <location> -o table \\`\\`\\`\\`."
+  desc: "Set the sku property: The elastic pool SKU. The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the \\`Capabilities\\_ListByLocation\\` REST API or the following command: \\`\\`\\`azurecli az sql elastic-pool list-editions -l <location> -o table \\`\\`\\`."
   returns:
     description: "the ElasticPoolInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.sql.fluent.models.ElasticPoolInner?alt=com.azure.resourcemanager.sql.fluent.models.ElasticPoolInner&text=ElasticPoolInner\" data-throw-if-not-resolved=\"False\" />"
@@ -413,4 +457,4 @@ type: "class"
 desc: "An elastic pool."
 metadata: {}
 package: "com.azure.resourcemanager.sql.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-sql:2.54.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-sql:2.55.0-beta.1

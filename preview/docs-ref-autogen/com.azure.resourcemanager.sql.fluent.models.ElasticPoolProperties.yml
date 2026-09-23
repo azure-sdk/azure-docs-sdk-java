@@ -30,6 +30,16 @@ constructors:
   syntax: "public ElasticPoolProperties()"
   desc: "Creates an instance of ElasticPoolProperties class."
 methods:
+- uid: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolProperties.autoPauseDelay()"
+  fullName: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolProperties.autoPauseDelay()"
+  name: "autoPauseDelay()"
+  nameWithType: "ElasticPoolProperties.autoPauseDelay()"
+  summary: "Get the auto<wbr>Pause<wbr>Delay property: Time in minutes after which elastic pool is automatically paused."
+  syntax: "public Integer autoPauseDelay()"
+  desc: "Get the autoPauseDelay property: Time in minutes after which elastic pool is automatically paused. A value of -1 means that automatic pause is disabled."
+  returns:
+    description: "the autoPauseDelay value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
 - uid: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolProperties.availabilityZone()"
   fullName: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolProperties.availabilityZone()"
   name: "availabilityZone()"
@@ -50,6 +60,16 @@ methods:
   returns:
     description: "the creationDate value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
+- uid: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolProperties.currentSku()"
+  fullName: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolProperties.currentSku()"
+  name: "currentSku()"
+  nameWithType: "ElasticPoolProperties.currentSku()"
+  summary: "Get the current<wbr>Sku property: The name and tier of the current SKU."
+  syntax: "public Sku currentSku()"
+  desc: "Get the currentSku property: The name and tier of the current SKU."
+  returns:
+    description: "the currentSku value."
+    type: "<xref href=\"com.azure.resourcemanager.sql.models.Sku?alt=com.azure.resourcemanager.sql.models.Sku&text=Sku\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolProperties.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolProperties.fromJson(JsonReader jsonReader)"
   name: "fromJson(JsonReader jsonReader)"
@@ -73,9 +93,9 @@ methods:
   fullName: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolProperties.highAvailabilityReplicaCount()"
   name: "highAvailabilityReplicaCount()"
   nameWithType: "ElasticPoolProperties.highAvailabilityReplicaCount()"
-  summary: "Get the high<wbr>Availability<wbr>Replica<wbr>Count property: The number of secondary replicas associated with the elastic pool that are used to provide high availability."
+  summary: "Get the high<wbr>Availability<wbr>Replica<wbr>Count property: The number of secondary replicas associated with the Business Critical, Premium, or Hyperscale edition elastic pool that are used to provide high availability."
   syntax: "public Integer highAvailabilityReplicaCount()"
-  desc: "Get the highAvailabilityReplicaCount property: The number of secondary replicas associated with the elastic pool that are used to provide high availability. Applicable only to Hyperscale elastic pools."
+  desc: "Get the highAvailabilityReplicaCount property: The number of secondary replicas associated with the Business Critical, Premium, or Hyperscale edition elastic pool that are used to provide high availability. Applicable only to Hyperscale elastic pools."
   returns:
     description: "the highAvailabilityReplicaCount value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
@@ -168,6 +188,20 @@ methods:
   summary: "Validates the instance."
   syntax: "public void validate()"
   desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolProperties.withAutoPauseDelay(java.lang.Integer)"
+  fullName: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolProperties.withAutoPauseDelay(Integer autoPauseDelay)"
+  name: "withAutoPauseDelay(Integer autoPauseDelay)"
+  nameWithType: "ElasticPoolProperties.withAutoPauseDelay(Integer autoPauseDelay)"
+  summary: "Set the auto<wbr>Pause<wbr>Delay property: Time in minutes after which elastic pool is automatically paused."
+  parameters:
+  - description: "the autoPauseDelay value to set."
+    name: "autoPauseDelay"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  syntax: "public ElasticPoolProperties withAutoPauseDelay(Integer autoPauseDelay)"
+  desc: "Set the autoPauseDelay property: Time in minutes after which elastic pool is automatically paused. A value of -1 means that automatic pause is disabled."
+  returns:
+    description: "the ElasticPoolProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.sql.fluent.models.ElasticPoolProperties?alt=com.azure.resourcemanager.sql.fluent.models.ElasticPoolProperties&text=ElasticPoolProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolProperties.withAvailabilityZone(com.azure.resourcemanager.sql.models.AvailabilityZoneType)"
   fullName: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolProperties.withAvailabilityZone(AvailabilityZoneType availabilityZone)"
   name: "withAvailabilityZone(AvailabilityZoneType availabilityZone)"
@@ -186,13 +220,13 @@ methods:
   fullName: "com.azure.resourcemanager.sql.fluent.models.ElasticPoolProperties.withHighAvailabilityReplicaCount(Integer highAvailabilityReplicaCount)"
   name: "withHighAvailabilityReplicaCount(Integer highAvailabilityReplicaCount)"
   nameWithType: "ElasticPoolProperties.withHighAvailabilityReplicaCount(Integer highAvailabilityReplicaCount)"
-  summary: "Set the high<wbr>Availability<wbr>Replica<wbr>Count property: The number of secondary replicas associated with the elastic pool that are used to provide high availability."
+  summary: "Set the high<wbr>Availability<wbr>Replica<wbr>Count property: The number of secondary replicas associated with the Business Critical, Premium, or Hyperscale edition elastic pool that are used to provide high availability."
   parameters:
   - description: "the highAvailabilityReplicaCount value to set."
     name: "highAvailabilityReplicaCount"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
   syntax: "public ElasticPoolProperties withHighAvailabilityReplicaCount(Integer highAvailabilityReplicaCount)"
-  desc: "Set the highAvailabilityReplicaCount property: The number of secondary replicas associated with the elastic pool that are used to provide high availability. Applicable only to Hyperscale elastic pools."
+  desc: "Set the highAvailabilityReplicaCount property: The number of secondary replicas associated with the Business Critical, Premium, or Hyperscale edition elastic pool that are used to provide high availability. Applicable only to Hyperscale elastic pools."
   returns:
     description: "the ElasticPoolProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.sql.fluent.models.ElasticPoolProperties?alt=com.azure.resourcemanager.sql.fluent.models.ElasticPoolProperties&text=ElasticPoolProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -310,4 +344,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.sql.fluent.models.ElasticPoolProperties?alt=com.azure.resourcemanager.sql.fluent.models.ElasticPoolProperties&text=ElasticPoolProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.sql.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-sql:2.54.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-sql:2.55.0-beta.1

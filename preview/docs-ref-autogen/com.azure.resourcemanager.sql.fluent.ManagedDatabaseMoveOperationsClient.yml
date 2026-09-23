@@ -14,13 +14,13 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the resource. You can obtain this value\n from the Azure Resource Manager API or the portal."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The locationName parameter."
+  - description: "The name of the region where the resource is located."
     name: "locationName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The operationId parameter."
+  - description: "The ID of the managed database move operation."
     name: "operationId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html\">UUID</a>"
   syntax: "public abstract ManagedDatabaseMoveOperationResultInner get(String resourceGroupName, String locationName, UUID operationId)"
@@ -36,13 +36,13 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the resource. You can obtain this value\n from the Azure Resource Manager API or the portal."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The locationName parameter."
+  - description: "The name of the region where the resource is located."
     name: "locationName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The operationId parameter."
+  - description: "The ID of the managed database move operation."
     name: "operationId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html\">UUID</a>"
   syntax: "public abstract Mono<ManagedDatabaseMoveOperationResultInner> getAsync(String resourceGroupName, String locationName, UUID operationId)"
@@ -58,13 +58,13 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the resource. You can obtain this value\n from the Azure Resource Manager API or the portal."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The locationName parameter."
+  - description: "The name of the region where the resource is located."
     name: "locationName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The operationId parameter."
+  - description: "The ID of the managed database move operation."
     name: "operationId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html\">UUID</a>"
   - description: "The context to associate with this operation."
@@ -83,13 +83,13 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the resource. You can obtain this value\n from the Azure Resource Manager API or the portal."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The locationName parameter."
+  - description: "The name of the region where the resource is located."
     name: "locationName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The operationId parameter."
+  - description: "The ID of the managed database move operation."
     name: "operationId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html\">UUID</a>"
   syntax: "public abstract Mono<Response<ManagedDatabaseMoveOperationResultInner>> getWithResponseAsync(String resourceGroupName, String locationName, UUID operationId)"
@@ -105,10 +105,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the resource. You can obtain this value\n from the Azure Resource Manager API or the portal."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The locationName parameter."
+  - description: "The name of the region where the resource is located."
     name: "locationName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<ManagedDatabaseMoveOperationResultInner> listByLocation(String resourceGroupName, String locationName)"
@@ -124,10 +124,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the resource. You can obtain this value\n from the Azure Resource Manager API or the portal."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The locationName parameter."
+  - description: "The name of the region where the resource is located."
     name: "locationName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Whether or not to only get the latest operation for each database. Has higher\n priority than $filter."
@@ -152,10 +152,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the resource. You can obtain this value\n from the Azure Resource Manager API or the portal."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The locationName parameter."
+  - description: "The name of the region where the resource is located."
     name: "locationName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedFlux<ManagedDatabaseMoveOperationResultInner> listByLocationAsync(String resourceGroupName, String locationName)"
@@ -171,10 +171,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains the resource. You can obtain this value\n from the Azure Resource Manager API or the portal."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The locationName parameter."
+  - description: "The name of the region where the resource is located."
     name: "locationName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Whether or not to only get the latest operation for each database. Has higher\n priority than $filter."
@@ -192,4 +192,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in ManagedDatabaseMoveOperationsClient."
 metadata: {}
 package: "com.azure.resourcemanager.sql.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-sql:2.54.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-sql:2.55.0-beta.1

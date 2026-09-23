@@ -1,0 +1,110 @@
+### YamlMime:JavaType
+uid: "com.azure.ai.agents.models.VoiceConversationStatus"
+fullName: "com.azure.ai.agents.models.VoiceConversationStatus"
+name: "VoiceConversationStatus"
+nameWithType: "VoiceConversationStatus"
+summary: "The lifecycle status of a persisted voice conversation: - \\`in\\_progress\\`: the live session is active, or post-session persistence finalization is pending."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"com.azure.core.util.ExpandableStringEnum?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "<xref href=\"com.azure.core.util.ExpandableStringEnum?alt=com.azure.core.util.ExpandableStringEnum&text=ExpandableStringEnum\" data-throw-if-not-resolved=\"False\" />"
+  methodsRef:
+  - "<xref href=\"com.azure.core.util.ExpandableStringEnum.<T>fromString(java.lang.String,java.lang.Class<T>)?alt=com.azure.core.util.ExpandableStringEnum.<T>fromString&text=<T>fromString\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.util.ExpandableStringEnum.<T>values(java.lang.Class<T>)?alt=com.azure.core.util.ExpandableStringEnum.<T>values&text=<T>values\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.util.ExpandableStringEnum.equals(java.lang.Object)?alt=com.azure.core.util.ExpandableStringEnum.equals&text=equals\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.util.ExpandableStringEnum.getValue()?alt=com.azure.core.util.ExpandableStringEnum.getValue&text=getValue\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.util.ExpandableStringEnum.hashCode()?alt=com.azure.core.util.ExpandableStringEnum.hashCode&text=hashCode\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.util.ExpandableStringEnum.toString()?alt=com.azure.core.util.ExpandableStringEnum.toString&text=toString\" data-throw-if-not-resolved=\"False\" />"
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **VoiceConversationStatus**</br> extends <xref href=\"com.azure.core.util.ExpandableStringEnum?alt=com.azure.core.util.ExpandableStringEnum&text=ExpandableStringEnum\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.VoiceConversationStatus?alt=com.azure.ai.agents.models.VoiceConversationStatus&text=VoiceConversationStatus\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.ai.agents.models.VoiceConversationStatus.VoiceConversationStatus()"
+  fullName: "com.azure.ai.agents.models.VoiceConversationStatus.VoiceConversationStatus()"
+  name: "VoiceConversationStatus()"
+  nameWithType: "VoiceConversationStatus.VoiceConversationStatus()"
+  summary: "Creates a new instance of Voice<wbr>Conversation<wbr>Status value."
+  deprecatedTag: "Use the <xref uid=\"com.azure.ai.agents.models.VoiceConversationStatus.fromString(java.lang.String)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#fromString(String)\"></xref> factory method."
+  syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public VoiceConversationStatus()"
+  desc: "Creates a new instance of VoiceConversationStatus value."
+  hasDeprecatedTag: true
+fields:
+- uid: "com.azure.ai.agents.models.VoiceConversationStatus.COMPLETED"
+  fullName: "com.azure.ai.agents.models.VoiceConversationStatus.COMPLETED"
+  name: "COMPLETED"
+  nameWithType: "VoiceConversationStatus.COMPLETED"
+  summary: "Persistence finalization succeeded."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceConversationStatus?alt=com.azure.ai.agents.models.VoiceConversationStatus&text=VoiceConversationStatus\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final VoiceConversationStatus COMPLETED"
+  desc: "Persistence finalization succeeded. This includes normal or client-initiated close, the \\`end\\_conversation\\` system tool, a max-duration \\`1001\\` close, and client or network disconnects that the service can still finalize."
+- uid: "com.azure.ai.agents.models.VoiceConversationStatus.FAILED"
+  fullName: "com.azure.ai.agents.models.VoiceConversationStatus.FAILED"
+  name: "FAILED"
+  nameWithType: "VoiceConversationStatus.FAILED"
+  summary: "A terminal service, bridge, storage, or unrecoverable transport failure prevented persistence finalization."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceConversationStatus?alt=com.azure.ai.agents.models.VoiceConversationStatus&text=VoiceConversationStatus\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final VoiceConversationStatus FAILED"
+  desc: "A terminal service, bridge, storage, or unrecoverable transport failure prevented persistence finalization."
+- uid: "com.azure.ai.agents.models.VoiceConversationStatus.IN_PROGRESS"
+  fullName: "com.azure.ai.agents.models.VoiceConversationStatus.IN_PROGRESS"
+  name: "IN_PROGRESS"
+  nameWithType: "VoiceConversationStatus.IN_PROGRESS"
+  summary: "The live session is active, or post-session persistence finalization is still pending."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceConversationStatus?alt=com.azure.ai.agents.models.VoiceConversationStatus&text=VoiceConversationStatus\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final VoiceConversationStatus IN_PROGRESS"
+  desc: "The live session is active, or post-session persistence finalization is still pending."
+methods:
+- uid: "com.azure.ai.agents.models.VoiceConversationStatus.fromString(java.lang.String)"
+  fullName: "com.azure.ai.agents.models.VoiceConversationStatus.fromString(String name)"
+  name: "fromString(String name)"
+  nameWithType: "VoiceConversationStatus.fromString(String name)"
+  summary: "Creates or finds a Voice<wbr>Conversation<wbr>Status from its string representation."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "a name to look for."
+    name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public static VoiceConversationStatus fromString(String name)"
+  desc: "Creates or finds a VoiceConversationStatus from its string representation."
+  returns:
+    description: "the corresponding VoiceConversationStatus."
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceConversationStatus?alt=com.azure.ai.agents.models.VoiceConversationStatus&text=VoiceConversationStatus\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.VoiceConversationStatus.values()"
+  fullName: "com.azure.ai.agents.models.VoiceConversationStatus.values()"
+  name: "values()"
+  nameWithType: "VoiceConversationStatus.values()"
+  summary: "Gets known Voice<wbr>Conversation<wbr>Status values."
+  modifiers:
+  - "static"
+  syntax: "public static Collection<VoiceConversationStatus> values()"
+  desc: "Gets known VoiceConversationStatus values."
+  returns:
+    description: "known VoiceConversationStatus values."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html\">Collection</a>&lt;<xref href=\"com.azure.ai.agents.models.VoiceConversationStatus?alt=com.azure.ai.agents.models.VoiceConversationStatus&text=VoiceConversationStatus\" data-throw-if-not-resolved=\"False\" />&gt;"
+type: "class"
+desc: "The lifecycle status of a persisted voice conversation: - \\`in\\_progress\\`: the live session is active, or post-session persistence finalization is pending. - \\`completed\\`: finalization succeeded after normal or client close, \\`end\\_conversation\\`, a max-duration \\`1001\\` close, or a client or network disconnect that the service can still finalize. - \\`failed\\`: a terminal service, bridge, storage, or unrecoverable transport failure prevented finalization."
+metadata: {}
+package: "com.azure.ai.agents.models"
+artifact: com.azure:azure-ai-agents:2.6.0

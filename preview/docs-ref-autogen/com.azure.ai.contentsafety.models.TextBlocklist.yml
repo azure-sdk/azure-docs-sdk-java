@@ -20,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **TextBlocklist**"
+syntax: "public final class **TextBlocklist**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.contentsafety.models.TextBlocklist?alt=com.azure.ai.contentsafety.models.TextBlocklist&text=TextBlocklist\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.ai.contentsafety.models.TextBlocklist.TextBlocklist()"
   fullName: "com.azure.ai.contentsafety.models.TextBlocklist.TextBlocklist()"
@@ -30,16 +30,25 @@ constructors:
   syntax: "public TextBlocklist()"
   desc: "Creates an instance of TextBlocklist class."
 methods:
-- uid: "com.azure.ai.contentsafety.models.TextBlocklist.getBlocklistName()"
-  fullName: "com.azure.ai.contentsafety.models.TextBlocklist.getBlocklistName()"
-  name: "getBlocklistName()"
-  nameWithType: "TextBlocklist.getBlocklistName()"
-  summary: "Get the blocklist<wbr>Name property: Text blocklist name."
-  syntax: "public String getBlocklistName()"
-  desc: "Get the blocklistName property: Text blocklist name."
+- uid: "com.azure.ai.contentsafety.models.TextBlocklist.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.ai.contentsafety.models.TextBlocklist.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "TextBlocklist.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Text<wbr>Blocklist from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static TextBlocklist fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of TextBlocklist from the JsonReader."
   returns:
-    description: "the blocklistName value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+    description: "An instance of TextBlocklist if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.ai.contentsafety.models.TextBlocklist?alt=com.azure.ai.contentsafety.models.TextBlocklist&text=TextBlocklist\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.contentsafety.models.TextBlocklist.getDescription()"
   fullName: "com.azure.ai.contentsafety.models.TextBlocklist.getDescription()"
   name: "getDescription()"
@@ -49,6 +58,16 @@ methods:
   desc: "Get the description property: Text blocklist description."
   returns:
     description: "the description value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.ai.contentsafety.models.TextBlocklist.getName()"
+  fullName: "com.azure.ai.contentsafety.models.TextBlocklist.getName()"
+  name: "getName()"
+  nameWithType: "TextBlocklist.getName()"
+  summary: "Get the name property: Text blocklist name."
+  syntax: "public String getName()"
+  desc: "Get the name property: Text blocklist name."
+  returns:
+    description: "the name value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.ai.contentsafety.models.TextBlocklist.setDescription(java.lang.String)"
   fullName: "com.azure.ai.contentsafety.models.TextBlocklist.setDescription(String description)"
@@ -64,8 +83,22 @@ methods:
   returns:
     description: "the TextBlocklist object itself."
     type: "<xref href=\"com.azure.ai.contentsafety.models.TextBlocklist?alt=com.azure.ai.contentsafety.models.TextBlocklist&text=TextBlocklist\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.contentsafety.models.TextBlocklist.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.ai.contentsafety.models.TextBlocklist.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "TextBlocklist.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Text Blocklist."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.contentsafety.models.TextBlocklist?alt=com.azure.ai.contentsafety.models.TextBlocklist&text=TextBlocklist\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.ai.contentsafety.models"
-artifact: com.azure:azure-ai-contentsafety:1.0.0-beta.1
+artifact: com.azure:azure-ai-contentsafety:1.1.0-beta.1
