@@ -1,7 +1,7 @@
 ---
 title: Azure Carbon Optimization SDK for Java
 description: Reference for Azure Carbon Optimization SDK for Java
-ms.date: 09/24/2026
+ms.date: 09/25/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: carbonoptimization
