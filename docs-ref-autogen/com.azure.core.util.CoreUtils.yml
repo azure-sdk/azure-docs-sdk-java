@@ -53,9 +53,9 @@ methods:
     name: "shutdownThread"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html\">Thread</a>"
   syntax: "public static Thread addShutdownHookSafely(Thread shutdownThread)"
-  desc: "Helper method that safely adds a <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Runtime#addShutdownHook(Thread)\"></xref> to the JVM that will run when the JVM is shutting down.\n\n<xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Runtime#addShutdownHook(Thread)\"></xref> checks for security privileges and will throw an exception if the proper security isn't available. So, if running with a security manager, setting `AZURE_ENABLE_SHUTDOWN_HOOK_WITH_PRIVILEGE` to true will have this method use access controller to add the shutdown hook with privileged permissions.\n\nIf `shutdownThread` is null, no shutdown hook will be added and this method will return null."
+  desc: "Helper method that safely adds a <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Runtime#addShutdownHook(Thread)\"></xref> to the JVM that will run when the JVM is shutting down.\n\n<xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Runtime#addShutdownHook(Thread)\"></xref> checks for security privileges and will throw an exception if the proper security isn't available. So, if running with a security manager, setting `AZURE_ENABLE_SHUTDOWN_HOOK_WITH_PRIVILEGE` to true will have this method use access controller to add the shutdown hook with privileged permissions.\n\nIf `shutdownThread` is null, no shutdown hook will be added and this method will return null.\n\nIf the JVM is already shutting down a shutdown hook can no longer be registered, and one registered now could never run. Rather than failing the caller's work, which may be an in-flight request draining during shutdown, this method returns null to indicate that no hook was registered."
   returns:
-    description: "The <xref uid=\"java.lang.Thread\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Thread\"></xref> that was passed in."
+    description: "The <xref uid=\"java.lang.Thread\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Thread\"></xref> that was passed in, or null if it was null or the JVM is already shutting down."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html\">Thread</a>"
 - uid: "com.azure.core.util.CoreUtils.<T>arrayToString(T[],java.util.function.Function<T,java.lang.String>)"
   fullName: "com.azure.core.util.CoreUtils.arrayToString(T[] array, Function<T,String> mapper)"
@@ -502,4 +502,4 @@ type: "class"
 desc: "This class contains utility methods useful for building client libraries."
 metadata: {}
 package: "com.azure.core.util"
-artifact: com.azure:azure-core:1.59.1
+artifact: com.azure:azure-core:1.60.0

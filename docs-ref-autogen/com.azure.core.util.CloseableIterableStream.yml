@@ -1,0 +1,76 @@
+### YamlMime:JavaType
+uid: "com.azure.core.util.CloseableIterableStream"
+fullName: "com.azure.core.util.CloseableIterableStream<T>"
+name: "CloseableIterableStream<T>"
+nameWithType: "CloseableIterableStream<T>"
+summary: "An <xref uid=\"com.azure.core.util.IterableStream\" data-throw-if-not-resolved=\"false\" data-raw-source=\"IterableStream\"></xref> that provides deterministic cleanup for resource-backed iteration."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"com.azure.core.util.IterableStream?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "<xref href=\"com.azure.core.util.IterableStream?alt=com.azure.core.util.IterableStream&text=IterableStream\" data-throw-if-not-resolved=\"False\" />"
+  methodsRef:
+  - "<xref href=\"com.azure.core.util.IterableStream.<T>of(java.lang.Iterable<T>)?alt=com.azure.core.util.IterableStream.<T>of&text=<T>of\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.util.IterableStream.iterator()?alt=com.azure.core.util.IterableStream.iterator&text=iterator\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.util.IterableStream.stream()?alt=com.azure.core.util.IterableStream.stream&text=stream\" data-throw-if-not-resolved=\"False\" />"
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **CloseableIterableStream<T>**</br> extends <xref href=\"com.azure.core.util.IterableStream?alt=com.azure.core.util.IterableStream&text=IterableStream\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;</br> implements <a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html\">Closeable</a>"
+constructors:
+- uid: "com.azure.core.util.CloseableIterableStream.CloseableIterableStream(java.lang.Iterable<T>,java.io.Closeable)"
+  fullName: "com.azure.core.util.CloseableIterableStream<T>.CloseableIterableStream(Iterable<T> iterable, Closeable ownedResource)"
+  name: "CloseableIterableStream(Iterable<T> iterable, Closeable ownedResource)"
+  nameWithType: "CloseableIterableStream<T>.CloseableIterableStream(Iterable<T> iterable, Closeable ownedResource)"
+  summary: "Creates an iterable stream that owns the resource associated with its iteration."
+  parameters:
+  - description: "The iterable that reads values from, or is otherwise associated with, the owned resource."
+    name: "iterable"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Iterable.html\">Iterable</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
+  - description: "The resource whose ownership is transferred to this stream and which is released when this\n stream is closed."
+    name: "ownedResource"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html\">Closeable</a>"
+  syntax: "public CloseableIterableStream(Iterable<T> iterable, Closeable ownedResource)"
+  desc: "Creates an iterable stream that owns the resource associated with its iteration."
+methods:
+- uid: "com.azure.core.util.CloseableIterableStream.close()"
+  fullName: "com.azure.core.util.CloseableIterableStream<T>.close()"
+  name: "close()"
+  nameWithType: "CloseableIterableStream<T>.close()"
+  summary: "Releases the resource owned by this stream."
+  syntax: "public void close()"
+  exceptions:
+  - description: "If the owned resource fails to close."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Releases the resource owned by this stream.\n\nThis method is idempotent."
+- uid: "com.azure.core.util.CloseableIterableStream.stream()"
+  fullName: "com.azure.core.util.CloseableIterableStream<T>.stream()"
+  name: "stream()"
+  nameWithType: "CloseableIterableStream<T>.stream()"
+  summary: "Gets a Java stream of values that closes this iterable stream when the returned stream is closed."
+  overridden: "com.azure.core.util.IterableStream.stream()"
+  syntax: "public Stream<T> stream()"
+  desc: "Gets a Java stream of values that closes this iterable stream when the returned stream is closed.\n\nClosing the returned Java stream also closes this iterable stream. If this iterable stream isn't managed with try-with-resources, the returned Java stream must be explicitly closed to release the owned resource. Terminal operations don't automatically close it."
+  returns:
+    description: "A Java stream of values."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html\">Stream</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
+type: "class"
+typeParameters:
+- description: "The type of values in this stream."
+  name: "T"
+desc: "An <xref uid=\"com.azure.core.util.IterableStream\" data-throw-if-not-resolved=\"false\" data-raw-source=\"IterableStream\"></xref> that provides deterministic cleanup for resource-backed iteration.\n\nThis stream takes ownership of the resource associated with the supplied iterable. After construction, manage the resource's lifetime through this stream rather than closing the resource directly.\n\nIteration behavior, including whether multiple iterators are supported, is determined by the supplied iterable. Use this stream in a try-with-resources statement to ensure that the owned resource is released whether iteration completes normally or ends early. Closing the stream is safe to do more than once.\n\n**Code sample**\n\n```java\nBufferedReader reader = getReader();\n Iterable<String> lines = () -> reader.lines().iterator();\n\n try (CloseableIterableStream<String> stream = new CloseableIterableStream<>(lines, reader)) {\n     for (String line : stream) {\n         System.out.println(line);\n     }\n } catch (IOException exception) {\n     throw new UncheckedIOException(\"Failed to close the reader.\", exception);\n }\n```"
+implements:
+- "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html\">Closeable</a>"
+metadata: {}
+package: "com.azure.core.util"
+artifact: com.azure:azure-core:1.60.0
