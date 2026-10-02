@@ -42,50 +42,50 @@ fields:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.FailoverMode.FORCED_FAILOVER"
   name: "FORCED_FAILOVER"
   nameWithType: "FailoverMode.FORCED_FAILOVER"
-  summary: "Static value Forced<wbr>Failover for Failover<wbr>Mode."
+  summary: "Terminate the primary database process first, then triggers the failover."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.FailoverMode?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.FailoverMode&text=FailoverMode\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final FailoverMode FORCED_FAILOVER"
-  desc: "Static value ForcedFailover for FailoverMode."
+  desc: "Terminate the primary database process first, then triggers the failover. This is more aggressive and used when the primary is unresponsive or in an unhealthy state."
 - uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.FailoverMode.FORCED_SWITCHOVER"
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.FailoverMode.FORCED_SWITCHOVER"
   name: "FORCED_SWITCHOVER"
   nameWithType: "FailoverMode.FORCED_SWITCHOVER"
-  summary: "Static value Forced<wbr>Switchover for Failover<wbr>Mode."
+  summary: "Terminate the primary database process first, and then triggers a switch over with role swapping."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.FailoverMode?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.FailoverMode&text=FailoverMode\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final FailoverMode FORCED_SWITCHOVER"
-  desc: "Static value ForcedSwitchover for FailoverMode."
+  desc: "Terminate the primary database process first, and then triggers a switch over with role swapping."
 - uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.FailoverMode.PLANNED_FAILOVER"
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.FailoverMode.PLANNED_FAILOVER"
   name: "PLANNED_FAILOVER"
   nameWithType: "FailoverMode.PLANNED_FAILOVER"
-  summary: "Static value Planned<wbr>Failover for Failover<wbr>Mode."
+  summary: "Trigger a failover from primary to standby without killing the primary database process first."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.FailoverMode?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.FailoverMode&text=FailoverMode\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final FailoverMode PLANNED_FAILOVER"
-  desc: "Static value PlannedFailover for FailoverMode."
+  desc: "Trigger a failover from primary to standby without killing the primary database process first. This is a graceful failover that attempts to preserve data consistency."
 - uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.FailoverMode.PLANNED_SWITCHOVER"
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.FailoverMode.PLANNED_SWITCHOVER"
   name: "PLANNED_SWITCHOVER"
   nameWithType: "FailoverMode.PLANNED_SWITCHOVER"
-  summary: "Static value Planned<wbr>Switchover for Failover<wbr>Mode."
+  summary: "Similar to 'Planned<wbr>Failover' but prefers a switch over operation where roles are swapped between primary and standby."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.FailoverMode?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.FailoverMode&text=FailoverMode\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final FailoverMode PLANNED_SWITCHOVER"
-  desc: "Static value PlannedSwitchover for FailoverMode."
+  desc: "Similar to 'PlannedFailover' but prefers a switch over operation where roles are swapped between primary and standby."
 methods:
 - uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.FailoverMode.fromString(java.lang.String)"
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.FailoverMode.fromString(String name)"
@@ -119,4 +119,4 @@ type: "class"
 desc: "Failover mode."
 metadata: {}
 package: "com.azure.resourcemanager.postgresqlflexibleserver.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-postgresqlflexibleserver:2.1.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-postgresqlflexibleserver:2.1.0-beta.3
