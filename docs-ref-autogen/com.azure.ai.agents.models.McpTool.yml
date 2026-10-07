@@ -105,7 +105,7 @@ methods:
   nameWithType: "McpTool.getConnectorType()"
   summary: "Get the connector<wbr>Type property: Identifier for service connectors, like those available in ChatGPT."
   syntax: "public McpToolConnectorId getConnectorType()"
-  desc: "Get the connectorType property: Identifier for service connectors, like those available in ChatGPT. One of \\`server\\_url\\`, \\`connector\\_id\\`, or \\`tunnel\\_id\\` must be provided. Learn more about service connectors \\[here\\](/docs/guides/tools-remote-mcp\\#connectors). Currently supported \\`connector\\_id\\` values are: - Dropbox: \\`connector\\_dropbox\\` - Gmail: \\`connector\\_gmail\\` - Google Calendar: \\`connector\\_googlecalendar\\` - Google Drive: \\`connector\\_googledrive\\` - Microsoft Teams: \\`connector\\_microsoftteams\\` - Outlook Calendar: \\`connector\\_outlookcalendar\\` - Outlook Email: \\`connector\\_outlookemail\\` - SharePoint: \\`connector\\_sharepoint\\`."
+  desc: "Get the connectorType property: Identifier for service connectors, like those available in ChatGPT. One of \\`server\\_url\\`, \\`connector\\_id\\`, or \\`tunnel\\_id\\` must be provided. Learn more about service connectors \\[here\\](https://developers.openai.com/api/docs/guides/tools-connectors-mcp\\#connectors). This field is deprecated for models released after September 1, 2026. Use \\`server\\_url\\` to connect to a remote MCP server, or \\`tunnel\\_id\\` to connect through a Secure MCP Tunnel. Currently supported \\`connector\\_id\\` values are: - Dropbox: \\`connector\\_dropbox\\` - Gmail: \\`connector\\_gmail\\` - Google Calendar: \\`connector\\_googlecalendar\\` - Google Drive: \\`connector\\_googledrive\\` - Microsoft Teams: \\`connector\\_microsoftteams\\` - Outlook Calendar: \\`connector\\_outlookcalendar\\` - Outlook Email: \\`connector\\_outlookemail\\` - SharePoint: \\`connector\\_sharepoint\\`."
   returns:
     description: "the connectorType value."
     type: "<xref href=\"com.azure.ai.agents.models.McpToolConnectorId?alt=com.azure.ai.agents.models.McpToolConnectorId&text=McpToolConnectorId\" data-throw-if-not-resolved=\"False\" />"
@@ -286,7 +286,7 @@ methods:
     name: "connectorType"
     type: "<xref href=\"com.azure.ai.agents.models.McpToolConnectorId?alt=com.azure.ai.agents.models.McpToolConnectorId&text=McpToolConnectorId\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public McpTool setConnectorType(McpToolConnectorId connectorType)"
-  desc: "Set the connectorType property: Identifier for service connectors, like those available in ChatGPT. One of \\`server\\_url\\`, \\`connector\\_id\\`, or \\`tunnel\\_id\\` must be provided. Learn more about service connectors \\[here\\](/docs/guides/tools-remote-mcp\\#connectors). Currently supported \\`connector\\_id\\` values are: - Dropbox: \\`connector\\_dropbox\\` - Gmail: \\`connector\\_gmail\\` - Google Calendar: \\`connector\\_googlecalendar\\` - Google Drive: \\`connector\\_googledrive\\` - Microsoft Teams: \\`connector\\_microsoftteams\\` - Outlook Calendar: \\`connector\\_outlookcalendar\\` - Outlook Email: \\`connector\\_outlookemail\\` - SharePoint: \\`connector\\_sharepoint\\`."
+  desc: "Set the connectorType property: Identifier for service connectors, like those available in ChatGPT. One of \\`server\\_url\\`, \\`connector\\_id\\`, or \\`tunnel\\_id\\` must be provided. Learn more about service connectors \\[here\\](https://developers.openai.com/api/docs/guides/tools-connectors-mcp\\#connectors). This field is deprecated for models released after September 1, 2026. Use \\`server\\_url\\` to connect to a remote MCP server, or \\`tunnel\\_id\\` to connect through a Secure MCP Tunnel. Currently supported \\`connector\\_id\\` values are: - Dropbox: \\`connector\\_dropbox\\` - Gmail: \\`connector\\_gmail\\` - Google Calendar: \\`connector\\_googlecalendar\\` - Google Drive: \\`connector\\_googledrive\\` - Microsoft Teams: \\`connector\\_microsoftteams\\` - Outlook Calendar: \\`connector\\_outlookcalendar\\` - Outlook Email: \\`connector\\_outlookemail\\` - SharePoint: \\`connector\\_sharepoint\\`."
   returns:
     description: "the McpTool object itself."
     type: "<xref href=\"com.azure.ai.agents.models.McpTool?alt=com.azure.ai.agents.models.McpTool&text=McpTool\" data-throw-if-not-resolved=\"False\" />"
@@ -430,7 +430,7 @@ methods:
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "MCP tool Give the model access to additional tools via remote Model Context Protocol (MCP) servers. \\[Learn more about MCP\\](/docs/guides/tools-remote-mcp)."
+desc: "MCP tool Give the model access to additional tools via remote Model Context Protocol (MCP) servers. \\[Learn more about MCP\\](https://developers.openai.com/api/docs/guides/tools-connectors-mcp)."
 metadata: {}
 package: "com.azure.ai.agents.models"
-artifact: com.azure:azure-ai-agents:2.6.0
+artifact: com.azure:azure-ai-agents:2.7.0

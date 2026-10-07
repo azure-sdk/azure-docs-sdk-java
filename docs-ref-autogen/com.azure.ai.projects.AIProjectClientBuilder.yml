@@ -62,7 +62,7 @@ methods:
   nameWithType: "AIProjectClientBuilder.beta()"
   summary: "Returns the sub-builder used to create beta clients for preview-only service areas."
   syntax: "public AIProjectClientBuilder.BetaAIProjectClientBuilder beta()"
-  desc: "Returns the sub-builder used to create beta clients for preview-only service areas.\n\nThe returned builder uses the configuration set on this builder, including endpoint, credential, HTTP pipeline, policies, retry settings, logging options, client options, and service version. Use this method when you want to build a client whose type is prefixed with `Beta`, such as <xref uid=\"com.azure.ai.projects.BetaModelsClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BetaModelsClient\"></xref>, <xref uid=\"com.azure.ai.projects.BetaRedTeamsClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BetaRedTeamsClient\"></xref>, <xref uid=\"com.azure.ai.projects.BetaDatasetsClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BetaDatasetsClient\"></xref>, or their async counterparts.\n\nClients created by this sub-builder automatically opt in to the preview service area they target by adding the required `Foundry-Features` header. Calling <xref uid=\"com.azure.ai.projects.AIProjectClientBuilder.allowPreview(boolean)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#allowPreview(boolean)\"></xref> is not required for these clients; that setting only controls supported preview behavior on non-beta clients."
+  desc: "Returns the sub-builder used to create beta clients for preview-only service areas.\n\nThe returned builder uses the configuration set on this builder, including endpoint, credential, HTTP pipeline, policies, retry settings, logging options, client options, and service version. Use this method when you want to build a client whose type is prefixed with `Beta`, such as <xref uid=\"com.azure.ai.projects.BetaModelsClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BetaModelsClient\"></xref>, <xref uid=\"com.azure.ai.projects.BetaRedTeamsClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BetaRedTeamsClient\"></xref>, <xref uid=\"com.azure.ai.projects.BetaSkillsClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BetaSkillsClient\"></xref>, or their async counterparts.\n\nClients created by this sub-builder automatically opt in to the preview service area they target by adding the required `Foundry-Features` header. Calling <xref uid=\"com.azure.ai.projects.AIProjectClientBuilder.allowPreview(boolean)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#allowPreview(boolean)\"></xref> is not required for these clients; that setting only controls supported preview behavior on non-beta clients."
   returns:
     description: "a builder for creating beta AI Projects service clients."
     type: "<xref href=\"com.azure.ai.projects.AIProjectClientBuilder.BetaAIProjectClientBuilder?alt=com.azure.ai.projects.AIProjectClientBuilder.BetaAIProjectClientBuilder&text=BetaAIProjectClientBuilder\" data-throw-if-not-resolved=\"False\" />"
@@ -120,7 +120,7 @@ methods:
   nameWithType: "AIProjectClientBuilder.buildDatasetsAsyncClient()"
   summary: "Builds an instance of Datasets<wbr>Async<wbr>Client class."
   syntax: "public DatasetsAsyncClient buildDatasetsAsyncClient()"
-  desc: "Builds an instance of DatasetsAsyncClient class."
+  desc: "Builds an instance of DatasetsAsyncClient class.\n\nPreview data generation features require <xref uid=\"com.azure.ai.projects.AIProjectClientBuilder.allowPreview(boolean)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"allowPreview(true)\"></xref>. By default, the client does not add a `Foundry-Features` header."
   returns:
     description: "an instance of DatasetsAsyncClient."
     type: "<xref href=\"com.azure.ai.projects.DatasetsAsyncClient?alt=com.azure.ai.projects.DatasetsAsyncClient&text=DatasetsAsyncClient\" data-throw-if-not-resolved=\"False\" />"
@@ -130,7 +130,7 @@ methods:
   nameWithType: "AIProjectClientBuilder.buildDatasetsClient()"
   summary: "Builds an instance of Datasets<wbr>Client class."
   syntax: "public DatasetsClient buildDatasetsClient()"
-  desc: "Builds an instance of DatasetsClient class."
+  desc: "Builds an instance of DatasetsClient class.\n\nPreview data generation features require <xref uid=\"com.azure.ai.projects.AIProjectClientBuilder.allowPreview(boolean)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"allowPreview(true)\"></xref>. By default, the client does not add a `Foundry-Features` header."
   returns:
     description: "an instance of DatasetsClient."
     type: "<xref href=\"com.azure.ai.projects.DatasetsClient?alt=com.azure.ai.projects.DatasetsClient&text=DatasetsClient\" data-throw-if-not-resolved=\"False\" />"
@@ -174,6 +174,26 @@ methods:
   returns:
     description: "an instance of EvaluationRulesClient."
     type: "<xref href=\"com.azure.ai.projects.EvaluationRulesClient?alt=com.azure.ai.projects.EvaluationRulesClient&text=EvaluationRulesClient\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.AIProjectClientBuilder.buildEvaluatorsAsyncClient()"
+  fullName: "com.azure.ai.projects.AIProjectClientBuilder.buildEvaluatorsAsyncClient()"
+  name: "buildEvaluatorsAsyncClient()"
+  nameWithType: "AIProjectClientBuilder.buildEvaluatorsAsyncClient()"
+  summary: "Builds an instance of Evaluators<wbr>Async<wbr>Client class."
+  syntax: "public EvaluatorsAsyncClient buildEvaluatorsAsyncClient()"
+  desc: "Builds an instance of EvaluatorsAsyncClient class."
+  returns:
+    description: "an instance of EvaluatorsAsyncClient."
+    type: "<xref href=\"com.azure.ai.projects.EvaluatorsAsyncClient?alt=com.azure.ai.projects.EvaluatorsAsyncClient&text=EvaluatorsAsyncClient\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.AIProjectClientBuilder.buildEvaluatorsClient()"
+  fullName: "com.azure.ai.projects.AIProjectClientBuilder.buildEvaluatorsClient()"
+  name: "buildEvaluatorsClient()"
+  nameWithType: "AIProjectClientBuilder.buildEvaluatorsClient()"
+  summary: "Builds an instance of Evaluators<wbr>Client class."
+  syntax: "public EvaluatorsClient buildEvaluatorsClient()"
+  desc: "Builds an instance of EvaluatorsClient class."
+  returns:
+    description: "an instance of EvaluatorsClient."
+    type: "<xref href=\"com.azure.ai.projects.EvaluatorsClient?alt=com.azure.ai.projects.EvaluatorsClient&text=EvaluatorsClient\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.projects.AIProjectClientBuilder.buildIndexesAsyncClient()"
   fullName: "com.azure.ai.projects.AIProjectClientBuilder.buildIndexesAsyncClient()"
   name: "buildIndexesAsyncClient()"
@@ -347,4 +367,4 @@ implements:
 - "<xref href=\"com.azure.core.client.traits.TokenCredentialTrait?alt=com.azure.core.client.traits.TokenCredentialTrait&text=TokenCredentialTrait\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.projects.AIProjectClientBuilder?alt=com.azure.ai.projects.AIProjectClientBuilder&text=AIProjectClientBuilder\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.ai.projects"
-artifact: com.azure:azure-ai-projects:2.6.1
+artifact: com.azure:azure-ai-projects:2.7.0

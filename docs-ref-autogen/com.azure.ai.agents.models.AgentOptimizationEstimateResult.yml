@@ -1,0 +1,92 @@
+### YamlMime:JavaType
+uid: "com.azure.ai.agents.models.AgentOptimizationEstimateResult"
+fullName: "com.azure.ai.agents.models.AgentOptimizationEstimateResult"
+name: "AgentOptimizationEstimateResult"
+nameWithType: "AgentOptimizationEstimateResult"
+summary: "Result returned when estimating an agent-optimization job."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **AgentOptimizationEstimateResult**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.AgentOptimizationEstimateResult?alt=com.azure.ai.agents.models.AgentOptimizationEstimateResult&text=AgentOptimizationEstimateResult\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.azure.ai.agents.models.AgentOptimizationEstimateResult.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.ai.agents.models.AgentOptimizationEstimateResult.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "AgentOptimizationEstimateResult.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Agent<wbr>Optimization<wbr>Estimate<wbr>Result from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static AgentOptimizationEstimateResult fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the AgentOptimizationEstimateResult."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of AgentOptimizationEstimateResult from the JsonReader."
+  returns:
+    description: "An instance of AgentOptimizationEstimateResult if the JsonReader was pointing to an instance of it, or\n null if it was pointing to JSON null."
+    type: "<xref href=\"com.azure.ai.agents.models.AgentOptimizationEstimateResult?alt=com.azure.ai.agents.models.AgentOptimizationEstimateResult&text=AgentOptimizationEstimateResult\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.AgentOptimizationEstimateResult.getCallCounts()"
+  fullName: "com.azure.ai.agents.models.AgentOptimizationEstimateResult.getCallCounts()"
+  name: "getCallCounts()"
+  nameWithType: "AgentOptimizationEstimateResult.getCallCounts()"
+  summary: "Get the call<wbr>Counts property: Estimated model-call counts grouped by optimization stage."
+  syntax: "public AgentOptimizationStageEstimate getCallCounts()"
+  desc: "Get the callCounts property: Estimated model-call counts grouped by optimization stage. Typical values are calibrated expectations and may be fractional."
+  returns:
+    description: "the callCounts value."
+    type: "<xref href=\"com.azure.ai.agents.models.AgentOptimizationStageEstimate?alt=com.azure.ai.agents.models.AgentOptimizationStageEstimate&text=AgentOptimizationStageEstimate\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.AgentOptimizationEstimateResult.getCost()"
+  fullName: "com.azure.ai.agents.models.AgentOptimizationEstimateResult.getCost()"
+  name: "getCost()"
+  nameWithType: "AgentOptimizationEstimateResult.getCost()"
+  summary: "Get the cost property: Estimated monetary cost."
+  syntax: "public AgentOptimizationCostEstimate getCost()"
+  desc: "Get the cost property: Estimated monetary cost. Omitted when no contributing model has pricing data."
+  returns:
+    description: "the cost value."
+    type: "<xref href=\"com.azure.ai.agents.models.AgentOptimizationCostEstimate?alt=com.azure.ai.agents.models.AgentOptimizationCostEstimate&text=AgentOptimizationCostEstimate\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.AgentOptimizationEstimateResult.getPricesAsOf()"
+  fullName: "com.azure.ai.agents.models.AgentOptimizationEstimateResult.getPricesAsOf()"
+  name: "getPricesAsOf()"
+  nameWithType: "AgentOptimizationEstimateResult.getPricesAsOf()"
+  summary: "Get the prices<wbr>AsOf property: Timestamp of the pricing snapshot used for cost estimation, represented in Unix time."
+  syntax: "public OffsetDateTime getPricesAsOf()"
+  desc: "Get the pricesAsOf property: Timestamp of the pricing snapshot used for cost estimation, represented in Unix time. Omitted when no valid pricing snapshot is available."
+  returns:
+    description: "the pricesAsOf value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
+- uid: "com.azure.ai.agents.models.AgentOptimizationEstimateResult.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.ai.agents.models.AgentOptimizationEstimateResult.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "AgentOptimizationEstimateResult.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Result returned when estimating an agent-optimization job."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.AgentOptimizationEstimateResult?alt=com.azure.ai.agents.models.AgentOptimizationEstimateResult&text=AgentOptimizationEstimateResult\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.ai.agents.models"
+artifact: com.azure:azure-ai-agents:2.7.0

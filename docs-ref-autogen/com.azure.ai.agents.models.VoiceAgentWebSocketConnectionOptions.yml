@@ -131,6 +131,16 @@ methods:
   returns:
     description: "the structured inputs, or null."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.ai.agents.models.VoiceAgentWebSocketConnectionOptions.getTransport()"
+  fullName: "com.azure.ai.agents.models.VoiceAgentWebSocketConnectionOptions.getTransport()"
+  name: "getTransport()"
+  nameWithType: "VoiceAgentWebSocketConnectionOptions.getTransport()"
+  summary: "Gets the transport used for the realtime connection."
+  syntax: "public VoiceAgentTransport getTransport()"
+  desc: "Gets the transport used for the realtime connection."
+  returns:
+    description: "the transport, or <code>null</code> to use <xref uid=\"com.azure.ai.agents.models.VoiceAgentTransport.WEBSOCKET\" data-throw-if-not-resolved=\"false\" data-raw-source=\"VoiceAgentTransport#WEBSOCKET\"></xref>."
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentTransport?alt=com.azure.ai.agents.models.VoiceAgentTransport&text=VoiceAgentTransport\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.agents.models.VoiceAgentWebSocketConnectionOptions.isStoreEnabled()"
   fullName: "com.azure.ai.agents.models.VoiceAgentWebSocketConnectionOptions.isStoreEnabled()"
   name: "isStoreEnabled()"
@@ -281,8 +291,22 @@ methods:
   returns:
     description: "this options instance."
     type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentWebSocketConnectionOptions?alt=com.azure.ai.agents.models.VoiceAgentWebSocketConnectionOptions&text=VoiceAgentWebSocketConnectionOptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.VoiceAgentWebSocketConnectionOptions.setTransport(com.azure.ai.agents.models.VoiceAgentTransport)"
+  fullName: "com.azure.ai.agents.models.VoiceAgentWebSocketConnectionOptions.setTransport(VoiceAgentTransport transport)"
+  name: "setTransport(VoiceAgentTransport transport)"
+  nameWithType: "VoiceAgentWebSocketConnectionOptions.setTransport(VoiceAgentTransport transport)"
+  summary: "Sets the transport used for the realtime connection."
+  parameters:
+  - description: "the transport, or <code>null</code> to use <xref uid=\"com.azure.ai.agents.models.VoiceAgentTransport.WEBSOCKET\" data-throw-if-not-resolved=\"false\" data-raw-source=\"VoiceAgentTransport#WEBSOCKET\"></xref>."
+    name: "transport"
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentTransport?alt=com.azure.ai.agents.models.VoiceAgentTransport&text=VoiceAgentTransport\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public VoiceAgentWebSocketConnectionOptions setTransport(VoiceAgentTransport transport)"
+  desc: "Sets the transport used for the realtime connection. When using <xref uid=\"com.azure.ai.agents.models.VoiceAgentTransport.WEBRTC\" data-throw-if-not-resolved=\"false\" data-raw-source=\"VoiceAgentTransport#WEBRTC\"></xref>, the caller is responsible for completing SDP negotiation using the RTC call signaling events."
+  returns:
+    description: "this options instance."
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentWebSocketConnectionOptions?alt=com.azure.ai.agents.models.VoiceAgentWebSocketConnectionOptions&text=VoiceAgentWebSocketConnectionOptions\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Options used when opening a realtime voice-agent WebSocket session."
 metadata: {}
 package: "com.azure.ai.agents.models"
-artifact: com.azure:azure-ai-agents:2.6.0
+artifact: com.azure:azure-ai-agents:2.7.0

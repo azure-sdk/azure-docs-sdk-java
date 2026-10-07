@@ -42,14 +42,14 @@ fields:
   fullName: "com.azure.ai.projects.models.DataGenerationJobOutputWriteMode.MERGE"
   name: "MERGE"
   nameWithType: "DataGenerationJobOutputWriteMode.MERGE"
-  summary: "Applicable only for trace data generation jobs that output evaluation datasets."
+  summary: "Merge newly generated output into an existing output."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.ai.projects.models.DataGenerationJobOutputWriteMode?alt=com.azure.ai.projects.models.DataGenerationJobOutputWriteMode&text=DataGenerationJobOutputWriteMode\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final DataGenerationJobOutputWriteMode MERGE"
-  desc: "Applicable only for trace data generation jobs that output evaluation datasets. Create the next dataset version by merging newly generated rows with the latest existing dataset version and de-duping trace rows."
+  desc: "Merge newly generated output into an existing output. For trace data generation jobs that output evaluation datasets, creates the next dataset version by merging newly generated rows with the latest existing dataset version and de-duping trace rows. For fine-tuning file outputs, merges into the file identified by \\`merge\\_file\\_id\\`."
 - uid: "com.azure.ai.projects.models.DataGenerationJobOutputWriteMode.OVERWRITE"
   fullName: "com.azure.ai.projects.models.DataGenerationJobOutputWriteMode.OVERWRITE"
   name: "OVERWRITE"
@@ -61,7 +61,7 @@ fields:
   field:
     type: "<xref href=\"com.azure.ai.projects.models.DataGenerationJobOutputWriteMode?alt=com.azure.ai.projects.models.DataGenerationJobOutputWriteMode&text=DataGenerationJobOutputWriteMode\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final DataGenerationJobOutputWriteMode OVERWRITE"
-  desc: "Default behavior. Create the next dataset version using only newly generated rows, replacing the previous version's rows in the new version."
+  desc: "Default behavior. Write newly generated output without merging it with an existing output. For dataset outputs, creates the next dataset version using only newly generated rows."
 methods:
 - uid: "com.azure.ai.projects.models.DataGenerationJobOutputWriteMode.fromString(java.lang.String)"
   fullName: "com.azure.ai.projects.models.DataGenerationJobOutputWriteMode.fromString(String name)"
@@ -95,4 +95,4 @@ type: "class"
 desc: "The supported write modes for data generation job outputs."
 metadata: {}
 package: "com.azure.ai.projects.models"
-artifact: com.azure:azure-ai-projects:2.6.1
+artifact: com.azure:azure-ai-projects:2.7.0

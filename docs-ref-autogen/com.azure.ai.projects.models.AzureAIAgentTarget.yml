@@ -3,7 +3,7 @@ uid: "com.azure.ai.projects.models.AzureAIAgentTarget"
 fullName: "com.azure.ai.projects.models.AzureAIAgentTarget"
 name: "AzureAIAgentTarget"
 nameWithType: "AzureAIAgentTarget"
-summary: "Represents a target specifying an Azure AI agent."
+summary: "A target that identifies an Azure AI agent."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 - "<xref href=\"com.azure.ai.projects.models.Target?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
@@ -63,9 +63,9 @@ methods:
   fullName: "com.azure.ai.projects.models.AzureAIAgentTarget.getName()"
   name: "getName()"
   nameWithType: "AzureAIAgentTarget.getName()"
-  summary: "Get the name property: The unique identifier of the Azure AI agent."
+  summary: "Get the name property: The name of the Azure AI agent to invoke as the evaluation target."
   syntax: "public String getName()"
-  desc: "Get the name property: The unique identifier of the Azure AI agent."
+  desc: "Get the name property: The name of the Azure AI agent to invoke as the evaluation target."
   returns:
     description: "the name value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -73,9 +73,9 @@ methods:
   fullName: "com.azure.ai.projects.models.AzureAIAgentTarget.getToolDescriptions()"
   name: "getToolDescriptions()"
   nameWithType: "AzureAIAgentTarget.getToolDescriptions()"
-  summary: "Get the tool<wbr>Descriptions property: The parameters used to control the sampling behavior of the agent during text generation."
+  summary: "Get the tool<wbr>Descriptions property: Optional descriptions of tools available to the agent."
   syntax: "public List<ToolDescription> getToolDescriptions()"
-  desc: "Get the toolDescriptions property: The parameters used to control the sampling behavior of the agent during text generation."
+  desc: "Get the toolDescriptions property: Optional descriptions of tools available to the agent."
   returns:
     description: "the toolDescriptions value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.ai.projects.models.ToolDescription?alt=com.azure.ai.projects.models.ToolDescription&text=ToolDescription\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -106,7 +106,7 @@ methods:
   nameWithType: "AzureAIAgentTarget.getVersion()"
   summary: "Get the version property: The version of the Azure AI agent."
   syntax: "public String getVersion()"
-  desc: "Get the version property: The version of the Azure AI agent."
+  desc: "Get the version property: The version of the Azure AI agent. When omitted, the latest version is used."
   returns:
     description: "the version value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -114,13 +114,13 @@ methods:
   fullName: "com.azure.ai.projects.models.AzureAIAgentTarget.setToolDescriptions(List<ToolDescription> toolDescriptions)"
   name: "setToolDescriptions(List<ToolDescription> toolDescriptions)"
   nameWithType: "AzureAIAgentTarget.setToolDescriptions(List<ToolDescription> toolDescriptions)"
-  summary: "Set the tool<wbr>Descriptions property: The parameters used to control the sampling behavior of the agent during text generation."
+  summary: "Set the tool<wbr>Descriptions property: Optional descriptions of tools available to the agent."
   parameters:
   - description: "the toolDescriptions value to set."
     name: "toolDescriptions"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.ai.projects.models.ToolDescription?alt=com.azure.ai.projects.models.ToolDescription&text=ToolDescription\" data-throw-if-not-resolved=\"False\" />&gt;"
   syntax: "public AzureAIAgentTarget setToolDescriptions(List<ToolDescription> toolDescriptions)"
-  desc: "Set the toolDescriptions property: The parameters used to control the sampling behavior of the agent during text generation."
+  desc: "Set the toolDescriptions property: Optional descriptions of tools available to the agent."
   returns:
     description: "the AzureAIAgentTarget object itself."
     type: "<xref href=\"com.azure.ai.projects.models.AzureAIAgentTarget?alt=com.azure.ai.projects.models.AzureAIAgentTarget&text=AzureAIAgentTarget\" data-throw-if-not-resolved=\"False\" />"
@@ -148,7 +148,7 @@ methods:
     name: "version"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public AzureAIAgentTarget setVersion(String version)"
-  desc: "Set the version property: The version of the Azure AI agent."
+  desc: "Set the version property: The version of the Azure AI agent. When omitted, the latest version is used."
   returns:
     description: "the AzureAIAgentTarget object itself."
     type: "<xref href=\"com.azure.ai.projects.models.AzureAIAgentTarget?alt=com.azure.ai.projects.models.AzureAIAgentTarget&text=AzureAIAgentTarget\" data-throw-if-not-resolved=\"False\" />"
@@ -166,7 +166,7 @@ methods:
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Represents a target specifying an Azure AI agent."
+desc: "A target that identifies an Azure AI agent. See \\[evaluate model or agent targets\\](https://learn.microsoft.com/en-us/azure/foundry/observability/how-to/cloud-evaluation-targets?tabs=python)."
 metadata: {}
 package: "com.azure.ai.projects.models"
-artifact: com.azure:azure-ai-projects:2.6.1
+artifact: com.azure:azure-ai-projects:2.7.0
