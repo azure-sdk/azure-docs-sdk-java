@@ -6,20 +6,16 @@ nameWithType: "CassandraViewCreateUpdateParameters"
 summary: "Parameters to create and update Cosmos DB Cassandra view."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.core.management.ProxyResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.core.management.Resource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 - "<xref href=\"com.azure.resourcemanager.cosmos.models.ArmResourceProperties?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
-- classRef: "<xref href=\"com.azure.core.management.Resource?alt=com.azure.core.management.Resource&text=Resource\" data-throw-if-not-resolved=\"False\" />"
-  methodsRef:
-  - "<xref href=\"com.azure.core.management.Resource.location()?alt=com.azure.core.management.Resource.location&text=location\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.tags()?alt=com.azure.core.management.Resource.tags&text=tags\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "<xref href=\"com.azure.resourcemanager.cosmos.models.ArmResourceProperties?alt=com.azure.resourcemanager.cosmos.models.ArmResourceProperties&text=ArmResourceProperties\" data-throw-if-not-resolved=\"False\" />"
   methodsRef:
   - "<xref href=\"com.azure.resourcemanager.cosmos.models.ArmResourceProperties.fromJson(com.azure.json.JsonReader)?alt=com.azure.resourcemanager.cosmos.models.ArmResourceProperties.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.cosmos.models.ArmResourceProperties.id()?alt=com.azure.resourcemanager.cosmos.models.ArmResourceProperties.id&text=id\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.cosmos.models.ArmResourceProperties.identity()?alt=com.azure.resourcemanager.cosmos.models.ArmResourceProperties.identity&text=identity\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.resourcemanager.cosmos.models.ArmResourceProperties.location()?alt=com.azure.resourcemanager.cosmos.models.ArmResourceProperties.location&text=location\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.cosmos.models.ArmResourceProperties.name()?alt=com.azure.resourcemanager.cosmos.models.ArmResourceProperties.name&text=name\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.resourcemanager.cosmos.models.ArmResourceProperties.tags()?alt=com.azure.resourcemanager.cosmos.models.ArmResourceProperties.tags&text=tags\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.cosmos.models.ArmResourceProperties.toJson(com.azure.json.JsonWriter)?alt=com.azure.resourcemanager.cosmos.models.ArmResourceProperties.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.cosmos.models.ArmResourceProperties.type()?alt=com.azure.resourcemanager.cosmos.models.ArmResourceProperties.type&text=type\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.cosmos.models.ArmResourceProperties.validate()?alt=com.azure.resourcemanager.cosmos.models.ArmResourceProperties.validate&text=validate\" data-throw-if-not-resolved=\"False\" />"
@@ -72,10 +68,10 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CassandraViewCreateUpdateParameters.id()"
   name: "id()"
   nameWithType: "CassandraViewCreateUpdateParameters.id()"
-  summary: "Get the id property: Fully qualified resource Id for the resource."
+  summary: "Get the id property: The unique resource identifier of the ARM resource."
   overridden: "com.azure.resourcemanager.cosmos.models.ArmResourceProperties.id()"
   syntax: "public String id()"
-  desc: "Get the id property: Fully qualified resource Id for the resource."
+  desc: "Get the id property: The unique resource identifier of the ARM resource."
   returns:
     description: "the id value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -83,10 +79,10 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CassandraViewCreateUpdateParameters.name()"
   name: "name()"
   nameWithType: "CassandraViewCreateUpdateParameters.name()"
-  summary: "Get the name property: The name of the resource."
+  summary: "Get the name property: The name of the ARM resource."
   overridden: "com.azure.resourcemanager.cosmos.models.ArmResourceProperties.name()"
   syntax: "public String name()"
-  desc: "Get the name property: The name of the resource."
+  desc: "Get the name property: The name of the ARM resource."
   returns:
     description: "the name value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -127,10 +123,10 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CassandraViewCreateUpdateParameters.type()"
   name: "type()"
   nameWithType: "CassandraViewCreateUpdateParameters.type()"
-  summary: "Get the type property: The type of the resource."
+  summary: "Get the type property: The type of Azure resource."
   overridden: "com.azure.resourcemanager.cosmos.models.ArmResourceProperties.type()"
   syntax: "public String type()"
-  desc: "Get the type property: The type of the resource."
+  desc: "Get the type property: The type of Azure resource."
   returns:
     description: "the type value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -159,11 +155,13 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CassandraViewCreateUpdateParameters.withLocation(String location)"
   name: "withLocation(String location)"
   nameWithType: "CassandraViewCreateUpdateParameters.withLocation(String location)"
+  summary: "Set the location property: The location of the resource group to which the resource belongs."
   overridden: "com.azure.resourcemanager.cosmos.models.ArmResourceProperties.withLocation(java.lang.String)"
   parameters:
   - name: "location"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public CassandraViewCreateUpdateParameters withLocation(String location)"
+  desc: "Set the location property: The location of the resource group to which the resource belongs."
   returns:
     type: "<xref href=\"com.azure.resourcemanager.cosmos.models.CassandraViewCreateUpdateParameters?alt=com.azure.resourcemanager.cosmos.models.CassandraViewCreateUpdateParameters&text=CassandraViewCreateUpdateParameters\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cosmos.models.CassandraViewCreateUpdateParameters.withOptions(com.azure.resourcemanager.cosmos.models.CreateUpdateOptions)"
@@ -198,15 +196,17 @@ methods:
   fullName: "com.azure.resourcemanager.cosmos.models.CassandraViewCreateUpdateParameters.withTags(Map<String,String> tags)"
   name: "withTags(Map<String,String> tags)"
   nameWithType: "CassandraViewCreateUpdateParameters.withTags(Map<String,String> tags)"
+  summary: "Set the tags property: Tags are a list of key-value pairs that describe the resource."
   overridden: "com.azure.resourcemanager.cosmos.models.ArmResourceProperties.withTags(java.util.Map<java.lang.String,java.lang.String>)"
   parameters:
   - name: "tags"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
   syntax: "public CassandraViewCreateUpdateParameters withTags(Map<String,String> tags)"
+  desc: "Set the tags property: Tags are a list of key-value pairs that describe the resource. These tags can be used in viewing and grouping this resource (across resource groups). A maximum of 15 tags can be provided for a resource. Each tag must have a key no greater than 128 characters and value no greater than 256 characters. For example, the default experience for a template type is set with \"defaultExperience\": \"Cassandra\". Current \"defaultExperience\" values also include \"Table\", \"Graph\", \"DocumentDB\", and \"MongoDB\"."
   returns:
     type: "<xref href=\"com.azure.resourcemanager.cosmos.models.CassandraViewCreateUpdateParameters?alt=com.azure.resourcemanager.cosmos.models.CassandraViewCreateUpdateParameters&text=CassandraViewCreateUpdateParameters\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Parameters to create and update Cosmos DB Cassandra view."
 metadata: {}
 package: "com.azure.resourcemanager.cosmos.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-cosmos:2.54.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-cosmos:2.56.0-beta.1

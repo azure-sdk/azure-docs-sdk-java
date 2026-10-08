@@ -37,11 +37,11 @@ methods:
   summary: "Gets the base<wbr>Size<wbr>TiB property: Base size of the Elastic San appliance in TiB."
   modifiers:
   - "abstract"
-  syntax: "public abstract long baseSizeTiB()"
+  syntax: "public abstract Long baseSizeTiB()"
   desc: "Gets the baseSizeTiB property: Base size of the Elastic San appliance in TiB."
   returns:
     description: "the baseSizeTiB value."
-    type: "<xref href=\"long?alt=long&text=long\" data-throw-if-not-resolved=\"False\" />"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
 - uid: "com.azure.resourcemanager.elasticsan.models.ElasticSan.extendedCapacitySizeTiB()"
   fullName: "com.azure.resourcemanager.elasticsan.models.ElasticSan.extendedCapacitySizeTiB()"
   name: "extendedCapacitySizeTiB()"
@@ -49,11 +49,11 @@ methods:
   summary: "Gets the extended<wbr>Capacity<wbr>Size<wbr>TiB property: Extended size of the Elastic San appliance in TiB."
   modifiers:
   - "abstract"
-  syntax: "public abstract long extendedCapacitySizeTiB()"
+  syntax: "public abstract Long extendedCapacitySizeTiB()"
   desc: "Gets the extendedCapacitySizeTiB property: Extended size of the Elastic San appliance in TiB."
   returns:
     description: "the extendedCapacitySizeTiB value."
-    type: "<xref href=\"long?alt=long&text=long\" data-throw-if-not-resolved=\"False\" />"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
 - uid: "com.azure.resourcemanager.elasticsan.models.ElasticSan.id()"
   fullName: "com.azure.resourcemanager.elasticsan.models.ElasticSan.id()"
   name: "id()"
@@ -246,7 +246,7 @@ methods:
   modifiers:
   - "abstract"
   syntax: "public abstract Long totalIops()"
-  desc: "Gets the totalIops property: Total Provisioned IOPS of the Elastic San appliance."
+  desc: "Gets the totalIops property: Total Provisioned IOPS of the Elastic San appliance. Settable only for ElasticSanVersion V2, where it is required; read-only for V1."
   returns:
     description: "the totalIops value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
@@ -258,10 +258,34 @@ methods:
   modifiers:
   - "abstract"
   syntax: "public abstract Long totalMBps()"
-  desc: "Gets the totalMBps property: Total Provisioned MBps Elastic San appliance."
+  desc: "Gets the totalMBps property: Total Provisioned MBps Elastic San appliance. Settable only for ElasticSanVersion V2, where it is required; read-only for V1."
   returns:
     description: "the totalMBps value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
+- uid: "com.azure.resourcemanager.elasticsan.models.ElasticSan.totalReservedIops()"
+  fullName: "com.azure.resourcemanager.elasticsan.models.ElasticSan.totalReservedIops()"
+  name: "totalReservedIops()"
+  nameWithType: "ElasticSan.totalReservedIops()"
+  summary: "Gets the total<wbr>Reserved<wbr>Iops property: Total IOPS reserved by all the volume groups under an Elastic<wbr>San."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Integer totalReservedIops()"
+  desc: "Gets the totalReservedIops property: Total IOPS reserved by all the volume groups under an ElasticSan."
+  returns:
+    description: "the totalReservedIops value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+- uid: "com.azure.resourcemanager.elasticsan.models.ElasticSan.totalReservedMBps()"
+  fullName: "com.azure.resourcemanager.elasticsan.models.ElasticSan.totalReservedMBps()"
+  name: "totalReservedMBps()"
+  nameWithType: "ElasticSan.totalReservedMBps()"
+  summary: "Gets the total<wbr>Reserved<wbr>MBps property: Total MBps reserved by all the volume groups under an Elastic<wbr>San."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Integer totalReservedMBps()"
+  desc: "Gets the totalReservedMBps property: Total MBps reserved by all the volume groups under an ElasticSan."
+  returns:
+    description: "the totalReservedMBps value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
 - uid: "com.azure.resourcemanager.elasticsan.models.ElasticSan.totalSizeTiB()"
   fullName: "com.azure.resourcemanager.elasticsan.models.ElasticSan.totalSizeTiB()"
   name: "totalSizeTiB()"
@@ -270,7 +294,7 @@ methods:
   modifiers:
   - "abstract"
   syntax: "public abstract Long totalSizeTiB()"
-  desc: "Gets the totalSizeTiB property: Total size of the Elastic San appliance in TB."
+  desc: "Gets the totalSizeTiB property: Total size of the Elastic San appliance in TB. Settable only for ElasticSanVersion V2, where it is required; read-only for V1."
   returns:
     description: "the totalSizeTiB value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
@@ -310,6 +334,30 @@ methods:
   returns:
     description: "the stage of resource update."
     type: "<xref href=\"com.azure.resourcemanager.elasticsan.models.ElasticSan.Update?alt=com.azure.resourcemanager.elasticsan.models.ElasticSan.Update&text=Update\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.elasticsan.models.ElasticSan.usedCapacityGiB()"
+  fullName: "com.azure.resourcemanager.elasticsan.models.ElasticSan.usedCapacityGiB()"
+  name: "usedCapacityGiB()"
+  nameWithType: "ElasticSan.usedCapacityGiB()"
+  summary: "Gets the used<wbr>Capacity<wbr>GiB property: Used capacity in GiB."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Long usedCapacityGiB()"
+  desc: "Gets the usedCapacityGiB property: Used capacity in GiB."
+  returns:
+    description: "the usedCapacityGiB value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html\">Long</a>"
+- uid: "com.azure.resourcemanager.elasticsan.models.ElasticSan.version()"
+  fullName: "com.azure.resourcemanager.elasticsan.models.ElasticSan.version()"
+  name: "version()"
+  nameWithType: "ElasticSan.version()"
+  summary: "Gets the version property: Elastic San appliance version."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract ElasticSanVersion version()"
+  desc: "Gets the version property: Elastic San appliance version. Defaults to V1 if not specified."
+  returns:
+    description: "the version value."
+    type: "<xref href=\"com.azure.resourcemanager.elasticsan.models.ElasticSanVersion?alt=com.azure.resourcemanager.elasticsan.models.ElasticSanVersion&text=ElasticSanVersion\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.elasticsan.models.ElasticSan.volumeGroupCount()"
   fullName: "com.azure.resourcemanager.elasticsan.models.ElasticSan.volumeGroupCount()"
   name: "volumeGroupCount()"
@@ -326,4 +374,4 @@ type: "interface"
 desc: "An immutable client-side representation of ElasticSan."
 metadata: {}
 package: "com.azure.resourcemanager.elasticsan.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-elasticsan:1.2.0-beta.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-elasticsan:1.3.0-beta.1
