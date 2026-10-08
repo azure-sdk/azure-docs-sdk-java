@@ -1,6 +1,6 @@
 {
   "Name": "azure-storage-file-share",
-  "Version": "12.31.0",
+  "Version": "12.32.0",
   "DevVersion": null,
   "DirectoryPath": "sdk/storage/azure-storage-file-share",
   "ServiceDirectory": "storage",
@@ -10,29 +10,29 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-storage-file-share",
-  "ReleaseStatus": "2026-06-11",
+  "ReleaseStatus": "2026-10-07",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": [
     "com.azure:azure-storage-perf",
     "com.azure:perf-test-core"
   ],
   "ArtifactDetails": {
-    "releaseInBatch": "${{ parameters.release_azurestoragefileshare }}",
     "groupId": "com.azure",
-    "name": "azure-storage-file-share",
     "triggeringPaths": [
       "/sdk/storage/ci.yml"
     ],
-    "safeName": "azurestoragefileshare"
+    "safeName": "azurestoragefileshare",
+    "name": "azure-storage-file-share",
+    "releaseInBatch": "${{ parameters.release_azurestoragefileshare }}"
   },
   "CIParameters": {
     "CIMatrixConfigs": [
       {
-        "Path": "sdk/storage/platform-matrix-ci.json",
-        "Selection": "sparse",
-        "GenerateVMJobs": true,
         "Name": "Storage_ci",
-        "NonSparseParameters": "Agent"
+        "Path": "sdk/storage/platform-matrix-ci.json",
+        "NonSparseParameters": "Agent",
+        "Selection": "sparse",
+        "GenerateVMJobs": true
       }
     ]
   },
