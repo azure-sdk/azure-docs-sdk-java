@@ -6,6 +6,6 @@ ms.topic: reference
 ms.devlang: java
 ms.service: resiliencemanagement
 ---
-# Azure Resilience Management SDK for Java - preview
-## Packages - preview
+# Azure Resilience Management SDK for Java - latest
+## Packages - latest
 [!INCLUDE [packages](resilience-management-index.md)]
