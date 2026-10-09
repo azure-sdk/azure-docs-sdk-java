@@ -20,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public class **BlobParallelUploadOptions**"
+syntax: "public class **BlobParallelUploadOptions**</br> implements <xref href=\"com.azure.storage.common.ValidatableContent?alt=com.azure.storage.common.ValidatableContent&text=ValidatableContent\" data-throw-if-not-resolved=\"False\" />"
 constructors:
 - uid: "com.azure.storage.blob.options.BlobParallelUploadOptions.BlobParallelUploadOptions(com.azure.core.util.BinaryData)"
   fullName: "com.azure.storage.blob.options.BlobParallelUploadOptions.BlobParallelUploadOptions(BinaryData data)"
@@ -72,6 +72,16 @@ constructors:
   syntax: "public BlobParallelUploadOptions(Flux<ByteBuffer> dataFlux)"
   desc: "Constructs a new <xref uid=\"com.azure.storage.blob.options.BlobParallelUploadOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BlobParallelUploadOptions\"></xref>."
 methods:
+- uid: "com.azure.storage.blob.options.BlobParallelUploadOptions.getContentValidationAlgorithm()"
+  fullName: "com.azure.storage.blob.options.BlobParallelUploadOptions.getContentValidationAlgorithm()"
+  name: "getContentValidationAlgorithm()"
+  nameWithType: "BlobParallelUploadOptions.getContentValidationAlgorithm()"
+  summary: "Gets the algorithm to use for transfer content validation on the request."
+  syntax: "public ContentValidationAlgorithm getContentValidationAlgorithm()"
+  desc: "Gets the algorithm to use for transfer content validation on the request. See <xref uid=\"com.azure.storage.common.ContentValidationAlgorithm\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ContentValidationAlgorithm\"></xref> for more details."
+  returns:
+    description: "The transfer validation checksum algorithm."
+    type: "<xref href=\"com.azure.storage.common.ContentValidationAlgorithm?alt=com.azure.storage.common.ContentValidationAlgorithm&text=ContentValidationAlgorithm\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.blob.options.BlobParallelUploadOptions.getDataFlux()"
   fullName: "com.azure.storage.blob.options.BlobParallelUploadOptions.getDataFlux()"
   name: "getDataFlux()"
@@ -230,6 +240,20 @@ methods:
   returns:
     description: "The updated options."
     type: "<xref href=\"com.azure.storage.blob.options.BlobParallelUploadOptions?alt=com.azure.storage.blob.options.BlobParallelUploadOptions&text=BlobParallelUploadOptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.blob.options.BlobParallelUploadOptions.setContentValidationAlgorithm(com.azure.storage.common.ContentValidationAlgorithm)"
+  fullName: "com.azure.storage.blob.options.BlobParallelUploadOptions.setContentValidationAlgorithm(ContentValidationAlgorithm contentValidationAlgorithm)"
+  name: "setContentValidationAlgorithm(ContentValidationAlgorithm contentValidationAlgorithm)"
+  nameWithType: "BlobParallelUploadOptions.setContentValidationAlgorithm(ContentValidationAlgorithm contentValidationAlgorithm)"
+  summary: "Sets the algorithm to use for transfer content validation on the request."
+  parameters:
+  - description: "The transfer validation checksum algorithm."
+    name: "contentValidationAlgorithm"
+    type: "<xref href=\"com.azure.storage.common.ContentValidationAlgorithm?alt=com.azure.storage.common.ContentValidationAlgorithm&text=ContentValidationAlgorithm\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public BlobParallelUploadOptions setContentValidationAlgorithm(ContentValidationAlgorithm contentValidationAlgorithm)"
+  desc: "Sets the algorithm to use for transfer content validation on the request. See <xref uid=\"com.azure.storage.common.ContentValidationAlgorithm\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ContentValidationAlgorithm\"></xref> for more details."
+  returns:
+    description: "The updated options."
+    type: "<xref href=\"com.azure.storage.blob.options.BlobParallelUploadOptions?alt=com.azure.storage.blob.options.BlobParallelUploadOptions&text=BlobParallelUploadOptions\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.blob.options.BlobParallelUploadOptions.setHeaders(com.azure.storage.blob.models.BlobHttpHeaders)"
   fullName: "com.azure.storage.blob.options.BlobParallelUploadOptions.setHeaders(BlobHttpHeaders headers)"
   name: "setHeaders(BlobHttpHeaders headers)"
@@ -360,6 +384,8 @@ methods:
     type: "<xref href=\"com.azure.storage.blob.options.BlobParallelUploadOptions?alt=com.azure.storage.blob.options.BlobParallelUploadOptions&text=BlobParallelUploadOptions\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Extended options that may be passed when uploading a Block Blob in parallel."
+implements:
+- "<xref href=\"com.azure.storage.common.ValidatableContent?alt=com.azure.storage.common.ValidatableContent&text=ValidatableContent\" data-throw-if-not-resolved=\"False\" />"
 metadata: {}
 package: "com.azure.storage.blob.options"
-artifact: com.azure:azure-storage-blob:12.35.0
+artifact: com.azure:azure-storage-blob:12.36.0

@@ -7,17 +7,14 @@ summary: "Deployment stack object."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 - "<xref href=\"com.azure.core.management.ProxyResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.resourcemanager.resources.models.AzureResourceBase?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
-- classRef: "<xref href=\"com.azure.resourcemanager.resources.models.AzureResourceBase?alt=com.azure.resourcemanager.resources.models.AzureResourceBase&text=AzureResourceBase\" data-throw-if-not-resolved=\"False\" />"
+- classRef: "<xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
   methodsRef:
-  - "<xref href=\"com.azure.resourcemanager.resources.models.AzureResourceBase.fromJson(com.azure.json.JsonReader)?alt=com.azure.resourcemanager.resources.models.AzureResourceBase.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.resourcemanager.resources.models.AzureResourceBase.id()?alt=com.azure.resourcemanager.resources.models.AzureResourceBase.id&text=id\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.resourcemanager.resources.models.AzureResourceBase.name()?alt=com.azure.resourcemanager.resources.models.AzureResourceBase.name&text=name\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.resourcemanager.resources.models.AzureResourceBase.systemData()?alt=com.azure.resourcemanager.resources.models.AzureResourceBase.systemData&text=systemData\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.resourcemanager.resources.models.AzureResourceBase.toJson(com.azure.json.JsonWriter)?alt=com.azure.resourcemanager.resources.models.AzureResourceBase.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.resourcemanager.resources.models.AzureResourceBase.type()?alt=com.azure.resourcemanager.resources.models.AzureResourceBase.type&text=type\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.resourcemanager.resources.models.AzureResourceBase.validate()?alt=com.azure.resourcemanager.resources.models.AzureResourceBase.validate&text=validate\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.ProxyResource.fromJson(com.azure.json.JsonReader)?alt=com.azure.core.management.ProxyResource.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.ProxyResource.id()?alt=com.azure.core.management.ProxyResource.id&text=id\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.ProxyResource.name()?alt=com.azure.core.management.ProxyResource.name&text=name\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.ProxyResource.toJson(com.azure.json.JsonWriter)?alt=com.azure.core.management.ProxyResource.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.ProxyResource.type()?alt=com.azure.core.management.ProxyResource.type&text=type\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -31,7 +28,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **DeploymentStackInner**</br> extends <xref href=\"com.azure.resourcemanager.resources.models.AzureResourceBase?alt=com.azure.resourcemanager.resources.models.AzureResourceBase&text=AzureResourceBase\" data-throw-if-not-resolved=\"False\" />"
+syntax: "public final class **DeploymentStackInner**</br> extends <xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
 constructors:
 - uid: "com.azure.resourcemanager.resources.fluent.models.DeploymentStackInner.DeploymentStackInner()"
   fullName: "com.azure.resourcemanager.resources.fluent.models.DeploymentStackInner.DeploymentStackInner()"
@@ -195,7 +192,7 @@ methods:
   name: "id()"
   nameWithType: "DeploymentStackInner.id()"
   summary: "Get the id property: Fully qualified resource Id for the resource."
-  overridden: "com.azure.resourcemanager.resources.models.AzureResourceBase.id()"
+  overridden: "com.azure.core.management.ProxyResource.id()"
   syntax: "public String id()"
   desc: "Get the id property: Fully qualified resource Id for the resource."
   returns:
@@ -205,9 +202,9 @@ methods:
   fullName: "com.azure.resourcemanager.resources.fluent.models.DeploymentStackInner.location()"
   name: "location()"
   nameWithType: "DeploymentStackInner.location()"
-  summary: "Get the location property: The location of the Deployment stack."
+  summary: "Get the location property: The geo-location where the resource lives."
   syntax: "public String location()"
-  desc: "Get the location property: The location of the Deployment stack. It cannot be changed after creation. It must be one of the supported Azure locations."
+  desc: "Get the location property: The geo-location where the resource lives. Required for subscription and management group scoped stacks. The location is inherited from the resource group for resource group scoped stacks."
   returns:
     description: "the location value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -216,7 +213,7 @@ methods:
   name: "name()"
   nameWithType: "DeploymentStackInner.name()"
   summary: "Get the name property: The name of the resource."
-  overridden: "com.azure.resourcemanager.resources.models.AzureResourceBase.name()"
+  overridden: "com.azure.core.management.ProxyResource.name()"
   syntax: "public String name()"
   desc: "Get the name property: The name of the resource."
   returns:
@@ -277,7 +274,6 @@ methods:
   name: "systemData()"
   nameWithType: "DeploymentStackInner.systemData()"
   summary: "Get the system<wbr>Data property: Azure Resource Manager metadata containing created<wbr>By and modified<wbr>By information."
-  overridden: "com.azure.resourcemanager.resources.models.AzureResourceBase.systemData()"
   syntax: "public SystemData systemData()"
   desc: "Get the systemData property: Azure Resource Manager metadata containing createdBy and modifiedBy information."
   returns:
@@ -287,9 +283,9 @@ methods:
   fullName: "com.azure.resourcemanager.resources.fluent.models.DeploymentStackInner.tags()"
   name: "tags()"
   nameWithType: "DeploymentStackInner.tags()"
-  summary: "Get the tags property: Deployment stack resource tags."
+  summary: "Get the tags property: Resource tags."
   syntax: "public Map<String,String> tags()"
-  desc: "Get the tags property: Deployment stack resource tags."
+  desc: "Get the tags property: Resource tags."
   returns:
     description: "the tags value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
@@ -317,7 +313,7 @@ methods:
   fullName: "com.azure.resourcemanager.resources.fluent.models.DeploymentStackInner.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
   nameWithType: "DeploymentStackInner.toJson(JsonWriter jsonWriter)"
-  overridden: "com.azure.resourcemanager.resources.models.AzureResourceBase.toJson(com.azure.json.JsonWriter)"
+  overridden: "com.azure.core.management.ProxyResource.toJson(com.azure.json.JsonWriter)"
   parameters:
   - name: "jsonWriter"
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
@@ -331,7 +327,7 @@ methods:
   name: "type()"
   nameWithType: "DeploymentStackInner.type()"
   summary: "Get the type property: The type of the resource."
-  overridden: "com.azure.resourcemanager.resources.models.AzureResourceBase.type()"
+  overridden: "com.azure.core.management.ProxyResource.type()"
   syntax: "public String type()"
   desc: "Get the type property: The type of the resource."
   returns:
@@ -342,7 +338,6 @@ methods:
   name: "validate()"
   nameWithType: "DeploymentStackInner.validate()"
   summary: "Validates the instance."
-  overridden: "com.azure.resourcemanager.resources.models.AzureResourceBase.validate()"
   syntax: "public void validate()"
   desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.resources.fluent.models.DeploymentStackInner.withActionOnUnmanage(com.azure.resourcemanager.resources.models.ActionOnUnmanage)"
@@ -429,31 +424,17 @@ methods:
   returns:
     description: "the DeploymentStackInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.resources.fluent.models.DeploymentStackInner?alt=com.azure.resourcemanager.resources.fluent.models.DeploymentStackInner&text=DeploymentStackInner\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.resources.fluent.models.DeploymentStackInner.withError(com.azure.core.management.exception.ManagementError)"
-  fullName: "com.azure.resourcemanager.resources.fluent.models.DeploymentStackInner.withError(ManagementError error)"
-  name: "withError(ManagementError error)"
-  nameWithType: "DeploymentStackInner.withError(ManagementError error)"
-  summary: "Set the error property: The error detail."
-  parameters:
-  - description: "the error value to set."
-    name: "error"
-    type: "<xref href=\"com.azure.core.management.exception.ManagementError?alt=com.azure.core.management.exception.ManagementError&text=ManagementError\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public DeploymentStackInner withError(ManagementError error)"
-  desc: "Set the error property: The error detail."
-  returns:
-    description: "the DeploymentStackInner object itself."
-    type: "<xref href=\"com.azure.resourcemanager.resources.fluent.models.DeploymentStackInner?alt=com.azure.resourcemanager.resources.fluent.models.DeploymentStackInner&text=DeploymentStackInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.resources.fluent.models.DeploymentStackInner.withLocation(java.lang.String)"
   fullName: "com.azure.resourcemanager.resources.fluent.models.DeploymentStackInner.withLocation(String location)"
   name: "withLocation(String location)"
   nameWithType: "DeploymentStackInner.withLocation(String location)"
-  summary: "Set the location property: The location of the Deployment stack."
+  summary: "Set the location property: The geo-location where the resource lives."
   parameters:
   - description: "the location value to set."
     name: "location"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public DeploymentStackInner withLocation(String location)"
-  desc: "Set the location property: The location of the Deployment stack. It cannot be changed after creation. It must be one of the supported Azure locations."
+  desc: "Set the location property: The geo-location where the resource lives. Required for subscription and management group scoped stacks. The location is inherited from the resource group for resource group scoped stacks."
   returns:
     description: "the DeploymentStackInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.resources.fluent.models.DeploymentStackInner?alt=com.azure.resourcemanager.resources.fluent.models.DeploymentStackInner&text=DeploymentStackInner\" data-throw-if-not-resolved=\"False\" />"
@@ -489,13 +470,13 @@ methods:
   fullName: "com.azure.resourcemanager.resources.fluent.models.DeploymentStackInner.withTags(Map<String,String> tags)"
   name: "withTags(Map<String,String> tags)"
   nameWithType: "DeploymentStackInner.withTags(Map<String,String> tags)"
-  summary: "Set the tags property: Deployment stack resource tags."
+  summary: "Set the tags property: Resource tags."
   parameters:
   - description: "the tags value to set."
     name: "tags"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
   syntax: "public DeploymentStackInner withTags(Map<String,String> tags)"
-  desc: "Set the tags property: Deployment stack resource tags."
+  desc: "Set the tags property: Resource tags."
   returns:
     description: "the DeploymentStackInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.resources.fluent.models.DeploymentStackInner?alt=com.azure.resourcemanager.resources.fluent.models.DeploymentStackInner&text=DeploymentStackInner\" data-throw-if-not-resolved=\"False\" />"
@@ -531,4 +512,4 @@ type: "class"
 desc: "Deployment stack object."
 metadata: {}
 package: "com.azure.resourcemanager.resources.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-resources:2.54.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-resources:2.55.0

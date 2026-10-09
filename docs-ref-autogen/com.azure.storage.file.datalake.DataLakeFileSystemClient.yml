@@ -61,7 +61,7 @@ methods:
   nameWithType: "DataLakeFileSystemClient.createDirectory(String directoryName)"
   summary: "Creates a new directory within a file system."
   parameters:
-  - description: "Name of the directory to create. If the path name contains special characters, pass in the\n url encoded version of the path name."
+  - description: "Name of the directory to create. Pass the name unencoded; the client percent-encodes it when\n building the request URL."
     name: "directoryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public DataLakeDirectoryClient createDirectory(String directoryName)"
@@ -75,7 +75,7 @@ methods:
   nameWithType: "DataLakeFileSystemClient.createDirectory(String directoryName, boolean overwrite)"
   summary: "Creates a new directory within a file system."
   parameters:
-  - description: "Name of the directory to create. If the path name contains special characters, pass in the\n url encoded version of the path name."
+  - description: "Name of the directory to create. Pass the name unencoded; the client percent-encodes it when\n building the request URL."
     name: "directoryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Whether to overwrite, should a directory exist."
@@ -92,7 +92,7 @@ methods:
   nameWithType: "DataLakeFileSystemClient.createDirectoryIfNotExists(String directoryName)"
   summary: "Creates a new directory within a file system if it does not exist."
   parameters:
-  - description: "Name of the directory to create. If the path name contains special characters, pass in the\n url encoded version of the path name."
+  - description: "Name of the directory to create. Pass the name unencoded; the client percent-encodes it when\n building the request URL."
     name: "directoryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public DataLakeDirectoryClient createDirectoryIfNotExists(String directoryName)"
@@ -106,7 +106,7 @@ methods:
   nameWithType: "DataLakeFileSystemClient.createDirectoryIfNotExistsWithResponse(String directoryName, DataLakePathCreateOptions options, Duration timeout, Context context)"
   summary: "Creates a new directory within a file system if it does not exist."
   parameters:
-  - description: "Name of the directory to create.  If the path name contains special characters, pass in the\n url encoded version of the path name."
+  - description: "Name of the directory to create. Pass the name unencoded; the client percent-encodes it when\n building the request URL."
     name: "directoryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "<xref uid=\"com.azure.storage.file.datalake.options.DataLakePathCreateOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DataLakePathCreateOptions\"></xref>"
@@ -129,7 +129,7 @@ methods:
   nameWithType: "DataLakeFileSystemClient.createDirectoryWithResponse(String directoryName, DataLakePathCreateOptions options, Duration timeout, Context context)"
   summary: "Creates a new directory within a file system."
   parameters:
-  - description: "Name of the directory to create.  If the path name contains special characters, pass in the\n url encoded version of the path name."
+  - description: "Name of the directory to create. Pass the name unencoded; the client percent-encodes it when\n building the request URL."
     name: "directoryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "<xref uid=\"com.azure.storage.file.datalake.options.DataLakePathCreateOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DataLakePathCreateOptions\"></xref>"
@@ -152,7 +152,7 @@ methods:
   nameWithType: "DataLakeFileSystemClient.createDirectoryWithResponse(String directoryName, String permissions, String umask, PathHttpHeaders headers, Map<String,String> metadata, DataLakeRequestConditions requestConditions, Duration timeout, Context context)"
   summary: "Creates a new directory within a file system."
   parameters:
-  - description: "Name of the directory to create.  If the path name contains special characters, pass in the\n url encoded version of the path name."
+  - description: "Name of the directory to create. Pass the name unencoded; the client percent-encodes it when\n building the request URL."
     name: "directoryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "POSIX access permissions for the directory owner, the directory owning group, and others."
@@ -376,7 +376,7 @@ methods:
   nameWithType: "DataLakeFileSystemClient.deleteDirectory(String directoryName)"
   summary: "Deletes the specified directory in the file system."
   parameters:
-  - description: "Name of the directory to delete.  If the path name contains special characters, pass in the\n url encoded version of the path name."
+  - description: "Name of the directory to delete. Pass the name unencoded; the client percent-encodes it when\n building the request URL."
     name: "directoryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public void deleteDirectory(String directoryName)"
@@ -387,7 +387,7 @@ methods:
   nameWithType: "DataLakeFileSystemClient.deleteDirectoryIfExists(String directoryName)"
   summary: "Deletes the specified directory in the file system if it exists."
   parameters:
-  - description: "Name of the directory to delete.  If the path name contains special characters, pass in the\n url encoded version of the path name."
+  - description: "Name of the directory to delete. Pass the name unencoded; the client percent-encodes it when\n building the request URL."
     name: "directoryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public boolean deleteDirectoryIfExists(String directoryName)"
@@ -401,7 +401,7 @@ methods:
   nameWithType: "DataLakeFileSystemClient.deleteDirectoryIfExistsWithResponse(String directoryName, DataLakePathDeleteOptions options, Duration timeout, Context context)"
   summary: "Deletes the specified directory in the file system if it exists."
   parameters:
-  - description: "Name of the directory to delete. If the path name contains special characters, pass in the\n url encoded version of the path name."
+  - description: "Name of the directory to delete. Pass the name unencoded; the client percent-encodes it when\n building the request URL."
     name: "directoryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "<xref uid=\"com.azure.storage.file.datalake.options.DataLakePathDeleteOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DataLakePathDeleteOptions\"></xref>"
@@ -424,7 +424,7 @@ methods:
   nameWithType: "DataLakeFileSystemClient.deleteDirectoryWithResponse(String directoryName, boolean recursive, DataLakeRequestConditions requestConditions, Duration timeout, Context context)"
   summary: "Deletes the specified directory in the file system."
   parameters:
-  - description: "Name of the directory to delete. If the path name contains special characters, pass in the\n url encoded version of the path name."
+  - description: "Name of the directory to delete. Pass the name unencoded; the client percent-encodes it when\n building the request URL."
     name: "directoryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Whether to delete all paths beneath the directory."
@@ -765,7 +765,7 @@ methods:
   nameWithType: "DataLakeFileSystemClient.getDirectoryClient(String directoryName)"
   summary: "Initializes a new Data<wbr>Lake<wbr>Directory<wbr>Client object by concatenating directory<wbr>Name to the end of Data<wbr>Lake<wbr>File<wbr>System<wbr>Client's URL."
   parameters:
-  - description: "A <code>String</code> representing the name of the directory. If the path name contains special\n characters, pass in the url encoded version of the path name.\n\n <p><strong>Code Samples</strong></p>\n\n <!-- src_embed com.azure.storage.file.datalake.DataLakeFileSystemClient.getDirectoryClient#String -->\n <pre>\n DataLakeDirectoryClient dataLakeDirectoryClient = client.getDirectoryClient&#40;directoryName&#41;;\n </pre>\n <!-- end com.azure.storage.file.datalake.DataLakeFileSystemClient.getDirectoryClient#String -->"
+  - description: "A <code>String</code> representing the name of the directory.\n     Pass the name unencoded; the client percent-encodes it when building the request URL.\n\n <p><strong>Code Samples</strong></p>\n\n <!-- src_embed com.azure.storage.file.datalake.DataLakeFileSystemClient.getDirectoryClient#String -->\n <pre>\n DataLakeDirectoryClient dataLakeDirectoryClient = client.getDirectoryClient&#40;directoryName&#41;;\n </pre>\n <!-- end com.azure.storage.file.datalake.DataLakeFileSystemClient.getDirectoryClient#String -->"
     name: "directoryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public DataLakeDirectoryClient getDirectoryClient(String directoryName)"
@@ -779,7 +779,7 @@ methods:
   nameWithType: "DataLakeFileSystemClient.getFileClient(String fileName)"
   summary: "Initializes a new Data<wbr>Lake<wbr>File<wbr>Client object by concatenating file<wbr>Name to the end of Data<wbr>Lake<wbr>File<wbr>System<wbr>Client's URL."
   parameters:
-  - description: "A <code>String</code> representing the name of the file. If the path name contains special characters,\n pass in the url encoded version of the path name.\n\n <p><strong>Code Samples</strong></p>\n\n <!-- src_embed com.azure.storage.file.datalake.DataLakeFileSystemClient.getFileClient#String -->\n <pre>\n DataLakeFileClient dataLakeFileClient = client.getFileClient&#40;fileName&#41;;\n </pre>\n <!-- end com.azure.storage.file.datalake.DataLakeFileSystemClient.getFileClient#String -->"
+  - description: "A <code>String</code> representing the name of the file. Pass the name unencoded; the client\n percent-encodes it when building the request URL.\n\n <p><strong>Code Samples</strong></p>\n\n <!-- src_embed com.azure.storage.file.datalake.DataLakeFileSystemClient.getFileClient#String -->\n <pre>\n DataLakeFileClient dataLakeFileClient = client.getFileClient&#40;fileName&#41;;\n </pre>\n <!-- end com.azure.storage.file.datalake.DataLakeFileSystemClient.getFileClient#String -->"
     name: "fileName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public DataLakeFileClient getFileClient(String fileName)"
@@ -1032,4 +1032,4 @@ type: "class"
 desc: "Client to a file system. It may only be instantiated through a <xref uid=\"com.azure.storage.file.datalake.DataLakeFileSystemClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DataLakeFileSystemClientBuilder\"></xref> or via the method <xref uid=\"com.azure.storage.file.datalake.DataLakeServiceClient.getFileSystemClient(java.lang.String)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DataLakeServiceClient#getFileSystemClient(String)\"></xref>. This class does not hold any state about a particular file system but is instead a convenient way of sending off appropriate requests to the resource on the service. It may also be used to construct URLs to files/directories.\n\nThis client contains operations on a file system. Operations on a path are available on <xref uid=\"com.azure.storage.file.datalake.DataLakeFileClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DataLakeFileClient\"></xref> and <xref uid=\"com.azure.storage.file.datalake.DataLakeDirectoryClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DataLakeDirectoryClient\"></xref> through <xref uid=\"com.azure.storage.file.datalake.DataLakeFileSystemClient.getFileClient(java.lang.String)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#getFileClient(String)\"></xref> and <xref uid=\"com.azure.storage.file.datalake.DataLakeFileSystemClient.getDirectoryClient(java.lang.String)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#getDirectoryClient(String)\"></xref> respectively, and operations on the service are available on <xref uid=\"com.azure.storage.file.datalake.DataLakeServiceClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DataLakeServiceClient\"></xref>.\n\nPlease refer to the [ Azure Docs][Azure Docs] for more information on file systems.\n\n\n[Azure Docs]: https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction"
 metadata: {}
 package: "com.azure.storage.file.datalake"
-artifact: com.azure:azure-storage-file-datalake:12.28.0
+artifact: com.azure:azure-storage-file-datalake:12.29.0

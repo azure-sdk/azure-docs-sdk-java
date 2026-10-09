@@ -1,0 +1,41 @@
+### YamlMime:JavaType
+uid: "com.azure.storage.common.ValidatableContent"
+fullName: "com.azure.storage.common.ValidatableContent"
+name: "ValidatableContent"
+nameWithType: "ValidatableContent"
+summary: "Represents options for a transfer operation whose content integrity can be validated."
+syntax: "public interface **ValidatableContent**"
+methods:
+- uid: "com.azure.storage.common.ValidatableContent.getContentValidationAlgorithm()"
+  fullName: "com.azure.storage.common.ValidatableContent.getContentValidationAlgorithm()"
+  name: "getContentValidationAlgorithm()"
+  nameWithType: "ValidatableContent.getContentValidationAlgorithm()"
+  summary: "Gets the algorithm to use for transfer content validation."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract ContentValidationAlgorithm getContentValidationAlgorithm()"
+  desc: "Gets the algorithm to use for transfer content validation. See <xref uid=\"com.azure.storage.common.ContentValidationAlgorithm\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ContentValidationAlgorithm\"></xref> for more details."
+  returns:
+    description: "The transfer validation checksum algorithm."
+    type: "<xref href=\"com.azure.storage.common.ContentValidationAlgorithm?alt=com.azure.storage.common.ContentValidationAlgorithm&text=ContentValidationAlgorithm\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.common.ValidatableContent.setContentValidationAlgorithm(com.azure.storage.common.ContentValidationAlgorithm)"
+  fullName: "com.azure.storage.common.ValidatableContent.setContentValidationAlgorithm(ContentValidationAlgorithm contentValidationAlgorithm)"
+  name: "setContentValidationAlgorithm(ContentValidationAlgorithm contentValidationAlgorithm)"
+  nameWithType: "ValidatableContent.setContentValidationAlgorithm(ContentValidationAlgorithm contentValidationAlgorithm)"
+  summary: "Sets the algorithm to use for transfer content validation."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The transfer validation checksum algorithm."
+    name: "contentValidationAlgorithm"
+    type: "<xref href=\"com.azure.storage.common.ContentValidationAlgorithm?alt=com.azure.storage.common.ContentValidationAlgorithm&text=ContentValidationAlgorithm\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract ValidatableContent setContentValidationAlgorithm(ContentValidationAlgorithm contentValidationAlgorithm)"
+  desc: "Sets the algorithm to use for transfer content validation. See <xref uid=\"com.azure.storage.common.ContentValidationAlgorithm\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ContentValidationAlgorithm\"></xref> for more details."
+  returns:
+    description: "The updated options."
+    type: "<xref href=\"com.azure.storage.common.ValidatableContent?alt=com.azure.storage.common.ValidatableContent&text=ValidatableContent\" data-throw-if-not-resolved=\"False\" />"
+type: "interface"
+desc: "Represents options for a transfer operation whose content integrity can be validated. Implemented by the various upload and download option types so that transfer content validation can be configured agnostically across many different operations.\n\nThis allows application code to enable or inspect content validation without needing to special-case every concrete option type. For example, a helper can accept a <xref uid=\"com.azure.storage.common.ValidatableContent\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ValidatableContent\"></xref> and apply a single <xref uid=\"com.azure.storage.common.ContentValidationAlgorithm\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ContentValidationAlgorithm\"></xref> to any supported upload or download options instance."
+metadata: {}
+package: "com.azure.storage.common"
+artifact: com.azure:azure-storage-common:12.35.0

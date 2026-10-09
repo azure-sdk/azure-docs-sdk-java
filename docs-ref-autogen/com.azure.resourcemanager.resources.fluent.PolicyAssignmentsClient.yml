@@ -10,21 +10,21 @@ methods:
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.create(String scope, String policyAssignmentName, PolicyAssignmentInner parameters)"
   name: "create(String scope, String policyAssignmentName, PolicyAssignmentInner parameters)"
   nameWithType: "PolicyAssignmentsClient.create(String scope, String policyAssignmentName, PolicyAssignmentInner parameters)"
-  summary: "Creates or updates a policy assignment."
+  summary: "This operation creates or updates a policy assignment with the given scope and name."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the policy assignment. Valid scopes are: management group (format:\n '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n '/subscriptions/{subscriptionId}'), resource group (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the policy assignment."
+  - description: "The name of the policy assignment to get."
     name: "policyAssignmentName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Parameters for the policy assignment."
     name: "parameters"
     type: "<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PolicyAssignmentInner create(String scope, String policyAssignmentName, PolicyAssignmentInner parameters)"
-  desc: "Creates or updates a policy assignment. This operation creates or updates a policy assignment with the given scope and name. Policy assignments apply to all resources contained within their scope. For example, when you assign a policy at resource group scope, that policy applies to all resources in the group."
+  desc: "This operation creates or updates a policy assignment with the given scope and name. Policy assignments apply to all resources contained within their scope. For example, when you assign a policy at resource group scope, that policy applies to all resources in the group."
   returns:
     description: "the policy assignment."
     type: "<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />"
@@ -32,21 +32,21 @@ methods:
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.createAsync(String scope, String policyAssignmentName, PolicyAssignmentInner parameters)"
   name: "createAsync(String scope, String policyAssignmentName, PolicyAssignmentInner parameters)"
   nameWithType: "PolicyAssignmentsClient.createAsync(String scope, String policyAssignmentName, PolicyAssignmentInner parameters)"
-  summary: "Creates or updates a policy assignment."
+  summary: "This operation creates or updates a policy assignment with the given scope and name."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the policy assignment. Valid scopes are: management group (format:\n '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n '/subscriptions/{subscriptionId}'), resource group (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the policy assignment."
+  - description: "The name of the policy assignment to get."
     name: "policyAssignmentName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Parameters for the policy assignment."
     name: "parameters"
     type: "<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Mono<PolicyAssignmentInner> createAsync(String scope, String policyAssignmentName, PolicyAssignmentInner parameters)"
-  desc: "Creates or updates a policy assignment. This operation creates or updates a policy assignment with the given scope and name. Policy assignments apply to all resources contained within their scope. For example, when you assign a policy at resource group scope, that policy applies to all resources in the group."
+  desc: "This operation creates or updates a policy assignment with the given scope and name. Policy assignments apply to all resources contained within their scope. For example, when you assign a policy at resource group scope, that policy applies to all resources in the group."
   returns:
     description: "the policy assignment on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -58,7 +58,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The ID of the policy assignment to create. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
+  - description: "The ID of the policy assignment to get. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
     name: "policyAssignmentId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Parameters for policy assignment."
@@ -77,7 +77,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The ID of the policy assignment to create. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
+  - description: "The ID of the policy assignment to get. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
     name: "policyAssignmentId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Parameters for policy assignment."
@@ -96,7 +96,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The ID of the policy assignment to create. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
+  - description: "The ID of the policy assignment to get. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
     name: "policyAssignmentId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Parameters for policy assignment."
@@ -118,7 +118,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The ID of the policy assignment to create. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
+  - description: "The ID of the policy assignment to get. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
     name: "policyAssignmentId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Parameters for policy assignment."
@@ -133,14 +133,14 @@ methods:
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.createWithResponse(String scope, String policyAssignmentName, PolicyAssignmentInner parameters, Context context)"
   name: "createWithResponse(String scope, String policyAssignmentName, PolicyAssignmentInner parameters, Context context)"
   nameWithType: "PolicyAssignmentsClient.createWithResponse(String scope, String policyAssignmentName, PolicyAssignmentInner parameters, Context context)"
-  summary: "Creates or updates a policy assignment."
+  summary: "This operation creates or updates a policy assignment with the given scope and name."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the policy assignment. Valid scopes are: management group (format:\n '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n '/subscriptions/{subscriptionId}'), resource group (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the policy assignment."
+  - description: "The name of the policy assignment to get."
     name: "policyAssignmentName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Parameters for the policy assignment."
@@ -150,7 +150,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<PolicyAssignmentInner> createWithResponse(String scope, String policyAssignmentName, PolicyAssignmentInner parameters, Context context)"
-  desc: "Creates or updates a policy assignment. This operation creates or updates a policy assignment with the given scope and name. Policy assignments apply to all resources contained within their scope. For example, when you assign a policy at resource group scope, that policy applies to all resources in the group."
+  desc: "This operation creates or updates a policy assignment with the given scope and name. Policy assignments apply to all resources contained within their scope. For example, when you assign a policy at resource group scope, that policy applies to all resources in the group."
   returns:
     description: "the policy assignment along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -158,21 +158,21 @@ methods:
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.createWithResponseAsync(String scope, String policyAssignmentName, PolicyAssignmentInner parameters)"
   name: "createWithResponseAsync(String scope, String policyAssignmentName, PolicyAssignmentInner parameters)"
   nameWithType: "PolicyAssignmentsClient.createWithResponseAsync(String scope, String policyAssignmentName, PolicyAssignmentInner parameters)"
-  summary: "Creates or updates a policy assignment."
+  summary: "This operation creates or updates a policy assignment with the given scope and name."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the policy assignment. Valid scopes are: management group (format:\n '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n '/subscriptions/{subscriptionId}'), resource group (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the policy assignment."
+  - description: "The name of the policy assignment to get."
     name: "policyAssignmentName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Parameters for the policy assignment."
     name: "parameters"
     type: "<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Mono<Response<PolicyAssignmentInner>> createWithResponseAsync(String scope, String policyAssignmentName, PolicyAssignmentInner parameters)"
-  desc: "Creates or updates a policy assignment. This operation creates or updates a policy assignment with the given scope and name. Policy assignments apply to all resources contained within their scope. For example, when you assign a policy at resource group scope, that policy applies to all resources in the group."
+  desc: "This operation creates or updates a policy assignment with the given scope and name. Policy assignments apply to all resources contained within their scope. For example, when you assign a policy at resource group scope, that policy applies to all resources in the group."
   returns:
     description: "the policy assignment along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
@@ -180,18 +180,18 @@ methods:
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.delete(String scope, String policyAssignmentName)"
   name: "delete(String scope, String policyAssignmentName)"
   nameWithType: "PolicyAssignmentsClient.delete(String scope, String policyAssignmentName)"
-  summary: "Deletes a policy assignment."
+  summary: "This operation deletes a policy assignment, given its name and the scope it was created in."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the policy assignment. Valid scopes are: management group (format:\n '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n '/subscriptions/{subscriptionId}'), resource group (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the policy assignment to delete."
+  - description: "The name of the policy assignment to get."
     name: "policyAssignmentName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PolicyAssignmentInner delete(String scope, String policyAssignmentName)"
-  desc: "Deletes a policy assignment. This operation deletes a policy assignment, given its name and the scope it was created in. The scope of a policy assignment is the part of its ID preceding '/providers/Microsoft.Authorization/policyAssignments/\\{policyAssignmentName\\}'."
+  desc: "This operation deletes a policy assignment, given its name and the scope it was created in. The scope of a policy assignment is the part of its ID preceding '/providers/Microsoft.Authorization/policyAssignments/\\{policyAssignmentName\\}'."
   returns:
     description: "the policy assignment."
     type: "<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />"
@@ -199,18 +199,18 @@ methods:
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.deleteAsync(String scope, String policyAssignmentName)"
   name: "deleteAsync(String scope, String policyAssignmentName)"
   nameWithType: "PolicyAssignmentsClient.deleteAsync(String scope, String policyAssignmentName)"
-  summary: "Deletes a policy assignment."
+  summary: "This operation deletes a policy assignment, given its name and the scope it was created in."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the policy assignment. Valid scopes are: management group (format:\n '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n '/subscriptions/{subscriptionId}'), resource group (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the policy assignment to delete."
+  - description: "The name of the policy assignment to get."
     name: "policyAssignmentName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract Mono<PolicyAssignmentInner> deleteAsync(String scope, String policyAssignmentName)"
-  desc: "Deletes a policy assignment. This operation deletes a policy assignment, given its name and the scope it was created in. The scope of a policy assignment is the part of its ID preceding '/providers/Microsoft.Authorization/policyAssignments/\\{policyAssignmentName\\}'."
+  desc: "This operation deletes a policy assignment, given its name and the scope it was created in. The scope of a policy assignment is the part of its ID preceding '/providers/Microsoft.Authorization/policyAssignments/\\{policyAssignmentName\\}'."
   returns:
     description: "the policy assignment on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -222,7 +222,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The ID of the policy assignment to delete. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
+  - description: "The ID of the policy assignment to get. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
     name: "policyAssignmentId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PolicyAssignmentInner deleteById(String policyAssignmentId)"
@@ -238,7 +238,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The ID of the policy assignment to delete. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
+  - description: "The ID of the policy assignment to get. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
     name: "policyAssignmentId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract Mono<PolicyAssignmentInner> deleteByIdAsync(String policyAssignmentId)"
@@ -254,7 +254,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The ID of the policy assignment to delete. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
+  - description: "The ID of the policy assignment to get. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
     name: "policyAssignmentId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
@@ -273,7 +273,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The ID of the policy assignment to delete. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
+  - description: "The ID of the policy assignment to get. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
     name: "policyAssignmentId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract Mono<Response<PolicyAssignmentInner>> deleteByIdWithResponseAsync(String policyAssignmentId)"
@@ -285,21 +285,21 @@ methods:
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.deleteWithResponse(String scope, String policyAssignmentName, Context context)"
   name: "deleteWithResponse(String scope, String policyAssignmentName, Context context)"
   nameWithType: "PolicyAssignmentsClient.deleteWithResponse(String scope, String policyAssignmentName, Context context)"
-  summary: "Deletes a policy assignment."
+  summary: "This operation deletes a policy assignment, given its name and the scope it was created in."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the policy assignment. Valid scopes are: management group (format:\n '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n '/subscriptions/{subscriptionId}'), resource group (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the policy assignment to delete."
+  - description: "The name of the policy assignment to get."
     name: "policyAssignmentName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<PolicyAssignmentInner> deleteWithResponse(String scope, String policyAssignmentName, Context context)"
-  desc: "Deletes a policy assignment. This operation deletes a policy assignment, given its name and the scope it was created in. The scope of a policy assignment is the part of its ID preceding '/providers/Microsoft.Authorization/policyAssignments/\\{policyAssignmentName\\}'."
+  desc: "This operation deletes a policy assignment, given its name and the scope it was created in. The scope of a policy assignment is the part of its ID preceding '/providers/Microsoft.Authorization/policyAssignments/\\{policyAssignmentName\\}'."
   returns:
     description: "the policy assignment along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -307,18 +307,18 @@ methods:
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.deleteWithResponseAsync(String scope, String policyAssignmentName)"
   name: "deleteWithResponseAsync(String scope, String policyAssignmentName)"
   nameWithType: "PolicyAssignmentsClient.deleteWithResponseAsync(String scope, String policyAssignmentName)"
-  summary: "Deletes a policy assignment."
+  summary: "This operation deletes a policy assignment, given its name and the scope it was created in."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the policy assignment. Valid scopes are: management group (format:\n '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n '/subscriptions/{subscriptionId}'), resource group (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the policy assignment to delete."
+  - description: "The name of the policy assignment to get."
     name: "policyAssignmentName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract Mono<Response<PolicyAssignmentInner>> deleteWithResponseAsync(String scope, String policyAssignmentName)"
-  desc: "Deletes a policy assignment. This operation deletes a policy assignment, given its name and the scope it was created in. The scope of a policy assignment is the part of its ID preceding '/providers/Microsoft.Authorization/policyAssignments/\\{policyAssignmentName\\}'."
+  desc: "This operation deletes a policy assignment, given its name and the scope it was created in. The scope of a policy assignment is the part of its ID preceding '/providers/Microsoft.Authorization/policyAssignments/\\{policyAssignmentName\\}'."
   returns:
     description: "the policy assignment along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
@@ -326,18 +326,18 @@ methods:
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.get(String scope, String policyAssignmentName)"
   name: "get(String scope, String policyAssignmentName)"
   nameWithType: "PolicyAssignmentsClient.get(String scope, String policyAssignmentName)"
-  summary: "Retrieves a policy assignment."
+  summary: "This operation retrieves a single policy assignment, given its name and the scope it was created at."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the policy assignment. Valid scopes are: management group (format:\n '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n '/subscriptions/{subscriptionId}'), resource group (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the policy assignment to get."
     name: "policyAssignmentName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PolicyAssignmentInner get(String scope, String policyAssignmentName)"
-  desc: "Retrieves a policy assignment. This operation retrieves a single policy assignment, given its name and the scope it was created at."
+  desc: "This operation retrieves a single policy assignment, given its name and the scope it was created at."
   returns:
     description: "the policy assignment."
     type: "<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />"
@@ -345,18 +345,18 @@ methods:
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.getAsync(String scope, String policyAssignmentName)"
   name: "getAsync(String scope, String policyAssignmentName)"
   nameWithType: "PolicyAssignmentsClient.getAsync(String scope, String policyAssignmentName)"
-  summary: "Retrieves a policy assignment."
+  summary: "This operation retrieves a single policy assignment, given its name and the scope it was created at."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the policy assignment. Valid scopes are: management group (format:\n '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n '/subscriptions/{subscriptionId}'), resource group (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the policy assignment to get."
     name: "policyAssignmentName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract Mono<PolicyAssignmentInner> getAsync(String scope, String policyAssignmentName)"
-  desc: "Retrieves a policy assignment. This operation retrieves a single policy assignment, given its name and the scope it was created at."
+  desc: "This operation retrieves a single policy assignment, given its name and the scope it was created at."
   returns:
     description: "the policy assignment on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -431,11 +431,11 @@ methods:
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.getWithResponse(String scope, String policyAssignmentName, String expand, Context context)"
   name: "getWithResponse(String scope, String policyAssignmentName, String expand, Context context)"
   nameWithType: "PolicyAssignmentsClient.getWithResponse(String scope, String policyAssignmentName, String expand, Context context)"
-  summary: "Retrieves a policy assignment."
+  summary: "This operation retrieves a single policy assignment, given its name and the scope it was created at."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the policy assignment. Valid scopes are: management group (format:\n '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n '/subscriptions/{subscriptionId}'), resource group (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the policy assignment to get."
@@ -448,7 +448,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<PolicyAssignmentInner> getWithResponse(String scope, String policyAssignmentName, String expand, Context context)"
-  desc: "Retrieves a policy assignment. This operation retrieves a single policy assignment, given its name and the scope it was created at."
+  desc: "This operation retrieves a single policy assignment, given its name and the scope it was created at."
   returns:
     description: "the policy assignment along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -456,11 +456,11 @@ methods:
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.getWithResponseAsync(String scope, String policyAssignmentName, String expand)"
   name: "getWithResponseAsync(String scope, String policyAssignmentName, String expand)"
   nameWithType: "PolicyAssignmentsClient.getWithResponseAsync(String scope, String policyAssignmentName, String expand)"
-  summary: "Retrieves a policy assignment."
+  summary: "This operation retrieves a single policy assignment, given its name and the scope it was created at."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the policy assignment. Valid scopes are: management group (format:\n '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n '/subscriptions/{subscriptionId}'), resource group (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the policy assignment to get."
@@ -470,7 +470,7 @@ methods:
     name: "expand"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract Mono<Response<PolicyAssignmentInner>> getWithResponseAsync(String scope, String policyAssignmentName, String expand)"
-  desc: "Retrieves a policy assignment. This operation retrieves a single policy assignment, given its name and the scope it was created at."
+  desc: "This operation retrieves a single policy assignment, given its name and the scope it was created at."
   returns:
     description: "the policy assignment along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
@@ -484,7 +484,7 @@ methods:
   syntax: "public abstract PagedIterable<PolicyAssignmentInner> list()"
   desc: "Retrieves all policy assignments that apply to a subscription. This operation retrieves the list of all policy assignments associated with the given subscription that match the optional given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()' or 'policyDefinitionId eq '\\{value\\}''. If $filter is not provided, the unfiltered list includes all policy assignments associated with the subscription, including those that apply directly or from management groups that contain the given subscription, as well as any applied to objects contained within the subscription. If $filter=atScope() is provided, the returned list includes all policy assignments that apply to the subscription, which is everything in the unfiltered list except those applied to objects contained within the subscription. If $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the subscription. If $filter=policyDefinitionId eq '\\{value\\}' is provided, the returned list includes all policy assignments of the policy definition whose id is \\{value\\}."
   returns:
-    description: "list of policy assignments as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the response of a PolicyAssignment list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.list(java.lang.String,java.lang.String,java.lang.Integer,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.list(String filter, String expand, Integer top, Context context)"
@@ -509,7 +509,7 @@ methods:
   syntax: "public abstract PagedIterable<PolicyAssignmentInner> list(String filter, String expand, Integer top, Context context)"
   desc: "Retrieves all policy assignments that apply to a subscription. This operation retrieves the list of all policy assignments associated with the given subscription that match the optional given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()' or 'policyDefinitionId eq '\\{value\\}''. If $filter is not provided, the unfiltered list includes all policy assignments associated with the subscription, including those that apply directly or from management groups that contain the given subscription, as well as any applied to objects contained within the subscription. If $filter=atScope() is provided, the returned list includes all policy assignments that apply to the subscription, which is everything in the unfiltered list except those applied to objects contained within the subscription. If $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the subscription. If $filter=policyDefinitionId eq '\\{value\\}' is provided, the returned list includes all policy assignments of the policy definition whose id is \\{value\\}."
   returns:
-    description: "list of policy assignments as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the response of a PolicyAssignment list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listAsync()"
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listAsync()"
@@ -521,7 +521,7 @@ methods:
   syntax: "public abstract PagedFlux<PolicyAssignmentInner> listAsync()"
   desc: "Retrieves all policy assignments that apply to a subscription. This operation retrieves the list of all policy assignments associated with the given subscription that match the optional given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()' or 'policyDefinitionId eq '\\{value\\}''. If $filter is not provided, the unfiltered list includes all policy assignments associated with the subscription, including those that apply directly or from management groups that contain the given subscription, as well as any applied to objects contained within the subscription. If $filter=atScope() is provided, the returned list includes all policy assignments that apply to the subscription, which is everything in the unfiltered list except those applied to objects contained within the subscription. If $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the subscription. If $filter=policyDefinitionId eq '\\{value\\}' is provided, the returned list includes all policy assignments of the policy definition whose id is \\{value\\}."
   returns:
-    description: "list of policy assignments as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
+    description: "the response of a PolicyAssignment list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listAsync(java.lang.String,java.lang.String,java.lang.Integer)"
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listAsync(String filter, String expand, Integer top)"
@@ -543,33 +543,33 @@ methods:
   syntax: "public abstract PagedFlux<PolicyAssignmentInner> listAsync(String filter, String expand, Integer top)"
   desc: "Retrieves all policy assignments that apply to a subscription. This operation retrieves the list of all policy assignments associated with the given subscription that match the optional given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()' or 'policyDefinitionId eq '\\{value\\}''. If $filter is not provided, the unfiltered list includes all policy assignments associated with the subscription, including those that apply directly or from management groups that contain the given subscription, as well as any applied to objects contained within the subscription. If $filter=atScope() is provided, the returned list includes all policy assignments that apply to the subscription, which is everything in the unfiltered list except those applied to objects contained within the subscription. If $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the subscription. If $filter=policyDefinitionId eq '\\{value\\}' is provided, the returned list includes all policy assignments of the policy definition whose id is \\{value\\}."
   returns:
-    description: "list of policy assignments as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
+    description: "the response of a PolicyAssignment list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listByResourceGroup(java.lang.String)"
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listByResourceGroup(String resourceGroupName)"
   name: "listByResourceGroup(String resourceGroupName)"
   nameWithType: "PolicyAssignmentsClient.listByResourceGroup(String resourceGroupName)"
-  summary: "Retrieves all policy assignments that apply to a resource group."
+  summary: "This operation retrieves the list of all policy assignments associated with the given resource group in the given subscription that match the optional given $filter."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains policy assignments."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<PolicyAssignmentInner> listByResourceGroup(String resourceGroupName)"
-  desc: "Retrieves all policy assignments that apply to a resource group. This operation retrieves the list of all policy assignments associated with the given resource group in the given subscription that match the optional given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()' or 'policyDefinitionId eq '\\{value\\}''. If $filter is not provided, the unfiltered list includes all policy assignments associated with the resource group, including those that apply directly or apply from containing scopes, as well as any applied to resources contained within the resource group. If $filter=atScope() is provided, the returned list includes all policy assignments that apply to the resource group, which is everything in the unfiltered list except those applied to resources contained within the resource group. If $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the resource group. If $filter=policyDefinitionId eq '\\{value\\}' is provided, the returned list includes all policy assignments of the policy definition whose id is \\{value\\} that apply to the resource group."
+  desc: "This operation retrieves the list of all policy assignments associated with the given resource group in the given subscription that match the optional given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()' or 'policyDefinitionId eq '\\{value\\}''. If $filter is not provided, the unfiltered list includes all policy assignments associated with the resource group, including those that apply directly or apply from containing scopes, as well as any applied to resources contained within the resource group. If $filter=atScope() is provided, the returned list includes all policy assignments that apply to the resource group, which is everything in the unfiltered list except those applied to resources contained within the resource group. If $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the resource group. If $filter=policyDefinitionId eq '\\{value\\}' is provided, the returned list includes all policy assignments of the policy definition whose id is \\{value\\} that apply to the resource group."
   returns:
-    description: "list of policy assignments as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the response of a PolicyAssignment list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listByResourceGroup(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listByResourceGroup(String resourceGroupName, String filter, String expand, Integer top, Context context)"
   name: "listByResourceGroup(String resourceGroupName, String filter, String expand, Integer top, Context context)"
   nameWithType: "PolicyAssignmentsClient.listByResourceGroup(String resourceGroupName, String filter, String expand, Integer top, Context context)"
-  summary: "Retrieves all policy assignments that apply to a resource group."
+  summary: "This operation retrieves the list of all policy assignments associated with the given resource group in the given subscription that match the optional given $filter."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains policy assignments."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The filter to apply on the operation. Valid values for $filter are: 'atScope()', 'atExactScope()'\n or 'policyDefinitionId eq '{value}''. If $filter is not provided, no filtering is performed. If $filter=atScope()\n is provided, the returned list only includes all policy assignments that apply to the scope, which is everything\n in the unfiltered list except those applied to sub scopes contained within the given scope. If\n $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the given\n scope. If $filter=policyDefinitionId eq '{value}' is provided, the returned list includes all policy assignments\n of the policy definition whose id is {value}."
@@ -585,35 +585,35 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PagedIterable<PolicyAssignmentInner> listByResourceGroup(String resourceGroupName, String filter, String expand, Integer top, Context context)"
-  desc: "Retrieves all policy assignments that apply to a resource group. This operation retrieves the list of all policy assignments associated with the given resource group in the given subscription that match the optional given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()' or 'policyDefinitionId eq '\\{value\\}''. If $filter is not provided, the unfiltered list includes all policy assignments associated with the resource group, including those that apply directly or apply from containing scopes, as well as any applied to resources contained within the resource group. If $filter=atScope() is provided, the returned list includes all policy assignments that apply to the resource group, which is everything in the unfiltered list except those applied to resources contained within the resource group. If $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the resource group. If $filter=policyDefinitionId eq '\\{value\\}' is provided, the returned list includes all policy assignments of the policy definition whose id is \\{value\\} that apply to the resource group."
+  desc: "This operation retrieves the list of all policy assignments associated with the given resource group in the given subscription that match the optional given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()' or 'policyDefinitionId eq '\\{value\\}''. If $filter is not provided, the unfiltered list includes all policy assignments associated with the resource group, including those that apply directly or apply from containing scopes, as well as any applied to resources contained within the resource group. If $filter=atScope() is provided, the returned list includes all policy assignments that apply to the resource group, which is everything in the unfiltered list except those applied to resources contained within the resource group. If $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the resource group. If $filter=policyDefinitionId eq '\\{value\\}' is provided, the returned list includes all policy assignments of the policy definition whose id is \\{value\\} that apply to the resource group."
   returns:
-    description: "list of policy assignments as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the response of a PolicyAssignment list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listByResourceGroupAsync(java.lang.String)"
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listByResourceGroupAsync(String resourceGroupName)"
   name: "listByResourceGroupAsync(String resourceGroupName)"
   nameWithType: "PolicyAssignmentsClient.listByResourceGroupAsync(String resourceGroupName)"
-  summary: "Retrieves all policy assignments that apply to a resource group."
+  summary: "This operation retrieves the list of all policy assignments associated with the given resource group in the given subscription that match the optional given $filter."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains policy assignments."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedFlux<PolicyAssignmentInner> listByResourceGroupAsync(String resourceGroupName)"
-  desc: "Retrieves all policy assignments that apply to a resource group. This operation retrieves the list of all policy assignments associated with the given resource group in the given subscription that match the optional given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()' or 'policyDefinitionId eq '\\{value\\}''. If $filter is not provided, the unfiltered list includes all policy assignments associated with the resource group, including those that apply directly or apply from containing scopes, as well as any applied to resources contained within the resource group. If $filter=atScope() is provided, the returned list includes all policy assignments that apply to the resource group, which is everything in the unfiltered list except those applied to resources contained within the resource group. If $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the resource group. If $filter=policyDefinitionId eq '\\{value\\}' is provided, the returned list includes all policy assignments of the policy definition whose id is \\{value\\} that apply to the resource group."
+  desc: "This operation retrieves the list of all policy assignments associated with the given resource group in the given subscription that match the optional given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()' or 'policyDefinitionId eq '\\{value\\}''. If $filter is not provided, the unfiltered list includes all policy assignments associated with the resource group, including those that apply directly or apply from containing scopes, as well as any applied to resources contained within the resource group. If $filter=atScope() is provided, the returned list includes all policy assignments that apply to the resource group, which is everything in the unfiltered list except those applied to resources contained within the resource group. If $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the resource group. If $filter=policyDefinitionId eq '\\{value\\}' is provided, the returned list includes all policy assignments of the policy definition whose id is \\{value\\} that apply to the resource group."
   returns:
-    description: "list of policy assignments as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
+    description: "the response of a PolicyAssignment list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listByResourceGroupAsync(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)"
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listByResourceGroupAsync(String resourceGroupName, String filter, String expand, Integer top)"
   name: "listByResourceGroupAsync(String resourceGroupName, String filter, String expand, Integer top)"
   nameWithType: "PolicyAssignmentsClient.listByResourceGroupAsync(String resourceGroupName, String filter, String expand, Integer top)"
-  summary: "Retrieves all policy assignments that apply to a resource group."
+  summary: "This operation retrieves the list of all policy assignments associated with the given resource group in the given subscription that match the optional given $filter."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group that contains policy assignments."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The filter to apply on the operation. Valid values for $filter are: 'atScope()', 'atExactScope()'\n or 'policyDefinitionId eq '{value}''. If $filter is not provided, no filtering is performed. If $filter=atScope()\n is provided, the returned list only includes all policy assignments that apply to the scope, which is everything\n in the unfiltered list except those applied to sub scopes contained within the given scope. If\n $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the given\n scope. If $filter=policyDefinitionId eq '{value}' is provided, the returned list includes all policy assignments\n of the policy definition whose id is {value}."
@@ -626,9 +626,9 @@ methods:
     name: "top"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
   syntax: "public abstract PagedFlux<PolicyAssignmentInner> listByResourceGroupAsync(String resourceGroupName, String filter, String expand, Integer top)"
-  desc: "Retrieves all policy assignments that apply to a resource group. This operation retrieves the list of all policy assignments associated with the given resource group in the given subscription that match the optional given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()' or 'policyDefinitionId eq '\\{value\\}''. If $filter is not provided, the unfiltered list includes all policy assignments associated with the resource group, including those that apply directly or apply from containing scopes, as well as any applied to resources contained within the resource group. If $filter=atScope() is provided, the returned list includes all policy assignments that apply to the resource group, which is everything in the unfiltered list except those applied to resources contained within the resource group. If $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the resource group. If $filter=policyDefinitionId eq '\\{value\\}' is provided, the returned list includes all policy assignments of the policy definition whose id is \\{value\\} that apply to the resource group."
+  desc: "This operation retrieves the list of all policy assignments associated with the given resource group in the given subscription that match the optional given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()' or 'policyDefinitionId eq '\\{value\\}''. If $filter is not provided, the unfiltered list includes all policy assignments associated with the resource group, including those that apply directly or apply from containing scopes, as well as any applied to resources contained within the resource group. If $filter=atScope() is provided, the returned list includes all policy assignments that apply to the resource group, which is everything in the unfiltered list except those applied to resources contained within the resource group. If $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the resource group. If $filter=policyDefinitionId eq '\\{value\\}' is provided, the returned list includes all policy assignments of the policy definition whose id is \\{value\\} that apply to the resource group."
   returns:
-    description: "list of policy assignments as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
+    description: "the response of a PolicyAssignment list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listForManagementGroup(java.lang.String)"
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listForManagementGroup(String managementGroupId)"
@@ -638,13 +638,13 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The ID of the management group."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<PolicyAssignmentInner> listForManagementGroup(String managementGroupId)"
   desc: "Retrieves all policy assignments that apply to a management group. This operation retrieves the list of all policy assignments applicable to the management group that match the given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()' or 'policyDefinitionId eq '\\{value\\}''. If $filter=atScope() is provided, the returned list includes all policy assignments that are assigned to the management group or the management group's ancestors. If $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the management group. If $filter=policyDefinitionId eq '\\{value\\}' is provided, the returned list includes all policy assignments of the policy definition whose id is \\{value\\} that apply to the management group."
   returns:
-    description: "list of policy assignments as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the response of a PolicyAssignment list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listForManagementGroup(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listForManagementGroup(String managementGroupId, String filter, String expand, Integer top, Context context)"
@@ -654,7 +654,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The ID of the management group."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The filter to apply on the operation. Valid values for $filter are: 'atScope()', 'atExactScope()'\n or 'policyDefinitionId eq '{value}''. If $filter is not provided, no filtering is performed. If $filter=atScope()\n is provided, the returned list only includes all policy assignments that apply to the scope, which is everything\n in the unfiltered list except those applied to sub scopes contained within the given scope. If\n $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the given\n scope. If $filter=policyDefinitionId eq '{value}' is provided, the returned list includes all policy assignments\n of the policy definition whose id is {value}."
@@ -672,7 +672,7 @@ methods:
   syntax: "public abstract PagedIterable<PolicyAssignmentInner> listForManagementGroup(String managementGroupId, String filter, String expand, Integer top, Context context)"
   desc: "Retrieves all policy assignments that apply to a management group. This operation retrieves the list of all policy assignments applicable to the management group that match the given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()' or 'policyDefinitionId eq '\\{value\\}''. If $filter=atScope() is provided, the returned list includes all policy assignments that are assigned to the management group or the management group's ancestors. If $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the management group. If $filter=policyDefinitionId eq '\\{value\\}' is provided, the returned list includes all policy assignments of the policy definition whose id is \\{value\\} that apply to the management group."
   returns:
-    description: "list of policy assignments as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the response of a PolicyAssignment list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listForManagementGroupAsync(java.lang.String)"
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listForManagementGroupAsync(String managementGroupId)"
@@ -682,13 +682,13 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The ID of the management group."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedFlux<PolicyAssignmentInner> listForManagementGroupAsync(String managementGroupId)"
   desc: "Retrieves all policy assignments that apply to a management group. This operation retrieves the list of all policy assignments applicable to the management group that match the given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()' or 'policyDefinitionId eq '\\{value\\}''. If $filter=atScope() is provided, the returned list includes all policy assignments that are assigned to the management group or the management group's ancestors. If $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the management group. If $filter=policyDefinitionId eq '\\{value\\}' is provided, the returned list includes all policy assignments of the policy definition whose id is \\{value\\} that apply to the management group."
   returns:
-    description: "list of policy assignments as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
+    description: "the response of a PolicyAssignment list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listForManagementGroupAsync(java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)"
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listForManagementGroupAsync(String managementGroupId, String filter, String expand, Integer top)"
@@ -698,7 +698,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The ID of the management group."
+  - description: "The management group ID."
     name: "managementGroupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The filter to apply on the operation. Valid values for $filter are: 'atScope()', 'atExactScope()'\n or 'policyDefinitionId eq '{value}''. If $filter is not provided, no filtering is performed. If $filter=atScope()\n is provided, the returned list only includes all policy assignments that apply to the scope, which is everything\n in the unfiltered list except those applied to sub scopes contained within the given scope. If\n $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the given\n scope. If $filter=policyDefinitionId eq '{value}' is provided, the returned list includes all policy assignments\n of the policy definition whose id is {value}."
@@ -713,7 +713,7 @@ methods:
   syntax: "public abstract PagedFlux<PolicyAssignmentInner> listForManagementGroupAsync(String managementGroupId, String filter, String expand, Integer top)"
   desc: "Retrieves all policy assignments that apply to a management group. This operation retrieves the list of all policy assignments applicable to the management group that match the given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()' or 'policyDefinitionId eq '\\{value\\}''. If $filter=atScope() is provided, the returned list includes all policy assignments that are assigned to the management group or the management group's ancestors. If $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the management group. If $filter=policyDefinitionId eq '\\{value\\}' is provided, the returned list includes all policy assignments of the policy definition whose id is \\{value\\} that apply to the management group."
   returns:
-    description: "list of policy assignments as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
+    description: "the response of a PolicyAssignment list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listForResource(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listForResource(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName)"
@@ -723,7 +723,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group containing the resource."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The namespace of the resource provider. For example, the namespace of a virtual\n machine is Microsoft.Compute (from Microsoft.Compute/virtualMachines)."
@@ -741,7 +741,7 @@ methods:
   syntax: "public abstract PagedIterable<PolicyAssignmentInner> listForResource(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName)"
   desc: "Retrieves all policy assignments that apply to a resource. This operation retrieves the list of all policy assignments associated with the specified resource in the given resource group and subscription that match the optional given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()' or 'policyDefinitionId eq '\\{value\\}''. If $filter is not provided, the unfiltered list includes all policy assignments associated with the resource, including those that apply directly or from all containing scopes, as well as any applied to resources contained within the resource. If $filter=atScope() is provided, the returned list includes all policy assignments that apply to the resource, which is everything in the unfiltered list except those applied to resources contained within the resource. If $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the resource level. If $filter=policyDefinitionId eq '\\{value\\}' is provided, the returned list includes all policy assignments of the policy definition whose id is \\{value\\} that apply to the resource. Three parameters plus the resource name are used to identify a specific resource. If the resource is not part of a parent resource (the more common case), the parent resource path should not be provided (or provided as ''). For example a web app could be specified as (\\{resourceProviderNamespace\\} == 'Microsoft.Web', \\{parentResourcePath\\} == '', \\{resourceType\\} == 'sites', \\{resourceName\\} == 'MyWebApp'). If the resource is part of a parent resource, then all parameters should be provided. For example a virtual machine DNS name could be specified as (\\{resourceProviderNamespace\\} == 'Microsoft.Compute', \\{parentResourcePath\\} == 'virtualMachines/MyVirtualMachine', \\{resourceType\\} == 'domainNames', \\{resourceName\\} == 'MyComputerName'). A convenient alternative to providing the namespace and type name separately is to provide both in the \\{resourceType\\} parameter, format: (\\{resourceProviderNamespace\\} == '', \\{parentResourcePath\\} == '', \\{resourceType\\} == 'Microsoft.Web/sites', \\{resourceName\\} == 'MyWebApp')."
   returns:
-    description: "list of policy assignments as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the response of a PolicyAssignment list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listForResource(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listForResource(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName, String filter, String expand, Integer top, Context context)"
@@ -751,7 +751,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group containing the resource."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The namespace of the resource provider. For example, the namespace of a virtual\n machine is Microsoft.Compute (from Microsoft.Compute/virtualMachines)."
@@ -781,7 +781,7 @@ methods:
   syntax: "public abstract PagedIterable<PolicyAssignmentInner> listForResource(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName, String filter, String expand, Integer top, Context context)"
   desc: "Retrieves all policy assignments that apply to a resource. This operation retrieves the list of all policy assignments associated with the specified resource in the given resource group and subscription that match the optional given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()' or 'policyDefinitionId eq '\\{value\\}''. If $filter is not provided, the unfiltered list includes all policy assignments associated with the resource, including those that apply directly or from all containing scopes, as well as any applied to resources contained within the resource. If $filter=atScope() is provided, the returned list includes all policy assignments that apply to the resource, which is everything in the unfiltered list except those applied to resources contained within the resource. If $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the resource level. If $filter=policyDefinitionId eq '\\{value\\}' is provided, the returned list includes all policy assignments of the policy definition whose id is \\{value\\} that apply to the resource. Three parameters plus the resource name are used to identify a specific resource. If the resource is not part of a parent resource (the more common case), the parent resource path should not be provided (or provided as ''). For example a web app could be specified as (\\{resourceProviderNamespace\\} == 'Microsoft.Web', \\{parentResourcePath\\} == '', \\{resourceType\\} == 'sites', \\{resourceName\\} == 'MyWebApp'). If the resource is part of a parent resource, then all parameters should be provided. For example a virtual machine DNS name could be specified as (\\{resourceProviderNamespace\\} == 'Microsoft.Compute', \\{parentResourcePath\\} == 'virtualMachines/MyVirtualMachine', \\{resourceType\\} == 'domainNames', \\{resourceName\\} == 'MyComputerName'). A convenient alternative to providing the namespace and type name separately is to provide both in the \\{resourceType\\} parameter, format: (\\{resourceProviderNamespace\\} == '', \\{parentResourcePath\\} == '', \\{resourceType\\} == 'Microsoft.Web/sites', \\{resourceName\\} == 'MyWebApp')."
   returns:
-    description: "list of policy assignments as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the response of a PolicyAssignment list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listForResourceAsync(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listForResourceAsync(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName)"
@@ -791,7 +791,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group containing the resource."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The namespace of the resource provider. For example, the namespace of a virtual\n machine is Microsoft.Compute (from Microsoft.Compute/virtualMachines)."
@@ -809,7 +809,7 @@ methods:
   syntax: "public abstract PagedFlux<PolicyAssignmentInner> listForResourceAsync(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName)"
   desc: "Retrieves all policy assignments that apply to a resource. This operation retrieves the list of all policy assignments associated with the specified resource in the given resource group and subscription that match the optional given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()' or 'policyDefinitionId eq '\\{value\\}''. If $filter is not provided, the unfiltered list includes all policy assignments associated with the resource, including those that apply directly or from all containing scopes, as well as any applied to resources contained within the resource. If $filter=atScope() is provided, the returned list includes all policy assignments that apply to the resource, which is everything in the unfiltered list except those applied to resources contained within the resource. If $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the resource level. If $filter=policyDefinitionId eq '\\{value\\}' is provided, the returned list includes all policy assignments of the policy definition whose id is \\{value\\} that apply to the resource. Three parameters plus the resource name are used to identify a specific resource. If the resource is not part of a parent resource (the more common case), the parent resource path should not be provided (or provided as ''). For example a web app could be specified as (\\{resourceProviderNamespace\\} == 'Microsoft.Web', \\{parentResourcePath\\} == '', \\{resourceType\\} == 'sites', \\{resourceName\\} == 'MyWebApp'). If the resource is part of a parent resource, then all parameters should be provided. For example a virtual machine DNS name could be specified as (\\{resourceProviderNamespace\\} == 'Microsoft.Compute', \\{parentResourcePath\\} == 'virtualMachines/MyVirtualMachine', \\{resourceType\\} == 'domainNames', \\{resourceName\\} == 'MyComputerName'). A convenient alternative to providing the namespace and type name separately is to provide both in the \\{resourceType\\} parameter, format: (\\{resourceProviderNamespace\\} == '', \\{parentResourcePath\\} == '', \\{resourceType\\} == 'Microsoft.Web/sites', \\{resourceName\\} == 'MyWebApp')."
   returns:
-    description: "list of policy assignments as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
+    description: "the response of a PolicyAssignment list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listForResourceAsync(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.Integer)"
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.listForResourceAsync(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName, String filter, String expand, Integer top)"
@@ -819,7 +819,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group containing the resource."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The namespace of the resource provider. For example, the namespace of a virtual\n machine is Microsoft.Compute (from Microsoft.Compute/virtualMachines)."
@@ -846,27 +846,27 @@ methods:
   syntax: "public abstract PagedFlux<PolicyAssignmentInner> listForResourceAsync(String resourceGroupName, String resourceProviderNamespace, String parentResourcePath, String resourceType, String resourceName, String filter, String expand, Integer top)"
   desc: "Retrieves all policy assignments that apply to a resource. This operation retrieves the list of all policy assignments associated with the specified resource in the given resource group and subscription that match the optional given $filter. Valid values for $filter are: 'atScope()', 'atExactScope()' or 'policyDefinitionId eq '\\{value\\}''. If $filter is not provided, the unfiltered list includes all policy assignments associated with the resource, including those that apply directly or from all containing scopes, as well as any applied to resources contained within the resource. If $filter=atScope() is provided, the returned list includes all policy assignments that apply to the resource, which is everything in the unfiltered list except those applied to resources contained within the resource. If $filter=atExactScope() is provided, the returned list only includes all policy assignments that at the resource level. If $filter=policyDefinitionId eq '\\{value\\}' is provided, the returned list includes all policy assignments of the policy definition whose id is \\{value\\} that apply to the resource. Three parameters plus the resource name are used to identify a specific resource. If the resource is not part of a parent resource (the more common case), the parent resource path should not be provided (or provided as ''). For example a web app could be specified as (\\{resourceProviderNamespace\\} == 'Microsoft.Web', \\{parentResourcePath\\} == '', \\{resourceType\\} == 'sites', \\{resourceName\\} == 'MyWebApp'). If the resource is part of a parent resource, then all parameters should be provided. For example a virtual machine DNS name could be specified as (\\{resourceProviderNamespace\\} == 'Microsoft.Compute', \\{parentResourcePath\\} == 'virtualMachines/MyVirtualMachine', \\{resourceType\\} == 'domainNames', \\{resourceName\\} == 'MyComputerName'). A convenient alternative to providing the namespace and type name separately is to provide both in the \\{resourceType\\} parameter, format: (\\{resourceProviderNamespace\\} == '', \\{parentResourcePath\\} == '', \\{resourceType\\} == 'Microsoft.Web/sites', \\{resourceName\\} == 'MyWebApp')."
   returns:
-    description: "list of policy assignments as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
+    description: "the response of a PolicyAssignment list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.update(java.lang.String,java.lang.String,com.azure.resourcemanager.resources.models.PolicyAssignmentUpdate)"
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.update(String scope, String policyAssignmentName, PolicyAssignmentUpdate parameters)"
   name: "update(String scope, String policyAssignmentName, PolicyAssignmentUpdate parameters)"
   nameWithType: "PolicyAssignmentsClient.update(String scope, String policyAssignmentName, PolicyAssignmentUpdate parameters)"
-  summary: "Updates a policy assignment."
+  summary: "This operation updates a policy assignment with the given scope and name."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the policy assignment. Valid scopes are: management group (format:\n '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n '/subscriptions/{subscriptionId}'), resource group (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the policy assignment."
+  - description: "The name of the policy assignment to get."
     name: "policyAssignmentName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Parameters for policy assignment patch request."
     name: "parameters"
     type: "<xref href=\"com.azure.resourcemanager.resources.models.PolicyAssignmentUpdate?alt=com.azure.resourcemanager.resources.models.PolicyAssignmentUpdate&text=PolicyAssignmentUpdate\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract PolicyAssignmentInner update(String scope, String policyAssignmentName, PolicyAssignmentUpdate parameters)"
-  desc: "Updates a policy assignment. This operation updates a policy assignment with the given scope and name. Policy assignments apply to all resources contained within their scope. For example, when you assign a policy at resource group scope, that policy applies to all resources in the group."
+  desc: "This operation updates a policy assignment with the given scope and name. Policy assignments apply to all resources contained within their scope. For example, when you assign a policy at resource group scope, that policy applies to all resources in the group."
   returns:
     description: "the policy assignment."
     type: "<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />"
@@ -874,21 +874,21 @@ methods:
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.updateAsync(String scope, String policyAssignmentName, PolicyAssignmentUpdate parameters)"
   name: "updateAsync(String scope, String policyAssignmentName, PolicyAssignmentUpdate parameters)"
   nameWithType: "PolicyAssignmentsClient.updateAsync(String scope, String policyAssignmentName, PolicyAssignmentUpdate parameters)"
-  summary: "Updates a policy assignment."
+  summary: "This operation updates a policy assignment with the given scope and name."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the policy assignment. Valid scopes are: management group (format:\n '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n '/subscriptions/{subscriptionId}'), resource group (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the policy assignment."
+  - description: "The name of the policy assignment to get."
     name: "policyAssignmentName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Parameters for policy assignment patch request."
     name: "parameters"
     type: "<xref href=\"com.azure.resourcemanager.resources.models.PolicyAssignmentUpdate?alt=com.azure.resourcemanager.resources.models.PolicyAssignmentUpdate&text=PolicyAssignmentUpdate\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Mono<PolicyAssignmentInner> updateAsync(String scope, String policyAssignmentName, PolicyAssignmentUpdate parameters)"
-  desc: "Updates a policy assignment. This operation updates a policy assignment with the given scope and name. Policy assignments apply to all resources contained within their scope. For example, when you assign a policy at resource group scope, that policy applies to all resources in the group."
+  desc: "This operation updates a policy assignment with the given scope and name. Policy assignments apply to all resources contained within their scope. For example, when you assign a policy at resource group scope, that policy applies to all resources in the group."
   returns:
     description: "the policy assignment on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -900,7 +900,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The ID of the policy assignment to update. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
+  - description: "The ID of the policy assignment to get. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
     name: "policyAssignmentId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Parameters for policy assignment patch request."
@@ -919,7 +919,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The ID of the policy assignment to update. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
+  - description: "The ID of the policy assignment to get. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
     name: "policyAssignmentId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Parameters for policy assignment patch request."
@@ -938,7 +938,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The ID of the policy assignment to update. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
+  - description: "The ID of the policy assignment to get. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
     name: "policyAssignmentId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Parameters for policy assignment patch request."
@@ -960,7 +960,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The ID of the policy assignment to update. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
+  - description: "The ID of the policy assignment to get. Use the format\n '{scope}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}'."
     name: "policyAssignmentId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Parameters for policy assignment patch request."
@@ -975,14 +975,14 @@ methods:
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.updateWithResponse(String scope, String policyAssignmentName, PolicyAssignmentUpdate parameters, Context context)"
   name: "updateWithResponse(String scope, String policyAssignmentName, PolicyAssignmentUpdate parameters, Context context)"
   nameWithType: "PolicyAssignmentsClient.updateWithResponse(String scope, String policyAssignmentName, PolicyAssignmentUpdate parameters, Context context)"
-  summary: "Updates a policy assignment."
+  summary: "This operation updates a policy assignment with the given scope and name."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the policy assignment. Valid scopes are: management group (format:\n '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n '/subscriptions/{subscriptionId}'), resource group (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the policy assignment."
+  - description: "The name of the policy assignment to get."
     name: "policyAssignmentName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Parameters for policy assignment patch request."
@@ -992,7 +992,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<PolicyAssignmentInner> updateWithResponse(String scope, String policyAssignmentName, PolicyAssignmentUpdate parameters, Context context)"
-  desc: "Updates a policy assignment. This operation updates a policy assignment with the given scope and name. Policy assignments apply to all resources contained within their scope. For example, when you assign a policy at resource group scope, that policy applies to all resources in the group."
+  desc: "This operation updates a policy assignment with the given scope and name. Policy assignments apply to all resources contained within their scope. For example, when you assign a policy at resource group scope, that policy applies to all resources in the group."
   returns:
     description: "the policy assignment along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -1000,21 +1000,21 @@ methods:
   fullName: "com.azure.resourcemanager.resources.fluent.PolicyAssignmentsClient.updateWithResponseAsync(String scope, String policyAssignmentName, PolicyAssignmentUpdate parameters)"
   name: "updateWithResponseAsync(String scope, String policyAssignmentName, PolicyAssignmentUpdate parameters)"
   nameWithType: "PolicyAssignmentsClient.updateWithResponseAsync(String scope, String policyAssignmentName, PolicyAssignmentUpdate parameters)"
-  summary: "Updates a policy assignment."
+  summary: "This operation updates a policy assignment with the given scope and name."
   modifiers:
   - "abstract"
   parameters:
-  - description: "The scope of the policy assignment. Valid scopes are: management group (format:\n '/providers/Microsoft.Management/managementGroups/{managementGroup}'), subscription (format:\n '/subscriptions/{subscriptionId}'), resource group (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}', or resource (format:\n '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/[{parentResourcePath}/]{resourceType}/{resourceName}'."
+  - description: "The fully qualified Azure Resource manager identifier of the resource."
     name: "scope"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the policy assignment."
+  - description: "The name of the policy assignment to get."
     name: "policyAssignmentName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Parameters for policy assignment patch request."
     name: "parameters"
     type: "<xref href=\"com.azure.resourcemanager.resources.models.PolicyAssignmentUpdate?alt=com.azure.resourcemanager.resources.models.PolicyAssignmentUpdate&text=PolicyAssignmentUpdate\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Mono<Response<PolicyAssignmentInner>> updateWithResponseAsync(String scope, String policyAssignmentName, PolicyAssignmentUpdate parameters)"
-  desc: "Updates a policy assignment. This operation updates a policy assignment with the given scope and name. Policy assignments apply to all resources contained within their scope. For example, when you assign a policy at resource group scope, that policy applies to all resources in the group."
+  desc: "This operation updates a policy assignment with the given scope and name. Policy assignments apply to all resources contained within their scope. For example, when you assign a policy at resource group scope, that policy applies to all resources in the group."
   returns:
     description: "the policy assignment along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
@@ -1025,4 +1025,4 @@ implements:
 - "<xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsListing?alt=com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsListing&text=InnerSupportsListing\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner?alt=com.azure.resourcemanager.resources.fluent.models.PolicyAssignmentInner&text=PolicyAssignmentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.resources.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-resources:2.54.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-resources:2.55.0

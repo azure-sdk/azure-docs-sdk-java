@@ -231,7 +231,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The properties to include in the results. For example, use &amp;$expand=metadata in the query\n string to retrieve resource provider metadata. To include property aliases in response, use\n $expand=resourceTypes/aliases."
+  - description: "The properties to include in the results."
     name: "expand"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
@@ -262,7 +262,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The properties to include in the results. For example, use &amp;$expand=metadata in the query\n string to retrieve resource provider metadata. To include property aliases in response, use\n $expand=resourceTypes/aliases."
+  - description: "The properties to include in the results."
     name: "expand"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedFlux<ProviderInner> listAtTenantScopeAsync(String expand)"
@@ -377,10 +377,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The namespace of the resource provider to register."
+  - description: "The management group ID.The namespace of the resource provider to register."
     name: "resourceProviderNamespace"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The management group ID."
+  - description: "The groupId parameter."
     name: "groupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract void registerAtManagementGroupScope(String resourceProviderNamespace, String groupId)"
@@ -393,10 +393,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The namespace of the resource provider to register."
+  - description: "The management group ID.The namespace of the resource provider to register."
     name: "resourceProviderNamespace"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The management group ID."
+  - description: "The groupId parameter."
     name: "groupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract Mono<Void> registerAtManagementGroupScopeAsync(String resourceProviderNamespace, String groupId)"
@@ -412,10 +412,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The namespace of the resource provider to register."
+  - description: "The management group ID.The namespace of the resource provider to register."
     name: "resourceProviderNamespace"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The management group ID."
+  - description: "The groupId parameter."
     name: "groupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
@@ -434,10 +434,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The namespace of the resource provider to register."
+  - description: "The management group ID.The namespace of the resource provider to register."
     name: "resourceProviderNamespace"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The management group ID."
+  - description: "The groupId parameter."
     name: "groupId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract Mono<Response<Void>> registerAtManagementGroupScopeWithResponseAsync(String resourceProviderNamespace, String groupId)"
@@ -557,4 +557,4 @@ type: "interface"
 desc: "An instance of this class provides access to all the operations defined in ProvidersClient."
 metadata: {}
 package: "com.azure.resourcemanager.resources.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-resources:2.54.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-resources:2.55.0

@@ -64,7 +64,7 @@ methods:
   nameWithType: "DataLakeFileSystemAsyncClient.createDirectory(String directoryName)"
   summary: "Creates a new directory within a file system."
   parameters:
-  - description: "Name of the directory to create. If the path name contains special characters, pass in the\n url encoded version of the path name."
+  - description: "Name of the directory to create. Pass the name unencoded; the client percent-encodes it when\n building the request URL."
     name: "directoryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public Mono<DataLakeDirectoryAsyncClient> createDirectory(String directoryName)"
@@ -78,7 +78,7 @@ methods:
   nameWithType: "DataLakeFileSystemAsyncClient.createDirectory(String directoryName, boolean overwrite)"
   summary: "Creates a new directory within a file system."
   parameters:
-  - description: "Name of the directory to create. If the path name contains special characters, pass in the\n url encoded version of the path name."
+  - description: "Name of the directory to create. Pass the name unencoded; the client percent-encodes it when\n building the request URL."
     name: "directoryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Whether to overwrite, should a directory exist."
@@ -95,7 +95,7 @@ methods:
   nameWithType: "DataLakeFileSystemAsyncClient.createDirectoryIfNotExists(String directoryName)"
   summary: "Creates a new directory within a file system if it does not exist."
   parameters:
-  - description: "Name of the directory to create. If the path name contains special characters, pass in the\n url encoded version of the path name."
+  - description: "Name of the directory to create. Pass the name unencoded; the client percent-encodes it when\n building the request URL."
     name: "directoryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public Mono<DataLakeDirectoryAsyncClient> createDirectoryIfNotExists(String directoryName)"
@@ -109,7 +109,7 @@ methods:
   nameWithType: "DataLakeFileSystemAsyncClient.createDirectoryIfNotExistsWithResponse(String directoryName, DataLakePathCreateOptions options)"
   summary: "Creates a new directory within a file system if it does not exist."
   parameters:
-  - description: "Name of the directory to create. If the path name contains special characters, pass in the\n url encoded version of the path name."
+  - description: "Name of the directory to create. Pass the name unencoded; the client percent-encodes it when\n building the request URL."
     name: "directoryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "<xref uid=\"com.azure.storage.file.datalake.options.DataLakePathCreateOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DataLakePathCreateOptions\"></xref>"
@@ -126,7 +126,7 @@ methods:
   nameWithType: "DataLakeFileSystemAsyncClient.createDirectoryWithResponse(String directoryName, DataLakePathCreateOptions options)"
   summary: "Creates a new directory within a file system."
   parameters:
-  - description: "Name of the directory to create. If the path name contains special characters, pass in the\n url encoded version of the path name."
+  - description: "Name of the directory to create. Pass the name unencoded; the client percent-encodes it when\n building the request URL."
     name: "directoryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "<xref uid=\"com.azure.storage.file.datalake.options.DataLakePathCreateOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DataLakePathCreateOptions\"></xref>"
@@ -143,7 +143,7 @@ methods:
   nameWithType: "DataLakeFileSystemAsyncClient.createDirectoryWithResponse(String directoryName, String permissions, String umask, PathHttpHeaders headers, Map<String,String> metadata, DataLakeRequestConditions requestConditions)"
   summary: "Creates a new directory within a file system."
   parameters:
-  - description: "Name of the directory to create. If the path name contains special characters, pass in the\n url encoded version of the path name."
+  - description: "Name of the directory to create. Pass the name unencoded; the client percent-encodes it when\n building the request URL."
     name: "directoryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "POSIX access permissions for the directory owner, the directory owning group, and others."
@@ -334,7 +334,7 @@ methods:
   nameWithType: "DataLakeFileSystemAsyncClient.deleteDirectory(String directoryName)"
   summary: "Deletes the specified directory in the file system."
   parameters:
-  - description: "Name of the directory to delete. If the path name contains special characters, pass in the\n url encoded version of the path name."
+  - description: "Name of the directory to delete. Pass the name unencoded; the client percent-encodes it when\n building the request URL."
     name: "directoryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public Mono<Void> deleteDirectory(String directoryName)"
@@ -348,7 +348,7 @@ methods:
   nameWithType: "DataLakeFileSystemAsyncClient.deleteDirectoryIfExists(String directoryName)"
   summary: "Deletes the specified directory in the file system if it exists."
   parameters:
-  - description: "Name of the directory to delete. If the path name contains special characters, pass in the\n url encoded version of the path name."
+  - description: "Name of the directory to delete. Pass the name unencoded; the client percent-encodes it when\n building the request URL."
     name: "directoryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public Mono<Boolean> deleteDirectoryIfExists(String directoryName)"
@@ -362,7 +362,7 @@ methods:
   nameWithType: "DataLakeFileSystemAsyncClient.deleteDirectoryIfExistsWithResponse(String directoryName, DataLakePathDeleteOptions options)"
   summary: "Deletes the specified directory in the file system if it exists."
   parameters:
-  - description: "Name of the directory to delete. If the path name contains special characters, pass in the\n url encoded version of the path name."
+  - description: "Name of the directory to delete. Pass the name unencoded; the client percent-encodes it when\n building the request URL."
     name: "directoryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "<xref uid=\"com.azure.storage.file.datalake.options.DataLakePathDeleteOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DataLakePathDeleteOptions\"></xref>"
@@ -379,7 +379,7 @@ methods:
   nameWithType: "DataLakeFileSystemAsyncClient.deleteDirectoryWithResponse(String directoryName, boolean recursive, DataLakeRequestConditions requestConditions)"
   summary: "Deletes the specified directory in the file system."
   parameters:
-  - description: "Name of the directory to delete. If the path name contains special characters, pass in the\n url encoded version of the path name."
+  - description: "Name of the directory to delete. Pass the name unencoded; the client percent-encodes it when\n building the request URL."
     name: "directoryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Whether to delete all paths beneath the directory."
@@ -680,7 +680,7 @@ methods:
   nameWithType: "DataLakeFileSystemAsyncClient.getDirectoryAsyncClient(String directoryName)"
   summary: "Initializes a new Data<wbr>Lake<wbr>Directory<wbr>Async<wbr>Client object by concatenating directory<wbr>Name to the end of Data<wbr>Lake<wbr>File<wbr>System<wbr>Async<wbr>Client's URL."
   parameters:
-  - description: "A <code>String</code> representing the name of the directory. If the path name contains special\n characters, pass in the url encoded version of the path name."
+  - description: "A <code>String</code> representing the name of the directory.\n     Pass the name unencoded; the client percent-encodes it when building the request URL."
     name: "directoryName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public DataLakeDirectoryAsyncClient getDirectoryAsyncClient(String directoryName)"
@@ -694,7 +694,7 @@ methods:
   nameWithType: "DataLakeFileSystemAsyncClient.getFileAsyncClient(String fileName)"
   summary: "Initializes a new Data<wbr>Lake<wbr>File<wbr>Async<wbr>Client object by concatenating file<wbr>Name to the end of Data<wbr>Lake<wbr>File<wbr>System<wbr>Async<wbr>Client's URL."
   parameters:
-  - description: "A <code>String</code> representing the name of the file. If the path name contains special characters,\n pass in the url encoded version of the path name."
+  - description: "A <code>String</code> representing the name of the file. Pass the name unencoded; the client\n percent-encodes it when building the request URL."
     name: "fileName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public DataLakeFileAsyncClient getFileAsyncClient(String fileName)"
@@ -920,4 +920,4 @@ type: "class"
 desc: "Client to a file system. It may only be instantiated through a <xref uid=\"com.azure.storage.file.datalake.DataLakeFileSystemClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DataLakeFileSystemClientBuilder\"></xref> or via the method <xref uid=\"com.azure.storage.file.datalake.DataLakeServiceAsyncClient.getFileSystemAsyncClient(java.lang.String)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DataLakeServiceAsyncClient#getFileSystemAsyncClient(String)\"></xref>. This class does not hold any state about a particular blob but is instead a convenient way of sending off appropriate requests to the resource on the service. It may also be used to construct clients for files/directories.\n\nThis client contains operations on a file system. Operations on a path are available on <xref uid=\"com.azure.storage.file.datalake.DataLakeFileAsyncClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DataLakeFileAsyncClient\"></xref> and <xref uid=\"com.azure.storage.file.datalake.DataLakeDirectoryAsyncClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DataLakeDirectoryAsyncClient\"></xref> through <xref uid=\"com.azure.storage.file.datalake.DataLakeFileSystemAsyncClient.getFileAsyncClient(java.lang.String)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#getFileAsyncClient(String)\"></xref> and <xref uid=\"com.azure.storage.file.datalake.DataLakeFileSystemAsyncClient.getDirectoryAsyncClient(java.lang.String)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#getDirectoryAsyncClient(String)\"></xref> respectively, and operations on the service are available on <xref uid=\"com.azure.storage.file.datalake.DataLakeServiceAsyncClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DataLakeServiceAsyncClient\"></xref>.\n\nPlease refer to the [Azure Docs][] for more information on file systems.\n\nNote this client is an async client that returns reactive responses from Spring Reactor Core project (https://projectreactor.io/). Calling the methods in this client will **NOT** start the actual network operation, until `.subscribe()` is called on the reactive response. You can simply convert one of these responses to a [CompletableFuture][] object through <xref uid=\"reactor.core.publisher.Mono.toFuture*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono#toFuture()\"></xref>.\n\n\n[Azure Docs]: https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction\n[CompletableFuture]: https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html"
 metadata: {}
 package: "com.azure.storage.file.datalake"
-artifact: com.azure:azure-storage-file-datalake:12.28.0
+artifact: com.azure:azure-storage-file-datalake:12.29.0
