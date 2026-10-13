@@ -1,18 +1,17 @@
 ---
-title: 
+title: Microsoft Azure Service Bus Client for Java
+description: Reference for the retired com.microsoft.azure:azure-servicebus Java library, with links to the supported client library and migration guide.
 keywords: Azure, java, SDK, API, azure-servicebus, servicebus
 ms.date: 11/14/2022
 ms.topic: reference
 ms.devlang: java
-ms.service: servicebus
+ms.service: azure-service-bus
 ---
-<p align="center">
-  <img src="service-bus.png" alt="Microsoft Azure Service Bus" width="100"/>
-</p>
 
 # Microsoft Azure Service Bus Client for Java
 
-> Please note, a newer package [com.azure:azure-messaging-servicebus](https://search.maven.org/artifact/com.azure/azure-messaging-servicebus) for [Azure Service Bus](https://azure.microsoft.com/services/service-bus/) is available as of December 2020. While this package will continue to receive critical bug fixes, we strongly encourage you to upgrade. Read the [migration guide](https://aka.ms/azsdk/java/migrate/sb) for more details.
+> [!IMPORTANT]
+> `com.microsoft.azure:azure-servicebus` was retired on September 30, 2026 and no longer receives official support or updates from Microsoft. This page describes the retired library. Use [com.azure:azure-messaging-servicebus](https://central.sonatype.com/artifact/com.azure/azure-messaging-servicebus) for supported applications, and follow the [migration guide](https://aka.ms/azsdk/java/migrate/sb) to update existing applications.
 
 This is the Java client library for Azure Service Bus that focuses on Queues & Topics. If you are looking for Event Hubs and Relay clients, follow the below links:
 * [Event Hubs](https://github.com/Azure/azure-sdk-for-java/tree/azure-servicebus_3.6.7/sdk/eventhubs/microsoft-azure-eventhubs)
@@ -59,7 +58,7 @@ If you send messages from a client any other than the Java client itself in any 
 ## FAQ
 
 ### Where is the API document?
-Click [here](/java/api/overview/azure/servicebus?view=azure-java-legacy).
+See the [legacy Azure Service Bus SDK for Java reference](/java/api/overview/azure/service-bus?view=azure-java-legacy&preserve-view=true).
 
 ### Where can I find examples that use this library?
 
@@ -71,11 +70,7 @@ Yes, this client library now has the management functionality built into it. Thi
 
 ### How do I run the unit tests?
 
-Tests are simple JUnit tests. They can be run from the command line or any IDE that supports running JUnit tests.
-Only prerequisite to running tests is setting an environment variable named 'AZURE_SERVICEBUS_CONNECTION_STRING' to the connection string
- of the namespace in which the tests will create entities. The tests create entities in the namespace and run tests and delete the created entities.
-And test classes also have methods to specify whether to create entities per test or once for all tests in a suite. Creating entities per test is better
-as it keeps test independent of each other.
+Tests are simple JUnit tests. They can be run from the command line or any IDE that supports running JUnit tests. Only prerequisite to running tests is setting an environment variable named 'AZURE_SERVICEBUS_CONNECTION_STRING' to the connection string of the namespace in which the tests will create entities. The tests create entities in the namespace and run tests and delete the created entities. And test classes also have methods to specify whether to create entities per test or once for all tests in a suite. Creating entities per test is better as it keeps test independent of each other.
 
 To use a proxy for unit tests, set an environment variable `RUN_WITH_PROXY` to `true`. Then set the environment variables `PROXY_HOSTNAME` and `PROXY_PORT` to your values.
 
@@ -92,6 +87,4 @@ To use a proxy for unit tests, set an environment variable `RUN_WITH_PROXY` to `
 8. Go to environment and add above mentioned environment variable and the regarding connection string.
 9. Click "Apply" and then "Run"
 10. You should have a new view next to the package explorer called JUnit showing the running tests and see Console outputs depending on which test currently runs. If you do not see the JUnit tab go to Window > Show view > Other... > Java > JUnit
-
-
 
