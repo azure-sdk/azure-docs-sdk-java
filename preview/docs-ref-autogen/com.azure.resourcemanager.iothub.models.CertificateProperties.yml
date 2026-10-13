@@ -40,6 +40,16 @@ methods:
   returns:
     description: "the certificate value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.iothub.models.CertificateProperties.certificateAuthorityResourceId()"
+  fullName: "com.azure.resourcemanager.iothub.models.CertificateProperties.certificateAuthorityResourceId()"
+  name: "certificateAuthorityResourceId()"
+  nameWithType: "CertificateProperties.certificateAuthorityResourceId()"
+  summary: "Get the certificate<wbr>Authority<wbr>Resource<wbr>Id property: Full certificate authority resource ID for ADR linked standard SKU hubs."
+  syntax: "public String certificateAuthorityResourceId()"
+  desc: "Get the certificateAuthorityResourceId property: Full certificate authority resource ID for ADR linked standard SKU hubs."
+  returns:
+    description: "the certificateAuthorityResourceId value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.iothub.models.CertificateProperties.created()"
   fullName: "com.azure.resourcemanager.iothub.models.CertificateProperties.created()"
   name: "created()"
@@ -89,16 +99,6 @@ methods:
   returns:
     description: "the isVerified value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
-- uid: "com.azure.resourcemanager.iothub.models.CertificateProperties.policyResourceId()"
-  fullName: "com.azure.resourcemanager.iothub.models.CertificateProperties.policyResourceId()"
-  name: "policyResourceId()"
-  nameWithType: "CertificateProperties.policyResourceId()"
-  summary: "Get the policy<wbr>Resource<wbr>Id property: The reference to policy stored in Azure Device Registry (ADR)."
-  syntax: "public String policyResourceId()"
-  desc: "Get the policyResourceId property: The reference to policy stored in Azure Device Registry (ADR)."
-  returns:
-    description: "the policyResourceId value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.iothub.models.CertificateProperties.subject()"
   fullName: "com.azure.resourcemanager.iothub.models.CertificateProperties.subject()"
   name: "subject()"
@@ -155,6 +155,20 @@ methods:
   returns:
     description: "the CertificateProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.iothub.models.CertificateProperties?alt=com.azure.resourcemanager.iothub.models.CertificateProperties&text=CertificateProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.iothub.models.CertificateProperties.withCertificateAuthorityResourceId(java.lang.String)"
+  fullName: "com.azure.resourcemanager.iothub.models.CertificateProperties.withCertificateAuthorityResourceId(String certificateAuthorityResourceId)"
+  name: "withCertificateAuthorityResourceId(String certificateAuthorityResourceId)"
+  nameWithType: "CertificateProperties.withCertificateAuthorityResourceId(String certificateAuthorityResourceId)"
+  summary: "Set the certificate<wbr>Authority<wbr>Resource<wbr>Id property: Full certificate authority resource ID for ADR linked standard SKU hubs."
+  parameters:
+  - description: "the certificateAuthorityResourceId value to set."
+    name: "certificateAuthorityResourceId"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public CertificateProperties withCertificateAuthorityResourceId(String certificateAuthorityResourceId)"
+  desc: "Set the certificateAuthorityResourceId property: Full certificate authority resource ID for ADR linked standard SKU hubs."
+  returns:
+    description: "the CertificateProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.iothub.models.CertificateProperties?alt=com.azure.resourcemanager.iothub.models.CertificateProperties&text=CertificateProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.iothub.models.CertificateProperties.withIsVerified(java.lang.Boolean)"
   fullName: "com.azure.resourcemanager.iothub.models.CertificateProperties.withIsVerified(Boolean isVerified)"
   name: "withIsVerified(Boolean isVerified)"
@@ -169,24 +183,10 @@ methods:
   returns:
     description: "the CertificateProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.iothub.models.CertificateProperties?alt=com.azure.resourcemanager.iothub.models.CertificateProperties&text=CertificateProperties\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.iothub.models.CertificateProperties.withPolicyResourceId(java.lang.String)"
-  fullName: "com.azure.resourcemanager.iothub.models.CertificateProperties.withPolicyResourceId(String policyResourceId)"
-  name: "withPolicyResourceId(String policyResourceId)"
-  nameWithType: "CertificateProperties.withPolicyResourceId(String policyResourceId)"
-  summary: "Set the policy<wbr>Resource<wbr>Id property: The reference to policy stored in Azure Device Registry (ADR)."
-  parameters:
-  - description: "the policyResourceId value to set."
-    name: "policyResourceId"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public CertificateProperties withPolicyResourceId(String policyResourceId)"
-  desc: "Set the policyResourceId property: The reference to policy stored in Azure Device Registry (ADR)."
-  returns:
-    description: "the CertificateProperties object itself."
-    type: "<xref href=\"com.azure.resourcemanager.iothub.models.CertificateProperties?alt=com.azure.resourcemanager.iothub.models.CertificateProperties&text=CertificateProperties\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "The description of an X509 CA Certificate."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.iothub.models.CertificateProperties?alt=com.azure.resourcemanager.iothub.models.CertificateProperties&text=CertificateProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.iothub.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-iothub:1.4.0-beta.3
+artifact: com.azure.resourcemanager:azure-resourcemanager-iothub:1.4.0-beta.4

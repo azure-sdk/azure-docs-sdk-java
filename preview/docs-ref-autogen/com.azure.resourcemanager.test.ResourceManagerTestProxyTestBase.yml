@@ -178,6 +178,31 @@ methods:
   returns:
     description: "the manager instance"
     type: "<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.test.ResourceManagerTestProxyTestBase.<T>buildManager(java.lang.Class<T>,com.azure.core.http.HttpPipeline,com.azure.core.management.profile.AzureProfile,java.time.Duration)"
+  fullName: "com.azure.resourcemanager.test.ResourceManagerTestProxyTestBase.buildManager(Class<T> manager, HttpPipeline httpPipeline, AzureProfile profile, Duration defaultPollInterval)"
+  name: "buildManager(Class<T> manager, HttpPipeline httpPipeline, AzureProfile profile, Duration defaultPollInterval)"
+  nameWithType: "ResourceManagerTestProxyTestBase.buildManager(Class<T> manager, HttpPipeline httpPipeline, AzureProfile profile, Duration defaultPollInterval)"
+  summary: "Builds the manager with provided http pipeline, profile and default<wbr>Poll<wbr>Interval in general manner."
+  modifiers:
+  - "protected"
+  parameters:
+  - description: "the class of the manager"
+    name: "manager"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html\">Class</a>&lt;<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />&gt;"
+  - description: "the http pipeline"
+    name: "httpPipeline"
+    type: "<xref href=\"com.azure.core.http.HttpPipeline?alt=com.azure.core.http.HttpPipeline&text=HttpPipeline\" data-throw-if-not-resolved=\"False\" />"
+  - description: "the azure profile"
+    name: "profile"
+    type: "<xref href=\"com.azure.core.management.profile.AzureProfile?alt=com.azure.core.management.profile.AzureProfile&text=AzureProfile\" data-throw-if-not-resolved=\"False\" />"
+  - description: "default poll interval for long-running operations"
+    name: "defaultPollInterval"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
+  syntax: "protected T <T>buildManager(Class<T> manager, HttpPipeline httpPipeline, AzureProfile profile, Duration defaultPollInterval)"
+  desc: "Builds the manager with provided http pipeline, profile and defaultPollInterval in general manner. This is useful when you are doing recording tests and want to share the already set-up HttpPipeline."
+  returns:
+    description: "the manager instance"
+    type: "<xref href=\"T?alt=T&text=T\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.test.ResourceManagerTestProxyTestBase.cleanUpResources()"
   fullName: "com.azure.resourcemanager.test.ResourceManagerTestProxyTestBase.cleanUpResources()"
   name: "cleanUpResources()"
@@ -347,4 +372,4 @@ type: "class"
 desc: "Test base for resource manager SDK.\n\nFor LIVE/RECORD test, dev should 1. Sign-in Azure with CLI (\"az login\"). 2. AZURE\\_TENANT\\_ID environment variable is set. 3. AZURE\\_SUBSCRIPTION\\_ID environment variable is set."
 metadata: {}
 package: "com.azure.resourcemanager.test"
-artifact: com.azure.resourcemanager:azure-resourcemanager-test:2.0.0-beta.3
+artifact: com.azure.resourcemanager:azure-resourcemanager-test:2.0.0-beta.4

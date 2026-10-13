@@ -70,6 +70,16 @@ methods:
   returns:
     description: "the comments value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.iothub.models.IotHubProperties.connectionProfile()"
+  fullName: "com.azure.resourcemanager.iothub.models.IotHubProperties.connectionProfile()"
+  name: "connectionProfile()"
+  nameWithType: "IotHubProperties.connectionProfile()"
+  summary: "Get the connection<wbr>Profile property: The connection profile that the IoT hub uses for device connections."
+  syntax: "public ConnectionProfile connectionProfile()"
+  desc: "Get the connectionProfile property: The connection profile that the IoT hub uses for device connections. Defaults to 'Classic'."
+  returns:
+    description: "the connectionProfile value."
+    type: "<xref href=\"com.azure.resourcemanager.iothub.models.ConnectionProfile?alt=com.azure.resourcemanager.iothub.models.ConnectionProfile&text=ConnectionProfile\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.iothub.models.IotHubProperties.deviceHostName()"
   fullName: "com.azure.resourcemanager.iothub.models.IotHubProperties.deviceHostName()"
   name: "deviceHostName()"
@@ -269,6 +279,16 @@ methods:
   returns:
     description: "the minTlsVersion value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.iothub.models.IotHubProperties.mqttV5Settings()"
+  fullName: "com.azure.resourcemanager.iothub.models.IotHubProperties.mqttV5Settings()"
+  name: "mqttV5Settings()"
+  nameWithType: "IotHubProperties.mqttV5Settings()"
+  summary: "Get the mqttV5Settings property: The custom topic configuration for an Event Grid-backed MQTT v5 IoT hub."
+  syntax: "public MqttV5Settings mqttV5Settings()"
+  desc: "Get the mqttV5Settings property: The custom topic configuration for an Event Grid-backed MQTT v5 IoT hub. This property is valid only when connectionProfile is 'MqttV5'."
+  returns:
+    description: "the mqttV5Settings value."
+    type: "<xref href=\"com.azure.resourcemanager.iothub.models.MqttV5Settings?alt=com.azure.resourcemanager.iothub.models.MqttV5Settings&text=MqttV5Settings\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.iothub.models.IotHubProperties.networkRuleSets()"
   fullName: "com.azure.resourcemanager.iothub.models.IotHubProperties.networkRuleSets()"
   name: "networkRuleSets()"
@@ -437,17 +457,17 @@ methods:
   returns:
     description: "the IotHubProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.iothub.models.IotHubProperties?alt=com.azure.resourcemanager.iothub.models.IotHubProperties&text=IotHubProperties\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.iothub.models.IotHubProperties.withDeviceRegistry(com.azure.resourcemanager.iothub.models.DeviceRegistry)"
-  fullName: "com.azure.resourcemanager.iothub.models.IotHubProperties.withDeviceRegistry(DeviceRegistry deviceRegistry)"
-  name: "withDeviceRegistry(DeviceRegistry deviceRegistry)"
-  nameWithType: "IotHubProperties.withDeviceRegistry(DeviceRegistry deviceRegistry)"
-  summary: "Set the device<wbr>Registry property: Represents properties related to the Azure Device Registry (ADR)."
+- uid: "com.azure.resourcemanager.iothub.models.IotHubProperties.withConnectionProfile(com.azure.resourcemanager.iothub.models.ConnectionProfile)"
+  fullName: "com.azure.resourcemanager.iothub.models.IotHubProperties.withConnectionProfile(ConnectionProfile connectionProfile)"
+  name: "withConnectionProfile(ConnectionProfile connectionProfile)"
+  nameWithType: "IotHubProperties.withConnectionProfile(ConnectionProfile connectionProfile)"
+  summary: "Set the connection<wbr>Profile property: The connection profile that the IoT hub uses for device connections."
   parameters:
-  - description: "the deviceRegistry value to set."
-    name: "deviceRegistry"
-    type: "<xref href=\"com.azure.resourcemanager.iothub.models.DeviceRegistry?alt=com.azure.resourcemanager.iothub.models.DeviceRegistry&text=DeviceRegistry\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public IotHubProperties withDeviceRegistry(DeviceRegistry deviceRegistry)"
-  desc: "Set the deviceRegistry property: Represents properties related to the Azure Device Registry (ADR)."
+  - description: "the connectionProfile value to set."
+    name: "connectionProfile"
+    type: "<xref href=\"com.azure.resourcemanager.iothub.models.ConnectionProfile?alt=com.azure.resourcemanager.iothub.models.ConnectionProfile&text=ConnectionProfile\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public IotHubProperties withConnectionProfile(ConnectionProfile connectionProfile)"
+  desc: "Set the connectionProfile property: The connection profile that the IoT hub uses for device connections. Defaults to 'Classic'."
   returns:
     description: "the IotHubProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.iothub.models.IotHubProperties?alt=com.azure.resourcemanager.iothub.models.IotHubProperties&text=IotHubProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -633,6 +653,20 @@ methods:
   returns:
     description: "the IotHubProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.iothub.models.IotHubProperties?alt=com.azure.resourcemanager.iothub.models.IotHubProperties&text=IotHubProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.iothub.models.IotHubProperties.withMqttV5Settings(com.azure.resourcemanager.iothub.models.MqttV5Settings)"
+  fullName: "com.azure.resourcemanager.iothub.models.IotHubProperties.withMqttV5Settings(MqttV5Settings mqttV5Settings)"
+  name: "withMqttV5Settings(MqttV5Settings mqttV5Settings)"
+  nameWithType: "IotHubProperties.withMqttV5Settings(MqttV5Settings mqttV5Settings)"
+  summary: "Set the mqttV5Settings property: The custom topic configuration for an Event Grid-backed MQTT v5 IoT hub."
+  parameters:
+  - description: "the mqttV5Settings value to set."
+    name: "mqttV5Settings"
+    type: "<xref href=\"com.azure.resourcemanager.iothub.models.MqttV5Settings?alt=com.azure.resourcemanager.iothub.models.MqttV5Settings&text=MqttV5Settings\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public IotHubProperties withMqttV5Settings(MqttV5Settings mqttV5Settings)"
+  desc: "Set the mqttV5Settings property: The custom topic configuration for an Event Grid-backed MQTT v5 IoT hub. This property is valid only when connectionProfile is 'MqttV5'."
+  returns:
+    description: "the IotHubProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.iothub.models.IotHubProperties?alt=com.azure.resourcemanager.iothub.models.IotHubProperties&text=IotHubProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.iothub.models.IotHubProperties.withNetworkRuleSets(com.azure.resourcemanager.iothub.models.NetworkRuleSetProperties)"
   fullName: "com.azure.resourcemanager.iothub.models.IotHubProperties.withNetworkRuleSets(NetworkRuleSetProperties networkRuleSets)"
   name: "withNetworkRuleSets(NetworkRuleSetProperties networkRuleSets)"
@@ -737,4 +771,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.iothub.models.IotHubProperties?alt=com.azure.resourcemanager.iothub.models.IotHubProperties&text=IotHubProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.iothub.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-iothub:1.4.0-beta.3
+artifact: com.azure.resourcemanager:azure-resourcemanager-iothub:1.4.0-beta.4
