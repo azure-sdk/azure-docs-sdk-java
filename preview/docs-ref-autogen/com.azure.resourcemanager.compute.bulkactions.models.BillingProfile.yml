@@ -1,0 +1,94 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.compute.bulkactions.models.BillingProfile"
+fullName: "com.azure.resourcemanager.compute.bulkactions.models.BillingProfile"
+name: "BillingProfile"
+nameWithType: "BillingProfile"
+summary: "Specifies the billing related details of the Azure Spot virtual machines."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **BillingProfile**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.BillingProfile?alt=com.azure.resourcemanager.compute.bulkactions.models.BillingProfile&text=BillingProfile\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.resourcemanager.compute.bulkactions.models.BillingProfile.BillingProfile()"
+  fullName: "com.azure.resourcemanager.compute.bulkactions.models.BillingProfile.BillingProfile()"
+  name: "BillingProfile()"
+  nameWithType: "BillingProfile.BillingProfile()"
+  summary: "Creates an instance of Billing<wbr>Profile class."
+  syntax: "public BillingProfile()"
+  desc: "Creates an instance of BillingProfile class."
+methods:
+- uid: "com.azure.resourcemanager.compute.bulkactions.models.BillingProfile.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.compute.bulkactions.models.BillingProfile.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "BillingProfile.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Billing<wbr>Profile from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static BillingProfile fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the BillingProfile."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of BillingProfile from the JsonReader."
+  returns:
+    description: "An instance of BillingProfile if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.BillingProfile?alt=com.azure.resourcemanager.compute.bulkactions.models.BillingProfile&text=BillingProfile\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.compute.bulkactions.models.BillingProfile.maxPrice()"
+  fullName: "com.azure.resourcemanager.compute.bulkactions.models.BillingProfile.maxPrice()"
+  name: "maxPrice()"
+  nameWithType: "BillingProfile.maxPrice()"
+  summary: "Get the max<wbr>Price property: Specifies the maximum price, in US Dollars, you are willing to pay per hour for each Azure Spot virtual machine."
+  syntax: "public Double maxPrice()"
+  desc: "Get the maxPrice property: Specifies the maximum price, in US Dollars, you are willing to pay per hour for each Azure Spot virtual machine. This price is compared with the current Azure Spot price for the virtual machine size at create time, and the operation only succeeds if maxPrice is greater than the current Azure Spot price. It is also used to evict a virtual machine if the current Azure Spot price rises above it after creation. Possible values are any decimal value greater than zero, or -1 to indicate the default price is up-to on-demand and the virtual machine should not be evicted for price reasons. The default is -1 when not provided."
+  returns:
+    description: "the maxPrice value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html\">Double</a>"
+- uid: "com.azure.resourcemanager.compute.bulkactions.models.BillingProfile.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.compute.bulkactions.models.BillingProfile.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "BillingProfile.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.compute.bulkactions.models.BillingProfile.withMaxPrice(java.lang.Double)"
+  fullName: "com.azure.resourcemanager.compute.bulkactions.models.BillingProfile.withMaxPrice(Double maxPrice)"
+  name: "withMaxPrice(Double maxPrice)"
+  nameWithType: "BillingProfile.withMaxPrice(Double maxPrice)"
+  summary: "Set the max<wbr>Price property: Specifies the maximum price, in US Dollars, you are willing to pay per hour for each Azure Spot virtual machine."
+  parameters:
+  - description: "the maxPrice value to set."
+    name: "maxPrice"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html\">Double</a>"
+  syntax: "public BillingProfile withMaxPrice(Double maxPrice)"
+  desc: "Set the maxPrice property: Specifies the maximum price, in US Dollars, you are willing to pay per hour for each Azure Spot virtual machine. This price is compared with the current Azure Spot price for the virtual machine size at create time, and the operation only succeeds if maxPrice is greater than the current Azure Spot price. It is also used to evict a virtual machine if the current Azure Spot price rises above it after creation. Possible values are any decimal value greater than zero, or -1 to indicate the default price is up-to on-demand and the virtual machine should not be evicted for price reasons. The default is -1 when not provided."
+  returns:
+    description: "the BillingProfile object itself."
+    type: "<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.BillingProfile?alt=com.azure.resourcemanager.compute.bulkactions.models.BillingProfile&text=BillingProfile\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Specifies the billing related details of the Azure Spot virtual machines."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.compute.bulkactions.models.BillingProfile?alt=com.azure.resourcemanager.compute.bulkactions.models.BillingProfile&text=BillingProfile\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.compute.bulkactions.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute-bulkactions:1.0.0-beta.8
