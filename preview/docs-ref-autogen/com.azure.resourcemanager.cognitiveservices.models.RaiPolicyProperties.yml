@@ -30,6 +30,26 @@ constructors:
   syntax: "public RaiPolicyProperties()"
   desc: "Creates an instance of RaiPolicyProperties class."
 methods:
+- uid: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.acs()"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.acs()"
+  name: "acs()"
+  nameWithType: "RaiPolicyProperties.acs()"
+  summary: "Get the acs property: The ACS manifest."
+  syntax: "public RaiAcsManifest acs()"
+  desc: "Get the acs property: The ACS manifest. Required by service validation when format is ACS."
+  returns:
+    description: "the acs value."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.RaiAcsManifest?alt=com.azure.resourcemanager.cognitiveservices.models.RaiAcsManifest&text=RaiAcsManifest\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.acsRegos()"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.acsRegos()"
+  name: "acsRegos()"
+  nameWithType: "RaiPolicyProperties.acsRegos()"
+  summary: "Get the acs<wbr>Regos property: Reusable same-account Rego resources loaded with the ACS manifest."
+  syntax: "public List<RaiRegoReference> acsRegos()"
+  desc: "Get the acsRegos property: Reusable same-account Rego resources loaded with the ACS manifest."
+  returns:
+    description: "the acsRegos value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.RaiRegoReference?alt=com.azure.resourcemanager.cognitiveservices.models.RaiRegoReference&text=RaiRegoReference\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.basePolicyName()"
   fullName: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.basePolicyName()"
   name: "basePolicyName()"
@@ -60,6 +80,16 @@ methods:
   returns:
     description: "the customBlocklists value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.CustomBlocklistConfig?alt=com.azure.resourcemanager.cognitiveservices.models.CustomBlocklistConfig&text=CustomBlocklistConfig\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.customExternalSafetyProviders()"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.customExternalSafetyProviders()"
+  name: "customExternalSafetyProviders()"
+  nameWithType: "RaiPolicyProperties.customExternalSafetyProviders()"
+  summary: "Get the custom<wbr>External<wbr>Safety<wbr>Providers property: Optional external safety-provider references used by this policy."
+  syntax: "public List<RaiPolicyCustomExternalSafetyProviderReference> customExternalSafetyProviders()"
+  desc: "Get the customExternalSafetyProviders property: Optional external safety-provider references used by this policy."
+  returns:
+    description: "the customExternalSafetyProviders value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.RaiPolicyCustomExternalSafetyProviderReference?alt=com.azure.resourcemanager.cognitiveservices.models.RaiPolicyCustomExternalSafetyProviderReference&text=RaiPolicyCustomExternalSafetyProviderReference\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.egressPolicy()"
   fullName: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.egressPolicy()"
   name: "egressPolicy()"
@@ -70,6 +100,16 @@ methods:
   returns:
     description: "the egressPolicy value."
     type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.RaiEgressPolicyConfig?alt=com.azure.resourcemanager.cognitiveservices.models.RaiEgressPolicyConfig&text=RaiEgressPolicyConfig\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.format()"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.format()"
+  name: "format()"
+  nameWithType: "RaiPolicyProperties.format()"
+  summary: "Get the format property: The policy representation."
+  syntax: "public RaiPolicyFormat format()"
+  desc: "Get the format property: The policy representation. Omission selects ContentFilters when creating a policy. ACS policy creation and replacement require ACS."
+  returns:
+    description: "the format value."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.RaiPolicyFormat?alt=com.azure.resourcemanager.cognitiveservices.models.RaiPolicyFormat&text=RaiPolicyFormat\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.fromJson(JsonReader jsonReader)"
   name: "fromJson(JsonReader jsonReader)"
@@ -131,6 +171,34 @@ methods:
   returns:
     description: "the type value."
     type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.RaiPolicyType?alt=com.azure.resourcemanager.cognitiveservices.models.RaiPolicyType&text=RaiPolicyType\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.withAcs(com.azure.resourcemanager.cognitiveservices.models.RaiAcsManifest)"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.withAcs(RaiAcsManifest acs)"
+  name: "withAcs(RaiAcsManifest acs)"
+  nameWithType: "RaiPolicyProperties.withAcs(RaiAcsManifest acs)"
+  summary: "Set the acs property: The ACS manifest."
+  parameters:
+  - description: "the acs value to set."
+    name: "acs"
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.RaiAcsManifest?alt=com.azure.resourcemanager.cognitiveservices.models.RaiAcsManifest&text=RaiAcsManifest\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public RaiPolicyProperties withAcs(RaiAcsManifest acs)"
+  desc: "Set the acs property: The ACS manifest. Required by service validation when format is ACS."
+  returns:
+    description: "the RaiPolicyProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties?alt=com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties&text=RaiPolicyProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.withAcsRegos(java.util.List<com.azure.resourcemanager.cognitiveservices.models.RaiRegoReference>)"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.withAcsRegos(List<RaiRegoReference> acsRegos)"
+  name: "withAcsRegos(List<RaiRegoReference> acsRegos)"
+  nameWithType: "RaiPolicyProperties.withAcsRegos(List<RaiRegoReference> acsRegos)"
+  summary: "Set the acs<wbr>Regos property: Reusable same-account Rego resources loaded with the ACS manifest."
+  parameters:
+  - description: "the acsRegos value to set."
+    name: "acsRegos"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.RaiRegoReference?alt=com.azure.resourcemanager.cognitiveservices.models.RaiRegoReference&text=RaiRegoReference\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public RaiPolicyProperties withAcsRegos(List<RaiRegoReference> acsRegos)"
+  desc: "Set the acsRegos property: Reusable same-account Rego resources loaded with the ACS manifest."
+  returns:
+    description: "the RaiPolicyProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties?alt=com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties&text=RaiPolicyProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.withBasePolicyName(java.lang.String)"
   fullName: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.withBasePolicyName(String basePolicyName)"
   name: "withBasePolicyName(String basePolicyName)"
@@ -173,6 +241,20 @@ methods:
   returns:
     description: "the RaiPolicyProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties?alt=com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties&text=RaiPolicyProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.withCustomExternalSafetyProviders(java.util.List<com.azure.resourcemanager.cognitiveservices.models.RaiPolicyCustomExternalSafetyProviderReference>)"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.withCustomExternalSafetyProviders(List<RaiPolicyCustomExternalSafetyProviderReference> customExternalSafetyProviders)"
+  name: "withCustomExternalSafetyProviders(List<RaiPolicyCustomExternalSafetyProviderReference> customExternalSafetyProviders)"
+  nameWithType: "RaiPolicyProperties.withCustomExternalSafetyProviders(List<RaiPolicyCustomExternalSafetyProviderReference> customExternalSafetyProviders)"
+  summary: "Set the custom<wbr>External<wbr>Safety<wbr>Providers property: Optional external safety-provider references used by this policy."
+  parameters:
+  - description: "the customExternalSafetyProviders value to set."
+    name: "customExternalSafetyProviders"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.RaiPolicyCustomExternalSafetyProviderReference?alt=com.azure.resourcemanager.cognitiveservices.models.RaiPolicyCustomExternalSafetyProviderReference&text=RaiPolicyCustomExternalSafetyProviderReference\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public RaiPolicyProperties withCustomExternalSafetyProviders(List<RaiPolicyCustomExternalSafetyProviderReference> customExternalSafetyProviders)"
+  desc: "Set the customExternalSafetyProviders property: Optional external safety-provider references used by this policy."
+  returns:
+    description: "the RaiPolicyProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties?alt=com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties&text=RaiPolicyProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.withEgressPolicy(com.azure.resourcemanager.cognitiveservices.models.RaiEgressPolicyConfig)"
   fullName: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.withEgressPolicy(RaiEgressPolicyConfig egressPolicy)"
   name: "withEgressPolicy(RaiEgressPolicyConfig egressPolicy)"
@@ -184,6 +266,20 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.RaiEgressPolicyConfig?alt=com.azure.resourcemanager.cognitiveservices.models.RaiEgressPolicyConfig&text=RaiEgressPolicyConfig\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public RaiPolicyProperties withEgressPolicy(RaiEgressPolicyConfig egressPolicy)"
   desc: "Set the egressPolicy property: Egress (outbound network) policy controlling which external endpoints sandboxed agents can reach. Includes rules with Allow/Deny/Transform/Rewrite actions."
+  returns:
+    description: "the RaiPolicyProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties?alt=com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties&text=RaiPolicyProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.withFormat(com.azure.resourcemanager.cognitiveservices.models.RaiPolicyFormat)"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties.withFormat(RaiPolicyFormat format)"
+  name: "withFormat(RaiPolicyFormat format)"
+  nameWithType: "RaiPolicyProperties.withFormat(RaiPolicyFormat format)"
+  summary: "Set the format property: The policy representation."
+  parameters:
+  - description: "the format value to set."
+    name: "format"
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.RaiPolicyFormat?alt=com.azure.resourcemanager.cognitiveservices.models.RaiPolicyFormat&text=RaiPolicyFormat\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public RaiPolicyProperties withFormat(RaiPolicyFormat format)"
+  desc: "Set the format property: The policy representation. Omission selects ContentFilters when creating a policy. ACS policy creation and replacement require ACS."
   returns:
     description: "the RaiPolicyProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties?alt=com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties&text=RaiPolicyProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -221,4 +317,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties?alt=com.azure.resourcemanager.cognitiveservices.models.RaiPolicyProperties&text=RaiPolicyProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.cognitiveservices.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-cognitiveservices:1.5.0-beta.4
+artifact: com.azure.resourcemanager:azure-resourcemanager-cognitiveservices:1.5.0-beta.5
