@@ -1,6 +1,6 @@
 {
   "Name": "azure-resourcemanager-terraform",
-  "Version": "1.0.0-beta.1",
+  "Version": "1.0.0-beta.2",
   "DevVersion": null,
   "DirectoryPath": "sdk/terraform/azure-resourcemanager-terraform",
   "ServiceDirectory": "terraform",
@@ -10,20 +10,27 @@
   "SdkType": "mgmt",
   "IsNewSdk": true,
   "ArtifactName": "azure-resourcemanager-terraform",
-  "ReleaseStatus": "2024-11-20",
+  "ReleaseStatus": "2026-08-27",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": null,
   "ArtifactDetails": {
     "name": "azure-resourcemanager-terraform",
+    "releaseInBatch": "${{ parameters.release_azureresourcemanagerterraform }}",
     "groupId": "com.azure.resourcemanager",
     "safeName": "azureresourcemanagerterraform",
-    "releaseInBatch": "${{ parameters.release_azureresourcemanagerterraform }}"
+    "triggeringPaths": [
+      "/sdk/terraform/ci.yml"
+    ]
   },
-  "CIMatrixConfigs": [],
+  "CIParameters": {
+    "CIMatrixConfigs": []
+  },
+  "SpecProjectPath": "specification/terraform/resource-manager/Microsoft.AzureTerraform/AzureTerraform",
   "Namespaces": [
     "com.azure.resourcemanager.terraform",
     "com.azure.resourcemanager.terraform.fluent",
     "com.azure.resourcemanager.terraform.fluent.models",
     "com.azure.resourcemanager.terraform.models"
-  ]
+  ],
+  "CIMatrixConfigs": []
 }
