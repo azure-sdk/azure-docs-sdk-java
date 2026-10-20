@@ -1,0 +1,49 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.cloudhealth.models.GetSignalRecommendationsResponse"
+fullName: "com.azure.resourcemanager.cloudhealth.models.GetSignalRecommendationsResponse"
+name: "GetSignalRecommendationsResponse"
+nameWithType: "GetSignalRecommendationsResponse"
+summary: "An immutable client-side representation of Get<wbr>Signal<wbr>Recommendations<wbr>Response."
+syntax: "public interface **GetSignalRecommendationsResponse**"
+methods:
+- uid: "com.azure.resourcemanager.cloudhealth.models.GetSignalRecommendationsResponse.innerModel()"
+  fullName: "com.azure.resourcemanager.cloudhealth.models.GetSignalRecommendationsResponse.innerModel()"
+  name: "innerModel()"
+  nameWithType: "GetSignalRecommendationsResponse.innerModel()"
+  summary: "Gets the inner com.<wbr>azure.<wbr>resourcemanager.<wbr>cloudhealth.<wbr>fluent.<wbr>models.<wbr>Get<wbr>Signal<wbr>Recommendations<wbr>Response<wbr>Inner object."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract GetSignalRecommendationsResponseInner innerModel()"
+  desc: "Gets the inner com.azure.resourcemanager.cloudhealth.fluent.models.GetSignalRecommendationsResponseInner object."
+  returns:
+    description: "the inner object."
+    type: "<xref href=\"com.azure.resourcemanager.cloudhealth.fluent.models.GetSignalRecommendationsResponseInner?alt=com.azure.resourcemanager.cloudhealth.fluent.models.GetSignalRecommendationsResponseInner&text=GetSignalRecommendationsResponseInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cloudhealth.models.GetSignalRecommendationsResponse.recommendedConfigurations()"
+  fullName: "com.azure.resourcemanager.cloudhealth.models.GetSignalRecommendationsResponse.recommendedConfigurations()"
+  name: "recommendedConfigurations()"
+  nameWithType: "GetSignalRecommendationsResponse.recommendedConfigurations()"
+  summary: "Gets the recommended<wbr>Configurations property: Additional signal configurations for metrics that are not broadly applicable to every health model for an Entity of this resource type, but if a caller chooses to monitor one of these metrics, the provided thresholds are suggested as a starting point."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract List<SignalConfiguration> recommendedConfigurations()"
+  desc: "Gets the recommendedConfigurations property: Additional signal configurations for metrics that are not broadly applicable to every health model for an Entity of this resource type, but if a caller chooses to monitor one of these metrics, the provided thresholds are suggested as a starting point. Independent of \\`recommendedSignals\\` — not paired by index."
+  returns:
+    description: "the recommendedConfigurations value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cloudhealth.models.SignalConfiguration?alt=com.azure.resourcemanager.cloudhealth.models.SignalConfiguration&text=SignalConfiguration\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cloudhealth.models.GetSignalRecommendationsResponse.recommendedSignals()"
+  fullName: "com.azure.resourcemanager.cloudhealth.models.GetSignalRecommendationsResponse.recommendedSignals()"
+  name: "recommendedSignals()"
+  nameWithType: "GetSignalRecommendationsResponse.recommendedSignals()"
+  summary: "Gets the recommended<wbr>Signals property: Signals that are broadly recommended to be enabled by default for health models monitoring an Entity of this resource type."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract List<SignalConfiguration> recommendedSignals()"
+  desc: "Gets the recommendedSignals property: Signals that are broadly recommended to be enabled by default for health models monitoring an Entity of this resource type. Each entry is a complete signal configuration (metric, aggregation, thresholds) ready to be added to a health model. Independent of \\`recommendedConfigurations\\` — not paired by index."
+  returns:
+    description: "the recommendedSignals value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cloudhealth.models.SignalConfiguration?alt=com.azure.resourcemanager.cloudhealth.models.SignalConfiguration&text=SignalConfiguration\" data-throw-if-not-resolved=\"False\" />&gt;"
+type: "interface"
+desc: "An immutable client-side representation of GetSignalRecommendationsResponse."
+metadata: {}
+package: "com.azure.resourcemanager.cloudhealth.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-cloudhealth:1.0.0

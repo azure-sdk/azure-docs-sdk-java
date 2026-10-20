@@ -17,11 +17,11 @@ methods:
   - description: "The request body."
     name: "body"
     type: "<xref href=\"com.azure.resourcemanager.terraform.models.BaseExportModel?alt=com.azure.resourcemanager.terraform.models.BaseExportModel&text=BaseExportModel\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginExportTerraform(BaseExportModel body)"
+  syntax: "public abstract SyncPoller<PollResult<TerraformOperationStatusInner>,TerraformOperationStatusInner> beginExportTerraform(BaseExportModel body)"
   desc: "Exports the Terraform configuration of the specified resource(s)."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.terraform.fluent.models.TerraformOperationStatusInner?alt=com.azure.resourcemanager.terraform.fluent.models.TerraformOperationStatusInner&text=TerraformOperationStatusInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.terraform.fluent.models.TerraformOperationStatusInner?alt=com.azure.resourcemanager.terraform.fluent.models.TerraformOperationStatusInner&text=TerraformOperationStatusInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.terraform.fluent.TerraformsClient.beginExportTerraform(com.azure.resourcemanager.terraform.models.BaseExportModel,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.terraform.fluent.TerraformsClient.beginExportTerraform(BaseExportModel body, Context context)"
   name: "beginExportTerraform(BaseExportModel body, Context context)"
@@ -36,11 +36,11 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginExportTerraform(BaseExportModel body, Context context)"
+  syntax: "public abstract SyncPoller<PollResult<TerraformOperationStatusInner>,TerraformOperationStatusInner> beginExportTerraform(BaseExportModel body, Context context)"
   desc: "Exports the Terraform configuration of the specified resource(s)."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.terraform.fluent.models.TerraformOperationStatusInner?alt=com.azure.resourcemanager.terraform.fluent.models.TerraformOperationStatusInner&text=TerraformOperationStatusInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.terraform.fluent.models.TerraformOperationStatusInner?alt=com.azure.resourcemanager.terraform.fluent.models.TerraformOperationStatusInner&text=TerraformOperationStatusInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.terraform.fluent.TerraformsClient.exportTerraform(com.azure.resourcemanager.terraform.models.BaseExportModel)"
   fullName: "com.azure.resourcemanager.terraform.fluent.TerraformsClient.exportTerraform(BaseExportModel body)"
   name: "exportTerraform(BaseExportModel body)"
@@ -52,8 +52,11 @@ methods:
   - description: "The request body."
     name: "body"
     type: "<xref href=\"com.azure.resourcemanager.terraform.models.BaseExportModel?alt=com.azure.resourcemanager.terraform.models.BaseExportModel&text=BaseExportModel\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract void exportTerraform(BaseExportModel body)"
+  syntax: "public abstract TerraformOperationStatusInner exportTerraform(BaseExportModel body)"
   desc: "Exports the Terraform configuration of the specified resource(s)."
+  returns:
+    description: "the response."
+    type: "<xref href=\"com.azure.resourcemanager.terraform.fluent.models.TerraformOperationStatusInner?alt=com.azure.resourcemanager.terraform.fluent.models.TerraformOperationStatusInner&text=TerraformOperationStatusInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.terraform.fluent.TerraformsClient.exportTerraform(com.azure.resourcemanager.terraform.models.BaseExportModel,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.terraform.fluent.TerraformsClient.exportTerraform(BaseExportModel body, Context context)"
   name: "exportTerraform(BaseExportModel body, Context context)"
@@ -68,10 +71,13 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract void exportTerraform(BaseExportModel body, Context context)"
+  syntax: "public abstract TerraformOperationStatusInner exportTerraform(BaseExportModel body, Context context)"
   desc: "Exports the Terraform configuration of the specified resource(s)."
+  returns:
+    description: "the response."
+    type: "<xref href=\"com.azure.resourcemanager.terraform.fluent.models.TerraformOperationStatusInner?alt=com.azure.resourcemanager.terraform.fluent.models.TerraformOperationStatusInner&text=TerraformOperationStatusInner\" data-throw-if-not-resolved=\"False\" />"
 type: "interface"
 desc: "An instance of this class provides access to all the operations defined in TerraformsClient."
 metadata: {}
 package: "com.azure.resourcemanager.terraform.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-terraform:1.0.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-terraform:1.0.0-beta.2

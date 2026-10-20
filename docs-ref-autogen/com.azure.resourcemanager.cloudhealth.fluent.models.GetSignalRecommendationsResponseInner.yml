@@ -1,0 +1,82 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.cloudhealth.fluent.models.GetSignalRecommendationsResponseInner"
+fullName: "com.azure.resourcemanager.cloudhealth.fluent.models.GetSignalRecommendationsResponseInner"
+name: "GetSignalRecommendationsResponseInner"
+nameWithType: "GetSignalRecommendationsResponseInner"
+summary: "Response from \\`get<wbr>Signal<wbr>Recommendations\\` containing two independent suggestion streams for the Azure resource type represented by the target Entity."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **GetSignalRecommendationsResponseInner**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cloudhealth.fluent.models.GetSignalRecommendationsResponseInner?alt=com.azure.resourcemanager.cloudhealth.fluent.models.GetSignalRecommendationsResponseInner&text=GetSignalRecommendationsResponseInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.azure.resourcemanager.cloudhealth.fluent.models.GetSignalRecommendationsResponseInner.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.cloudhealth.fluent.models.GetSignalRecommendationsResponseInner.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "GetSignalRecommendationsResponseInner.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Get<wbr>Signal<wbr>Recommendations<wbr>Response<wbr>Inner from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static GetSignalRecommendationsResponseInner fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of GetSignalRecommendationsResponseInner from the JsonReader."
+  returns:
+    description: "An instance of GetSignalRecommendationsResponseInner if the JsonReader was pointing to an instance of it,\n or null if it was pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.cloudhealth.fluent.models.GetSignalRecommendationsResponseInner?alt=com.azure.resourcemanager.cloudhealth.fluent.models.GetSignalRecommendationsResponseInner&text=GetSignalRecommendationsResponseInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cloudhealth.fluent.models.GetSignalRecommendationsResponseInner.recommendedConfigurations()"
+  fullName: "com.azure.resourcemanager.cloudhealth.fluent.models.GetSignalRecommendationsResponseInner.recommendedConfigurations()"
+  name: "recommendedConfigurations()"
+  nameWithType: "GetSignalRecommendationsResponseInner.recommendedConfigurations()"
+  summary: "Get the recommended<wbr>Configurations property: Additional signal configurations for metrics that are not broadly applicable to every health model for an Entity of this resource type, but if a caller chooses to monitor one of these metrics, the provided thresholds are suggested as a starting point."
+  syntax: "public List<SignalConfiguration> recommendedConfigurations()"
+  desc: "Get the recommendedConfigurations property: Additional signal configurations for metrics that are not broadly applicable to every health model for an Entity of this resource type, but if a caller chooses to monitor one of these metrics, the provided thresholds are suggested as a starting point. Independent of \\`recommendedSignals\\` — not paired by index."
+  returns:
+    description: "the recommendedConfigurations value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cloudhealth.models.SignalConfiguration?alt=com.azure.resourcemanager.cloudhealth.models.SignalConfiguration&text=SignalConfiguration\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cloudhealth.fluent.models.GetSignalRecommendationsResponseInner.recommendedSignals()"
+  fullName: "com.azure.resourcemanager.cloudhealth.fluent.models.GetSignalRecommendationsResponseInner.recommendedSignals()"
+  name: "recommendedSignals()"
+  nameWithType: "GetSignalRecommendationsResponseInner.recommendedSignals()"
+  summary: "Get the recommended<wbr>Signals property: Signals that are broadly recommended to be enabled by default for health models monitoring an Entity of this resource type."
+  syntax: "public List<SignalConfiguration> recommendedSignals()"
+  desc: "Get the recommendedSignals property: Signals that are broadly recommended to be enabled by default for health models monitoring an Entity of this resource type. Each entry is a complete signal configuration (metric, aggregation, thresholds) ready to be added to a health model. Independent of \\`recommendedConfigurations\\` — not paired by index."
+  returns:
+    description: "the recommendedSignals value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cloudhealth.models.SignalConfiguration?alt=com.azure.resourcemanager.cloudhealth.models.SignalConfiguration&text=SignalConfiguration\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cloudhealth.fluent.models.GetSignalRecommendationsResponseInner.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.cloudhealth.fluent.models.GetSignalRecommendationsResponseInner.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "GetSignalRecommendationsResponseInner.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Response from \\`getSignalRecommendations\\` containing two independent suggestion streams for the Azure resource type represented by the target Entity. \\`recommendedSignals\\` lists signals broadly recommended to be enabled by default; \\`recommendedConfigurations\\` lists additional metrics that are not broadly applicable but, if a caller chooses to monitor one of them, ship with suggested starting-point thresholds. The two arrays are independent — items are not paired by index, and callers should treat them as two separate suggestion streams."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cloudhealth.fluent.models.GetSignalRecommendationsResponseInner?alt=com.azure.resourcemanager.cloudhealth.fluent.models.GetSignalRecommendationsResponseInner&text=GetSignalRecommendationsResponseInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.cloudhealth.fluent.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-cloudhealth:1.0.0

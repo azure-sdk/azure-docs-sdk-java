@@ -145,6 +145,16 @@ methods:
   returns:
     description: "the extensionsTimeBudget value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.compute.fluent.models.VirtualMachineInner.flexProfile()"
+  fullName: "com.azure.resourcemanager.compute.fluent.models.VirtualMachineInner.flexProfile()"
+  name: "flexProfile()"
+  nameWithType: "VirtualMachineInner.flexProfile()"
+  summary: "Get the flex<wbr>Profile property: \\[Preview Feature\\] Specifies a Flex<wbr>Profile for VM size."
+  syntax: "public FlexProfile flexProfile()"
+  desc: "Get the flexProfile property: \\[Preview Feature\\] Specifies a FlexProfile for VM size. Azure may deploy a compatible alternative VM size based on capacity and placement considerations, and returns the deployed size in hardwareProfile.vmSize. A request that adds flexProfile must omit hardwareProfile.vmSize. For a virtual machine that uses FlexProfile, a hardwareProfile.vmSize equal to the deployed size is ignored, so a GET response can be sent back unchanged. A PATCH request that omits flexProfile keeps it. A PUT request that omits flexProfile and sets hardwareProfile.vmSize clears it. This property cannot exist along with a non-null properties.availabilitySet, properties.capacityReservation, properties.host, properties.hostGroup, properties.proximityPlacementGroup or properties.virtualMachineScaleSet."
+  returns:
+    description: "the flexProfile value."
+    type: "<xref href=\"com.azure.resourcemanager.compute.models.FlexProfile?alt=com.azure.resourcemanager.compute.models.FlexProfile&text=FlexProfile\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.compute.fluent.models.VirtualMachineInner.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.resourcemanager.compute.fluent.models.VirtualMachineInner.fromJson(JsonReader jsonReader)"
   name: "fromJson(JsonReader jsonReader)"
@@ -613,6 +623,20 @@ methods:
   returns:
     description: "the VirtualMachineInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.compute.fluent.models.VirtualMachineInner?alt=com.azure.resourcemanager.compute.fluent.models.VirtualMachineInner&text=VirtualMachineInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.compute.fluent.models.VirtualMachineInner.withFlexProfile(com.azure.resourcemanager.compute.models.FlexProfile)"
+  fullName: "com.azure.resourcemanager.compute.fluent.models.VirtualMachineInner.withFlexProfile(FlexProfile flexProfile)"
+  name: "withFlexProfile(FlexProfile flexProfile)"
+  nameWithType: "VirtualMachineInner.withFlexProfile(FlexProfile flexProfile)"
+  summary: "Set the flex<wbr>Profile property: \\[Preview Feature\\] Specifies a Flex<wbr>Profile for VM size."
+  parameters:
+  - description: "the flexProfile value to set."
+    name: "flexProfile"
+    type: "<xref href=\"com.azure.resourcemanager.compute.models.FlexProfile?alt=com.azure.resourcemanager.compute.models.FlexProfile&text=FlexProfile\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public VirtualMachineInner withFlexProfile(FlexProfile flexProfile)"
+  desc: "Set the flexProfile property: \\[Preview Feature\\] Specifies a FlexProfile for VM size. Azure may deploy a compatible alternative VM size based on capacity and placement considerations, and returns the deployed size in hardwareProfile.vmSize. A request that adds flexProfile must omit hardwareProfile.vmSize. For a virtual machine that uses FlexProfile, a hardwareProfile.vmSize equal to the deployed size is ignored, so a GET response can be sent back unchanged. A PATCH request that omits flexProfile keeps it. A PUT request that omits flexProfile and sets hardwareProfile.vmSize clears it. This property cannot exist along with a non-null properties.availabilitySet, properties.capacityReservation, properties.host, properties.hostGroup, properties.proximityPlacementGroup or properties.virtualMachineScaleSet."
+  returns:
+    description: "the VirtualMachineInner object itself."
+    type: "<xref href=\"com.azure.resourcemanager.compute.fluent.models.VirtualMachineInner?alt=com.azure.resourcemanager.compute.fluent.models.VirtualMachineInner&text=VirtualMachineInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.compute.fluent.models.VirtualMachineInner.withHardwareProfile(com.azure.resourcemanager.compute.models.HardwareProfile)"
   fullName: "com.azure.resourcemanager.compute.fluent.models.VirtualMachineInner.withHardwareProfile(HardwareProfile hardwareProfile)"
   name: "withHardwareProfile(HardwareProfile hardwareProfile)"
@@ -943,4 +967,4 @@ type: "class"
 desc: "Describes a Virtual Machine."
 metadata: {}
 package: "com.azure.resourcemanager.compute.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.61.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute:2.62.0
