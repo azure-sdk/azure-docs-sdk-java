@@ -1,7 +1,7 @@
 ---
 title: Azure Nginx SDK for Java
 description: Reference for Azure Nginx SDK for Java
-ms.date: 10/19/2026
+ms.date: 10/20/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: nginx
