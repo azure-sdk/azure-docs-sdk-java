@@ -1,7 +1,7 @@
 ---
 title: Azure Confluent SDK for Java
 description: Reference for Azure Confluent SDK for Java
-ms.date: 10/20/2026
+ms.date: 10/21/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: confluent
