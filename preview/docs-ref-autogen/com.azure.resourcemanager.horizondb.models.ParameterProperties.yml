@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.horizondb.models.ParameterProperties"
 fullName: "com.azure.resourcemanager.horizondb.models.ParameterProperties"
 name: "ParameterProperties"
 nameWithType: "ParameterProperties"
-summary: "Properties of a HorizonDB parameters."
+summary: "Properties of a HorizonDB parameter."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -49,6 +49,16 @@ methods:
   desc: "Get the dataType property: The data type of the parameter."
   returns:
     description: "the dataType value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.horizondb.models.ParameterProperties.defaultValue()"
+  fullName: "com.azure.resourcemanager.horizondb.models.ParameterProperties.defaultValue()"
+  name: "defaultValue()"
+  nameWithType: "ParameterProperties.defaultValue()"
+  summary: "Get the default<wbr>Value property: The system-defined default value of the parameter, independent of the effective value."
+  syntax: "public String defaultValue()"
+  desc: "Get the defaultValue property: The system-defined default value of the parameter, independent of the effective value."
+  returns:
+    description: "the defaultValue value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.horizondb.models.ParameterProperties.description()"
   fullName: "com.azure.resourcemanager.horizondb.models.ParameterProperties.description()"
@@ -103,9 +113,9 @@ methods:
   fullName: "com.azure.resourcemanager.horizondb.models.ParameterProperties.isReadOnly()"
   name: "isReadOnly()"
   nameWithType: "ParameterProperties.isReadOnly()"
-  summary: "Get the is<wbr>Read<wbr>Only property: Whether the parameter is a read-only parameter."
+  summary: "Get the is<wbr>Read<wbr>Only property: Whether the parameter is read-only."
   syntax: "public Boolean isReadOnly()"
-  desc: "Get the isReadOnly property: Whether the parameter is a read-only parameter."
+  desc: "Get the isReadOnly property: Whether the parameter is read-only. Read-only parameters cannot be overridden."
   returns:
     description: "the isReadOnly value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
@@ -151,6 +161,16 @@ methods:
   returns:
     description: "the value value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.horizondb.models.ParameterProperties.valueSource()"
+  fullName: "com.azure.resourcemanager.horizondb.models.ParameterProperties.valueSource()"
+  name: "valueSource()"
+  nameWithType: "ParameterProperties.valueSource()"
+  summary: "Get the value<wbr>Source property: The source of the effective parameter value."
+  syntax: "public ParameterValueSource valueSource()"
+  desc: "Get the valueSource property: The source of the effective parameter value. UserOverride means that the value was explicitly supplied by the user, even when it equals defaultValue."
+  returns:
+    description: "the valueSource value."
+    type: "<xref href=\"com.azure.resourcemanager.horizondb.models.ParameterValueSource?alt=com.azure.resourcemanager.horizondb.models.ParameterValueSource&text=ParameterValueSource\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.horizondb.models.ParameterProperties.withName(java.lang.String)"
   fullName: "com.azure.resourcemanager.horizondb.models.ParameterProperties.withName(String name)"
   name: "withName(String name)"
@@ -180,9 +200,9 @@ methods:
     description: "the ParameterProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.horizondb.models.ParameterProperties?alt=com.azure.resourcemanager.horizondb.models.ParameterProperties&text=ParameterProperties\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Properties of a HorizonDB parameters."
+desc: "Properties of a HorizonDB parameter."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.horizondb.models.ParameterProperties?alt=com.azure.resourcemanager.horizondb.models.ParameterProperties&text=ParameterProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.horizondb.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-horizondb:1.0.0-beta.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-horizondb:1.0.0-beta.3

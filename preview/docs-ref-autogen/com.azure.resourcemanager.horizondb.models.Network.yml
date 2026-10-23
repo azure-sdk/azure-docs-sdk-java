@@ -49,15 +49,15 @@ methods:
   returns:
     description: "An instance of Network if the JsonReader was pointing to an instance of it, or null if it was pointing to\n JSON null."
     type: "<xref href=\"com.azure.resourcemanager.horizondb.models.Network?alt=com.azure.resourcemanager.horizondb.models.Network&text=Network\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.horizondb.models.Network.publicNetworkAccess()"
-  fullName: "com.azure.resourcemanager.horizondb.models.Network.publicNetworkAccess()"
-  name: "publicNetworkAccess()"
-  nameWithType: "Network.publicNetworkAccess()"
-  summary: "Get the public<wbr>Network<wbr>Access property: The flag indicating whether public ip is requested."
-  syntax: "public PublicNetworkAccessState publicNetworkAccess()"
-  desc: "Get the publicNetworkAccess property: The flag indicating whether public ip is requested."
+- uid: "com.azure.resourcemanager.horizondb.models.Network.publicAccess()"
+  fullName: "com.azure.resourcemanager.horizondb.models.Network.publicAccess()"
+  name: "publicAccess()"
+  nameWithType: "Network.publicAccess()"
+  summary: "Get the public<wbr>Access property: Specifies whether public access is enabled for the cluster."
+  syntax: "public PublicNetworkAccessState publicAccess()"
+  desc: "Get the publicAccess property: Specifies whether public access is enabled for the cluster. The service defaults to Disabled when this property is omitted."
   returns:
-    description: "the publicNetworkAccess value."
+    description: "the publicAccess value."
     type: "<xref href=\"com.azure.resourcemanager.horizondb.models.PublicNetworkAccessState?alt=com.azure.resourcemanager.horizondb.models.PublicNetworkAccessState&text=PublicNetworkAccessState\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.horizondb.models.Network.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.horizondb.models.Network.toJson(JsonWriter jsonWriter)"
@@ -71,10 +71,24 @@ methods:
   - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.horizondb.models.Network.withPublicAccess(com.azure.resourcemanager.horizondb.models.PublicNetworkAccessState)"
+  fullName: "com.azure.resourcemanager.horizondb.models.Network.withPublicAccess(PublicNetworkAccessState publicAccess)"
+  name: "withPublicAccess(PublicNetworkAccessState publicAccess)"
+  nameWithType: "Network.withPublicAccess(PublicNetworkAccessState publicAccess)"
+  summary: "Set the public<wbr>Access property: Specifies whether public access is enabled for the cluster."
+  parameters:
+  - description: "the publicAccess value to set."
+    name: "publicAccess"
+    type: "<xref href=\"com.azure.resourcemanager.horizondb.models.PublicNetworkAccessState?alt=com.azure.resourcemanager.horizondb.models.PublicNetworkAccessState&text=PublicNetworkAccessState\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public Network withPublicAccess(PublicNetworkAccessState publicAccess)"
+  desc: "Set the publicAccess property: Specifies whether public access is enabled for the cluster. The service defaults to Disabled when this property is omitted."
+  returns:
+    description: "the Network object itself."
+    type: "<xref href=\"com.azure.resourcemanager.horizondb.models.Network?alt=com.azure.resourcemanager.horizondb.models.Network&text=Network\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Network properties."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.horizondb.models.Network?alt=com.azure.resourcemanager.horizondb.models.Network&text=Network\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.horizondb.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-horizondb:1.0.0-beta.2
+artifact: com.azure.resourcemanager:azure-resourcemanager-horizondb:1.0.0-beta.3

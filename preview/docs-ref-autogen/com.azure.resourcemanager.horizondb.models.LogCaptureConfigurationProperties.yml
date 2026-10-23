@@ -1,0 +1,92 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.horizondb.models.LogCaptureConfigurationProperties"
+fullName: "com.azure.resourcemanager.horizondb.models.LogCaptureConfigurationProperties"
+name: "LogCaptureConfigurationProperties"
+nameWithType: "LogCaptureConfigurationProperties"
+summary: "The settings for capturing a specific type of HorizonDB log."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **LogCaptureConfigurationProperties**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.horizondb.models.LogCaptureConfigurationProperties?alt=com.azure.resourcemanager.horizondb.models.LogCaptureConfigurationProperties&text=LogCaptureConfigurationProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.azure.resourcemanager.horizondb.models.LogCaptureConfigurationProperties.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.horizondb.models.LogCaptureConfigurationProperties.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "LogCaptureConfigurationProperties.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Log<wbr>Capture<wbr>Configuration<wbr>Properties from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static LogCaptureConfigurationProperties fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of LogCaptureConfigurationProperties from the JsonReader."
+  returns:
+    description: "An instance of LogCaptureConfigurationProperties if the JsonReader was pointing to an instance of it, or\n null if it was pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.horizondb.models.LogCaptureConfigurationProperties?alt=com.azure.resourcemanager.horizondb.models.LogCaptureConfigurationProperties&text=LogCaptureConfigurationProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.horizondb.models.LogCaptureConfigurationProperties.provisioningState()"
+  fullName: "com.azure.resourcemanager.horizondb.models.LogCaptureConfigurationProperties.provisioningState()"
+  name: "provisioningState()"
+  nameWithType: "LogCaptureConfigurationProperties.provisioningState()"
+  summary: "Get the provisioning<wbr>State property: The provisioning state of the log capture configuration."
+  syntax: "public ProvisioningState provisioningState()"
+  desc: "Get the provisioningState property: The provisioning state of the log capture configuration."
+  returns:
+    description: "the provisioningState value."
+    type: "<xref href=\"com.azure.resourcemanager.horizondb.models.ProvisioningState?alt=com.azure.resourcemanager.horizondb.models.ProvisioningState&text=ProvisioningState\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.horizondb.models.LogCaptureConfigurationProperties.retentionDays()"
+  fullName: "com.azure.resourcemanager.horizondb.models.LogCaptureConfigurationProperties.retentionDays()"
+  name: "retentionDays()"
+  nameWithType: "LogCaptureConfigurationProperties.retentionDays()"
+  summary: "Get the retention<wbr>Days property: The number of days captured log files are retained."
+  syntax: "public int retentionDays()"
+  desc: "Get the retentionDays property: The number of days captured log files are retained."
+  returns:
+    description: "the retentionDays value."
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.horizondb.models.LogCaptureConfigurationProperties.state()"
+  fullName: "com.azure.resourcemanager.horizondb.models.LogCaptureConfigurationProperties.state()"
+  name: "state()"
+  nameWithType: "LogCaptureConfigurationProperties.state()"
+  summary: "Get the state property: Specifies whether HorizonDB captures this type of log."
+  syntax: "public LogCaptureState state()"
+  desc: "Get the state property: Specifies whether HorizonDB captures this type of log. Disabling capture stops the production of new log files; existing files remain available until their retention period expires."
+  returns:
+    description: "the state value."
+    type: "<xref href=\"com.azure.resourcemanager.horizondb.models.LogCaptureState?alt=com.azure.resourcemanager.horizondb.models.LogCaptureState&text=LogCaptureState\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.horizondb.models.LogCaptureConfigurationProperties.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.horizondb.models.LogCaptureConfigurationProperties.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "LogCaptureConfigurationProperties.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "The settings for capturing a specific type of HorizonDB log."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.horizondb.models.LogCaptureConfigurationProperties?alt=com.azure.resourcemanager.horizondb.models.LogCaptureConfigurationProperties&text=LogCaptureConfigurationProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.horizondb.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-horizondb:1.0.0-beta.3

@@ -1,0 +1,72 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.horizondb.models.ReadWritePoolProperties"
+fullName: "com.azure.resourcemanager.horizondb.models.ReadWritePoolProperties"
+name: "ReadWritePoolProperties"
+nameWithType: "ReadWritePoolProperties"
+summary: "The pool currently designated to host a HorizonDB cluster's read-write node."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **ReadWritePoolProperties**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.horizondb.models.ReadWritePoolProperties?alt=com.azure.resourcemanager.horizondb.models.ReadWritePoolProperties&text=ReadWritePoolProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.azure.resourcemanager.horizondb.models.ReadWritePoolProperties.designatedPoolResourceId()"
+  fullName: "com.azure.resourcemanager.horizondb.models.ReadWritePoolProperties.designatedPoolResourceId()"
+  name: "designatedPoolResourceId()"
+  nameWithType: "ReadWritePoolProperties.designatedPoolResourceId()"
+  summary: "Get the designated<wbr>Pool<wbr>Resource<wbr>Id property: The Azure resource ID of the pool designated to host the cluster's read-write node."
+  syntax: "public String designatedPoolResourceId()"
+  desc: "Get the designatedPoolResourceId property: The Azure resource ID of the pool designated to host the cluster's read-write node. The pool is a child resource of this cluster. When a pool is created while the cluster currently has no pools, the service automatically sets this property to the new pool's resource ID, including when all pools that existed earlier in the cluster's lifetime were deleted. This property is absent when no pool is designated, such as after clearReadWritePool succeeds."
+  returns:
+    description: "the designatedPoolResourceId value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.horizondb.models.ReadWritePoolProperties.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.horizondb.models.ReadWritePoolProperties.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "ReadWritePoolProperties.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Read<wbr>Write<wbr>Pool<wbr>Properties from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static ReadWritePoolProperties fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the ReadWritePoolProperties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of ReadWritePoolProperties from the JsonReader."
+  returns:
+    description: "An instance of ReadWritePoolProperties if the JsonReader was pointing to an instance of it, or null if it\n was pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.horizondb.models.ReadWritePoolProperties?alt=com.azure.resourcemanager.horizondb.models.ReadWritePoolProperties&text=ReadWritePoolProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.horizondb.models.ReadWritePoolProperties.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.horizondb.models.ReadWritePoolProperties.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "ReadWritePoolProperties.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "The pool currently designated to host a HorizonDB cluster's read-write node. When a pool is created while the cluster currently has no pools, the service automatically designates the new pool as the read-write pool. This behavior also applies after all pools that existed earlier in the cluster's lifetime have been deleted."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.horizondb.models.ReadWritePoolProperties?alt=com.azure.resourcemanager.horizondb.models.ReadWritePoolProperties&text=ReadWritePoolProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.horizondb.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-horizondb:1.0.0-beta.3

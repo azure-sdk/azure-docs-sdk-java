@@ -55,7 +55,7 @@ methods:
   nameWithType: "SessionConfiguration.getIdleTimeoutSeconds()"
   summary: "Get the idle<wbr>Timeout<wbr>Seconds property: The idle duration, in seconds, before a session's sandbox is suspended."
   syntax: "public Duration getIdleTimeoutSeconds()"
-  desc: "Get the idleTimeoutSeconds property: The idle duration, in seconds, before a session's sandbox is suspended. Optional — when unset, the server default of 900 seconds is used. Must be between 120 and 3600 seconds (inclusive)."
+  desc: "Get the idleTimeoutSeconds property: The idle duration, in seconds, before a session's sandbox is suspended. When omitted, the server defaults to 900 seconds. Must be between 120 and 14400 seconds (4 hours)."
   returns:
     description: "the idleTimeoutSeconds value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
@@ -69,7 +69,7 @@ methods:
     name: "idleTimeoutSeconds"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
   syntax: "public SessionConfiguration setIdleTimeoutSeconds(Duration idleTimeoutSeconds)"
-  desc: "Set the idleTimeoutSeconds property: The idle duration, in seconds, before a session's sandbox is suspended. Optional — when unset, the server default of 900 seconds is used. Must be between 120 and 3600 seconds (inclusive)."
+  desc: "Set the idleTimeoutSeconds property: The idle duration, in seconds, before a session's sandbox is suspended. When omitted, the server defaults to 900 seconds. Must be between 120 and 14400 seconds (4 hours)."
   returns:
     description: "the SessionConfiguration object itself."
     type: "<xref href=\"com.azure.ai.agents.models.SessionConfiguration?alt=com.azure.ai.agents.models.SessionConfiguration&text=SessionConfiguration\" data-throw-if-not-resolved=\"False\" />"
@@ -91,4 +91,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.SessionConfiguration?alt=com.azure.ai.agents.models.SessionConfiguration&text=SessionConfiguration\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.ai.agents.models"
-artifact: com.azure:azure-ai-agents:2.7.0
+artifact: com.azure:azure-ai-agents:2.8.0
