@@ -1,7 +1,7 @@
 ---
 title: Azure Online Experimentation SDK for Java
 description: Reference for Azure Online Experimentation SDK for Java
-ms.date: 10/23/2026
+ms.date: 10/26/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: onlineexperimentation
