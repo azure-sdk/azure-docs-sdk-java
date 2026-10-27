@@ -1,7 +1,7 @@
 ---
 title: Azure Artifact Signing SDK for Java
 description: Reference for Azure Artifact Signing SDK for Java
-ms.date: 10/26/2026
+ms.date: 10/27/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: artifactsigning
