@@ -39,6 +39,30 @@ methods:
   overridden: "com.microsoft.cognitiveservices.speech.audio.AudioInputStream.close()"
   syntax: "public void close()"
   desc: "Closes the stream. Note: close() must be called in order to release underlying resources held by the object."
+- uid: "com.microsoft.cognitiveservices.speech.audio.PushAudioInputStream.commit()"
+  fullName: "com.microsoft.cognitiveservices.speech.audio.PushAudioInputStream.commit()"
+  name: "commit()"
+  nameWithType: "PushAudioInputStream.commit()"
+  summary: "Requests that the audio written so far be committed as a completed segment."
+  syntax: "public int commit()"
+  desc: "Requests that the audio written so far be committed as a completed segment. Non-blocking; returns immediately with a correlation token. The request is advisory. A token is issued as soon as the request is recorded, but there is no guarantee that it will be acknowledged: the service may not support inline commit, or the session may end first. Applications must tolerate a token that is never echoed."
+  returns:
+    description: "A token greater than 0 that can be matched against the commit token\n value on a subsequent Recognized event, or 0 if the call was rejected\n outright e.g. based on the SDK-local rate limit (at most one successful\n commit per 100 ms per push stream)."
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.microsoft.cognitiveservices.speech.audio.PushAudioInputStream.commit(int)"
+  fullName: "com.microsoft.cognitiveservices.speech.audio.PushAudioInputStream.commit(int channelId)"
+  name: "commit(int channelId)"
+  nameWithType: "PushAudioInputStream.commit(int channelId)"
+  summary: "Same as commit() but scoped to a single channel of a multichannel input."
+  parameters:
+  - description: "0-indexed channel identifier."
+    name: "channelId"
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public int commit(int channelId)"
+  desc: "Same as commit() but scoped to a single channel of a multichannel input. The service acknowledges the commit on the named channel only."
+  returns:
+    description: "A token greater than 0, or 0 if the call was rejected."
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.microsoft.cognitiveservices.speech.audio.PushAudioInputStream.create()"
   fullName: "com.microsoft.cognitiveservices.speech.audio.PushAudioInputStream.create()"
   name: "create()"
@@ -82,4 +106,4 @@ type: "class"
 desc: "Represents memory backed push audio input stream used for custom audio input configurations. Note: close() must be called in order to release underlying resources held by the object."
 metadata: {}
 package: "com.microsoft.cognitiveservices.speech.audio"
-artifact: com.microsoft.cognitiveservices.speech:client-sdk:1.51.0
+artifact: com.microsoft.cognitiveservices.speech:client-sdk:1.52.0

@@ -328,6 +328,17 @@ methods:
     type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
   syntax: "protected void dispose(boolean disposing)"
   desc: "This method performs cleanup of resources. The Boolean parameter disposing indicates whether the method is called from Dispose (if disposing is true) or from the finalizer (if disposing is false). Derived classes should override this method to dispose resource if needed."
+- uid: "com.microsoft.cognitiveservices.speech.SpeechRecognizer.enableLegacyDefaultDisconnectSilenceTimeout(boolean)"
+  fullName: "com.microsoft.cognitiveservices.speech.SpeechRecognizer.enableLegacyDefaultDisconnectSilenceTimeout(boolean enable)"
+  name: "enableLegacyDefaultDisconnectSilenceTimeout(boolean enable)"
+  nameWithType: "SpeechRecognizer.enableLegacyDefaultDisconnectSilenceTimeout(boolean enable)"
+  summary: "Enables (or disables) the SDK 1.51 (or older) default behavior for the initial and end (disconnect) silence timeouts during continuous recognition."
+  parameters:
+  - description: "true to omit unspecified IST and EST values; false to send 0 for unspecified IST and EST values."
+    name: "enable"
+    type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public void enableLegacyDefaultDisconnectSilenceTimeout(boolean enable)"
+  desc: "Enables (or disables) the SDK 1.51 (or older) default behavior for the initial and end (disconnect) silence timeouts during continuous recognition. When called with `enable` true, the SDK does not send the initial silence timeout (IST) or end silence timeout (EST) to the service when they are not explicitly configured, letting the service apply its own defaults. When called with `enable` false, the SDK sends a value of 0 to the service for each timeout that is not explicitly configured. Explicitly configured timeout values are always honored regardless of this flag, and this setting only affects continuous recognition (startContinuousRecognition); single-shot recognition (recognizeOnce) is unaffected. If this method is not called, the SDK behaves as if it were called with `enable` set to true."
 - uid: "com.microsoft.cognitiveservices.speech.SpeechRecognizer.getAuthorizationToken()"
   fullName: "com.microsoft.cognitiveservices.speech.SpeechRecognizer.getAuthorizationToken()"
   name: "getAuthorizationToken()"
@@ -447,4 +458,4 @@ type: "class"
 desc: "Performs speech recognition from microphone, file, or other audio input streams, and gets transcribed text as result. Note: close() must be called in order to release underlying resources held by the object."
 metadata: {}
 package: "com.microsoft.cognitiveservices.speech"
-artifact: com.microsoft.cognitiveservices.speech:client-sdk:1.51.0
+artifact: com.microsoft.cognitiveservices.speech:client-sdk:1.52.0
