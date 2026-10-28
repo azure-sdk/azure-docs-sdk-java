@@ -1,12 +1,12 @@
 ---
 title: Azure Core Vert.x HTTP plugin library for Java
 keywords: Azure, java, SDK, API, azure-core-http-vertx, core
-ms.date: 09/30/2026
+ms.date: 10/28/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: core
 ---
-# Azure Core Vert.x HTTP plugin library for Java - version 1.2.0 
+# Azure Core Vert.x HTTP plugin library for Java - version 1.3.0 
 
 
 Azure Core Vert.x HTTP client is a plugin for the `azure-core` HTTP client API.
@@ -19,10 +19,19 @@ Azure Core Vert.x HTTP client is a plugin for the `azure-core` HTTP client API.
   - Here are details about [Java 8 client compatibility with Azure Certificate Authority][java8_client_compatibility].
 
 ### Include the package
+
+By default, this transport uses Vert.x 4.5 and Netty 4.1 to support Java 8. It also supports Vert.x 5.0,
+5.1 (5.1.1 or later), and 5.2 on Java 11 or later when your application selects one of these Vert.x versions and its
+compatible transitive dependencies, including Netty 4.2.
+Vert.x 5.1.0 has an [upstream regression][vertx_connect_timeout_fix] that rejects disabled connection timeouts;
+use 5.1.1 or a later patch release in the 5.1 series instead.
+Keep Vert.x and Netty versions consistent across your application. Do not combine the default Vert.x 4.5/Netty 4.1
+dependencies with the Netty 4.2-based `azure-core-http-netty` library on the same classpath.
+
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-core-http-vertx_1.2.0/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-core-http-vertx_1.3.0/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -58,13 +67,17 @@ add the direct dependency to your project as follows.
   <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-core-http-vertx</artifactId>
-    <version>1.2.0</version>
+    <version>1.3.0</version>
   </dependency>
 </dependencies>
 ```
 [//]: # ({x-version-update-end})
 
 ## Key concepts
+
+An explicit request `Host` header overrides the HTTP authority without changing the connection destination specified
+by the request URL. With HTTP/1.1 it is sent as `Host`; with HTTP/2 its value is passed unchanged as `:authority`
+instead of sending a conflicting `Host` header. Requests without an explicit `Host` continue to use the URL's authority.
 
 ## Examples
 
@@ -133,7 +146,7 @@ locate the root issue. View the [logging][logging] wiki for guidance about enabl
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-core-http-vertx_1.2.0/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-core-http-vertx_1.3.0/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -145,6 +158,5 @@ For details on contributing to this repository, see the [contributing guide](htt
 [logging]: https://learn.microsoft.com/azure/developer/java/sdk/logging-overview
 [jdk_link]: https://learn.microsoft.com/java/azure/jdk/?view=azure-java-stable
 [java8_client_compatibility]: https://learn.microsoft.com/azure/security/fundamentals/azure-ca-details?tabs=root-and-subordinate-cas-list#client-compatibility-for-public-pkis
-
-
+[vertx_connect_timeout_fix]: https://github.com/eclipse-vertx/vert.x/commit/a1a103485300ab78468dfbbd7a961e19c5e4268a
 

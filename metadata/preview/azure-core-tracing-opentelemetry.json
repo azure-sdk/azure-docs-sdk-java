@@ -1,6 +1,6 @@
 {
   "Name": "azure-core-tracing-opentelemetry",
-  "Version": "1.0.0-beta.67",
+  "Version": "1.0.0-beta.68",
   "DevVersion": null,
   "DirectoryPath": "sdk/core/azure-core-tracing-opentelemetry",
   "ServiceDirectory": "core",
@@ -10,7 +10,7 @@
   "SdkType": "client",
   "IsNewSdk": true,
   "ArtifactName": "azure-core-tracing-opentelemetry",
-  "ReleaseStatus": "2026-09-29",
+  "ReleaseStatus": "2026-10-27",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": [
     "com.azure:azure-core-tracing-opentelemetry-samples",
@@ -21,33 +21,33 @@
     "safeName": "azurecoretracingopentelemetry",
     "groupId": "com.azure",
     "name": "azure-core-tracing-opentelemetry",
+    "releaseInBatch": "${{ parameters.release_azurecoretracingopentelemetry }}",
     "triggeringPaths": [
       "/sdk/core/ci.yml"
-    ],
-    "releaseInBatch": "${{ parameters.release_azurecoretracingopentelemetry }}"
+    ]
   },
   "CIParameters": {
     "CIMatrixConfigs": [
       {
-        "Selection": "sparse",
+        "Name": "Java_ci_test_base",
         "GenerateVMJobs": true,
         "Path": "eng/pipelines/templates/stages/platform-matrix.json",
-        "NonSparseParameters": "Agent",
-        "Name": "Java_ci_test_base"
+        "Selection": "sparse",
+        "NonSparseParameters": "Agent"
       },
       {
-        "Selection": "all",
+        "Name": "version_overrides_tests",
         "GenerateVMJobs": true,
         "Path": "sdk/core/version-overrides-matrix.json",
-        "PRBatching": false,
-        "Name": "version_overrides_tests"
+        "Selection": "all",
+        "PRBatching": false
       },
       {
-        "Selection": "all",
+        "Name": "version_overrides_vertx_tests",
         "GenerateVMJobs": true,
         "Path": "sdk/core/version-overrides-vertx-matrix.json",
-        "PRBatching": false,
-        "Name": "version_overrides_vertx_tests"
+        "Selection": "all",
+        "PRBatching": false
       }
     ]
   },

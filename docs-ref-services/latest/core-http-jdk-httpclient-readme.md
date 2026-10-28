@@ -1,12 +1,12 @@
 ---
 title: Azure Core JDK HTTP plugin library for Java
 keywords: Azure, java, SDK, API, azure-core-http-jdk-httpclient, core
-ms.date: 09/30/2026
+ms.date: 10/28/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: core
 ---
-# Azure Core JDK HTTP plugin library for Java - version 1.2.0 
+# Azure Core JDK HTTP plugin library for Java - version 1.3.0 
 
 
 This is an azure-core HTTP client that makes use of the asynchronous HttpClient that was made generally available as 
@@ -22,7 +22,7 @@ part of JDK 11.
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-core-http-jdk-httpclient_1.2.0/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-core-http-jdk-httpclient_1.3.0/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -57,12 +57,34 @@ add the direct dependency to your project as follows.
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-core-http-jdk-httpclient</artifactId>
-    <version>1.2.0</version>
+    <version>1.3.0</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
 
 ## Key concepts
+
+### Request host overrides
+
+The request URL determines the connection destination. By default, the SDK filters out the restricted `Host` header
+and logs a warning. To allow an explicit `Host` header, start the application JVM with:
+
+```text
+java -Djdk.httpclient.allowRestrictedHeaders=host -jar application.jar
+```
+
+If `jdk.httpclient.allowRestrictedHeaders` already lists other headers, add `host` to that comma-separated list.
+The JDK caches this setting, so it must be configured before the JDK HTTP client is initialized.
+
+The default SDK configuration reads this system property. If you supply a custom `Configuration` to
+`JdkHttpClientBuilder.configuration(...)`, include the same setting there so the SDK's header filter also permits `Host`.
+`Configuration.NONE` does not read system properties. Setting the property only in the builder's configuration does not
+enable the native JDK override.
+Requests without an explicit `Host` header continue to use the URL's authority.
+
+This setting affects all JDK HTTP clients in the JVM. The JDK documents it as a testing-oriented option; consult the
+[JDK HTTP client properties](https://docs.oracle.com/en/java/javase/25/docs/api/java.net.http/module-summary.html#jdk.httpclient.allowRestrictedHeaders)
+for its restrictions.
 
 ## Examples
 
@@ -112,7 +134,7 @@ locate the root issue. View the [logging][logging] wiki for guidance about enabl
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-core-http-jdk-httpclient_1.2.0/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-core-http-jdk-httpclient_1.3.0/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -123,6 +145,4 @@ For details on contributing to this repository, see the [contributing guide](htt
 <!-- links -->
 [logging]: https://learn.microsoft.com/azure/developer/java/sdk/logging-overview
 [jdk_link]: https://learn.microsoft.com/java/azure/jdk/?view=azure-java-stable
-
-
 

@@ -1,12 +1,12 @@
 ---
 title: Azure Core Netty HTTP plugin library for Java
 keywords: Azure, java, SDK, API, azure-core-http-netty, core
-ms.date: 09/30/2026
+ms.date: 10/28/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: core
 ---
-# Azure Core Netty HTTP plugin library for Java - version 1.16.8 
+# Azure Core Netty HTTP plugin library for Java - version 1.17.0 
 
 
 Azure Core Netty HTTP client is a plugin for the `azure-core` HTTP client API.
@@ -22,7 +22,7 @@ Azure Core Netty HTTP client is a plugin for the `azure-core` HTTP client API.
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-core-http-netty_1.16.8/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-core-http-netty_1.17.0/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -57,12 +57,53 @@ add the direct dependency to your project as follows.
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-core-http-netty</artifactId>
-    <version>1.16.8</version>
+    <version>1.17.0</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
 
 ## Key concepts
+
+### Netty 4.2 compatibility
+
+Starting with `1.17.0-beta.1`, this library uses Netty `4.2.19.Final`, Reactor Netty `1.3.7`, and Reactor `3.8.7`.
+Netty 4.1 and 4.2 must not be mixed on the classpath. If your application or framework manages these dependencies,
+align the entire Netty and Reactor stack when upgrading. Java 8 remains supported.
+
+Netty 4.2 enables TLS hostname verification by default and changes its default buffer allocator to the adaptive allocator.
+This library retains pooled allocation unless the application explicitly configures an allocator.
+See the [Netty 4.2 migration guide](https://netty.io/wiki/netty-4.2-migration-guide.html#recommended-upgrade-process)
+for application-level migration guidance.
+
+### Native transports on the module path
+
+On JDK 11 or later, Netty 4.2 packages the epoll/kqueue classes and their platform-specific JNI libraries
+as **separate explicit Java modules**. Having the JARs on the module path does not resolve either module
+automatically. A named-module application that wants native transport must include the matching
+`netty-transport-native-epoll` or `netty-transport-native-kqueue` classifier JAR (which brings in its
+`netty-transport-classes-*` JAR) and add **both** modules as launch roots:
+
+| Platform and classifier | Launch option |
+| --- | --- |
+| Linux x86_64 (`netty-transport-native-epoll:linux-x86_64`) | `--add-modules=io.netty.transport.classes.epoll,io.netty.transport.epoll.linux.x86_64` |
+| macOS x86_64 (`netty-transport-native-kqueue:osx-x86_64`) | `--add-modules=io.netty.transport.classes.kqueue,io.netty.transport.kqueue.osx.x86_64` |
+
+For example, with the Linux classifier JAR and its dependencies on the module path:
+
+```text
+java --module-path "path-to-application-and-dependency-JARs" --add-modules=io.netty.transport.classes.epoll,io.netty.transport.epoll.linux.x86_64 -m my.app/com.example.Main
+```
+
+This library declares the x86_64 classifier dependencies, but applications using another architecture
+must supply the corresponding native classifier and resolve its module instead. Check that JAR's
+module name with `jar --describe-module --file <native-JAR> --release 11`; see
+[Netty's native transport guide](https://netty.io/wiki/native-transports.html#using-the-native-transports)
+for classifier details. Resolving only the classes
+leaves the bundled JNI library invisible to Netty; `requires static` in a library descriptor does not
+resolve either optional module at run time. If native transport is unavailable, Reactor Netty uses
+JDK NIO. These launch options do not apply to Java 8 or to applications using the classpath rather
+than the module path, and resolving the modules alone does not guarantee native transport is usable
+on the current OS.
 
 ## Examples
 
@@ -217,7 +258,7 @@ locate the root issue. View the [logging][logging] wiki for guidance about enabl
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-core-http-netty_1.16.8/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-core-http-netty_1.17.0/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -229,6 +270,4 @@ For details on contributing to this repository, see the [contributing guide](htt
 [logging]: https://learn.microsoft.com/azure/developer/java/sdk/logging-overview
 [jdk_link]: https://learn.microsoft.com/java/azure/jdk/?view=azure-java-stable
 [java8_client_compatibility]: https://learn.microsoft.com/azure/security/fundamentals/azure-ca-details?tabs=root-and-subordinate-cas-list#client-compatibility-for-public-pkis
-
-
 
