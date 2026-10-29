@@ -71,12 +71,23 @@ methods:
     type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static OriginProperties fromJson(JsonReader jsonReader)"
   exceptions:
-  - description: "If an error occurs while reading the OriginProperties."
+  - description: "If the deserialized JSON object was missing any required properties."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   desc: "Reads an instance of OriginProperties from the JsonReader."
   returns:
     description: "An instance of OriginProperties if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
     type: "<xref href=\"com.azure.resourcemanager.cdn.fluent.models.OriginProperties?alt=com.azure.resourcemanager.cdn.fluent.models.OriginProperties&text=OriginProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cdn.fluent.models.OriginProperties.hostname()"
+  fullName: "com.azure.resourcemanager.cdn.fluent.models.OriginProperties.hostname()"
+  name: "hostname()"
+  nameWithType: "OriginProperties.hostname()"
+  summary: "Get the hostname property: The address of the origin."
+  overridden: "com.azure.resourcemanager.cdn.fluent.models.OriginUpdatePropertiesParameters.hostname()"
+  syntax: "public String hostname()"
+  desc: "Get the hostname property: The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint."
+  returns:
+    description: "the hostname value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.cdn.fluent.models.OriginProperties.privateEndpointStatus()"
   fullName: "com.azure.resourcemanager.cdn.fluent.models.OriginProperties.privateEndpointStatus()"
   name: "privateEndpointStatus()"
@@ -148,11 +159,13 @@ methods:
   summary: "Set the hostname property: The address of the origin."
   overridden: "com.azure.resourcemanager.cdn.fluent.models.OriginUpdatePropertiesParameters.withHostname(java.lang.String)"
   parameters:
-  - name: "hostname"
+  - description: "the hostname value to set."
+    name: "hostname"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public OriginProperties withHostname(String hostname)"
   desc: "Set the hostname property: The address of the origin. Domain names, IPv4 addresses, and IPv6 addresses are supported.This should be unique across all origins in an endpoint."
   returns:
+    description: "the OriginProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.cdn.fluent.models.OriginProperties?alt=com.azure.resourcemanager.cdn.fluent.models.OriginProperties&text=OriginProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cdn.fluent.models.OriginProperties.withHttpPort(java.lang.Integer)"
   fullName: "com.azure.resourcemanager.cdn.fluent.models.OriginProperties.withHttpPort(Integer httpPort)"
@@ -275,4 +288,4 @@ type: "class"
 desc: "The JSON object that contains the properties of the origin."
 metadata: {}
 package: "com.azure.resourcemanager.cdn.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-cdn:2.53.7
+artifact: com.azure.resourcemanager:azure-resourcemanager-cdn:2.54.0

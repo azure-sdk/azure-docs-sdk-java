@@ -14,7 +14,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Properties needed to check if cdn profile or classic frontdoor can be migrated."
@@ -33,7 +33,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Properties needed to check if cdn profile or classic frontdoor can be migrated."
@@ -55,7 +55,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Properties needed to check if cdn profile or classic frontdoor can be migrated."
@@ -66,6 +66,135 @@ methods:
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.PollerFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PollerFlux\"></xref> for polling of result for canMigrate operation."
     type: "<xref href=\"com.azure.core.util.polling.PollerFlux?alt=com.azure.core.util.polling.PollerFlux&text=PollerFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.fluent.models.CanMigrateResultInner?alt=com.azure.resourcemanager.cdn.fluent.models.CanMigrateResultInner&text=CanMigrateResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.cdn.fluent.models.CanMigrateResultInner?alt=com.azure.resourcemanager.cdn.fluent.models.CanMigrateResultInner&text=CanMigrateResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.beginCdnCanMigrateToAfd(java.lang.String,java.lang.String)"
+  fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.beginCdnCanMigrateToAfd(String resourceGroupName, String profileName)"
+  name: "beginCdnCanMigrateToAfd(String resourceGroupName, String profileName)"
+  nameWithType: "ProfilesClient.beginCdnCanMigrateToAfd(String resourceGroupName, String profileName)"
+  summary: "Checks if CDN profile can be migrated to Azure Frontdoor(Standard/Premium) profile."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
+    name: "profileName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract SyncPoller<PollResult<CanMigrateResultInner>,CanMigrateResultInner> beginCdnCanMigrateToAfd(String resourceGroupName, String profileName)"
+  desc: "Checks if CDN profile can be migrated to Azure Frontdoor(Standard/Premium) profile."
+  returns:
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of result for canMigrate operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.fluent.models.CanMigrateResultInner?alt=com.azure.resourcemanager.cdn.fluent.models.CanMigrateResultInner&text=CanMigrateResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.cdn.fluent.models.CanMigrateResultInner?alt=com.azure.resourcemanager.cdn.fluent.models.CanMigrateResultInner&text=CanMigrateResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.beginCdnCanMigrateToAfd(java.lang.String,java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.beginCdnCanMigrateToAfd(String resourceGroupName, String profileName, Context context)"
+  name: "beginCdnCanMigrateToAfd(String resourceGroupName, String profileName, Context context)"
+  nameWithType: "ProfilesClient.beginCdnCanMigrateToAfd(String resourceGroupName, String profileName, Context context)"
+  summary: "Checks if CDN profile can be migrated to Azure Frontdoor(Standard/Premium) profile."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
+    name: "profileName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract SyncPoller<PollResult<CanMigrateResultInner>,CanMigrateResultInner> beginCdnCanMigrateToAfd(String resourceGroupName, String profileName, Context context)"
+  desc: "Checks if CDN profile can be migrated to Azure Frontdoor(Standard/Premium) profile."
+  returns:
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of result for canMigrate operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.fluent.models.CanMigrateResultInner?alt=com.azure.resourcemanager.cdn.fluent.models.CanMigrateResultInner&text=CanMigrateResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.cdn.fluent.models.CanMigrateResultInner?alt=com.azure.resourcemanager.cdn.fluent.models.CanMigrateResultInner&text=CanMigrateResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.beginCdnCanMigrateToAfdAsync(java.lang.String,java.lang.String)"
+  fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.beginCdnCanMigrateToAfdAsync(String resourceGroupName, String profileName)"
+  name: "beginCdnCanMigrateToAfdAsync(String resourceGroupName, String profileName)"
+  nameWithType: "ProfilesClient.beginCdnCanMigrateToAfdAsync(String resourceGroupName, String profileName)"
+  summary: "Checks if CDN profile can be migrated to Azure Frontdoor(Standard/Premium) profile."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
+    name: "profileName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract PollerFlux<PollResult<CanMigrateResultInner>,CanMigrateResultInner> beginCdnCanMigrateToAfdAsync(String resourceGroupName, String profileName)"
+  desc: "Checks if CDN profile can be migrated to Azure Frontdoor(Standard/Premium) profile."
+  returns:
+    description: "the <xref uid=\"com.azure.core.util.polling.PollerFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PollerFlux\"></xref> for polling of result for canMigrate operation."
+    type: "<xref href=\"com.azure.core.util.polling.PollerFlux?alt=com.azure.core.util.polling.PollerFlux&text=PollerFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.fluent.models.CanMigrateResultInner?alt=com.azure.resourcemanager.cdn.fluent.models.CanMigrateResultInner&text=CanMigrateResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.cdn.fluent.models.CanMigrateResultInner?alt=com.azure.resourcemanager.cdn.fluent.models.CanMigrateResultInner&text=CanMigrateResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.beginCdnMigrateToAfd(java.lang.String,java.lang.String,com.azure.resourcemanager.cdn.models.CdnMigrationToAfdParameters)"
+  fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.beginCdnMigrateToAfd(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters)"
+  name: "beginCdnMigrateToAfd(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters)"
+  nameWithType: "ProfilesClient.beginCdnMigrateToAfd(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters)"
+  summary: "Migrate the CDN profile to Azure Frontdoor(Standard/Premium) profile."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
+    name: "profileName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Properties needed to migrate the profile."
+    name: "migrationParameters"
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.CdnMigrationToAfdParameters?alt=com.azure.resourcemanager.cdn.models.CdnMigrationToAfdParameters&text=CdnMigrationToAfdParameters\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract SyncPoller<PollResult<MigrateResultInner>,MigrateResultInner> beginCdnMigrateToAfd(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters)"
+  desc: "Migrate the CDN profile to Azure Frontdoor(Standard/Premium) profile. This step prepares the profile for migration and will be followed by Commit to finalize the migration."
+  returns:
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of result for migrate operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.fluent.models.MigrateResultInner?alt=com.azure.resourcemanager.cdn.fluent.models.MigrateResultInner&text=MigrateResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.cdn.fluent.models.MigrateResultInner?alt=com.azure.resourcemanager.cdn.fluent.models.MigrateResultInner&text=MigrateResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.beginCdnMigrateToAfd(java.lang.String,java.lang.String,com.azure.resourcemanager.cdn.models.CdnMigrationToAfdParameters,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.beginCdnMigrateToAfd(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters, Context context)"
+  name: "beginCdnMigrateToAfd(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters, Context context)"
+  nameWithType: "ProfilesClient.beginCdnMigrateToAfd(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters, Context context)"
+  summary: "Migrate the CDN profile to Azure Frontdoor(Standard/Premium) profile."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
+    name: "profileName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Properties needed to migrate the profile."
+    name: "migrationParameters"
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.CdnMigrationToAfdParameters?alt=com.azure.resourcemanager.cdn.models.CdnMigrationToAfdParameters&text=CdnMigrationToAfdParameters\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract SyncPoller<PollResult<MigrateResultInner>,MigrateResultInner> beginCdnMigrateToAfd(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters, Context context)"
+  desc: "Migrate the CDN profile to Azure Frontdoor(Standard/Premium) profile. This step prepares the profile for migration and will be followed by Commit to finalize the migration."
+  returns:
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of result for migrate operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.fluent.models.MigrateResultInner?alt=com.azure.resourcemanager.cdn.fluent.models.MigrateResultInner&text=MigrateResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.cdn.fluent.models.MigrateResultInner?alt=com.azure.resourcemanager.cdn.fluent.models.MigrateResultInner&text=MigrateResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.beginCdnMigrateToAfdAsync(java.lang.String,java.lang.String,com.azure.resourcemanager.cdn.models.CdnMigrationToAfdParameters)"
+  fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.beginCdnMigrateToAfdAsync(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters)"
+  name: "beginCdnMigrateToAfdAsync(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters)"
+  nameWithType: "ProfilesClient.beginCdnMigrateToAfdAsync(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters)"
+  summary: "Migrate the CDN profile to Azure Frontdoor(Standard/Premium) profile."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
+    name: "profileName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Properties needed to migrate the profile."
+    name: "migrationParameters"
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.CdnMigrationToAfdParameters?alt=com.azure.resourcemanager.cdn.models.CdnMigrationToAfdParameters&text=CdnMigrationToAfdParameters\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract PollerFlux<PollResult<MigrateResultInner>,MigrateResultInner> beginCdnMigrateToAfdAsync(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters)"
+  desc: "Migrate the CDN profile to Azure Frontdoor(Standard/Premium) profile. This step prepares the profile for migration and will be followed by Commit to finalize the migration."
+  returns:
+    description: "the <xref uid=\"com.azure.core.util.polling.PollerFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PollerFlux\"></xref> for polling of result for migrate operation."
+    type: "<xref href=\"com.azure.core.util.polling.PollerFlux?alt=com.azure.core.util.polling.PollerFlux&text=PollerFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.fluent.models.MigrateResultInner?alt=com.azure.resourcemanager.cdn.fluent.models.MigrateResultInner&text=MigrateResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.cdn.fluent.models.MigrateResultInner?alt=com.azure.resourcemanager.cdn.fluent.models.MigrateResultInner&text=MigrateResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.beginCreate(java.lang.String,java.lang.String,com.azure.resourcemanager.cdn.fluent.models.ProfileInner)"
   fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.beginCreate(String resourceGroupName, String profileName, ProfileInner profile)"
   name: "beginCreate(String resourceGroupName, String profileName, ProfileInner profile)"
@@ -74,7 +203,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -96,7 +225,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -121,7 +250,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -143,7 +272,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -162,7 +291,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -184,7 +313,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -203,7 +332,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Properties needed to migrate the profile."
@@ -222,7 +351,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Properties needed to migrate the profile."
@@ -244,7 +373,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Properties needed to migrate the profile."
@@ -255,6 +384,66 @@ methods:
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.PollerFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PollerFlux\"></xref> for polling of result for migrate operation."
     type: "<xref href=\"com.azure.core.util.polling.PollerFlux?alt=com.azure.core.util.polling.PollerFlux&text=PollerFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.fluent.models.MigrateResultInner?alt=com.azure.resourcemanager.cdn.fluent.models.MigrateResultInner&text=MigrateResultInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.cdn.fluent.models.MigrateResultInner?alt=com.azure.resourcemanager.cdn.fluent.models.MigrateResultInner&text=MigrateResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.beginMigrationAbort(java.lang.String,java.lang.String)"
+  fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.beginMigrationAbort(String resourceGroupName, String profileName)"
+  name: "beginMigrationAbort(String resourceGroupName, String profileName)"
+  nameWithType: "ProfilesClient.beginMigrationAbort(String resourceGroupName, String profileName)"
+  summary: "Abort the migration to Azure Frontdoor Premium/Standard."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
+    name: "profileName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginMigrationAbort(String resourceGroupName, String profileName)"
+  desc: "Abort the migration to Azure Frontdoor Premium/Standard."
+  returns:
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+- uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.beginMigrationAbort(java.lang.String,java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.beginMigrationAbort(String resourceGroupName, String profileName, Context context)"
+  name: "beginMigrationAbort(String resourceGroupName, String profileName, Context context)"
+  nameWithType: "ProfilesClient.beginMigrationAbort(String resourceGroupName, String profileName, Context context)"
+  summary: "Abort the migration to Azure Frontdoor Premium/Standard."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
+    name: "profileName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginMigrationAbort(String resourceGroupName, String profileName, Context context)"
+  desc: "Abort the migration to Azure Frontdoor Premium/Standard."
+  returns:
+    description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+- uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.beginMigrationAbortAsync(java.lang.String,java.lang.String)"
+  fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.beginMigrationAbortAsync(String resourceGroupName, String profileName)"
+  name: "beginMigrationAbortAsync(String resourceGroupName, String profileName)"
+  nameWithType: "ProfilesClient.beginMigrationAbortAsync(String resourceGroupName, String profileName)"
+  summary: "Abort the migration to Azure Frontdoor Premium/Standard."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
+    name: "profileName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract PollerFlux<PollResult<Void>,Void> beginMigrationAbortAsync(String resourceGroupName, String profileName)"
+  desc: "Abort the migration to Azure Frontdoor Premium/Standard."
+  returns:
+    description: "the <xref uid=\"com.azure.core.util.polling.PollerFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PollerFlux\"></xref> for polling of long-running operation."
+    type: "<xref href=\"com.azure.core.util.polling.PollerFlux?alt=com.azure.core.util.polling.PollerFlux&text=PollerFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.beginMigrationCommit(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.beginMigrationCommit(String resourceGroupName, String profileName)"
   name: "beginMigrationCommit(String resourceGroupName, String profileName)"
@@ -263,10 +452,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Name of the CDN profile which is unique within the resource group."
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
     name: "profileName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginMigrationCommit(String resourceGroupName, String profileName)"
@@ -282,10 +471,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Name of the CDN profile which is unique within the resource group."
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
     name: "profileName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
@@ -304,10 +493,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Name of the CDN profile which is unique within the resource group."
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
     name: "profileName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PollerFlux<PollResult<Void>,Void> beginMigrationCommitAsync(String resourceGroupName, String profileName)"
@@ -323,7 +512,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -345,7 +534,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -370,7 +559,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -392,7 +581,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Properties needed to check if cdn profile or classic frontdoor can be migrated."
@@ -411,7 +600,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Properties needed to check if cdn profile or classic frontdoor can be migrated."
@@ -433,7 +622,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Properties needed to check if cdn profile or classic frontdoor can be migrated."
@@ -452,7 +641,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Properties needed to check if cdn profile or classic frontdoor can be migrated."
@@ -463,6 +652,176 @@ methods:
   returns:
     description: "result for canMigrate operation along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;&gt;"
+- uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.cdnCanMigrateToAfd(java.lang.String,java.lang.String)"
+  fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.cdnCanMigrateToAfd(String resourceGroupName, String profileName)"
+  name: "cdnCanMigrateToAfd(String resourceGroupName, String profileName)"
+  nameWithType: "ProfilesClient.cdnCanMigrateToAfd(String resourceGroupName, String profileName)"
+  summary: "Checks if CDN profile can be migrated to Azure Frontdoor(Standard/Premium) profile."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
+    name: "profileName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract CanMigrateResultInner cdnCanMigrateToAfd(String resourceGroupName, String profileName)"
+  desc: "Checks if CDN profile can be migrated to Azure Frontdoor(Standard/Premium) profile."
+  returns:
+    description: "result for canMigrate operation."
+    type: "<xref href=\"com.azure.resourcemanager.cdn.fluent.models.CanMigrateResultInner?alt=com.azure.resourcemanager.cdn.fluent.models.CanMigrateResultInner&text=CanMigrateResultInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.cdnCanMigrateToAfd(java.lang.String,java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.cdnCanMigrateToAfd(String resourceGroupName, String profileName, Context context)"
+  name: "cdnCanMigrateToAfd(String resourceGroupName, String profileName, Context context)"
+  nameWithType: "ProfilesClient.cdnCanMigrateToAfd(String resourceGroupName, String profileName, Context context)"
+  summary: "Checks if CDN profile can be migrated to Azure Frontdoor(Standard/Premium) profile."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
+    name: "profileName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract CanMigrateResultInner cdnCanMigrateToAfd(String resourceGroupName, String profileName, Context context)"
+  desc: "Checks if CDN profile can be migrated to Azure Frontdoor(Standard/Premium) profile."
+  returns:
+    description: "result for canMigrate operation."
+    type: "<xref href=\"com.azure.resourcemanager.cdn.fluent.models.CanMigrateResultInner?alt=com.azure.resourcemanager.cdn.fluent.models.CanMigrateResultInner&text=CanMigrateResultInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.cdnCanMigrateToAfdAsync(java.lang.String,java.lang.String)"
+  fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.cdnCanMigrateToAfdAsync(String resourceGroupName, String profileName)"
+  name: "cdnCanMigrateToAfdAsync(String resourceGroupName, String profileName)"
+  nameWithType: "ProfilesClient.cdnCanMigrateToAfdAsync(String resourceGroupName, String profileName)"
+  summary: "Checks if CDN profile can be migrated to Azure Frontdoor(Standard/Premium) profile."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
+    name: "profileName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract Mono<CanMigrateResultInner> cdnCanMigrateToAfdAsync(String resourceGroupName, String profileName)"
+  desc: "Checks if CDN profile can be migrated to Azure Frontdoor(Standard/Premium) profile."
+  returns:
+    description: "result for canMigrate operation on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.fluent.models.CanMigrateResultInner?alt=com.azure.resourcemanager.cdn.fluent.models.CanMigrateResultInner&text=CanMigrateResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.cdnCanMigrateToAfdWithResponseAsync(java.lang.String,java.lang.String)"
+  fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.cdnCanMigrateToAfdWithResponseAsync(String resourceGroupName, String profileName)"
+  name: "cdnCanMigrateToAfdWithResponseAsync(String resourceGroupName, String profileName)"
+  nameWithType: "ProfilesClient.cdnCanMigrateToAfdWithResponseAsync(String resourceGroupName, String profileName)"
+  summary: "Checks if CDN profile can be migrated to Azure Frontdoor(Standard/Premium) profile."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
+    name: "profileName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract Mono<Response<Flux<ByteBuffer>>> cdnCanMigrateToAfdWithResponseAsync(String resourceGroupName, String profileName)"
+  desc: "Checks if CDN profile can be migrated to Azure Frontdoor(Standard/Premium) profile."
+  returns:
+    description: "result for canMigrate operation along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;&gt;"
+- uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.cdnMigrateToAfd(java.lang.String,java.lang.String,com.azure.resourcemanager.cdn.models.CdnMigrationToAfdParameters)"
+  fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.cdnMigrateToAfd(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters)"
+  name: "cdnMigrateToAfd(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters)"
+  nameWithType: "ProfilesClient.cdnMigrateToAfd(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters)"
+  summary: "Migrate the CDN profile to Azure Frontdoor(Standard/Premium) profile."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
+    name: "profileName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Properties needed to migrate the profile."
+    name: "migrationParameters"
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.CdnMigrationToAfdParameters?alt=com.azure.resourcemanager.cdn.models.CdnMigrationToAfdParameters&text=CdnMigrationToAfdParameters\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract MigrateResultInner cdnMigrateToAfd(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters)"
+  desc: "Migrate the CDN profile to Azure Frontdoor(Standard/Premium) profile. This step prepares the profile for migration and will be followed by Commit to finalize the migration."
+  returns:
+    description: "result for migrate operation."
+    type: "<xref href=\"com.azure.resourcemanager.cdn.fluent.models.MigrateResultInner?alt=com.azure.resourcemanager.cdn.fluent.models.MigrateResultInner&text=MigrateResultInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.cdnMigrateToAfd(java.lang.String,java.lang.String,com.azure.resourcemanager.cdn.models.CdnMigrationToAfdParameters,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.cdnMigrateToAfd(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters, Context context)"
+  name: "cdnMigrateToAfd(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters, Context context)"
+  nameWithType: "ProfilesClient.cdnMigrateToAfd(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters, Context context)"
+  summary: "Migrate the CDN profile to Azure Frontdoor(Standard/Premium) profile."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
+    name: "profileName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Properties needed to migrate the profile."
+    name: "migrationParameters"
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.CdnMigrationToAfdParameters?alt=com.azure.resourcemanager.cdn.models.CdnMigrationToAfdParameters&text=CdnMigrationToAfdParameters\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract MigrateResultInner cdnMigrateToAfd(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters, Context context)"
+  desc: "Migrate the CDN profile to Azure Frontdoor(Standard/Premium) profile. This step prepares the profile for migration and will be followed by Commit to finalize the migration."
+  returns:
+    description: "result for migrate operation."
+    type: "<xref href=\"com.azure.resourcemanager.cdn.fluent.models.MigrateResultInner?alt=com.azure.resourcemanager.cdn.fluent.models.MigrateResultInner&text=MigrateResultInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.cdnMigrateToAfdAsync(java.lang.String,java.lang.String,com.azure.resourcemanager.cdn.models.CdnMigrationToAfdParameters)"
+  fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.cdnMigrateToAfdAsync(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters)"
+  name: "cdnMigrateToAfdAsync(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters)"
+  nameWithType: "ProfilesClient.cdnMigrateToAfdAsync(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters)"
+  summary: "Migrate the CDN profile to Azure Frontdoor(Standard/Premium) profile."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
+    name: "profileName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Properties needed to migrate the profile."
+    name: "migrationParameters"
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.CdnMigrationToAfdParameters?alt=com.azure.resourcemanager.cdn.models.CdnMigrationToAfdParameters&text=CdnMigrationToAfdParameters\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Mono<MigrateResultInner> cdnMigrateToAfdAsync(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters)"
+  desc: "Migrate the CDN profile to Azure Frontdoor(Standard/Premium) profile. This step prepares the profile for migration and will be followed by Commit to finalize the migration."
+  returns:
+    description: "result for migrate operation on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.fluent.models.MigrateResultInner?alt=com.azure.resourcemanager.cdn.fluent.models.MigrateResultInner&text=MigrateResultInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.cdnMigrateToAfdWithResponseAsync(java.lang.String,java.lang.String,com.azure.resourcemanager.cdn.models.CdnMigrationToAfdParameters)"
+  fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.cdnMigrateToAfdWithResponseAsync(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters)"
+  name: "cdnMigrateToAfdWithResponseAsync(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters)"
+  nameWithType: "ProfilesClient.cdnMigrateToAfdWithResponseAsync(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters)"
+  summary: "Migrate the CDN profile to Azure Frontdoor(Standard/Premium) profile."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
+    name: "profileName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Properties needed to migrate the profile."
+    name: "migrationParameters"
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.CdnMigrationToAfdParameters?alt=com.azure.resourcemanager.cdn.models.CdnMigrationToAfdParameters&text=CdnMigrationToAfdParameters\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Mono<Response<Flux<ByteBuffer>>> cdnMigrateToAfdWithResponseAsync(String resourceGroupName, String profileName, CdnMigrationToAfdParameters migrationParameters)"
+  desc: "Migrate the CDN profile to Azure Frontdoor(Standard/Premium) profile. This step prepares the profile for migration and will be followed by Commit to finalize the migration."
+  returns:
+    description: "result for migrate operation along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;&gt;"
 - uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.create(java.lang.String,java.lang.String,com.azure.resourcemanager.cdn.fluent.models.ProfileInner)"
   fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.create(String resourceGroupName, String profileName, ProfileInner profile)"
   name: "create(String resourceGroupName, String profileName, ProfileInner profile)"
@@ -471,7 +830,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -493,7 +852,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -518,7 +877,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -540,7 +899,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -562,7 +921,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -578,7 +937,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -597,7 +956,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -616,7 +975,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -635,10 +994,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Name of the CDN profile which is unique within the resource group."
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
     name: "profileName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract SsoUriInner generateSsoUri(String resourceGroupName, String profileName)"
@@ -654,10 +1013,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Name of the CDN profile which is unique within the resource group."
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
     name: "profileName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract Mono<SsoUriInner> generateSsoUriAsync(String resourceGroupName, String profileName)"
@@ -673,10 +1032,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Name of the CDN profile which is unique within the resource group."
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
     name: "profileName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
@@ -695,10 +1054,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Name of the CDN profile which is unique within the resource group."
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
     name: "profileName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract Mono<Response<SsoUriInner>> generateSsoUriWithResponseAsync(String resourceGroupName, String profileName)"
@@ -714,7 +1073,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -733,7 +1092,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -752,7 +1111,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -774,7 +1133,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -795,7 +1154,7 @@ methods:
   syntax: "public abstract PagedIterable<ProfileInner> list()"
   desc: "Lists all of the Azure Front Door Standard, Azure Front Door Premium, and CDN profiles within an Azure subscription."
   returns:
-    description: "result of the request to list profiles as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the response of a Profile list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.fluent.models.ProfileInner?alt=com.azure.resourcemanager.cdn.fluent.models.ProfileInner&text=ProfileInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.list(com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.list(Context context)"
@@ -811,7 +1170,7 @@ methods:
   syntax: "public abstract PagedIterable<ProfileInner> list(Context context)"
   desc: "Lists all of the Azure Front Door Standard, Azure Front Door Premium, and CDN profiles within an Azure subscription."
   returns:
-    description: "result of the request to list profiles as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the response of a Profile list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.fluent.models.ProfileInner?alt=com.azure.resourcemanager.cdn.fluent.models.ProfileInner&text=ProfileInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.listAsync()"
   fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.listAsync()"
@@ -823,7 +1182,7 @@ methods:
   syntax: "public abstract PagedFlux<ProfileInner> listAsync()"
   desc: "Lists all of the Azure Front Door Standard, Azure Front Door Premium, and CDN profiles within an Azure subscription."
   returns:
-    description: "result of the request to list profiles as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
+    description: "the response of a Profile list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.fluent.models.ProfileInner?alt=com.azure.resourcemanager.cdn.fluent.models.ProfileInner&text=ProfileInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.listByResourceGroup(java.lang.String)"
   fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.listByResourceGroup(String resourceGroupName)"
@@ -833,13 +1192,13 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<ProfileInner> listByResourceGroup(String resourceGroupName)"
   desc: "Lists all of the Azure Front Door Standard, Azure Front Door Premium, and CDN profiles within a resource group."
   returns:
-    description: "result of the request to list profiles as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the response of a Profile list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.fluent.models.ProfileInner?alt=com.azure.resourcemanager.cdn.fluent.models.ProfileInner&text=ProfileInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.listByResourceGroup(java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.listByResourceGroup(String resourceGroupName, Context context)"
@@ -849,7 +1208,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
@@ -858,7 +1217,7 @@ methods:
   syntax: "public abstract PagedIterable<ProfileInner> listByResourceGroup(String resourceGroupName, Context context)"
   desc: "Lists all of the Azure Front Door Standard, Azure Front Door Premium, and CDN profiles within a resource group."
   returns:
-    description: "result of the request to list profiles as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the response of a Profile list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.fluent.models.ProfileInner?alt=com.azure.resourcemanager.cdn.fluent.models.ProfileInner&text=ProfileInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.listByResourceGroupAsync(java.lang.String)"
   fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.listByResourceGroupAsync(String resourceGroupName)"
@@ -868,13 +1227,13 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedFlux<ProfileInner> listByResourceGroupAsync(String resourceGroupName)"
   desc: "Lists all of the Azure Front Door Standard, Azure Front Door Premium, and CDN profiles within a resource group."
   returns:
-    description: "result of the request to list profiles as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
+    description: "the response of a Profile list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.fluent.models.ProfileInner?alt=com.azure.resourcemanager.cdn.fluent.models.ProfileInner&text=ProfileInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.listResourceUsage(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.listResourceUsage(String resourceGroupName, String profileName)"
@@ -884,7 +1243,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -903,7 +1262,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -925,7 +1284,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -944,7 +1303,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -963,7 +1322,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -982,7 +1341,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -1004,7 +1363,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -1023,7 +1382,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Properties needed to migrate the profile."
@@ -1042,7 +1401,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Properties needed to migrate the profile."
@@ -1064,7 +1423,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Properties needed to migrate the profile."
@@ -1083,7 +1442,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Properties needed to migrate the profile."
@@ -1094,6 +1453,79 @@ methods:
   returns:
     description: "result for migrate operation along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;&gt;"
+- uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.migrationAbort(java.lang.String,java.lang.String)"
+  fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.migrationAbort(String resourceGroupName, String profileName)"
+  name: "migrationAbort(String resourceGroupName, String profileName)"
+  nameWithType: "ProfilesClient.migrationAbort(String resourceGroupName, String profileName)"
+  summary: "Abort the migration to Azure Frontdoor Premium/Standard."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
+    name: "profileName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract void migrationAbort(String resourceGroupName, String profileName)"
+  desc: "Abort the migration to Azure Frontdoor Premium/Standard."
+- uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.migrationAbort(java.lang.String,java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.migrationAbort(String resourceGroupName, String profileName, Context context)"
+  name: "migrationAbort(String resourceGroupName, String profileName, Context context)"
+  nameWithType: "ProfilesClient.migrationAbort(String resourceGroupName, String profileName, Context context)"
+  summary: "Abort the migration to Azure Frontdoor Premium/Standard."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
+    name: "profileName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract void migrationAbort(String resourceGroupName, String profileName, Context context)"
+  desc: "Abort the migration to Azure Frontdoor Premium/Standard."
+- uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.migrationAbortAsync(java.lang.String,java.lang.String)"
+  fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.migrationAbortAsync(String resourceGroupName, String profileName)"
+  name: "migrationAbortAsync(String resourceGroupName, String profileName)"
+  nameWithType: "ProfilesClient.migrationAbortAsync(String resourceGroupName, String profileName)"
+  summary: "Abort the migration to Azure Frontdoor Premium/Standard."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
+    name: "profileName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract Mono<Void> migrationAbortAsync(String resourceGroupName, String profileName)"
+  desc: "Abort the migration to Azure Frontdoor Premium/Standard."
+  returns:
+    description: "A <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref> that completes when a successful response is received."
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+- uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.migrationAbortWithResponseAsync(java.lang.String,java.lang.String)"
+  fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.migrationAbortWithResponseAsync(String resourceGroupName, String profileName)"
+  name: "migrationAbortWithResponseAsync(String resourceGroupName, String profileName)"
+  nameWithType: "ProfilesClient.migrationAbortWithResponseAsync(String resourceGroupName, String profileName)"
+  summary: "Abort the migration to Azure Frontdoor Premium/Standard."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The name of the resource group. The name is case insensitive."
+    name: "resourceGroupName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
+    name: "profileName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract Mono<Response<Flux<ByteBuffer>>> migrationAbortWithResponseAsync(String resourceGroupName, String profileName)"
+  desc: "Abort the migration to Azure Frontdoor Premium/Standard."
+  returns:
+    description: "the <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;&gt;"
 - uid: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.migrationCommit(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.cdn.fluent.ProfilesClient.migrationCommit(String resourceGroupName, String profileName)"
   name: "migrationCommit(String resourceGroupName, String profileName)"
@@ -1102,10 +1534,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Name of the CDN profile which is unique within the resource group."
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
     name: "profileName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract void migrationCommit(String resourceGroupName, String profileName)"
@@ -1118,10 +1550,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Name of the CDN profile which is unique within the resource group."
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
     name: "profileName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
@@ -1137,10 +1569,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Name of the CDN profile which is unique within the resource group."
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
     name: "profileName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract Mono<Void> migrationCommitAsync(String resourceGroupName, String profileName)"
@@ -1156,10 +1588,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Name of the CDN profile which is unique within the resource group."
+  - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
     name: "profileName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract Mono<Response<Flux<ByteBuffer>>> migrationCommitWithResponseAsync(String resourceGroupName, String profileName)"
@@ -1175,7 +1607,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -1197,7 +1629,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -1222,7 +1654,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -1244,7 +1676,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the Resource group within the Azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Name of the Azure Front Door Standard or Azure Front Door Premium or CDN profile which is\n unique within the resource group."
@@ -1266,4 +1698,4 @@ implements:
 - "<xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsListing?alt=com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsListing&text=InnerSupportsListing\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.fluent.models.ProfileInner?alt=com.azure.resourcemanager.cdn.fluent.models.ProfileInner&text=ProfileInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.cdn.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-cdn:2.53.7
+artifact: com.azure.resourcemanager:azure-resourcemanager-cdn:2.54.0

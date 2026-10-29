@@ -1,0 +1,100 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.cdn.models.Rule"
+fullName: "com.azure.resourcemanager.cdn.models.Rule"
+name: "Rule"
+nameWithType: "Rule"
+summary: "An immutable client-side representation of an Azure Front Door (AFD) rule that lives under a <xref uid=\"com.azure.resourcemanager.cdn.models.RuleSet\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RuleSet\"></xref>."
+syntax: "public interface **Rule**</br> extends <xref href=\"com.azure.resourcemanager.resources.fluentcore.arm.models.ExternalChildResource?alt=com.azure.resourcemanager.resources.fluentcore.arm.models.ExternalChildResource&text=ExternalChildResource\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.models.Rule?alt=com.azure.resourcemanager.cdn.models.Rule&text=Rule\" data-throw-if-not-resolved=\"False\" />,<xref href=\"com.azure.resourcemanager.cdn.models.RuleSet?alt=com.azure.resourcemanager.cdn.models.RuleSet&text=RuleSet\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.azure.resourcemanager.resources.fluentcore.model.HasInnerModel?alt=com.azure.resourcemanager.resources.fluentcore.model.HasInnerModel&text=HasInnerModel\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.fluent.models.RuleInner?alt=com.azure.resourcemanager.cdn.fluent.models.RuleInner&text=RuleInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.azure.resourcemanager.cdn.models.Rule.actions()"
+  fullName: "com.azure.resourcemanager.cdn.models.Rule.actions()"
+  name: "actions()"
+  nameWithType: "Rule.actions()"
+  summary: "Gets the list of actions that are executed when all the conditions of a rule are satisfied."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract List<DeliveryRuleAction> actions()"
+  desc: "Gets the list of actions that are executed when all the conditions of a rule are satisfied."
+  returns:
+    description: "the actions"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cdn.models.DeliveryRuleAction?alt=com.azure.resourcemanager.cdn.models.DeliveryRuleAction&text=DeliveryRuleAction\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cdn.models.Rule.conditions()"
+  fullName: "com.azure.resourcemanager.cdn.models.Rule.conditions()"
+  name: "conditions()"
+  nameWithType: "Rule.conditions()"
+  summary: "Gets the list of conditions that must be matched for the actions to be executed."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract List<DeliveryRuleCondition> conditions()"
+  desc: "Gets the list of conditions that must be matched for the actions to be executed."
+  returns:
+    description: "the conditions"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cdn.models.DeliveryRuleCondition?alt=com.azure.resourcemanager.cdn.models.DeliveryRuleCondition&text=DeliveryRuleCondition\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cdn.models.Rule.deploymentStatus()"
+  fullName: "com.azure.resourcemanager.cdn.models.Rule.deploymentStatus()"
+  name: "deploymentStatus()"
+  nameWithType: "Rule.deploymentStatus()"
+  summary: "Gets the deployment status for the rule."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract DeploymentStatus deploymentStatus()"
+  desc: "Gets the deployment status for the rule."
+  returns:
+    description: "the deployment status"
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.DeploymentStatus?alt=com.azure.resourcemanager.cdn.models.DeploymentStatus&text=DeploymentStatus\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cdn.models.Rule.matchProcessingBehavior()"
+  fullName: "com.azure.resourcemanager.cdn.models.Rule.matchProcessingBehavior()"
+  name: "matchProcessingBehavior()"
+  nameWithType: "Rule.matchProcessingBehavior()"
+  summary: "Gets whether the rules engine should continue running the remaining rules or stop after this rule is matched."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract MatchProcessingBehavior matchProcessingBehavior()"
+  desc: "Gets whether the rules engine should continue running the remaining rules or stop after this rule is matched."
+  returns:
+    description: "the match processing behavior"
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.MatchProcessingBehavior?alt=com.azure.resourcemanager.cdn.models.MatchProcessingBehavior&text=MatchProcessingBehavior\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cdn.models.Rule.order()"
+  fullName: "com.azure.resourcemanager.cdn.models.Rule.order()"
+  name: "order()"
+  nameWithType: "Rule.order()"
+  summary: "Gets the order in which the rule is applied for the endpoint."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Integer order()"
+  desc: "Gets the order in which the rule is applied for the endpoint."
+  returns:
+    description: "the order"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+- uid: "com.azure.resourcemanager.cdn.models.Rule.provisioningState()"
+  fullName: "com.azure.resourcemanager.cdn.models.Rule.provisioningState()"
+  name: "provisioningState()"
+  nameWithType: "Rule.provisioningState()"
+  summary: "Gets the provisioning state reported by the service."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract AfdProvisioningState provisioningState()"
+  desc: "Gets the provisioning state reported by the service."
+  returns:
+    description: "the provisioning state"
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.AfdProvisioningState?alt=com.azure.resourcemanager.cdn.models.AfdProvisioningState&text=AfdProvisioningState\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cdn.models.Rule.ruleSetName()"
+  fullName: "com.azure.resourcemanager.cdn.models.Rule.ruleSetName()"
+  name: "ruleSetName()"
+  nameWithType: "Rule.ruleSetName()"
+  summary: "Gets the name of the rule set containing this rule."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String ruleSetName()"
+  desc: "Gets the name of the rule set containing this rule."
+  returns:
+    description: "the rule set name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+type: "interface"
+desc: "An immutable client-side representation of an Azure Front Door (AFD) rule that lives under a <xref uid=\"com.azure.resourcemanager.cdn.models.RuleSet\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RuleSet\"></xref>."
+implements:
+- "<xref href=\"com.azure.resourcemanager.resources.fluentcore.arm.models.ExternalChildResource?alt=com.azure.resourcemanager.resources.fluentcore.arm.models.ExternalChildResource&text=ExternalChildResource\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.models.Rule?alt=com.azure.resourcemanager.cdn.models.Rule&text=Rule\" data-throw-if-not-resolved=\"False\" />,<xref href=\"com.azure.resourcemanager.cdn.models.RuleSet?alt=com.azure.resourcemanager.cdn.models.RuleSet&text=RuleSet\" data-throw-if-not-resolved=\"False\" />&gt;"
+- "<xref href=\"com.azure.resourcemanager.resources.fluentcore.model.HasInnerModel?alt=com.azure.resourcemanager.resources.fluentcore.model.HasInnerModel&text=HasInnerModel\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.fluent.models.RuleInner?alt=com.azure.resourcemanager.cdn.fluent.models.RuleInner&text=RuleInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.cdn.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-cdn:2.54.0

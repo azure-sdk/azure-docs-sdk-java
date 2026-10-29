@@ -6,6 +6,18 @@ nameWithType: "CdnProfile"
 summary: "An immutable client-side representation of an Azure CDN profile."
 syntax: "public interface **CdnProfile**</br> extends <xref href=\"com.azure.resourcemanager.resources.fluentcore.arm.models.GroupableResource?alt=com.azure.resourcemanager.resources.fluentcore.arm.models.GroupableResource&text=GroupableResource\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.CdnManager?alt=com.azure.resourcemanager.cdn.CdnManager&text=CdnManager\" data-throw-if-not-resolved=\"False\" />,<xref href=\"com.azure.resourcemanager.cdn.fluent.models.ProfileInner?alt=com.azure.resourcemanager.cdn.fluent.models.ProfileInner&text=ProfileInner\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.azure.resourcemanager.resources.fluentcore.model.Refreshable?alt=com.azure.resourcemanager.resources.fluentcore.model.Refreshable&text=Refreshable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.models.CdnProfile?alt=com.azure.resourcemanager.cdn.models.CdnProfile&text=CdnProfile\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.azure.resourcemanager.resources.fluentcore.model.Updatable?alt=com.azure.resourcemanager.resources.fluentcore.model.Updatable&text=Updatable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.models.CdnProfile.Update?alt=com.azure.resourcemanager.cdn.models.CdnProfile.Update&text=Update\" data-throw-if-not-resolved=\"False\" />&gt;"
 methods:
+- uid: "com.azure.resourcemanager.cdn.models.CdnProfile.afdEndpoints()"
+  fullName: "com.azure.resourcemanager.cdn.models.CdnProfile.afdEndpoints()"
+  name: "afdEndpoints()"
+  nameWithType: "CdnProfile.afdEndpoints()"
+  summary: "Gets latest Azure Front Door endpoints by sending http request."
+  modifiers:
+  - "default"
+  syntax: "public default Map<String,AfdEndpoint> afdEndpoints()"
+  desc: "Gets latest Azure Front Door endpoints by sending http request."
+  returns:
+    description: "AFD endpoints in the CDN manager profile, indexed by name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.resourcemanager.cdn.models.AfdEndpoint?alt=com.azure.resourcemanager.cdn.models.AfdEndpoint&text=AfdEndpoint\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.cdn.models.CdnProfile.checkEndpointNameAvailability(java.lang.String)"
   fullName: "com.azure.resourcemanager.cdn.models.CdnProfile.checkEndpointNameAvailability(String name)"
   name: "checkEndpointNameAvailability(String name)"
@@ -133,6 +145,18 @@ methods:
   returns:
     description: "a representation of the deferred computation of this call"
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+- uid: "com.azure.resourcemanager.cdn.models.CdnProfile.originGroups()"
+  fullName: "com.azure.resourcemanager.cdn.models.CdnProfile.originGroups()"
+  name: "originGroups()"
+  nameWithType: "CdnProfile.originGroups()"
+  summary: "Gets latest Azure Front Door origin groups by sending http request."
+  modifiers:
+  - "default"
+  syntax: "public default Map<String,OriginGroup> originGroups()"
+  desc: "Gets latest Azure Front Door origin groups by sending http request."
+  returns:
+    description: "AFD origin groups in the CDN manager profile, indexed by name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.resourcemanager.cdn.models.OriginGroup?alt=com.azure.resourcemanager.cdn.models.OriginGroup&text=OriginGroup\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.cdn.models.CdnProfile.purgeEndpointContent(java.lang.String,java.util.Set<java.lang.String>)"
   fullName: "com.azure.resourcemanager.cdn.models.CdnProfile.purgeEndpointContent(String endpointName, Set<String> contentPaths)"
   name: "purgeEndpointContent(String endpointName, Set<String> contentPaths)"
@@ -180,6 +204,18 @@ methods:
   returns:
     description: "CDN profile state"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.cdn.models.CdnProfile.ruleSets()"
+  fullName: "com.azure.resourcemanager.cdn.models.CdnProfile.ruleSets()"
+  name: "ruleSets()"
+  nameWithType: "CdnProfile.ruleSets()"
+  summary: "Gets latest Azure Front Door rule sets by sending http request."
+  modifiers:
+  - "default"
+  syntax: "public default Map<String,RuleSet> ruleSets()"
+  desc: "Gets latest Azure Front Door rule sets by sending http request."
+  returns:
+    description: "rule sets in the CDN manager profile, indexed by name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.resourcemanager.cdn.models.RuleSet?alt=com.azure.resourcemanager.cdn.models.RuleSet&text=RuleSet\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.cdn.models.CdnProfile.sku()"
   fullName: "com.azure.resourcemanager.cdn.models.CdnProfile.sku()"
   name: "sku()"
@@ -296,4 +332,4 @@ implements:
 - "<xref href=\"com.azure.resourcemanager.resources.fluentcore.model.Updatable?alt=com.azure.resourcemanager.resources.fluentcore.model.Updatable&text=Updatable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.models.CdnProfile.Update?alt=com.azure.resourcemanager.cdn.models.CdnProfile.Update&text=Update\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.cdn.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-cdn:2.53.7
+artifact: com.azure.resourcemanager:azure-resourcemanager-cdn:2.54.0

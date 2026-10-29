@@ -273,11 +273,11 @@ methods:
   fullName: "com.azure.core.util.CoreUtils.getDefaultTimeoutFromEnvironment(Configuration configuration, String timeoutPropertyName, Duration defaultTimeout, ClientLogger logger)"
   name: "getDefaultTimeoutFromEnvironment(Configuration configuration, String timeoutPropertyName, Duration defaultTimeout, ClientLogger logger)"
   nameWithType: "CoreUtils.getDefaultTimeoutFromEnvironment(Configuration configuration, String timeoutPropertyName, Duration defaultTimeout, ClientLogger logger)"
-  summary: "Attempts to load an environment configured default timeout."
+  summary: "Attempts to load a configured default timeout, checking explicit configuration before environment settings."
   modifiers:
   - "static"
   parameters:
-  - description: "The environment configurations."
+  - description: "The configuration store."
     name: "configuration"
     type: "<xref href=\"com.azure.core.util.Configuration?alt=com.azure.core.util.Configuration&text=Configuration\" data-throw-if-not-resolved=\"False\" />"
   - description: "The default timeout property name."
@@ -290,7 +290,7 @@ methods:
     name: "logger"
     type: "<xref href=\"com.azure.core.util.logging.ClientLogger?alt=com.azure.core.util.logging.ClientLogger&text=ClientLogger\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static Duration getDefaultTimeoutFromEnvironment(Configuration configuration, String timeoutPropertyName, Duration defaultTimeout, ClientLogger logger)"
-  desc: "Attempts to load an environment configured default timeout.\n\nIf the environment default timeout isn't configured, `defaultTimeout` will be returned. If the environment default timeout is a string that isn't parseable by <xref uid=\"java.lang.Long.parseLong*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Long#parseLong(String)\"></xref>, `defaultTimeout` will be returned. If the environment default timeout is less than 0, <xref uid=\"java.time.Duration.ZERO\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Duration#ZERO\"></xref> will be returned indicated that there is no timeout period."
+  desc: "Attempts to load a configured default timeout, checking explicit configuration before environment settings.\n\nIf the environment default timeout isn't configured, `defaultTimeout` will be returned. If the environment default timeout is a string that isn't parseable by <xref uid=\"java.lang.Long.parseLong*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Long#parseLong(String)\"></xref>, `defaultTimeout` will be returned. If the environment default timeout is less than 0, <xref uid=\"java.time.Duration.ZERO\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Duration#ZERO\"></xref> will be returned indicated that there is no timeout period."
   returns:
     description: "Either the environment configured default timeout, <code>defaultTimeoutMillis</code>, or 0."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
@@ -502,4 +502,4 @@ type: "class"
 desc: "This class contains utility methods useful for building client libraries."
 metadata: {}
 package: "com.azure.core.util"
-artifact: com.azure:azure-core:1.60.0
+artifact: com.azure:azure-core:1.61.0

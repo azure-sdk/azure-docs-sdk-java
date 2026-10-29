@@ -34,12 +34,18 @@ methods:
   fullName: "com.microsoft.cognitiveservices.speech.SpeechSynthesisRequest.close()"
   name: "close()"
   nameWithType: "SpeechSynthesisRequest.close()"
-  syntax: "public void close()"
+  summary: "Releases the resources held by the request."
+  modifiers:
+  - "synchronized"
+  syntax: "public synchronized void close()"
+  desc: "Releases the resources held by the request. If the input has not been finished yet, it is finished first, so that a synthesis that is waiting for more input can complete. Calling close() more than once is allowed."
 - uid: "com.microsoft.cognitiveservices.speech.SpeechSynthesisRequest.finishInput()"
   fullName: "com.microsoft.cognitiveservices.speech.SpeechSynthesisRequest.finishInput()"
   name: "finishInput()"
   nameWithType: "SpeechSynthesisRequest.finishInput()"
-  syntax: "public void finishInput()"
+  modifiers:
+  - "synchronized"
+  syntax: "public synchronized void finishInput()"
 - uid: "com.microsoft.cognitiveservices.speech.SpeechSynthesisRequest.getInputStream()"
   fullName: "com.microsoft.cognitiveservices.speech.SpeechSynthesisRequest.getInputStream()"
   name: "getInputStream()"
@@ -125,4 +131,4 @@ implements:
 - "<xref href=\"java.lang.AutoCloseable?alt=java.lang.AutoCloseable&text=AutoCloseable\" data-throw-if-not-resolved=\"False\" />"
 metadata: {}
 package: "com.microsoft.cognitiveservices.speech"
-artifact: com.microsoft.cognitiveservices.speech:client-sdk:1.52.0
+artifact: com.microsoft.cognitiveservices.speech:client-sdk:1.53.0

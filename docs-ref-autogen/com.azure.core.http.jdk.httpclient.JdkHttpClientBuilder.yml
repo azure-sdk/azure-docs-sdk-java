@@ -61,7 +61,7 @@ methods:
     name: "configuration"
     type: "<xref href=\"com.azure.core.util.Configuration?alt=com.azure.core.util.Configuration&text=Configuration\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public JdkHttpClientBuilder configuration(Configuration configuration)"
-  desc: "Sets the configuration store that is used during construction of the HTTP client.\n\nThe default configuration store is a clone of the <xref uid=\"Configuration#getGlobalConfiguration()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"global\n configuration store\"></xref>, use <xref uid=\"com.azure.core.util.Configuration.NONE\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Configuration#NONE\"></xref> to bypass using configuration settings during construction."
+  desc: "Sets the configuration store that is used during construction of the HTTP client.\n\nThe default configuration store is the <xref uid=\"com.azure.core.util.Configuration.getGlobalConfiguration*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"global configuration store\"></xref>. Timeouts explicitly set on this builder take precedence over this store, then the global store, then the default timeout. Use <xref uid=\"com.azure.core.util.Configuration.NONE\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Configuration#NONE\"></xref> to bypass other configuration settings during construction; unset timeouts still fall back to the global store."
   returns:
     description: "The updated JdkHttpClientBuilder object."
     type: "<xref href=\"com.azure.core.http.jdk.httpclient.JdkHttpClientBuilder?alt=com.azure.core.http.jdk.httpclient.JdkHttpClientBuilder&text=JdkHttpClientBuilder\" data-throw-if-not-resolved=\"False\" />"
@@ -75,7 +75,7 @@ methods:
     name: "connectionTimeout"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
   syntax: "public JdkHttpClientBuilder connectionTimeout(Duration connectionTimeout)"
-  desc: "Sets the connection timeout.\n\n**Code Samples**\n\n```java\nHttpClient client = new JdkHttpClientBuilder()\n         .connectionTimeout(Duration.ofSeconds(250)) // connection timeout of 250 seconds\n         .build();\n```\n\nThe default connection timeout is 10 seconds."
+  desc: "Sets the connection timeout.\n\n**Code Samples**\n\n```java\nHttpClient client = new JdkHttpClientBuilder()\n         .connectionTimeout(Duration.ofSeconds(250)) // connection timeout of 250 seconds\n         .build();\n```\n\nThe default connection timeout is 10 seconds. A duration less than or equal to zero disables the connection timeout applied by this builder. If an existing JDK builder was supplied, its connection timeout is retained in this case because the JDK API does not support clearing a configured timeout."
   returns:
     description: "the updated JdkHttpClientBuilder object"
     type: "<xref href=\"com.azure.core.http.jdk.httpclient.JdkHttpClientBuilder?alt=com.azure.core.http.jdk.httpclient.JdkHttpClientBuilder&text=JdkHttpClientBuilder\" data-throw-if-not-resolved=\"False\" />"
@@ -103,7 +103,7 @@ methods:
     name: "proxyOptions"
     type: "<xref href=\"com.azure.core.http.ProxyOptions?alt=com.azure.core.http.ProxyOptions&text=ProxyOptions\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public JdkHttpClientBuilder proxy(ProxyOptions proxyOptions)"
-  desc: "Sets the proxy.\n\n**Code Samples**\n\n```java\nfinal String proxyHost = \"<proxy-host>\"; // e.g. localhost\n final int proxyPort = 9999; // Proxy port\n ProxyOptions proxyOptions = new ProxyOptions(ProxyOptions.Type.HTTP,\n         new InetSocketAddress(proxyHost, proxyPort));\n HttpClient client = new JdkHttpClientBuilder()\n         .proxy(proxyOptions)\n         .build();\n```"
+  desc: "Sets the proxy. If credentials are configured, they are used only for authentication requests from the configured proxy host and port, not from destination servers.\n\n**Code Samples**\n\n```java\nfinal String proxyHost = \"<proxy-host>\"; // e.g. localhost\n final int proxyPort = 9999; // Proxy port\n ProxyOptions proxyOptions = new ProxyOptions(ProxyOptions.Type.HTTP,\n         new InetSocketAddress(proxyHost, proxyPort));\n HttpClient client = new JdkHttpClientBuilder()\n         .proxy(proxyOptions)\n         .build();\n```"
   returns:
     description: "the updated JdkHttpClientBuilder object"
     type: "<xref href=\"com.azure.core.http.jdk.httpclient.JdkHttpClientBuilder?alt=com.azure.core.http.jdk.httpclient.JdkHttpClientBuilder&text=JdkHttpClientBuilder\" data-throw-if-not-resolved=\"False\" />"
@@ -150,7 +150,7 @@ methods:
     description: "The updated <xref uid=\"com.azure.core.http.jdk.httpclient.JdkHttpClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"JdkHttpClientBuilder\"></xref> object."
     type: "<xref href=\"com.azure.core.http.jdk.httpclient.JdkHttpClientBuilder?alt=com.azure.core.http.jdk.httpclient.JdkHttpClientBuilder&text=JdkHttpClientBuilder\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Builder to configure and build an instance of the azure-core <xref uid=\"com.azure.core.http.HttpClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"HttpClient\"></xref> type using the JDK HttpClient APIs, first introduced as preview in JDK 9, but made generally available from JDK 11 onwards."
+desc: "Builder to configure and build an instance of the azure-core <xref uid=\"com.azure.core.http.HttpClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"HttpClient\"></xref> type using the JDK HttpClient APIs, first introduced as preview in JDK 9, but made generally available from JDK 11 onwards.\n\nTo send an explicit `Host` header, start the JVM with `-Djdk.httpclient.allowRestrictedHeaders=host` before the JDK HTTP client is initialized. By default, the SDK filters out this restricted header and logs a warning. If a custom <xref uid=\"com.azure.core.util.Configuration\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Configuration\"></xref> is supplied, include this setting there as well. Setting it only in the builder's configuration does not enable the native JDK override."
 metadata: {}
 package: "com.azure.core.http.jdk.httpclient"
-artifact: com.azure:azure-core-http-jdk-httpclient:1.2.0
+artifact: com.azure:azure-core-http-jdk-httpclient:1.3.0

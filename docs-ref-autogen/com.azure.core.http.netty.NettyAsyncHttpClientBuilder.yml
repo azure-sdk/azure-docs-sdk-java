@@ -39,7 +39,7 @@ constructors:
     name: "nettyHttpClient"
     type: "<xref href=\"reactor.netty.http.client.HttpClient?alt=reactor.netty.http.client.HttpClient&text=HttpClient\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public NettyAsyncHttpClientBuilder(HttpClient nettyHttpClient)"
-  desc: "Creates a new builder instance, where a builder is capable of generating multiple instances of <xref uid=\"com.azure.core.http.HttpClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"HttpClient\"></xref> based on the provided Reactor Netty HttpClient.\n\n```java\n// Creates a reactor-netty client with netty logging enabled.\n reactor.netty.http.client.HttpClient baseHttpClient = reactor.netty.http.client.HttpClient.create()\n     .wiretap(TcpClient.class.getName(), LogLevel.INFO);\n // Create an HttpClient based on above reactor-netty client and configure EventLoop count.\n HttpClient client = new NettyAsyncHttpClientBuilder(baseHttpClient)\n     .eventLoopGroup(new NioEventLoopGroup(5))\n     .build();\n```"
+  desc: "Creates a new builder instance, where a builder is capable of generating multiple instances of <xref uid=\"com.azure.core.http.HttpClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"HttpClient\"></xref> based on the provided Reactor Netty HttpClient.\n\n```java\n// Creates a reactor-netty client with netty logging enabled.\n reactor.netty.http.client.HttpClient baseHttpClient = reactor.netty.http.client.HttpClient.create()\n     .wiretap(TcpClient.class.getName(), LogLevel.INFO);\n // Create an HttpClient based on above reactor-netty client and configure EventLoop count.\n HttpClient client = new NettyAsyncHttpClientBuilder(baseHttpClient)\n     .eventLoopGroup(new MultiThreadIoEventLoopGroup(5, NioIoHandler.newFactory()))\n     .build();\n```"
 methods:
 - uid: "com.azure.core.http.netty.NettyAsyncHttpClientBuilder.build()"
   fullName: "com.azure.core.http.netty.NettyAsyncHttpClientBuilder.build()"
@@ -61,7 +61,7 @@ methods:
     name: "configuration"
     type: "<xref href=\"com.azure.core.util.Configuration?alt=com.azure.core.util.Configuration&text=Configuration\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public NettyAsyncHttpClientBuilder configuration(Configuration configuration)"
-  desc: "Sets the configuration store that is used during construction of the HTTP client.\n\nThe default configuration store is a clone of the <xref uid=\"Configuration#getGlobalConfiguration()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"global\n configuration store\"></xref>, use <xref uid=\"com.azure.core.util.Configuration.NONE\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Configuration#NONE\"></xref> to bypass using configuration settings during construction."
+  desc: "Sets the configuration store that is used during construction of the HTTP client.\n\nThe default configuration store is the <xref uid=\"com.azure.core.util.Configuration.getGlobalConfiguration*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"global configuration store\"></xref>. Timeouts explicitly set on this builder take precedence over this store, then the global store, then the default timeout. Use <xref uid=\"com.azure.core.util.Configuration.NONE\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Configuration#NONE\"></xref> to bypass other configuration settings during construction; unset timeouts still fall back to the global store."
   returns:
     description: "The updated NettyAsyncHttpClientBuilder object."
     type: "<xref href=\"com.azure.core.http.netty.NettyAsyncHttpClientBuilder?alt=com.azure.core.http.netty.NettyAsyncHttpClientBuilder&text=NettyAsyncHttpClientBuilder\" data-throw-if-not-resolved=\"False\" />"
@@ -117,7 +117,7 @@ methods:
     name: "eventLoopGroup"
     type: "<xref href=\"io.netty.channel.EventLoopGroup?alt=io.netty.channel.EventLoopGroup&text=EventLoopGroup\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public NettyAsyncHttpClientBuilder eventLoopGroup(EventLoopGroup eventLoopGroup)"
-  desc: "Sets the IO event loop group that will be used to run IO loops.\n\n**Code Samples**\n\n```java\nint threadCount = 5;\n HttpClient client = new NettyAsyncHttpClientBuilder()\n     .eventLoopGroup(new NioEventLoopGroup(threadCount))\n     .build();\n```"
+  desc: "Sets the IO event loop group that will be used to run IO loops.\n\n**Code Samples**\n\n```java\nint threadCount = 5;\n HttpClient client = new NettyAsyncHttpClientBuilder()\n     .eventLoopGroup(new MultiThreadIoEventLoopGroup(threadCount, NioIoHandler.newFactory()))\n     .build();\n```"
   returns:
     description: "the updated NettyAsyncHttpClientBuilder object."
     type: "<xref href=\"com.azure.core.http.netty.NettyAsyncHttpClientBuilder?alt=com.azure.core.http.netty.NettyAsyncHttpClientBuilder&text=NettyAsyncHttpClientBuilder\" data-throw-if-not-resolved=\"False\" />"
@@ -128,7 +128,7 @@ methods:
   summary: "Sets the NIO event loop group that will be used to run IO loops."
   deprecatedTag: "deprecated in favor of <xref uid=\"com.azure.core.http.netty.NettyAsyncHttpClientBuilder.eventLoopGroup(io.netty.channel.EventLoopGroup)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#eventLoopGroup(EventLoopGroup)\"></xref>."
   parameters:
-  - description: "The <xref uid=\"io.netty.channel.nio.NioEventLoopGroup\" data-throw-if-not-resolved=\"false\" data-raw-source=\"NioEventLoopGroup\"></xref> that will run IO loops."
+  - description: "The <xref uid=\"io.netty.channel.nio.NioEventLoopGroup\" data-throw-if-not-resolved=\"false\" data-raw-source=\"io.netty.channel.nio.NioEventLoopGroup\"></xref> that will run IO loops."
     name: "nioEventLoopGroup"
     type: "<xref href=\"io.netty.channel.nio.NioEventLoopGroup?alt=io.netty.channel.nio.NioEventLoopGroup&text=NioEventLoopGroup\" data-throw-if-not-resolved=\"False\" />"
   syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public NettyAsyncHttpClientBuilder nioEventLoopGroup(NioEventLoopGroup nioEventLoopGroup)"
@@ -227,4 +227,4 @@ type: "class"
 desc: "Builder class responsible for creating instances of <xref uid=\"com.azure.core.http.HttpClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"com.azure.core.http.HttpClient\"></xref> backed by Reactor Netty. The client built from this builder can support sending requests synchronously and asynchronously. Use <xref uid=\"com.azure.core.http.HttpClient.sendSync*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"com.azure.core.http.HttpClient#sendSync(HttpRequest, Context)\"></xref> to send the provided request synchronously with contextual information.\n\n**Building a new HttpClient instance**\n\n```java\nHttpClient client = new NettyAsyncHttpClientBuilder()\n     .port(8080)\n     .build();\n```\n\n**Building a new HttpClient instance using http proxy.**\n\nConfiguring the Netty client with a proxy is relevant when your application needs to communicate with Azure services through a proxy server.\n\n```java\nHttpClient client = new NettyAsyncHttpClientBuilder()\n     .port(8080)\n     .build();\n```\n\n**Building a new HttpClient instance with HTTP/2 Support.**\n\n```java\nHttpClient client = new NettyAsyncHttpClientBuilder()\n     .port(8080)\n     .build();\n```\n\nIt is also possible to create a Netty HttpClient that only supports HTTP/2.\n\n```java\n// Constructs an HttpClient that only supports HTTP/2.\n HttpClient client = new NettyAsyncHttpClientBuilder(reactor.netty.http.client.HttpClient.create()\n     .protocol(HttpProtocol.H2))\n     .build();\n```"
 metadata: {}
 package: "com.azure.core.http.netty"
-artifact: com.azure:azure-core-http-netty:1.16.8
+artifact: com.azure:azure-core-http-netty:1.17.0

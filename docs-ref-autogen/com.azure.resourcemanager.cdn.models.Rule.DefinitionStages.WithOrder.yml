@@ -1,0 +1,32 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.cdn.models.Rule.DefinitionStages.WithOrder"
+fullName: "com.azure.resourcemanager.cdn.models.Rule.DefinitionStages.WithOrder<ParentT>"
+name: "Rule.DefinitionStages.WithOrder<ParentT>"
+nameWithType: "Rule.DefinitionStages.WithOrder<ParentT>"
+summary: "The stage of a rule definition requiring the order to be specified."
+syntax: "public static interface **Rule.DefinitionStages.WithOrder<ParentT>**"
+methods:
+- uid: "com.azure.resourcemanager.cdn.models.Rule.DefinitionStages.WithOrder.withOrder(int)"
+  fullName: "com.azure.resourcemanager.cdn.models.Rule.DefinitionStages.WithOrder<ParentT>.withOrder(int order)"
+  name: "withOrder(int order)"
+  nameWithType: "Rule.DefinitionStages.WithOrder<ParentT>.withOrder(int order)"
+  summary: "Specifies the order in which the rule is applied for the endpoint."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the order value"
+    name: "order"
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Rule.DefinitionStages.WithActions<ParentT> withOrder(int order)"
+  desc: "Specifies the order in which the rule is applied for the endpoint. A rule with a lesser order will be applied before a rule with a greater order. Rule with order 0 is a special rule that does not require any condition and actions listed in it will always be applied."
+  returns:
+    description: "the next stage of the definition"
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.Rule.DefinitionStages.WithActions?alt=com.azure.resourcemanager.cdn.models.Rule.DefinitionStages.WithActions&text=WithActions\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"ParentT?alt=ParentT&text=ParentT\" data-throw-if-not-resolved=\"False\" />&gt;"
+type: "interface"
+typeParameters:
+- description: "the stage of the parent rule set definition to return to after attaching"
+  name: "ParentT"
+desc: "The stage of a rule definition requiring the order to be specified."
+metadata: {}
+package: "com.azure.resourcemanager.cdn.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-cdn:2.54.0

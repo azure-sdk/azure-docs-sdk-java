@@ -6,7 +6,14 @@ nameWithType: "CdnCertificateSourceParameters"
 summary: "Defines the parameters for using CDN managed certificate for securing custom domain."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"com.azure.resourcemanager.cdn.models.CertificateSourceParameters?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
+- classRef: "<xref href=\"com.azure.resourcemanager.cdn.models.CertificateSourceParameters?alt=com.azure.resourcemanager.cdn.models.CertificateSourceParameters&text=CertificateSourceParameters\" data-throw-if-not-resolved=\"False\" />"
+  methodsRef:
+  - "<xref href=\"com.azure.resourcemanager.cdn.models.CertificateSourceParameters.fromJson(com.azure.json.JsonReader)?alt=com.azure.resourcemanager.cdn.models.CertificateSourceParameters.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.resourcemanager.cdn.models.CertificateSourceParameters.toJson(com.azure.json.JsonWriter)?alt=com.azure.resourcemanager.cdn.models.CertificateSourceParameters.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.resourcemanager.cdn.models.CertificateSourceParameters.typeName()?alt=com.azure.resourcemanager.cdn.models.CertificateSourceParameters.typeName&text=typeName\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.resourcemanager.cdn.models.CertificateSourceParameters.validate()?alt=com.azure.resourcemanager.cdn.models.CertificateSourceParameters.validate&text=validate\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -20,7 +27,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **CdnCertificateSourceParameters**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.models.CdnCertificateSourceParameters?alt=com.azure.resourcemanager.cdn.models.CdnCertificateSourceParameters&text=CdnCertificateSourceParameters\" data-throw-if-not-resolved=\"False\" />&gt;"
+syntax: "public final class **CdnCertificateSourceParameters**</br> extends <xref href=\"com.azure.resourcemanager.cdn.models.CertificateSourceParameters?alt=com.azure.resourcemanager.cdn.models.CertificateSourceParameters&text=CertificateSourceParameters\" data-throw-if-not-resolved=\"False\" />"
 constructors:
 - uid: "com.azure.resourcemanager.cdn.models.CdnCertificateSourceParameters.CdnCertificateSourceParameters()"
   fullName: "com.azure.resourcemanager.cdn.models.CdnCertificateSourceParameters.CdnCertificateSourceParameters()"
@@ -63,6 +70,7 @@ methods:
   fullName: "com.azure.resourcemanager.cdn.models.CdnCertificateSourceParameters.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
   nameWithType: "CdnCertificateSourceParameters.toJson(JsonWriter jsonWriter)"
+  overridden: "com.azure.resourcemanager.cdn.models.CertificateSourceParameters.toJson(com.azure.json.JsonWriter)"
   parameters:
   - name: "jsonWriter"
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
@@ -76,16 +84,18 @@ methods:
   name: "typeName()"
   nameWithType: "CdnCertificateSourceParameters.typeName()"
   summary: "Get the type<wbr>Name property: The type<wbr>Name property."
-  syntax: "public String typeName()"
+  overridden: "com.azure.resourcemanager.cdn.models.CertificateSourceParameters.typeName()"
+  syntax: "public CertificateSourceParametersType typeName()"
   desc: "Get the typeName property: The typeName property."
   returns:
     description: "the typeName value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.CertificateSourceParametersType?alt=com.azure.resourcemanager.cdn.models.CertificateSourceParametersType&text=CertificateSourceParametersType\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cdn.models.CdnCertificateSourceParameters.validate()"
   fullName: "com.azure.resourcemanager.cdn.models.CdnCertificateSourceParameters.validate()"
   name: "validate()"
   nameWithType: "CdnCertificateSourceParameters.validate()"
   summary: "Validates the instance."
+  overridden: "com.azure.resourcemanager.cdn.models.CertificateSourceParameters.validate()"
   syntax: "public void validate()"
   desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.cdn.models.CdnCertificateSourceParameters.withCertificateType(com.azure.resourcemanager.cdn.models.CertificateType)"
@@ -102,24 +112,8 @@ methods:
   returns:
     description: "the CdnCertificateSourceParameters object itself."
     type: "<xref href=\"com.azure.resourcemanager.cdn.models.CdnCertificateSourceParameters?alt=com.azure.resourcemanager.cdn.models.CdnCertificateSourceParameters&text=CdnCertificateSourceParameters\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.cdn.models.CdnCertificateSourceParameters.withTypeName(java.lang.String)"
-  fullName: "com.azure.resourcemanager.cdn.models.CdnCertificateSourceParameters.withTypeName(String typeName)"
-  name: "withTypeName(String typeName)"
-  nameWithType: "CdnCertificateSourceParameters.withTypeName(String typeName)"
-  summary: "Set the type<wbr>Name property: The type<wbr>Name property."
-  parameters:
-  - description: "the typeName value to set."
-    name: "typeName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public CdnCertificateSourceParameters withTypeName(String typeName)"
-  desc: "Set the typeName property: The typeName property."
-  returns:
-    description: "the CdnCertificateSourceParameters object itself."
-    type: "<xref href=\"com.azure.resourcemanager.cdn.models.CdnCertificateSourceParameters?alt=com.azure.resourcemanager.cdn.models.CdnCertificateSourceParameters&text=CdnCertificateSourceParameters\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Defines the parameters for using CDN managed certificate for securing custom domain."
-implements:
-- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.models.CdnCertificateSourceParameters?alt=com.azure.resourcemanager.cdn.models.CdnCertificateSourceParameters&text=CdnCertificateSourceParameters\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.cdn.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-cdn:2.53.7
+artifact: com.azure.resourcemanager:azure-resourcemanager-cdn:2.54.0

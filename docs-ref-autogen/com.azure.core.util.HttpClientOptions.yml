@@ -182,7 +182,7 @@ methods:
     name: "configuration"
     type: "<xref href=\"com.azure.core.util.Configuration?alt=com.azure.core.util.Configuration&text=Configuration\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public HttpClientOptions setConfiguration(Configuration configuration)"
-  desc: "Sets the configuration store that the <xref uid=\"com.azure.core.http.HttpClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"HttpClient\"></xref> will use."
+  desc: "Sets the configuration store that the <xref uid=\"com.azure.core.http.HttpClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"HttpClient\"></xref> will use.\n\nExplicit timeout values take precedence over this store, then the global configuration store, then the default timeout. Missing timeout values fall back to the global store even when <xref uid=\"com.azure.core.util.Configuration.NONE\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Configuration#NONE\"></xref> is supplied."
   returns:
     description: "The updated HttpClientOptions object."
     type: "<xref href=\"com.azure.core.util.HttpClientOptions?alt=com.azure.core.util.HttpClientOptions&text=HttpClientOptions\" data-throw-if-not-resolved=\"False\" />"
@@ -315,4 +315,4 @@ type: "class"
 desc: "General configuration options for <xref uid=\"com.azure.core.http.HttpClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"HttpClients\"></xref>.\n\n<xref uid=\"com.azure.core.http.HttpClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"HttpClient\"></xref> implementations may not support all configuration options in this class."
 metadata: {}
 package: "com.azure.core.util"
-artifact: com.azure:azure-core:1.60.0
+artifact: com.azure:azure-core:1.61.0

@@ -6,16 +6,7 @@ nameWithType: "AfdEndpointProperties"
 summary: "The JSON object that contains the properties required to create an endpoint."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.resourcemanager.cdn.fluent.models.AfdEndpointPropertiesUpdateParameters?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
-- classRef: "<xref href=\"com.azure.resourcemanager.cdn.fluent.models.AfdEndpointPropertiesUpdateParameters?alt=com.azure.resourcemanager.cdn.fluent.models.AfdEndpointPropertiesUpdateParameters&text=AfdEndpointPropertiesUpdateParameters\" data-throw-if-not-resolved=\"False\" />"
-  methodsRef:
-  - "<xref href=\"com.azure.resourcemanager.cdn.fluent.models.AfdEndpointPropertiesUpdateParameters.enabledState()?alt=com.azure.resourcemanager.cdn.fluent.models.AfdEndpointPropertiesUpdateParameters.enabledState&text=enabledState\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.resourcemanager.cdn.fluent.models.AfdEndpointPropertiesUpdateParameters.fromJson(com.azure.json.JsonReader)?alt=com.azure.resourcemanager.cdn.fluent.models.AfdEndpointPropertiesUpdateParameters.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.resourcemanager.cdn.fluent.models.AfdEndpointPropertiesUpdateParameters.profileName()?alt=com.azure.resourcemanager.cdn.fluent.models.AfdEndpointPropertiesUpdateParameters.profileName&text=profileName\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.resourcemanager.cdn.fluent.models.AfdEndpointPropertiesUpdateParameters.toJson(com.azure.json.JsonWriter)?alt=com.azure.resourcemanager.cdn.fluent.models.AfdEndpointPropertiesUpdateParameters.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.resourcemanager.cdn.fluent.models.AfdEndpointPropertiesUpdateParameters.validate()?alt=com.azure.resourcemanager.cdn.fluent.models.AfdEndpointPropertiesUpdateParameters.validate&text=validate\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.resourcemanager.cdn.fluent.models.AfdEndpointPropertiesUpdateParameters.withEnabledState(com.azure.resourcemanager.cdn.models.EnabledState)?alt=com.azure.resourcemanager.cdn.fluent.models.AfdEndpointPropertiesUpdateParameters.withEnabledState&text=withEnabledState\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -29,7 +20,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **AfdEndpointProperties**</br> extends <xref href=\"com.azure.resourcemanager.cdn.fluent.models.AfdEndpointPropertiesUpdateParameters?alt=com.azure.resourcemanager.cdn.fluent.models.AfdEndpointPropertiesUpdateParameters&text=AfdEndpointPropertiesUpdateParameters\" data-throw-if-not-resolved=\"False\" />"
+syntax: "public final class **AfdEndpointProperties**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.fluent.models.AfdEndpointProperties?alt=com.azure.resourcemanager.cdn.fluent.models.AfdEndpointProperties&text=AfdEndpointProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
 - uid: "com.azure.resourcemanager.cdn.fluent.models.AfdEndpointProperties.AfdEndpointProperties()"
   fullName: "com.azure.resourcemanager.cdn.fluent.models.AfdEndpointProperties.AfdEndpointProperties()"
@@ -59,6 +50,26 @@ methods:
   returns:
     description: "the deploymentStatus value."
     type: "<xref href=\"com.azure.resourcemanager.cdn.models.DeploymentStatus?alt=com.azure.resourcemanager.cdn.models.DeploymentStatus&text=DeploymentStatus\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cdn.fluent.models.AfdEndpointProperties.enabledState()"
+  fullName: "com.azure.resourcemanager.cdn.fluent.models.AfdEndpointProperties.enabledState()"
+  name: "enabledState()"
+  nameWithType: "AfdEndpointProperties.enabledState()"
+  summary: "Get the enabled<wbr>State property: Whether to enable use of this rule."
+  syntax: "public EnabledState enabledState()"
+  desc: "Get the enabledState property: Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'."
+  returns:
+    description: "the enabledState value."
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.EnabledState?alt=com.azure.resourcemanager.cdn.models.EnabledState&text=EnabledState\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cdn.fluent.models.AfdEndpointProperties.enforceMtls()"
+  fullName: "com.azure.resourcemanager.cdn.fluent.models.AfdEndpointProperties.enforceMtls()"
+  name: "enforceMtls()"
+  nameWithType: "AfdEndpointProperties.enforceMtls()"
+  summary: "Get the enforce<wbr>Mtls property: Set to Disabled by default."
+  syntax: "public EnforceMtlsEnabledState enforceMtls()"
+  desc: "Get the enforceMtls property: Set to Disabled by default. If set to Enabled, only custom domains with mTLS enabled can be added to child Route resources."
+  returns:
+    description: "the enforceMtls value."
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.EnforceMtlsEnabledState?alt=com.azure.resourcemanager.cdn.models.EnforceMtlsEnabledState&text=EnforceMtlsEnabledState\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cdn.fluent.models.AfdEndpointProperties.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.resourcemanager.cdn.fluent.models.AfdEndpointProperties.fromJson(JsonReader jsonReader)"
   name: "fromJson(JsonReader jsonReader)"
@@ -93,7 +104,6 @@ methods:
   name: "profileName()"
   nameWithType: "AfdEndpointProperties.profileName()"
   summary: "Get the profile<wbr>Name property: The name of the profile which holds the endpoint."
-  overridden: "com.azure.resourcemanager.cdn.fluent.models.AfdEndpointPropertiesUpdateParameters.profileName()"
   syntax: "public String profileName()"
   desc: "Get the profileName property: The name of the profile which holds the endpoint."
   returns:
@@ -113,7 +123,6 @@ methods:
   fullName: "com.azure.resourcemanager.cdn.fluent.models.AfdEndpointProperties.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
   nameWithType: "AfdEndpointProperties.toJson(JsonWriter jsonWriter)"
-  overridden: "com.azure.resourcemanager.cdn.fluent.models.AfdEndpointPropertiesUpdateParameters.toJson(com.azure.json.JsonWriter)"
   parameters:
   - name: "jsonWriter"
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
@@ -127,7 +136,6 @@ methods:
   name: "validate()"
   nameWithType: "AfdEndpointProperties.validate()"
   summary: "Validates the instance."
-  overridden: "com.azure.resourcemanager.cdn.fluent.models.AfdEndpointPropertiesUpdateParameters.validate()"
   syntax: "public void validate()"
   desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.cdn.fluent.models.AfdEndpointProperties.withAutoGeneratedDomainNameLabelScope(com.azure.resourcemanager.cdn.models.AutoGeneratedDomainNameLabelScope)"
@@ -149,16 +157,33 @@ methods:
   name: "withEnabledState(EnabledState enabledState)"
   nameWithType: "AfdEndpointProperties.withEnabledState(EnabledState enabledState)"
   summary: "Set the enabled<wbr>State property: Whether to enable use of this rule."
-  overridden: "com.azure.resourcemanager.cdn.fluent.models.AfdEndpointPropertiesUpdateParameters.withEnabledState(com.azure.resourcemanager.cdn.models.EnabledState)"
   parameters:
-  - name: "enabledState"
+  - description: "the enabledState value to set."
+    name: "enabledState"
     type: "<xref href=\"com.azure.resourcemanager.cdn.models.EnabledState?alt=com.azure.resourcemanager.cdn.models.EnabledState&text=EnabledState\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public AfdEndpointProperties withEnabledState(EnabledState enabledState)"
   desc: "Set the enabledState property: Whether to enable use of this rule. Permitted values are 'Enabled' or 'Disabled'."
   returns:
+    description: "the AfdEndpointProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.cdn.fluent.models.AfdEndpointProperties?alt=com.azure.resourcemanager.cdn.fluent.models.AfdEndpointProperties&text=AfdEndpointProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cdn.fluent.models.AfdEndpointProperties.withEnforceMtls(com.azure.resourcemanager.cdn.models.EnforceMtlsEnabledState)"
+  fullName: "com.azure.resourcemanager.cdn.fluent.models.AfdEndpointProperties.withEnforceMtls(EnforceMtlsEnabledState enforceMtls)"
+  name: "withEnforceMtls(EnforceMtlsEnabledState enforceMtls)"
+  nameWithType: "AfdEndpointProperties.withEnforceMtls(EnforceMtlsEnabledState enforceMtls)"
+  summary: "Set the enforce<wbr>Mtls property: Set to Disabled by default."
+  parameters:
+  - description: "the enforceMtls value to set."
+    name: "enforceMtls"
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.EnforceMtlsEnabledState?alt=com.azure.resourcemanager.cdn.models.EnforceMtlsEnabledState&text=EnforceMtlsEnabledState\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public AfdEndpointProperties withEnforceMtls(EnforceMtlsEnabledState enforceMtls)"
+  desc: "Set the enforceMtls property: Set to Disabled by default. If set to Enabled, only custom domains with mTLS enabled can be added to child Route resources."
+  returns:
+    description: "the AfdEndpointProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.cdn.fluent.models.AfdEndpointProperties?alt=com.azure.resourcemanager.cdn.fluent.models.AfdEndpointProperties&text=AfdEndpointProperties\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "The JSON object that contains the properties required to create an endpoint."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.fluent.models.AfdEndpointProperties?alt=com.azure.resourcemanager.cdn.fluent.models.AfdEndpointProperties&text=AfdEndpointProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.cdn.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-cdn:2.53.7
+artifact: com.azure.resourcemanager:azure-resourcemanager-cdn:2.54.0

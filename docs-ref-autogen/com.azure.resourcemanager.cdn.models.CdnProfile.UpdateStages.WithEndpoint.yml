@@ -6,6 +6,22 @@ nameWithType: "CdnProfile.UpdateStages.WithEndpoint"
 summary: "The stage of a CDN profile update allowing to modify the endpoints for the profile."
 syntax: "public static interface **CdnProfile.UpdateStages.WithEndpoint**"
 methods:
+- uid: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.defineAfdEndpoint(java.lang.String)"
+  fullName: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.defineAfdEndpoint(String name)"
+  name: "defineAfdEndpoint(String name)"
+  nameWithType: "CdnProfile.UpdateStages.WithEndpoint.defineAfdEndpoint(String name)"
+  summary: "Starts the definition of a new Azure Front Door endpoint to be attached to the CDN profile."
+  modifiers:
+  - "default"
+  parameters:
+  - description: "the name for the endpoint"
+    name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public default AfdEndpoint.UpdateDefinitionStages.Blank<CdnProfile.Update> defineAfdEndpoint(String name)"
+  desc: "Starts the definition of a new Azure Front Door endpoint to be attached to the CDN profile."
+  returns:
+    description: "the first stage of an endpoint definition"
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.AfdEndpoint.UpdateDefinitionStages.Blank?alt=com.azure.resourcemanager.cdn.models.AfdEndpoint.UpdateDefinitionStages.Blank&text=Blank\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.models.CdnProfile.Update?alt=com.azure.resourcemanager.cdn.models.CdnProfile.Update&text=Update\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.defineNewEndpoint()"
   fullName: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.defineNewEndpoint()"
   name: "defineNewEndpoint()"
@@ -100,6 +116,54 @@ methods:
   returns:
     description: "the first stage of an endpoint definition"
     type: "<xref href=\"com.azure.resourcemanager.cdn.models.CdnEndpoint.UpdateDefinitionStages.WithPremiumAttach?alt=com.azure.resourcemanager.cdn.models.CdnEndpoint.UpdateDefinitionStages.WithPremiumAttach&text=WithPremiumAttach\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.models.CdnProfile.Update?alt=com.azure.resourcemanager.cdn.models.CdnProfile.Update&text=Update\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.defineOriginGroup(java.lang.String)"
+  fullName: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.defineOriginGroup(String name)"
+  name: "defineOriginGroup(String name)"
+  nameWithType: "CdnProfile.UpdateStages.WithEndpoint.defineOriginGroup(String name)"
+  summary: "Starts the definition of a new Azure Front Door origin group to be attached to the CDN profile."
+  modifiers:
+  - "default"
+  parameters:
+  - description: "the name for the origin group"
+    name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public default OriginGroup.UpdateDefinitionStages.Blank<CdnProfile.Update> defineOriginGroup(String name)"
+  desc: "Starts the definition of a new Azure Front Door origin group to be attached to the CDN profile."
+  returns:
+    description: "the first stage of an origin group definition"
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.OriginGroup.UpdateDefinitionStages.Blank?alt=com.azure.resourcemanager.cdn.models.OriginGroup.UpdateDefinitionStages.Blank&text=Blank\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.models.CdnProfile.Update?alt=com.azure.resourcemanager.cdn.models.CdnProfile.Update&text=Update\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.defineRuleSet(java.lang.String)"
+  fullName: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.defineRuleSet(String name)"
+  name: "defineRuleSet(String name)"
+  nameWithType: "CdnProfile.UpdateStages.WithEndpoint.defineRuleSet(String name)"
+  summary: "Starts the definition of a new Azure Front Door rule set to be attached to the CDN profile."
+  modifiers:
+  - "default"
+  parameters:
+  - description: "the name for the rule set"
+    name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public default RuleSet.UpdateDefinitionStages.Blank<CdnProfile.Update> defineRuleSet(String name)"
+  desc: "Starts the definition of a new Azure Front Door rule set to be attached to the CDN profile."
+  returns:
+    description: "the first stage of a rule set definition"
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.RuleSet.UpdateDefinitionStages.Blank?alt=com.azure.resourcemanager.cdn.models.RuleSet.UpdateDefinitionStages.Blank&text=Blank\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.models.CdnProfile.Update?alt=com.azure.resourcemanager.cdn.models.CdnProfile.Update&text=Update\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.updateAfdEndpoint(java.lang.String)"
+  fullName: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.updateAfdEndpoint(String name)"
+  name: "updateAfdEndpoint(String name)"
+  nameWithType: "CdnProfile.UpdateStages.WithEndpoint.updateAfdEndpoint(String name)"
+  summary: "Begins the description of an update of an existing Azure Front Door endpoint in current profile."
+  modifiers:
+  - "default"
+  parameters:
+  - description: "the name of an existing endpoint"
+    name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public default AfdEndpoint.Update updateAfdEndpoint(String name)"
+  desc: "Begins the description of an update of an existing Azure Front Door endpoint in current profile."
+  returns:
+    description: "the first stage of the update of the endpoint"
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.AfdEndpoint.Update?alt=com.azure.resourcemanager.cdn.models.AfdEndpoint.Update&text=Update\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.updateEndpoint(java.lang.String)"
   fullName: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.updateEndpoint(String name)"
   name: "updateEndpoint(String name)"
@@ -116,6 +180,22 @@ methods:
   returns:
     description: "the first stage of the update of the endpoint"
     type: "<xref href=\"com.azure.resourcemanager.cdn.models.CdnEndpoint.UpdateStandardEndpoint?alt=com.azure.resourcemanager.cdn.models.CdnEndpoint.UpdateStandardEndpoint&text=UpdateStandardEndpoint\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.updateOriginGroup(java.lang.String)"
+  fullName: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.updateOriginGroup(String name)"
+  name: "updateOriginGroup(String name)"
+  nameWithType: "CdnProfile.UpdateStages.WithEndpoint.updateOriginGroup(String name)"
+  summary: "Begins the description of an update of an existing Azure Front Door origin group in current profile."
+  modifiers:
+  - "default"
+  parameters:
+  - description: "the name of an existing origin group"
+    name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public default OriginGroup.Update updateOriginGroup(String name)"
+  desc: "Begins the description of an update of an existing Azure Front Door origin group in current profile."
+  returns:
+    description: "the first stage of the update of the origin group"
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.OriginGroup.Update?alt=com.azure.resourcemanager.cdn.models.OriginGroup.Update&text=Update\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.updatePremiumEndpoint(java.lang.String)"
   fullName: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.updatePremiumEndpoint(String name)"
   name: "updatePremiumEndpoint(String name)"
@@ -132,6 +212,22 @@ methods:
   returns:
     description: "the first stage of the update of the endpoint"
     type: "<xref href=\"com.azure.resourcemanager.cdn.models.CdnEndpoint.UpdatePremiumEndpoint?alt=com.azure.resourcemanager.cdn.models.CdnEndpoint.UpdatePremiumEndpoint&text=UpdatePremiumEndpoint\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.updateRuleSet(java.lang.String)"
+  fullName: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.updateRuleSet(String name)"
+  name: "updateRuleSet(String name)"
+  nameWithType: "CdnProfile.UpdateStages.WithEndpoint.updateRuleSet(String name)"
+  summary: "Begins the description of an update of an existing Azure Front Door rule set in current profile."
+  modifiers:
+  - "default"
+  parameters:
+  - description: "the name of an existing rule set"
+    name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public default RuleSet.Update updateRuleSet(String name)"
+  desc: "Begins the description of an update of an existing Azure Front Door rule set in current profile."
+  returns:
+    description: "the first stage of the update of the rule set"
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.RuleSet.Update?alt=com.azure.resourcemanager.cdn.models.RuleSet.Update&text=Update\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.withNewEndpoint(java.lang.String)"
   fullName: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.withNewEndpoint(String endpointOriginHostname)"
   name: "withNewEndpoint(String endpointOriginHostname)"
@@ -164,6 +260,22 @@ methods:
   returns:
     description: "the next stage of the update"
     type: "<xref href=\"com.azure.resourcemanager.cdn.models.CdnProfile.Update?alt=com.azure.resourcemanager.cdn.models.CdnProfile.Update&text=Update\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.withoutAfdEndpoint(java.lang.String)"
+  fullName: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.withoutAfdEndpoint(String name)"
+  name: "withoutAfdEndpoint(String name)"
+  nameWithType: "CdnProfile.UpdateStages.WithEndpoint.withoutAfdEndpoint(String name)"
+  summary: "Removes an Azure Front Door endpoint from the profile."
+  modifiers:
+  - "default"
+  parameters:
+  - description: "the name of an existing endpoint"
+    name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public default CdnProfile.Update withoutAfdEndpoint(String name)"
+  desc: "Removes an Azure Front Door endpoint from the profile."
+  returns:
+    description: "the next stage of the CDN profile update"
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.CdnProfile.Update?alt=com.azure.resourcemanager.cdn.models.CdnProfile.Update&text=Update\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.withoutEndpoint(java.lang.String)"
   fullName: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.withoutEndpoint(String name)"
   name: "withoutEndpoint(String name)"
@@ -180,8 +292,40 @@ methods:
   returns:
     description: "the next stage of the CDN profile update"
     type: "<xref href=\"com.azure.resourcemanager.cdn.models.CdnProfile.Update?alt=com.azure.resourcemanager.cdn.models.CdnProfile.Update&text=Update\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.withoutOriginGroup(java.lang.String)"
+  fullName: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.withoutOriginGroup(String name)"
+  name: "withoutOriginGroup(String name)"
+  nameWithType: "CdnProfile.UpdateStages.WithEndpoint.withoutOriginGroup(String name)"
+  summary: "Removes an Azure Front Door origin group from the profile."
+  modifiers:
+  - "default"
+  parameters:
+  - description: "the name of an existing origin group"
+    name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public default CdnProfile.Update withoutOriginGroup(String name)"
+  desc: "Removes an Azure Front Door origin group from the profile."
+  returns:
+    description: "the next stage of the CDN profile update"
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.CdnProfile.Update?alt=com.azure.resourcemanager.cdn.models.CdnProfile.Update&text=Update\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.withoutRuleSet(java.lang.String)"
+  fullName: "com.azure.resourcemanager.cdn.models.CdnProfile.UpdateStages.WithEndpoint.withoutRuleSet(String name)"
+  name: "withoutRuleSet(String name)"
+  nameWithType: "CdnProfile.UpdateStages.WithEndpoint.withoutRuleSet(String name)"
+  summary: "Removes an Azure Front Door rule set from the profile."
+  modifiers:
+  - "default"
+  parameters:
+  - description: "the name of an existing rule set"
+    name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public default CdnProfile.Update withoutRuleSet(String name)"
+  desc: "Removes an Azure Front Door rule set from the profile."
+  returns:
+    description: "the next stage of the CDN profile update"
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.CdnProfile.Update?alt=com.azure.resourcemanager.cdn.models.CdnProfile.Update&text=Update\" data-throw-if-not-resolved=\"False\" />"
 type: "interface"
 desc: "The stage of a CDN profile update allowing to modify the endpoints for the profile."
 metadata: {}
 package: "com.azure.resourcemanager.cdn.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-cdn:2.53.7
+artifact: com.azure.resourcemanager:azure-resourcemanager-cdn:2.54.0

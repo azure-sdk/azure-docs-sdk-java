@@ -6,7 +6,14 @@ nameWithType: "QueryStringMatchConditionParameters"
 summary: "Defines the parameters for Query<wbr>String match conditions."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"com.azure.resourcemanager.cdn.models.DeliveryRuleConditionParameters?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
+- classRef: "<xref href=\"com.azure.resourcemanager.cdn.models.DeliveryRuleConditionParameters?alt=com.azure.resourcemanager.cdn.models.DeliveryRuleConditionParameters&text=DeliveryRuleConditionParameters\" data-throw-if-not-resolved=\"False\" />"
+  methodsRef:
+  - "<xref href=\"com.azure.resourcemanager.cdn.models.DeliveryRuleConditionParameters.fromJson(com.azure.json.JsonReader)?alt=com.azure.resourcemanager.cdn.models.DeliveryRuleConditionParameters.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.resourcemanager.cdn.models.DeliveryRuleConditionParameters.toJson(com.azure.json.JsonWriter)?alt=com.azure.resourcemanager.cdn.models.DeliveryRuleConditionParameters.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.resourcemanager.cdn.models.DeliveryRuleConditionParameters.typeName()?alt=com.azure.resourcemanager.cdn.models.DeliveryRuleConditionParameters.typeName&text=typeName\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.resourcemanager.cdn.models.DeliveryRuleConditionParameters.validate()?alt=com.azure.resourcemanager.cdn.models.DeliveryRuleConditionParameters.validate&text=validate\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -20,7 +27,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **QueryStringMatchConditionParameters**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.models.QueryStringMatchConditionParameters?alt=com.azure.resourcemanager.cdn.models.QueryStringMatchConditionParameters&text=QueryStringMatchConditionParameters\" data-throw-if-not-resolved=\"False\" />&gt;"
+syntax: "public final class **QueryStringMatchConditionParameters**</br> extends <xref href=\"com.azure.resourcemanager.cdn.models.DeliveryRuleConditionParameters?alt=com.azure.resourcemanager.cdn.models.DeliveryRuleConditionParameters&text=DeliveryRuleConditionParameters\" data-throw-if-not-resolved=\"False\" />"
 constructors:
 - uid: "com.azure.resourcemanager.cdn.models.QueryStringMatchConditionParameters.QueryStringMatchConditionParameters()"
   fullName: "com.azure.resourcemanager.cdn.models.QueryStringMatchConditionParameters.QueryStringMatchConditionParameters()"
@@ -83,6 +90,7 @@ methods:
   fullName: "com.azure.resourcemanager.cdn.models.QueryStringMatchConditionParameters.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
   nameWithType: "QueryStringMatchConditionParameters.toJson(JsonWriter jsonWriter)"
+  overridden: "com.azure.resourcemanager.cdn.models.DeliveryRuleConditionParameters.toJson(com.azure.json.JsonWriter)"
   parameters:
   - name: "jsonWriter"
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
@@ -106,16 +114,18 @@ methods:
   name: "typeName()"
   nameWithType: "QueryStringMatchConditionParameters.typeName()"
   summary: "Get the type<wbr>Name property: The type<wbr>Name property."
-  syntax: "public String typeName()"
+  overridden: "com.azure.resourcemanager.cdn.models.DeliveryRuleConditionParameters.typeName()"
+  syntax: "public DeliveryRuleConditionParametersType typeName()"
   desc: "Get the typeName property: The typeName property."
   returns:
     description: "the typeName value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.DeliveryRuleConditionParametersType?alt=com.azure.resourcemanager.cdn.models.DeliveryRuleConditionParametersType&text=DeliveryRuleConditionParametersType\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cdn.models.QueryStringMatchConditionParameters.validate()"
   fullName: "com.azure.resourcemanager.cdn.models.QueryStringMatchConditionParameters.validate()"
   name: "validate()"
   nameWithType: "QueryStringMatchConditionParameters.validate()"
   summary: "Validates the instance."
+  overridden: "com.azure.resourcemanager.cdn.models.DeliveryRuleConditionParameters.validate()"
   syntax: "public void validate()"
   desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.cdn.models.QueryStringMatchConditionParameters.withMatchValues(java.util.List<java.lang.String>)"
@@ -174,24 +184,8 @@ methods:
   returns:
     description: "the QueryStringMatchConditionParameters object itself."
     type: "<xref href=\"com.azure.resourcemanager.cdn.models.QueryStringMatchConditionParameters?alt=com.azure.resourcemanager.cdn.models.QueryStringMatchConditionParameters&text=QueryStringMatchConditionParameters\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.cdn.models.QueryStringMatchConditionParameters.withTypeName(java.lang.String)"
-  fullName: "com.azure.resourcemanager.cdn.models.QueryStringMatchConditionParameters.withTypeName(String typeName)"
-  name: "withTypeName(String typeName)"
-  nameWithType: "QueryStringMatchConditionParameters.withTypeName(String typeName)"
-  summary: "Set the type<wbr>Name property: The type<wbr>Name property."
-  parameters:
-  - description: "the typeName value to set."
-    name: "typeName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public QueryStringMatchConditionParameters withTypeName(String typeName)"
-  desc: "Set the typeName property: The typeName property."
-  returns:
-    description: "the QueryStringMatchConditionParameters object itself."
-    type: "<xref href=\"com.azure.resourcemanager.cdn.models.QueryStringMatchConditionParameters?alt=com.azure.resourcemanager.cdn.models.QueryStringMatchConditionParameters&text=QueryStringMatchConditionParameters\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Defines the parameters for QueryString match conditions."
-implements:
-- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.models.QueryStringMatchConditionParameters?alt=com.azure.resourcemanager.cdn.models.QueryStringMatchConditionParameters&text=QueryStringMatchConditionParameters\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.cdn.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-cdn:2.53.7
+artifact: com.azure.resourcemanager:azure-resourcemanager-cdn:2.54.0

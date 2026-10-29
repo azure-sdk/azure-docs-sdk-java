@@ -38,6 +38,16 @@ constructors:
   syntax: "public RuleSetProperties()"
   desc: "Creates an instance of RuleSetProperties class."
 methods:
+- uid: "com.azure.resourcemanager.cdn.fluent.models.RuleSetProperties.batchMode()"
+  fullName: "com.azure.resourcemanager.cdn.fluent.models.RuleSetProperties.batchMode()"
+  name: "batchMode()"
+  nameWithType: "RuleSetProperties.batchMode()"
+  summary: "Get the batch<wbr>Mode property: Indicates whether rule set is in batch mode."
+  syntax: "public Boolean batchMode()"
+  desc: "Get the batchMode property: Indicates whether rule set is in batch mode. When batch mode is enabled, rules will be processed in a batch along with the rule set. When batch mode is disabled, rules would need to be processed independently. This property can only be set during rule set creation and cannot be updated later. For switching modes, a new rule set needs to be created with the desired mode and rules need to be migrated to the new rule set."
+  returns:
+    description: "the batchMode value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.resourcemanager.cdn.fluent.models.RuleSetProperties.deploymentStatus()"
   fullName: "com.azure.resourcemanager.cdn.fluent.models.RuleSetProperties.deploymentStatus()"
   name: "deploymentStatus()"
@@ -89,6 +99,16 @@ methods:
   returns:
     description: "the provisioningState value."
     type: "<xref href=\"com.azure.resourcemanager.cdn.models.AfdProvisioningState?alt=com.azure.resourcemanager.cdn.models.AfdProvisioningState&text=AfdProvisioningState\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cdn.fluent.models.RuleSetProperties.rules()"
+  fullName: "com.azure.resourcemanager.cdn.fluent.models.RuleSetProperties.rules()"
+  name: "rules()"
+  nameWithType: "RuleSetProperties.rules()"
+  summary: "Get the rules property: A list of rules that are part of this rule set provided the rule set is in batch mode."
+  syntax: "public List<BatchRuleProperties> rules()"
+  desc: "Get the rules property: A list of rules that are part of this rule set provided the rule set is in batch mode. This property will be ignored if the rule set is not in batch mode."
+  returns:
+    description: "the rules value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cdn.models.BatchRuleProperties?alt=com.azure.resourcemanager.cdn.models.BatchRuleProperties&text=BatchRuleProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.cdn.fluent.models.RuleSetProperties.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.cdn.fluent.models.RuleSetProperties.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -110,8 +130,36 @@ methods:
   overridden: "com.azure.resourcemanager.cdn.models.AfdStateProperties.validate()"
   syntax: "public void validate()"
   desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.cdn.fluent.models.RuleSetProperties.withBatchMode(java.lang.Boolean)"
+  fullName: "com.azure.resourcemanager.cdn.fluent.models.RuleSetProperties.withBatchMode(Boolean batchMode)"
+  name: "withBatchMode(Boolean batchMode)"
+  nameWithType: "RuleSetProperties.withBatchMode(Boolean batchMode)"
+  summary: "Set the batch<wbr>Mode property: Indicates whether rule set is in batch mode."
+  parameters:
+  - description: "the batchMode value to set."
+    name: "batchMode"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+  syntax: "public RuleSetProperties withBatchMode(Boolean batchMode)"
+  desc: "Set the batchMode property: Indicates whether rule set is in batch mode. When batch mode is enabled, rules will be processed in a batch along with the rule set. When batch mode is disabled, rules would need to be processed independently. This property can only be set during rule set creation and cannot be updated later. For switching modes, a new rule set needs to be created with the desired mode and rules need to be migrated to the new rule set."
+  returns:
+    description: "the RuleSetProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.cdn.fluent.models.RuleSetProperties?alt=com.azure.resourcemanager.cdn.fluent.models.RuleSetProperties&text=RuleSetProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cdn.fluent.models.RuleSetProperties.withRules(java.util.List<com.azure.resourcemanager.cdn.models.BatchRuleProperties>)"
+  fullName: "com.azure.resourcemanager.cdn.fluent.models.RuleSetProperties.withRules(List<BatchRuleProperties> rules)"
+  name: "withRules(List<BatchRuleProperties> rules)"
+  nameWithType: "RuleSetProperties.withRules(List<BatchRuleProperties> rules)"
+  summary: "Set the rules property: A list of rules that are part of this rule set provided the rule set is in batch mode."
+  parameters:
+  - description: "the rules value to set."
+    name: "rules"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cdn.models.BatchRuleProperties?alt=com.azure.resourcemanager.cdn.models.BatchRuleProperties&text=BatchRuleProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public RuleSetProperties withRules(List<BatchRuleProperties> rules)"
+  desc: "Set the rules property: A list of rules that are part of this rule set provided the rule set is in batch mode. This property will be ignored if the rule set is not in batch mode."
+  returns:
+    description: "the RuleSetProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.cdn.fluent.models.RuleSetProperties?alt=com.azure.resourcemanager.cdn.fluent.models.RuleSetProperties&text=RuleSetProperties\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "The JSON object that contains the properties of the Rule Set to create."
 metadata: {}
 package: "com.azure.resourcemanager.cdn.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-cdn:2.53.7
+artifact: com.azure.resourcemanager:azure-resourcemanager-cdn:2.54.0

@@ -6,7 +6,14 @@ nameWithType: "CacheKeyQueryStringActionParameters"
 summary: "Defines the parameters for the cache-key query string action."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"com.azure.resourcemanager.cdn.models.DeliveryRuleActionParameters?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
+- classRef: "<xref href=\"com.azure.resourcemanager.cdn.models.DeliveryRuleActionParameters?alt=com.azure.resourcemanager.cdn.models.DeliveryRuleActionParameters&text=DeliveryRuleActionParameters\" data-throw-if-not-resolved=\"False\" />"
+  methodsRef:
+  - "<xref href=\"com.azure.resourcemanager.cdn.models.DeliveryRuleActionParameters.fromJson(com.azure.json.JsonReader)?alt=com.azure.resourcemanager.cdn.models.DeliveryRuleActionParameters.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.resourcemanager.cdn.models.DeliveryRuleActionParameters.toJson(com.azure.json.JsonWriter)?alt=com.azure.resourcemanager.cdn.models.DeliveryRuleActionParameters.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.resourcemanager.cdn.models.DeliveryRuleActionParameters.typeName()?alt=com.azure.resourcemanager.cdn.models.DeliveryRuleActionParameters.typeName&text=typeName\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.resourcemanager.cdn.models.DeliveryRuleActionParameters.validate()?alt=com.azure.resourcemanager.cdn.models.DeliveryRuleActionParameters.validate&text=validate\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -20,7 +27,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **CacheKeyQueryStringActionParameters**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.models.CacheKeyQueryStringActionParameters?alt=com.azure.resourcemanager.cdn.models.CacheKeyQueryStringActionParameters&text=CacheKeyQueryStringActionParameters\" data-throw-if-not-resolved=\"False\" />&gt;"
+syntax: "public final class **CacheKeyQueryStringActionParameters**</br> extends <xref href=\"com.azure.resourcemanager.cdn.models.DeliveryRuleActionParameters?alt=com.azure.resourcemanager.cdn.models.DeliveryRuleActionParameters&text=DeliveryRuleActionParameters\" data-throw-if-not-resolved=\"False\" />"
 constructors:
 - uid: "com.azure.resourcemanager.cdn.models.CacheKeyQueryStringActionParameters.CacheKeyQueryStringActionParameters()"
   fullName: "com.azure.resourcemanager.cdn.models.CacheKeyQueryStringActionParameters.CacheKeyQueryStringActionParameters()"
@@ -73,6 +80,7 @@ methods:
   fullName: "com.azure.resourcemanager.cdn.models.CacheKeyQueryStringActionParameters.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
   nameWithType: "CacheKeyQueryStringActionParameters.toJson(JsonWriter jsonWriter)"
+  overridden: "com.azure.resourcemanager.cdn.models.DeliveryRuleActionParameters.toJson(com.azure.json.JsonWriter)"
   parameters:
   - name: "jsonWriter"
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
@@ -86,16 +94,18 @@ methods:
   name: "typeName()"
   nameWithType: "CacheKeyQueryStringActionParameters.typeName()"
   summary: "Get the type<wbr>Name property: The type<wbr>Name property."
-  syntax: "public String typeName()"
+  overridden: "com.azure.resourcemanager.cdn.models.DeliveryRuleActionParameters.typeName()"
+  syntax: "public DeliveryRuleActionParametersType typeName()"
   desc: "Get the typeName property: The typeName property."
   returns:
     description: "the typeName value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+    type: "<xref href=\"com.azure.resourcemanager.cdn.models.DeliveryRuleActionParametersType?alt=com.azure.resourcemanager.cdn.models.DeliveryRuleActionParametersType&text=DeliveryRuleActionParametersType\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cdn.models.CacheKeyQueryStringActionParameters.validate()"
   fullName: "com.azure.resourcemanager.cdn.models.CacheKeyQueryStringActionParameters.validate()"
   name: "validate()"
   nameWithType: "CacheKeyQueryStringActionParameters.validate()"
   summary: "Validates the instance."
+  overridden: "com.azure.resourcemanager.cdn.models.DeliveryRuleActionParameters.validate()"
   syntax: "public void validate()"
   desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.cdn.models.CacheKeyQueryStringActionParameters.withQueryParameters(java.lang.String)"
@@ -126,24 +136,8 @@ methods:
   returns:
     description: "the CacheKeyQueryStringActionParameters object itself."
     type: "<xref href=\"com.azure.resourcemanager.cdn.models.CacheKeyQueryStringActionParameters?alt=com.azure.resourcemanager.cdn.models.CacheKeyQueryStringActionParameters&text=CacheKeyQueryStringActionParameters\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.cdn.models.CacheKeyQueryStringActionParameters.withTypeName(java.lang.String)"
-  fullName: "com.azure.resourcemanager.cdn.models.CacheKeyQueryStringActionParameters.withTypeName(String typeName)"
-  name: "withTypeName(String typeName)"
-  nameWithType: "CacheKeyQueryStringActionParameters.withTypeName(String typeName)"
-  summary: "Set the type<wbr>Name property: The type<wbr>Name property."
-  parameters:
-  - description: "the typeName value to set."
-    name: "typeName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public CacheKeyQueryStringActionParameters withTypeName(String typeName)"
-  desc: "Set the typeName property: The typeName property."
-  returns:
-    description: "the CacheKeyQueryStringActionParameters object itself."
-    type: "<xref href=\"com.azure.resourcemanager.cdn.models.CacheKeyQueryStringActionParameters?alt=com.azure.resourcemanager.cdn.models.CacheKeyQueryStringActionParameters&text=CacheKeyQueryStringActionParameters\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Defines the parameters for the cache-key query string action."
-implements:
-- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cdn.models.CacheKeyQueryStringActionParameters?alt=com.azure.resourcemanager.cdn.models.CacheKeyQueryStringActionParameters&text=CacheKeyQueryStringActionParameters\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.cdn.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-cdn:2.53.7
+artifact: com.azure.resourcemanager:azure-resourcemanager-cdn:2.54.0
