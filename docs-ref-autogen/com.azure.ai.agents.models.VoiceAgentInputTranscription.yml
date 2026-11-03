@@ -3,7 +3,7 @@ uid: "com.azure.ai.agents.models.VoiceAgentInputTranscription"
 fullName: "com.azure.ai.agents.models.VoiceAgentInputTranscription"
 name: "VoiceAgentInputTranscription"
 nameWithType: "VoiceAgentInputTranscription"
-summary: "Asynchronous input-audio transcription configuration."
+summary: "Settings for transcribing input audio, including the transcription model, Custom Speech deployments, and phrase hints."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -89,7 +89,7 @@ methods:
   nameWithType: "VoiceAgentInputTranscription.getLanguage()"
   summary: "Get the language property: The language of the input audio."
   syntax: "public String getLanguage()"
-  desc: "Get the language property: The language of the input audio. Supplying the input language in \\[ISO-639-1\\](https://en.wikipedia.org/wiki/List\\_of\\_ISO\\_639-1\\_codes) (e.g. \\`en\\`) format will improve accuracy and latency."
+  desc: "Get the language property: The language of the input audio. Supplying the input language in \\[ISO-639-1\\](https://en.wikipedia.org/wiki/List\\_of\\_ISO\\_639-1\\_codes) (e.g. \\`en\\`) format will improve accuracy and latency. Optional for other transcription models; required and must be nonempty when \\`model\\` is \\`azure-speech-streaming\\` (such as \\`en-US\\`; comma-separated locales are supported)."
   returns:
     description: "the language value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -109,7 +109,7 @@ methods:
   nameWithType: "VoiceAgentInputTranscription.getModel()"
   summary: "Get the model property: The transcription model identifier."
   syntax: "public VoiceAgentInputTranscriptionModel getModel()"
-  desc: "Get the model property: The transcription model identifier. Configure customer custom speech deployments in \\`custom\\_speech\\`."
+  desc: "Get the model property: The transcription model identifier. Configure customer custom speech deployments in \\`custom\\_speech\\`. \\`azure-speech-streaming\\` is for cascaded text-model conversations only (not realtime speech-to-speech models), requires a nonempty \\`language\\` such as \\`en-US\\` (comma-separated locales are supported), and supports \\`custom\\_speech\\`, \\`phrase\\_list\\`, and \\`profanity\\_filter\\`."
   returns:
     description: "the model value."
     type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentInputTranscriptionModel?alt=com.azure.ai.agents.models.VoiceAgentInputTranscriptionModel&text=VoiceAgentInputTranscriptionModel\" data-throw-if-not-resolved=\"False\" />"
@@ -123,6 +123,16 @@ methods:
   returns:
     description: "the phraseList value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+- uid: "com.azure.ai.agents.models.VoiceAgentInputTranscription.getProfanityFilter()"
+  fullName: "com.azure.ai.agents.models.VoiceAgentInputTranscription.getProfanityFilter()"
+  name: "getProfanityFilter()"
+  nameWithType: "VoiceAgentInputTranscription.getProfanityFilter()"
+  summary: "Get the profanity<wbr>Filter property: Controls how profanity is handled in input transcripts."
+  syntax: "public VoiceAgentProfanityFilterMode getProfanityFilter()"
+  desc: "Get the profanityFilter property: Controls how profanity is handled in input transcripts. Supported only with managed Azure Speech (\\`azure-speech\\` and \\`azure-speech-streaming\\`), including Custom Speech. Set this property before the session starts. If omitted, the transcription provider's default applies. You cannot change the mode during a session. Filtering affects transcript events and the text sent to cascaded models. It does not change input audio, voice activity detection, or assistant speech; audio-native models still receive the original audio. Mandatory service masking policies apply even when you select \\`unfiltered\\`."
+  returns:
+    description: "the profanityFilter value."
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentProfanityFilterMode?alt=com.azure.ai.agents.models.VoiceAgentProfanityFilterMode&text=VoiceAgentProfanityFilterMode\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.agents.models.VoiceAgentInputTranscription.getPrompt()"
   fullName: "com.azure.ai.agents.models.VoiceAgentInputTranscription.getPrompt()"
   name: "getPrompt()"
@@ -185,7 +195,7 @@ methods:
     name: "language"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public VoiceAgentInputTranscription setLanguage(String language)"
-  desc: "Set the language property: The language of the input audio. Supplying the input language in \\[ISO-639-1\\](https://en.wikipedia.org/wiki/List\\_of\\_ISO\\_639-1\\_codes) (e.g. \\`en\\`) format will improve accuracy and latency."
+  desc: "Set the language property: The language of the input audio. Supplying the input language in \\[ISO-639-1\\](https://en.wikipedia.org/wiki/List\\_of\\_ISO\\_639-1\\_codes) (e.g. \\`en\\`) format will improve accuracy and latency. Optional for other transcription models; required and must be nonempty when \\`model\\` is \\`azure-speech-streaming\\` (such as \\`en-US\\`; comma-separated locales are supported)."
   returns:
     description: "the VoiceAgentInputTranscription object itself."
     type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentInputTranscription?alt=com.azure.ai.agents.models.VoiceAgentInputTranscription&text=VoiceAgentInputTranscription\" data-throw-if-not-resolved=\"False\" />"
@@ -217,6 +227,20 @@ methods:
   returns:
     description: "the VoiceAgentInputTranscription object itself."
     type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentInputTranscription?alt=com.azure.ai.agents.models.VoiceAgentInputTranscription&text=VoiceAgentInputTranscription\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.VoiceAgentInputTranscription.setProfanityFilter(com.azure.ai.agents.models.VoiceAgentProfanityFilterMode)"
+  fullName: "com.azure.ai.agents.models.VoiceAgentInputTranscription.setProfanityFilter(VoiceAgentProfanityFilterMode profanityFilter)"
+  name: "setProfanityFilter(VoiceAgentProfanityFilterMode profanityFilter)"
+  nameWithType: "VoiceAgentInputTranscription.setProfanityFilter(VoiceAgentProfanityFilterMode profanityFilter)"
+  summary: "Set the profanity<wbr>Filter property: Controls how profanity is handled in input transcripts."
+  parameters:
+  - description: "the profanityFilter value to set."
+    name: "profanityFilter"
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentProfanityFilterMode?alt=com.azure.ai.agents.models.VoiceAgentProfanityFilterMode&text=VoiceAgentProfanityFilterMode\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public VoiceAgentInputTranscription setProfanityFilter(VoiceAgentProfanityFilterMode profanityFilter)"
+  desc: "Set the profanityFilter property: Controls how profanity is handled in input transcripts. Supported only with managed Azure Speech (\\`azure-speech\\` and \\`azure-speech-streaming\\`), including Custom Speech. Set this property before the session starts. If omitted, the transcription provider's default applies. You cannot change the mode during a session. Filtering affects transcript events and the text sent to cascaded models. It does not change input audio, voice activity detection, or assistant speech; audio-native models still receive the original audio. Mandatory service masking policies apply even when you select \\`unfiltered\\`."
+  returns:
+    description: "the VoiceAgentInputTranscription object itself."
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentInputTranscription?alt=com.azure.ai.agents.models.VoiceAgentInputTranscription&text=VoiceAgentInputTranscription\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.agents.models.VoiceAgentInputTranscription.setPrompt(java.lang.String)"
   fullName: "com.azure.ai.agents.models.VoiceAgentInputTranscription.setPrompt(String prompt)"
   name: "setPrompt(String prompt)"
@@ -244,9 +268,9 @@ methods:
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Asynchronous input-audio transcription configuration. Extends the OpenAI Realtime transcription options with the Azure and MAI transcription models, custom speech models, and phrase hints."
+desc: "Settings for transcribing input audio, including the transcription model, Custom Speech deployments, and phrase hints. When \\`model\\` is \\`azure-speech-streaming\\`, transcription is supported for cascaded text-model conversations only (not realtime speech-to-speech models), requires a nonempty \\`language\\` such as \\`en-US\\` (comma-separated locales are supported), and supports \\`custom\\_speech\\`, \\`phrase\\_list\\`, and \\`profanity\\_filter\\`."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.VoiceAgentInputTranscription?alt=com.azure.ai.agents.models.VoiceAgentInputTranscription&text=VoiceAgentInputTranscription\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.ai.agents.models"
-artifact: com.azure:azure-ai-agents:2.8.0
+artifact: com.azure:azure-ai-agents:2.9.0

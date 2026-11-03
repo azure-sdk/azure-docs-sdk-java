@@ -1,0 +1,108 @@
+### YamlMime:JavaType
+uid: "com.azure.ai.agents.models.VoiceAgentSoundscapeTrackConfiguration"
+fullName: "com.azure.ai.agents.models.VoiceAgentSoundscapeTrackConfiguration"
+name: "VoiceAgentSoundscapeTrackConfiguration"
+nameWithType: "VoiceAgentSoundscapeTrackConfiguration"
+summary: "A soundscape track with its own audio source and playback volume."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **VoiceAgentSoundscapeTrackConfiguration**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.VoiceAgentSoundscapeTrackConfiguration?alt=com.azure.ai.agents.models.VoiceAgentSoundscapeTrackConfiguration&text=VoiceAgentSoundscapeTrackConfiguration\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.ai.agents.models.VoiceAgentSoundscapeTrackConfiguration.VoiceAgentSoundscapeTrackConfiguration(com.azure.ai.agents.models.VoiceAgentSoundscapeSourceConfiguration)"
+  fullName: "com.azure.ai.agents.models.VoiceAgentSoundscapeTrackConfiguration.VoiceAgentSoundscapeTrackConfiguration(VoiceAgentSoundscapeSourceConfiguration source)"
+  name: "VoiceAgentSoundscapeTrackConfiguration(VoiceAgentSoundscapeSourceConfiguration source)"
+  nameWithType: "VoiceAgentSoundscapeTrackConfiguration.VoiceAgentSoundscapeTrackConfiguration(VoiceAgentSoundscapeSourceConfiguration source)"
+  summary: "Creates an instance of Voice<wbr>Agent<wbr>Soundscape<wbr>Track<wbr>Configuration class."
+  parameters:
+  - description: "the source value to set."
+    name: "source"
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentSoundscapeSourceConfiguration?alt=com.azure.ai.agents.models.VoiceAgentSoundscapeSourceConfiguration&text=VoiceAgentSoundscapeSourceConfiguration\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public VoiceAgentSoundscapeTrackConfiguration(VoiceAgentSoundscapeSourceConfiguration source)"
+  desc: "Creates an instance of VoiceAgentSoundscapeTrackConfiguration class."
+methods:
+- uid: "com.azure.ai.agents.models.VoiceAgentSoundscapeTrackConfiguration.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.ai.agents.models.VoiceAgentSoundscapeTrackConfiguration.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "VoiceAgentSoundscapeTrackConfiguration.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Voice<wbr>Agent<wbr>Soundscape<wbr>Track<wbr>Configuration from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static VoiceAgentSoundscapeTrackConfiguration fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of VoiceAgentSoundscapeTrackConfiguration from the JsonReader."
+  returns:
+    description: "An instance of VoiceAgentSoundscapeTrackConfiguration if the JsonReader was pointing to an instance of\n it, or null if it was pointing to JSON null."
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentSoundscapeTrackConfiguration?alt=com.azure.ai.agents.models.VoiceAgentSoundscapeTrackConfiguration&text=VoiceAgentSoundscapeTrackConfiguration\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.VoiceAgentSoundscapeTrackConfiguration.getGain()"
+  fullName: "com.azure.ai.agents.models.VoiceAgentSoundscapeTrackConfiguration.getGain()"
+  name: "getGain()"
+  nameWithType: "VoiceAgentSoundscapeTrackConfiguration.getGain()"
+  summary: "Get the gain property: Linear playback gain from 0 to 1, independent of agent speech volume."
+  syntax: "public Double getGain()"
+  desc: "Get the gain property: Linear playback gain from 0 to 1, independent of agent speech volume. If omitted, the service defaults to 1. A value of 0 mutes this track."
+  returns:
+    description: "the gain value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html\">Double</a>"
+- uid: "com.azure.ai.agents.models.VoiceAgentSoundscapeTrackConfiguration.getSource()"
+  fullName: "com.azure.ai.agents.models.VoiceAgentSoundscapeTrackConfiguration.getSource()"
+  name: "getSource()"
+  nameWithType: "VoiceAgentSoundscapeTrackConfiguration.getSource()"
+  summary: "Get the source property: The required audio source for this track."
+  syntax: "public VoiceAgentSoundscapeSourceConfiguration getSource()"
+  desc: "Get the source property: The required audio source for this track."
+  returns:
+    description: "the source value."
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentSoundscapeSourceConfiguration?alt=com.azure.ai.agents.models.VoiceAgentSoundscapeSourceConfiguration&text=VoiceAgentSoundscapeSourceConfiguration\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.VoiceAgentSoundscapeTrackConfiguration.setGain(java.lang.Double)"
+  fullName: "com.azure.ai.agents.models.VoiceAgentSoundscapeTrackConfiguration.setGain(Double gain)"
+  name: "setGain(Double gain)"
+  nameWithType: "VoiceAgentSoundscapeTrackConfiguration.setGain(Double gain)"
+  summary: "Set the gain property: Linear playback gain from 0 to 1, independent of agent speech volume."
+  parameters:
+  - description: "the gain value to set."
+    name: "gain"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html\">Double</a>"
+  syntax: "public VoiceAgentSoundscapeTrackConfiguration setGain(Double gain)"
+  desc: "Set the gain property: Linear playback gain from 0 to 1, independent of agent speech volume. If omitted, the service defaults to 1. A value of 0 mutes this track."
+  returns:
+    description: "the VoiceAgentSoundscapeTrackConfiguration object itself."
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentSoundscapeTrackConfiguration?alt=com.azure.ai.agents.models.VoiceAgentSoundscapeTrackConfiguration&text=VoiceAgentSoundscapeTrackConfiguration\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.VoiceAgentSoundscapeTrackConfiguration.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.ai.agents.models.VoiceAgentSoundscapeTrackConfiguration.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "VoiceAgentSoundscapeTrackConfiguration.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "A soundscape track with its own audio source and playback volume."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.VoiceAgentSoundscapeTrackConfiguration?alt=com.azure.ai.agents.models.VoiceAgentSoundscapeTrackConfiguration&text=VoiceAgentSoundscapeTrackConfiguration\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.ai.agents.models"
+artifact: com.azure:azure-ai-agents:2.9.0

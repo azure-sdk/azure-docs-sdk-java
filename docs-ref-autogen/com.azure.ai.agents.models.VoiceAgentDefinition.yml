@@ -188,6 +188,16 @@ methods:
   returns:
     description: "the outputModalities value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.ai.agents.models.VoiceOutputModality?alt=com.azure.ai.agents.models.VoiceOutputModality&text=VoiceOutputModality\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.ai.agents.models.VoiceAgentDefinition.getSoundscape()"
+  fullName: "com.azure.ai.agents.models.VoiceAgentDefinition.getSoundscape()"
+  name: "getSoundscape()"
+  nameWithType: "VoiceAgentDefinition.getSoundscape()"
+  summary: "Get the soundscape property: Optional background ambience and event cues, stored with the agent version and separate from the audio configuration."
+  syntax: "public VoiceAgentSoundscapeConfiguration getSoundscape()"
+  desc: "Get the soundscape property: Optional background ambience and event cues, stored with the agent version and separate from the audio configuration. Currently rendered only for telephony calls, not browser WebRTC or direct voice WebSocket sessions. Omit this property to disable all auxiliary audio. Persisted conversation recordings do not include the soundscape mix."
+  returns:
+    description: "the soundscape value."
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentSoundscapeConfiguration?alt=com.azure.ai.agents.models.VoiceAgentSoundscapeConfiguration&text=VoiceAgentSoundscapeConfiguration\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.agents.models.VoiceAgentDefinition.getStructuredInputs()"
   fullName: "com.azure.ai.agents.models.VoiceAgentDefinition.getStructuredInputs()"
   name: "getStructuredInputs()"
@@ -463,6 +473,20 @@ methods:
   desc: "Set the raiConfig property: Configuration for Responsible AI (RAI) content filtering and safety features."
   returns:
     type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentDefinition?alt=com.azure.ai.agents.models.VoiceAgentDefinition&text=VoiceAgentDefinition\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.VoiceAgentDefinition.setSoundscape(com.azure.ai.agents.models.VoiceAgentSoundscapeConfiguration)"
+  fullName: "com.azure.ai.agents.models.VoiceAgentDefinition.setSoundscape(VoiceAgentSoundscapeConfiguration soundscape)"
+  name: "setSoundscape(VoiceAgentSoundscapeConfiguration soundscape)"
+  nameWithType: "VoiceAgentDefinition.setSoundscape(VoiceAgentSoundscapeConfiguration soundscape)"
+  summary: "Set the soundscape property: Optional background ambience and event cues, stored with the agent version and separate from the audio configuration."
+  parameters:
+  - description: "the soundscape value to set."
+    name: "soundscape"
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentSoundscapeConfiguration?alt=com.azure.ai.agents.models.VoiceAgentSoundscapeConfiguration&text=VoiceAgentSoundscapeConfiguration\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public VoiceAgentDefinition setSoundscape(VoiceAgentSoundscapeConfiguration soundscape)"
+  desc: "Set the soundscape property: Optional background ambience and event cues, stored with the agent version and separate from the audio configuration. Currently rendered only for telephony calls, not browser WebRTC or direct voice WebSocket sessions. Omit this property to disable all auxiliary audio. Persisted conversation recordings do not include the soundscape mix."
+  returns:
+    description: "the VoiceAgentDefinition object itself."
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentDefinition?alt=com.azure.ai.agents.models.VoiceAgentDefinition&text=VoiceAgentDefinition\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.agents.models.VoiceAgentDefinition.setStore(java.lang.Boolean)"
   fullName: "com.azure.ai.agents.models.VoiceAgentDefinition.setStore(Boolean store)"
   name: "setStore(Boolean store)"
@@ -578,4 +602,4 @@ type: "class"
 desc: "The voice agent definition. Its configuration (model, instructions, audio, tools, and optional avatar) drives a managed speech-to-speech experience. Establish realtime voice sessions through \\`GET /agents/\\{agent\\_name\\}/endpoint/protocols/voice\\`. Every create or update produces a new immutable version."
 metadata: {}
 package: "com.azure.ai.agents.models"
-artifact: com.azure:azure-ai-agents:2.8.0
+artifact: com.azure:azure-ai-agents:2.9.0

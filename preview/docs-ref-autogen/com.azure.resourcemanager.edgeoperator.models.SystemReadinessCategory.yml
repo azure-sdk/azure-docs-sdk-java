@@ -1,0 +1,92 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.edgeoperator.models.SystemReadinessCategory"
+fullName: "com.azure.resourcemanager.edgeoperator.models.SystemReadinessCategory"
+name: "SystemReadinessCategory"
+nameWithType: "SystemReadinessCategory"
+summary: "The readiness state reported for a single provider-defined category."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **SystemReadinessCategory**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.edgeoperator.models.SystemReadinessCategory?alt=com.azure.resourcemanager.edgeoperator.models.SystemReadinessCategory&text=SystemReadinessCategory\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.azure.resourcemanager.edgeoperator.models.SystemReadinessCategory.categoryName()"
+  fullName: "com.azure.resourcemanager.edgeoperator.models.SystemReadinessCategory.categoryName()"
+  name: "categoryName()"
+  nameWithType: "SystemReadinessCategory.categoryName()"
+  summary: "Get the category<wbr>Name property: The provider-defined name of the readiness category (for example, \\`services\\`, \\`diagnostics\\`, \\`identity\\`, \\`networking\\`)."
+  syntax: "public String categoryName()"
+  desc: "Get the categoryName property: The provider-defined name of the readiness category (for example, \\`services\\`, \\`diagnostics\\`, \\`identity\\`, \\`networking\\`). Categories may be added, renamed, or removed without an API-version change and must be treated as an open string."
+  returns:
+    description: "the categoryName value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.edgeoperator.models.SystemReadinessCategory.errorMessageDetails()"
+  fullName: "com.azure.resourcemanager.edgeoperator.models.SystemReadinessCategory.errorMessageDetails()"
+  name: "errorMessageDetails()"
+  nameWithType: "SystemReadinessCategory.errorMessageDetails()"
+  summary: "Get the error<wbr>Message<wbr>Details property: The error messages reported for the category."
+  syntax: "public List<String> errorMessageDetails()"
+  desc: "Get the errorMessageDetails property: The error messages reported for the category. The list is empty when no specific errors are available."
+  returns:
+    description: "the errorMessageDetails value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+- uid: "com.azure.resourcemanager.edgeoperator.models.SystemReadinessCategory.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.edgeoperator.models.SystemReadinessCategory.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "SystemReadinessCategory.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of System<wbr>Readiness<wbr>Category from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static SystemReadinessCategory fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of SystemReadinessCategory from the JsonReader."
+  returns:
+    description: "An instance of SystemReadinessCategory if the JsonReader was pointing to an instance of it, or null if it\n was pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.edgeoperator.models.SystemReadinessCategory?alt=com.azure.resourcemanager.edgeoperator.models.SystemReadinessCategory&text=SystemReadinessCategory\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.edgeoperator.models.SystemReadinessCategory.readinessPercentage()"
+  fullName: "com.azure.resourcemanager.edgeoperator.models.SystemReadinessCategory.readinessPercentage()"
+  name: "readinessPercentage()"
+  nameWithType: "SystemReadinessCategory.readinessPercentage()"
+  summary: "Get the readiness<wbr>Percentage property: The readiness percentage reported by the category, from 0 (not ready) to 100 (fully ready)."
+  syntax: "public int readinessPercentage()"
+  desc: "Get the readinessPercentage property: The readiness percentage reported by the category, from 0 (not ready) to 100 (fully ready)."
+  returns:
+    description: "the readinessPercentage value."
+    type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.edgeoperator.models.SystemReadinessCategory.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.edgeoperator.models.SystemReadinessCategory.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "SystemReadinessCategory.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "The readiness state reported for a single provider-defined category."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.edgeoperator.models.SystemReadinessCategory?alt=com.azure.resourcemanager.edgeoperator.models.SystemReadinessCategory&text=SystemReadinessCategory\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.edgeoperator.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-edgeoperator:1.0.0-beta.1

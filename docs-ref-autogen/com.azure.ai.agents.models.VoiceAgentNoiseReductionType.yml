@@ -50,6 +50,30 @@ fields:
     type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentNoiseReductionType?alt=com.azure.ai.agents.models.VoiceAgentNoiseReductionType&text=VoiceAgentNoiseReductionType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final VoiceAgentNoiseReductionType AZURE_DEEP_NOISE_SUPPRESSION"
   desc: "Azure deep noise suppression."
+- uid: "com.azure.ai.agents.models.VoiceAgentNoiseReductionType.AZURE_DEEP_NOISE_SUPPRESSION_HEADSET"
+  fullName: "com.azure.ai.agents.models.VoiceAgentNoiseReductionType.AZURE_DEEP_NOISE_SUPPRESSION_HEADSET"
+  name: "AZURE_DEEP_NOISE_SUPPRESSION_HEADSET"
+  nameWithType: "VoiceAgentNoiseReductionType.AZURE_DEEP_NOISE_SUPPRESSION_HEADSET"
+  summary: "Azure headset-optimized noise suppression for local voice activity detection."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentNoiseReductionType?alt=com.azure.ai.agents.models.VoiceAgentNoiseReductionType&text=VoiceAgentNoiseReductionType\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final VoiceAgentNoiseReductionType AZURE_DEEP_NOISE_SUPPRESSION_HEADSET"
+  desc: "Azure headset-optimized noise suppression for local voice activity detection. Optimized for low-sample-rate audio, including 8 kHz telephony audio. Enhances detection audio without changing the audio used for recognition. The mode is not restricted to headset devices."
+- uid: "com.azure.ai.agents.models.VoiceAgentNoiseReductionType.AZURE_PERSONAL_NOISE_SUPPRESSION"
+  fullName: "com.azure.ai.agents.models.VoiceAgentNoiseReductionType.AZURE_PERSONAL_NOISE_SUPPRESSION"
+  name: "AZURE_PERSONAL_NOISE_SUPPRESSION"
+  nameWithType: "VoiceAgentNoiseReductionType.AZURE_PERSONAL_NOISE_SUPPRESSION"
+  summary: "Azure personalized noise suppression for local voice activity detection."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentNoiseReductionType?alt=com.azure.ai.agents.models.VoiceAgentNoiseReductionType&text=VoiceAgentNoiseReductionType\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final VoiceAgentNoiseReductionType AZURE_PERSONAL_NOISE_SUPPRESSION"
+  desc: "Azure personalized noise suppression for local voice activity detection. Starts with headset suppression and personalizes detection after automatic speaker enrollment. Recognition audio is unchanged; headset suppression remains active when personalization is unavailable."
 - uid: "com.azure.ai.agents.models.VoiceAgentNoiseReductionType.FAR_FIELD"
   fullName: "com.azure.ai.agents.models.VoiceAgentNoiseReductionType.FAR_FIELD"
   name: "FAR_FIELD"
@@ -104,7 +128,7 @@ methods:
     description: "known VoiceAgentNoiseReductionType values."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html\">Collection</a>&lt;<xref href=\"com.azure.ai.agents.models.VoiceAgentNoiseReductionType?alt=com.azure.ai.agents.models.VoiceAgentNoiseReductionType&text=VoiceAgentNoiseReductionType\" data-throw-if-not-resolved=\"False\" />&gt;"
 type: "class"
-desc: "The input audio noise reduction mode."
+desc: "The input audio noise reduction mode. - \\`azure\\_deep\\_noise\\_suppression\\_headset\\`: Azure headset-optimized noise suppression for local voice activity detection. Optimized for low-sample-rate audio, including 8 kHz telephony audio. Enhances detection audio without changing the audio used for recognition. The mode is not restricted to headset devices. - \\`azure\\_personal\\_noise\\_suppression\\`: Azure personalized noise suppression for local voice activity detection. Starts with headset suppression and personalizes detection after automatic speaker enrollment. Recognition audio is unchanged; headset suppression remains active when personalization is unavailable."
 metadata: {}
 package: "com.azure.ai.agents.models"
-artifact: com.azure:azure-ai-agents:2.8.0
+artifact: com.azure:azure-ai-agents:2.9.0

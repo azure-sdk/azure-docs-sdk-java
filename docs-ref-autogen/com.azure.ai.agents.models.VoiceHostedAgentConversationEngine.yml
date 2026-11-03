@@ -65,7 +65,7 @@ methods:
   nameWithType: "VoiceHostedAgentConversationEngine.getAdditionalProperties()"
   summary: "Get the additional<wbr>Properties property: A closed reference to the hosted text agent that owns conversation handling for a voice agent."
   syntax: "public Map<String,BinaryData> getAdditionalProperties()"
-  desc: "Get the additionalProperties property: A closed reference to the hosted text agent that owns conversation handling for a voice agent. The hosted agent is resolved within the same project and must support the \\`invocations\\_ws\\` protocol, Voice Live compatibility, and Bridge Protocol 1.0."
+  desc: "Get the additionalProperties property: A closed reference to the hosted text agent that owns conversation handling for a voice agent. The hosted agent is resolved within the same project and must declare \\`voice\\_conversation\\_engine\\` version \\`1.0.0\\`. Voice Live connects through the dedicated voice-conversation-engine endpoint using the existing Bridge Protocol 1.0 wire semantics; the Bridge message version is independent of the container protocol version and the Hosted Agents API version \\`v1\\`. Declaring \\`invocations\\_ws\\` is optional and does not substitute for \\`voice\\_conversation\\_engine\\`."
   returns:
     description: "the additionalProperties value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -110,7 +110,7 @@ methods:
     name: "additionalProperties"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />&gt;"
   syntax: "public VoiceHostedAgentConversationEngine setAdditionalProperties(Map<String,BinaryData> additionalProperties)"
-  desc: "Set the additionalProperties property: A closed reference to the hosted text agent that owns conversation handling for a voice agent. The hosted agent is resolved within the same project and must support the \\`invocations\\_ws\\` protocol, Voice Live compatibility, and Bridge Protocol 1.0."
+  desc: "Set the additionalProperties property: A closed reference to the hosted text agent that owns conversation handling for a voice agent. The hosted agent is resolved within the same project and must declare \\`voice\\_conversation\\_engine\\` version \\`1.0.0\\`. Voice Live connects through the dedicated voice-conversation-engine endpoint using the existing Bridge Protocol 1.0 wire semantics; the Bridge message version is independent of the container protocol version and the Hosted Agents API version \\`v1\\`. Declaring \\`invocations\\_ws\\` is optional and does not substitute for \\`voice\\_conversation\\_engine\\`."
   returns:
     description: "the VoiceHostedAgentConversationEngine object itself."
     type: "<xref href=\"com.azure.ai.agents.models.VoiceHostedAgentConversationEngine?alt=com.azure.ai.agents.models.VoiceHostedAgentConversationEngine&text=VoiceHostedAgentConversationEngine\" data-throw-if-not-resolved=\"False\" />"
@@ -142,7 +142,7 @@ methods:
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "A closed reference to the hosted text agent that owns conversation handling for a voice agent. The hosted agent is resolved within the same project and must support the \\`invocations\\_ws\\` protocol, Voice Live compatibility, and Bridge Protocol 1.0."
+desc: "A closed reference to the hosted text agent that owns conversation handling for a voice agent. The hosted agent is resolved within the same project and must declare \\`voice\\_conversation\\_engine\\` version \\`1.0.0\\`. Voice Live connects through the dedicated voice-conversation-engine endpoint using the existing Bridge Protocol 1.0 wire semantics; the Bridge message version is independent of the container protocol version and the Hosted Agents API version \\`v1\\`. Declaring \\`invocations\\_ws\\` is optional and does not substitute for \\`voice\\_conversation\\_engine\\`."
 metadata: {}
 package: "com.azure.ai.agents.models"
-artifact: com.azure:azure-ai-agents:2.8.0
+artifact: com.azure:azure-ai-agents:2.9.0
