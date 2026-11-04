@@ -14,13 +14,13 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "A name for the replication protection item."
+  - description: "Replication protection intent name."
     name: "intentObjectName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Create Protection Intent Input."
@@ -39,13 +39,13 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "A name for the replication protection item."
+  - description: "Replication protection intent name."
     name: "intentObjectName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Create Protection Intent Input."
@@ -67,10 +67,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Replication protection intent name."
@@ -79,7 +79,7 @@ methods:
   syntax: "public abstract ReplicationProtectionIntentInner get(String resourceGroupName, String resourceName, String intentObjectName)"
   desc: "Gets the details of a Replication protection intent item. Gets the details of an ASR replication protection intent."
   returns:
-    description: "the details of an ASR replication protection intent."
+    description: "the details of a Replication protection intent item.\n \n Gets the details of an ASR replication protection intent."
     type: "<xref href=\"com.azure.resourcemanager.recoveryservicessiterecovery.fluent.models.ReplicationProtectionIntentInner?alt=com.azure.resourcemanager.recoveryservicessiterecovery.fluent.models.ReplicationProtectionIntentInner&text=ReplicationProtectionIntentInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.recoveryservicessiterecovery.fluent.ReplicationProtectionIntentsClient.getWithResponse(java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.recoveryservicessiterecovery.fluent.ReplicationProtectionIntentsClient.getWithResponse(String resourceGroupName, String resourceName, String intentObjectName, Context context)"
@@ -89,10 +89,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Replication protection intent name."
@@ -104,7 +104,7 @@ methods:
   syntax: "public abstract Response<ReplicationProtectionIntentInner> getWithResponse(String resourceGroupName, String resourceName, String intentObjectName, Context context)"
   desc: "Gets the details of a Replication protection intent item. Gets the details of an ASR replication protection intent."
   returns:
-    description: "the details of an ASR replication protection intent along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    description: "the details of a Replication protection intent item.\n \n Gets the details of an ASR replication protection intent along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.recoveryservicessiterecovery.fluent.models.ReplicationProtectionIntentInner?alt=com.azure.resourcemanager.recoveryservicessiterecovery.fluent.models.ReplicationProtectionIntentInner&text=ReplicationProtectionIntentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.recoveryservicessiterecovery.fluent.ReplicationProtectionIntentsClient.list(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.recoveryservicessiterecovery.fluent.ReplicationProtectionIntentsClient.list(String resourceGroupName, String resourceName)"
@@ -114,16 +114,16 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<ReplicationProtectionIntentInner> list(String resourceGroupName, String resourceName)"
   desc: "Gets the list of replication protection intent objects. Gets the list of ASR replication protection intent objects in the vault."
   returns:
-    description: "the list of ASR replication protection intent objects in the vault as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the list of replication protection intent objects.\n \n Gets the list of ASR replication protection intent objects in the vault as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.recoveryservicessiterecovery.fluent.models.ReplicationProtectionIntentInner?alt=com.azure.resourcemanager.recoveryservicessiterecovery.fluent.models.ReplicationProtectionIntentInner&text=ReplicationProtectionIntentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.recoveryservicessiterecovery.fluent.ReplicationProtectionIntentsClient.list(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.recoveryservicessiterecovery.fluent.ReplicationProtectionIntentsClient.list(String resourceGroupName, String resourceName, String skipToken, String takeToken, Context context)"
@@ -133,10 +133,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The pagination token."
@@ -151,10 +151,10 @@ methods:
   syntax: "public abstract PagedIterable<ReplicationProtectionIntentInner> list(String resourceGroupName, String resourceName, String skipToken, String takeToken, Context context)"
   desc: "Gets the list of replication protection intent objects. Gets the list of ASR replication protection intent objects in the vault."
   returns:
-    description: "the list of ASR replication protection intent objects in the vault as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the list of replication protection intent objects.\n \n Gets the list of ASR replication protection intent objects in the vault as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.recoveryservicessiterecovery.fluent.models.ReplicationProtectionIntentInner?alt=com.azure.resourcemanager.recoveryservicessiterecovery.fluent.models.ReplicationProtectionIntentInner&text=ReplicationProtectionIntentInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 type: "interface"
 desc: "An instance of this class provides access to all the operations defined in ReplicationProtectionIntentsClient."
 metadata: {}
 package: "com.azure.resourcemanager.recoveryservicessiterecovery.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-recoveryservicessiterecovery:1.3.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-recoveryservicessiterecovery:1.4.0

@@ -30,16 +30,16 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Unique fabric ARM name."
+  - description: "Fabric name."
     name: "fabricName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Unique protection container ARM name."
+  - description: "Protection container name."
     name: "protectionContainerName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract void delete(String resourceGroupName, String resourceName, String fabricName, String protectionContainerName)"
@@ -52,16 +52,16 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Unique fabric ARM name."
+  - description: "Fabric name."
     name: "fabricName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Unique protection container ARM name."
+  - description: "Protection container name."
     name: "protectionContainerName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
@@ -77,16 +77,16 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the fabric."
+  - description: "Fabric name."
     name: "fabricName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the protection container."
+  - description: "Protection container name."
     name: "protectionContainerName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The request object to add a protectable item."
@@ -105,16 +105,16 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the fabric."
+  - description: "Fabric name."
     name: "fabricName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the protection container."
+  - description: "Protection container name."
     name: "protectionContainerName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The request object to add a protectable item."
@@ -136,10 +136,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Fabric name."
@@ -151,7 +151,7 @@ methods:
   syntax: "public abstract ProtectionContainer get(String resourceGroupName, String resourceName, String fabricName, String protectionContainerName)"
   desc: "Gets the protection container details. Gets the details of a protection container."
   returns:
-    description: "the details of a protection container."
+    description: "the protection container details.\n \n Gets the details of a protection container."
     type: "<xref href=\"com.azure.resourcemanager.recoveryservicessiterecovery.models.ProtectionContainer?alt=com.azure.resourcemanager.recoveryservicessiterecovery.models.ProtectionContainer&text=ProtectionContainer\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationProtectionContainers.getById(java.lang.String)"
   fullName: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationProtectionContainers.getById(String id)"
@@ -167,7 +167,7 @@ methods:
   syntax: "public abstract ProtectionContainer getById(String id)"
   desc: "Gets the protection container details. Gets the details of a protection container."
   returns:
-    description: "the details of a protection container along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    description: "the protection container details.\n \n Gets the details of a protection container along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.resourcemanager.recoveryservicessiterecovery.models.ProtectionContainer?alt=com.azure.resourcemanager.recoveryservicessiterecovery.models.ProtectionContainer&text=ProtectionContainer\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationProtectionContainers.getByIdWithResponse(java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationProtectionContainers.getByIdWithResponse(String id, Context context)"
@@ -186,7 +186,7 @@ methods:
   syntax: "public abstract Response<ProtectionContainer> getByIdWithResponse(String id, Context context)"
   desc: "Gets the protection container details. Gets the details of a protection container."
   returns:
-    description: "the details of a protection container along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    description: "the protection container details.\n \n Gets the details of a protection container along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.recoveryservicessiterecovery.models.ProtectionContainer?alt=com.azure.resourcemanager.recoveryservicessiterecovery.models.ProtectionContainer&text=ProtectionContainer\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationProtectionContainers.getWithResponse(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationProtectionContainers.getWithResponse(String resourceGroupName, String resourceName, String fabricName, String protectionContainerName, Context context)"
@@ -196,10 +196,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Fabric name."
@@ -214,7 +214,7 @@ methods:
   syntax: "public abstract Response<ProtectionContainer> getWithResponse(String resourceGroupName, String resourceName, String fabricName, String protectionContainerName, Context context)"
   desc: "Gets the protection container details. Gets the details of a protection container."
   returns:
-    description: "the details of a protection container along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    description: "the protection container details.\n \n Gets the details of a protection container along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.recoveryservicessiterecovery.models.ProtectionContainer?alt=com.azure.resourcemanager.recoveryservicessiterecovery.models.ProtectionContainer&text=ProtectionContainer\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationProtectionContainers.list(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationProtectionContainers.list(String resourceGroupName, String resourceName)"
@@ -224,7 +224,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the recovery services vault."
@@ -233,7 +233,7 @@ methods:
   syntax: "public abstract PagedIterable<ProtectionContainer> list(String resourceGroupName, String resourceName)"
   desc: "Gets the list of all protection containers in a vault. Lists the protection containers in a vault."
   returns:
-    description: "protection Container collection as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the list of all protection containers in a vault.\n \n Lists the protection containers in a vault as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.recoveryservicessiterecovery.models.ProtectionContainer?alt=com.azure.resourcemanager.recoveryservicessiterecovery.models.ProtectionContainer&text=ProtectionContainer\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationProtectionContainers.list(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationProtectionContainers.list(String resourceGroupName, String resourceName, Context context)"
@@ -243,7 +243,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the recovery services vault."
@@ -255,7 +255,7 @@ methods:
   syntax: "public abstract PagedIterable<ProtectionContainer> list(String resourceGroupName, String resourceName, Context context)"
   desc: "Gets the list of all protection containers in a vault. Lists the protection containers in a vault."
   returns:
-    description: "protection Container collection as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the list of all protection containers in a vault.\n \n Lists the protection containers in a vault as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.recoveryservicessiterecovery.models.ProtectionContainer?alt=com.azure.resourcemanager.recoveryservicessiterecovery.models.ProtectionContainer&text=ProtectionContainer\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationProtectionContainers.listByReplicationFabrics(java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationProtectionContainers.listByReplicationFabrics(String resourceGroupName, String resourceName, String fabricName)"
@@ -265,10 +265,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Fabric name."
@@ -277,7 +277,7 @@ methods:
   syntax: "public abstract PagedIterable<ProtectionContainer> listByReplicationFabrics(String resourceGroupName, String resourceName, String fabricName)"
   desc: "Gets the list of protection container for a fabric. Lists the protection containers in the specified fabric."
   returns:
-    description: "protection Container collection as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the list of protection container for a fabric.\n \n Lists the protection containers in the specified fabric as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.recoveryservicessiterecovery.models.ProtectionContainer?alt=com.azure.resourcemanager.recoveryservicessiterecovery.models.ProtectionContainer&text=ProtectionContainer\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationProtectionContainers.listByReplicationFabrics(java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationProtectionContainers.listByReplicationFabrics(String resourceGroupName, String resourceName, String fabricName, Context context)"
@@ -287,10 +287,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Fabric name."
@@ -302,7 +302,7 @@ methods:
   syntax: "public abstract PagedIterable<ProtectionContainer> listByReplicationFabrics(String resourceGroupName, String resourceName, String fabricName, Context context)"
   desc: "Gets the list of protection container for a fabric. Lists the protection containers in the specified fabric."
   returns:
-    description: "protection Container collection as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the list of protection container for a fabric.\n \n Lists the protection containers in the specified fabric as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.recoveryservicessiterecovery.models.ProtectionContainer?alt=com.azure.resourcemanager.recoveryservicessiterecovery.models.ProtectionContainer&text=ProtectionContainer\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationProtectionContainers.switchClusterProtection(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.recoveryservicessiterecovery.models.SwitchClusterProtectionInput)"
   fullName: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationProtectionContainers.switchClusterProtection(String resourceGroupName, String resourceName, String fabricName, String protectionContainerName, SwitchClusterProtectionInput switchInput)"
@@ -312,7 +312,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the recovery services vault."
@@ -330,7 +330,7 @@ methods:
   syntax: "public abstract ProtectionContainer switchClusterProtection(String resourceGroupName, String resourceName, String fabricName, String protectionContainerName, SwitchClusterProtectionInput switchInput)"
   desc: "Switches protection from one container to another. Operation to switch protection from one container to another."
   returns:
-    description: "protection container details."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.recoveryservicessiterecovery.models.ProtectionContainer?alt=com.azure.resourcemanager.recoveryservicessiterecovery.models.ProtectionContainer&text=ProtectionContainer\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationProtectionContainers.switchClusterProtection(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.recoveryservicessiterecovery.models.SwitchClusterProtectionInput,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationProtectionContainers.switchClusterProtection(String resourceGroupName, String resourceName, String fabricName, String protectionContainerName, SwitchClusterProtectionInput switchInput, Context context)"
@@ -340,7 +340,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the recovery services vault."
@@ -361,7 +361,7 @@ methods:
   syntax: "public abstract ProtectionContainer switchClusterProtection(String resourceGroupName, String resourceName, String fabricName, String protectionContainerName, SwitchClusterProtectionInput switchInput, Context context)"
   desc: "Switches protection from one container to another. Operation to switch protection from one container to another."
   returns:
-    description: "protection container details."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.recoveryservicessiterecovery.models.ProtectionContainer?alt=com.azure.resourcemanager.recoveryservicessiterecovery.models.ProtectionContainer&text=ProtectionContainer\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationProtectionContainers.switchProtection(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.resourcemanager.recoveryservicessiterecovery.models.SwitchProtectionInput)"
   fullName: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationProtectionContainers.switchProtection(String resourceGroupName, String resourceName, String fabricName, String protectionContainerName, SwitchProtectionInput switchInput)"
@@ -371,13 +371,13 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Unique fabric name."
+  - description: "Fabric name."
     name: "fabricName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Protection container name."
@@ -399,13 +399,13 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "Unique fabric name."
+  - description: "Fabric name."
     name: "fabricName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Protection container name."
@@ -426,4 +426,4 @@ type: "interface"
 desc: "Resource collection API of ReplicationProtectionContainers."
 metadata: {}
 package: "com.azure.resourcemanager.recoveryservicessiterecovery.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-recoveryservicessiterecovery:1.3.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-recoveryservicessiterecovery:1.4.0

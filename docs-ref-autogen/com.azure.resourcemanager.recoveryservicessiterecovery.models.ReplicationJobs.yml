@@ -14,10 +14,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Job identifier."
@@ -36,10 +36,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Job identifier."
@@ -61,13 +61,13 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the recovery services vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "job query filter."
+  - description: "The request body."
     name: "jobQueryParameter"
     type: "<xref href=\"com.azure.resourcemanager.recoveryservicessiterecovery.models.JobQueryParameter?alt=com.azure.resourcemanager.recoveryservicessiterecovery.models.JobQueryParameter&text=JobQueryParameter\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Job export(String resourceGroupName, String resourceName, JobQueryParameter jobQueryParameter)"
@@ -83,13 +83,13 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the recovery services vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "job query filter."
+  - description: "The request body."
     name: "jobQueryParameter"
     type: "<xref href=\"com.azure.resourcemanager.recoveryservicessiterecovery.models.JobQueryParameter?alt=com.azure.resourcemanager.recoveryservicessiterecovery.models.JobQueryParameter&text=JobQueryParameter\" data-throw-if-not-resolved=\"False\" />"
   - description: "The context to associate with this operation."
@@ -108,10 +108,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Job identifier."
@@ -120,7 +120,7 @@ methods:
   syntax: "public abstract Job get(String resourceGroupName, String resourceName, String jobName)"
   desc: "Gets the job details. Get the details of an Azure Site Recovery job."
   returns:
-    description: "the details of an Azure Site Recovery job."
+    description: "the job details.\n \n Get the details of an Azure Site Recovery job."
     type: "<xref href=\"com.azure.resourcemanager.recoveryservicessiterecovery.models.Job?alt=com.azure.resourcemanager.recoveryservicessiterecovery.models.Job&text=Job\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationJobs.getWithResponse(java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationJobs.getWithResponse(String resourceGroupName, String resourceName, String jobName, Context context)"
@@ -130,10 +130,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Job identifier."
@@ -145,7 +145,7 @@ methods:
   syntax: "public abstract Response<Job> getWithResponse(String resourceGroupName, String resourceName, String jobName, Context context)"
   desc: "Gets the job details. Get the details of an Azure Site Recovery job."
   returns:
-    description: "the details of an Azure Site Recovery job along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    description: "the job details.\n \n Get the details of an Azure Site Recovery job along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.recoveryservicessiterecovery.models.Job?alt=com.azure.resourcemanager.recoveryservicessiterecovery.models.Job&text=Job\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationJobs.list(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationJobs.list(String resourceGroupName, String resourceName)"
@@ -155,16 +155,16 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<Job> list(String resourceGroupName, String resourceName)"
   desc: "Gets the list of jobs. Gets the list of Azure Site Recovery Jobs for the vault."
   returns:
-    description: "the list of Azure Site Recovery Jobs for the vault as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the list of jobs.\n \n Gets the list of Azure Site Recovery Jobs for the vault as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.recoveryservicessiterecovery.models.Job?alt=com.azure.resourcemanager.recoveryservicessiterecovery.models.Job&text=Job\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationJobs.list(java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationJobs.list(String resourceGroupName, String resourceName, String filter, Context context)"
@@ -174,10 +174,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "OData filter options."
@@ -189,7 +189,7 @@ methods:
   syntax: "public abstract PagedIterable<Job> list(String resourceGroupName, String resourceName, String filter, Context context)"
   desc: "Gets the list of jobs. Gets the list of Azure Site Recovery Jobs for the vault."
   returns:
-    description: "the list of Azure Site Recovery Jobs for the vault as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the list of jobs.\n \n Gets the list of Azure Site Recovery Jobs for the vault as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.recoveryservicessiterecovery.models.Job?alt=com.azure.resourcemanager.recoveryservicessiterecovery.models.Job&text=Job\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationJobs.restart(java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.recoveryservicessiterecovery.models.ReplicationJobs.restart(String resourceGroupName, String resourceName, String jobName)"
@@ -199,10 +199,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Job identifier."
@@ -221,10 +221,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Job identifier."
@@ -246,10 +246,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Job identifier."
@@ -271,10 +271,10 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group where the recovery services vault is present."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "The name of the recovery services vault."
+  - description: "The name of the Vault."
     name: "resourceName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Job identifier."
@@ -295,4 +295,4 @@ type: "interface"
 desc: "Resource collection API of ReplicationJobs."
 metadata: {}
 package: "com.azure.resourcemanager.recoveryservicessiterecovery.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-recoveryservicessiterecovery:1.3.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-recoveryservicessiterecovery:1.4.0
