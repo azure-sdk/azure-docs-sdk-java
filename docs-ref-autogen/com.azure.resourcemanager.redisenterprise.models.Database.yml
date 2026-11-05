@@ -14,7 +14,7 @@ methods:
   modifiers:
   - "abstract"
   syntax: "public abstract AccessKeysAuthentication accessKeysAuthentication()"
-  desc: "Gets the accessKeysAuthentication property: This property can be Enabled/Disabled to allow or deny access with the current access keys. Can be updated even after database is created."
+  desc: "Gets the accessKeysAuthentication property: This property can be Enabled/Disabled to allow or deny access with the current access keys. Can be updated even after database is created. Default is Disabled."
   returns:
     description: "the accessKeysAuthentication value."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.AccessKeysAuthentication?alt=com.azure.resourcemanager.redisenterprise.models.AccessKeysAuthentication&text=AccessKeysAuthentication\" data-throw-if-not-resolved=\"False\" />"
@@ -253,7 +253,7 @@ methods:
   syntax: "public abstract AccessKeys listKeys()"
   desc: "Retrieves the access keys for the Redis Enterprise database."
   returns:
-    description: "access keys."
+    description: "the secret access keys used for authenticating connections to redis."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.AccessKeys?alt=com.azure.resourcemanager.redisenterprise.models.AccessKeys&text=AccessKeys\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.redisenterprise.models.Database.listKeysWithResponse(com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.redisenterprise.models.Database.listKeysWithResponse(Context context)"
@@ -269,7 +269,7 @@ methods:
   syntax: "public abstract Response<AccessKeys> listKeysWithResponse(Context context)"
   desc: "Retrieves the access keys for the Redis Enterprise database."
   returns:
-    description: "access keys along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    description: "the secret access keys used for authenticating connections to redis along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.redisenterprise.models.AccessKeys?alt=com.azure.resourcemanager.redisenterprise.models.AccessKeys&text=AccessKeys\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.redisenterprise.models.Database.modules()"
   fullName: "com.azure.resourcemanager.redisenterprise.models.Database.modules()"
@@ -294,6 +294,18 @@ methods:
   desc: "Gets the name property: The name of the resource."
   returns:
     description: "the name value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.redisenterprise.models.Database.notifyKeyspaceEvents()"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.Database.notifyKeyspaceEvents()"
+  name: "notifyKeyspaceEvents()"
+  nameWithType: "Database.notifyKeyspaceEvents()"
+  summary: "Gets the notify<wbr>Keyspace<wbr>Events property: Specifies which keyspace events should trigger notifications."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String notifyKeyspaceEvents()"
+  desc: "Gets the notifyKeyspaceEvents property: Specifies which keyspace events should trigger notifications. Default is an empty string, meaning this feature is disabled. When enabled, at least 'K' (keyspace events) or 'E' (keyevent events) must be present. For example, 'AKE' enables all standard events. See https://redis.io/docs/latest/develop/use/keyspace-notifications/ for the complete list of event types."
+  returns:
+    description: "the notifyKeyspaceEvents value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.redisenterprise.models.Database.persistence()"
   fullName: "com.azure.resourcemanager.redisenterprise.models.Database.persistence()"
@@ -385,7 +397,7 @@ methods:
   syntax: "public abstract AccessKeys regenerateKey(RegenerateKeyParameters parameters)"
   desc: "Regenerates the Redis Enterprise database's access keys."
   returns:
-    description: "access keys."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.AccessKeys?alt=com.azure.resourcemanager.redisenterprise.models.AccessKeys&text=AccessKeys\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.redisenterprise.models.Database.regenerateKey(com.azure.resourcemanager.redisenterprise.models.RegenerateKeyParameters,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.redisenterprise.models.Database.regenerateKey(RegenerateKeyParameters parameters, Context context)"
@@ -404,7 +416,7 @@ methods:
   syntax: "public abstract AccessKeys regenerateKey(RegenerateKeyParameters parameters, Context context)"
   desc: "Regenerates the Redis Enterprise database's access keys."
   returns:
-    description: "access keys."
+    description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.AccessKeys?alt=com.azure.resourcemanager.redisenterprise.models.AccessKeys&text=AccessKeys\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.redisenterprise.models.Database.resourceGroupName()"
   fullName: "com.azure.resourcemanager.redisenterprise.models.Database.resourceGroupName()"
@@ -492,4 +504,4 @@ type: "interface"
 desc: "An immutable client-side representation of Database."
 metadata: {}
 package: "com.azure.resourcemanager.redisenterprise.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.2.0

@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties"
 fullName: "com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties"
 name: "ClusterCommonProperties"
 nameWithType: "ClusterCommonProperties"
-summary: "Redis Enterprise cluster properties Properties of Redis Enterprise clusters, as opposed to general resource properties like location, tags."
+summary: "Properties of Redis Enterprise clusters, as opposed to general resource properties like location, tags."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -79,6 +79,26 @@ methods:
   returns:
     description: "the hostname value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.maintenanceConfiguration()"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.maintenanceConfiguration()"
+  name: "maintenanceConfiguration()"
+  nameWithType: "ClusterCommonProperties.maintenanceConfiguration()"
+  summary: "Get the maintenance<wbr>Configuration property: Cluster-level maintenance configuration."
+  syntax: "public MaintenanceConfiguration maintenanceConfiguration()"
+  desc: "Get the maintenanceConfiguration property: Cluster-level maintenance configuration."
+  returns:
+    description: "the maintenanceConfiguration value."
+    type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.MaintenanceConfiguration?alt=com.azure.resourcemanager.redisenterprise.models.MaintenanceConfiguration&text=MaintenanceConfiguration\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.migratedEndpoint()"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.migratedEndpoint()"
+  name: "migratedEndpoint()"
+  nameWithType: "ClusterCommonProperties.migratedEndpoint()"
+  summary: "Get the migrated<wbr>Endpoint property: The endpoint of the source resource that is currently pointing to this resource as a result of an ACR/ACRE to AMR migration."
+  syntax: "public String migratedEndpoint()"
+  desc: "Get the migratedEndpoint property: The endpoint of the source resource that is currently pointing to this resource as a result of an ACR/ACRE to AMR migration."
+  returns:
+    description: "the migratedEndpoint value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.minimumTlsVersion()"
   fullName: "com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.minimumTlsVersion()"
   name: "minimumTlsVersion()"
@@ -151,13 +171,6 @@ methods:
   - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.validate()"
-  fullName: "com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.validate()"
-  name: "validate()"
-  nameWithType: "ClusterCommonProperties.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.withEncryption(com.azure.resourcemanager.redisenterprise.models.ClusterPropertiesEncryption)"
   fullName: "com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.withEncryption(ClusterPropertiesEncryption encryption)"
   name: "withEncryption(ClusterPropertiesEncryption encryption)"
@@ -186,6 +199,20 @@ methods:
   returns:
     description: "the ClusterCommonProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties?alt=com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties&text=ClusterCommonProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.withMaintenanceConfiguration(com.azure.resourcemanager.redisenterprise.models.MaintenanceConfiguration)"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.withMaintenanceConfiguration(MaintenanceConfiguration maintenanceConfiguration)"
+  name: "withMaintenanceConfiguration(MaintenanceConfiguration maintenanceConfiguration)"
+  nameWithType: "ClusterCommonProperties.withMaintenanceConfiguration(MaintenanceConfiguration maintenanceConfiguration)"
+  summary: "Set the maintenance<wbr>Configuration property: Cluster-level maintenance configuration."
+  parameters:
+  - description: "the maintenanceConfiguration value to set."
+    name: "maintenanceConfiguration"
+    type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.MaintenanceConfiguration?alt=com.azure.resourcemanager.redisenterprise.models.MaintenanceConfiguration&text=MaintenanceConfiguration\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ClusterCommonProperties withMaintenanceConfiguration(MaintenanceConfiguration maintenanceConfiguration)"
+  desc: "Set the maintenanceConfiguration property: Cluster-level maintenance configuration."
+  returns:
+    description: "the ClusterCommonProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties?alt=com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties&text=ClusterCommonProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.withMinimumTlsVersion(com.azure.resourcemanager.redisenterprise.models.TlsVersion)"
   fullName: "com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.withMinimumTlsVersion(TlsVersion minimumTlsVersion)"
   name: "withMinimumTlsVersion(TlsVersion minimumTlsVersion)"
@@ -201,9 +228,9 @@ methods:
     description: "the ClusterCommonProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties?alt=com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties&text=ClusterCommonProperties\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Redis Enterprise cluster properties Properties of Redis Enterprise clusters, as opposed to general resource properties like location, tags."
+desc: "Properties of Redis Enterprise clusters, as opposed to general resource properties like location, tags."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties?alt=com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties&text=ClusterCommonProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.redisenterprise.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.2.0

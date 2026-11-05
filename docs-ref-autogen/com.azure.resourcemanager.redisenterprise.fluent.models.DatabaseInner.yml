@@ -44,7 +44,7 @@ methods:
   nameWithType: "DatabaseInner.accessKeysAuthentication()"
   summary: "Get the access<wbr>Keys<wbr>Authentication property: This property can be Enabled/Disabled to allow or deny access with the current access keys."
   syntax: "public AccessKeysAuthentication accessKeysAuthentication()"
-  desc: "Get the accessKeysAuthentication property: This property can be Enabled/Disabled to allow or deny access with the current access keys. Can be updated even after database is created."
+  desc: "Get the accessKeysAuthentication property: This property can be Enabled/Disabled to allow or deny access with the current access keys. Can be updated even after database is created. Default is Disabled."
   returns:
     description: "the accessKeysAuthentication value."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.AccessKeysAuthentication?alt=com.azure.resourcemanager.redisenterprise.models.AccessKeysAuthentication&text=AccessKeysAuthentication\" data-throw-if-not-resolved=\"False\" />"
@@ -149,6 +149,16 @@ methods:
   returns:
     description: "the name value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.redisenterprise.fluent.models.DatabaseInner.notifyKeyspaceEvents()"
+  fullName: "com.azure.resourcemanager.redisenterprise.fluent.models.DatabaseInner.notifyKeyspaceEvents()"
+  name: "notifyKeyspaceEvents()"
+  nameWithType: "DatabaseInner.notifyKeyspaceEvents()"
+  summary: "Get the notify<wbr>Keyspace<wbr>Events property: Specifies which keyspace events should trigger notifications."
+  syntax: "public String notifyKeyspaceEvents()"
+  desc: "Get the notifyKeyspaceEvents property: Specifies which keyspace events should trigger notifications. Default is an empty string, meaning this feature is disabled. When enabled, at least 'K' (keyspace events) or 'E' (keyevent events) must be present. For example, 'AKE' enables all standard events. See https://redis.io/docs/latest/develop/use/keyspace-notifications/ for the complete list of event types."
+  returns:
+    description: "the notifyKeyspaceEvents value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.redisenterprise.fluent.models.DatabaseInner.persistence()"
   fullName: "com.azure.resourcemanager.redisenterprise.fluent.models.DatabaseInner.persistence()"
   name: "persistence()"
@@ -233,13 +243,6 @@ methods:
   returns:
     description: "the type value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-- uid: "com.azure.resourcemanager.redisenterprise.fluent.models.DatabaseInner.validate()"
-  fullName: "com.azure.resourcemanager.redisenterprise.fluent.models.DatabaseInner.validate()"
-  name: "validate()"
-  nameWithType: "DatabaseInner.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.redisenterprise.fluent.models.DatabaseInner.withAccessKeysAuthentication(com.azure.resourcemanager.redisenterprise.models.AccessKeysAuthentication)"
   fullName: "com.azure.resourcemanager.redisenterprise.fluent.models.DatabaseInner.withAccessKeysAuthentication(AccessKeysAuthentication accessKeysAuthentication)"
   name: "withAccessKeysAuthentication(AccessKeysAuthentication accessKeysAuthentication)"
@@ -250,7 +253,7 @@ methods:
     name: "accessKeysAuthentication"
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.AccessKeysAuthentication?alt=com.azure.resourcemanager.redisenterprise.models.AccessKeysAuthentication&text=AccessKeysAuthentication\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public DatabaseInner withAccessKeysAuthentication(AccessKeysAuthentication accessKeysAuthentication)"
-  desc: "Set the accessKeysAuthentication property: This property can be Enabled/Disabled to allow or deny access with the current access keys. Can be updated even after database is created."
+  desc: "Set the accessKeysAuthentication property: This property can be Enabled/Disabled to allow or deny access with the current access keys. Can be updated even after database is created. Default is Disabled."
   returns:
     description: "the DatabaseInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.fluent.models.DatabaseInner?alt=com.azure.resourcemanager.redisenterprise.fluent.models.DatabaseInner&text=DatabaseInner\" data-throw-if-not-resolved=\"False\" />"
@@ -338,6 +341,20 @@ methods:
   returns:
     description: "the DatabaseInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.fluent.models.DatabaseInner?alt=com.azure.resourcemanager.redisenterprise.fluent.models.DatabaseInner&text=DatabaseInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redisenterprise.fluent.models.DatabaseInner.withNotifyKeyspaceEvents(java.lang.String)"
+  fullName: "com.azure.resourcemanager.redisenterprise.fluent.models.DatabaseInner.withNotifyKeyspaceEvents(String notifyKeyspaceEvents)"
+  name: "withNotifyKeyspaceEvents(String notifyKeyspaceEvents)"
+  nameWithType: "DatabaseInner.withNotifyKeyspaceEvents(String notifyKeyspaceEvents)"
+  summary: "Set the notify<wbr>Keyspace<wbr>Events property: Specifies which keyspace events should trigger notifications."
+  parameters:
+  - description: "the notifyKeyspaceEvents value to set."
+    name: "notifyKeyspaceEvents"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public DatabaseInner withNotifyKeyspaceEvents(String notifyKeyspaceEvents)"
+  desc: "Set the notifyKeyspaceEvents property: Specifies which keyspace events should trigger notifications. Default is an empty string, meaning this feature is disabled. When enabled, at least 'K' (keyspace events) or 'E' (keyevent events) must be present. For example, 'AKE' enables all standard events. See https://redis.io/docs/latest/develop/use/keyspace-notifications/ for the complete list of event types."
+  returns:
+    description: "the DatabaseInner object itself."
+    type: "<xref href=\"com.azure.resourcemanager.redisenterprise.fluent.models.DatabaseInner?alt=com.azure.resourcemanager.redisenterprise.fluent.models.DatabaseInner&text=DatabaseInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.redisenterprise.fluent.models.DatabaseInner.withPersistence(com.azure.resourcemanager.redisenterprise.models.Persistence)"
   fullName: "com.azure.resourcemanager.redisenterprise.fluent.models.DatabaseInner.withPersistence(Persistence persistence)"
   name: "withPersistence(Persistence persistence)"
@@ -370,4 +387,4 @@ type: "class"
 desc: "Describes a database on the Redis Enterprise cluster."
 metadata: {}
 package: "com.azure.resourcemanager.redisenterprise.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.2.0

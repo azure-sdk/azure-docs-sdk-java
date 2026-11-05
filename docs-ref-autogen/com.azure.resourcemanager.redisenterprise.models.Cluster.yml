@@ -58,11 +58,11 @@ methods:
   fullName: "com.azure.resourcemanager.redisenterprise.models.Cluster.identity()"
   name: "identity()"
   nameWithType: "Cluster.identity()"
-  summary: "Gets the identity property: The identity of the resource."
+  summary: "Gets the identity property: The managed service identities assigned to this resource."
   modifiers:
   - "abstract"
   syntax: "public abstract ManagedServiceIdentity identity()"
-  desc: "Gets the identity property: The identity of the resource."
+  desc: "Gets the identity property: The managed service identities assigned to this resource."
   returns:
     description: "the identity value."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ManagedServiceIdentity?alt=com.azure.resourcemanager.redisenterprise.models.ManagedServiceIdentity&text=ManagedServiceIdentity\" data-throw-if-not-resolved=\"False\" />"
@@ -129,6 +129,30 @@ methods:
   desc: "Gets the location property: The geo-location where the resource lives."
   returns:
     description: "the location value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.redisenterprise.models.Cluster.maintenanceConfiguration()"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.Cluster.maintenanceConfiguration()"
+  name: "maintenanceConfiguration()"
+  nameWithType: "Cluster.maintenanceConfiguration()"
+  summary: "Gets the maintenance<wbr>Configuration property: Cluster-level maintenance configuration."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract MaintenanceConfiguration maintenanceConfiguration()"
+  desc: "Gets the maintenanceConfiguration property: Cluster-level maintenance configuration."
+  returns:
+    description: "the maintenanceConfiguration value."
+    type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.MaintenanceConfiguration?alt=com.azure.resourcemanager.redisenterprise.models.MaintenanceConfiguration&text=MaintenanceConfiguration\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redisenterprise.models.Cluster.migratedEndpoint()"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.Cluster.migratedEndpoint()"
+  name: "migratedEndpoint()"
+  nameWithType: "Cluster.migratedEndpoint()"
+  summary: "Gets the migrated<wbr>Endpoint property: The endpoint of the source resource that is currently pointing to this resource as a result of an ACR/ACRE to AMR migration."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract String migratedEndpoint()"
+  desc: "Gets the migratedEndpoint property: The endpoint of the source resource that is currently pointing to this resource as a result of an ACR/ACRE to AMR migration."
+  returns:
+    description: "the migratedEndpoint value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.redisenterprise.models.Cluster.minimumTlsVersion()"
   fullName: "com.azure.resourcemanager.redisenterprise.models.Cluster.minimumTlsVersion()"
@@ -302,6 +326,18 @@ methods:
   returns:
     description: "the sku value."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.Sku?alt=com.azure.resourcemanager.redisenterprise.models.Sku&text=Sku\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redisenterprise.models.Cluster.systemData()"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.Cluster.systemData()"
+  name: "systemData()"
+  nameWithType: "Cluster.systemData()"
+  summary: "Gets the system<wbr>Data property: Azure Resource Manager metadata containing created<wbr>By and modified<wbr>By information."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract SystemData systemData()"
+  desc: "Gets the systemData property: Azure Resource Manager metadata containing createdBy and modifiedBy information."
+  returns:
+    description: "the systemData value."
+    type: "<xref href=\"com.azure.core.management.SystemData?alt=com.azure.core.management.SystemData&text=SystemData\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.redisenterprise.models.Cluster.tags()"
   fullName: "com.azure.resourcemanager.redisenterprise.models.Cluster.tags()"
   name: "tags()"
@@ -342,11 +378,11 @@ methods:
   fullName: "com.azure.resourcemanager.redisenterprise.models.Cluster.zones()"
   name: "zones()"
   nameWithType: "Cluster.zones()"
-  summary: "Gets the zones property: The Availability Zones where this cluster will be deployed."
+  summary: "Gets the zones property: The availability zones."
   modifiers:
   - "abstract"
   syntax: "public abstract List<String> zones()"
-  desc: "Gets the zones property: The Availability Zones where this cluster will be deployed."
+  desc: "Gets the zones property: The availability zones."
   returns:
     description: "the zones value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
@@ -354,4 +390,4 @@ type: "interface"
 desc: "An immutable client-side representation of Cluster."
 metadata: {}
 package: "com.azure.resourcemanager.redisenterprise.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.2.0

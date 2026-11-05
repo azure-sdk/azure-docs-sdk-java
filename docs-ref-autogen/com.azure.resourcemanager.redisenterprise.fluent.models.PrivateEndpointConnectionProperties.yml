@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.redisenterprise.fluent.models.PrivateEndpointCon
 fullName: "com.azure.resourcemanager.redisenterprise.fluent.models.PrivateEndpointConnectionProperties"
 name: "PrivateEndpointConnectionProperties"
 nameWithType: "PrivateEndpointConnectionProperties"
-summary: "Properties of the Private<wbr>Endpoint<wbr>Connect<wbr>Properties."
+summary: "Properties of the private endpoint connection."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -49,13 +49,23 @@ methods:
   returns:
     description: "An instance of PrivateEndpointConnectionProperties if the JsonReader was pointing to an instance of it,\n or null if it was pointing to JSON null."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.fluent.models.PrivateEndpointConnectionProperties?alt=com.azure.resourcemanager.redisenterprise.fluent.models.PrivateEndpointConnectionProperties&text=PrivateEndpointConnectionProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redisenterprise.fluent.models.PrivateEndpointConnectionProperties.groupIds()"
+  fullName: "com.azure.resourcemanager.redisenterprise.fluent.models.PrivateEndpointConnectionProperties.groupIds()"
+  name: "groupIds()"
+  nameWithType: "PrivateEndpointConnectionProperties.groupIds()"
+  summary: "Get the group<wbr>Ids property: The group ids for the private endpoint resource."
+  syntax: "public List<String> groupIds()"
+  desc: "Get the groupIds property: The group ids for the private endpoint resource."
+  returns:
+    description: "the groupIds value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.resourcemanager.redisenterprise.fluent.models.PrivateEndpointConnectionProperties.privateEndpoint()"
   fullName: "com.azure.resourcemanager.redisenterprise.fluent.models.PrivateEndpointConnectionProperties.privateEndpoint()"
   name: "privateEndpoint()"
   nameWithType: "PrivateEndpointConnectionProperties.privateEndpoint()"
-  summary: "Get the private<wbr>Endpoint property: The resource of private end point."
+  summary: "Get the private<wbr>Endpoint property: The private endpoint resource."
   syntax: "public PrivateEndpoint privateEndpoint()"
-  desc: "Get the privateEndpoint property: The resource of private end point."
+  desc: "Get the privateEndpoint property: The private endpoint resource."
   returns:
     description: "the privateEndpoint value."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.PrivateEndpoint?alt=com.azure.resourcemanager.redisenterprise.models.PrivateEndpoint&text=PrivateEndpoint\" data-throw-if-not-resolved=\"False\" />"
@@ -91,24 +101,17 @@ methods:
   - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.redisenterprise.fluent.models.PrivateEndpointConnectionProperties.validate()"
-  fullName: "com.azure.resourcemanager.redisenterprise.fluent.models.PrivateEndpointConnectionProperties.validate()"
-  name: "validate()"
-  nameWithType: "PrivateEndpointConnectionProperties.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.redisenterprise.fluent.models.PrivateEndpointConnectionProperties.withPrivateEndpoint(com.azure.resourcemanager.redisenterprise.models.PrivateEndpoint)"
   fullName: "com.azure.resourcemanager.redisenterprise.fluent.models.PrivateEndpointConnectionProperties.withPrivateEndpoint(PrivateEndpoint privateEndpoint)"
   name: "withPrivateEndpoint(PrivateEndpoint privateEndpoint)"
   nameWithType: "PrivateEndpointConnectionProperties.withPrivateEndpoint(PrivateEndpoint privateEndpoint)"
-  summary: "Set the private<wbr>Endpoint property: The resource of private end point."
+  summary: "Set the private<wbr>Endpoint property: The private endpoint resource."
   parameters:
   - description: "the privateEndpoint value to set."
     name: "privateEndpoint"
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.PrivateEndpoint?alt=com.azure.resourcemanager.redisenterprise.models.PrivateEndpoint&text=PrivateEndpoint\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public PrivateEndpointConnectionProperties withPrivateEndpoint(PrivateEndpoint privateEndpoint)"
-  desc: "Set the privateEndpoint property: The resource of private end point."
+  desc: "Set the privateEndpoint property: The private endpoint resource."
   returns:
     description: "the PrivateEndpointConnectionProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.fluent.models.PrivateEndpointConnectionProperties?alt=com.azure.resourcemanager.redisenterprise.fluent.models.PrivateEndpointConnectionProperties&text=PrivateEndpointConnectionProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -127,9 +130,9 @@ methods:
     description: "the PrivateEndpointConnectionProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.fluent.models.PrivateEndpointConnectionProperties?alt=com.azure.resourcemanager.redisenterprise.fluent.models.PrivateEndpointConnectionProperties&text=PrivateEndpointConnectionProperties\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Properties of the PrivateEndpointConnectProperties."
+desc: "Properties of the private endpoint connection."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.redisenterprise.fluent.models.PrivateEndpointConnectionProperties?alt=com.azure.resourcemanager.redisenterprise.fluent.models.PrivateEndpointConnectionProperties&text=PrivateEndpointConnectionProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.redisenterprise.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.2.0
