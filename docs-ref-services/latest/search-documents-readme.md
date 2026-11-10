@@ -1,12 +1,12 @@
 ---
 title: Azure AI Search client library for Java
 keywords: Azure, java, SDK, API, azure-search-documents, cognitive-search
-ms.date: 05/04/2026
+ms.date: 11/10/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: cognitive-search
 ---
-# Azure AI Search client library for Java - version 12.0.0 
+# Azure AI Search client library for Java - version 12.2.0 
 
 
 This is the Java client library for [Azure AI Search](https://learn.microsoft.com/azure/search/) (formerly known as "Azure Cognitive Search"). Azure AI Search service is an AI-powered information retrieval platform that helps developers build rich search experiences and generative AI apps that combine large language models with enterprise data.
@@ -42,12 +42,49 @@ Use the Azure AI Search client library to:
 
 ## Getting started
 
+### Service API version
+
+This development version targets the `2026-10-01` GA service API by default.
+Use `SearchServiceVersion.V2026_10_01` to select this version explicitly on a client builder.
+Preview-only APIs that are not included in this GA service version are not available in this development version.
+Previously supported GA service versions remain selectable with `SearchServiceVersion`.
+
+This release also removes public Java APIs for preview-only features accidentally exposed by the previous GA
+specification. The corresponding features were not supported by that GA service API, but removing the published Java
+APIs is a source and binary compatibility break. Selecting an older service version does not restore removed Java
+APIs. See the changelog's [Breaking Changes](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-search-documents_12.2.0/sdk/search/azure-search-documents/CHANGELOG.md#breaking-changes)
+section and the [specification correction](https://github.com/Azure/azure-rest-api-specs/pull/47112) for details.
+
+Knowledge bases, typed retrieval streaming, and file knowledge sources are included in this GA API.
+See the [knowledge base configuration sample](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-search-documents_12.2.0/sdk/search/azure-search-documents/src/samples/java/com/azure/search/documents/KnowledgeBaseConfigurationExample.java),
+[retrieval response sample](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-search-documents_12.2.0/sdk/search/azure-search-documents/src/samples/java/com/azure/search/documents/KnowledgeRetrievalResponseExample.java),
+[retrieval streaming sample](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-search-documents_12.2.0/sdk/search/azure-search-documents/src/samples/java/com/azure/search/documents/KnowledgeBaseRetrievalStreamExample.java), and
+[file knowledge source sample](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-search-documents_12.2.0/sdk/search/azure-search-documents/src/samples/java/com/azure/search/documents/KnowledgeSourceFileExample.java).
+See [the changelog](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-search-documents_12.2.0/sdk/search/azure-search-documents/CHANGELOG.md) for additions, breaking changes, and fixes relative to the previous GA release,
+`12.1.1`. The [sample feature-coverage table](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-search-documents_12.2.0/sdk/search/azure-search-documents/src/samples/README.md#new-ga-feature-coverage) maps the new capabilities
+to runnable examples and configuration snippets, including document permissions, indexed SQL and SharePoint sources,
+and content-understanding chunking.
+
+### Listing and pagination
+
+Listing operations use `list...` names and return typed `PagedIterable<T>` results on synchronous clients and
+`PagedFlux<T>` results on asynchronous clients. Pages are fetched lazily, and service-provided continuation links
+are followed automatically. Use `iterableByPage()` or `byPage()` to inspect pages, and pass a page's continuation
+token to the corresponding overload to resume a listing.
+
+Request-options overloads accept service-supported listing filters such as `search`, `searchType`, `pageSize`,
+and `$select` where applicable. A page size limits each service response, not the total number of returned items.
+Set `pageSize` explicitly in the request options or the listing overload that accepts it; the current generated
+listing APIs do not forward page-size hints from `iterableByPage(int)` or `byPage(int)` to the service.
+Use a new `RequestOptions` instance for each independently configured listing. The `list...Names()` methods request
+only resource names and retain pagination.
+
 ### Include the package
 
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-search-documents_12.0.0/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-search-documents_12.2.0/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -84,7 +121,7 @@ add the direct dependency to your project as follows.
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-search-documents</artifactId>
-    <version>11.8.0</version>
+    <version>12.2.0</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -209,13 +246,13 @@ SearchAsyncClient searchAsyncClient = new SearchClientBuilder()
 #### Create a client using Microsoft Entra ID authentication
 
 You can also create a `SearchClient`, `SearchIndexClient`, or `SearchIndexerClient` using Microsoft Entra ID authentication. Your user or service principal must be assigned the "Search Index Data Reader" role.
-Using the [DefaultAzureCredential](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-search-documents_12.0.0/sdk/identity/azure-identity/README.md#defaultazurecredential) 
+Using the [DefaultAzureCredential](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-search-documents_12.2.0/sdk/identity/azure-identity/README.md#defaultazurecredential) 
 you can authenticate a service using Managed Identity or a service principal, authenticate as a developer working on an
 application, and more all without changing code. Please refer the [documentation](https://learn.microsoft.com/azure/search/search-security-rbac?tabs=config-svc-portal%2Croles-portal%2Ctest-portal%2Ccustom-role-portal%2Cdisable-keys-portal) 
 for instructions on how to connect to Azure AI Search using Azure role-based access control (Azure RBAC).
 
-Before you can use the `DefaultAzureCredential`, or any credential type from [Azure.Identity](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-search-documents_12.0.0/sdk/identity/azure-identity/README.md), 
-you'll first need to [install the Azure.Identity package](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-search-documents_12.0.0/sdk/identity/azure-identity/README.md#include-the-package).
+Before you can use the `DefaultAzureCredential`, or any credential type from [Azure.Identity](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-search-documents_12.2.0/sdk/identity/azure-identity/README.md), 
+you'll first need to [install the Azure.Identity package](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-search-documents_12.2.0/sdk/identity/azure-identity/README.md#include-the-package).
 
 To use `DefaultAzureCredential` with a client ID and secret, you'll need to set the `AZURE_TENANT_ID`, 
 `AZURE_CLIENT_ID`, and `AZURE_CLIENT_SECRET` environment variables; alternatively, you can pass those values
@@ -273,7 +310,6 @@ tables.)_ The `azure-search-documents` client library exposes operations on thes
 * `SearchIndexClient` allows you to:
   * [Create, delete, update, or configure a search index](https://learn.microsoft.com/rest/api/searchservice/index-operations)
   * [Declare custom synonym maps to expand or rewrite queries](https://learn.microsoft.com/rest/api/searchservice/synonym-map-operations)
-  <!-- * Most of the `SearchServiceClient` functionality is not yet available in our current preview -->
 
 * `SearchIndexerClient` allows you to:
   * [Start indexers to automatically crawl data sources](https://learn.microsoft.com/rest/api/searchservice/indexer-operations)
@@ -384,6 +420,26 @@ SearchOptions options = new SearchOptions().setSearchText("luxury")
     .setTop(5);
 SearchPagedIterable searchResultsIterable = SEARCH_CLIENT.search(options);
 // ...
+```
+
+To find documents similar to an existing document, supply its key with `setMoreLikeThis`.
+Do not combine this option with search text.
+
+```java readme-sample-searchMoreLikeThis
+SearchOptions options = new SearchOptions().setMoreLikeThis("hotel-1")
+    .setSearchFields("HotelName", "Description")
+    .setTop(5);
+SEARCH_CLIENT.search(options).forEach(result -> System.out.println(result.getAdditionalProperties()));
+```
+
+For permission-filtered search, supply the user's query-source authorization token. These header options are preserved
+on continuation pages. Elevated reads bypass document-level permission checks and are disabled in this example.
+
+```java readme-sample-searchWithDocumentPermissions
+SearchOptions options = new SearchOptions().setSearchText("hotel")
+    .setQuerySourceAuthorization(querySourceToken)
+    .setEnableElevatedRead(false);
+SEARCH_CLIENT.search(options).forEach(result -> System.out.println(result.getAdditionalProperties()));
 ```
 
 ### Creating an index
@@ -520,7 +576,7 @@ SearchClient searchClient = new SearchClientBuilder()
 
 ## Troubleshooting
 
-See our [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-search-documents_12.0.0/sdk/search/azure-search-documents/TROUBLESHOOTING.md) 
+See our [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-search-documents_12.2.0/sdk/search/azure-search-documents/TROUBLESHOOTING.md) 
 for details on how to diagnose various failure scenarios.
 
 ### General
@@ -586,22 +642,20 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [azure_subscription]: https://azure.microsoft.com/free/java
 [maven]: https://maven.apache.org/
 [package]: https://central.sonatype.com/artifact/com.azure/azure-search-documents
-[samples]: https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-search-documents_12.0.0/sdk/search/azure-search-documents/src/samples/
-[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-search-documents_12.0.0/sdk/search/azure-search-documents/src/samples/README.md
-[source_code]: https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-search-documents_12.0.0/sdk/search/azure-search-documents/src
-[logging]: https://learn.microsoft.com/azure/developer/java/sdk/logging-overview
+[samples]: https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-search-documents_12.2.0/sdk/search/azure-search-documents/src/samples/
+[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-search-documents_12.2.0/sdk/search/azure-search-documents/src/samples/README.md
+[source_code]: https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-search-documents_12.2.0/sdk/search/azure-search-documents/src
+[logging]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-search-documents_12.2.0/docs/logging.md
 [cla]: https://cla.microsoft.com
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
 [coc_contact]: mailto:opencode@microsoft.com
-[add_headers_from_context_policy]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-search-documents_12.0.0/sdk/core/azure-core/src/main/java/com/azure/core/http/policy/AddHeadersFromContextPolicy.java
+[add_headers_from_context_policy]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-search-documents_12.2.0/sdk/core/azure-core/src/main/java/com/azure/core/http/policy/AddHeadersFromContextPolicy.java
 [rest_api]: https://learn.microsoft.com/rest/api/searchservice/http-status-codes
 [create_search_service_docs]: https://learn.microsoft.com/azure/search/search-create-service-portal
 [create_search_service_ps]: https://learn.microsoft.com/azure/search/search-manage-powershell#create-or-delete-a-service
 [create_search_service_cli]: https://learn.microsoft.com/cli/azure/search/service?view=azure-cli-latest#az-search-service-create
-[HttpResponseException]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-search-documents_12.0.0/sdk/core/azure-core/src/main/java/com/azure/core/exception/HttpResponseException.java
+[HttpResponseException]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-search-documents_12.2.0/sdk/core/azure-core/src/main/java/com/azure/core/exception/HttpResponseException.java
 [status_codes]: https://learn.microsoft.com/rest/api/searchservice/http-status-codes
 [search-get-started-portal]: https://learn.microsoft.com/azure/search/search-get-started-portal
-
-
 
