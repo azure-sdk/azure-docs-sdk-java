@@ -674,6 +674,40 @@ methods:
   returns:
     description: "the URL of the storage account"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.storage.file.share.ShareFileAsyncClient.getFileId()"
+  fullName: "com.azure.storage.file.share.ShareFileAsyncClient.getFileId()"
+  name: "getFileId()"
+  nameWithType: "ShareFileAsyncClient.getFileId()"
+  summary: "Gets the file ID used to address the file, or an empty string when the client is path-addressed."
+  syntax: "public String getFileId()"
+  desc: "Gets the file ID used to address the file, or an empty string when the client is path-addressed."
+  returns:
+    description: "The file ID."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.storage.file.share.ShareFileAsyncClient.getFileLinks()"
+  fullName: "com.azure.storage.file.share.ShareFileAsyncClient.getFileLinks()"
+  name: "getFileLinks()"
+  nameWithType: "ShareFileAsyncClient.getFileLinks()"
+  summary: "SMB only."
+  syntax: "public Mono<ShareFileLinks> getFileLinks()"
+  desc: "SMB only. Gets the file links. This operation is available only for a file-ID-addressed client."
+  returns:
+    description: "The file properties and hard links."
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.models.ShareFileLinks?alt=com.azure.storage.file.share.models.ShareFileLinks&text=ShareFileLinks\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.storage.file.share.ShareFileAsyncClient.getFileLinksWithResponse(com.azure.storage.file.share.models.ShareRequestConditions)"
+  fullName: "com.azure.storage.file.share.ShareFileAsyncClient.getFileLinksWithResponse(ShareRequestConditions requestConditions)"
+  name: "getFileLinksWithResponse(ShareRequestConditions requestConditions)"
+  nameWithType: "ShareFileAsyncClient.getFileLinksWithResponse(ShareRequestConditions requestConditions)"
+  summary: "SMB only."
+  parameters:
+  - description: "Conditions to apply to the request."
+    name: "requestConditions"
+    type: "<xref href=\"com.azure.storage.file.share.models.ShareRequestConditions?alt=com.azure.storage.file.share.models.ShareRequestConditions&text=ShareRequestConditions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public Mono<Response<ShareFileLinks>> getFileLinksWithResponse(ShareRequestConditions requestConditions)"
+  desc: "SMB only. Gets the hard links to this file. This operation is available only for a file-ID-addressed client."
+  returns:
+    description: "A response containing the file properties and hard links."
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.models.ShareFileLinks?alt=com.azure.storage.file.share.models.ShareFileLinks&text=ShareFileLinks\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.storage.file.share.ShareFileAsyncClient.getFilePath()"
   fullName: "com.azure.storage.file.share.ShareFileAsyncClient.getFilePath()"
   name: "getFilePath()"
@@ -710,7 +744,7 @@ methods:
   nameWithType: "ShareFileAsyncClient.getProperties()"
   summary: "Retrieves the properties of the storage account's file."
   syntax: "public Mono<ShareFileProperties> getProperties()"
-  desc: "Retrieves the properties of the storage account's file. The properties include file metadata, last modified date, is server encrypted, and eTag.\n\n**Code Samples**\n\nRetrieve file properties\n\n```java\nshareFileAsyncClient.getProperties()\n     .subscribe(properties -> {\n         System.out.printf(\"File latest modified date is %s.\", properties.getLastModified());\n     });\n```\n\nFor more information, see the [Azure Docs][].\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/get-file-properties"
+  desc: "Retrieves the properties of the storage account's file. The properties include file metadata, last modified date, is server encrypted, and eTag.\n\n**Code Samples**\n\nRetrieve file properties\n\nThis operation accepts path-addressed and file-ID-addressed clients. To address a file by ID, use <xref uid=\"com.azure.storage.file.share.ShareAsyncClient.getFileClientByFileId(java.lang.String)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareAsyncClient#getFileClientByFileId(String)\"></xref>. Service availability determines whether a file-ID request succeeds; the client does not check the share protocol. If the service does not support property retrieval by ID for the share, use a path-addressed client.\n\n```java\nshareFileAsyncClient.getProperties()\n     .subscribe(properties -> {\n         System.out.printf(\"File latest modified date is %s.\", properties.getLastModified());\n     });\n```\n\nFor more information, see the [Azure Docs][].\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/get-file-properties"
   returns:
     description: "<xref uid=\"com.azure.storage.file.share.models.ShareFileProperties\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Storage file properties\"></xref>"
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.models.ShareFileProperties?alt=com.azure.storage.file.share.models.ShareFileProperties&text=ShareFileProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -1348,7 +1382,7 @@ methods:
     description: "The <xref uid=\"com.azure.storage.file.share.models.ShareFileUploadInfo\" data-throw-if-not-resolved=\"false\" data-raw-source=\"file upload info\"></xref>"
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.models.ShareFileUploadInfo?alt=com.azure.storage.file.share.models.ShareFileUploadInfo&text=ShareFileUploadInfo\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 type: "class"
-desc: "This class provides a client that contains all the operations for interacting with file in Azure Storage File Service. Operations allowed by the client are creating, copying, uploading, downloading, deleting and listing on a file, retrieving properties, setting metadata and list or force close handles of the file.\n\n**Instantiating an Asynchronous File Client**\n\n```java\nShareFileAsyncClient client = new ShareFileClientBuilder()\n     .connectionString(\"${connectionString}\")\n     .endpoint(\"${endpoint}\")\n     .buildFileAsyncClient();\n```\n\nView <xref uid=\"com.azure.storage.file.share.ShareFileClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"this\"></xref> for additional ways to construct the client."
+desc: "This class provides a client that contains all the operations for interacting with file in Azure Storage File Service. Operations allowed by the client are creating, copying, uploading, downloading, deleting and listing on a file, retrieving properties, setting metadata and list or force close handles of the file.\n\nUse <xref uid=\"com.azure.storage.file.share.ShareAsyncClient.getFileClientByFileId(java.lang.String)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareAsyncClient#getFileClientByFileId(String)\"></xref> to retrieve properties without knowing the file path. File-ID clients support <xref uid=\"com.azure.storage.file.share.ShareFileAsyncClient.getProperties()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#getProperties()\"></xref> and <xref uid=\"com.azure.storage.file.share.ShareFileAsyncClient.getFileLinks()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#getFileLinks()\"></xref> (SMB only). Other service operations require a path-addressed client.\n\n**Instantiating an Asynchronous File Client**\n\n```java\nShareFileAsyncClient client = new ShareFileClientBuilder()\n     .connectionString(\"${connectionString}\")\n     .endpoint(\"${endpoint}\")\n     .buildFileAsyncClient();\n```\n\nView <xref uid=\"com.azure.storage.file.share.ShareFileClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"this\"></xref> for additional ways to construct the client."
 metadata: {}
 package: "com.azure.storage.file.share"
-artifact: com.azure:azure-storage-file-share:12.32.0-beta.1
+artifact: com.azure:azure-storage-file-share:12.34.0-beta.1

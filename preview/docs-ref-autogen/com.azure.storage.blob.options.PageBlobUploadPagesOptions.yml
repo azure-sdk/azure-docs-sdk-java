@@ -20,16 +20,33 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **PageBlobUploadPagesOptions**"
+syntax: "public final class **PageBlobUploadPagesOptions**</br> implements <xref href=\"com.azure.storage.common.ValidatableContent?alt=com.azure.storage.common.ValidatableContent&text=ValidatableContent\" data-throw-if-not-resolved=\"False\" />"
 constructors:
-- uid: "com.azure.storage.blob.options.PageBlobUploadPagesOptions.PageBlobUploadPagesOptions()"
-  fullName: "com.azure.storage.blob.options.PageBlobUploadPagesOptions.PageBlobUploadPagesOptions()"
-  name: "PageBlobUploadPagesOptions()"
-  nameWithType: "PageBlobUploadPagesOptions.PageBlobUploadPagesOptions()"
+- uid: "com.azure.storage.blob.options.PageBlobUploadPagesOptions.PageBlobUploadPagesOptions(com.azure.storage.blob.models.PageRange,com.azure.core.util.BinaryData)"
+  fullName: "com.azure.storage.blob.options.PageBlobUploadPagesOptions.PageBlobUploadPagesOptions(PageRange pageRange, BinaryData body)"
+  name: "PageBlobUploadPagesOptions(PageRange pageRange, BinaryData body)"
+  nameWithType: "PageBlobUploadPagesOptions.PageBlobUploadPagesOptions(PageRange pageRange, BinaryData body)"
   summary: "Creates a new instance of <xref uid=\"com.azure.storage.blob.options.PageBlobUploadPagesOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PageBlobUploadPagesOptions\"></xref>."
-  syntax: "public PageBlobUploadPagesOptions()"
+  parameters:
+  - description: "A <xref uid=\"com.azure.storage.blob.models.PageRange\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PageRange\"></xref> object. Given that pages must be aligned with 512-byte boundaries, the start\n offset must be a modulus of 512 and the end offset must be a modulus of 512 - 1. Examples of valid byte ranges\n are 0-511, 512-1023, etc."
+    name: "pageRange"
+    type: "<xref href=\"com.azure.storage.blob.models.PageRange?alt=com.azure.storage.blob.models.PageRange&text=PageRange\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The data to write to the page. This <code>BinaryData</code> must have a defined length equal to the\n specified page range and must be replayable if retries are enabled (the default), see\n <xref uid=\"com.azure.core.util.BinaryData.isReplayable*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BinaryData#isReplayable()\"></xref>."
+    name: "body"
+    type: "<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public PageBlobUploadPagesOptions(PageRange pageRange, BinaryData body)"
   desc: "Creates a new instance of <xref uid=\"com.azure.storage.blob.options.PageBlobUploadPagesOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PageBlobUploadPagesOptions\"></xref>."
 methods:
+- uid: "com.azure.storage.blob.options.PageBlobUploadPagesOptions.getBody()"
+  fullName: "com.azure.storage.blob.options.PageBlobUploadPagesOptions.getBody()"
+  name: "getBody()"
+  nameWithType: "PageBlobUploadPagesOptions.getBody()"
+  summary: "Gets the data to write to the page."
+  syntax: "public BinaryData getBody()"
+  desc: "Gets the data to write to the page."
+  returns:
+    description: "The data to write to the page."
+    type: "<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.blob.options.PageBlobUploadPagesOptions.getContentMd5()"
   fullName: "com.azure.storage.blob.options.PageBlobUploadPagesOptions.getContentMd5()"
   name: "getContentMd5()"
@@ -50,6 +67,16 @@ methods:
   returns:
     description: "The transfer validation checksum algorithm."
     type: "<xref href=\"com.azure.storage.common.ContentValidationAlgorithm?alt=com.azure.storage.common.ContentValidationAlgorithm&text=ContentValidationAlgorithm\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.blob.options.PageBlobUploadPagesOptions.getPageRange()"
+  fullName: "com.azure.storage.blob.options.PageBlobUploadPagesOptions.getPageRange()"
+  name: "getPageRange()"
+  nameWithType: "PageBlobUploadPagesOptions.getPageRange()"
+  summary: "Gets the page range for the request."
+  syntax: "public PageRange getPageRange()"
+  desc: "Gets the page range for the request."
+  returns:
+    description: "The page range for the request."
+    type: "<xref href=\"com.azure.storage.blob.models.PageRange?alt=com.azure.storage.blob.models.PageRange&text=PageRange\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.blob.options.PageBlobUploadPagesOptions.getRequestConditions()"
   fullName: "com.azure.storage.blob.options.PageBlobUploadPagesOptions.getRequestConditions()"
   name: "getRequestConditions()"
@@ -104,6 +131,8 @@ methods:
     type: "<xref href=\"com.azure.storage.blob.options.PageBlobUploadPagesOptions?alt=com.azure.storage.blob.options.PageBlobUploadPagesOptions&text=PageBlobUploadPagesOptions\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Extended options that may be passed when uploading pages to a page blob."
+implements:
+- "<xref href=\"com.azure.storage.common.ValidatableContent?alt=com.azure.storage.common.ValidatableContent&text=ValidatableContent\" data-throw-if-not-resolved=\"False\" />"
 metadata: {}
 package: "com.azure.storage.blob.options"
-artifact: com.azure:azure-storage-blob:12.36.0-beta.1
+artifact: com.azure:azure-storage-blob:12.38.0-beta.1

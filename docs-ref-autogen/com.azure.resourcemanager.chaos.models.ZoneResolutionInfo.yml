@@ -1,0 +1,92 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.chaos.models.ZoneResolutionInfo"
+fullName: "com.azure.resourcemanager.chaos.models.ZoneResolutionInfo"
+name: "ZoneResolutionInfo"
+nameWithType: "ZoneResolutionInfo"
+summary: "Information about how physical zones were resolved to logical zones for each subscription during scenario execution."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **ZoneResolutionInfo**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.chaos.models.ZoneResolutionInfo?alt=com.azure.resourcemanager.chaos.models.ZoneResolutionInfo&text=ZoneResolutionInfo\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.azure.resourcemanager.chaos.models.ZoneResolutionInfo.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.chaos.models.ZoneResolutionInfo.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "ZoneResolutionInfo.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Zone<wbr>Resolution<wbr>Info from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static ZoneResolutionInfo fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of ZoneResolutionInfo from the JsonReader."
+  returns:
+    description: "An instance of ZoneResolutionInfo if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.chaos.models.ZoneResolutionInfo?alt=com.azure.resourcemanager.chaos.models.ZoneResolutionInfo&text=ZoneResolutionInfo\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.chaos.models.ZoneResolutionInfo.mode()"
+  fullName: "com.azure.resourcemanager.chaos.models.ZoneResolutionInfo.mode()"
+  name: "mode()"
+  nameWithType: "ZoneResolutionInfo.mode()"
+  summary: "Get the mode property: The zone targeting mode used for this run."
+  syntax: "public ZoneResolutionMode mode()"
+  desc: "Get the mode property: The zone targeting mode used for this run. \\`logical\\` — customer specified logical zone identifiers directly. \\`physical\\` — customer specified physical zone identifiers; the system resolved them to per-subscription logical zones at execution time."
+  returns:
+    description: "the mode value."
+    type: "<xref href=\"com.azure.resourcemanager.chaos.models.ZoneResolutionMode?alt=com.azure.resourcemanager.chaos.models.ZoneResolutionMode&text=ZoneResolutionMode\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.chaos.models.ZoneResolutionInfo.requestedPhysicalZones()"
+  fullName: "com.azure.resourcemanager.chaos.models.ZoneResolutionInfo.requestedPhysicalZones()"
+  name: "requestedPhysicalZones()"
+  nameWithType: "ZoneResolutionInfo.requestedPhysicalZones()"
+  summary: "Get the requested<wbr>Physical<wbr>Zones property: The physical zone identifiers requested by the customer in the scenario configuration (e.<wbr>g., \\`\\[\"westus2-az1\"\\]\\`)."
+  syntax: "public List<String> requestedPhysicalZones()"
+  desc: "Get the requestedPhysicalZones property: The physical zone identifiers requested by the customer in the scenario configuration (e.g., \\`\\[\"westus2-az1\"\\]\\`). Empty array when \\`mode\\` is \\`logical\\`."
+  returns:
+    description: "the requestedPhysicalZones value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+- uid: "com.azure.resourcemanager.chaos.models.ZoneResolutionInfo.subscriptionZoneMappings()"
+  fullName: "com.azure.resourcemanager.chaos.models.ZoneResolutionInfo.subscriptionZoneMappings()"
+  name: "subscriptionZoneMappings()"
+  nameWithType: "ZoneResolutionInfo.subscriptionZoneMappings()"
+  summary: "Get the subscription<wbr>Zone<wbr>Mappings property: Per-subscription zone resolution results."
+  syntax: "public List<ZoneResolutionMapping> subscriptionZoneMappings()"
+  desc: "Get the subscriptionZoneMappings property: Per-subscription zone resolution results. Each entry maps a subscription to the logical zone resolved from the requested physical zone. Empty when \\`mode\\` is \\`logical\\`."
+  returns:
+    description: "the subscriptionZoneMappings value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.chaos.models.ZoneResolutionMapping?alt=com.azure.resourcemanager.chaos.models.ZoneResolutionMapping&text=ZoneResolutionMapping\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.chaos.models.ZoneResolutionInfo.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.chaos.models.ZoneResolutionInfo.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "ZoneResolutionInfo.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Information about how physical zones were resolved to logical zones for each subscription during scenario execution."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.chaos.models.ZoneResolutionInfo?alt=com.azure.resourcemanager.chaos.models.ZoneResolutionInfo&text=ZoneResolutionInfo\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.chaos.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-chaos:1.4.0

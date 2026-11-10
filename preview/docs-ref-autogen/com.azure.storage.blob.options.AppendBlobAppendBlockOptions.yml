@@ -20,14 +20,18 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **AppendBlobAppendBlockOptions**"
+syntax: "public final class **AppendBlobAppendBlockOptions**</br> implements <xref href=\"com.azure.storage.common.ValidatableContent?alt=com.azure.storage.common.ValidatableContent&text=ValidatableContent\" data-throw-if-not-resolved=\"False\" />"
 constructors:
-- uid: "com.azure.storage.blob.options.AppendBlobAppendBlockOptions.AppendBlobAppendBlockOptions()"
-  fullName: "com.azure.storage.blob.options.AppendBlobAppendBlockOptions.AppendBlobAppendBlockOptions()"
-  name: "AppendBlobAppendBlockOptions()"
-  nameWithType: "AppendBlobAppendBlockOptions.AppendBlobAppendBlockOptions()"
+- uid: "com.azure.storage.blob.options.AppendBlobAppendBlockOptions.AppendBlobAppendBlockOptions(com.azure.core.util.BinaryData)"
+  fullName: "com.azure.storage.blob.options.AppendBlobAppendBlockOptions.AppendBlobAppendBlockOptions(BinaryData data)"
+  name: "AppendBlobAppendBlockOptions(BinaryData data)"
+  nameWithType: "AppendBlobAppendBlockOptions.AppendBlobAppendBlockOptions(BinaryData data)"
   summary: "Creates a new instance of <xref uid=\"com.azure.storage.blob.options.AppendBlobAppendBlockOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AppendBlobAppendBlockOptions\"></xref>."
-  syntax: "public AppendBlobAppendBlockOptions()"
+  parameters:
+  - description: "The data to write to the blob. Note that this <code>BinaryData</code> must have defined length\n and must be replayable if retries are enabled (the default), see <xref uid=\"com.azure.core.util.BinaryData.isReplayable*\" data-throw-if-not-resolved=\"false\" data-raw-source=\"BinaryData#isReplayable()\"></xref>."
+    name: "data"
+    type: "<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public AppendBlobAppendBlockOptions(BinaryData data)"
   desc: "Creates a new instance of <xref uid=\"com.azure.storage.blob.options.AppendBlobAppendBlockOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AppendBlobAppendBlockOptions\"></xref>."
 methods:
 - uid: "com.azure.storage.blob.options.AppendBlobAppendBlockOptions.getContentMd5()"
@@ -50,6 +54,16 @@ methods:
   returns:
     description: "The transfer validation checksum algorithm."
     type: "<xref href=\"com.azure.storage.common.ContentValidationAlgorithm?alt=com.azure.storage.common.ContentValidationAlgorithm&text=ContentValidationAlgorithm\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.blob.options.AppendBlobAppendBlockOptions.getData()"
+  fullName: "com.azure.storage.blob.options.AppendBlobAppendBlockOptions.getData()"
+  name: "getData()"
+  nameWithType: "AppendBlobAppendBlockOptions.getData()"
+  summary: "Gets the data to write to the blob."
+  syntax: "public BinaryData getData()"
+  desc: "Gets the data to write to the blob."
+  returns:
+    description: "The data to write to the blob."
+    type: "<xref href=\"com.azure.core.util.BinaryData?alt=com.azure.core.util.BinaryData&text=BinaryData\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.blob.options.AppendBlobAppendBlockOptions.getRequestConditions()"
   fullName: "com.azure.storage.blob.options.AppendBlobAppendBlockOptions.getRequestConditions()"
   name: "getRequestConditions()"
@@ -104,6 +118,8 @@ methods:
     type: "<xref href=\"com.azure.storage.blob.options.AppendBlobAppendBlockOptions?alt=com.azure.storage.blob.options.AppendBlobAppendBlockOptions&text=AppendBlobAppendBlockOptions\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Extended options that may be passed when appending a block to an append blob."
+implements:
+- "<xref href=\"com.azure.storage.common.ValidatableContent?alt=com.azure.storage.common.ValidatableContent&text=ValidatableContent\" data-throw-if-not-resolved=\"False\" />"
 metadata: {}
 package: "com.azure.storage.blob.options"
-artifact: com.azure:azure-storage-blob:12.36.0-beta.1
+artifact: com.azure:azure-storage-blob:12.38.0-beta.1

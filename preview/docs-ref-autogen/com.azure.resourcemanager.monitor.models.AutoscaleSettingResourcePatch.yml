@@ -59,6 +59,16 @@ methods:
   returns:
     description: "An instance of AutoscaleSettingResourcePatch if the JsonReader was pointing to an instance of it, or null\n if it was pointing to JSON null."
     type: "<xref href=\"com.azure.resourcemanager.monitor.models.AutoscaleSettingResourcePatch?alt=com.azure.resourcemanager.monitor.models.AutoscaleSettingResourcePatch&text=AutoscaleSettingResourcePatch\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.monitor.models.AutoscaleSettingResourcePatch.identity()"
+  fullName: "com.azure.resourcemanager.monitor.models.AutoscaleSettingResourcePatch.identity()"
+  name: "identity()"
+  nameWithType: "AutoscaleSettingResourcePatch.identity()"
+  summary: "Get the identity property: The managed service identities assigned to this resource."
+  syntax: "public ManagedServiceIdentity identity()"
+  desc: "Get the identity property: The managed service identities assigned to this resource. Only user-assigned identities are supported; 'SystemAssigned' and 'SystemAssigned,UserAssigned' are rejected. At most one user-assigned managed identity may be assigned to an autoscale setting. To remove the assigned identity, send 'type' as 'None'."
+  returns:
+    description: "the identity value."
+    type: "<xref href=\"com.azure.resourcemanager.monitor.models.ManagedServiceIdentity?alt=com.azure.resourcemanager.monitor.models.ManagedServiceIdentity&text=ManagedServiceIdentity\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.monitor.models.AutoscaleSettingResourcePatch.name()"
   fullName: "com.azure.resourcemanager.monitor.models.AutoscaleSettingResourcePatch.name()"
   name: "name()"
@@ -159,6 +169,20 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
   syntax: "public AutoscaleSettingResourcePatch withEnabled(Boolean enabled)"
   desc: "Set the enabled property: the enabled flag. Specifies whether automatic scaling is enabled for the resource. The default value is 'false'."
+  returns:
+    description: "the AutoscaleSettingResourcePatch object itself."
+    type: "<xref href=\"com.azure.resourcemanager.monitor.models.AutoscaleSettingResourcePatch?alt=com.azure.resourcemanager.monitor.models.AutoscaleSettingResourcePatch&text=AutoscaleSettingResourcePatch\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.monitor.models.AutoscaleSettingResourcePatch.withIdentity(com.azure.resourcemanager.monitor.models.ManagedServiceIdentity)"
+  fullName: "com.azure.resourcemanager.monitor.models.AutoscaleSettingResourcePatch.withIdentity(ManagedServiceIdentity identity)"
+  name: "withIdentity(ManagedServiceIdentity identity)"
+  nameWithType: "AutoscaleSettingResourcePatch.withIdentity(ManagedServiceIdentity identity)"
+  summary: "Set the identity property: The managed service identities assigned to this resource."
+  parameters:
+  - description: "the identity value to set."
+    name: "identity"
+    type: "<xref href=\"com.azure.resourcemanager.monitor.models.ManagedServiceIdentity?alt=com.azure.resourcemanager.monitor.models.ManagedServiceIdentity&text=ManagedServiceIdentity\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public AutoscaleSettingResourcePatch withIdentity(ManagedServiceIdentity identity)"
+  desc: "Set the identity property: The managed service identities assigned to this resource. Only user-assigned identities are supported; 'SystemAssigned' and 'SystemAssigned,UserAssigned' are rejected. At most one user-assigned managed identity may be assigned to an autoscale setting. To remove the assigned identity, send 'type' as 'None'."
   returns:
     description: "the AutoscaleSettingResourcePatch object itself."
     type: "<xref href=\"com.azure.resourcemanager.monitor.models.AutoscaleSettingResourcePatch?alt=com.azure.resourcemanager.monitor.models.AutoscaleSettingResourcePatch&text=AutoscaleSettingResourcePatch\" data-throw-if-not-resolved=\"False\" />"
@@ -266,4 +290,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.monitor.models.AutoscaleSettingResourcePatch?alt=com.azure.resourcemanager.monitor.models.AutoscaleSettingResourcePatch&text=AutoscaleSettingResourcePatch\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.monitor.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-monitor:2.54.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-monitor:2.55.0-beta.1

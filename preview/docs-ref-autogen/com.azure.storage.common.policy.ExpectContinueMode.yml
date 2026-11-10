@@ -1,0 +1,77 @@
+### YamlMime:JavaEnum
+uid: "com.azure.storage.common.policy.ExpectContinueMode"
+fullName: "com.azure.storage.common.policy.ExpectContinueMode"
+name: "ExpectContinueMode"
+nameWithType: "ExpectContinueMode"
+summary: "This type holds possible options for applying the HTTP header `Expect: 100-continue` to requests that carry a body."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"java.lang.Enum?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html\">Enum</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#valueOf-java.lang.Class-java.lang.String-\">valueOf</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#compareTo-E-\">compareTo</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#describeConstable--\">describeConstable</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#getDeclaringClass--\">getDeclaringClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#name--\">name</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#ordinal--\">ordinal</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#toString--\">toString</a>"
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public enum **ExpectContinueMode**</br> extends <a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html\">Enum</a>&lt;<xref href=\"com.azure.storage.common.policy.ExpectContinueMode?alt=com.azure.storage.common.policy.ExpectContinueMode&text=ExpectContinueMode\" data-throw-if-not-resolved=\"False\" />&gt;"
+fields:
+- uid: "com.azure.storage.common.policy.ExpectContinueMode.APPLY_ON_THROTTLE"
+  fullName: "com.azure.storage.common.policy.ExpectContinueMode.APPLY_ON_THROTTLE"
+  name: "APPLY_ON_THROTTLE"
+  nameWithType: "ExpectContinueMode.APPLY_ON_THROTTLE"
+  summary: "Tells the pipeline to apply `Expect: 100-continue` only after the service has recently indicated that it is under load, and to keep applying it until a period of time has passed since the last such response."
+  desc: "Tells the pipeline to apply `Expect: 100-continue` only after the service has recently indicated that it is under load, and to keep applying it until a period of time has passed since the last such response.\n\nResponse codes that trigger this behavior are 429, 500, and 503.\n\nThis is the default mode of <xref uid=\"com.azure.storage.common.policy.ExpectContinueOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ExpectContinueOptions\"></xref>. The header is not applied unless options are explicitly supplied to a client builder."
+- uid: "com.azure.storage.common.policy.ExpectContinueMode.OFF"
+  fullName: "com.azure.storage.common.policy.ExpectContinueMode.OFF"
+  name: "OFF"
+  nameWithType: "ExpectContinueMode.OFF"
+  summary: "Tells the pipeline to never apply `Expect: 100-continue`."
+  desc: "Tells the pipeline to never apply `Expect: 100-continue`."
+- uid: "com.azure.storage.common.policy.ExpectContinueMode.ON"
+  fullName: "com.azure.storage.common.policy.ExpectContinueMode.ON"
+  name: "ON"
+  nameWithType: "ExpectContinueMode.ON"
+  summary: "Tells the pipeline to apply `Expect: 100-continue` regardless of recent error status."
+  desc: "Tells the pipeline to apply `Expect: 100-continue` regardless of recent error status. The header is still subject to <xref uid=\"com.azure.storage.common.policy.ExpectContinueOptions.getContentLengthThreshold()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ExpectContinueOptions#getContentLengthThreshold()\"></xref>."
+methods:
+- uid: "com.azure.storage.common.policy.ExpectContinueMode.valueOf(java.lang.String)"
+  fullName: "com.azure.storage.common.policy.ExpectContinueMode.valueOf(String name)"
+  name: "valueOf(String name)"
+  nameWithType: "ExpectContinueMode.valueOf(String name)"
+  modifiers:
+  - "static"
+  parameters:
+  - name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public static ExpectContinueMode valueOf(String name)"
+  returns:
+    type: "<xref href=\"com.azure.storage.common.policy.ExpectContinueMode?alt=com.azure.storage.common.policy.ExpectContinueMode&text=ExpectContinueMode\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.common.policy.ExpectContinueMode.values()"
+  fullName: "com.azure.storage.common.policy.ExpectContinueMode.values()"
+  name: "values()"
+  nameWithType: "ExpectContinueMode.values()"
+  modifiers:
+  - "static"
+  syntax: "public static ExpectContinueMode[] values()"
+  returns:
+    type: "<xref href=\"com.azure.storage.common.policy.ExpectContinueMode?alt=com.azure.storage.common.policy.ExpectContinueMode&text=ExpectContinueMode\" data-throw-if-not-resolved=\"False\" />[]"
+desc: "This type holds possible options for applying the HTTP header `Expect: 100-continue` to requests that carry a body. They may be used with <xref uid=\"com.azure.storage.common.policy.ExpectContinueOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ExpectContinueOptions\"></xref>."
+metadata: {}
+package: "com.azure.storage.common.policy"
+artifact: com.azure:azure-storage-common:12.37.0-beta.1

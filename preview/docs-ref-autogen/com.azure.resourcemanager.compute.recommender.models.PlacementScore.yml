@@ -51,16 +51,16 @@ methods:
   returns:
     description: "An instance of PlacementScore if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
     type: "<xref href=\"com.azure.resourcemanager.compute.recommender.models.PlacementScore?alt=com.azure.resourcemanager.compute.recommender.models.PlacementScore&text=PlacementScore\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.compute.recommender.models.PlacementScore.isQuotaAvailable()"
-  fullName: "com.azure.resourcemanager.compute.recommender.models.PlacementScore.isQuotaAvailable()"
-  name: "isQuotaAvailable()"
-  nameWithType: "PlacementScore.isQuotaAvailable()"
-  summary: "Get the is<wbr>Quota<wbr>Available property: Whether the desired quota is available."
-  syntax: "public Boolean isQuotaAvailable()"
-  desc: "Get the isQuotaAvailable property: Whether the desired quota is available."
+- uid: "com.azure.resourcemanager.compute.recommender.models.PlacementScore.placementPreference()"
+  fullName: "com.azure.resourcemanager.compute.recommender.models.PlacementScore.placementPreference()"
+  name: "placementPreference()"
+  nameWithType: "PlacementScore.placementPreference()"
+  summary: "Get the placement<wbr>Preference property: Placement preference from 0 to 10 (inclusive)."
+  syntax: "public Integer placementPreference()"
+  desc: "Get the placementPreference property: Placement preference from 0 to 10 (inclusive). Higher is better."
   returns:
-    description: "the isQuotaAvailable value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+    description: "the placementPreference value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
 - uid: "com.azure.resourcemanager.compute.recommender.models.PlacementScore.region()"
   fullName: "com.azure.resourcemanager.compute.recommender.models.PlacementScore.region()"
   name: "region()"
@@ -76,11 +76,11 @@ methods:
   name: "score()"
   nameWithType: "PlacementScore.score()"
   summary: "Get the score property: A placement score indicating the likelihood of successfully allocating the specified Spot VM(s), as well as the expected lifetimes of the Spot VM(s) after allocation."
-  syntax: "public String score()"
+  syntax: "public PlacementScoreValue score()"
   desc: "Get the score property: A placement score indicating the likelihood of successfully allocating the specified Spot VM(s), as well as the expected lifetimes of the Spot VM(s) after allocation."
   returns:
     description: "the score value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+    type: "<xref href=\"com.azure.resourcemanager.compute.recommender.models.PlacementScoreValue?alt=com.azure.resourcemanager.compute.recommender.models.PlacementScoreValue&text=PlacementScoreValue\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.compute.recommender.models.PlacementScore.sku()"
   fullName: "com.azure.resourcemanager.compute.recommender.models.PlacementScore.sku()"
   name: "sku()"
@@ -109,4 +109,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.compute.recommender.models.PlacementScore?alt=com.azure.resourcemanager.compute.recommender.models.PlacementScore&text=PlacementScore\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.compute.recommender.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-compute-recommender:1.0.0-beta.3
+artifact: com.azure.resourcemanager:azure-resourcemanager-compute-recommender:1.0.0-beta.4

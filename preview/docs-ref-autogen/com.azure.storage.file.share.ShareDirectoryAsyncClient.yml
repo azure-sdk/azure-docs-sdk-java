@@ -585,6 +585,16 @@ methods:
   returns:
     description: "a ShareFileAsyncClient that interacts with the specified share"
     type: "<xref href=\"com.azure.storage.file.share.ShareFileAsyncClient?alt=com.azure.storage.file.share.ShareFileAsyncClient&text=ShareFileAsyncClient\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.file.share.ShareDirectoryAsyncClient.getFileId()"
+  fullName: "com.azure.storage.file.share.ShareDirectoryAsyncClient.getFileId()"
+  name: "getFileId()"
+  nameWithType: "ShareDirectoryAsyncClient.getFileId()"
+  summary: "Gets the file ID used to address the directory, or an empty string when the client is path-addressed."
+  syntax: "public String getFileId()"
+  desc: "Gets the file ID used to address the directory, or an empty string when the client is path-addressed."
+  returns:
+    description: "The file ID."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.storage.file.share.ShareDirectoryAsyncClient.getHttpPipeline()"
   fullName: "com.azure.storage.file.share.ShareDirectoryAsyncClient.getHttpPipeline()"
   name: "getHttpPipeline()"
@@ -601,7 +611,7 @@ methods:
   nameWithType: "ShareDirectoryAsyncClient.getProperties()"
   summary: "Retrieves the properties of this directory."
   syntax: "public Mono<ShareDirectoryProperties> getProperties()"
-  desc: "Retrieves the properties of this directory. The properties include directory metadata, last modified date, is server encrypted, and eTag.\n\n**Code Samples**\n\nRetrieve directory properties\n\n```java\nshareDirectoryAsyncClient.getProperties().subscribe(properties -> {\n     System.out.printf(\"Directory latest modified date is %s.\", properties.getLastModified());\n });\n```\n\nFor more information, see the [Azure Docs][].\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/get-directory-properties"
+  desc: "Retrieves the properties of this directory. The properties include directory metadata, last modified date, is server encrypted, and eTag.\n\n**Code Samples**\n\nRetrieve directory properties\n\nThis operation accepts path-addressed and file-ID-addressed clients. To retrieve properties without knowing the directory path, use <xref uid=\"com.azure.storage.file.share.ShareAsyncClient.getDirectoryClientByFileId(java.lang.String)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareAsyncClient#getDirectoryClientByFileId(String)\"></xref>. Service availability determines whether a file-ID request succeeds; the client does not check the share protocol. If the service does not support property retrieval by ID for the share, use a path-addressed client.\n\n```java\nshareDirectoryAsyncClient.getProperties().subscribe(properties -> {\n     System.out.printf(\"Directory latest modified date is %s.\", properties.getLastModified());\n });\n```\n\nFor more information, see the [Azure Docs][].\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/get-directory-properties"
   returns:
     description: "Storage directory properties"
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.models.ShareDirectoryProperties?alt=com.azure.storage.file.share.models.ShareDirectoryProperties&text=ShareDirectoryProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -822,7 +832,7 @@ methods:
     description: "A response containing the storage directory smb properties with headers and response status code"
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.models.ShareDirectoryInfo?alt=com.azure.storage.file.share.models.ShareDirectoryInfo&text=ShareDirectoryInfo\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 type: "class"
-desc: "This class provides a client that contains all the operations for interacting with directory in Azure Storage File Service. Operations allowed by the client are creating, deleting and listing subdirectory and file, retrieving properties, setting metadata and list or force close handles of the directory or file.\n\n**Instantiating an Asynchronous Directory Client**\n\n```java\nShareDirectoryAsyncClient client = new ShareFileClientBuilder()\n     .connectionString(\"${connectionString}\")\n     .endpoint(\"${endpoint}\")\n     .buildDirectoryAsyncClient();\n```\n\nView <xref uid=\"com.azure.storage.file.share.ShareFileClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"this\"></xref> for additional ways to construct the client."
+desc: "This class provides a client that contains all the operations for interacting with directory in Azure Storage File Service. Operations allowed by the client are creating, deleting and listing subdirectory and file, retrieving properties, setting metadata and list or force close handles of the directory or file.\n\nClients addressed by file ID support property retrieval. Other service operations, including existence checks, and child-client creation throw <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"IllegalStateException\"></xref> or signal it through the returned publisher. Use a path-addressed client for these operations.\n\n**Instantiating an Asynchronous Directory Client**\n\n```java\nShareDirectoryAsyncClient client = new ShareFileClientBuilder()\n     .connectionString(\"${connectionString}\")\n     .endpoint(\"${endpoint}\")\n     .buildDirectoryAsyncClient();\n```\n\nView <xref uid=\"com.azure.storage.file.share.ShareFileClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"this\"></xref> for additional ways to construct the client."
 metadata: {}
 package: "com.azure.storage.file.share"
-artifact: com.azure:azure-storage-file-share:12.32.0-beta.1
+artifact: com.azure:azure-storage-file-share:12.34.0-beta.1

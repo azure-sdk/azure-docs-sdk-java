@@ -776,6 +776,20 @@ methods:
   returns:
     description: "a <xref uid=\"com.azure.storage.file.share.ShareDirectoryClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareDirectoryClient\"></xref> that interacts with the directory in the share"
     type: "<xref href=\"com.azure.storage.file.share.ShareDirectoryClient?alt=com.azure.storage.file.share.ShareDirectoryClient&text=ShareDirectoryClient\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.file.share.ShareClient.getDirectoryClientByFileId(java.lang.String)"
+  fullName: "com.azure.storage.file.share.ShareClient.getDirectoryClientByFileId(String fileId)"
+  name: "getDirectoryClientByFileId(String fileId)"
+  nameWithType: "ShareClient.getDirectoryClientByFileId(String fileId)"
+  summary: "Creates a directory client that addresses a directory by its file ID."
+  parameters:
+  - description: "The file ID of the directory."
+    name: "fileId"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public ShareDirectoryClient getDirectoryClientByFileId(String fileId)"
+  desc: "Creates a directory client that addresses a directory by its file ID.\n\nCall <xref uid=\"com.azure.storage.file.share.ShareDirectoryClient.getProperties()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareDirectoryClient#getProperties()\"></xref> on the returned client to retrieve properties without knowing the directory path. Obtain the ID from <xref uid=\"com.azure.storage.file.share.FileSmbProperties.getFileId()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"FileSmbProperties#getFileId()\"></xref> in a path-based properties response. Other service operations require a path-addressed client.\n\n```java\nShareDirectoryProperties properties = shareClient.getDirectoryClientByFileId(fileId).getProperties();\n```"
+  returns:
+    description: "A client for interacting with the directory by ID."
+    type: "<xref href=\"com.azure.storage.file.share.ShareDirectoryClient?alt=com.azure.storage.file.share.ShareDirectoryClient&text=ShareDirectoryClient\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.file.share.ShareClient.getFileClient(java.lang.String)"
   fullName: "com.azure.storage.file.share.ShareClient.getFileClient(String filePath)"
   name: "getFileClient(String filePath)"
@@ -789,6 +803,20 @@ methods:
   desc: "Constructs a <xref uid=\"com.azure.storage.file.share.ShareFileClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareFileClient\"></xref> that interacts with the specified file.\n\nIf the file doesn't exist in the share <xref uid=\"com.azure.storage.file.share.ShareFileClient.create(long)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareFileClient#create(long)\"></xref> ) create\\} in the client will need to be called before interaction with the file can happen."
   returns:
     description: "a <xref uid=\"com.azure.storage.file.share.ShareFileClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareFileClient\"></xref> that interacts with the file in the share"
+    type: "<xref href=\"com.azure.storage.file.share.ShareFileClient?alt=com.azure.storage.file.share.ShareFileClient&text=ShareFileClient\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.file.share.ShareClient.getFileClientByFileId(java.lang.String)"
+  fullName: "com.azure.storage.file.share.ShareClient.getFileClientByFileId(String fileId)"
+  name: "getFileClientByFileId(String fileId)"
+  nameWithType: "ShareClient.getFileClientByFileId(String fileId)"
+  summary: "Creates a file client that addresses a file by its file ID."
+  parameters:
+  - description: "The file ID of the file."
+    name: "fileId"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public ShareFileClient getFileClientByFileId(String fileId)"
+  desc: "Creates a file client that addresses a file by its file ID.\n\nCall <xref uid=\"com.azure.storage.file.share.ShareFileClient.getProperties()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareFileClient#getProperties()\"></xref> on the returned client to retrieve properties without knowing the file path. Obtain the ID from <xref uid=\"com.azure.storage.file.share.FileSmbProperties.getFileId()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"FileSmbProperties#getFileId()\"></xref> in a path-based properties response. The returned client supports property retrieval and <xref uid=\"com.azure.storage.file.share.ShareFileClient.getFileLinks()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareFileClient#getFileLinks()\"></xref> (SMB only). Other service operations require a path-addressed client.\n\n```java\nShareFileProperties properties = shareClient.getFileClientByFileId(fileId).getProperties();\n```"
+  returns:
+    description: "A client for interacting with the file by ID."
     type: "<xref href=\"com.azure.storage.file.share.ShareFileClient?alt=com.azure.storage.file.share.ShareFileClient&text=ShareFileClient\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.file.share.ShareClient.getHttpPipeline()"
   fullName: "com.azure.storage.file.share.ShareClient.getHttpPipeline()"
@@ -1213,4 +1241,4 @@ type: "class"
 desc: "This class provides a client that contains all the operations for interacting with a share in Azure Storage Share. Operations allowed by the client are creating and deleting the share, creating snapshots for the share, creating and deleting directories in the share and retrieving and updating properties metadata and access policies of the share.\n\n**Instantiating a Synchronous Share Client**\n\n```java\nShareClient client = new ShareClientBuilder()\n     .connectionString(\"${connectionString}\")\n     .endpoint(\"${endpoint}\")\n     .buildClient();\n```\n\nView <xref uid=\"com.azure.storage.file.share.ShareClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"this\"></xref> for additional ways to construct the client."
 metadata: {}
 package: "com.azure.storage.file.share"
-artifact: com.azure:azure-storage-file-share:12.32.0-beta.1
+artifact: com.azure:azure-storage-file-share:12.34.0-beta.1

@@ -342,6 +342,20 @@ methods:
   returns:
     description: "the updated DataLakeServiceClientBuilder object"
     type: "<xref href=\"com.azure.storage.file.datalake.DataLakeServiceClientBuilder?alt=com.azure.storage.file.datalake.DataLakeServiceClientBuilder&text=DataLakeServiceClientBuilder\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.file.datalake.DataLakeServiceClientBuilder.sessionContext(com.azure.storage.blob.SessionContext)"
+  fullName: "com.azure.storage.file.datalake.DataLakeServiceClientBuilder.sessionContext(SessionContext sessionContext)"
+  name: "sessionContext(SessionContext sessionContext)"
+  nameWithType: "DataLakeServiceClientBuilder.sessionContext(SessionContext sessionContext)"
+  summary: "Sets the <xref uid=\"com.azure.storage.blob.SessionContext\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SessionContext\"></xref> used for session-based authentication by the underlying Blob clients of file system and path clients derived from this service client."
+  parameters:
+  - description: "The session context for the HTTP pipeline, or <code>null</code> to reset to a new default context."
+    name: "sessionContext"
+    type: "<xref href=\"com.azure.storage.blob.SessionContext?alt=com.azure.storage.blob.SessionContext&text=SessionContext\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public DataLakeServiceClientBuilder sessionContext(SessionContext sessionContext)"
+  desc: "Sets the <xref uid=\"com.azure.storage.blob.SessionContext\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SessionContext\"></xref> used for session-based authentication by the underlying Blob clients of file system and path clients derived from this service client. Sessions are not used by the DFS pipeline.\n\nApplies when this builder constructs a pipeline with a <xref uid=\"com.azure.core.credential.TokenCredential\" data-throw-if-not-resolved=\"false\" data-raw-source=\"TokenCredential\"></xref>. The default session mode, <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SessionContext.SessionMode#AUTO\"></xref>, currently disables sessions. Set the context's session mode to <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SessionContext.SessionMode#ENABLED\"></xref> to enable session authentication for eligible GET blob requests. Other requests, and requests for which session acquisition fails, use bearer token authentication.\n\nSession-enabled clients built with the same context instance share a session cache, including independently built clients. Each client acquires sessions through its own Blob pipeline. The context can override the endpoint and credential used for session acquisition without changing the client's settings for other requests. Share the context only across clients targeting the same endpoint with compatible identity and network contexts, or use separate instances for independent caches.\n\nThe session mode and account name are captured when the client is built. Changing them on the context affects only clients built afterward; the session cache remains shared."
+  returns:
+    description: "the updated DataLakeServiceClientBuilder object."
+    type: "<xref href=\"com.azure.storage.file.datalake.DataLakeServiceClientBuilder?alt=com.azure.storage.file.datalake.DataLakeServiceClientBuilder&text=DataLakeServiceClientBuilder\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "This class provides a fluent builder API to help aid the configuration and instantiation of <xref uid=\"com.azure.storage.file.datalake.DataLakeServiceClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DataLakeServiceClients\"></xref> and <xref uid=\"com.azure.storage.file.datalake.DataLakeServiceAsyncClient\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DataLakeServiceAsyncClients\"></xref>, call <xref uid=\"com.azure.storage.file.datalake.DataLakeServiceClientBuilder.buildClient()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"buildClient\"></xref> and <xref uid=\"com.azure.storage.file.datalake.DataLakeServiceClientBuilder.buildAsyncClient()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"buildAsyncClient\"></xref> respectively to construct an instance of the desired client.\n\nThe following information must be provided on this builder:\n\n *  the endpoint through `.endpoint()`, in the format of `https://{accountName}.dfs.core.windows.net`.\n *  the credential through `.credential()` or `.connectionString()`."
 implements:
@@ -353,4 +367,4 @@ implements:
 - "<xref href=\"com.azure.core.client.traits.TokenCredentialTrait?alt=com.azure.core.client.traits.TokenCredentialTrait&text=TokenCredentialTrait\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.datalake.DataLakeServiceClientBuilder?alt=com.azure.storage.file.datalake.DataLakeServiceClientBuilder&text=DataLakeServiceClientBuilder\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.storage.file.datalake"
-artifact: com.azure:azure-storage-file-datalake:12.29.0-beta.1
+artifact: com.azure:azure-storage-file-datalake:12.31.0-beta.1

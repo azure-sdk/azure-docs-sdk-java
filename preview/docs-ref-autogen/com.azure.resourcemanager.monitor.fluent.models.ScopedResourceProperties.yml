@@ -49,6 +49,16 @@ methods:
   returns:
     description: "An instance of ScopedResourceProperties if the JsonReader was pointing to an instance of it, or null if\n it was pointing to JSON null."
     type: "<xref href=\"com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties?alt=com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties&text=ScopedResourceProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties.kind()"
+  fullName: "com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties.kind()"
+  name: "kind()"
+  nameWithType: "ScopedResourceProperties.kind()"
+  summary: "Get the kind property: The kind of scoped Azure monitor resource."
+  syntax: "public ScopedResourceKind kind()"
+  desc: "Get the kind property: The kind of scoped Azure monitor resource."
+  returns:
+    description: "the kind value."
+    type: "<xref href=\"com.azure.resourcemanager.monitor.models.ScopedResourceKind?alt=com.azure.resourcemanager.monitor.models.ScopedResourceKind&text=ScopedResourceKind\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties.linkedResourceId()"
   fullName: "com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties.linkedResourceId()"
   name: "linkedResourceId()"
@@ -63,11 +73,21 @@ methods:
   fullName: "com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties.provisioningState()"
   name: "provisioningState()"
   nameWithType: "ScopedResourceProperties.provisioningState()"
-  summary: "Get the provisioning<wbr>State property: State of the private endpoint connection."
-  syntax: "public String provisioningState()"
-  desc: "Get the provisioningState property: State of the private endpoint connection."
+  summary: "Get the provisioning<wbr>State property: State of the Azure monitor resource."
+  syntax: "public ScopedResourceProvisioningState provisioningState()"
+  desc: "Get the provisioningState property: State of the Azure monitor resource."
   returns:
     description: "the provisioningState value."
+    type: "<xref href=\"com.azure.resourcemanager.monitor.models.ScopedResourceProvisioningState?alt=com.azure.resourcemanager.monitor.models.ScopedResourceProvisioningState&text=ScopedResourceProvisioningState\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties.subscriptionLocation()"
+  fullName: "com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties.subscriptionLocation()"
+  name: "subscriptionLocation()"
+  nameWithType: "ScopedResourceProperties.subscriptionLocation()"
+  summary: "Get the subscription<wbr>Location property: The location of a scoped subscription."
+  syntax: "public String subscriptionLocation()"
+  desc: "Get the subscriptionLocation property: The location of a scoped subscription. Only needs to be specified for metric dataplane subscriptions."
+  returns:
+    description: "the subscriptionLocation value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties.toJson(JsonWriter jsonWriter)"
@@ -88,6 +108,20 @@ methods:
   summary: "Validates the instance."
   syntax: "public void validate()"
   desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties.withKind(com.azure.resourcemanager.monitor.models.ScopedResourceKind)"
+  fullName: "com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties.withKind(ScopedResourceKind kind)"
+  name: "withKind(ScopedResourceKind kind)"
+  nameWithType: "ScopedResourceProperties.withKind(ScopedResourceKind kind)"
+  summary: "Set the kind property: The kind of scoped Azure monitor resource."
+  parameters:
+  - description: "the kind value to set."
+    name: "kind"
+    type: "<xref href=\"com.azure.resourcemanager.monitor.models.ScopedResourceKind?alt=com.azure.resourcemanager.monitor.models.ScopedResourceKind&text=ScopedResourceKind\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ScopedResourceProperties withKind(ScopedResourceKind kind)"
+  desc: "Set the kind property: The kind of scoped Azure monitor resource."
+  returns:
+    description: "the ScopedResourceProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties?alt=com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties&text=ScopedResourceProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties.withLinkedResourceId(java.lang.String)"
   fullName: "com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties.withLinkedResourceId(String linkedResourceId)"
   name: "withLinkedResourceId(String linkedResourceId)"
@@ -102,10 +136,24 @@ methods:
   returns:
     description: "the ScopedResourceProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties?alt=com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties&text=ScopedResourceProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties.withSubscriptionLocation(java.lang.String)"
+  fullName: "com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties.withSubscriptionLocation(String subscriptionLocation)"
+  name: "withSubscriptionLocation(String subscriptionLocation)"
+  nameWithType: "ScopedResourceProperties.withSubscriptionLocation(String subscriptionLocation)"
+  summary: "Set the subscription<wbr>Location property: The location of a scoped subscription."
+  parameters:
+  - description: "the subscriptionLocation value to set."
+    name: "subscriptionLocation"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public ScopedResourceProperties withSubscriptionLocation(String subscriptionLocation)"
+  desc: "Set the subscriptionLocation property: The location of a scoped subscription. Only needs to be specified for metric dataplane subscriptions."
+  returns:
+    description: "the ScopedResourceProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties?alt=com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties&text=ScopedResourceProperties\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Properties of a private link scoped resource."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties?alt=com.azure.resourcemanager.monitor.fluent.models.ScopedResourceProperties&text=ScopedResourceProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.monitor.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-monitor:2.54.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-monitor:2.55.0-beta.1

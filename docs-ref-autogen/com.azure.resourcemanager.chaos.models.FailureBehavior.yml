@@ -1,0 +1,98 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.chaos.models.FailureBehavior"
+fullName: "com.azure.resourcemanager.chaos.models.FailureBehavior"
+name: "FailureBehavior"
+nameWithType: "FailureBehavior"
+summary: "Enum of how a scenario run reacts when an action fails."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"com.azure.core.util.ExpandableStringEnum?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "<xref href=\"com.azure.core.util.ExpandableStringEnum?alt=com.azure.core.util.ExpandableStringEnum&text=ExpandableStringEnum\" data-throw-if-not-resolved=\"False\" />"
+  methodsRef:
+  - "<xref href=\"com.azure.core.util.ExpandableStringEnum.<T>fromString(java.lang.String,java.lang.Class<T>)?alt=com.azure.core.util.ExpandableStringEnum.<T>fromString&text=<T>fromString\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.util.ExpandableStringEnum.<T>values(java.lang.Class<T>)?alt=com.azure.core.util.ExpandableStringEnum.<T>values&text=<T>values\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.util.ExpandableStringEnum.equals(java.lang.Object)?alt=com.azure.core.util.ExpandableStringEnum.equals&text=equals\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.util.ExpandableStringEnum.getValue()?alt=com.azure.core.util.ExpandableStringEnum.getValue&text=getValue\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.util.ExpandableStringEnum.hashCode()?alt=com.azure.core.util.ExpandableStringEnum.hashCode&text=hashCode\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.util.ExpandableStringEnum.toString()?alt=com.azure.core.util.ExpandableStringEnum.toString&text=toString\" data-throw-if-not-resolved=\"False\" />"
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **FailureBehavior**</br> extends <xref href=\"com.azure.core.util.ExpandableStringEnum?alt=com.azure.core.util.ExpandableStringEnum&text=ExpandableStringEnum\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.chaos.models.FailureBehavior?alt=com.azure.resourcemanager.chaos.models.FailureBehavior&text=FailureBehavior\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.resourcemanager.chaos.models.FailureBehavior.FailureBehavior()"
+  fullName: "com.azure.resourcemanager.chaos.models.FailureBehavior.FailureBehavior()"
+  name: "FailureBehavior()"
+  nameWithType: "FailureBehavior.FailureBehavior()"
+  summary: "Creates a new instance of Failure<wbr>Behavior value."
+  deprecatedTag: "Use the <xref uid=\"com.azure.resourcemanager.chaos.models.FailureBehavior.fromString(java.lang.String)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#fromString(String)\"></xref> factory method."
+  syntax: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html\">@Deprecated</a></br>public FailureBehavior()"
+  desc: "Creates a new instance of FailureBehavior value."
+  hasDeprecatedTag: true
+fields:
+- uid: "com.azure.resourcemanager.chaos.models.FailureBehavior.CONTINUE"
+  fullName: "com.azure.resourcemanager.chaos.models.FailureBehavior.CONTINUE"
+  name: "CONTINUE"
+  nameWithType: "FailureBehavior.CONTINUE"
+  summary: "The action failure is suppressed: it does not by itself end the scenario run, and the run continues with its remaining actions."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.resourcemanager.chaos.models.FailureBehavior?alt=com.azure.resourcemanager.chaos.models.FailureBehavior&text=FailureBehavior\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final FailureBehavior CONTINUE"
+  desc: "The action failure is suppressed: it does not by itself end the scenario run, and the run continues with its remaining actions. Suppression affects the run's result only. It does not change dependency scheduling, which stays under the control of each action's \\`runAfter\\` — an action that should still start after a failed dependency says so there. A run that completes normally and whose action failures were all suppressed terminates as \\`PartiallySucceeded\\`. Any failure that is not suppressed still drives the run to \\`Failed\\`, and cancellation keeps its existing result."
+- uid: "com.azure.resourcemanager.chaos.models.FailureBehavior.STOP"
+  fullName: "com.azure.resourcemanager.chaos.models.FailureBehavior.STOP"
+  name: "STOP"
+  nameWithType: "FailureBehavior.STOP"
+  summary: "The action failure stops the scenario run and drives it to the \\`Failed\\` terminal state."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.resourcemanager.chaos.models.FailureBehavior?alt=com.azure.resourcemanager.chaos.models.FailureBehavior&text=FailureBehavior\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final FailureBehavior STOP"
+  desc: "The action failure stops the scenario run and drives it to the \\`Failed\\` terminal state. This is the effective behavior when no \\`failureBehavior\\` is supplied."
+methods:
+- uid: "com.azure.resourcemanager.chaos.models.FailureBehavior.fromString(java.lang.String)"
+  fullName: "com.azure.resourcemanager.chaos.models.FailureBehavior.fromString(String name)"
+  name: "fromString(String name)"
+  nameWithType: "FailureBehavior.fromString(String name)"
+  summary: "Creates or finds a Failure<wbr>Behavior from its string representation."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "a name to look for."
+    name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public static FailureBehavior fromString(String name)"
+  desc: "Creates or finds a FailureBehavior from its string representation."
+  returns:
+    description: "the corresponding FailureBehavior."
+    type: "<xref href=\"com.azure.resourcemanager.chaos.models.FailureBehavior?alt=com.azure.resourcemanager.chaos.models.FailureBehavior&text=FailureBehavior\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.chaos.models.FailureBehavior.values()"
+  fullName: "com.azure.resourcemanager.chaos.models.FailureBehavior.values()"
+  name: "values()"
+  nameWithType: "FailureBehavior.values()"
+  summary: "Gets known Failure<wbr>Behavior values."
+  modifiers:
+  - "static"
+  syntax: "public static Collection<FailureBehavior> values()"
+  desc: "Gets known FailureBehavior values."
+  returns:
+    description: "known FailureBehavior values."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html\">Collection</a>&lt;<xref href=\"com.azure.resourcemanager.chaos.models.FailureBehavior?alt=com.azure.resourcemanager.chaos.models.FailureBehavior&text=FailureBehavior\" data-throw-if-not-resolved=\"False\" />&gt;"
+type: "class"
+desc: "Enum of how a scenario run reacts when an action fails."
+metadata: {}
+package: "com.azure.resourcemanager.chaos.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-chaos:1.4.0

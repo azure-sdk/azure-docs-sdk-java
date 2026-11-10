@@ -7,21 +7,14 @@ summary: "The scheduled query rule resource."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 - "<xref href=\"com.azure.core.management.ProxyResource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
-- "<xref href=\"com.azure.core.management.Resource?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
 - classRef: "<xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
   methodsRef:
+  - "<xref href=\"com.azure.core.management.ProxyResource.fromJson(com.azure.json.JsonReader)?alt=com.azure.core.management.ProxyResource.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.management.ProxyResource.id()?alt=com.azure.core.management.ProxyResource.id&text=id\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.management.ProxyResource.name()?alt=com.azure.core.management.ProxyResource.name&text=name\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.management.ProxyResource.toJson(com.azure.json.JsonWriter)?alt=com.azure.core.management.ProxyResource.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.core.management.ProxyResource.type()?alt=com.azure.core.management.ProxyResource.type&text=type\" data-throw-if-not-resolved=\"False\" />"
-- classRef: "<xref href=\"com.azure.core.management.Resource?alt=com.azure.core.management.Resource&text=Resource\" data-throw-if-not-resolved=\"False\" />"
-  methodsRef:
-  - "<xref href=\"com.azure.core.management.Resource.fromJson(com.azure.json.JsonReader)?alt=com.azure.core.management.Resource.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.location()?alt=com.azure.core.management.Resource.location&text=location\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.tags()?alt=com.azure.core.management.Resource.tags&text=tags\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.toJson(com.azure.json.JsonWriter)?alt=com.azure.core.management.Resource.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.withLocation(java.lang.String)?alt=com.azure.core.management.Resource.withLocation&text=withLocation\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.core.management.Resource.withTags(java.util.Map<java.lang.String,java.lang.String>)?alt=com.azure.core.management.Resource.withTags&text=withTags\" data-throw-if-not-resolved=\"False\" />"
 - classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
   methodsRef:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
@@ -35,7 +28,7 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
-syntax: "public final class **ScheduledQueryRuleResourceInner**</br> extends <xref href=\"com.azure.core.management.Resource?alt=com.azure.core.management.Resource&text=Resource\" data-throw-if-not-resolved=\"False\" />"
+syntax: "public final class **ScheduledQueryRuleResourceInner**</br> extends <xref href=\"com.azure.core.management.ProxyResource?alt=com.azure.core.management.ProxyResource&text=ProxyResource\" data-throw-if-not-resolved=\"False\" />"
 constructors:
 - uid: "com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner.ScheduledQueryRuleResourceInner()"
   fullName: "com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner.ScheduledQueryRuleResourceInner()"
@@ -61,7 +54,7 @@ methods:
   nameWithType: "ScheduledQueryRuleResourceInner.autoMitigate()"
   summary: "Get the auto<wbr>Mitigate property: The flag that indicates whether the alert should be automatically resolved or not."
   syntax: "public Boolean autoMitigate()"
-  desc: "Get the autoMitigate property: The flag that indicates whether the alert should be automatically resolved or not. The default is true. Relevant only for rules of the kind LogAlert."
+  desc: "Get the autoMitigate property: The flag that indicates whether the alert should be automatically resolved or not. The default is true. Relevant only for rules of kinds LogAlert and SimpleLogAlert."
   returns:
     description: "the autoMitigate value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
@@ -129,9 +122,9 @@ methods:
   fullName: "com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner.etag()"
   name: "etag()"
   nameWithType: "ScheduledQueryRuleResourceInner.etag()"
-  summary: "Get the etag property: The etag field is \\*not\\* required."
+  summary: "Get the etag property: Resource entity tag (ETag)."
   syntax: "public String etag()"
-  desc: "Get the etag property: The etag field is \\*not\\* required. If it is provided in the response body, it must also be provided as a header per the normal etag convention. Entity tags are used for comparing two or more entities from the same requested resource. HTTP/1.1 uses entity tags in the etag (section 14.19), If-Match (section 14.24), If-None-Match (section 14.26), and If-Range (section 14.27) header fields."
+  desc: "Get the etag property: Resource entity tag (ETag)."
   returns:
     description: "the etag value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -215,6 +208,16 @@ methods:
   returns:
     description: "the kind value."
     type: "<xref href=\"com.azure.resourcemanager.monitor.models.Kind?alt=com.azure.resourcemanager.monitor.models.Kind&text=Kind\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner.location()"
+  fullName: "com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner.location()"
+  name: "location()"
+  nameWithType: "ScheduledQueryRuleResourceInner.location()"
+  summary: "Get the location property: The geo-location where the resource lives."
+  syntax: "public String location()"
+  desc: "Get the location property: The geo-location where the resource lives."
+  returns:
+    description: "the location value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner.muteActionsDuration()"
   fullName: "com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner.muteActionsDuration()"
   name: "muteActionsDuration()"
@@ -252,7 +255,7 @@ methods:
   nameWithType: "ScheduledQueryRuleResourceInner.resolveConfiguration()"
   summary: "Get the resolve<wbr>Configuration property: Defines the configuration for resolving fired alerts."
   syntax: "public RuleResolveConfiguration resolveConfiguration()"
-  desc: "Get the resolveConfiguration property: Defines the configuration for resolving fired alerts. Relevant only for rules of the kind LogAlert."
+  desc: "Get the resolveConfiguration property: Defines the configuration for resolving fired alerts. Relevant only for rules of kinds LogAlert and SimpleLogAlert."
   returns:
     description: "the resolveConfiguration value."
     type: "<xref href=\"com.azure.resourcemanager.monitor.models.RuleResolveConfiguration?alt=com.azure.resourcemanager.monitor.models.RuleResolveConfiguration&text=RuleResolveConfiguration\" data-throw-if-not-resolved=\"False\" />"
@@ -290,12 +293,22 @@ methods:
   fullName: "com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner.systemData()"
   name: "systemData()"
   nameWithType: "ScheduledQueryRuleResourceInner.systemData()"
-  summary: "Get the system<wbr>Data property: System<wbr>Data of Scheduled<wbr>Query<wbr>Rule."
+  summary: "Get the system<wbr>Data property: Azure Resource Manager metadata containing created<wbr>By and modified<wbr>By information."
   syntax: "public SystemData systemData()"
-  desc: "Get the systemData property: SystemData of ScheduledQueryRule."
+  desc: "Get the systemData property: Azure Resource Manager metadata containing createdBy and modifiedBy information."
   returns:
     description: "the systemData value."
     type: "<xref href=\"com.azure.core.management.SystemData?alt=com.azure.core.management.SystemData&text=SystemData\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner.tags()"
+  fullName: "com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner.tags()"
+  name: "tags()"
+  nameWithType: "ScheduledQueryRuleResourceInner.tags()"
+  summary: "Get the tags property: Resource tags."
+  syntax: "public Map<String,String> tags()"
+  desc: "Get the tags property: Resource tags."
+  returns:
+    description: "the tags value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner.targetResourceTypes()"
   fullName: "com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner.targetResourceTypes()"
   name: "targetResourceTypes()"
@@ -310,7 +323,7 @@ methods:
   fullName: "com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
   nameWithType: "ScheduledQueryRuleResourceInner.toJson(JsonWriter jsonWriter)"
-  overridden: "com.azure.core.management.Resource.toJson(com.azure.json.JsonWriter)"
+  overridden: "com.azure.core.management.ProxyResource.toJson(com.azure.json.JsonWriter)"
   parameters:
   - name: "jsonWriter"
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
@@ -371,7 +384,7 @@ methods:
     name: "autoMitigate"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
   syntax: "public ScheduledQueryRuleResourceInner withAutoMitigate(Boolean autoMitigate)"
-  desc: "Set the autoMitigate property: The flag that indicates whether the alert should be automatically resolved or not. The default is true. Relevant only for rules of the kind LogAlert."
+  desc: "Set the autoMitigate property: The flag that indicates whether the alert should be automatically resolved or not. The default is true. Relevant only for rules of kinds LogAlert and SimpleLogAlert."
   returns:
     description: "the ScheduledQueryRuleResourceInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner?alt=com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner&text=ScheduledQueryRuleResourceInner\" data-throw-if-not-resolved=\"False\" />"
@@ -491,12 +504,15 @@ methods:
   fullName: "com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner.withLocation(String location)"
   name: "withLocation(String location)"
   nameWithType: "ScheduledQueryRuleResourceInner.withLocation(String location)"
-  overridden: "com.azure.core.management.Resource.withLocation(java.lang.String)"
+  summary: "Set the location property: The geo-location where the resource lives."
   parameters:
-  - name: "location"
+  - description: "the location value to set."
+    name: "location"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ScheduledQueryRuleResourceInner withLocation(String location)"
+  desc: "Set the location property: The geo-location where the resource lives."
   returns:
+    description: "the ScheduledQueryRuleResourceInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner?alt=com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner&text=ScheduledQueryRuleResourceInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner.withMuteActionsDuration(java.time.Duration)"
   fullName: "com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner.withMuteActionsDuration(Duration muteActionsDuration)"
@@ -536,7 +552,7 @@ methods:
     name: "resolveConfiguration"
     type: "<xref href=\"com.azure.resourcemanager.monitor.models.RuleResolveConfiguration?alt=com.azure.resourcemanager.monitor.models.RuleResolveConfiguration&text=RuleResolveConfiguration\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public ScheduledQueryRuleResourceInner withResolveConfiguration(RuleResolveConfiguration resolveConfiguration)"
-  desc: "Set the resolveConfiguration property: Defines the configuration for resolving fired alerts. Relevant only for rules of the kind LogAlert."
+  desc: "Set the resolveConfiguration property: Defines the configuration for resolving fired alerts. Relevant only for rules of kinds LogAlert and SimpleLogAlert."
   returns:
     description: "the ScheduledQueryRuleResourceInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner?alt=com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner&text=ScheduledQueryRuleResourceInner\" data-throw-if-not-resolved=\"False\" />"
@@ -586,12 +602,15 @@ methods:
   fullName: "com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner.withTags(Map<String,String> tags)"
   name: "withTags(Map<String,String> tags)"
   nameWithType: "ScheduledQueryRuleResourceInner.withTags(Map<String,String> tags)"
-  overridden: "com.azure.core.management.Resource.withTags(java.util.Map<java.lang.String,java.lang.String>)"
+  summary: "Set the tags property: Resource tags."
   parameters:
-  - name: "tags"
+  - description: "the tags value to set."
+    name: "tags"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
   syntax: "public ScheduledQueryRuleResourceInner withTags(Map<String,String> tags)"
+  desc: "Set the tags property: Resource tags."
   returns:
+    description: "the ScheduledQueryRuleResourceInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner?alt=com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner&text=ScheduledQueryRuleResourceInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner.withTargetResourceTypes(java.util.List<java.lang.String>)"
   fullName: "com.azure.resourcemanager.monitor.fluent.models.ScheduledQueryRuleResourceInner.withTargetResourceTypes(List<String> targetResourceTypes)"
@@ -625,4 +644,4 @@ type: "class"
 desc: "The scheduled query rule resource."
 metadata: {}
 package: "com.azure.resourcemanager.monitor.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-monitor:2.54.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-monitor:2.55.0-beta.1

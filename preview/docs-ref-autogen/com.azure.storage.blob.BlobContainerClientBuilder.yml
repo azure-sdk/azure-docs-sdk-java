@@ -246,6 +246,20 @@ methods:
   returns:
     description: "the updated BlobContainerClientBuilder object"
     type: "<xref href=\"com.azure.storage.blob.BlobContainerClientBuilder?alt=com.azure.storage.blob.BlobContainerClientBuilder&text=BlobContainerClientBuilder\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.blob.BlobContainerClientBuilder.expectContinueBehavior(com.azure.storage.common.policy.ExpectContinueOptions)"
+  fullName: "com.azure.storage.blob.BlobContainerClientBuilder.expectContinueBehavior(ExpectContinueOptions expectContinueOptions)"
+  name: "expectContinueBehavior(ExpectContinueOptions expectContinueOptions)"
+  nameWithType: "BlobContainerClientBuilder.expectContinueBehavior(ExpectContinueOptions expectContinueOptions)"
+  summary: "Sets the behavior for applying the HTTP header `Expect: 100-continue` to requests that carry a body."
+  parameters:
+  - description: "<xref uid=\"com.azure.storage.common.policy.ExpectContinueOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ExpectContinueOptions\"></xref> to be used when sending requests with a body."
+    name: "expectContinueOptions"
+    type: "<xref href=\"com.azure.storage.common.policy.ExpectContinueOptions?alt=com.azure.storage.common.policy.ExpectContinueOptions&text=ExpectContinueOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public BlobContainerClientBuilder expectContinueBehavior(ExpectContinueOptions expectContinueOptions)"
+  desc: "Sets the behavior for applying the HTTP header `Expect: 100-continue` to requests that carry a body.\n\nThe header is not applied unless this is set, and requires an HTTP client that withholds the request body until the service responds."
+  returns:
+    description: "the updated BlobContainerClientBuilder object"
+    type: "<xref href=\"com.azure.storage.blob.BlobContainerClientBuilder?alt=com.azure.storage.blob.BlobContainerClientBuilder&text=BlobContainerClientBuilder\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.blob.BlobContainerClientBuilder.getDefaultHttpLogOptions()"
   fullName: "com.azure.storage.blob.BlobContainerClientBuilder.getDefaultHttpLogOptions()"
   name: "getDefaultHttpLogOptions()"
@@ -356,6 +370,20 @@ methods:
   returns:
     description: "the updated BlobContainerClientBuilder object"
     type: "<xref href=\"com.azure.storage.blob.BlobContainerClientBuilder?alt=com.azure.storage.blob.BlobContainerClientBuilder&text=BlobContainerClientBuilder\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.blob.BlobContainerClientBuilder.sessionContext(com.azure.storage.blob.SessionContext)"
+  fullName: "com.azure.storage.blob.BlobContainerClientBuilder.sessionContext(SessionContext sessionContext)"
+  name: "sessionContext(SessionContext sessionContext)"
+  nameWithType: "BlobContainerClientBuilder.sessionContext(SessionContext sessionContext)"
+  summary: "Sets the <xref uid=\"com.azure.storage.blob.SessionContext\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SessionContext\"></xref> used for session-based authentication of eligible GET blob requests made by blob clients derived from this container client."
+  parameters:
+  - description: "The session context for the HTTP pipeline, or <code>null</code> to reset to a new default context."
+    name: "sessionContext"
+    type: "<xref href=\"com.azure.storage.blob.SessionContext?alt=com.azure.storage.blob.SessionContext&text=SessionContext\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public BlobContainerClientBuilder sessionContext(SessionContext sessionContext)"
+  desc: "Sets the <xref uid=\"com.azure.storage.blob.SessionContext\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SessionContext\"></xref> used for session-based authentication of eligible GET blob requests made by blob clients derived from this container client. Applies when this builder constructs a pipeline with a <xref uid=\"com.azure.core.credential.TokenCredential\" data-throw-if-not-resolved=\"false\" data-raw-source=\"TokenCredential\"></xref>; requests that are not eligible continue to use bearer token authentication. Sessions are disabled by default.\n\nSession-enabled clients built with the same context instance share a session cache. See <xref uid=\"com.azure.storage.blob.SessionContext\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SessionContext\"></xref> for configuration, cache-sharing requirements, and the effect of changing settings after a client is built."
+  returns:
+    description: "the updated BlobContainerClientBuilder object."
+    type: "<xref href=\"com.azure.storage.blob.BlobContainerClientBuilder?alt=com.azure.storage.blob.BlobContainerClientBuilder&text=BlobContainerClientBuilder\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.blob.BlobContainerClientBuilder.setAnonymousAccess()"
   fullName: "com.azure.storage.blob.BlobContainerClientBuilder.setAnonymousAccess()"
   name: "setAnonymousAccess()"
@@ -378,4 +406,4 @@ implements:
 - "<xref href=\"com.azure.core.client.traits.TokenCredentialTrait?alt=com.azure.core.client.traits.TokenCredentialTrait&text=TokenCredentialTrait\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.blob.BlobContainerClientBuilder?alt=com.azure.storage.blob.BlobContainerClientBuilder&text=BlobContainerClientBuilder\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.storage.blob"
-artifact: com.azure:azure-storage-blob:12.36.0-beta.1
+artifact: com.azure:azure-storage-blob:12.38.0-beta.1

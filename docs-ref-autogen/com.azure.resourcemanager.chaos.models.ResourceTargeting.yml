@@ -1,0 +1,118 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.chaos.models.ResourceTargeting"
+fullName: "com.azure.resourcemanager.chaos.models.ResourceTargeting"
+name: "ResourceTargeting"
+nameWithType: "ResourceTargeting"
+summary: "Model that represents unified resource targeting with symmetric include/exclude criteria."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **ResourceTargeting**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.chaos.models.ResourceTargeting?alt=com.azure.resourcemanager.chaos.models.ResourceTargeting&text=ResourceTargeting\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.resourcemanager.chaos.models.ResourceTargeting.ResourceTargeting()"
+  fullName: "com.azure.resourcemanager.chaos.models.ResourceTargeting.ResourceTargeting()"
+  name: "ResourceTargeting()"
+  nameWithType: "ResourceTargeting.ResourceTargeting()"
+  summary: "Creates an instance of Resource<wbr>Targeting class."
+  syntax: "public ResourceTargeting()"
+  desc: "Creates an instance of ResourceTargeting class."
+methods:
+- uid: "com.azure.resourcemanager.chaos.models.ResourceTargeting.exclude()"
+  fullName: "com.azure.resourcemanager.chaos.models.ResourceTargeting.exclude()"
+  name: "exclude()"
+  nameWithType: "ResourceTargeting.exclude()"
+  summary: "Get the exclude property: Exclusion criteria."
+  syntax: "public ResourceTargetingCriteria exclude()"
+  desc: "Get the exclude property: Exclusion criteria. Resources matching ANY active dimension are removed. Null or omitted means no exclusions applied."
+  returns:
+    description: "the exclude value."
+    type: "<xref href=\"com.azure.resourcemanager.chaos.models.ResourceTargetingCriteria?alt=com.azure.resourcemanager.chaos.models.ResourceTargetingCriteria&text=ResourceTargetingCriteria\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.chaos.models.ResourceTargeting.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.chaos.models.ResourceTargeting.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "ResourceTargeting.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Resource<wbr>Targeting from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static ResourceTargeting fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the ResourceTargeting."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of ResourceTargeting from the JsonReader."
+  returns:
+    description: "An instance of ResourceTargeting if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.chaos.models.ResourceTargeting?alt=com.azure.resourcemanager.chaos.models.ResourceTargeting&text=ResourceTargeting\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.chaos.models.ResourceTargeting.include()"
+  fullName: "com.azure.resourcemanager.chaos.models.ResourceTargeting.include()"
+  name: "include()"
+  nameWithType: "ResourceTargeting.include()"
+  summary: "Get the include property: Inclusion criteria."
+  syntax: "public ResourceTargetingCriteria include()"
+  desc: "Get the include property: Inclusion criteria. Resources must match ALL active dimensions to be candidates. Null or omitted means no inclusion filtering (all resources are candidates)."
+  returns:
+    description: "the include value."
+    type: "<xref href=\"com.azure.resourcemanager.chaos.models.ResourceTargetingCriteria?alt=com.azure.resourcemanager.chaos.models.ResourceTargetingCriteria&text=ResourceTargetingCriteria\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.chaos.models.ResourceTargeting.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.chaos.models.ResourceTargeting.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "ResourceTargeting.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.chaos.models.ResourceTargeting.withExclude(com.azure.resourcemanager.chaos.models.ResourceTargetingCriteria)"
+  fullName: "com.azure.resourcemanager.chaos.models.ResourceTargeting.withExclude(ResourceTargetingCriteria exclude)"
+  name: "withExclude(ResourceTargetingCriteria exclude)"
+  nameWithType: "ResourceTargeting.withExclude(ResourceTargetingCriteria exclude)"
+  summary: "Set the exclude property: Exclusion criteria."
+  parameters:
+  - description: "the exclude value to set."
+    name: "exclude"
+    type: "<xref href=\"com.azure.resourcemanager.chaos.models.ResourceTargetingCriteria?alt=com.azure.resourcemanager.chaos.models.ResourceTargetingCriteria&text=ResourceTargetingCriteria\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ResourceTargeting withExclude(ResourceTargetingCriteria exclude)"
+  desc: "Set the exclude property: Exclusion criteria. Resources matching ANY active dimension are removed. Null or omitted means no exclusions applied."
+  returns:
+    description: "the ResourceTargeting object itself."
+    type: "<xref href=\"com.azure.resourcemanager.chaos.models.ResourceTargeting?alt=com.azure.resourcemanager.chaos.models.ResourceTargeting&text=ResourceTargeting\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.chaos.models.ResourceTargeting.withInclude(com.azure.resourcemanager.chaos.models.ResourceTargetingCriteria)"
+  fullName: "com.azure.resourcemanager.chaos.models.ResourceTargeting.withInclude(ResourceTargetingCriteria include)"
+  name: "withInclude(ResourceTargetingCriteria include)"
+  nameWithType: "ResourceTargeting.withInclude(ResourceTargetingCriteria include)"
+  summary: "Set the include property: Inclusion criteria."
+  parameters:
+  - description: "the include value to set."
+    name: "include"
+    type: "<xref href=\"com.azure.resourcemanager.chaos.models.ResourceTargetingCriteria?alt=com.azure.resourcemanager.chaos.models.ResourceTargetingCriteria&text=ResourceTargetingCriteria\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ResourceTargeting withInclude(ResourceTargetingCriteria include)"
+  desc: "Set the include property: Inclusion criteria. Resources must match ALL active dimensions to be candidates. Null or omitted means no inclusion filtering (all resources are candidates)."
+  returns:
+    description: "the ResourceTargeting object itself."
+    type: "<xref href=\"com.azure.resourcemanager.chaos.models.ResourceTargeting?alt=com.azure.resourcemanager.chaos.models.ResourceTargeting&text=ResourceTargeting\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Model that represents unified resource targeting with symmetric include/exclude criteria. Both sides support the same set of dimensions."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.chaos.models.ResourceTargeting?alt=com.azure.resourcemanager.chaos.models.ResourceTargeting&text=ResourceTargeting\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.chaos.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-chaos:1.4.0

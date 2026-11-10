@@ -1,0 +1,118 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption"
+fullName: "com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption"
+name: "WorkspaceCustomerManagedKeyEncryption"
+nameWithType: "WorkspaceCustomerManagedKeyEncryption"
+summary: "A customer-managed key reference, not key material."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **WorkspaceCustomerManagedKeyEncryption**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption?alt=com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption&text=WorkspaceCustomerManagedKeyEncryption\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption.WorkspaceCustomerManagedKeyEncryption()"
+  fullName: "com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption.WorkspaceCustomerManagedKeyEncryption()"
+  name: "WorkspaceCustomerManagedKeyEncryption()"
+  nameWithType: "WorkspaceCustomerManagedKeyEncryption.WorkspaceCustomerManagedKeyEncryption()"
+  summary: "Creates an instance of Workspace<wbr>Customer<wbr>Managed<wbr>Key<wbr>Encryption class."
+  syntax: "public WorkspaceCustomerManagedKeyEncryption()"
+  desc: "Creates an instance of WorkspaceCustomerManagedKeyEncryption class."
+methods:
+- uid: "com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "WorkspaceCustomerManagedKeyEncryption.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Workspace<wbr>Customer<wbr>Managed<wbr>Key<wbr>Encryption from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static WorkspaceCustomerManagedKeyEncryption fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of WorkspaceCustomerManagedKeyEncryption from the JsonReader."
+  returns:
+    description: "An instance of WorkspaceCustomerManagedKeyEncryption if the JsonReader was pointing to an instance of it,\n or null if it was pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption?alt=com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption&text=WorkspaceCustomerManagedKeyEncryption\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption.keyEncryptionKeyUrl()"
+  fullName: "com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption.keyEncryptionKeyUrl()"
+  name: "keyEncryptionKeyUrl()"
+  nameWithType: "WorkspaceCustomerManagedKeyEncryption.keyEncryptionKeyUrl()"
+  summary: "Get the key<wbr>Encryption<wbr>Key<wbr>Url property: The versionless HTTPS Key Vault key URI in the supported cloud and Workspace tenant."
+  syntax: "public String keyEncryptionKeyUrl()"
+  desc: "Get the keyEncryptionKeyUrl property: The versionless HTTPS Key Vault key URI in the supported cloud and Workspace tenant. The key vault must belong to the same Microsoft Entra tenant as the Workspace. Its HTTPS origin must match the vault referenced by keyVaultResourceId. The service validates the effective pair and caller vault-read permission synchronously through Azure Resource Manager before creating public operation metadata, accepting the configuration operation, persisting requested encryption, or changing Storage or customer data. Supports RSA keys in Azure Key Vault and RSA-HSM keys in Premium Key Vault, with key sizes of 2048, 3072, or 4096 bits. Premium RSA-HSM keys use the same vault URL. The separate Azure Managed HSM service is not supported; Managed HSM endpoints are rejected before operation acceptance. A key version, query string, or fragment is not permitted. Azure Storage follows key versions automatically. Keep the previous version available for at least 24 hours after rotation."
+  returns:
+    description: "the keyEncryptionKeyUrl value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption.keyVaultResourceId()"
+  fullName: "com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption.keyVaultResourceId()"
+  name: "keyVaultResourceId()"
+  nameWithType: "WorkspaceCustomerManagedKeyEncryption.keyVaultResourceId()"
+  summary: "Get the key<wbr>Vault<wbr>Resource<wbr>Id property: The fully qualified Azure resource ID of the key vault that contains the key."
+  syntax: "public String keyVaultResourceId()"
+  desc: "Get the keyVaultResourceId property: The fully qualified Azure resource ID of the key vault that contains the key. Use /subscriptions/\\{subscriptionId\\}/resourceGroups/\\{resourceGroupName\\}/providers/Microsoft.KeyVault/vaults/\\{vaultName\\}, not a key child resource, Managed HSM, or URL. Full PUT with CMK and PATCH that changes either CMK member require Microsoft.KeyVault/vaults/read on the effective vault. The service compares its canonical ID, tenant, and vault URI with the requested pair before accepting the operation."
+  returns:
+    description: "the keyVaultResourceId value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "WorkspaceCustomerManagedKeyEncryption.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption.withKeyEncryptionKeyUrl(java.lang.String)"
+  fullName: "com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption.withKeyEncryptionKeyUrl(String keyEncryptionKeyUrl)"
+  name: "withKeyEncryptionKeyUrl(String keyEncryptionKeyUrl)"
+  nameWithType: "WorkspaceCustomerManagedKeyEncryption.withKeyEncryptionKeyUrl(String keyEncryptionKeyUrl)"
+  summary: "Set the key<wbr>Encryption<wbr>Key<wbr>Url property: The versionless HTTPS Key Vault key URI in the supported cloud and Workspace tenant."
+  parameters:
+  - description: "the keyEncryptionKeyUrl value to set."
+    name: "keyEncryptionKeyUrl"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public WorkspaceCustomerManagedKeyEncryption withKeyEncryptionKeyUrl(String keyEncryptionKeyUrl)"
+  desc: "Set the keyEncryptionKeyUrl property: The versionless HTTPS Key Vault key URI in the supported cloud and Workspace tenant. The key vault must belong to the same Microsoft Entra tenant as the Workspace. Its HTTPS origin must match the vault referenced by keyVaultResourceId. The service validates the effective pair and caller vault-read permission synchronously through Azure Resource Manager before creating public operation metadata, accepting the configuration operation, persisting requested encryption, or changing Storage or customer data. Supports RSA keys in Azure Key Vault and RSA-HSM keys in Premium Key Vault, with key sizes of 2048, 3072, or 4096 bits. Premium RSA-HSM keys use the same vault URL. The separate Azure Managed HSM service is not supported; Managed HSM endpoints are rejected before operation acceptance. A key version, query string, or fragment is not permitted. Azure Storage follows key versions automatically. Keep the previous version available for at least 24 hours after rotation."
+  returns:
+    description: "the WorkspaceCustomerManagedKeyEncryption object itself."
+    type: "<xref href=\"com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption?alt=com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption&text=WorkspaceCustomerManagedKeyEncryption\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption.withKeyVaultResourceId(java.lang.String)"
+  fullName: "com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption.withKeyVaultResourceId(String keyVaultResourceId)"
+  name: "withKeyVaultResourceId(String keyVaultResourceId)"
+  nameWithType: "WorkspaceCustomerManagedKeyEncryption.withKeyVaultResourceId(String keyVaultResourceId)"
+  summary: "Set the key<wbr>Vault<wbr>Resource<wbr>Id property: The fully qualified Azure resource ID of the key vault that contains the key."
+  parameters:
+  - description: "the keyVaultResourceId value to set."
+    name: "keyVaultResourceId"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public WorkspaceCustomerManagedKeyEncryption withKeyVaultResourceId(String keyVaultResourceId)"
+  desc: "Set the keyVaultResourceId property: The fully qualified Azure resource ID of the key vault that contains the key. Use /subscriptions/\\{subscriptionId\\}/resourceGroups/\\{resourceGroupName\\}/providers/Microsoft.KeyVault/vaults/\\{vaultName\\}, not a key child resource, Managed HSM, or URL. Full PUT with CMK and PATCH that changes either CMK member require Microsoft.KeyVault/vaults/read on the effective vault. The service compares its canonical ID, tenant, and vault URI with the requested pair before accepting the operation."
+  returns:
+    description: "the WorkspaceCustomerManagedKeyEncryption object itself."
+    type: "<xref href=\"com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption?alt=com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption&text=WorkspaceCustomerManagedKeyEncryption\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "A customer-managed key reference, not key material."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption?alt=com.azure.resourcemanager.chaos.models.WorkspaceCustomerManagedKeyEncryption&text=WorkspaceCustomerManagedKeyEncryption\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.chaos.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-chaos:1.4.0

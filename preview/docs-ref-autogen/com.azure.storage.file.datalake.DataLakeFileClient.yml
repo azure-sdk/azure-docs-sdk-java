@@ -701,6 +701,29 @@ methods:
   returns:
     description: "A response containing status code and HTTP headers."
     type: "<xref href=\"com.azure.storage.file.datalake.models.FileReadResponse?alt=com.azure.storage.file.datalake.models.FileReadResponse&text=FileReadResponse\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.file.datalake.DataLakeFileClient.readWithResponse(java.io.OutputStream,com.azure.storage.file.datalake.options.FileReadOptions,java.time.Duration,com.azure.core.util.Context)"
+  fullName: "com.azure.storage.file.datalake.DataLakeFileClient.readWithResponse(OutputStream stream, FileReadOptions options, Duration timeout, Context context)"
+  name: "readWithResponse(OutputStream stream, FileReadOptions options, Duration timeout, Context context)"
+  nameWithType: "DataLakeFileClient.readWithResponse(OutputStream stream, FileReadOptions options, Duration timeout, Context context)"
+  summary: "Reads a range of bytes from a file into an output stream with options."
+  parameters:
+  - description: "A non-null <xref uid=\"java.io.OutputStream\" data-throw-if-not-resolved=\"false\" data-raw-source=\"OutputStream\"></xref> instance where the downloaded data will be written."
+    name: "stream"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/OutputStream.html\">OutputStream</a>"
+  - description: "<xref uid=\"com.azure.storage.file.datalake.options.FileReadOptions\" data-throw-if-not-resolved=\"false\" data-raw-source=\"FileReadOptions\"></xref>"
+    name: "options"
+    type: "<xref href=\"com.azure.storage.file.datalake.options.FileReadOptions?alt=com.azure.storage.file.datalake.options.FileReadOptions&text=FileReadOptions\" data-throw-if-not-resolved=\"False\" />"
+  - description: "An optional timeout value beyond which a <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RuntimeException\"></xref> will be raised."
+    name: "timeout"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
+  - description: "Additional context that is passed through the Http pipeline during the service call."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public FileReadResponse readWithResponse(OutputStream stream, FileReadOptions options, Duration timeout, Context context)"
+  desc: "Reads a range of bytes from a file into an output stream with options.\n\nFor more information, see the [Azure Docs][]\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/get-blob"
+  returns:
+    description: "A response containing status code and HTTP headers."
+    type: "<xref href=\"com.azure.storage.file.datalake.models.FileReadResponse?alt=com.azure.storage.file.datalake.models.FileReadResponse&text=FileReadResponse\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.file.datalake.DataLakeFileClient.rename(java.lang.String,java.lang.String)"
   fullName: "com.azure.storage.file.datalake.DataLakeFileClient.rename(String destinationFileSystem, String destinationPath)"
   name: "rename(String destinationFileSystem, String destinationPath)"
@@ -953,4 +976,4 @@ type: "class"
 desc: "This class provides a client that contains file operations for Azure Storage Data Lake. Operations provided by this client include creating a file, deleting a file, renaming a file, setting metadata and http headers, setting and retrieving access control, getting properties, reading a file, and appending and flushing data to write to a file.\n\nThis client is instantiated through <xref uid=\"com.azure.storage.file.datalake.DataLakePathClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DataLakePathClientBuilder\"></xref> or retrieved via <xref uid=\"com.azure.storage.file.datalake.DataLakeFileSystemClient.getFileClient(java.lang.String)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"getFileClient\"></xref>.\n\nPlease refer to the [Azure Docs][] for more information.\n\n\n[Azure Docs]: https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction"
 metadata: {}
 package: "com.azure.storage.file.datalake"
-artifact: com.azure:azure-storage-file-datalake:12.29.0-beta.1
+artifact: com.azure:azure-storage-file-datalake:12.31.0-beta.1

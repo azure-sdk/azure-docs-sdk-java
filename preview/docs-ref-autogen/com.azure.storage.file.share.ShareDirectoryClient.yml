@@ -572,7 +572,7 @@ methods:
   nameWithType: "ShareDirectoryClient.forceCloseHandleWithResponse(String handleId, Duration timeout, Context context)"
   summary: "Closes a handle on the directory at the service."
   parameters:
-  - description: "Handle ID to be clsoed."
+  - description: "Handle ID to be closed."
     name: "handleId"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "An optional timeout applied to the operation. If a response is not returned before the timeout\n concludes a <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"RuntimeException\"></xref> will be thrown."
@@ -687,6 +687,16 @@ methods:
   returns:
     description: "a ShareFileClient that interacts with the specified share"
     type: "<xref href=\"com.azure.storage.file.share.ShareFileClient?alt=com.azure.storage.file.share.ShareFileClient&text=ShareFileClient\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.file.share.ShareDirectoryClient.getFileId()"
+  fullName: "com.azure.storage.file.share.ShareDirectoryClient.getFileId()"
+  name: "getFileId()"
+  nameWithType: "ShareDirectoryClient.getFileId()"
+  summary: "Gets the file ID used to address the directory, or an empty string when the client is path-addressed."
+  syntax: "public String getFileId()"
+  desc: "Gets the file ID used to address the directory, or an empty string when the client is path-addressed."
+  returns:
+    description: "The file ID."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.storage.file.share.ShareDirectoryClient.getHttpPipeline()"
   fullName: "com.azure.storage.file.share.ShareDirectoryClient.getHttpPipeline()"
   name: "getHttpPipeline()"
@@ -703,7 +713,7 @@ methods:
   nameWithType: "ShareDirectoryClient.getProperties()"
   summary: "Retrieves the properties of this directory."
   syntax: "public ShareDirectoryProperties getProperties()"
-  desc: "Retrieves the properties of this directory. The properties includes directory metadata, last modified date, is server encrypted, and eTag.\n\n**Code Samples**\n\nRetrieve directory properties\n\n```java\nShareDirectoryProperties response = shareDirectoryClient.getProperties();\n System.out.printf(\"Directory latest modified date is %s.\", response.getLastModified());\n```\n\nFor more information, see the [Azure Docs][].\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/get-directory-properties"
+  desc: "Retrieves the properties of this directory. The properties includes directory metadata, last modified date, is server encrypted, and eTag.\n\n**Code Samples**\n\nRetrieve directory properties\n\nThis operation accepts path-addressed and file-ID-addressed clients. To retrieve properties without knowing the directory path, use <xref uid=\"com.azure.storage.file.share.ShareClient.getDirectoryClientByFileId(java.lang.String)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareClient#getDirectoryClientByFileId(String)\"></xref>. Service availability determines whether a file-ID request succeeds; the client does not check the share protocol. If the service does not support property retrieval by ID for the share, use a path-addressed client.\n\n```java\nShareDirectoryProperties response = shareDirectoryClient.getProperties();\n System.out.printf(\"Directory latest modified date is %s.\", response.getLastModified());\n```\n\nFor more information, see the [Azure Docs][].\n\n\n[Azure Docs]: https://docs.microsoft.com/rest/api/storageservices/get-directory-properties"
   returns:
     description: "Storage directory properties"
     type: "<xref href=\"com.azure.storage.file.share.models.ShareDirectoryProperties?alt=com.azure.storage.file.share.models.ShareDirectoryProperties&text=ShareDirectoryProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -973,7 +983,7 @@ methods:
     description: "A response containing the storage directory smb properties with headers and response status code"
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.models.ShareDirectoryInfo?alt=com.azure.storage.file.share.models.ShareDirectoryInfo&text=ShareDirectoryInfo\" data-throw-if-not-resolved=\"False\" />&gt;"
 type: "class"
-desc: "This class provides a client that contains all the operations for interacting with directory in Azure Storage File Service. Operations allowed by the client are creating, deleting and listing subdirectory and file, retrieving properties, setting metadata and list or force close handles of the directory or file.\n\n**Instantiating an Synchronous Directory Client**\n\n```java\nShareDirectoryClient client = new ShareFileClientBuilder()\n     .connectionString(\"${connectionString}\")\n     .endpoint(\"${endpoint}\")\n     .buildDirectoryClient();\n```\n\nView <xref uid=\"com.azure.storage.file.share.ShareFileClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"this\"></xref> for additional ways to construct the client."
+desc: "This class provides a client that contains all the operations for interacting with directory in Azure Storage File Service. Operations allowed by the client are creating, deleting and listing subdirectory and file, retrieving properties, setting metadata and list or force close handles of the directory or file.\n\nClients addressed by file ID support property retrieval. Other service operations, including existence checks, and child-client creation throw <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"IllegalStateException\"></xref>. Use a path-addressed client for these operations.\n\n**Instantiating an Synchronous Directory Client**\n\n```java\nShareDirectoryClient client = new ShareFileClientBuilder()\n     .connectionString(\"${connectionString}\")\n     .endpoint(\"${endpoint}\")\n     .buildDirectoryClient();\n```\n\nView <xref uid=\"com.azure.storage.file.share.ShareFileClientBuilder\" data-throw-if-not-resolved=\"false\" data-raw-source=\"this\"></xref> for additional ways to construct the client."
 metadata: {}
 package: "com.azure.storage.file.share"
-artifact: com.azure:azure-storage-file-share:12.32.0-beta.1
+artifact: com.azure:azure-storage-file-share:12.34.0-beta.1

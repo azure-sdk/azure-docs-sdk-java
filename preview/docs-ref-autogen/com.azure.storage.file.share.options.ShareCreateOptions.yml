@@ -40,6 +40,16 @@ methods:
   returns:
     description: "<xref uid=\"com.azure.storage.file.share.models.ShareAccessTier\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareAccessTier\"></xref>."
     type: "<xref href=\"com.azure.storage.file.share.models.ShareAccessTier?alt=com.azure.storage.file.share.models.ShareAccessTier&text=ShareAccessTier\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.file.share.options.ShareCreateOptions.getChangeFeedRetentionInDays()"
+  fullName: "com.azure.storage.file.share.options.ShareCreateOptions.getChangeFeedRetentionInDays()"
+  name: "getChangeFeedRetentionInDays()"
+  nameWithType: "ShareCreateOptions.getChangeFeedRetentionInDays()"
+  summary: "Get the change<wbr>Feed<wbr>Retention<wbr>InDays property: Optional."
+  syntax: "public Integer getChangeFeedRetentionInDays()"
+  desc: "Get the changeFeedRetentionInDays property: Optional. Supported in version 2026-06-06 and above. Only applicable for premium file storage accounts. The number of days that change feed records are retained. Valid values are between 1 and 365 inclusive. Default if not specified is 7 days."
+  returns:
+    description: "the changeFeedRetentionInDays value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
 - uid: "com.azure.storage.file.share.options.ShareCreateOptions.getMetadata()"
   fullName: "com.azure.storage.file.share.options.ShareCreateOptions.getMetadata()"
   name: "getMetadata()"
@@ -120,6 +130,16 @@ methods:
   returns:
     description: "The root squash to set for the share. Only valid for NFS."
     type: "<xref href=\"com.azure.storage.file.share.models.ShareRootSquash?alt=com.azure.storage.file.share.models.ShareRootSquash&text=ShareRootSquash\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.file.share.options.ShareCreateOptions.isChangeFeedEnabled()"
+  fullName: "com.azure.storage.file.share.options.ShareCreateOptions.isChangeFeedEnabled()"
+  name: "isChangeFeedEnabled()"
+  nameWithType: "ShareCreateOptions.isChangeFeedEnabled()"
+  summary: "Get the enable<wbr>Change<wbr>Feed property: Optional."
+  syntax: "public Boolean isChangeFeedEnabled()"
+  desc: "Get the enableChangeFeed property: Optional. Supported in version 2026-06-06 and above. Only applicable for premium file storage accounts. This property enables change feed on the share."
+  returns:
+    description: "the enableChangeFeed value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.storage.file.share.options.ShareCreateOptions.isPaidBurstingEnabled()"
   fullName: "com.azure.storage.file.share.options.ShareCreateOptions.isPaidBurstingEnabled()"
   name: "isPaidBurstingEnabled()"
@@ -153,6 +173,34 @@ methods:
   desc: "Sets the access tier for the share."
   returns:
     description: "The updated options."
+    type: "<xref href=\"com.azure.storage.file.share.options.ShareCreateOptions?alt=com.azure.storage.file.share.options.ShareCreateOptions&text=ShareCreateOptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.file.share.options.ShareCreateOptions.setChangeFeedEnabled(java.lang.Boolean)"
+  fullName: "com.azure.storage.file.share.options.ShareCreateOptions.setChangeFeedEnabled(Boolean enableChangeFeed)"
+  name: "setChangeFeedEnabled(Boolean enableChangeFeed)"
+  nameWithType: "ShareCreateOptions.setChangeFeedEnabled(Boolean enableChangeFeed)"
+  summary: "Set the enable<wbr>Change<wbr>Feed property: Optional."
+  parameters:
+  - description: "the enableChangeFeed value to set."
+    name: "enableChangeFeed"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+  syntax: "public ShareCreateOptions setChangeFeedEnabled(Boolean enableChangeFeed)"
+  desc: "Set the enableChangeFeed property: Optional. Supported in version 2026-06-06 and above. Only applicable for premium file storage accounts. This property enables change feed on the share."
+  returns:
+    description: "the ShareCreateOptions object itself."
+    type: "<xref href=\"com.azure.storage.file.share.options.ShareCreateOptions?alt=com.azure.storage.file.share.options.ShareCreateOptions&text=ShareCreateOptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.file.share.options.ShareCreateOptions.setChangeFeedRetentionInDays(java.lang.Integer)"
+  fullName: "com.azure.storage.file.share.options.ShareCreateOptions.setChangeFeedRetentionInDays(Integer changeFeedRetentionInDays)"
+  name: "setChangeFeedRetentionInDays(Integer changeFeedRetentionInDays)"
+  nameWithType: "ShareCreateOptions.setChangeFeedRetentionInDays(Integer changeFeedRetentionInDays)"
+  summary: "Set the change<wbr>Feed<wbr>Retention<wbr>InDays property: Optional."
+  parameters:
+  - description: "the changeFeedRetentionInDays value to set."
+    name: "changeFeedRetentionInDays"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  syntax: "public ShareCreateOptions setChangeFeedRetentionInDays(Integer changeFeedRetentionInDays)"
+  desc: "Set the changeFeedRetentionInDays property: Optional. Supported in version 2026-06-06 and above. Only applicable for premium file storage accounts. The number of days that change feed records are retained. Valid values are between 1 and 365 inclusive. Default if not specified is 7 days."
+  returns:
+    description: "the ShareCreateOptions object itself."
     type: "<xref href=\"com.azure.storage.file.share.options.ShareCreateOptions?alt=com.azure.storage.file.share.options.ShareCreateOptions&text=ShareCreateOptions\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.storage.file.share.options.ShareCreateOptions.setMetadata(java.util.Map<java.lang.String,java.lang.String>)"
   fullName: "com.azure.storage.file.share.options.ShareCreateOptions.setMetadata(Map<String,String> metadata)"
@@ -298,4 +346,4 @@ type: "class"
 desc: "Extended options that may be passed when creating a share."
 metadata: {}
 package: "com.azure.storage.file.share.options"
-artifact: com.azure:azure-storage-file-share:12.32.0-beta.1
+artifact: com.azure:azure-storage-file-share:12.34.0-beta.1

@@ -1,0 +1,79 @@
+### YamlMime:JavaType
+uid: "com.azure.storage.common.policy.DataLocalityPolicy"
+fullName: "com.azure.storage.common.policy.DataLocalityPolicy"
+name: "DataLocalityPolicy"
+nameWithType: "DataLocalityPolicy"
+summary: "Pipeline policy that, when an ideal endpoint has been set on the per-call <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"com.azure.core.util.Context\"></xref> under <xref uid=\"com.azure.storage.common.policy.DataLocalityPolicy.LAYOUT_ENDPOINT_KEY\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#LAYOUT_ENDPOINT_KEY\"></xref>, rewrites the outgoing request's host and port to that endpoint while preserving the original host on the `Host` header."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"com.azure.core.http.policy.HttpPipelineSyncPolicy?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "<xref href=\"com.azure.core.http.policy.HttpPipelineSyncPolicy?alt=com.azure.core.http.policy.HttpPipelineSyncPolicy&text=HttpPipelineSyncPolicy\" data-throw-if-not-resolved=\"False\" />"
+  methodsRef:
+  - "<xref href=\"com.azure.core.http.policy.HttpPipelineSyncPolicy.afterReceivedResponse(com.azure.core.http.HttpPipelineCallContext,com.azure.core.http.HttpResponse)?alt=com.azure.core.http.policy.HttpPipelineSyncPolicy.afterReceivedResponse&text=afterReceivedResponse\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.http.policy.HttpPipelineSyncPolicy.beforeSendingRequest(com.azure.core.http.HttpPipelineCallContext)?alt=com.azure.core.http.policy.HttpPipelineSyncPolicy.beforeSendingRequest&text=beforeSendingRequest\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.http.policy.HttpPipelineSyncPolicy.process(com.azure.core.http.HttpPipelineCallContext,com.azure.core.http.HttpPipelineNextPolicy)?alt=com.azure.core.http.policy.HttpPipelineSyncPolicy.process&text=process\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.core.http.policy.HttpPipelineSyncPolicy.processSync(com.azure.core.http.HttpPipelineCallContext,com.azure.core.http.HttpPipelineNextSyncPolicy)?alt=com.azure.core.http.policy.HttpPipelineSyncPolicy.processSync&text=processSync\" data-throw-if-not-resolved=\"False\" />"
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **DataLocalityPolicy**</br> extends <xref href=\"com.azure.core.http.policy.HttpPipelineSyncPolicy?alt=com.azure.core.http.policy.HttpPipelineSyncPolicy&text=HttpPipelineSyncPolicy\" data-throw-if-not-resolved=\"False\" />"
+constructors:
+- uid: "com.azure.storage.common.policy.DataLocalityPolicy.DataLocalityPolicy()"
+  fullName: "com.azure.storage.common.policy.DataLocalityPolicy.DataLocalityPolicy()"
+  name: "DataLocalityPolicy()"
+  nameWithType: "DataLocalityPolicy.DataLocalityPolicy()"
+  summary: "Creates a new instance of <xref uid=\"com.azure.storage.common.policy.DataLocalityPolicy\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DataLocalityPolicy\"></xref>."
+  syntax: "public DataLocalityPolicy()"
+  desc: "Creates a new instance of <xref uid=\"com.azure.storage.common.policy.DataLocalityPolicy\" data-throw-if-not-resolved=\"false\" data-raw-source=\"DataLocalityPolicy\"></xref>."
+fields:
+- uid: "com.azure.storage.common.policy.DataLocalityPolicy.LAYOUT_ENDPOINT_KEY"
+  fullName: "com.azure.storage.common.policy.DataLocalityPolicy.LAYOUT_ENDPOINT_KEY"
+  name: "LAYOUT_ENDPOINT_KEY"
+  nameWithType: "DataLocalityPolicy.LAYOUT_ENDPOINT_KEY"
+  summary: "The <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"com.azure.core.util.Context\"></xref> data key used to opt a request into locality-aware routing."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    value: "Azure.Storage.LayoutEndpoint"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public static final String LAYOUT_ENDPOINT_KEY"
+  desc: "The <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"com.azure.core.util.Context\"></xref> data key used to opt a request into locality-aware routing. When present and set to a non-null, non-empty endpoint string, this policy rewrites the outgoing request's host/port to that endpoint. The endpoint may be a bare `host[:port]` or a full URL."
+methods:
+- uid: "com.azure.storage.common.policy.DataLocalityPolicy.beforeSendingRequest(com.azure.core.http.HttpPipelineCallContext)"
+  fullName: "com.azure.storage.common.policy.DataLocalityPolicy.beforeSendingRequest(HttpPipelineCallContext context)"
+  name: "beforeSendingRequest(HttpPipelineCallContext context)"
+  nameWithType: "DataLocalityPolicy.beforeSendingRequest(HttpPipelineCallContext context)"
+  modifiers:
+  - "protected"
+  overridden: "com.azure.core.http.policy.HttpPipelineSyncPolicy.beforeSendingRequest(com.azure.core.http.HttpPipelineCallContext)"
+  parameters:
+  - name: "context"
+    type: "<xref href=\"com.azure.core.http.HttpPipelineCallContext?alt=com.azure.core.http.HttpPipelineCallContext&text=HttpPipelineCallContext\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "protected void beforeSendingRequest(HttpPipelineCallContext context)"
+- uid: "com.azure.storage.common.policy.DataLocalityPolicy.getPipelinePosition()"
+  fullName: "com.azure.storage.common.policy.DataLocalityPolicy.getPipelinePosition()"
+  name: "getPipelinePosition()"
+  nameWithType: "DataLocalityPolicy.getPipelinePosition()"
+  summary: "Gets the position to place the policy."
+  syntax: "public HttpPipelinePosition getPipelinePosition()"
+  desc: "Gets the position to place the policy."
+  returns:
+    description: "The position to place the policy."
+    type: "<xref href=\"com.azure.core.http.HttpPipelinePosition?alt=com.azure.core.http.HttpPipelinePosition&text=HttpPipelinePosition\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Pipeline policy that, when an ideal endpoint has been set on the per-call <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"com.azure.core.util.Context\"></xref> under <xref uid=\"com.azure.storage.common.policy.DataLocalityPolicy.LAYOUT_ENDPOINT_KEY\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#LAYOUT_ENDPOINT_KEY\"></xref>, rewrites the outgoing request's host and port to that endpoint while preserving the original host on the `Host` header.\n\nThis policy is a no-op for any request that does not opt in by setting the <xref uid=\"com.azure.storage.common.policy.DataLocalityPolicy.LAYOUT_ENDPOINT_KEY\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#LAYOUT_ENDPOINT_KEY\"></xref> property on the call context, for example via `context.addData(DataLocalityPolicy.LAYOUT_ENDPOINT_KEY, endpoint)` before issuing the request."
+metadata: {}
+package: "com.azure.storage.common.policy"
+artifact: com.azure:azure-storage-common:12.37.0-beta.1

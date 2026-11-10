@@ -1,0 +1,77 @@
+### YamlMime:JavaEnum
+uid: "com.azure.storage.common.LayoutAwareRouting"
+fullName: "com.azure.storage.common.LayoutAwareRouting"
+name: "LayoutAwareRouting"
+nameWithType: "LayoutAwareRouting"
+summary: "Defines the routing behavior the SDK should use when download hint metadata indicates blob layout is available."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+- "<xref href=\"java.lang.Enum?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html\">Enum</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#valueOf-java.lang.Class-java.lang.String-\">valueOf</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#compareTo-E-\">compareTo</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#describeConstable--\">describeConstable</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#getDeclaringClass--\">getDeclaringClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#name--\">name</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#ordinal--\">ordinal</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html#toString--\">toString</a>"
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public enum **LayoutAwareRouting**</br> extends <a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html\">Enum</a>&lt;<xref href=\"com.azure.storage.common.LayoutAwareRouting?alt=com.azure.storage.common.LayoutAwareRouting&text=LayoutAwareRouting\" data-throw-if-not-resolved=\"False\" />&gt;"
+fields:
+- uid: "com.azure.storage.common.LayoutAwareRouting.AUTO"
+  fullName: "com.azure.storage.common.LayoutAwareRouting.AUTO"
+  name: "AUTO"
+  nameWithType: "LayoutAwareRouting.AUTO"
+  summary: "Let the SDK choose the routing behavior most appropriate for the request."
+  desc: "Let the SDK choose the routing behavior most appropriate for the request.\n\nThe behavior selected by `AUTO` is an implementation detail and may change between SDK releases. Choose <xref uid=\"com.azure.storage.common.LayoutAwareRouting.DISABLED\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#DISABLED\"></xref> or <xref uid=\"com.azure.storage.common.LayoutAwareRouting.ENABLED\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#ENABLED\"></xref> explicitly if you require a specific behavior."
+- uid: "com.azure.storage.common.LayoutAwareRouting.DISABLED"
+  fullName: "com.azure.storage.common.LayoutAwareRouting.DISABLED"
+  name: "DISABLED"
+  nameWithType: "LayoutAwareRouting.DISABLED"
+  summary: "Never use layout-aware routing."
+  desc: "Never use layout-aware routing. The client always uses its configured endpoint."
+- uid: "com.azure.storage.common.LayoutAwareRouting.ENABLED"
+  fullName: "com.azure.storage.common.LayoutAwareRouting.ENABLED"
+  name: "ENABLED"
+  nameWithType: "LayoutAwareRouting.ENABLED"
+  summary: "Opt in to layout-aware routing."
+  desc: "Opt in to layout-aware routing. The client fetches blob layout on demand, caches it, and refreshes it in the background when needed.\n\nLayout-aware routing connects to the selected locality endpoint while preserving the original storage account authority in the `Host` header. When using the JDK HTTP transport, start the JVM with `-Djdk.httpclient.allowRestrictedHeaders=host` before the JDK HTTP client is initialized. If the property already specifies other headers, add `host` to its comma-separated list. Do not configure the JDK HTTP transport to use HTTP/2 for layout-aware routing, as its `:authority` remains derived from the request URL. This setting affects all JDK HTTP clients in the process. See the [JDK HTTP transport documentation][] for custom configuration and other limitations.\n\n\n[JDK HTTP transport documentation]: https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/core/azure-core-http-jdk-httpclient/README.md#request-host-overrides"
+methods:
+- uid: "com.azure.storage.common.LayoutAwareRouting.valueOf(java.lang.String)"
+  fullName: "com.azure.storage.common.LayoutAwareRouting.valueOf(String name)"
+  name: "valueOf(String name)"
+  nameWithType: "LayoutAwareRouting.valueOf(String name)"
+  modifiers:
+  - "static"
+  parameters:
+  - name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public static LayoutAwareRouting valueOf(String name)"
+  returns:
+    type: "<xref href=\"com.azure.storage.common.LayoutAwareRouting?alt=com.azure.storage.common.LayoutAwareRouting&text=LayoutAwareRouting\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.common.LayoutAwareRouting.values()"
+  fullName: "com.azure.storage.common.LayoutAwareRouting.values()"
+  name: "values()"
+  nameWithType: "LayoutAwareRouting.values()"
+  modifiers:
+  - "static"
+  syntax: "public static LayoutAwareRouting[] values()"
+  returns:
+    type: "<xref href=\"com.azure.storage.common.LayoutAwareRouting?alt=com.azure.storage.common.LayoutAwareRouting&text=LayoutAwareRouting\" data-throw-if-not-resolved=\"False\" />[]"
+desc: "Defines the routing behavior the SDK should use when download hint metadata indicates blob layout is available.\n\nThis is a performance optimization only. The bytes returned are identical regardless of the mode used. Client-side encrypted blob clients do not support layout-aware routing and always use their configured endpoint. A warning is logged when <xref uid=\"com.azure.storage.common.LayoutAwareRouting.ENABLED\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#ENABLED\"></xref> is explicitly requested for an unsupported client."
+metadata: {}
+package: "com.azure.storage.common"
+artifact: com.azure:azure-storage-common:12.37.0-beta.1

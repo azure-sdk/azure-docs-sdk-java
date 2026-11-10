@@ -234,7 +234,21 @@ methods:
     name: "endpoint"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ShareFileClientBuilder endpoint(String endpoint)"
-  desc: "Sets the endpoint for the Azure Storage File instance that the client will interact with.\n\nThe first path segment, if the endpoint contains path segments, will be assumed to be the name of the share that the client will interact with. Rest of the path segments should be the path of the file. It mush end up with the file name if more segments exist.\n\nQuery parameters of the endpoint will be parsed in an attempt to generate a SAS token to authenticate requests sent to the service."
+  desc: "Sets the endpoint for the Azure Storage File instance that the client will interact with.\n\nThe first path segment, if the endpoint contains path segments, will be assumed to be the name of the share that the client will interact with. Rest of the path segments should be the path of the file. It mush end up with the file name if more segments exist.\n\nThe `sharesnapshot` and `fileid` query parameters are parsed from the endpoint. Other query parameters are parsed in an attempt to generate a SAS token to authenticate requests sent to the service."
+  returns:
+    description: "the updated ShareFileClientBuilder object"
+    type: "<xref href=\"com.azure.storage.file.share.ShareFileClientBuilder?alt=com.azure.storage.file.share.ShareFileClientBuilder&text=ShareFileClientBuilder\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.storage.file.share.ShareFileClientBuilder.fileId(java.lang.String)"
+  fullName: "com.azure.storage.file.share.ShareFileClientBuilder.fileId(String fileId)"
+  name: "fileId(String fileId)"
+  nameWithType: "ShareFileClientBuilder.fileId(String fileId)"
+  summary: "Sets the file ID used to address a file."
+  parameters:
+  - description: "The file ID of the file."
+    name: "fileId"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public ShareFileClientBuilder fileId(String fileId)"
+  desc: "Sets the file ID used to address a file.\n\nCall <xref uid=\"com.azure.storage.file.share.ShareFileClient.getProperties()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareFileClient#getProperties()\"></xref> or <xref uid=\"com.azure.storage.file.share.ShareFileAsyncClient.getProperties()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareFileAsyncClient#getProperties()\"></xref> on the resulting client to retrieve properties without supplying the file path. File-ID clients also support <xref uid=\"com.azure.storage.file.share.ShareFileClient.getFileLinks()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareFileClient#getFileLinks()\"></xref> and <xref uid=\"com.azure.storage.file.share.ShareFileAsyncClient.getFileLinks()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ShareFileAsyncClient#getFileLinks()\"></xref> (SMB only). Other service operations require a path-addressed client.\n\nSetting a file ID clears the resource path. The file ID can also be read from the `fileid` query parameter when supplied in the endpoint. File IDs are supported only for file clients; building a directory client with a file ID configured throws <xref uid=\"\" data-throw-if-not-resolved=\"false\" data-raw-source=\"IllegalStateException\"></xref>. Use <xref uid=\"com.azure.storage.file.share.ShareFileClientBuilder.resourcePath(java.lang.String)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#resourcePath(String)\"></xref> to clear the file ID and address a directory by path."
   returns:
     description: "the updated ShareFileClientBuilder object"
     type: "<xref href=\"com.azure.storage.file.share.ShareFileClientBuilder?alt=com.azure.storage.file.share.ShareFileClientBuilder&text=ShareFileClientBuilder\" data-throw-if-not-resolved=\"False\" />"
@@ -296,13 +310,13 @@ methods:
   fullName: "com.azure.storage.file.share.ShareFileClientBuilder.resourcePath(String resourcePath)"
   name: "resourcePath(String resourcePath)"
   nameWithType: "ShareFileClientBuilder.resourcePath(String resourcePath)"
-  summary: "Sets the file that the constructed clients will interact with"
+  summary: "Sets the file or directory path that the constructed clients will interact with."
   parameters:
   - description: "Path of the file (or directory)."
     name: "resourcePath"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public ShareFileClientBuilder resourcePath(String resourcePath)"
-  desc: "Sets the file that the constructed clients will interact with"
+  desc: "Sets the file or directory path that the constructed clients will interact with. Calling this method clears any file ID previously set with <xref uid=\"com.azure.storage.file.share.ShareFileClientBuilder.fileId(java.lang.String)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#fileId(String)\"></xref>."
   returns:
     description: "the updated ShareFileClientBuilder object"
     type: "<xref href=\"com.azure.storage.file.share.ShareFileClientBuilder?alt=com.azure.storage.file.share.ShareFileClientBuilder&text=ShareFileClientBuilder\" data-throw-if-not-resolved=\"False\" />"
@@ -416,4 +430,4 @@ implements:
 - "<xref href=\"com.azure.core.client.traits.TokenCredentialTrait?alt=com.azure.core.client.traits.TokenCredentialTrait&text=TokenCredentialTrait\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.storage.file.share.ShareFileClientBuilder?alt=com.azure.storage.file.share.ShareFileClientBuilder&text=ShareFileClientBuilder\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.storage.file.share"
-artifact: com.azure:azure-storage-file-share:12.32.0-beta.1
+artifact: com.azure:azure-storage-file-share:12.34.0-beta.1
