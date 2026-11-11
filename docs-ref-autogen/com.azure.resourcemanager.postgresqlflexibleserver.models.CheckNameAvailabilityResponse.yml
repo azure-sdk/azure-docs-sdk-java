@@ -27,7 +27,9 @@ constructors:
   name: "CheckNameAvailabilityResponse()"
   nameWithType: "CheckNameAvailabilityResponse.CheckNameAvailabilityResponse()"
   summary: "Creates an instance of Check<wbr>Name<wbr>Availability<wbr>Response class."
-  syntax: "public CheckNameAvailabilityResponse()"
+  modifiers:
+  - "protected"
+  syntax: "protected CheckNameAvailabilityResponse()"
   desc: "Creates an instance of CheckNameAvailabilityResponse class."
 methods:
 - uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.CheckNameAvailabilityResponse.fromJson(com.azure.json.JsonReader)"
@@ -53,9 +55,9 @@ methods:
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.CheckNameAvailabilityResponse.message()"
   name: "message()"
   nameWithType: "CheckNameAvailabilityResponse.message()"
-  summary: "Get the message property: Detailed reason why the given name is available."
+  summary: "Get the message property: Detailed reason why the given name is not available."
   syntax: "public String message()"
-  desc: "Get the message property: Detailed reason why the given name is available."
+  desc: "Get the message property: Detailed reason why the given name is not available."
   returns:
     description: "the message value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -91,59 +93,10 @@ methods:
   - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.CheckNameAvailabilityResponse.validate()"
-  fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.CheckNameAvailabilityResponse.validate()"
-  name: "validate()"
-  nameWithType: "CheckNameAvailabilityResponse.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
-- uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.CheckNameAvailabilityResponse.withMessage(java.lang.String)"
-  fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.CheckNameAvailabilityResponse.withMessage(String message)"
-  name: "withMessage(String message)"
-  nameWithType: "CheckNameAvailabilityResponse.withMessage(String message)"
-  summary: "Set the message property: Detailed reason why the given name is available."
-  parameters:
-  - description: "the message value to set."
-    name: "message"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public CheckNameAvailabilityResponse withMessage(String message)"
-  desc: "Set the message property: Detailed reason why the given name is available."
-  returns:
-    description: "the CheckNameAvailabilityResponse object itself."
-    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.CheckNameAvailabilityResponse?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.CheckNameAvailabilityResponse&text=CheckNameAvailabilityResponse\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.CheckNameAvailabilityResponse.withNameAvailable(java.lang.Boolean)"
-  fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.CheckNameAvailabilityResponse.withNameAvailable(Boolean nameAvailable)"
-  name: "withNameAvailable(Boolean nameAvailable)"
-  nameWithType: "CheckNameAvailabilityResponse.withNameAvailable(Boolean nameAvailable)"
-  summary: "Set the name<wbr>Available property: Indicates if the resource name is available."
-  parameters:
-  - description: "the nameAvailable value to set."
-    name: "nameAvailable"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
-  syntax: "public CheckNameAvailabilityResponse withNameAvailable(Boolean nameAvailable)"
-  desc: "Set the nameAvailable property: Indicates if the resource name is available."
-  returns:
-    description: "the CheckNameAvailabilityResponse object itself."
-    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.CheckNameAvailabilityResponse?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.CheckNameAvailabilityResponse&text=CheckNameAvailabilityResponse\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.CheckNameAvailabilityResponse.withReason(com.azure.resourcemanager.postgresqlflexibleserver.models.CheckNameAvailabilityReason)"
-  fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.CheckNameAvailabilityResponse.withReason(CheckNameAvailabilityReason reason)"
-  name: "withReason(CheckNameAvailabilityReason reason)"
-  nameWithType: "CheckNameAvailabilityResponse.withReason(CheckNameAvailabilityReason reason)"
-  summary: "Set the reason property: The reason why the given name is not available."
-  parameters:
-  - description: "the reason value to set."
-    name: "reason"
-    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.CheckNameAvailabilityReason?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.CheckNameAvailabilityReason&text=CheckNameAvailabilityReason\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public CheckNameAvailabilityResponse withReason(CheckNameAvailabilityReason reason)"
-  desc: "Set the reason property: The reason why the given name is not available."
-  returns:
-    description: "the CheckNameAvailabilityResponse object itself."
-    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.CheckNameAvailabilityResponse?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.CheckNameAvailabilityResponse&text=CheckNameAvailabilityResponse\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "The check availability result."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.CheckNameAvailabilityResponse?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.CheckNameAvailabilityResponse&text=CheckNameAvailabilityResponse\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.postgresqlflexibleserver.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-postgresqlflexibleserver:2.0.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-postgresqlflexibleserver:3.0.0

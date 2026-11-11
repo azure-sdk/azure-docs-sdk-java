@@ -11,6 +11,7 @@ inheritedClassMethods:
 - classRef: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties?alt=com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties&text=ClusterCommonProperties\" data-throw-if-not-resolved=\"False\" />"
   methodsRef:
   - "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.encryption()?alt=com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.encryption&text=encryption\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.firewallRules()?alt=com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.firewallRules&text=firewallRules\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.fromJson(com.azure.json.JsonReader)?alt=com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.highAvailability()?alt=com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.highAvailability&text=highAvailability\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.hostname()?alt=com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.hostname&text=hostname\" data-throw-if-not-resolved=\"False\" />"
@@ -24,6 +25,7 @@ inheritedClassMethods:
   - "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.resourceState()?alt=com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.resourceState&text=resourceState\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.toJson(com.azure.json.JsonWriter)?alt=com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.withEncryption(com.azure.resourcemanager.redisenterprise.models.ClusterPropertiesEncryption)?alt=com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.withEncryption&text=withEncryption\" data-throw-if-not-resolved=\"False\" />"
+  - "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.withFirewallRules(java.util.List<com.azure.resourcemanager.redisenterprise.models.FirewallRule>)?alt=com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.withFirewallRules&text=withFirewallRules\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.withHighAvailability(com.azure.resourcemanager.redisenterprise.models.HighAvailability)?alt=com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.withHighAvailability&text=withHighAvailability\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.withMaintenanceConfiguration(com.azure.resourcemanager.redisenterprise.models.MaintenanceConfiguration)?alt=com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.withMaintenanceConfiguration&text=withMaintenanceConfiguration\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.withMinimumTlsVersion(com.azure.resourcemanager.redisenterprise.models.TlsVersion)?alt=com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.withMinimumTlsVersion&text=withMinimumTlsVersion\" data-throw-if-not-resolved=\"False\" />"
@@ -182,6 +184,19 @@ methods:
   desc: "Set the encryption property: Encryption-at-rest configuration for the cluster."
   returns:
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.fluent.models.ClusterProperties?alt=com.azure.resourcemanager.redisenterprise.fluent.models.ClusterProperties&text=ClusterProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redisenterprise.fluent.models.ClusterProperties.withFirewallRules(java.util.List<com.azure.resourcemanager.redisenterprise.models.FirewallRule>)"
+  fullName: "com.azure.resourcemanager.redisenterprise.fluent.models.ClusterProperties.withFirewallRules(List<FirewallRule> firewallRules)"
+  name: "withFirewallRules(List<FirewallRule> firewallRules)"
+  nameWithType: "ClusterProperties.withFirewallRules(List<FirewallRule> firewallRules)"
+  summary: "Set the firewall<wbr>Rules property: The complete set of firewall rules for an Azure Managed Redis (AMR) cluster."
+  overridden: "com.azure.resourcemanager.redisenterprise.models.ClusterCommonProperties.withFirewallRules(java.util.List<com.azure.resourcemanager.redisenterprise.models.FirewallRule>)"
+  parameters:
+  - name: "firewallRules"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.redisenterprise.models.FirewallRule?alt=com.azure.resourcemanager.redisenterprise.models.FirewallRule&text=FirewallRule\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public ClusterProperties withFirewallRules(List<FirewallRule> firewallRules)"
+  desc: "Set the firewallRules property: The complete set of firewall rules for an Azure Managed Redis (AMR) cluster. At most 250 rules are supported, and non-empty rules require publicNetworkAccess to be Enabled. On PUT, the supplied array replaces all existing rules. Omitting this property or supplying an empty array clears all rules. On PATCH, omitting this property preserves existing rules. A supplied array replaces all existing rules; rules absent from it are deleted. Supplying an empty array clears all rules. Disabling publicNetworkAccess also clears existing rules. With publicNetworkAccess Enabled, an empty rule set allows all public traffic; it does not deny all traffic. Firewall rule changes cannot be combined with scaling or encryption changes in the same update request."
+  returns:
+    type: "<xref href=\"com.azure.resourcemanager.redisenterprise.fluent.models.ClusterProperties?alt=com.azure.resourcemanager.redisenterprise.fluent.models.ClusterProperties&text=ClusterProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.redisenterprise.fluent.models.ClusterProperties.withHighAvailability(com.azure.resourcemanager.redisenterprise.models.HighAvailability)"
   fullName: "com.azure.resourcemanager.redisenterprise.fluent.models.ClusterProperties.withHighAvailability(HighAvailability highAvailability)"
   name: "withHighAvailability(HighAvailability highAvailability)"
@@ -239,4 +254,4 @@ type: "class"
 desc: "Properties of Redis Enterprise clusters for create operations."
 metadata: {}
 package: "com.azure.resourcemanager.redisenterprise.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.2.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.3.0-beta.1

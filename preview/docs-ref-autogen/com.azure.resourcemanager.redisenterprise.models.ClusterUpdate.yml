@@ -40,6 +40,16 @@ methods:
   returns:
     description: "the encryption value."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusterPropertiesEncryption?alt=com.azure.resourcemanager.redisenterprise.models.ClusterPropertiesEncryption&text=ClusterPropertiesEncryption\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redisenterprise.models.ClusterUpdate.firewallRules()"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.ClusterUpdate.firewallRules()"
+  name: "firewallRules()"
+  nameWithType: "ClusterUpdate.firewallRules()"
+  summary: "Get the firewall<wbr>Rules property: The complete set of firewall rules for an Azure Managed Redis (AMR) cluster."
+  syntax: "public List<FirewallRule> firewallRules()"
+  desc: "Get the firewallRules property: The complete set of firewall rules for an Azure Managed Redis (AMR) cluster. At most 250 rules are supported, and non-empty rules require publicNetworkAccess to be Enabled. On PUT, the supplied array replaces all existing rules. Omitting this property or supplying an empty array clears all rules. On PATCH, omitting this property preserves existing rules. A supplied array replaces all existing rules; rules absent from it are deleted. Supplying an empty array clears all rules. Disabling publicNetworkAccess also clears existing rules. With publicNetworkAccess Enabled, an empty rule set allows all public traffic; it does not deny all traffic. Firewall rule changes cannot be combined with scaling or encryption changes in the same update request."
+  returns:
+    description: "the firewallRules value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.redisenterprise.models.FirewallRule?alt=com.azure.resourcemanager.redisenterprise.models.FirewallRule&text=FirewallRule\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.redisenterprise.models.ClusterUpdate.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.resourcemanager.redisenterprise.models.ClusterUpdate.fromJson(JsonReader jsonReader)"
   name: "fromJson(JsonReader jsonReader)"
@@ -225,6 +235,20 @@ methods:
   returns:
     description: "the ClusterUpdate object itself."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusterUpdate?alt=com.azure.resourcemanager.redisenterprise.models.ClusterUpdate&text=ClusterUpdate\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redisenterprise.models.ClusterUpdate.withFirewallRules(java.util.List<com.azure.resourcemanager.redisenterprise.models.FirewallRule>)"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.ClusterUpdate.withFirewallRules(List<FirewallRule> firewallRules)"
+  name: "withFirewallRules(List<FirewallRule> firewallRules)"
+  nameWithType: "ClusterUpdate.withFirewallRules(List<FirewallRule> firewallRules)"
+  summary: "Set the firewall<wbr>Rules property: The complete set of firewall rules for an Azure Managed Redis (AMR) cluster."
+  parameters:
+  - description: "the firewallRules value to set."
+    name: "firewallRules"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.redisenterprise.models.FirewallRule?alt=com.azure.resourcemanager.redisenterprise.models.FirewallRule&text=FirewallRule\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public ClusterUpdate withFirewallRules(List<FirewallRule> firewallRules)"
+  desc: "Set the firewallRules property: The complete set of firewall rules for an Azure Managed Redis (AMR) cluster. At most 250 rules are supported, and non-empty rules require publicNetworkAccess to be Enabled. On PUT, the supplied array replaces all existing rules. Omitting this property or supplying an empty array clears all rules. On PATCH, omitting this property preserves existing rules. A supplied array replaces all existing rules; rules absent from it are deleted. Supplying an empty array clears all rules. Disabling publicNetworkAccess also clears existing rules. With publicNetworkAccess Enabled, an empty rule set allows all public traffic; it does not deny all traffic. Firewall rule changes cannot be combined with scaling or encryption changes in the same update request."
+  returns:
+    description: "the ClusterUpdate object itself."
+    type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusterUpdate?alt=com.azure.resourcemanager.redisenterprise.models.ClusterUpdate&text=ClusterUpdate\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.redisenterprise.models.ClusterUpdate.withHighAvailability(com.azure.resourcemanager.redisenterprise.models.HighAvailability)"
   fullName: "com.azure.resourcemanager.redisenterprise.models.ClusterUpdate.withHighAvailability(HighAvailability highAvailability)"
   name: "withHighAvailability(HighAvailability highAvailability)"
@@ -329,4 +353,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.redisenterprise.models.ClusterUpdate?alt=com.azure.resourcemanager.redisenterprise.models.ClusterUpdate&text=ClusterUpdate\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.redisenterprise.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.2.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.3.0-beta.1

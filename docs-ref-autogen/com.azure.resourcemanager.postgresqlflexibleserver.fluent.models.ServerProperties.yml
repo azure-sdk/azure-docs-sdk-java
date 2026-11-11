@@ -110,6 +110,16 @@ methods:
   returns:
     description: "the dataEncryption value."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.DataEncryption?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.DataEncryption&text=DataEncryption\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.postgresqlflexibleserver.fluent.models.ServerProperties.fipsMode()"
+  fullName: "com.azure.resourcemanager.postgresqlflexibleserver.fluent.models.ServerProperties.fipsMode()"
+  name: "fipsMode()"
+  nameWithType: "ServerProperties.fipsMode()"
+  summary: "Get the fips<wbr>Mode property: Indicates if FIPS (Federal Information Processing Standards) mode is enabled on the server."
+  syntax: "public FipsMode fipsMode()"
+  desc: "Get the fipsMode property: Indicates if FIPS (Federal Information Processing Standards) mode is enabled on the server. If not specified on create, it defaults to Disabled."
+  returns:
+    description: "the fipsMode value."
+    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.FipsMode?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.FipsMode&text=FipsMode\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.postgresqlflexibleserver.fluent.models.ServerProperties.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.fluent.models.ServerProperties.fromJson(JsonReader jsonReader)"
   name: "fromJson(JsonReader jsonReader)"
@@ -271,23 +281,16 @@ methods:
   - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.postgresqlflexibleserver.fluent.models.ServerProperties.validate()"
-  fullName: "com.azure.resourcemanager.postgresqlflexibleserver.fluent.models.ServerProperties.validate()"
-  name: "validate()"
-  nameWithType: "ServerProperties.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.postgresqlflexibleserver.fluent.models.ServerProperties.version()"
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.fluent.models.ServerProperties.version()"
   name: "version()"
   nameWithType: "ServerProperties.version()"
   summary: "Get the version property: Major version of PostgreSQL database engine."
-  syntax: "public PostgresMajorVersion version()"
+  syntax: "public String version()"
   desc: "Get the version property: Major version of PostgreSQL database engine."
   returns:
     description: "the version value."
-    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.PostgresMajorVersion?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.PostgresMajorVersion&text=PostgresMajorVersion\" data-throw-if-not-resolved=\"False\" />"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.resourcemanager.postgresqlflexibleserver.fluent.models.ServerProperties.withAdministratorLogin(java.lang.String)"
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.fluent.models.ServerProperties.withAdministratorLogin(String administratorLogin)"
   name: "withAdministratorLogin(String administratorLogin)"
@@ -397,6 +400,20 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.DataEncryption?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.DataEncryption&text=DataEncryption\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public ServerProperties withDataEncryption(DataEncryption dataEncryption)"
   desc: "Set the dataEncryption property: Data encryption properties of a server."
+  returns:
+    description: "the ServerProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.fluent.models.ServerProperties?alt=com.azure.resourcemanager.postgresqlflexibleserver.fluent.models.ServerProperties&text=ServerProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.postgresqlflexibleserver.fluent.models.ServerProperties.withFipsMode(com.azure.resourcemanager.postgresqlflexibleserver.models.FipsMode)"
+  fullName: "com.azure.resourcemanager.postgresqlflexibleserver.fluent.models.ServerProperties.withFipsMode(FipsMode fipsMode)"
+  name: "withFipsMode(FipsMode fipsMode)"
+  nameWithType: "ServerProperties.withFipsMode(FipsMode fipsMode)"
+  summary: "Set the fips<wbr>Mode property: Indicates if FIPS (Federal Information Processing Standards) mode is enabled on the server."
+  parameters:
+  - description: "the fipsMode value to set."
+    name: "fipsMode"
+    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.FipsMode?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.FipsMode&text=FipsMode\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public ServerProperties withFipsMode(FipsMode fipsMode)"
+  desc: "Set the fipsMode property: Indicates if FIPS (Federal Information Processing Standards) mode is enabled on the server. If not specified on create, it defaults to Disabled."
   returns:
     description: "the ServerProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.fluent.models.ServerProperties?alt=com.azure.resourcemanager.postgresqlflexibleserver.fluent.models.ServerProperties&text=ServerProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -512,16 +529,16 @@ methods:
   returns:
     description: "the ServerProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.fluent.models.ServerProperties?alt=com.azure.resourcemanager.postgresqlflexibleserver.fluent.models.ServerProperties&text=ServerProperties\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.postgresqlflexibleserver.fluent.models.ServerProperties.withVersion(com.azure.resourcemanager.postgresqlflexibleserver.models.PostgresMajorVersion)"
-  fullName: "com.azure.resourcemanager.postgresqlflexibleserver.fluent.models.ServerProperties.withVersion(PostgresMajorVersion version)"
-  name: "withVersion(PostgresMajorVersion version)"
-  nameWithType: "ServerProperties.withVersion(PostgresMajorVersion version)"
+- uid: "com.azure.resourcemanager.postgresqlflexibleserver.fluent.models.ServerProperties.withVersion(java.lang.String)"
+  fullName: "com.azure.resourcemanager.postgresqlflexibleserver.fluent.models.ServerProperties.withVersion(String version)"
+  name: "withVersion(String version)"
+  nameWithType: "ServerProperties.withVersion(String version)"
   summary: "Set the version property: Major version of PostgreSQL database engine."
   parameters:
   - description: "the version value to set."
     name: "version"
-    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.PostgresMajorVersion?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.PostgresMajorVersion&text=PostgresMajorVersion\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public ServerProperties withVersion(PostgresMajorVersion version)"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public ServerProperties withVersion(String version)"
   desc: "Set the version property: Major version of PostgreSQL database engine."
   returns:
     description: "the ServerProperties object itself."
@@ -532,4 +549,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.fluent.models.ServerProperties?alt=com.azure.resourcemanager.postgresqlflexibleserver.fluent.models.ServerProperties&text=ServerProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.postgresqlflexibleserver.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-postgresqlflexibleserver:2.0.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-postgresqlflexibleserver:3.0.0

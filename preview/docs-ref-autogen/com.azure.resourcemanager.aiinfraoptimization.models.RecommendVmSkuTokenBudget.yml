@@ -55,7 +55,7 @@ methods:
   nameWithType: "RecommendVmSkuTokenBudget.maxOutputTokens()"
   summary: "Get the max<wbr>Output<wbr>Tokens property: The maximum number of generated output tokens per inference request."
   syntax: "public Integer maxOutputTokens()"
-  desc: "Get the maxOutputTokens property: The maximum number of generated output tokens per inference request. Must be supplied together with \\`promptTokens\\`, and the two must total from 1 through 131072."
+  desc: "Get the maxOutputTokens property: The maximum number of generated output tokens per inference request. Must be supplied together with \\`promptTokens\\`, and the two must total from 1 through 2147483647 without exceeding the model's maximum context length."
   returns:
     description: "the maxOutputTokens value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
@@ -65,7 +65,7 @@ methods:
   nameWithType: "RecommendVmSkuTokenBudget.promptTokens()"
   summary: "Get the prompt<wbr>Tokens property: The number of prompt, or input, tokens per inference request."
   syntax: "public Integer promptTokens()"
-  desc: "Get the promptTokens property: The number of prompt, or input, tokens per inference request. Must be supplied together with \\`maxOutputTokens\\`, and the two must total from 1 through 131072."
+  desc: "Get the promptTokens property: The number of prompt, or input, tokens per inference request. Must be supplied together with \\`maxOutputTokens\\`, and the two must total from 1 through 2147483647 without exceeding the model's maximum context length."
   returns:
     description: "the promptTokens value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
@@ -91,7 +91,7 @@ methods:
     name: "maxOutputTokens"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
   syntax: "public RecommendVmSkuTokenBudget withMaxOutputTokens(Integer maxOutputTokens)"
-  desc: "Set the maxOutputTokens property: The maximum number of generated output tokens per inference request. Must be supplied together with \\`promptTokens\\`, and the two must total from 1 through 131072."
+  desc: "Set the maxOutputTokens property: The maximum number of generated output tokens per inference request. Must be supplied together with \\`promptTokens\\`, and the two must total from 1 through 2147483647 without exceeding the model's maximum context length."
   returns:
     description: "the RecommendVmSkuTokenBudget object itself."
     type: "<xref href=\"com.azure.resourcemanager.aiinfraoptimization.models.RecommendVmSkuTokenBudget?alt=com.azure.resourcemanager.aiinfraoptimization.models.RecommendVmSkuTokenBudget&text=RecommendVmSkuTokenBudget\" data-throw-if-not-resolved=\"False\" />"
@@ -105,7 +105,7 @@ methods:
     name: "promptTokens"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
   syntax: "public RecommendVmSkuTokenBudget withPromptTokens(Integer promptTokens)"
-  desc: "Set the promptTokens property: The number of prompt, or input, tokens per inference request. Must be supplied together with \\`maxOutputTokens\\`, and the two must total from 1 through 131072."
+  desc: "Set the promptTokens property: The number of prompt, or input, tokens per inference request. Must be supplied together with \\`maxOutputTokens\\`, and the two must total from 1 through 2147483647 without exceeding the model's maximum context length."
   returns:
     description: "the RecommendVmSkuTokenBudget object itself."
     type: "<xref href=\"com.azure.resourcemanager.aiinfraoptimization.models.RecommendVmSkuTokenBudget?alt=com.azure.resourcemanager.aiinfraoptimization.models.RecommendVmSkuTokenBudget&text=RecommendVmSkuTokenBudget\" data-throw-if-not-resolved=\"False\" />"
@@ -115,4 +115,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.aiinfraoptimization.models.RecommendVmSkuTokenBudget?alt=com.azure.resourcemanager.aiinfraoptimization.models.RecommendVmSkuTokenBudget&text=RecommendVmSkuTokenBudget\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.aiinfraoptimization.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-aiinfraoptimization:1.0.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-aiinfraoptimization:1.0.0-beta.2

@@ -65,7 +65,7 @@ methods:
   nameWithType: "BackupProperties.geoRedundancy()"
   summary: "Get the geo<wbr>Redundancy property: The geo-redundancy state."
   syntax: "public GeoRedundancyState geoRedundancy()"
-  desc: "Get the geoRedundancy property: The geo-redundancy state. Geo-redundant backup is not supported when dataEncryption.type is AzureKeyVault."
+  desc: "Get the geoRedundancy property: The geo-redundancy state. When creationMode is PointInTimeRestore, the service ignores the requested value during cluster creation and configures the new cluster with the same geo-redundancy setting as the source cluster, for both same-location and cross-location restores. The response reports the inherited setting. Geo-redundant backup is not supported when dataEncryption.type is AzureKeyVault."
   returns:
     description: "the geoRedundancy value."
     type: "<xref href=\"com.azure.resourcemanager.horizondb.models.GeoRedundancyState?alt=com.azure.resourcemanager.horizondb.models.GeoRedundancyState&text=GeoRedundancyState\" data-throw-if-not-resolved=\"False\" />"
@@ -101,7 +101,7 @@ methods:
     name: "geoRedundancy"
     type: "<xref href=\"com.azure.resourcemanager.horizondb.models.GeoRedundancyState?alt=com.azure.resourcemanager.horizondb.models.GeoRedundancyState&text=GeoRedundancyState\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public BackupProperties withGeoRedundancy(GeoRedundancyState geoRedundancy)"
-  desc: "Set the geoRedundancy property: The geo-redundancy state. Geo-redundant backup is not supported when dataEncryption.type is AzureKeyVault."
+  desc: "Set the geoRedundancy property: The geo-redundancy state. When creationMode is PointInTimeRestore, the service ignores the requested value during cluster creation and configures the new cluster with the same geo-redundancy setting as the source cluster, for both same-location and cross-location restores. The response reports the inherited setting. Geo-redundant backup is not supported when dataEncryption.type is AzureKeyVault."
   returns:
     description: "the BackupProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.horizondb.models.BackupProperties?alt=com.azure.resourcemanager.horizondb.models.BackupProperties&text=BackupProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -125,4 +125,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.horizondb.models.BackupProperties?alt=com.azure.resourcemanager.horizondb.models.BackupProperties&text=BackupProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.horizondb.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-horizondb:1.0.0-beta.3
+artifact: com.azure.resourcemanager:azure-resourcemanager-horizondb:1.0.0-beta.4

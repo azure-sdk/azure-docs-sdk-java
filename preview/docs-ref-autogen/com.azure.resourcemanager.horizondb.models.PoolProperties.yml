@@ -83,9 +83,9 @@ methods:
   fullName: "com.azure.resourcemanager.horizondb.models.PoolProperties.parameterGroup()"
   name: "parameterGroup()"
   nameWithType: "PoolProperties.parameterGroup()"
-  summary: "Get the parameter<wbr>Group property: The required parameter group associated with the pool."
+  summary: "Get the parameter<wbr>Group property: The parameter group associated with the pool."
   syntax: "public PoolParameterGroupReference parameterGroup()"
-  desc: "Get the parameterGroup property: The required parameter group associated with the pool. When creating a new pool in this API version, the caller must supply the corresponding default parameter group; customer-created parameter groups are not accepted during creation. For an existing pool, PUT or PATCH can associate either the corresponding default parameter group or a customer-created parameter group. The create-visible shape intentionally supports both resource ID forms so a future API version can allow customer-created parameter groups during creation without a breaking schema change."
+  desc: "Get the parameterGroup property: The parameter group associated with the pool. When omitted during creation, the service applies the default parameter group compatible with the parent cluster's PostgreSQL version. When supplied during creation in this API version, it must reference the corresponding default parameter group; customer-created parameter groups are not accepted during creation. For an existing pool, PUT or PATCH can associate either the corresponding default parameter group or a customer-created parameter group. The create-visible shape intentionally supports both resource ID forms so a future API version can allow customer-created parameter groups during creation without a breaking schema change."
   returns:
     description: "the parameterGroup value."
     type: "<xref href=\"com.azure.resourcemanager.horizondb.models.PoolParameterGroupReference?alt=com.azure.resourcemanager.horizondb.models.PoolParameterGroupReference&text=PoolParameterGroupReference\" data-throw-if-not-resolved=\"False\" />"
@@ -177,13 +177,13 @@ methods:
   fullName: "com.azure.resourcemanager.horizondb.models.PoolProperties.withParameterGroup(PoolParameterGroupReference parameterGroup)"
   name: "withParameterGroup(PoolParameterGroupReference parameterGroup)"
   nameWithType: "PoolProperties.withParameterGroup(PoolParameterGroupReference parameterGroup)"
-  summary: "Set the parameter<wbr>Group property: The required parameter group associated with the pool."
+  summary: "Set the parameter<wbr>Group property: The parameter group associated with the pool."
   parameters:
   - description: "the parameterGroup value to set."
     name: "parameterGroup"
     type: "<xref href=\"com.azure.resourcemanager.horizondb.models.PoolParameterGroupReference?alt=com.azure.resourcemanager.horizondb.models.PoolParameterGroupReference&text=PoolParameterGroupReference\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public PoolProperties withParameterGroup(PoolParameterGroupReference parameterGroup)"
-  desc: "Set the parameterGroup property: The required parameter group associated with the pool. When creating a new pool in this API version, the caller must supply the corresponding default parameter group; customer-created parameter groups are not accepted during creation. For an existing pool, PUT or PATCH can associate either the corresponding default parameter group or a customer-created parameter group. The create-visible shape intentionally supports both resource ID forms so a future API version can allow customer-created parameter groups during creation without a breaking schema change."
+  desc: "Set the parameterGroup property: The parameter group associated with the pool. When omitted during creation, the service applies the default parameter group compatible with the parent cluster's PostgreSQL version. When supplied during creation in this API version, it must reference the corresponding default parameter group; customer-created parameter groups are not accepted during creation. For an existing pool, PUT or PATCH can associate either the corresponding default parameter group or a customer-created parameter group. The create-visible shape intentionally supports both resource ID forms so a future API version can allow customer-created parameter groups during creation without a breaking schema change."
   returns:
     description: "the PoolProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.horizondb.models.PoolProperties?alt=com.azure.resourcemanager.horizondb.models.PoolProperties&text=PoolProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -207,4 +207,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.horizondb.models.PoolProperties?alt=com.azure.resourcemanager.horizondb.models.PoolProperties&text=PoolProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.horizondb.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-horizondb:1.0.0-beta.3
+artifact: com.azure.resourcemanager:azure-resourcemanager-horizondb:1.0.0-beta.4

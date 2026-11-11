@@ -106,6 +106,16 @@ methods:
   returns:
     description: "the normalizerName value."
     type: "<xref href=\"com.azure.search.documents.indexes.models.LexicalNormalizerName?alt=com.azure.search.documents.indexes.models.LexicalNormalizerName&text=LexicalNormalizerName\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.indexes.models.SearchField.getPermissionFilter()"
+  fullName: "com.azure.search.documents.indexes.models.SearchField.getPermissionFilter()"
+  name: "getPermissionFilter()"
+  nameWithType: "SearchField.getPermissionFilter()"
+  summary: "Get the permission<wbr>Filter property: A value indicating whether the field should be used as a permission filter."
+  syntax: "public PermissionFilter getPermissionFilter()"
+  desc: "Get the permissionFilter property: A value indicating whether the field should be used as a permission filter."
+  returns:
+    description: "the permissionFilter value."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.PermissionFilter?alt=com.azure.search.documents.indexes.models.PermissionFilter&text=PermissionFilter\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.SearchField.getSearchAnalyzerName()"
   fullName: "com.azure.search.documents.indexes.models.SearchField.getSearchAnalyzerName()"
   name: "getSearchAnalyzerName()"
@@ -208,6 +218,16 @@ methods:
   returns:
     description: "the key value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.search.documents.indexes.models.SearchField.isOrganizationAccessExpiration()"
+  fullName: "com.azure.search.documents.indexes.models.SearchField.isOrganizationAccessExpiration()"
+  name: "isOrganizationAccessExpiration()"
+  nameWithType: "SearchField.isOrganizationAccessExpiration()"
+  summary: "Get the organization<wbr>Access<wbr>Expiration property: A value indicating whether the field contains the expiration timestamp for organization-scoped Share<wbr>Point sharing links."
+  syntax: "public Boolean isOrganizationAccessExpiration()"
+  desc: "Get the organizationAccessExpiration property: A value indicating whether the field contains the expiration timestamp for organization-scoped SharePoint sharing links. At most one top-level field of type Edm.DateTimeOffset can have this property set to true. On permission-filtered queries, expiration applies only to orgLink:<tenantId> values in a userIds permission-filter field whose tenant ID matches the validated user's tenant ID. The grant is valid only before the timestamp; an absent expiration field or a null timestamp means no time limit. Expiration does not affect orgGroup:<tenantId> values in groupIds permission-filter fields or ordinary user and group grants. If omitted or false, this field is not used for organization-link expiration."
+  returns:
+    description: "the organizationAccessExpiration value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.search.documents.indexes.models.SearchField.isRetrievable()"
   fullName: "com.azure.search.documents.indexes.models.SearchField.isRetrievable()"
   name: "isRetrievable()"
@@ -227,6 +247,16 @@ methods:
   desc: "Get the searchable property: A value indicating whether the field is full-text searchable. This means it will undergo analysis such as word-breaking during indexing. If you set a searchable field to a value like \"sunny day\", internally it will be split into the individual tokens \"sunny\" and \"day\". This enables full-text searches for these terms. Fields of type Edm.String or Collection(Edm.String) are searchable by default. This property must be false for simple fields of other non-string data types, and it must be null for complex fields. Note: searchable fields consume extra space in your index to accommodate additional tokenized versions of the field value for full-text searches. If you want to save space in your index and you don't need a field to be included in searches, set searchable to false."
   returns:
     description: "the searchable value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.search.documents.indexes.models.SearchField.isSharepointSiteUrl()"
+  fullName: "com.azure.search.documents.indexes.models.SearchField.isSharepointSiteUrl()"
+  name: "isSharepointSiteUrl()"
+  nameWithType: "SearchField.isSharepointSiteUrl()"
+  summary: "Get the sharepoint<wbr>Site<wbr>Url property: A value indicating whether the field contains a Share<wbr>Point site URL used for Share<wbr>Point group-based filtering."
+  syntax: "public Boolean isSharepointSiteUrl()"
+  desc: "Get the sharepointSiteUrl property: A value indicating whether the field contains a SharePoint site URL used for SharePoint group-based filtering."
+  returns:
+    description: "the sharepointSiteUrl value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.search.documents.indexes.models.SearchField.isSortable()"
   fullName: "com.azure.search.documents.indexes.models.SearchField.isSortable()"
@@ -376,6 +406,34 @@ methods:
   returns:
     description: "the SearchField object itself."
     type: "<xref href=\"com.azure.search.documents.indexes.models.SearchField?alt=com.azure.search.documents.indexes.models.SearchField&text=SearchField\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.indexes.models.SearchField.setOrganizationAccessExpiration(java.lang.Boolean)"
+  fullName: "com.azure.search.documents.indexes.models.SearchField.setOrganizationAccessExpiration(Boolean organizationAccessExpiration)"
+  name: "setOrganizationAccessExpiration(Boolean organizationAccessExpiration)"
+  nameWithType: "SearchField.setOrganizationAccessExpiration(Boolean organizationAccessExpiration)"
+  summary: "Set the organization<wbr>Access<wbr>Expiration property: A value indicating whether the field contains the expiration timestamp for organization-scoped Share<wbr>Point sharing links."
+  parameters:
+  - description: "the organizationAccessExpiration value to set."
+    name: "organizationAccessExpiration"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+  syntax: "public SearchField setOrganizationAccessExpiration(Boolean organizationAccessExpiration)"
+  desc: "Set the organizationAccessExpiration property: A value indicating whether the field contains the expiration timestamp for organization-scoped SharePoint sharing links. At most one top-level field of type Edm.DateTimeOffset can have this property set to true. On permission-filtered queries, expiration applies only to orgLink:<tenantId> values in a userIds permission-filter field whose tenant ID matches the validated user's tenant ID. The grant is valid only before the timestamp; an absent expiration field or a null timestamp means no time limit. Expiration does not affect orgGroup:<tenantId> values in groupIds permission-filter fields or ordinary user and group grants. If omitted or false, this field is not used for organization-link expiration."
+  returns:
+    description: "the SearchField object itself."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.SearchField?alt=com.azure.search.documents.indexes.models.SearchField&text=SearchField\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.indexes.models.SearchField.setPermissionFilter(com.azure.search.documents.indexes.models.PermissionFilter)"
+  fullName: "com.azure.search.documents.indexes.models.SearchField.setPermissionFilter(PermissionFilter permissionFilter)"
+  name: "setPermissionFilter(PermissionFilter permissionFilter)"
+  nameWithType: "SearchField.setPermissionFilter(PermissionFilter permissionFilter)"
+  summary: "Set the permission<wbr>Filter property: A value indicating whether the field should be used as a permission filter."
+  parameters:
+  - description: "the permissionFilter value to set."
+    name: "permissionFilter"
+    type: "<xref href=\"com.azure.search.documents.indexes.models.PermissionFilter?alt=com.azure.search.documents.indexes.models.PermissionFilter&text=PermissionFilter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public SearchField setPermissionFilter(PermissionFilter permissionFilter)"
+  desc: "Set the permissionFilter property: A value indicating whether the field should be used as a permission filter."
+  returns:
+    description: "the SearchField object itself."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.SearchField?alt=com.azure.search.documents.indexes.models.SearchField&text=SearchField\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.SearchField.setRetrievable(java.lang.Boolean)"
   fullName: "com.azure.search.documents.indexes.models.SearchField.setRetrievable(Boolean retrievable)"
   name: "setRetrievable(Boolean retrievable)"
@@ -415,6 +473,20 @@ methods:
     type: "<xref href=\"com.azure.search.documents.indexes.models.LexicalAnalyzerName?alt=com.azure.search.documents.indexes.models.LexicalAnalyzerName&text=LexicalAnalyzerName\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public SearchField setSearchAnalyzerName(LexicalAnalyzerName searchAnalyzerName)"
   desc: "Set the searchAnalyzerName property: The name of the analyzer used at search time for the field. This option can be used only with searchable fields. It must be set together with indexAnalyzer and it cannot be set together with the analyzer option. This property cannot be set to the name of a language analyzer; use the analyzer property instead if you need a language analyzer. This analyzer can be updated on an existing field. Must be null for complex fields."
+  returns:
+    description: "the SearchField object itself."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.SearchField?alt=com.azure.search.documents.indexes.models.SearchField&text=SearchField\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.indexes.models.SearchField.setSharepointSiteUrl(java.lang.Boolean)"
+  fullName: "com.azure.search.documents.indexes.models.SearchField.setSharepointSiteUrl(Boolean sharepointSiteUrl)"
+  name: "setSharepointSiteUrl(Boolean sharepointSiteUrl)"
+  nameWithType: "SearchField.setSharepointSiteUrl(Boolean sharepointSiteUrl)"
+  summary: "Set the sharepoint<wbr>Site<wbr>Url property: A value indicating whether the field contains a Share<wbr>Point site URL used for Share<wbr>Point group-based filtering."
+  parameters:
+  - description: "the sharepointSiteUrl value to set."
+    name: "sharepointSiteUrl"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+  syntax: "public SearchField setSharepointSiteUrl(Boolean sharepointSiteUrl)"
+  desc: "Set the sharepointSiteUrl property: A value indicating whether the field contains a SharePoint site URL used for SharePoint group-based filtering."
   returns:
     description: "the SearchField object itself."
     type: "<xref href=\"com.azure.search.documents.indexes.models.SearchField?alt=com.azure.search.documents.indexes.models.SearchField&text=SearchField\" data-throw-if-not-resolved=\"False\" />"
@@ -534,4 +606,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.indexes.models.SearchField?alt=com.azure.search.documents.indexes.models.SearchField&text=SearchField\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.search.documents.indexes.models"
-artifact: com.azure:azure-search-documents:12.0.0
+artifact: com.azure:azure-search-documents:12.2.0

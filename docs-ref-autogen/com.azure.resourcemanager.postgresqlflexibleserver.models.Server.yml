@@ -102,6 +102,18 @@ methods:
   returns:
     description: "the dataEncryption value."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.DataEncryption?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.DataEncryption&text=DataEncryption\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.fipsMode()"
+  fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.fipsMode()"
+  name: "fipsMode()"
+  nameWithType: "Server.fipsMode()"
+  summary: "Gets the fips<wbr>Mode property: Indicates if FIPS (Federal Information Processing Standards) mode is enabled on the server."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract FipsMode fipsMode()"
+  desc: "Gets the fipsMode property: Indicates if FIPS (Federal Information Processing Standards) mode is enabled on the server. If not specified on create, it defaults to Disabled."
+  returns:
+    description: "the fipsMode value."
+    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.FipsMode?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.FipsMode&text=FipsMode\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.fullyQualifiedDomainName()"
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.fullyQualifiedDomainName()"
   name: "fullyQualifiedDomainName()"
@@ -186,6 +198,34 @@ methods:
   returns:
     description: "the maintenanceWindow value."
     type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.MaintenanceWindow?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.MaintenanceWindow&text=MaintenanceWindow\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.migrateNetworkMode()"
+  fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.migrateNetworkMode()"
+  name: "migrateNetworkMode()"
+  nameWithType: "Server.migrateNetworkMode()"
+  summary: "Migrates an Azure Database for PostgreSQL server from VNet integration to a Private Link network model."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract MigrateNetworkStatus migrateNetworkMode()"
+  desc: "Migrates an Azure Database for PostgreSQL server from VNet integration to a Private Link network model."
+  returns:
+    description: "status of a network migration operation."
+    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.MigrateNetworkStatus?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.MigrateNetworkStatus&text=MigrateNetworkStatus\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.migrateNetworkMode(com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.migrateNetworkMode(Context context)"
+  name: "migrateNetworkMode(Context context)"
+  nameWithType: "Server.migrateNetworkMode(Context context)"
+  summary: "Migrates an Azure Database for PostgreSQL server from VNet integration to a Private Link network model."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract MigrateNetworkStatus migrateNetworkMode(Context context)"
+  desc: "Migrates an Azure Database for PostgreSQL server from VNet integration to a Private Link network model."
+  returns:
+    description: "status of a network migration operation."
+    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.MigrateNetworkStatus?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.MigrateNetworkStatus&text=MigrateNetworkStatus\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.minorVersion()"
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.minorVersion()"
   name: "minorVersion()"
@@ -417,6 +457,41 @@ methods:
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract void start(Context context)"
   desc: "Starts a stopped server."
+- uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.startMajorVersionUpgradePrecheck(com.azure.resourcemanager.postgresqlflexibleserver.models.StartMajorVersionUpgradePrecheckRequest)"
+  fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.startMajorVersionUpgradePrecheck(StartMajorVersionUpgradePrecheckRequest body)"
+  name: "startMajorVersionUpgradePrecheck(StartMajorVersionUpgradePrecheckRequest body)"
+  nameWithType: "Server.startMajorVersionUpgradePrecheck(StartMajorVersionUpgradePrecheckRequest body)"
+  summary: "Start Major Version Upgrade Prechecks."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The content of the action request."
+    name: "body"
+    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.StartMajorVersionUpgradePrecheckRequest?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.StartMajorVersionUpgradePrecheckRequest&text=StartMajorVersionUpgradePrecheckRequest\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract StartMajorVersionUpgradePrecheckResponse startMajorVersionUpgradePrecheck(StartMajorVersionUpgradePrecheckRequest body)"
+  desc: "Start Major Version Upgrade Prechecks."
+  returns:
+    description: "response model for starting a major version upgrade precheck."
+    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.StartMajorVersionUpgradePrecheckResponse?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.StartMajorVersionUpgradePrecheckResponse&text=StartMajorVersionUpgradePrecheckResponse\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.startMajorVersionUpgradePrecheck(com.azure.resourcemanager.postgresqlflexibleserver.models.StartMajorVersionUpgradePrecheckRequest,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.startMajorVersionUpgradePrecheck(StartMajorVersionUpgradePrecheckRequest body, Context context)"
+  name: "startMajorVersionUpgradePrecheck(StartMajorVersionUpgradePrecheckRequest body, Context context)"
+  nameWithType: "Server.startMajorVersionUpgradePrecheck(StartMajorVersionUpgradePrecheckRequest body, Context context)"
+  summary: "Start Major Version Upgrade Prechecks."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The content of the action request."
+    name: "body"
+    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.StartMajorVersionUpgradePrecheckRequest?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.StartMajorVersionUpgradePrecheckRequest&text=StartMajorVersionUpgradePrecheckRequest\" data-throw-if-not-resolved=\"False\" />"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract StartMajorVersionUpgradePrecheckResponse startMajorVersionUpgradePrecheck(StartMajorVersionUpgradePrecheckRequest body, Context context)"
+  desc: "Start Major Version Upgrade Prechecks."
+  returns:
+    description: "response model for starting a major version upgrade precheck."
+    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.StartMajorVersionUpgradePrecheckResponse?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.StartMajorVersionUpgradePrecheckResponse&text=StartMajorVersionUpgradePrecheckResponse\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.state()"
   fullName: "com.azure.resourcemanager.postgresqlflexibleserver.models.Server.state()"
   name: "state()"
@@ -518,13 +593,13 @@ methods:
   summary: "Gets the version property: Major version of PostgreSQL database engine."
   modifiers:
   - "abstract"
-  syntax: "public abstract PostgresMajorVersion version()"
+  syntax: "public abstract String version()"
   desc: "Gets the version property: Major version of PostgreSQL database engine."
   returns:
     description: "the version value."
-    type: "<xref href=\"com.azure.resourcemanager.postgresqlflexibleserver.models.PostgresMajorVersion?alt=com.azure.resourcemanager.postgresqlflexibleserver.models.PostgresMajorVersion&text=PostgresMajorVersion\" data-throw-if-not-resolved=\"False\" />"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 type: "interface"
 desc: "An immutable client-side representation of Server."
 metadata: {}
 package: "com.azure.resourcemanager.postgresqlflexibleserver.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-postgresqlflexibleserver:2.0.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-postgresqlflexibleserver:3.0.0

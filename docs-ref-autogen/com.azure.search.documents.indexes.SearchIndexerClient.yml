@@ -486,7 +486,7 @@ methods:
   syntax: "public PagedIterable<String> listDataSourceConnectionNames()"
   desc: "Lists the names of all datasources available for a search service."
   returns:
-    description: "the names of all datasources as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the names of all datasources as a paginated response."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.search.documents.indexes.SearchIndexerClient.listDataSourceConnections()"
   fullName: "com.azure.search.documents.indexes.SearchIndexerClient.listDataSourceConnections()"
@@ -498,6 +498,20 @@ methods:
   returns:
     description: "all datasources as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.indexes.models.SearchIndexerDataSourceConnection?alt=com.azure.search.documents.indexes.models.SearchIndexerDataSourceConnection&text=SearchIndexerDataSourceConnection\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.search.documents.indexes.SearchIndexerClient.listDataSourceConnections(com.azure.core.http.rest.RequestOptions)"
+  fullName: "com.azure.search.documents.indexes.SearchIndexerClient.listDataSourceConnections(RequestOptions requestOptions)"
+  name: "listDataSourceConnections(RequestOptions requestOptions)"
+  nameWithType: "SearchIndexerClient.listDataSourceConnections(RequestOptions requestOptions)"
+  summary: "Lists all matching datasources, following service-provided continuation links."
+  parameters:
+  - description: "The options to configure the HTTP request, including listing filters."
+    name: "requestOptions"
+    type: "<xref href=\"com.azure.core.http.rest.RequestOptions?alt=com.azure.core.http.rest.RequestOptions&text=RequestOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public PagedIterable<SearchIndexerDataSourceConnection> listDataSourceConnections(RequestOptions requestOptions)"
+  desc: "Lists all matching datasources, following service-provided continuation links."
+  returns:
+    description: "the matching datasources as a paginated response."
+    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.indexes.models.SearchIndexerDataSourceConnection?alt=com.azure.search.documents.indexes.models.SearchIndexerDataSourceConnection&text=SearchIndexerDataSourceConnection\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.search.documents.indexes.SearchIndexerClient.listIndexerNames()"
   fullName: "com.azure.search.documents.indexes.SearchIndexerClient.listIndexerNames()"
   name: "listIndexerNames()"
@@ -506,7 +520,7 @@ methods:
   syntax: "public PagedIterable<String> listIndexerNames()"
   desc: "Lists the names of all indexers available for a search service."
   returns:
-    description: "the names of all indexers as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the names of all indexers as a paginated response."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.search.documents.indexes.SearchIndexerClient.listIndexers()"
   fullName: "com.azure.search.documents.indexes.SearchIndexerClient.listIndexers()"
@@ -518,6 +532,20 @@ methods:
   returns:
     description: "all indexers as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.indexes.models.SearchIndexer?alt=com.azure.search.documents.indexes.models.SearchIndexer&text=SearchIndexer\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.search.documents.indexes.SearchIndexerClient.listIndexers(com.azure.core.http.rest.RequestOptions)"
+  fullName: "com.azure.search.documents.indexes.SearchIndexerClient.listIndexers(RequestOptions requestOptions)"
+  name: "listIndexers(RequestOptions requestOptions)"
+  nameWithType: "SearchIndexerClient.listIndexers(RequestOptions requestOptions)"
+  summary: "Lists all matching indexers, following service-provided continuation links."
+  parameters:
+  - description: "The options to configure the HTTP request, including listing filters."
+    name: "requestOptions"
+    type: "<xref href=\"com.azure.core.http.rest.RequestOptions?alt=com.azure.core.http.rest.RequestOptions&text=RequestOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public PagedIterable<SearchIndexer> listIndexers(RequestOptions requestOptions)"
+  desc: "Lists all matching indexers, following service-provided continuation links."
+  returns:
+    description: "the matching indexers as a paginated response."
+    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.indexes.models.SearchIndexer?alt=com.azure.search.documents.indexes.models.SearchIndexer&text=SearchIndexer\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.search.documents.indexes.SearchIndexerClient.listSkillsetNames()"
   fullName: "com.azure.search.documents.indexes.SearchIndexerClient.listSkillsetNames()"
   name: "listSkillsetNames()"
@@ -526,7 +554,7 @@ methods:
   syntax: "public PagedIterable<String> listSkillsetNames()"
   desc: "Lists the names of all skillsets in a search service."
   returns:
-    description: "the names of all skillsets as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the names of all skillsets as a paginated response."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.search.documents.indexes.SearchIndexerClient.listSkillsets()"
   fullName: "com.azure.search.documents.indexes.SearchIndexerClient.listSkillsets()"
@@ -537,6 +565,20 @@ methods:
   desc: "List all skillsets in a search service."
   returns:
     description: "all skillsets as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.indexes.models.SearchIndexerSkillset?alt=com.azure.search.documents.indexes.models.SearchIndexerSkillset&text=SearchIndexerSkillset\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.search.documents.indexes.SearchIndexerClient.listSkillsets(com.azure.core.http.rest.RequestOptions)"
+  fullName: "com.azure.search.documents.indexes.SearchIndexerClient.listSkillsets(RequestOptions requestOptions)"
+  name: "listSkillsets(RequestOptions requestOptions)"
+  nameWithType: "SearchIndexerClient.listSkillsets(RequestOptions requestOptions)"
+  summary: "Lists all matching skillsets, following service-provided continuation links."
+  parameters:
+  - description: "The options to configure the HTTP request, including listing filters."
+    name: "requestOptions"
+    type: "<xref href=\"com.azure.core.http.rest.RequestOptions?alt=com.azure.core.http.rest.RequestOptions&text=RequestOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public PagedIterable<SearchIndexerSkillset> listSkillsets(RequestOptions requestOptions)"
+  desc: "Lists all matching skillsets, following service-provided continuation links."
+  returns:
+    description: "the matching skillsets as a paginated response."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.indexes.models.SearchIndexerSkillset?alt=com.azure.search.documents.indexes.models.SearchIndexerSkillset&text=SearchIndexerSkillset\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.search.documents.indexes.SearchIndexerClient.resetIndexer(java.lang.String)"
   fullName: "com.azure.search.documents.indexes.SearchIndexerClient.resetIndexer(String name)"
@@ -566,6 +608,20 @@ methods:
   returns:
     description: "the <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
+- uid: "com.azure.search.documents.indexes.SearchIndexerClient.resync(java.lang.String,com.azure.search.documents.indexes.models.IndexerResyncBody)"
+  fullName: "com.azure.search.documents.indexes.SearchIndexerClient.resync(String name, IndexerResyncBody indexerResync)"
+  name: "resync(String name, IndexerResyncBody indexerResync)"
+  nameWithType: "SearchIndexerClient.resync(String name, IndexerResyncBody indexerResync)"
+  summary: "Resync selective options from the datasource to be re-ingested by the indexer.\"."
+  parameters:
+  - description: "The name of the indexer."
+    name: "name"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The definition of the indexer resync options."
+    name: "indexerResync"
+    type: "<xref href=\"com.azure.search.documents.indexes.models.IndexerResyncBody?alt=com.azure.search.documents.indexes.models.IndexerResyncBody&text=IndexerResyncBody\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public void resync(String name, IndexerResyncBody indexerResync)"
+  desc: "Resync selective options from the datasource to be re-ingested by the indexer.\"."
 - uid: "com.azure.search.documents.indexes.SearchIndexerClient.runIndexer(java.lang.String)"
   fullName: "com.azure.search.documents.indexes.SearchIndexerClient.runIndexer(String name)"
   name: "runIndexer(String name)"
@@ -598,4 +654,4 @@ type: "class"
 desc: "Initializes a new instance of the synchronous SearchIndexerClient type."
 metadata: {}
 package: "com.azure.search.documents.indexes"
-artifact: com.azure:azure-search-documents:12.0.0
+artifact: com.azure:azure-search-documents:12.2.0

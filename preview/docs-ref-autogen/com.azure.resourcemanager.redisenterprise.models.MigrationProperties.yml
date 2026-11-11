@@ -79,6 +79,16 @@ methods:
   returns:
     description: "the provisioningState value."
     type: "<xref href=\"com.azure.resourcemanager.redisenterprise.models.MigrationProvisioningState?alt=com.azure.resourcemanager.redisenterprise.models.MigrationProvisioningState&text=MigrationProvisioningState\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.redisenterprise.models.MigrationProperties.rollbackEligibleUntil()"
+  fullName: "com.azure.resourcemanager.redisenterprise.models.MigrationProperties.rollbackEligibleUntil()"
+  name: "rollbackEligibleUntil()"
+  nameWithType: "MigrationProperties.rollbackEligibleUntil()"
+  summary: "Get the rollback<wbr>Eligible<wbr>Until property: The timestamp until which a successful migration remains eligible to be undone (rolled back) to the source cache."
+  syntax: "public OffsetDateTime rollbackEligibleUntil()"
+  desc: "Get the rollbackEligibleUntil property: The timestamp until which a successful migration remains eligible to be undone (rolled back) to the source cache. This property is only returned while the migration is in the Succeeded state, and is calculated from the time the migration succeeded plus the rollback window. After this time the source cache is released and the migration can no longer be undone."
+  returns:
+    description: "the rollbackEligibleUntil value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
 - uid: "com.azure.resourcemanager.redisenterprise.models.MigrationProperties.sourceType()"
   fullName: "com.azure.resourcemanager.redisenterprise.models.MigrationProperties.sourceType()"
   name: "sourceType()"
@@ -127,4 +137,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.redisenterprise.models.MigrationProperties?alt=com.azure.resourcemanager.redisenterprise.models.MigrationProperties&text=MigrationProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.redisenterprise.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.2.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-redisenterprise:2.3.0-beta.1
