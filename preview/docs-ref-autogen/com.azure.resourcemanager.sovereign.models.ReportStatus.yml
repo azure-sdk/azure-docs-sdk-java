@@ -1,0 +1,82 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.sovereign.models.ReportStatus"
+fullName: "com.azure.resourcemanager.sovereign.models.ReportStatus"
+name: "ReportStatus"
+nameWithType: "ReportStatus"
+summary: "The compliance report generation status, including the current state and the next attempt time."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **ReportStatus**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.sovereign.models.ReportStatus?alt=com.azure.resourcemanager.sovereign.models.ReportStatus&text=ReportStatus\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.azure.resourcemanager.sovereign.models.ReportStatus.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.sovereign.models.ReportStatus.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "ReportStatus.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Report<wbr>Status from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static ReportStatus fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of ReportStatus from the JsonReader."
+  returns:
+    description: "An instance of ReportStatus if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.sovereign.models.ReportStatus?alt=com.azure.resourcemanager.sovereign.models.ReportStatus&text=ReportStatus\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.sovereign.models.ReportStatus.nextAttempt()"
+  fullName: "com.azure.resourcemanager.sovereign.models.ReportStatus.nextAttempt()"
+  name: "nextAttempt()"
+  nameWithType: "ReportStatus.nextAttempt()"
+  summary: "Get the next<wbr>Attempt property: The next scheduled evaluation time, in RFC3339 format."
+  syntax: "public OffsetDateTime nextAttempt()"
+  desc: "Get the nextAttempt property: The next scheduled evaluation time, in RFC3339 format. May not be available for all report states."
+  returns:
+    description: "the nextAttempt value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
+- uid: "com.azure.resourcemanager.sovereign.models.ReportStatus.state()"
+  fullName: "com.azure.resourcemanager.sovereign.models.ReportStatus.state()"
+  name: "state()"
+  nameWithType: "ReportStatus.state()"
+  summary: "Get the state property: The current compliance report generation state."
+  syntax: "public ReportState state()"
+  desc: "Get the state property: The current compliance report generation state."
+  returns:
+    description: "the state value."
+    type: "<xref href=\"com.azure.resourcemanager.sovereign.models.ReportState?alt=com.azure.resourcemanager.sovereign.models.ReportState&text=ReportState\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.sovereign.models.ReportStatus.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.sovereign.models.ReportStatus.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "ReportStatus.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "The compliance report generation status, including the current state and the next attempt time."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.sovereign.models.ReportStatus?alt=com.azure.resourcemanager.sovereign.models.ReportStatus&text=ReportStatus\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.sovereign.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-sovereign:1.0.0-beta.1
