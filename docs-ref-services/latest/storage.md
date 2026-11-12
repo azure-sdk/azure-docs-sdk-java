@@ -133,6 +133,7 @@ If you have questions or need additional help, please [create a support ticket](
 1. [InvalidHeaderValue error message when using beta version of SDK](#10-invalidheadervalue-error-message-when-using-beta-version-of-sdk)
 1. [Uploading with `BlobClient.upload(InputStream data)` overwrites existing blob by default](#11-uploading-with-blobclientuploadinputstream-data-overwrites-existing-blob-by-default)
 1. [Downloading with `ShareFileClient.downloadToFile()` can write incorrect data to a file](#12-downloading-with-sharefileclientdownloadtofile-can-write-incorrect-data-to-a-file)
+1. [Uploading a `ByteBuffer` with a nonzero position can upload incorrect data](#13-uploading-a-bytebuffer-with-a-nonzero-position-can-upload-incorrect-data)
 
 ### 1. Buffer overwrite issue with `BlobOutputStream`
 
@@ -365,5 +366,40 @@ In the **azure-storage-file-share** package, the `ShareFileClient.downloadToFile
 #### Recommended steps
 
 Update client library versions according to the table above.
+
+[Back to list of known issues](#list-of-known-issues)
+
+### 13. Uploading a `ByteBuffer` with a nonzero position can upload incorrect data
+
+#### Issue description
+
+When an upload is split into multiple requests, a `ByteBuffer` whose position isn't 0 and that's larger than the block size is split starting from the beginning of the buffer instead of from its position. As a result, the bytes before the buffer's position are uploaded along with the intended data, and incorrect data is written to Azure Storage. The upload completes without an error. Transactional content validation (CRC64 or MD5) doesn't detect this issue, because the checksums are calculated over the data that's sent.
+
+This issue only occurs when all of the following conditions are true:
+
+- The application uploads data from `ByteBuffer` objects, either as a `Flux<ByteBuffer>` or as `BinaryData` created from them, for example with `BinaryData.fromByteBuffer()`. This includes the `upload()` and `uploadWithResponse()` methods that accept this data on `BlobClient`, `BlobAsyncClient`, `DataLakeFileClient`, `DataLakeFileAsyncClient`, `ShareFileClient`, `ShareFileAsyncClient`, `EncryptedBlobClient`, and `EncryptedBlobAsyncClient`, and the `BlobParallelUploadOptions`, `FileParallelUploadOptions`, and `ShareFileUploadOptions` classes.
+- The position of a `ByteBuffer` isn't 0. For example, the buffer was created with `ByteBuffer.wrap(array, offset, length)`, its position was set with `position()`, or some of its data was already read.
+- That `ByteBuffer` is larger than the block size, which is 4 MiB by default.
+- The upload is split into multiple requests. This happens when the data is larger than `MaxSingleUploadSize`, which is 256 MiB by default for Blob Storage, 100 MiB for Data Lake Storage, and 4 MiB for Azure Files. You can change this value by calling the `setMaxSingleUploadSizeLong()` method of the `ParallelTransferOptions` class. Client-side encryption (v2) always splits data into 4 MiB regions, regardless of the upload size.
+
+Uploads from files, `InputStream`, `byte[]`, or `String` data aren't affected.
+
+#### Issue details
+
+| Client library | Versions impacted | Minimum safe version | Recommended action |
+| --- | --- | --- | --- |
+| Azure Storage Blob | 12.6.0 to 12.37.1 | 12.37.2 | [Update to latest version or minimum 12.37.2](https://mvnrepository.com/artifact/com.azure/azure-storage-blob) |
+| Azure File Data Lake | 12.0.1 to 12.30.1 | 12.30.2 | [Update to latest version or minimum 12.30.2](https://mvnrepository.com/artifact/com.azure/azure-storage-file-datalake) |
+| Azure File Share | 12.9.1 to 12.33.1 | 12.33.2 | [Update to latest version or minimum 12.33.2](https://mvnrepository.com/artifact/com.azure/azure-storage-file-share) |
+| Azure Blob Storage Cryptography | 12.17.0 to 12.36.1 | 12.36.2 | [Update to latest version or minimum 12.36.2](https://mvnrepository.com/artifact/com.azure/azure-storage-blob-cryptography) |
+| Azure Storage Common | 12.5.0 to 12.36.1 | 12.36.2 | [Update to latest version or minimum 12.36.2](https://mvnrepository.com/artifact/com.azure/azure-storage-common) |
+
+#### Recommended steps
+
+1. Update client library versions according to the table above. The fix is in Azure Storage Common, which the other client libraries depend on. If your application specifies the version of Azure Storage Common directly, update it as well.
+1. Check whether your application uploads `ByteBuffer` data that meets all of the conditions above. If not, this issue doesn't affect your application. However, we still recommend that you update your application to use the minimum safe versions or later.
+1. If you can't update right away, pass `buffer.slice()` instead of `buffer` when uploading. The `slice()` method returns a buffer that starts at the original buffer's position, which avoids this issue.
+
+Note: Azure doesn't have the ability to recover incorrectly written objects. As any potential impact occurs before upload, Azure doesn't have a valid copy of any affected object. If you have the original data, it can be reuploaded to your storage account.
 
 [Back to list of known issues](#list-of-known-issues)
