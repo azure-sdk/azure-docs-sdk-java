@@ -4,7 +4,7 @@ fullName: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsCli
 name: "ContainerGroupsClient"
 nameWithType: "ContainerGroupsClient"
 summary: "An instance of this class provides access to all the operations defined in Container<wbr>Groups<wbr>Client."
-syntax: "public interface **ContainerGroupsClient**</br> extends <xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsGet?alt=com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsGet&text=InnerSupportsGet\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsListing?alt=com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsListing&text=InnerSupportsListing\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsDelete?alt=com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsDelete&text=InnerSupportsDelete\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+syntax: "public interface **ContainerGroupsClient**</br> extends <xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsGet?alt=com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsGet&text=InnerSupportsGet\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsListing?alt=com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsListing&text=InnerSupportsListing\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />&gt;, <xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsDelete?alt=com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsDelete&text=InnerSupportsDelete\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 methods:
 - uid: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.beginCreateOrUpdate(java.lang.String,java.lang.String,com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner)"
   fullName: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.beginCreateOrUpdate(String resourceGroupName, String containerGroupName, ContainerGroupInner containerGroup)"
@@ -14,7 +14,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -36,7 +36,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -61,7 +61,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -83,17 +83,17 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
     name: "containerGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract SyncPoller<PollResult<ContainerGroupInner>,ContainerGroupInner> beginDelete(String resourceGroupName, String containerGroupName)"
+  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginDelete(String resourceGroupName, String containerGroupName)"
   desc: "Delete the specified container group. Delete the specified container group in the specified subscription and resource group. The operation does not delete other resources provided by the user, such as volumes."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of a container group."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.beginDelete(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.beginDelete(String resourceGroupName, String containerGroupName, Context context)"
   name: "beginDelete(String resourceGroupName, String containerGroupName, Context context)"
@@ -102,7 +102,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -111,11 +111,11 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract SyncPoller<PollResult<ContainerGroupInner>,ContainerGroupInner> beginDelete(String resourceGroupName, String containerGroupName, Context context)"
+  syntax: "public abstract SyncPoller<PollResult<Void>,Void> beginDelete(String resourceGroupName, String containerGroupName, Context context)"
   desc: "Delete the specified container group. Delete the specified container group in the specified subscription and resource group. The operation does not delete other resources provided by the user, such as volumes."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of a container group."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.beginDeleteAsync(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.beginDeleteAsync(String resourceGroupName, String containerGroupName)"
   name: "beginDeleteAsync(String resourceGroupName, String containerGroupName)"
@@ -124,17 +124,17 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
     name: "containerGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract PollerFlux<PollResult<ContainerGroupInner>,ContainerGroupInner> beginDeleteAsync(String resourceGroupName, String containerGroupName)"
+  syntax: "public abstract PollerFlux<PollResult<Void>,Void> beginDeleteAsync(String resourceGroupName, String containerGroupName)"
   desc: "Delete the specified container group. Delete the specified container group in the specified subscription and resource group. The operation does not delete other resources provided by the user, such as volumes."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.PollerFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PollerFlux\"></xref> for polling of a container group."
-    type: "<xref href=\"com.azure.core.util.polling.PollerFlux?alt=com.azure.core.util.polling.PollerFlux&text=PollerFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"com.azure.core.util.polling.PollerFlux?alt=com.azure.core.util.polling.PollerFlux&text=PollerFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.beginRestart(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.beginRestart(String resourceGroupName, String containerGroupName)"
   name: "beginRestart(String resourceGroupName, String containerGroupName)"
@@ -143,7 +143,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -162,7 +162,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -184,7 +184,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -203,7 +203,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -222,7 +222,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -244,7 +244,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -263,7 +263,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -285,7 +285,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -310,7 +310,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -332,7 +332,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -354,17 +354,14 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
     name: "containerGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract ContainerGroupInner delete(String resourceGroupName, String containerGroupName)"
+  syntax: "public abstract void delete(String resourceGroupName, String containerGroupName)"
   desc: "Delete the specified container group. Delete the specified container group in the specified subscription and resource group. The operation does not delete other resources provided by the user, such as volumes."
-  returns:
-    description: "a container group."
-    type: "<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.delete(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.delete(String resourceGroupName, String containerGroupName, Context context)"
   name: "delete(String resourceGroupName, String containerGroupName, Context context)"
@@ -373,7 +370,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -382,11 +379,8 @@ methods:
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract ContainerGroupInner delete(String resourceGroupName, String containerGroupName, Context context)"
+  syntax: "public abstract void delete(String resourceGroupName, String containerGroupName, Context context)"
   desc: "Delete the specified container group. Delete the specified container group in the specified subscription and resource group. The operation does not delete other resources provided by the user, such as volumes."
-  returns:
-    description: "a container group."
-    type: "<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.deleteAsync(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.deleteAsync(String resourceGroupName, String containerGroupName)"
   name: "deleteAsync(String resourceGroupName, String containerGroupName)"
@@ -395,17 +389,17 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
     name: "containerGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public abstract Mono<ContainerGroupInner> deleteAsync(String resourceGroupName, String containerGroupName)"
+  syntax: "public abstract Mono<Void> deleteAsync(String resourceGroupName, String containerGroupName)"
   desc: "Delete the specified container group. Delete the specified container group in the specified subscription and resource group. The operation does not delete other resources provided by the user, such as volumes."
   returns:
     description: "a container group on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - uid: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.deleteWithResponseAsync(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.deleteWithResponseAsync(String resourceGroupName, String containerGroupName)"
   name: "deleteWithResponseAsync(String resourceGroupName, String containerGroupName)"
@@ -414,7 +408,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -433,7 +427,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -442,7 +436,7 @@ methods:
   syntax: "public abstract ContainerGroupInner getByResourceGroup(String resourceGroupName, String containerGroupName)"
   desc: "Get the properties of the specified container group. Gets the properties of the specified container group in the specified subscription and resource group. The operation returns the properties of each container group including containers, image registry credentials, restart policy, IP address type, OS type, state, and volumes."
   returns:
-    description: "the properties of the specified container group in the specified subscription and resource group."
+    description: "the properties of the specified container group.\n \n Gets the properties of the specified container group in the specified subscription and resource group."
     type: "<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.getByResourceGroupAsync(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.getByResourceGroupAsync(String resourceGroupName, String containerGroupName)"
@@ -452,7 +446,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -461,7 +455,7 @@ methods:
   syntax: "public abstract Mono<ContainerGroupInner> getByResourceGroupAsync(String resourceGroupName, String containerGroupName)"
   desc: "Get the properties of the specified container group. Gets the properties of the specified container group in the specified subscription and resource group. The operation returns the properties of each container group including containers, image registry credentials, restart policy, IP address type, OS type, state, and volumes."
   returns:
-    description: "the properties of the specified container group in the specified subscription and resource group on\n successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
+    description: "the properties of the specified container group.\n \n Gets the properties of the specified container group in the specified subscription and resource group on\n successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.getByResourceGroupWithResponse(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.getByResourceGroupWithResponse(String resourceGroupName, String containerGroupName, Context context)"
@@ -471,7 +465,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -483,7 +477,7 @@ methods:
   syntax: "public abstract Response<ContainerGroupInner> getByResourceGroupWithResponse(String resourceGroupName, String containerGroupName, Context context)"
   desc: "Get the properties of the specified container group. Gets the properties of the specified container group in the specified subscription and resource group. The operation returns the properties of each container group including containers, image registry credentials, restart policy, IP address type, OS type, state, and volumes."
   returns:
-    description: "the properties of the specified container group in the specified subscription and resource group along\n with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    description: "the properties of the specified container group.\n \n Gets the properties of the specified container group in the specified subscription and resource group along with\n <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.getByResourceGroupWithResponseAsync(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.getByResourceGroupWithResponseAsync(String resourceGroupName, String containerGroupName)"
@@ -493,7 +487,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -502,7 +496,7 @@ methods:
   syntax: "public abstract Mono<Response<ContainerGroupInner>> getByResourceGroupWithResponseAsync(String resourceGroupName, String containerGroupName)"
   desc: "Get the properties of the specified container group. Gets the properties of the specified container group in the specified subscription and resource group. The operation returns the properties of each container group including containers, image registry credentials, restart policy, IP address type, OS type, state, and volumes."
   returns:
-    description: "the properties of the specified container group in the specified subscription and resource group along\n with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
+    description: "the properties of the specified container group.\n \n Gets the properties of the specified container group in the specified subscription and resource group along with\n <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />&gt;&gt;"
 - uid: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.getOutboundNetworkDependenciesEndpoints(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.getOutboundNetworkDependenciesEndpoints(String resourceGroupName, String containerGroupName)"
@@ -512,7 +506,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -521,7 +515,7 @@ methods:
   syntax: "public abstract List<String> getOutboundNetworkDependenciesEndpoints(String resourceGroupName, String containerGroupName)"
   desc: "Get all network dependencies for container group. Gets all the network dependencies for this container group to allow complete control of network setting and configuration. For container groups, this will always be an empty list."
   returns:
-    description: "all the network dependencies for this container group to allow complete control of network setting and\n configuration."
+    description: "all network dependencies for container group.\n \n Gets all the network dependencies for this container group to allow complete control of network setting and\n configuration."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.getOutboundNetworkDependenciesEndpointsAsync(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.getOutboundNetworkDependenciesEndpointsAsync(String resourceGroupName, String containerGroupName)"
@@ -531,7 +525,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -540,7 +534,7 @@ methods:
   syntax: "public abstract Mono<List<String>> getOutboundNetworkDependenciesEndpointsAsync(String resourceGroupName, String containerGroupName)"
   desc: "Get all network dependencies for container group. Gets all the network dependencies for this container group to allow complete control of network setting and configuration. For container groups, this will always be an empty list."
   returns:
-    description: "all the network dependencies for this container group to allow complete control of network setting and\n configuration on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
+    description: "all network dependencies for container group.\n \n Gets all the network dependencies for this container group to allow complete control of network setting and\n configuration on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;"
 - uid: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.getOutboundNetworkDependenciesEndpointsWithResponse(java.lang.String,java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.getOutboundNetworkDependenciesEndpointsWithResponse(String resourceGroupName, String containerGroupName, Context context)"
@@ -550,7 +544,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -562,7 +556,7 @@ methods:
   syntax: "public abstract Response<List<String>> getOutboundNetworkDependenciesEndpointsWithResponse(String resourceGroupName, String containerGroupName, Context context)"
   desc: "Get all network dependencies for container group. Gets all the network dependencies for this container group to allow complete control of network setting and configuration. For container groups, this will always be an empty list."
   returns:
-    description: "all the network dependencies for this container group to allow complete control of network setting and\n configuration along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    description: "all network dependencies for container group.\n \n Gets all the network dependencies for this container group to allow complete control of network setting and\n configuration along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;"
 - uid: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.getOutboundNetworkDependenciesEndpointsWithResponseAsync(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.getOutboundNetworkDependenciesEndpointsWithResponseAsync(String resourceGroupName, String containerGroupName)"
@@ -572,7 +566,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -581,7 +575,7 @@ methods:
   syntax: "public abstract Mono<Response<List<String>>> getOutboundNetworkDependenciesEndpointsWithResponseAsync(String resourceGroupName, String containerGroupName)"
   desc: "Get all network dependencies for container group. Gets all the network dependencies for this container group to allow complete control of network setting and configuration. For container groups, this will always be an empty list."
   returns:
-    description: "all the network dependencies for this container group to allow complete control of network setting and\n configuration along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
+    description: "all network dependencies for container group.\n \n Gets all the network dependencies for this container group to allow complete control of network setting and\n configuration along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;&gt;&gt;"
 - uid: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.list()"
   fullName: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.list()"
@@ -593,7 +587,7 @@ methods:
   syntax: "public abstract PagedIterable<ContainerGroupInner> list()"
   desc: "Get a list of container groups in the specified subscription. Get a list of container groups in the specified subscription. This operation returns properties of each container group including containers, image registry credentials, restart policy, IP address type, OS type, state, and volumes."
   returns:
-    description: "a list of container groups in the specified subscription as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "a list of container groups in the specified subscription.\n \n Get a list of container groups in the specified subscription as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.list(com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.list(Context context)"
@@ -609,7 +603,7 @@ methods:
   syntax: "public abstract PagedIterable<ContainerGroupInner> list(Context context)"
   desc: "Get a list of container groups in the specified subscription. Get a list of container groups in the specified subscription. This operation returns properties of each container group including containers, image registry credentials, restart policy, IP address type, OS type, state, and volumes."
   returns:
-    description: "a list of container groups in the specified subscription as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "a list of container groups in the specified subscription.\n \n Get a list of container groups in the specified subscription as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.listAsync()"
   fullName: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.listAsync()"
@@ -621,7 +615,7 @@ methods:
   syntax: "public abstract PagedFlux<ContainerGroupInner> listAsync()"
   desc: "Get a list of container groups in the specified subscription. Get a list of container groups in the specified subscription. This operation returns properties of each container group including containers, image registry credentials, restart policy, IP address type, OS type, state, and volumes."
   returns:
-    description: "a list of container groups in the specified subscription as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
+    description: "a list of container groups in the specified subscription.\n \n Get a list of container groups in the specified subscription as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.listByResourceGroup(java.lang.String)"
   fullName: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.listByResourceGroup(String resourceGroupName)"
@@ -631,13 +625,13 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<ContainerGroupInner> listByResourceGroup(String resourceGroupName)"
   desc: "Get a list of container groups in the specified subscription and resource group. Get a list of container groups in a specified subscription and resource group. This operation returns properties of each container group including containers, image registry credentials, restart policy, IP address type, OS type, state, and volumes."
   returns:
-    description: "a list of container groups in a specified subscription and resource group as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "a list of container groups in the specified subscription and resource group.\n \n Get a list of container groups in a specified subscription and resource group as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.listByResourceGroup(java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.listByResourceGroup(String resourceGroupName, Context context)"
@@ -647,7 +641,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
@@ -656,7 +650,7 @@ methods:
   syntax: "public abstract PagedIterable<ContainerGroupInner> listByResourceGroup(String resourceGroupName, Context context)"
   desc: "Get a list of container groups in the specified subscription and resource group. Get a list of container groups in a specified subscription and resource group. This operation returns properties of each container group including containers, image registry credentials, restart policy, IP address type, OS type, state, and volumes."
   returns:
-    description: "a list of container groups in a specified subscription and resource group as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "a list of container groups in the specified subscription and resource group.\n \n Get a list of container groups in a specified subscription and resource group as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.listByResourceGroupAsync(java.lang.String)"
   fullName: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.listByResourceGroupAsync(String resourceGroupName)"
@@ -666,13 +660,13 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedFlux<ContainerGroupInner> listByResourceGroupAsync(String resourceGroupName)"
   desc: "Get a list of container groups in the specified subscription and resource group. Get a list of container groups in a specified subscription and resource group. This operation returns properties of each container group including containers, image registry credentials, restart policy, IP address type, OS type, state, and volumes."
   returns:
-    description: "a list of container groups in a specified subscription and resource group as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
+    description: "a list of container groups in the specified subscription and resource group.\n \n Get a list of container groups in a specified subscription and resource group as paginated response with\n <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.restart(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.containerinstance.fluent.ContainerGroupsClient.restart(String resourceGroupName, String containerGroupName)"
@@ -682,7 +676,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -698,7 +692,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -717,7 +711,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -736,7 +730,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -755,7 +749,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -771,7 +765,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -790,7 +784,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -809,7 +803,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -828,7 +822,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -844,7 +838,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -863,7 +857,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -885,7 +879,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -904,7 +898,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -926,7 +920,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -948,7 +942,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -973,7 +967,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "The name of the resource group."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The name of the container group."
@@ -990,9 +984,9 @@ methods:
 type: "interface"
 desc: "An instance of this class provides access to all the operations defined in ContainerGroupsClient."
 implements:
-- "<xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsDelete?alt=com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsDelete&text=InnerSupportsDelete\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+- "<xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsDelete?alt=com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsDelete&text=InnerSupportsDelete\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
 - "<xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsGet?alt=com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsGet&text=InnerSupportsGet\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - "<xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsListing?alt=com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsListing&text=InnerSupportsListing\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner?alt=com.azure.resourcemanager.containerinstance.fluent.models.ContainerGroupInner&text=ContainerGroupInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.containerinstance.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-containerinstance:2.53.12
+artifact: com.azure.resourcemanager:azure-resourcemanager-containerinstance:2.55.0
