@@ -1,12 +1,12 @@
 ---
 title: Azure Agents client library for Java
 keywords: Azure, java, SDK, API, azure-ai-agents, ai
-ms.date: 11/02/2026
+ms.date: 11/13/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: ai
 ---
-# Azure Agents client library for Java - version 2.9.0 
+# Azure Agents client library for Java - version 2.10.0 
 
 
 Develop Agents using the Azure AI Foundry platform, leveraging an extensive ecosystem of models, tools, and capabilities from OpenAI, Microsoft, and other LLM providers.
@@ -40,7 +40,7 @@ Various documentation is available to help you get started
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-ai-agents</artifactId>
-    <version>2.9.0</version>
+    <version>2.10.0</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -72,19 +72,20 @@ AgentsAsyncClient agentsAsyncClient = new AgentsClientBuilder()
 ``` 
 
 The Agents client library has the following sub-clients which group the different operations that can be performed: 
-- `AgentsClient` / `AgentsAsyncClient`: Perform operations related to agents, including agent optimization.
+- `AgentsClient` / `AgentsAsyncClient`: Perform operations related to agents, including agent generation and optimization.
   When `allowPreview(true)` is configured, these clients can
   also use preview definitions, hosted-agent sessions, session files, and code package operations.
-- `BetaAgentsClient` / `BetaAgentsAsyncClient` **(preview)**: Generate and create agents from high-level prompts.
 - `ResponsesClient` / `ResponsesAsyncClient`: Create responses that require Azure-specific request fields, such as an explicit `AgentReference` or structured inputs. For standard OpenAI Responses API calls through an agent endpoint, use an agent-scoped OpenAI client. See the [OpenAI Responses API documentation][openai_responses_api_docs] for more information.
 - `BetaMemoryStoresClient` / `BetaMemoryStoresAsyncClient` **(preview)**: Manage memory stores and individual memory items for agents.
 - `ToolboxesClient` / `ToolboxesAsyncClient`: Manage toolboxes and toolbox versions.
-- `BetaVoiceAgentWebSocketClient` / `BetaVoiceAgentWebSocketAsyncClient` **(preview)**: Open typed realtime WebSocket sessions with voice agents.
-- `BetaVoiceAgentsTelephonyClient` / `BetaVoiceAgentsTelephonyAsyncClient` **(preview)**: Manage telephony bindings, calls, transfer targets, and outbound call jobs.
-- `BetaVoiceAgentsConversationsClient` / `BetaVoiceAgentsConversationsAsyncClient` **(preview)**: Read and delete persisted voice-agent conversations and retrieve their responses, items, and audio.
+- `VoiceAgentsWebSocketClient` / `VoiceAgentsWebSocketAsyncClient`: Open typed realtime WebSocket sessions with voice agents.
+- `BetaVoiceAgentsLiveWebSocketClient` / `BetaVoiceAgentsLiveWebSocketAsyncClient` **(preview)**: Open native GPT Live WebSocket sessions with persisted Live voice agents.
+- `VoiceAgentsTelephonyClient` / `VoiceAgentsTelephonyAsyncClient`: Manage telephony bindings, calls, transfer targets, and outbound call jobs.
+- `BetaVoiceAgentsTelephonyClient` / `BetaVoiceAgentsTelephonyAsyncClient` **(preview)**: Manage outbound telephony campaigns.
+- `VoiceAgentsConversationsClient` / `VoiceAgentsConversationsAsyncClient`: Read and delete persisted voice-agent conversations and retrieve their responses, items, and audio.
 
 OpenAI conversation operations are accessed through the [OpenAI Official Java SDK][openai_java_sdk]'s
-`ConversationService`. Persisted voice-agent conversation records use the beta voice conversation clients listed above.
+`ConversationService`. Persisted voice-agent conversation records use the voice conversation clients listed above.
 See the [OpenAI Conversation API documentation][openai_conversations_api_docs] for more information.
 
 To access each sub-client you need to use your `AgentsClientBuilder()`. The Agents client library takes the [Official OpenAI SDK][openai_java_sdk] as a dependency, which is used for all operations, except the ones corresponding to direct Agent management.
@@ -98,9 +99,6 @@ AgentsClientBuilder builder = new AgentsClientBuilder()
 // Agents sub-clients
 AgentsClient agentsClient = builder.buildAgentsClient();
 AgentsAsyncClient agentsAsyncClient = builder.buildAgentsAsyncClient();
-// Beta* clients automatically opt in to their preview service area.
-BetaAgentsClient betaAgentsClient = builder.beta().buildBetaAgentsClient();
-BetaAgentsAsyncClient betaAgentsAsyncClient = builder.beta().buildBetaAgentsAsyncClient();
 // Responses sub-clients.
 ResponsesClient responsesClient = builder.buildResponsesClient();
 ResponsesAsyncClient responsesAsyncClient = builder.buildResponsesAsyncClient();
@@ -137,8 +135,8 @@ Draft agent versions are preview candidates that are not promoted to the agent's
 `listAgentVersions` when you need to list draft versions. Build the non-Beta client with
 `allowPreview(true)` to opt in to the `DraftAgents=V1Preview` service feature.
 
-See the full samples in [AgentDraftSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/agents/AgentDraftSample.java)
-and [AgentDraftAsyncSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/agents/AgentDraftAsyncSample.java).
+See the full samples in [AgentDraftSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/agents/AgentDraftSample.java)
+and [AgentDraftAsyncSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/agents/AgentDraftAsyncSample.java).
 
 ### Agent tools
 
@@ -204,25 +202,25 @@ Build clients whose names start with `Beta` from `AgentsClientBuilder.beta()`. T
 
 | Beta sub-client | Automatically populated `Foundry-Features` value |
 |---|---|
-| `BetaAgentsClient` | `WorkflowAgents=V1Preview,ExternalAgents=V1Preview,DraftAgents=V1Preview,VoiceAgents=V1Preview,DigitalWorker=V1Preview,GitHubCopilot=V1Preview,Skills=V1Preview,MicrosoftCopilot=V1Preview` |
 | `BetaMemoryStoresClient` | `MemoryStores=V1Preview` |
-| `BetaVoiceAgentWebSocketClient` | `VoiceAgents=V1Preview` |
+| `BetaVoiceAgentsLiveWebSocketClient` / `BetaVoiceAgentsLiveWebSocketAsyncClient` | `VoiceAgents=V1Preview` |
 | `BetaVoiceAgentsTelephonyClient` | `VoiceAgents=V1Preview` |
-| `BetaVoiceAgentsConversationsClient` | `VoiceAgents=V1Preview` |
+| `BetaVoiceAgentsLiveConversationsClient` | `VoiceAgents=V1Preview` |
 
 The async `Beta*AsyncClient` counterparts follow the same behavior.
 
 ### Realtime voice-agent sessions
 
 Create and manage preview voice agents with `VoiceAgentDefinition` and an `AgentsClient` or `AgentsAsyncClient` built
-using `allowPreview(true)`. Use `BetaVoiceAgentWebSocketClient` or `BetaVoiceAgentWebSocketAsyncClient` to open a typed,
+using `allowPreview(true)`. Use `VoiceAgentsWebSocketClient` or `VoiceAgentsWebSocketAsyncClient` to open a typed,
 bidirectional session with an existing voice agent. The client acquires a token for `https://ai.azure.com/.default`,
-negotiates the `realtime` WebSocket subprotocol, and sends the required `VoiceAgents=V1Preview` feature header
-automatically.
+negotiates the `realtime` WebSocket subprotocol, and sends the `Foundry-Features: VoiceAgents=V1Preview` header
+only when built with `allowPreview(true)`. GPT Live WebSocket clients always send that preview header,
+independently of `allowPreview`.
 
 The session API supports text and audio in the format configured on the voice agent, typed streaming server events,
 response cancellation, client-executed function tools, and optional persisted conversations. See
-[Realtime voice-agent WebSocket examples](#realtime-voice-agent-websocket-examples-preview) for complete samples.
+[Realtime voice-agent WebSocket examples](#realtime-voice-agent-websocket-examples) for complete samples.
 
 Use `VoiceAgentWebSocketConnectionOptions` with `openWebSocketSession` to configure session IDs, agent version
 selection, transport, structured inputs, persistence, buffering, and timeouts. Options are copied when the session is opened, so
@@ -249,8 +247,8 @@ Construct `AgentOptimizationJob` with `AgentOptimizationModelConfiguration` and 
 skills, tools, or model improvements. Use `estimateOptimizationJob`, `listOptimizationCandidates`,
 `getOptimizationCandidate`, and `promoteOptimizationCandidate` to estimate costs and manage candidates.
 See [Agent optimizer in Foundry Agent Service][agent_optimizer_overview] for the service workflow and the complete
-examples in [AgentOptimizationSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/optimization/AgentOptimizationSample.java)
-and [AgentOptimizationAsyncSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/optimization/AgentOptimizationAsyncSample.java).
+examples in [AgentOptimizationSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/optimization/AgentOptimizationSample.java)
+and [AgentOptimizationAsyncSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/optimization/AgentOptimizationAsyncSample.java).
 
 ### Memory item management
 
@@ -296,7 +294,7 @@ AgentVersionDetails agent = agentsClient.createAgentVersion("my-agent", promptAg
 
 This returns an `AgentVersionDetails` containing the agent's name and version. By default, the agent endpoint serves the latest version through the Responses protocol using Microsoft Entra authentication.
 
-To pin the endpoint to a specific version, see [ConfigureAgentEndpoint.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/agents/ConfigureAgentEndpoint.java) and [ConfigureAgentEndpointAsync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/agents/ConfigureAgentEndpointAsync.java).
+To pin the endpoint to a specific version, see [ConfigureAgentEndpoint.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/agents/ConfigureAgentEndpoint.java) and [ConfigureAgentEndpointAsync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/agents/ConfigureAgentEndpointAsync.java).
 
 #### Create conversation
 
@@ -326,7 +324,7 @@ conversationsClient.items().create(
 );
 ```
 
-To scope conversation operations to a delegated end user, set `FOUNDRY_USER_IDENTITY` to an opaque application-generated value and apply it as the `x-ms-user-identity` header. The caller must have the `agents/endpoints/UserIdentityImpersonation/action` RBAC permission. See the sync [UserIdentityConversation.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/conversations/UserIdentityConversation.java) and async [UserIdentityConversationAsync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/conversations/UserIdentityConversationAsync.java) samples.
+To scope conversation operations to a delegated end user, set `FOUNDRY_USER_IDENTITY` to an opaque application-generated value and apply it as the `x-ms-user-identity` header. The caller must have the `agents/endpoints/UserIdentityImpersonation/action` RBAC permission. See the sync [UserIdentityConversation.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/conversations/UserIdentityConversation.java) and async [UserIdentityConversationAsync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/conversations/UserIdentityConversationAsync.java) samples.
 
 #### Text generation with Responses
 
@@ -344,7 +342,7 @@ For asynchronous calls, use `buildAgentScopedOpenAIAsyncClient`.
 
 ### Using Agent tools
 
-Agents can be enhanced with specialized tools for various capabilities. For complete working examples, see the `tools/` folder under [samples](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools).
+Agents can be enhanced with specialized tools for various capabilities. For complete working examples, see the `tools/` folder under [samples](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools).
 
 In the description below, tools are organized by their Foundry connection requirements: "Built-in Tools" (which do not require a Foundry connection) and "Connection-based Tools" (which require a Foundry connection).
 
@@ -363,7 +361,7 @@ Write and run Python code in a sandboxed environment, process files and work wit
 CodeInterpreterTool tool = new CodeInterpreterTool();
 ```
 
-See the full sample in [CodeInterpreterSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/CodeInterpreterSync.java).
+See the full sample in [CodeInterpreterSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/CodeInterpreterSync.java).
 
 ---
 
@@ -376,7 +374,7 @@ Search through files in a vector store for knowledge retrieval:
 FileSearchTool tool = new FileSearchTool(Collections.singletonList(vectorStore.id()));
 ```
 
-See the full sample in [FileSearchSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/FileSearchSync.java).
+See the full sample in [FileSearchSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/FileSearchSync.java).
 
 ---
 
@@ -392,7 +390,7 @@ ImageGenTool imageGenTool = new ImageGenTool()
     .setSize(ImageGenToolSize.fromString("1024x1024"));
 ```
 
-See the full sample in [ImageGenerationSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/ImageGenerationSync.java).
+See the full sample in [ImageGenerationSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/ImageGenerationSync.java).
 
 ---
 
@@ -405,23 +403,19 @@ Search the web for current information:
 WebSearchPreviewTool tool = new WebSearchPreviewTool();
 ```
 
-See the full sample in [WebSearchSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/WebSearchSync.java).
+See the full sample in [WebSearchSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/WebSearchSync.java).
 
 ---
 
-##### **Computer Use (Preview)** ([documentation](https://learn.microsoft.com/azure/foundry/agents/how-to/tools/computer-use?pivots=java))
+##### **Computer Use** ([documentation](https://learn.microsoft.com/azure/foundry/agents/how-to/tools/computer-use?pivots=java))
 
 Interact with computer interfaces through simulated actions and screenshots:
 
 ```java com.azure.ai.agents.define_computer_use
-ComputerUsePreviewTool tool = new ComputerUsePreviewTool(
-    ComputerEnvironment.WINDOWS,
-    1026,
-    769
-);
+ComputerTool tool = new ComputerTool();
 ```
 
-See the full sample in [ComputerUseSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/ComputerUseSync.java).
+See the full sample in [ComputerUseSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/ComputerUseSync.java).
 
 ---
 
@@ -436,7 +430,7 @@ McpTool tool = new McpTool("api-specs")
     .setRequireApproval("always");
 ```
 
-See the full sample in [McpSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/McpSync.java).
+See the full sample in [McpSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/McpSync.java).
 
 ---
 
@@ -457,7 +451,7 @@ OpenApiTool tool = new OpenApiTool(
         .setDescription("Get request metadata from an OpenAPI endpoint."));
 ```
 
-See the full sample in [OpenApiSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/OpenApiSync.java).
+See the full sample in [OpenApiSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/OpenApiSync.java).
 
 ---
 
@@ -488,7 +482,7 @@ FunctionTool tool = new FunctionTool("get_weather", parameters, true)
     .setDescription("Get the current weather in a given location");
 ```
 
-See the full sample in [FunctionCallSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/FunctionCallSync.java).
+See the full sample in [FunctionCallSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/FunctionCallSync.java).
 
 ---
 
@@ -512,7 +506,7 @@ AzureFunctionTool azureFunctionTool = new AzureFunctionTool(
 
 *When the agent handles a response, it enqueues function arguments to the input queue. Your Azure Function processes the request and returns results through the output queue.*
 
-See the full sample in [AzureFunctionSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/AzureFunctionSync.java).
+See the full sample in [AzureFunctionSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/AzureFunctionSync.java).
 
 ---
 
@@ -526,7 +520,7 @@ MemorySearchPreviewTool tool = new MemorySearchPreviewTool(memoryStore.getName()
     .setUpdateDelaySeconds(1);
 ```
 
-See the full sample in [MemorySearchSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/MemorySearchSync.java) showing how to create an agent with a memory store and use it across multiple conversations.
+See the full sample in [MemorySearchSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/MemorySearchSync.java) showing how to create an agent with a memory store and use it across multiple conversations.
 
 ---
 
@@ -552,7 +546,7 @@ AzureAISearchTool aiSearchTool = new AzureAISearchTool(
 );
 ```
 
-See the full sample in [AzureAISearchSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/AzureAISearchSync.java).
+See the full sample in [AzureAISearchSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/AzureAISearchSync.java).
 
 ---
 
@@ -569,7 +563,7 @@ BingGroundingTool bingTool = new BingGroundingTool(
 );
 ```
 
-See the full sample in [BingGroundingSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/BingGroundingSync.java).
+See the full sample in [BingGroundingSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/BingGroundingSync.java).
 
 ---
 
@@ -588,7 +582,7 @@ BingCustomSearchPreviewTool bingCustomSearchTool = new BingCustomSearchPreviewTo
 );
 ```
 
-See the full sample in [BingCustomSearchSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/BingCustomSearchSync.java).
+See the full sample in [BingCustomSearchSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/BingCustomSearchSync.java).
 
 ---
 
@@ -606,7 +600,7 @@ MicrosoftFabricPreviewTool fabricTool = new MicrosoftFabricPreviewTool(
 );
 ```
 
-See the full sample in [FabricSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/FabricSync.java).
+See the full sample in [FabricSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/FabricSync.java).
 
 ---
 
@@ -626,8 +620,8 @@ The samples use `FOUNDRY_PROJECT_ENDPOINT`, `FOUNDRY_MODEL_NAME`, and the fully 
 `FABRIC_IQ_PROJECT_CONNECTION_ID`. `FOUNDRY_AGENT_NAME` and `FABRIC_IQ_USER_INPUT` are optional.
 The response text and any returned annotations are printed before the temporary agent version is deleted.
 
-See the full samples in [FabricIQSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/FabricIQSync.java)
-and [FabricIQAsync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/FabricIQAsync.java).
+See the full samples in [FabricIQSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/FabricIQSync.java)
+and [FabricIQAsync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/FabricIQAsync.java).
 
 ---
 
@@ -644,8 +638,8 @@ Set `FOUNDRY_PROJECT_ENDPOINT`, `FOUNDRY_MODEL_NAME`, and `WORK_IQ_PROJECT_CONNE
 sample. `FOUNDRY_AGENT_NAME` and `WORK_IQ_USER_INPUT` are optional. Work IQ uses delegated authentication and
 honors the signed-in user's Microsoft 365 permissions.
 
-See the full samples in [WorkIQSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/WorkIQSync.java)
-and [WorkIQAsync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/WorkIQAsync.java).
+See the full samples in [WorkIQSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/WorkIQSync.java)
+and [WorkIQAsync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/WorkIQAsync.java).
 
 ---
 
@@ -663,7 +657,7 @@ SharepointPreviewTool sharepointTool = new SharepointPreviewTool(
 );
 ```
 
-See the full sample in [SharePointGroundingSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/SharePointGroundingSync.java).
+See the full sample in [SharePointGroundingSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/SharePointGroundingSync.java).
 
 ---
 
@@ -683,7 +677,7 @@ BrowserAutomationTool browserTool = new BrowserAutomationTool(
 );
 ```
 
-See the full sample in [BrowserAutomationSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/BrowserAutomationSync.java).
+See the full sample in [BrowserAutomationSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/BrowserAutomationSync.java).
 
 ---
 
@@ -697,7 +691,7 @@ A2ATool a2aTool = new A2ATool(A2AProtocolVersion.V1_0)
     .setProjectConnectionId(a2aConnectionId);
 ```
 
-See the full sample in [AgentToAgentSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/AgentToAgentSync.java).
+See the full sample in [AgentToAgentSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/AgentToAgentSync.java).
 
 ---
 
@@ -713,7 +707,7 @@ McpTool mcpTool = new McpTool("api-specs")
     .setRequireApproval("always");
 ```
 
-See the full sample in [McpWithConnectionSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/McpWithConnectionSync.java).
+See the full sample in [McpWithConnectionSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/McpWithConnectionSync.java).
 
 ---
 
@@ -732,7 +726,7 @@ OpenApiTool openApiTool = new OpenApiTool(
         .setDescription("TripAdvisor API to get travel information."));
 ```
 
-See the full sample in [OpenApiWithConnectionSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/OpenApiWithConnectionSync.java).
+See the full sample in [OpenApiWithConnectionSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/tools/OpenApiWithConnectionSync.java).
 
 ---
 
@@ -766,7 +760,7 @@ for (ToolboxTool tool : version.getTools()) {
 
 ```
 
-See the full sample in [ToolboxSearchToolboxSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/toolboxes/ToolboxSearchToolboxSample.java).
+See the full sample in [ToolboxSearchToolboxSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/toolboxes/ToolboxSearchToolboxSample.java).
 
 ##### **Reminder (preview)**
 
@@ -792,7 +786,7 @@ System.out.printf("Tool type: %s%n", version.getTools().get(0).getType());
 
 ```
 
-See the full samples in [ReminderPreviewToolboxSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/toolboxes/ReminderPreviewToolboxSample.java) and [ReminderPreviewToolboxAsyncSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/toolboxes/ReminderPreviewToolboxAsyncSample.java).
+See the full samples in [ReminderPreviewToolboxSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/toolboxes/ReminderPreviewToolboxSample.java) and [ReminderPreviewToolboxAsyncSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/toolboxes/ReminderPreviewToolboxAsyncSample.java).
 
 ##### **Shell**
 
@@ -815,7 +809,7 @@ ToolboxVersionDetails toolboxVersion = toolboxesClient.createToolboxVersion(
 
 ```
 
-See the full end-to-end sample in [ShellToolboxSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/toolboxes/ShellToolboxSample.java).
+See the full end-to-end sample in [ShellToolboxSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/toolboxes/ShellToolboxSample.java).
 
 ---
 
@@ -850,7 +844,7 @@ Response response = responseAccumulator.response();
 System.out.println("\nResponse ID: " + response.id());
 ```
 
-See the full samples in [SimpleStreamingSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/streaming/SimpleStreamingSync.java), [FunctionCallStreamingSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/streaming/FunctionCallStreamingSync.java), and [CodeInterpreterStreamingSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/streaming/CodeInterpreterStreamingSync.java).
+See the full samples in [SimpleStreamingSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/streaming/SimpleStreamingSync.java), [FunctionCallStreamingSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/streaming/FunctionCallStreamingSync.java), and [CodeInterpreterStreamingSync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/streaming/CodeInterpreterStreamingSync.java).
 
 #### Asynchronous streaming
 
@@ -881,7 +875,7 @@ Mono<Void> streamingCompletion = Mono.defer(() -> {
 });
 ```
 
-See the full samples in [SimpleStreamingAsync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/streaming/SimpleStreamingAsync.java), [FunctionCallStreamingAsync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/streaming/FunctionCallStreamingAsync.java), and [CodeInterpreterStreamingAsync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/streaming/CodeInterpreterStreamingAsync.java).
+See the full samples in [SimpleStreamingAsync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/streaming/SimpleStreamingAsync.java), [FunctionCallStreamingAsync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/streaming/FunctionCallStreamingAsync.java), and [CodeInterpreterStreamingAsync.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/streaming/CodeInterpreterStreamingAsync.java).
 
 ### Stream hosted agent session logs
 
@@ -967,41 +961,43 @@ Response response = responsesClient.createAzureResponse(
 
 Streaming is also supported via `createStreamingAzureResponse`, which returns an `IterableStream<ResponseStreamEvent>` (sync) or `Flux<ResponseStreamEvent>` (async).
 
-See the full sample in [CreateResponseWithStructuredInput.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/CreateResponseWithStructuredInput.java).
+See the full sample in [CreateResponseWithStructuredInput.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/CreateResponseWithStructuredInput.java).
 
 ---
 
-### Voice agent samples (preview)
+### Voice agent samples
 
-The following [voice-agent samples](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice) cover agent management and persisted conversations.
+The following [voice-agent samples](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice) cover agent management and persisted conversations.
 
 | Scenario | Samples |
 |---|---|
-| Lifecycle | [VoiceAgentBasicSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/VoiceAgentBasicSample.java) and [VoiceAgentBasicAsyncSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/VoiceAgentBasicAsyncSample.java) create, retrieve, update, list, enable, disable, and delete voice agents. |
-| Versions and drafts | [VoiceAgentVersionsSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/VoiceAgentVersionsSample.java) creates and lists released and draft versions. |
-| Guided generation | [VoiceAgentGenerateSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/VoiceAgentGenerateSample.java) generates and creates a voice agent from high-level input. |
-| Audio and tools | [VoiceAgentWithToolsSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/VoiceAgentWithToolsSample.java) configures PCM audio, transcription, voice activity detection, function tools, and system tools. |
-| Persisted conversations | [VoiceAgentReadConversationSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/VoiceAgentReadConversationSample.java) reads responses and transcripts, while [VoiceAgentReadConversationAudioSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/VoiceAgentReadConversationAudioSample.java) downloads call and item audio. |
+| Lifecycle | [VoiceAgentBasicSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/VoiceAgentBasicSample.java) and [VoiceAgentBasicAsyncSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/VoiceAgentBasicAsyncSample.java) create, retrieve, update, list, enable, disable, and delete voice agents. |
+| Versions and drafts | [VoiceAgentVersionsSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/VoiceAgentVersionsSample.java) creates and lists released and draft versions. |
+| Guided generation | [VoiceAgentGenerateSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/VoiceAgentGenerateSample.java) generates and creates a voice agent from high-level input. |
+| Audio and tools | [VoiceAgentWithToolsSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/VoiceAgentWithToolsSample.java) configures PCM audio, transcription, voice activity detection, function tools, and system tools. |
+| Persisted conversations | [VoiceAgentReadConversationSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/VoiceAgentReadConversationSample.java) reads responses and transcripts, while [VoiceAgentReadConversationAudioSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/VoiceAgentReadConversationAudioSample.java) downloads call and item audio. |
 
 Authenticate with `DefaultAzureCredential`. Every voice sample requires `FOUNDRY_PROJECT_ENDPOINT`. Samples that create explicit definitions optionally use `FOUNDRY_VOICE_MODEL`, `FOUNDRY_VOICE_MODEL_TYPE`, and `FOUNDRY_VOICE_AGENT_NAME`. The persisted-conversation samples require `FOUNDRY_VOICE_AGENT_NAME` and `FOUNDRY_VOICE_CONVERSATION_ID`.
 
-### Realtime voice-agent WebSocket examples (preview)
+### Realtime voice-agent WebSocket examples
 
 Realtime WebSocket sessions provide bidirectional text and audio communication with a voice agent. Create the voice agent before opening a session; the lifecycle samples above demonstrate how to create one.
 
 #### Create a realtime WebSocket client
 
-Build a synchronous or asynchronous preview client from the same `AgentsClientBuilder`. Beta clients automatically send the required preview feature header.
+Build a synchronous or asynchronous realtime client from `AgentsClientBuilder`.
+Realtime handshakes omit the preview feature header by default; set `allowPreview(true)` before building
+the client to opt into voice-agent preview features.
 
 ```java
 AgentsClientBuilder builder = new AgentsClientBuilder()
     .credential(new DefaultAzureCredentialBuilder().build())
     .endpoint(endpoint);
 
-BetaVoiceAgentWebSocketClient realtimeClient
-    = builder.beta().buildBetaVoiceAgentWebSocketClient();
-BetaVoiceAgentWebSocketAsyncClient realtimeAsyncClient
-    = builder.beta().buildBetaVoiceAgentWebSocketAsyncClient();
+VoiceAgentsWebSocketClient realtimeClient
+    = builder.buildVoiceAgentsWebSocketClient();
+VoiceAgentsWebSocketAsyncClient realtimeAsyncClient
+    = builder.buildVoiceAgentsWebSocketAsyncClient();
 ```
 
 #### Send a synchronous text turn
@@ -1030,7 +1026,7 @@ VoiceAgentWebSocketConnectionOptions options
         .setReceiveBufferCapacity(512)
         .setMaxMessageSize(8 * 1024 * 1024)
         .setOverflowStrategy(VoiceAgentWebSocketOverflowStrategy.ERROR);
-try (BetaVoiceAgentWebSocketSessionClient session = realtimeClient.openWebSocketSession(agentName, options)) {
+try (VoiceAgentsWebSocketSessionClient session = realtimeClient.openWebSocketSession(agentName, options)) {
     session.sendEvent(BinaryData.fromString(
         "{\"type\":\"response.create\",\"event_id\":\"response-1\"}"));
     for (RealtimeServerEvent event : session.receiveEvents()) {
@@ -1051,7 +1047,7 @@ Use `close(code, reason)` or asynchronous `closeAsync(code, reason)` to send a c
 fit in 123 UTF-8 bytes and close codes must be valid WebSocket codes. The first asynchronous close request wins.
 
 ```java
-try (BetaVoiceAgentWebSocketSessionClient session = realtimeClient.openWebSocketSession(agentName)) {
+try (VoiceAgentsWebSocketSessionClient session = realtimeClient.openWebSocketSession(agentName)) {
     session.sendText("Hello! Tell me about the services you provide.");
     session.createResponse();
 
@@ -1087,9 +1083,9 @@ Mono.usingWhen(
         })
         .takeUntil(event -> event instanceof RealtimeResponseDoneEvent)
         .then(),
-    BetaVoiceAgentWebSocketSessionAsyncClient::closeAsync,
+    VoiceAgentsWebSocketSessionAsyncClient::closeAsync,
     (session, error) -> session.closeAsync(),
-    BetaVoiceAgentWebSocketSessionAsyncClient::closeAsync)
+    VoiceAgentsWebSocketSessionAsyncClient::closeAsync)
     .block();
 ```
 
@@ -1103,14 +1099,245 @@ When a `RealtimeResponseFunctionCallArgumentsDoneEvent` requests a client-side t
 
 | Scenario | Complete sample |
 |---|---|
-| Synchronous live text | [VoiceAgentLiveTextConversationSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/VoiceAgentLiveTextConversationSample.java) |
-| Asynchronous live text | [VoiceAgentLiveTextConversationAsyncSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/VoiceAgentLiveTextConversationAsyncSample.java) |
-| Asynchronous live audio | [VoiceAgentLiveAudioConversationAsyncSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/VoiceAgentLiveAudioConversationAsyncSample.java) |
-| Live function tool | [VoiceAgentLiveFunctionToolSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/VoiceAgentLiveFunctionToolSample.java) |
+| Synchronous live text | [VoiceAgentLiveTextConversationSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/VoiceAgentLiveTextConversationSample.java) |
+| Asynchronous live text | [VoiceAgentLiveTextConversationAsyncSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/VoiceAgentLiveTextConversationAsyncSample.java) |
+| Asynchronous live audio | [VoiceAgentLiveAudioConversationAsyncSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/VoiceAgentLiveAudioConversationAsyncSample.java) |
+| Live function tool | [VoiceAgentLiveFunctionToolSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/VoiceAgentLiveFunctionToolSample.java) |
 
 All realtime examples require `FOUNDRY_PROJECT_ENDPOINT` and optionally use `FOUNDRY_VOICE_AGENT_NAME`. The function-tool example also optionally uses `FOUNDRY_VOICE_MODEL` and `FOUNDRY_VOICE_MODEL_TYPE`. The asynchronous text and audio examples delete their generated agents by default; set `FOUNDRY_KEEP_VOICE_AGENT=true` to retain them.
 
+The synchronous live text sample deletes and replaces the selected agent if creation returns a conflict,
+then deletes the replacement on exit, including on failure. Use a dedicated sample-agent name: this also
+applies when `FOUNDRY_VOICE_AGENT_NAME` is set. This synchronous sample does not support retaining its agent.
+
 The live audio example requires a Java Sound-compatible microphone and speaker. It streams signed, little-endian, mono PCM16 audio at 24 kHz. These examples use WebSocket transport. Although the generated protocol models include WebRTC signaling events, the Java client does not provide a WebRTC peer connection or media implementation.
+
+### GPT Live WebSocket examples (preview)
+
+GPT Live is a different wire protocol from Realtime. Create a persisted agent with `VoiceAgentLiveDefinition`,
+then use `BetaVoiceAgentsLiveWebSocketClient` or `BetaVoiceAgentsLiveWebSocketAsyncClient` to connect.
+These clients use
+`wss://{project-endpoint}/agents/{agent_name}/endpoint/protocols/voice/live/sessions?api-version=v1`,
+send the `Foundry-Features: VoiceAgents=V1Preview` header, and **do not** negotiate the `realtime` WebSocket
+subprotocol. `allowPreview(true)` is not required.
+
+Foundry sends the initial native `session.start`. Wait for `session.started` before sending application events;
+do not send `session.start` yourself. Use `sendEvent(ClientEvent)` and `receiveEvents()` with the
+`com.openai.models.live` event models from the SDK's existing `openai-java` dependency. These are distinct
+from Realtime event models. The synchronous client also offers `receiveEvents(Duration)` for bounded waits.
+The `sendEvent(BinaryData)` and `receiveRawEvents()` APIs expose complete JSON objects when the original
+wire representation is needed, including unknown properties, nested `response.event` backend events, and the
+Foundry `conversation_id` on `session.started`. OpenAI typed models retain extra properties and unknown event
+variants, but typed serialization need not preserve the original JSON formatting.
+The existing samples named `VoiceAgentLive*ConversationSample` above demonstrate live connections using the
+**Realtime** protocol; use the separate GPT Live clients for `VoiceAgentLiveDefinition` agents.
+
+For example, configure and open a synchronous Live session for an agent using Responses delegation:
+
+```java readme-sample-com.azure.ai.agents.live_connection_options
+BetaVoiceAgentsLiveWebSocketClient liveClient = builder.beta().buildBetaVoiceAgentsLiveWebSocketClient();
+VoiceAgentLiveWebSocketConnectionOptions options = new VoiceAgentLiveWebSocketConnectionOptions()
+    .setReceiveBufferCapacity(512)
+    .setMaxMessageSize(8 * 1024 * 1024)
+    .setOverflowStrategy(VoiceAgentWebSocketOverflowStrategy.ERROR)
+    .setHandshakeTimeout(Duration.ofSeconds(30))
+    .setCloseTimeout(Duration.ofSeconds(10))
+    .setStoreEnabled(false);
+
+try (BetaVoiceAgentsLiveWebSocketSessionClient session = liveClient.openWebSocketSession(agentName, options)) {
+    for (ServerEvent event : session.receiveEvents()) {
+        if (event.isSessionStarted()) {
+            session.sendEvent(ClientEvent.ofResponseCreate(ResponseCreateEvent.builder().build()));
+        } else if (event.isSessionOutputTranscriptDelta()) {
+            System.out.print(event.asSessionOutputTranscriptDelta().delta());
+        } else if (event.isSessionClosed() || event.isErrorEvent()) {
+            break;
+        }
+    }
+}
+```
+
+Send only native Live commands valid for the configured delegation mode, whether typed or raw.
+In particular, `response.item.create` and `response.create` are Responses-delegation-only commands.
+Service `error` events arrive as events for the application to inspect. Typed receivers decode JSON and
+fail on malformed events unless a malformed-event callback was explicitly configured. Raw receivers do not
+parse JSON or construct typed models; transport size limits and UTF-8 validation still apply.
+
+Configure timeouts, bounded receive capacity, overflow handling, message size, persistence, agent version,
+and structured inputs with `VoiceAgentLiveWebSocketConnectionOptions`. Structured inputs are passed as
+unencoded JSON to `setStructuredInputs` and URL-encoded by the SDK into the `structured_inputs` query parameter.
+Do not log endpoint URLs containing sensitive template inputs. Realtime-only transport and agent-session-ID
+options are not exposed. Options are copied when opening a session.
+
+Both transports retain the realtime clients' credential, proxy, custom-header and builder validation behavior.
+Custom HTTP clients, pipelines, policies, and retry settings are unsupported and fail at build time rather
+than being ignored. Each session permits one receiver, shared by typed and raw receive APIs.
+The default receive buffer holds 256 events; overflow
+terminates the session unless a drop strategy explicitly permits event loss.
+
+#### Runnable GPT Live scenarios
+
+These examples create a uniquely named `VoiceAgentLiveDefinition` agent and connect using native GPT Live WebSockets.
+Most use **Responses delegation** and delete their generated agent on exit, including on failure. The connection
+lifecycle sample uses client delegation and deletes only the agent version it created. None modifies or deletes an
+existing agent. Set these environment variables before running a sample's `main` method:
+
+| Variable | Value |
+|---|---|
+| `FOUNDRY_PROJECT_ENDPOINT` | Your Foundry project endpoint. Authentication uses `DefaultAzureCredential`. |
+| `FOUNDRY_GPT_LIVE_MODEL` | Your GPT Live **deployment name**, not a model catalog ID. Required by the connection lifecycle sample; optional for other samples, which default to `gpt-live-1`. |
+| `FOUNDRY_GPT_LIVE_BACKEND_MODEL` | Optional. Your Responses backend **deployment name in the Live resource**. Defaults to `gpt-5.6-terra` when unset. |
+| `FOUNDRY_GPT_LIVE_STORE` | Optional, text and microphone/speaker examples. Set to `true` to persist conversation content and audio. Defaults to `false`. |
+| `FOUNDRY_KEEP_GPT_LIVE_AGENT` | Optional. Set to `true` to retain the sample-created agent; defaults to `false`. |
+| `FOUNDRY_VOICE_AGENT_NAME` | Optional prefix used by the connection lifecycle sample. Defaults to `sample-live-connection`. |
+
+Each sample reads, defaults, and validates these settings and configures its client builder directly in its own `main` method.
+Shared helpers receive explicit values rather than reading environment variables.
+Override the model variables if your deployment names differ from these defaults. Explicitly blank values are invalid.
+Generated agent names use `gpt-live-<scenario>-<UUID>` and fit the service's 63-character limit.
+
+| Scenario | Runnable sample |
+|---|---|
+| Synchronous multi-turn text | [GptLiveTextConversationSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/GptLiveTextConversationSample.java) |
+| Asynchronous multi-turn text | [GptLiveTextConversationAsyncSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/GptLiveTextConversationAsyncSample.java) |
+| Asynchronous connection lifecycle (no audio devices) | [GptLiveConnectionAsyncSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/GptLiveConnectionAsyncSample.java) |
+| Asynchronous microphone and speaker | [GptLiveAudioConversationAsyncSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/GptLiveAudioConversationAsyncSample.java) |
+| Responses backend function tool | [GptLiveFunctionToolSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/GptLiveFunctionToolSample.java) |
+| Advanced synchronous console input and speaker | [GptLiveInteractiveTextConversationSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/GptLiveInteractiveTextConversationSample.java) |
+| Advanced asynchronous console input and speaker | [GptLiveInteractiveTextConversationAsyncSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/GptLiveInteractiveTextConversationAsyncSample.java) |
+
+#### Read persisted GPT Live conversations and audio
+
+These REST examples read existing persisted data; they do not start a WebSocket session, create an agent,
+or delete resources.
+
+| Scenario | Runnable sample |
+|---|---|
+| Synchronous history and transcripts | [GptLiveReadConversationSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/GptLiveReadConversationSample.java) |
+| Asynchronous history and transcripts | [GptLiveReadConversationAsyncSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/GptLiveReadConversationAsyncSample.java) |
+| Synchronous stored audio download | [GptLiveReadConversationAudioSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/GptLiveReadConversationAudioSample.java) |
+| Asynchronous stored audio download | [GptLiveReadConversationAudioAsyncSample.java](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/voice/GptLiveReadConversationAudioAsyncSample.java) |
+
+Use an agent/session configured with `store=true` and retain the agent. With either text WebSocket example or the
+microphone/speaker example, set
+both `FOUNDRY_GPT_LIVE_STORE=true` and `FOUNDRY_KEEP_GPT_LIVE_AGENT=true`. The first sets the session persistence
+override; the second prevents sample cleanup from deleting the agent. Keeping the agent alone does **not** enable
+persistence. The text, advanced interactive, and microphone examples print the Foundry `conversation_id` from `session.started`
+when provided. If absent, startup output explicitly reports that no persisted conversation ID was provided;
+it never substitutes the native session ID.
+Use `session.started.conversation_id`, not the native session ID. Set:
+
+| Variable | Value |
+|---|---|
+| `FOUNDRY_PROJECT_ENDPOINT` | Required. Your Foundry project endpoint; authentication uses `DefaultAzureCredential`. No default. |
+| `FOUNDRY_GPT_LIVE_AGENT_NAME` | Required. The existing Live agent's name. No default. |
+| `FOUNDRY_GPT_LIVE_CONVERSATION_ID` | Required. The persisted Foundry conversation ID. No default. |
+| `FOUNDRY_GPT_LIVE_ITEM_ID` | Optional, audio examples only: a speech item's ID, not a delegation item. Defaults to unset (merged audio only); explicitly blank values are invalid. |
+
+Model deployment settings such as `FOUNDRY_GPT_LIVE_MODEL` and `FOUNDRY_GPT_LIVE_BACKEND_MODEL` are not needed:
+these samples read existing conversations rather than creating agents.
+Run a history sample's `main` method with no arguments. For audio, pass one existing local output directory;
+there is no default output directory.
+Audio examples create uniquely named WAV files without overwriting existing files. History examples explicitly
+advance the `after` cursor until an empty page because the generated list clients do not expose automatic
+continuation; missing or repeated cursors fail explicitly. They show conversation status and usage seconds,
+input/output transcripts, and delegation targets/response IDs. Stored speech segments are not native turns or
+proof that audio was played. Treat the printed transcripts and downloaded audio as sensitive data.
+
+Wait for session completion and recording finalization before downloading. HTTP errors propagate: `404` can mean
+missing audio; `409` can mean `recording_not_ready` or `recording_unavailable`. Inspect `Retry-After` before retrying.
+BYOS metadata is reported without calling Foundry content endpoints; use the metadata's blob URI and your own
+Azure Storage credentials to download BYOS audio. The current generated Live REST builder methods require explicit
+preview opt-in, so these samples add `Foundry-Features: VoiceAgents=V1Preview` using an HTTP pipeline header policy.
+
+#### Using the text WebSocket samples
+
+The primary synchronous and asynchronous text examples show agent and Responses-delegation configuration,
+connection, typed sends, event handling, and graceful closure directly. Each command-line argument is a prompt;
+with no arguments, they send `What can you help me with?` and exit after the reply.
+They wait for `session.started`, send `response.item.create` followed by `response.create`, and wait for the
+nested `response.completed` before advancing to the next turn. They print backend text without console input,
+speaker playback, microphone capture, or silent audio uploads.
+
+#### Using the advanced interactive WebSocket samples
+
+The separate synchronous and asynchronous interactive examples read terminal input. After each reply,
+they prompt for another message; submit a blank line or enter `exit` or `quit` to close the session.
+Each example owns its conversation flow; shared helpers provide audio-device plumbing and transcript rendering.
+Both request a spoken opening greeting with
+`session.commentary.append`, play the voice frontend's 24-kHz PCM16 audio, and print its spoken transcript
+rather than backend working notes. The synchronous example uses synchronous session send/receive calls,
+with workers for receiving events and reading console input.
+Before displaying the first `You:` prompt, each waits for both greeting audio and transcript, one second without
+speech activity, and completion of queued speaker playback. Continuous silent audio does not restart the timer.
+For this heuristic, PCM16 frames with peak sample magnitude at most 256 (about -42 dBFS) are treated as silence.
+The quiet period is a heuristic because native GPT Live
+has no speech-completed event: a long pause within a greeting can be mistaken for its end. Missing greeting output
+fails with a timeout instead of silently starting input before the introduction.
+It sends 20 milliseconds of silent PCM (960 bytes) every 20 milliseconds after startup, providing continuous
+audio input without opening a microphone. **This consumes voice-session usage while you type or wait.**
+The silent stream is stopped and pending audio sends complete before the sample requests `session.close`.
+If sending falls behind, silent-frame production waits for demand instead of accumulating timer ticks or
+failing with an interval overflow; it resumes without a burst of stale frames.
+Speaker playback runs off the WebSocket receive thread. If a speaker is unavailable, the sample reports that
+and still prints transcripts, like the Realtime text example.
+Agent creation and deletion occur on the main thread.
+
+Console input is line-oriented: press Enter to submit a message. The sample flushes the `You:` prompt immediately;
+character echo while typing is controlled by Windows CMD/PowerShell and its terminal host, not by the service.
+Interactive input uses a normal blocking line read on a worker rather than polling `Reader.ready()`,
+matching the Realtime sample's console interaction. The WebSocket receiver continues independently.
+When a native Java console is attached, input comes from `System.console().reader()` rather than `System.in`.
+Without a console, the sample reads `System.in`, supporting redirected input. End-of-input (EOF), a blank line,
+or an explicit exit command closes the session.
+The terminal echoes characters on the `You:` line as you type. Assistant transcript fragments are assembled into
+utterances independently of typed turns and backend completion. A one-second speech-inactivity period marks an
+utterance boundary using the same heuristic as the greeting; a long pause within speech can still divide the text.
+Completed utterances are printed with one `Assistant:` label each. While input is active, completed text waits
+until Enter so it cannot overwrite typed characters; incomplete text stays buffered across input submissions.
+Audio playback and input remain available. This dependency-free approach can delay captions until the next Enter.
+Session closure flushes any remaining transcript. Completed and incomplete text share a 65,536-character buffer
+limit; exceeding it fails the sample explicitly instead of dropping transcript text or growing memory indefinitely.
+The native console's echoed Enter already starts a new line; the sample avoids adding another blank line.
+After a remote disconnect, a console read that the operating system cannot interrupt may require Enter to release
+the worker. The sample does not close shared standard input to force a pending read to return.
+Backend `response.completed` permits the next typed prompt but does not mean that the frontend finished speaking:
+native GPT Live has no output-audio-done event. The sample keeps receiving audio and transcripts while you type.
+See [GPT-Live audio and transcript events](https://learn.microsoft.com/azure/foundry/openai/gpt-live-reference#sessionoutput_audiodelta).
+Server `remote_hangup` closes the conversation normally. Other unexpected closures remain failures and include
+the complete `session.closed` event, including its reason, rather than hiding the service diagnostic.
+
+#### Using the microphone and tool samples
+
+The audio example requires a Java Sound-compatible microphone and speaker supporting raw, mono PCM16LE at
+24 kHz. After `session.started`, it sends a greeting request followed by `response.create` so the agent can
+open the conversation. It labels spoken transcript fragments as `You:` or `Assistant:` and omits backend
+text deltas, which are not necessarily the words spoken by the voice frontend.
+Press Enter to end the call; asking the model to end it does not itself close the session.
+Service moderation (`content_filter`) ends the call with an explicit error and the original service event;
+it is not treated as a successful completion. Audio devices and the WebSocket are released on failure.
+The standalone audio and text samples' `main` methods also shut down shared Reactor schedulers on exit
+to avoid lingering timer threads under `exec:java`. Do not invoke those `main` methods inside an application that
+shares Reactor schedulers.
+
+The audio sample sends `session.input_audio.append`, plays base64-decoded `session.output_audio.delta` chunks, and
+prints native input/output transcript deltas. It does not send Realtime audio-buffer commit or response-cancel
+commands. Capture and playback use dedicated threads; the playback backlog is bounded to 60 seconds.
+Device errors and overflow end the call explicitly. Press Enter to stop capture and finalize the session.
+This example must be the only reader of standard input.
+
+The function-tool example configures `get_weather` on the **Responses backend**, consumes completed
+`function_call` items from nested `response.output_item.done` events, then sends `function_call_output` items
+with the original `call_id` before requesting continuation. Its weather results are **simulated demonstration
+data**, not live weather. It does not assume lifecycle snapshots contain output items, and does not add
+Foundry-managed-agent tool-result routing.
+
+All WebSocket scenarios request `session.close` and wait for `session.closed` before normal transport cleanup.
+The asynchronous text examples apply a 60-second timeout to startup, each response, and finalization;
+the advanced interactive example waits for terminal input without a timeout.
+The synchronous text and tool examples use a 60-second event-wait timeout;
+the microphone example uses a 60-second startup/finalization timeout.
+An unexpected disconnect or native service error fails the sample rather than being reported as success.
 
 ### Service API versions
 
@@ -1159,10 +1386,10 @@ AgentVersionDetails agent = agentsClient.createAgentVersion("my-agent", definiti
 System.out.printf("Created agent %s (traced).%n", agent.getName());
 ```
 
-See [`TracingSample.java`](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/TracingSample.java) for a runnable example.
+See [`TracingSample.java`](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/TracingSample.java) for a runnable example.
 To inspect exported traces in the Foundry tracing UI, connect the Foundry project to an Application Insights resource
 and configure an Azure Monitor OpenTelemetry exporter. See
-[`TracingAzureMonitorSample.java`](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.9.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/TracingAzureMonitorSample.java) for the exporter
+[`TracingAzureMonitorSample.java`](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-agents_2.10.0/sdk/ai/azure-ai-agents/src/samples/java/com/azure/ai/agents/TracingAzureMonitorSample.java) for the exporter
 setup.
 
 ## Troubleshooting
@@ -1196,7 +1423,7 @@ reduce the dependency size, refer to the [performance tuning][performance_tuning
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-agents_2.9.0/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-agents_2.10.0/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -1209,11 +1436,11 @@ For details on contributing to this repository, see the [contributing guide](htt
 [docs]: https://aka.ms/azsdk/azure-ai-projects-v2/api-reference-v1
 [jdk]: https://learn.microsoft.com/azure/developer/java/fundamentals/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-agents_2.9.0/sdk/identity/azure-identity
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-agents_2.10.0/sdk/identity/azure-identity
 [openai_java_sdk]: https://github.com/openai/openai-java/
 [openai_responses_api_docs]: https://platform.openai.com/docs/api-reference/responses
 [openai_conversations_api_docs]: https://platform.openai.com/docs/api-reference/conversations
-[logLevels]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-agents_2.9.0/sdk/core/azure-core/src/main/java/com/azure/core/util/logging/LogLevel.java
-[performance_tuning]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-agents_2.9.0/docs/performance-tuning.md
+[logLevels]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-agents_2.10.0/sdk/core/azure-core/src/main/java/com/azure/core/util/logging/LogLevel.java
+[performance_tuning]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-agents_2.10.0/docs/performance-tuning.md
 [agent_optimizer_overview]: https://learn.microsoft.com/azure/foundry/agents/concepts/agent-optimizer-overview
 

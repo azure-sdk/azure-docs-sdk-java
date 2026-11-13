@@ -1,12 +1,12 @@
 ---
 title: Azure Projects client library for Java
 keywords: Azure, java, SDK, API, azure-ai-projects, ai
-ms.date: 11/02/2026
+ms.date: 11/13/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: ai
 ---
-# Azure Projects client library for Java - version 2.9.0 
+# Azure Projects client library for Java - version 2.10.0 
 
 
 The AI Projects client library is part of the Azure AI Foundry SDK and provides easy access to resources in your Azure AI Foundry Project. Use it to:
@@ -19,7 +19,7 @@ The AI Projects client library is part of the Azure AI Foundry SDK and provides 
 * **Manage evaluator versions and generate rubrics** using `EvaluatorsClient`.
 * **Register and manage model weights** as Foundry `ModelVersion` resources using the preview `BetaModelsClient`.
 * **Create and dispatch routines** using the preview `BetaRoutinesClient`.
-* **Monitor deployed agents for issues** and review the resulting insights using the preview `BetaAgentInsightMonitorsClient`.
+* **Monitor deployed agents for issues** and review the resulting insights using `AgentInsightMonitorsClient`.
 * **Create and manage skills** using the preview `BetaSkillsClient`.
 * **Create and enumerate Search Indexes** using the `Indexes` operations.
 
@@ -54,7 +54,7 @@ Various documentation is available to help you get started
 <dependency>
     <groupId>com.azure</groupId>
     <artifactId>azure-ai-projects</artifactId>
-    <version>2.9.0</version>
+    <version>2.10.0</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -72,12 +72,11 @@ AIProjectClientBuilder builder = new AIProjectClientBuilder()
     .allowPreview(true); // Only needed for preview APIs on non-Beta clients that support them.
 
 ConnectionsClient connectionsClient = builder.buildConnectionsClient();
-// Beta* clients automatically opt in to their preview service area.
-BetaAgentInsightMonitorsClient agentInsightMonitorsClient
-    = builder.beta().buildBetaAgentInsightMonitorsClient();
+AgentInsightMonitorsClient agentInsightMonitorsClient = builder.buildAgentInsightMonitorsClient();
 DatasetsClient datasetsClient = builder.buildDatasetsClient();
 DeploymentsClient deploymentsClient = builder.buildDeploymentsClient();
 EvaluationRulesClient evaluationRulesClient = builder.buildEvaluationRulesClient();
+// Beta* clients automatically opt in to their preview service area.
 BetaEvaluationTaxonomiesClient evaluationTaxonomiesClient
     = builder.beta().buildBetaEvaluationTaxonomiesClient();
 EvaluatorsClient evaluatorsClient = builder.buildEvaluatorsClient();
@@ -165,7 +164,6 @@ Build clients whose names start with `Beta` from `AIProjectClientBuilder.beta()`
 
 | Beta sub-client | Automatically populated `Foundry-Features` value |
 |---|---|
-| `BetaAgentInsightMonitorsClient` | `AgentInsights=V1Preview` |
 | `BetaEvaluationTaxonomiesClient` | `Evaluations=V1Preview` |
 | `BetaEvaluatorsClient` | `Evaluations=V1Preview` |
 | `BetaInsightsClient` | `Insights=V1Preview` |
@@ -183,16 +181,17 @@ The examples below show common operations for core AI Projects sub-clients. For 
 
 | Folder | Scenarios |
 | --- | --- |
-| [agents](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-projects_2.9.0/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects/agents) | Create and delete agents using the Agents client library. |
-| [connections](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-projects_2.9.0/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects/connections) | List connections and retrieve connection details. |
-| [datageneration](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-projects_2.9.0/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects/datageneration) | Create data generation jobs and evaluate generated datasets. |
-| [datasets](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-projects_2.9.0/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects/datasets) | Upload files and manage datasets and versions. |
-| [deployments](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-projects_2.9.0/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects/deployments) | List and retrieve model deployments. |
-| [evaluations](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-projects_2.9.0/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects/evaluations) | Evaluate inline or uploaded JSONL data using built-in evaluators, native graders, and custom rubrics; manage and generate evaluator versions. |
-| [indexes](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-projects_2.9.0/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects/indexes) | Create, list, retrieve, and delete indexes. |
-| [models](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-projects_2.9.0/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects/models) | Register model weights and manage model versions. |
-| [routines](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-projects_2.9.0/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects/routines) | Manage routines, dispatch manually, and use schedule and timer triggers. |
-| [skills](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-projects_2.9.0/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects/skills) | Manage skills and upload or download skill packages. |
+| [agents](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-projects_2.10.0/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects/agents) | Create and delete agents using the Agents client library. |
+| [agentinsights](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-projects_2.10.0/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects/agentinsights) | Analyze existing agent traces on demand or configure recurring Agent Insights runs. |
+| [connections](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-projects_2.10.0/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects/connections) | List connections and retrieve connection details. |
+| [datageneration](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-projects_2.10.0/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects/datageneration) | Create data generation jobs and evaluate generated datasets. |
+| [datasets](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-projects_2.10.0/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects/datasets) | Upload files and manage datasets and versions. |
+| [deployments](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-projects_2.10.0/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects/deployments) | List and retrieve model deployments. |
+| [evaluations](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-projects_2.10.0/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects/evaluations) | Evaluate inline or uploaded JSONL data using built-in evaluators, native graders, and custom rubrics; schedule agent-trace evaluations; manage and generate evaluator versions. |
+| [indexes](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-projects_2.10.0/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects/indexes) | Create, list, retrieve, and delete indexes. |
+| [models](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-projects_2.10.0/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects/models) | Register model weights and manage model versions. |
+| [routines](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-projects_2.10.0/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects/routines) | Manage routines, dispatch manually, and use schedule and timer triggers. |
+| [skills](https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-projects_2.10.0/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects/skills) | Manage skills and upload or download skill packages. |
 
 ### Connections operations
 
@@ -892,7 +891,7 @@ reduce the dependency size, refer to the [performance tuning][performance_tuning
 
 ## Contributing
 
-For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-projects_2.9.0/CONTRIBUTING.md).
+For details on contributing to this repository, see the [contributing guide](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-projects_2.10.0/CONTRIBUTING.md).
 
 1. Fork it
 1. Create your feature branch (`git checkout -b my-new-feature`)
@@ -905,10 +904,10 @@ For details on contributing to this repository, see the [contributing guide](htt
 [docs]: https://aka.ms/azsdk/azure-ai-projects-v2/api-reference-v1
 [jdk]: https://learn.microsoft.com/azure/developer/java/fundamentals/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-projects_2.9.0/sdk/identity/azure-identity
-[package_samples]: https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-projects_2.9.0/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-projects_2.10.0/sdk/identity/azure-identity
+[package_samples]: https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-ai-projects_2.10.0/sdk/ai/azure-ai-projects/src/samples/java/com/azure/ai/projects
 [openai_java_sdk]: https://github.com/openai/openai-java
 [openai_api_docs]: https://platform.openai.com/docs/overview
-[logLevels]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-projects_2.9.0/sdk/core/azure-core/src/main/java/com/azure/core/util/logging/LogLevel.java
-[performance_tuning]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-projects_2.9.0/docs/performance-tuning.md
+[logLevels]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-projects_2.10.0/sdk/core/azure-core/src/main/java/com/azure/core/util/logging/LogLevel.java
+[performance_tuning]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-ai-projects_2.10.0/docs/performance-tuning.md
 
