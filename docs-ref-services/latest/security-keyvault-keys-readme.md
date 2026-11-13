@@ -1,12 +1,12 @@
 ---
 title: Azure Key Vault Key client library for Java
 keywords: Azure, java, SDK, API, azure-security-keyvault-keys, keyvault
-ms.date: 05/28/2026
+ms.date: 11/13/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: keyvault
 ---
-# Azure Key Vault Key client library for Java - version 4.11.0 
+# Azure Key Vault Key client library for Java - version 4.13.0 
 
 Azure Key Vault is a cloud service that provides secure storage of keys for encrypting your data. Multiple keys, and multiple versions of the same key, can be kept in the Azure Key Vault. Cryptographic keys in Azure Key Vault are represented as [JSON Web Key [JWK]][jwk_specification] objects.
 
@@ -19,7 +19,7 @@ The Azure Key Vault keys library client supports RSA keys and Elliptic Curve (EC
 ## Getting started
 ### Include the package
 #### Include the BOM file
-Please include the `azure-sdk-bom` to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number. To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-security-keyvault-keys_4.11.0/sdk/boms/azure-sdk-bom/README.md).
+Please include the `azure-sdk-bom` to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number. To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-security-keyvault-keys_4.13.0/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -116,6 +116,7 @@ The cryptography client performs the cryptographic operations locally or calls t
 ### Sync API
 The following sections provide several code snippets covering some of the most common Azure Key Vault Key service tasks, including:
 - [Create a key](#create-a-key)
+- [Create an external key](#create-an-external-key)
 - [Retrieve a key](#retrieve-a-key)
 - [Update an existing key](#update-an-existing-key)
 - [Delete a key](#delete-a-key)
@@ -137,6 +138,18 @@ KeyVaultKey ecKey = keyClient.createEcKey(new CreateEcKeyOptions("CloudEcKey")
     .setCurveName(KeyCurveName.P_256)
     .setExpiresOn(OffsetDateTime.now().plusYears(1)));
 System.out.printf("Key created with name \"%s\" and id %s%n", ecKey.getName(), ecKey.getId());
+```
+
+#### Create an external key
+Register an external key with a Managed HSM. An external key references key material that is owned by an external Hardware Security Module (HSM); the Managed HSM stores only a reference to that material.
+- `createExternalKey` registers the external key in the Managed HSM. This is only supported on a Managed HSM configured to use External Key Management (EKM).
+
+```java readme-sample-createExternalKey
+// External keys are only supported on a Managed HSM configured to use External Key Management (EKM).
+KeyVaultKey externalKey = keyClient.createExternalKey(
+    new CreateExternalKeyOptions("CloudExternalKey", new ExternalKey("external-key-reference-id"))
+        .setExpiresOn(OffsetDateTime.now().plusYears(1)));
+System.out.printf("Key created with name \"%s\" and id %s%n", externalKey.getName(), externalKey.getId());
 ```
 
 #### Retrieve a key
@@ -322,7 +335,7 @@ cryptoAsyncClient.encrypt(EncryptionAlgorithm.RSA_OAEP, plaintext)
 ```
 
 ## Troubleshooting
-See our [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-security-keyvault-keys_4.11.0/sdk/keyvault/azure-security-keyvault-keys/TROUBLESHOOTING.md) for details on how to diagnose various failure scenarios.
+See our [troubleshooting guide](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-security-keyvault-keys_4.13.0/sdk/keyvault/azure-security-keyvault-keys/TROUBLESHOOTING.md) for details on how to diagnose various failure scenarios.
 
 ### General
 Azure Key Vault Key clients raise exceptions. For example, if you try to retrieve a key after it is deleted a `404` error is returned, indicating the resource was not found. In the following snippet, the error is handled gracefully by catching the exception and displaying additional information about the error.
@@ -358,7 +371,7 @@ When you submit a pull request, a CLA-bot will automatically determine whether y
 This project has adopted the [Microsoft Open Source Code of Conduct][microsoft_code_of_conduct]. For more information see the Code of Conduct FAQ or contact <opencode@microsoft.com> with any additional questions or comments.
 
 <!-- LINKS -->
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-security-keyvault-keys_4.11.0/sdk/keyvault/azure-security-keyvault-keys/src
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-security-keyvault-keys_4.13.0/sdk/keyvault/azure-security-keyvault-keys/src
 [api_documentation]: https://azure.github.io/azure-sdk-for-java
 [azkeyvault_docs]: https://learn.microsoft.com/azure/key-vault/
 [azure_identity]: https://learn.microsoft.com/java/api/overview/azure/identity-readme?view=azure-java-stable
@@ -371,9 +384,9 @@ This project has adopted the [Microsoft Open Source Code of Conduct][microsoft_c
 [default_azure_credential]: https://learn.microsoft.com/java/api/overview/azure/identity-readme?view=azure-java-stable#defaultazurecredential
 [managed_identity]: https://learn.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview
 [azkeyvault_rest]: https://learn.microsoft.com/rest/api/keyvault/
-[keys_samples]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-security-keyvault-keys_4.11.0/sdk/keyvault/azure-security-keyvault-keys/src/samples/java/com/azure/security/keyvault/keys
-[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-security-keyvault-keys_4.11.0/sdk/keyvault/azure-security-keyvault-keys/src/samples/README.md
-[performance_tuning]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-security-keyvault-keys_4.11.0/docs/performance-tuning.md
+[keys_samples]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-security-keyvault-keys_4.13.0/sdk/keyvault/azure-security-keyvault-keys/src/samples/java/com/azure/security/keyvault/keys
+[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-security-keyvault-keys_4.13.0/sdk/keyvault/azure-security-keyvault-keys/src/samples/README.md
+[performance_tuning]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-security-keyvault-keys_4.13.0/docs/performance-tuning.md
 [jdk_link]: https://learn.microsoft.com/java/azure/jdk/?view=azure-java-stable
 [jwk_specification]: https://tools.ietf.org/html/rfc7517
 [http_clients_wiki]: https://learn.microsoft.com/azure/developer/java/sdk/http-client-pipeline#http-clients
