@@ -1,34 +1,39 @@
 {
   "Name": "azure-resourcemanager-eventhubs",
-  "Version": "2.48.0-beta.1",
+  "Version": "2.55.0-beta.1",
   "DevVersion": null,
-  "DirectoryPath": "sdk/resourcemanager/azure-resourcemanager-eventhubs",
-  "ServiceDirectory": "resourcemanager",
-  "ReadMePath": "sdk/resourcemanager/azure-resourcemanager-eventhubs/README.md",
-  "ChangeLogPath": "sdk/resourcemanager/azure-resourcemanager-eventhubs/CHANGELOG.md",
+  "DirectoryPath": "sdk/eventhubs/azure-resourcemanager-eventhubs",
+  "ServiceDirectory": "eventhubs",
+  "ReadMePath": "sdk/eventhubs/azure-resourcemanager-eventhubs/README.md",
+  "ChangeLogPath": "sdk/eventhubs/azure-resourcemanager-eventhubs/CHANGELOG.md",
   "Group": "com.azure.resourcemanager",
   "SdkType": "mgmt",
   "IsNewSdk": true,
   "ArtifactName": "azure-resourcemanager-eventhubs",
-  "ReleaseStatus": "2025-02-14",
+  "ReleaseStatus": "2026-11-06",
   "IncludedForValidation": false,
   "AdditionalValidationPackages": [
-    "com.azure.resourcemanager:azure-resourcemanager-samples",
-    "com.azure.resourcemanager:azure-resourcemanager-perf",
-    "com.azure.resourcemanager:azure-resourcemanager-test",
+    "com.azure:azure-messaging-eventhubs-track2-perf",
     "com.azure:perf-test-core"
   ],
   "ArtifactDetails": {
+    "groupId": "com.azure.resourcemanager",
     "safeName": "azureresourcemanagereventhubs",
     "name": "azure-resourcemanager-eventhubs",
-    "releaseInBatch": "${{ parameters.release_azureresourcemanagereventhubs }}",
-    "groupId": "com.azure.resourcemanager"
+    "triggeringPaths": [
+      "/sdk/eventhubs/ci.yml"
+    ],
+    "releaseInBatch": "${{ parameters.release_azureresourcemanagereventhubs }}"
   },
-  "CIMatrixConfigs": [],
+  "CIParameters": {
+    "CIMatrixConfigs": []
+  },
+  "SpecProjectPath": "specification/eventhub/resource-manager/Microsoft.EventHub/Eventhub",
   "Namespaces": [
     "com.azure.resourcemanager.eventhubs",
     "com.azure.resourcemanager.eventhubs.fluent",
     "com.azure.resourcemanager.eventhubs.fluent.models",
     "com.azure.resourcemanager.eventhubs.models"
-  ]
+  ],
+  "CIMatrixConfigs": []
 }
