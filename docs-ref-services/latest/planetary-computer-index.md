@@ -1,3 +1,4 @@
 | Reference | Package | Source |
 |---|---|---|
+|[Microsoft Planetary Computer Pro](analytics-planetarycomputer-readme.md)|[azure-analytics-planetarycomputer](https://pkgs.dev.azure.com/azure-sdk/public/_packaging/azure-sdk-for-java/maven/v1/com/azure/azure-analytics-planetarycomputer)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/planetarycomputer/azure-analytics-planetarycomputer)|
 |[Resource Management - Planetary Computer](resourcemanager-planetarycomputer-readme.md)|[azure-resourcemanager-planetarycomputer](https://pkgs.dev.azure.com/azure-sdk/public/_packaging/azure-sdk-for-java/maven/v1/com/azure/resourcemanager/azure-resourcemanager-planetarycomputer)|[GitHub](https://github.com/Azure/azure-sdk-for-java/blob/main/sdk/planetarycomputer/azure-resourcemanager-planetarycomputer)|
