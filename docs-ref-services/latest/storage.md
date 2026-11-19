@@ -4,7 +4,7 @@ description: Reference for Azure Storage SDK for Java
 ms.date: 11/18/2026
 ms.topic: reference
 ms.devlang: java
-ms.service: storage
+ms.service: azure-blob-storage
 ---
 # Azure Storage libraries for Java
 
@@ -82,7 +82,6 @@ For more examples, review the [Client Library README](https://github.com/Azure/a
 | Library version | Supported services | Maven | Reference / Javadoc | Source, Readme, Examples |
 |----------------------|------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Version 12 | Blob, Queue, File, and Data Lake | [Blob](https://search.maven.org/artifact/com.azure/azure-storage-blob/)<br />[Queue](https://search.maven.org/artifact/com.azure/azure-storage-queue/)<br />[File](https://search.maven.org/artifact/com.azure/azure-storage-file-share/)<br />[Data Lake](https://search.maven.org/artifact/com.azure/azure-storage-file-datalake/) | [Blob](https://azuresdkdocs.z19.web.core.windows.net/java/azure-storage-blob/latest/index.html)<br/>[Queue](https://azuresdkdocs.z19.web.core.windows.net/java/azure-storage-queue/latest/index.html)<br />[File](https://azuresdkdocs.z19.web.core.windows.net/java/azure-storage-file-share/latest/index.html)<br />[Data Lake](https://azuresdkdocs.z19.web.core.windows.net/java/azure-storage-file-datalake/latest/index.html)  | [Blob](https://github.com/Azure/azure-sdk-for-java/tree/azure-storage-blob_12.4.0/sdk/storage/azure-storage-blob) ([Quickstart](/azure/storage/blobs/storage-quickstart-blobs-java))<br />[Queue](https://github.com/Azure/azure-sdk-for-java/tree/azure-storage-blob_12.3.0/sdk/storage/azure-storage-queue)<br />[File](https://github.com/Azure/azure-sdk-for-java/tree/azure-storage-file-share_12.2.0/sdk/storage/azure-storage-queue)<br />[Data Lake](https://github.com/Azure/azure-sdk-for-java/tree/azure-storage-blob_12.0.0/sdk/storage/azure-storage-file-datalake) |
-| Version 8 | Blob, Queue, File, and Table | [All services](https://mvnrepository.com/artifact/com.microsoft.azure/azure-storage) | [Version 8 reference](/java/api/overview/azure/storage/client) | [All services](https://github.com/azure/azure-storage-java/tree/legacy-master) ([Quickstart](/azure/storage/blobs/storage-quickstart-blobs-java-legacy)) |
 
 Refer to the [Azure SDK Releases page](https://azure.github.io/azure-sdk/) for details on how to install and use the preview packages.
 
