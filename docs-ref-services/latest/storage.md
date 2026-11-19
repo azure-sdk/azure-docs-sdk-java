@@ -1,10 +1,10 @@
 ---
 title: Azure Storage SDK for Java
 description: Reference for Azure Storage SDK for Java
-ms.date: 11/18/2026
+ms.date: 11/19/2026
 ms.topic: reference
 ms.devlang: java
-ms.service: azure-blob-storage
+ms.service: storage
 ---
 # Azure Storage libraries for Java
 
