@@ -22,10 +22,10 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
 syntax: "public final class **TelephonyTransferTarget**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.TelephonyTransferTarget?alt=com.azure.ai.agents.models.TelephonyTransferTarget&text=TelephonyTransferTarget\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
-- uid: "com.azure.ai.agents.models.TelephonyTransferTarget.TelephonyTransferTarget(java.lang.String,java.lang.String,com.azure.ai.agents.models.TelephonyTransferDestination)"
-  fullName: "com.azure.ai.agents.models.TelephonyTransferTarget.TelephonyTransferTarget(String name, String description, TelephonyTransferDestination destination)"
-  name: "TelephonyTransferTarget(String name, String description, TelephonyTransferDestination destination)"
-  nameWithType: "TelephonyTransferTarget.TelephonyTransferTarget(String name, String description, TelephonyTransferDestination destination)"
+- uid: "com.azure.ai.agents.models.TelephonyTransferTarget.TelephonyTransferTarget(java.lang.String,java.lang.String,com.azure.ai.agents.models.TelephonyAddress)"
+  fullName: "com.azure.ai.agents.models.TelephonyTransferTarget.TelephonyTransferTarget(String name, String description, TelephonyAddress destination)"
+  name: "TelephonyTransferTarget(String name, String description, TelephonyAddress destination)"
+  nameWithType: "TelephonyTransferTarget.TelephonyTransferTarget(String name, String description, TelephonyAddress destination)"
   summary: "Creates an instance of Telephony<wbr>Transfer<wbr>Target class."
   parameters:
   - description: "the name value to set."
@@ -36,8 +36,8 @@ constructors:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "the destination value to set."
     name: "destination"
-    type: "<xref href=\"com.azure.ai.agents.models.TelephonyTransferDestination?alt=com.azure.ai.agents.models.TelephonyTransferDestination&text=TelephonyTransferDestination\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public TelephonyTransferTarget(String name, String description, TelephonyTransferDestination destination)"
+    type: "<xref href=\"com.azure.ai.agents.models.TelephonyAddress?alt=com.azure.ai.agents.models.TelephonyAddress&text=TelephonyAddress\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public TelephonyTransferTarget(String name, String description, TelephonyAddress destination)"
   desc: "Creates an instance of TelephonyTransferTarget class."
 methods:
 - uid: "com.azure.ai.agents.models.TelephonyTransferTarget.fromJson(com.azure.json.JsonReader)"
@@ -73,12 +73,12 @@ methods:
   fullName: "com.azure.ai.agents.models.TelephonyTransferTarget.getDestination()"
   name: "getDestination()"
   nameWithType: "TelephonyTransferTarget.getDestination()"
-  summary: "Get the destination property: The provider-specific transfer destination."
-  syntax: "public TelephonyTransferDestination getDestination()"
-  desc: "Get the destination property: The provider-specific transfer destination."
+  summary: "Get the destination property: The shared typed address to transfer to."
+  syntax: "public TelephonyAddress getDestination()"
+  desc: "Get the destination property: The shared typed address to transfer to. The selected provider validates supported destination types."
   returns:
     description: "the destination value."
-    type: "<xref href=\"com.azure.ai.agents.models.TelephonyTransferDestination?alt=com.azure.ai.agents.models.TelephonyTransferDestination&text=TelephonyTransferDestination\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.ai.agents.models.TelephonyAddress?alt=com.azure.ai.agents.models.TelephonyAddress&text=TelephonyAddress\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.agents.models.TelephonyTransferTarget.getName()"
   fullName: "com.azure.ai.agents.models.TelephonyTransferTarget.getName()"
   name: "getName()"
@@ -107,4 +107,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.TelephonyTransferTarget?alt=com.azure.ai.agents.models.TelephonyTransferTarget&text=TelephonyTransferTarget\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.ai.agents.models"
-artifact: com.azure:azure-ai-agents:2.9.0
+artifact: com.azure:azure-ai-agents:2.10.0

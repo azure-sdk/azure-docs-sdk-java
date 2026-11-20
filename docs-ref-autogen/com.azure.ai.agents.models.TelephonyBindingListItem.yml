@@ -22,10 +22,10 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
 syntax: "public class **TelephonyBindingListItem**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.TelephonyBindingListItem?alt=com.azure.ai.agents.models.TelephonyBindingListItem&text=TelephonyBindingListItem\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
-- uid: "com.azure.ai.agents.models.TelephonyBindingListItem.TelephonyBindingListItem(java.lang.String,java.lang.String,com.azure.ai.agents.models.TelephonyBindingStatus,java.lang.String)"
-  fullName: "com.azure.ai.agents.models.TelephonyBindingListItem.TelephonyBindingListItem(String id, String connectionName, TelephonyBindingStatus status, String incomingCallUrl)"
-  name: "TelephonyBindingListItem(String id, String connectionName, TelephonyBindingStatus status, String incomingCallUrl)"
-  nameWithType: "TelephonyBindingListItem.TelephonyBindingListItem(String id, String connectionName, TelephonyBindingStatus status, String incomingCallUrl)"
+- uid: "com.azure.ai.agents.models.TelephonyBindingListItem.TelephonyBindingListItem(java.lang.String,java.lang.String,java.lang.String)"
+  fullName: "com.azure.ai.agents.models.TelephonyBindingListItem.TelephonyBindingListItem(String id, String connectionName, String incomingCallUrl)"
+  name: "TelephonyBindingListItem(String id, String connectionName, String incomingCallUrl)"
+  nameWithType: "TelephonyBindingListItem.TelephonyBindingListItem(String id, String connectionName, String incomingCallUrl)"
   summary: "Creates an instance of Telephony<wbr>Binding<wbr>List<wbr>Item class."
   modifiers:
   - "protected"
@@ -36,13 +36,10 @@ constructors:
   - description: "the connectionName value to set."
     name: "connectionName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "the status value to set."
-    name: "status"
-    type: "<xref href=\"com.azure.ai.agents.models.TelephonyBindingStatus?alt=com.azure.ai.agents.models.TelephonyBindingStatus&text=TelephonyBindingStatus\" data-throw-if-not-resolved=\"False\" />"
   - description: "the incomingCallUrl value to set."
     name: "incomingCallUrl"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "protected TelephonyBindingListItem(String id, String connectionName, TelephonyBindingStatus status, String incomingCallUrl)"
+  syntax: "protected TelephonyBindingListItem(String id, String connectionName, String incomingCallUrl)"
   desc: "Creates an instance of TelephonyBindingListItem class."
 methods:
 - uid: "com.azure.ai.agents.models.TelephonyBindingListItem.fromJson(com.azure.json.JsonReader)"
@@ -98,9 +95,9 @@ methods:
   fullName: "com.azure.ai.agents.models.TelephonyBindingListItem.getIncomingCallUrl()"
   name: "getIncomingCallUrl()"
   nameWithType: "TelephonyBindingListItem.getIncomingCallUrl()"
-  summary: "Get the incoming<wbr>Call<wbr>Url property: The service-generated webhook URL to configure with the telephony provider."
+  summary: "Get the incoming<wbr>Call<wbr>Url property: The service-generated HTTPS webhook or SIP/SIPS ingress URI to configure with the telephony provider."
   syntax: "public String getIncomingCallUrl()"
-  desc: "Get the incomingCallUrl property: The service-generated webhook URL to configure with the telephony provider."
+  desc: "Get the incomingCallUrl property: The service-generated HTTPS webhook or SIP/SIPS ingress URI to configure with the telephony provider."
   returns:
     description: "the incomingCallUrl value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -124,16 +121,6 @@ methods:
   returns:
     description: "the provider value."
     type: "<xref href=\"com.azure.ai.agents.models.TelephonyProvider?alt=com.azure.ai.agents.models.TelephonyProvider&text=TelephonyProvider\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.ai.agents.models.TelephonyBindingListItem.getStatus()"
-  fullName: "com.azure.ai.agents.models.TelephonyBindingListItem.getStatus()"
-  name: "getStatus()"
-  nameWithType: "TelephonyBindingListItem.getStatus()"
-  summary: "Get the status property: The lifecycle status."
-  syntax: "public TelephonyBindingStatus getStatus()"
-  desc: "Get the status property: The lifecycle status."
-  returns:
-    description: "the status value."
-    type: "<xref href=\"com.azure.ai.agents.models.TelephonyBindingStatus?alt=com.azure.ai.agents.models.TelephonyBindingStatus&text=TelephonyBindingStatus\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.agents.models.TelephonyBindingListItem.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.ai.agents.models.TelephonyBindingListItem.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -152,4 +139,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.TelephonyBindingListItem?alt=com.azure.ai.agents.models.TelephonyBindingListItem&text=TelephonyBindingListItem\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.ai.agents.models"
-artifact: com.azure:azure-ai-agents:2.9.0
+artifact: com.azure:azure-ai-agents:2.10.0

@@ -3,7 +3,7 @@ uid: "com.azure.ai.projects.models.Dimension"
 fullName: "com.azure.ai.projects.models.Dimension"
 name: "Dimension"
 nameWithType: "Dimension"
-summary: "A single dimension — one independent, measurable quality dimension within a rubric evaluator's scoring blueprint."
+summary: "One measurable criterion within a rubric."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -22,11 +22,25 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
 syntax: "public final class **Dimension**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.projects.models.Dimension?alt=com.azure.ai.projects.models.Dimension&text=Dimension\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
+- uid: "com.azure.ai.projects.models.Dimension.Dimension(java.lang.String,java.lang.String)"
+  fullName: "com.azure.ai.projects.models.Dimension.Dimension(String id, String description)"
+  name: "Dimension(String id, String description)"
+  nameWithType: "Dimension.Dimension(String id, String description)"
+  summary: "Creates an instance of Dimension class."
+  parameters:
+  - description: "the id value to set."
+    name: "id"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "the description value to set."
+    name: "description"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public Dimension(String id, String description)"
+  desc: "Creates an instance of Dimension class."
 - uid: "com.azure.ai.projects.models.Dimension.Dimension(java.lang.String,java.lang.String,int)"
   fullName: "com.azure.ai.projects.models.Dimension.Dimension(String id, String description, int weight)"
   name: "Dimension(String id, String description, int weight)"
   nameWithType: "Dimension.Dimension(String id, String description, int weight)"
-  summary: "Creates an instance of Dimension class."
+  summary: "Creates an instance of Dimension class with a configured weight."
   parameters:
   - description: "the id value to set."
     name: "id"
@@ -38,7 +52,7 @@ constructors:
     name: "weight"
     type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public Dimension(String id, String description, int weight)"
-  desc: "Creates an instance of Dimension class."
+  desc: "Creates an instance of Dimension class with a configured weight."
 methods:
 - uid: "com.azure.ai.projects.models.Dimension.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.ai.projects.models.Dimension.fromJson(JsonReader jsonReader)"
@@ -69,6 +83,16 @@ methods:
   returns:
     description: "the description value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.ai.projects.models.Dimension.getGeneratedWeight()"
+  fullName: "com.azure.ai.projects.models.Dimension.getGeneratedWeight()"
+  name: "getGeneratedWeight()"
+  nameWithType: "Dimension.getGeneratedWeight()"
+  summary: "Get the generated<wbr>Weight property: Read-only model-suggested weight (1-10) returned for unweighted Likert dimensions."
+  syntax: "public Integer getGeneratedWeight()"
+  desc: "Get the generatedWeight property: Read-only model-suggested weight (1-10) returned for unweighted Likert dimensions."
+  returns:
+    description: "the generatedWeight value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
 - uid: "com.azure.ai.projects.models.Dimension.getId()"
   fullName: "com.azure.ai.projects.models.Dimension.getId()"
   name: "getId()"
@@ -83,12 +107,22 @@ methods:
   fullName: "com.azure.ai.projects.models.Dimension.getWeight()"
   name: "getWeight()"
   nameWithType: "Dimension.getWeight()"
-  summary: "Get the weight property: Relative weight of this dimension (1-10)."
+  summary: "Get the weight property: Optional configured weight for legacy or Likert scoring."
   syntax: "public int getWeight()"
-  desc: "Get the weight property: Relative weight of this dimension (1-10). The generation pipeline assigns exactly one dimension weight 8-10; all others use 1-6. User edits are not constrained by this heuristic."
+  desc: "Get the weight property: Optional configured weight for legacy or Likert scoring. For Likert, omit every weight for equal contribution or supply a weight for every dimension; partially weighted definitions are rejected. Boolean scoring rejects every configured weight, including explicit unit weights. No schema default is emitted."
   returns:
-    description: "the weight value."
+    description: "the weight value, or zero when no weight is configured. This fallback does not configure a weight on the\n wire."
     type: "<xref href=\"int?alt=int&text=int\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.models.Dimension.isAllowed()"
+  fullName: "com.azure.ai.projects.models.Dimension.isAllowed()"
+  name: "isAllowed()"
+  nameWithType: "Dimension.isAllowed()"
+  summary: "Get the allowed property: Safety behavior classification: true means allowed behavior and false means disallowed behavior."
+  syntax: "public Boolean isAllowed()"
+  desc: "Get the allowed property: Safety behavior classification: true means allowed behavior and false means disallowed behavior. Required on every safety criterion instead of weight. This is not an evaluation verdict. Omit for ordinary quality criteria; omission never defaults a safety criterion to false. Preserved through edits and regeneration."
+  returns:
+    description: "the allowed value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.ai.projects.models.Dimension.isAlwaysApplicable()"
   fullName: "com.azure.ai.projects.models.Dimension.isAlwaysApplicable()"
   name: "isAlwaysApplicable()"
@@ -99,6 +133,20 @@ methods:
   returns:
     description: "the alwaysApplicable value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.ai.projects.models.Dimension.setAllowed(java.lang.Boolean)"
+  fullName: "com.azure.ai.projects.models.Dimension.setAllowed(Boolean allowed)"
+  name: "setAllowed(Boolean allowed)"
+  nameWithType: "Dimension.setAllowed(Boolean allowed)"
+  summary: "Set the allowed property: Safety behavior classification: true means allowed behavior and false means disallowed behavior."
+  parameters:
+  - description: "the allowed value to set."
+    name: "allowed"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+  syntax: "public Dimension setAllowed(Boolean allowed)"
+  desc: "Set the allowed property: Safety behavior classification: true means allowed behavior and false means disallowed behavior. Required on every safety criterion instead of weight. This is not an evaluation verdict. Omit for ordinary quality criteria; omission never defaults a safety criterion to false. Preserved through edits and regeneration."
+  returns:
+    description: "the Dimension object itself."
+    type: "<xref href=\"com.azure.ai.projects.models.Dimension?alt=com.azure.ai.projects.models.Dimension&text=Dimension\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.projects.models.Dimension.setAlwaysApplicable(java.lang.Boolean)"
   fullName: "com.azure.ai.projects.models.Dimension.setAlwaysApplicable(Boolean alwaysApplicable)"
   name: "setAlwaysApplicable(Boolean alwaysApplicable)"
@@ -110,6 +158,20 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
   syntax: "public Dimension setAlwaysApplicable(Boolean alwaysApplicable)"
   desc: "Set the alwaysApplicable property: When true, the LLM judge always scores this dimension regardless of relevance (skips applicability assessment). The service-generated general quality/policy dimension has this set to true and is non-editable. Users may set this on their own custom dimensions. The service defaults to \\`false\\` if a value is not specified by the caller."
+  returns:
+    description: "the Dimension object itself."
+    type: "<xref href=\"com.azure.ai.projects.models.Dimension?alt=com.azure.ai.projects.models.Dimension&text=Dimension\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.models.Dimension.setWeight(java.lang.Integer)"
+  fullName: "com.azure.ai.projects.models.Dimension.setWeight(Integer weight)"
+  name: "setWeight(Integer weight)"
+  nameWithType: "Dimension.setWeight(Integer weight)"
+  summary: "Set the weight property: Optional configured weight for legacy or Likert scoring."
+  parameters:
+  - description: "the weight value to set."
+    name: "weight"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  syntax: "public Dimension setWeight(Integer weight)"
+  desc: "Set the weight property: Optional configured weight for legacy or Likert scoring. For Likert, omit every weight for equal contribution or supply a weight for every dimension; partially weighted definitions are rejected. Boolean scoring rejects every configured weight, including explicit unit weights. No schema default is emitted."
   returns:
     description: "the Dimension object itself."
     type: "<xref href=\"com.azure.ai.projects.models.Dimension?alt=com.azure.ai.projects.models.Dimension&text=Dimension\" data-throw-if-not-resolved=\"False\" />"
@@ -126,9 +188,9 @@ methods:
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "A single dimension — one independent, measurable quality dimension within a rubric evaluator's scoring blueprint."
+desc: "One measurable criterion within a rubric. Quality criteria may use rating weights; safety criteria classify a behavior as allowed or disallowed."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.projects.models.Dimension?alt=com.azure.ai.projects.models.Dimension&text=Dimension\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.ai.projects.models"
-artifact: com.azure:azure-ai-projects:2.9.0
+artifact: com.azure:azure-ai-projects:2.10.0

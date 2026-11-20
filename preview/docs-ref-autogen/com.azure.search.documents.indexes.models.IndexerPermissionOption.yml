@@ -50,6 +50,30 @@ fields:
     type: "<xref href=\"com.azure.search.documents.indexes.models.IndexerPermissionOption?alt=com.azure.search.documents.indexes.models.IndexerPermissionOption&text=IndexerPermissionOption\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final IndexerPermissionOption GROUP_IDS"
   desc: "Indexer to ingest ACL groupIds from data source to index."
+- uid: "com.azure.search.documents.indexes.models.IndexerPermissionOption.ONE_LAKE_LAKEHOUSE_ID"
+  fullName: "com.azure.search.documents.indexes.models.IndexerPermissionOption.ONE_LAKE_LAKEHOUSE_ID"
+  name: "ONE_LAKE_LAKEHOUSE_ID"
+  nameWithType: "IndexerPermissionOption.ONE_LAKE_LAKEHOUSE_ID"
+  summary: "For One<wbr>Lake data sources only, ingest the source item's lakehouse ID for mapping to an index field with permission<wbr>Filter 'one<wbr>Lake<wbr>Lakehouse<wbr>Id'."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.search.documents.indexes.models.IndexerPermissionOption?alt=com.azure.search.documents.indexes.models.IndexerPermissionOption&text=IndexerPermissionOption\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final IndexerPermissionOption ONE_LAKE_LAKEHOUSE_ID"
+  desc: "For OneLake data sources only, ingest the source item's lakehouse ID for mapping to an index field with permissionFilter 'oneLakeLakehouseId'. The index must also specify 'oneLakeSecuritySource'."
+- uid: "com.azure.search.documents.indexes.models.IndexerPermissionOption.ONE_LAKE_PARENT_FOLDERS"
+  fullName: "com.azure.search.documents.indexes.models.IndexerPermissionOption.ONE_LAKE_PARENT_FOLDERS"
+  name: "ONE_LAKE_PARENT_FOLDERS"
+  nameWithType: "IndexerPermissionOption.ONE_LAKE_PARENT_FOLDERS"
+  summary: "For One<wbr>Lake data sources only, ingest all ancestor folder paths from '/Files' through the immediate parent, excluding the file name, as the string collection 'metadata\\_onelake\\_parent\\_folders'."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.search.documents.indexes.models.IndexerPermissionOption?alt=com.azure.search.documents.indexes.models.IndexerPermissionOption&text=IndexerPermissionOption\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final IndexerPermissionOption ONE_LAKE_PARENT_FOLDERS"
+  desc: "For OneLake data sources only, ingest all ancestor folder paths from '/Files' through the immediate parent, excluding the file name, as the string collection 'metadata\\_onelake\\_parent\\_folders'. Use indexer fieldMappings to map this source metadata to a filterable Collection(Edm.String) field with permissionFilter 'oneLakeParentFolders'; index projections use source '/document/metadata\\_onelake\\_parent\\_folders'. The index must also specify 'oneLakeSecuritySource'."
 - uid: "com.azure.search.documents.indexes.models.IndexerPermissionOption.RBAC_SCOPE"
   fullName: "com.azure.search.documents.indexes.models.IndexerPermissionOption.RBAC_SCOPE"
   name: "RBAC_SCOPE"
@@ -107,4 +131,4 @@ type: "class"
 desc: "Options with various types of permission data to index."
 metadata: {}
 package: "com.azure.search.documents.indexes.models"
-artifact: com.azure:azure-search-documents:12.1.0-beta.2
+artifact: com.azure:azure-search-documents:12.3.0-beta.1

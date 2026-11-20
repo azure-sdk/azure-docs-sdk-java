@@ -1,0 +1,140 @@
+### YamlMime:JavaType
+uid: "com.azure.ai.projects.models.UserConversationSimulationSource"
+fullName: "com.azure.ai.projects.models.UserConversationSimulationSource"
+name: "UserConversationSimulationSource"
+nameWithType: "UserConversationSimulationSource"
+summary: "Test scenarios for user-conversation simulation, shared by the standard and preview evaluation run data sources."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **UserConversationSimulationSource**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.projects.models.UserConversationSimulationSource?alt=com.azure.ai.projects.models.UserConversationSimulationSource&text=UserConversationSimulationSource\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.azure.ai.projects.models.UserConversationSimulationSource.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.ai.projects.models.UserConversationSimulationSource.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "UserConversationSimulationSource.fromJson(JsonReader jsonReader)"
+  summary: "Reads a simulation source using the `type` discriminator."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "the JSON reader."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static UserConversationSimulationSource fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "if the JSON cannot be read."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads a simulation source using the `type` discriminator."
+  returns:
+    description: "the source, or null for JSON null."
+    type: "<xref href=\"com.azure.ai.projects.models.UserConversationSimulationSource?alt=com.azure.ai.projects.models.UserConversationSimulationSource&text=UserConversationSimulationSource\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.models.UserConversationSimulationSource.getFileContent()"
+  fullName: "com.azure.ai.projects.models.UserConversationSimulationSource.getFileContent()"
+  name: "getFileContent()"
+  nameWithType: "UserConversationSimulationSource.getFileContent()"
+  summary: "Gets the JSONL file-content variant."
+  syntax: "public CreateEvalJsonlRunDataSource.Source.FileContent getFileContent()"
+  desc: "Gets the JSONL file-content variant."
+  returns:
+    description: "the file content, or null if this source contains another variant."
+    type: "<xref href=\"com.openai.models.evals.runs.CreateEvalJsonlRunDataSource.Source.FileContent?alt=com.openai.models.evals.runs.CreateEvalJsonlRunDataSource.Source.FileContent&text=FileContent\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.models.UserConversationSimulationSource.getFileId()"
+  fullName: "com.azure.ai.projects.models.UserConversationSimulationSource.getFileId()"
+  name: "getFileId()"
+  nameWithType: "UserConversationSimulationSource.getFileId()"
+  summary: "Gets the JSONL file-ID variant."
+  syntax: "public CreateEvalJsonlRunDataSource.Source.FileId getFileId()"
+  desc: "Gets the JSONL file-ID variant."
+  returns:
+    description: "the file ID source, or null if this source contains another variant."
+    type: "<xref href=\"com.openai.models.evals.runs.CreateEvalJsonlRunDataSource.Source.FileId?alt=com.openai.models.evals.runs.CreateEvalJsonlRunDataSource.Source.FileId&text=FileId\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.models.UserConversationSimulationSource.getInlineTestCases()"
+  fullName: "com.azure.ai.projects.models.UserConversationSimulationSource.getInlineTestCases()"
+  name: "getInlineTestCases()"
+  nameWithType: "UserConversationSimulationSource.getInlineTestCases()"
+  summary: "Gets the inline test-case variant."
+  syntax: "public UserConversationSimulationInlineTestCasesSource getInlineTestCases()"
+  desc: "Gets the inline test-case variant."
+  returns:
+    description: "the inline test cases, or null if this source contains another variant."
+    type: "<xref href=\"com.azure.ai.projects.models.UserConversationSimulationInlineTestCasesSource?alt=com.azure.ai.projects.models.UserConversationSimulationInlineTestCasesSource&text=UserConversationSimulationInlineTestCasesSource\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.models.UserConversationSimulationSource.ofFileContent(com.openai.models.evals.runs.CreateEvalJsonlRunDataSource.Source.FileContent)"
+  fullName: "com.azure.ai.projects.models.UserConversationSimulationSource.ofFileContent(CreateEvalJsonlRunDataSource.Source.FileContent source)"
+  name: "ofFileContent(CreateEvalJsonlRunDataSource.Source.FileContent source)"
+  nameWithType: "UserConversationSimulationSource.ofFileContent(CreateEvalJsonlRunDataSource.Source.FileContent source)"
+  summary: "Creates a source containing JSONL file content."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "the file content."
+    name: "source"
+    type: "<xref href=\"com.openai.models.evals.runs.CreateEvalJsonlRunDataSource.Source.FileContent?alt=com.openai.models.evals.runs.CreateEvalJsonlRunDataSource.Source.FileContent&text=FileContent\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static UserConversationSimulationSource ofFileContent(CreateEvalJsonlRunDataSource.Source.FileContent source)"
+  desc: "Creates a source containing JSONL file content."
+  returns:
+    description: "the user-conversation simulation source."
+    type: "<xref href=\"com.azure.ai.projects.models.UserConversationSimulationSource?alt=com.azure.ai.projects.models.UserConversationSimulationSource&text=UserConversationSimulationSource\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.models.UserConversationSimulationSource.ofFileId(com.openai.models.evals.runs.CreateEvalJsonlRunDataSource.Source.FileId)"
+  fullName: "com.azure.ai.projects.models.UserConversationSimulationSource.ofFileId(CreateEvalJsonlRunDataSource.Source.FileId source)"
+  name: "ofFileId(CreateEvalJsonlRunDataSource.Source.FileId source)"
+  nameWithType: "UserConversationSimulationSource.ofFileId(CreateEvalJsonlRunDataSource.Source.FileId source)"
+  summary: "Creates a source referencing a JSONL file."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "the file ID source."
+    name: "source"
+    type: "<xref href=\"com.openai.models.evals.runs.CreateEvalJsonlRunDataSource.Source.FileId?alt=com.openai.models.evals.runs.CreateEvalJsonlRunDataSource.Source.FileId&text=FileId\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static UserConversationSimulationSource ofFileId(CreateEvalJsonlRunDataSource.Source.FileId source)"
+  desc: "Creates a source referencing a JSONL file."
+  returns:
+    description: "the user-conversation simulation source."
+    type: "<xref href=\"com.azure.ai.projects.models.UserConversationSimulationSource?alt=com.azure.ai.projects.models.UserConversationSimulationSource&text=UserConversationSimulationSource\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.models.UserConversationSimulationSource.ofInlineTestCases(com.azure.ai.projects.models.UserConversationSimulationInlineTestCasesSource)"
+  fullName: "com.azure.ai.projects.models.UserConversationSimulationSource.ofInlineTestCases(UserConversationSimulationInlineTestCasesSource source)"
+  name: "ofInlineTestCases(UserConversationSimulationInlineTestCasesSource source)"
+  nameWithType: "UserConversationSimulationSource.ofInlineTestCases(UserConversationSimulationInlineTestCasesSource source)"
+  summary: "Creates a source containing inline test cases."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "the inline test cases."
+    name: "source"
+    type: "<xref href=\"com.azure.ai.projects.models.UserConversationSimulationInlineTestCasesSource?alt=com.azure.ai.projects.models.UserConversationSimulationInlineTestCasesSource&text=UserConversationSimulationInlineTestCasesSource\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static UserConversationSimulationSource ofInlineTestCases(UserConversationSimulationInlineTestCasesSource source)"
+  desc: "Creates a source containing inline test cases."
+  returns:
+    description: "the user-conversation simulation source."
+    type: "<xref href=\"com.azure.ai.projects.models.UserConversationSimulationSource?alt=com.azure.ai.projects.models.UserConversationSimulationSource&text=UserConversationSimulationSource\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.models.UserConversationSimulationSource.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.ai.projects.models.UserConversationSimulationSource.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "UserConversationSimulationSource.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Test scenarios for user-conversation simulation, shared by the standard and preview evaluation run data sources. Use the typed factories to supply JSONL content, a file ID, or inline test cases."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.projects.models.UserConversationSimulationSource?alt=com.azure.ai.projects.models.UserConversationSimulationSource&text=UserConversationSimulationSource\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.ai.projects.models"
+artifact: com.azure:azure-ai-projects:2.10.0

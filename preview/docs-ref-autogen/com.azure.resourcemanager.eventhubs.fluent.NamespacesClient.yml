@@ -14,7 +14,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -36,7 +36,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -61,7 +61,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -83,7 +83,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -102,7 +102,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -124,7 +124,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -135,15 +135,15 @@ methods:
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.PollerFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PollerFlux\"></xref> for polling of long-running operation."
     type: "<xref href=\"com.azure.core.util.polling.PollerFlux?alt=com.azure.core.util.polling.PollerFlux&text=PollerFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Void.html\">Void</a>&gt;"
-- uid: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.beginFailover(java.lang.String,java.lang.String,com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner)"
-  fullName: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.beginFailover(String resourceGroupName, String namespaceName, FailOverInner parameters)"
-  name: "beginFailover(String resourceGroupName, String namespaceName, FailOverInner parameters)"
-  nameWithType: "NamespacesClient.beginFailover(String resourceGroupName, String namespaceName, FailOverInner parameters)"
+- uid: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.beginFailover(java.lang.String,java.lang.String,com.azure.resourcemanager.eventhubs.models.FailOver)"
+  fullName: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.beginFailover(String resourceGroupName, String namespaceName, FailOver parameters)"
+  name: "beginFailover(String resourceGroupName, String namespaceName, FailOver parameters)"
+  nameWithType: "NamespacesClient.beginFailover(String resourceGroupName, String namespaceName, FailOver parameters)"
   summary: "GeoDR Failover."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -151,21 +151,21 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Parameters for updating a namespace resource."
     name: "parameters"
-    type: "<xref href=\"com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner?alt=com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner&text=FailOverInner\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract SyncPoller<PollResult<FailOverInner>,FailOverInner> beginFailover(String resourceGroupName, String namespaceName, FailOverInner parameters)"
+    type: "<xref href=\"com.azure.resourcemanager.eventhubs.models.FailOver?alt=com.azure.resourcemanager.eventhubs.models.FailOver&text=FailOver\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract SyncPoller<PollResult<FailOver>,FailOver> beginFailover(String resourceGroupName, String namespaceName, FailOver parameters)"
   desc: "GeoDR Failover."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner?alt=com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner&text=FailOverInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner?alt=com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner&text=FailOverInner\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.beginFailover(java.lang.String,java.lang.String,com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner,com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.beginFailover(String resourceGroupName, String namespaceName, FailOverInner parameters, Context context)"
-  name: "beginFailover(String resourceGroupName, String namespaceName, FailOverInner parameters, Context context)"
-  nameWithType: "NamespacesClient.beginFailover(String resourceGroupName, String namespaceName, FailOverInner parameters, Context context)"
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.eventhubs.models.FailOver?alt=com.azure.resourcemanager.eventhubs.models.FailOver&text=FailOver\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.eventhubs.models.FailOver?alt=com.azure.resourcemanager.eventhubs.models.FailOver&text=FailOver\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.beginFailover(java.lang.String,java.lang.String,com.azure.resourcemanager.eventhubs.models.FailOver,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.beginFailover(String resourceGroupName, String namespaceName, FailOver parameters, Context context)"
+  name: "beginFailover(String resourceGroupName, String namespaceName, FailOver parameters, Context context)"
+  nameWithType: "NamespacesClient.beginFailover(String resourceGroupName, String namespaceName, FailOver parameters, Context context)"
   summary: "GeoDR Failover."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -173,24 +173,24 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Parameters for updating a namespace resource."
     name: "parameters"
-    type: "<xref href=\"com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner?alt=com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner&text=FailOverInner\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.resourcemanager.eventhubs.models.FailOver?alt=com.azure.resourcemanager.eventhubs.models.FailOver&text=FailOver\" data-throw-if-not-resolved=\"False\" />"
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract SyncPoller<PollResult<FailOverInner>,FailOverInner> beginFailover(String resourceGroupName, String namespaceName, FailOverInner parameters, Context context)"
+  syntax: "public abstract SyncPoller<PollResult<FailOver>,FailOver> beginFailover(String resourceGroupName, String namespaceName, FailOver parameters, Context context)"
   desc: "GeoDR Failover."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.SyncPoller\" data-throw-if-not-resolved=\"false\" data-raw-source=\"SyncPoller\"></xref> for polling of long-running operation."
-    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner?alt=com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner&text=FailOverInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner?alt=com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner&text=FailOverInner\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.beginFailoverAsync(java.lang.String,java.lang.String,com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner)"
-  fullName: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.beginFailoverAsync(String resourceGroupName, String namespaceName, FailOverInner parameters)"
-  name: "beginFailoverAsync(String resourceGroupName, String namespaceName, FailOverInner parameters)"
-  nameWithType: "NamespacesClient.beginFailoverAsync(String resourceGroupName, String namespaceName, FailOverInner parameters)"
+    type: "<xref href=\"com.azure.core.util.polling.SyncPoller?alt=com.azure.core.util.polling.SyncPoller&text=SyncPoller\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.eventhubs.models.FailOver?alt=com.azure.resourcemanager.eventhubs.models.FailOver&text=FailOver\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.eventhubs.models.FailOver?alt=com.azure.resourcemanager.eventhubs.models.FailOver&text=FailOver\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.beginFailoverAsync(java.lang.String,java.lang.String,com.azure.resourcemanager.eventhubs.models.FailOver)"
+  fullName: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.beginFailoverAsync(String resourceGroupName, String namespaceName, FailOver parameters)"
+  name: "beginFailoverAsync(String resourceGroupName, String namespaceName, FailOver parameters)"
+  nameWithType: "NamespacesClient.beginFailoverAsync(String resourceGroupName, String namespaceName, FailOver parameters)"
   summary: "GeoDR Failover."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -198,12 +198,12 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Parameters for updating a namespace resource."
     name: "parameters"
-    type: "<xref href=\"com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner?alt=com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner&text=FailOverInner\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract PollerFlux<PollResult<FailOverInner>,FailOverInner> beginFailoverAsync(String resourceGroupName, String namespaceName, FailOverInner parameters)"
+    type: "<xref href=\"com.azure.resourcemanager.eventhubs.models.FailOver?alt=com.azure.resourcemanager.eventhubs.models.FailOver&text=FailOver\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract PollerFlux<PollResult<FailOver>,FailOver> beginFailoverAsync(String resourceGroupName, String namespaceName, FailOver parameters)"
   desc: "GeoDR Failover."
   returns:
     description: "the <xref uid=\"com.azure.core.util.polling.PollerFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PollerFlux\"></xref> for polling of long-running operation."
-    type: "<xref href=\"com.azure.core.util.polling.PollerFlux?alt=com.azure.core.util.polling.PollerFlux&text=PollerFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner?alt=com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner&text=FailOverInner\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner?alt=com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner&text=FailOverInner\" data-throw-if-not-resolved=\"False\" />&gt;"
+    type: "<xref href=\"com.azure.core.util.polling.PollerFlux?alt=com.azure.core.util.polling.PollerFlux&text=PollerFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.management.polling.PollResult?alt=com.azure.core.management.polling.PollResult&text=PollResult\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.eventhubs.models.FailOver?alt=com.azure.resourcemanager.eventhubs.models.FailOver&text=FailOver\" data-throw-if-not-resolved=\"False\" />&gt;,<xref href=\"com.azure.resourcemanager.eventhubs.models.FailOver?alt=com.azure.resourcemanager.eventhubs.models.FailOver&text=FailOver\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.checkNameAvailability(com.azure.resourcemanager.eventhubs.models.CheckNameAvailabilityParameter)"
   fullName: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.checkNameAvailability(CheckNameAvailabilityParameter parameters)"
   name: "checkNameAvailability(CheckNameAvailabilityParameter parameters)"
@@ -212,7 +212,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Parameters to check availability of the given Namespace name."
+  - description: "The request body."
     name: "parameters"
     type: "<xref href=\"com.azure.resourcemanager.eventhubs.models.CheckNameAvailabilityParameter?alt=com.azure.resourcemanager.eventhubs.models.CheckNameAvailabilityParameter&text=CheckNameAvailabilityParameter\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract CheckNameAvailabilityResultInner checkNameAvailability(CheckNameAvailabilityParameter parameters)"
@@ -228,7 +228,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Parameters to check availability of the given Namespace name."
+  - description: "The request body."
     name: "parameters"
     type: "<xref href=\"com.azure.resourcemanager.eventhubs.models.CheckNameAvailabilityParameter?alt=com.azure.resourcemanager.eventhubs.models.CheckNameAvailabilityParameter&text=CheckNameAvailabilityParameter\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Mono<CheckNameAvailabilityResultInner> checkNameAvailabilityAsync(CheckNameAvailabilityParameter parameters)"
@@ -244,7 +244,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Parameters to check availability of the given Namespace name."
+  - description: "The request body."
     name: "parameters"
     type: "<xref href=\"com.azure.resourcemanager.eventhubs.models.CheckNameAvailabilityParameter?alt=com.azure.resourcemanager.eventhubs.models.CheckNameAvailabilityParameter&text=CheckNameAvailabilityParameter\" data-throw-if-not-resolved=\"False\" />"
   - description: "The context to associate with this operation."
@@ -263,7 +263,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Parameters to check availability of the given Namespace name."
+  - description: "The request body."
     name: "parameters"
     type: "<xref href=\"com.azure.resourcemanager.eventhubs.models.CheckNameAvailabilityParameter?alt=com.azure.resourcemanager.eventhubs.models.CheckNameAvailabilityParameter&text=CheckNameAvailabilityParameter\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Mono<Response<CheckNameAvailabilityResultInner>> checkNameAvailabilityWithResponseAsync(CheckNameAvailabilityParameter parameters)"
@@ -279,7 +279,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -301,7 +301,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -326,7 +326,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -348,7 +348,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -373,7 +373,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -398,7 +398,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -426,7 +426,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -451,7 +451,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -473,7 +473,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -495,7 +495,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -520,7 +520,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -542,7 +542,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -564,7 +564,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -580,7 +580,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -599,7 +599,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -618,7 +618,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -637,7 +637,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -659,7 +659,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -684,7 +684,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -706,7 +706,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -717,15 +717,15 @@ methods:
   returns:
     description: "the <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;&gt;"
-- uid: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.failover(java.lang.String,java.lang.String,com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner)"
-  fullName: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.failover(String resourceGroupName, String namespaceName, FailOverInner parameters)"
-  name: "failover(String resourceGroupName, String namespaceName, FailOverInner parameters)"
-  nameWithType: "NamespacesClient.failover(String resourceGroupName, String namespaceName, FailOverInner parameters)"
+- uid: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.failover(java.lang.String,java.lang.String,com.azure.resourcemanager.eventhubs.models.FailOver)"
+  fullName: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.failover(String resourceGroupName, String namespaceName, FailOver parameters)"
+  name: "failover(String resourceGroupName, String namespaceName, FailOver parameters)"
+  nameWithType: "NamespacesClient.failover(String resourceGroupName, String namespaceName, FailOver parameters)"
   summary: "GeoDR Failover."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -733,21 +733,21 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Parameters for updating a namespace resource."
     name: "parameters"
-    type: "<xref href=\"com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner?alt=com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner&text=FailOverInner\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract FailOverInner failover(String resourceGroupName, String namespaceName, FailOverInner parameters)"
+    type: "<xref href=\"com.azure.resourcemanager.eventhubs.models.FailOver?alt=com.azure.resourcemanager.eventhubs.models.FailOver&text=FailOver\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract FailOver failover(String resourceGroupName, String namespaceName, FailOver parameters)"
   desc: "GeoDR Failover."
   returns:
     description: "the response."
-    type: "<xref href=\"com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner?alt=com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner&text=FailOverInner\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.failover(java.lang.String,java.lang.String,com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner,com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.failover(String resourceGroupName, String namespaceName, FailOverInner parameters, Context context)"
-  name: "failover(String resourceGroupName, String namespaceName, FailOverInner parameters, Context context)"
-  nameWithType: "NamespacesClient.failover(String resourceGroupName, String namespaceName, FailOverInner parameters, Context context)"
+    type: "<xref href=\"com.azure.resourcemanager.eventhubs.models.FailOver?alt=com.azure.resourcemanager.eventhubs.models.FailOver&text=FailOver\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.failover(java.lang.String,java.lang.String,com.azure.resourcemanager.eventhubs.models.FailOver,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.failover(String resourceGroupName, String namespaceName, FailOver parameters, Context context)"
+  name: "failover(String resourceGroupName, String namespaceName, FailOver parameters, Context context)"
+  nameWithType: "NamespacesClient.failover(String resourceGroupName, String namespaceName, FailOver parameters, Context context)"
   summary: "GeoDR Failover."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -755,24 +755,24 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Parameters for updating a namespace resource."
     name: "parameters"
-    type: "<xref href=\"com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner?alt=com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner&text=FailOverInner\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.resourcemanager.eventhubs.models.FailOver?alt=com.azure.resourcemanager.eventhubs.models.FailOver&text=FailOver\" data-throw-if-not-resolved=\"False\" />"
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract FailOverInner failover(String resourceGroupName, String namespaceName, FailOverInner parameters, Context context)"
+  syntax: "public abstract FailOver failover(String resourceGroupName, String namespaceName, FailOver parameters, Context context)"
   desc: "GeoDR Failover."
   returns:
     description: "the response."
-    type: "<xref href=\"com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner?alt=com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner&text=FailOverInner\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.failoverAsync(java.lang.String,java.lang.String,com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner)"
-  fullName: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.failoverAsync(String resourceGroupName, String namespaceName, FailOverInner parameters)"
-  name: "failoverAsync(String resourceGroupName, String namespaceName, FailOverInner parameters)"
-  nameWithType: "NamespacesClient.failoverAsync(String resourceGroupName, String namespaceName, FailOverInner parameters)"
+    type: "<xref href=\"com.azure.resourcemanager.eventhubs.models.FailOver?alt=com.azure.resourcemanager.eventhubs.models.FailOver&text=FailOver\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.failoverAsync(java.lang.String,java.lang.String,com.azure.resourcemanager.eventhubs.models.FailOver)"
+  fullName: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.failoverAsync(String resourceGroupName, String namespaceName, FailOver parameters)"
+  name: "failoverAsync(String resourceGroupName, String namespaceName, FailOver parameters)"
+  nameWithType: "NamespacesClient.failoverAsync(String resourceGroupName, String namespaceName, FailOver parameters)"
   summary: "GeoDR Failover."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -780,21 +780,21 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Parameters for updating a namespace resource."
     name: "parameters"
-    type: "<xref href=\"com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner?alt=com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner&text=FailOverInner\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract Mono<FailOverInner> failoverAsync(String resourceGroupName, String namespaceName, FailOverInner parameters)"
+    type: "<xref href=\"com.azure.resourcemanager.eventhubs.models.FailOver?alt=com.azure.resourcemanager.eventhubs.models.FailOver&text=FailOver\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Mono<FailOver> failoverAsync(String resourceGroupName, String namespaceName, FailOver parameters)"
   desc: "GeoDR Failover."
   returns:
     description: "the response body on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
-    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner?alt=com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner&text=FailOverInner\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.failoverWithResponseAsync(java.lang.String,java.lang.String,com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner)"
-  fullName: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.failoverWithResponseAsync(String resourceGroupName, String namespaceName, FailOverInner parameters)"
-  name: "failoverWithResponseAsync(String resourceGroupName, String namespaceName, FailOverInner parameters)"
-  nameWithType: "NamespacesClient.failoverWithResponseAsync(String resourceGroupName, String namespaceName, FailOverInner parameters)"
+    type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.eventhubs.models.FailOver?alt=com.azure.resourcemanager.eventhubs.models.FailOver&text=FailOver\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.failoverWithResponseAsync(java.lang.String,java.lang.String,com.azure.resourcemanager.eventhubs.models.FailOver)"
+  fullName: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.failoverWithResponseAsync(String resourceGroupName, String namespaceName, FailOver parameters)"
+  name: "failoverWithResponseAsync(String resourceGroupName, String namespaceName, FailOver parameters)"
+  nameWithType: "NamespacesClient.failoverWithResponseAsync(String resourceGroupName, String namespaceName, FailOver parameters)"
   summary: "GeoDR Failover."
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -802,11 +802,11 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "Parameters for updating a namespace resource."
     name: "parameters"
-    type: "<xref href=\"com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner?alt=com.azure.resourcemanager.eventhubs.fluent.models.FailOverInner&text=FailOverInner\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract Mono<Response<Flux<ByteBuffer>>> failoverWithResponseAsync(String resourceGroupName, String namespaceName, FailOverInner parameters)"
+    type: "<xref href=\"com.azure.resourcemanager.eventhubs.models.FailOver?alt=com.azure.resourcemanager.eventhubs.models.FailOver&text=FailOver\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Mono<Response<Flux<ByteBuffer>>> failoverWithResponseAsync(String resourceGroupName, String namespaceName, FailOver parameters)"
   desc: "GeoDR Failover."
   returns:
-    description: "the response body along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
+    description: "the <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref> on successful completion of <xref uid=\"reactor.core.publisher.Mono\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Mono\"></xref>."
     type: "<xref href=\"reactor.core.publisher.Mono?alt=reactor.core.publisher.Mono&text=Mono\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"reactor.core.publisher.Flux?alt=reactor.core.publisher.Flux&text=Flux\" data-throw-if-not-resolved=\"False\" />&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html\">ByteBuffer</a>&gt;&gt;&gt;"
 - uid: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.getAuthorizationRule(java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.getAuthorizationRule(String resourceGroupName, String namespaceName, String authorizationRuleName)"
@@ -816,7 +816,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -838,7 +838,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -860,7 +860,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -885,7 +885,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -907,7 +907,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -926,7 +926,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -945,7 +945,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -967,7 +967,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -986,7 +986,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -1005,7 +1005,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -1024,7 +1024,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -1046,7 +1046,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -1067,7 +1067,7 @@ methods:
   syntax: "public abstract PagedIterable<EHNamespaceInner> list()"
   desc: "Lists all the available Namespaces within a subscription, irrespective of the resource groups."
   returns:
-    description: "the response of the List Namespace operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the response of a EHNamespace list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.eventhubs.fluent.models.EHNamespaceInner?alt=com.azure.resourcemanager.eventhubs.fluent.models.EHNamespaceInner&text=EHNamespaceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.list(com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.list(Context context)"
@@ -1083,7 +1083,7 @@ methods:
   syntax: "public abstract PagedIterable<EHNamespaceInner> list(Context context)"
   desc: "Lists all the available Namespaces within a subscription, irrespective of the resource groups."
   returns:
-    description: "the response of the List Namespace operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the response of a EHNamespace list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.eventhubs.fluent.models.EHNamespaceInner?alt=com.azure.resourcemanager.eventhubs.fluent.models.EHNamespaceInner&text=EHNamespaceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.listAsync()"
   fullName: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.listAsync()"
@@ -1095,7 +1095,7 @@ methods:
   syntax: "public abstract PagedFlux<EHNamespaceInner> listAsync()"
   desc: "Lists all the available Namespaces within a subscription, irrespective of the resource groups."
   returns:
-    description: "the response of the List Namespace operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
+    description: "the response of a EHNamespace list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.eventhubs.fluent.models.EHNamespaceInner?alt=com.azure.resourcemanager.eventhubs.fluent.models.EHNamespaceInner&text=EHNamespaceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.listAuthorizationRules(java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.listAuthorizationRules(String resourceGroupName, String namespaceName)"
@@ -1105,7 +1105,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -1124,7 +1124,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -1146,7 +1146,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -1165,13 +1165,13 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedIterable<EHNamespaceInner> listByResourceGroup(String resourceGroupName)"
   desc: "Lists the available Namespaces within a resource group."
   returns:
-    description: "the response of the List Namespace operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the response of a EHNamespace list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.eventhubs.fluent.models.EHNamespaceInner?alt=com.azure.resourcemanager.eventhubs.fluent.models.EHNamespaceInner&text=EHNamespaceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.listByResourceGroup(java.lang.String,com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.listByResourceGroup(String resourceGroupName, Context context)"
@@ -1181,7 +1181,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The context to associate with this operation."
@@ -1190,7 +1190,7 @@ methods:
   syntax: "public abstract PagedIterable<EHNamespaceInner> listByResourceGroup(String resourceGroupName, Context context)"
   desc: "Lists the available Namespaces within a resource group."
   returns:
-    description: "the response of the List Namespace operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    description: "the response of a EHNamespace list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.eventhubs.fluent.models.EHNamespaceInner?alt=com.azure.resourcemanager.eventhubs.fluent.models.EHNamespaceInner&text=EHNamespaceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.listByResourceGroupAsync(java.lang.String)"
   fullName: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.listByResourceGroupAsync(String resourceGroupName)"
@@ -1200,13 +1200,13 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public abstract PagedFlux<EHNamespaceInner> listByResourceGroupAsync(String resourceGroupName)"
   desc: "Lists the available Namespaces within a resource group."
   returns:
-    description: "the response of the List Namespace operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
+    description: "the response of a EHNamespace list operation as paginated response with <xref uid=\"com.azure.core.http.rest.PagedFlux\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedFlux\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.PagedFlux?alt=com.azure.core.http.rest.PagedFlux&text=PagedFlux\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.eventhubs.fluent.models.EHNamespaceInner?alt=com.azure.resourcemanager.eventhubs.fluent.models.EHNamespaceInner&text=EHNamespaceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.listKeys(java.lang.String,java.lang.String,java.lang.String)"
   fullName: "com.azure.resourcemanager.eventhubs.fluent.NamespacesClient.listKeys(String resourceGroupName, String namespaceName, String authorizationRuleName)"
@@ -1216,7 +1216,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -1238,7 +1238,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -1260,7 +1260,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -1285,7 +1285,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -1307,7 +1307,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -1326,7 +1326,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -1345,7 +1345,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -1367,7 +1367,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -1386,7 +1386,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -1411,7 +1411,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -1436,7 +1436,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -1464,7 +1464,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -1489,7 +1489,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -1511,7 +1511,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -1533,7 +1533,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -1558,7 +1558,7 @@ methods:
   modifiers:
   - "abstract"
   parameters:
-  - description: "Name of the resource group within the azure subscription."
+  - description: "The name of the resource group. The name is case insensitive."
     name: "resourceGroupName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   - description: "The Namespace name."
@@ -1580,4 +1580,4 @@ implements:
 - "<xref href=\"com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsListing?alt=com.azure.resourcemanager.resources.fluentcore.collection.InnerSupportsListing&text=InnerSupportsListing\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.eventhubs.fluent.models.EHNamespaceInner?alt=com.azure.resourcemanager.eventhubs.fluent.models.EHNamespaceInner&text=EHNamespaceInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.eventhubs.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-eventhubs:2.48.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-eventhubs:2.55.0-beta.1

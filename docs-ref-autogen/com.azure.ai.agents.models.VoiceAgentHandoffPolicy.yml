@@ -1,0 +1,118 @@
+### YamlMime:JavaType
+uid: "com.azure.ai.agents.models.VoiceAgentHandoffPolicy"
+fullName: "com.azure.ai.agents.models.VoiceAgentHandoffPolicy"
+name: "VoiceAgentHandoffPolicy"
+nameWithType: "VoiceAgentHandoffPolicy"
+summary: "Session-wide limits shared by all handoff conditions in one Voice Agent session."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **VoiceAgentHandoffPolicy**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.VoiceAgentHandoffPolicy?alt=com.azure.ai.agents.models.VoiceAgentHandoffPolicy&text=VoiceAgentHandoffPolicy\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.ai.agents.models.VoiceAgentHandoffPolicy.VoiceAgentHandoffPolicy()"
+  fullName: "com.azure.ai.agents.models.VoiceAgentHandoffPolicy.VoiceAgentHandoffPolicy()"
+  name: "VoiceAgentHandoffPolicy()"
+  nameWithType: "VoiceAgentHandoffPolicy.VoiceAgentHandoffPolicy()"
+  summary: "Creates an instance of Voice<wbr>Agent<wbr>Handoff<wbr>Policy class."
+  syntax: "public VoiceAgentHandoffPolicy()"
+  desc: "Creates an instance of VoiceAgentHandoffPolicy class."
+methods:
+- uid: "com.azure.ai.agents.models.VoiceAgentHandoffPolicy.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.ai.agents.models.VoiceAgentHandoffPolicy.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "VoiceAgentHandoffPolicy.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Voice<wbr>Agent<wbr>Handoff<wbr>Policy from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static VoiceAgentHandoffPolicy fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the VoiceAgentHandoffPolicy."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of VoiceAgentHandoffPolicy from the JsonReader."
+  returns:
+    description: "An instance of VoiceAgentHandoffPolicy if the JsonReader was pointing to an instance of it, or null if it\n was pointing to JSON null."
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentHandoffPolicy?alt=com.azure.ai.agents.models.VoiceAgentHandoffPolicy&text=VoiceAgentHandoffPolicy\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.VoiceAgentHandoffPolicy.getMaxAttempts()"
+  fullName: "com.azure.ai.agents.models.VoiceAgentHandoffPolicy.getMaxAttempts()"
+  name: "getMaxAttempts()"
+  nameWithType: "VoiceAgentHandoffPolicy.getMaxAttempts()"
+  summary: "Get the max<wbr>Attempts property: The maximum number of attempted handoffs, from 1 through 100."
+  syntax: "public Integer getMaxAttempts()"
+  desc: "Get the maxAttempts property: The maximum number of attempted handoffs, from 1 through 100. If omitted, the service uses \\`max\\_transfers\\`. The service requires this value to be greater than or equal to \\`max\\_transfers\\`."
+  returns:
+    description: "the maxAttempts value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+- uid: "com.azure.ai.agents.models.VoiceAgentHandoffPolicy.getMaxTransfers()"
+  fullName: "com.azure.ai.agents.models.VoiceAgentHandoffPolicy.getMaxTransfers()"
+  name: "getMaxTransfers()"
+  nameWithType: "VoiceAgentHandoffPolicy.getMaxTransfers()"
+  summary: "Get the max<wbr>Transfers property: The maximum number of successfully completed handoffs in one session, from 1 through 100."
+  syntax: "public Integer getMaxTransfers()"
+  desc: "Get the maxTransfers property: The maximum number of successfully completed handoffs in one session, from 1 through 100. If omitted, the service defaults to 16."
+  returns:
+    description: "the maxTransfers value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+- uid: "com.azure.ai.agents.models.VoiceAgentHandoffPolicy.setMaxAttempts(java.lang.Integer)"
+  fullName: "com.azure.ai.agents.models.VoiceAgentHandoffPolicy.setMaxAttempts(Integer maxAttempts)"
+  name: "setMaxAttempts(Integer maxAttempts)"
+  nameWithType: "VoiceAgentHandoffPolicy.setMaxAttempts(Integer maxAttempts)"
+  summary: "Set the max<wbr>Attempts property: The maximum number of attempted handoffs, from 1 through 100."
+  parameters:
+  - description: "the maxAttempts value to set."
+    name: "maxAttempts"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  syntax: "public VoiceAgentHandoffPolicy setMaxAttempts(Integer maxAttempts)"
+  desc: "Set the maxAttempts property: The maximum number of attempted handoffs, from 1 through 100. If omitted, the service uses \\`max\\_transfers\\`. The service requires this value to be greater than or equal to \\`max\\_transfers\\`."
+  returns:
+    description: "the VoiceAgentHandoffPolicy object itself."
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentHandoffPolicy?alt=com.azure.ai.agents.models.VoiceAgentHandoffPolicy&text=VoiceAgentHandoffPolicy\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.VoiceAgentHandoffPolicy.setMaxTransfers(java.lang.Integer)"
+  fullName: "com.azure.ai.agents.models.VoiceAgentHandoffPolicy.setMaxTransfers(Integer maxTransfers)"
+  name: "setMaxTransfers(Integer maxTransfers)"
+  nameWithType: "VoiceAgentHandoffPolicy.setMaxTransfers(Integer maxTransfers)"
+  summary: "Set the max<wbr>Transfers property: The maximum number of successfully completed handoffs in one session, from 1 through 100."
+  parameters:
+  - description: "the maxTransfers value to set."
+    name: "maxTransfers"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
+  syntax: "public VoiceAgentHandoffPolicy setMaxTransfers(Integer maxTransfers)"
+  desc: "Set the maxTransfers property: The maximum number of successfully completed handoffs in one session, from 1 through 100. If omitted, the service defaults to 16."
+  returns:
+    description: "the VoiceAgentHandoffPolicy object itself."
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentHandoffPolicy?alt=com.azure.ai.agents.models.VoiceAgentHandoffPolicy&text=VoiceAgentHandoffPolicy\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.VoiceAgentHandoffPolicy.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.ai.agents.models.VoiceAgentHandoffPolicy.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "VoiceAgentHandoffPolicy.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Session-wide limits shared by all handoff conditions in one Voice Agent session."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.VoiceAgentHandoffPolicy?alt=com.azure.ai.agents.models.VoiceAgentHandoffPolicy&text=VoiceAgentHandoffPolicy\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.ai.agents.models"
+artifact: com.azure:azure-ai-agents:2.10.0

@@ -1,0 +1,140 @@
+### YamlMime:JavaType
+uid: "com.azure.ai.agents.models.RealtimeResponseInputContent"
+fullName: "com.azure.ai.agents.models.RealtimeResponseInputContent"
+name: "RealtimeResponseInputContent"
+nameWithType: "RealtimeResponseInputContent"
+summary: "Text, audio, or image content in a user message supplied as response input."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **RealtimeResponseInputContent**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.RealtimeResponseInputContent?alt=com.azure.ai.agents.models.RealtimeResponseInputContent&text=RealtimeResponseInputContent\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.azure.ai.agents.models.RealtimeResponseInputContent.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.ai.agents.models.RealtimeResponseInputContent.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "RealtimeResponseInputContent.fromJson(JsonReader jsonReader)"
+  summary: "Reads input content, selecting its variant using the `type` discriminator."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "the JSON reader."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static RealtimeResponseInputContent fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "if the JSON cannot be read."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads input content, selecting its variant using the `type` discriminator."
+  returns:
+    description: "the input content, or null for JSON null."
+    type: "<xref href=\"com.azure.ai.agents.models.RealtimeResponseInputContent?alt=com.azure.ai.agents.models.RealtimeResponseInputContent&text=RealtimeResponseInputContent\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.RealtimeResponseInputContent.getAudio()"
+  fullName: "com.azure.ai.agents.models.RealtimeResponseInputContent.getAudio()"
+  name: "getAudio()"
+  nameWithType: "RealtimeResponseInputContent.getAudio()"
+  summary: "Gets the audio variant."
+  syntax: "public RealtimeResponseInputAudio getAudio()"
+  desc: "Gets the audio variant."
+  returns:
+    description: "the audio, or null if this content contains another variant."
+    type: "<xref href=\"com.azure.ai.agents.models.RealtimeResponseInputAudio?alt=com.azure.ai.agents.models.RealtimeResponseInputAudio&text=RealtimeResponseInputAudio\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.RealtimeResponseInputContent.getImage()"
+  fullName: "com.azure.ai.agents.models.RealtimeResponseInputContent.getImage()"
+  name: "getImage()"
+  nameWithType: "RealtimeResponseInputContent.getImage()"
+  summary: "Gets the image variant."
+  syntax: "public RealtimeResponseInputImage getImage()"
+  desc: "Gets the image variant."
+  returns:
+    description: "the image, or null if this content contains another variant."
+    type: "<xref href=\"com.azure.ai.agents.models.RealtimeResponseInputImage?alt=com.azure.ai.agents.models.RealtimeResponseInputImage&text=RealtimeResponseInputImage\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.RealtimeResponseInputContent.getText()"
+  fullName: "com.azure.ai.agents.models.RealtimeResponseInputContent.getText()"
+  name: "getText()"
+  nameWithType: "RealtimeResponseInputContent.getText()"
+  summary: "Gets the text variant."
+  syntax: "public RealtimeResponseInputText getText()"
+  desc: "Gets the text variant."
+  returns:
+    description: "the text, or null if this content contains another variant."
+    type: "<xref href=\"com.azure.ai.agents.models.RealtimeResponseInputText?alt=com.azure.ai.agents.models.RealtimeResponseInputText&text=RealtimeResponseInputText\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.RealtimeResponseInputContent.ofAudio(com.azure.ai.agents.models.RealtimeResponseInputAudio)"
+  fullName: "com.azure.ai.agents.models.RealtimeResponseInputContent.ofAudio(RealtimeResponseInputAudio audio)"
+  name: "ofAudio(RealtimeResponseInputAudio audio)"
+  nameWithType: "RealtimeResponseInputContent.ofAudio(RealtimeResponseInputAudio audio)"
+  summary: "Creates content containing audio."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "the audio content."
+    name: "audio"
+    type: "<xref href=\"com.azure.ai.agents.models.RealtimeResponseInputAudio?alt=com.azure.ai.agents.models.RealtimeResponseInputAudio&text=RealtimeResponseInputAudio\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static RealtimeResponseInputContent ofAudio(RealtimeResponseInputAudio audio)"
+  desc: "Creates content containing audio."
+  returns:
+    description: "the input content."
+    type: "<xref href=\"com.azure.ai.agents.models.RealtimeResponseInputContent?alt=com.azure.ai.agents.models.RealtimeResponseInputContent&text=RealtimeResponseInputContent\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.RealtimeResponseInputContent.ofImage(com.azure.ai.agents.models.RealtimeResponseInputImage)"
+  fullName: "com.azure.ai.agents.models.RealtimeResponseInputContent.ofImage(RealtimeResponseInputImage image)"
+  name: "ofImage(RealtimeResponseInputImage image)"
+  nameWithType: "RealtimeResponseInputContent.ofImage(RealtimeResponseInputImage image)"
+  summary: "Creates content containing an image."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "the image content."
+    name: "image"
+    type: "<xref href=\"com.azure.ai.agents.models.RealtimeResponseInputImage?alt=com.azure.ai.agents.models.RealtimeResponseInputImage&text=RealtimeResponseInputImage\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static RealtimeResponseInputContent ofImage(RealtimeResponseInputImage image)"
+  desc: "Creates content containing an image."
+  returns:
+    description: "the input content."
+    type: "<xref href=\"com.azure.ai.agents.models.RealtimeResponseInputContent?alt=com.azure.ai.agents.models.RealtimeResponseInputContent&text=RealtimeResponseInputContent\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.RealtimeResponseInputContent.ofText(com.azure.ai.agents.models.RealtimeResponseInputText)"
+  fullName: "com.azure.ai.agents.models.RealtimeResponseInputContent.ofText(RealtimeResponseInputText text)"
+  name: "ofText(RealtimeResponseInputText text)"
+  nameWithType: "RealtimeResponseInputContent.ofText(RealtimeResponseInputText text)"
+  summary: "Creates content containing text."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "the text content."
+    name: "text"
+    type: "<xref href=\"com.azure.ai.agents.models.RealtimeResponseInputText?alt=com.azure.ai.agents.models.RealtimeResponseInputText&text=RealtimeResponseInputText\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static RealtimeResponseInputContent ofText(RealtimeResponseInputText text)"
+  desc: "Creates content containing text."
+  returns:
+    description: "the input content."
+    type: "<xref href=\"com.azure.ai.agents.models.RealtimeResponseInputContent?alt=com.azure.ai.agents.models.RealtimeResponseInputContent&text=RealtimeResponseInputContent\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.RealtimeResponseInputContent.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.ai.agents.models.RealtimeResponseInputContent.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "RealtimeResponseInputContent.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Text, audio, or image content in a user message supplied as response input. Use the factory methods to combine different content variants in the same message."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.RealtimeResponseInputContent?alt=com.azure.ai.agents.models.RealtimeResponseInputContent&text=RealtimeResponseInputContent\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.ai.agents.models"
+artifact: com.azure:azure-ai-agents:2.10.0

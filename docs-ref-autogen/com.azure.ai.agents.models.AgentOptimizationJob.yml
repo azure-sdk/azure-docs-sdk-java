@@ -3,7 +3,7 @@ uid: "com.azure.ai.agents.models.AgentOptimizationJob"
 fullName: "com.azure.ai.agents.models.AgentOptimizationJob"
 name: "AgentOptimizationJob"
 nameWithType: "AgentOptimizationJob"
-summary: "Agent optimization job resource — a long-running job that produces candidate changes to a Foundry agent configuration."
+summary: "Agent optimization job resource — a long-running job that produces candidate changes or versioned skill packages."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -80,9 +80,9 @@ methods:
   fullName: "com.azure.ai.agents.models.AgentOptimizationJob.getError()"
   name: "getError()"
   nameWithType: "AgentOptimizationJob.getError()"
-  summary: "Get the error property: Error details — populated only on failure."
+  summary: "Get the error property: Failure or skip reason; status distinguishes the outcomes."
   syntax: "public ApiError getError()"
-  desc: "Get the error property: Error details — populated only on failure."
+  desc: "Get the error property: Failure or skip reason; status distinguishes the outcomes. Omitted otherwise."
   returns:
     description: "the error value."
     type: "<xref href=\"com.azure.ai.agents.models.ApiError?alt=com.azure.ai.agents.models.ApiError&text=ApiError\" data-throw-if-not-resolved=\"False\" />"
@@ -150,9 +150,9 @@ methods:
   fullName: "com.azure.ai.agents.models.AgentOptimizationJob.getTargetConfiguration()"
   name: "getTargetConfiguration()"
   nameWithType: "AgentOptimizationJob.getTargetConfiguration()"
-  summary: "Get the target<wbr>Configuration property: Foundry agent whose configuration is optimized."
+  summary: "Get the target<wbr>Configuration property: Foundry agent whose configuration is optimized, or a read-only trace and skill source for skill\\_optimization."
   syntax: "public AgentOptimizationTargetConfiguration getTargetConfiguration()"
-  desc: "Get the targetConfiguration property: Foundry agent whose configuration is optimized. Omitted when the workflow does not target a registered Foundry agent."
+  desc: "Get the targetConfiguration property: Foundry agent whose configuration is optimized, or a read-only trace and skill source for skill\\_optimization. Agentless skill optimization requires explicit agent\\_traces telemetry configuration with an exact agent\\_name. Skill optimization does not modify the target agent."
   returns:
     description: "the targetConfiguration value."
     type: "<xref href=\"com.azure.ai.agents.models.AgentOptimizationTargetConfiguration?alt=com.azure.ai.agents.models.AgentOptimizationTargetConfiguration&text=AgentOptimizationTargetConfiguration\" data-throw-if-not-resolved=\"False\" />"
@@ -194,13 +194,13 @@ methods:
   fullName: "com.azure.ai.agents.models.AgentOptimizationJob.setTargetConfiguration(AgentOptimizationTargetConfiguration targetConfiguration)"
   name: "setTargetConfiguration(AgentOptimizationTargetConfiguration targetConfiguration)"
   nameWithType: "AgentOptimizationJob.setTargetConfiguration(AgentOptimizationTargetConfiguration targetConfiguration)"
-  summary: "Set the target<wbr>Configuration property: Foundry agent whose configuration is optimized."
+  summary: "Set the target<wbr>Configuration property: Foundry agent whose configuration is optimized, or a read-only trace and skill source for skill\\_optimization."
   parameters:
   - description: "the targetConfiguration value to set."
     name: "targetConfiguration"
     type: "<xref href=\"com.azure.ai.agents.models.AgentOptimizationTargetConfiguration?alt=com.azure.ai.agents.models.AgentOptimizationTargetConfiguration&text=AgentOptimizationTargetConfiguration\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public AgentOptimizationJob setTargetConfiguration(AgentOptimizationTargetConfiguration targetConfiguration)"
-  desc: "Set the targetConfiguration property: Foundry agent whose configuration is optimized. Omitted when the workflow does not target a registered Foundry agent."
+  desc: "Set the targetConfiguration property: Foundry agent whose configuration is optimized, or a read-only trace and skill source for skill\\_optimization. Agentless skill optimization requires explicit agent\\_traces telemetry configuration with an exact agent\\_name. Skill optimization does not modify the target agent."
   returns:
     description: "the AgentOptimizationJob object itself."
     type: "<xref href=\"com.azure.ai.agents.models.AgentOptimizationJob?alt=com.azure.ai.agents.models.AgentOptimizationJob&text=AgentOptimizationJob\" data-throw-if-not-resolved=\"False\" />"
@@ -217,9 +217,9 @@ methods:
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Agent optimization job resource — a long-running job that produces candidate changes to a Foundry agent configuration."
+desc: "Agent optimization job resource — a long-running job that produces candidate changes or versioned skill packages. For failed or skipped jobs, error explains the outcome; status distinguishes failure from a skip."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.AgentOptimizationJob?alt=com.azure.ai.agents.models.AgentOptimizationJob&text=AgentOptimizationJob\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.ai.agents.models"
-artifact: com.azure:azure-ai-agents:2.9.0
+artifact: com.azure:azure-ai-agents:2.10.0

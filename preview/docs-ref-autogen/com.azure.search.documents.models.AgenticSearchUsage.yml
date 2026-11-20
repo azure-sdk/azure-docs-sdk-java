@@ -1,0 +1,82 @@
+### YamlMime:JavaType
+uid: "com.azure.search.documents.models.AgenticSearchUsage"
+fullName: "com.azure.search.documents.models.AgenticSearchUsage"
+name: "AgenticSearchUsage"
+nameWithType: "AgenticSearchUsage"
+summary: "Token usage for agentic query planning and ranking across the search request, including documents not returned in the response."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **AgenticSearchUsage**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.models.AgenticSearchUsage?alt=com.azure.search.documents.models.AgenticSearchUsage&text=AgenticSearchUsage\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.azure.search.documents.models.AgenticSearchUsage.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.search.documents.models.AgenticSearchUsage.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "AgenticSearchUsage.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Agentic<wbr>Search<wbr>Usage from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static AgenticSearchUsage fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of AgenticSearchUsage from the JsonReader."
+  returns:
+    description: "An instance of AgenticSearchUsage if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.search.documents.models.AgenticSearchUsage?alt=com.azure.search.documents.models.AgenticSearchUsage&text=AgenticSearchUsage\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.models.AgenticSearchUsage.getAgenticPlanningTokens()"
+  fullName: "com.azure.search.documents.models.AgenticSearchUsage.getAgenticPlanningTokens()"
+  name: "getAgenticPlanningTokens()"
+  nameWithType: "AgenticSearchUsage.getAgenticPlanningTokens()"
+  summary: "Get the agentic<wbr>Planning<wbr>Tokens property: The number of tokens consumed by the agentic model for query planning, excluding ranking work."
+  syntax: "public long getAgenticPlanningTokens()"
+  desc: "Get the agenticPlanningTokens property: The number of tokens consumed by the agentic model for query planning, excluding ranking work."
+  returns:
+    description: "the agenticPlanningTokens value."
+    type: "<xref href=\"long?alt=long&text=long\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.models.AgenticSearchUsage.getReasoningTokens()"
+  fullName: "com.azure.search.documents.models.AgenticSearchUsage.getReasoningTokens()"
+  name: "getReasoningTokens()"
+  nameWithType: "AgenticSearchUsage.getReasoningTokens()"
+  summary: "Get the reasoning<wbr>Tokens property: The number of tokens consumed for semantic ranking, including documents not returned in the response."
+  syntax: "public long getReasoningTokens()"
+  desc: "Get the reasoningTokens property: The number of tokens consumed for semantic ranking, including documents not returned in the response. Excludes agentic query-planning tokens."
+  returns:
+    description: "the reasoningTokens value."
+    type: "<xref href=\"long?alt=long&text=long\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.models.AgenticSearchUsage.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.search.documents.models.AgenticSearchUsage.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "AgenticSearchUsage.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Token usage for agentic query planning and ranking across the search request, including documents not returned in the response."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.models.AgenticSearchUsage?alt=com.azure.search.documents.models.AgenticSearchUsage&text=AgenticSearchUsage\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.search.documents.models"
+artifact: com.azure:azure-search-documents:12.3.0-beta.1

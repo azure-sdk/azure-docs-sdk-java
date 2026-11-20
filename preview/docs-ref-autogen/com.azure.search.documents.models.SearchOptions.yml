@@ -30,6 +30,16 @@ constructors:
   syntax: "public SearchOptions()"
   desc: "Creates an instance of SearchOptions class."
 methods:
+- uid: "com.azure.search.documents.models.SearchOptions.getAgenticOptions()"
+  fullName: "com.azure.search.documents.models.SearchOptions.getAgenticOptions()"
+  name: "getAgenticOptions()"
+  nameWithType: "SearchOptions.getAgenticOptions()"
+  summary: "Get the agentic<wbr>Options property: Request-scoped runtime options when query<wbr>Type is set to 'agentic'."
+  syntax: "public AgenticSearchOptions getAgenticOptions()"
+  desc: "Get the agenticOptions property: Request-scoped runtime options when queryType is set to 'agentic'. Not supported with other query modes. Use the existing debug selector for diagnostics."
+  returns:
+    description: "the agenticOptions value."
+    type: "<xref href=\"com.azure.search.documents.models.AgenticSearchOptions?alt=com.azure.search.documents.models.AgenticSearchOptions&text=AgenticSearchOptions\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.models.SearchOptions.getAnswers()"
   fullName: "com.azure.search.documents.models.SearchOptions.getAnswers()"
   name: "getAnswers()"
@@ -130,6 +140,16 @@ methods:
   returns:
     description: "the minimumCoverage value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html\">Double</a>"
+- uid: "com.azure.search.documents.models.SearchOptions.getMoreLikeThis()"
+  fullName: "com.azure.search.documents.models.SearchOptions.getMoreLikeThis()"
+  name: "getMoreLikeThis()"
+  nameWithType: "SearchOptions.getMoreLikeThis()"
+  summary: "Get the more<wbr>Like<wbr>This property: The key of the document to use as the basis for finding similar documents."
+  syntax: "public String getMoreLikeThis()"
+  desc: "Get the moreLikeThis property: The key of the document to use as the basis for finding similar documents. This parameter cannot be used together with search text."
+  returns:
+    description: "the moreLikeThis value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.search.documents.models.SearchOptions.getOrderBy()"
   fullName: "com.azure.search.documents.models.SearchOptions.getOrderBy()"
   name: "getOrderBy()"
@@ -380,6 +400,20 @@ methods:
   returns:
     description: "the includeTotalCount value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.search.documents.models.SearchOptions.setAgenticOptions(com.azure.search.documents.models.AgenticSearchOptions)"
+  fullName: "com.azure.search.documents.models.SearchOptions.setAgenticOptions(AgenticSearchOptions agenticOptions)"
+  name: "setAgenticOptions(AgenticSearchOptions agenticOptions)"
+  nameWithType: "SearchOptions.setAgenticOptions(AgenticSearchOptions agenticOptions)"
+  summary: "Set the agentic<wbr>Options property: Request-scoped runtime options when query<wbr>Type is set to 'agentic'."
+  parameters:
+  - description: "the agenticOptions value to set."
+    name: "agenticOptions"
+    type: "<xref href=\"com.azure.search.documents.models.AgenticSearchOptions?alt=com.azure.search.documents.models.AgenticSearchOptions&text=AgenticSearchOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public SearchOptions setAgenticOptions(AgenticSearchOptions agenticOptions)"
+  desc: "Set the agenticOptions property: Request-scoped runtime options when queryType is set to 'agentic'. Not supported with other query modes. Use the existing debug selector for diagnostics."
+  returns:
+    description: "the SearchOptions object itself."
+    type: "<xref href=\"com.azure.search.documents.models.SearchOptions?alt=com.azure.search.documents.models.SearchOptions&text=SearchOptions\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.models.SearchOptions.setAnswers(com.azure.search.documents.models.QueryAnswerType)"
   fullName: "com.azure.search.documents.models.SearchOptions.setAnswers(QueryAnswerType answers)"
   name: "setAnswers(QueryAnswerType answers)"
@@ -573,6 +607,20 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html\">Double</a>"
   syntax: "public SearchOptions setMinimumCoverage(Double minimumCoverage)"
   desc: "Set the minimumCoverage property: A number between 0 and 100 indicating the percentage of the index that must be covered by a search query in order for the query to be reported as a success. This parameter can be useful for ensuring search availability even for services with only one replica. The default is 100."
+  returns:
+    description: "the SearchOptions object itself."
+    type: "<xref href=\"com.azure.search.documents.models.SearchOptions?alt=com.azure.search.documents.models.SearchOptions&text=SearchOptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.models.SearchOptions.setMoreLikeThis(java.lang.String)"
+  fullName: "com.azure.search.documents.models.SearchOptions.setMoreLikeThis(String moreLikeThis)"
+  name: "setMoreLikeThis(String moreLikeThis)"
+  nameWithType: "SearchOptions.setMoreLikeThis(String moreLikeThis)"
+  summary: "Set the more<wbr>Like<wbr>This property: The key of the document to use as the basis for finding similar documents."
+  parameters:
+  - description: "the moreLikeThis value to set."
+    name: "moreLikeThis"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public SearchOptions setMoreLikeThis(String moreLikeThis)"
+  desc: "Set the moreLikeThis property: The key of the document to use as the basis for finding similar documents. This parameter cannot be used together with search text."
   returns:
     description: "the SearchOptions object itself."
     type: "<xref href=\"com.azure.search.documents.models.SearchOptions?alt=com.azure.search.documents.models.SearchOptions&text=SearchOptions\" data-throw-if-not-resolved=\"False\" />"
@@ -972,4 +1020,4 @@ type: "class"
 desc: "Options for search API."
 metadata: {}
 package: "com.azure.search.documents.models"
-artifact: com.azure:azure-search-documents:12.1.0-beta.2
+artifact: com.azure:azure-search-documents:12.3.0-beta.1

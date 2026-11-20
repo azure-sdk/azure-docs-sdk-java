@@ -30,6 +30,16 @@ constructors:
   syntax: "public AccountProperties()"
   desc: "Creates an instance of AccountProperties class."
 methods:
+- uid: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.a365LoggingEnabled()"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.a365LoggingEnabled()"
+  name: "a365LoggingEnabled()"
+  nameWithType: "AccountProperties.a365LoggingEnabled()"
+  summary: "Get the a365Logging<wbr>Enabled property: Specifies whether A365 logging is enabled."
+  syntax: "public Boolean a365LoggingEnabled()"
+  desc: "Get the a365LoggingEnabled property: Specifies whether A365 logging is enabled. Defaults to true. Set to false to opt out."
+  returns:
+    description: "the a365LoggingEnabled value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.abusePenalty()"
   fullName: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.abusePenalty()"
   name: "abusePenalty()"
@@ -401,6 +411,16 @@ methods:
   - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.trustedCertificateSources()"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.trustedCertificateSources()"
+  name: "trustedCertificateSources()"
+  nameWithType: "AccountProperties.trustedCertificateSources()"
+  summary: "Get the trusted<wbr>Certificate<wbr>Sources property: Private CA trust sources for supported features in an AIServices account with allow<wbr>Project<wbr>Management enabled."
+  syntax: "public List<TrustedCertificateSource> trustedCertificateSources()"
+  desc: "Get the trustedCertificateSources property: Private CA trust sources for supported features in an AIServices account with allowProjectManagement enabled. Supports one Azure Key Vault source containing version-pinned references to secrets with PEM-encoded CA certificates or certificate bundles. On PUT or PATCH, a non-null array replaces the complete configuration, so include all references to retain. Omit this property or send null to preserve the existing configuration; send an empty array to clear it."
+  returns:
+    description: "the trustedCertificateSources value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.TrustedCertificateSource?alt=com.azure.resourcemanager.cognitiveservices.models.TrustedCertificateSource&text=TrustedCertificateSource\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.userOwnedStorage()"
   fullName: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.userOwnedStorage()"
   name: "userOwnedStorage()"
@@ -411,13 +431,20 @@ methods:
   returns:
     description: "the userOwnedStorage value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.UserOwnedStorage?alt=com.azure.resourcemanager.cognitiveservices.models.UserOwnedStorage&text=UserOwnedStorage\" data-throw-if-not-resolved=\"False\" />&gt;"
-- uid: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.validate()"
-  fullName: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.validate()"
-  name: "validate()"
-  nameWithType: "AccountProperties.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
+- uid: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.withA365LoggingEnabled(java.lang.Boolean)"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.withA365LoggingEnabled(Boolean a365LoggingEnabled)"
+  name: "withA365LoggingEnabled(Boolean a365LoggingEnabled)"
+  nameWithType: "AccountProperties.withA365LoggingEnabled(Boolean a365LoggingEnabled)"
+  summary: "Set the a365Logging<wbr>Enabled property: Specifies whether A365 logging is enabled."
+  parameters:
+  - description: "the a365LoggingEnabled value to set."
+    name: "a365LoggingEnabled"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+  syntax: "public AccountProperties withA365LoggingEnabled(Boolean a365LoggingEnabled)"
+  desc: "Set the a365LoggingEnabled property: Specifies whether A365 logging is enabled. Defaults to true. Set to false to opt out."
+  returns:
+    description: "the AccountProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.AccountProperties?alt=com.azure.resourcemanager.cognitiveservices.models.AccountProperties&text=AccountProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.withAllowedFqdnList(java.util.List<java.lang.String>)"
   fullName: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.withAllowedFqdnList(List<String> allowedFqdnList)"
   name: "withAllowedFqdnList(List<String> allowedFqdnList)"
@@ -684,6 +711,20 @@ methods:
   returns:
     description: "the AccountProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.AccountProperties?alt=com.azure.resourcemanager.cognitiveservices.models.AccountProperties&text=AccountProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.withTrustedCertificateSources(java.util.List<com.azure.resourcemanager.cognitiveservices.models.TrustedCertificateSource>)"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.withTrustedCertificateSources(List<TrustedCertificateSource> trustedCertificateSources)"
+  name: "withTrustedCertificateSources(List<TrustedCertificateSource> trustedCertificateSources)"
+  nameWithType: "AccountProperties.withTrustedCertificateSources(List<TrustedCertificateSource> trustedCertificateSources)"
+  summary: "Set the trusted<wbr>Certificate<wbr>Sources property: Private CA trust sources for supported features in an AIServices account with allow<wbr>Project<wbr>Management enabled."
+  parameters:
+  - description: "the trustedCertificateSources value to set."
+    name: "trustedCertificateSources"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.TrustedCertificateSource?alt=com.azure.resourcemanager.cognitiveservices.models.TrustedCertificateSource&text=TrustedCertificateSource\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public AccountProperties withTrustedCertificateSources(List<TrustedCertificateSource> trustedCertificateSources)"
+  desc: "Set the trustedCertificateSources property: Private CA trust sources for supported features in an AIServices account with allowProjectManagement enabled. Supports one Azure Key Vault source containing version-pinned references to secrets with PEM-encoded CA certificates or certificate bundles. On PUT or PATCH, a non-null array replaces the complete configuration, so include all references to retain. Omit this property or send null to preserve the existing configuration; send an empty array to clear it."
+  returns:
+    description: "the AccountProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.AccountProperties?alt=com.azure.resourcemanager.cognitiveservices.models.AccountProperties&text=AccountProperties\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.withUserOwnedStorage(java.util.List<com.azure.resourcemanager.cognitiveservices.models.UserOwnedStorage>)"
   fullName: "com.azure.resourcemanager.cognitiveservices.models.AccountProperties.withUserOwnedStorage(List<UserOwnedStorage> userOwnedStorage)"
   name: "withUserOwnedStorage(List<UserOwnedStorage> userOwnedStorage)"
@@ -704,4 +745,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.AccountProperties?alt=com.azure.resourcemanager.cognitiveservices.models.AccountProperties&text=AccountProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.cognitiveservices.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-cognitiveservices:1.4.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-cognitiveservices:1.5.0

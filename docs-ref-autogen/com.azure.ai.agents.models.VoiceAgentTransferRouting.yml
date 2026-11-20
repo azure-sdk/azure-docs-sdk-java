@@ -1,0 +1,108 @@
+### YamlMime:JavaType
+uid: "com.azure.ai.agents.models.VoiceAgentTransferRouting"
+fullName: "com.azure.ai.agents.models.VoiceAgentTransferRouting"
+name: "VoiceAgentTransferRouting"
+nameWithType: "VoiceAgentTransferRouting"
+summary: "The configured transfer routing policy."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **VoiceAgentTransferRouting**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.VoiceAgentTransferRouting?alt=com.azure.ai.agents.models.VoiceAgentTransferRouting&text=VoiceAgentTransferRouting\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.ai.agents.models.VoiceAgentTransferRouting.VoiceAgentTransferRouting(com.azure.ai.agents.models.VoiceAgentTransferStrategy)"
+  fullName: "com.azure.ai.agents.models.VoiceAgentTransferRouting.VoiceAgentTransferRouting(VoiceAgentTransferStrategy strategy)"
+  name: "VoiceAgentTransferRouting(VoiceAgentTransferStrategy strategy)"
+  nameWithType: "VoiceAgentTransferRouting.VoiceAgentTransferRouting(VoiceAgentTransferStrategy strategy)"
+  summary: "Creates an instance of Voice<wbr>Agent<wbr>Transfer<wbr>Routing class."
+  parameters:
+  - description: "the strategy value to set."
+    name: "strategy"
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentTransferStrategy?alt=com.azure.ai.agents.models.VoiceAgentTransferStrategy&text=VoiceAgentTransferStrategy\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public VoiceAgentTransferRouting(VoiceAgentTransferStrategy strategy)"
+  desc: "Creates an instance of VoiceAgentTransferRouting class."
+methods:
+- uid: "com.azure.ai.agents.models.VoiceAgentTransferRouting.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.ai.agents.models.VoiceAgentTransferRouting.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "VoiceAgentTransferRouting.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Voice<wbr>Agent<wbr>Transfer<wbr>Routing from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static VoiceAgentTransferRouting fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If the deserialized JSON object was missing any required properties."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of VoiceAgentTransferRouting from the JsonReader."
+  returns:
+    description: "An instance of VoiceAgentTransferRouting if the JsonReader was pointing to an instance of it, or null if\n it was pointing to JSON null."
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentTransferRouting?alt=com.azure.ai.agents.models.VoiceAgentTransferRouting&text=VoiceAgentTransferRouting\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.VoiceAgentTransferRouting.getRingTimeout()"
+  fullName: "com.azure.ai.agents.models.VoiceAgentTransferRouting.getRingTimeout()"
+  name: "getRingTimeout()"
+  nameWithType: "VoiceAgentTransferRouting.getRingTimeout()"
+  summary: "Get the ring<wbr>Timeout property: The per-destination ring timeout in seconds, from 1 to 300."
+  syntax: "public Duration getRingTimeout()"
+  desc: "Get the ringTimeout property: The per-destination ring timeout in seconds, from 1 to 300. If omitted, the service defaults to 20 seconds. Must not exceed the tool's execution timeout. ACS allows at most 180 seconds."
+  returns:
+    description: "the ringTimeout value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
+- uid: "com.azure.ai.agents.models.VoiceAgentTransferRouting.getStrategy()"
+  fullName: "com.azure.ai.agents.models.VoiceAgentTransferRouting.getStrategy()"
+  name: "getStrategy()"
+  nameWithType: "VoiceAgentTransferRouting.getStrategy()"
+  summary: "Get the strategy property: The routing strategy."
+  syntax: "public VoiceAgentTransferStrategy getStrategy()"
+  desc: "Get the strategy property: The routing strategy. Current native Telephony transfer supports ACS sequential and random routing only."
+  returns:
+    description: "the strategy value."
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentTransferStrategy?alt=com.azure.ai.agents.models.VoiceAgentTransferStrategy&text=VoiceAgentTransferStrategy\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.VoiceAgentTransferRouting.setRingTimeout(java.time.Duration)"
+  fullName: "com.azure.ai.agents.models.VoiceAgentTransferRouting.setRingTimeout(Duration ringTimeout)"
+  name: "setRingTimeout(Duration ringTimeout)"
+  nameWithType: "VoiceAgentTransferRouting.setRingTimeout(Duration ringTimeout)"
+  summary: "Set the ring<wbr>Timeout property: The per-destination ring timeout in seconds, from 1 to 300."
+  parameters:
+  - description: "the ringTimeout value to set."
+    name: "ringTimeout"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
+  syntax: "public VoiceAgentTransferRouting setRingTimeout(Duration ringTimeout)"
+  desc: "Set the ringTimeout property: The per-destination ring timeout in seconds, from 1 to 300. If omitted, the service defaults to 20 seconds. Must not exceed the tool's execution timeout. ACS allows at most 180 seconds."
+  returns:
+    description: "the VoiceAgentTransferRouting object itself."
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentTransferRouting?alt=com.azure.ai.agents.models.VoiceAgentTransferRouting&text=VoiceAgentTransferRouting\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.VoiceAgentTransferRouting.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.ai.agents.models.VoiceAgentTransferRouting.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "VoiceAgentTransferRouting.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "The configured transfer routing policy. The model selects a target name, not destinations or routing settings."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.VoiceAgentTransferRouting?alt=com.azure.ai.agents.models.VoiceAgentTransferRouting&text=VoiceAgentTransferRouting\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.ai.agents.models"
+artifact: com.azure:azure-ai-agents:2.10.0

@@ -1,0 +1,57 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.cognitiveservices.models.ManagedComputeCapacities"
+fullName: "com.azure.resourcemanager.cognitiveservices.models.ManagedComputeCapacities"
+name: "ManagedComputeCapacities"
+nameWithType: "ManagedComputeCapacities"
+summary: "Resource collection API of Managed<wbr>Compute<wbr>Capacities."
+syntax: "public interface **ManagedComputeCapacities**"
+methods:
+- uid: "com.azure.resourcemanager.cognitiveservices.models.ManagedComputeCapacities.list(java.lang.String)"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.ManagedComputeCapacities.list(String offer)"
+  name: "list(String offer)"
+  nameWithType: "ManagedComputeCapacities.list(String offer)"
+  summary: "Gets the managed compute capacities for a subscription."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The offer name to query capacity for (required)."
+    name: "offer"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract PagedIterable<ManagedComputeCapacity> list(String offer)"
+  desc: "Gets the managed compute capacities for a subscription. Returns available capacity per accelerator type, including deployment size information."
+  returns:
+    description: "the managed compute capacities for a subscription as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.ManagedComputeCapacity?alt=com.azure.resourcemanager.cognitiveservices.models.ManagedComputeCapacity&text=ManagedComputeCapacity\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.ManagedComputeCapacities.list(java.lang.String,java.lang.String,java.lang.String,java.lang.String,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.ManagedComputeCapacities.list(String offer, String acceleratorType, String deploymentId, String location, Context context)"
+  name: "list(String offer, String acceleratorType, String deploymentId, String location, Context context)"
+  nameWithType: "ManagedComputeCapacities.list(String offer, String acceleratorType, String deploymentId, String location, Context context)"
+  summary: "Gets the managed compute capacities for a subscription."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "The offer name to query capacity for (required)."
+    name: "offer"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Optional accelerator type filter to narrow results to a specific accelerator type."
+    name: "acceleratorType"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Optional deployment resource ID. When provided, returns capacity for the specific region\n where the deployment is hosted rather than the best available region."
+    name: "deploymentId"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "Optional Azure location used to select a DataZone scope. Without a deployment ID,\n omitted or blank location returns Global and both US and EU DataZone capacities.\n A supported location returns Global and the matching DataZone capacities; an\n unsupported location returns Global capacity only. With a deployment ID, a\n nonblank location must match the parent account location, ignoring case and\n surrounding whitespace, or the request returns HTTP 400. Capacity is still\n returned for the deployment's backend region."
+    name: "location"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "The context to associate with this operation."
+    name: "context"
+    type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract PagedIterable<ManagedComputeCapacity> list(String offer, String acceleratorType, String deploymentId, String location, Context context)"
+  desc: "Gets the managed compute capacities for a subscription. Returns available capacity per accelerator type, including deployment size information."
+  returns:
+    description: "the managed compute capacities for a subscription as paginated response with <xref uid=\"com.azure.core.http.rest.PagedIterable\" data-throw-if-not-resolved=\"false\" data-raw-source=\"PagedIterable\"></xref>."
+    type: "<xref href=\"com.azure.core.http.rest.PagedIterable?alt=com.azure.core.http.rest.PagedIterable&text=PagedIterable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.ManagedComputeCapacity?alt=com.azure.resourcemanager.cognitiveservices.models.ManagedComputeCapacity&text=ManagedComputeCapacity\" data-throw-if-not-resolved=\"False\" />&gt;"
+type: "interface"
+desc: "Resource collection API of ManagedComputeCapacities."
+metadata: {}
+package: "com.azure.resourcemanager.cognitiveservices.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-cognitiveservices:1.5.0

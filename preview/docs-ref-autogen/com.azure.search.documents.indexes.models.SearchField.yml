@@ -136,6 +136,16 @@ methods:
   returns:
     description: "the synonymMapNames value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+- uid: "com.azure.search.documents.indexes.models.SearchField.getTopicGraphProfile()"
+  fullName: "com.azure.search.documents.indexes.models.SearchField.getTopicGraphProfile()"
+  name: "getTopicGraphProfile()"
+  nameWithType: "SearchField.getTopicGraphProfile()"
+  summary: "Get the topic<wbr>Graph<wbr>Profile property: The name of the topic graph profile linked to this vector field."
+  syntax: "public String getTopicGraphProfile()"
+  desc: "Get the topicGraphProfile property: The name of the topic graph profile linked to this vector field."
+  returns:
+    description: "the topicGraphProfile value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
 - uid: "com.azure.search.documents.indexes.models.SearchField.getType()"
   fullName: "com.azure.search.documents.indexes.models.SearchField.getType()"
   name: "getType()"
@@ -217,6 +227,16 @@ methods:
   desc: "Get the key property: A value indicating whether the field uniquely identifies documents in the index. Exactly one top-level field in each index must be chosen as the key field and it must be of type Edm.String. Key fields can be used to look up documents directly and update or delete specific documents. Default is false for simple fields and null for complex fields."
   returns:
     description: "the key value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.search.documents.indexes.models.SearchField.isOrganizationAccessExpiration()"
+  fullName: "com.azure.search.documents.indexes.models.SearchField.isOrganizationAccessExpiration()"
+  name: "isOrganizationAccessExpiration()"
+  nameWithType: "SearchField.isOrganizationAccessExpiration()"
+  summary: "Get the organization<wbr>Access<wbr>Expiration property: A value indicating whether the field contains the expiration timestamp for organization-scoped Share<wbr>Point sharing links."
+  syntax: "public Boolean isOrganizationAccessExpiration()"
+  desc: "Get the organizationAccessExpiration property: A value indicating whether the field contains the expiration timestamp for organization-scoped SharePoint sharing links. At most one top-level field of type Edm.DateTimeOffset can have this property set to true. On permission-filtered queries, expiration applies only to orgLink:<tenantId> values in a userIds permission-filter field whose tenant ID matches the validated user's tenant ID. The grant is valid only before the timestamp; an absent expiration field or a null timestamp means no time limit. Expiration does not affect orgGroup:<tenantId> values in groupIds permission-filter fields or ordinary user and group grants. If omitted or false, this field is not used for organization-link expiration."
+  returns:
+    description: "the organizationAccessExpiration value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.search.documents.indexes.models.SearchField.isRetrievable()"
   fullName: "com.azure.search.documents.indexes.models.SearchField.isRetrievable()"
@@ -426,6 +446,20 @@ methods:
   returns:
     description: "the SearchField object itself."
     type: "<xref href=\"com.azure.search.documents.indexes.models.SearchField?alt=com.azure.search.documents.indexes.models.SearchField&text=SearchField\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.indexes.models.SearchField.setOrganizationAccessExpiration(java.lang.Boolean)"
+  fullName: "com.azure.search.documents.indexes.models.SearchField.setOrganizationAccessExpiration(Boolean organizationAccessExpiration)"
+  name: "setOrganizationAccessExpiration(Boolean organizationAccessExpiration)"
+  nameWithType: "SearchField.setOrganizationAccessExpiration(Boolean organizationAccessExpiration)"
+  summary: "Set the organization<wbr>Access<wbr>Expiration property: A value indicating whether the field contains the expiration timestamp for organization-scoped Share<wbr>Point sharing links."
+  parameters:
+  - description: "the organizationAccessExpiration value to set."
+    name: "organizationAccessExpiration"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+  syntax: "public SearchField setOrganizationAccessExpiration(Boolean organizationAccessExpiration)"
+  desc: "Set the organizationAccessExpiration property: A value indicating whether the field contains the expiration timestamp for organization-scoped SharePoint sharing links. At most one top-level field of type Edm.DateTimeOffset can have this property set to true. On permission-filtered queries, expiration applies only to orgLink:<tenantId> values in a userIds permission-filter field whose tenant ID matches the validated user's tenant ID. The grant is valid only before the timestamp; an absent expiration field or a null timestamp means no time limit. Expiration does not affect orgGroup:<tenantId> values in groupIds permission-filter fields or ordinary user and group grants. If omitted or false, this field is not used for organization-link expiration."
+  returns:
+    description: "the SearchField object itself."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.SearchField?alt=com.azure.search.documents.indexes.models.SearchField&text=SearchField\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.SearchField.setPermissionFilter(com.azure.search.documents.indexes.models.PermissionFilter)"
   fullName: "com.azure.search.documents.indexes.models.SearchField.setPermissionFilter(PermissionFilter permissionFilter)"
   name: "setPermissionFilter(PermissionFilter permissionFilter)"
@@ -594,6 +628,20 @@ methods:
   returns:
     description: "the SearchField object itself."
     type: "<xref href=\"com.azure.search.documents.indexes.models.SearchField?alt=com.azure.search.documents.indexes.models.SearchField&text=SearchField\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.indexes.models.SearchField.setTopicGraphProfile(java.lang.String)"
+  fullName: "com.azure.search.documents.indexes.models.SearchField.setTopicGraphProfile(String topicGraphProfile)"
+  name: "setTopicGraphProfile(String topicGraphProfile)"
+  nameWithType: "SearchField.setTopicGraphProfile(String topicGraphProfile)"
+  summary: "Set the topic<wbr>Graph<wbr>Profile property: The name of the topic graph profile linked to this vector field."
+  parameters:
+  - description: "the topicGraphProfile value to set."
+    name: "topicGraphProfile"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public SearchField setTopicGraphProfile(String topicGraphProfile)"
+  desc: "Set the topicGraphProfile property: The name of the topic graph profile linked to this vector field."
+  returns:
+    description: "the SearchField object itself."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.SearchField?alt=com.azure.search.documents.indexes.models.SearchField&text=SearchField\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.SearchField.setVectorEncodingFormat(com.azure.search.documents.indexes.models.VectorEncodingFormat)"
   fullName: "com.azure.search.documents.indexes.models.SearchField.setVectorEncodingFormat(VectorEncodingFormat vectorEncodingFormat)"
   name: "setVectorEncodingFormat(VectorEncodingFormat vectorEncodingFormat)"
@@ -654,4 +702,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.indexes.models.SearchField?alt=com.azure.search.documents.indexes.models.SearchField&text=SearchField\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.search.documents.indexes.models"
-artifact: com.azure:azure-search-documents:12.1.0-beta.2
+artifact: com.azure:azure-search-documents:12.3.0-beta.1

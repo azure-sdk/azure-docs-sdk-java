@@ -1,0 +1,140 @@
+### YamlMime:JavaType
+uid: "com.azure.ai.agents.models.VoiceAgentToolChoice"
+fullName: "com.azure.ai.agents.models.VoiceAgentToolChoice"
+name: "VoiceAgentToolChoice"
+nameWithType: "VoiceAgentToolChoice"
+summary: "Tool-selection behavior for a voice agent: a mode, a specific function, or a specific MCP tool."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **VoiceAgentToolChoice**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.VoiceAgentToolChoice?alt=com.azure.ai.agents.models.VoiceAgentToolChoice&text=VoiceAgentToolChoice\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.azure.ai.agents.models.VoiceAgentToolChoice.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.ai.agents.models.VoiceAgentToolChoice.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "VoiceAgentToolChoice.fromJson(JsonReader jsonReader)"
+  summary: "Reads a tool choice from a JSON string or object."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "the JSON reader."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static VoiceAgentToolChoice fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "if the JSON cannot be read."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads a tool choice from a JSON string or object."
+  returns:
+    description: "the tool choice, or null for JSON null."
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentToolChoice?alt=com.azure.ai.agents.models.VoiceAgentToolChoice&text=VoiceAgentToolChoice\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.VoiceAgentToolChoice.getFunction()"
+  fullName: "com.azure.ai.agents.models.VoiceAgentToolChoice.getFunction()"
+  name: "getFunction()"
+  nameWithType: "VoiceAgentToolChoice.getFunction()"
+  summary: "Gets the specific function tool selected by this choice."
+  syntax: "public ToolChoiceFunction getFunction()"
+  desc: "Gets the specific function tool selected by this choice."
+  returns:
+    description: "the function tool, or <code>null</code> if this choice holds another variant."
+    type: "<xref href=\"com.openai.models.responses.ToolChoiceFunction?alt=com.openai.models.responses.ToolChoiceFunction&text=ToolChoiceFunction\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.VoiceAgentToolChoice.getMcp()"
+  fullName: "com.azure.ai.agents.models.VoiceAgentToolChoice.getMcp()"
+  name: "getMcp()"
+  nameWithType: "VoiceAgentToolChoice.getMcp()"
+  summary: "Gets the specific MCP tool selected by this choice."
+  syntax: "public ToolChoiceMcp getMcp()"
+  desc: "Gets the specific MCP tool selected by this choice."
+  returns:
+    description: "the MCP tool, or <code>null</code> if this choice holds another variant."
+    type: "<xref href=\"com.openai.models.responses.ToolChoiceMcp?alt=com.openai.models.responses.ToolChoiceMcp&text=ToolChoiceMcp\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.VoiceAgentToolChoice.getMode()"
+  fullName: "com.azure.ai.agents.models.VoiceAgentToolChoice.getMode()"
+  name: "getMode()"
+  nameWithType: "VoiceAgentToolChoice.getMode()"
+  summary: "Gets the tool-selection mode."
+  syntax: "public ToolChoiceOptions getMode()"
+  desc: "Gets the tool-selection mode."
+  returns:
+    description: "the mode, or <code>null</code> if this choice holds another variant."
+    type: "<xref href=\"com.openai.models.responses.ToolChoiceOptions?alt=com.openai.models.responses.ToolChoiceOptions&text=ToolChoiceOptions\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.VoiceAgentToolChoice.ofFunction(com.openai.models.responses.ToolChoiceFunction)"
+  fullName: "com.azure.ai.agents.models.VoiceAgentToolChoice.ofFunction(ToolChoiceFunction function)"
+  name: "ofFunction(ToolChoiceFunction function)"
+  nameWithType: "VoiceAgentToolChoice.ofFunction(ToolChoiceFunction function)"
+  summary: "Creates a choice that selects a specific function tool."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "the function tool to select."
+    name: "function"
+    type: "<xref href=\"com.openai.models.responses.ToolChoiceFunction?alt=com.openai.models.responses.ToolChoiceFunction&text=ToolChoiceFunction\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static VoiceAgentToolChoice ofFunction(ToolChoiceFunction function)"
+  desc: "Creates a choice that selects a specific function tool."
+  returns:
+    description: "the tool choice."
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentToolChoice?alt=com.azure.ai.agents.models.VoiceAgentToolChoice&text=VoiceAgentToolChoice\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.VoiceAgentToolChoice.ofMcp(com.openai.models.responses.ToolChoiceMcp)"
+  fullName: "com.azure.ai.agents.models.VoiceAgentToolChoice.ofMcp(ToolChoiceMcp mcp)"
+  name: "ofMcp(ToolChoiceMcp mcp)"
+  nameWithType: "VoiceAgentToolChoice.ofMcp(ToolChoiceMcp mcp)"
+  summary: "Creates a choice that selects a specific MCP tool."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "the MCP tool to select."
+    name: "mcp"
+    type: "<xref href=\"com.openai.models.responses.ToolChoiceMcp?alt=com.openai.models.responses.ToolChoiceMcp&text=ToolChoiceMcp\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static VoiceAgentToolChoice ofMcp(ToolChoiceMcp mcp)"
+  desc: "Creates a choice that selects a specific MCP tool."
+  returns:
+    description: "the tool choice."
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentToolChoice?alt=com.azure.ai.agents.models.VoiceAgentToolChoice&text=VoiceAgentToolChoice\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.VoiceAgentToolChoice.ofMode(com.openai.models.responses.ToolChoiceOptions)"
+  fullName: "com.azure.ai.agents.models.VoiceAgentToolChoice.ofMode(ToolChoiceOptions mode)"
+  name: "ofMode(ToolChoiceOptions mode)"
+  nameWithType: "VoiceAgentToolChoice.ofMode(ToolChoiceOptions mode)"
+  summary: "Creates a choice using a tool-selection mode, such as <xref uid=\"com.openai.models.responses.ToolChoiceOptions.AUTO\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ToolChoiceOptions#AUTO\"></xref>."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "the tool-selection mode."
+    name: "mode"
+    type: "<xref href=\"com.openai.models.responses.ToolChoiceOptions?alt=com.openai.models.responses.ToolChoiceOptions&text=ToolChoiceOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static VoiceAgentToolChoice ofMode(ToolChoiceOptions mode)"
+  desc: "Creates a choice using a tool-selection mode, such as <xref uid=\"com.openai.models.responses.ToolChoiceOptions.AUTO\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ToolChoiceOptions#AUTO\"></xref>."
+  returns:
+    description: "the tool choice."
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentToolChoice?alt=com.azure.ai.agents.models.VoiceAgentToolChoice&text=VoiceAgentToolChoice\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.VoiceAgentToolChoice.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.ai.agents.models.VoiceAgentToolChoice.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "VoiceAgentToolChoice.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Tool-selection behavior for a voice agent: a mode, a specific function, or a specific MCP tool.\n\nCreate a choice using <xref uid=\"com.azure.ai.agents.models.VoiceAgentToolChoice.ofMode(com.openai.models.responses.ToolChoiceOptions)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#ofMode(ToolChoiceOptions)\"></xref>, <xref uid=\"com.azure.ai.agents.models.VoiceAgentToolChoice.ofFunction(com.openai.models.responses.ToolChoiceFunction)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#ofFunction(ToolChoiceFunction)\"></xref>, or <xref uid=\"com.azure.ai.agents.models.VoiceAgentToolChoice.ofMcp(com.openai.models.responses.ToolChoiceMcp)\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#ofMcp(ToolChoiceMcp)\"></xref>. Pass `null` to a model's `setToolChoice` method to clear the property; the factories do not accept `null`.\n\nUse <xref uid=\"com.azure.ai.agents.models.VoiceAgentToolChoice.getMode()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#getMode()\"></xref>, <xref uid=\"com.azure.ai.agents.models.VoiceAgentToolChoice.getFunction()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#getFunction()\"></xref>, or <xref uid=\"com.azure.ai.agents.models.VoiceAgentToolChoice.getMcp()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#getMcp()\"></xref> to read the selected variant. Getters for other variants return `null`. Unrecognized choices read from JSON are preserved when serialized again; all three getters return `null` for an unrecognized choice."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.VoiceAgentToolChoice?alt=com.azure.ai.agents.models.VoiceAgentToolChoice&text=VoiceAgentToolChoice\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.ai.agents.models"
+artifact: com.azure:azure-ai-agents:2.10.0

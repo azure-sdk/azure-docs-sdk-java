@@ -3,7 +3,7 @@ uid: "com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilter
 fullName: "com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint"
 name: "SearchIndexKnowledgeSourceFilterHint"
 nameWithType: "SearchIndexKnowledgeSourceFilterHint"
-summary: "A hint that identifies a field and representative values the query planner can use when constructing a filter."
+summary: "A hint that identifies a field and exhaustive grounding values the query planner can use when constructing a filter."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -22,20 +22,31 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
 syntax: "public final class **SearchIndexKnowledgeSourceFilterHint**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint?alt=com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint&text=SearchIndexKnowledgeSourceFilterHint\" data-throw-if-not-resolved=\"False\" />&gt;"
 constructors:
-- uid: "com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint.SearchIndexKnowledgeSourceFilterHint(java.lang.String,java.util.List<java.lang.String>)"
-  fullName: "com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint.SearchIndexKnowledgeSourceFilterHint(String field, List<String> fieldValues)"
-  name: "SearchIndexKnowledgeSourceFilterHint(String field, List<String> fieldValues)"
-  nameWithType: "SearchIndexKnowledgeSourceFilterHint.SearchIndexKnowledgeSourceFilterHint(String field, List<String> fieldValues)"
+- uid: "com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint.SearchIndexKnowledgeSourceFilterHint(java.lang.String)"
+  fullName: "com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint.SearchIndexKnowledgeSourceFilterHint(String field)"
+  name: "SearchIndexKnowledgeSourceFilterHint(String field)"
+  nameWithType: "SearchIndexKnowledgeSourceFilterHint.SearchIndexKnowledgeSourceFilterHint(String field)"
   summary: "Creates an instance of Search<wbr>Index<wbr>Knowledge<wbr>Source<wbr>Filter<wbr>Hint class."
   parameters:
   - description: "the field value to set."
     name: "field"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  - description: "the fieldValues value to set."
+  syntax: "public SearchIndexKnowledgeSourceFilterHint(String field)"
+  desc: "Creates an instance of SearchIndexKnowledgeSourceFilterHint class."
+- uid: "com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint.SearchIndexKnowledgeSourceFilterHint(java.lang.String,java.util.List<java.lang.String>)"
+  fullName: "com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint.SearchIndexKnowledgeSourceFilterHint(String field, List<String> fieldValues)"
+  name: "SearchIndexKnowledgeSourceFilterHint(String field, List<String> fieldValues)"
+  nameWithType: "SearchIndexKnowledgeSourceFilterHint.SearchIndexKnowledgeSourceFilterHint(String field, List<String> fieldValues)"
+  summary: "Creates a filter hint with explicit values."
+  parameters:
+  - description: "the field to filter."
+    name: "field"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "the allowed filter values."
     name: "fieldValues"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
   syntax: "public SearchIndexKnowledgeSourceFilterHint(String field, List<String> fieldValues)"
-  desc: "Creates an instance of SearchIndexKnowledgeSourceFilterHint class."
+  desc: "Creates a filter hint with explicit values."
 methods:
 - uid: "com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint.fromJson(JsonReader jsonReader)"
@@ -56,6 +67,16 @@ methods:
   returns:
     description: "An instance of SearchIndexKnowledgeSourceFilterHint if the JsonReader was pointing to an instance of it,\n or null if it was pointing to JSON null."
     type: "<xref href=\"com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint?alt=com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint&text=SearchIndexKnowledgeSourceFilterHint\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint.getAutoConfiguration()"
+  fullName: "com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint.getAutoConfiguration()"
+  name: "getAutoConfiguration()"
+  nameWithType: "SearchIndexKnowledgeSourceFilterHint.getAutoConfiguration()"
+  summary: "Get the auto<wbr>Configuration property: Configures the service to resolve grounding values from the field's facets."
+  syntax: "public SearchIndexKnowledgeSourceFilterHintAutoConfiguration getAutoConfiguration()"
+  desc: "Get the autoConfiguration property: Configures the service to resolve grounding values from the field's facets. Its presence enables auto-configuration. The field must be filterable and facetable. Not supported when the target index has document-level permissions or Purview sensitivity labels enabled; this restriction is validated at knowledge source create/update and knowledge base retrieval time. Mutually exclusive with \\`fieldValues\\`. Supported only in a knowledge source's stored \\`queryHints\\`, not in request-time \\`queryHintOverrides\\`."
+  returns:
+    description: "the autoConfiguration value."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHintAutoConfiguration?alt=com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHintAutoConfiguration&text=SearchIndexKnowledgeSourceFilterHintAutoConfiguration\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint.getField()"
   fullName: "com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint.getField()"
   name: "getField()"
@@ -70,9 +91,9 @@ methods:
   fullName: "com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint.getFieldValues()"
   name: "getFieldValues()"
   nameWithType: "SearchIndexKnowledgeSourceFilterHint.getFieldValues()"
-  summary: "Get the field<wbr>Values property: Representative values for the field."
+  summary: "Get the field<wbr>Values property: The exhaustive set of values for the field."
   syntax: "public List<String> getFieldValues()"
-  desc: "Get the fieldValues property: Representative values for the field."
+  desc: "Get the fieldValues property: The exhaustive set of values for the field. At most 160 values, with a maximum of 128 characters per value and 2048 characters combined. In versions supporting \\`autoConfiguration\\`, required unless \\`autoConfiguration\\` is specified, and mutually exclusive with it."
   returns:
     description: "the fieldValues value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
@@ -86,6 +107,34 @@ methods:
   returns:
     description: "the filterInstructions value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint.setAutoConfiguration(com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHintAutoConfiguration)"
+  fullName: "com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint.setAutoConfiguration(SearchIndexKnowledgeSourceFilterHintAutoConfiguration autoConfiguration)"
+  name: "setAutoConfiguration(SearchIndexKnowledgeSourceFilterHintAutoConfiguration autoConfiguration)"
+  nameWithType: "SearchIndexKnowledgeSourceFilterHint.setAutoConfiguration(SearchIndexKnowledgeSourceFilterHintAutoConfiguration autoConfiguration)"
+  summary: "Set the auto<wbr>Configuration property: Configures the service to resolve grounding values from the field's facets."
+  parameters:
+  - description: "the autoConfiguration value to set."
+    name: "autoConfiguration"
+    type: "<xref href=\"com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHintAutoConfiguration?alt=com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHintAutoConfiguration&text=SearchIndexKnowledgeSourceFilterHintAutoConfiguration\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public SearchIndexKnowledgeSourceFilterHint setAutoConfiguration(SearchIndexKnowledgeSourceFilterHintAutoConfiguration autoConfiguration)"
+  desc: "Set the autoConfiguration property: Configures the service to resolve grounding values from the field's facets. Its presence enables auto-configuration. The field must be filterable and facetable. Not supported when the target index has document-level permissions or Purview sensitivity labels enabled; this restriction is validated at knowledge source create/update and knowledge base retrieval time. Mutually exclusive with \\`fieldValues\\`. Supported only in a knowledge source's stored \\`queryHints\\`, not in request-time \\`queryHintOverrides\\`."
+  returns:
+    description: "the SearchIndexKnowledgeSourceFilterHint object itself."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint?alt=com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint&text=SearchIndexKnowledgeSourceFilterHint\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint.setFieldValues(java.util.List<java.lang.String>)"
+  fullName: "com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint.setFieldValues(List<String> fieldValues)"
+  name: "setFieldValues(List<String> fieldValues)"
+  nameWithType: "SearchIndexKnowledgeSourceFilterHint.setFieldValues(List<String> fieldValues)"
+  summary: "Set the field<wbr>Values property: The exhaustive set of values for the field."
+  parameters:
+  - description: "the fieldValues value to set."
+    name: "fieldValues"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+  syntax: "public SearchIndexKnowledgeSourceFilterHint setFieldValues(List<String> fieldValues)"
+  desc: "Set the fieldValues property: The exhaustive set of values for the field. At most 160 values, with a maximum of 128 characters per value and 2048 characters combined. In versions supporting \\`autoConfiguration\\`, required unless \\`autoConfiguration\\` is specified, and mutually exclusive with it."
+  returns:
+    description: "the SearchIndexKnowledgeSourceFilterHint object itself."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint?alt=com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint&text=SearchIndexKnowledgeSourceFilterHint\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint.setFilterInstructions(java.lang.String)"
   fullName: "com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint.setFilterInstructions(String filterInstructions)"
   name: "setFilterInstructions(String filterInstructions)"
@@ -113,9 +162,9 @@ methods:
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "A hint that identifies a field and representative values the query planner can use when constructing a filter."
+desc: "A hint that identifies a field and exhaustive grounding values the query planner can use when constructing a filter."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint?alt=com.azure.search.documents.indexes.models.SearchIndexKnowledgeSourceFilterHint&text=SearchIndexKnowledgeSourceFilterHint\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.search.documents.indexes.models"
-artifact: com.azure:azure-search-documents:12.1.0-beta.2
+artifact: com.azure:azure-search-documents:12.3.0-beta.1

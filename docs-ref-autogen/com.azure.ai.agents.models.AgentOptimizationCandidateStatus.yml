@@ -42,14 +42,14 @@ fields:
   fullName: "com.azure.ai.agents.models.AgentOptimizationCandidateStatus.COMPLETED"
   name: "COMPLETED"
   nameWithType: "AgentOptimizationCandidateStatus.COMPLETED"
-  summary: "The candidate completed full evaluation."
+  summary: "Candidate processing completed, including evaluation when applicable."
   modifiers:
   - "static"
   - "final"
   field:
     type: "<xref href=\"com.azure.ai.agents.models.AgentOptimizationCandidateStatus?alt=com.azure.ai.agents.models.AgentOptimizationCandidateStatus&text=AgentOptimizationCandidateStatus\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final AgentOptimizationCandidateStatus COMPLETED"
-  desc: "The candidate completed full evaluation."
+  desc: "Candidate processing completed, including evaluation when applicable."
 - uid: "com.azure.ai.agents.models.AgentOptimizationCandidateStatus.EVALUATING"
   fullName: "com.azure.ai.agents.models.AgentOptimizationCandidateStatus.EVALUATING"
   name: "EVALUATING"
@@ -86,6 +86,18 @@ fields:
     type: "<xref href=\"com.azure.ai.agents.models.AgentOptimizationCandidateStatus?alt=com.azure.ai.agents.models.AgentOptimizationCandidateStatus&text=AgentOptimizationCandidateStatus\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static final AgentOptimizationCandidateStatus GENERATING"
   desc: "The optimizer is proposing and screening mutations for this candidate."
+- uid: "com.azure.ai.agents.models.AgentOptimizationCandidateStatus.SKIPPED"
+  fullName: "com.azure.ai.agents.models.AgentOptimizationCandidateStatus.SKIPPED"
+  name: "SKIPPED"
+  nameWithType: "AgentOptimizationCandidateStatus.SKIPPED"
+  summary: "Required input was unavailable, so skill optimization did not run."
+  modifiers:
+  - "static"
+  - "final"
+  field:
+    type: "<xref href=\"com.azure.ai.agents.models.AgentOptimizationCandidateStatus?alt=com.azure.ai.agents.models.AgentOptimizationCandidateStatus&text=AgentOptimizationCandidateStatus\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static final AgentOptimizationCandidateStatus SKIPPED"
+  desc: "Required input was unavailable, so skill optimization did not run."
 methods:
 - uid: "com.azure.ai.agents.models.AgentOptimizationCandidateStatus.fromString(java.lang.String)"
   fullName: "com.azure.ai.agents.models.AgentOptimizationCandidateStatus.fromString(String name)"
@@ -119,4 +131,4 @@ type: "class"
 desc: "The candidate's lifecycle state."
 metadata: {}
 package: "com.azure.ai.agents.models"
-artifact: com.azure:azure-ai-agents:2.9.0
+artifact: com.azure:azure-ai-agents:2.10.0

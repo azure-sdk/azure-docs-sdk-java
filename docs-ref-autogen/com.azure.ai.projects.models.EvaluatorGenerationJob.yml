@@ -41,6 +41,16 @@ methods:
   returns:
     description: "An instance of EvaluatorGenerationJob if the JsonReader was pointing to an instance of it, or null if it\n was pointing to JSON null."
     type: "<xref href=\"com.azure.ai.projects.models.EvaluatorGenerationJob?alt=com.azure.ai.projects.models.EvaluatorGenerationJob&text=EvaluatorGenerationJob\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.models.EvaluatorGenerationJob.getCategory()"
+  fullName: "com.azure.ai.projects.models.EvaluatorGenerationJob.getCategory()"
+  name: "getCategory()"
+  nameWithType: "EvaluatorGenerationJob.getCategory()"
+  summary: "Get the category property: Generation intent selected or inherited for this generation attempt."
+  syntax: "public EvaluatorGenerationCategory getCategory()"
+  desc: "Get the category property: Generation intent selected or inherited for this generation attempt. Omitted when no category was supplied."
+  returns:
+    description: "the category value."
+    type: "<xref href=\"com.azure.ai.projects.models.EvaluatorGenerationCategory?alt=com.azure.ai.projects.models.EvaluatorGenerationCategory&text=EvaluatorGenerationCategory\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.projects.models.EvaluatorGenerationJob.getCreatedAt()"
   fullName: "com.azure.ai.projects.models.EvaluatorGenerationJob.getCreatedAt()"
   name: "getCreatedAt()"
@@ -51,6 +61,16 @@ methods:
   returns:
     description: "the createdAt value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/OffsetDateTime.html\">OffsetDateTime</a>"
+- uid: "com.azure.ai.projects.models.EvaluatorGenerationJob.getDimensions()"
+  fullName: "com.azure.ai.projects.models.EvaluatorGenerationJob.getDimensions()"
+  name: "getDimensions()"
+  nameWithType: "EvaluatorGenerationJob.getDimensions()"
+  summary: "Get the dimensions property: Caller-approved dimensions fixed for this generation attempt, not the complete generated result."
+  syntax: "public List<Dimension> getDimensions()"
+  desc: "Get the dimensions property: Caller-approved dimensions fixed for this generation attempt, not the complete generated result. Omission retains normal regeneration ownership handling; an empty list explicitly clears the fixed set."
+  returns:
+    description: "the dimensions value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.ai.projects.models.Dimension?alt=com.azure.ai.projects.models.Dimension&text=Dimension\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.ai.projects.models.EvaluatorGenerationJob.getError()"
   fullName: "com.azure.ai.projects.models.EvaluatorGenerationJob.getError()"
   name: "getError()"
@@ -125,12 +145,22 @@ methods:
   fullName: "com.azure.ai.projects.models.EvaluatorGenerationJob.getModel()"
   name: "getModel()"
   nameWithType: "EvaluatorGenerationJob.getModel()"
-  summary: "Get the model property: The LLM model to use for rubric generation (e.<wbr>g., 'gpt-4o')."
+  summary: "Get the model property: The LLM model used for quality rubric generation (e.<wbr>g., 'gpt-4o')."
   syntax: "public String getModel()"
-  desc: "Get the model property: The LLM model to use for rubric generation (e.g., 'gpt-4o'). Required — users must provide their own model rather than relying on service-owned capacity."
+  desc: "Get the model property: The LLM model used for quality rubric generation (e.g., 'gpt-4o'). Empty when safety generation uses centrally managed simulation capacity."
   returns:
     description: "the model value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.ai.projects.models.EvaluatorGenerationJob.getPassThreshold()"
+  fullName: "com.azure.ai.projects.models.EvaluatorGenerationJob.getPassThreshold()"
+  name: "getPassThreshold()"
+  nameWithType: "EvaluatorGenerationJob.getPassThreshold()"
+  summary: "Get the pass<wbr>Threshold property: Normalized pass threshold supplied or inherited for this generation attempt."
+  syntax: "public Double getPassThreshold()"
+  desc: "Get the passThreshold property: Normalized pass threshold supplied or inherited for this generation attempt. Omitted when no threshold was supplied or saved. Boolean scoring always uses an effective threshold of 1."
+  returns:
+    description: "the passThreshold value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html\">Double</a>"
 - uid: "com.azure.ai.projects.models.EvaluatorGenerationJob.getResult()"
   fullName: "com.azure.ai.projects.models.EvaluatorGenerationJob.getResult()"
   name: "getResult()"
@@ -141,6 +171,16 @@ methods:
   returns:
     description: "the result value."
     type: "<xref href=\"com.azure.ai.projects.models.EvaluatorVersion?alt=com.azure.ai.projects.models.EvaluatorVersion&text=EvaluatorVersion\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.models.EvaluatorGenerationJob.getScoring()"
+  fullName: "com.azure.ai.projects.models.EvaluatorGenerationJob.getScoring()"
+  name: "getScoring()"
+  nameWithType: "EvaluatorGenerationJob.getScoring()"
+  summary: "Get the scoring property: Rubric scoring selected for this generation attempt, including an inherited saved mode."
+  syntax: "public RubricScoring getScoring()"
+  desc: "Get the scoring property: Rubric scoring selected for this generation attempt, including an inherited saved mode. Omitted for legacy generation."
+  returns:
+    description: "the scoring value."
+    type: "<xref href=\"com.azure.ai.projects.models.RubricScoring?alt=com.azure.ai.projects.models.RubricScoring&text=RubricScoring\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.projects.models.EvaluatorGenerationJob.getSources()"
   fullName: "com.azure.ai.projects.models.EvaluatorGenerationJob.getSources()"
   name: "getSources()"
@@ -189,4 +229,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.projects.models.EvaluatorGenerationJob?alt=com.azure.ai.projects.models.EvaluatorGenerationJob&text=EvaluatorGenerationJob\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.ai.projects.models"
-artifact: com.azure:azure-ai-projects:2.9.0
+artifact: com.azure:azure-ai-projects:2.10.0

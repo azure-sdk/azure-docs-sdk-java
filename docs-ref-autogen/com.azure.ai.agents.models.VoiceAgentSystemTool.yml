@@ -77,17 +77,27 @@ methods:
   returns:
     description: "the name value."
     type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentSystemToolName?alt=com.azure.ai.agents.models.VoiceAgentSystemToolName&text=VoiceAgentSystemToolName\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.VoiceAgentSystemTool.getTimeout()"
+  fullName: "com.azure.ai.agents.models.VoiceAgentSystemTool.getTimeout()"
+  name: "getTimeout()"
+  nameWithType: "VoiceAgentSystemTool.getTimeout()"
+  summary: "Get the timeout property: The execution timeout in seconds, from 1 to 300."
+  syntax: "public Duration getTimeout()"
+  desc: "Get the timeout property: The execution timeout in seconds, from 1 to 300. If omitted, the service defaults to 60 seconds."
+  returns:
+    description: "the timeout value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
 - uid: "com.azure.ai.agents.models.VoiceAgentSystemTool.getType()"
   fullName: "com.azure.ai.agents.models.VoiceAgentSystemTool.getType()"
   name: "getType()"
   nameWithType: "VoiceAgentSystemTool.getType()"
   summary: "Get the type property: The tool kind."
   overridden: "com.azure.ai.agents.models.VoiceAgentTool.getType()"
-  syntax: "public String getType()"
+  syntax: "public VoiceAgentToolType getType()"
   desc: "Get the type property: The tool kind."
   returns:
     description: "the type value."
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentToolType?alt=com.azure.ai.agents.models.VoiceAgentToolType&text=VoiceAgentToolType\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.agents.models.VoiceAgentSystemTool.setDescription(java.lang.String)"
   fullName: "com.azure.ai.agents.models.VoiceAgentSystemTool.setDescription(String description)"
   name: "setDescription(String description)"
@@ -99,6 +109,20 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public VoiceAgentSystemTool setDescription(String description)"
   desc: "Set the description property: An optional description of the system tool."
+  returns:
+    description: "the VoiceAgentSystemTool object itself."
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentSystemTool?alt=com.azure.ai.agents.models.VoiceAgentSystemTool&text=VoiceAgentSystemTool\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.VoiceAgentSystemTool.setTimeout(java.time.Duration)"
+  fullName: "com.azure.ai.agents.models.VoiceAgentSystemTool.setTimeout(Duration timeout)"
+  name: "setTimeout(Duration timeout)"
+  nameWithType: "VoiceAgentSystemTool.setTimeout(Duration timeout)"
+  summary: "Set the timeout property: The execution timeout in seconds, from 1 to 300."
+  parameters:
+  - description: "the timeout value to set."
+    name: "timeout"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html\">Duration</a>"
+  syntax: "public VoiceAgentSystemTool setTimeout(Duration timeout)"
+  desc: "Set the timeout property: The execution timeout in seconds, from 1 to 300. If omitted, the service defaults to 60 seconds."
   returns:
     description: "the VoiceAgentSystemTool object itself."
     type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentSystemTool?alt=com.azure.ai.agents.models.VoiceAgentSystemTool&text=VoiceAgentSystemTool\" data-throw-if-not-resolved=\"False\" />"
@@ -119,4 +143,4 @@ type: "class"
 desc: "A service-managed control that acts on the active voice session without customer code or external authentication."
 metadata: {}
 package: "com.azure.ai.agents.models"
-artifact: com.azure:azure-ai-agents:2.9.0
+artifact: com.azure:azure-ai-agents:2.10.0

@@ -1,0 +1,60 @@
+### YamlMime:JavaType
+uid: "com.azure.ai.agents.BetaVoiceAgentsLiveWebSocketClient"
+fullName: "com.azure.ai.agents.BetaVoiceAgentsLiveWebSocketClient"
+name: "BetaVoiceAgentsLiveWebSocketClient"
+nameWithType: "BetaVoiceAgentsLiveWebSocketClient"
+summary: "A synchronous client for opening native GPT Live sessions with persisted Foundry Live voice agents."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **BetaVoiceAgentsLiveWebSocketClient**"
+methods:
+- uid: "com.azure.ai.agents.BetaVoiceAgentsLiveWebSocketClient.openWebSocketSession(java.lang.String)"
+  fullName: "com.azure.ai.agents.BetaVoiceAgentsLiveWebSocketClient.openWebSocketSession(String agentName)"
+  name: "openWebSocketSession(String agentName)"
+  nameWithType: "BetaVoiceAgentsLiveWebSocketClient.openWebSocketSession(String agentName)"
+  summary: "Opens a Web<wbr>Socket session using the persisted Live agent configuration."
+  parameters:
+  - description: "the Live voice agent name."
+    name: "agentName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public BetaVoiceAgentsLiveWebSocketSessionClient openWebSocketSession(String agentName)"
+  desc: "Opens a WebSocket session using the persisted Live agent configuration."
+  returns:
+    description: "the connected session."
+    type: "<xref href=\"com.azure.ai.agents.BetaVoiceAgentsLiveWebSocketSessionClient?alt=com.azure.ai.agents.BetaVoiceAgentsLiveWebSocketSessionClient&text=BetaVoiceAgentsLiveWebSocketSessionClient\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.BetaVoiceAgentsLiveWebSocketClient.openWebSocketSession(java.lang.String,com.azure.ai.agents.models.VoiceAgentLiveWebSocketConnectionOptions)"
+  fullName: "com.azure.ai.agents.BetaVoiceAgentsLiveWebSocketClient.openWebSocketSession(String agentName, VoiceAgentLiveWebSocketConnectionOptions options)"
+  name: "openWebSocketSession(String agentName, VoiceAgentLiveWebSocketConnectionOptions options)"
+  nameWithType: "BetaVoiceAgentsLiveWebSocketClient.openWebSocketSession(String agentName, VoiceAgentLiveWebSocketConnectionOptions options)"
+  summary: "Opens a Web<wbr>Socket session."
+  parameters:
+  - description: "the Live voice agent name."
+    name: "agentName"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  - description: "the connection options, copied before connecting."
+    name: "options"
+    type: "<xref href=\"com.azure.ai.agents.models.VoiceAgentLiveWebSocketConnectionOptions?alt=com.azure.ai.agents.models.VoiceAgentLiveWebSocketConnectionOptions&text=VoiceAgentLiveWebSocketConnectionOptions\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public BetaVoiceAgentsLiveWebSocketSessionClient openWebSocketSession(String agentName, VoiceAgentLiveWebSocketConnectionOptions options)"
+  desc: "Opens a WebSocket session. Foundry sends the initial `session.start`; consume `session.started` from the event stream before sending application events. No Realtime subprotocol is negotiated."
+  returns:
+    description: "the connected session."
+    type: "<xref href=\"com.azure.ai.agents.BetaVoiceAgentsLiveWebSocketSessionClient?alt=com.azure.ai.agents.BetaVoiceAgentsLiveWebSocketSessionClient&text=BetaVoiceAgentsLiveWebSocketSessionClient\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "A synchronous client for opening native GPT Live sessions with persisted Foundry Live voice agents. Create instances with <xref uid=\"com.azure.ai.agents.AgentsClientBuilder.beta()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"AgentsClientBuilder#beta()\"></xref>."
+metadata: {}
+package: "com.azure.ai.agents"
+artifact: com.azure:azure-ai-agents:2.10.0

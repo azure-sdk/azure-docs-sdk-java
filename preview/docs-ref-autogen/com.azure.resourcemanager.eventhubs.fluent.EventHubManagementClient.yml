@@ -10,11 +10,11 @@ methods:
   fullName: "com.azure.resourcemanager.eventhubs.fluent.EventHubManagementClient.getApiVersion()"
   name: "getApiVersion()"
   nameWithType: "EventHubManagementClient.getApiVersion()"
-  summary: "Gets Api Version."
+  summary: "Gets Version parameter."
   modifiers:
   - "abstract"
   syntax: "public abstract String getApiVersion()"
-  desc: "Gets Api Version."
+  desc: "Gets Version parameter."
   returns:
     description: "the apiVersion value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -94,11 +94,11 @@ methods:
   fullName: "com.azure.resourcemanager.eventhubs.fluent.EventHubManagementClient.getEndpoint()"
   name: "getEndpoint()"
   nameWithType: "EventHubManagementClient.getEndpoint()"
-  summary: "Gets server parameter."
+  summary: "Gets Service host."
   modifiers:
   - "abstract"
   syntax: "public abstract String getEndpoint()"
-  desc: "Gets server parameter."
+  desc: "Gets Service host."
   returns:
     description: "the endpoint value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -114,6 +114,18 @@ methods:
   returns:
     description: "the EventHubsClient object."
     type: "<xref href=\"com.azure.resourcemanager.eventhubs.fluent.EventHubsClient?alt=com.azure.resourcemanager.eventhubs.fluent.EventHubsClient&text=EventHubsClient\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.eventhubs.fluent.EventHubManagementClient.getFabricShortcuts()"
+  fullName: "com.azure.resourcemanager.eventhubs.fluent.EventHubManagementClient.getFabricShortcuts()"
+  name: "getFabricShortcuts()"
+  nameWithType: "EventHubManagementClient.getFabricShortcuts()"
+  summary: "Gets the Fabric<wbr>Shortcuts<wbr>Client object to access its operations."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract FabricShortcutsClient getFabricShortcuts()"
+  desc: "Gets the FabricShortcutsClient object to access its operations."
+  returns:
+    description: "the FabricShortcutsClient object."
+    type: "<xref href=\"com.azure.resourcemanager.eventhubs.fluent.FabricShortcutsClient?alt=com.azure.resourcemanager.eventhubs.fluent.FabricShortcutsClient&text=FabricShortcutsClient\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.eventhubs.fluent.EventHubManagementClient.getHttpPipeline()"
   fullName: "com.azure.resourcemanager.eventhubs.fluent.EventHubManagementClient.getHttpPipeline()"
   name: "getHttpPipeline()"
@@ -150,18 +162,6 @@ methods:
   returns:
     description: "the NetworkSecurityPerimeterConfigurationsClient object."
     type: "<xref href=\"com.azure.resourcemanager.eventhubs.fluent.NetworkSecurityPerimeterConfigurationsClient?alt=com.azure.resourcemanager.eventhubs.fluent.NetworkSecurityPerimeterConfigurationsClient&text=NetworkSecurityPerimeterConfigurationsClient\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.eventhubs.fluent.EventHubManagementClient.getNetworkSecurityPerimeterConfigurationsOperations()"
-  fullName: "com.azure.resourcemanager.eventhubs.fluent.EventHubManagementClient.getNetworkSecurityPerimeterConfigurationsOperations()"
-  name: "getNetworkSecurityPerimeterConfigurationsOperations()"
-  nameWithType: "EventHubManagementClient.getNetworkSecurityPerimeterConfigurationsOperations()"
-  summary: "Gets the Network<wbr>Security<wbr>Perimeter<wbr>Configurations<wbr>Operations<wbr>Client object to access its operations."
-  modifiers:
-  - "abstract"
-  syntax: "public abstract NetworkSecurityPerimeterConfigurationsOperationsClient getNetworkSecurityPerimeterConfigurationsOperations()"
-  desc: "Gets the NetworkSecurityPerimeterConfigurationsOperationsClient object to access its operations."
-  returns:
-    description: "the NetworkSecurityPerimeterConfigurationsOperationsClient object."
-    type: "<xref href=\"com.azure.resourcemanager.eventhubs.fluent.NetworkSecurityPerimeterConfigurationsOperationsClient?alt=com.azure.resourcemanager.eventhubs.fluent.NetworkSecurityPerimeterConfigurationsOperationsClient&text=NetworkSecurityPerimeterConfigurationsOperationsClient\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.eventhubs.fluent.EventHubManagementClient.getOperations()"
   fullName: "com.azure.resourcemanager.eventhubs.fluent.EventHubManagementClient.getOperations()"
   name: "getOperations()"
@@ -214,16 +214,28 @@ methods:
   fullName: "com.azure.resourcemanager.eventhubs.fluent.EventHubManagementClient.getSubscriptionId()"
   name: "getSubscriptionId()"
   nameWithType: "EventHubManagementClient.getSubscriptionId()"
-  summary: "Gets Subscription credentials that uniquely identify a Microsoft Azure subscription."
+  summary: "Gets The ID of the target subscription."
   modifiers:
   - "abstract"
   syntax: "public abstract String getSubscriptionId()"
-  desc: "Gets Subscription credentials that uniquely identify a Microsoft Azure subscription. The subscription ID forms part of the URI for every service call."
+  desc: "Gets The ID of the target subscription. The value must be an UUID."
   returns:
     description: "the subscriptionId value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.eventhubs.fluent.EventHubManagementClient.getUpgradePreferencesOperations()"
+  fullName: "com.azure.resourcemanager.eventhubs.fluent.EventHubManagementClient.getUpgradePreferencesOperations()"
+  name: "getUpgradePreferencesOperations()"
+  nameWithType: "EventHubManagementClient.getUpgradePreferencesOperations()"
+  summary: "Gets the Upgrade<wbr>Preferences<wbr>Operations<wbr>Client object to access its operations."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract UpgradePreferencesOperationsClient getUpgradePreferencesOperations()"
+  desc: "Gets the UpgradePreferencesOperationsClient object to access its operations."
+  returns:
+    description: "the UpgradePreferencesOperationsClient object."
+    type: "<xref href=\"com.azure.resourcemanager.eventhubs.fluent.UpgradePreferencesOperationsClient?alt=com.azure.resourcemanager.eventhubs.fluent.UpgradePreferencesOperationsClient&text=UpgradePreferencesOperationsClient\" data-throw-if-not-resolved=\"False\" />"
 type: "interface"
 desc: "The interface for EventHubManagementClient class."
 metadata: {}
 package: "com.azure.resourcemanager.eventhubs.fluent"
-artifact: com.azure.resourcemanager:azure-resourcemanager-eventhubs:2.48.0-beta.1
+artifact: com.azure.resourcemanager:azure-resourcemanager-eventhubs:2.55.0-beta.1

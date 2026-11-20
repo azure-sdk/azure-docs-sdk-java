@@ -3,7 +3,7 @@ uid: "com.azure.search.documents.knowledgebases.models.KnowledgeBaseRetrievalStr
 fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeBaseRetrievalStreamEvent"
 name: "KnowledgeBaseRetrievalStreamEvent"
 nameWithType: "KnowledgeBaseRetrievalStreamEvent"
-summary: "Base type for events emitted by a streaming knowledge base retrieval."
+summary: "Base for polymorphic events emitted by a streaming knowledge base retrieval."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -21,20 +21,6 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
 syntax: "public abstract class **KnowledgeBaseRetrievalStreamEvent**"
-constructors:
-- uid: "com.azure.search.documents.knowledgebases.models.KnowledgeBaseRetrievalStreamEvent.KnowledgeBaseRetrievalStreamEvent(java.lang.String)"
-  fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeBaseRetrievalStreamEvent.KnowledgeBaseRetrievalStreamEvent(String eventName)"
-  name: "KnowledgeBaseRetrievalStreamEvent(String eventName)"
-  nameWithType: "KnowledgeBaseRetrievalStreamEvent.KnowledgeBaseRetrievalStreamEvent(String eventName)"
-  summary: "Creates a stream event."
-  modifiers:
-  - "protected"
-  parameters:
-  - description: "The server-sent event name."
-    name: "eventName"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "protected KnowledgeBaseRetrievalStreamEvent(String eventName)"
-  desc: "Creates a stream event."
 methods:
 - uid: "com.azure.search.documents.knowledgebases.models.KnowledgeBaseRetrievalStreamEvent.getEventName()"
   fullName: "com.azure.search.documents.knowledgebases.models.KnowledgeBaseRetrievalStreamEvent.getEventName()"
@@ -59,7 +45,7 @@ methods:
     description: "<code>true</code> if this is a terminal event; otherwise <code>false</code>."
     type: "<xref href=\"boolean?alt=boolean&text=boolean\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Base type for events emitted by a streaming knowledge base retrieval."
+desc: "Base for polymorphic events emitted by a streaming knowledge base retrieval. Known events expose typed payloads through their subtype's `getValue()` method. Unrecognized events expose only their names through <xref uid=\"com.azure.search.documents.knowledgebases.models.KnowledgeBaseRetrievalStreamEvent.getEventName()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"#getEventName()\"></xref>; their payloads are not available and they are not terminal. Stream events are envelopes, not JSON payload models; serialize the typed payload instead."
 metadata: {}
 package: "com.azure.search.documents.knowledgebases.models"
-artifact: com.azure:azure-search-documents:12.1.0-beta.2
+artifact: com.azure:azure-search-documents:12.3.0-beta.1

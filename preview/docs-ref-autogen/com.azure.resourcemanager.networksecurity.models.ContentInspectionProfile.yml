@@ -1,0 +1,118 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile"
+fullName: "com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile"
+name: "ContentInspectionProfile"
+nameWithType: "ContentInspectionProfile"
+summary: "A connection to a customer-owned Azure Content Safety account."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **ContentInspectionProfile**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile?alt=com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile&text=ContentInspectionProfile\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile.ContentInspectionProfile()"
+  fullName: "com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile.ContentInspectionProfile()"
+  name: "ContentInspectionProfile()"
+  nameWithType: "ContentInspectionProfile.ContentInspectionProfile()"
+  summary: "Creates an instance of Content<wbr>Inspection<wbr>Profile class."
+  syntax: "public ContentInspectionProfile()"
+  desc: "Creates an instance of ContentInspectionProfile class."
+methods:
+- uid: "com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile.apiKey()"
+  fullName: "com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile.apiKey()"
+  name: "apiKey()"
+  nameWithType: "ContentInspectionProfile.apiKey()"
+  summary: "Get the api<wbr>Key property: The nonempty API key for the specified account."
+  syntax: "public String apiKey()"
+  desc: "Get the apiKey property: The nonempty API key for the specified account. Required together with endpoint in every nonempty request profile, even when the endpoint is unchanged. Supplying a different key with the endpoint on PUT rotates the stored credential. A missing key in a nonempty profile is rejected without retrieving a saved key or comparing with the saved endpoint to permit omission. Null and empty values are rejected, not treated as removal. The key is never returned in resource, list, or long-running operation responses."
+  returns:
+    description: "the apiKey value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile.endpoint()"
+  fullName: "com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile.endpoint()"
+  name: "endpoint()"
+  nameWithType: "ContentInspectionProfile.endpoint()"
+  summary: "Get the endpoint property: The HTTPS account endpoint, for example \\`https://contoso.<wbr>cognitiveservices.<wbr>azure.<wbr>com/\\`."
+  syntax: "public String endpoint()"
+  desc: "Get the endpoint property: The HTTPS account endpoint, for example \\`https://contoso.cognitiveservices.azure.com/\\`. Only Azure Content Safety account endpoints in the service's supported Azure cloud are accepted. Credentials must not be forwarded to other destinations, including redirects. Required together with apiKey in a nonempty request profile, including key rotation. Changing the endpoint requires a key for the new account; the stored key is not reused."
+  returns:
+    description: "the endpoint value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "ContentInspectionProfile.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Content<wbr>Inspection<wbr>Profile from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static ContentInspectionProfile fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the ContentInspectionProfile."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of ContentInspectionProfile from the JsonReader."
+  returns:
+    description: "An instance of ContentInspectionProfile if the JsonReader was pointing to an instance of it, or null if\n it was pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile?alt=com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile&text=ContentInspectionProfile\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "ContentInspectionProfile.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile.withApiKey(java.lang.String)"
+  fullName: "com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile.withApiKey(String apiKey)"
+  name: "withApiKey(String apiKey)"
+  nameWithType: "ContentInspectionProfile.withApiKey(String apiKey)"
+  summary: "Set the api<wbr>Key property: The nonempty API key for the specified account."
+  parameters:
+  - description: "the apiKey value to set."
+    name: "apiKey"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public ContentInspectionProfile withApiKey(String apiKey)"
+  desc: "Set the apiKey property: The nonempty API key for the specified account. Required together with endpoint in every nonempty request profile, even when the endpoint is unchanged. Supplying a different key with the endpoint on PUT rotates the stored credential. A missing key in a nonempty profile is rejected without retrieving a saved key or comparing with the saved endpoint to permit omission. Null and empty values are rejected, not treated as removal. The key is never returned in resource, list, or long-running operation responses."
+  returns:
+    description: "the ContentInspectionProfile object itself."
+    type: "<xref href=\"com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile?alt=com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile&text=ContentInspectionProfile\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile.withEndpoint(java.lang.String)"
+  fullName: "com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile.withEndpoint(String endpoint)"
+  name: "withEndpoint(String endpoint)"
+  nameWithType: "ContentInspectionProfile.withEndpoint(String endpoint)"
+  summary: "Set the endpoint property: The HTTPS account endpoint, for example \\`https://contoso.<wbr>cognitiveservices.<wbr>azure.<wbr>com/\\`."
+  parameters:
+  - description: "the endpoint value to set."
+    name: "endpoint"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public ContentInspectionProfile withEndpoint(String endpoint)"
+  desc: "Set the endpoint property: The HTTPS account endpoint, for example \\`https://contoso.cognitiveservices.azure.com/\\`. Only Azure Content Safety account endpoints in the service's supported Azure cloud are accepted. Credentials must not be forwarded to other destinations, including redirects. Required together with apiKey in a nonempty request profile, including key rotation. Changing the endpoint requires a key for the new account; the stored key is not reused."
+  returns:
+    description: "the ContentInspectionProfile object itself."
+    type: "<xref href=\"com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile?alt=com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile&text=ContentInspectionProfile\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "A connection to a customer-owned Azure Content Safety account. Configuring the connection does not create or attach a ContentInspection policy or select traffic for inspection. The endpoint routes Content Safety calls; a key alone cannot identify the account endpoint. The customer supplies the key, so the service does not discover account keys through Azure Resource Manager or require permission to perform the account's listKeys action. Fields are schema-optional to allow an empty request object. Service cross-field validation requires both endpoint and apiKey in a nonempty request profile. Read responses contain only the endpoint; they are not complete connection-update inputs."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile?alt=com.azure.resourcemanager.networksecurity.models.ContentInspectionProfile&text=ContentInspectionProfile\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.networksecurity.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-networksecurity:1.0.0-beta.2

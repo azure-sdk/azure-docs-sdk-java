@@ -1,0 +1,97 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.keyvault.models.Vault.UpdateStages.WithAccessPolicy"
+fullName: "com.azure.resourcemanager.keyvault.models.Vault.UpdateStages.WithAccessPolicy"
+name: "Vault.UpdateStages.WithAccessPolicy"
+nameWithType: "Vault.UpdateStages.WithAccessPolicy"
+summary: "A key vault update allowing access policies to be modified, attached, or removed."
+syntax: "public static interface **Vault.UpdateStages.WithAccessPolicy**"
+methods:
+- uid: "com.azure.resourcemanager.keyvault.models.Vault.UpdateStages.WithAccessPolicy.defineAccessPolicy()"
+  fullName: "com.azure.resourcemanager.keyvault.models.Vault.UpdateStages.WithAccessPolicy.defineAccessPolicy()"
+  name: "defineAccessPolicy()"
+  nameWithType: "Vault.UpdateStages.WithAccessPolicy.defineAccessPolicy()"
+  summary: "Begins the definition of a new access policy to be added to this key vault."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract AccessPolicy.UpdateDefinitionStages.Blank<Vault.Update> defineAccessPolicy()"
+  desc: "Begins the definition of a new access policy to be added to this key vault."
+  returns:
+    description: "the first stage of the access policy definition"
+    type: "<xref href=\"com.azure.resourcemanager.keyvault.models.AccessPolicy.UpdateDefinitionStages.Blank?alt=com.azure.resourcemanager.keyvault.models.AccessPolicy.UpdateDefinitionStages.Blank&text=Blank\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.keyvault.models.Vault.Update?alt=com.azure.resourcemanager.keyvault.models.Vault.Update&text=Update\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.keyvault.models.Vault.UpdateStages.WithAccessPolicy.updateAccessPolicy(java.lang.String)"
+  fullName: "com.azure.resourcemanager.keyvault.models.Vault.UpdateStages.WithAccessPolicy.updateAccessPolicy(String objectId)"
+  name: "updateAccessPolicy(String objectId)"
+  nameWithType: "Vault.UpdateStages.WithAccessPolicy.updateAccessPolicy(String objectId)"
+  summary: "Begins the update of an existing access policy attached to this key vault."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the object ID of the Active Directory identity the access policy is for"
+    name: "objectId"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract AccessPolicy.Update updateAccessPolicy(String objectId)"
+  desc: "Begins the update of an existing access policy attached to this key vault."
+  returns:
+    description: "the update stage of the access policy definition"
+    type: "<xref href=\"com.azure.resourcemanager.keyvault.models.AccessPolicy.Update?alt=com.azure.resourcemanager.keyvault.models.AccessPolicy.Update&text=Update\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.keyvault.models.Vault.UpdateStages.WithAccessPolicy.withAccessPolicy(com.azure.resourcemanager.keyvault.models.AccessPolicy)"
+  fullName: "com.azure.resourcemanager.keyvault.models.Vault.UpdateStages.WithAccessPolicy.withAccessPolicy(AccessPolicy accessPolicy)"
+  name: "withAccessPolicy(AccessPolicy accessPolicy)"
+  nameWithType: "Vault.UpdateStages.WithAccessPolicy.withAccessPolicy(AccessPolicy accessPolicy)"
+  summary: "Attach an existing access policy."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the existing access policy"
+    name: "accessPolicy"
+    type: "<xref href=\"com.azure.resourcemanager.keyvault.models.AccessPolicy?alt=com.azure.resourcemanager.keyvault.models.AccessPolicy&text=AccessPolicy\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public abstract Vault.Update withAccessPolicy(AccessPolicy accessPolicy)"
+  desc: "Attach an existing access policy."
+  returns:
+    description: "the key vault update stage"
+    type: "<xref href=\"com.azure.resourcemanager.keyvault.models.Vault.Update?alt=com.azure.resourcemanager.keyvault.models.Vault.Update&text=Update\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.keyvault.models.Vault.UpdateStages.WithAccessPolicy.withoutAccessPolicy(java.lang.String)"
+  fullName: "com.azure.resourcemanager.keyvault.models.Vault.UpdateStages.WithAccessPolicy.withoutAccessPolicy(String objectId)"
+  name: "withoutAccessPolicy(String objectId)"
+  nameWithType: "Vault.UpdateStages.WithAccessPolicy.withoutAccessPolicy(String objectId)"
+  summary: "Remove an access policy from the access policy list."
+  modifiers:
+  - "abstract"
+  parameters:
+  - description: "the object ID of the Active Directory identity the access policy is for"
+    name: "objectId"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+  syntax: "public abstract Vault.Update withoutAccessPolicy(String objectId)"
+  desc: "Remove an access policy from the access policy list."
+  returns:
+    description: "the key vault update stage"
+    type: "<xref href=\"com.azure.resourcemanager.keyvault.models.Vault.Update?alt=com.azure.resourcemanager.keyvault.models.Vault.Update&text=Update\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.keyvault.models.Vault.UpdateStages.WithAccessPolicy.withoutRoleBasedAccessControl()"
+  fullName: "com.azure.resourcemanager.keyvault.models.Vault.UpdateStages.WithAccessPolicy.withoutRoleBasedAccessControl()"
+  name: "withoutRoleBasedAccessControl()"
+  nameWithType: "Vault.UpdateStages.WithAccessPolicy.withoutRoleBasedAccessControl()"
+  summary: "Disables role based access control (RBAC) for authorization of data access."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Vault.Update withoutRoleBasedAccessControl()"
+  desc: "Disables role based access control (RBAC) for authorization of data access."
+  returns:
+    description: "the update stage of the access policy definition"
+    type: "<xref href=\"com.azure.resourcemanager.keyvault.models.Vault.Update?alt=com.azure.resourcemanager.keyvault.models.Vault.Update&text=Update\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.keyvault.models.Vault.UpdateStages.WithAccessPolicy.withRoleBasedAccessControl()"
+  fullName: "com.azure.resourcemanager.keyvault.models.Vault.UpdateStages.WithAccessPolicy.withRoleBasedAccessControl()"
+  name: "withRoleBasedAccessControl()"
+  nameWithType: "Vault.UpdateStages.WithAccessPolicy.withRoleBasedAccessControl()"
+  summary: "Enables role based access control (RBAC) for authorization of data access."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Vault.Update withRoleBasedAccessControl()"
+  desc: "Enables role based access control (RBAC) for authorization of data access. It overrides access policies configure."
+  returns:
+    description: "the update stage of the access policy definition"
+    type: "<xref href=\"com.azure.resourcemanager.keyvault.models.Vault.Update?alt=com.azure.resourcemanager.keyvault.models.Vault.Update&text=Update\" data-throw-if-not-resolved=\"False\" />"
+type: "interface"
+desc: "A key vault update allowing access policies to be modified, attached, or removed."
+metadata: {}
+package: "com.azure.resourcemanager.keyvault.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-keyvault:2.58.0-beta.1

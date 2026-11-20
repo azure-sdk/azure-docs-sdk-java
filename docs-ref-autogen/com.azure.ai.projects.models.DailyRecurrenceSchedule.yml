@@ -28,16 +28,12 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
 syntax: "public final class **DailyRecurrenceSchedule**</br> extends <xref href=\"com.azure.ai.projects.models.RecurrenceSchedule?alt=com.azure.ai.projects.models.RecurrenceSchedule&text=RecurrenceSchedule\" data-throw-if-not-resolved=\"False\" />"
 constructors:
-- uid: "com.azure.ai.projects.models.DailyRecurrenceSchedule.DailyRecurrenceSchedule(java.util.List<java.lang.Integer>)"
-  fullName: "com.azure.ai.projects.models.DailyRecurrenceSchedule.DailyRecurrenceSchedule(List<Integer> hours)"
-  name: "DailyRecurrenceSchedule(List<Integer> hours)"
-  nameWithType: "DailyRecurrenceSchedule.DailyRecurrenceSchedule(List<Integer> hours)"
+- uid: "com.azure.ai.projects.models.DailyRecurrenceSchedule.DailyRecurrenceSchedule()"
+  fullName: "com.azure.ai.projects.models.DailyRecurrenceSchedule.DailyRecurrenceSchedule()"
+  name: "DailyRecurrenceSchedule()"
+  nameWithType: "DailyRecurrenceSchedule.DailyRecurrenceSchedule()"
   summary: "Creates an instance of Daily<wbr>Recurrence<wbr>Schedule class."
-  parameters:
-  - description: "the hours value to set."
-    name: "hours"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>&gt;"
-  syntax: "public DailyRecurrenceSchedule(List<Integer> hours)"
+  syntax: "public DailyRecurrenceSchedule()"
   desc: "Creates an instance of DailyRecurrenceSchedule class."
 methods:
 - uid: "com.azure.ai.projects.models.DailyRecurrenceSchedule.fromJson(com.azure.json.JsonReader)"
@@ -53,7 +49,7 @@ methods:
     type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static DailyRecurrenceSchedule fromJson(JsonReader jsonReader)"
   exceptions:
-  - description: "If the deserialized JSON object was missing any required properties."
+  - description: "If an error occurs while reading the DailyRecurrenceSchedule."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   desc: "Reads an instance of DailyRecurrenceSchedule from the JsonReader."
   returns:
@@ -65,7 +61,7 @@ methods:
   nameWithType: "DailyRecurrenceSchedule.getHours()"
   summary: "Get the hours property: Hours for the recurrence schedule."
   syntax: "public List<Integer> getHours()"
-  desc: "Get the hours property: Hours for the recurrence schedule."
+  desc: "Get the hours property: Hours for the recurrence schedule. If omitted, the service uses the current UTC hour when the schedule is created."
   returns:
     description: "the hours value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>&gt;"
@@ -80,6 +76,20 @@ methods:
   returns:
     description: "the type value."
     type: "<xref href=\"com.azure.ai.projects.models.RecurrenceType?alt=com.azure.ai.projects.models.RecurrenceType&text=RecurrenceType\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.models.DailyRecurrenceSchedule.setHours(java.util.List<java.lang.Integer>)"
+  fullName: "com.azure.ai.projects.models.DailyRecurrenceSchedule.setHours(List<Integer> hours)"
+  name: "setHours(List<Integer> hours)"
+  nameWithType: "DailyRecurrenceSchedule.setHours(List<Integer> hours)"
+  summary: "Set the hours property: Hours for the recurrence schedule."
+  parameters:
+  - description: "the hours value to set."
+    name: "hours"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>&gt;"
+  syntax: "public DailyRecurrenceSchedule setHours(List<Integer> hours)"
+  desc: "Set the hours property: Hours for the recurrence schedule. If omitted, the service uses the current UTC hour when the schedule is created."
+  returns:
+    description: "the DailyRecurrenceSchedule object itself."
+    type: "<xref href=\"com.azure.ai.projects.models.DailyRecurrenceSchedule?alt=com.azure.ai.projects.models.DailyRecurrenceSchedule&text=DailyRecurrenceSchedule\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.projects.models.DailyRecurrenceSchedule.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.ai.projects.models.DailyRecurrenceSchedule.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -97,4 +107,4 @@ type: "class"
 desc: "Daily recurrence schedule."
 metadata: {}
 package: "com.azure.ai.projects.models"
-artifact: com.azure:azure-ai-projects:2.9.0
+artifact: com.azure:azure-ai-projects:2.10.0

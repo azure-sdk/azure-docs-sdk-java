@@ -89,6 +89,16 @@ methods:
   returns:
     description: "the displayName value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.ai.projects.models.EvaluationRule.getError()"
+  fullName: "com.azure.ai.projects.models.EvaluationRule.getError()"
+  name: "getError()"
+  nameWithType: "EvaluationRule.getError()"
+  summary: "Get the error property: Error that caused the rule to be disabled, if any."
+  syntax: "public ResponseError getError()"
+  desc: "Get the error property: Error that caused the rule to be disabled, if any."
+  returns:
+    description: "the error value."
+    type: "<xref href=\"com.azure.core.models.ResponseError?alt=com.azure.core.models.ResponseError&text=ResponseError\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.projects.models.EvaluationRule.getEventType()"
   fullName: "com.azure.ai.projects.models.EvaluationRule.getEventType()"
   name: "getEventType()"
@@ -119,6 +129,26 @@ methods:
   returns:
     description: "the id value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.ai.projects.models.EvaluationRule.getProvisioningStatus()"
+  fullName: "com.azure.ai.projects.models.EvaluationRule.getProvisioningStatus()"
+  name: "getProvisioningStatus()"
+  nameWithType: "EvaluationRule.getProvisioningStatus()"
+  summary: "Get the provisioning<wbr>Status property: Provisioning state of the rule's schedule."
+  syntax: "public ScheduleProvisioningStatus getProvisioningStatus()"
+  desc: "Get the provisioningStatus property: Provisioning state of the rule's schedule. Returned for timerTrigger rules only."
+  returns:
+    description: "the provisioningStatus value."
+    type: "<xref href=\"com.azure.ai.projects.models.ScheduleProvisioningStatus?alt=com.azure.ai.projects.models.ScheduleProvisioningStatus&text=ScheduleProvisioningStatus\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.models.EvaluationRule.getSchedule()"
+  fullName: "com.azure.ai.projects.models.EvaluationRule.getSchedule()"
+  name: "getSchedule()"
+  nameWithType: "EvaluationRule.getSchedule()"
+  summary: "Get the schedule property: Timing for timer<wbr>Trigger rules."
+  syntax: "public Trigger getSchedule()"
+  desc: "Get the schedule property: Timing for timerTrigger rules. Required for timerTrigger and not allowed for other event types."
+  returns:
+    description: "the schedule value."
+    type: "<xref href=\"com.azure.ai.projects.models.Trigger?alt=com.azure.ai.projects.models.Trigger&text=Trigger\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.projects.models.EvaluationRule.getSystemData()"
   fullName: "com.azure.ai.projects.models.EvaluationRule.getSystemData()"
   name: "getSystemData()"
@@ -181,6 +211,20 @@ methods:
   returns:
     description: "the EvaluationRule object itself."
     type: "<xref href=\"com.azure.ai.projects.models.EvaluationRule?alt=com.azure.ai.projects.models.EvaluationRule&text=EvaluationRule\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.models.EvaluationRule.setSchedule(com.azure.ai.projects.models.Trigger)"
+  fullName: "com.azure.ai.projects.models.EvaluationRule.setSchedule(Trigger schedule)"
+  name: "setSchedule(Trigger schedule)"
+  nameWithType: "EvaluationRule.setSchedule(Trigger schedule)"
+  summary: "Set the schedule property: Timing for timer<wbr>Trigger rules."
+  parameters:
+  - description: "the schedule value to set."
+    name: "schedule"
+    type: "<xref href=\"com.azure.ai.projects.models.Trigger?alt=com.azure.ai.projects.models.Trigger&text=Trigger\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public EvaluationRule setSchedule(Trigger schedule)"
+  desc: "Set the schedule property: Timing for timerTrigger rules. Required for timerTrigger and not allowed for other event types."
+  returns:
+    description: "the EvaluationRule object itself."
+    type: "<xref href=\"com.azure.ai.projects.models.EvaluationRule?alt=com.azure.ai.projects.models.EvaluationRule&text=EvaluationRule\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.projects.models.EvaluationRule.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.ai.projects.models.EvaluationRule.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -199,4 +243,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.projects.models.EvaluationRule?alt=com.azure.ai.projects.models.EvaluationRule&text=EvaluationRule\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.ai.projects.models"
-artifact: com.azure:azure-ai-projects:2.9.0
+artifact: com.azure:azure-ai-projects:2.10.0

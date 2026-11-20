@@ -150,6 +150,16 @@ methods:
   returns:
     description: "the fields value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.search.documents.indexes.models.SearchField?alt=com.azure.search.documents.indexes.models.SearchField&text=SearchField\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.search.documents.indexes.models.SearchIndex.getGraphProfile()"
+  fullName: "com.azure.search.documents.indexes.models.SearchIndex.getGraphProfile()"
+  name: "getGraphProfile()"
+  nameWithType: "SearchIndex.getGraphProfile()"
+  summary: "Get the graph<wbr>Profile property: Maps edge-list graph roles to this index's fields."
+  syntax: "public GraphProfile getGraphProfile()"
+  desc: "Get the graphProfile property: Maps edge-list graph roles to this index's fields. Required for search.graph; omitted on ordinary document indexes."
+  returns:
+    description: "the graphProfile value."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.GraphProfile?alt=com.azure.search.documents.indexes.models.GraphProfile&text=GraphProfile\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.SearchIndex.getName()"
   fullName: "com.azure.search.documents.indexes.models.SearchIndex.getName()"
   name: "getName()"
@@ -170,6 +180,16 @@ methods:
   returns:
     description: "the normalizers value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.search.documents.indexes.models.LexicalNormalizer?alt=com.azure.search.documents.indexes.models.LexicalNormalizer&text=LexicalNormalizer\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.search.documents.indexes.models.SearchIndex.getOneLakeSecuritySource()"
+  fullName: "com.azure.search.documents.indexes.models.SearchIndex.getOneLakeSecuritySource()"
+  name: "getOneLakeSecuritySource()"
+  nameWithType: "SearchIndex.getOneLakeSecuritySource()"
+  summary: "Get the one<wbr>Lake<wbr>Security<wbr>Source property: Identifies the Microsoft Fabric One<wbr>Lake lakehouse that the index's documents originate from."
+  syntax: "public OneLakeSecuritySource getOneLakeSecuritySource()"
+  desc: "Get the oneLakeSecuritySource property: Identifies the Microsoft Fabric OneLake lakehouse that the index's documents originate from. Required when any field uses the 'oneLakeParentFolders' or 'oneLakeLakehouseId' permission filter."
+  returns:
+    description: "the oneLakeSecuritySource value."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.OneLakeSecuritySource?alt=com.azure.search.documents.indexes.models.OneLakeSecuritySource&text=OneLakeSecuritySource\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.SearchIndex.getPermissionFilterOption()"
   fullName: "com.azure.search.documents.indexes.models.SearchIndex.getPermissionFilterOption()"
   name: "getPermissionFilterOption()"
@@ -396,6 +416,20 @@ methods:
   returns:
     description: "the SearchIndex object itself."
     type: "<xref href=\"com.azure.search.documents.indexes.models.SearchIndex?alt=com.azure.search.documents.indexes.models.SearchIndex&text=SearchIndex\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.indexes.models.SearchIndex.setGraphProfile(com.azure.search.documents.indexes.models.GraphProfile)"
+  fullName: "com.azure.search.documents.indexes.models.SearchIndex.setGraphProfile(GraphProfile graphProfile)"
+  name: "setGraphProfile(GraphProfile graphProfile)"
+  nameWithType: "SearchIndex.setGraphProfile(GraphProfile graphProfile)"
+  summary: "Set the graph<wbr>Profile property: Maps edge-list graph roles to this index's fields."
+  parameters:
+  - description: "the graphProfile value to set."
+    name: "graphProfile"
+    type: "<xref href=\"com.azure.search.documents.indexes.models.GraphProfile?alt=com.azure.search.documents.indexes.models.GraphProfile&text=GraphProfile\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public SearchIndex setGraphProfile(GraphProfile graphProfile)"
+  desc: "Set the graphProfile property: Maps edge-list graph roles to this index's fields. Required for search.graph; omitted on ordinary document indexes."
+  returns:
+    description: "the SearchIndex object itself."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.SearchIndex?alt=com.azure.search.documents.indexes.models.SearchIndex&text=SearchIndex\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.search.documents.indexes.models.SearchIndex.setNormalizers(com.azure.search.documents.indexes.models.LexicalNormalizer...)"
   fullName: "com.azure.search.documents.indexes.models.SearchIndex.setNormalizers(LexicalNormalizer[] normalizers)"
   name: "setNormalizers(LexicalNormalizer[] normalizers)"
@@ -421,6 +455,20 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.search.documents.indexes.models.LexicalNormalizer?alt=com.azure.search.documents.indexes.models.LexicalNormalizer&text=LexicalNormalizer\" data-throw-if-not-resolved=\"False\" />&gt;"
   syntax: "public SearchIndex setNormalizers(List<LexicalNormalizer> normalizers)"
   desc: "Set the normalizers property: The normalizers for the index."
+  returns:
+    description: "the SearchIndex object itself."
+    type: "<xref href=\"com.azure.search.documents.indexes.models.SearchIndex?alt=com.azure.search.documents.indexes.models.SearchIndex&text=SearchIndex\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.search.documents.indexes.models.SearchIndex.setOneLakeSecuritySource(com.azure.search.documents.indexes.models.OneLakeSecuritySource)"
+  fullName: "com.azure.search.documents.indexes.models.SearchIndex.setOneLakeSecuritySource(OneLakeSecuritySource oneLakeSecuritySource)"
+  name: "setOneLakeSecuritySource(OneLakeSecuritySource oneLakeSecuritySource)"
+  nameWithType: "SearchIndex.setOneLakeSecuritySource(OneLakeSecuritySource oneLakeSecuritySource)"
+  summary: "Set the one<wbr>Lake<wbr>Security<wbr>Source property: Identifies the Microsoft Fabric One<wbr>Lake lakehouse that the index's documents originate from."
+  parameters:
+  - description: "the oneLakeSecuritySource value to set."
+    name: "oneLakeSecuritySource"
+    type: "<xref href=\"com.azure.search.documents.indexes.models.OneLakeSecuritySource?alt=com.azure.search.documents.indexes.models.OneLakeSecuritySource&text=OneLakeSecuritySource\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public SearchIndex setOneLakeSecuritySource(OneLakeSecuritySource oneLakeSecuritySource)"
+  desc: "Set the oneLakeSecuritySource property: Identifies the Microsoft Fabric OneLake lakehouse that the index's documents originate from. Required when any field uses the 'oneLakeParentFolders' or 'oneLakeLakehouseId' permission filter."
   returns:
     description: "the SearchIndex object itself."
     type: "<xref href=\"com.azure.search.documents.indexes.models.SearchIndex?alt=com.azure.search.documents.indexes.models.SearchIndex&text=SearchIndex\" data-throw-if-not-resolved=\"False\" />"
@@ -638,4 +686,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.search.documents.indexes.models.SearchIndex?alt=com.azure.search.documents.indexes.models.SearchIndex&text=SearchIndex\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.search.documents.indexes.models"
-artifact: com.azure:azure-search-documents:12.1.0-beta.2
+artifact: com.azure:azure-search-documents:12.3.0-beta.1

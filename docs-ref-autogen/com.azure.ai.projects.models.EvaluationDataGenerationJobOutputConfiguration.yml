@@ -85,7 +85,7 @@ methods:
   nameWithType: "EvaluationDataGenerationJobOutputConfiguration.getWriteMode()"
   summary: "Get the write<wbr>Mode property: Controls how dataset outputs are written."
   syntax: "public DataGenerationJobOutputWriteMode getWriteMode()"
-  desc: "Get the writeMode property: Controls how dataset outputs are written. If omitted, defaults to \\`overwrite\\` and creates the next dataset version using only newly generated rows."
+  desc: "Get the writeMode property: Controls how dataset outputs are written. If omitted, defaults to \\`overwrite\\` and creates the next dataset version using only newly generated rows. \\`merge\\` combines newly generated rows with the latest existing dataset version and de-duplicates trace rows. For conversation jobs, a newly generated conversation snapshot replaces the existing snapshot of the same conversation wholesale. The replacement snapshot may omit earlier turns outside the selected time window. Existing conversations without a newly generated replacement remain unchanged. Merging replaces whole conversation snapshots rather than unioning individual turns, so it does not retain every previous turn from the replaced snapshot."
   returns:
     description: "the writeMode value."
     type: "<xref href=\"com.azure.ai.projects.models.DataGenerationJobOutputWriteMode?alt=com.azure.ai.projects.models.DataGenerationJobOutputWriteMode&text=DataGenerationJobOutputWriteMode\" data-throw-if-not-resolved=\"False\" />"
@@ -141,7 +141,7 @@ methods:
     name: "writeMode"
     type: "<xref href=\"com.azure.ai.projects.models.DataGenerationJobOutputWriteMode?alt=com.azure.ai.projects.models.DataGenerationJobOutputWriteMode&text=DataGenerationJobOutputWriteMode\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public EvaluationDataGenerationJobOutputConfiguration setWriteMode(DataGenerationJobOutputWriteMode writeMode)"
-  desc: "Set the writeMode property: Controls how dataset outputs are written. If omitted, defaults to \\`overwrite\\` and creates the next dataset version using only newly generated rows."
+  desc: "Set the writeMode property: Controls how dataset outputs are written. If omitted, defaults to \\`overwrite\\` and creates the next dataset version using only newly generated rows. \\`merge\\` combines newly generated rows with the latest existing dataset version and de-duplicates trace rows. For conversation jobs, a newly generated conversation snapshot replaces the existing snapshot of the same conversation wholesale. The replacement snapshot may omit earlier turns outside the selected time window. Existing conversations without a newly generated replacement remain unchanged. Merging replaces whole conversation snapshots rather than unioning individual turns, so it does not retain every previous turn from the replaced snapshot."
   returns:
     description: "the EvaluationDataGenerationJobOutputConfiguration object itself."
     type: "<xref href=\"com.azure.ai.projects.models.EvaluationDataGenerationJobOutputConfiguration?alt=com.azure.ai.projects.models.EvaluationDataGenerationJobOutputConfiguration&text=EvaluationDataGenerationJobOutputConfiguration\" data-throw-if-not-resolved=\"False\" />"
@@ -163,4 +163,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.projects.models.EvaluationDataGenerationJobOutputConfiguration?alt=com.azure.ai.projects.models.EvaluationDataGenerationJobOutputConfiguration&text=EvaluationDataGenerationJobOutputConfiguration\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.ai.projects.models"
-artifact: com.azure:azure-ai-projects:2.9.0
+artifact: com.azure:azure-ai-projects:2.10.0

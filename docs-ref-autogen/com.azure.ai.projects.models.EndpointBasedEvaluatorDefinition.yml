@@ -75,6 +75,16 @@ methods:
   returns:
     description: "the connectionName value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.ai.projects.models.EndpointBasedEvaluatorDefinition.getSchemaVersion()"
+  fullName: "com.azure.ai.projects.models.EndpointBasedEvaluatorDefinition.getSchemaVersion()"
+  name: "getSchemaVersion()"
+  nameWithType: "EndpointBasedEvaluatorDefinition.getSchemaVersion()"
+  summary: "Get the schema<wbr>Version property: Version of the contract between the service and the evaluator endpoint."
+  syntax: "public EndpointEvaluatorSchemaVersion getSchemaVersion()"
+  desc: "Get the schemaVersion property: Version of the contract between the service and the evaluator endpoint. Optional on create; if omitted, the service uses \\`0.0.1\\`, so existing clients that do not send this property are unaffected. Stored evaluator versions keep the value they were created with. Registration rejects values the service does not support; the type stays extensible so responses can return newer versions. Version \\`0.0.2\\` requires \\`metrics\\` to contain exactly one metric, of type \\`ordinal\\` or \\`continuous\\`."
+  returns:
+    description: "the schemaVersion value."
+    type: "<xref href=\"com.azure.ai.projects.models.EndpointEvaluatorSchemaVersion?alt=com.azure.ai.projects.models.EndpointEvaluatorSchemaVersion&text=EndpointEvaluatorSchemaVersion\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.projects.models.EndpointBasedEvaluatorDefinition.getType()"
   fullName: "com.azure.ai.projects.models.EndpointBasedEvaluatorDefinition.getType()"
   name: "getType()"
@@ -125,6 +135,20 @@ methods:
   desc: "Set the metrics property: List of output metrics produced by this evaluator."
   returns:
     type: "<xref href=\"com.azure.ai.projects.models.EndpointBasedEvaluatorDefinition?alt=com.azure.ai.projects.models.EndpointBasedEvaluatorDefinition&text=EndpointBasedEvaluatorDefinition\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.projects.models.EndpointBasedEvaluatorDefinition.setSchemaVersion(com.azure.ai.projects.models.EndpointEvaluatorSchemaVersion)"
+  fullName: "com.azure.ai.projects.models.EndpointBasedEvaluatorDefinition.setSchemaVersion(EndpointEvaluatorSchemaVersion schemaVersion)"
+  name: "setSchemaVersion(EndpointEvaluatorSchemaVersion schemaVersion)"
+  nameWithType: "EndpointBasedEvaluatorDefinition.setSchemaVersion(EndpointEvaluatorSchemaVersion schemaVersion)"
+  summary: "Set the schema<wbr>Version property: Version of the contract between the service and the evaluator endpoint."
+  parameters:
+  - description: "the schemaVersion value to set."
+    name: "schemaVersion"
+    type: "<xref href=\"com.azure.ai.projects.models.EndpointEvaluatorSchemaVersion?alt=com.azure.ai.projects.models.EndpointEvaluatorSchemaVersion&text=EndpointEvaluatorSchemaVersion\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public EndpointBasedEvaluatorDefinition setSchemaVersion(EndpointEvaluatorSchemaVersion schemaVersion)"
+  desc: "Set the schemaVersion property: Version of the contract between the service and the evaluator endpoint. Optional on create; if omitted, the service uses \\`0.0.1\\`, so existing clients that do not send this property are unaffected. Stored evaluator versions keep the value they were created with. Registration rejects values the service does not support; the type stays extensible so responses can return newer versions. Version \\`0.0.2\\` requires \\`metrics\\` to contain exactly one metric, of type \\`ordinal\\` or \\`continuous\\`."
+  returns:
+    description: "the EndpointBasedEvaluatorDefinition object itself."
+    type: "<xref href=\"com.azure.ai.projects.models.EndpointBasedEvaluatorDefinition?alt=com.azure.ai.projects.models.EndpointBasedEvaluatorDefinition&text=EndpointBasedEvaluatorDefinition\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.ai.projects.models.EndpointBasedEvaluatorDefinition.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.ai.projects.models.EndpointBasedEvaluatorDefinition.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -142,4 +166,4 @@ type: "class"
 desc: "Endpoint-based evaluator definition. The customer owns and hosts an HTTP endpoint that implements the evaluation contract. The evaluator references a Project Connection by name; the connection stores the endpoint URL and credentials (API Key or Entra ID). At execution time, the service resolves the connection to obtain the endpoint URL and authentication details, then calls the endpoint for each evaluation row."
 metadata: {}
 package: "com.azure.ai.projects.models"
-artifact: com.azure:azure-ai-projects:2.9.0
+artifact: com.azure:azure-ai-projects:2.10.0

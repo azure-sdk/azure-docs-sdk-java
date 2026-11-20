@@ -1,0 +1,82 @@
+### YamlMime:JavaType
+uid: "com.azure.ai.agents.models.AgentOptimizationSkillResolvedContext"
+fullName: "com.azure.ai.agents.models.AgentOptimizationSkillResolvedContext"
+name: "AgentOptimizationSkillResolvedContext"
+nameWithType: "AgentOptimizationSkillResolvedContext"
+summary: "Frozen evidence and discovered baselines, without duplicating requested job configuration."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **AgentOptimizationSkillResolvedContext**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.AgentOptimizationSkillResolvedContext?alt=com.azure.ai.agents.models.AgentOptimizationSkillResolvedContext&text=AgentOptimizationSkillResolvedContext\" data-throw-if-not-resolved=\"False\" />&gt;"
+methods:
+- uid: "com.azure.ai.agents.models.AgentOptimizationSkillResolvedContext.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.ai.agents.models.AgentOptimizationSkillResolvedContext.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "AgentOptimizationSkillResolvedContext.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Agent<wbr>Optimization<wbr>Skill<wbr>Resolved<wbr>Context from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static AgentOptimizationSkillResolvedContext fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the AgentOptimizationSkillResolvedContext."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of AgentOptimizationSkillResolvedContext from the JsonReader."
+  returns:
+    description: "An instance of AgentOptimizationSkillResolvedContext if the JsonReader was pointing to an instance of it,\n or null if it was pointing to JSON null."
+    type: "<xref href=\"com.azure.ai.agents.models.AgentOptimizationSkillResolvedContext?alt=com.azure.ai.agents.models.AgentOptimizationSkillResolvedContext&text=AgentOptimizationSkillResolvedContext\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.ai.agents.models.AgentOptimizationSkillResolvedContext.getAgentSkills()"
+  fullName: "com.azure.ai.agents.models.AgentOptimizationSkillResolvedContext.getAgentSkills()"
+  name: "getAgentSkills()"
+  nameWithType: "AgentOptimizationSkillResolvedContext.getAgentSkills()"
+  summary: "Get the agent<wbr>Skills property: Deduplicated exact baselines discovered from the agent and its toolboxes."
+  syntax: "public List<AgentOptimizationSkillReference> getAgentSkills()"
+  desc: "Get the agentSkills property: Deduplicated exact baselines discovered from the agent and its toolboxes. Excludes skills supplied only through skill\\_references context items and does not imply invocation. Omitted before discovery; empty when none were discovered or the job is agentless."
+  returns:
+    description: "the agentSkills value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.ai.agents.models.AgentOptimizationSkillReference?alt=com.azure.ai.agents.models.AgentOptimizationSkillReference&text=AgentOptimizationSkillReference\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.ai.agents.models.AgentOptimizationSkillResolvedContext.getSourceTraceIds()"
+  fullName: "com.azure.ai.agents.models.AgentOptimizationSkillResolvedContext.getSourceTraceIds()"
+  name: "getSourceTraceIds()"
+  nameWithType: "AgentOptimizationSkillResolvedContext.getSourceTraceIds()"
+  summary: "Get the source<wbr>Trace<wbr>Ids property: Complete evidence cohort, including traces that produced no artifact."
+  syntax: "public List<String> getSourceTraceIds()"
+  desc: "Get the sourceTraceIds property: Complete evidence cohort, including traces that produced no artifact. Omitted before resolution; an empty array means a resolved empty cohort."
+  returns:
+    description: "the sourceTraceIds value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+- uid: "com.azure.ai.agents.models.AgentOptimizationSkillResolvedContext.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.ai.agents.models.AgentOptimizationSkillResolvedContext.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "AgentOptimizationSkillResolvedContext.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Frozen evidence and discovered baselines, without duplicating requested job configuration."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.ai.agents.models.AgentOptimizationSkillResolvedContext?alt=com.azure.ai.agents.models.AgentOptimizationSkillResolvedContext&text=AgentOptimizationSkillResolvedContext\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.ai.agents.models"
+artifact: com.azure:azure-ai-agents:2.10.0

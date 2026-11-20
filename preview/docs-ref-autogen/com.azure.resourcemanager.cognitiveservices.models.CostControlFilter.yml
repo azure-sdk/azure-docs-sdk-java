@@ -1,0 +1,118 @@
+### YamlMime:JavaType
+uid: "com.azure.resourcemanager.cognitiveservices.models.CostControlFilter"
+fullName: "com.azure.resourcemanager.cognitiveservices.models.CostControlFilter"
+name: "CostControlFilter"
+nameWithType: "CostControlFilter"
+summary: "Traffic selection using exactly one of \\`additional<wbr>Info\\` or \\`and\\`."
+inheritances:
+- "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
+inheritedClassMethods:
+- classRef: "java.lang.<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html\">Object</a>"
+  methodsRef:
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#clone--\">clone</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-\">equals</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#finalize--\">finalize</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--\">getClass</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--\">hashCode</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--\">notify</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--\">notifyAll</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--\">toString</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
+  - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
+syntax: "public final class **CostControlFilter**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.CostControlFilter?alt=com.azure.resourcemanager.cognitiveservices.models.CostControlFilter&text=CostControlFilter\" data-throw-if-not-resolved=\"False\" />&gt;"
+constructors:
+- uid: "com.azure.resourcemanager.cognitiveservices.models.CostControlFilter.CostControlFilter()"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.CostControlFilter.CostControlFilter()"
+  name: "CostControlFilter()"
+  nameWithType: "CostControlFilter.CostControlFilter()"
+  summary: "Creates an instance of Cost<wbr>Control<wbr>Filter class."
+  syntax: "public CostControlFilter()"
+  desc: "Creates an instance of CostControlFilter class."
+methods:
+- uid: "com.azure.resourcemanager.cognitiveservices.models.CostControlFilter.additionalInfo()"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.CostControlFilter.additionalInfo()"
+  name: "additionalInfo()"
+  nameWithType: "CostControlFilter.additionalInfo()"
+  summary: "Get the additional<wbr>Info property: A single additional-info condition."
+  syntax: "public CostControlAdditionalInfoFilter additionalInfo()"
+  desc: "Get the additionalInfo property: A single additional-info condition. Must not be combined with \\`and\\` on the same filter object."
+  returns:
+    description: "the additionalInfo value."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.CostControlAdditionalInfoFilter?alt=com.azure.resourcemanager.cognitiveservices.models.CostControlAdditionalInfoFilter&text=CostControlAdditionalInfoFilter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.CostControlFilter.and()"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.CostControlFilter.and()"
+  name: "and()"
+  nameWithType: "CostControlFilter.and()"
+  summary: "Get the and property: A conjunction of at least two conditions."
+  syntax: "public List<CostControlFilter> and()"
+  desc: "Get the and property: A conjunction of at least two conditions. Must not be combined with \\`additionalInfo\\` on the same filter object."
+  returns:
+    description: "the and value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.CostControlFilter?alt=com.azure.resourcemanager.cognitiveservices.models.CostControlFilter&text=CostControlFilter\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.CostControlFilter.fromJson(com.azure.json.JsonReader)"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.CostControlFilter.fromJson(JsonReader jsonReader)"
+  name: "fromJson(JsonReader jsonReader)"
+  nameWithType: "CostControlFilter.fromJson(JsonReader jsonReader)"
+  summary: "Reads an instance of Cost<wbr>Control<wbr>Filter from the Json<wbr>Reader."
+  modifiers:
+  - "static"
+  parameters:
+  - description: "The JsonReader being read."
+    name: "jsonReader"
+    type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public static CostControlFilter fromJson(JsonReader jsonReader)"
+  exceptions:
+  - description: "If an error occurs while reading the CostControlFilter."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  desc: "Reads an instance of CostControlFilter from the JsonReader."
+  returns:
+    description: "An instance of CostControlFilter if the JsonReader was pointing to an instance of it, or null if it was\n pointing to JSON null."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.CostControlFilter?alt=com.azure.resourcemanager.cognitiveservices.models.CostControlFilter&text=CostControlFilter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.CostControlFilter.toJson(com.azure.json.JsonWriter)"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.CostControlFilter.toJson(JsonWriter jsonWriter)"
+  name: "toJson(JsonWriter jsonWriter)"
+  nameWithType: "CostControlFilter.toJson(JsonWriter jsonWriter)"
+  parameters:
+  - name: "jsonWriter"
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public JsonWriter toJson(JsonWriter jsonWriter)"
+  exceptions:
+  - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
+  returns:
+    type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.CostControlFilter.withAdditionalInfo(com.azure.resourcemanager.cognitiveservices.models.CostControlAdditionalInfoFilter)"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.CostControlFilter.withAdditionalInfo(CostControlAdditionalInfoFilter additionalInfo)"
+  name: "withAdditionalInfo(CostControlAdditionalInfoFilter additionalInfo)"
+  nameWithType: "CostControlFilter.withAdditionalInfo(CostControlAdditionalInfoFilter additionalInfo)"
+  summary: "Set the additional<wbr>Info property: A single additional-info condition."
+  parameters:
+  - description: "the additionalInfo value to set."
+    name: "additionalInfo"
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.CostControlAdditionalInfoFilter?alt=com.azure.resourcemanager.cognitiveservices.models.CostControlAdditionalInfoFilter&text=CostControlAdditionalInfoFilter\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public CostControlFilter withAdditionalInfo(CostControlAdditionalInfoFilter additionalInfo)"
+  desc: "Set the additionalInfo property: A single additional-info condition. Must not be combined with \\`and\\` on the same filter object."
+  returns:
+    description: "the CostControlFilter object itself."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.CostControlFilter?alt=com.azure.resourcemanager.cognitiveservices.models.CostControlFilter&text=CostControlFilter\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.cognitiveservices.models.CostControlFilter.withAnd(java.util.List<com.azure.resourcemanager.cognitiveservices.models.CostControlFilter>)"
+  fullName: "com.azure.resourcemanager.cognitiveservices.models.CostControlFilter.withAnd(List<CostControlFilter> and)"
+  name: "withAnd(List<CostControlFilter> and)"
+  nameWithType: "CostControlFilter.withAnd(List<CostControlFilter> and)"
+  summary: "Set the and property: A conjunction of at least two conditions."
+  parameters:
+  - description: "the and value to set."
+    name: "and"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.CostControlFilter?alt=com.azure.resourcemanager.cognitiveservices.models.CostControlFilter&text=CostControlFilter\" data-throw-if-not-resolved=\"False\" />&gt;"
+  syntax: "public CostControlFilter withAnd(List<CostControlFilter> and)"
+  desc: "Set the and property: A conjunction of at least two conditions. Must not be combined with \\`additionalInfo\\` on the same filter object."
+  returns:
+    description: "the CostControlFilter object itself."
+    type: "<xref href=\"com.azure.resourcemanager.cognitiveservices.models.CostControlFilter?alt=com.azure.resourcemanager.cognitiveservices.models.CostControlFilter&text=CostControlFilter\" data-throw-if-not-resolved=\"False\" />"
+type: "class"
+desc: "Traffic selection using exactly one of \\`additionalInfo\\` or \\`and\\`. Additional-info names must be unique across the complete expression. Filters narrow the owner's scope and cannot extend a project-owned control to another project. Values within one condition are alternatives; conditions are combined with AND. An agent selection requires an explicit project filter selecting exactly one project, including for project-owned controls."
+implements:
+- "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.cognitiveservices.models.CostControlFilter?alt=com.azure.resourcemanager.cognitiveservices.models.CostControlFilter&text=CostControlFilter\" data-throw-if-not-resolved=\"False\" />&gt;"
+metadata: {}
+package: "com.azure.resourcemanager.cognitiveservices.models"
+artifact: com.azure.resourcemanager:azure-resourcemanager-cognitiveservices:1.6.0-beta.1
