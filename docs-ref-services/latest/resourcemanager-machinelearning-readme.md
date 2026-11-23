@@ -1,17 +1,17 @@
 ---
 title: Azure Resource Manager Machine Learning client library for Java
 keywords: Azure, java, SDK, API, azure-resourcemanager-machinelearning, machinelearning
-ms.date: 08/22/2024
+ms.date: 11/23/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: machinelearning
 ---
-# Azure Resource Manager Machine Learning client library for Java - version 1.1.0 
+# Azure Resource Manager Machine Learning client library for Java - version 2.0.0 
 
 
 Azure Resource Manager Machine Learning client library for Java.
 
-This package contains Microsoft Azure SDK for Machine Learning Management SDK. These APIs allow end users to operate on Azure Machine Learning Workspace resources. Package tag package-2024-04. For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
+This package contains Microsoft Azure SDK for Machine Learning Management SDK. These APIs allow end users to operate on Azure Machine Learning Workspace resources. Package api-version 2026-07-01. For documentation on how to use this package, please see [Azure Management Libraries for Java](https://aka.ms/azsdk/java/mgmt).
 
 ## We'd love to hear your feedback
 
@@ -41,7 +41,7 @@ Various documentation is available to help you get started
 <dependency>
     <groupId>com.azure.resourcemanager</groupId>
     <artifactId>azure-resourcemanager-machinelearning</artifactId>
-    <version>1.1.0</version>
+    <version>2.0.0</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -61,7 +61,7 @@ Azure subscription ID can be configured via `AZURE_SUBSCRIPTION_ID` environment 
 Assuming the use of the `DefaultAzureCredential` credential class, the client can be authenticated using the following code:
 
 ```java
-AzureProfile profile = new AzureProfile(AzureEnvironment.AZURE);
+AzureProfile profile = new AzureProfile(AzureCloud.AZURE_PUBLIC_CLOUD);
 TokenCredential credential = new DefaultAzureCredentialBuilder()
     .authorityHost(profile.getEnvironment().getActiveDirectoryEndpoint())
     .build();
@@ -69,7 +69,7 @@ MachineLearningManager manager = MachineLearningManager
     .authenticate(credential, profile);
 ```
 
-The sample code assumes global Azure. Please change `AzureEnvironment.AZURE` variable if otherwise.
+The sample code assumes global Azure. Please change the `AzureCloud.AZURE_PUBLIC_CLOUD` variable if otherwise.
 
 See [Authentication][authenticate] for more options.
 
@@ -87,42 +87,40 @@ workspace = machineLearningManager.workspaces()
     .withSku(new Sku().withName("Basic").withTier(SkuTier.BASIC))
     .withIdentity(new ManagedServiceIdentity().withType(ManagedServiceIdentityType.SYSTEM_ASSIGNED))
     .withFriendlyName(workspaceName)
-    .withStorageAccount(
-        storageManager.storageAccounts()
-            .define(storageName)
-            .withRegion(REGION)
-            .withExistingResourceGroup(resourceGroupName)
-            .withSku(StorageAccountSkuType.STANDARD_LRS)
-            .withMinimumTlsVersion(MinimumTlsVersion.TLS1_0)
-            .withHnsEnabled(false)
-            .withAccessFromAzureServices()
-            .withOnlyHttpsTraffic()
-            .withBlobStorageAccountKind().withAccessTier(AccessTier.HOT)
-            .create()
-            .id())
-    .withKeyVault(
-        keyVaultManager.vaults()
-            .define(keyVaultName)
-            .withRegion(REGION)
-            .withExistingResourceGroup(resourceGroupName)
-            .withEmptyAccessPolicy()
-            .withSku(SkuName.STANDARD)
-            .withDeploymentDisabled()
-            .withAccessFromAllNetworks()
-            .create()
-            .id())
-    .withApplicationInsights(
-        applicationInsightsManager.components()
-            .define(insightName)
-            .withRegion(REGION)
-            .withExistingResourceGroup(resourceGroupName)
-            .withKind("web")
-            .withApplicationType(ApplicationType.WEB)
-            .create()
-            .id())
+    .withStorageAccount(storageManager.storageAccounts()
+        .define(storageName)
+        .withRegion(REGION)
+        .withExistingResourceGroup(resourceGroupName)
+        .withSku(StorageAccountSkuType.STANDARD_LRS)
+        .withMinimumTlsVersion(MinimumTlsVersion.TLS1_0)
+        .withHnsEnabled(false)
+        .withAccessFromAzureServices()
+        .withOnlyHttpsTraffic()
+        .withBlobStorageAccountKind()
+        .withAccessTier(AccessTier.HOT)
+        .create()
+        .id())
+    .withKeyVault(keyVaultManager.vaults()
+        .define(keyVaultName)
+        .withRegion(REGION)
+        .withExistingResourceGroup(resourceGroupName)
+        .withEmptyAccessPolicy()
+        .withSku(SkuName.STANDARD)
+        .withDeploymentDisabled()
+        .withAccessFromAllNetworks()
+        .create()
+        .id())
+    .withApplicationInsights(applicationInsightsManager.components()
+        .define(insightName)
+        .withRegion(REGION)
+        .withExistingResourceGroup(resourceGroupName)
+        .withKind("web")
+        .withApplicationType(ApplicationType.WEB)
+        .create()
+        .id())
     .create();
 ```
-[Code snippets and samples](https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-machinelearning_1.1.0/sdk/machinelearning/azure-resourcemanager-machinelearning/SAMPLE.md)
+[Code snippets and samples](https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-machinelearning_2.0.0/sdk/machinelearning/azure-resourcemanager-machinelearning/SAMPLE.md)
 
 
 ## Troubleshooting
@@ -144,14 +142,12 @@ This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For m
 [docs]: https://azure.github.io/azure-sdk-for-java/
 [jdk]: https://learn.microsoft.com/azure/developer/java/fundamentals/
 [azure_subscription]: https://azure.microsoft.com/free/
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-machinelearning_1.1.0/sdk/identity/azure-identity
-[azure_identity_credentials]: https://github.com/Azure/azure-sdk-for-java/tree/azure-resourcemanager-machinelearning_1.1.0/sdk/identity/azure-identity#credentials
-[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-machinelearning_1.1.0/sdk/core/azure-core-http-netty
-[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-machinelearning_1.1.0/sdk/resourcemanager/docs/AUTH.md
-[design]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-machinelearning_1.1.0/sdk/resourcemanager/docs/DESIGN.md
-[cg]: https://github.com/Azure/azure-sdk-for-java/blob/azure-resourcemanager-machinelearning_1.1.0/CONTRIBUTING.md
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-machinelearning_2.0.0/sdk/identity/azure-identity
+[azure_identity_credentials]: https://github.com/Azure/azure-sdk-for-java/tree/com.azure.resourcemanager+azure-resourcemanager-machinelearning_2.0.0/sdk/identity/azure-identity#credentials
+[azure_core_http_netty]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-machinelearning_2.0.0/sdk/core/azure-core-http-netty
+[authenticate]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-machinelearning_2.0.0/sdk/resourcemanager/docs/AUTH.md
+[design]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-machinelearning_2.0.0/sdk/resourcemanager/docs/DESIGN.md
+[cg]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure.resourcemanager+azure-resourcemanager-machinelearning_2.0.0/CONTRIBUTING.md
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
-
-
 
