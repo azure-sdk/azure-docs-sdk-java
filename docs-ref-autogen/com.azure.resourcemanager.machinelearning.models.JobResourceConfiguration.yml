@@ -15,7 +15,6 @@ inheritedClassMethods:
   - "<xref href=\"com.azure.resourcemanager.machinelearning.models.ResourceConfiguration.instanceType()?alt=com.azure.resourcemanager.machinelearning.models.ResourceConfiguration.instanceType&text=instanceType\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.machinelearning.models.ResourceConfiguration.properties()?alt=com.azure.resourcemanager.machinelearning.models.ResourceConfiguration.properties&text=properties\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.machinelearning.models.ResourceConfiguration.toJson(com.azure.json.JsonWriter)?alt=com.azure.resourcemanager.machinelearning.models.ResourceConfiguration.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.resourcemanager.machinelearning.models.ResourceConfiguration.validate()?alt=com.azure.resourcemanager.machinelearning.models.ResourceConfiguration.validate&text=validate\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.machinelearning.models.ResourceConfiguration.withInstanceCount(java.lang.Integer)?alt=com.azure.resourcemanager.machinelearning.models.ResourceConfiguration.withInstanceCount&text=withInstanceCount\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.machinelearning.models.ResourceConfiguration.withInstanceType(java.lang.String)?alt=com.azure.resourcemanager.machinelearning.models.ResourceConfiguration.withInstanceType&text=withInstanceType\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.machinelearning.models.ResourceConfiguration.withProperties(java.util.Map<java.lang.String,java.lang.Object>)?alt=com.azure.resourcemanager.machinelearning.models.ResourceConfiguration.withProperties&text=withProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -52,6 +51,16 @@ methods:
   returns:
     description: "the dockerArgs value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.machinelearning.models.JobResourceConfiguration.dockerArgsList()"
+  fullName: "com.azure.resourcemanager.machinelearning.models.JobResourceConfiguration.dockerArgsList()"
+  name: "dockerArgsList()"
+  nameWithType: "JobResourceConfiguration.dockerArgsList()"
+  summary: "Get the docker<wbr>Args<wbr>List property: Extra arguments to pass to the Docker run command, as a collection."
+  syntax: "public List<String> dockerArgsList()"
+  desc: "Get the dockerArgsList property: Extra arguments to pass to the Docker run command, as a collection. This would override any parameters that have already been set by the system, or in this section. This parameter is only supported for Azure ML compute types."
+  returns:
+    description: "the dockerArgsList value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.resourcemanager.machinelearning.models.JobResourceConfiguration.fromJson(com.azure.json.JsonReader)"
   fullName: "com.azure.resourcemanager.machinelearning.models.JobResourceConfiguration.fromJson(JsonReader jsonReader)"
   name: "fromJson(JsonReader jsonReader)"
@@ -94,14 +103,6 @@ methods:
   - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.machinelearning.models.JobResourceConfiguration.validate()"
-  fullName: "com.azure.resourcemanager.machinelearning.models.JobResourceConfiguration.validate()"
-  name: "validate()"
-  nameWithType: "JobResourceConfiguration.validate()"
-  summary: "Validates the instance."
-  overridden: "com.azure.resourcemanager.machinelearning.models.ResourceConfiguration.validate()"
-  syntax: "public void validate()"
-  desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.machinelearning.models.JobResourceConfiguration.withDockerArgs(java.lang.String)"
   fullName: "com.azure.resourcemanager.machinelearning.models.JobResourceConfiguration.withDockerArgs(String dockerArgs)"
   name: "withDockerArgs(String dockerArgs)"
@@ -113,6 +114,20 @@ methods:
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public JobResourceConfiguration withDockerArgs(String dockerArgs)"
   desc: "Set the dockerArgs property: Extra arguments to pass to the Docker run command. This would override any parameters that have already been set by the system, or in this section. This parameter is only supported for Azure ML compute types."
+  returns:
+    description: "the JobResourceConfiguration object itself."
+    type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.JobResourceConfiguration?alt=com.azure.resourcemanager.machinelearning.models.JobResourceConfiguration&text=JobResourceConfiguration\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.machinelearning.models.JobResourceConfiguration.withDockerArgsList(java.util.List<java.lang.String>)"
+  fullName: "com.azure.resourcemanager.machinelearning.models.JobResourceConfiguration.withDockerArgsList(List<String> dockerArgsList)"
+  name: "withDockerArgsList(List<String> dockerArgsList)"
+  nameWithType: "JobResourceConfiguration.withDockerArgsList(List<String> dockerArgsList)"
+  summary: "Set the docker<wbr>Args<wbr>List property: Extra arguments to pass to the Docker run command, as a collection."
+  parameters:
+  - description: "the dockerArgsList value to set."
+    name: "dockerArgsList"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+  syntax: "public JobResourceConfiguration withDockerArgsList(List<String> dockerArgsList)"
+  desc: "Set the dockerArgsList property: Extra arguments to pass to the Docker run command, as a collection. This would override any parameters that have already been set by the system, or in this section. This parameter is only supported for Azure ML compute types."
   returns:
     description: "the JobResourceConfiguration object itself."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.JobResourceConfiguration?alt=com.azure.resourcemanager.machinelearning.models.JobResourceConfiguration&text=JobResourceConfiguration\" data-throw-if-not-resolved=\"False\" />"
@@ -173,4 +188,4 @@ type: "class"
 desc: "The JobResourceConfiguration model."
 metadata: {}
 package: "com.azure.resourcemanager.machinelearning.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-machinelearning:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-machinelearning:2.0.0

@@ -79,20 +79,20 @@ methods:
     description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.DiagnoseResponseResult?alt=com.azure.resourcemanager.machinelearning.models.DiagnoseResponseResult&text=DiagnoseResponseResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.machinelearning.models.Workspace.diagnose(com.azure.resourcemanager.machinelearning.models.DiagnoseWorkspaceParameters,com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.machinelearning.models.Workspace.diagnose(DiagnoseWorkspaceParameters parameters, Context context)"
-  name: "diagnose(DiagnoseWorkspaceParameters parameters, Context context)"
-  nameWithType: "Workspace.diagnose(DiagnoseWorkspaceParameters parameters, Context context)"
+  fullName: "com.azure.resourcemanager.machinelearning.models.Workspace.diagnose(DiagnoseWorkspaceParameters body, Context context)"
+  name: "diagnose(DiagnoseWorkspaceParameters body, Context context)"
+  nameWithType: "Workspace.diagnose(DiagnoseWorkspaceParameters body, Context context)"
   summary: "Diagnose workspace setup issue."
   modifiers:
   - "abstract"
   parameters:
   - description: "The parameter of diagnosing workspace health."
-    name: "parameters"
+    name: "body"
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.DiagnoseWorkspaceParameters?alt=com.azure.resourcemanager.machinelearning.models.DiagnoseWorkspaceParameters&text=DiagnoseWorkspaceParameters\" data-throw-if-not-resolved=\"False\" />"
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract DiagnoseResponseResult diagnose(DiagnoseWorkspaceParameters parameters, Context context)"
+  syntax: "public abstract DiagnoseResponseResult diagnose(DiagnoseWorkspaceParameters body, Context context)"
   desc: "Diagnose workspace setup issue."
   returns:
     description: "the response."
@@ -121,15 +121,27 @@ methods:
   returns:
     description: "the enableDataIsolation value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
+- uid: "com.azure.resourcemanager.machinelearning.models.Workspace.enableServiceSideCmkEncryption()"
+  fullName: "com.azure.resourcemanager.machinelearning.models.Workspace.enableServiceSideCmkEncryption()"
+  name: "enableServiceSideCmkEncryption()"
+  nameWithType: "Workspace.enableServiceSideCmkEncryption()"
+  summary: "Gets the enable<wbr>Service<wbr>Side<wbr>Cmk<wbr>Encryption property: The enable<wbr>Service<wbr>Side<wbr>CMKEncryption property."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Boolean enableServiceSideCmkEncryption()"
+  desc: "Gets the enableServiceSideCmkEncryption property: The enableServiceSideCMKEncryption property."
+  returns:
+    description: "the enableServiceSideCmkEncryption value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.resourcemanager.machinelearning.models.Workspace.encryption()"
   fullName: "com.azure.resourcemanager.machinelearning.models.Workspace.encryption()"
   name: "encryption()"
   nameWithType: "Workspace.encryption()"
-  summary: "Gets the encryption property: The encryption settings of Azure ML workspace."
+  summary: "Gets the encryption property: The encryption property."
   modifiers:
   - "abstract"
   syntax: "public abstract EncryptionProperty encryption()"
-  desc: "Gets the encryption property: The encryption settings of Azure ML workspace."
+  desc: "Gets the encryption property: The encryption property."
   returns:
     description: "the encryption value."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.EncryptionProperty?alt=com.azure.resourcemanager.machinelearning.models.EncryptionProperty&text=EncryptionProperty\" data-throw-if-not-resolved=\"False\" />"
@@ -197,11 +209,11 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.models.Workspace.identity()"
   name: "identity()"
   nameWithType: "Workspace.identity()"
-  summary: "Gets the identity property: The identity of the resource."
+  summary: "Gets the identity property: The managed service identities assigned to this resource."
   modifiers:
   - "abstract"
   syntax: "public abstract ManagedServiceIdentity identity()"
-  desc: "Gets the identity property: The identity of the resource."
+  desc: "Gets the identity property: The managed service identities assigned to this resource."
   returns:
     description: "the identity value."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.ManagedServiceIdentity?alt=com.azure.resourcemanager.machinelearning.models.ManagedServiceIdentity&text=ManagedServiceIdentity\" data-throw-if-not-resolved=\"False\" />"
@@ -285,19 +297,19 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.models.Workspace.listNotebookAccessToken()"
   name: "listNotebookAccessToken()"
   nameWithType: "Workspace.listNotebookAccessToken()"
-  summary: "return notebook access token and refresh token."
+  summary: "Get Azure Machine Learning Workspace notebook access token."
   modifiers:
   - "abstract"
   syntax: "public abstract NotebookAccessTokenResult listNotebookAccessToken()"
-  desc: "return notebook access token and refresh token."
+  desc: "Get Azure Machine Learning Workspace notebook access token."
   returns:
-    description: "the response."
+    description: "azure Machine Learning Workspace notebook access token."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.NotebookAccessTokenResult?alt=com.azure.resourcemanager.machinelearning.models.NotebookAccessTokenResult&text=NotebookAccessTokenResult\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.machinelearning.models.Workspace.listNotebookAccessTokenWithResponse(com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.machinelearning.models.Workspace.listNotebookAccessTokenWithResponse(Context context)"
   name: "listNotebookAccessTokenWithResponse(Context context)"
   nameWithType: "Workspace.listNotebookAccessTokenWithResponse(Context context)"
-  summary: "return notebook access token and refresh token."
+  summary: "Get Azure Machine Learning Workspace notebook access token."
   modifiers:
   - "abstract"
   parameters:
@@ -305,19 +317,19 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<NotebookAccessTokenResult> listNotebookAccessTokenWithResponse(Context context)"
-  desc: "return notebook access token and refresh token."
+  desc: "Get Azure Machine Learning Workspace notebook access token."
   returns:
-    description: "the response body along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
+    description: "azure Machine Learning Workspace notebook access token along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.machinelearning.models.NotebookAccessTokenResult?alt=com.azure.resourcemanager.machinelearning.models.NotebookAccessTokenResult&text=NotebookAccessTokenResult\" data-throw-if-not-resolved=\"False\" />&gt;"
 - uid: "com.azure.resourcemanager.machinelearning.models.Workspace.listNotebookKeys()"
   fullName: "com.azure.resourcemanager.machinelearning.models.Workspace.listNotebookKeys()"
   name: "listNotebookKeys()"
   nameWithType: "Workspace.listNotebookKeys()"
-  summary: "List keys of a notebook."
+  summary: "Lists keys of Azure Machine Learning Workspaces notebook."
   modifiers:
   - "abstract"
   syntax: "public abstract ListNotebookKeysResult listNotebookKeys()"
-  desc: "List keys of a notebook."
+  desc: "Lists keys of Azure Machine Learning Workspaces notebook."
   returns:
     description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.ListNotebookKeysResult?alt=com.azure.resourcemanager.machinelearning.models.ListNotebookKeysResult&text=ListNotebookKeysResult\" data-throw-if-not-resolved=\"False\" />"
@@ -325,7 +337,7 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.models.Workspace.listNotebookKeysWithResponse(Context context)"
   name: "listNotebookKeysWithResponse(Context context)"
   nameWithType: "Workspace.listNotebookKeysWithResponse(Context context)"
-  summary: "List keys of a notebook."
+  summary: "Lists keys of Azure Machine Learning Workspaces notebook."
   modifiers:
   - "abstract"
   parameters:
@@ -333,7 +345,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<ListNotebookKeysResult> listNotebookKeysWithResponse(Context context)"
-  desc: "List keys of a notebook."
+  desc: "Lists keys of Azure Machine Learning Workspaces notebook."
   returns:
     description: "the response body along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.machinelearning.models.ListNotebookKeysResult?alt=com.azure.resourcemanager.machinelearning.models.ListNotebookKeysResult&text=ListNotebookKeysResult\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -341,11 +353,11 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.models.Workspace.listStorageAccountKeys()"
   name: "listStorageAccountKeys()"
   nameWithType: "Workspace.listStorageAccountKeys()"
-  summary: "List storage account keys of a workspace."
+  summary: "Lists keys of Azure Machine Learning Workspace's storage account."
   modifiers:
   - "abstract"
   syntax: "public abstract ListStorageAccountKeysResult listStorageAccountKeys()"
-  desc: "List storage account keys of a workspace."
+  desc: "Lists keys of Azure Machine Learning Workspace's storage account."
   returns:
     description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.ListStorageAccountKeysResult?alt=com.azure.resourcemanager.machinelearning.models.ListStorageAccountKeysResult&text=ListStorageAccountKeysResult\" data-throw-if-not-resolved=\"False\" />"
@@ -353,7 +365,7 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.models.Workspace.listStorageAccountKeysWithResponse(Context context)"
   name: "listStorageAccountKeysWithResponse(Context context)"
   nameWithType: "Workspace.listStorageAccountKeysWithResponse(Context context)"
-  summary: "List storage account keys of a workspace."
+  summary: "Lists keys of Azure Machine Learning Workspace's storage account."
   modifiers:
   - "abstract"
   parameters:
@@ -361,7 +373,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract Response<ListStorageAccountKeysResult> listStorageAccountKeysWithResponse(Context context)"
-  desc: "List storage account keys of a workspace."
+  desc: "Lists keys of Azure Machine Learning Workspace's storage account."
   returns:
     description: "the response body along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
     type: "<xref href=\"com.azure.core.http.rest.Response?alt=com.azure.core.http.rest.Response&text=Response\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.machinelearning.models.ListStorageAccountKeysResult?alt=com.azure.resourcemanager.machinelearning.models.ListStorageAccountKeysResult&text=ListStorageAccountKeysResult\" data-throw-if-not-resolved=\"False\" />&gt;"
@@ -369,11 +381,11 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.models.Workspace.location()"
   name: "location()"
   nameWithType: "Workspace.location()"
-  summary: "Gets the location property: Specifies the location of the resource."
+  summary: "Gets the location property: The location property."
   modifiers:
   - "abstract"
   syntax: "public abstract String location()"
-  desc: "Gets the location property: Specifies the location of the resource."
+  desc: "Gets the location property: The location property."
   returns:
     description: "the location value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -381,11 +393,11 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.models.Workspace.managedNetwork()"
   name: "managedNetwork()"
   nameWithType: "Workspace.managedNetwork()"
-  summary: "Gets the managed<wbr>Network property: Managed Network settings for a machine learning workspace."
+  summary: "Gets the managed<wbr>Network property: The managed<wbr>Network property."
   modifiers:
   - "abstract"
   syntax: "public abstract ManagedNetworkSettings managedNetwork()"
-  desc: "Gets the managedNetwork property: Managed Network settings for a machine learning workspace."
+  desc: "Gets the managedNetwork property: The managedNetwork property."
   returns:
     description: "the managedNetwork value."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.ManagedNetworkSettings?alt=com.azure.resourcemanager.machinelearning.models.ManagedNetworkSettings&text=ManagedNetworkSettings\" data-throw-if-not-resolved=\"False\" />"
@@ -429,11 +441,11 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.models.Workspace.prepareNotebook()"
   name: "prepareNotebook()"
   nameWithType: "Workspace.prepareNotebook()"
-  summary: "Prepare a notebook."
+  summary: "Prepare Azure Machine Learning Workspace's notebook resource."
   modifiers:
   - "abstract"
   syntax: "public abstract NotebookResourceInfo prepareNotebook()"
-  desc: "Prepare a notebook."
+  desc: "Prepare Azure Machine Learning Workspace's notebook resource."
   returns:
     description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.NotebookResourceInfo?alt=com.azure.resourcemanager.machinelearning.models.NotebookResourceInfo&text=NotebookResourceInfo\" data-throw-if-not-resolved=\"False\" />"
@@ -441,7 +453,7 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.models.Workspace.prepareNotebook(Context context)"
   name: "prepareNotebook(Context context)"
   nameWithType: "Workspace.prepareNotebook(Context context)"
-  summary: "Prepare a notebook."
+  summary: "Prepare Azure Machine Learning Workspace's notebook resource."
   modifiers:
   - "abstract"
   parameters:
@@ -449,7 +461,7 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract NotebookResourceInfo prepareNotebook(Context context)"
-  desc: "Prepare a notebook."
+  desc: "Prepare Azure Machine Learning Workspace's notebook resource."
   returns:
     description: "the response."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.NotebookResourceInfo?alt=com.azure.resourcemanager.machinelearning.models.NotebookResourceInfo&text=NotebookResourceInfo\" data-throw-if-not-resolved=\"False\" />"
@@ -501,6 +513,18 @@ methods:
   returns:
     description: "the provisioningState value."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.ProvisioningState?alt=com.azure.resourcemanager.machinelearning.models.ProvisioningState&text=ProvisioningState\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.machinelearning.models.Workspace.provisionNetworkNow()"
+  fullName: "com.azure.resourcemanager.machinelearning.models.Workspace.provisionNetworkNow()"
+  name: "provisionNetworkNow()"
+  nameWithType: "Workspace.provisionNetworkNow()"
+  summary: "Gets the provision<wbr>Network<wbr>Now property: Set to trigger the provisioning of the managed VNet with the default Options when creating a Workspace with the managed VNet enabled, or else it does nothing."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract Boolean provisionNetworkNow()"
+  desc: "Gets the provisionNetworkNow property: Set to trigger the provisioning of the managed VNet with the default Options when creating a Workspace with the managed VNet enabled, or else it does nothing."
+  returns:
+    description: "the provisionNetworkNow value."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
 - uid: "com.azure.resourcemanager.machinelearning.models.Workspace.publicNetworkAccess()"
   fullName: "com.azure.resourcemanager.machinelearning.models.Workspace.publicNetworkAccess()"
   name: "publicNetworkAccess()"
@@ -581,16 +605,16 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.models.Workspace.resyncKeys()"
   name: "resyncKeys()"
   nameWithType: "Workspace.resyncKeys()"
-  summary: "Resync all the keys associated with this workspace."
+  summary: "Resync all the keys associated with this workspace.<wbr>This includes keys for the storage account, app insights and password for container registry."
   modifiers:
   - "abstract"
   syntax: "public abstract void resyncKeys()"
-  desc: "Resync all the keys associated with this workspace. This includes keys for the storage account, app insights and password for container registry."
+  desc: "Resync all the keys associated with this workspace.This includes keys for the storage account, app insights and password for container registry."
 - uid: "com.azure.resourcemanager.machinelearning.models.Workspace.resyncKeys(com.azure.core.util.Context)"
   fullName: "com.azure.resourcemanager.machinelearning.models.Workspace.resyncKeys(Context context)"
   name: "resyncKeys(Context context)"
   nameWithType: "Workspace.resyncKeys(Context context)"
-  summary: "Resync all the keys associated with this workspace."
+  summary: "Resync all the keys associated with this workspace.<wbr>This includes keys for the storage account, app insights and password for container registry."
   modifiers:
   - "abstract"
   parameters:
@@ -598,16 +622,16 @@ methods:
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public abstract void resyncKeys(Context context)"
-  desc: "Resync all the keys associated with this workspace. This includes keys for the storage account, app insights and password for container registry."
+  desc: "Resync all the keys associated with this workspace.This includes keys for the storage account, app insights and password for container registry."
 - uid: "com.azure.resourcemanager.machinelearning.models.Workspace.serverlessComputeSettings()"
   fullName: "com.azure.resourcemanager.machinelearning.models.Workspace.serverlessComputeSettings()"
   name: "serverlessComputeSettings()"
   nameWithType: "Workspace.serverlessComputeSettings()"
-  summary: "Gets the serverless<wbr>Compute<wbr>Settings property: Settings for serverless compute created in the workspace."
+  summary: "Gets the serverless<wbr>Compute<wbr>Settings property: Settings for serverless compute in a workspace."
   modifiers:
   - "abstract"
   syntax: "public abstract ServerlessComputeSettings serverlessComputeSettings()"
-  desc: "Gets the serverlessComputeSettings property: Settings for serverless compute created in the workspace."
+  desc: "Gets the serverlessComputeSettings property: Settings for serverless compute in a workspace."
   returns:
     description: "the serverlessComputeSettings value."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.ServerlessComputeSettings?alt=com.azure.resourcemanager.machinelearning.models.ServerlessComputeSettings&text=ServerlessComputeSettings\" data-throw-if-not-resolved=\"False\" />"
@@ -651,11 +675,11 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.models.Workspace.sku()"
   name: "sku()"
   nameWithType: "Workspace.sku()"
-  summary: "Gets the sku property: The sku of the workspace."
+  summary: "Gets the sku property: Optional."
   modifiers:
   - "abstract"
   syntax: "public abstract Sku sku()"
-  desc: "Gets the sku property: The sku of the workspace."
+  desc: "Gets the sku property: Optional. This field is required to be implemented by the RP because AML is supporting more than one tier."
   returns:
     description: "the sku value."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.Sku?alt=com.azure.resourcemanager.machinelearning.models.Sku&text=Sku\" data-throw-if-not-resolved=\"False\" />"
@@ -695,15 +719,27 @@ methods:
   returns:
     description: "the systemData value."
     type: "<xref href=\"com.azure.core.management.SystemData?alt=com.azure.core.management.SystemData&text=SystemData\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.machinelearning.models.Workspace.systemDatastoresAuthMode()"
+  fullName: "com.azure.resourcemanager.machinelearning.models.Workspace.systemDatastoresAuthMode()"
+  name: "systemDatastoresAuthMode()"
+  nameWithType: "Workspace.systemDatastoresAuthMode()"
+  summary: "Gets the system<wbr>Datastores<wbr>Auth<wbr>Mode property: The auth mode used for accessing the system datastores of the workspace."
+  modifiers:
+  - "abstract"
+  syntax: "public abstract SystemDatastoresAuthMode systemDatastoresAuthMode()"
+  desc: "Gets the systemDatastoresAuthMode property: The auth mode used for accessing the system datastores of the workspace."
+  returns:
+    description: "the systemDatastoresAuthMode value."
+    type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.SystemDatastoresAuthMode?alt=com.azure.resourcemanager.machinelearning.models.SystemDatastoresAuthMode&text=SystemDatastoresAuthMode\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.machinelearning.models.Workspace.tags()"
   fullName: "com.azure.resourcemanager.machinelearning.models.Workspace.tags()"
   name: "tags()"
   nameWithType: "Workspace.tags()"
-  summary: "Gets the tags property: Contains resource tags defined as key/value pairs."
+  summary: "Gets the tags property: The tags property."
   modifiers:
   - "abstract"
   syntax: "public abstract Map<String,String> tags()"
-  desc: "Gets the tags property: Contains resource tags defined as key/value pairs."
+  desc: "Gets the tags property: The tags property."
   returns:
     description: "the tags value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
@@ -783,4 +819,4 @@ type: "interface"
 desc: "An immutable client-side representation of Workspace."
 metadata: {}
 package: "com.azure.resourcemanager.machinelearning.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-machinelearning:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-machinelearning:2.0.0

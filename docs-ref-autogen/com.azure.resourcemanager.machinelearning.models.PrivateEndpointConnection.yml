@@ -22,11 +22,11 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.models.PrivateEndpointConnection.identity()"
   name: "identity()"
   nameWithType: "PrivateEndpointConnection.identity()"
-  summary: "Gets the identity property: The identity of the resource."
+  summary: "Gets the identity property: The managed service identities assigned to this resource."
   modifiers:
   - "abstract"
   syntax: "public abstract ManagedServiceIdentity identity()"
-  desc: "Gets the identity property: The identity of the resource."
+  desc: "Gets the identity property: The managed service identities assigned to this resource."
   returns:
     description: "the identity value."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.ManagedServiceIdentity?alt=com.azure.resourcemanager.machinelearning.models.ManagedServiceIdentity&text=ManagedServiceIdentity\" data-throw-if-not-resolved=\"False\" />"
@@ -46,11 +46,11 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.models.PrivateEndpointConnection.location()"
   name: "location()"
   nameWithType: "PrivateEndpointConnection.location()"
-  summary: "Gets the location property: Specifies the location of the resource."
+  summary: "Gets the location property: \\*Same as workspace location."
   modifiers:
   - "abstract"
   syntax: "public abstract String location()"
-  desc: "Gets the location property: Specifies the location of the resource."
+  desc: "Gets the location property: \\*Same as workspace location."
   returns:
     description: "the location value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -70,23 +70,23 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.models.PrivateEndpointConnection.privateEndpoint()"
   name: "privateEndpoint()"
   nameWithType: "PrivateEndpointConnection.privateEndpoint()"
-  summary: "Gets the private<wbr>Endpoint property: The resource of private end point."
+  summary: "Gets the private<wbr>Endpoint property: The private<wbr>Endpoint property."
   modifiers:
   - "abstract"
-  syntax: "public abstract PrivateEndpoint privateEndpoint()"
-  desc: "Gets the privateEndpoint property: The resource of private end point."
+  syntax: "public abstract WorkspacePrivateEndpointResource privateEndpoint()"
+  desc: "Gets the privateEndpoint property: The privateEndpoint property."
   returns:
     description: "the privateEndpoint value."
-    type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.PrivateEndpoint?alt=com.azure.resourcemanager.machinelearning.models.PrivateEndpoint&text=PrivateEndpoint\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.WorkspacePrivateEndpointResource?alt=com.azure.resourcemanager.machinelearning.models.WorkspacePrivateEndpointResource&text=WorkspacePrivateEndpointResource\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.machinelearning.models.PrivateEndpointConnection.privateLinkServiceConnectionState()"
   fullName: "com.azure.resourcemanager.machinelearning.models.PrivateEndpointConnection.privateLinkServiceConnectionState()"
   name: "privateLinkServiceConnectionState()"
   nameWithType: "PrivateEndpointConnection.privateLinkServiceConnectionState()"
-  summary: "Gets the private<wbr>Link<wbr>Service<wbr>Connection<wbr>State property: A collection of information about the state of the connection between service consumer and provider."
+  summary: "Gets the private<wbr>Link<wbr>Service<wbr>Connection<wbr>State property: The connection state."
   modifiers:
   - "abstract"
   syntax: "public abstract PrivateLinkServiceConnectionState privateLinkServiceConnectionState()"
-  desc: "Gets the privateLinkServiceConnectionState property: A collection of information about the state of the connection between service consumer and provider."
+  desc: "Gets the privateLinkServiceConnectionState property: The connection state."
   returns:
     description: "the privateLinkServiceConnectionState value."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.PrivateLinkServiceConnectionState?alt=com.azure.resourcemanager.machinelearning.models.PrivateLinkServiceConnectionState&text=PrivateLinkServiceConnectionState\" data-throw-if-not-resolved=\"False\" />"
@@ -94,11 +94,11 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.models.PrivateEndpointConnection.provisioningState()"
   name: "provisioningState()"
   nameWithType: "PrivateEndpointConnection.provisioningState()"
-  summary: "Gets the provisioning<wbr>State property: The provisioning state of the private endpoint connection resource."
+  summary: "Gets the provisioning<wbr>State property: The current provisioning state."
   modifiers:
   - "abstract"
   syntax: "public abstract PrivateEndpointConnectionProvisioningState provisioningState()"
-  desc: "Gets the provisioningState property: The provisioning state of the private endpoint connection resource."
+  desc: "Gets the provisioningState property: The current provisioning state."
   returns:
     description: "the provisioningState value."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.PrivateEndpointConnectionProvisioningState?alt=com.azure.resourcemanager.machinelearning.models.PrivateEndpointConnectionProvisioningState&text=PrivateEndpointConnectionProvisioningState\" data-throw-if-not-resolved=\"False\" />"
@@ -170,11 +170,11 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.models.PrivateEndpointConnection.sku()"
   name: "sku()"
   nameWithType: "PrivateEndpointConnection.sku()"
-  summary: "Gets the sku property: The sku of the workspace."
+  summary: "Gets the sku property: Optional."
   modifiers:
   - "abstract"
   syntax: "public abstract Sku sku()"
-  desc: "Gets the sku property: The sku of the workspace."
+  desc: "Gets the sku property: Optional. This field is required to be implemented by the RP because AML is supporting more than one tier."
   returns:
     description: "the sku value."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.Sku?alt=com.azure.resourcemanager.machinelearning.models.Sku&text=Sku\" data-throw-if-not-resolved=\"False\" />"
@@ -194,11 +194,11 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.models.PrivateEndpointConnection.tags()"
   name: "tags()"
   nameWithType: "PrivateEndpointConnection.tags()"
-  summary: "Gets the tags property: Contains resource tags defined as key/value pairs."
+  summary: "Gets the tags property: The tags property."
   modifiers:
   - "abstract"
   syntax: "public abstract Map<String,String> tags()"
-  desc: "Gets the tags property: Contains resource tags defined as key/value pairs."
+  desc: "Gets the tags property: The tags property."
   returns:
     description: "the tags value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/Map.html\">Map</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>,<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
@@ -230,4 +230,4 @@ type: "interface"
 desc: "An immutable client-side representation of PrivateEndpointConnection."
 metadata: {}
 package: "com.azure.resourcemanager.machinelearning.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-machinelearning:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-machinelearning:2.0.0

@@ -34,9 +34,9 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.models.PrivateLinkServiceConnectionState.actionsRequired()"
   name: "actionsRequired()"
   nameWithType: "PrivateLinkServiceConnectionState.actionsRequired()"
-  summary: "Get the actions<wbr>Required property: A message indicating if changes on the service provider require any updates on the consumer."
+  summary: "Get the actions<wbr>Required property: Some RP chose \"None\"."
   syntax: "public String actionsRequired()"
-  desc: "Get the actionsRequired property: A message indicating if changes on the service provider require any updates on the consumer."
+  desc: "Get the actionsRequired property: Some RP chose \"None\". Other RPs use this for region expansion."
   returns:
     description: "the actionsRequired value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -44,9 +44,9 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.models.PrivateLinkServiceConnectionState.description()"
   name: "description()"
   nameWithType: "PrivateLinkServiceConnectionState.description()"
-  summary: "Get the description property: The reason for approval/rejection of the connection."
+  summary: "Get the description property: User-defined message that, per NRP doc, may be used for approval-related message."
   syntax: "public String description()"
-  desc: "Get the description property: The reason for approval/rejection of the connection."
+  desc: "Get the description property: User-defined message that, per NRP doc, may be used for approval-related message."
   returns:
     description: "the description value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -73,9 +73,9 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.models.PrivateLinkServiceConnectionState.status()"
   name: "status()"
   nameWithType: "PrivateLinkServiceConnectionState.status()"
-  summary: "Get the status property: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service."
+  summary: "Get the status property: Connection status of the service consumer with the service provider\\\\r\\\\n<wbr>Possible state transitions\\\\r\\\\n<wbr>Pending -> Approved (Service provider approves the connection request)\\\\r\\\\n<wbr>Pending -> Rejected (Service provider rejects the connection request)\\\\r\\\\n<wbr>Pending -> Disconnected (Service provider deletes the connection)\\\\r\\\\n<wbr>Approved -> Rejected (Service provider rejects the approved connection)\\\\r\\\\n<wbr>Approved -> Disconnected (Service provider deletes the connection)\\\\r\\\\n<wbr>Rejected -> Pending (Service consumer re-initiates the connection request that was rejected)\\\\r\\\\n<wbr>Rejected -> Disconnected (Service provider deletes the connection)."
   syntax: "public PrivateEndpointServiceConnectionStatus status()"
-  desc: "Get the status property: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service."
+  desc: "Get the status property: Connection status of the service consumer with the service provider\\\\r\\\\nPossible state transitions\\\\r\\\\nPending -> Approved (Service provider approves the connection request)\\\\r\\\\nPending -> Rejected (Service provider rejects the connection request)\\\\r\\\\nPending -> Disconnected (Service provider deletes the connection)\\\\r\\\\nApproved -> Rejected (Service provider rejects the approved connection)\\\\r\\\\nApproved -> Disconnected (Service provider deletes the connection)\\\\r\\\\nRejected -> Pending (Service consumer re-initiates the connection request that was rejected)\\\\r\\\\nRejected -> Disconnected (Service provider deletes the connection)."
   returns:
     description: "the status value."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.PrivateEndpointServiceConnectionStatus?alt=com.azure.resourcemanager.machinelearning.models.PrivateEndpointServiceConnectionStatus&text=PrivateEndpointServiceConnectionStatus\" data-throw-if-not-resolved=\"False\" />"
@@ -91,24 +91,17 @@ methods:
   - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.machinelearning.models.PrivateLinkServiceConnectionState.validate()"
-  fullName: "com.azure.resourcemanager.machinelearning.models.PrivateLinkServiceConnectionState.validate()"
-  name: "validate()"
-  nameWithType: "PrivateLinkServiceConnectionState.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.machinelearning.models.PrivateLinkServiceConnectionState.withActionsRequired(java.lang.String)"
   fullName: "com.azure.resourcemanager.machinelearning.models.PrivateLinkServiceConnectionState.withActionsRequired(String actionsRequired)"
   name: "withActionsRequired(String actionsRequired)"
   nameWithType: "PrivateLinkServiceConnectionState.withActionsRequired(String actionsRequired)"
-  summary: "Set the actions<wbr>Required property: A message indicating if changes on the service provider require any updates on the consumer."
+  summary: "Set the actions<wbr>Required property: Some RP chose \"None\"."
   parameters:
   - description: "the actionsRequired value to set."
     name: "actionsRequired"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public PrivateLinkServiceConnectionState withActionsRequired(String actionsRequired)"
-  desc: "Set the actionsRequired property: A message indicating if changes on the service provider require any updates on the consumer."
+  desc: "Set the actionsRequired property: Some RP chose \"None\". Other RPs use this for region expansion."
   returns:
     description: "the PrivateLinkServiceConnectionState object itself."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.PrivateLinkServiceConnectionState?alt=com.azure.resourcemanager.machinelearning.models.PrivateLinkServiceConnectionState&text=PrivateLinkServiceConnectionState\" data-throw-if-not-resolved=\"False\" />"
@@ -116,13 +109,13 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.models.PrivateLinkServiceConnectionState.withDescription(String description)"
   name: "withDescription(String description)"
   nameWithType: "PrivateLinkServiceConnectionState.withDescription(String description)"
-  summary: "Set the description property: The reason for approval/rejection of the connection."
+  summary: "Set the description property: User-defined message that, per NRP doc, may be used for approval-related message."
   parameters:
   - description: "the description value to set."
     name: "description"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public PrivateLinkServiceConnectionState withDescription(String description)"
-  desc: "Set the description property: The reason for approval/rejection of the connection."
+  desc: "Set the description property: User-defined message that, per NRP doc, may be used for approval-related message."
   returns:
     description: "the PrivateLinkServiceConnectionState object itself."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.PrivateLinkServiceConnectionState?alt=com.azure.resourcemanager.machinelearning.models.PrivateLinkServiceConnectionState&text=PrivateLinkServiceConnectionState\" data-throw-if-not-resolved=\"False\" />"
@@ -130,13 +123,13 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.models.PrivateLinkServiceConnectionState.withStatus(PrivateEndpointServiceConnectionStatus status)"
   name: "withStatus(PrivateEndpointServiceConnectionStatus status)"
   nameWithType: "PrivateLinkServiceConnectionState.withStatus(PrivateEndpointServiceConnectionStatus status)"
-  summary: "Set the status property: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service."
+  summary: "Set the status property: Connection status of the service consumer with the service provider\\\\r\\\\n<wbr>Possible state transitions\\\\r\\\\n<wbr>Pending -> Approved (Service provider approves the connection request)\\\\r\\\\n<wbr>Pending -> Rejected (Service provider rejects the connection request)\\\\r\\\\n<wbr>Pending -> Disconnected (Service provider deletes the connection)\\\\r\\\\n<wbr>Approved -> Rejected (Service provider rejects the approved connection)\\\\r\\\\n<wbr>Approved -> Disconnected (Service provider deletes the connection)\\\\r\\\\n<wbr>Rejected -> Pending (Service consumer re-initiates the connection request that was rejected)\\\\r\\\\n<wbr>Rejected -> Disconnected (Service provider deletes the connection)."
   parameters:
   - description: "the status value to set."
     name: "status"
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.PrivateEndpointServiceConnectionStatus?alt=com.azure.resourcemanager.machinelearning.models.PrivateEndpointServiceConnectionStatus&text=PrivateEndpointServiceConnectionStatus\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public PrivateLinkServiceConnectionState withStatus(PrivateEndpointServiceConnectionStatus status)"
-  desc: "Set the status property: Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service."
+  desc: "Set the status property: Connection status of the service consumer with the service provider\\\\r\\\\nPossible state transitions\\\\r\\\\nPending -> Approved (Service provider approves the connection request)\\\\r\\\\nPending -> Rejected (Service provider rejects the connection request)\\\\r\\\\nPending -> Disconnected (Service provider deletes the connection)\\\\r\\\\nApproved -> Rejected (Service provider rejects the approved connection)\\\\r\\\\nApproved -> Disconnected (Service provider deletes the connection)\\\\r\\\\nRejected -> Pending (Service consumer re-initiates the connection request that was rejected)\\\\r\\\\nRejected -> Disconnected (Service provider deletes the connection)."
   returns:
     description: "the PrivateLinkServiceConnectionState object itself."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.PrivateLinkServiceConnectionState?alt=com.azure.resourcemanager.machinelearning.models.PrivateLinkServiceConnectionState&text=PrivateLinkServiceConnectionState\" data-throw-if-not-resolved=\"False\" />"
@@ -146,4 +139,4 @@ implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.machinelearning.models.PrivateLinkServiceConnectionState?alt=com.azure.resourcemanager.machinelearning.models.PrivateLinkServiceConnectionState&text=PrivateLinkServiceConnectionState\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.machinelearning.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-machinelearning:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-machinelearning:2.0.0

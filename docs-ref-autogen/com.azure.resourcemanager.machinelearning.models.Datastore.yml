@@ -42,18 +42,21 @@ methods:
   returns:
     description: "datastore secrets."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.DatastoreSecrets?alt=com.azure.resourcemanager.machinelearning.models.DatastoreSecrets&text=DatastoreSecrets\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.machinelearning.models.Datastore.listSecretsWithResponse(com.azure.core.util.Context)"
-  fullName: "com.azure.resourcemanager.machinelearning.models.Datastore.listSecretsWithResponse(Context context)"
-  name: "listSecretsWithResponse(Context context)"
-  nameWithType: "Datastore.listSecretsWithResponse(Context context)"
+- uid: "com.azure.resourcemanager.machinelearning.models.Datastore.listSecretsWithResponse(com.azure.resourcemanager.machinelearning.models.SecretExpiry,com.azure.core.util.Context)"
+  fullName: "com.azure.resourcemanager.machinelearning.models.Datastore.listSecretsWithResponse(SecretExpiry body, Context context)"
+  name: "listSecretsWithResponse(SecretExpiry body, Context context)"
+  nameWithType: "Datastore.listSecretsWithResponse(SecretExpiry body, Context context)"
   summary: "Get datastore secrets."
   modifiers:
   - "abstract"
   parameters:
+  - description: "Secret expiry information."
+    name: "body"
+    type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.SecretExpiry?alt=com.azure.resourcemanager.machinelearning.models.SecretExpiry&text=SecretExpiry\" data-throw-if-not-resolved=\"False\" />"
   - description: "The context to associate with this operation."
     name: "context"
     type: "<xref href=\"com.azure.core.util.Context?alt=com.azure.core.util.Context&text=Context\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public abstract Response<DatastoreSecrets> listSecretsWithResponse(Context context)"
+  syntax: "public abstract Response<DatastoreSecrets> listSecretsWithResponse(SecretExpiry body, Context context)"
   desc: "Get datastore secrets."
   returns:
     description: "datastore secrets along with <xref uid=\"com.azure.core.http.rest.Response\" data-throw-if-not-resolved=\"false\" data-raw-source=\"Response\"></xref>."
@@ -162,4 +165,4 @@ type: "interface"
 desc: "An immutable client-side representation of Datastore."
 metadata: {}
 package: "com.azure.resourcemanager.machinelearning.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-machinelearning:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-machinelearning:2.0.0

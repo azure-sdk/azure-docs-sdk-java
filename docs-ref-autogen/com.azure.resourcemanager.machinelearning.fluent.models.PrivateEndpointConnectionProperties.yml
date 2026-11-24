@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.machinelearning.fluent.models.PrivateEndpointCon
 fullName: "com.azure.resourcemanager.machinelearning.fluent.models.PrivateEndpointConnectionProperties"
 name: "PrivateEndpointConnectionProperties"
 nameWithType: "PrivateEndpointConnectionProperties"
-summary: "Properties of the Private<wbr>Endpoint<wbr>Connect<wbr>Properties."
+summary: "Private endpoint connection properties."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -43,7 +43,7 @@ methods:
     type: "<xref href=\"com.azure.json.JsonReader?alt=com.azure.json.JsonReader&text=JsonReader\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public static PrivateEndpointConnectionProperties fromJson(JsonReader jsonReader)"
   exceptions:
-  - description: "If the deserialized JSON object was missing any required properties."
+  - description: "If an error occurs while reading the PrivateEndpointConnectionProperties."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   desc: "Reads an instance of PrivateEndpointConnectionProperties from the JsonReader."
   returns:
@@ -53,19 +53,19 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.fluent.models.PrivateEndpointConnectionProperties.privateEndpoint()"
   name: "privateEndpoint()"
   nameWithType: "PrivateEndpointConnectionProperties.privateEndpoint()"
-  summary: "Get the private<wbr>Endpoint property: The resource of private end point."
-  syntax: "public PrivateEndpoint privateEndpoint()"
-  desc: "Get the privateEndpoint property: The resource of private end point."
+  summary: "Get the private<wbr>Endpoint property: The private<wbr>Endpoint property."
+  syntax: "public WorkspacePrivateEndpointResource privateEndpoint()"
+  desc: "Get the privateEndpoint property: The privateEndpoint property."
   returns:
     description: "the privateEndpoint value."
-    type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.PrivateEndpoint?alt=com.azure.resourcemanager.machinelearning.models.PrivateEndpoint&text=PrivateEndpoint\" data-throw-if-not-resolved=\"False\" />"
+    type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.WorkspacePrivateEndpointResource?alt=com.azure.resourcemanager.machinelearning.models.WorkspacePrivateEndpointResource&text=WorkspacePrivateEndpointResource\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.machinelearning.fluent.models.PrivateEndpointConnectionProperties.privateLinkServiceConnectionState()"
   fullName: "com.azure.resourcemanager.machinelearning.fluent.models.PrivateEndpointConnectionProperties.privateLinkServiceConnectionState()"
   name: "privateLinkServiceConnectionState()"
   nameWithType: "PrivateEndpointConnectionProperties.privateLinkServiceConnectionState()"
-  summary: "Get the private<wbr>Link<wbr>Service<wbr>Connection<wbr>State property: A collection of information about the state of the connection between service consumer and provider."
+  summary: "Get the private<wbr>Link<wbr>Service<wbr>Connection<wbr>State property: The connection state."
   syntax: "public PrivateLinkServiceConnectionState privateLinkServiceConnectionState()"
-  desc: "Get the privateLinkServiceConnectionState property: A collection of information about the state of the connection between service consumer and provider."
+  desc: "Get the privateLinkServiceConnectionState property: The connection state."
   returns:
     description: "the privateLinkServiceConnectionState value."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.PrivateLinkServiceConnectionState?alt=com.azure.resourcemanager.machinelearning.models.PrivateLinkServiceConnectionState&text=PrivateLinkServiceConnectionState\" data-throw-if-not-resolved=\"False\" />"
@@ -73,9 +73,9 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.fluent.models.PrivateEndpointConnectionProperties.provisioningState()"
   name: "provisioningState()"
   nameWithType: "PrivateEndpointConnectionProperties.provisioningState()"
-  summary: "Get the provisioning<wbr>State property: The provisioning state of the private endpoint connection resource."
+  summary: "Get the provisioning<wbr>State property: The current provisioning state."
   syntax: "public PrivateEndpointConnectionProvisioningState provisioningState()"
-  desc: "Get the provisioningState property: The provisioning state of the private endpoint connection resource."
+  desc: "Get the provisioningState property: The current provisioning state."
   returns:
     description: "the provisioningState value."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.PrivateEndpointConnectionProvisioningState?alt=com.azure.resourcemanager.machinelearning.models.PrivateEndpointConnectionProvisioningState&text=PrivateEndpointConnectionProvisioningState\" data-throw-if-not-resolved=\"False\" />"
@@ -91,24 +91,17 @@ methods:
   - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.machinelearning.fluent.models.PrivateEndpointConnectionProperties.validate()"
-  fullName: "com.azure.resourcemanager.machinelearning.fluent.models.PrivateEndpointConnectionProperties.validate()"
-  name: "validate()"
-  nameWithType: "PrivateEndpointConnectionProperties.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
-- uid: "com.azure.resourcemanager.machinelearning.fluent.models.PrivateEndpointConnectionProperties.withPrivateEndpoint(com.azure.resourcemanager.machinelearning.models.PrivateEndpoint)"
-  fullName: "com.azure.resourcemanager.machinelearning.fluent.models.PrivateEndpointConnectionProperties.withPrivateEndpoint(PrivateEndpoint privateEndpoint)"
-  name: "withPrivateEndpoint(PrivateEndpoint privateEndpoint)"
-  nameWithType: "PrivateEndpointConnectionProperties.withPrivateEndpoint(PrivateEndpoint privateEndpoint)"
-  summary: "Set the private<wbr>Endpoint property: The resource of private end point."
+- uid: "com.azure.resourcemanager.machinelearning.fluent.models.PrivateEndpointConnectionProperties.withPrivateEndpoint(com.azure.resourcemanager.machinelearning.models.WorkspacePrivateEndpointResource)"
+  fullName: "com.azure.resourcemanager.machinelearning.fluent.models.PrivateEndpointConnectionProperties.withPrivateEndpoint(WorkspacePrivateEndpointResource privateEndpoint)"
+  name: "withPrivateEndpoint(WorkspacePrivateEndpointResource privateEndpoint)"
+  nameWithType: "PrivateEndpointConnectionProperties.withPrivateEndpoint(WorkspacePrivateEndpointResource privateEndpoint)"
+  summary: "Set the private<wbr>Endpoint property: The private<wbr>Endpoint property."
   parameters:
   - description: "the privateEndpoint value to set."
     name: "privateEndpoint"
-    type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.PrivateEndpoint?alt=com.azure.resourcemanager.machinelearning.models.PrivateEndpoint&text=PrivateEndpoint\" data-throw-if-not-resolved=\"False\" />"
-  syntax: "public PrivateEndpointConnectionProperties withPrivateEndpoint(PrivateEndpoint privateEndpoint)"
-  desc: "Set the privateEndpoint property: The resource of private end point."
+    type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.WorkspacePrivateEndpointResource?alt=com.azure.resourcemanager.machinelearning.models.WorkspacePrivateEndpointResource&text=WorkspacePrivateEndpointResource\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public PrivateEndpointConnectionProperties withPrivateEndpoint(WorkspacePrivateEndpointResource privateEndpoint)"
+  desc: "Set the privateEndpoint property: The privateEndpoint property."
   returns:
     description: "the PrivateEndpointConnectionProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.fluent.models.PrivateEndpointConnectionProperties?alt=com.azure.resourcemanager.machinelearning.fluent.models.PrivateEndpointConnectionProperties&text=PrivateEndpointConnectionProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -116,20 +109,20 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.fluent.models.PrivateEndpointConnectionProperties.withPrivateLinkServiceConnectionState(PrivateLinkServiceConnectionState privateLinkServiceConnectionState)"
   name: "withPrivateLinkServiceConnectionState(PrivateLinkServiceConnectionState privateLinkServiceConnectionState)"
   nameWithType: "PrivateEndpointConnectionProperties.withPrivateLinkServiceConnectionState(PrivateLinkServiceConnectionState privateLinkServiceConnectionState)"
-  summary: "Set the private<wbr>Link<wbr>Service<wbr>Connection<wbr>State property: A collection of information about the state of the connection between service consumer and provider."
+  summary: "Set the private<wbr>Link<wbr>Service<wbr>Connection<wbr>State property: The connection state."
   parameters:
   - description: "the privateLinkServiceConnectionState value to set."
     name: "privateLinkServiceConnectionState"
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.PrivateLinkServiceConnectionState?alt=com.azure.resourcemanager.machinelearning.models.PrivateLinkServiceConnectionState&text=PrivateLinkServiceConnectionState\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public PrivateEndpointConnectionProperties withPrivateLinkServiceConnectionState(PrivateLinkServiceConnectionState privateLinkServiceConnectionState)"
-  desc: "Set the privateLinkServiceConnectionState property: A collection of information about the state of the connection between service consumer and provider."
+  desc: "Set the privateLinkServiceConnectionState property: The connection state."
   returns:
     description: "the PrivateEndpointConnectionProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.fluent.models.PrivateEndpointConnectionProperties?alt=com.azure.resourcemanager.machinelearning.fluent.models.PrivateEndpointConnectionProperties&text=PrivateEndpointConnectionProperties\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "Properties of the PrivateEndpointConnectProperties."
+desc: "Private endpoint connection properties."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.machinelearning.fluent.models.PrivateEndpointConnectionProperties?alt=com.azure.resourcemanager.machinelearning.fluent.models.PrivateEndpointConnectionProperties&text=PrivateEndpointConnectionProperties\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.machinelearning.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-machinelearning:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-machinelearning:2.0.0

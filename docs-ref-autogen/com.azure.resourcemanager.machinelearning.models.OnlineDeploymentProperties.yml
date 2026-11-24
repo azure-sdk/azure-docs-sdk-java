@@ -17,7 +17,6 @@ inheritedClassMethods:
   - "<xref href=\"com.azure.resourcemanager.machinelearning.models.EndpointDeploymentPropertiesBase.fromJson(com.azure.json.JsonReader)?alt=com.azure.resourcemanager.machinelearning.models.EndpointDeploymentPropertiesBase.fromJson&text=fromJson\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.machinelearning.models.EndpointDeploymentPropertiesBase.properties()?alt=com.azure.resourcemanager.machinelearning.models.EndpointDeploymentPropertiesBase.properties&text=properties\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.machinelearning.models.EndpointDeploymentPropertiesBase.toJson(com.azure.json.JsonWriter)?alt=com.azure.resourcemanager.machinelearning.models.EndpointDeploymentPropertiesBase.toJson&text=toJson\" data-throw-if-not-resolved=\"False\" />"
-  - "<xref href=\"com.azure.resourcemanager.machinelearning.models.EndpointDeploymentPropertiesBase.validate()?alt=com.azure.resourcemanager.machinelearning.models.EndpointDeploymentPropertiesBase.validate&text=validate\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.machinelearning.models.EndpointDeploymentPropertiesBase.withCodeConfiguration(com.azure.resourcemanager.machinelearning.models.CodeConfiguration)?alt=com.azure.resourcemanager.machinelearning.models.EndpointDeploymentPropertiesBase.withCodeConfiguration&text=withCodeConfiguration\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.machinelearning.models.EndpointDeploymentPropertiesBase.withDescription(java.lang.String)?alt=com.azure.resourcemanager.machinelearning.models.EndpointDeploymentPropertiesBase.withDescription&text=withDescription\" data-throw-if-not-resolved=\"False\" />"
   - "<xref href=\"com.azure.resourcemanager.machinelearning.models.EndpointDeploymentPropertiesBase.withEnvironmentId(java.lang.String)?alt=com.azure.resourcemanager.machinelearning.models.EndpointDeploymentPropertiesBase.withEnvironmentId&text=withEnvironmentId\" data-throw-if-not-resolved=\"False\" />"
@@ -70,9 +69,9 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.models.OnlineDeploymentProperties.egressPublicNetworkAccess()"
   name: "egressPublicNetworkAccess()"
   nameWithType: "OnlineDeploymentProperties.egressPublicNetworkAccess()"
-  summary: "Get the egress<wbr>Public<wbr>Network<wbr>Access property: If Enabled, allow egress public network access."
+  summary: "Get the egress<wbr>Public<wbr>Network<wbr>Access property: Enum to determine whether Public<wbr>Network<wbr>Access is Enabled or Disabled for egress of a deployment."
   syntax: "public EgressPublicNetworkAccessType egressPublicNetworkAccess()"
-  desc: "Get the egressPublicNetworkAccess property: If Enabled, allow egress public network access. If Disabled, this will create secure egress. Default: Enabled."
+  desc: "Get the egressPublicNetworkAccess property: Enum to determine whether PublicNetworkAccess is Enabled or Disabled for egress of a deployment."
   returns:
     description: "the egressPublicNetworkAccess value."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.EgressPublicNetworkAccessType?alt=com.azure.resourcemanager.machinelearning.models.EgressPublicNetworkAccessType&text=EgressPublicNetworkAccessType\" data-throw-if-not-resolved=\"False\" />"
@@ -111,7 +110,7 @@ methods:
   nameWithType: "OnlineDeploymentProperties.instanceType()"
   summary: "Get the instance<wbr>Type property: Compute instance type."
   syntax: "public String instanceType()"
-  desc: "Get the instanceType property: Compute instance type."
+  desc: "Get the instanceType property: Compute instance type. Default: Standard\\_F4s\\_v2."
   returns:
     description: "the instanceType value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -185,6 +184,16 @@ methods:
   returns:
     description: "the scaleSettings value."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.OnlineScaleSettings?alt=com.azure.resourcemanager.machinelearning.models.OnlineScaleSettings&text=OnlineScaleSettings\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.machinelearning.models.OnlineDeploymentProperties.startupProbe()"
+  fullName: "com.azure.resourcemanager.machinelearning.models.OnlineDeploymentProperties.startupProbe()"
+  name: "startupProbe()"
+  nameWithType: "OnlineDeploymentProperties.startupProbe()"
+  summary: "Get the startup<wbr>Probe property: Startup probe verify whether an application within a container has started successfully."
+  syntax: "public ProbeSettings startupProbe()"
+  desc: "Get the startupProbe property: Startup probe verify whether an application within a container has started successfully."
+  returns:
+    description: "the startupProbe value."
+    type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.ProbeSettings?alt=com.azure.resourcemanager.machinelearning.models.ProbeSettings&text=ProbeSettings\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.machinelearning.models.OnlineDeploymentProperties.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.machinelearning.models.OnlineDeploymentProperties.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -198,14 +207,6 @@ methods:
   - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.machinelearning.models.OnlineDeploymentProperties.validate()"
-  fullName: "com.azure.resourcemanager.machinelearning.models.OnlineDeploymentProperties.validate()"
-  name: "validate()"
-  nameWithType: "OnlineDeploymentProperties.validate()"
-  summary: "Validates the instance."
-  overridden: "com.azure.resourcemanager.machinelearning.models.EndpointDeploymentPropertiesBase.validate()"
-  syntax: "public void validate()"
-  desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.machinelearning.models.OnlineDeploymentProperties.withAppInsightsEnabled(java.lang.Boolean)"
   fullName: "com.azure.resourcemanager.machinelearning.models.OnlineDeploymentProperties.withAppInsightsEnabled(Boolean appInsightsEnabled)"
   name: "withAppInsightsEnabled(Boolean appInsightsEnabled)"
@@ -264,13 +265,13 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.models.OnlineDeploymentProperties.withEgressPublicNetworkAccess(EgressPublicNetworkAccessType egressPublicNetworkAccess)"
   name: "withEgressPublicNetworkAccess(EgressPublicNetworkAccessType egressPublicNetworkAccess)"
   nameWithType: "OnlineDeploymentProperties.withEgressPublicNetworkAccess(EgressPublicNetworkAccessType egressPublicNetworkAccess)"
-  summary: "Set the egress<wbr>Public<wbr>Network<wbr>Access property: If Enabled, allow egress public network access."
+  summary: "Set the egress<wbr>Public<wbr>Network<wbr>Access property: Enum to determine whether Public<wbr>Network<wbr>Access is Enabled or Disabled for egress of a deployment."
   parameters:
   - description: "the egressPublicNetworkAccess value to set."
     name: "egressPublicNetworkAccess"
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.EgressPublicNetworkAccessType?alt=com.azure.resourcemanager.machinelearning.models.EgressPublicNetworkAccessType&text=EgressPublicNetworkAccessType\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public OnlineDeploymentProperties withEgressPublicNetworkAccess(EgressPublicNetworkAccessType egressPublicNetworkAccess)"
-  desc: "Set the egressPublicNetworkAccess property: If Enabled, allow egress public network access. If Disabled, this will create secure egress. Default: Enabled."
+  desc: "Set the egressPublicNetworkAccess property: Enum to determine whether PublicNetworkAccess is Enabled or Disabled for egress of a deployment."
   returns:
     description: "the OnlineDeploymentProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.OnlineDeploymentProperties?alt=com.azure.resourcemanager.machinelearning.models.OnlineDeploymentProperties&text=OnlineDeploymentProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -310,7 +311,7 @@ methods:
     name: "instanceType"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public OnlineDeploymentProperties withInstanceType(String instanceType)"
-  desc: "Set the instanceType property: Compute instance type."
+  desc: "Set the instanceType property: Compute instance type. Default: Standard\\_F4s\\_v2."
   returns:
     description: "the OnlineDeploymentProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.OnlineDeploymentProperties?alt=com.azure.resourcemanager.machinelearning.models.OnlineDeploymentProperties&text=OnlineDeploymentProperties\" data-throw-if-not-resolved=\"False\" />"
@@ -411,8 +412,22 @@ methods:
   returns:
     description: "the OnlineDeploymentProperties object itself."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.OnlineDeploymentProperties?alt=com.azure.resourcemanager.machinelearning.models.OnlineDeploymentProperties&text=OnlineDeploymentProperties\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.machinelearning.models.OnlineDeploymentProperties.withStartupProbe(com.azure.resourcemanager.machinelearning.models.ProbeSettings)"
+  fullName: "com.azure.resourcemanager.machinelearning.models.OnlineDeploymentProperties.withStartupProbe(ProbeSettings startupProbe)"
+  name: "withStartupProbe(ProbeSettings startupProbe)"
+  nameWithType: "OnlineDeploymentProperties.withStartupProbe(ProbeSettings startupProbe)"
+  summary: "Set the startup<wbr>Probe property: Startup probe verify whether an application within a container has started successfully."
+  parameters:
+  - description: "the startupProbe value to set."
+    name: "startupProbe"
+    type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.ProbeSettings?alt=com.azure.resourcemanager.machinelearning.models.ProbeSettings&text=ProbeSettings\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public OnlineDeploymentProperties withStartupProbe(ProbeSettings startupProbe)"
+  desc: "Set the startupProbe property: Startup probe verify whether an application within a container has started successfully."
+  returns:
+    description: "the OnlineDeploymentProperties object itself."
+    type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.OnlineDeploymentProperties?alt=com.azure.resourcemanager.machinelearning.models.OnlineDeploymentProperties&text=OnlineDeploymentProperties\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "The OnlineDeploymentProperties model."
 metadata: {}
 package: "com.azure.resourcemanager.machinelearning.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-machinelearning:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-machinelearning:2.0.0

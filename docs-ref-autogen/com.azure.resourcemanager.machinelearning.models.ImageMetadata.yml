@@ -21,14 +21,6 @@ inheritedClassMethods:
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-\">wait</a>"
   - "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-\">wait</a>"
 syntax: "public final class **ImageMetadata**</br> implements <xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.machinelearning.models.ImageMetadata?alt=com.azure.resourcemanager.machinelearning.models.ImageMetadata&text=ImageMetadata\" data-throw-if-not-resolved=\"False\" />&gt;"
-constructors:
-- uid: "com.azure.resourcemanager.machinelearning.models.ImageMetadata.ImageMetadata()"
-  fullName: "com.azure.resourcemanager.machinelearning.models.ImageMetadata.ImageMetadata()"
-  name: "ImageMetadata()"
-  nameWithType: "ImageMetadata.ImageMetadata()"
-  summary: "Creates an instance of Image<wbr>Metadata class."
-  syntax: "public ImageMetadata()"
-  desc: "Creates an instance of ImageMetadata class."
 methods:
 - uid: "com.azure.resourcemanager.machinelearning.models.ImageMetadata.currentImageVersion()"
   fullName: "com.azure.resourcemanager.machinelearning.models.ImageMetadata.currentImageVersion()"
@@ -79,6 +71,16 @@ methods:
   returns:
     description: "the latestImageVersion value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
+- uid: "com.azure.resourcemanager.machinelearning.models.ImageMetadata.osPatchingStatus()"
+  fullName: "com.azure.resourcemanager.machinelearning.models.ImageMetadata.osPatchingStatus()"
+  name: "osPatchingStatus()"
+  nameWithType: "ImageMetadata.osPatchingStatus()"
+  summary: "Get the os<wbr>Patching<wbr>Status property: Metadata about the os patching."
+  syntax: "public OsPatchingStatus osPatchingStatus()"
+  desc: "Get the osPatchingStatus property: Metadata about the os patching."
+  returns:
+    description: "the osPatchingStatus value."
+    type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.OsPatchingStatus?alt=com.azure.resourcemanager.machinelearning.models.OsPatchingStatus&text=OsPatchingStatus\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.machinelearning.models.ImageMetadata.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.machinelearning.models.ImageMetadata.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -91,59 +93,10 @@ methods:
   - type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html\">IOException</a>"
   returns:
     type: "<xref href=\"com.azure.json.JsonWriter?alt=com.azure.json.JsonWriter&text=JsonWriter\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.machinelearning.models.ImageMetadata.validate()"
-  fullName: "com.azure.resourcemanager.machinelearning.models.ImageMetadata.validate()"
-  name: "validate()"
-  nameWithType: "ImageMetadata.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
-- uid: "com.azure.resourcemanager.machinelearning.models.ImageMetadata.withCurrentImageVersion(java.lang.String)"
-  fullName: "com.azure.resourcemanager.machinelearning.models.ImageMetadata.withCurrentImageVersion(String currentImageVersion)"
-  name: "withCurrentImageVersion(String currentImageVersion)"
-  nameWithType: "ImageMetadata.withCurrentImageVersion(String currentImageVersion)"
-  summary: "Set the current<wbr>Image<wbr>Version property: Specifies the current operating system image version this compute instance is running on."
-  parameters:
-  - description: "the currentImageVersion value to set."
-    name: "currentImageVersion"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public ImageMetadata withCurrentImageVersion(String currentImageVersion)"
-  desc: "Set the currentImageVersion property: Specifies the current operating system image version this compute instance is running on."
-  returns:
-    description: "the ImageMetadata object itself."
-    type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.ImageMetadata?alt=com.azure.resourcemanager.machinelearning.models.ImageMetadata&text=ImageMetadata\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.machinelearning.models.ImageMetadata.withIsLatestOsImageVersion(java.lang.Boolean)"
-  fullName: "com.azure.resourcemanager.machinelearning.models.ImageMetadata.withIsLatestOsImageVersion(Boolean isLatestOsImageVersion)"
-  name: "withIsLatestOsImageVersion(Boolean isLatestOsImageVersion)"
-  nameWithType: "ImageMetadata.withIsLatestOsImageVersion(Boolean isLatestOsImageVersion)"
-  summary: "Set the is<wbr>Latest<wbr>OsImage<wbr>Version property: Specifies whether this compute instance is running on the latest operating system image."
-  parameters:
-  - description: "the isLatestOsImageVersion value to set."
-    name: "isLatestOsImageVersion"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
-  syntax: "public ImageMetadata withIsLatestOsImageVersion(Boolean isLatestOsImageVersion)"
-  desc: "Set the isLatestOsImageVersion property: Specifies whether this compute instance is running on the latest operating system image."
-  returns:
-    description: "the ImageMetadata object itself."
-    type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.ImageMetadata?alt=com.azure.resourcemanager.machinelearning.models.ImageMetadata&text=ImageMetadata\" data-throw-if-not-resolved=\"False\" />"
-- uid: "com.azure.resourcemanager.machinelearning.models.ImageMetadata.withLatestImageVersion(java.lang.String)"
-  fullName: "com.azure.resourcemanager.machinelearning.models.ImageMetadata.withLatestImageVersion(String latestImageVersion)"
-  name: "withLatestImageVersion(String latestImageVersion)"
-  nameWithType: "ImageMetadata.withLatestImageVersion(String latestImageVersion)"
-  summary: "Set the latest<wbr>Image<wbr>Version property: Specifies the latest available operating system image version."
-  parameters:
-  - description: "the latestImageVersion value to set."
-    name: "latestImageVersion"
-    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
-  syntax: "public ImageMetadata withLatestImageVersion(String latestImageVersion)"
-  desc: "Set the latestImageVersion property: Specifies the latest available operating system image version."
-  returns:
-    description: "the ImageMetadata object itself."
-    type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.ImageMetadata?alt=com.azure.resourcemanager.machinelearning.models.ImageMetadata&text=ImageMetadata\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
 desc: "Returns metadata about the operating system image for this compute instance."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.machinelearning.models.ImageMetadata?alt=com.azure.resourcemanager.machinelearning.models.ImageMetadata&text=ImageMetadata\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.machinelearning.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-machinelearning:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-machinelearning:2.0.0

@@ -3,7 +3,7 @@ uid: "com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertie
 fullName: "com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner"
 name: "WorkspacePropertiesUpdateParametersInner"
 nameWithType: "WorkspacePropertiesUpdateParametersInner"
-summary: "The parameters for updating the properties of a machine learning workspace."
+summary: "The parameters for updating a machine learning workspace."
 inheritances:
 - "<xref href=\"java.lang.Object?displayProperty=fullName\" data-throw-if-not-resolved=\"False\" />"
 inheritedClassMethods:
@@ -96,7 +96,7 @@ methods:
   nameWithType: "WorkspacePropertiesUpdateParametersInner.friendlyName()"
   summary: "Get the friendly<wbr>Name property: The friendly name for this workspace."
   syntax: "public String friendlyName()"
-  desc: "Get the friendlyName property: The friendly name for this workspace."
+  desc: "Get the friendlyName property: The friendly name for this workspace. This name in mutable."
   returns:
     description: "the friendlyName value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
@@ -133,9 +133,9 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner.managedNetwork()"
   name: "managedNetwork()"
   nameWithType: "WorkspacePropertiesUpdateParametersInner.managedNetwork()"
-  summary: "Get the managed<wbr>Network property: Managed Network settings for a machine learning workspace."
+  summary: "Get the managed<wbr>Network property: The managed<wbr>Network property."
   syntax: "public ManagedNetworkSettingsInner managedNetwork()"
-  desc: "Get the managedNetwork property: Managed Network settings for a machine learning workspace."
+  desc: "Get the managedNetwork property: The managedNetwork property."
   returns:
     description: "the managedNetwork value."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.fluent.models.ManagedNetworkSettingsInner?alt=com.azure.resourcemanager.machinelearning.fluent.models.ManagedNetworkSettingsInner&text=ManagedNetworkSettingsInner\" data-throw-if-not-resolved=\"False\" />"
@@ -163,9 +163,9 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner.serverlessComputeSettings()"
   name: "serverlessComputeSettings()"
   nameWithType: "WorkspacePropertiesUpdateParametersInner.serverlessComputeSettings()"
-  summary: "Get the serverless<wbr>Compute<wbr>Settings property: Settings for serverless compute created in the workspace."
+  summary: "Get the serverless<wbr>Compute<wbr>Settings property: Settings for serverless compute in a workspace."
   syntax: "public ServerlessComputeSettings serverlessComputeSettings()"
-  desc: "Get the serverlessComputeSettings property: Settings for serverless compute created in the workspace."
+  desc: "Get the serverlessComputeSettings property: Settings for serverless compute in a workspace."
   returns:
     description: "the serverlessComputeSettings value."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.ServerlessComputeSettings?alt=com.azure.resourcemanager.machinelearning.models.ServerlessComputeSettings&text=ServerlessComputeSettings\" data-throw-if-not-resolved=\"False\" />"
@@ -179,6 +179,16 @@ methods:
   returns:
     description: "the serviceManagedResourcesSettings value."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.ServiceManagedResourcesSettings?alt=com.azure.resourcemanager.machinelearning.models.ServiceManagedResourcesSettings&text=ServiceManagedResourcesSettings\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner.systemDatastoresAuthMode()"
+  fullName: "com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner.systemDatastoresAuthMode()"
+  name: "systemDatastoresAuthMode()"
+  nameWithType: "WorkspacePropertiesUpdateParametersInner.systemDatastoresAuthMode()"
+  summary: "Get the system<wbr>Datastores<wbr>Auth<wbr>Mode property: The auth mode used for accessing the system datastores of the workspace."
+  syntax: "public SystemDatastoresAuthMode systemDatastoresAuthMode()"
+  desc: "Get the systemDatastoresAuthMode property: The auth mode used for accessing the system datastores of the workspace."
+  returns:
+    description: "the systemDatastoresAuthMode value."
+    type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.SystemDatastoresAuthMode?alt=com.azure.resourcemanager.machinelearning.models.SystemDatastoresAuthMode&text=SystemDatastoresAuthMode\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner.toJson(com.azure.json.JsonWriter)"
   fullName: "com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner.toJson(JsonWriter jsonWriter)"
   name: "toJson(JsonWriter jsonWriter)"
@@ -201,13 +211,6 @@ methods:
   returns:
     description: "the v1LegacyMode value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html\">Boolean</a>"
-- uid: "com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner.validate()"
-  fullName: "com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner.validate()"
-  name: "validate()"
-  nameWithType: "WorkspacePropertiesUpdateParametersInner.validate()"
-  summary: "Validates the instance."
-  syntax: "public void validate()"
-  desc: "Validates the instance."
 - uid: "com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner.withApplicationInsights(java.lang.String)"
   fullName: "com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner.withApplicationInsights(String applicationInsights)"
   name: "withApplicationInsights(String applicationInsights)"
@@ -302,7 +305,7 @@ methods:
     name: "friendlyName"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>"
   syntax: "public WorkspacePropertiesUpdateParametersInner withFriendlyName(String friendlyName)"
-  desc: "Set the friendlyName property: The friendly name for this workspace."
+  desc: "Set the friendlyName property: The friendly name for this workspace. This name in mutable."
   returns:
     description: "the WorkspacePropertiesUpdateParametersInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner?alt=com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner&text=WorkspacePropertiesUpdateParametersInner\" data-throw-if-not-resolved=\"False\" />"
@@ -324,13 +327,13 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner.withManagedNetwork(ManagedNetworkSettingsInner managedNetwork)"
   name: "withManagedNetwork(ManagedNetworkSettingsInner managedNetwork)"
   nameWithType: "WorkspacePropertiesUpdateParametersInner.withManagedNetwork(ManagedNetworkSettingsInner managedNetwork)"
-  summary: "Set the managed<wbr>Network property: Managed Network settings for a machine learning workspace."
+  summary: "Set the managed<wbr>Network property: The managed<wbr>Network property."
   parameters:
   - description: "the managedNetwork value to set."
     name: "managedNetwork"
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.fluent.models.ManagedNetworkSettingsInner?alt=com.azure.resourcemanager.machinelearning.fluent.models.ManagedNetworkSettingsInner&text=ManagedNetworkSettingsInner\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public WorkspacePropertiesUpdateParametersInner withManagedNetwork(ManagedNetworkSettingsInner managedNetwork)"
-  desc: "Set the managedNetwork property: Managed Network settings for a machine learning workspace."
+  desc: "Set the managedNetwork property: The managedNetwork property."
   returns:
     description: "the WorkspacePropertiesUpdateParametersInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner?alt=com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner&text=WorkspacePropertiesUpdateParametersInner\" data-throw-if-not-resolved=\"False\" />"
@@ -366,13 +369,13 @@ methods:
   fullName: "com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner.withServerlessComputeSettings(ServerlessComputeSettings serverlessComputeSettings)"
   name: "withServerlessComputeSettings(ServerlessComputeSettings serverlessComputeSettings)"
   nameWithType: "WorkspacePropertiesUpdateParametersInner.withServerlessComputeSettings(ServerlessComputeSettings serverlessComputeSettings)"
-  summary: "Set the serverless<wbr>Compute<wbr>Settings property: Settings for serverless compute created in the workspace."
+  summary: "Set the serverless<wbr>Compute<wbr>Settings property: Settings for serverless compute in a workspace."
   parameters:
   - description: "the serverlessComputeSettings value to set."
     name: "serverlessComputeSettings"
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.ServerlessComputeSettings?alt=com.azure.resourcemanager.machinelearning.models.ServerlessComputeSettings&text=ServerlessComputeSettings\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public WorkspacePropertiesUpdateParametersInner withServerlessComputeSettings(ServerlessComputeSettings serverlessComputeSettings)"
-  desc: "Set the serverlessComputeSettings property: Settings for serverless compute created in the workspace."
+  desc: "Set the serverlessComputeSettings property: Settings for serverless compute in a workspace."
   returns:
     description: "the WorkspacePropertiesUpdateParametersInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner?alt=com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner&text=WorkspacePropertiesUpdateParametersInner\" data-throw-if-not-resolved=\"False\" />"
@@ -387,6 +390,20 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.ServiceManagedResourcesSettings?alt=com.azure.resourcemanager.machinelearning.models.ServiceManagedResourcesSettings&text=ServiceManagedResourcesSettings\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public WorkspacePropertiesUpdateParametersInner withServiceManagedResourcesSettings(ServiceManagedResourcesSettings serviceManagedResourcesSettings)"
   desc: "Set the serviceManagedResourcesSettings property: The service managed resource settings."
+  returns:
+    description: "the WorkspacePropertiesUpdateParametersInner object itself."
+    type: "<xref href=\"com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner?alt=com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner&text=WorkspacePropertiesUpdateParametersInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner.withSystemDatastoresAuthMode(com.azure.resourcemanager.machinelearning.models.SystemDatastoresAuthMode)"
+  fullName: "com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner.withSystemDatastoresAuthMode(SystemDatastoresAuthMode systemDatastoresAuthMode)"
+  name: "withSystemDatastoresAuthMode(SystemDatastoresAuthMode systemDatastoresAuthMode)"
+  nameWithType: "WorkspacePropertiesUpdateParametersInner.withSystemDatastoresAuthMode(SystemDatastoresAuthMode systemDatastoresAuthMode)"
+  summary: "Set the system<wbr>Datastores<wbr>Auth<wbr>Mode property: The auth mode used for accessing the system datastores of the workspace."
+  parameters:
+  - description: "the systemDatastoresAuthMode value to set."
+    name: "systemDatastoresAuthMode"
+    type: "<xref href=\"com.azure.resourcemanager.machinelearning.models.SystemDatastoresAuthMode?alt=com.azure.resourcemanager.machinelearning.models.SystemDatastoresAuthMode&text=SystemDatastoresAuthMode\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public WorkspacePropertiesUpdateParametersInner withSystemDatastoresAuthMode(SystemDatastoresAuthMode systemDatastoresAuthMode)"
+  desc: "Set the systemDatastoresAuthMode property: The auth mode used for accessing the system datastores of the workspace."
   returns:
     description: "the WorkspacePropertiesUpdateParametersInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner?alt=com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner&text=WorkspacePropertiesUpdateParametersInner\" data-throw-if-not-resolved=\"False\" />"
@@ -405,9 +422,9 @@ methods:
     description: "the WorkspacePropertiesUpdateParametersInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner?alt=com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner&text=WorkspacePropertiesUpdateParametersInner\" data-throw-if-not-resolved=\"False\" />"
 type: "class"
-desc: "The parameters for updating the properties of a machine learning workspace."
+desc: "The parameters for updating a machine learning workspace."
 implements:
 - "<xref href=\"com.azure.json.JsonSerializable?alt=com.azure.json.JsonSerializable&text=JsonSerializable\" data-throw-if-not-resolved=\"False\" />&lt;<xref href=\"com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner?alt=com.azure.resourcemanager.machinelearning.fluent.models.WorkspacePropertiesUpdateParametersInner&text=WorkspacePropertiesUpdateParametersInner\" data-throw-if-not-resolved=\"False\" />&gt;"
 metadata: {}
 package: "com.azure.resourcemanager.machinelearning.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-machinelearning:1.1.0
+artifact: com.azure.resourcemanager:azure-resourcemanager-machinelearning:2.0.0
