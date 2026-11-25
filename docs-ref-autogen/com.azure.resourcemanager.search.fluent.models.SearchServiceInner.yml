@@ -140,7 +140,7 @@ methods:
   nameWithType: "SearchServiceInner.hostingMode()"
   summary: "Get the hosting<wbr>Mode property: Applicable only for the standard3 SKU."
   syntax: "public HostingMode hostingMode()"
-  desc: "Get the hostingMode property: Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the standard3 SKU, the value is either 'default' or 'highDensity'. For all other SKUs, this value must be 'default'."
+  desc: "Get the hostingMode property: Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the standard3 SKU, the value is either 'Default' or 'HighDensity'. For all other SKUs, this value must be 'Default'."
   returns:
     description: "the hostingMode value."
     type: "<xref href=\"com.azure.resourcemanager.search.models.HostingMode?alt=com.azure.resourcemanager.search.models.HostingMode&text=HostingMode\" data-throw-if-not-resolved=\"False\" />"
@@ -165,6 +165,16 @@ methods:
   returns:
     description: "the identity value."
     type: "<xref href=\"com.azure.resourcemanager.search.models.Identity?alt=com.azure.resourcemanager.search.models.Identity&text=Identity\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.search.fluent.models.SearchServiceInner.knowledgeRetrieval()"
+  fullName: "com.azure.resourcemanager.search.fluent.models.SearchServiceInner.knowledgeRetrieval()"
+  name: "knowledgeRetrieval()"
+  nameWithType: "SearchServiceInner.knowledgeRetrieval()"
+  summary: "Get the knowledge<wbr>Retrieval property: Specifies the billing plan for agentic retrieval on the Azure AI Search service."
+  syntax: "public KnowledgeRetrieval knowledgeRetrieval()"
+  desc: "Get the knowledgeRetrieval property: Specifies the billing plan for agentic retrieval on the Azure AI Search service. This configuration is only available for certain pricing tiers in certain regions."
+  returns:
+    description: "the knowledgeRetrieval value."
+    type: "<xref href=\"com.azure.resourcemanager.search.models.KnowledgeRetrieval?alt=com.azure.resourcemanager.search.models.KnowledgeRetrieval&text=KnowledgeRetrieval\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.resourcemanager.search.fluent.models.SearchServiceInner.name()"
   fullName: "com.azure.resourcemanager.search.fluent.models.SearchServiceInner.name()"
   name: "name()"
@@ -190,9 +200,9 @@ methods:
   fullName: "com.azure.resourcemanager.search.fluent.models.SearchServiceInner.partitionCount()"
   name: "partitionCount()"
   nameWithType: "SearchServiceInner.partitionCount()"
-  summary: "Get the partition<wbr>Count property: The number of partitions in the search service; if specified, it can be 1, 2, 3, 4, 6, or 12."
+  summary: "Get the partition<wbr>Count property: The number of partitions in the dedicated search service; if specified, it can be 1, 2, 3, 4, 6, or 12."
   syntax: "public Integer partitionCount()"
-  desc: "Get the partitionCount property: The number of partitions in the search service; if specified, it can be 1, 2, 3, 4, 6, or 12. Values greater than 1 are only valid for standard SKUs. For 'standard3' services with hostingMode set to 'highDensity', the allowed values are between 1 and 3."
+  desc: "Get the partitionCount property: The number of partitions in the dedicated search service; if specified, it can be 1, 2, 3, 4, 6, or 12. Values greater than 1 are only valid for standard SKUs. For 'standard3' services with hostingMode set to 'highDensity', the allowed values are between 1 and 3."
   returns:
     description: "the partitionCount value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
@@ -220,9 +230,9 @@ methods:
   fullName: "com.azure.resourcemanager.search.fluent.models.SearchServiceInner.publicNetworkAccess()"
   name: "publicNetworkAccess()"
   nameWithType: "SearchServiceInner.publicNetworkAccess()"
-  summary: "Get the public<wbr>Network<wbr>Access property: This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates."
+  summary: "Get the public<wbr>Network<wbr>Access property: This value can be set to 'Enabled' to avoid breaking changes on existing customer resources and templates."
   syntax: "public PublicNetworkAccess publicNetworkAccess()"
-  desc: "Get the publicNetworkAccess property: This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method."
+  desc: "Get the publicNetworkAccess property: This value can be set to 'Enabled' to avoid breaking changes on existing customer resources and templates. If set to 'Disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method."
   returns:
     description: "the publicNetworkAccess value."
     type: "<xref href=\"com.azure.resourcemanager.search.models.PublicNetworkAccess?alt=com.azure.resourcemanager.search.models.PublicNetworkAccess&text=PublicNetworkAccess\" data-throw-if-not-resolved=\"False\" />"
@@ -230,9 +240,9 @@ methods:
   fullName: "com.azure.resourcemanager.search.fluent.models.SearchServiceInner.replicaCount()"
   name: "replicaCount()"
   nameWithType: "SearchServiceInner.replicaCount()"
-  summary: "Get the replica<wbr>Count property: The number of replicas in the search service."
+  summary: "Get the replica<wbr>Count property: The number of replicas in the dedicated search service."
   syntax: "public Integer replicaCount()"
-  desc: "Get the replicaCount property: The number of replicas in the search service. If specified, it must be a value between 1 and 12 inclusive for standard SKUs or between 1 and 3 inclusive for basic SKU."
+  desc: "Get the replicaCount property: The number of replicas in the dedicated search service. If specified, it must be a value between 1 and 12 inclusive for standard SKUs or between 1 and 3 inclusive for basic SKU."
   returns:
     description: "the replicaCount value."
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
@@ -240,9 +250,9 @@ methods:
   fullName: "com.azure.resourcemanager.search.fluent.models.SearchServiceInner.semanticSearch()"
   name: "semanticSearch()"
   nameWithType: "SearchServiceInner.semanticSearch()"
-  summary: "Get the semantic<wbr>Search property: Sets options that control the availability of semantic search."
+  summary: "Get the semantic<wbr>Search property: Specifies the availability and billing plan for semantic search on the Azure AI Search service."
   syntax: "public SearchSemanticSearch semanticSearch()"
-  desc: "Get the semanticSearch property: Sets options that control the availability of semantic search. This configuration is only possible for certain Azure AI Search SKUs in certain locations."
+  desc: "Get the semanticSearch property: Specifies the availability and billing plan for semantic search on the Azure AI Search service. This configuration is only available for certain pricing tiers in certain regions."
   returns:
     description: "the semanticSearch value."
     type: "<xref href=\"com.azure.resourcemanager.search.models.SearchSemanticSearch?alt=com.azure.resourcemanager.search.models.SearchSemanticSearch&text=SearchSemanticSearch\" data-throw-if-not-resolved=\"False\" />"
@@ -441,7 +451,7 @@ methods:
     name: "hostingMode"
     type: "<xref href=\"com.azure.resourcemanager.search.models.HostingMode?alt=com.azure.resourcemanager.search.models.HostingMode&text=HostingMode\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public SearchServiceInner withHostingMode(HostingMode hostingMode)"
-  desc: "Set the hostingMode property: Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the standard3 SKU, the value is either 'default' or 'highDensity'. For all other SKUs, this value must be 'default'."
+  desc: "Set the hostingMode property: Applicable only for the standard3 SKU. You can set this property to enable up to 3 high density partitions that allow up to 1000 indexes, which is much higher than the maximum indexes allowed for any other SKU. For the standard3 SKU, the value is either 'Default' or 'HighDensity'. For all other SKUs, this value must be 'Default'."
   returns:
     description: "the SearchServiceInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.search.fluent.models.SearchServiceInner?alt=com.azure.resourcemanager.search.fluent.models.SearchServiceInner&text=SearchServiceInner\" data-throw-if-not-resolved=\"False\" />"
@@ -456,6 +466,20 @@ methods:
     type: "<xref href=\"com.azure.resourcemanager.search.models.Identity?alt=com.azure.resourcemanager.search.models.Identity&text=Identity\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public SearchServiceInner withIdentity(Identity identity)"
   desc: "Set the identity property: The identity of the resource."
+  returns:
+    description: "the SearchServiceInner object itself."
+    type: "<xref href=\"com.azure.resourcemanager.search.fluent.models.SearchServiceInner?alt=com.azure.resourcemanager.search.fluent.models.SearchServiceInner&text=SearchServiceInner\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.resourcemanager.search.fluent.models.SearchServiceInner.withKnowledgeRetrieval(com.azure.resourcemanager.search.models.KnowledgeRetrieval)"
+  fullName: "com.azure.resourcemanager.search.fluent.models.SearchServiceInner.withKnowledgeRetrieval(KnowledgeRetrieval knowledgeRetrieval)"
+  name: "withKnowledgeRetrieval(KnowledgeRetrieval knowledgeRetrieval)"
+  nameWithType: "SearchServiceInner.withKnowledgeRetrieval(KnowledgeRetrieval knowledgeRetrieval)"
+  summary: "Set the knowledge<wbr>Retrieval property: Specifies the billing plan for agentic retrieval on the Azure AI Search service."
+  parameters:
+  - description: "the knowledgeRetrieval value to set."
+    name: "knowledgeRetrieval"
+    type: "<xref href=\"com.azure.resourcemanager.search.models.KnowledgeRetrieval?alt=com.azure.resourcemanager.search.models.KnowledgeRetrieval&text=KnowledgeRetrieval\" data-throw-if-not-resolved=\"False\" />"
+  syntax: "public SearchServiceInner withKnowledgeRetrieval(KnowledgeRetrieval knowledgeRetrieval)"
+  desc: "Set the knowledgeRetrieval property: Specifies the billing plan for agentic retrieval on the Azure AI Search service. This configuration is only available for certain pricing tiers in certain regions."
   returns:
     description: "the SearchServiceInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.search.fluent.models.SearchServiceInner?alt=com.azure.resourcemanager.search.fluent.models.SearchServiceInner&text=SearchServiceInner\" data-throw-if-not-resolved=\"False\" />"
@@ -488,13 +512,13 @@ methods:
   fullName: "com.azure.resourcemanager.search.fluent.models.SearchServiceInner.withPartitionCount(Integer partitionCount)"
   name: "withPartitionCount(Integer partitionCount)"
   nameWithType: "SearchServiceInner.withPartitionCount(Integer partitionCount)"
-  summary: "Set the partition<wbr>Count property: The number of partitions in the search service; if specified, it can be 1, 2, 3, 4, 6, or 12."
+  summary: "Set the partition<wbr>Count property: The number of partitions in the dedicated search service; if specified, it can be 1, 2, 3, 4, 6, or 12."
   parameters:
   - description: "the partitionCount value to set."
     name: "partitionCount"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
   syntax: "public SearchServiceInner withPartitionCount(Integer partitionCount)"
-  desc: "Set the partitionCount property: The number of partitions in the search service; if specified, it can be 1, 2, 3, 4, 6, or 12. Values greater than 1 are only valid for standard SKUs. For 'standard3' services with hostingMode set to 'highDensity', the allowed values are between 1 and 3."
+  desc: "Set the partitionCount property: The number of partitions in the dedicated search service; if specified, it can be 1, 2, 3, 4, 6, or 12. Values greater than 1 are only valid for standard SKUs. For 'standard3' services with hostingMode set to 'highDensity', the allowed values are between 1 and 3."
   returns:
     description: "the SearchServiceInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.search.fluent.models.SearchServiceInner?alt=com.azure.resourcemanager.search.fluent.models.SearchServiceInner&text=SearchServiceInner\" data-throw-if-not-resolved=\"False\" />"
@@ -502,13 +526,13 @@ methods:
   fullName: "com.azure.resourcemanager.search.fluent.models.SearchServiceInner.withPublicNetworkAccess(PublicNetworkAccess publicNetworkAccess)"
   name: "withPublicNetworkAccess(PublicNetworkAccess publicNetworkAccess)"
   nameWithType: "SearchServiceInner.withPublicNetworkAccess(PublicNetworkAccess publicNetworkAccess)"
-  summary: "Set the public<wbr>Network<wbr>Access property: This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates."
+  summary: "Set the public<wbr>Network<wbr>Access property: This value can be set to 'Enabled' to avoid breaking changes on existing customer resources and templates."
   parameters:
   - description: "the publicNetworkAccess value to set."
     name: "publicNetworkAccess"
     type: "<xref href=\"com.azure.resourcemanager.search.models.PublicNetworkAccess?alt=com.azure.resourcemanager.search.models.PublicNetworkAccess&text=PublicNetworkAccess\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public SearchServiceInner withPublicNetworkAccess(PublicNetworkAccess publicNetworkAccess)"
-  desc: "Set the publicNetworkAccess property: This value can be set to 'enabled' to avoid breaking changes on existing customer resources and templates. If set to 'disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method."
+  desc: "Set the publicNetworkAccess property: This value can be set to 'Enabled' to avoid breaking changes on existing customer resources and templates. If set to 'Disabled', traffic over public interface is not allowed, and private endpoint connections would be the exclusive access method."
   returns:
     description: "the SearchServiceInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.search.fluent.models.SearchServiceInner?alt=com.azure.resourcemanager.search.fluent.models.SearchServiceInner&text=SearchServiceInner\" data-throw-if-not-resolved=\"False\" />"
@@ -516,13 +540,13 @@ methods:
   fullName: "com.azure.resourcemanager.search.fluent.models.SearchServiceInner.withReplicaCount(Integer replicaCount)"
   name: "withReplicaCount(Integer replicaCount)"
   nameWithType: "SearchServiceInner.withReplicaCount(Integer replicaCount)"
-  summary: "Set the replica<wbr>Count property: The number of replicas in the search service."
+  summary: "Set the replica<wbr>Count property: The number of replicas in the dedicated search service."
   parameters:
   - description: "the replicaCount value to set."
     name: "replicaCount"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html\">Integer</a>"
   syntax: "public SearchServiceInner withReplicaCount(Integer replicaCount)"
-  desc: "Set the replicaCount property: The number of replicas in the search service. If specified, it must be a value between 1 and 12 inclusive for standard SKUs or between 1 and 3 inclusive for basic SKU."
+  desc: "Set the replicaCount property: The number of replicas in the dedicated search service. If specified, it must be a value between 1 and 12 inclusive for standard SKUs or between 1 and 3 inclusive for basic SKU."
   returns:
     description: "the SearchServiceInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.search.fluent.models.SearchServiceInner?alt=com.azure.resourcemanager.search.fluent.models.SearchServiceInner&text=SearchServiceInner\" data-throw-if-not-resolved=\"False\" />"
@@ -530,13 +554,13 @@ methods:
   fullName: "com.azure.resourcemanager.search.fluent.models.SearchServiceInner.withSemanticSearch(SearchSemanticSearch semanticSearch)"
   name: "withSemanticSearch(SearchSemanticSearch semanticSearch)"
   nameWithType: "SearchServiceInner.withSemanticSearch(SearchSemanticSearch semanticSearch)"
-  summary: "Set the semantic<wbr>Search property: Sets options that control the availability of semantic search."
+  summary: "Set the semantic<wbr>Search property: Specifies the availability and billing plan for semantic search on the Azure AI Search service."
   parameters:
   - description: "the semanticSearch value to set."
     name: "semanticSearch"
     type: "<xref href=\"com.azure.resourcemanager.search.models.SearchSemanticSearch?alt=com.azure.resourcemanager.search.models.SearchSemanticSearch&text=SearchSemanticSearch\" data-throw-if-not-resolved=\"False\" />"
   syntax: "public SearchServiceInner withSemanticSearch(SearchSemanticSearch semanticSearch)"
-  desc: "Set the semanticSearch property: Sets options that control the availability of semantic search. This configuration is only possible for certain Azure AI Search SKUs in certain locations."
+  desc: "Set the semanticSearch property: Specifies the availability and billing plan for semantic search on the Azure AI Search service. This configuration is only available for certain pricing tiers in certain regions."
   returns:
     description: "the SearchServiceInner object itself."
     type: "<xref href=\"com.azure.resourcemanager.search.fluent.models.SearchServiceInner?alt=com.azure.resourcemanager.search.fluent.models.SearchServiceInner&text=SearchServiceInner\" data-throw-if-not-resolved=\"False\" />"
@@ -583,4 +607,4 @@ type: "class"
 desc: "Describes an Azure AI Search service and its current state."
 metadata: {}
 package: "com.azure.resourcemanager.search.fluent.models"
-artifact: com.azure.resourcemanager:azure-resourcemanager-search:2.54.6
+artifact: com.azure.resourcemanager:azure-resourcemanager-search:2.56.0
