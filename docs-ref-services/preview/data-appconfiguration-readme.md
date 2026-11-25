@@ -1,12 +1,12 @@
 ---
 title: Azure App Configuration client library for Java
 keywords: Azure, java, SDK, API, azure-data-appconfiguration, appconfiguration
-ms.date: 03/04/2024
+ms.date: 11/25/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: appconfiguration
 ---
-# Azure App Configuration client library for Java - version 1.6.0-beta.1 
+# Azure App Configuration client library for Java - version 1.13.0-beta.1 
 
 Azure App Configuration is a managed service that helps developers centralize their application configurations simply and securely.
 
@@ -15,13 +15,14 @@ Modern programs, especially programs running in a cloud, generally have many com
 Use the client library for App Configuration to create and manage application configuration settings.
 
 [Source code][source_code] | [Package (Maven)][package] | [API reference documentation][api_documentation]
-| [Product documentation][azconfig_docs] | [Samples][samples] | [Troubleshooting][troubleshooting]
+| [Product documentation][app_config_docs] | [Samples][samples] | [Troubleshooting][troubleshooting]
 
 ## Getting started
 
 ### Prerequisites
 
 - A [Java Development Kit (JDK)][jdk_link], version 8 or later.
+  - Here are details about [Java 8 client compatibility with Azure Certificate Authority](https://learn.microsoft.com/azure/security/fundamentals/azure-ca-details?tabs=root-and-subordinate-cas-list#client-compatibility-for-public-pkis).
 - [Azure Subscription][azure_subscription]
 - [App Configuration Store][app_config_store]
 
@@ -29,7 +30,7 @@ Use the client library for App Configuration to create and manage application co
 #### Include the BOM file
 
 Please include the azure-sdk-bom to your project to take dependency on the General Availability (GA) version of the library. In the following snippet, replace the {bom_version_to_target} placeholder with the version number.
-To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/azure-data-appconfiguration_1.6.0-beta.1/sdk/boms/azure-sdk-bom/README.md).
+To learn more about the BOM, see the [AZURE SDK BOM README](https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-data-appconfiguration_1.13.0-beta.1/sdk/boms/azure-sdk-bom/README.md).
 
 ```xml
 <dependencyManagement>
@@ -64,7 +65,7 @@ add the direct dependency to your project as follows.
 <dependency>
   <groupId>com.azure</groupId>
   <artifactId>azure-data-appconfiguration</artifactId>
-  <version>1.5.0</version>
+  <version>1.12.0</version>
 </dependency>
 ```
 [//]: # ({x-version-update-end})
@@ -88,7 +89,7 @@ az appconfig create --name <config-store-name> --resource-group <resource-group-
 ### Authenticate the client
 
 In order to interact with the App Configuration service you'll need to create an instance of the Configuration Client 
-class. To make this possible you'll need the connection string of the Configuration Store. Alternatively, use AAD token
+class. To make this possible you'll need the connection string of the Configuration Store. Alternatively, use Entra token
 to connect to the service.
 
 #### Use connection string
@@ -121,7 +122,7 @@ ConfigurationAsyncClient configurationClient = new ConfigurationClientBuilder()
     .buildAsyncClient();
 ```
 
-#### Use AAD token
+#### Use Entra token
 
 Here we demonstrate using [DefaultAzureCredential][default_cred_ref]
 to authenticate as a service principal. However, the configuration client
@@ -170,13 +171,21 @@ configuration client.
 Constructing the client also requires your configuration store's URL, which you can
 get from the Azure CLI or the Azure Portal. In the Azure Portal, the URL can be found listed as the service "Endpoint".
 
-```java readme-sample-aadAuthentication
+```java readme-sample-entraAuthentication
 DefaultAzureCredential credential = new DefaultAzureCredentialBuilder().build();
 ConfigurationClient configurationClient = new ConfigurationClientBuilder()
     .credential(credential)
     .endpoint(endpoint)
     .buildClient();
 ```
+
+When using Microsoft Entra ID, the client automatically infers the authentication audience from the endpoint hostname,
+including sovereign cloud and staging endpoints. For example, `https://my-store.appconfig.sovereign.cloud` uses
+`https://appconfig.sovereign.cloud`, and `https://my-store.azconfig.io` uses `https://azconfig.io`.
+Unrecognized hostnames default to `https://appconfig.azure.com`. To override inference, call
+`audience(ConfigurationAudience.fromString("https://custom.audience"))` on the builder. Audience values in Java do not
+include a trailing slash; the client appends `/.default` to form the token scope. This applies to both synchronous and
+asynchronous clients. See [authentication token audiences](https://aka.ms/appconfig/client-token-audience) for details.
 
 ## Key concepts
 
@@ -249,6 +258,80 @@ For "Feature Flag" and "Secret Reference" configuration settings, see [samples][
 * [Recover a snapshot](#recover-a-snapshot)
 * [Retrieve all Snapshots](#retrieve-all-snapshots)
 * [Retrieve Configuration Settings in a Snapshot](#retrieve-configuration-settings-in-a-snapshot)
+* [Retrieve Labels](#retrieve-labels)
+* [Manage dedicated Feature Flag resources](#manage-dedicated-feature-flag-resources)
+
+### Manage dedicated Feature Flag resources
+
+The preview API version `2026-05-01-preview` introduces a dedicated feature flag resource, managed with
+`FeatureFlagClient` and `FeatureFlagAsyncClient`. Use a preview library version that supports this API; the GA BOM
+does not select preview releases.
+
+These resources are **separate** from `FeatureFlagConfigurationSetting` instances stored as key-values:
+
+| Resource | Clients | Model |
+|---|---|---|
+| Key-value-backed feature flag setting (`/kv`) | `ConfigurationClient`, `ConfigurationAsyncClient` | `FeatureFlagConfigurationSetting` |
+| Dedicated feature flag (`/ff`) | `FeatureFlagClient`, `FeatureFlagAsyncClient` | `FeatureFlag` |
+
+Use the feature flag name directly, without the `.appconfig.featureflag/` key prefix. Neither client converts or
+redirects operations between these resource types. Existing feature flag setting APIs continue to use key-values.
+
+The following examples use Microsoft Entra ID authentication with `DefaultAzureCredential` from [azure-identity][azure_identity].
+Set `endpoint` to your App Configuration store endpoint, and assign the **App Configuration Data Owner** role
+to the identity running these read/write examples. When running the sample's `main` method, set the
+`AZURE_APP_CONFIG_ENDPOINT` environment variable.
+
+```java readme-sample-featureFlagResources
+FeatureFlagClient client = new FeatureFlagClientBuilder()
+    .endpoint(endpoint)
+    .credential(new DefaultAzureCredentialBuilder().build())
+    .buildClient();
+
+FeatureFlag created = client.addFeatureFlag(new FeatureFlag("MyFeature", true).setLabel("production"));
+FeatureFlag retrieved = client.getFeatureFlag(created.getName(), created.getLabel());
+retrieved.setEnabled(false);
+FeatureFlag updated = client.setFeatureFlagWithResponse(retrieved, true, Context.NONE).getValue();
+
+FeatureFlagSelector selector = new FeatureFlagSelector().setNameFilter("My*").setLabelFilter("production");
+client.listFeatureFlags(selector).forEach(flag -> System.out.println(flag.getName()));
+client.listFeatureFlagRevisions(selector).forEach(flag -> System.out.println(flag.getETag()));
+client.listLabels().forEach(label -> System.out.println(label.getName()));
+
+client.deleteFeatureFlagWithResponse(updated, true, Context.NONE);
+```
+
+`addFeatureFlag` creates only if the name and label do not already exist. `setFeatureFlag` creates or replaces
+unconditionally; pass `true` to the response-bearing overload to require an unchanged ETag. Conditional writes
+require an ETag on the supplied resource. Conditional reads expose HTTP 304 with a null response value.
+
+`FeatureFlagSelector` supports name, label, and tag filters, field selection, point-in-time reads, and per-page
+match conditions. To monitor changes, retain the ETag from each page and supply
+`MatchConditions.setIfNoneMatch` entries in page order on the next listing. Unchanged pages have HTTP status 304
+and no items, but paging continues.
+
+Feature flag models also support conditions (`FeatureFlagConditions`, `FeatureFilter`), variants, allocation,
+and telemetry. `FeatureFilter` belongs to the new resource and uses string-valued parameters; it is not the existing
+`FeatureFlagFilter` used with key-value-backed feature flag settings.
+
+Both clients support connection strings, Microsoft Entra credentials, audience selection, and sync tokens.
+Build an asynchronous client with `FeatureFlagClientBuilder.buildAsyncClient()`:
+
+```java readme-sample-featureFlagResourcesAsync
+FeatureFlagAsyncClient client = new FeatureFlagClientBuilder()
+    .endpoint(endpoint)
+    .credential(new DefaultAzureCredentialBuilder().build())
+    .buildAsyncClient();
+
+client.setFeatureFlag(new FeatureFlag("MyAsyncFeature", true))
+    .flatMap(flag -> client.getFeatureFlag(flag.getName()))
+    .flatMap(flag -> client.deleteFeatureFlag(flag.getName()))
+    .subscribe(flag -> System.out.println(flag.getName()));
+```
+
+`FeatureFlagClient.listLabels` always selects dedicated feature flag labels (`resourceType=ff`).
+`ConfigurationClient.listLabels` selects key-value labels (`resourceType=kv` on API version `2026-05-01-preview` and later); asynchronous
+clients follow the same rules. See the [feature flag resource sample](src/samples/java/com/azure/data/appconfiguration/FeatureFlagResourceSample.java).
 
 ### Create a Configuration Client
 
@@ -408,6 +491,7 @@ configurationClient.setConfigurationSetting(key2, "new_label", "new_value");
 SettingSelector selector = new SettingSelector().setKeyFilter(key + "," + key2);
 PagedIterable<ConfigurationSetting> settings = configurationClient.listConfigurationSettings(selector);
 ```
+For more filters see class `SettingSelector`, such as `tagsFilter` see [samples][samples].
 
 ### List revisions of multiple Configuration Settings
 
@@ -543,6 +627,18 @@ for (ConfigurationSetting setting : configurationSettings) {
 }
 ```
 
+### Retrieve Labels
+List multiple labels in the App Configuration store by calling `listLabels`.
+
+```java readme-sample-listLabels
+String labelNameFilter = "{labelNamePrefix}*";
+configurationClient.listLabels(new SettingLabelSelector().setNameFilter(labelNameFilter))
+        .forEach(label -> {
+            System.out.println("label name = " + label.getName());
+        });
+```
+
+
 ## Troubleshooting
 
 ### General
@@ -568,13 +664,13 @@ For more detail information, check out the [AddHeadersFromContextPolicy][add_hea
 ### Default HTTP Client
 All client libraries by default use the Netty HTTP client. Adding the above dependency will automatically configure 
 the client library to use the Netty HTTP client. Configuring or changing the HTTP client is detailed in the
-[HTTP clients wiki](https://github.com/Azure/azure-sdk-for-java/wiki/HTTP-clients).
+[HTTP clients wiki](https://learn.microsoft.com/azure/developer/java/sdk/http-client-pipeline#http-clients).
 
 ### Default SSL library
 All client libraries, by default, use the Tomcat-native Boring SSL library to enable native-level performance for SSL 
 operations. The Boring SSL library is an uber jar containing native libraries for Linux / macOS / Windows, and provides 
 better performance compared to the default SSL implementation within the JDK. For more information, including how to 
-reduce the dependency size, refer to the [performance tuning][performance_tuning] section of the wiki.
+reduce the dependency size, refer to the [performance tuning][performance_tuning] documentation.
 
 ## Next steps
 
@@ -590,28 +686,27 @@ When you submit a pull request, a CLA-bot will automatically determine whether y
 This project has adopted the [Microsoft Open Source Code of Conduct][coc]. For more information see the [Code of Conduct FAQ][coc_faq] or contact [opencode@microsoft.com][coc_contact] with any additional questions or comments.
 
 <!-- LINKS -->
-[add_headers_from_context_policy]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-appconfiguration_1.6.0-beta.1/sdk/core/azure-core/src/main/java/com/azure/core/http/policy/AddHeadersFromContextPolicy.java
+[add_headers_from_context_policy]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-data-appconfiguration_1.13.0-beta.1/sdk/core/azure-core/src/main/java/com/azure/core/http/policy/AddHeadersFromContextPolicy.java
 [api_documentation]: https://aka.ms/java-docs
-[app_config_store]: /azure/azure-app-configuration/quickstart-dotnet-core-app#create-an-app-configuration-store
-[app_config_role]: /azure/azure-app-configuration/rest-api-authorization-azure-ad#roles
-[azconfig_docs]: /azure/azure-app-configuration
-[azure_cli]: /cli/azure
-[azure_identity]: https://github.com/Azure/azure-sdk-for-java/tree/azure-data-appconfiguration_1.6.0-beta.1/sdk/identity/azure-identity
+[app_config_store]: https://learn.microsoft.com/azure/azure-app-configuration/quickstart-dotnet-core-app#create-an-app-configuration-store
+[app_config_role]: https://learn.microsoft.com/azure/azure-app-configuration/rest-api-authorization-azure-ad#roles
+[app_config_docs]: https://learn.microsoft.com/azure/azure-app-configuration
+[azure_cli]: https://learn.microsoft.com/cli/azure
+[azure_identity]: https://github.com/Azure/azure-sdk-for-java/tree/com.azure+azure-data-appconfiguration_1.13.0-beta.1/sdk/identity/azure-identity
 [azure_subscription]: https://azure.microsoft.com/free
 [cla]: https://cla.microsoft.com
 [coc]: https://opensource.microsoft.com/codeofconduct/
 [coc_faq]: https://opensource.microsoft.com/codeofconduct/faq/
 [coc_contact]: mailto:opencode@microsoft.com
 [default_cred_ref]: https://azuresdkdocs.z19.web.core.windows.net/java/azure-identity/latest/com/azure/identity/DefaultAzureCredential.html
-[jdk_link]: /java/azure/jdk/?view=azure-java-stable
+[jdk_link]: https://learn.microsoft.com/java/azure/jdk/?view=azure-java-stable
 [maven]: https://maven.apache.org/
 [package]: https://central.sonatype.com/artifact/com.azure/azure-data-appconfiguration
-[performance_tuning]: https://github.com/Azure/azure-sdk-for-java/wiki/Performance-Tuning
+[performance_tuning]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-data-appconfiguration_1.13.0-beta.1/docs/performance-tuning.md
 [rest_api]: https://github.com/Azure/AppConfiguration#rest-api-reference
-[samples]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-appconfiguration_1.6.0-beta.1/sdk/appconfiguration/azure-data-appconfiguration/src/samples/java/com/azure/data/appconfiguration
-[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-appconfiguration_1.6.0-beta.1/sdk/appconfiguration/azure-data-appconfiguration/src/samples/README.md
-[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-appconfiguration_1.6.0-beta.1/sdk/appconfiguration/azure-data-appconfiguration/src
-[spring_quickstart]: /azure/azure-app-configuration/quickstart-java-spring-app
-[troubleshooting]: https://github.com/Azure/azure-sdk-for-java/blob/azure-data-appconfiguration_1.6.0-beta.1/sdk/appconfiguration/azure-data-appconfiguration/TROUBLESHOOTING.md
-
+[samples]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-data-appconfiguration_1.13.0-beta.1/sdk/appconfiguration/azure-data-appconfiguration/src/samples/java/com/azure/data/appconfiguration
+[samples_readme]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-data-appconfiguration_1.13.0-beta.1/sdk/appconfiguration/azure-data-appconfiguration/src/samples/README.md
+[source_code]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-data-appconfiguration_1.13.0-beta.1/sdk/appconfiguration/azure-data-appconfiguration/src
+[spring_quickstart]: https://learn.microsoft.com/azure/azure-app-configuration/quickstart-java-spring-app
+[troubleshooting]: https://github.com/Azure/azure-sdk-for-java/blob/com.azure+azure-data-appconfiguration_1.13.0-beta.1/sdk/appconfiguration/azure-data-appconfiguration/TROUBLESHOOTING.md
 
