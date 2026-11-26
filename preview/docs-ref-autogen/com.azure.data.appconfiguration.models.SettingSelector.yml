@@ -80,6 +80,16 @@ methods:
   returns:
     description: "The match conditions"
     type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<xref href=\"com.azure.core.http.MatchConditions?alt=com.azure.core.http.MatchConditions&text=MatchConditions\" data-throw-if-not-resolved=\"False\" />&gt;"
+- uid: "com.azure.data.appconfiguration.models.SettingSelector.getTagsFilter()"
+  fullName: "com.azure.data.appconfiguration.models.SettingSelector.getTagsFilter()"
+  name: "getTagsFilter()"
+  nameWithType: "SettingSelector.getTagsFilter()"
+  summary: "Gets the tags used to filter settings based on their <xref uid=\"com.azure.data.appconfiguration.models.ConfigurationSetting.getTags()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"tags\"></xref> in the service."
+  syntax: "public List<String> getTagsFilter()"
+  desc: "Gets the tags used to filter settings based on their <xref uid=\"com.azure.data.appconfiguration.models.ConfigurationSetting.getTags()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"tags\"></xref> in the service.\n\nSee [Filtering][] for more information about these supported filters.\n\n\n[Filtering]: https://docs.microsoft.com/azure/azure-app-configuration/rest-api-key-value#supported-filters"
+  returns:
+    description: "tagsFilter The tags used to filter GET requests from the service."
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
 - uid: "com.azure.data.appconfiguration.models.SettingSelector.setAcceptDatetime(java.time.OffsetDateTime)"
   fullName: "com.azure.data.appconfiguration.models.SettingSelector.setAcceptDatetime(OffsetDateTime datetime)"
   name: "setAcceptDatetime(OffsetDateTime datetime)"
@@ -150,6 +160,20 @@ methods:
   returns:
     description: "The updated SettingSelector object."
     type: "<xref href=\"com.azure.data.appconfiguration.models.SettingSelector?alt=com.azure.data.appconfiguration.models.SettingSelector&text=SettingSelector\" data-throw-if-not-resolved=\"False\" />"
+- uid: "com.azure.data.appconfiguration.models.SettingSelector.setTagsFilter(java.util.List<java.lang.String>)"
+  fullName: "com.azure.data.appconfiguration.models.SettingSelector.setTagsFilter(List<String> tagsFilter)"
+  name: "setTagsFilter(List<String> tagsFilter)"
+  nameWithType: "SettingSelector.setTagsFilter(List<String> tagsFilter)"
+  summary: "Sets the expression to filter <xref uid=\"com.azure.data.appconfiguration.models.ConfigurationSetting.getTags()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"tags\"></xref> on for the request."
+  parameters:
+  - description: "The expressions to filter ConfigurationSetting tags on."
+    name: "tagsFilter"
+    type: "<a href=\"https://docs.oracle.com/javase/8/docs/api/java/util/List.html\">List</a>&lt;<a href=\"https://docs.oracle.com/javase/8/docs/api/java/lang/String.html\">String</a>&gt;"
+  syntax: "public SettingSelector setTagsFilter(List<String> tagsFilter)"
+  desc: "Sets the expression to filter <xref uid=\"com.azure.data.appconfiguration.models.ConfigurationSetting.getTags()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"tags\"></xref> on for the request.\n\nSee [Filtering][] for more information about these supported filters.\n\n\n[Filtering]: https://docs.microsoft.com/azure/azure-app-configuration/rest-api-key-value#supported-filters"
+  returns:
+    description: "SettingSelector The updated SettingSelector object."
+    type: "<xref href=\"com.azure.data.appconfiguration.models.SettingSelector?alt=com.azure.data.appconfiguration.models.SettingSelector&text=SettingSelector\" data-throw-if-not-resolved=\"False\" />"
 - uid: "com.azure.data.appconfiguration.models.SettingSelector.toString()"
   fullName: "com.azure.data.appconfiguration.models.SettingSelector.toString()"
   name: "toString()"
@@ -162,4 +186,4 @@ type: "class"
 desc: "A set of options for selecting configuration settings from App Configuration service.\n\n *  Providing <xref uid=\"com.azure.data.appconfiguration.models.SettingSelector.getLabelFilter()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"labelFilter\"></xref> will filter <xref uid=\"com.azure.data.appconfiguration.models.ConfigurationSetting\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ConfigurationSettings\"></xref> that match any label name in conjunction with the keys that are passed in to the service request.\n *  Providing <xref uid=\"com.azure.data.appconfiguration.models.SettingSelector.getAcceptDateTime()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"acceptDateTime\"></xref> will return the representation of matching <xref uid=\"com.azure.data.appconfiguration.models.ConfigurationSetting\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ConfigurationSetting\"></xref> at that given <xref uid=\"java.time.OffsetDateTime\" data-throw-if-not-resolved=\"false\" data-raw-source=\"OffsetDateTime\"></xref>.\n *  Providing <xref uid=\"com.azure.data.appconfiguration.models.SettingSelector.getFields()\" data-throw-if-not-resolved=\"false\" data-raw-source=\"fields\"></xref> will populate only those <xref uid=\"com.azure.data.appconfiguration.models.ConfigurationSetting\" data-throw-if-not-resolved=\"false\" data-raw-source=\"ConfigurationSetting\"></xref> fields in the response. By default, all of the fields are returned."
 metadata: {}
 package: "com.azure.data.appconfiguration.models"
-artifact: com.azure:azure-data-appconfiguration:1.6.0-beta.1
+artifact: com.azure:azure-data-appconfiguration:1.13.0-beta.1
