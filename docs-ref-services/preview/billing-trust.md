@@ -1,10 +1,10 @@
 ---
-title: Azure Billing-Trust SDK for Java
-description: Reference for Azure Billing-Trust SDK for Java
-ms.date: 11/25/2026
+title: Azure Billing Trust SDK for Java
+description: Reference for Azure Billing Trust SDK for Java
+ms.date: 11/26/2026
 ms.topic: reference
 ms.devlang: java
-ms.service: billing-trust
+ms.service: billingtrust
 ---
 # Azure Billing-Trust SDK for Java - preview
 ## Packages - preview

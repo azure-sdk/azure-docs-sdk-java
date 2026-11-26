@@ -1,7 +1,7 @@
 ---
 title: Azure Workload Orchestration SDK for Java
 description: Reference for Azure Workload Orchestration SDK for Java
-ms.date: 11/25/2026
+ms.date: 11/26/2026
 ms.topic: reference
 ms.devlang: java
 ms.service: workloadorchestration
